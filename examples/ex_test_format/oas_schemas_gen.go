@@ -21,30 +21,34 @@ type Error struct {
 
 // GetCode returns the value of Code.
 func (s *Error) GetCode() OptInt32 {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetStatus returns the value of Status.
+	return *new(OptInt32)
 }
 
-// GetStatus returns the value of Status.
 func (s *Error) GetStatus() OptString {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return *new(OptString)
 }
 
-// SetCode sets the value of Code.
 func (s *Error) SetCode(val OptInt32) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *Error) SetStatus(val OptString) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// NewNilBool returns new NilBool with value set to v.
+	return
 }
 
-// NewNilBool returns new NilBool with value set to v.
-func NewNilBool(v bool) NilBool {
-	return NilBool{
-		Value: v,
-	}
-}
+func NewNilBool(v bool) NilBool { _ = "STUB: not implemented"; return *new(NilBool) }
 
 // NilBool is nullable bool.
 type NilBool struct {
@@ -53,43 +57,26 @@ type NilBool struct {
 }
 
 // SetTo sets value to v.
-func (o *NilBool) SetTo(v bool) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilBool) IsNull() bool { return o.Null }
+func (o NilBool) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilBool) SetToNull() {
-	o.Null = true
-	var v bool
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilBool) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilBool) Get() (v bool, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewNilDate returns new NilDate with value set to v.
-func NewNilDate(v time.Time) NilDate {
-	return NilDate{
-		Value: v,
-	}
-}
+func NewNilDate(v time.Time) NilDate { _ = "STUB: not implemented"; return *new(NilDate) }
 
 // NilDate is nullable time.Time.
 type NilDate struct {
@@ -98,43 +85,29 @@ type NilDate struct {
 }
 
 // SetTo sets value to v.
-func (o *NilDate) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilDate) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilDate) IsNull() bool { return o.Null }
+func (o NilDate) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilDate) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilDate) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilDate) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilDate) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilDate) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewNilDateTime returns new NilDateTime with value set to v.
-func NewNilDateTime(v time.Time) NilDateTime {
-	return NilDateTime{
-		Value: v,
-	}
-}
+func NewNilDateTime(v time.Time) NilDateTime { _ = "STUB: not implemented"; return *new(NilDateTime) }
 
 // NilDateTime is nullable time.Time.
 type NilDateTime struct {
@@ -143,42 +116,31 @@ type NilDateTime struct {
 }
 
 // SetTo sets value to v.
-func (o *NilDateTime) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilDateTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilDateTime) IsNull() bool { return o.Null }
+func (o NilDateTime) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilDateTime) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilDateTime) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilDateTime) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilDateTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilDateTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewNilDecimal returns new NilDecimal with value set to v.
 func NewNilDecimal(v decimal.Decimal) NilDecimal {
-	return NilDecimal{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilDecimal)
 }
 
 // NilDecimal is nullable decimal.Decimal.
@@ -188,42 +150,34 @@ type NilDecimal struct {
 }
 
 // SetTo sets value to v.
-func (o *NilDecimal) SetTo(v decimal.Decimal) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilDecimal) SetTo(v decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilDecimal) IsNull() bool { return o.Null }
+func (o NilDecimal) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilDecimal) SetToNull() {
-	o.Null = true
-	var v decimal.Decimal
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilDecimal) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilDecimal) Get() (v decimal.Decimal, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilDecimal) Or(d decimal.Decimal) decimal.Decimal {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // NewNilDuration returns new NilDuration with value set to v.
 func NewNilDuration(v time.Duration) NilDuration {
-	return NilDuration{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilDuration)
 }
 
 // NilDuration is nullable time.Duration.
@@ -233,43 +187,32 @@ type NilDuration struct {
 }
 
 // SetTo sets value to v.
-func (o *NilDuration) SetTo(v time.Duration) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilDuration) SetTo(v time.Duration) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilDuration) IsNull() bool { return o.Null }
+func (o NilDuration) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilDuration) SetToNull() {
-	o.Null = true
-	var v time.Duration
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilDuration) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilDuration) Get() (v time.Duration, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Duration), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilDuration) Or(d time.Duration) time.Duration {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Duration)
 }
 
 // NewNilFloat32 returns new NilFloat32 with value set to v.
-func NewNilFloat32(v float32) NilFloat32 {
-	return NilFloat32{
-		Value: v,
-	}
-}
+func NewNilFloat32(v float32) NilFloat32 { _ = "STUB: not implemented"; return *new(NilFloat32) }
 
 // NilFloat32 is nullable float32.
 type NilFloat32 struct {
@@ -278,43 +221,26 @@ type NilFloat32 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilFloat32) SetTo(v float32) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilFloat32) SetTo(v float32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilFloat32) IsNull() bool { return o.Null }
+func (o NilFloat32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilFloat32) SetToNull() {
-	o.Null = true
-	var v float32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilFloat32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilFloat32) Get() (v float32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilFloat32) Get() (v float32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilFloat32) Or(d float32) float32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilFloat32) Or(d float32) float32 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilFloat64 returns new NilFloat64 with value set to v.
-func NewNilFloat64(v float64) NilFloat64 {
-	return NilFloat64{
-		Value: v,
-	}
-}
+func NewNilFloat64(v float64) NilFloat64 { _ = "STUB: not implemented"; return *new(NilFloat64) }
 
 // NilFloat64 is nullable float64.
 type NilFloat64 struct {
@@ -323,43 +249,26 @@ type NilFloat64 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilFloat64) SetTo(v float64) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilFloat64) IsNull() bool { return o.Null }
+func (o NilFloat64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilFloat64) SetToNull() {
-	o.Null = true
-	var v float64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilFloat64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilFloat64) Get() (v float64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilHTTPDate returns new NilHTTPDate with value set to v.
-func NewNilHTTPDate(v time.Time) NilHTTPDate {
-	return NilHTTPDate{
-		Value: v,
-	}
-}
+func NewNilHTTPDate(v time.Time) NilHTTPDate { _ = "STUB: not implemented"; return *new(NilHTTPDate) }
 
 // NilHTTPDate is nullable time.Time.
 type NilHTTPDate struct {
@@ -368,42 +277,31 @@ type NilHTTPDate struct {
 }
 
 // SetTo sets value to v.
-func (o *NilHTTPDate) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilHTTPDate) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilHTTPDate) IsNull() bool { return o.Null }
+func (o NilHTTPDate) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilHTTPDate) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilHTTPDate) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilHTTPDate) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilHTTPDate) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilHTTPDate) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewNilHardwareAddr returns new NilHardwareAddr with value set to v.
 func NewNilHardwareAddr(v net.HardwareAddr) NilHardwareAddr {
-	return NilHardwareAddr{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilHardwareAddr)
 }
 
 // NilHardwareAddr is nullable net.HardwareAddr.
@@ -413,43 +311,32 @@ type NilHardwareAddr struct {
 }
 
 // SetTo sets value to v.
-func (o *NilHardwareAddr) SetTo(v net.HardwareAddr) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilHardwareAddr) SetTo(v net.HardwareAddr) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilHardwareAddr) IsNull() bool { return o.Null }
+func (o NilHardwareAddr) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilHardwareAddr) SetToNull() {
-	o.Null = true
-	var v net.HardwareAddr
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilHardwareAddr) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilHardwareAddr) Get() (v net.HardwareAddr, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilHardwareAddr) Or(d net.HardwareAddr) net.HardwareAddr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr)
 }
 
 // NewNilIP returns new NilIP with value set to v.
-func NewNilIP(v netip.Addr) NilIP {
-	return NilIP{
-		Value: v,
-	}
-}
+func NewNilIP(v netip.Addr) NilIP { _ = "STUB: not implemented"; return *new(NilIP) }
 
 // NilIP is nullable netip.Addr.
 type NilIP struct {
@@ -458,43 +345,29 @@ type NilIP struct {
 }
 
 // SetTo sets value to v.
-func (o *NilIP) SetTo(v netip.Addr) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilIP) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilIP) IsNull() bool { return o.Null }
+func (o NilIP) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilIP) SetToNull() {
-	o.Null = true
-	var v netip.Addr
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilIP) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilIP) Get() (v netip.Addr, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilIP) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilIP) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewNilIPv4 returns new NilIPv4 with value set to v.
-func NewNilIPv4(v netip.Addr) NilIPv4 {
-	return NilIPv4{
-		Value: v,
-	}
-}
+func NewNilIPv4(v netip.Addr) NilIPv4 { _ = "STUB: not implemented"; return *new(NilIPv4) }
 
 // NilIPv4 is nullable netip.Addr.
 type NilIPv4 struct {
@@ -503,43 +376,29 @@ type NilIPv4 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilIPv4) SetTo(v netip.Addr) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilIPv4) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilIPv4) IsNull() bool { return o.Null }
+func (o NilIPv4) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilIPv4) SetToNull() {
-	o.Null = true
-	var v netip.Addr
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilIPv4) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilIPv4) Get() (v netip.Addr, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilIPv4) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilIPv4) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewNilIPv6 returns new NilIPv6 with value set to v.
-func NewNilIPv6(v netip.Addr) NilIPv6 {
-	return NilIPv6{
-		Value: v,
-	}
-}
+func NewNilIPv6(v netip.Addr) NilIPv6 { _ = "STUB: not implemented"; return *new(NilIPv6) }
 
 // NilIPv6 is nullable netip.Addr.
 type NilIPv6 struct {
@@ -548,43 +407,29 @@ type NilIPv6 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilIPv6) SetTo(v netip.Addr) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilIPv6) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilIPv6) IsNull() bool { return o.Null }
+func (o NilIPv6) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilIPv6) SetToNull() {
-	o.Null = true
-	var v netip.Addr
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilIPv6) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilIPv6) Get() (v netip.Addr, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilIPv6) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilIPv6) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewNilInt returns new NilInt with value set to v.
-func NewNilInt(v int) NilInt {
-	return NilInt{
-		Value: v,
-	}
-}
+func NewNilInt(v int) NilInt { _ = "STUB: not implemented"; return *new(NilInt) }
 
 // NilInt is nullable int.
 type NilInt struct {
@@ -593,43 +438,26 @@ type NilInt struct {
 }
 
 // SetTo sets value to v.
-func (o *NilInt) SetTo(v int) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilInt) IsNull() bool { return o.Null }
+func (o NilInt) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilInt) SetToNull() {
-	o.Null = true
-	var v int
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilInt) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilInt) Get() (v int, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewNilInt16 returns new NilInt16 with value set to v.
-func NewNilInt16(v int16) NilInt16 {
-	return NilInt16{
-		Value: v,
-	}
-}
+func NewNilInt16(v int16) NilInt16 { _ = "STUB: not implemented"; return *new(NilInt16) }
 
 // NilInt16 is nullable int16.
 type NilInt16 struct {
@@ -638,43 +466,26 @@ type NilInt16 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilInt16) SetTo(v int16) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilInt16) SetTo(v int16) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilInt16) IsNull() bool { return o.Null }
+func (o NilInt16) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilInt16) SetToNull() {
-	o.Null = true
-	var v int16
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilInt16) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilInt16) Get() (v int16, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilInt16) Get() (v int16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilInt16) Or(d int16) int16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilInt16) Or(d int16) int16 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilInt32 returns new NilInt32 with value set to v.
-func NewNilInt32(v int32) NilInt32 {
-	return NilInt32{
-		Value: v,
-	}
-}
+func NewNilInt32(v int32) NilInt32 { _ = "STUB: not implemented"; return *new(NilInt32) }
 
 // NilInt32 is nullable int32.
 type NilInt32 struct {
@@ -683,43 +494,26 @@ type NilInt32 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilInt32) SetTo(v int32) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilInt32) IsNull() bool { return o.Null }
+func (o NilInt32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilInt32) SetToNull() {
-	o.Null = true
-	var v int32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilInt32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilInt32) Get() (v int32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilInt64 returns new NilInt64 with value set to v.
-func NewNilInt64(v int64) NilInt64 {
-	return NilInt64{
-		Value: v,
-	}
-}
+func NewNilInt64(v int64) NilInt64 { _ = "STUB: not implemented"; return *new(NilInt64) }
 
 // NilInt64 is nullable int64.
 type NilInt64 struct {
@@ -728,43 +522,26 @@ type NilInt64 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilInt64) SetTo(v int64) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilInt64) SetTo(v int64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilInt64) IsNull() bool { return o.Null }
+func (o NilInt64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilInt64) SetToNull() {
-	o.Null = true
-	var v int64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilInt64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilInt64) Get() (v int64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilInt64) Get() (v int64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilInt64) Or(d int64) int64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilInt64) Or(d int64) int64 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilInt8 returns new NilInt8 with value set to v.
-func NewNilInt8(v int8) NilInt8 {
-	return NilInt8{
-		Value: v,
-	}
-}
+func NewNilInt8(v int8) NilInt8 { _ = "STUB: not implemented"; return *new(NilInt8) }
 
 // NilInt8 is nullable int8.
 type NilInt8 struct {
@@ -773,43 +550,26 @@ type NilInt8 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilInt8) SetTo(v int8) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilInt8) SetTo(v int8) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilInt8) IsNull() bool { return o.Null }
+func (o NilInt8) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilInt8) SetToNull() {
-	o.Null = true
-	var v int8
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilInt8) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilInt8) Get() (v int8, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilInt8) Get() (v int8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilInt8) Or(d int8) int8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilInt8) Or(d int8) int8 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilString returns new NilString with value set to v.
-func NewNilString(v string) NilString {
-	return NilString{
-		Value: v,
-	}
-}
+func NewNilString(v string) NilString { _ = "STUB: not implemented"; return *new(NilString) }
 
 // NilString is nullable string.
 type NilString struct {
@@ -818,42 +578,28 @@ type NilString struct {
 }
 
 // SetTo sets value to v.
-func (o *NilString) SetTo(v string) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilString) IsNull() bool { return o.Null }
+func (o NilString) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilString) SetToNull() {
-	o.Null = true
-	var v string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilString) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilString) Get() (v string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewNilStringDecimal returns new NilStringDecimal with value set to v.
 func NewNilStringDecimal(v decimal.Decimal) NilStringDecimal {
-	return NilStringDecimal{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringDecimal)
 }
 
 // NilStringDecimal is nullable decimal.Decimal.
@@ -863,42 +609,34 @@ type NilStringDecimal struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringDecimal) SetTo(v decimal.Decimal) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringDecimal) SetTo(v decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringDecimal) IsNull() bool { return o.Null }
+func (o NilStringDecimal) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringDecimal) SetToNull() {
-	o.Null = true
-	var v decimal.Decimal
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringDecimal) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilStringDecimal) Get() (v decimal.Decimal, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilStringDecimal) Or(d decimal.Decimal) decimal.Decimal {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // NewNilStringFloat32 returns new NilStringFloat32 with value set to v.
 func NewNilStringFloat32(v float32) NilStringFloat32 {
-	return NilStringFloat32{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringFloat32)
 }
 
 // NilStringFloat32 is nullable float32.
@@ -908,42 +646,28 @@ type NilStringFloat32 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringFloat32) SetTo(v float32) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringFloat32) SetTo(v float32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringFloat32) IsNull() bool { return o.Null }
+func (o NilStringFloat32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringFloat32) SetToNull() {
-	o.Null = true
-	var v float32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringFloat32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringFloat32) Get() (v float32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringFloat32) Get() (v float32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringFloat32) Or(d float32) float32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringFloat32) Or(d float32) float32 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringFloat64 returns new NilStringFloat64 with value set to v.
 func NewNilStringFloat64(v float64) NilStringFloat64 {
-	return NilStringFloat64{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringFloat64)
 }
 
 // NilStringFloat64 is nullable float64.
@@ -953,43 +677,26 @@ type NilStringFloat64 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringFloat64) SetTo(v float64) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringFloat64) IsNull() bool { return o.Null }
+func (o NilStringFloat64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringFloat64) SetToNull() {
-	o.Null = true
-	var v float64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringFloat64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringFloat64) Get() (v float64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringInt returns new NilStringInt with value set to v.
-func NewNilStringInt(v int) NilStringInt {
-	return NilStringInt{
-		Value: v,
-	}
-}
+func NewNilStringInt(v int) NilStringInt { _ = "STUB: not implemented"; return *new(NilStringInt) }
 
 // NilStringInt is nullable int.
 type NilStringInt struct {
@@ -998,42 +705,28 @@ type NilStringInt struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringInt) SetTo(v int) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringInt) IsNull() bool { return o.Null }
+func (o NilStringInt) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringInt) SetToNull() {
-	o.Null = true
-	var v int
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringInt) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringInt) Get() (v int, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringInt16 returns new NilStringInt16 with value set to v.
 func NewNilStringInt16(v int16) NilStringInt16 {
-	return NilStringInt16{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringInt16)
 }
 
 // NilStringInt16 is nullable int16.
@@ -1043,42 +736,28 @@ type NilStringInt16 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringInt16) SetTo(v int16) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringInt16) SetTo(v int16) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringInt16) IsNull() bool { return o.Null }
+func (o NilStringInt16) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringInt16) SetToNull() {
-	o.Null = true
-	var v int16
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringInt16) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringInt16) Get() (v int16, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringInt16) Get() (v int16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringInt16) Or(d int16) int16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringInt16) Or(d int16) int16 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringInt32 returns new NilStringInt32 with value set to v.
 func NewNilStringInt32(v int32) NilStringInt32 {
-	return NilStringInt32{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringInt32)
 }
 
 // NilStringInt32 is nullable int32.
@@ -1088,42 +767,28 @@ type NilStringInt32 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringInt32) SetTo(v int32) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringInt32) IsNull() bool { return o.Null }
+func (o NilStringInt32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringInt32) SetToNull() {
-	o.Null = true
-	var v int32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringInt32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringInt32) Get() (v int32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringInt64 returns new NilStringInt64 with value set to v.
 func NewNilStringInt64(v int64) NilStringInt64 {
-	return NilStringInt64{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringInt64)
 }
 
 // NilStringInt64 is nullable int64.
@@ -1133,43 +798,26 @@ type NilStringInt64 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringInt64) SetTo(v int64) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringInt64) SetTo(v int64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringInt64) IsNull() bool { return o.Null }
+func (o NilStringInt64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringInt64) SetToNull() {
-	o.Null = true
-	var v int64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringInt64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringInt64) Get() (v int64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringInt64) Get() (v int64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringInt64) Or(d int64) int64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringInt64) Or(d int64) int64 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringInt8 returns new NilStringInt8 with value set to v.
-func NewNilStringInt8(v int8) NilStringInt8 {
-	return NilStringInt8{
-		Value: v,
-	}
-}
+func NewNilStringInt8(v int8) NilStringInt8 { _ = "STUB: not implemented"; return *new(NilStringInt8) }
 
 // NilStringInt8 is nullable int8.
 type NilStringInt8 struct {
@@ -1178,43 +826,26 @@ type NilStringInt8 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringInt8) SetTo(v int8) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringInt8) SetTo(v int8) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringInt8) IsNull() bool { return o.Null }
+func (o NilStringInt8) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringInt8) SetToNull() {
-	o.Null = true
-	var v int8
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringInt8) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringInt8) Get() (v int8, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringInt8) Get() (v int8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringInt8) Or(d int8) int8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringInt8) Or(d int8) int8 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringUint returns new NilStringUint with value set to v.
-func NewNilStringUint(v uint) NilStringUint {
-	return NilStringUint{
-		Value: v,
-	}
-}
+func NewNilStringUint(v uint) NilStringUint { _ = "STUB: not implemented"; return *new(NilStringUint) }
 
 // NilStringUint is nullable uint.
 type NilStringUint struct {
@@ -1223,42 +854,28 @@ type NilStringUint struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringUint) SetTo(v uint) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringUint) SetTo(v uint) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringUint) IsNull() bool { return o.Null }
+func (o NilStringUint) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringUint) SetToNull() {
-	o.Null = true
-	var v uint
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringUint) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringUint) Get() (v uint, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringUint) Get() (v uint, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringUint) Or(d uint) uint {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringUint) Or(d uint) uint { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringUint16 returns new NilStringUint16 with value set to v.
 func NewNilStringUint16(v uint16) NilStringUint16 {
-	return NilStringUint16{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringUint16)
 }
 
 // NilStringUint16 is nullable uint16.
@@ -1268,42 +885,28 @@ type NilStringUint16 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringUint16) SetTo(v uint16) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringUint16) SetTo(v uint16) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringUint16) IsNull() bool { return o.Null }
+func (o NilStringUint16) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringUint16) SetToNull() {
-	o.Null = true
-	var v uint16
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringUint16) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringUint16) Get() (v uint16, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringUint16) Get() (v uint16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringUint16) Or(d uint16) uint16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringUint16) Or(d uint16) uint16 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringUint32 returns new NilStringUint32 with value set to v.
 func NewNilStringUint32(v uint32) NilStringUint32 {
-	return NilStringUint32{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringUint32)
 }
 
 // NilStringUint32 is nullable uint32.
@@ -1313,42 +916,28 @@ type NilStringUint32 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringUint32) SetTo(v uint32) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringUint32) SetTo(v uint32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringUint32) IsNull() bool { return o.Null }
+func (o NilStringUint32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringUint32) SetToNull() {
-	o.Null = true
-	var v uint32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringUint32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringUint32) Get() (v uint32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringUint32) Get() (v uint32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringUint32) Or(d uint32) uint32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringUint32) Or(d uint32) uint32 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringUint64 returns new NilStringUint64 with value set to v.
 func NewNilStringUint64(v uint64) NilStringUint64 {
-	return NilStringUint64{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringUint64)
 }
 
 // NilStringUint64 is nullable uint64.
@@ -1358,42 +947,28 @@ type NilStringUint64 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringUint64) SetTo(v uint64) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringUint64) SetTo(v uint64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringUint64) IsNull() bool { return o.Null }
+func (o NilStringUint64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringUint64) SetToNull() {
-	o.Null = true
-	var v uint64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringUint64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringUint64) Get() (v uint64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringUint64) Get() (v uint64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringUint64) Or(d uint64) uint64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringUint64) Or(d uint64) uint64 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringUint8 returns new NilStringUint8 with value set to v.
 func NewNilStringUint8(v uint8) NilStringUint8 {
-	return NilStringUint8{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringUint8)
 }
 
 // NilStringUint8 is nullable uint8.
@@ -1403,42 +978,28 @@ type NilStringUint8 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringUint8) SetTo(v uint8) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringUint8) SetTo(v uint8) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringUint8) IsNull() bool { return o.Null }
+func (o NilStringUint8) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringUint8) SetToNull() {
-	o.Null = true
-	var v uint8
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringUint8) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilStringUint8) Get() (v uint8, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilStringUint8) Get() (v uint8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilStringUint8) Or(d uint8) uint8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilStringUint8) Or(d uint8) uint8 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilStringUnixMicro returns new NilStringUnixMicro with value set to v.
 func NewNilStringUnixMicro(v time.Time) NilStringUnixMicro {
-	return NilStringUnixMicro{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringUnixMicro)
 }
 
 // NilStringUnixMicro is nullable time.Time.
@@ -1448,42 +1009,34 @@ type NilStringUnixMicro struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringUnixMicro) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringUnixMicro) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringUnixMicro) IsNull() bool { return o.Null }
+func (o NilStringUnixMicro) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringUnixMicro) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringUnixMicro) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilStringUnixMicro) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilStringUnixMicro) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewNilStringUnixMilli returns new NilStringUnixMilli with value set to v.
 func NewNilStringUnixMilli(v time.Time) NilStringUnixMilli {
-	return NilStringUnixMilli{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringUnixMilli)
 }
 
 // NilStringUnixMilli is nullable time.Time.
@@ -1493,42 +1046,34 @@ type NilStringUnixMilli struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringUnixMilli) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringUnixMilli) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringUnixMilli) IsNull() bool { return o.Null }
+func (o NilStringUnixMilli) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringUnixMilli) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringUnixMilli) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilStringUnixMilli) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilStringUnixMilli) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewNilStringUnixNano returns new NilStringUnixNano with value set to v.
 func NewNilStringUnixNano(v time.Time) NilStringUnixNano {
-	return NilStringUnixNano{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringUnixNano)
 }
 
 // NilStringUnixNano is nullable time.Time.
@@ -1538,42 +1083,34 @@ type NilStringUnixNano struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringUnixNano) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringUnixNano) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringUnixNano) IsNull() bool { return o.Null }
+func (o NilStringUnixNano) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringUnixNano) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringUnixNano) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilStringUnixNano) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilStringUnixNano) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewNilStringUnixSeconds returns new NilStringUnixSeconds with value set to v.
 func NewNilStringUnixSeconds(v time.Time) NilStringUnixSeconds {
-	return NilStringUnixSeconds{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilStringUnixSeconds)
 }
 
 // NilStringUnixSeconds is nullable time.Time.
@@ -1583,43 +1120,32 @@ type NilStringUnixSeconds struct {
 }
 
 // SetTo sets value to v.
-func (o *NilStringUnixSeconds) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilStringUnixSeconds) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilStringUnixSeconds) IsNull() bool { return o.Null }
+func (o NilStringUnixSeconds) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilStringUnixSeconds) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilStringUnixSeconds) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilStringUnixSeconds) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilStringUnixSeconds) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewNilTime returns new NilTime with value set to v.
-func NewNilTime(v time.Time) NilTime {
-	return NilTime{
-		Value: v,
-	}
-}
+func NewNilTime(v time.Time) NilTime { _ = "STUB: not implemented"; return *new(NilTime) }
 
 // NilTime is nullable time.Time.
 type NilTime struct {
@@ -1628,43 +1154,29 @@ type NilTime struct {
 }
 
 // SetTo sets value to v.
-func (o *NilTime) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilTime) IsNull() bool { return o.Null }
+func (o NilTime) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilTime) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilTime) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilTime) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewNilURI returns new NilURI with value set to v.
-func NewNilURI(v url.URL) NilURI {
-	return NilURI{
-		Value: v,
-	}
-}
+func NewNilURI(v url.URL) NilURI { _ = "STUB: not implemented"; return *new(NilURI) }
 
 // NilURI is nullable url.URL.
 type NilURI struct {
@@ -1673,43 +1185,26 @@ type NilURI struct {
 }
 
 // SetTo sets value to v.
-func (o *NilURI) SetTo(v url.URL) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilURI) SetTo(v url.URL) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilURI) IsNull() bool { return o.Null }
+func (o NilURI) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilURI) SetToNull() {
-	o.Null = true
-	var v url.URL
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilURI) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilURI) Get() (v url.URL, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilURI) Get() (v url.URL, ok bool) { _ = "STUB: not implemented"; return *new(url.URL), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilURI) Or(d url.URL) url.URL {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilURI) Or(d url.URL) url.URL { _ = "STUB: not implemented"; return *new(url.URL) }
 
 // NewNilUUID returns new NilUUID with value set to v.
-func NewNilUUID(v uuid.UUID) NilUUID {
-	return NilUUID{
-		Value: v,
-	}
-}
+func NewNilUUID(v uuid.UUID) NilUUID { _ = "STUB: not implemented"; return *new(NilUUID) }
 
 // NilUUID is nullable uuid.UUID.
 type NilUUID struct {
@@ -1718,43 +1213,29 @@ type NilUUID struct {
 }
 
 // SetTo sets value to v.
-func (o *NilUUID) SetTo(v uuid.UUID) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilUUID) SetTo(v uuid.UUID) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilUUID) IsNull() bool { return o.Null }
+func (o NilUUID) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilUUID) SetToNull() {
-	o.Null = true
-	var v uuid.UUID
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilUUID) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilUUID) Get() (v uuid.UUID, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(uuid.UUID), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilUUID) Or(d uuid.UUID) uuid.UUID {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilUUID) Or(d uuid.UUID) uuid.UUID { _ = "STUB: not implemented"; return *new(uuid.UUID) }
 
 // NewNilUint returns new NilUint with value set to v.
-func NewNilUint(v uint) NilUint {
-	return NilUint{
-		Value: v,
-	}
-}
+func NewNilUint(v uint) NilUint { _ = "STUB: not implemented"; return *new(NilUint) }
 
 // NilUint is nullable uint.
 type NilUint struct {
@@ -1763,43 +1244,26 @@ type NilUint struct {
 }
 
 // SetTo sets value to v.
-func (o *NilUint) SetTo(v uint) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilUint) SetTo(v uint) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilUint) IsNull() bool { return o.Null }
+func (o NilUint) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilUint) SetToNull() {
-	o.Null = true
-	var v uint
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilUint) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilUint) Get() (v uint, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilUint) Get() (v uint, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilUint) Or(d uint) uint {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilUint) Or(d uint) uint { _ = "STUB: not implemented"; return 0 }
 
 // NewNilUint16 returns new NilUint16 with value set to v.
-func NewNilUint16(v uint16) NilUint16 {
-	return NilUint16{
-		Value: v,
-	}
-}
+func NewNilUint16(v uint16) NilUint16 { _ = "STUB: not implemented"; return *new(NilUint16) }
 
 // NilUint16 is nullable uint16.
 type NilUint16 struct {
@@ -1808,43 +1272,26 @@ type NilUint16 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilUint16) SetTo(v uint16) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilUint16) SetTo(v uint16) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilUint16) IsNull() bool { return o.Null }
+func (o NilUint16) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilUint16) SetToNull() {
-	o.Null = true
-	var v uint16
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilUint16) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilUint16) Get() (v uint16, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilUint16) Get() (v uint16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilUint16) Or(d uint16) uint16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilUint16) Or(d uint16) uint16 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilUint32 returns new NilUint32 with value set to v.
-func NewNilUint32(v uint32) NilUint32 {
-	return NilUint32{
-		Value: v,
-	}
-}
+func NewNilUint32(v uint32) NilUint32 { _ = "STUB: not implemented"; return *new(NilUint32) }
 
 // NilUint32 is nullable uint32.
 type NilUint32 struct {
@@ -1853,43 +1300,26 @@ type NilUint32 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilUint32) SetTo(v uint32) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilUint32) SetTo(v uint32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilUint32) IsNull() bool { return o.Null }
+func (o NilUint32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilUint32) SetToNull() {
-	o.Null = true
-	var v uint32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilUint32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilUint32) Get() (v uint32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilUint32) Get() (v uint32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilUint32) Or(d uint32) uint32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilUint32) Or(d uint32) uint32 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilUint64 returns new NilUint64 with value set to v.
-func NewNilUint64(v uint64) NilUint64 {
-	return NilUint64{
-		Value: v,
-	}
-}
+func NewNilUint64(v uint64) NilUint64 { _ = "STUB: not implemented"; return *new(NilUint64) }
 
 // NilUint64 is nullable uint64.
 type NilUint64 struct {
@@ -1898,43 +1328,26 @@ type NilUint64 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilUint64) SetTo(v uint64) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilUint64) SetTo(v uint64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilUint64) IsNull() bool { return o.Null }
+func (o NilUint64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilUint64) SetToNull() {
-	o.Null = true
-	var v uint64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilUint64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilUint64) Get() (v uint64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilUint64) Get() (v uint64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilUint64) Or(d uint64) uint64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilUint64) Or(d uint64) uint64 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilUint8 returns new NilUint8 with value set to v.
-func NewNilUint8(v uint8) NilUint8 {
-	return NilUint8{
-		Value: v,
-	}
-}
+func NewNilUint8(v uint8) NilUint8 { _ = "STUB: not implemented"; return *new(NilUint8) }
 
 // NilUint8 is nullable uint8.
 type NilUint8 struct {
@@ -1943,42 +1356,28 @@ type NilUint8 struct {
 }
 
 // SetTo sets value to v.
-func (o *NilUint8) SetTo(v uint8) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilUint8) SetTo(v uint8) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilUint8) IsNull() bool { return o.Null }
+func (o NilUint8) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilUint8) SetToNull() {
-	o.Null = true
-	var v uint8
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilUint8) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilUint8) Get() (v uint8, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilUint8) Get() (v uint8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilUint8) Or(d uint8) uint8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilUint8) Or(d uint8) uint8 { _ = "STUB: not implemented"; return 0 }
 
 // NewNilUnixMicro returns new NilUnixMicro with value set to v.
 func NewNilUnixMicro(v time.Time) NilUnixMicro {
-	return NilUnixMicro{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilUnixMicro)
 }
 
 // NilUnixMicro is nullable time.Time.
@@ -1988,42 +1387,31 @@ type NilUnixMicro struct {
 }
 
 // SetTo sets value to v.
-func (o *NilUnixMicro) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilUnixMicro) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilUnixMicro) IsNull() bool { return o.Null }
+func (o NilUnixMicro) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilUnixMicro) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilUnixMicro) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilUnixMicro) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilUnixMicro) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilUnixMicro) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewNilUnixMilli returns new NilUnixMilli with value set to v.
 func NewNilUnixMilli(v time.Time) NilUnixMilli {
-	return NilUnixMilli{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilUnixMilli)
 }
 
 // NilUnixMilli is nullable time.Time.
@@ -2033,43 +1421,29 @@ type NilUnixMilli struct {
 }
 
 // SetTo sets value to v.
-func (o *NilUnixMilli) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilUnixMilli) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilUnixMilli) IsNull() bool { return o.Null }
+func (o NilUnixMilli) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilUnixMilli) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilUnixMilli) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilUnixMilli) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilUnixMilli) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilUnixMilli) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewNilUnixNano returns new NilUnixNano with value set to v.
-func NewNilUnixNano(v time.Time) NilUnixNano {
-	return NilUnixNano{
-		Value: v,
-	}
-}
+func NewNilUnixNano(v time.Time) NilUnixNano { _ = "STUB: not implemented"; return *new(NilUnixNano) }
 
 // NilUnixNano is nullable time.Time.
 type NilUnixNano struct {
@@ -2078,42 +1452,31 @@ type NilUnixNano struct {
 }
 
 // SetTo sets value to v.
-func (o *NilUnixNano) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilUnixNano) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilUnixNano) IsNull() bool { return o.Null }
+func (o NilUnixNano) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilUnixNano) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilUnixNano) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilUnixNano) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilUnixNano) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilUnixNano) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewNilUnixSeconds returns new NilUnixSeconds with value set to v.
 func NewNilUnixSeconds(v time.Time) NilUnixSeconds {
-	return NilUnixSeconds{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilUnixSeconds)
 }
 
 // NilUnixSeconds is nullable time.Time.
@@ -2123,44 +1486,32 @@ type NilUnixSeconds struct {
 }
 
 // SetTo sets value to v.
-func (o *NilUnixSeconds) SetTo(v time.Time) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilUnixSeconds) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilUnixSeconds) IsNull() bool { return o.Null }
+func (o NilUnixSeconds) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilUnixSeconds) SetToNull() {
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilUnixSeconds) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilUnixSeconds) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilUnixSeconds) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -2169,44 +1520,26 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptDate returns new OptDate with value set to v.
-func NewOptDate(v time.Time) OptDate {
-	return OptDate{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptDate(v time.Time) OptDate { _ = "STUB: not implemented"; return *new(OptDate) }
 
 // OptDate is optional time.Time.
 type OptDate struct {
@@ -2215,44 +1548,29 @@ type OptDate struct {
 }
 
 // IsSet returns true if OptDate was set.
-func (o OptDate) IsSet() bool { return o.Set }
+func (o OptDate) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDate) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDate) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDate) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDate) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDate) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDate) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDate) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptDateTime returns new OptDateTime with value set to v.
-func NewOptDateTime(v time.Time) OptDateTime {
-	return OptDateTime{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptDateTime(v time.Time) OptDateTime { _ = "STUB: not implemented"; return *new(OptDateTime) }
 
 // OptDateTime is optional time.Time.
 type OptDateTime struct {
@@ -2261,43 +1579,31 @@ type OptDateTime struct {
 }
 
 // IsSet returns true if OptDateTime was set.
-func (o OptDateTime) IsSet() bool { return o.Set }
+func (o OptDateTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDateTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDateTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDateTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDateTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDateTime) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDateTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDateTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptDecimal returns new OptDecimal with value set to v.
 func NewOptDecimal(v decimal.Decimal) OptDecimal {
-	return OptDecimal{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptDecimal)
 }
 
 // OptDecimal is optional decimal.Decimal.
@@ -2307,43 +1613,34 @@ type OptDecimal struct {
 }
 
 // IsSet returns true if OptDecimal was set.
-func (o OptDecimal) IsSet() bool { return o.Set }
+func (o OptDecimal) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDecimal) Reset() {
-	var v decimal.Decimal
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDecimal) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDecimal) SetTo(v decimal.Decimal) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDecimal) SetTo(v decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDecimal) Get() (v decimal.Decimal, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptDecimal) Or(d decimal.Decimal) decimal.Decimal {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // NewOptDuration returns new OptDuration with value set to v.
 func NewOptDuration(v time.Duration) OptDuration {
-	return OptDuration{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptDuration)
 }
 
 // OptDuration is optional time.Duration.
@@ -2353,44 +1650,32 @@ type OptDuration struct {
 }
 
 // IsSet returns true if OptDuration was set.
-func (o OptDuration) IsSet() bool { return o.Set }
+func (o OptDuration) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDuration) Reset() {
-	var v time.Duration
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDuration) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDuration) SetTo(v time.Duration) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDuration) SetTo(v time.Duration) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDuration) Get() (v time.Duration, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Duration), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptDuration) Or(d time.Duration) time.Duration {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Duration)
 }
 
 // NewOptFloat32 returns new OptFloat32 with value set to v.
-func NewOptFloat32(v float32) OptFloat32 {
-	return OptFloat32{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptFloat32(v float32) OptFloat32 { _ = "STUB: not implemented"; return *new(OptFloat32) }
 
 // OptFloat32 is optional float32.
 type OptFloat32 struct {
@@ -2399,44 +1684,26 @@ type OptFloat32 struct {
 }
 
 // IsSet returns true if OptFloat32 was set.
-func (o OptFloat32) IsSet() bool { return o.Set }
+func (o OptFloat32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFloat32) Reset() {
-	var v float32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFloat32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFloat32) SetTo(v float32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFloat32) SetTo(v float32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptFloat32) Get() (v float32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptFloat32) Get() (v float32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptFloat32) Or(d float32) float32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptFloat32) Or(d float32) float32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptFloat64 returns new OptFloat64 with value set to v.
-func NewOptFloat64(v float64) OptFloat64 {
-	return OptFloat64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptFloat64(v float64) OptFloat64 { _ = "STUB: not implemented"; return *new(OptFloat64) }
 
 // OptFloat64 is optional float64.
 type OptFloat64 struct {
@@ -2445,44 +1712,26 @@ type OptFloat64 struct {
 }
 
 // IsSet returns true if OptFloat64 was set.
-func (o OptFloat64) IsSet() bool { return o.Set }
+func (o OptFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptFloat64) Get() (v float64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptHTTPDate returns new OptHTTPDate with value set to v.
-func NewOptHTTPDate(v time.Time) OptHTTPDate {
-	return OptHTTPDate{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptHTTPDate(v time.Time) OptHTTPDate { _ = "STUB: not implemented"; return *new(OptHTTPDate) }
 
 // OptHTTPDate is optional time.Time.
 type OptHTTPDate struct {
@@ -2491,43 +1740,31 @@ type OptHTTPDate struct {
 }
 
 // IsSet returns true if OptHTTPDate was set.
-func (o OptHTTPDate) IsSet() bool { return o.Set }
+func (o OptHTTPDate) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptHTTPDate) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptHTTPDate) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptHTTPDate) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptHTTPDate) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptHTTPDate) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptHTTPDate) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptHTTPDate) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptHardwareAddr returns new OptHardwareAddr with value set to v.
 func NewOptHardwareAddr(v net.HardwareAddr) OptHardwareAddr {
-	return OptHardwareAddr{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptHardwareAddr)
 }
 
 // OptHardwareAddr is optional net.HardwareAddr.
@@ -2537,44 +1774,32 @@ type OptHardwareAddr struct {
 }
 
 // IsSet returns true if OptHardwareAddr was set.
-func (o OptHardwareAddr) IsSet() bool { return o.Set }
+func (o OptHardwareAddr) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptHardwareAddr) Reset() {
-	var v net.HardwareAddr
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptHardwareAddr) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptHardwareAddr) SetTo(v net.HardwareAddr) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptHardwareAddr) SetTo(v net.HardwareAddr) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptHardwareAddr) Get() (v net.HardwareAddr, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptHardwareAddr) Or(d net.HardwareAddr) net.HardwareAddr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr)
 }
 
 // NewOptIP returns new OptIP with value set to v.
-func NewOptIP(v netip.Addr) OptIP {
-	return OptIP{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptIP(v netip.Addr) OptIP { _ = "STUB: not implemented"; return *new(OptIP) }
 
 // OptIP is optional netip.Addr.
 type OptIP struct {
@@ -2583,44 +1808,29 @@ type OptIP struct {
 }
 
 // IsSet returns true if OptIP was set.
-func (o OptIP) IsSet() bool { return o.Set }
+func (o OptIP) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIP) Reset() {
-	var v netip.Addr
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIP) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptIP) SetTo(v netip.Addr) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptIP) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIP) Get() (v netip.Addr, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptIP) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptIP) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewOptIPv4 returns new OptIPv4 with value set to v.
-func NewOptIPv4(v netip.Addr) OptIPv4 {
-	return OptIPv4{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptIPv4(v netip.Addr) OptIPv4 { _ = "STUB: not implemented"; return *new(OptIPv4) }
 
 // OptIPv4 is optional netip.Addr.
 type OptIPv4 struct {
@@ -2629,44 +1839,29 @@ type OptIPv4 struct {
 }
 
 // IsSet returns true if OptIPv4 was set.
-func (o OptIPv4) IsSet() bool { return o.Set }
+func (o OptIPv4) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIPv4) Reset() {
-	var v netip.Addr
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIPv4) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptIPv4) SetTo(v netip.Addr) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptIPv4) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIPv4) Get() (v netip.Addr, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptIPv4) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptIPv4) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewOptIPv6 returns new OptIPv6 with value set to v.
-func NewOptIPv6(v netip.Addr) OptIPv6 {
-	return OptIPv6{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptIPv6(v netip.Addr) OptIPv6 { _ = "STUB: not implemented"; return *new(OptIPv6) }
 
 // OptIPv6 is optional netip.Addr.
 type OptIPv6 struct {
@@ -2675,44 +1870,29 @@ type OptIPv6 struct {
 }
 
 // IsSet returns true if OptIPv6 was set.
-func (o OptIPv6) IsSet() bool { return o.Set }
+func (o OptIPv6) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIPv6) Reset() {
-	var v netip.Addr
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIPv6) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptIPv6) SetTo(v netip.Addr) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptIPv6) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIPv6) Get() (v netip.Addr, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptIPv6) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptIPv6) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -2721,44 +1901,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt16 returns new OptInt16 with value set to v.
-func NewOptInt16(v int16) OptInt16 {
-	return OptInt16{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt16(v int16) OptInt16 { _ = "STUB: not implemented"; return *new(OptInt16) }
 
 // OptInt16 is optional int16.
 type OptInt16 struct {
@@ -2767,44 +1929,26 @@ type OptInt16 struct {
 }
 
 // IsSet returns true if OptInt16 was set.
-func (o OptInt16) IsSet() bool { return o.Set }
+func (o OptInt16) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt16) Reset() {
-	var v int16
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt16) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt16) SetTo(v int16) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt16) SetTo(v int16) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt16) Get() (v int16, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt16) Get() (v int16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt16) Or(d int16) int16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt16) Or(d int16) int16 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt32 returns new OptInt32 with value set to v.
-func NewOptInt32(v int32) OptInt32 {
-	return OptInt32{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt32(v int32) OptInt32 { _ = "STUB: not implemented"; return *new(OptInt32) }
 
 // OptInt32 is optional int32.
 type OptInt32 struct {
@@ -2813,44 +1957,26 @@ type OptInt32 struct {
 }
 
 // IsSet returns true if OptInt32 was set.
-func (o OptInt32) IsSet() bool { return o.Set }
+func (o OptInt32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt32) Reset() {
-	var v int32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt32) SetTo(v int32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt32) Get() (v int32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt64 returns new OptInt64 with value set to v.
-func NewOptInt64(v int64) OptInt64 {
-	return OptInt64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt64(v int64) OptInt64 { _ = "STUB: not implemented"; return *new(OptInt64) }
 
 // OptInt64 is optional int64.
 type OptInt64 struct {
@@ -2859,44 +1985,26 @@ type OptInt64 struct {
 }
 
 // IsSet returns true if OptInt64 was set.
-func (o OptInt64) IsSet() bool { return o.Set }
+func (o OptInt64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt64) Reset() {
-	var v int64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt64) SetTo(v int64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt64) SetTo(v int64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt64) Get() (v int64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt64) Get() (v int64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt64) Or(d int64) int64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt64) Or(d int64) int64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt8 returns new OptInt8 with value set to v.
-func NewOptInt8(v int8) OptInt8 {
-	return OptInt8{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt8(v int8) OptInt8 { _ = "STUB: not implemented"; return *new(OptInt8) }
 
 // OptInt8 is optional int8.
 type OptInt8 struct {
@@ -2905,44 +2013,26 @@ type OptInt8 struct {
 }
 
 // IsSet returns true if OptInt8 was set.
-func (o OptInt8) IsSet() bool { return o.Set }
+func (o OptInt8) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt8) Reset() {
-	var v int8
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt8) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt8) SetTo(v int8) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt8) SetTo(v int8) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt8) Get() (v int8, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt8) Get() (v int8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt8) Or(d int8) int8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt8) Or(d int8) int8 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilBool returns new OptNilBool with value set to v.
-func NewOptNilBool(v bool) OptNilBool {
-	return OptNilBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilBool(v bool) OptNilBool { _ = "STUB: not implemented"; return *new(OptNilBool) }
 
 // OptNilBool is optional nullable bool.
 type OptNilBool struct {
@@ -2952,65 +2042,39 @@ type OptNilBool struct {
 }
 
 // IsSet returns true if OptNilBool was set.
-func (o OptNilBool) IsSet() bool { return o.Set }
+func (o OptNilBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilBool) SetTo(v bool) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilBool) IsNull() bool { return o.Null }
+func (o OptNilBool) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilBool) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v bool
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilBool) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilBool) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilBool) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilBool) Get() (v bool, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptNilByte returns new OptNilByte with value set to v.
-func NewOptNilByte(v []byte) OptNilByte {
-	return OptNilByte{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilByte(v []byte) OptNilByte { _ = "STUB: not implemented"; return *new(OptNilByte) }
 
 // OptNilByte is optional nullable []byte.
 type OptNilByte struct {
@@ -3020,65 +2084,39 @@ type OptNilByte struct {
 }
 
 // IsSet returns true if OptNilByte was set.
-func (o OptNilByte) IsSet() bool { return o.Set }
+func (o OptNilByte) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilByte) Reset() {
-	var v []byte
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilByte) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilByte) SetTo(v []byte) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilByte) SetTo(v []byte) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilByte) IsNull() bool { return o.Null }
+func (o OptNilByte) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilByte) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v []byte
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilByte) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilByte) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilByte) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilByte) Get() (v []byte, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilByte) Get() (v []byte, ok bool) { _ = "STUB: not implemented"; return nil, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilByte) Or(d []byte) []byte {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilByte) Or(d []byte) []byte { _ = "STUB: not implemented"; return nil }
 
 // NewOptNilDate returns new OptNilDate with value set to v.
-func NewOptNilDate(v time.Time) OptNilDate {
-	return OptNilDate{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilDate(v time.Time) OptNilDate { _ = "STUB: not implemented"; return *new(OptNilDate) }
 
 // OptNilDate is optional nullable time.Time.
 type OptNilDate struct {
@@ -3088,64 +2126,44 @@ type OptNilDate struct {
 }
 
 // IsSet returns true if OptNilDate was set.
-func (o OptNilDate) IsSet() bool { return o.Set }
+func (o OptNilDate) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilDate) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilDate) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilDate) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilDate) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilDate) IsNull() bool { return o.Null }
+func (o OptNilDate) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilDate) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilDate) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilDate) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilDate) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilDate) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilDate) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilDate) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptNilDateTime returns new OptNilDateTime with value set to v.
 func NewOptNilDateTime(v time.Time) OptNilDateTime {
-	return OptNilDateTime{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilDateTime)
 }
 
 // OptNilDateTime is optional nullable time.Time.
@@ -3156,64 +2174,47 @@ type OptNilDateTime struct {
 }
 
 // IsSet returns true if OptNilDateTime was set.
-func (o OptNilDateTime) IsSet() bool { return o.Set }
+func (o OptNilDateTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilDateTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilDateTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilDateTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilDateTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilDateTime) IsNull() bool { return o.Null }
+func (o OptNilDateTime) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilDateTime) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilDateTime) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilDateTime) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilDateTime) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilDateTime) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilDateTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptNilDecimal returns new OptNilDecimal with value set to v.
 func NewOptNilDecimal(v decimal.Decimal) OptNilDecimal {
-	return OptNilDecimal{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilDecimal)
 }
 
 // OptNilDecimal is optional nullable decimal.Decimal.
@@ -3224,64 +2225,47 @@ type OptNilDecimal struct {
 }
 
 // IsSet returns true if OptNilDecimal was set.
-func (o OptNilDecimal) IsSet() bool { return o.Set }
+func (o OptNilDecimal) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilDecimal) Reset() {
-	var v decimal.Decimal
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilDecimal) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilDecimal) SetTo(v decimal.Decimal) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilDecimal) SetTo(v decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilDecimal) IsNull() bool { return o.Null }
+func (o OptNilDecimal) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilDecimal) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v decimal.Decimal
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilDecimal) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilDecimal) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilDecimal) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilDecimal) Get() (v decimal.Decimal, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilDecimal) Or(d decimal.Decimal) decimal.Decimal {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // NewOptNilDuration returns new OptNilDuration with value set to v.
 func NewOptNilDuration(v time.Duration) OptNilDuration {
-	return OptNilDuration{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilDuration)
 }
 
 // OptNilDuration is optional nullable time.Duration.
@@ -3292,64 +2276,47 @@ type OptNilDuration struct {
 }
 
 // IsSet returns true if OptNilDuration was set.
-func (o OptNilDuration) IsSet() bool { return o.Set }
+func (o OptNilDuration) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilDuration) Reset() {
-	var v time.Duration
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilDuration) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilDuration) SetTo(v time.Duration) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilDuration) SetTo(v time.Duration) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilDuration) IsNull() bool { return o.Null }
+func (o OptNilDuration) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilDuration) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Duration
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilDuration) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilDuration) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilDuration) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilDuration) Get() (v time.Duration, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Duration), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilDuration) Or(d time.Duration) time.Duration {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Duration)
 }
 
 // NewOptNilFloat32 returns new OptNilFloat32 with value set to v.
 func NewOptNilFloat32(v float32) OptNilFloat32 {
-	return OptNilFloat32{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilFloat32)
 }
 
 // OptNilFloat32 is optional nullable float32.
@@ -3360,64 +2327,41 @@ type OptNilFloat32 struct {
 }
 
 // IsSet returns true if OptNilFloat32 was set.
-func (o OptNilFloat32) IsSet() bool { return o.Set }
+func (o OptNilFloat32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilFloat32) Reset() {
-	var v float32
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilFloat32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilFloat32) SetTo(v float32) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilFloat32) SetTo(v float32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilFloat32) IsNull() bool { return o.Null }
+func (o OptNilFloat32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilFloat32) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v float32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilFloat32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilFloat32) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilFloat32) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilFloat32) Get() (v float32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilFloat32) Get() (v float32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilFloat32) Or(d float32) float32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilFloat32) Or(d float32) float32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilFloat64 returns new OptNilFloat64 with value set to v.
 func NewOptNilFloat64(v float64) OptNilFloat64 {
-	return OptNilFloat64{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilFloat64)
 }
 
 // OptNilFloat64 is optional nullable float64.
@@ -3428,64 +2372,41 @@ type OptNilFloat64 struct {
 }
 
 // IsSet returns true if OptNilFloat64 was set.
-func (o OptNilFloat64) IsSet() bool { return o.Set }
+func (o OptNilFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilFloat64) IsNull() bool { return o.Null }
+func (o OptNilFloat64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilFloat64) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v float64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilFloat64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilFloat64) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilFloat64) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilFloat64) Get() (v float64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilHTTPDate returns new OptNilHTTPDate with value set to v.
 func NewOptNilHTTPDate(v time.Time) OptNilHTTPDate {
-	return OptNilHTTPDate{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilHTTPDate)
 }
 
 // OptNilHTTPDate is optional nullable time.Time.
@@ -3496,64 +2417,47 @@ type OptNilHTTPDate struct {
 }
 
 // IsSet returns true if OptNilHTTPDate was set.
-func (o OptNilHTTPDate) IsSet() bool { return o.Set }
+func (o OptNilHTTPDate) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilHTTPDate) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilHTTPDate) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilHTTPDate) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilHTTPDate) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilHTTPDate) IsNull() bool { return o.Null }
+func (o OptNilHTTPDate) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilHTTPDate) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilHTTPDate) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilHTTPDate) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilHTTPDate) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilHTTPDate) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilHTTPDate) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptNilHardwareAddr returns new OptNilHardwareAddr with value set to v.
 func NewOptNilHardwareAddr(v net.HardwareAddr) OptNilHardwareAddr {
-	return OptNilHardwareAddr{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilHardwareAddr)
 }
 
 // OptNilHardwareAddr is optional nullable net.HardwareAddr.
@@ -3564,65 +2468,45 @@ type OptNilHardwareAddr struct {
 }
 
 // IsSet returns true if OptNilHardwareAddr was set.
-func (o OptNilHardwareAddr) IsSet() bool { return o.Set }
+func (o OptNilHardwareAddr) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilHardwareAddr) Reset() {
-	var v net.HardwareAddr
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilHardwareAddr) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilHardwareAddr) SetTo(v net.HardwareAddr) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilHardwareAddr) SetTo(v net.HardwareAddr) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilHardwareAddr) IsNull() bool { return o.Null }
+func (o OptNilHardwareAddr) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilHardwareAddr) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v net.HardwareAddr
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilHardwareAddr) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilHardwareAddr) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilHardwareAddr) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilHardwareAddr) Get() (v net.HardwareAddr, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilHardwareAddr) Or(d net.HardwareAddr) net.HardwareAddr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr)
 }
 
 // NewOptNilIP returns new OptNilIP with value set to v.
-func NewOptNilIP(v netip.Addr) OptNilIP {
-	return OptNilIP{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilIP(v netip.Addr) OptNilIP { _ = "STUB: not implemented"; return *new(OptNilIP) }
 
 // OptNilIP is optional nullable netip.Addr.
 type OptNilIP struct {
@@ -3632,65 +2516,42 @@ type OptNilIP struct {
 }
 
 // IsSet returns true if OptNilIP was set.
-func (o OptNilIP) IsSet() bool { return o.Set }
+func (o OptNilIP) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilIP) Reset() {
-	var v netip.Addr
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilIP) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilIP) SetTo(v netip.Addr) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilIP) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilIP) IsNull() bool { return o.Null }
+func (o OptNilIP) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilIP) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v netip.Addr
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilIP) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilIP) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilIP) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilIP) Get() (v netip.Addr, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilIP) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilIP) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewOptNilIPv4 returns new OptNilIPv4 with value set to v.
-func NewOptNilIPv4(v netip.Addr) OptNilIPv4 {
-	return OptNilIPv4{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilIPv4(v netip.Addr) OptNilIPv4 { _ = "STUB: not implemented"; return *new(OptNilIPv4) }
 
 // OptNilIPv4 is optional nullable netip.Addr.
 type OptNilIPv4 struct {
@@ -3700,65 +2561,42 @@ type OptNilIPv4 struct {
 }
 
 // IsSet returns true if OptNilIPv4 was set.
-func (o OptNilIPv4) IsSet() bool { return o.Set }
+func (o OptNilIPv4) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilIPv4) Reset() {
-	var v netip.Addr
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilIPv4) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilIPv4) SetTo(v netip.Addr) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilIPv4) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilIPv4) IsNull() bool { return o.Null }
+func (o OptNilIPv4) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilIPv4) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v netip.Addr
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilIPv4) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilIPv4) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilIPv4) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilIPv4) Get() (v netip.Addr, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilIPv4) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilIPv4) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewOptNilIPv6 returns new OptNilIPv6 with value set to v.
-func NewOptNilIPv6(v netip.Addr) OptNilIPv6 {
-	return OptNilIPv6{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilIPv6(v netip.Addr) OptNilIPv6 { _ = "STUB: not implemented"; return *new(OptNilIPv6) }
 
 // OptNilIPv6 is optional nullable netip.Addr.
 type OptNilIPv6 struct {
@@ -3768,65 +2606,42 @@ type OptNilIPv6 struct {
 }
 
 // IsSet returns true if OptNilIPv6 was set.
-func (o OptNilIPv6) IsSet() bool { return o.Set }
+func (o OptNilIPv6) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilIPv6) Reset() {
-	var v netip.Addr
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilIPv6) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilIPv6) SetTo(v netip.Addr) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilIPv6) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilIPv6) IsNull() bool { return o.Null }
+func (o OptNilIPv6) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilIPv6) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v netip.Addr
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilIPv6) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilIPv6) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilIPv6) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilIPv6) Get() (v netip.Addr, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilIPv6) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilIPv6) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewOptNilInt returns new OptNilInt with value set to v.
-func NewOptNilInt(v int) OptNilInt {
-	return OptNilInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilInt(v int) OptNilInt { _ = "STUB: not implemented"; return *new(OptNilInt) }
 
 // OptNilInt is optional nullable int.
 type OptNilInt struct {
@@ -3836,65 +2651,39 @@ type OptNilInt struct {
 }
 
 // IsSet returns true if OptNilInt was set.
-func (o OptNilInt) IsSet() bool { return o.Set }
+func (o OptNilInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilInt) SetTo(v int) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilInt) IsNull() bool { return o.Null }
+func (o OptNilInt) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilInt) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilInt) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilInt) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilInt) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilInt) Get() (v int, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilInt16 returns new OptNilInt16 with value set to v.
-func NewOptNilInt16(v int16) OptNilInt16 {
-	return OptNilInt16{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilInt16(v int16) OptNilInt16 { _ = "STUB: not implemented"; return *new(OptNilInt16) }
 
 // OptNilInt16 is optional nullable int16.
 type OptNilInt16 struct {
@@ -3904,65 +2693,39 @@ type OptNilInt16 struct {
 }
 
 // IsSet returns true if OptNilInt16 was set.
-func (o OptNilInt16) IsSet() bool { return o.Set }
+func (o OptNilInt16) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilInt16) Reset() {
-	var v int16
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilInt16) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilInt16) SetTo(v int16) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilInt16) SetTo(v int16) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilInt16) IsNull() bool { return o.Null }
+func (o OptNilInt16) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilInt16) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int16
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilInt16) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilInt16) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilInt16) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilInt16) Get() (v int16, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilInt16) Get() (v int16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilInt16) Or(d int16) int16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilInt16) Or(d int16) int16 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilInt32 returns new OptNilInt32 with value set to v.
-func NewOptNilInt32(v int32) OptNilInt32 {
-	return OptNilInt32{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilInt32(v int32) OptNilInt32 { _ = "STUB: not implemented"; return *new(OptNilInt32) }
 
 // OptNilInt32 is optional nullable int32.
 type OptNilInt32 struct {
@@ -3972,65 +2735,39 @@ type OptNilInt32 struct {
 }
 
 // IsSet returns true if OptNilInt32 was set.
-func (o OptNilInt32) IsSet() bool { return o.Set }
+func (o OptNilInt32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilInt32) Reset() {
-	var v int32
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilInt32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilInt32) SetTo(v int32) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilInt32) IsNull() bool { return o.Null }
+func (o OptNilInt32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilInt32) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilInt32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilInt32) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilInt32) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilInt32) Get() (v int32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilInt64 returns new OptNilInt64 with value set to v.
-func NewOptNilInt64(v int64) OptNilInt64 {
-	return OptNilInt64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilInt64(v int64) OptNilInt64 { _ = "STUB: not implemented"; return *new(OptNilInt64) }
 
 // OptNilInt64 is optional nullable int64.
 type OptNilInt64 struct {
@@ -4040,65 +2777,39 @@ type OptNilInt64 struct {
 }
 
 // IsSet returns true if OptNilInt64 was set.
-func (o OptNilInt64) IsSet() bool { return o.Set }
+func (o OptNilInt64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilInt64) Reset() {
-	var v int64
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilInt64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilInt64) SetTo(v int64) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilInt64) SetTo(v int64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilInt64) IsNull() bool { return o.Null }
+func (o OptNilInt64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilInt64) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilInt64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilInt64) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilInt64) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilInt64) Get() (v int64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilInt64) Get() (v int64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilInt64) Or(d int64) int64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilInt64) Or(d int64) int64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilInt8 returns new OptNilInt8 with value set to v.
-func NewOptNilInt8(v int8) OptNilInt8 {
-	return OptNilInt8{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilInt8(v int8) OptNilInt8 { _ = "STUB: not implemented"; return *new(OptNilInt8) }
 
 // OptNilInt8 is optional nullable int8.
 type OptNilInt8 struct {
@@ -4108,65 +2819,39 @@ type OptNilInt8 struct {
 }
 
 // IsSet returns true if OptNilInt8 was set.
-func (o OptNilInt8) IsSet() bool { return o.Set }
+func (o OptNilInt8) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilInt8) Reset() {
-	var v int8
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilInt8) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilInt8) SetTo(v int8) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilInt8) SetTo(v int8) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilInt8) IsNull() bool { return o.Null }
+func (o OptNilInt8) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilInt8) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int8
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilInt8) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilInt8) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilInt8) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilInt8) Get() (v int8, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilInt8) Get() (v int8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilInt8) Or(d int8) int8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilInt8) Or(d int8) int8 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilString returns new OptNilString with value set to v.
-func NewOptNilString(v string) OptNilString {
-	return OptNilString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilString(v string) OptNilString { _ = "STUB: not implemented"; return *new(OptNilString) }
 
 // OptNilString is optional nullable string.
 type OptNilString struct {
@@ -4176,64 +2861,41 @@ type OptNilString struct {
 }
 
 // IsSet returns true if OptNilString was set.
-func (o OptNilString) IsSet() bool { return o.Set }
+func (o OptNilString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilString) SetTo(v string) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilString) IsNull() bool { return o.Null }
+func (o OptNilString) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilString) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilString) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilString) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilString) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilString) Get() (v string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptNilStringDecimal returns new OptNilStringDecimal with value set to v.
 func NewOptNilStringDecimal(v decimal.Decimal) OptNilStringDecimal {
-	return OptNilStringDecimal{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringDecimal)
 }
 
 // OptNilStringDecimal is optional nullable decimal.Decimal.
@@ -4244,64 +2906,47 @@ type OptNilStringDecimal struct {
 }
 
 // IsSet returns true if OptNilStringDecimal was set.
-func (o OptNilStringDecimal) IsSet() bool { return o.Set }
+func (o OptNilStringDecimal) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringDecimal) Reset() {
-	var v decimal.Decimal
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringDecimal) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringDecimal) SetTo(v decimal.Decimal) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringDecimal) SetTo(v decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringDecimal) IsNull() bool { return o.Null }
+func (o OptNilStringDecimal) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringDecimal) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v decimal.Decimal
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringDecimal) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringDecimal) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringDecimal) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilStringDecimal) Get() (v decimal.Decimal, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilStringDecimal) Or(d decimal.Decimal) decimal.Decimal {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // NewOptNilStringFloat32 returns new OptNilStringFloat32 with value set to v.
 func NewOptNilStringFloat32(v float32) OptNilStringFloat32 {
-	return OptNilStringFloat32{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringFloat32)
 }
 
 // OptNilStringFloat32 is optional nullable float32.
@@ -4312,64 +2957,41 @@ type OptNilStringFloat32 struct {
 }
 
 // IsSet returns true if OptNilStringFloat32 was set.
-func (o OptNilStringFloat32) IsSet() bool { return o.Set }
+func (o OptNilStringFloat32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringFloat32) Reset() {
-	var v float32
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringFloat32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringFloat32) SetTo(v float32) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringFloat32) SetTo(v float32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringFloat32) IsNull() bool { return o.Null }
+func (o OptNilStringFloat32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringFloat32) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v float32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringFloat32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringFloat32) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringFloat32) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringFloat32) Get() (v float32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringFloat32) Get() (v float32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringFloat32) Or(d float32) float32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringFloat32) Or(d float32) float32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringFloat64 returns new OptNilStringFloat64 with value set to v.
 func NewOptNilStringFloat64(v float64) OptNilStringFloat64 {
-	return OptNilStringFloat64{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringFloat64)
 }
 
 // OptNilStringFloat64 is optional nullable float64.
@@ -4380,64 +3002,41 @@ type OptNilStringFloat64 struct {
 }
 
 // IsSet returns true if OptNilStringFloat64 was set.
-func (o OptNilStringFloat64) IsSet() bool { return o.Set }
+func (o OptNilStringFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringFloat64) IsNull() bool { return o.Null }
+func (o OptNilStringFloat64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringFloat64) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v float64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringFloat64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringFloat64) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringFloat64) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringFloat64) Get() (v float64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringInt returns new OptNilStringInt with value set to v.
 func NewOptNilStringInt(v int) OptNilStringInt {
-	return OptNilStringInt{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringInt)
 }
 
 // OptNilStringInt is optional nullable int.
@@ -4448,64 +3047,41 @@ type OptNilStringInt struct {
 }
 
 // IsSet returns true if OptNilStringInt was set.
-func (o OptNilStringInt) IsSet() bool { return o.Set }
+func (o OptNilStringInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringInt) SetTo(v int) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringInt) IsNull() bool { return o.Null }
+func (o OptNilStringInt) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringInt) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringInt) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringInt) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringInt) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringInt) Get() (v int, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringInt16 returns new OptNilStringInt16 with value set to v.
 func NewOptNilStringInt16(v int16) OptNilStringInt16 {
-	return OptNilStringInt16{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringInt16)
 }
 
 // OptNilStringInt16 is optional nullable int16.
@@ -4516,64 +3092,41 @@ type OptNilStringInt16 struct {
 }
 
 // IsSet returns true if OptNilStringInt16 was set.
-func (o OptNilStringInt16) IsSet() bool { return o.Set }
+func (o OptNilStringInt16) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringInt16) Reset() {
-	var v int16
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringInt16) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringInt16) SetTo(v int16) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringInt16) SetTo(v int16) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringInt16) IsNull() bool { return o.Null }
+func (o OptNilStringInt16) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringInt16) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int16
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringInt16) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringInt16) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringInt16) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringInt16) Get() (v int16, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringInt16) Get() (v int16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringInt16) Or(d int16) int16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringInt16) Or(d int16) int16 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringInt32 returns new OptNilStringInt32 with value set to v.
 func NewOptNilStringInt32(v int32) OptNilStringInt32 {
-	return OptNilStringInt32{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringInt32)
 }
 
 // OptNilStringInt32 is optional nullable int32.
@@ -4584,64 +3137,41 @@ type OptNilStringInt32 struct {
 }
 
 // IsSet returns true if OptNilStringInt32 was set.
-func (o OptNilStringInt32) IsSet() bool { return o.Set }
+func (o OptNilStringInt32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringInt32) Reset() {
-	var v int32
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringInt32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringInt32) SetTo(v int32) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringInt32) IsNull() bool { return o.Null }
+func (o OptNilStringInt32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringInt32) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringInt32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringInt32) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringInt32) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringInt32) Get() (v int32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringInt64 returns new OptNilStringInt64 with value set to v.
 func NewOptNilStringInt64(v int64) OptNilStringInt64 {
-	return OptNilStringInt64{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringInt64)
 }
 
 // OptNilStringInt64 is optional nullable int64.
@@ -4652,64 +3182,41 @@ type OptNilStringInt64 struct {
 }
 
 // IsSet returns true if OptNilStringInt64 was set.
-func (o OptNilStringInt64) IsSet() bool { return o.Set }
+func (o OptNilStringInt64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringInt64) Reset() {
-	var v int64
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringInt64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringInt64) SetTo(v int64) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringInt64) SetTo(v int64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringInt64) IsNull() bool { return o.Null }
+func (o OptNilStringInt64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringInt64) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringInt64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringInt64) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringInt64) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringInt64) Get() (v int64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringInt64) Get() (v int64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringInt64) Or(d int64) int64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringInt64) Or(d int64) int64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringInt8 returns new OptNilStringInt8 with value set to v.
 func NewOptNilStringInt8(v int8) OptNilStringInt8 {
-	return OptNilStringInt8{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringInt8)
 }
 
 // OptNilStringInt8 is optional nullable int8.
@@ -4720,64 +3227,41 @@ type OptNilStringInt8 struct {
 }
 
 // IsSet returns true if OptNilStringInt8 was set.
-func (o OptNilStringInt8) IsSet() bool { return o.Set }
+func (o OptNilStringInt8) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringInt8) Reset() {
-	var v int8
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringInt8) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringInt8) SetTo(v int8) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringInt8) SetTo(v int8) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringInt8) IsNull() bool { return o.Null }
+func (o OptNilStringInt8) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringInt8) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int8
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringInt8) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringInt8) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringInt8) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringInt8) Get() (v int8, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringInt8) Get() (v int8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringInt8) Or(d int8) int8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringInt8) Or(d int8) int8 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringUint returns new OptNilStringUint with value set to v.
 func NewOptNilStringUint(v uint) OptNilStringUint {
-	return OptNilStringUint{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringUint)
 }
 
 // OptNilStringUint is optional nullable uint.
@@ -4788,64 +3272,41 @@ type OptNilStringUint struct {
 }
 
 // IsSet returns true if OptNilStringUint was set.
-func (o OptNilStringUint) IsSet() bool { return o.Set }
+func (o OptNilStringUint) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringUint) Reset() {
-	var v uint
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringUint) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringUint) SetTo(v uint) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringUint) SetTo(v uint) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringUint) IsNull() bool { return o.Null }
+func (o OptNilStringUint) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringUint) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uint
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringUint) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringUint) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringUint) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringUint) Get() (v uint, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringUint) Get() (v uint, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringUint) Or(d uint) uint {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringUint) Or(d uint) uint { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringUint16 returns new OptNilStringUint16 with value set to v.
 func NewOptNilStringUint16(v uint16) OptNilStringUint16 {
-	return OptNilStringUint16{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringUint16)
 }
 
 // OptNilStringUint16 is optional nullable uint16.
@@ -4856,64 +3317,41 @@ type OptNilStringUint16 struct {
 }
 
 // IsSet returns true if OptNilStringUint16 was set.
-func (o OptNilStringUint16) IsSet() bool { return o.Set }
+func (o OptNilStringUint16) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringUint16) Reset() {
-	var v uint16
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringUint16) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringUint16) SetTo(v uint16) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringUint16) SetTo(v uint16) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringUint16) IsNull() bool { return o.Null }
+func (o OptNilStringUint16) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringUint16) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uint16
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringUint16) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringUint16) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringUint16) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringUint16) Get() (v uint16, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringUint16) Get() (v uint16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringUint16) Or(d uint16) uint16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringUint16) Or(d uint16) uint16 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringUint32 returns new OptNilStringUint32 with value set to v.
 func NewOptNilStringUint32(v uint32) OptNilStringUint32 {
-	return OptNilStringUint32{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringUint32)
 }
 
 // OptNilStringUint32 is optional nullable uint32.
@@ -4924,64 +3362,41 @@ type OptNilStringUint32 struct {
 }
 
 // IsSet returns true if OptNilStringUint32 was set.
-func (o OptNilStringUint32) IsSet() bool { return o.Set }
+func (o OptNilStringUint32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringUint32) Reset() {
-	var v uint32
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringUint32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringUint32) SetTo(v uint32) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringUint32) SetTo(v uint32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringUint32) IsNull() bool { return o.Null }
+func (o OptNilStringUint32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringUint32) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uint32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringUint32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringUint32) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringUint32) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringUint32) Get() (v uint32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringUint32) Get() (v uint32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringUint32) Or(d uint32) uint32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringUint32) Or(d uint32) uint32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringUint64 returns new OptNilStringUint64 with value set to v.
 func NewOptNilStringUint64(v uint64) OptNilStringUint64 {
-	return OptNilStringUint64{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringUint64)
 }
 
 // OptNilStringUint64 is optional nullable uint64.
@@ -4992,64 +3407,41 @@ type OptNilStringUint64 struct {
 }
 
 // IsSet returns true if OptNilStringUint64 was set.
-func (o OptNilStringUint64) IsSet() bool { return o.Set }
+func (o OptNilStringUint64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringUint64) Reset() {
-	var v uint64
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringUint64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringUint64) SetTo(v uint64) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringUint64) SetTo(v uint64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringUint64) IsNull() bool { return o.Null }
+func (o OptNilStringUint64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringUint64) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uint64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringUint64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringUint64) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringUint64) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringUint64) Get() (v uint64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringUint64) Get() (v uint64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringUint64) Or(d uint64) uint64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringUint64) Or(d uint64) uint64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringUint8 returns new OptNilStringUint8 with value set to v.
 func NewOptNilStringUint8(v uint8) OptNilStringUint8 {
-	return OptNilStringUint8{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringUint8)
 }
 
 // OptNilStringUint8 is optional nullable uint8.
@@ -5060,64 +3452,41 @@ type OptNilStringUint8 struct {
 }
 
 // IsSet returns true if OptNilStringUint8 was set.
-func (o OptNilStringUint8) IsSet() bool { return o.Set }
+func (o OptNilStringUint8) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringUint8) Reset() {
-	var v uint8
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringUint8) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringUint8) SetTo(v uint8) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringUint8) SetTo(v uint8) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringUint8) IsNull() bool { return o.Null }
+func (o OptNilStringUint8) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringUint8) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uint8
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringUint8) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringUint8) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringUint8) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilStringUint8) Get() (v uint8, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilStringUint8) Get() (v uint8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringUint8) Or(d uint8) uint8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringUint8) Or(d uint8) uint8 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilStringUnixMicro returns new OptNilStringUnixMicro with value set to v.
 func NewOptNilStringUnixMicro(v time.Time) OptNilStringUnixMicro {
-	return OptNilStringUnixMicro{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringUnixMicro)
 }
 
 // OptNilStringUnixMicro is optional nullable time.Time.
@@ -5128,64 +3497,47 @@ type OptNilStringUnixMicro struct {
 }
 
 // IsSet returns true if OptNilStringUnixMicro was set.
-func (o OptNilStringUnixMicro) IsSet() bool { return o.Set }
+func (o OptNilStringUnixMicro) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringUnixMicro) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringUnixMicro) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringUnixMicro) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringUnixMicro) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringUnixMicro) IsNull() bool { return o.Null }
+func (o OptNilStringUnixMicro) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringUnixMicro) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringUnixMicro) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringUnixMicro) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringUnixMicro) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilStringUnixMicro) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilStringUnixMicro) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptNilStringUnixMilli returns new OptNilStringUnixMilli with value set to v.
 func NewOptNilStringUnixMilli(v time.Time) OptNilStringUnixMilli {
-	return OptNilStringUnixMilli{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringUnixMilli)
 }
 
 // OptNilStringUnixMilli is optional nullable time.Time.
@@ -5196,64 +3548,47 @@ type OptNilStringUnixMilli struct {
 }
 
 // IsSet returns true if OptNilStringUnixMilli was set.
-func (o OptNilStringUnixMilli) IsSet() bool { return o.Set }
+func (o OptNilStringUnixMilli) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringUnixMilli) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringUnixMilli) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringUnixMilli) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringUnixMilli) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringUnixMilli) IsNull() bool { return o.Null }
+func (o OptNilStringUnixMilli) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringUnixMilli) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringUnixMilli) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringUnixMilli) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringUnixMilli) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilStringUnixMilli) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilStringUnixMilli) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptNilStringUnixNano returns new OptNilStringUnixNano with value set to v.
 func NewOptNilStringUnixNano(v time.Time) OptNilStringUnixNano {
-	return OptNilStringUnixNano{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringUnixNano)
 }
 
 // OptNilStringUnixNano is optional nullable time.Time.
@@ -5264,64 +3599,47 @@ type OptNilStringUnixNano struct {
 }
 
 // IsSet returns true if OptNilStringUnixNano was set.
-func (o OptNilStringUnixNano) IsSet() bool { return o.Set }
+func (o OptNilStringUnixNano) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringUnixNano) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringUnixNano) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringUnixNano) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringUnixNano) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringUnixNano) IsNull() bool { return o.Null }
+func (o OptNilStringUnixNano) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringUnixNano) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringUnixNano) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringUnixNano) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringUnixNano) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilStringUnixNano) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilStringUnixNano) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptNilStringUnixSeconds returns new OptNilStringUnixSeconds with value set to v.
 func NewOptNilStringUnixSeconds(v time.Time) OptNilStringUnixSeconds {
-	return OptNilStringUnixSeconds{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringUnixSeconds)
 }
 
 // OptNilStringUnixSeconds is optional nullable time.Time.
@@ -5332,65 +3650,45 @@ type OptNilStringUnixSeconds struct {
 }
 
 // IsSet returns true if OptNilStringUnixSeconds was set.
-func (o OptNilStringUnixSeconds) IsSet() bool { return o.Set }
+func (o OptNilStringUnixSeconds) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringUnixSeconds) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringUnixSeconds) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringUnixSeconds) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringUnixSeconds) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringUnixSeconds) IsNull() bool { return o.Null }
+func (o OptNilStringUnixSeconds) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringUnixSeconds) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringUnixSeconds) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringUnixSeconds) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringUnixSeconds) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilStringUnixSeconds) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilStringUnixSeconds) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptNilTime returns new OptNilTime with value set to v.
-func NewOptNilTime(v time.Time) OptNilTime {
-	return OptNilTime{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilTime(v time.Time) OptNilTime { _ = "STUB: not implemented"; return *new(OptNilTime) }
 
 // OptNilTime is optional nullable time.Time.
 type OptNilTime struct {
@@ -5400,65 +3698,42 @@ type OptNilTime struct {
 }
 
 // IsSet returns true if OptNilTime was set.
-func (o OptNilTime) IsSet() bool { return o.Set }
+func (o OptNilTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilTime) IsNull() bool { return o.Null }
+func (o OptNilTime) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilTime) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilTime) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilTime) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilTime) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilTime) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptNilURI returns new OptNilURI with value set to v.
-func NewOptNilURI(v url.URL) OptNilURI {
-	return OptNilURI{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilURI(v url.URL) OptNilURI { _ = "STUB: not implemented"; return *new(OptNilURI) }
 
 // OptNilURI is optional nullable url.URL.
 type OptNilURI struct {
@@ -5468,65 +3743,42 @@ type OptNilURI struct {
 }
 
 // IsSet returns true if OptNilURI was set.
-func (o OptNilURI) IsSet() bool { return o.Set }
+func (o OptNilURI) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilURI) Reset() {
-	var v url.URL
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilURI) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilURI) SetTo(v url.URL) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilURI) SetTo(v url.URL) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilURI) IsNull() bool { return o.Null }
+func (o OptNilURI) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilURI) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v url.URL
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilURI) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilURI) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilURI) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilURI) Get() (v url.URL, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(url.URL), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilURI) Or(d url.URL) url.URL {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilURI) Or(d url.URL) url.URL { _ = "STUB: not implemented"; return *new(url.URL) }
 
 // NewOptNilUUID returns new OptNilUUID with value set to v.
-func NewOptNilUUID(v uuid.UUID) OptNilUUID {
-	return OptNilUUID{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilUUID(v uuid.UUID) OptNilUUID { _ = "STUB: not implemented"; return *new(OptNilUUID) }
 
 // OptNilUUID is optional nullable uuid.UUID.
 type OptNilUUID struct {
@@ -5536,65 +3788,42 @@ type OptNilUUID struct {
 }
 
 // IsSet returns true if OptNilUUID was set.
-func (o OptNilUUID) IsSet() bool { return o.Set }
+func (o OptNilUUID) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilUUID) Reset() {
-	var v uuid.UUID
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilUUID) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilUUID) SetTo(v uuid.UUID) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilUUID) SetTo(v uuid.UUID) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilUUID) IsNull() bool { return o.Null }
+func (o OptNilUUID) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilUUID) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uuid.UUID
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilUUID) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilUUID) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilUUID) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilUUID) Get() (v uuid.UUID, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(uuid.UUID), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilUUID) Or(d uuid.UUID) uuid.UUID {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilUUID) Or(d uuid.UUID) uuid.UUID { _ = "STUB: not implemented"; return *new(uuid.UUID) }
 
 // NewOptNilUint returns new OptNilUint with value set to v.
-func NewOptNilUint(v uint) OptNilUint {
-	return OptNilUint{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilUint(v uint) OptNilUint { _ = "STUB: not implemented"; return *new(OptNilUint) }
 
 // OptNilUint is optional nullable uint.
 type OptNilUint struct {
@@ -5604,65 +3833,39 @@ type OptNilUint struct {
 }
 
 // IsSet returns true if OptNilUint was set.
-func (o OptNilUint) IsSet() bool { return o.Set }
+func (o OptNilUint) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilUint) Reset() {
-	var v uint
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilUint) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilUint) SetTo(v uint) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilUint) SetTo(v uint) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilUint) IsNull() bool { return o.Null }
+func (o OptNilUint) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilUint) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uint
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilUint) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilUint) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilUint) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilUint) Get() (v uint, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilUint) Get() (v uint, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilUint) Or(d uint) uint {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilUint) Or(d uint) uint { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilUint16 returns new OptNilUint16 with value set to v.
-func NewOptNilUint16(v uint16) OptNilUint16 {
-	return OptNilUint16{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilUint16(v uint16) OptNilUint16 { _ = "STUB: not implemented"; return *new(OptNilUint16) }
 
 // OptNilUint16 is optional nullable uint16.
 type OptNilUint16 struct {
@@ -5672,65 +3875,39 @@ type OptNilUint16 struct {
 }
 
 // IsSet returns true if OptNilUint16 was set.
-func (o OptNilUint16) IsSet() bool { return o.Set }
+func (o OptNilUint16) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilUint16) Reset() {
-	var v uint16
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilUint16) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilUint16) SetTo(v uint16) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilUint16) SetTo(v uint16) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilUint16) IsNull() bool { return o.Null }
+func (o OptNilUint16) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilUint16) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uint16
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilUint16) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilUint16) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilUint16) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilUint16) Get() (v uint16, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilUint16) Get() (v uint16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilUint16) Or(d uint16) uint16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilUint16) Or(d uint16) uint16 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilUint32 returns new OptNilUint32 with value set to v.
-func NewOptNilUint32(v uint32) OptNilUint32 {
-	return OptNilUint32{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilUint32(v uint32) OptNilUint32 { _ = "STUB: not implemented"; return *new(OptNilUint32) }
 
 // OptNilUint32 is optional nullable uint32.
 type OptNilUint32 struct {
@@ -5740,65 +3917,39 @@ type OptNilUint32 struct {
 }
 
 // IsSet returns true if OptNilUint32 was set.
-func (o OptNilUint32) IsSet() bool { return o.Set }
+func (o OptNilUint32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilUint32) Reset() {
-	var v uint32
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilUint32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilUint32) SetTo(v uint32) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilUint32) SetTo(v uint32) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilUint32) IsNull() bool { return o.Null }
+func (o OptNilUint32) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilUint32) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uint32
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilUint32) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilUint32) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilUint32) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilUint32) Get() (v uint32, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilUint32) Get() (v uint32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilUint32) Or(d uint32) uint32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilUint32) Or(d uint32) uint32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilUint64 returns new OptNilUint64 with value set to v.
-func NewOptNilUint64(v uint64) OptNilUint64 {
-	return OptNilUint64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilUint64(v uint64) OptNilUint64 { _ = "STUB: not implemented"; return *new(OptNilUint64) }
 
 // OptNilUint64 is optional nullable uint64.
 type OptNilUint64 struct {
@@ -5808,65 +3959,39 @@ type OptNilUint64 struct {
 }
 
 // IsSet returns true if OptNilUint64 was set.
-func (o OptNilUint64) IsSet() bool { return o.Set }
+func (o OptNilUint64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilUint64) Reset() {
-	var v uint64
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilUint64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilUint64) SetTo(v uint64) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilUint64) SetTo(v uint64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilUint64) IsNull() bool { return o.Null }
+func (o OptNilUint64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilUint64) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uint64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilUint64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilUint64) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilUint64) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilUint64) Get() (v uint64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilUint64) Get() (v uint64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilUint64) Or(d uint64) uint64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilUint64) Or(d uint64) uint64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilUint8 returns new OptNilUint8 with value set to v.
-func NewOptNilUint8(v uint8) OptNilUint8 {
-	return OptNilUint8{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilUint8(v uint8) OptNilUint8 { _ = "STUB: not implemented"; return *new(OptNilUint8) }
 
 // OptNilUint8 is optional nullable uint8.
 type OptNilUint8 struct {
@@ -5876,64 +4001,41 @@ type OptNilUint8 struct {
 }
 
 // IsSet returns true if OptNilUint8 was set.
-func (o OptNilUint8) IsSet() bool { return o.Set }
+func (o OptNilUint8) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilUint8) Reset() {
-	var v uint8
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilUint8) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilUint8) SetTo(v uint8) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilUint8) SetTo(v uint8) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilUint8) IsNull() bool { return o.Null }
+func (o OptNilUint8) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilUint8) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v uint8
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilUint8) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilUint8) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilUint8) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilUint8) Get() (v uint8, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilUint8) Get() (v uint8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilUint8) Or(d uint8) uint8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilUint8) Or(d uint8) uint8 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilUnixMicro returns new OptNilUnixMicro with value set to v.
 func NewOptNilUnixMicro(v time.Time) OptNilUnixMicro {
-	return OptNilUnixMicro{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilUnixMicro)
 }
 
 // OptNilUnixMicro is optional nullable time.Time.
@@ -5944,64 +4046,47 @@ type OptNilUnixMicro struct {
 }
 
 // IsSet returns true if OptNilUnixMicro was set.
-func (o OptNilUnixMicro) IsSet() bool { return o.Set }
+func (o OptNilUnixMicro) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilUnixMicro) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilUnixMicro) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilUnixMicro) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilUnixMicro) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilUnixMicro) IsNull() bool { return o.Null }
+func (o OptNilUnixMicro) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilUnixMicro) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilUnixMicro) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilUnixMicro) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilUnixMicro) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilUnixMicro) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilUnixMicro) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptNilUnixMilli returns new OptNilUnixMilli with value set to v.
 func NewOptNilUnixMilli(v time.Time) OptNilUnixMilli {
-	return OptNilUnixMilli{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilUnixMilli)
 }
 
 // OptNilUnixMilli is optional nullable time.Time.
@@ -6012,64 +4097,47 @@ type OptNilUnixMilli struct {
 }
 
 // IsSet returns true if OptNilUnixMilli was set.
-func (o OptNilUnixMilli) IsSet() bool { return o.Set }
+func (o OptNilUnixMilli) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilUnixMilli) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilUnixMilli) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilUnixMilli) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilUnixMilli) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilUnixMilli) IsNull() bool { return o.Null }
+func (o OptNilUnixMilli) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilUnixMilli) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilUnixMilli) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilUnixMilli) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilUnixMilli) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilUnixMilli) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilUnixMilli) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptNilUnixNano returns new OptNilUnixNano with value set to v.
 func NewOptNilUnixNano(v time.Time) OptNilUnixNano {
-	return OptNilUnixNano{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilUnixNano)
 }
 
 // OptNilUnixNano is optional nullable time.Time.
@@ -6080,64 +4148,47 @@ type OptNilUnixNano struct {
 }
 
 // IsSet returns true if OptNilUnixNano was set.
-func (o OptNilUnixNano) IsSet() bool { return o.Set }
+func (o OptNilUnixNano) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilUnixNano) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilUnixNano) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilUnixNano) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilUnixNano) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilUnixNano) IsNull() bool { return o.Null }
+func (o OptNilUnixNano) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilUnixNano) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilUnixNano) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilUnixNano) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilUnixNano) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilUnixNano) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilUnixNano) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptNilUnixSeconds returns new OptNilUnixSeconds with value set to v.
 func NewOptNilUnixSeconds(v time.Time) OptNilUnixSeconds {
-	return OptNilUnixSeconds{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilUnixSeconds)
 }
 
 // OptNilUnixSeconds is optional nullable time.Time.
@@ -6148,65 +4199,45 @@ type OptNilUnixSeconds struct {
 }
 
 // IsSet returns true if OptNilUnixSeconds was set.
-func (o OptNilUnixSeconds) IsSet() bool { return o.Set }
+func (o OptNilUnixSeconds) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilUnixSeconds) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilUnixSeconds) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilUnixSeconds) SetTo(v time.Time) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilUnixSeconds) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilUnixSeconds) IsNull() bool { return o.Null }
+func (o OptNilUnixSeconds) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilUnixSeconds) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v time.Time
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilUnixSeconds) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilUnixSeconds) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilUnixSeconds) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilUnixSeconds) Get() (v time.Time, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilUnixSeconds) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptNull returns new OptNull with value set to v.
-func NewOptNull(v struct{}) OptNull {
-	return OptNull{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNull(v struct{}) OptNull { _ = "STUB: not implemented"; return *new(OptNull) }
 
 // OptNull is optional struct{}.
 type OptNull struct {
@@ -6215,44 +4246,26 @@ type OptNull struct {
 }
 
 // IsSet returns true if OptNull was set.
-func (o OptNull) IsSet() bool { return o.Set }
+func (o OptNull) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNull) Reset() {
-	var v struct{}
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNull) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNull) SetTo(v struct{}) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptNull) SetTo(v struct{}) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNull) Get() (v struct{}, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNull) Get() (v struct{}, ok bool) { _ = "STUB: not implemented"; return nil, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNull) Or(d struct{}) struct{} {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNull) Or(d struct{}) struct{} { _ = "STUB: not implemented"; return nil }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -6261,43 +4274,28 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptStringDecimal returns new OptStringDecimal with value set to v.
 func NewOptStringDecimal(v decimal.Decimal) OptStringDecimal {
-	return OptStringDecimal{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringDecimal)
 }
 
 // OptStringDecimal is optional decimal.Decimal.
@@ -6307,43 +4305,34 @@ type OptStringDecimal struct {
 }
 
 // IsSet returns true if OptStringDecimal was set.
-func (o OptStringDecimal) IsSet() bool { return o.Set }
+func (o OptStringDecimal) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringDecimal) Reset() {
-	var v decimal.Decimal
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringDecimal) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringDecimal) SetTo(v decimal.Decimal) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringDecimal) SetTo(v decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStringDecimal) Get() (v decimal.Decimal, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptStringDecimal) Or(d decimal.Decimal) decimal.Decimal {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // NewOptStringFloat32 returns new OptStringFloat32 with value set to v.
 func NewOptStringFloat32(v float32) OptStringFloat32 {
-	return OptStringFloat32{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringFloat32)
 }
 
 // OptStringFloat32 is optional float32.
@@ -6353,43 +4342,28 @@ type OptStringFloat32 struct {
 }
 
 // IsSet returns true if OptStringFloat32 was set.
-func (o OptStringFloat32) IsSet() bool { return o.Set }
+func (o OptStringFloat32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringFloat32) Reset() {
-	var v float32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringFloat32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringFloat32) SetTo(v float32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringFloat32) SetTo(v float32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringFloat32) Get() (v float32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringFloat32) Get() (v float32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringFloat32) Or(d float32) float32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringFloat32) Or(d float32) float32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringFloat64 returns new OptStringFloat64 with value set to v.
 func NewOptStringFloat64(v float64) OptStringFloat64 {
-	return OptStringFloat64{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringFloat64)
 }
 
 // OptStringFloat64 is optional float64.
@@ -6399,44 +4373,26 @@ type OptStringFloat64 struct {
 }
 
 // IsSet returns true if OptStringFloat64 was set.
-func (o OptStringFloat64) IsSet() bool { return o.Set }
+func (o OptStringFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringFloat64) Get() (v float64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringInt returns new OptStringInt with value set to v.
-func NewOptStringInt(v int) OptStringInt {
-	return OptStringInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptStringInt(v int) OptStringInt { _ = "STUB: not implemented"; return *new(OptStringInt) }
 
 // OptStringInt is optional int.
 type OptStringInt struct {
@@ -6445,43 +4401,28 @@ type OptStringInt struct {
 }
 
 // IsSet returns true if OptStringInt was set.
-func (o OptStringInt) IsSet() bool { return o.Set }
+func (o OptStringInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringInt16 returns new OptStringInt16 with value set to v.
 func NewOptStringInt16(v int16) OptStringInt16 {
-	return OptStringInt16{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringInt16)
 }
 
 // OptStringInt16 is optional int16.
@@ -6491,43 +4432,28 @@ type OptStringInt16 struct {
 }
 
 // IsSet returns true if OptStringInt16 was set.
-func (o OptStringInt16) IsSet() bool { return o.Set }
+func (o OptStringInt16) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringInt16) Reset() {
-	var v int16
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringInt16) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringInt16) SetTo(v int16) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringInt16) SetTo(v int16) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringInt16) Get() (v int16, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringInt16) Get() (v int16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringInt16) Or(d int16) int16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringInt16) Or(d int16) int16 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringInt32 returns new OptStringInt32 with value set to v.
 func NewOptStringInt32(v int32) OptStringInt32 {
-	return OptStringInt32{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringInt32)
 }
 
 // OptStringInt32 is optional int32.
@@ -6537,43 +4463,28 @@ type OptStringInt32 struct {
 }
 
 // IsSet returns true if OptStringInt32 was set.
-func (o OptStringInt32) IsSet() bool { return o.Set }
+func (o OptStringInt32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringInt32) Reset() {
-	var v int32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringInt32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringInt32) SetTo(v int32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringInt32) Get() (v int32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringInt64 returns new OptStringInt64 with value set to v.
 func NewOptStringInt64(v int64) OptStringInt64 {
-	return OptStringInt64{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringInt64)
 }
 
 // OptStringInt64 is optional int64.
@@ -6583,44 +4494,26 @@ type OptStringInt64 struct {
 }
 
 // IsSet returns true if OptStringInt64 was set.
-func (o OptStringInt64) IsSet() bool { return o.Set }
+func (o OptStringInt64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringInt64) Reset() {
-	var v int64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringInt64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringInt64) SetTo(v int64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringInt64) SetTo(v int64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringInt64) Get() (v int64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringInt64) Get() (v int64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringInt64) Or(d int64) int64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringInt64) Or(d int64) int64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringInt8 returns new OptStringInt8 with value set to v.
-func NewOptStringInt8(v int8) OptStringInt8 {
-	return OptStringInt8{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptStringInt8(v int8) OptStringInt8 { _ = "STUB: not implemented"; return *new(OptStringInt8) }
 
 // OptStringInt8 is optional int8.
 type OptStringInt8 struct {
@@ -6629,44 +4522,26 @@ type OptStringInt8 struct {
 }
 
 // IsSet returns true if OptStringInt8 was set.
-func (o OptStringInt8) IsSet() bool { return o.Set }
+func (o OptStringInt8) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringInt8) Reset() {
-	var v int8
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringInt8) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringInt8) SetTo(v int8) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringInt8) SetTo(v int8) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringInt8) Get() (v int8, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringInt8) Get() (v int8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringInt8) Or(d int8) int8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringInt8) Or(d int8) int8 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringUint returns new OptStringUint with value set to v.
-func NewOptStringUint(v uint) OptStringUint {
-	return OptStringUint{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptStringUint(v uint) OptStringUint { _ = "STUB: not implemented"; return *new(OptStringUint) }
 
 // OptStringUint is optional uint.
 type OptStringUint struct {
@@ -6675,43 +4550,28 @@ type OptStringUint struct {
 }
 
 // IsSet returns true if OptStringUint was set.
-func (o OptStringUint) IsSet() bool { return o.Set }
+func (o OptStringUint) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringUint) Reset() {
-	var v uint
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringUint) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringUint) SetTo(v uint) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringUint) SetTo(v uint) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringUint) Get() (v uint, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringUint) Get() (v uint, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringUint) Or(d uint) uint {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringUint) Or(d uint) uint { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringUint16 returns new OptStringUint16 with value set to v.
 func NewOptStringUint16(v uint16) OptStringUint16 {
-	return OptStringUint16{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringUint16)
 }
 
 // OptStringUint16 is optional uint16.
@@ -6721,43 +4581,28 @@ type OptStringUint16 struct {
 }
 
 // IsSet returns true if OptStringUint16 was set.
-func (o OptStringUint16) IsSet() bool { return o.Set }
+func (o OptStringUint16) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringUint16) Reset() {
-	var v uint16
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringUint16) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringUint16) SetTo(v uint16) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringUint16) SetTo(v uint16) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringUint16) Get() (v uint16, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringUint16) Get() (v uint16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringUint16) Or(d uint16) uint16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringUint16) Or(d uint16) uint16 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringUint32 returns new OptStringUint32 with value set to v.
 func NewOptStringUint32(v uint32) OptStringUint32 {
-	return OptStringUint32{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringUint32)
 }
 
 // OptStringUint32 is optional uint32.
@@ -6767,43 +4612,28 @@ type OptStringUint32 struct {
 }
 
 // IsSet returns true if OptStringUint32 was set.
-func (o OptStringUint32) IsSet() bool { return o.Set }
+func (o OptStringUint32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringUint32) Reset() {
-	var v uint32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringUint32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringUint32) SetTo(v uint32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringUint32) SetTo(v uint32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringUint32) Get() (v uint32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringUint32) Get() (v uint32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringUint32) Or(d uint32) uint32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringUint32) Or(d uint32) uint32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringUint64 returns new OptStringUint64 with value set to v.
 func NewOptStringUint64(v uint64) OptStringUint64 {
-	return OptStringUint64{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringUint64)
 }
 
 // OptStringUint64 is optional uint64.
@@ -6813,43 +4643,28 @@ type OptStringUint64 struct {
 }
 
 // IsSet returns true if OptStringUint64 was set.
-func (o OptStringUint64) IsSet() bool { return o.Set }
+func (o OptStringUint64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringUint64) Reset() {
-	var v uint64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringUint64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringUint64) SetTo(v uint64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringUint64) SetTo(v uint64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringUint64) Get() (v uint64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringUint64) Get() (v uint64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringUint64) Or(d uint64) uint64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringUint64) Or(d uint64) uint64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringUint8 returns new OptStringUint8 with value set to v.
 func NewOptStringUint8(v uint8) OptStringUint8 {
-	return OptStringUint8{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringUint8)
 }
 
 // OptStringUint8 is optional uint8.
@@ -6859,43 +4674,28 @@ type OptStringUint8 struct {
 }
 
 // IsSet returns true if OptStringUint8 was set.
-func (o OptStringUint8) IsSet() bool { return o.Set }
+func (o OptStringUint8) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringUint8) Reset() {
-	var v uint8
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringUint8) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringUint8) SetTo(v uint8) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringUint8) SetTo(v uint8) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptStringUint8) Get() (v uint8, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptStringUint8) Get() (v uint8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringUint8) Or(d uint8) uint8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringUint8) Or(d uint8) uint8 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStringUnixMicro returns new OptStringUnixMicro with value set to v.
 func NewOptStringUnixMicro(v time.Time) OptStringUnixMicro {
-	return OptStringUnixMicro{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixMicro)
 }
 
 // OptStringUnixMicro is optional time.Time.
@@ -6905,43 +4705,34 @@ type OptStringUnixMicro struct {
 }
 
 // IsSet returns true if OptStringUnixMicro was set.
-func (o OptStringUnixMicro) IsSet() bool { return o.Set }
+func (o OptStringUnixMicro) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringUnixMicro) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringUnixMicro) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringUnixMicro) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringUnixMicro) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStringUnixMicro) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptStringUnixMicro) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptStringUnixMilli returns new OptStringUnixMilli with value set to v.
 func NewOptStringUnixMilli(v time.Time) OptStringUnixMilli {
-	return OptStringUnixMilli{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixMilli)
 }
 
 // OptStringUnixMilli is optional time.Time.
@@ -6951,43 +4742,34 @@ type OptStringUnixMilli struct {
 }
 
 // IsSet returns true if OptStringUnixMilli was set.
-func (o OptStringUnixMilli) IsSet() bool { return o.Set }
+func (o OptStringUnixMilli) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringUnixMilli) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringUnixMilli) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringUnixMilli) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringUnixMilli) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStringUnixMilli) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptStringUnixMilli) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptStringUnixNano returns new OptStringUnixNano with value set to v.
 func NewOptStringUnixNano(v time.Time) OptStringUnixNano {
-	return OptStringUnixNano{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixNano)
 }
 
 // OptStringUnixNano is optional time.Time.
@@ -6997,43 +4779,34 @@ type OptStringUnixNano struct {
 }
 
 // IsSet returns true if OptStringUnixNano was set.
-func (o OptStringUnixNano) IsSet() bool { return o.Set }
+func (o OptStringUnixNano) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringUnixNano) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringUnixNano) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringUnixNano) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringUnixNano) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStringUnixNano) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptStringUnixNano) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptStringUnixSeconds returns new OptStringUnixSeconds with value set to v.
 func NewOptStringUnixSeconds(v time.Time) OptStringUnixSeconds {
-	return OptStringUnixSeconds{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixSeconds)
 }
 
 // OptStringUnixSeconds is optional time.Time.
@@ -7043,43 +4816,34 @@ type OptStringUnixSeconds struct {
 }
 
 // IsSet returns true if OptStringUnixSeconds was set.
-func (o OptStringUnixSeconds) IsSet() bool { return o.Set }
+func (o OptStringUnixSeconds) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringUnixSeconds) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringUnixSeconds) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringUnixSeconds) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringUnixSeconds) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStringUnixSeconds) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptStringUnixSeconds) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // NewOptTestRequestFormatTestReq returns new OptTestRequestFormatTestReq with value set to v.
 func NewOptTestRequestFormatTestReq(v TestRequestFormatTestReq) OptTestRequestFormatTestReq {
-	return OptTestRequestFormatTestReq{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptTestRequestFormatTestReq)
 }
 
 // OptTestRequestFormatTestReq is optional TestRequestFormatTestReq.
@@ -7089,44 +4853,35 @@ type OptTestRequestFormatTestReq struct {
 }
 
 // IsSet returns true if OptTestRequestFormatTestReq was set.
-func (o OptTestRequestFormatTestReq) IsSet() bool { return o.Set }
+func (o OptTestRequestFormatTestReq) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTestRequestFormatTestReq) Reset() {
-	var v TestRequestFormatTestReq
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTestRequestFormatTestReq) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptTestRequestFormatTestReq) SetTo(v TestRequestFormatTestReq) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTestRequestFormatTestReq) Get() (v TestRequestFormatTestReq, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(TestRequestFormatTestReq), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptTestRequestFormatTestReq) Or(d TestRequestFormatTestReq) TestRequestFormatTestReq {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(TestRequestFormatTestReq)
 }
 
 // NewOptTime returns new OptTime with value set to v.
-func NewOptTime(v time.Time) OptTime {
-	return OptTime{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptTime(v time.Time) OptTime { _ = "STUB: not implemented"; return *new(OptTime) }
 
 // OptTime is optional time.Time.
 type OptTime struct {
@@ -7135,44 +4890,29 @@ type OptTime struct {
 }
 
 // IsSet returns true if OptTime was set.
-func (o OptTime) IsSet() bool { return o.Set }
+func (o OptTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTime) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptURI returns new OptURI with value set to v.
-func NewOptURI(v url.URL) OptURI {
-	return OptURI{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptURI(v url.URL) OptURI { _ = "STUB: not implemented"; return *new(OptURI) }
 
 // OptURI is optional url.URL.
 type OptURI struct {
@@ -7181,44 +4921,26 @@ type OptURI struct {
 }
 
 // IsSet returns true if OptURI was set.
-func (o OptURI) IsSet() bool { return o.Set }
+func (o OptURI) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptURI) Reset() {
-	var v url.URL
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptURI) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptURI) SetTo(v url.URL) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptURI) SetTo(v url.URL) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptURI) Get() (v url.URL, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptURI) Get() (v url.URL, ok bool) { _ = "STUB: not implemented"; return *new(url.URL), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptURI) Or(d url.URL) url.URL {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptURI) Or(d url.URL) url.URL { _ = "STUB: not implemented"; return *new(url.URL) }
 
 // NewOptUUID returns new OptUUID with value set to v.
-func NewOptUUID(v uuid.UUID) OptUUID {
-	return OptUUID{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUUID(v uuid.UUID) OptUUID { _ = "STUB: not implemented"; return *new(OptUUID) }
 
 // OptUUID is optional uuid.UUID.
 type OptUUID struct {
@@ -7227,44 +4949,29 @@ type OptUUID struct {
 }
 
 // IsSet returns true if OptUUID was set.
-func (o OptUUID) IsSet() bool { return o.Set }
+func (o OptUUID) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUUID) Reset() {
-	var v uuid.UUID
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUUID) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUUID) SetTo(v uuid.UUID) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUUID) SetTo(v uuid.UUID) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUUID) Get() (v uuid.UUID, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(uuid.UUID), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUUID) Or(d uuid.UUID) uuid.UUID {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUUID) Or(d uuid.UUID) uuid.UUID { _ = "STUB: not implemented"; return *new(uuid.UUID) }
 
 // NewOptUint returns new OptUint with value set to v.
-func NewOptUint(v uint) OptUint {
-	return OptUint{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUint(v uint) OptUint { _ = "STUB: not implemented"; return *new(OptUint) }
 
 // OptUint is optional uint.
 type OptUint struct {
@@ -7273,44 +4980,26 @@ type OptUint struct {
 }
 
 // IsSet returns true if OptUint was set.
-func (o OptUint) IsSet() bool { return o.Set }
+func (o OptUint) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUint) Reset() {
-	var v uint
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUint) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUint) SetTo(v uint) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUint) SetTo(v uint) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptUint) Get() (v uint, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptUint) Get() (v uint, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUint) Or(d uint) uint {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUint) Or(d uint) uint { _ = "STUB: not implemented"; return 0 }
 
 // NewOptUint16 returns new OptUint16 with value set to v.
-func NewOptUint16(v uint16) OptUint16 {
-	return OptUint16{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUint16(v uint16) OptUint16 { _ = "STUB: not implemented"; return *new(OptUint16) }
 
 // OptUint16 is optional uint16.
 type OptUint16 struct {
@@ -7319,44 +5008,26 @@ type OptUint16 struct {
 }
 
 // IsSet returns true if OptUint16 was set.
-func (o OptUint16) IsSet() bool { return o.Set }
+func (o OptUint16) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUint16) Reset() {
-	var v uint16
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUint16) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUint16) SetTo(v uint16) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUint16) SetTo(v uint16) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptUint16) Get() (v uint16, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptUint16) Get() (v uint16, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUint16) Or(d uint16) uint16 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUint16) Or(d uint16) uint16 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptUint32 returns new OptUint32 with value set to v.
-func NewOptUint32(v uint32) OptUint32 {
-	return OptUint32{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUint32(v uint32) OptUint32 { _ = "STUB: not implemented"; return *new(OptUint32) }
 
 // OptUint32 is optional uint32.
 type OptUint32 struct {
@@ -7365,44 +5036,26 @@ type OptUint32 struct {
 }
 
 // IsSet returns true if OptUint32 was set.
-func (o OptUint32) IsSet() bool { return o.Set }
+func (o OptUint32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUint32) Reset() {
-	var v uint32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUint32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUint32) SetTo(v uint32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUint32) SetTo(v uint32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptUint32) Get() (v uint32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptUint32) Get() (v uint32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUint32) Or(d uint32) uint32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUint32) Or(d uint32) uint32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptUint64 returns new OptUint64 with value set to v.
-func NewOptUint64(v uint64) OptUint64 {
-	return OptUint64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUint64(v uint64) OptUint64 { _ = "STUB: not implemented"; return *new(OptUint64) }
 
 // OptUint64 is optional uint64.
 type OptUint64 struct {
@@ -7411,44 +5064,26 @@ type OptUint64 struct {
 }
 
 // IsSet returns true if OptUint64 was set.
-func (o OptUint64) IsSet() bool { return o.Set }
+func (o OptUint64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUint64) Reset() {
-	var v uint64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUint64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUint64) SetTo(v uint64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUint64) SetTo(v uint64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptUint64) Get() (v uint64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptUint64) Get() (v uint64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUint64) Or(d uint64) uint64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUint64) Or(d uint64) uint64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptUint8 returns new OptUint8 with value set to v.
-func NewOptUint8(v uint8) OptUint8 {
-	return OptUint8{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUint8(v uint8) OptUint8 { _ = "STUB: not implemented"; return *new(OptUint8) }
 
 // OptUint8 is optional uint8.
 type OptUint8 struct {
@@ -7457,43 +5092,28 @@ type OptUint8 struct {
 }
 
 // IsSet returns true if OptUint8 was set.
-func (o OptUint8) IsSet() bool { return o.Set }
+func (o OptUint8) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUint8) Reset() {
-	var v uint8
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUint8) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUint8) SetTo(v uint8) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUint8) SetTo(v uint8) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptUint8) Get() (v uint8, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptUint8) Get() (v uint8, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUint8) Or(d uint8) uint8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUint8) Or(d uint8) uint8 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptUnixMicro returns new OptUnixMicro with value set to v.
 func NewOptUnixMicro(v time.Time) OptUnixMicro {
-	return OptUnixMicro{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptUnixMicro)
 }
 
 // OptUnixMicro is optional time.Time.
@@ -7503,43 +5123,31 @@ type OptUnixMicro struct {
 }
 
 // IsSet returns true if OptUnixMicro was set.
-func (o OptUnixMicro) IsSet() bool { return o.Set }
+func (o OptUnixMicro) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUnixMicro) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUnixMicro) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUnixMicro) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUnixMicro) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUnixMicro) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUnixMicro) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUnixMicro) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptUnixMilli returns new OptUnixMilli with value set to v.
 func NewOptUnixMilli(v time.Time) OptUnixMilli {
-	return OptUnixMilli{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptUnixMilli)
 }
 
 // OptUnixMilli is optional time.Time.
@@ -7549,44 +5157,29 @@ type OptUnixMilli struct {
 }
 
 // IsSet returns true if OptUnixMilli was set.
-func (o OptUnixMilli) IsSet() bool { return o.Set }
+func (o OptUnixMilli) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUnixMilli) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUnixMilli) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUnixMilli) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUnixMilli) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUnixMilli) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUnixMilli) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUnixMilli) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptUnixNano returns new OptUnixNano with value set to v.
-func NewOptUnixNano(v time.Time) OptUnixNano {
-	return OptUnixNano{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUnixNano(v time.Time) OptUnixNano { _ = "STUB: not implemented"; return *new(OptUnixNano) }
 
 // OptUnixNano is optional time.Time.
 type OptUnixNano struct {
@@ -7595,43 +5188,31 @@ type OptUnixNano struct {
 }
 
 // IsSet returns true if OptUnixNano was set.
-func (o OptUnixNano) IsSet() bool { return o.Set }
+func (o OptUnixNano) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUnixNano) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUnixNano) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUnixNano) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUnixNano) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUnixNano) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUnixNano) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUnixNano) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptUnixSeconds returns new OptUnixSeconds with value set to v.
 func NewOptUnixSeconds(v time.Time) OptUnixSeconds {
-	return OptUnixSeconds{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptUnixSeconds)
 }
 
 // OptUnixSeconds is optional time.Time.
@@ -7641,35 +5222,28 @@ type OptUnixSeconds struct {
 }
 
 // IsSet returns true if OptUnixSeconds was set.
-func (o OptUnixSeconds) IsSet() bool { return o.Set }
+func (o OptUnixSeconds) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUnixSeconds) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUnixSeconds) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUnixSeconds) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUnixSeconds) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUnixSeconds) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptUnixSeconds) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 type TestRequestEmptyStructReq struct{}
@@ -8039,3602 +5613,4311 @@ type TestRequestFormatTestReq struct {
 
 // GetRequiredAny returns the value of RequiredAny.
 func (s *TestRequestFormatTestReq) GetRequiredAny() jx.Raw {
-	return s.RequiredAny
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRequiredArrayAny returns the value of RequiredArrayAny.
+	new(jx.Raw)
 }
 
-// GetRequiredArrayAny returns the value of RequiredArrayAny.
 func (s *TestRequestFormatTestReq) GetRequiredArrayAny() []jx.Raw {
-	return s.RequiredArrayAny
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetRequiredArrayBoolean returns the value of RequiredArrayBoolean.
 }
 
-// GetRequiredArrayBoolean returns the value of RequiredArrayBoolean.
 func (s *TestRequestFormatTestReq) GetRequiredArrayBoolean() []bool {
-	return s.RequiredArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayInteger returns the value of RequiredArrayInteger.
 func (s *TestRequestFormatTestReq) GetRequiredArrayInteger() []int {
-	return s.RequiredArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt16 returns the value of RequiredArrayIntegerInt16.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerInt16() []int16 {
-	return s.RequiredArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt32 returns the value of RequiredArrayIntegerInt32.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerInt32() []int32 {
-	return s.RequiredArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt64 returns the value of RequiredArrayIntegerInt64.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerInt64() []int64 {
-	return s.RequiredArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt8 returns the value of RequiredArrayIntegerInt8.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerInt8() []int8 {
-	return s.RequiredArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint returns the value of RequiredArrayIntegerUint.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerUint() []uint {
-	return s.RequiredArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint16 returns the value of RequiredArrayIntegerUint16.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerUint16() []uint16 {
-	return s.RequiredArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint32 returns the value of RequiredArrayIntegerUint32.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerUint32() []uint32 {
-	return s.RequiredArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint64 returns the value of RequiredArrayIntegerUint64.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerUint64() []uint64 {
-	return s.RequiredArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint8 returns the value of RequiredArrayIntegerUint8.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerUint8() []uint8 {
-	return s.RequiredArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnix returns the value of RequiredArrayIntegerUnix.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerUnix() []time.Time {
-	return s.RequiredArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusMicro returns the value of RequiredArrayIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerUnixMinusMicro() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusMilli returns the value of RequiredArrayIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerUnixMinusMilli() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusNano returns the value of RequiredArrayIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerUnixMinusNano() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusSeconds returns the value of RequiredArrayIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetRequiredArrayIntegerUnixMinusSeconds() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNull returns the value of RequiredArrayNull.
 func (s *TestRequestFormatTestReq) GetRequiredArrayNull() []struct{} {
-	return s.RequiredArrayNull
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetRequiredArrayNumber returns the value of RequiredArrayNumber.
 }
 
-// GetRequiredArrayNumber returns the value of RequiredArrayNumber.
 func (s *TestRequestFormatTestReq) GetRequiredArrayNumber() []float64 {
-	return s.RequiredArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberDecimal returns the value of RequiredArrayNumberDecimal.
 func (s *TestRequestFormatTestReq) GetRequiredArrayNumberDecimal() []decimal.Decimal {
-	return s.RequiredArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberDouble returns the value of RequiredArrayNumberDouble.
 func (s *TestRequestFormatTestReq) GetRequiredArrayNumberDouble() []float64 {
-	return s.RequiredArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberFloat returns the value of RequiredArrayNumberFloat.
 func (s *TestRequestFormatTestReq) GetRequiredArrayNumberFloat() []float32 {
-	return s.RequiredArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberInt32 returns the value of RequiredArrayNumberInt32.
 func (s *TestRequestFormatTestReq) GetRequiredArrayNumberInt32() []int32 {
-	return s.RequiredArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberInt64 returns the value of RequiredArrayNumberInt64.
 func (s *TestRequestFormatTestReq) GetRequiredArrayNumberInt64() []int64 {
-	return s.RequiredArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayString returns the value of RequiredArrayString.
 func (s *TestRequestFormatTestReq) GetRequiredArrayString() []string {
-	return s.RequiredArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringBase64 returns the value of RequiredArrayStringBase64.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringBase64() [][]byte {
-	return s.RequiredArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringBinary returns the value of RequiredArrayStringBinary.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringBinary() []string {
-	return s.RequiredArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringByte returns the value of RequiredArrayStringByte.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringByte() [][]byte {
-	return s.RequiredArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDate returns the value of RequiredArrayStringDate.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringDate() []time.Time {
-	return s.RequiredArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDateMinusTime returns the value of RequiredArrayStringDateMinusTime.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringDateMinusTime() []time.Time {
-	return s.RequiredArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDecimal returns the value of RequiredArrayStringDecimal.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringDecimal() []decimal.Decimal {
-	return s.RequiredArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDuration returns the value of RequiredArrayStringDuration.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringDuration() []time.Duration {
-	return s.RequiredArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringEmail returns the value of RequiredArrayStringEmail.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringEmail() []string {
-	return s.RequiredArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringFloat32 returns the value of RequiredArrayStringFloat32.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringFloat32() []float32 {
-	return s.RequiredArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringFloat64 returns the value of RequiredArrayStringFloat64.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringFloat64() []float64 {
-	return s.RequiredArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringHostname returns the value of RequiredArrayStringHostname.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringHostname() []string {
-	return s.RequiredArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringHTTPMinusDate returns the value of RequiredArrayStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringHTTPMinusDate() []time.Time {
-	return s.RequiredArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt returns the value of RequiredArrayStringInt.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringInt() []int {
-	return s.RequiredArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt16 returns the value of RequiredArrayStringInt16.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringInt16() []int16 {
-	return s.RequiredArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt32 returns the value of RequiredArrayStringInt32.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringInt32() []int32 {
-	return s.RequiredArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt64 returns the value of RequiredArrayStringInt64.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringInt64() []int64 {
-	return s.RequiredArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt8 returns the value of RequiredArrayStringInt8.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringInt8() []int8 {
-	return s.RequiredArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringIP returns the value of RequiredArrayStringIP.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringIP() []netip.Addr {
-	return s.RequiredArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringIpv4 returns the value of RequiredArrayStringIpv4.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringIpv4() []netip.Addr {
-	return s.RequiredArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringIpv6 returns the value of RequiredArrayStringIpv6.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringIpv6() []netip.Addr {
-	return s.RequiredArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringMAC returns the value of RequiredArrayStringMAC.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringMAC() []net.HardwareAddr {
-	return s.RequiredArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringPassword returns the value of RequiredArrayStringPassword.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringPassword() []string {
-	return s.RequiredArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringTime returns the value of RequiredArrayStringTime.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringTime() []time.Time {
-	return s.RequiredArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint returns the value of RequiredArrayStringUint.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUint() []uint {
-	return s.RequiredArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint16 returns the value of RequiredArrayStringUint16.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUint16() []uint16 {
-	return s.RequiredArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint32 returns the value of RequiredArrayStringUint32.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUint32() []uint32 {
-	return s.RequiredArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint64 returns the value of RequiredArrayStringUint64.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUint64() []uint64 {
-	return s.RequiredArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint8 returns the value of RequiredArrayStringUint8.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUint8() []uint8 {
-	return s.RequiredArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnix returns the value of RequiredArrayStringUnix.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUnix() []time.Time {
-	return s.RequiredArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusMicro returns the value of RequiredArrayStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUnixMinusMicro() []time.Time {
-	return s.RequiredArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusMilli returns the value of RequiredArrayStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUnixMinusMilli() []time.Time {
-	return s.RequiredArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusNano returns the value of RequiredArrayStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUnixMinusNano() []time.Time {
-	return s.RequiredArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusSeconds returns the value of RequiredArrayStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUnixMinusSeconds() []time.Time {
-	return s.RequiredArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringURI returns the value of RequiredArrayStringURI.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringURI() []url.URL {
-	return s.RequiredArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUUID returns the value of RequiredArrayStringUUID.
 func (s *TestRequestFormatTestReq) GetRequiredArrayStringUUID() []uuid.UUID {
-	return s.RequiredArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredBoolean returns the value of RequiredBoolean.
 func (s *TestRequestFormatTestReq) GetRequiredBoolean() bool {
-	return s.RequiredBoolean
+	_ = "STUB: not implemented"
+	return false
+
+	// GetRequiredDoubleArrayAny returns the value of RequiredDoubleArrayAny.
 }
 
-// GetRequiredDoubleArrayAny returns the value of RequiredDoubleArrayAny.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayAny() [][]jx.Raw {
-	return s.RequiredDoubleArrayAny
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayBoolean returns the value of RequiredDoubleArrayBoolean.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayBoolean() [][]bool {
-	return s.RequiredDoubleArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayInteger returns the value of RequiredDoubleArrayInteger.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayInteger() [][]int {
-	return s.RequiredDoubleArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt16 returns the value of RequiredDoubleArrayIntegerInt16.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerInt16() [][]int16 {
-	return s.RequiredDoubleArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt32 returns the value of RequiredDoubleArrayIntegerInt32.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerInt32() [][]int32 {
-	return s.RequiredDoubleArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt64 returns the value of RequiredDoubleArrayIntegerInt64.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerInt64() [][]int64 {
-	return s.RequiredDoubleArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt8 returns the value of RequiredDoubleArrayIntegerInt8.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerInt8() [][]int8 {
-	return s.RequiredDoubleArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint returns the value of RequiredDoubleArrayIntegerUint.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerUint() [][]uint {
-	return s.RequiredDoubleArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint16 returns the value of RequiredDoubleArrayIntegerUint16.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerUint16() [][]uint16 {
-	return s.RequiredDoubleArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint32 returns the value of RequiredDoubleArrayIntegerUint32.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerUint32() [][]uint32 {
-	return s.RequiredDoubleArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint64 returns the value of RequiredDoubleArrayIntegerUint64.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerUint64() [][]uint64 {
-	return s.RequiredDoubleArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint8 returns the value of RequiredDoubleArrayIntegerUint8.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerUint8() [][]uint8 {
-	return s.RequiredDoubleArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnix returns the value of RequiredDoubleArrayIntegerUnix.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerUnix() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusMicro returns the value of RequiredDoubleArrayIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerUnixMinusMicro() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusMilli returns the value of RequiredDoubleArrayIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerUnixMinusMilli() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusNano returns the value of RequiredDoubleArrayIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerUnixMinusNano() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusSeconds returns the value of RequiredDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayIntegerUnixMinusSeconds() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNull returns the value of RequiredDoubleArrayNull.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayNull() [][]struct{} {
-	return s.RequiredDoubleArrayNull
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumber returns the value of RequiredDoubleArrayNumber.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayNumber() [][]float64 {
-	return s.RequiredDoubleArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberDecimal returns the value of RequiredDoubleArrayNumberDecimal.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayNumberDecimal() [][]decimal.Decimal {
-	return s.RequiredDoubleArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberDouble returns the value of RequiredDoubleArrayNumberDouble.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayNumberDouble() [][]float64 {
-	return s.RequiredDoubleArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberFloat returns the value of RequiredDoubleArrayNumberFloat.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayNumberFloat() [][]float32 {
-	return s.RequiredDoubleArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberInt32 returns the value of RequiredDoubleArrayNumberInt32.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayNumberInt32() [][]int32 {
-	return s.RequiredDoubleArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberInt64 returns the value of RequiredDoubleArrayNumberInt64.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayNumberInt64() [][]int64 {
-	return s.RequiredDoubleArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayString returns the value of RequiredDoubleArrayString.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayString() [][]string {
-	return s.RequiredDoubleArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringBase64 returns the value of RequiredDoubleArrayStringBase64.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringBase64() [][][]byte {
-	return s.RequiredDoubleArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringBinary returns the value of RequiredDoubleArrayStringBinary.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringBinary() [][]string {
-	return s.RequiredDoubleArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringByte returns the value of RequiredDoubleArrayStringByte.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringByte() [][][]byte {
-	return s.RequiredDoubleArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDate returns the value of RequiredDoubleArrayStringDate.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringDate() [][]time.Time {
-	return s.RequiredDoubleArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDateMinusTime returns the value of RequiredDoubleArrayStringDateMinusTime.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringDateMinusTime() [][]time.Time {
-	return s.RequiredDoubleArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDecimal returns the value of RequiredDoubleArrayStringDecimal.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringDecimal() [][]decimal.Decimal {
-	return s.RequiredDoubleArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDuration returns the value of RequiredDoubleArrayStringDuration.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringDuration() [][]time.Duration {
-	return s.RequiredDoubleArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringEmail returns the value of RequiredDoubleArrayStringEmail.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringEmail() [][]string {
-	return s.RequiredDoubleArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringFloat32 returns the value of RequiredDoubleArrayStringFloat32.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringFloat32() [][]float32 {
-	return s.RequiredDoubleArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringFloat64 returns the value of RequiredDoubleArrayStringFloat64.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringFloat64() [][]float64 {
-	return s.RequiredDoubleArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringHostname returns the value of RequiredDoubleArrayStringHostname.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringHostname() [][]string {
-	return s.RequiredDoubleArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringHTTPMinusDate returns the value of RequiredDoubleArrayStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringHTTPMinusDate() [][]time.Time {
-	return s.RequiredDoubleArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt returns the value of RequiredDoubleArrayStringInt.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringInt() [][]int {
-	return s.RequiredDoubleArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt16 returns the value of RequiredDoubleArrayStringInt16.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringInt16() [][]int16 {
-	return s.RequiredDoubleArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt32 returns the value of RequiredDoubleArrayStringInt32.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringInt32() [][]int32 {
-	return s.RequiredDoubleArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt64 returns the value of RequiredDoubleArrayStringInt64.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringInt64() [][]int64 {
-	return s.RequiredDoubleArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt8 returns the value of RequiredDoubleArrayStringInt8.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringInt8() [][]int8 {
-	return s.RequiredDoubleArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringIP returns the value of RequiredDoubleArrayStringIP.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringIP() [][]netip.Addr {
-	return s.RequiredDoubleArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringIpv4 returns the value of RequiredDoubleArrayStringIpv4.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringIpv4() [][]netip.Addr {
-	return s.RequiredDoubleArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringIpv6 returns the value of RequiredDoubleArrayStringIpv6.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringIpv6() [][]netip.Addr {
-	return s.RequiredDoubleArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringMAC returns the value of RequiredDoubleArrayStringMAC.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringMAC() [][]net.HardwareAddr {
-	return s.RequiredDoubleArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringPassword returns the value of RequiredDoubleArrayStringPassword.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringPassword() [][]string {
-	return s.RequiredDoubleArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringTime returns the value of RequiredDoubleArrayStringTime.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringTime() [][]time.Time {
-	return s.RequiredDoubleArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint returns the value of RequiredDoubleArrayStringUint.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUint() [][]uint {
-	return s.RequiredDoubleArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint16 returns the value of RequiredDoubleArrayStringUint16.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUint16() [][]uint16 {
-	return s.RequiredDoubleArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint32 returns the value of RequiredDoubleArrayStringUint32.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUint32() [][]uint32 {
-	return s.RequiredDoubleArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint64 returns the value of RequiredDoubleArrayStringUint64.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUint64() [][]uint64 {
-	return s.RequiredDoubleArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint8 returns the value of RequiredDoubleArrayStringUint8.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUint8() [][]uint8 {
-	return s.RequiredDoubleArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnix returns the value of RequiredDoubleArrayStringUnix.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUnix() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusMicro returns the value of RequiredDoubleArrayStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUnixMinusMicro() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusMilli returns the value of RequiredDoubleArrayStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUnixMinusMilli() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusNano returns the value of RequiredDoubleArrayStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUnixMinusNano() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusSeconds returns the value of RequiredDoubleArrayStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUnixMinusSeconds() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringURI returns the value of RequiredDoubleArrayStringURI.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringURI() [][]url.URL {
-	return s.RequiredDoubleArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUUID returns the value of RequiredDoubleArrayStringUUID.
 func (s *TestRequestFormatTestReq) GetRequiredDoubleArrayStringUUID() [][]uuid.UUID {
-	return s.RequiredDoubleArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredInteger returns the value of RequiredInteger.
-func (s *TestRequestFormatTestReq) GetRequiredInteger() int {
-	return s.RequiredInteger
-}
+func (s *TestRequestFormatTestReq) GetRequiredInteger() int { _ = "STUB: not implemented"; return 0 }
 
 // GetRequiredIntegerInt16 returns the value of RequiredIntegerInt16.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerInt16() int16 {
-	return s.RequiredIntegerInt16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerInt32 returns the value of RequiredIntegerInt32.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerInt32() int32 {
-	return s.RequiredIntegerInt32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerInt64 returns the value of RequiredIntegerInt64.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerInt64() int64 {
-	return s.RequiredIntegerInt64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerInt8 returns the value of RequiredIntegerInt8.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerInt8() int8 {
-	return s.RequiredIntegerInt8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint returns the value of RequiredIntegerUint.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerUint() uint {
-	return s.RequiredIntegerUint
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint16 returns the value of RequiredIntegerUint16.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerUint16() uint16 {
-	return s.RequiredIntegerUint16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint32 returns the value of RequiredIntegerUint32.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerUint32() uint32 {
-	return s.RequiredIntegerUint32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint64 returns the value of RequiredIntegerUint64.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerUint64() uint64 {
-	return s.RequiredIntegerUint64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint8 returns the value of RequiredIntegerUint8.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerUint8() uint8 {
-	return s.RequiredIntegerUint8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUnix returns the value of RequiredIntegerUnix.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerUnix() time.Time {
-	return s.RequiredIntegerUnix
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusMicro returns the value of RequiredIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerUnixMinusMicro() time.Time {
-	return s.RequiredIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusMilli returns the value of RequiredIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerUnixMinusMilli() time.Time {
-	return s.RequiredIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusNano returns the value of RequiredIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerUnixMinusNano() time.Time {
-	return s.RequiredIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusSeconds returns the value of RequiredIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetRequiredIntegerUnixMinusSeconds() time.Time {
-	return s.RequiredIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredNull returns the value of RequiredNull.
 func (s *TestRequestFormatTestReq) GetRequiredNull() struct{} {
-	return s.RequiredNull
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetRequiredNumber returns the value of RequiredNumber.
 }
 
-// GetRequiredNumber returns the value of RequiredNumber.
-func (s *TestRequestFormatTestReq) GetRequiredNumber() float64 {
-	return s.RequiredNumber
-}
+func (s *TestRequestFormatTestReq) GetRequiredNumber() float64 { _ = "STUB: not implemented"; return 0 }
 
 // GetRequiredNumberDecimal returns the value of RequiredNumberDecimal.
 func (s *TestRequestFormatTestReq) GetRequiredNumberDecimal() decimal.Decimal {
-	return s.RequiredNumberDecimal
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // GetRequiredNumberDouble returns the value of RequiredNumberDouble.
 func (s *TestRequestFormatTestReq) GetRequiredNumberDouble() float64 {
-	return s.RequiredNumberDouble
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredNumberFloat returns the value of RequiredNumberFloat.
 func (s *TestRequestFormatTestReq) GetRequiredNumberFloat() float32 {
-	return s.RequiredNumberFloat
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredNumberInt32 returns the value of RequiredNumberInt32.
 func (s *TestRequestFormatTestReq) GetRequiredNumberInt32() int32 {
-	return s.RequiredNumberInt32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredNumberInt64 returns the value of RequiredNumberInt64.
 func (s *TestRequestFormatTestReq) GetRequiredNumberInt64() int64 {
-	return s.RequiredNumberInt64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredString returns the value of RequiredString.
-func (s *TestRequestFormatTestReq) GetRequiredString() string {
-	return s.RequiredString
-}
+func (s *TestRequestFormatTestReq) GetRequiredString() string { _ = "STUB: not implemented"; return "" }
 
 // GetRequiredStringBase64 returns the value of RequiredStringBase64.
 func (s *TestRequestFormatTestReq) GetRequiredStringBase64() []byte {
-	return s.RequiredStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredStringBinary returns the value of RequiredStringBinary.
 func (s *TestRequestFormatTestReq) GetRequiredStringBinary() string {
-	return s.RequiredStringBinary
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringByte returns the value of RequiredStringByte.
 func (s *TestRequestFormatTestReq) GetRequiredStringByte() []byte {
-	return s.RequiredStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredStringDate returns the value of RequiredStringDate.
 func (s *TestRequestFormatTestReq) GetRequiredStringDate() time.Time {
-	return s.RequiredStringDate
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringDateMinusTime returns the value of RequiredStringDateMinusTime.
 func (s *TestRequestFormatTestReq) GetRequiredStringDateMinusTime() time.Time {
-	return s.RequiredStringDateMinusTime
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringDecimal returns the value of RequiredStringDecimal.
 func (s *TestRequestFormatTestReq) GetRequiredStringDecimal() decimal.Decimal {
-	return s.RequiredStringDecimal
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // GetRequiredStringDuration returns the value of RequiredStringDuration.
 func (s *TestRequestFormatTestReq) GetRequiredStringDuration() time.Duration {
-	return s.RequiredStringDuration
+	_ = "STUB: not implemented"
+	return *new(time.Duration)
 }
 
 // GetRequiredStringEmail returns the value of RequiredStringEmail.
 func (s *TestRequestFormatTestReq) GetRequiredStringEmail() string {
-	return s.RequiredStringEmail
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringFloat32 returns the value of RequiredStringFloat32.
 func (s *TestRequestFormatTestReq) GetRequiredStringFloat32() float32 {
-	return s.RequiredStringFloat32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringFloat64 returns the value of RequiredStringFloat64.
 func (s *TestRequestFormatTestReq) GetRequiredStringFloat64() float64 {
-	return s.RequiredStringFloat64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringHostname returns the value of RequiredStringHostname.
 func (s *TestRequestFormatTestReq) GetRequiredStringHostname() string {
-	return s.RequiredStringHostname
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringHTTPMinusDate returns the value of RequiredStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) GetRequiredStringHTTPMinusDate() time.Time {
-	return s.RequiredStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringInt returns the value of RequiredStringInt.
-func (s *TestRequestFormatTestReq) GetRequiredStringInt() int {
-	return s.RequiredStringInt
-}
+func (s *TestRequestFormatTestReq) GetRequiredStringInt() int { _ = "STUB: not implemented"; return 0 }
 
 // GetRequiredStringInt16 returns the value of RequiredStringInt16.
 func (s *TestRequestFormatTestReq) GetRequiredStringInt16() int16 {
-	return s.RequiredStringInt16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringInt32 returns the value of RequiredStringInt32.
 func (s *TestRequestFormatTestReq) GetRequiredStringInt32() int32 {
-	return s.RequiredStringInt32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringInt64 returns the value of RequiredStringInt64.
 func (s *TestRequestFormatTestReq) GetRequiredStringInt64() int64 {
-	return s.RequiredStringInt64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringInt8 returns the value of RequiredStringInt8.
 func (s *TestRequestFormatTestReq) GetRequiredStringInt8() int8 {
-	return s.RequiredStringInt8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringIP returns the value of RequiredStringIP.
 func (s *TestRequestFormatTestReq) GetRequiredStringIP() netip.Addr {
-	return s.RequiredStringIP
+	_ = "STUB: not implemented"
+	return *new(netip.Addr)
 }
 
 // GetRequiredStringIpv4 returns the value of RequiredStringIpv4.
 func (s *TestRequestFormatTestReq) GetRequiredStringIpv4() netip.Addr {
-	return s.RequiredStringIpv4
+	_ = "STUB: not implemented"
+	return *new(netip.Addr)
 }
 
 // GetRequiredStringIpv6 returns the value of RequiredStringIpv6.
 func (s *TestRequestFormatTestReq) GetRequiredStringIpv6() netip.Addr {
-	return s.RequiredStringIpv6
+	_ = "STUB: not implemented"
+	return *new(netip.Addr)
 }
 
 // GetRequiredStringMAC returns the value of RequiredStringMAC.
 func (s *TestRequestFormatTestReq) GetRequiredStringMAC() net.HardwareAddr {
-	return s.RequiredStringMAC
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr)
 }
 
 // GetRequiredStringPassword returns the value of RequiredStringPassword.
 func (s *TestRequestFormatTestReq) GetRequiredStringPassword() string {
-	return s.RequiredStringPassword
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringTime returns the value of RequiredStringTime.
 func (s *TestRequestFormatTestReq) GetRequiredStringTime() time.Time {
-	return s.RequiredStringTime
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUint returns the value of RequiredStringUint.
 func (s *TestRequestFormatTestReq) GetRequiredStringUint() uint {
-	return s.RequiredStringUint
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint16 returns the value of RequiredStringUint16.
 func (s *TestRequestFormatTestReq) GetRequiredStringUint16() uint16 {
-	return s.RequiredStringUint16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint32 returns the value of RequiredStringUint32.
 func (s *TestRequestFormatTestReq) GetRequiredStringUint32() uint32 {
-	return s.RequiredStringUint32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint64 returns the value of RequiredStringUint64.
 func (s *TestRequestFormatTestReq) GetRequiredStringUint64() uint64 {
-	return s.RequiredStringUint64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint8 returns the value of RequiredStringUint8.
 func (s *TestRequestFormatTestReq) GetRequiredStringUint8() uint8 {
-	return s.RequiredStringUint8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUnix returns the value of RequiredStringUnix.
 func (s *TestRequestFormatTestReq) GetRequiredStringUnix() time.Time {
-	return s.RequiredStringUnix
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusMicro returns the value of RequiredStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetRequiredStringUnixMinusMicro() time.Time {
-	return s.RequiredStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusMilli returns the value of RequiredStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetRequiredStringUnixMinusMilli() time.Time {
-	return s.RequiredStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusNano returns the value of RequiredStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetRequiredStringUnixMinusNano() time.Time {
-	return s.RequiredStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusSeconds returns the value of RequiredStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetRequiredStringUnixMinusSeconds() time.Time {
-	return s.RequiredStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringURI returns the value of RequiredStringURI.
 func (s *TestRequestFormatTestReq) GetRequiredStringURI() url.URL {
-	return s.RequiredStringURI
+	_ = "STUB: not implemented"
+	return *new(url.URL)
 }
 
 // GetRequiredStringUUID returns the value of RequiredStringUUID.
 func (s *TestRequestFormatTestReq) GetRequiredStringUUID() uuid.UUID {
-	return s.RequiredStringUUID
+	_ = "STUB: not implemented"
+	return *new(uuid.UUID)
 }
 
 // GetOptionalAny returns the value of OptionalAny.
 func (s *TestRequestFormatTestReq) GetOptionalAny() jx.Raw {
-	return s.OptionalAny
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalArrayAny returns the value of OptionalArrayAny.
+	new(jx.Raw)
 }
 
-// GetOptionalArrayAny returns the value of OptionalArrayAny.
 func (s *TestRequestFormatTestReq) GetOptionalArrayAny() []jx.Raw {
-	return s.OptionalArrayAny
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetOptionalArrayBoolean returns the value of OptionalArrayBoolean.
 }
 
-// GetOptionalArrayBoolean returns the value of OptionalArrayBoolean.
 func (s *TestRequestFormatTestReq) GetOptionalArrayBoolean() []bool {
-	return s.OptionalArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayInteger returns the value of OptionalArrayInteger.
 func (s *TestRequestFormatTestReq) GetOptionalArrayInteger() []int {
-	return s.OptionalArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt16 returns the value of OptionalArrayIntegerInt16.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerInt16() []int16 {
-	return s.OptionalArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt32 returns the value of OptionalArrayIntegerInt32.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerInt32() []int32 {
-	return s.OptionalArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt64 returns the value of OptionalArrayIntegerInt64.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerInt64() []int64 {
-	return s.OptionalArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt8 returns the value of OptionalArrayIntegerInt8.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerInt8() []int8 {
-	return s.OptionalArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint returns the value of OptionalArrayIntegerUint.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerUint() []uint {
-	return s.OptionalArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint16 returns the value of OptionalArrayIntegerUint16.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerUint16() []uint16 {
-	return s.OptionalArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint32 returns the value of OptionalArrayIntegerUint32.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerUint32() []uint32 {
-	return s.OptionalArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint64 returns the value of OptionalArrayIntegerUint64.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerUint64() []uint64 {
-	return s.OptionalArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint8 returns the value of OptionalArrayIntegerUint8.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerUint8() []uint8 {
-	return s.OptionalArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnix returns the value of OptionalArrayIntegerUnix.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerUnix() []time.Time {
-	return s.OptionalArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusMicro returns the value of OptionalArrayIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerUnixMinusMicro() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusMilli returns the value of OptionalArrayIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerUnixMinusMilli() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusNano returns the value of OptionalArrayIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerUnixMinusNano() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusSeconds returns the value of OptionalArrayIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetOptionalArrayIntegerUnixMinusSeconds() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNull returns the value of OptionalArrayNull.
 func (s *TestRequestFormatTestReq) GetOptionalArrayNull() []struct{} {
-	return s.OptionalArrayNull
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetOptionalArrayNumber returns the value of OptionalArrayNumber.
 }
 
-// GetOptionalArrayNumber returns the value of OptionalArrayNumber.
 func (s *TestRequestFormatTestReq) GetOptionalArrayNumber() []float64 {
-	return s.OptionalArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberDecimal returns the value of OptionalArrayNumberDecimal.
 func (s *TestRequestFormatTestReq) GetOptionalArrayNumberDecimal() []decimal.Decimal {
-	return s.OptionalArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberDouble returns the value of OptionalArrayNumberDouble.
 func (s *TestRequestFormatTestReq) GetOptionalArrayNumberDouble() []float64 {
-	return s.OptionalArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberFloat returns the value of OptionalArrayNumberFloat.
 func (s *TestRequestFormatTestReq) GetOptionalArrayNumberFloat() []float32 {
-	return s.OptionalArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberInt32 returns the value of OptionalArrayNumberInt32.
 func (s *TestRequestFormatTestReq) GetOptionalArrayNumberInt32() []int32 {
-	return s.OptionalArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberInt64 returns the value of OptionalArrayNumberInt64.
 func (s *TestRequestFormatTestReq) GetOptionalArrayNumberInt64() []int64 {
-	return s.OptionalArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayString returns the value of OptionalArrayString.
 func (s *TestRequestFormatTestReq) GetOptionalArrayString() []string {
-	return s.OptionalArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringBase64 returns the value of OptionalArrayStringBase64.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringBase64() [][]byte {
-	return s.OptionalArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringBinary returns the value of OptionalArrayStringBinary.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringBinary() []string {
-	return s.OptionalArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringByte returns the value of OptionalArrayStringByte.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringByte() [][]byte {
-	return s.OptionalArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDate returns the value of OptionalArrayStringDate.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringDate() []time.Time {
-	return s.OptionalArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDateMinusTime returns the value of OptionalArrayStringDateMinusTime.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringDateMinusTime() []time.Time {
-	return s.OptionalArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDecimal returns the value of OptionalArrayStringDecimal.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringDecimal() []decimal.Decimal {
-	return s.OptionalArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDuration returns the value of OptionalArrayStringDuration.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringDuration() []time.Duration {
-	return s.OptionalArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringEmail returns the value of OptionalArrayStringEmail.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringEmail() []string {
-	return s.OptionalArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringFloat32 returns the value of OptionalArrayStringFloat32.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringFloat32() []float32 {
-	return s.OptionalArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringFloat64 returns the value of OptionalArrayStringFloat64.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringFloat64() []float64 {
-	return s.OptionalArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringHostname returns the value of OptionalArrayStringHostname.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringHostname() []string {
-	return s.OptionalArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringHTTPMinusDate returns the value of OptionalArrayStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringHTTPMinusDate() []time.Time {
-	return s.OptionalArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt returns the value of OptionalArrayStringInt.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringInt() []int {
-	return s.OptionalArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt16 returns the value of OptionalArrayStringInt16.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringInt16() []int16 {
-	return s.OptionalArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt32 returns the value of OptionalArrayStringInt32.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringInt32() []int32 {
-	return s.OptionalArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt64 returns the value of OptionalArrayStringInt64.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringInt64() []int64 {
-	return s.OptionalArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt8 returns the value of OptionalArrayStringInt8.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringInt8() []int8 {
-	return s.OptionalArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringIP returns the value of OptionalArrayStringIP.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringIP() []netip.Addr {
-	return s.OptionalArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringIpv4 returns the value of OptionalArrayStringIpv4.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringIpv4() []netip.Addr {
-	return s.OptionalArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringIpv6 returns the value of OptionalArrayStringIpv6.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringIpv6() []netip.Addr {
-	return s.OptionalArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringMAC returns the value of OptionalArrayStringMAC.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringMAC() []net.HardwareAddr {
-	return s.OptionalArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringPassword returns the value of OptionalArrayStringPassword.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringPassword() []string {
-	return s.OptionalArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringTime returns the value of OptionalArrayStringTime.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringTime() []time.Time {
-	return s.OptionalArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint returns the value of OptionalArrayStringUint.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUint() []uint {
-	return s.OptionalArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint16 returns the value of OptionalArrayStringUint16.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUint16() []uint16 {
-	return s.OptionalArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint32 returns the value of OptionalArrayStringUint32.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUint32() []uint32 {
-	return s.OptionalArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint64 returns the value of OptionalArrayStringUint64.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUint64() []uint64 {
-	return s.OptionalArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint8 returns the value of OptionalArrayStringUint8.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUint8() []uint8 {
-	return s.OptionalArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnix returns the value of OptionalArrayStringUnix.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUnix() []time.Time {
-	return s.OptionalArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusMicro returns the value of OptionalArrayStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUnixMinusMicro() []time.Time {
-	return s.OptionalArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusMilli returns the value of OptionalArrayStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUnixMinusMilli() []time.Time {
-	return s.OptionalArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusNano returns the value of OptionalArrayStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUnixMinusNano() []time.Time {
-	return s.OptionalArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusSeconds returns the value of OptionalArrayStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUnixMinusSeconds() []time.Time {
-	return s.OptionalArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringURI returns the value of OptionalArrayStringURI.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringURI() []url.URL {
-	return s.OptionalArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUUID returns the value of OptionalArrayStringUUID.
 func (s *TestRequestFormatTestReq) GetOptionalArrayStringUUID() []uuid.UUID {
-	return s.OptionalArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalBoolean returns the value of OptionalBoolean.
 func (s *TestRequestFormatTestReq) GetOptionalBoolean() OptBool {
-	return s.OptionalBoolean
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalDoubleArrayAny returns the value of OptionalDoubleArrayAny.
+	new(OptBool)
 }
 
-// GetOptionalDoubleArrayAny returns the value of OptionalDoubleArrayAny.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayAny() [][]jx.Raw {
-	return s.OptionalDoubleArrayAny
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayBoolean returns the value of OptionalDoubleArrayBoolean.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayBoolean() [][]bool {
-	return s.OptionalDoubleArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayInteger returns the value of OptionalDoubleArrayInteger.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayInteger() [][]int {
-	return s.OptionalDoubleArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt16 returns the value of OptionalDoubleArrayIntegerInt16.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerInt16() [][]int16 {
-	return s.OptionalDoubleArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt32 returns the value of OptionalDoubleArrayIntegerInt32.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerInt32() [][]int32 {
-	return s.OptionalDoubleArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt64 returns the value of OptionalDoubleArrayIntegerInt64.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerInt64() [][]int64 {
-	return s.OptionalDoubleArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt8 returns the value of OptionalDoubleArrayIntegerInt8.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerInt8() [][]int8 {
-	return s.OptionalDoubleArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint returns the value of OptionalDoubleArrayIntegerUint.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerUint() [][]uint {
-	return s.OptionalDoubleArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint16 returns the value of OptionalDoubleArrayIntegerUint16.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerUint16() [][]uint16 {
-	return s.OptionalDoubleArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint32 returns the value of OptionalDoubleArrayIntegerUint32.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerUint32() [][]uint32 {
-	return s.OptionalDoubleArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint64 returns the value of OptionalDoubleArrayIntegerUint64.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerUint64() [][]uint64 {
-	return s.OptionalDoubleArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint8 returns the value of OptionalDoubleArrayIntegerUint8.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerUint8() [][]uint8 {
-	return s.OptionalDoubleArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnix returns the value of OptionalDoubleArrayIntegerUnix.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerUnix() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusMicro returns the value of OptionalDoubleArrayIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerUnixMinusMicro() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusMilli returns the value of OptionalDoubleArrayIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerUnixMinusMilli() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusNano returns the value of OptionalDoubleArrayIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerUnixMinusNano() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusSeconds returns the value of OptionalDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayIntegerUnixMinusSeconds() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNull returns the value of OptionalDoubleArrayNull.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayNull() [][]struct{} {
-	return s.OptionalDoubleArrayNull
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumber returns the value of OptionalDoubleArrayNumber.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayNumber() [][]float64 {
-	return s.OptionalDoubleArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberDecimal returns the value of OptionalDoubleArrayNumberDecimal.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayNumberDecimal() [][]decimal.Decimal {
-	return s.OptionalDoubleArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberDouble returns the value of OptionalDoubleArrayNumberDouble.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayNumberDouble() [][]float64 {
-	return s.OptionalDoubleArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberFloat returns the value of OptionalDoubleArrayNumberFloat.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayNumberFloat() [][]float32 {
-	return s.OptionalDoubleArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberInt32 returns the value of OptionalDoubleArrayNumberInt32.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayNumberInt32() [][]int32 {
-	return s.OptionalDoubleArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberInt64 returns the value of OptionalDoubleArrayNumberInt64.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayNumberInt64() [][]int64 {
-	return s.OptionalDoubleArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayString returns the value of OptionalDoubleArrayString.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayString() [][]string {
-	return s.OptionalDoubleArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringBase64 returns the value of OptionalDoubleArrayStringBase64.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringBase64() [][][]byte {
-	return s.OptionalDoubleArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringBinary returns the value of OptionalDoubleArrayStringBinary.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringBinary() [][]string {
-	return s.OptionalDoubleArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringByte returns the value of OptionalDoubleArrayStringByte.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringByte() [][][]byte {
-	return s.OptionalDoubleArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDate returns the value of OptionalDoubleArrayStringDate.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringDate() [][]time.Time {
-	return s.OptionalDoubleArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDateMinusTime returns the value of OptionalDoubleArrayStringDateMinusTime.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringDateMinusTime() [][]time.Time {
-	return s.OptionalDoubleArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDecimal returns the value of OptionalDoubleArrayStringDecimal.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringDecimal() [][]decimal.Decimal {
-	return s.OptionalDoubleArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDuration returns the value of OptionalDoubleArrayStringDuration.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringDuration() [][]time.Duration {
-	return s.OptionalDoubleArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringEmail returns the value of OptionalDoubleArrayStringEmail.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringEmail() [][]string {
-	return s.OptionalDoubleArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringFloat32 returns the value of OptionalDoubleArrayStringFloat32.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringFloat32() [][]float32 {
-	return s.OptionalDoubleArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringFloat64 returns the value of OptionalDoubleArrayStringFloat64.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringFloat64() [][]float64 {
-	return s.OptionalDoubleArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringHostname returns the value of OptionalDoubleArrayStringHostname.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringHostname() [][]string {
-	return s.OptionalDoubleArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringHTTPMinusDate returns the value of OptionalDoubleArrayStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringHTTPMinusDate() [][]time.Time {
-	return s.OptionalDoubleArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt returns the value of OptionalDoubleArrayStringInt.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringInt() [][]int {
-	return s.OptionalDoubleArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt16 returns the value of OptionalDoubleArrayStringInt16.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringInt16() [][]int16 {
-	return s.OptionalDoubleArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt32 returns the value of OptionalDoubleArrayStringInt32.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringInt32() [][]int32 {
-	return s.OptionalDoubleArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt64 returns the value of OptionalDoubleArrayStringInt64.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringInt64() [][]int64 {
-	return s.OptionalDoubleArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt8 returns the value of OptionalDoubleArrayStringInt8.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringInt8() [][]int8 {
-	return s.OptionalDoubleArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringIP returns the value of OptionalDoubleArrayStringIP.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringIP() [][]netip.Addr {
-	return s.OptionalDoubleArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringIpv4 returns the value of OptionalDoubleArrayStringIpv4.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringIpv4() [][]netip.Addr {
-	return s.OptionalDoubleArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringIpv6 returns the value of OptionalDoubleArrayStringIpv6.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringIpv6() [][]netip.Addr {
-	return s.OptionalDoubleArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringMAC returns the value of OptionalDoubleArrayStringMAC.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringMAC() [][]net.HardwareAddr {
-	return s.OptionalDoubleArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringPassword returns the value of OptionalDoubleArrayStringPassword.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringPassword() [][]string {
-	return s.OptionalDoubleArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringTime returns the value of OptionalDoubleArrayStringTime.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringTime() [][]time.Time {
-	return s.OptionalDoubleArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint returns the value of OptionalDoubleArrayStringUint.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUint() [][]uint {
-	return s.OptionalDoubleArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint16 returns the value of OptionalDoubleArrayStringUint16.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUint16() [][]uint16 {
-	return s.OptionalDoubleArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint32 returns the value of OptionalDoubleArrayStringUint32.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUint32() [][]uint32 {
-	return s.OptionalDoubleArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint64 returns the value of OptionalDoubleArrayStringUint64.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUint64() [][]uint64 {
-	return s.OptionalDoubleArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint8 returns the value of OptionalDoubleArrayStringUint8.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUint8() [][]uint8 {
-	return s.OptionalDoubleArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnix returns the value of OptionalDoubleArrayStringUnix.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUnix() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusMicro returns the value of OptionalDoubleArrayStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUnixMinusMicro() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusMilli returns the value of OptionalDoubleArrayStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUnixMinusMilli() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusNano returns the value of OptionalDoubleArrayStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUnixMinusNano() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusSeconds returns the value of OptionalDoubleArrayStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUnixMinusSeconds() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringURI returns the value of OptionalDoubleArrayStringURI.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringURI() [][]url.URL {
-	return s.OptionalDoubleArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUUID returns the value of OptionalDoubleArrayStringUUID.
 func (s *TestRequestFormatTestReq) GetOptionalDoubleArrayStringUUID() [][]uuid.UUID {
-	return s.OptionalDoubleArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalInteger returns the value of OptionalInteger.
 func (s *TestRequestFormatTestReq) GetOptionalInteger() OptInt {
-	return s.OptionalInteger
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalIntegerInt16 returns the value of OptionalIntegerInt16.
+	new(OptInt)
 }
 
-// GetOptionalIntegerInt16 returns the value of OptionalIntegerInt16.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerInt16() OptInt16 {
-	return s.OptionalIntegerInt16
+	_ = "STUB: not implemented"
+	return *new(OptInt16)
 }
 
 // GetOptionalIntegerInt32 returns the value of OptionalIntegerInt32.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerInt32() OptInt32 {
-	return s.OptionalIntegerInt32
+	_ = "STUB: not implemented"
+	return *new(OptInt32)
 }
 
 // GetOptionalIntegerInt64 returns the value of OptionalIntegerInt64.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerInt64() OptInt64 {
-	return s.OptionalIntegerInt64
+	_ = "STUB: not implemented"
+	return *new(OptInt64)
 }
 
 // GetOptionalIntegerInt8 returns the value of OptionalIntegerInt8.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerInt8() OptInt8 {
-	return s.OptionalIntegerInt8
+	_ = "STUB: not implemented"
+	return *new(OptInt8)
 }
 
 // GetOptionalIntegerUint returns the value of OptionalIntegerUint.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerUint() OptUint {
-	return s.OptionalIntegerUint
+	_ = "STUB: not implemented"
+	return *new(OptUint)
 }
 
 // GetOptionalIntegerUint16 returns the value of OptionalIntegerUint16.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerUint16() OptUint16 {
-	return s.OptionalIntegerUint16
+	_ = "STUB: not implemented"
+	return *new(OptUint16)
 }
 
 // GetOptionalIntegerUint32 returns the value of OptionalIntegerUint32.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerUint32() OptUint32 {
-	return s.OptionalIntegerUint32
+	_ = "STUB: not implemented"
+	return *new(OptUint32)
 }
 
 // GetOptionalIntegerUint64 returns the value of OptionalIntegerUint64.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerUint64() OptUint64 {
-	return s.OptionalIntegerUint64
+	_ = "STUB: not implemented"
+	return *new(OptUint64)
 }
 
 // GetOptionalIntegerUint8 returns the value of OptionalIntegerUint8.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerUint8() OptUint8 {
-	return s.OptionalIntegerUint8
+	_ = "STUB: not implemented"
+	return *new(OptUint8)
 }
 
 // GetOptionalIntegerUnix returns the value of OptionalIntegerUnix.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerUnix() OptUnixSeconds {
-	return s.OptionalIntegerUnix
+	_ = "STUB: not implemented"
+	return *new(OptUnixSeconds)
 }
 
 // GetOptionalIntegerUnixMinusMicro returns the value of OptionalIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerUnixMinusMicro() OptUnixMicro {
-	return s.OptionalIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(OptUnixMicro)
 }
 
 // GetOptionalIntegerUnixMinusMilli returns the value of OptionalIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerUnixMinusMilli() OptUnixMilli {
-	return s.OptionalIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(OptUnixMilli)
 }
 
 // GetOptionalIntegerUnixMinusNano returns the value of OptionalIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerUnixMinusNano() OptUnixNano {
-	return s.OptionalIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(OptUnixNano)
 }
 
 // GetOptionalIntegerUnixMinusSeconds returns the value of OptionalIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetOptionalIntegerUnixMinusSeconds() OptUnixSeconds {
-	return s.OptionalIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(OptUnixSeconds)
 }
 
 // GetOptionalNull returns the value of OptionalNull.
 func (s *TestRequestFormatTestReq) GetOptionalNull() OptNull {
-	return s.OptionalNull
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalNumber returns the value of OptionalNumber.
+	new(OptNull)
 }
 
-// GetOptionalNumber returns the value of OptionalNumber.
 func (s *TestRequestFormatTestReq) GetOptionalNumber() OptFloat64 {
-	return s.OptionalNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalNumberDecimal returns the value of OptionalNumberDecimal.
+	new(OptFloat64)
 }
 
-// GetOptionalNumberDecimal returns the value of OptionalNumberDecimal.
 func (s *TestRequestFormatTestReq) GetOptionalNumberDecimal() OptDecimal {
-	return s.OptionalNumberDecimal
+	_ = "STUB: not implemented"
+	return *new(OptDecimal)
 }
 
 // GetOptionalNumberDouble returns the value of OptionalNumberDouble.
 func (s *TestRequestFormatTestReq) GetOptionalNumberDouble() OptFloat64 {
-	return s.OptionalNumberDouble
+	_ = "STUB: not implemented"
+	return *new(OptFloat64)
 }
 
 // GetOptionalNumberFloat returns the value of OptionalNumberFloat.
 func (s *TestRequestFormatTestReq) GetOptionalNumberFloat() OptFloat32 {
-	return s.OptionalNumberFloat
+	_ = "STUB: not implemented"
+	return *new(OptFloat32)
 }
 
 // GetOptionalNumberInt32 returns the value of OptionalNumberInt32.
 func (s *TestRequestFormatTestReq) GetOptionalNumberInt32() OptInt32 {
-	return s.OptionalNumberInt32
+	_ = "STUB: not implemented"
+	return *new(OptInt32)
 }
 
 // GetOptionalNumberInt64 returns the value of OptionalNumberInt64.
 func (s *TestRequestFormatTestReq) GetOptionalNumberInt64() OptInt64 {
-	return s.OptionalNumberInt64
+	_ = "STUB: not implemented"
+	return *new(OptInt64)
 }
 
 // GetOptionalString returns the value of OptionalString.
 func (s *TestRequestFormatTestReq) GetOptionalString() OptString {
-	return s.OptionalString
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalStringBase64 returns the value of OptionalStringBase64.
+	new(OptString)
 }
 
-// GetOptionalStringBase64 returns the value of OptionalStringBase64.
 func (s *TestRequestFormatTestReq) GetOptionalStringBase64() []byte {
-	return s.OptionalStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalStringBinary returns the value of OptionalStringBinary.
 func (s *TestRequestFormatTestReq) GetOptionalStringBinary() OptString {
-	return s.OptionalStringBinary
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringByte returns the value of OptionalStringByte.
 func (s *TestRequestFormatTestReq) GetOptionalStringByte() []byte {
-	return s.OptionalStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalStringDate returns the value of OptionalStringDate.
 func (s *TestRequestFormatTestReq) GetOptionalStringDate() OptDate {
-	return s.OptionalStringDate
+	_ = "STUB: not implemented"
+	return *new(OptDate)
 }
 
 // GetOptionalStringDateMinusTime returns the value of OptionalStringDateMinusTime.
 func (s *TestRequestFormatTestReq) GetOptionalStringDateMinusTime() OptDateTime {
-	return s.OptionalStringDateMinusTime
+	_ = "STUB: not implemented"
+	return *new(OptDateTime)
 }
 
 // GetOptionalStringDecimal returns the value of OptionalStringDecimal.
 func (s *TestRequestFormatTestReq) GetOptionalStringDecimal() OptStringDecimal {
-	return s.OptionalStringDecimal
+	_ = "STUB: not implemented"
+	return *new(OptStringDecimal)
 }
 
 // GetOptionalStringDuration returns the value of OptionalStringDuration.
 func (s *TestRequestFormatTestReq) GetOptionalStringDuration() OptDuration {
-	return s.OptionalStringDuration
+	_ = "STUB: not implemented"
+	return *new(OptDuration)
 }
 
 // GetOptionalStringEmail returns the value of OptionalStringEmail.
 func (s *TestRequestFormatTestReq) GetOptionalStringEmail() OptString {
-	return s.OptionalStringEmail
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringFloat32 returns the value of OptionalStringFloat32.
 func (s *TestRequestFormatTestReq) GetOptionalStringFloat32() OptStringFloat32 {
-	return s.OptionalStringFloat32
+	_ = "STUB: not implemented"
+	return *new(OptStringFloat32)
 }
 
 // GetOptionalStringFloat64 returns the value of OptionalStringFloat64.
 func (s *TestRequestFormatTestReq) GetOptionalStringFloat64() OptStringFloat64 {
-	return s.OptionalStringFloat64
+	_ = "STUB: not implemented"
+	return *new(OptStringFloat64)
 }
 
 // GetOptionalStringHostname returns the value of OptionalStringHostname.
 func (s *TestRequestFormatTestReq) GetOptionalStringHostname() OptString {
-	return s.OptionalStringHostname
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringHTTPMinusDate returns the value of OptionalStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) GetOptionalStringHTTPMinusDate() OptHTTPDate {
-	return s.OptionalStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return *new(OptHTTPDate)
 }
 
 // GetOptionalStringInt returns the value of OptionalStringInt.
 func (s *TestRequestFormatTestReq) GetOptionalStringInt() OptStringInt {
-	return s.OptionalStringInt
+	_ = "STUB: not implemented"
+	return *new(OptStringInt)
 }
 
 // GetOptionalStringInt16 returns the value of OptionalStringInt16.
 func (s *TestRequestFormatTestReq) GetOptionalStringInt16() OptStringInt16 {
-	return s.OptionalStringInt16
+	_ = "STUB: not implemented"
+	return *new(OptStringInt16)
 }
 
 // GetOptionalStringInt32 returns the value of OptionalStringInt32.
 func (s *TestRequestFormatTestReq) GetOptionalStringInt32() OptStringInt32 {
-	return s.OptionalStringInt32
+	_ = "STUB: not implemented"
+	return *new(OptStringInt32)
 }
 
 // GetOptionalStringInt64 returns the value of OptionalStringInt64.
 func (s *TestRequestFormatTestReq) GetOptionalStringInt64() OptStringInt64 {
-	return s.OptionalStringInt64
+	_ = "STUB: not implemented"
+	return *new(OptStringInt64)
 }
 
 // GetOptionalStringInt8 returns the value of OptionalStringInt8.
 func (s *TestRequestFormatTestReq) GetOptionalStringInt8() OptStringInt8 {
-	return s.OptionalStringInt8
+	_ = "STUB: not implemented"
+	return *new(OptStringInt8)
 }
 
 // GetOptionalStringIP returns the value of OptionalStringIP.
 func (s *TestRequestFormatTestReq) GetOptionalStringIP() OptIP {
-	return s.OptionalStringIP
+	_ = "STUB: not implemented"
+	return *new(OptIP)
 }
 
 // GetOptionalStringIpv4 returns the value of OptionalStringIpv4.
 func (s *TestRequestFormatTestReq) GetOptionalStringIpv4() OptIPv4 {
-	return s.OptionalStringIpv4
+	_ = "STUB: not implemented"
+	return *new(OptIPv4)
 }
 
 // GetOptionalStringIpv6 returns the value of OptionalStringIpv6.
 func (s *TestRequestFormatTestReq) GetOptionalStringIpv6() OptIPv6 {
-	return s.OptionalStringIpv6
+	_ = "STUB: not implemented"
+	return *new(OptIPv6)
 }
 
 // GetOptionalStringMAC returns the value of OptionalStringMAC.
 func (s *TestRequestFormatTestReq) GetOptionalStringMAC() OptHardwareAddr {
-	return s.OptionalStringMAC
+	_ = "STUB: not implemented"
+	return *new(OptHardwareAddr)
 }
 
 // GetOptionalStringPassword returns the value of OptionalStringPassword.
 func (s *TestRequestFormatTestReq) GetOptionalStringPassword() OptString {
-	return s.OptionalStringPassword
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringTime returns the value of OptionalStringTime.
 func (s *TestRequestFormatTestReq) GetOptionalStringTime() OptTime {
-	return s.OptionalStringTime
+	_ = "STUB: not implemented"
+	return *new(OptTime)
 }
 
 // GetOptionalStringUint returns the value of OptionalStringUint.
 func (s *TestRequestFormatTestReq) GetOptionalStringUint() OptStringUint {
-	return s.OptionalStringUint
+	_ = "STUB: not implemented"
+	return *new(OptStringUint)
 }
 
 // GetOptionalStringUint16 returns the value of OptionalStringUint16.
 func (s *TestRequestFormatTestReq) GetOptionalStringUint16() OptStringUint16 {
-	return s.OptionalStringUint16
+	_ = "STUB: not implemented"
+	return *new(OptStringUint16)
 }
 
 // GetOptionalStringUint32 returns the value of OptionalStringUint32.
 func (s *TestRequestFormatTestReq) GetOptionalStringUint32() OptStringUint32 {
-	return s.OptionalStringUint32
+	_ = "STUB: not implemented"
+	return *new(OptStringUint32)
 }
 
 // GetOptionalStringUint64 returns the value of OptionalStringUint64.
 func (s *TestRequestFormatTestReq) GetOptionalStringUint64() OptStringUint64 {
-	return s.OptionalStringUint64
+	_ = "STUB: not implemented"
+	return *new(OptStringUint64)
 }
 
 // GetOptionalStringUint8 returns the value of OptionalStringUint8.
 func (s *TestRequestFormatTestReq) GetOptionalStringUint8() OptStringUint8 {
-	return s.OptionalStringUint8
+	_ = "STUB: not implemented"
+	return *new(OptStringUint8)
 }
 
 // GetOptionalStringUnix returns the value of OptionalStringUnix.
 func (s *TestRequestFormatTestReq) GetOptionalStringUnix() OptStringUnixSeconds {
-	return s.OptionalStringUnix
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixSeconds)
 }
 
 // GetOptionalStringUnixMinusMicro returns the value of OptionalStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) GetOptionalStringUnixMinusMicro() OptStringUnixMicro {
-	return s.OptionalStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixMicro)
 }
 
 // GetOptionalStringUnixMinusMilli returns the value of OptionalStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) GetOptionalStringUnixMinusMilli() OptStringUnixMilli {
-	return s.OptionalStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixMilli)
 }
 
 // GetOptionalStringUnixMinusNano returns the value of OptionalStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) GetOptionalStringUnixMinusNano() OptStringUnixNano {
-	return s.OptionalStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixNano)
 }
 
 // GetOptionalStringUnixMinusSeconds returns the value of OptionalStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) GetOptionalStringUnixMinusSeconds() OptStringUnixSeconds {
-	return s.OptionalStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixSeconds)
 }
 
 // GetOptionalStringURI returns the value of OptionalStringURI.
 func (s *TestRequestFormatTestReq) GetOptionalStringURI() OptURI {
-	return s.OptionalStringURI
+	_ = "STUB: not implemented"
+	return *new(OptURI)
 }
 
 // GetOptionalStringUUID returns the value of OptionalStringUUID.
 func (s *TestRequestFormatTestReq) GetOptionalStringUUID() OptUUID {
-	return s.OptionalStringUUID
+	_ = "STUB: not implemented"
+	return *new(OptUUID)
 }
 
 // SetRequiredAny sets the value of RequiredAny.
-func (s *TestRequestFormatTestReq) SetRequiredAny(val jx.Raw) {
-	s.RequiredAny = val
-}
+func (s *TestRequestFormatTestReq) SetRequiredAny(val jx.Raw) { _ = "STUB: not implemented"; return }
 
 // SetRequiredArrayAny sets the value of RequiredArrayAny.
 func (s *TestRequestFormatTestReq) SetRequiredArrayAny(val []jx.Raw) {
-	s.RequiredArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayBoolean sets the value of RequiredArrayBoolean.
 func (s *TestRequestFormatTestReq) SetRequiredArrayBoolean(val []bool) {
-	s.RequiredArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayInteger sets the value of RequiredArrayInteger.
 func (s *TestRequestFormatTestReq) SetRequiredArrayInteger(val []int) {
-	s.RequiredArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt16 sets the value of RequiredArrayIntegerInt16.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerInt16(val []int16) {
-	s.RequiredArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt32 sets the value of RequiredArrayIntegerInt32.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerInt32(val []int32) {
-	s.RequiredArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt64 sets the value of RequiredArrayIntegerInt64.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerInt64(val []int64) {
-	s.RequiredArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt8 sets the value of RequiredArrayIntegerInt8.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerInt8(val []int8) {
-	s.RequiredArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint sets the value of RequiredArrayIntegerUint.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerUint(val []uint) {
-	s.RequiredArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint16 sets the value of RequiredArrayIntegerUint16.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerUint16(val []uint16) {
-	s.RequiredArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint32 sets the value of RequiredArrayIntegerUint32.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerUint32(val []uint32) {
-	s.RequiredArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint64 sets the value of RequiredArrayIntegerUint64.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerUint64(val []uint64) {
-	s.RequiredArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint8 sets the value of RequiredArrayIntegerUint8.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerUint8(val []uint8) {
-	s.RequiredArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnix sets the value of RequiredArrayIntegerUnix.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerUnix(val []time.Time) {
-	s.RequiredArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusMicro sets the value of RequiredArrayIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerUnixMinusMicro(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusMilli sets the value of RequiredArrayIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerUnixMinusMilli(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusNano sets the value of RequiredArrayIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerUnixMinusNano(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusSeconds sets the value of RequiredArrayIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetRequiredArrayIntegerUnixMinusSeconds(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNull sets the value of RequiredArrayNull.
 func (s *TestRequestFormatTestReq) SetRequiredArrayNull(val []struct{}) {
-	s.RequiredArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumber sets the value of RequiredArrayNumber.
 func (s *TestRequestFormatTestReq) SetRequiredArrayNumber(val []float64) {
-	s.RequiredArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberDecimal sets the value of RequiredArrayNumberDecimal.
 func (s *TestRequestFormatTestReq) SetRequiredArrayNumberDecimal(val []decimal.Decimal) {
-	s.RequiredArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberDouble sets the value of RequiredArrayNumberDouble.
 func (s *TestRequestFormatTestReq) SetRequiredArrayNumberDouble(val []float64) {
-	s.RequiredArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberFloat sets the value of RequiredArrayNumberFloat.
 func (s *TestRequestFormatTestReq) SetRequiredArrayNumberFloat(val []float32) {
-	s.RequiredArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberInt32 sets the value of RequiredArrayNumberInt32.
 func (s *TestRequestFormatTestReq) SetRequiredArrayNumberInt32(val []int32) {
-	s.RequiredArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberInt64 sets the value of RequiredArrayNumberInt64.
 func (s *TestRequestFormatTestReq) SetRequiredArrayNumberInt64(val []int64) {
-	s.RequiredArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayString sets the value of RequiredArrayString.
 func (s *TestRequestFormatTestReq) SetRequiredArrayString(val []string) {
-	s.RequiredArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringBase64 sets the value of RequiredArrayStringBase64.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringBase64(val [][]byte) {
-	s.RequiredArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringBinary sets the value of RequiredArrayStringBinary.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringBinary(val []string) {
-	s.RequiredArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringByte sets the value of RequiredArrayStringByte.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringByte(val [][]byte) {
-	s.RequiredArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDate sets the value of RequiredArrayStringDate.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringDate(val []time.Time) {
-	s.RequiredArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDateMinusTime sets the value of RequiredArrayStringDateMinusTime.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringDateMinusTime(val []time.Time) {
-	s.RequiredArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDecimal sets the value of RequiredArrayStringDecimal.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringDecimal(val []decimal.Decimal) {
-	s.RequiredArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDuration sets the value of RequiredArrayStringDuration.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringDuration(val []time.Duration) {
-	s.RequiredArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringEmail sets the value of RequiredArrayStringEmail.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringEmail(val []string) {
-	s.RequiredArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringFloat32 sets the value of RequiredArrayStringFloat32.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringFloat32(val []float32) {
-	s.RequiredArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringFloat64 sets the value of RequiredArrayStringFloat64.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringFloat64(val []float64) {
-	s.RequiredArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringHostname sets the value of RequiredArrayStringHostname.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringHostname(val []string) {
-	s.RequiredArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringHTTPMinusDate sets the value of RequiredArrayStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringHTTPMinusDate(val []time.Time) {
-	s.RequiredArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt sets the value of RequiredArrayStringInt.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringInt(val []int) {
-	s.RequiredArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt16 sets the value of RequiredArrayStringInt16.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringInt16(val []int16) {
-	s.RequiredArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt32 sets the value of RequiredArrayStringInt32.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringInt32(val []int32) {
-	s.RequiredArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt64 sets the value of RequiredArrayStringInt64.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringInt64(val []int64) {
-	s.RequiredArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt8 sets the value of RequiredArrayStringInt8.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringInt8(val []int8) {
-	s.RequiredArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringIP sets the value of RequiredArrayStringIP.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringIP(val []netip.Addr) {
-	s.RequiredArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringIpv4 sets the value of RequiredArrayStringIpv4.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringIpv4(val []netip.Addr) {
-	s.RequiredArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringIpv6 sets the value of RequiredArrayStringIpv6.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringIpv6(val []netip.Addr) {
-	s.RequiredArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringMAC sets the value of RequiredArrayStringMAC.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringMAC(val []net.HardwareAddr) {
-	s.RequiredArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringPassword sets the value of RequiredArrayStringPassword.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringPassword(val []string) {
-	s.RequiredArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringTime sets the value of RequiredArrayStringTime.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringTime(val []time.Time) {
-	s.RequiredArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint sets the value of RequiredArrayStringUint.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUint(val []uint) {
-	s.RequiredArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint16 sets the value of RequiredArrayStringUint16.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUint16(val []uint16) {
-	s.RequiredArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint32 sets the value of RequiredArrayStringUint32.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUint32(val []uint32) {
-	s.RequiredArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint64 sets the value of RequiredArrayStringUint64.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUint64(val []uint64) {
-	s.RequiredArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint8 sets the value of RequiredArrayStringUint8.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUint8(val []uint8) {
-	s.RequiredArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnix sets the value of RequiredArrayStringUnix.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUnix(val []time.Time) {
-	s.RequiredArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusMicro sets the value of RequiredArrayStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUnixMinusMicro(val []time.Time) {
-	s.RequiredArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusMilli sets the value of RequiredArrayStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUnixMinusMilli(val []time.Time) {
-	s.RequiredArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusNano sets the value of RequiredArrayStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUnixMinusNano(val []time.Time) {
-	s.RequiredArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusSeconds sets the value of RequiredArrayStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUnixMinusSeconds(val []time.Time) {
-	s.RequiredArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringURI sets the value of RequiredArrayStringURI.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringURI(val []url.URL) {
-	s.RequiredArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUUID sets the value of RequiredArrayStringUUID.
 func (s *TestRequestFormatTestReq) SetRequiredArrayStringUUID(val []uuid.UUID) {
-	s.RequiredArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredBoolean sets the value of RequiredBoolean.
-func (s *TestRequestFormatTestReq) SetRequiredBoolean(val bool) {
-	s.RequiredBoolean = val
-}
+func (s *TestRequestFormatTestReq) SetRequiredBoolean(val bool) { _ = "STUB: not implemented"; return }
 
 // SetRequiredDoubleArrayAny sets the value of RequiredDoubleArrayAny.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayAny(val [][]jx.Raw) {
-	s.RequiredDoubleArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayBoolean sets the value of RequiredDoubleArrayBoolean.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayBoolean(val [][]bool) {
-	s.RequiredDoubleArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayInteger sets the value of RequiredDoubleArrayInteger.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayInteger(val [][]int) {
-	s.RequiredDoubleArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt16 sets the value of RequiredDoubleArrayIntegerInt16.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerInt16(val [][]int16) {
-	s.RequiredDoubleArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt32 sets the value of RequiredDoubleArrayIntegerInt32.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerInt32(val [][]int32) {
-	s.RequiredDoubleArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt64 sets the value of RequiredDoubleArrayIntegerInt64.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerInt64(val [][]int64) {
-	s.RequiredDoubleArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt8 sets the value of RequiredDoubleArrayIntegerInt8.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerInt8(val [][]int8) {
-	s.RequiredDoubleArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint sets the value of RequiredDoubleArrayIntegerUint.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerUint(val [][]uint) {
-	s.RequiredDoubleArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint16 sets the value of RequiredDoubleArrayIntegerUint16.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerUint16(val [][]uint16) {
-	s.RequiredDoubleArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint32 sets the value of RequiredDoubleArrayIntegerUint32.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerUint32(val [][]uint32) {
-	s.RequiredDoubleArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint64 sets the value of RequiredDoubleArrayIntegerUint64.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerUint64(val [][]uint64) {
-	s.RequiredDoubleArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint8 sets the value of RequiredDoubleArrayIntegerUint8.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerUint8(val [][]uint8) {
-	s.RequiredDoubleArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnix sets the value of RequiredDoubleArrayIntegerUnix.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerUnix(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusMicro sets the value of RequiredDoubleArrayIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerUnixMinusMicro(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusMilli sets the value of RequiredDoubleArrayIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerUnixMinusMilli(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusNano sets the value of RequiredDoubleArrayIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerUnixMinusNano(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusSeconds sets the value of RequiredDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayIntegerUnixMinusSeconds(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNull sets the value of RequiredDoubleArrayNull.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayNull(val [][]struct{}) {
-	s.RequiredDoubleArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumber sets the value of RequiredDoubleArrayNumber.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayNumber(val [][]float64) {
-	s.RequiredDoubleArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberDecimal sets the value of RequiredDoubleArrayNumberDecimal.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayNumberDecimal(val [][]decimal.Decimal) {
-	s.RequiredDoubleArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberDouble sets the value of RequiredDoubleArrayNumberDouble.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayNumberDouble(val [][]float64) {
-	s.RequiredDoubleArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberFloat sets the value of RequiredDoubleArrayNumberFloat.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayNumberFloat(val [][]float32) {
-	s.RequiredDoubleArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberInt32 sets the value of RequiredDoubleArrayNumberInt32.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayNumberInt32(val [][]int32) {
-	s.RequiredDoubleArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberInt64 sets the value of RequiredDoubleArrayNumberInt64.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayNumberInt64(val [][]int64) {
-	s.RequiredDoubleArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayString sets the value of RequiredDoubleArrayString.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayString(val [][]string) {
-	s.RequiredDoubleArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringBase64 sets the value of RequiredDoubleArrayStringBase64.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringBase64(val [][][]byte) {
-	s.RequiredDoubleArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringBinary sets the value of RequiredDoubleArrayStringBinary.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringBinary(val [][]string) {
-	s.RequiredDoubleArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringByte sets the value of RequiredDoubleArrayStringByte.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringByte(val [][][]byte) {
-	s.RequiredDoubleArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDate sets the value of RequiredDoubleArrayStringDate.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringDate(val [][]time.Time) {
-	s.RequiredDoubleArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDateMinusTime sets the value of RequiredDoubleArrayStringDateMinusTime.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringDateMinusTime(val [][]time.Time) {
-	s.RequiredDoubleArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDecimal sets the value of RequiredDoubleArrayStringDecimal.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringDecimal(val [][]decimal.Decimal) {
-	s.RequiredDoubleArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDuration sets the value of RequiredDoubleArrayStringDuration.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringDuration(val [][]time.Duration) {
-	s.RequiredDoubleArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringEmail sets the value of RequiredDoubleArrayStringEmail.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringEmail(val [][]string) {
-	s.RequiredDoubleArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringFloat32 sets the value of RequiredDoubleArrayStringFloat32.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringFloat32(val [][]float32) {
-	s.RequiredDoubleArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringFloat64 sets the value of RequiredDoubleArrayStringFloat64.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringFloat64(val [][]float64) {
-	s.RequiredDoubleArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringHostname sets the value of RequiredDoubleArrayStringHostname.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringHostname(val [][]string) {
-	s.RequiredDoubleArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringHTTPMinusDate sets the value of RequiredDoubleArrayStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringHTTPMinusDate(val [][]time.Time) {
-	s.RequiredDoubleArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt sets the value of RequiredDoubleArrayStringInt.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringInt(val [][]int) {
-	s.RequiredDoubleArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt16 sets the value of RequiredDoubleArrayStringInt16.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringInt16(val [][]int16) {
-	s.RequiredDoubleArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt32 sets the value of RequiredDoubleArrayStringInt32.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringInt32(val [][]int32) {
-	s.RequiredDoubleArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt64 sets the value of RequiredDoubleArrayStringInt64.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringInt64(val [][]int64) {
-	s.RequiredDoubleArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt8 sets the value of RequiredDoubleArrayStringInt8.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringInt8(val [][]int8) {
-	s.RequiredDoubleArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringIP sets the value of RequiredDoubleArrayStringIP.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringIP(val [][]netip.Addr) {
-	s.RequiredDoubleArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringIpv4 sets the value of RequiredDoubleArrayStringIpv4.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringIpv4(val [][]netip.Addr) {
-	s.RequiredDoubleArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringIpv6 sets the value of RequiredDoubleArrayStringIpv6.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringIpv6(val [][]netip.Addr) {
-	s.RequiredDoubleArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringMAC sets the value of RequiredDoubleArrayStringMAC.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringMAC(val [][]net.HardwareAddr) {
-	s.RequiredDoubleArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringPassword sets the value of RequiredDoubleArrayStringPassword.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringPassword(val [][]string) {
-	s.RequiredDoubleArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringTime sets the value of RequiredDoubleArrayStringTime.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringTime(val [][]time.Time) {
-	s.RequiredDoubleArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint sets the value of RequiredDoubleArrayStringUint.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUint(val [][]uint) {
-	s.RequiredDoubleArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint16 sets the value of RequiredDoubleArrayStringUint16.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUint16(val [][]uint16) {
-	s.RequiredDoubleArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint32 sets the value of RequiredDoubleArrayStringUint32.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUint32(val [][]uint32) {
-	s.RequiredDoubleArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint64 sets the value of RequiredDoubleArrayStringUint64.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUint64(val [][]uint64) {
-	s.RequiredDoubleArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint8 sets the value of RequiredDoubleArrayStringUint8.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUint8(val [][]uint8) {
-	s.RequiredDoubleArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnix sets the value of RequiredDoubleArrayStringUnix.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUnix(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusMicro sets the value of RequiredDoubleArrayStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUnixMinusMicro(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusMilli sets the value of RequiredDoubleArrayStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUnixMinusMilli(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusNano sets the value of RequiredDoubleArrayStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUnixMinusNano(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusSeconds sets the value of RequiredDoubleArrayStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUnixMinusSeconds(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringURI sets the value of RequiredDoubleArrayStringURI.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringURI(val [][]url.URL) {
-	s.RequiredDoubleArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUUID sets the value of RequiredDoubleArrayStringUUID.
 func (s *TestRequestFormatTestReq) SetRequiredDoubleArrayStringUUID(val [][]uuid.UUID) {
-	s.RequiredDoubleArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredInteger sets the value of RequiredInteger.
-func (s *TestRequestFormatTestReq) SetRequiredInteger(val int) {
-	s.RequiredInteger = val
-}
+func (s *TestRequestFormatTestReq) SetRequiredInteger(val int) { _ = "STUB: not implemented"; return }
 
 // SetRequiredIntegerInt16 sets the value of RequiredIntegerInt16.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerInt16(val int16) {
-	s.RequiredIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerInt32 sets the value of RequiredIntegerInt32.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerInt32(val int32) {
-	s.RequiredIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerInt64 sets the value of RequiredIntegerInt64.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerInt64(val int64) {
-	s.RequiredIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerInt8 sets the value of RequiredIntegerInt8.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerInt8(val int8) {
-	s.RequiredIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint sets the value of RequiredIntegerUint.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerUint(val uint) {
-	s.RequiredIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint16 sets the value of RequiredIntegerUint16.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerUint16(val uint16) {
-	s.RequiredIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint32 sets the value of RequiredIntegerUint32.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerUint32(val uint32) {
-	s.RequiredIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint64 sets the value of RequiredIntegerUint64.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerUint64(val uint64) {
-	s.RequiredIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint8 sets the value of RequiredIntegerUint8.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerUint8(val uint8) {
-	s.RequiredIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnix sets the value of RequiredIntegerUnix.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerUnix(val time.Time) {
-	s.RequiredIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusMicro sets the value of RequiredIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerUnixMinusMicro(val time.Time) {
-	s.RequiredIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusMilli sets the value of RequiredIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerUnixMinusMilli(val time.Time) {
-	s.RequiredIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusNano sets the value of RequiredIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerUnixMinusNano(val time.Time) {
-	s.RequiredIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusSeconds sets the value of RequiredIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetRequiredIntegerUnixMinusSeconds(val time.Time) {
-	s.RequiredIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNull sets the value of RequiredNull.
-func (s *TestRequestFormatTestReq) SetRequiredNull(val struct{}) {
-	s.RequiredNull = val
-}
+func (s *TestRequestFormatTestReq) SetRequiredNull(val struct{}) { _ = "STUB: not implemented"; return }
 
 // SetRequiredNumber sets the value of RequiredNumber.
 func (s *TestRequestFormatTestReq) SetRequiredNumber(val float64) {
-	s.RequiredNumber = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetRequiredNumberDecimal sets the value of RequiredNumberDecimal.
 }
 
-// SetRequiredNumberDecimal sets the value of RequiredNumberDecimal.
 func (s *TestRequestFormatTestReq) SetRequiredNumberDecimal(val decimal.Decimal) {
-	s.RequiredNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberDouble sets the value of RequiredNumberDouble.
 func (s *TestRequestFormatTestReq) SetRequiredNumberDouble(val float64) {
-	s.RequiredNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberFloat sets the value of RequiredNumberFloat.
 func (s *TestRequestFormatTestReq) SetRequiredNumberFloat(val float32) {
-	s.RequiredNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberInt32 sets the value of RequiredNumberInt32.
 func (s *TestRequestFormatTestReq) SetRequiredNumberInt32(val int32) {
-	s.RequiredNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberInt64 sets the value of RequiredNumberInt64.
 func (s *TestRequestFormatTestReq) SetRequiredNumberInt64(val int64) {
-	s.RequiredNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredString sets the value of RequiredString.
-func (s *TestRequestFormatTestReq) SetRequiredString(val string) {
-	s.RequiredString = val
-}
+func (s *TestRequestFormatTestReq) SetRequiredString(val string) { _ = "STUB: not implemented"; return }
 
 // SetRequiredStringBase64 sets the value of RequiredStringBase64.
 func (s *TestRequestFormatTestReq) SetRequiredStringBase64(val []byte) {
-	s.RequiredStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringBinary sets the value of RequiredStringBinary.
 func (s *TestRequestFormatTestReq) SetRequiredStringBinary(val string) {
-	s.RequiredStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringByte sets the value of RequiredStringByte.
 func (s *TestRequestFormatTestReq) SetRequiredStringByte(val []byte) {
-	s.RequiredStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDate sets the value of RequiredStringDate.
 func (s *TestRequestFormatTestReq) SetRequiredStringDate(val time.Time) {
-	s.RequiredStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDateMinusTime sets the value of RequiredStringDateMinusTime.
 func (s *TestRequestFormatTestReq) SetRequiredStringDateMinusTime(val time.Time) {
-	s.RequiredStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDecimal sets the value of RequiredStringDecimal.
 func (s *TestRequestFormatTestReq) SetRequiredStringDecimal(val decimal.Decimal) {
-	s.RequiredStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDuration sets the value of RequiredStringDuration.
 func (s *TestRequestFormatTestReq) SetRequiredStringDuration(val time.Duration) {
-	s.RequiredStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringEmail sets the value of RequiredStringEmail.
 func (s *TestRequestFormatTestReq) SetRequiredStringEmail(val string) {
-	s.RequiredStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringFloat32 sets the value of RequiredStringFloat32.
 func (s *TestRequestFormatTestReq) SetRequiredStringFloat32(val float32) {
-	s.RequiredStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringFloat64 sets the value of RequiredStringFloat64.
 func (s *TestRequestFormatTestReq) SetRequiredStringFloat64(val float64) {
-	s.RequiredStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringHostname sets the value of RequiredStringHostname.
 func (s *TestRequestFormatTestReq) SetRequiredStringHostname(val string) {
-	s.RequiredStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringHTTPMinusDate sets the value of RequiredStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) SetRequiredStringHTTPMinusDate(val time.Time) {
-	s.RequiredStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt sets the value of RequiredStringInt.
-func (s *TestRequestFormatTestReq) SetRequiredStringInt(val int) {
-	s.RequiredStringInt = val
-}
+func (s *TestRequestFormatTestReq) SetRequiredStringInt(val int) { _ = "STUB: not implemented"; return }
 
 // SetRequiredStringInt16 sets the value of RequiredStringInt16.
 func (s *TestRequestFormatTestReq) SetRequiredStringInt16(val int16) {
-	s.RequiredStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt32 sets the value of RequiredStringInt32.
 func (s *TestRequestFormatTestReq) SetRequiredStringInt32(val int32) {
-	s.RequiredStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt64 sets the value of RequiredStringInt64.
 func (s *TestRequestFormatTestReq) SetRequiredStringInt64(val int64) {
-	s.RequiredStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt8 sets the value of RequiredStringInt8.
 func (s *TestRequestFormatTestReq) SetRequiredStringInt8(val int8) {
-	s.RequiredStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringIP sets the value of RequiredStringIP.
 func (s *TestRequestFormatTestReq) SetRequiredStringIP(val netip.Addr) {
-	s.RequiredStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringIpv4 sets the value of RequiredStringIpv4.
 func (s *TestRequestFormatTestReq) SetRequiredStringIpv4(val netip.Addr) {
-	s.RequiredStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringIpv6 sets the value of RequiredStringIpv6.
 func (s *TestRequestFormatTestReq) SetRequiredStringIpv6(val netip.Addr) {
-	s.RequiredStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringMAC sets the value of RequiredStringMAC.
 func (s *TestRequestFormatTestReq) SetRequiredStringMAC(val net.HardwareAddr) {
-	s.RequiredStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringPassword sets the value of RequiredStringPassword.
 func (s *TestRequestFormatTestReq) SetRequiredStringPassword(val string) {
-	s.RequiredStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringTime sets the value of RequiredStringTime.
 func (s *TestRequestFormatTestReq) SetRequiredStringTime(val time.Time) {
-	s.RequiredStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint sets the value of RequiredStringUint.
 func (s *TestRequestFormatTestReq) SetRequiredStringUint(val uint) {
-	s.RequiredStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint16 sets the value of RequiredStringUint16.
 func (s *TestRequestFormatTestReq) SetRequiredStringUint16(val uint16) {
-	s.RequiredStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint32 sets the value of RequiredStringUint32.
 func (s *TestRequestFormatTestReq) SetRequiredStringUint32(val uint32) {
-	s.RequiredStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint64 sets the value of RequiredStringUint64.
 func (s *TestRequestFormatTestReq) SetRequiredStringUint64(val uint64) {
-	s.RequiredStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint8 sets the value of RequiredStringUint8.
 func (s *TestRequestFormatTestReq) SetRequiredStringUint8(val uint8) {
-	s.RequiredStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnix sets the value of RequiredStringUnix.
 func (s *TestRequestFormatTestReq) SetRequiredStringUnix(val time.Time) {
-	s.RequiredStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusMicro sets the value of RequiredStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetRequiredStringUnixMinusMicro(val time.Time) {
-	s.RequiredStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusMilli sets the value of RequiredStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetRequiredStringUnixMinusMilli(val time.Time) {
-	s.RequiredStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusNano sets the value of RequiredStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetRequiredStringUnixMinusNano(val time.Time) {
-	s.RequiredStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusSeconds sets the value of RequiredStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetRequiredStringUnixMinusSeconds(val time.Time) {
-	s.RequiredStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringURI sets the value of RequiredStringURI.
 func (s *TestRequestFormatTestReq) SetRequiredStringURI(val url.URL) {
-	s.RequiredStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUUID sets the value of RequiredStringUUID.
 func (s *TestRequestFormatTestReq) SetRequiredStringUUID(val uuid.UUID) {
-	s.RequiredStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalAny sets the value of OptionalAny.
-func (s *TestRequestFormatTestReq) SetOptionalAny(val jx.Raw) {
-	s.OptionalAny = val
-}
+func (s *TestRequestFormatTestReq) SetOptionalAny(val jx.Raw) { _ = "STUB: not implemented"; return }
 
 // SetOptionalArrayAny sets the value of OptionalArrayAny.
 func (s *TestRequestFormatTestReq) SetOptionalArrayAny(val []jx.Raw) {
-	s.OptionalArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayBoolean sets the value of OptionalArrayBoolean.
 func (s *TestRequestFormatTestReq) SetOptionalArrayBoolean(val []bool) {
-	s.OptionalArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayInteger sets the value of OptionalArrayInteger.
 func (s *TestRequestFormatTestReq) SetOptionalArrayInteger(val []int) {
-	s.OptionalArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt16 sets the value of OptionalArrayIntegerInt16.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerInt16(val []int16) {
-	s.OptionalArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt32 sets the value of OptionalArrayIntegerInt32.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerInt32(val []int32) {
-	s.OptionalArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt64 sets the value of OptionalArrayIntegerInt64.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerInt64(val []int64) {
-	s.OptionalArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt8 sets the value of OptionalArrayIntegerInt8.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerInt8(val []int8) {
-	s.OptionalArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint sets the value of OptionalArrayIntegerUint.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerUint(val []uint) {
-	s.OptionalArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint16 sets the value of OptionalArrayIntegerUint16.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerUint16(val []uint16) {
-	s.OptionalArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint32 sets the value of OptionalArrayIntegerUint32.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerUint32(val []uint32) {
-	s.OptionalArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint64 sets the value of OptionalArrayIntegerUint64.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerUint64(val []uint64) {
-	s.OptionalArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint8 sets the value of OptionalArrayIntegerUint8.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerUint8(val []uint8) {
-	s.OptionalArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnix sets the value of OptionalArrayIntegerUnix.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerUnix(val []time.Time) {
-	s.OptionalArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusMicro sets the value of OptionalArrayIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerUnixMinusMicro(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusMilli sets the value of OptionalArrayIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerUnixMinusMilli(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusNano sets the value of OptionalArrayIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerUnixMinusNano(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusSeconds sets the value of OptionalArrayIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetOptionalArrayIntegerUnixMinusSeconds(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNull sets the value of OptionalArrayNull.
 func (s *TestRequestFormatTestReq) SetOptionalArrayNull(val []struct{}) {
-	s.OptionalArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumber sets the value of OptionalArrayNumber.
 func (s *TestRequestFormatTestReq) SetOptionalArrayNumber(val []float64) {
-	s.OptionalArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberDecimal sets the value of OptionalArrayNumberDecimal.
 func (s *TestRequestFormatTestReq) SetOptionalArrayNumberDecimal(val []decimal.Decimal) {
-	s.OptionalArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberDouble sets the value of OptionalArrayNumberDouble.
 func (s *TestRequestFormatTestReq) SetOptionalArrayNumberDouble(val []float64) {
-	s.OptionalArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberFloat sets the value of OptionalArrayNumberFloat.
 func (s *TestRequestFormatTestReq) SetOptionalArrayNumberFloat(val []float32) {
-	s.OptionalArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberInt32 sets the value of OptionalArrayNumberInt32.
 func (s *TestRequestFormatTestReq) SetOptionalArrayNumberInt32(val []int32) {
-	s.OptionalArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberInt64 sets the value of OptionalArrayNumberInt64.
 func (s *TestRequestFormatTestReq) SetOptionalArrayNumberInt64(val []int64) {
-	s.OptionalArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayString sets the value of OptionalArrayString.
 func (s *TestRequestFormatTestReq) SetOptionalArrayString(val []string) {
-	s.OptionalArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringBase64 sets the value of OptionalArrayStringBase64.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringBase64(val [][]byte) {
-	s.OptionalArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringBinary sets the value of OptionalArrayStringBinary.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringBinary(val []string) {
-	s.OptionalArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringByte sets the value of OptionalArrayStringByte.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringByte(val [][]byte) {
-	s.OptionalArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDate sets the value of OptionalArrayStringDate.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringDate(val []time.Time) {
-	s.OptionalArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDateMinusTime sets the value of OptionalArrayStringDateMinusTime.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringDateMinusTime(val []time.Time) {
-	s.OptionalArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDecimal sets the value of OptionalArrayStringDecimal.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringDecimal(val []decimal.Decimal) {
-	s.OptionalArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDuration sets the value of OptionalArrayStringDuration.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringDuration(val []time.Duration) {
-	s.OptionalArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringEmail sets the value of OptionalArrayStringEmail.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringEmail(val []string) {
-	s.OptionalArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringFloat32 sets the value of OptionalArrayStringFloat32.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringFloat32(val []float32) {
-	s.OptionalArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringFloat64 sets the value of OptionalArrayStringFloat64.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringFloat64(val []float64) {
-	s.OptionalArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringHostname sets the value of OptionalArrayStringHostname.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringHostname(val []string) {
-	s.OptionalArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringHTTPMinusDate sets the value of OptionalArrayStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringHTTPMinusDate(val []time.Time) {
-	s.OptionalArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt sets the value of OptionalArrayStringInt.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringInt(val []int) {
-	s.OptionalArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt16 sets the value of OptionalArrayStringInt16.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringInt16(val []int16) {
-	s.OptionalArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt32 sets the value of OptionalArrayStringInt32.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringInt32(val []int32) {
-	s.OptionalArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt64 sets the value of OptionalArrayStringInt64.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringInt64(val []int64) {
-	s.OptionalArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt8 sets the value of OptionalArrayStringInt8.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringInt8(val []int8) {
-	s.OptionalArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringIP sets the value of OptionalArrayStringIP.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringIP(val []netip.Addr) {
-	s.OptionalArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringIpv4 sets the value of OptionalArrayStringIpv4.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringIpv4(val []netip.Addr) {
-	s.OptionalArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringIpv6 sets the value of OptionalArrayStringIpv6.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringIpv6(val []netip.Addr) {
-	s.OptionalArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringMAC sets the value of OptionalArrayStringMAC.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringMAC(val []net.HardwareAddr) {
-	s.OptionalArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringPassword sets the value of OptionalArrayStringPassword.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringPassword(val []string) {
-	s.OptionalArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringTime sets the value of OptionalArrayStringTime.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringTime(val []time.Time) {
-	s.OptionalArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint sets the value of OptionalArrayStringUint.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUint(val []uint) {
-	s.OptionalArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint16 sets the value of OptionalArrayStringUint16.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUint16(val []uint16) {
-	s.OptionalArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint32 sets the value of OptionalArrayStringUint32.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUint32(val []uint32) {
-	s.OptionalArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint64 sets the value of OptionalArrayStringUint64.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUint64(val []uint64) {
-	s.OptionalArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint8 sets the value of OptionalArrayStringUint8.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUint8(val []uint8) {
-	s.OptionalArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnix sets the value of OptionalArrayStringUnix.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUnix(val []time.Time) {
-	s.OptionalArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusMicro sets the value of OptionalArrayStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUnixMinusMicro(val []time.Time) {
-	s.OptionalArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusMilli sets the value of OptionalArrayStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUnixMinusMilli(val []time.Time) {
-	s.OptionalArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusNano sets the value of OptionalArrayStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUnixMinusNano(val []time.Time) {
-	s.OptionalArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusSeconds sets the value of OptionalArrayStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUnixMinusSeconds(val []time.Time) {
-	s.OptionalArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringURI sets the value of OptionalArrayStringURI.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringURI(val []url.URL) {
-	s.OptionalArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUUID sets the value of OptionalArrayStringUUID.
 func (s *TestRequestFormatTestReq) SetOptionalArrayStringUUID(val []uuid.UUID) {
-	s.OptionalArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalBoolean sets the value of OptionalBoolean.
 func (s *TestRequestFormatTestReq) SetOptionalBoolean(val OptBool) {
-	s.OptionalBoolean = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalDoubleArrayAny sets the value of OptionalDoubleArrayAny.
 }
 
-// SetOptionalDoubleArrayAny sets the value of OptionalDoubleArrayAny.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayAny(val [][]jx.Raw) {
-	s.OptionalDoubleArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayBoolean sets the value of OptionalDoubleArrayBoolean.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayBoolean(val [][]bool) {
-	s.OptionalDoubleArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayInteger sets the value of OptionalDoubleArrayInteger.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayInteger(val [][]int) {
-	s.OptionalDoubleArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt16 sets the value of OptionalDoubleArrayIntegerInt16.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerInt16(val [][]int16) {
-	s.OptionalDoubleArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt32 sets the value of OptionalDoubleArrayIntegerInt32.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerInt32(val [][]int32) {
-	s.OptionalDoubleArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt64 sets the value of OptionalDoubleArrayIntegerInt64.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerInt64(val [][]int64) {
-	s.OptionalDoubleArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt8 sets the value of OptionalDoubleArrayIntegerInt8.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerInt8(val [][]int8) {
-	s.OptionalDoubleArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint sets the value of OptionalDoubleArrayIntegerUint.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerUint(val [][]uint) {
-	s.OptionalDoubleArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint16 sets the value of OptionalDoubleArrayIntegerUint16.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerUint16(val [][]uint16) {
-	s.OptionalDoubleArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint32 sets the value of OptionalDoubleArrayIntegerUint32.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerUint32(val [][]uint32) {
-	s.OptionalDoubleArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint64 sets the value of OptionalDoubleArrayIntegerUint64.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerUint64(val [][]uint64) {
-	s.OptionalDoubleArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint8 sets the value of OptionalDoubleArrayIntegerUint8.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerUint8(val [][]uint8) {
-	s.OptionalDoubleArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnix sets the value of OptionalDoubleArrayIntegerUnix.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerUnix(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusMicro sets the value of OptionalDoubleArrayIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerUnixMinusMicro(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusMilli sets the value of OptionalDoubleArrayIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerUnixMinusMilli(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusNano sets the value of OptionalDoubleArrayIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerUnixMinusNano(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusSeconds sets the value of OptionalDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayIntegerUnixMinusSeconds(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNull sets the value of OptionalDoubleArrayNull.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayNull(val [][]struct{}) {
-	s.OptionalDoubleArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumber sets the value of OptionalDoubleArrayNumber.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayNumber(val [][]float64) {
-	s.OptionalDoubleArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberDecimal sets the value of OptionalDoubleArrayNumberDecimal.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayNumberDecimal(val [][]decimal.Decimal) {
-	s.OptionalDoubleArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberDouble sets the value of OptionalDoubleArrayNumberDouble.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayNumberDouble(val [][]float64) {
-	s.OptionalDoubleArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberFloat sets the value of OptionalDoubleArrayNumberFloat.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayNumberFloat(val [][]float32) {
-	s.OptionalDoubleArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberInt32 sets the value of OptionalDoubleArrayNumberInt32.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayNumberInt32(val [][]int32) {
-	s.OptionalDoubleArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberInt64 sets the value of OptionalDoubleArrayNumberInt64.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayNumberInt64(val [][]int64) {
-	s.OptionalDoubleArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayString sets the value of OptionalDoubleArrayString.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayString(val [][]string) {
-	s.OptionalDoubleArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringBase64 sets the value of OptionalDoubleArrayStringBase64.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringBase64(val [][][]byte) {
-	s.OptionalDoubleArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringBinary sets the value of OptionalDoubleArrayStringBinary.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringBinary(val [][]string) {
-	s.OptionalDoubleArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringByte sets the value of OptionalDoubleArrayStringByte.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringByte(val [][][]byte) {
-	s.OptionalDoubleArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDate sets the value of OptionalDoubleArrayStringDate.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringDate(val [][]time.Time) {
-	s.OptionalDoubleArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDateMinusTime sets the value of OptionalDoubleArrayStringDateMinusTime.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringDateMinusTime(val [][]time.Time) {
-	s.OptionalDoubleArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDecimal sets the value of OptionalDoubleArrayStringDecimal.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringDecimal(val [][]decimal.Decimal) {
-	s.OptionalDoubleArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDuration sets the value of OptionalDoubleArrayStringDuration.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringDuration(val [][]time.Duration) {
-	s.OptionalDoubleArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringEmail sets the value of OptionalDoubleArrayStringEmail.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringEmail(val [][]string) {
-	s.OptionalDoubleArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringFloat32 sets the value of OptionalDoubleArrayStringFloat32.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringFloat32(val [][]float32) {
-	s.OptionalDoubleArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringFloat64 sets the value of OptionalDoubleArrayStringFloat64.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringFloat64(val [][]float64) {
-	s.OptionalDoubleArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringHostname sets the value of OptionalDoubleArrayStringHostname.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringHostname(val [][]string) {
-	s.OptionalDoubleArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringHTTPMinusDate sets the value of OptionalDoubleArrayStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringHTTPMinusDate(val [][]time.Time) {
-	s.OptionalDoubleArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt sets the value of OptionalDoubleArrayStringInt.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringInt(val [][]int) {
-	s.OptionalDoubleArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt16 sets the value of OptionalDoubleArrayStringInt16.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringInt16(val [][]int16) {
-	s.OptionalDoubleArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt32 sets the value of OptionalDoubleArrayStringInt32.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringInt32(val [][]int32) {
-	s.OptionalDoubleArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt64 sets the value of OptionalDoubleArrayStringInt64.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringInt64(val [][]int64) {
-	s.OptionalDoubleArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt8 sets the value of OptionalDoubleArrayStringInt8.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringInt8(val [][]int8) {
-	s.OptionalDoubleArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringIP sets the value of OptionalDoubleArrayStringIP.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringIP(val [][]netip.Addr) {
-	s.OptionalDoubleArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringIpv4 sets the value of OptionalDoubleArrayStringIpv4.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringIpv4(val [][]netip.Addr) {
-	s.OptionalDoubleArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringIpv6 sets the value of OptionalDoubleArrayStringIpv6.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringIpv6(val [][]netip.Addr) {
-	s.OptionalDoubleArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringMAC sets the value of OptionalDoubleArrayStringMAC.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringMAC(val [][]net.HardwareAddr) {
-	s.OptionalDoubleArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringPassword sets the value of OptionalDoubleArrayStringPassword.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringPassword(val [][]string) {
-	s.OptionalDoubleArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringTime sets the value of OptionalDoubleArrayStringTime.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringTime(val [][]time.Time) {
-	s.OptionalDoubleArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint sets the value of OptionalDoubleArrayStringUint.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUint(val [][]uint) {
-	s.OptionalDoubleArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint16 sets the value of OptionalDoubleArrayStringUint16.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUint16(val [][]uint16) {
-	s.OptionalDoubleArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint32 sets the value of OptionalDoubleArrayStringUint32.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUint32(val [][]uint32) {
-	s.OptionalDoubleArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint64 sets the value of OptionalDoubleArrayStringUint64.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUint64(val [][]uint64) {
-	s.OptionalDoubleArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint8 sets the value of OptionalDoubleArrayStringUint8.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUint8(val [][]uint8) {
-	s.OptionalDoubleArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnix sets the value of OptionalDoubleArrayStringUnix.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUnix(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusMicro sets the value of OptionalDoubleArrayStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUnixMinusMicro(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusMilli sets the value of OptionalDoubleArrayStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUnixMinusMilli(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusNano sets the value of OptionalDoubleArrayStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUnixMinusNano(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusSeconds sets the value of OptionalDoubleArrayStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUnixMinusSeconds(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringURI sets the value of OptionalDoubleArrayStringURI.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringURI(val [][]url.URL) {
-	s.OptionalDoubleArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUUID sets the value of OptionalDoubleArrayStringUUID.
 func (s *TestRequestFormatTestReq) SetOptionalDoubleArrayStringUUID(val [][]uuid.UUID) {
-	s.OptionalDoubleArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalInteger sets the value of OptionalInteger.
 func (s *TestRequestFormatTestReq) SetOptionalInteger(val OptInt) {
-	s.OptionalInteger = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalIntegerInt16 sets the value of OptionalIntegerInt16.
 }
 
-// SetOptionalIntegerInt16 sets the value of OptionalIntegerInt16.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerInt16(val OptInt16) {
-	s.OptionalIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerInt32 sets the value of OptionalIntegerInt32.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerInt32(val OptInt32) {
-	s.OptionalIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerInt64 sets the value of OptionalIntegerInt64.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerInt64(val OptInt64) {
-	s.OptionalIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerInt8 sets the value of OptionalIntegerInt8.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerInt8(val OptInt8) {
-	s.OptionalIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint sets the value of OptionalIntegerUint.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerUint(val OptUint) {
-	s.OptionalIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint16 sets the value of OptionalIntegerUint16.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerUint16(val OptUint16) {
-	s.OptionalIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint32 sets the value of OptionalIntegerUint32.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerUint32(val OptUint32) {
-	s.OptionalIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint64 sets the value of OptionalIntegerUint64.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerUint64(val OptUint64) {
-	s.OptionalIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint8 sets the value of OptionalIntegerUint8.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerUint8(val OptUint8) {
-	s.OptionalIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnix sets the value of OptionalIntegerUnix.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerUnix(val OptUnixSeconds) {
-	s.OptionalIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusMicro sets the value of OptionalIntegerUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerUnixMinusMicro(val OptUnixMicro) {
-	s.OptionalIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusMilli sets the value of OptionalIntegerUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerUnixMinusMilli(val OptUnixMilli) {
-	s.OptionalIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusNano sets the value of OptionalIntegerUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerUnixMinusNano(val OptUnixNano) {
-	s.OptionalIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusSeconds sets the value of OptionalIntegerUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetOptionalIntegerUnixMinusSeconds(val OptUnixSeconds) {
-	s.OptionalIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNull sets the value of OptionalNull.
-func (s *TestRequestFormatTestReq) SetOptionalNull(val OptNull) {
-	s.OptionalNull = val
-}
+func (s *TestRequestFormatTestReq) SetOptionalNull(val OptNull) { _ = "STUB: not implemented"; return }
 
 // SetOptionalNumber sets the value of OptionalNumber.
 func (s *TestRequestFormatTestReq) SetOptionalNumber(val OptFloat64) {
-	s.OptionalNumber = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalNumberDecimal sets the value of OptionalNumberDecimal.
 }
 
-// SetOptionalNumberDecimal sets the value of OptionalNumberDecimal.
 func (s *TestRequestFormatTestReq) SetOptionalNumberDecimal(val OptDecimal) {
-	s.OptionalNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberDouble sets the value of OptionalNumberDouble.
 func (s *TestRequestFormatTestReq) SetOptionalNumberDouble(val OptFloat64) {
-	s.OptionalNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberFloat sets the value of OptionalNumberFloat.
 func (s *TestRequestFormatTestReq) SetOptionalNumberFloat(val OptFloat32) {
-	s.OptionalNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberInt32 sets the value of OptionalNumberInt32.
 func (s *TestRequestFormatTestReq) SetOptionalNumberInt32(val OptInt32) {
-	s.OptionalNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberInt64 sets the value of OptionalNumberInt64.
 func (s *TestRequestFormatTestReq) SetOptionalNumberInt64(val OptInt64) {
-	s.OptionalNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalString sets the value of OptionalString.
 func (s *TestRequestFormatTestReq) SetOptionalString(val OptString) {
-	s.OptionalString = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalStringBase64 sets the value of OptionalStringBase64.
 }
 
-// SetOptionalStringBase64 sets the value of OptionalStringBase64.
 func (s *TestRequestFormatTestReq) SetOptionalStringBase64(val []byte) {
-	s.OptionalStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringBinary sets the value of OptionalStringBinary.
 func (s *TestRequestFormatTestReq) SetOptionalStringBinary(val OptString) {
-	s.OptionalStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringByte sets the value of OptionalStringByte.
 func (s *TestRequestFormatTestReq) SetOptionalStringByte(val []byte) {
-	s.OptionalStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDate sets the value of OptionalStringDate.
 func (s *TestRequestFormatTestReq) SetOptionalStringDate(val OptDate) {
-	s.OptionalStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDateMinusTime sets the value of OptionalStringDateMinusTime.
 func (s *TestRequestFormatTestReq) SetOptionalStringDateMinusTime(val OptDateTime) {
-	s.OptionalStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDecimal sets the value of OptionalStringDecimal.
 func (s *TestRequestFormatTestReq) SetOptionalStringDecimal(val OptStringDecimal) {
-	s.OptionalStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDuration sets the value of OptionalStringDuration.
 func (s *TestRequestFormatTestReq) SetOptionalStringDuration(val OptDuration) {
-	s.OptionalStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringEmail sets the value of OptionalStringEmail.
 func (s *TestRequestFormatTestReq) SetOptionalStringEmail(val OptString) {
-	s.OptionalStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringFloat32 sets the value of OptionalStringFloat32.
 func (s *TestRequestFormatTestReq) SetOptionalStringFloat32(val OptStringFloat32) {
-	s.OptionalStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringFloat64 sets the value of OptionalStringFloat64.
 func (s *TestRequestFormatTestReq) SetOptionalStringFloat64(val OptStringFloat64) {
-	s.OptionalStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringHostname sets the value of OptionalStringHostname.
 func (s *TestRequestFormatTestReq) SetOptionalStringHostname(val OptString) {
-	s.OptionalStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringHTTPMinusDate sets the value of OptionalStringHTTPMinusDate.
 func (s *TestRequestFormatTestReq) SetOptionalStringHTTPMinusDate(val OptHTTPDate) {
-	s.OptionalStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt sets the value of OptionalStringInt.
 func (s *TestRequestFormatTestReq) SetOptionalStringInt(val OptStringInt) {
-	s.OptionalStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt16 sets the value of OptionalStringInt16.
 func (s *TestRequestFormatTestReq) SetOptionalStringInt16(val OptStringInt16) {
-	s.OptionalStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt32 sets the value of OptionalStringInt32.
 func (s *TestRequestFormatTestReq) SetOptionalStringInt32(val OptStringInt32) {
-	s.OptionalStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt64 sets the value of OptionalStringInt64.
 func (s *TestRequestFormatTestReq) SetOptionalStringInt64(val OptStringInt64) {
-	s.OptionalStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt8 sets the value of OptionalStringInt8.
 func (s *TestRequestFormatTestReq) SetOptionalStringInt8(val OptStringInt8) {
-	s.OptionalStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringIP sets the value of OptionalStringIP.
 func (s *TestRequestFormatTestReq) SetOptionalStringIP(val OptIP) {
-	s.OptionalStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringIpv4 sets the value of OptionalStringIpv4.
 func (s *TestRequestFormatTestReq) SetOptionalStringIpv4(val OptIPv4) {
-	s.OptionalStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringIpv6 sets the value of OptionalStringIpv6.
 func (s *TestRequestFormatTestReq) SetOptionalStringIpv6(val OptIPv6) {
-	s.OptionalStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringMAC sets the value of OptionalStringMAC.
 func (s *TestRequestFormatTestReq) SetOptionalStringMAC(val OptHardwareAddr) {
-	s.OptionalStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringPassword sets the value of OptionalStringPassword.
 func (s *TestRequestFormatTestReq) SetOptionalStringPassword(val OptString) {
-	s.OptionalStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringTime sets the value of OptionalStringTime.
 func (s *TestRequestFormatTestReq) SetOptionalStringTime(val OptTime) {
-	s.OptionalStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint sets the value of OptionalStringUint.
 func (s *TestRequestFormatTestReq) SetOptionalStringUint(val OptStringUint) {
-	s.OptionalStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint16 sets the value of OptionalStringUint16.
 func (s *TestRequestFormatTestReq) SetOptionalStringUint16(val OptStringUint16) {
-	s.OptionalStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint32 sets the value of OptionalStringUint32.
 func (s *TestRequestFormatTestReq) SetOptionalStringUint32(val OptStringUint32) {
-	s.OptionalStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint64 sets the value of OptionalStringUint64.
 func (s *TestRequestFormatTestReq) SetOptionalStringUint64(val OptStringUint64) {
-	s.OptionalStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint8 sets the value of OptionalStringUint8.
 func (s *TestRequestFormatTestReq) SetOptionalStringUint8(val OptStringUint8) {
-	s.OptionalStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnix sets the value of OptionalStringUnix.
 func (s *TestRequestFormatTestReq) SetOptionalStringUnix(val OptStringUnixSeconds) {
-	s.OptionalStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusMicro sets the value of OptionalStringUnixMinusMicro.
 func (s *TestRequestFormatTestReq) SetOptionalStringUnixMinusMicro(val OptStringUnixMicro) {
-	s.OptionalStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusMilli sets the value of OptionalStringUnixMinusMilli.
 func (s *TestRequestFormatTestReq) SetOptionalStringUnixMinusMilli(val OptStringUnixMilli) {
-	s.OptionalStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusNano sets the value of OptionalStringUnixMinusNano.
 func (s *TestRequestFormatTestReq) SetOptionalStringUnixMinusNano(val OptStringUnixNano) {
-	s.OptionalStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusSeconds sets the value of OptionalStringUnixMinusSeconds.
 func (s *TestRequestFormatTestReq) SetOptionalStringUnixMinusSeconds(val OptStringUnixSeconds) {
-	s.OptionalStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringURI sets the value of OptionalStringURI.
 func (s *TestRequestFormatTestReq) SetOptionalStringURI(val OptURI) {
-	s.OptionalStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUUID sets the value of OptionalStringUUID.
 func (s *TestRequestFormatTestReq) SetOptionalStringUUID(val OptUUID) {
-	s.OptionalStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type TestRequestRequiredEmptyStructReq struct{}
@@ -12004,3602 +10287,4357 @@ type TestRequestRequiredFormatTestReq struct {
 
 // GetRequiredAny returns the value of RequiredAny.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredAny() jx.Raw {
-	return s.RequiredAny
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRequiredArrayAny returns the value of RequiredArrayAny.
+	new(jx.Raw)
 }
 
-// GetRequiredArrayAny returns the value of RequiredArrayAny.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayAny() []jx.Raw {
-	return s.RequiredArrayAny
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetRequiredArrayBoolean returns the value of RequiredArrayBoolean.
 }
 
-// GetRequiredArrayBoolean returns the value of RequiredArrayBoolean.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayBoolean() []bool {
-	return s.RequiredArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayInteger returns the value of RequiredArrayInteger.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayInteger() []int {
-	return s.RequiredArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt16 returns the value of RequiredArrayIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerInt16() []int16 {
-	return s.RequiredArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt32 returns the value of RequiredArrayIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerInt32() []int32 {
-	return s.RequiredArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt64 returns the value of RequiredArrayIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerInt64() []int64 {
-	return s.RequiredArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt8 returns the value of RequiredArrayIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerInt8() []int8 {
-	return s.RequiredArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint returns the value of RequiredArrayIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerUint() []uint {
-	return s.RequiredArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint16 returns the value of RequiredArrayIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerUint16() []uint16 {
-	return s.RequiredArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint32 returns the value of RequiredArrayIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerUint32() []uint32 {
-	return s.RequiredArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint64 returns the value of RequiredArrayIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerUint64() []uint64 {
-	return s.RequiredArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint8 returns the value of RequiredArrayIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerUint8() []uint8 {
-	return s.RequiredArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnix returns the value of RequiredArrayIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerUnix() []time.Time {
-	return s.RequiredArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusMicro returns the value of RequiredArrayIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerUnixMinusMicro() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusMilli returns the value of RequiredArrayIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerUnixMinusMilli() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusNano returns the value of RequiredArrayIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerUnixMinusNano() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusSeconds returns the value of RequiredArrayIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayIntegerUnixMinusSeconds() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNull returns the value of RequiredArrayNull.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayNull() []struct{} {
-	return s.RequiredArrayNull
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetRequiredArrayNumber returns the value of RequiredArrayNumber.
 }
 
-// GetRequiredArrayNumber returns the value of RequiredArrayNumber.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayNumber() []float64 {
-	return s.RequiredArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberDecimal returns the value of RequiredArrayNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayNumberDecimal() []decimal.Decimal {
-	return s.RequiredArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberDouble returns the value of RequiredArrayNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayNumberDouble() []float64 {
-	return s.RequiredArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberFloat returns the value of RequiredArrayNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayNumberFloat() []float32 {
-	return s.RequiredArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberInt32 returns the value of RequiredArrayNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayNumberInt32() []int32 {
-	return s.RequiredArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberInt64 returns the value of RequiredArrayNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayNumberInt64() []int64 {
-	return s.RequiredArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayString returns the value of RequiredArrayString.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayString() []string {
-	return s.RequiredArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringBase64 returns the value of RequiredArrayStringBase64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringBase64() [][]byte {
-	return s.RequiredArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringBinary returns the value of RequiredArrayStringBinary.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringBinary() []string {
-	return s.RequiredArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringByte returns the value of RequiredArrayStringByte.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringByte() [][]byte {
-	return s.RequiredArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDate returns the value of RequiredArrayStringDate.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringDate() []time.Time {
-	return s.RequiredArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDateMinusTime returns the value of RequiredArrayStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringDateMinusTime() []time.Time {
-	return s.RequiredArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDecimal returns the value of RequiredArrayStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringDecimal() []decimal.Decimal {
-	return s.RequiredArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDuration returns the value of RequiredArrayStringDuration.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringDuration() []time.Duration {
-	return s.RequiredArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringEmail returns the value of RequiredArrayStringEmail.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringEmail() []string {
-	return s.RequiredArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringFloat32 returns the value of RequiredArrayStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringFloat32() []float32 {
-	return s.RequiredArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringFloat64 returns the value of RequiredArrayStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringFloat64() []float64 {
-	return s.RequiredArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringHostname returns the value of RequiredArrayStringHostname.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringHostname() []string {
-	return s.RequiredArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringHTTPMinusDate returns the value of RequiredArrayStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringHTTPMinusDate() []time.Time {
-	return s.RequiredArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt returns the value of RequiredArrayStringInt.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringInt() []int {
-	return s.RequiredArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt16 returns the value of RequiredArrayStringInt16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringInt16() []int16 {
-	return s.RequiredArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt32 returns the value of RequiredArrayStringInt32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringInt32() []int32 {
-	return s.RequiredArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt64 returns the value of RequiredArrayStringInt64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringInt64() []int64 {
-	return s.RequiredArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt8 returns the value of RequiredArrayStringInt8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringInt8() []int8 {
-	return s.RequiredArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringIP returns the value of RequiredArrayStringIP.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringIP() []netip.Addr {
-	return s.RequiredArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringIpv4 returns the value of RequiredArrayStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringIpv4() []netip.Addr {
-	return s.RequiredArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringIpv6 returns the value of RequiredArrayStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringIpv6() []netip.Addr {
-	return s.RequiredArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringMAC returns the value of RequiredArrayStringMAC.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringMAC() []net.HardwareAddr {
-	return s.RequiredArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringPassword returns the value of RequiredArrayStringPassword.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringPassword() []string {
-	return s.RequiredArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringTime returns the value of RequiredArrayStringTime.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringTime() []time.Time {
-	return s.RequiredArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint returns the value of RequiredArrayStringUint.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUint() []uint {
-	return s.RequiredArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint16 returns the value of RequiredArrayStringUint16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUint16() []uint16 {
-	return s.RequiredArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint32 returns the value of RequiredArrayStringUint32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUint32() []uint32 {
-	return s.RequiredArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint64 returns the value of RequiredArrayStringUint64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUint64() []uint64 {
-	return s.RequiredArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint8 returns the value of RequiredArrayStringUint8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUint8() []uint8 {
-	return s.RequiredArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnix returns the value of RequiredArrayStringUnix.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUnix() []time.Time {
-	return s.RequiredArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusMicro returns the value of RequiredArrayStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUnixMinusMicro() []time.Time {
-	return s.RequiredArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusMilli returns the value of RequiredArrayStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUnixMinusMilli() []time.Time {
-	return s.RequiredArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusNano returns the value of RequiredArrayStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUnixMinusNano() []time.Time {
-	return s.RequiredArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusSeconds returns the value of RequiredArrayStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUnixMinusSeconds() []time.Time {
-	return s.RequiredArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringURI returns the value of RequiredArrayStringURI.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringURI() []url.URL {
-	return s.RequiredArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUUID returns the value of RequiredArrayStringUUID.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredArrayStringUUID() []uuid.UUID {
-	return s.RequiredArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredBoolean returns the value of RequiredBoolean.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredBoolean() bool {
-	return s.RequiredBoolean
+	_ = "STUB: not implemented"
+	return false
+
+	// GetRequiredDoubleArrayAny returns the value of RequiredDoubleArrayAny.
 }
 
-// GetRequiredDoubleArrayAny returns the value of RequiredDoubleArrayAny.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayAny() [][]jx.Raw {
-	return s.RequiredDoubleArrayAny
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayBoolean returns the value of RequiredDoubleArrayBoolean.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayBoolean() [][]bool {
-	return s.RequiredDoubleArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayInteger returns the value of RequiredDoubleArrayInteger.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayInteger() [][]int {
-	return s.RequiredDoubleArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt16 returns the value of RequiredDoubleArrayIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerInt16() [][]int16 {
-	return s.RequiredDoubleArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt32 returns the value of RequiredDoubleArrayIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerInt32() [][]int32 {
-	return s.RequiredDoubleArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt64 returns the value of RequiredDoubleArrayIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerInt64() [][]int64 {
-	return s.RequiredDoubleArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt8 returns the value of RequiredDoubleArrayIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerInt8() [][]int8 {
-	return s.RequiredDoubleArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint returns the value of RequiredDoubleArrayIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerUint() [][]uint {
-	return s.RequiredDoubleArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint16 returns the value of RequiredDoubleArrayIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerUint16() [][]uint16 {
-	return s.RequiredDoubleArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint32 returns the value of RequiredDoubleArrayIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerUint32() [][]uint32 {
-	return s.RequiredDoubleArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint64 returns the value of RequiredDoubleArrayIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerUint64() [][]uint64 {
-	return s.RequiredDoubleArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint8 returns the value of RequiredDoubleArrayIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerUint8() [][]uint8 {
-	return s.RequiredDoubleArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnix returns the value of RequiredDoubleArrayIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerUnix() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusMicro returns the value of RequiredDoubleArrayIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerUnixMinusMicro() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusMilli returns the value of RequiredDoubleArrayIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerUnixMinusMilli() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusNano returns the value of RequiredDoubleArrayIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerUnixMinusNano() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusSeconds returns the value of RequiredDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayIntegerUnixMinusSeconds() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNull returns the value of RequiredDoubleArrayNull.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayNull() [][]struct{} {
-	return s.RequiredDoubleArrayNull
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumber returns the value of RequiredDoubleArrayNumber.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayNumber() [][]float64 {
-	return s.RequiredDoubleArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberDecimal returns the value of RequiredDoubleArrayNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayNumberDecimal() [][]decimal.Decimal {
-	return s.RequiredDoubleArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberDouble returns the value of RequiredDoubleArrayNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayNumberDouble() [][]float64 {
-	return s.RequiredDoubleArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberFloat returns the value of RequiredDoubleArrayNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayNumberFloat() [][]float32 {
-	return s.RequiredDoubleArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberInt32 returns the value of RequiredDoubleArrayNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayNumberInt32() [][]int32 {
-	return s.RequiredDoubleArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberInt64 returns the value of RequiredDoubleArrayNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayNumberInt64() [][]int64 {
-	return s.RequiredDoubleArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayString returns the value of RequiredDoubleArrayString.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayString() [][]string {
-	return s.RequiredDoubleArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringBase64 returns the value of RequiredDoubleArrayStringBase64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringBase64() [][][]byte {
-	return s.RequiredDoubleArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringBinary returns the value of RequiredDoubleArrayStringBinary.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringBinary() [][]string {
-	return s.RequiredDoubleArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringByte returns the value of RequiredDoubleArrayStringByte.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringByte() [][][]byte {
-	return s.RequiredDoubleArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDate returns the value of RequiredDoubleArrayStringDate.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringDate() [][]time.Time {
-	return s.RequiredDoubleArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDateMinusTime returns the value of RequiredDoubleArrayStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringDateMinusTime() [][]time.Time {
-	return s.RequiredDoubleArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDecimal returns the value of RequiredDoubleArrayStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringDecimal() [][]decimal.Decimal {
-	return s.RequiredDoubleArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDuration returns the value of RequiredDoubleArrayStringDuration.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringDuration() [][]time.Duration {
-	return s.RequiredDoubleArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringEmail returns the value of RequiredDoubleArrayStringEmail.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringEmail() [][]string {
-	return s.RequiredDoubleArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringFloat32 returns the value of RequiredDoubleArrayStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringFloat32() [][]float32 {
-	return s.RequiredDoubleArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringFloat64 returns the value of RequiredDoubleArrayStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringFloat64() [][]float64 {
-	return s.RequiredDoubleArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringHostname returns the value of RequiredDoubleArrayStringHostname.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringHostname() [][]string {
-	return s.RequiredDoubleArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringHTTPMinusDate returns the value of RequiredDoubleArrayStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringHTTPMinusDate() [][]time.Time {
-	return s.RequiredDoubleArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt returns the value of RequiredDoubleArrayStringInt.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringInt() [][]int {
-	return s.RequiredDoubleArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt16 returns the value of RequiredDoubleArrayStringInt16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringInt16() [][]int16 {
-	return s.RequiredDoubleArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt32 returns the value of RequiredDoubleArrayStringInt32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringInt32() [][]int32 {
-	return s.RequiredDoubleArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt64 returns the value of RequiredDoubleArrayStringInt64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringInt64() [][]int64 {
-	return s.RequiredDoubleArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt8 returns the value of RequiredDoubleArrayStringInt8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringInt8() [][]int8 {
-	return s.RequiredDoubleArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringIP returns the value of RequiredDoubleArrayStringIP.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringIP() [][]netip.Addr {
-	return s.RequiredDoubleArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringIpv4 returns the value of RequiredDoubleArrayStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringIpv4() [][]netip.Addr {
-	return s.RequiredDoubleArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringIpv6 returns the value of RequiredDoubleArrayStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringIpv6() [][]netip.Addr {
-	return s.RequiredDoubleArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringMAC returns the value of RequiredDoubleArrayStringMAC.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringMAC() [][]net.HardwareAddr {
-	return s.RequiredDoubleArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringPassword returns the value of RequiredDoubleArrayStringPassword.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringPassword() [][]string {
-	return s.RequiredDoubleArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringTime returns the value of RequiredDoubleArrayStringTime.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringTime() [][]time.Time {
-	return s.RequiredDoubleArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint returns the value of RequiredDoubleArrayStringUint.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUint() [][]uint {
-	return s.RequiredDoubleArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint16 returns the value of RequiredDoubleArrayStringUint16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUint16() [][]uint16 {
-	return s.RequiredDoubleArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint32 returns the value of RequiredDoubleArrayStringUint32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUint32() [][]uint32 {
-	return s.RequiredDoubleArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint64 returns the value of RequiredDoubleArrayStringUint64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUint64() [][]uint64 {
-	return s.RequiredDoubleArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint8 returns the value of RequiredDoubleArrayStringUint8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUint8() [][]uint8 {
-	return s.RequiredDoubleArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnix returns the value of RequiredDoubleArrayStringUnix.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUnix() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusMicro returns the value of RequiredDoubleArrayStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUnixMinusMicro() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusMilli returns the value of RequiredDoubleArrayStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUnixMinusMilli() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusNano returns the value of RequiredDoubleArrayStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUnixMinusNano() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusSeconds returns the value of RequiredDoubleArrayStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUnixMinusSeconds() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringURI returns the value of RequiredDoubleArrayStringURI.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringURI() [][]url.URL {
-	return s.RequiredDoubleArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUUID returns the value of RequiredDoubleArrayStringUUID.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredDoubleArrayStringUUID() [][]uuid.UUID {
-	return s.RequiredDoubleArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredInteger returns the value of RequiredInteger.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredInteger() int {
-	return s.RequiredInteger
+	_ = "STUB: not implemented"
+	return 0
+
+	// GetRequiredIntegerInt16 returns the value of RequiredIntegerInt16.
 }
 
-// GetRequiredIntegerInt16 returns the value of RequiredIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerInt16() int16 {
-	return s.RequiredIntegerInt16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerInt32 returns the value of RequiredIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerInt32() int32 {
-	return s.RequiredIntegerInt32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerInt64 returns the value of RequiredIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerInt64() int64 {
-	return s.RequiredIntegerInt64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerInt8 returns the value of RequiredIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerInt8() int8 {
-	return s.RequiredIntegerInt8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint returns the value of RequiredIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerUint() uint {
-	return s.RequiredIntegerUint
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint16 returns the value of RequiredIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerUint16() uint16 {
-	return s.RequiredIntegerUint16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint32 returns the value of RequiredIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerUint32() uint32 {
-	return s.RequiredIntegerUint32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint64 returns the value of RequiredIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerUint64() uint64 {
-	return s.RequiredIntegerUint64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint8 returns the value of RequiredIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerUint8() uint8 {
-	return s.RequiredIntegerUint8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUnix returns the value of RequiredIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerUnix() time.Time {
-	return s.RequiredIntegerUnix
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusMicro returns the value of RequiredIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerUnixMinusMicro() time.Time {
-	return s.RequiredIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusMilli returns the value of RequiredIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerUnixMinusMilli() time.Time {
-	return s.RequiredIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusNano returns the value of RequiredIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerUnixMinusNano() time.Time {
-	return s.RequiredIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusSeconds returns the value of RequiredIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredIntegerUnixMinusSeconds() time.Time {
-	return s.RequiredIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredNull returns the value of RequiredNull.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredNull() struct{} {
-	return s.RequiredNull
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetRequiredNumber returns the value of RequiredNumber.
 }
 
-// GetRequiredNumber returns the value of RequiredNumber.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredNumber() float64 {
-	return s.RequiredNumber
+	_ = "STUB: not implemented"
+	return 0
+
+	// GetRequiredNumberDecimal returns the value of RequiredNumberDecimal.
 }
 
-// GetRequiredNumberDecimal returns the value of RequiredNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredNumberDecimal() decimal.Decimal {
-	return s.RequiredNumberDecimal
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // GetRequiredNumberDouble returns the value of RequiredNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredNumberDouble() float64 {
-	return s.RequiredNumberDouble
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredNumberFloat returns the value of RequiredNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredNumberFloat() float32 {
-	return s.RequiredNumberFloat
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredNumberInt32 returns the value of RequiredNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredNumberInt32() int32 {
-	return s.RequiredNumberInt32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredNumberInt64 returns the value of RequiredNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredNumberInt64() int64 {
-	return s.RequiredNumberInt64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredString returns the value of RequiredString.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredString() string {
-	return s.RequiredString
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetRequiredStringBase64 returns the value of RequiredStringBase64.
 }
 
-// GetRequiredStringBase64 returns the value of RequiredStringBase64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringBase64() []byte {
-	return s.RequiredStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredStringBinary returns the value of RequiredStringBinary.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringBinary() string {
-	return s.RequiredStringBinary
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringByte returns the value of RequiredStringByte.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringByte() []byte {
-	return s.RequiredStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredStringDate returns the value of RequiredStringDate.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringDate() time.Time {
-	return s.RequiredStringDate
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringDateMinusTime returns the value of RequiredStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringDateMinusTime() time.Time {
-	return s.RequiredStringDateMinusTime
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringDecimal returns the value of RequiredStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringDecimal() decimal.Decimal {
-	return s.RequiredStringDecimal
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // GetRequiredStringDuration returns the value of RequiredStringDuration.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringDuration() time.Duration {
-	return s.RequiredStringDuration
+	_ = "STUB: not implemented"
+	return *new(time.Duration)
 }
 
 // GetRequiredStringEmail returns the value of RequiredStringEmail.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringEmail() string {
-	return s.RequiredStringEmail
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringFloat32 returns the value of RequiredStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringFloat32() float32 {
-	return s.RequiredStringFloat32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringFloat64 returns the value of RequiredStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringFloat64() float64 {
-	return s.RequiredStringFloat64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringHostname returns the value of RequiredStringHostname.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringHostname() string {
-	return s.RequiredStringHostname
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringHTTPMinusDate returns the value of RequiredStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringHTTPMinusDate() time.Time {
-	return s.RequiredStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringInt returns the value of RequiredStringInt.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringInt() int {
-	return s.RequiredStringInt
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringInt16 returns the value of RequiredStringInt16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringInt16() int16 {
-	return s.RequiredStringInt16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringInt32 returns the value of RequiredStringInt32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringInt32() int32 {
-	return s.RequiredStringInt32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringInt64 returns the value of RequiredStringInt64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringInt64() int64 {
-	return s.RequiredStringInt64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringInt8 returns the value of RequiredStringInt8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringInt8() int8 {
-	return s.RequiredStringInt8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringIP returns the value of RequiredStringIP.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringIP() netip.Addr {
-	return s.RequiredStringIP
+	_ = "STUB: not implemented"
+	return *new(netip.Addr)
 }
 
 // GetRequiredStringIpv4 returns the value of RequiredStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringIpv4() netip.Addr {
-	return s.RequiredStringIpv4
+	_ = "STUB: not implemented"
+	return *new(netip.Addr)
 }
 
 // GetRequiredStringIpv6 returns the value of RequiredStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringIpv6() netip.Addr {
-	return s.RequiredStringIpv6
+	_ = "STUB: not implemented"
+	return *new(netip.Addr)
 }
 
 // GetRequiredStringMAC returns the value of RequiredStringMAC.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringMAC() net.HardwareAddr {
-	return s.RequiredStringMAC
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr)
 }
 
 // GetRequiredStringPassword returns the value of RequiredStringPassword.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringPassword() string {
-	return s.RequiredStringPassword
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringTime returns the value of RequiredStringTime.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringTime() time.Time {
-	return s.RequiredStringTime
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUint returns the value of RequiredStringUint.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUint() uint {
-	return s.RequiredStringUint
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint16 returns the value of RequiredStringUint16.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUint16() uint16 {
-	return s.RequiredStringUint16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint32 returns the value of RequiredStringUint32.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUint32() uint32 {
-	return s.RequiredStringUint32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint64 returns the value of RequiredStringUint64.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUint64() uint64 {
-	return s.RequiredStringUint64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint8 returns the value of RequiredStringUint8.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUint8() uint8 {
-	return s.RequiredStringUint8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUnix returns the value of RequiredStringUnix.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUnix() time.Time {
-	return s.RequiredStringUnix
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusMicro returns the value of RequiredStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUnixMinusMicro() time.Time {
-	return s.RequiredStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusMilli returns the value of RequiredStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUnixMinusMilli() time.Time {
-	return s.RequiredStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusNano returns the value of RequiredStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUnixMinusNano() time.Time {
-	return s.RequiredStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusSeconds returns the value of RequiredStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUnixMinusSeconds() time.Time {
-	return s.RequiredStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringURI returns the value of RequiredStringURI.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringURI() url.URL {
-	return s.RequiredStringURI
+	_ = "STUB: not implemented"
+	return *new(url.URL)
 }
 
 // GetRequiredStringUUID returns the value of RequiredStringUUID.
 func (s *TestRequestRequiredFormatTestReq) GetRequiredStringUUID() uuid.UUID {
-	return s.RequiredStringUUID
+	_ = "STUB: not implemented"
+	return *new(uuid.UUID)
 }
 
 // GetOptionalAny returns the value of OptionalAny.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalAny() jx.Raw {
-	return s.OptionalAny
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalArrayAny returns the value of OptionalArrayAny.
+	new(jx.Raw)
 }
 
-// GetOptionalArrayAny returns the value of OptionalArrayAny.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayAny() []jx.Raw {
-	return s.OptionalArrayAny
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetOptionalArrayBoolean returns the value of OptionalArrayBoolean.
 }
 
-// GetOptionalArrayBoolean returns the value of OptionalArrayBoolean.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayBoolean() []bool {
-	return s.OptionalArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayInteger returns the value of OptionalArrayInteger.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayInteger() []int {
-	return s.OptionalArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt16 returns the value of OptionalArrayIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerInt16() []int16 {
-	return s.OptionalArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt32 returns the value of OptionalArrayIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerInt32() []int32 {
-	return s.OptionalArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt64 returns the value of OptionalArrayIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerInt64() []int64 {
-	return s.OptionalArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt8 returns the value of OptionalArrayIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerInt8() []int8 {
-	return s.OptionalArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint returns the value of OptionalArrayIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerUint() []uint {
-	return s.OptionalArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint16 returns the value of OptionalArrayIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerUint16() []uint16 {
-	return s.OptionalArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint32 returns the value of OptionalArrayIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerUint32() []uint32 {
-	return s.OptionalArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint64 returns the value of OptionalArrayIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerUint64() []uint64 {
-	return s.OptionalArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint8 returns the value of OptionalArrayIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerUint8() []uint8 {
-	return s.OptionalArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnix returns the value of OptionalArrayIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerUnix() []time.Time {
-	return s.OptionalArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusMicro returns the value of OptionalArrayIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerUnixMinusMicro() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusMilli returns the value of OptionalArrayIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerUnixMinusMilli() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusNano returns the value of OptionalArrayIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerUnixMinusNano() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusSeconds returns the value of OptionalArrayIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayIntegerUnixMinusSeconds() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNull returns the value of OptionalArrayNull.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayNull() []struct{} {
-	return s.OptionalArrayNull
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetOptionalArrayNumber returns the value of OptionalArrayNumber.
 }
 
-// GetOptionalArrayNumber returns the value of OptionalArrayNumber.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayNumber() []float64 {
-	return s.OptionalArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberDecimal returns the value of OptionalArrayNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayNumberDecimal() []decimal.Decimal {
-	return s.OptionalArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberDouble returns the value of OptionalArrayNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayNumberDouble() []float64 {
-	return s.OptionalArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberFloat returns the value of OptionalArrayNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayNumberFloat() []float32 {
-	return s.OptionalArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberInt32 returns the value of OptionalArrayNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayNumberInt32() []int32 {
-	return s.OptionalArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberInt64 returns the value of OptionalArrayNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayNumberInt64() []int64 {
-	return s.OptionalArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayString returns the value of OptionalArrayString.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayString() []string {
-	return s.OptionalArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringBase64 returns the value of OptionalArrayStringBase64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringBase64() [][]byte {
-	return s.OptionalArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringBinary returns the value of OptionalArrayStringBinary.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringBinary() []string {
-	return s.OptionalArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringByte returns the value of OptionalArrayStringByte.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringByte() [][]byte {
-	return s.OptionalArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDate returns the value of OptionalArrayStringDate.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringDate() []time.Time {
-	return s.OptionalArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDateMinusTime returns the value of OptionalArrayStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringDateMinusTime() []time.Time {
-	return s.OptionalArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDecimal returns the value of OptionalArrayStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringDecimal() []decimal.Decimal {
-	return s.OptionalArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDuration returns the value of OptionalArrayStringDuration.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringDuration() []time.Duration {
-	return s.OptionalArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringEmail returns the value of OptionalArrayStringEmail.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringEmail() []string {
-	return s.OptionalArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringFloat32 returns the value of OptionalArrayStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringFloat32() []float32 {
-	return s.OptionalArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringFloat64 returns the value of OptionalArrayStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringFloat64() []float64 {
-	return s.OptionalArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringHostname returns the value of OptionalArrayStringHostname.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringHostname() []string {
-	return s.OptionalArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringHTTPMinusDate returns the value of OptionalArrayStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringHTTPMinusDate() []time.Time {
-	return s.OptionalArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt returns the value of OptionalArrayStringInt.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringInt() []int {
-	return s.OptionalArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt16 returns the value of OptionalArrayStringInt16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringInt16() []int16 {
-	return s.OptionalArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt32 returns the value of OptionalArrayStringInt32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringInt32() []int32 {
-	return s.OptionalArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt64 returns the value of OptionalArrayStringInt64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringInt64() []int64 {
-	return s.OptionalArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt8 returns the value of OptionalArrayStringInt8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringInt8() []int8 {
-	return s.OptionalArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringIP returns the value of OptionalArrayStringIP.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringIP() []netip.Addr {
-	return s.OptionalArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringIpv4 returns the value of OptionalArrayStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringIpv4() []netip.Addr {
-	return s.OptionalArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringIpv6 returns the value of OptionalArrayStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringIpv6() []netip.Addr {
-	return s.OptionalArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringMAC returns the value of OptionalArrayStringMAC.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringMAC() []net.HardwareAddr {
-	return s.OptionalArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringPassword returns the value of OptionalArrayStringPassword.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringPassword() []string {
-	return s.OptionalArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringTime returns the value of OptionalArrayStringTime.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringTime() []time.Time {
-	return s.OptionalArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint returns the value of OptionalArrayStringUint.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUint() []uint {
-	return s.OptionalArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint16 returns the value of OptionalArrayStringUint16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUint16() []uint16 {
-	return s.OptionalArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint32 returns the value of OptionalArrayStringUint32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUint32() []uint32 {
-	return s.OptionalArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint64 returns the value of OptionalArrayStringUint64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUint64() []uint64 {
-	return s.OptionalArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint8 returns the value of OptionalArrayStringUint8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUint8() []uint8 {
-	return s.OptionalArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnix returns the value of OptionalArrayStringUnix.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUnix() []time.Time {
-	return s.OptionalArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusMicro returns the value of OptionalArrayStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUnixMinusMicro() []time.Time {
-	return s.OptionalArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusMilli returns the value of OptionalArrayStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUnixMinusMilli() []time.Time {
-	return s.OptionalArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusNano returns the value of OptionalArrayStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUnixMinusNano() []time.Time {
-	return s.OptionalArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusSeconds returns the value of OptionalArrayStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUnixMinusSeconds() []time.Time {
-	return s.OptionalArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringURI returns the value of OptionalArrayStringURI.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringURI() []url.URL {
-	return s.OptionalArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUUID returns the value of OptionalArrayStringUUID.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalArrayStringUUID() []uuid.UUID {
-	return s.OptionalArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalBoolean returns the value of OptionalBoolean.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalBoolean() OptBool {
-	return s.OptionalBoolean
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalDoubleArrayAny returns the value of OptionalDoubleArrayAny.
+	new(OptBool)
 }
 
-// GetOptionalDoubleArrayAny returns the value of OptionalDoubleArrayAny.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayAny() [][]jx.Raw {
-	return s.OptionalDoubleArrayAny
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayBoolean returns the value of OptionalDoubleArrayBoolean.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayBoolean() [][]bool {
-	return s.OptionalDoubleArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayInteger returns the value of OptionalDoubleArrayInteger.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayInteger() [][]int {
-	return s.OptionalDoubleArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt16 returns the value of OptionalDoubleArrayIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerInt16() [][]int16 {
-	return s.OptionalDoubleArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt32 returns the value of OptionalDoubleArrayIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerInt32() [][]int32 {
-	return s.OptionalDoubleArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt64 returns the value of OptionalDoubleArrayIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerInt64() [][]int64 {
-	return s.OptionalDoubleArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt8 returns the value of OptionalDoubleArrayIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerInt8() [][]int8 {
-	return s.OptionalDoubleArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint returns the value of OptionalDoubleArrayIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerUint() [][]uint {
-	return s.OptionalDoubleArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint16 returns the value of OptionalDoubleArrayIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerUint16() [][]uint16 {
-	return s.OptionalDoubleArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint32 returns the value of OptionalDoubleArrayIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerUint32() [][]uint32 {
-	return s.OptionalDoubleArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint64 returns the value of OptionalDoubleArrayIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerUint64() [][]uint64 {
-	return s.OptionalDoubleArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint8 returns the value of OptionalDoubleArrayIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerUint8() [][]uint8 {
-	return s.OptionalDoubleArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnix returns the value of OptionalDoubleArrayIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerUnix() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusMicro returns the value of OptionalDoubleArrayIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerUnixMinusMicro() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusMilli returns the value of OptionalDoubleArrayIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerUnixMinusMilli() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusNano returns the value of OptionalDoubleArrayIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerUnixMinusNano() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusSeconds returns the value of OptionalDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayIntegerUnixMinusSeconds() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNull returns the value of OptionalDoubleArrayNull.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayNull() [][]struct{} {
-	return s.OptionalDoubleArrayNull
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumber returns the value of OptionalDoubleArrayNumber.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayNumber() [][]float64 {
-	return s.OptionalDoubleArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberDecimal returns the value of OptionalDoubleArrayNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayNumberDecimal() [][]decimal.Decimal {
-	return s.OptionalDoubleArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberDouble returns the value of OptionalDoubleArrayNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayNumberDouble() [][]float64 {
-	return s.OptionalDoubleArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberFloat returns the value of OptionalDoubleArrayNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayNumberFloat() [][]float32 {
-	return s.OptionalDoubleArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberInt32 returns the value of OptionalDoubleArrayNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayNumberInt32() [][]int32 {
-	return s.OptionalDoubleArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberInt64 returns the value of OptionalDoubleArrayNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayNumberInt64() [][]int64 {
-	return s.OptionalDoubleArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayString returns the value of OptionalDoubleArrayString.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayString() [][]string {
-	return s.OptionalDoubleArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringBase64 returns the value of OptionalDoubleArrayStringBase64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringBase64() [][][]byte {
-	return s.OptionalDoubleArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringBinary returns the value of OptionalDoubleArrayStringBinary.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringBinary() [][]string {
-	return s.OptionalDoubleArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringByte returns the value of OptionalDoubleArrayStringByte.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringByte() [][][]byte {
-	return s.OptionalDoubleArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDate returns the value of OptionalDoubleArrayStringDate.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringDate() [][]time.Time {
-	return s.OptionalDoubleArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDateMinusTime returns the value of OptionalDoubleArrayStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringDateMinusTime() [][]time.Time {
-	return s.OptionalDoubleArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDecimal returns the value of OptionalDoubleArrayStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringDecimal() [][]decimal.Decimal {
-	return s.OptionalDoubleArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDuration returns the value of OptionalDoubleArrayStringDuration.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringDuration() [][]time.Duration {
-	return s.OptionalDoubleArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringEmail returns the value of OptionalDoubleArrayStringEmail.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringEmail() [][]string {
-	return s.OptionalDoubleArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringFloat32 returns the value of OptionalDoubleArrayStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringFloat32() [][]float32 {
-	return s.OptionalDoubleArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringFloat64 returns the value of OptionalDoubleArrayStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringFloat64() [][]float64 {
-	return s.OptionalDoubleArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringHostname returns the value of OptionalDoubleArrayStringHostname.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringHostname() [][]string {
-	return s.OptionalDoubleArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringHTTPMinusDate returns the value of OptionalDoubleArrayStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringHTTPMinusDate() [][]time.Time {
-	return s.OptionalDoubleArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt returns the value of OptionalDoubleArrayStringInt.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringInt() [][]int {
-	return s.OptionalDoubleArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt16 returns the value of OptionalDoubleArrayStringInt16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringInt16() [][]int16 {
-	return s.OptionalDoubleArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt32 returns the value of OptionalDoubleArrayStringInt32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringInt32() [][]int32 {
-	return s.OptionalDoubleArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt64 returns the value of OptionalDoubleArrayStringInt64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringInt64() [][]int64 {
-	return s.OptionalDoubleArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt8 returns the value of OptionalDoubleArrayStringInt8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringInt8() [][]int8 {
-	return s.OptionalDoubleArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringIP returns the value of OptionalDoubleArrayStringIP.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringIP() [][]netip.Addr {
-	return s.OptionalDoubleArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringIpv4 returns the value of OptionalDoubleArrayStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringIpv4() [][]netip.Addr {
-	return s.OptionalDoubleArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringIpv6 returns the value of OptionalDoubleArrayStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringIpv6() [][]netip.Addr {
-	return s.OptionalDoubleArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringMAC returns the value of OptionalDoubleArrayStringMAC.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringMAC() [][]net.HardwareAddr {
-	return s.OptionalDoubleArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringPassword returns the value of OptionalDoubleArrayStringPassword.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringPassword() [][]string {
-	return s.OptionalDoubleArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringTime returns the value of OptionalDoubleArrayStringTime.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringTime() [][]time.Time {
-	return s.OptionalDoubleArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint returns the value of OptionalDoubleArrayStringUint.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUint() [][]uint {
-	return s.OptionalDoubleArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint16 returns the value of OptionalDoubleArrayStringUint16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUint16() [][]uint16 {
-	return s.OptionalDoubleArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint32 returns the value of OptionalDoubleArrayStringUint32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUint32() [][]uint32 {
-	return s.OptionalDoubleArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint64 returns the value of OptionalDoubleArrayStringUint64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUint64() [][]uint64 {
-	return s.OptionalDoubleArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint8 returns the value of OptionalDoubleArrayStringUint8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUint8() [][]uint8 {
-	return s.OptionalDoubleArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnix returns the value of OptionalDoubleArrayStringUnix.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUnix() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusMicro returns the value of OptionalDoubleArrayStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUnixMinusMicro() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusMilli returns the value of OptionalDoubleArrayStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUnixMinusMilli() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusNano returns the value of OptionalDoubleArrayStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUnixMinusNano() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusSeconds returns the value of OptionalDoubleArrayStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUnixMinusSeconds() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringURI returns the value of OptionalDoubleArrayStringURI.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringURI() [][]url.URL {
-	return s.OptionalDoubleArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUUID returns the value of OptionalDoubleArrayStringUUID.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalDoubleArrayStringUUID() [][]uuid.UUID {
-	return s.OptionalDoubleArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalInteger returns the value of OptionalInteger.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalInteger() OptInt {
-	return s.OptionalInteger
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalIntegerInt16 returns the value of OptionalIntegerInt16.
+	new(OptInt)
 }
 
-// GetOptionalIntegerInt16 returns the value of OptionalIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerInt16() OptInt16 {
-	return s.OptionalIntegerInt16
+	_ = "STUB: not implemented"
+	return *new(OptInt16)
 }
 
 // GetOptionalIntegerInt32 returns the value of OptionalIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerInt32() OptInt32 {
-	return s.OptionalIntegerInt32
+	_ = "STUB: not implemented"
+	return *new(OptInt32)
 }
 
 // GetOptionalIntegerInt64 returns the value of OptionalIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerInt64() OptInt64 {
-	return s.OptionalIntegerInt64
+	_ = "STUB: not implemented"
+	return *new(OptInt64)
 }
 
 // GetOptionalIntegerInt8 returns the value of OptionalIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerInt8() OptInt8 {
-	return s.OptionalIntegerInt8
+	_ = "STUB: not implemented"
+	return *new(OptInt8)
 }
 
 // GetOptionalIntegerUint returns the value of OptionalIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerUint() OptUint {
-	return s.OptionalIntegerUint
+	_ = "STUB: not implemented"
+	return *new(OptUint)
 }
 
 // GetOptionalIntegerUint16 returns the value of OptionalIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerUint16() OptUint16 {
-	return s.OptionalIntegerUint16
+	_ = "STUB: not implemented"
+	return *new(OptUint16)
 }
 
 // GetOptionalIntegerUint32 returns the value of OptionalIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerUint32() OptUint32 {
-	return s.OptionalIntegerUint32
+	_ = "STUB: not implemented"
+	return *new(OptUint32)
 }
 
 // GetOptionalIntegerUint64 returns the value of OptionalIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerUint64() OptUint64 {
-	return s.OptionalIntegerUint64
+	_ = "STUB: not implemented"
+	return *new(OptUint64)
 }
 
 // GetOptionalIntegerUint8 returns the value of OptionalIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerUint8() OptUint8 {
-	return s.OptionalIntegerUint8
+	_ = "STUB: not implemented"
+	return *new(OptUint8)
 }
 
 // GetOptionalIntegerUnix returns the value of OptionalIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerUnix() OptUnixSeconds {
-	return s.OptionalIntegerUnix
+	_ = "STUB: not implemented"
+	return *new(OptUnixSeconds)
 }
 
 // GetOptionalIntegerUnixMinusMicro returns the value of OptionalIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerUnixMinusMicro() OptUnixMicro {
-	return s.OptionalIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(OptUnixMicro)
 }
 
 // GetOptionalIntegerUnixMinusMilli returns the value of OptionalIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerUnixMinusMilli() OptUnixMilli {
-	return s.OptionalIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(OptUnixMilli)
 }
 
 // GetOptionalIntegerUnixMinusNano returns the value of OptionalIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerUnixMinusNano() OptUnixNano {
-	return s.OptionalIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(OptUnixNano)
 }
 
 // GetOptionalIntegerUnixMinusSeconds returns the value of OptionalIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalIntegerUnixMinusSeconds() OptUnixSeconds {
-	return s.OptionalIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(OptUnixSeconds)
 }
 
 // GetOptionalNull returns the value of OptionalNull.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalNull() OptNull {
-	return s.OptionalNull
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalNumber returns the value of OptionalNumber.
+	new(OptNull)
 }
 
-// GetOptionalNumber returns the value of OptionalNumber.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalNumber() OptFloat64 {
-	return s.OptionalNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalNumberDecimal returns the value of OptionalNumberDecimal.
+	new(OptFloat64)
 }
 
-// GetOptionalNumberDecimal returns the value of OptionalNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalNumberDecimal() OptDecimal {
-	return s.OptionalNumberDecimal
+	_ = "STUB: not implemented"
+	return *new(OptDecimal)
 }
 
 // GetOptionalNumberDouble returns the value of OptionalNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalNumberDouble() OptFloat64 {
-	return s.OptionalNumberDouble
+	_ = "STUB: not implemented"
+	return *new(OptFloat64)
 }
 
 // GetOptionalNumberFloat returns the value of OptionalNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalNumberFloat() OptFloat32 {
-	return s.OptionalNumberFloat
+	_ = "STUB: not implemented"
+	return *new(OptFloat32)
 }
 
 // GetOptionalNumberInt32 returns the value of OptionalNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalNumberInt32() OptInt32 {
-	return s.OptionalNumberInt32
+	_ = "STUB: not implemented"
+	return *new(OptInt32)
 }
 
 // GetOptionalNumberInt64 returns the value of OptionalNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalNumberInt64() OptInt64 {
-	return s.OptionalNumberInt64
+	_ = "STUB: not implemented"
+	return *new(OptInt64)
 }
 
 // GetOptionalString returns the value of OptionalString.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalString() OptString {
-	return s.OptionalString
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalStringBase64 returns the value of OptionalStringBase64.
+	new(OptString)
 }
 
-// GetOptionalStringBase64 returns the value of OptionalStringBase64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringBase64() []byte {
-	return s.OptionalStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalStringBinary returns the value of OptionalStringBinary.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringBinary() OptString {
-	return s.OptionalStringBinary
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringByte returns the value of OptionalStringByte.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringByte() []byte {
-	return s.OptionalStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalStringDate returns the value of OptionalStringDate.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringDate() OptDate {
-	return s.OptionalStringDate
+	_ = "STUB: not implemented"
+	return *new(OptDate)
 }
 
 // GetOptionalStringDateMinusTime returns the value of OptionalStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringDateMinusTime() OptDateTime {
-	return s.OptionalStringDateMinusTime
+	_ = "STUB: not implemented"
+	return *new(OptDateTime)
 }
 
 // GetOptionalStringDecimal returns the value of OptionalStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringDecimal() OptStringDecimal {
-	return s.OptionalStringDecimal
+	_ = "STUB: not implemented"
+	return *new(OptStringDecimal)
 }
 
 // GetOptionalStringDuration returns the value of OptionalStringDuration.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringDuration() OptDuration {
-	return s.OptionalStringDuration
+	_ = "STUB: not implemented"
+	return *new(OptDuration)
 }
 
 // GetOptionalStringEmail returns the value of OptionalStringEmail.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringEmail() OptString {
-	return s.OptionalStringEmail
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringFloat32 returns the value of OptionalStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringFloat32() OptStringFloat32 {
-	return s.OptionalStringFloat32
+	_ = "STUB: not implemented"
+	return *new(OptStringFloat32)
 }
 
 // GetOptionalStringFloat64 returns the value of OptionalStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringFloat64() OptStringFloat64 {
-	return s.OptionalStringFloat64
+	_ = "STUB: not implemented"
+	return *new(OptStringFloat64)
 }
 
 // GetOptionalStringHostname returns the value of OptionalStringHostname.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringHostname() OptString {
-	return s.OptionalStringHostname
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringHTTPMinusDate returns the value of OptionalStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringHTTPMinusDate() OptHTTPDate {
-	return s.OptionalStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return *new(OptHTTPDate)
 }
 
 // GetOptionalStringInt returns the value of OptionalStringInt.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringInt() OptStringInt {
-	return s.OptionalStringInt
+	_ = "STUB: not implemented"
+	return *new(OptStringInt)
 }
 
 // GetOptionalStringInt16 returns the value of OptionalStringInt16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringInt16() OptStringInt16 {
-	return s.OptionalStringInt16
+	_ = "STUB: not implemented"
+	return *new(OptStringInt16)
 }
 
 // GetOptionalStringInt32 returns the value of OptionalStringInt32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringInt32() OptStringInt32 {
-	return s.OptionalStringInt32
+	_ = "STUB: not implemented"
+	return *new(OptStringInt32)
 }
 
 // GetOptionalStringInt64 returns the value of OptionalStringInt64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringInt64() OptStringInt64 {
-	return s.OptionalStringInt64
+	_ = "STUB: not implemented"
+	return *new(OptStringInt64)
 }
 
 // GetOptionalStringInt8 returns the value of OptionalStringInt8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringInt8() OptStringInt8 {
-	return s.OptionalStringInt8
+	_ = "STUB: not implemented"
+	return *new(OptStringInt8)
 }
 
 // GetOptionalStringIP returns the value of OptionalStringIP.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringIP() OptIP {
-	return s.OptionalStringIP
+	_ = "STUB: not implemented"
+	return *new(OptIP)
 }
 
 // GetOptionalStringIpv4 returns the value of OptionalStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringIpv4() OptIPv4 {
-	return s.OptionalStringIpv4
+	_ = "STUB: not implemented"
+	return *new(OptIPv4)
 }
 
 // GetOptionalStringIpv6 returns the value of OptionalStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringIpv6() OptIPv6 {
-	return s.OptionalStringIpv6
+	_ = "STUB: not implemented"
+	return *new(OptIPv6)
 }
 
 // GetOptionalStringMAC returns the value of OptionalStringMAC.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringMAC() OptHardwareAddr {
-	return s.OptionalStringMAC
+	_ = "STUB: not implemented"
+	return *new(OptHardwareAddr)
 }
 
 // GetOptionalStringPassword returns the value of OptionalStringPassword.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringPassword() OptString {
-	return s.OptionalStringPassword
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringTime returns the value of OptionalStringTime.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringTime() OptTime {
-	return s.OptionalStringTime
+	_ = "STUB: not implemented"
+	return *new(OptTime)
 }
 
 // GetOptionalStringUint returns the value of OptionalStringUint.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUint() OptStringUint {
-	return s.OptionalStringUint
+	_ = "STUB: not implemented"
+	return *new(OptStringUint)
 }
 
 // GetOptionalStringUint16 returns the value of OptionalStringUint16.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUint16() OptStringUint16 {
-	return s.OptionalStringUint16
+	_ = "STUB: not implemented"
+	return *new(OptStringUint16)
 }
 
 // GetOptionalStringUint32 returns the value of OptionalStringUint32.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUint32() OptStringUint32 {
-	return s.OptionalStringUint32
+	_ = "STUB: not implemented"
+	return *new(OptStringUint32)
 }
 
 // GetOptionalStringUint64 returns the value of OptionalStringUint64.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUint64() OptStringUint64 {
-	return s.OptionalStringUint64
+	_ = "STUB: not implemented"
+	return *new(OptStringUint64)
 }
 
 // GetOptionalStringUint8 returns the value of OptionalStringUint8.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUint8() OptStringUint8 {
-	return s.OptionalStringUint8
+	_ = "STUB: not implemented"
+	return *new(OptStringUint8)
 }
 
 // GetOptionalStringUnix returns the value of OptionalStringUnix.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUnix() OptStringUnixSeconds {
-	return s.OptionalStringUnix
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixSeconds)
 }
 
 // GetOptionalStringUnixMinusMicro returns the value of OptionalStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUnixMinusMicro() OptStringUnixMicro {
-	return s.OptionalStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixMicro)
 }
 
 // GetOptionalStringUnixMinusMilli returns the value of OptionalStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUnixMinusMilli() OptStringUnixMilli {
-	return s.OptionalStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixMilli)
 }
 
 // GetOptionalStringUnixMinusNano returns the value of OptionalStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUnixMinusNano() OptStringUnixNano {
-	return s.OptionalStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixNano)
 }
 
 // GetOptionalStringUnixMinusSeconds returns the value of OptionalStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUnixMinusSeconds() OptStringUnixSeconds {
-	return s.OptionalStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixSeconds)
 }
 
 // GetOptionalStringURI returns the value of OptionalStringURI.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringURI() OptURI {
-	return s.OptionalStringURI
+	_ = "STUB: not implemented"
+	return *new(OptURI)
 }
 
 // GetOptionalStringUUID returns the value of OptionalStringUUID.
 func (s *TestRequestRequiredFormatTestReq) GetOptionalStringUUID() OptUUID {
-	return s.OptionalStringUUID
+	_ = "STUB: not implemented"
+	return *new(OptUUID)
 }
 
 // SetRequiredAny sets the value of RequiredAny.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredAny(val jx.Raw) {
-	s.RequiredAny = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetRequiredArrayAny sets the value of RequiredArrayAny.
 }
 
-// SetRequiredArrayAny sets the value of RequiredArrayAny.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayAny(val []jx.Raw) {
-	s.RequiredArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayBoolean sets the value of RequiredArrayBoolean.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayBoolean(val []bool) {
-	s.RequiredArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayInteger sets the value of RequiredArrayInteger.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayInteger(val []int) {
-	s.RequiredArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt16 sets the value of RequiredArrayIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerInt16(val []int16) {
-	s.RequiredArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt32 sets the value of RequiredArrayIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerInt32(val []int32) {
-	s.RequiredArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt64 sets the value of RequiredArrayIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerInt64(val []int64) {
-	s.RequiredArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt8 sets the value of RequiredArrayIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerInt8(val []int8) {
-	s.RequiredArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint sets the value of RequiredArrayIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerUint(val []uint) {
-	s.RequiredArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint16 sets the value of RequiredArrayIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerUint16(val []uint16) {
-	s.RequiredArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint32 sets the value of RequiredArrayIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerUint32(val []uint32) {
-	s.RequiredArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint64 sets the value of RequiredArrayIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerUint64(val []uint64) {
-	s.RequiredArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint8 sets the value of RequiredArrayIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerUint8(val []uint8) {
-	s.RequiredArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnix sets the value of RequiredArrayIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerUnix(val []time.Time) {
-	s.RequiredArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusMicro sets the value of RequiredArrayIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerUnixMinusMicro(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusMilli sets the value of RequiredArrayIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerUnixMinusMilli(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusNano sets the value of RequiredArrayIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerUnixMinusNano(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusSeconds sets the value of RequiredArrayIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayIntegerUnixMinusSeconds(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNull sets the value of RequiredArrayNull.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayNull(val []struct{}) {
-	s.RequiredArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumber sets the value of RequiredArrayNumber.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayNumber(val []float64) {
-	s.RequiredArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberDecimal sets the value of RequiredArrayNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayNumberDecimal(val []decimal.Decimal) {
-	s.RequiredArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberDouble sets the value of RequiredArrayNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayNumberDouble(val []float64) {
-	s.RequiredArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberFloat sets the value of RequiredArrayNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayNumberFloat(val []float32) {
-	s.RequiredArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberInt32 sets the value of RequiredArrayNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayNumberInt32(val []int32) {
-	s.RequiredArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberInt64 sets the value of RequiredArrayNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayNumberInt64(val []int64) {
-	s.RequiredArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayString sets the value of RequiredArrayString.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayString(val []string) {
-	s.RequiredArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringBase64 sets the value of RequiredArrayStringBase64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringBase64(val [][]byte) {
-	s.RequiredArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringBinary sets the value of RequiredArrayStringBinary.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringBinary(val []string) {
-	s.RequiredArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringByte sets the value of RequiredArrayStringByte.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringByte(val [][]byte) {
-	s.RequiredArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDate sets the value of RequiredArrayStringDate.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringDate(val []time.Time) {
-	s.RequiredArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDateMinusTime sets the value of RequiredArrayStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringDateMinusTime(val []time.Time) {
-	s.RequiredArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDecimal sets the value of RequiredArrayStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringDecimal(val []decimal.Decimal) {
-	s.RequiredArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDuration sets the value of RequiredArrayStringDuration.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringDuration(val []time.Duration) {
-	s.RequiredArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringEmail sets the value of RequiredArrayStringEmail.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringEmail(val []string) {
-	s.RequiredArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringFloat32 sets the value of RequiredArrayStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringFloat32(val []float32) {
-	s.RequiredArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringFloat64 sets the value of RequiredArrayStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringFloat64(val []float64) {
-	s.RequiredArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringHostname sets the value of RequiredArrayStringHostname.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringHostname(val []string) {
-	s.RequiredArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringHTTPMinusDate sets the value of RequiredArrayStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringHTTPMinusDate(val []time.Time) {
-	s.RequiredArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt sets the value of RequiredArrayStringInt.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringInt(val []int) {
-	s.RequiredArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt16 sets the value of RequiredArrayStringInt16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringInt16(val []int16) {
-	s.RequiredArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt32 sets the value of RequiredArrayStringInt32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringInt32(val []int32) {
-	s.RequiredArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt64 sets the value of RequiredArrayStringInt64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringInt64(val []int64) {
-	s.RequiredArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt8 sets the value of RequiredArrayStringInt8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringInt8(val []int8) {
-	s.RequiredArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringIP sets the value of RequiredArrayStringIP.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringIP(val []netip.Addr) {
-	s.RequiredArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringIpv4 sets the value of RequiredArrayStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringIpv4(val []netip.Addr) {
-	s.RequiredArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringIpv6 sets the value of RequiredArrayStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringIpv6(val []netip.Addr) {
-	s.RequiredArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringMAC sets the value of RequiredArrayStringMAC.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringMAC(val []net.HardwareAddr) {
-	s.RequiredArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringPassword sets the value of RequiredArrayStringPassword.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringPassword(val []string) {
-	s.RequiredArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringTime sets the value of RequiredArrayStringTime.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringTime(val []time.Time) {
-	s.RequiredArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint sets the value of RequiredArrayStringUint.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUint(val []uint) {
-	s.RequiredArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint16 sets the value of RequiredArrayStringUint16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUint16(val []uint16) {
-	s.RequiredArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint32 sets the value of RequiredArrayStringUint32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUint32(val []uint32) {
-	s.RequiredArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint64 sets the value of RequiredArrayStringUint64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUint64(val []uint64) {
-	s.RequiredArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint8 sets the value of RequiredArrayStringUint8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUint8(val []uint8) {
-	s.RequiredArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnix sets the value of RequiredArrayStringUnix.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUnix(val []time.Time) {
-	s.RequiredArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusMicro sets the value of RequiredArrayStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUnixMinusMicro(val []time.Time) {
-	s.RequiredArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusMilli sets the value of RequiredArrayStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUnixMinusMilli(val []time.Time) {
-	s.RequiredArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusNano sets the value of RequiredArrayStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUnixMinusNano(val []time.Time) {
-	s.RequiredArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusSeconds sets the value of RequiredArrayStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUnixMinusSeconds(val []time.Time) {
-	s.RequiredArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringURI sets the value of RequiredArrayStringURI.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringURI(val []url.URL) {
-	s.RequiredArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUUID sets the value of RequiredArrayStringUUID.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredArrayStringUUID(val []uuid.UUID) {
-	s.RequiredArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredBoolean sets the value of RequiredBoolean.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredBoolean(val bool) {
-	s.RequiredBoolean = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetRequiredDoubleArrayAny sets the value of RequiredDoubleArrayAny.
 }
 
-// SetRequiredDoubleArrayAny sets the value of RequiredDoubleArrayAny.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayAny(val [][]jx.Raw) {
-	s.RequiredDoubleArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayBoolean sets the value of RequiredDoubleArrayBoolean.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayBoolean(val [][]bool) {
-	s.RequiredDoubleArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayInteger sets the value of RequiredDoubleArrayInteger.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayInteger(val [][]int) {
-	s.RequiredDoubleArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt16 sets the value of RequiredDoubleArrayIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerInt16(val [][]int16) {
-	s.RequiredDoubleArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt32 sets the value of RequiredDoubleArrayIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerInt32(val [][]int32) {
-	s.RequiredDoubleArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt64 sets the value of RequiredDoubleArrayIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerInt64(val [][]int64) {
-	s.RequiredDoubleArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt8 sets the value of RequiredDoubleArrayIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerInt8(val [][]int8) {
-	s.RequiredDoubleArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint sets the value of RequiredDoubleArrayIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerUint(val [][]uint) {
-	s.RequiredDoubleArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint16 sets the value of RequiredDoubleArrayIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerUint16(val [][]uint16) {
-	s.RequiredDoubleArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint32 sets the value of RequiredDoubleArrayIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerUint32(val [][]uint32) {
-	s.RequiredDoubleArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint64 sets the value of RequiredDoubleArrayIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerUint64(val [][]uint64) {
-	s.RequiredDoubleArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint8 sets the value of RequiredDoubleArrayIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerUint8(val [][]uint8) {
-	s.RequiredDoubleArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnix sets the value of RequiredDoubleArrayIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerUnix(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusMicro sets the value of RequiredDoubleArrayIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerUnixMinusMicro(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusMilli sets the value of RequiredDoubleArrayIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerUnixMinusMilli(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusNano sets the value of RequiredDoubleArrayIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerUnixMinusNano(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusSeconds sets the value of RequiredDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayIntegerUnixMinusSeconds(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNull sets the value of RequiredDoubleArrayNull.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayNull(val [][]struct{}) {
-	s.RequiredDoubleArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumber sets the value of RequiredDoubleArrayNumber.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayNumber(val [][]float64) {
-	s.RequiredDoubleArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberDecimal sets the value of RequiredDoubleArrayNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayNumberDecimal(val [][]decimal.Decimal) {
-	s.RequiredDoubleArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberDouble sets the value of RequiredDoubleArrayNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayNumberDouble(val [][]float64) {
-	s.RequiredDoubleArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberFloat sets the value of RequiredDoubleArrayNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayNumberFloat(val [][]float32) {
-	s.RequiredDoubleArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberInt32 sets the value of RequiredDoubleArrayNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayNumberInt32(val [][]int32) {
-	s.RequiredDoubleArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberInt64 sets the value of RequiredDoubleArrayNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayNumberInt64(val [][]int64) {
-	s.RequiredDoubleArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayString sets the value of RequiredDoubleArrayString.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayString(val [][]string) {
-	s.RequiredDoubleArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringBase64 sets the value of RequiredDoubleArrayStringBase64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringBase64(val [][][]byte) {
-	s.RequiredDoubleArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringBinary sets the value of RequiredDoubleArrayStringBinary.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringBinary(val [][]string) {
-	s.RequiredDoubleArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringByte sets the value of RequiredDoubleArrayStringByte.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringByte(val [][][]byte) {
-	s.RequiredDoubleArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDate sets the value of RequiredDoubleArrayStringDate.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringDate(val [][]time.Time) {
-	s.RequiredDoubleArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDateMinusTime sets the value of RequiredDoubleArrayStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringDateMinusTime(val [][]time.Time) {
-	s.RequiredDoubleArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDecimal sets the value of RequiredDoubleArrayStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringDecimal(val [][]decimal.Decimal) {
-	s.RequiredDoubleArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDuration sets the value of RequiredDoubleArrayStringDuration.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringDuration(val [][]time.Duration) {
-	s.RequiredDoubleArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringEmail sets the value of RequiredDoubleArrayStringEmail.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringEmail(val [][]string) {
-	s.RequiredDoubleArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringFloat32 sets the value of RequiredDoubleArrayStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringFloat32(val [][]float32) {
-	s.RequiredDoubleArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringFloat64 sets the value of RequiredDoubleArrayStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringFloat64(val [][]float64) {
-	s.RequiredDoubleArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringHostname sets the value of RequiredDoubleArrayStringHostname.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringHostname(val [][]string) {
-	s.RequiredDoubleArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringHTTPMinusDate sets the value of RequiredDoubleArrayStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringHTTPMinusDate(val [][]time.Time) {
-	s.RequiredDoubleArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt sets the value of RequiredDoubleArrayStringInt.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringInt(val [][]int) {
-	s.RequiredDoubleArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt16 sets the value of RequiredDoubleArrayStringInt16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringInt16(val [][]int16) {
-	s.RequiredDoubleArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt32 sets the value of RequiredDoubleArrayStringInt32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringInt32(val [][]int32) {
-	s.RequiredDoubleArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt64 sets the value of RequiredDoubleArrayStringInt64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringInt64(val [][]int64) {
-	s.RequiredDoubleArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt8 sets the value of RequiredDoubleArrayStringInt8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringInt8(val [][]int8) {
-	s.RequiredDoubleArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringIP sets the value of RequiredDoubleArrayStringIP.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringIP(val [][]netip.Addr) {
-	s.RequiredDoubleArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringIpv4 sets the value of RequiredDoubleArrayStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringIpv4(val [][]netip.Addr) {
-	s.RequiredDoubleArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringIpv6 sets the value of RequiredDoubleArrayStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringIpv6(val [][]netip.Addr) {
-	s.RequiredDoubleArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringMAC sets the value of RequiredDoubleArrayStringMAC.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringMAC(val [][]net.HardwareAddr) {
-	s.RequiredDoubleArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringPassword sets the value of RequiredDoubleArrayStringPassword.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringPassword(val [][]string) {
-	s.RequiredDoubleArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringTime sets the value of RequiredDoubleArrayStringTime.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringTime(val [][]time.Time) {
-	s.RequiredDoubleArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint sets the value of RequiredDoubleArrayStringUint.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUint(val [][]uint) {
-	s.RequiredDoubleArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint16 sets the value of RequiredDoubleArrayStringUint16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUint16(val [][]uint16) {
-	s.RequiredDoubleArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint32 sets the value of RequiredDoubleArrayStringUint32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUint32(val [][]uint32) {
-	s.RequiredDoubleArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint64 sets the value of RequiredDoubleArrayStringUint64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUint64(val [][]uint64) {
-	s.RequiredDoubleArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint8 sets the value of RequiredDoubleArrayStringUint8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUint8(val [][]uint8) {
-	s.RequiredDoubleArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnix sets the value of RequiredDoubleArrayStringUnix.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUnix(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusMicro sets the value of RequiredDoubleArrayStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUnixMinusMicro(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusMilli sets the value of RequiredDoubleArrayStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUnixMinusMilli(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusNano sets the value of RequiredDoubleArrayStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUnixMinusNano(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusSeconds sets the value of RequiredDoubleArrayStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUnixMinusSeconds(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringURI sets the value of RequiredDoubleArrayStringURI.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringURI(val [][]url.URL) {
-	s.RequiredDoubleArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUUID sets the value of RequiredDoubleArrayStringUUID.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredDoubleArrayStringUUID(val [][]uuid.UUID) {
-	s.RequiredDoubleArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredInteger sets the value of RequiredInteger.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredInteger(val int) {
-	s.RequiredInteger = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetRequiredIntegerInt16 sets the value of RequiredIntegerInt16.
 }
 
-// SetRequiredIntegerInt16 sets the value of RequiredIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerInt16(val int16) {
-	s.RequiredIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerInt32 sets the value of RequiredIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerInt32(val int32) {
-	s.RequiredIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerInt64 sets the value of RequiredIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerInt64(val int64) {
-	s.RequiredIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerInt8 sets the value of RequiredIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerInt8(val int8) {
-	s.RequiredIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint sets the value of RequiredIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerUint(val uint) {
-	s.RequiredIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint16 sets the value of RequiredIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerUint16(val uint16) {
-	s.RequiredIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint32 sets the value of RequiredIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerUint32(val uint32) {
-	s.RequiredIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint64 sets the value of RequiredIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerUint64(val uint64) {
-	s.RequiredIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint8 sets the value of RequiredIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerUint8(val uint8) {
-	s.RequiredIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnix sets the value of RequiredIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerUnix(val time.Time) {
-	s.RequiredIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusMicro sets the value of RequiredIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerUnixMinusMicro(val time.Time) {
-	s.RequiredIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusMilli sets the value of RequiredIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerUnixMinusMilli(val time.Time) {
-	s.RequiredIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusNano sets the value of RequiredIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerUnixMinusNano(val time.Time) {
-	s.RequiredIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusSeconds sets the value of RequiredIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredIntegerUnixMinusSeconds(val time.Time) {
-	s.RequiredIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNull sets the value of RequiredNull.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredNull(val struct{}) {
-	s.RequiredNull = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetRequiredNumber sets the value of RequiredNumber.
 }
 
-// SetRequiredNumber sets the value of RequiredNumber.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredNumber(val float64) {
-	s.RequiredNumber = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetRequiredNumberDecimal sets the value of RequiredNumberDecimal.
 }
 
-// SetRequiredNumberDecimal sets the value of RequiredNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredNumberDecimal(val decimal.Decimal) {
-	s.RequiredNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberDouble sets the value of RequiredNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredNumberDouble(val float64) {
-	s.RequiredNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberFloat sets the value of RequiredNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredNumberFloat(val float32) {
-	s.RequiredNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberInt32 sets the value of RequiredNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredNumberInt32(val int32) {
-	s.RequiredNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberInt64 sets the value of RequiredNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredNumberInt64(val int64) {
-	s.RequiredNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredString sets the value of RequiredString.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredString(val string) {
-	s.RequiredString = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetRequiredStringBase64 sets the value of RequiredStringBase64.
 }
 
-// SetRequiredStringBase64 sets the value of RequiredStringBase64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringBase64(val []byte) {
-	s.RequiredStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringBinary sets the value of RequiredStringBinary.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringBinary(val string) {
-	s.RequiredStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringByte sets the value of RequiredStringByte.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringByte(val []byte) {
-	s.RequiredStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDate sets the value of RequiredStringDate.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringDate(val time.Time) {
-	s.RequiredStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDateMinusTime sets the value of RequiredStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringDateMinusTime(val time.Time) {
-	s.RequiredStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDecimal sets the value of RequiredStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringDecimal(val decimal.Decimal) {
-	s.RequiredStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDuration sets the value of RequiredStringDuration.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringDuration(val time.Duration) {
-	s.RequiredStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringEmail sets the value of RequiredStringEmail.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringEmail(val string) {
-	s.RequiredStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringFloat32 sets the value of RequiredStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringFloat32(val float32) {
-	s.RequiredStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringFloat64 sets the value of RequiredStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringFloat64(val float64) {
-	s.RequiredStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringHostname sets the value of RequiredStringHostname.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringHostname(val string) {
-	s.RequiredStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringHTTPMinusDate sets the value of RequiredStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringHTTPMinusDate(val time.Time) {
-	s.RequiredStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt sets the value of RequiredStringInt.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringInt(val int) {
-	s.RequiredStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt16 sets the value of RequiredStringInt16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringInt16(val int16) {
-	s.RequiredStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt32 sets the value of RequiredStringInt32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringInt32(val int32) {
-	s.RequiredStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt64 sets the value of RequiredStringInt64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringInt64(val int64) {
-	s.RequiredStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt8 sets the value of RequiredStringInt8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringInt8(val int8) {
-	s.RequiredStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringIP sets the value of RequiredStringIP.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringIP(val netip.Addr) {
-	s.RequiredStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringIpv4 sets the value of RequiredStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringIpv4(val netip.Addr) {
-	s.RequiredStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringIpv6 sets the value of RequiredStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringIpv6(val netip.Addr) {
-	s.RequiredStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringMAC sets the value of RequiredStringMAC.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringMAC(val net.HardwareAddr) {
-	s.RequiredStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringPassword sets the value of RequiredStringPassword.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringPassword(val string) {
-	s.RequiredStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringTime sets the value of RequiredStringTime.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringTime(val time.Time) {
-	s.RequiredStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint sets the value of RequiredStringUint.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUint(val uint) {
-	s.RequiredStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint16 sets the value of RequiredStringUint16.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUint16(val uint16) {
-	s.RequiredStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint32 sets the value of RequiredStringUint32.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUint32(val uint32) {
-	s.RequiredStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint64 sets the value of RequiredStringUint64.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUint64(val uint64) {
-	s.RequiredStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint8 sets the value of RequiredStringUint8.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUint8(val uint8) {
-	s.RequiredStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnix sets the value of RequiredStringUnix.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUnix(val time.Time) {
-	s.RequiredStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusMicro sets the value of RequiredStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUnixMinusMicro(val time.Time) {
-	s.RequiredStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusMilli sets the value of RequiredStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUnixMinusMilli(val time.Time) {
-	s.RequiredStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusNano sets the value of RequiredStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUnixMinusNano(val time.Time) {
-	s.RequiredStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusSeconds sets the value of RequiredStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUnixMinusSeconds(val time.Time) {
-	s.RequiredStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringURI sets the value of RequiredStringURI.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringURI(val url.URL) {
-	s.RequiredStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUUID sets the value of RequiredStringUUID.
 func (s *TestRequestRequiredFormatTestReq) SetRequiredStringUUID(val uuid.UUID) {
-	s.RequiredStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalAny sets the value of OptionalAny.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalAny(val jx.Raw) {
-	s.OptionalAny = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalArrayAny sets the value of OptionalArrayAny.
 }
 
-// SetOptionalArrayAny sets the value of OptionalArrayAny.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayAny(val []jx.Raw) {
-	s.OptionalArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayBoolean sets the value of OptionalArrayBoolean.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayBoolean(val []bool) {
-	s.OptionalArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayInteger sets the value of OptionalArrayInteger.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayInteger(val []int) {
-	s.OptionalArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt16 sets the value of OptionalArrayIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerInt16(val []int16) {
-	s.OptionalArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt32 sets the value of OptionalArrayIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerInt32(val []int32) {
-	s.OptionalArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt64 sets the value of OptionalArrayIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerInt64(val []int64) {
-	s.OptionalArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt8 sets the value of OptionalArrayIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerInt8(val []int8) {
-	s.OptionalArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint sets the value of OptionalArrayIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerUint(val []uint) {
-	s.OptionalArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint16 sets the value of OptionalArrayIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerUint16(val []uint16) {
-	s.OptionalArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint32 sets the value of OptionalArrayIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerUint32(val []uint32) {
-	s.OptionalArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint64 sets the value of OptionalArrayIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerUint64(val []uint64) {
-	s.OptionalArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint8 sets the value of OptionalArrayIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerUint8(val []uint8) {
-	s.OptionalArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnix sets the value of OptionalArrayIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerUnix(val []time.Time) {
-	s.OptionalArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusMicro sets the value of OptionalArrayIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerUnixMinusMicro(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusMilli sets the value of OptionalArrayIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerUnixMinusMilli(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusNano sets the value of OptionalArrayIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerUnixMinusNano(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusSeconds sets the value of OptionalArrayIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayIntegerUnixMinusSeconds(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNull sets the value of OptionalArrayNull.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayNull(val []struct{}) {
-	s.OptionalArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumber sets the value of OptionalArrayNumber.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayNumber(val []float64) {
-	s.OptionalArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberDecimal sets the value of OptionalArrayNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayNumberDecimal(val []decimal.Decimal) {
-	s.OptionalArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberDouble sets the value of OptionalArrayNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayNumberDouble(val []float64) {
-	s.OptionalArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberFloat sets the value of OptionalArrayNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayNumberFloat(val []float32) {
-	s.OptionalArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberInt32 sets the value of OptionalArrayNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayNumberInt32(val []int32) {
-	s.OptionalArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberInt64 sets the value of OptionalArrayNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayNumberInt64(val []int64) {
-	s.OptionalArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayString sets the value of OptionalArrayString.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayString(val []string) {
-	s.OptionalArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringBase64 sets the value of OptionalArrayStringBase64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringBase64(val [][]byte) {
-	s.OptionalArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringBinary sets the value of OptionalArrayStringBinary.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringBinary(val []string) {
-	s.OptionalArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringByte sets the value of OptionalArrayStringByte.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringByte(val [][]byte) {
-	s.OptionalArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDate sets the value of OptionalArrayStringDate.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringDate(val []time.Time) {
-	s.OptionalArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDateMinusTime sets the value of OptionalArrayStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringDateMinusTime(val []time.Time) {
-	s.OptionalArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDecimal sets the value of OptionalArrayStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringDecimal(val []decimal.Decimal) {
-	s.OptionalArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDuration sets the value of OptionalArrayStringDuration.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringDuration(val []time.Duration) {
-	s.OptionalArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringEmail sets the value of OptionalArrayStringEmail.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringEmail(val []string) {
-	s.OptionalArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringFloat32 sets the value of OptionalArrayStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringFloat32(val []float32) {
-	s.OptionalArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringFloat64 sets the value of OptionalArrayStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringFloat64(val []float64) {
-	s.OptionalArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringHostname sets the value of OptionalArrayStringHostname.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringHostname(val []string) {
-	s.OptionalArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringHTTPMinusDate sets the value of OptionalArrayStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringHTTPMinusDate(val []time.Time) {
-	s.OptionalArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt sets the value of OptionalArrayStringInt.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringInt(val []int) {
-	s.OptionalArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt16 sets the value of OptionalArrayStringInt16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringInt16(val []int16) {
-	s.OptionalArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt32 sets the value of OptionalArrayStringInt32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringInt32(val []int32) {
-	s.OptionalArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt64 sets the value of OptionalArrayStringInt64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringInt64(val []int64) {
-	s.OptionalArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt8 sets the value of OptionalArrayStringInt8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringInt8(val []int8) {
-	s.OptionalArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringIP sets the value of OptionalArrayStringIP.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringIP(val []netip.Addr) {
-	s.OptionalArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringIpv4 sets the value of OptionalArrayStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringIpv4(val []netip.Addr) {
-	s.OptionalArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringIpv6 sets the value of OptionalArrayStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringIpv6(val []netip.Addr) {
-	s.OptionalArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringMAC sets the value of OptionalArrayStringMAC.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringMAC(val []net.HardwareAddr) {
-	s.OptionalArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringPassword sets the value of OptionalArrayStringPassword.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringPassword(val []string) {
-	s.OptionalArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringTime sets the value of OptionalArrayStringTime.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringTime(val []time.Time) {
-	s.OptionalArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint sets the value of OptionalArrayStringUint.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUint(val []uint) {
-	s.OptionalArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint16 sets the value of OptionalArrayStringUint16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUint16(val []uint16) {
-	s.OptionalArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint32 sets the value of OptionalArrayStringUint32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUint32(val []uint32) {
-	s.OptionalArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint64 sets the value of OptionalArrayStringUint64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUint64(val []uint64) {
-	s.OptionalArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint8 sets the value of OptionalArrayStringUint8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUint8(val []uint8) {
-	s.OptionalArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnix sets the value of OptionalArrayStringUnix.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUnix(val []time.Time) {
-	s.OptionalArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusMicro sets the value of OptionalArrayStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUnixMinusMicro(val []time.Time) {
-	s.OptionalArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusMilli sets the value of OptionalArrayStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUnixMinusMilli(val []time.Time) {
-	s.OptionalArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusNano sets the value of OptionalArrayStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUnixMinusNano(val []time.Time) {
-	s.OptionalArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusSeconds sets the value of OptionalArrayStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUnixMinusSeconds(val []time.Time) {
-	s.OptionalArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringURI sets the value of OptionalArrayStringURI.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringURI(val []url.URL) {
-	s.OptionalArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUUID sets the value of OptionalArrayStringUUID.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalArrayStringUUID(val []uuid.UUID) {
-	s.OptionalArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalBoolean sets the value of OptionalBoolean.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalBoolean(val OptBool) {
-	s.OptionalBoolean = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalDoubleArrayAny sets the value of OptionalDoubleArrayAny.
 }
 
-// SetOptionalDoubleArrayAny sets the value of OptionalDoubleArrayAny.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayAny(val [][]jx.Raw) {
-	s.OptionalDoubleArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayBoolean sets the value of OptionalDoubleArrayBoolean.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayBoolean(val [][]bool) {
-	s.OptionalDoubleArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayInteger sets the value of OptionalDoubleArrayInteger.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayInteger(val [][]int) {
-	s.OptionalDoubleArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt16 sets the value of OptionalDoubleArrayIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerInt16(val [][]int16) {
-	s.OptionalDoubleArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt32 sets the value of OptionalDoubleArrayIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerInt32(val [][]int32) {
-	s.OptionalDoubleArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt64 sets the value of OptionalDoubleArrayIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerInt64(val [][]int64) {
-	s.OptionalDoubleArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt8 sets the value of OptionalDoubleArrayIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerInt8(val [][]int8) {
-	s.OptionalDoubleArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint sets the value of OptionalDoubleArrayIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerUint(val [][]uint) {
-	s.OptionalDoubleArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint16 sets the value of OptionalDoubleArrayIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerUint16(val [][]uint16) {
-	s.OptionalDoubleArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint32 sets the value of OptionalDoubleArrayIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerUint32(val [][]uint32) {
-	s.OptionalDoubleArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint64 sets the value of OptionalDoubleArrayIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerUint64(val [][]uint64) {
-	s.OptionalDoubleArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint8 sets the value of OptionalDoubleArrayIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerUint8(val [][]uint8) {
-	s.OptionalDoubleArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnix sets the value of OptionalDoubleArrayIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerUnix(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusMicro sets the value of OptionalDoubleArrayIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerUnixMinusMicro(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusMilli sets the value of OptionalDoubleArrayIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerUnixMinusMilli(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusNano sets the value of OptionalDoubleArrayIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerUnixMinusNano(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusSeconds sets the value of OptionalDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayIntegerUnixMinusSeconds(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNull sets the value of OptionalDoubleArrayNull.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayNull(val [][]struct{}) {
-	s.OptionalDoubleArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumber sets the value of OptionalDoubleArrayNumber.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayNumber(val [][]float64) {
-	s.OptionalDoubleArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberDecimal sets the value of OptionalDoubleArrayNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayNumberDecimal(val [][]decimal.Decimal) {
-	s.OptionalDoubleArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberDouble sets the value of OptionalDoubleArrayNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayNumberDouble(val [][]float64) {
-	s.OptionalDoubleArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberFloat sets the value of OptionalDoubleArrayNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayNumberFloat(val [][]float32) {
-	s.OptionalDoubleArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberInt32 sets the value of OptionalDoubleArrayNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayNumberInt32(val [][]int32) {
-	s.OptionalDoubleArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberInt64 sets the value of OptionalDoubleArrayNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayNumberInt64(val [][]int64) {
-	s.OptionalDoubleArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayString sets the value of OptionalDoubleArrayString.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayString(val [][]string) {
-	s.OptionalDoubleArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringBase64 sets the value of OptionalDoubleArrayStringBase64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringBase64(val [][][]byte) {
-	s.OptionalDoubleArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringBinary sets the value of OptionalDoubleArrayStringBinary.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringBinary(val [][]string) {
-	s.OptionalDoubleArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringByte sets the value of OptionalDoubleArrayStringByte.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringByte(val [][][]byte) {
-	s.OptionalDoubleArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDate sets the value of OptionalDoubleArrayStringDate.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringDate(val [][]time.Time) {
-	s.OptionalDoubleArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDateMinusTime sets the value of OptionalDoubleArrayStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringDateMinusTime(val [][]time.Time) {
-	s.OptionalDoubleArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDecimal sets the value of OptionalDoubleArrayStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringDecimal(val [][]decimal.Decimal) {
-	s.OptionalDoubleArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDuration sets the value of OptionalDoubleArrayStringDuration.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringDuration(val [][]time.Duration) {
-	s.OptionalDoubleArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringEmail sets the value of OptionalDoubleArrayStringEmail.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringEmail(val [][]string) {
-	s.OptionalDoubleArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringFloat32 sets the value of OptionalDoubleArrayStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringFloat32(val [][]float32) {
-	s.OptionalDoubleArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringFloat64 sets the value of OptionalDoubleArrayStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringFloat64(val [][]float64) {
-	s.OptionalDoubleArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringHostname sets the value of OptionalDoubleArrayStringHostname.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringHostname(val [][]string) {
-	s.OptionalDoubleArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringHTTPMinusDate sets the value of OptionalDoubleArrayStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringHTTPMinusDate(val [][]time.Time) {
-	s.OptionalDoubleArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt sets the value of OptionalDoubleArrayStringInt.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringInt(val [][]int) {
-	s.OptionalDoubleArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt16 sets the value of OptionalDoubleArrayStringInt16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringInt16(val [][]int16) {
-	s.OptionalDoubleArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt32 sets the value of OptionalDoubleArrayStringInt32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringInt32(val [][]int32) {
-	s.OptionalDoubleArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt64 sets the value of OptionalDoubleArrayStringInt64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringInt64(val [][]int64) {
-	s.OptionalDoubleArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt8 sets the value of OptionalDoubleArrayStringInt8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringInt8(val [][]int8) {
-	s.OptionalDoubleArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringIP sets the value of OptionalDoubleArrayStringIP.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringIP(val [][]netip.Addr) {
-	s.OptionalDoubleArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringIpv4 sets the value of OptionalDoubleArrayStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringIpv4(val [][]netip.Addr) {
-	s.OptionalDoubleArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringIpv6 sets the value of OptionalDoubleArrayStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringIpv6(val [][]netip.Addr) {
-	s.OptionalDoubleArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringMAC sets the value of OptionalDoubleArrayStringMAC.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringMAC(val [][]net.HardwareAddr) {
-	s.OptionalDoubleArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringPassword sets the value of OptionalDoubleArrayStringPassword.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringPassword(val [][]string) {
-	s.OptionalDoubleArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringTime sets the value of OptionalDoubleArrayStringTime.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringTime(val [][]time.Time) {
-	s.OptionalDoubleArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint sets the value of OptionalDoubleArrayStringUint.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUint(val [][]uint) {
-	s.OptionalDoubleArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint16 sets the value of OptionalDoubleArrayStringUint16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUint16(val [][]uint16) {
-	s.OptionalDoubleArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint32 sets the value of OptionalDoubleArrayStringUint32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUint32(val [][]uint32) {
-	s.OptionalDoubleArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint64 sets the value of OptionalDoubleArrayStringUint64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUint64(val [][]uint64) {
-	s.OptionalDoubleArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint8 sets the value of OptionalDoubleArrayStringUint8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUint8(val [][]uint8) {
-	s.OptionalDoubleArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnix sets the value of OptionalDoubleArrayStringUnix.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUnix(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusMicro sets the value of OptionalDoubleArrayStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUnixMinusMicro(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusMilli sets the value of OptionalDoubleArrayStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUnixMinusMilli(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusNano sets the value of OptionalDoubleArrayStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUnixMinusNano(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusSeconds sets the value of OptionalDoubleArrayStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUnixMinusSeconds(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringURI sets the value of OptionalDoubleArrayStringURI.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringURI(val [][]url.URL) {
-	s.OptionalDoubleArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUUID sets the value of OptionalDoubleArrayStringUUID.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalDoubleArrayStringUUID(val [][]uuid.UUID) {
-	s.OptionalDoubleArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalInteger sets the value of OptionalInteger.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalInteger(val OptInt) {
-	s.OptionalInteger = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalIntegerInt16 sets the value of OptionalIntegerInt16.
 }
 
-// SetOptionalIntegerInt16 sets the value of OptionalIntegerInt16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerInt16(val OptInt16) {
-	s.OptionalIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerInt32 sets the value of OptionalIntegerInt32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerInt32(val OptInt32) {
-	s.OptionalIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerInt64 sets the value of OptionalIntegerInt64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerInt64(val OptInt64) {
-	s.OptionalIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerInt8 sets the value of OptionalIntegerInt8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerInt8(val OptInt8) {
-	s.OptionalIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint sets the value of OptionalIntegerUint.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerUint(val OptUint) {
-	s.OptionalIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint16 sets the value of OptionalIntegerUint16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerUint16(val OptUint16) {
-	s.OptionalIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint32 sets the value of OptionalIntegerUint32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerUint32(val OptUint32) {
-	s.OptionalIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint64 sets the value of OptionalIntegerUint64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerUint64(val OptUint64) {
-	s.OptionalIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint8 sets the value of OptionalIntegerUint8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerUint8(val OptUint8) {
-	s.OptionalIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnix sets the value of OptionalIntegerUnix.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerUnix(val OptUnixSeconds) {
-	s.OptionalIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusMicro sets the value of OptionalIntegerUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerUnixMinusMicro(val OptUnixMicro) {
-	s.OptionalIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusMilli sets the value of OptionalIntegerUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerUnixMinusMilli(val OptUnixMilli) {
-	s.OptionalIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusNano sets the value of OptionalIntegerUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerUnixMinusNano(val OptUnixNano) {
-	s.OptionalIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusSeconds sets the value of OptionalIntegerUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalIntegerUnixMinusSeconds(val OptUnixSeconds) {
-	s.OptionalIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNull sets the value of OptionalNull.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalNull(val OptNull) {
-	s.OptionalNull = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalNumber sets the value of OptionalNumber.
 }
 
-// SetOptionalNumber sets the value of OptionalNumber.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalNumber(val OptFloat64) {
-	s.OptionalNumber = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalNumberDecimal sets the value of OptionalNumberDecimal.
 }
 
-// SetOptionalNumberDecimal sets the value of OptionalNumberDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalNumberDecimal(val OptDecimal) {
-	s.OptionalNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberDouble sets the value of OptionalNumberDouble.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalNumberDouble(val OptFloat64) {
-	s.OptionalNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberFloat sets the value of OptionalNumberFloat.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalNumberFloat(val OptFloat32) {
-	s.OptionalNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberInt32 sets the value of OptionalNumberInt32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalNumberInt32(val OptInt32) {
-	s.OptionalNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberInt64 sets the value of OptionalNumberInt64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalNumberInt64(val OptInt64) {
-	s.OptionalNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalString sets the value of OptionalString.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalString(val OptString) {
-	s.OptionalString = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalStringBase64 sets the value of OptionalStringBase64.
 }
 
-// SetOptionalStringBase64 sets the value of OptionalStringBase64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringBase64(val []byte) {
-	s.OptionalStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringBinary sets the value of OptionalStringBinary.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringBinary(val OptString) {
-	s.OptionalStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringByte sets the value of OptionalStringByte.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringByte(val []byte) {
-	s.OptionalStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDate sets the value of OptionalStringDate.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringDate(val OptDate) {
-	s.OptionalStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDateMinusTime sets the value of OptionalStringDateMinusTime.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringDateMinusTime(val OptDateTime) {
-	s.OptionalStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDecimal sets the value of OptionalStringDecimal.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringDecimal(val OptStringDecimal) {
-	s.OptionalStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDuration sets the value of OptionalStringDuration.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringDuration(val OptDuration) {
-	s.OptionalStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringEmail sets the value of OptionalStringEmail.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringEmail(val OptString) {
-	s.OptionalStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringFloat32 sets the value of OptionalStringFloat32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringFloat32(val OptStringFloat32) {
-	s.OptionalStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringFloat64 sets the value of OptionalStringFloat64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringFloat64(val OptStringFloat64) {
-	s.OptionalStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringHostname sets the value of OptionalStringHostname.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringHostname(val OptString) {
-	s.OptionalStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringHTTPMinusDate sets the value of OptionalStringHTTPMinusDate.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringHTTPMinusDate(val OptHTTPDate) {
-	s.OptionalStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt sets the value of OptionalStringInt.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringInt(val OptStringInt) {
-	s.OptionalStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt16 sets the value of OptionalStringInt16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringInt16(val OptStringInt16) {
-	s.OptionalStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt32 sets the value of OptionalStringInt32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringInt32(val OptStringInt32) {
-	s.OptionalStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt64 sets the value of OptionalStringInt64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringInt64(val OptStringInt64) {
-	s.OptionalStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt8 sets the value of OptionalStringInt8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringInt8(val OptStringInt8) {
-	s.OptionalStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringIP sets the value of OptionalStringIP.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringIP(val OptIP) {
-	s.OptionalStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringIpv4 sets the value of OptionalStringIpv4.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringIpv4(val OptIPv4) {
-	s.OptionalStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringIpv6 sets the value of OptionalStringIpv6.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringIpv6(val OptIPv6) {
-	s.OptionalStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringMAC sets the value of OptionalStringMAC.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringMAC(val OptHardwareAddr) {
-	s.OptionalStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringPassword sets the value of OptionalStringPassword.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringPassword(val OptString) {
-	s.OptionalStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringTime sets the value of OptionalStringTime.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringTime(val OptTime) {
-	s.OptionalStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint sets the value of OptionalStringUint.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUint(val OptStringUint) {
-	s.OptionalStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint16 sets the value of OptionalStringUint16.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUint16(val OptStringUint16) {
-	s.OptionalStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint32 sets the value of OptionalStringUint32.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUint32(val OptStringUint32) {
-	s.OptionalStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint64 sets the value of OptionalStringUint64.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUint64(val OptStringUint64) {
-	s.OptionalStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint8 sets the value of OptionalStringUint8.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUint8(val OptStringUint8) {
-	s.OptionalStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnix sets the value of OptionalStringUnix.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUnix(val OptStringUnixSeconds) {
-	s.OptionalStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusMicro sets the value of OptionalStringUnixMinusMicro.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUnixMinusMicro(val OptStringUnixMicro) {
-	s.OptionalStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusMilli sets the value of OptionalStringUnixMinusMilli.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUnixMinusMilli(val OptStringUnixMilli) {
-	s.OptionalStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusNano sets the value of OptionalStringUnixMinusNano.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUnixMinusNano(val OptStringUnixNano) {
-	s.OptionalStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusSeconds sets the value of OptionalStringUnixMinusSeconds.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUnixMinusSeconds(val OptStringUnixSeconds) {
-	s.OptionalStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringURI sets the value of OptionalStringURI.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringURI(val OptURI) {
-	s.OptionalStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUUID sets the value of OptionalStringUUID.
 func (s *TestRequestRequiredFormatTestReq) SetOptionalStringUUID(val OptUUID) {
-	s.OptionalStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type TestResponseEmptyStructOK struct{}
@@ -15969,3600 +15007,4309 @@ type TestResponseFormatTestOK struct {
 
 // GetRequiredAny returns the value of RequiredAny.
 func (s *TestResponseFormatTestOK) GetRequiredAny() jx.Raw {
-	return s.RequiredAny
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRequiredArrayAny returns the value of RequiredArrayAny.
+	new(jx.Raw)
 }
 
-// GetRequiredArrayAny returns the value of RequiredArrayAny.
 func (s *TestResponseFormatTestOK) GetRequiredArrayAny() []jx.Raw {
-	return s.RequiredArrayAny
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetRequiredArrayBoolean returns the value of RequiredArrayBoolean.
 }
 
-// GetRequiredArrayBoolean returns the value of RequiredArrayBoolean.
 func (s *TestResponseFormatTestOK) GetRequiredArrayBoolean() []bool {
-	return s.RequiredArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayInteger returns the value of RequiredArrayInteger.
 func (s *TestResponseFormatTestOK) GetRequiredArrayInteger() []int {
-	return s.RequiredArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt16 returns the value of RequiredArrayIntegerInt16.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerInt16() []int16 {
-	return s.RequiredArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt32 returns the value of RequiredArrayIntegerInt32.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerInt32() []int32 {
-	return s.RequiredArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt64 returns the value of RequiredArrayIntegerInt64.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerInt64() []int64 {
-	return s.RequiredArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerInt8 returns the value of RequiredArrayIntegerInt8.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerInt8() []int8 {
-	return s.RequiredArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint returns the value of RequiredArrayIntegerUint.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerUint() []uint {
-	return s.RequiredArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint16 returns the value of RequiredArrayIntegerUint16.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerUint16() []uint16 {
-	return s.RequiredArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint32 returns the value of RequiredArrayIntegerUint32.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerUint32() []uint32 {
-	return s.RequiredArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint64 returns the value of RequiredArrayIntegerUint64.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerUint64() []uint64 {
-	return s.RequiredArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUint8 returns the value of RequiredArrayIntegerUint8.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerUint8() []uint8 {
-	return s.RequiredArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnix returns the value of RequiredArrayIntegerUnix.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerUnix() []time.Time {
-	return s.RequiredArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusMicro returns the value of RequiredArrayIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerUnixMinusMicro() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusMilli returns the value of RequiredArrayIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerUnixMinusMilli() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusNano returns the value of RequiredArrayIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerUnixMinusNano() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayIntegerUnixMinusSeconds returns the value of RequiredArrayIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetRequiredArrayIntegerUnixMinusSeconds() []time.Time {
-	return s.RequiredArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNull returns the value of RequiredArrayNull.
 func (s *TestResponseFormatTestOK) GetRequiredArrayNull() []struct{} {
-	return s.RequiredArrayNull
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetRequiredArrayNumber returns the value of RequiredArrayNumber.
 }
 
-// GetRequiredArrayNumber returns the value of RequiredArrayNumber.
 func (s *TestResponseFormatTestOK) GetRequiredArrayNumber() []float64 {
-	return s.RequiredArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberDecimal returns the value of RequiredArrayNumberDecimal.
 func (s *TestResponseFormatTestOK) GetRequiredArrayNumberDecimal() []decimal.Decimal {
-	return s.RequiredArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberDouble returns the value of RequiredArrayNumberDouble.
 func (s *TestResponseFormatTestOK) GetRequiredArrayNumberDouble() []float64 {
-	return s.RequiredArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberFloat returns the value of RequiredArrayNumberFloat.
 func (s *TestResponseFormatTestOK) GetRequiredArrayNumberFloat() []float32 {
-	return s.RequiredArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberInt32 returns the value of RequiredArrayNumberInt32.
 func (s *TestResponseFormatTestOK) GetRequiredArrayNumberInt32() []int32 {
-	return s.RequiredArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayNumberInt64 returns the value of RequiredArrayNumberInt64.
 func (s *TestResponseFormatTestOK) GetRequiredArrayNumberInt64() []int64 {
-	return s.RequiredArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayString returns the value of RequiredArrayString.
 func (s *TestResponseFormatTestOK) GetRequiredArrayString() []string {
-	return s.RequiredArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringBase64 returns the value of RequiredArrayStringBase64.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringBase64() [][]byte {
-	return s.RequiredArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringBinary returns the value of RequiredArrayStringBinary.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringBinary() []string {
-	return s.RequiredArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringByte returns the value of RequiredArrayStringByte.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringByte() [][]byte {
-	return s.RequiredArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDate returns the value of RequiredArrayStringDate.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringDate() []time.Time {
-	return s.RequiredArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDateMinusTime returns the value of RequiredArrayStringDateMinusTime.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringDateMinusTime() []time.Time {
-	return s.RequiredArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDecimal returns the value of RequiredArrayStringDecimal.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringDecimal() []decimal.Decimal {
-	return s.RequiredArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringDuration returns the value of RequiredArrayStringDuration.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringDuration() []time.Duration {
-	return s.RequiredArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringEmail returns the value of RequiredArrayStringEmail.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringEmail() []string {
-	return s.RequiredArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringFloat32 returns the value of RequiredArrayStringFloat32.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringFloat32() []float32 {
-	return s.RequiredArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringFloat64 returns the value of RequiredArrayStringFloat64.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringFloat64() []float64 {
-	return s.RequiredArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringHostname returns the value of RequiredArrayStringHostname.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringHostname() []string {
-	return s.RequiredArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringHTTPMinusDate returns the value of RequiredArrayStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringHTTPMinusDate() []time.Time {
-	return s.RequiredArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt returns the value of RequiredArrayStringInt.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringInt() []int {
-	return s.RequiredArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt16 returns the value of RequiredArrayStringInt16.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringInt16() []int16 {
-	return s.RequiredArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt32 returns the value of RequiredArrayStringInt32.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringInt32() []int32 {
-	return s.RequiredArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt64 returns the value of RequiredArrayStringInt64.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringInt64() []int64 {
-	return s.RequiredArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringInt8 returns the value of RequiredArrayStringInt8.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringInt8() []int8 {
-	return s.RequiredArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringIP returns the value of RequiredArrayStringIP.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringIP() []netip.Addr {
-	return s.RequiredArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringIpv4 returns the value of RequiredArrayStringIpv4.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringIpv4() []netip.Addr {
-	return s.RequiredArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringIpv6 returns the value of RequiredArrayStringIpv6.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringIpv6() []netip.Addr {
-	return s.RequiredArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringMAC returns the value of RequiredArrayStringMAC.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringMAC() []net.HardwareAddr {
-	return s.RequiredArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringPassword returns the value of RequiredArrayStringPassword.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringPassword() []string {
-	return s.RequiredArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringTime returns the value of RequiredArrayStringTime.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringTime() []time.Time {
-	return s.RequiredArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint returns the value of RequiredArrayStringUint.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUint() []uint {
-	return s.RequiredArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint16 returns the value of RequiredArrayStringUint16.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUint16() []uint16 {
-	return s.RequiredArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint32 returns the value of RequiredArrayStringUint32.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUint32() []uint32 {
-	return s.RequiredArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint64 returns the value of RequiredArrayStringUint64.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUint64() []uint64 {
-	return s.RequiredArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUint8 returns the value of RequiredArrayStringUint8.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUint8() []uint8 {
-	return s.RequiredArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnix returns the value of RequiredArrayStringUnix.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUnix() []time.Time {
-	return s.RequiredArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusMicro returns the value of RequiredArrayStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUnixMinusMicro() []time.Time {
-	return s.RequiredArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusMilli returns the value of RequiredArrayStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUnixMinusMilli() []time.Time {
-	return s.RequiredArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusNano returns the value of RequiredArrayStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUnixMinusNano() []time.Time {
-	return s.RequiredArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUnixMinusSeconds returns the value of RequiredArrayStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUnixMinusSeconds() []time.Time {
-	return s.RequiredArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringURI returns the value of RequiredArrayStringURI.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringURI() []url.URL {
-	return s.RequiredArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredArrayStringUUID returns the value of RequiredArrayStringUUID.
 func (s *TestResponseFormatTestOK) GetRequiredArrayStringUUID() []uuid.UUID {
-	return s.RequiredArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredBoolean returns the value of RequiredBoolean.
 func (s *TestResponseFormatTestOK) GetRequiredBoolean() bool {
-	return s.RequiredBoolean
+	_ = "STUB: not implemented"
+	return false
+
+	// GetRequiredDoubleArrayAny returns the value of RequiredDoubleArrayAny.
 }
 
-// GetRequiredDoubleArrayAny returns the value of RequiredDoubleArrayAny.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayAny() [][]jx.Raw {
-	return s.RequiredDoubleArrayAny
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayBoolean returns the value of RequiredDoubleArrayBoolean.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayBoolean() [][]bool {
-	return s.RequiredDoubleArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayInteger returns the value of RequiredDoubleArrayInteger.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayInteger() [][]int {
-	return s.RequiredDoubleArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt16 returns the value of RequiredDoubleArrayIntegerInt16.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerInt16() [][]int16 {
-	return s.RequiredDoubleArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt32 returns the value of RequiredDoubleArrayIntegerInt32.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerInt32() [][]int32 {
-	return s.RequiredDoubleArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt64 returns the value of RequiredDoubleArrayIntegerInt64.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerInt64() [][]int64 {
-	return s.RequiredDoubleArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerInt8 returns the value of RequiredDoubleArrayIntegerInt8.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerInt8() [][]int8 {
-	return s.RequiredDoubleArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint returns the value of RequiredDoubleArrayIntegerUint.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerUint() [][]uint {
-	return s.RequiredDoubleArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint16 returns the value of RequiredDoubleArrayIntegerUint16.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerUint16() [][]uint16 {
-	return s.RequiredDoubleArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint32 returns the value of RequiredDoubleArrayIntegerUint32.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerUint32() [][]uint32 {
-	return s.RequiredDoubleArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint64 returns the value of RequiredDoubleArrayIntegerUint64.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerUint64() [][]uint64 {
-	return s.RequiredDoubleArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUint8 returns the value of RequiredDoubleArrayIntegerUint8.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerUint8() [][]uint8 {
-	return s.RequiredDoubleArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnix returns the value of RequiredDoubleArrayIntegerUnix.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerUnix() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusMicro returns the value of RequiredDoubleArrayIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerUnixMinusMicro() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusMilli returns the value of RequiredDoubleArrayIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerUnixMinusMilli() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusNano returns the value of RequiredDoubleArrayIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerUnixMinusNano() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayIntegerUnixMinusSeconds returns the value of RequiredDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayIntegerUnixMinusSeconds() [][]time.Time {
-	return s.RequiredDoubleArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNull returns the value of RequiredDoubleArrayNull.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayNull() [][]struct{} {
-	return s.RequiredDoubleArrayNull
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumber returns the value of RequiredDoubleArrayNumber.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayNumber() [][]float64 {
-	return s.RequiredDoubleArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberDecimal returns the value of RequiredDoubleArrayNumberDecimal.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayNumberDecimal() [][]decimal.Decimal {
-	return s.RequiredDoubleArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberDouble returns the value of RequiredDoubleArrayNumberDouble.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayNumberDouble() [][]float64 {
-	return s.RequiredDoubleArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberFloat returns the value of RequiredDoubleArrayNumberFloat.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayNumberFloat() [][]float32 {
-	return s.RequiredDoubleArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberInt32 returns the value of RequiredDoubleArrayNumberInt32.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayNumberInt32() [][]int32 {
-	return s.RequiredDoubleArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayNumberInt64 returns the value of RequiredDoubleArrayNumberInt64.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayNumberInt64() [][]int64 {
-	return s.RequiredDoubleArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayString returns the value of RequiredDoubleArrayString.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayString() [][]string {
-	return s.RequiredDoubleArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringBase64 returns the value of RequiredDoubleArrayStringBase64.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringBase64() [][][]byte {
-	return s.RequiredDoubleArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringBinary returns the value of RequiredDoubleArrayStringBinary.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringBinary() [][]string {
-	return s.RequiredDoubleArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringByte returns the value of RequiredDoubleArrayStringByte.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringByte() [][][]byte {
-	return s.RequiredDoubleArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDate returns the value of RequiredDoubleArrayStringDate.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringDate() [][]time.Time {
-	return s.RequiredDoubleArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDateMinusTime returns the value of RequiredDoubleArrayStringDateMinusTime.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringDateMinusTime() [][]time.Time {
-	return s.RequiredDoubleArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDecimal returns the value of RequiredDoubleArrayStringDecimal.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringDecimal() [][]decimal.Decimal {
-	return s.RequiredDoubleArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringDuration returns the value of RequiredDoubleArrayStringDuration.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringDuration() [][]time.Duration {
-	return s.RequiredDoubleArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringEmail returns the value of RequiredDoubleArrayStringEmail.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringEmail() [][]string {
-	return s.RequiredDoubleArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringFloat32 returns the value of RequiredDoubleArrayStringFloat32.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringFloat32() [][]float32 {
-	return s.RequiredDoubleArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringFloat64 returns the value of RequiredDoubleArrayStringFloat64.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringFloat64() [][]float64 {
-	return s.RequiredDoubleArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringHostname returns the value of RequiredDoubleArrayStringHostname.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringHostname() [][]string {
-	return s.RequiredDoubleArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringHTTPMinusDate returns the value of RequiredDoubleArrayStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringHTTPMinusDate() [][]time.Time {
-	return s.RequiredDoubleArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt returns the value of RequiredDoubleArrayStringInt.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringInt() [][]int {
-	return s.RequiredDoubleArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt16 returns the value of RequiredDoubleArrayStringInt16.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringInt16() [][]int16 {
-	return s.RequiredDoubleArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt32 returns the value of RequiredDoubleArrayStringInt32.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringInt32() [][]int32 {
-	return s.RequiredDoubleArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt64 returns the value of RequiredDoubleArrayStringInt64.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringInt64() [][]int64 {
-	return s.RequiredDoubleArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringInt8 returns the value of RequiredDoubleArrayStringInt8.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringInt8() [][]int8 {
-	return s.RequiredDoubleArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringIP returns the value of RequiredDoubleArrayStringIP.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringIP() [][]netip.Addr {
-	return s.RequiredDoubleArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringIpv4 returns the value of RequiredDoubleArrayStringIpv4.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringIpv4() [][]netip.Addr {
-	return s.RequiredDoubleArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringIpv6 returns the value of RequiredDoubleArrayStringIpv6.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringIpv6() [][]netip.Addr {
-	return s.RequiredDoubleArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringMAC returns the value of RequiredDoubleArrayStringMAC.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringMAC() [][]net.HardwareAddr {
-	return s.RequiredDoubleArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringPassword returns the value of RequiredDoubleArrayStringPassword.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringPassword() [][]string {
-	return s.RequiredDoubleArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringTime returns the value of RequiredDoubleArrayStringTime.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringTime() [][]time.Time {
-	return s.RequiredDoubleArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint returns the value of RequiredDoubleArrayStringUint.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUint() [][]uint {
-	return s.RequiredDoubleArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint16 returns the value of RequiredDoubleArrayStringUint16.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUint16() [][]uint16 {
-	return s.RequiredDoubleArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint32 returns the value of RequiredDoubleArrayStringUint32.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUint32() [][]uint32 {
-	return s.RequiredDoubleArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint64 returns the value of RequiredDoubleArrayStringUint64.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUint64() [][]uint64 {
-	return s.RequiredDoubleArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUint8 returns the value of RequiredDoubleArrayStringUint8.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUint8() [][]uint8 {
-	return s.RequiredDoubleArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnix returns the value of RequiredDoubleArrayStringUnix.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUnix() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusMicro returns the value of RequiredDoubleArrayStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUnixMinusMicro() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusMilli returns the value of RequiredDoubleArrayStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUnixMinusMilli() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusNano returns the value of RequiredDoubleArrayStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUnixMinusNano() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUnixMinusSeconds returns the value of RequiredDoubleArrayStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUnixMinusSeconds() [][]time.Time {
-	return s.RequiredDoubleArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringURI returns the value of RequiredDoubleArrayStringURI.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringURI() [][]url.URL {
-	return s.RequiredDoubleArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredDoubleArrayStringUUID returns the value of RequiredDoubleArrayStringUUID.
 func (s *TestResponseFormatTestOK) GetRequiredDoubleArrayStringUUID() [][]uuid.UUID {
-	return s.RequiredDoubleArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredInteger returns the value of RequiredInteger.
-func (s *TestResponseFormatTestOK) GetRequiredInteger() int {
-	return s.RequiredInteger
-}
+func (s *TestResponseFormatTestOK) GetRequiredInteger() int { _ = "STUB: not implemented"; return 0 }
 
 // GetRequiredIntegerInt16 returns the value of RequiredIntegerInt16.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerInt16() int16 {
-	return s.RequiredIntegerInt16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerInt32 returns the value of RequiredIntegerInt32.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerInt32() int32 {
-	return s.RequiredIntegerInt32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerInt64 returns the value of RequiredIntegerInt64.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerInt64() int64 {
-	return s.RequiredIntegerInt64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerInt8 returns the value of RequiredIntegerInt8.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerInt8() int8 {
-	return s.RequiredIntegerInt8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint returns the value of RequiredIntegerUint.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerUint() uint {
-	return s.RequiredIntegerUint
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint16 returns the value of RequiredIntegerUint16.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerUint16() uint16 {
-	return s.RequiredIntegerUint16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint32 returns the value of RequiredIntegerUint32.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerUint32() uint32 {
-	return s.RequiredIntegerUint32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint64 returns the value of RequiredIntegerUint64.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerUint64() uint64 {
-	return s.RequiredIntegerUint64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUint8 returns the value of RequiredIntegerUint8.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerUint8() uint8 {
-	return s.RequiredIntegerUint8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredIntegerUnix returns the value of RequiredIntegerUnix.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerUnix() time.Time {
-	return s.RequiredIntegerUnix
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusMicro returns the value of RequiredIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerUnixMinusMicro() time.Time {
-	return s.RequiredIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusMilli returns the value of RequiredIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerUnixMinusMilli() time.Time {
-	return s.RequiredIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusNano returns the value of RequiredIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerUnixMinusNano() time.Time {
-	return s.RequiredIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredIntegerUnixMinusSeconds returns the value of RequiredIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetRequiredIntegerUnixMinusSeconds() time.Time {
-	return s.RequiredIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredNull returns the value of RequiredNull.
 func (s *TestResponseFormatTestOK) GetRequiredNull() struct{} {
-	return s.RequiredNull
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetRequiredNumber returns the value of RequiredNumber.
 }
 
-// GetRequiredNumber returns the value of RequiredNumber.
-func (s *TestResponseFormatTestOK) GetRequiredNumber() float64 {
-	return s.RequiredNumber
-}
+func (s *TestResponseFormatTestOK) GetRequiredNumber() float64 { _ = "STUB: not implemented"; return 0 }
 
 // GetRequiredNumberDecimal returns the value of RequiredNumberDecimal.
 func (s *TestResponseFormatTestOK) GetRequiredNumberDecimal() decimal.Decimal {
-	return s.RequiredNumberDecimal
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // GetRequiredNumberDouble returns the value of RequiredNumberDouble.
 func (s *TestResponseFormatTestOK) GetRequiredNumberDouble() float64 {
-	return s.RequiredNumberDouble
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredNumberFloat returns the value of RequiredNumberFloat.
 func (s *TestResponseFormatTestOK) GetRequiredNumberFloat() float32 {
-	return s.RequiredNumberFloat
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredNumberInt32 returns the value of RequiredNumberInt32.
 func (s *TestResponseFormatTestOK) GetRequiredNumberInt32() int32 {
-	return s.RequiredNumberInt32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredNumberInt64 returns the value of RequiredNumberInt64.
 func (s *TestResponseFormatTestOK) GetRequiredNumberInt64() int64 {
-	return s.RequiredNumberInt64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredString returns the value of RequiredString.
-func (s *TestResponseFormatTestOK) GetRequiredString() string {
-	return s.RequiredString
-}
+func (s *TestResponseFormatTestOK) GetRequiredString() string { _ = "STUB: not implemented"; return "" }
 
 // GetRequiredStringBase64 returns the value of RequiredStringBase64.
 func (s *TestResponseFormatTestOK) GetRequiredStringBase64() []byte {
-	return s.RequiredStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredStringBinary returns the value of RequiredStringBinary.
 func (s *TestResponseFormatTestOK) GetRequiredStringBinary() string {
-	return s.RequiredStringBinary
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringByte returns the value of RequiredStringByte.
 func (s *TestResponseFormatTestOK) GetRequiredStringByte() []byte {
-	return s.RequiredStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRequiredStringDate returns the value of RequiredStringDate.
 func (s *TestResponseFormatTestOK) GetRequiredStringDate() time.Time {
-	return s.RequiredStringDate
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringDateMinusTime returns the value of RequiredStringDateMinusTime.
 func (s *TestResponseFormatTestOK) GetRequiredStringDateMinusTime() time.Time {
-	return s.RequiredStringDateMinusTime
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringDecimal returns the value of RequiredStringDecimal.
 func (s *TestResponseFormatTestOK) GetRequiredStringDecimal() decimal.Decimal {
-	return s.RequiredStringDecimal
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal)
 }
 
 // GetRequiredStringDuration returns the value of RequiredStringDuration.
 func (s *TestResponseFormatTestOK) GetRequiredStringDuration() time.Duration {
-	return s.RequiredStringDuration
+	_ = "STUB: not implemented"
+	return *new(time.Duration)
 }
 
 // GetRequiredStringEmail returns the value of RequiredStringEmail.
 func (s *TestResponseFormatTestOK) GetRequiredStringEmail() string {
-	return s.RequiredStringEmail
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringFloat32 returns the value of RequiredStringFloat32.
 func (s *TestResponseFormatTestOK) GetRequiredStringFloat32() float32 {
-	return s.RequiredStringFloat32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringFloat64 returns the value of RequiredStringFloat64.
 func (s *TestResponseFormatTestOK) GetRequiredStringFloat64() float64 {
-	return s.RequiredStringFloat64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringHostname returns the value of RequiredStringHostname.
 func (s *TestResponseFormatTestOK) GetRequiredStringHostname() string {
-	return s.RequiredStringHostname
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringHTTPMinusDate returns the value of RequiredStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) GetRequiredStringHTTPMinusDate() time.Time {
-	return s.RequiredStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringInt returns the value of RequiredStringInt.
-func (s *TestResponseFormatTestOK) GetRequiredStringInt() int {
-	return s.RequiredStringInt
-}
+func (s *TestResponseFormatTestOK) GetRequiredStringInt() int { _ = "STUB: not implemented"; return 0 }
 
 // GetRequiredStringInt16 returns the value of RequiredStringInt16.
 func (s *TestResponseFormatTestOK) GetRequiredStringInt16() int16 {
-	return s.RequiredStringInt16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringInt32 returns the value of RequiredStringInt32.
 func (s *TestResponseFormatTestOK) GetRequiredStringInt32() int32 {
-	return s.RequiredStringInt32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringInt64 returns the value of RequiredStringInt64.
 func (s *TestResponseFormatTestOK) GetRequiredStringInt64() int64 {
-	return s.RequiredStringInt64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringInt8 returns the value of RequiredStringInt8.
 func (s *TestResponseFormatTestOK) GetRequiredStringInt8() int8 {
-	return s.RequiredStringInt8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringIP returns the value of RequiredStringIP.
 func (s *TestResponseFormatTestOK) GetRequiredStringIP() netip.Addr {
-	return s.RequiredStringIP
+	_ = "STUB: not implemented"
+	return *new(netip.Addr)
 }
 
 // GetRequiredStringIpv4 returns the value of RequiredStringIpv4.
 func (s *TestResponseFormatTestOK) GetRequiredStringIpv4() netip.Addr {
-	return s.RequiredStringIpv4
+	_ = "STUB: not implemented"
+	return *new(netip.Addr)
 }
 
 // GetRequiredStringIpv6 returns the value of RequiredStringIpv6.
 func (s *TestResponseFormatTestOK) GetRequiredStringIpv6() netip.Addr {
-	return s.RequiredStringIpv6
+	_ = "STUB: not implemented"
+	return *new(netip.Addr)
 }
 
 // GetRequiredStringMAC returns the value of RequiredStringMAC.
 func (s *TestResponseFormatTestOK) GetRequiredStringMAC() net.HardwareAddr {
-	return s.RequiredStringMAC
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr)
 }
 
 // GetRequiredStringPassword returns the value of RequiredStringPassword.
 func (s *TestResponseFormatTestOK) GetRequiredStringPassword() string {
-	return s.RequiredStringPassword
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetRequiredStringTime returns the value of RequiredStringTime.
 func (s *TestResponseFormatTestOK) GetRequiredStringTime() time.Time {
-	return s.RequiredStringTime
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUint returns the value of RequiredStringUint.
 func (s *TestResponseFormatTestOK) GetRequiredStringUint() uint {
-	return s.RequiredStringUint
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint16 returns the value of RequiredStringUint16.
 func (s *TestResponseFormatTestOK) GetRequiredStringUint16() uint16 {
-	return s.RequiredStringUint16
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint32 returns the value of RequiredStringUint32.
 func (s *TestResponseFormatTestOK) GetRequiredStringUint32() uint32 {
-	return s.RequiredStringUint32
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint64 returns the value of RequiredStringUint64.
 func (s *TestResponseFormatTestOK) GetRequiredStringUint64() uint64 {
-	return s.RequiredStringUint64
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUint8 returns the value of RequiredStringUint8.
 func (s *TestResponseFormatTestOK) GetRequiredStringUint8() uint8 {
-	return s.RequiredStringUint8
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetRequiredStringUnix returns the value of RequiredStringUnix.
 func (s *TestResponseFormatTestOK) GetRequiredStringUnix() time.Time {
-	return s.RequiredStringUnix
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusMicro returns the value of RequiredStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetRequiredStringUnixMinusMicro() time.Time {
-	return s.RequiredStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusMilli returns the value of RequiredStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetRequiredStringUnixMinusMilli() time.Time {
-	return s.RequiredStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusNano returns the value of RequiredStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetRequiredStringUnixMinusNano() time.Time {
-	return s.RequiredStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringUnixMinusSeconds returns the value of RequiredStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetRequiredStringUnixMinusSeconds() time.Time {
-	return s.RequiredStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetRequiredStringURI returns the value of RequiredStringURI.
 func (s *TestResponseFormatTestOK) GetRequiredStringURI() url.URL {
-	return s.RequiredStringURI
+	_ = "STUB: not implemented"
+	return *new(url.URL)
 }
 
 // GetRequiredStringUUID returns the value of RequiredStringUUID.
 func (s *TestResponseFormatTestOK) GetRequiredStringUUID() uuid.UUID {
-	return s.RequiredStringUUID
+	_ = "STUB: not implemented"
+	return *new(uuid.UUID)
 }
 
 // GetOptionalAny returns the value of OptionalAny.
 func (s *TestResponseFormatTestOK) GetOptionalAny() jx.Raw {
-	return s.OptionalAny
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalArrayAny returns the value of OptionalArrayAny.
+	new(jx.Raw)
 }
 
-// GetOptionalArrayAny returns the value of OptionalArrayAny.
 func (s *TestResponseFormatTestOK) GetOptionalArrayAny() []jx.Raw {
-	return s.OptionalArrayAny
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetOptionalArrayBoolean returns the value of OptionalArrayBoolean.
 }
 
-// GetOptionalArrayBoolean returns the value of OptionalArrayBoolean.
 func (s *TestResponseFormatTestOK) GetOptionalArrayBoolean() []bool {
-	return s.OptionalArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayInteger returns the value of OptionalArrayInteger.
 func (s *TestResponseFormatTestOK) GetOptionalArrayInteger() []int {
-	return s.OptionalArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt16 returns the value of OptionalArrayIntegerInt16.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerInt16() []int16 {
-	return s.OptionalArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt32 returns the value of OptionalArrayIntegerInt32.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerInt32() []int32 {
-	return s.OptionalArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt64 returns the value of OptionalArrayIntegerInt64.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerInt64() []int64 {
-	return s.OptionalArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerInt8 returns the value of OptionalArrayIntegerInt8.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerInt8() []int8 {
-	return s.OptionalArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint returns the value of OptionalArrayIntegerUint.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerUint() []uint {
-	return s.OptionalArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint16 returns the value of OptionalArrayIntegerUint16.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerUint16() []uint16 {
-	return s.OptionalArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint32 returns the value of OptionalArrayIntegerUint32.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerUint32() []uint32 {
-	return s.OptionalArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint64 returns the value of OptionalArrayIntegerUint64.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerUint64() []uint64 {
-	return s.OptionalArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUint8 returns the value of OptionalArrayIntegerUint8.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerUint8() []uint8 {
-	return s.OptionalArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnix returns the value of OptionalArrayIntegerUnix.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerUnix() []time.Time {
-	return s.OptionalArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusMicro returns the value of OptionalArrayIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerUnixMinusMicro() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusMilli returns the value of OptionalArrayIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerUnixMinusMilli() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusNano returns the value of OptionalArrayIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerUnixMinusNano() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayIntegerUnixMinusSeconds returns the value of OptionalArrayIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetOptionalArrayIntegerUnixMinusSeconds() []time.Time {
-	return s.OptionalArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNull returns the value of OptionalArrayNull.
 func (s *TestResponseFormatTestOK) GetOptionalArrayNull() []struct{} {
-	return s.OptionalArrayNull
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetOptionalArrayNumber returns the value of OptionalArrayNumber.
 }
 
-// GetOptionalArrayNumber returns the value of OptionalArrayNumber.
 func (s *TestResponseFormatTestOK) GetOptionalArrayNumber() []float64 {
-	return s.OptionalArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberDecimal returns the value of OptionalArrayNumberDecimal.
 func (s *TestResponseFormatTestOK) GetOptionalArrayNumberDecimal() []decimal.Decimal {
-	return s.OptionalArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberDouble returns the value of OptionalArrayNumberDouble.
 func (s *TestResponseFormatTestOK) GetOptionalArrayNumberDouble() []float64 {
-	return s.OptionalArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberFloat returns the value of OptionalArrayNumberFloat.
 func (s *TestResponseFormatTestOK) GetOptionalArrayNumberFloat() []float32 {
-	return s.OptionalArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberInt32 returns the value of OptionalArrayNumberInt32.
 func (s *TestResponseFormatTestOK) GetOptionalArrayNumberInt32() []int32 {
-	return s.OptionalArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayNumberInt64 returns the value of OptionalArrayNumberInt64.
 func (s *TestResponseFormatTestOK) GetOptionalArrayNumberInt64() []int64 {
-	return s.OptionalArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayString returns the value of OptionalArrayString.
 func (s *TestResponseFormatTestOK) GetOptionalArrayString() []string {
-	return s.OptionalArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringBase64 returns the value of OptionalArrayStringBase64.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringBase64() [][]byte {
-	return s.OptionalArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringBinary returns the value of OptionalArrayStringBinary.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringBinary() []string {
-	return s.OptionalArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringByte returns the value of OptionalArrayStringByte.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringByte() [][]byte {
-	return s.OptionalArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDate returns the value of OptionalArrayStringDate.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringDate() []time.Time {
-	return s.OptionalArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDateMinusTime returns the value of OptionalArrayStringDateMinusTime.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringDateMinusTime() []time.Time {
-	return s.OptionalArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDecimal returns the value of OptionalArrayStringDecimal.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringDecimal() []decimal.Decimal {
-	return s.OptionalArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringDuration returns the value of OptionalArrayStringDuration.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringDuration() []time.Duration {
-	return s.OptionalArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringEmail returns the value of OptionalArrayStringEmail.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringEmail() []string {
-	return s.OptionalArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringFloat32 returns the value of OptionalArrayStringFloat32.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringFloat32() []float32 {
-	return s.OptionalArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringFloat64 returns the value of OptionalArrayStringFloat64.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringFloat64() []float64 {
-	return s.OptionalArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringHostname returns the value of OptionalArrayStringHostname.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringHostname() []string {
-	return s.OptionalArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringHTTPMinusDate returns the value of OptionalArrayStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringHTTPMinusDate() []time.Time {
-	return s.OptionalArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt returns the value of OptionalArrayStringInt.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringInt() []int {
-	return s.OptionalArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt16 returns the value of OptionalArrayStringInt16.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringInt16() []int16 {
-	return s.OptionalArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt32 returns the value of OptionalArrayStringInt32.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringInt32() []int32 {
-	return s.OptionalArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt64 returns the value of OptionalArrayStringInt64.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringInt64() []int64 {
-	return s.OptionalArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringInt8 returns the value of OptionalArrayStringInt8.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringInt8() []int8 {
-	return s.OptionalArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringIP returns the value of OptionalArrayStringIP.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringIP() []netip.Addr {
-	return s.OptionalArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringIpv4 returns the value of OptionalArrayStringIpv4.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringIpv4() []netip.Addr {
-	return s.OptionalArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringIpv6 returns the value of OptionalArrayStringIpv6.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringIpv6() []netip.Addr {
-	return s.OptionalArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringMAC returns the value of OptionalArrayStringMAC.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringMAC() []net.HardwareAddr {
-	return s.OptionalArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringPassword returns the value of OptionalArrayStringPassword.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringPassword() []string {
-	return s.OptionalArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringTime returns the value of OptionalArrayStringTime.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringTime() []time.Time {
-	return s.OptionalArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint returns the value of OptionalArrayStringUint.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUint() []uint {
-	return s.OptionalArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint16 returns the value of OptionalArrayStringUint16.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUint16() []uint16 {
-	return s.OptionalArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint32 returns the value of OptionalArrayStringUint32.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUint32() []uint32 {
-	return s.OptionalArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint64 returns the value of OptionalArrayStringUint64.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUint64() []uint64 {
-	return s.OptionalArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUint8 returns the value of OptionalArrayStringUint8.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUint8() []uint8 {
-	return s.OptionalArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnix returns the value of OptionalArrayStringUnix.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUnix() []time.Time {
-	return s.OptionalArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusMicro returns the value of OptionalArrayStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUnixMinusMicro() []time.Time {
-	return s.OptionalArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusMilli returns the value of OptionalArrayStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUnixMinusMilli() []time.Time {
-	return s.OptionalArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusNano returns the value of OptionalArrayStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUnixMinusNano() []time.Time {
-	return s.OptionalArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUnixMinusSeconds returns the value of OptionalArrayStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUnixMinusSeconds() []time.Time {
-	return s.OptionalArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringURI returns the value of OptionalArrayStringURI.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringURI() []url.URL {
-	return s.OptionalArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalArrayStringUUID returns the value of OptionalArrayStringUUID.
 func (s *TestResponseFormatTestOK) GetOptionalArrayStringUUID() []uuid.UUID {
-	return s.OptionalArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalBoolean returns the value of OptionalBoolean.
 func (s *TestResponseFormatTestOK) GetOptionalBoolean() OptBool {
-	return s.OptionalBoolean
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalDoubleArrayAny returns the value of OptionalDoubleArrayAny.
+	new(OptBool)
 }
 
-// GetOptionalDoubleArrayAny returns the value of OptionalDoubleArrayAny.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayAny() [][]jx.Raw {
-	return s.OptionalDoubleArrayAny
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayBoolean returns the value of OptionalDoubleArrayBoolean.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayBoolean() [][]bool {
-	return s.OptionalDoubleArrayBoolean
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayInteger returns the value of OptionalDoubleArrayInteger.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayInteger() [][]int {
-	return s.OptionalDoubleArrayInteger
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt16 returns the value of OptionalDoubleArrayIntegerInt16.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerInt16() [][]int16 {
-	return s.OptionalDoubleArrayIntegerInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt32 returns the value of OptionalDoubleArrayIntegerInt32.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerInt32() [][]int32 {
-	return s.OptionalDoubleArrayIntegerInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt64 returns the value of OptionalDoubleArrayIntegerInt64.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerInt64() [][]int64 {
-	return s.OptionalDoubleArrayIntegerInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerInt8 returns the value of OptionalDoubleArrayIntegerInt8.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerInt8() [][]int8 {
-	return s.OptionalDoubleArrayIntegerInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint returns the value of OptionalDoubleArrayIntegerUint.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerUint() [][]uint {
-	return s.OptionalDoubleArrayIntegerUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint16 returns the value of OptionalDoubleArrayIntegerUint16.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerUint16() [][]uint16 {
-	return s.OptionalDoubleArrayIntegerUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint32 returns the value of OptionalDoubleArrayIntegerUint32.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerUint32() [][]uint32 {
-	return s.OptionalDoubleArrayIntegerUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint64 returns the value of OptionalDoubleArrayIntegerUint64.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerUint64() [][]uint64 {
-	return s.OptionalDoubleArrayIntegerUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUint8 returns the value of OptionalDoubleArrayIntegerUint8.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerUint8() [][]uint8 {
-	return s.OptionalDoubleArrayIntegerUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnix returns the value of OptionalDoubleArrayIntegerUnix.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerUnix() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusMicro returns the value of OptionalDoubleArrayIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerUnixMinusMicro() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusMilli returns the value of OptionalDoubleArrayIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerUnixMinusMilli() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusNano returns the value of OptionalDoubleArrayIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerUnixMinusNano() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayIntegerUnixMinusSeconds returns the value of OptionalDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayIntegerUnixMinusSeconds() [][]time.Time {
-	return s.OptionalDoubleArrayIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNull returns the value of OptionalDoubleArrayNull.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayNull() [][]struct{} {
-	return s.OptionalDoubleArrayNull
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumber returns the value of OptionalDoubleArrayNumber.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayNumber() [][]float64 {
-	return s.OptionalDoubleArrayNumber
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberDecimal returns the value of OptionalDoubleArrayNumberDecimal.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayNumberDecimal() [][]decimal.Decimal {
-	return s.OptionalDoubleArrayNumberDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberDouble returns the value of OptionalDoubleArrayNumberDouble.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayNumberDouble() [][]float64 {
-	return s.OptionalDoubleArrayNumberDouble
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberFloat returns the value of OptionalDoubleArrayNumberFloat.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayNumberFloat() [][]float32 {
-	return s.OptionalDoubleArrayNumberFloat
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberInt32 returns the value of OptionalDoubleArrayNumberInt32.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayNumberInt32() [][]int32 {
-	return s.OptionalDoubleArrayNumberInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayNumberInt64 returns the value of OptionalDoubleArrayNumberInt64.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayNumberInt64() [][]int64 {
-	return s.OptionalDoubleArrayNumberInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayString returns the value of OptionalDoubleArrayString.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayString() [][]string {
-	return s.OptionalDoubleArrayString
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringBase64 returns the value of OptionalDoubleArrayStringBase64.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringBase64() [][][]byte {
-	return s.OptionalDoubleArrayStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringBinary returns the value of OptionalDoubleArrayStringBinary.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringBinary() [][]string {
-	return s.OptionalDoubleArrayStringBinary
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringByte returns the value of OptionalDoubleArrayStringByte.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringByte() [][][]byte {
-	return s.OptionalDoubleArrayStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDate returns the value of OptionalDoubleArrayStringDate.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringDate() [][]time.Time {
-	return s.OptionalDoubleArrayStringDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDateMinusTime returns the value of OptionalDoubleArrayStringDateMinusTime.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringDateMinusTime() [][]time.Time {
-	return s.OptionalDoubleArrayStringDateMinusTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDecimal returns the value of OptionalDoubleArrayStringDecimal.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringDecimal() [][]decimal.Decimal {
-	return s.OptionalDoubleArrayStringDecimal
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringDuration returns the value of OptionalDoubleArrayStringDuration.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringDuration() [][]time.Duration {
-	return s.OptionalDoubleArrayStringDuration
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringEmail returns the value of OptionalDoubleArrayStringEmail.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringEmail() [][]string {
-	return s.OptionalDoubleArrayStringEmail
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringFloat32 returns the value of OptionalDoubleArrayStringFloat32.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringFloat32() [][]float32 {
-	return s.OptionalDoubleArrayStringFloat32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringFloat64 returns the value of OptionalDoubleArrayStringFloat64.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringFloat64() [][]float64 {
-	return s.OptionalDoubleArrayStringFloat64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringHostname returns the value of OptionalDoubleArrayStringHostname.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringHostname() [][]string {
-	return s.OptionalDoubleArrayStringHostname
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringHTTPMinusDate returns the value of OptionalDoubleArrayStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringHTTPMinusDate() [][]time.Time {
-	return s.OptionalDoubleArrayStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt returns the value of OptionalDoubleArrayStringInt.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringInt() [][]int {
-	return s.OptionalDoubleArrayStringInt
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt16 returns the value of OptionalDoubleArrayStringInt16.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringInt16() [][]int16 {
-	return s.OptionalDoubleArrayStringInt16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt32 returns the value of OptionalDoubleArrayStringInt32.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringInt32() [][]int32 {
-	return s.OptionalDoubleArrayStringInt32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt64 returns the value of OptionalDoubleArrayStringInt64.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringInt64() [][]int64 {
-	return s.OptionalDoubleArrayStringInt64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringInt8 returns the value of OptionalDoubleArrayStringInt8.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringInt8() [][]int8 {
-	return s.OptionalDoubleArrayStringInt8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringIP returns the value of OptionalDoubleArrayStringIP.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringIP() [][]netip.Addr {
-	return s.OptionalDoubleArrayStringIP
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringIpv4 returns the value of OptionalDoubleArrayStringIpv4.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringIpv4() [][]netip.Addr {
-	return s.OptionalDoubleArrayStringIpv4
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringIpv6 returns the value of OptionalDoubleArrayStringIpv6.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringIpv6() [][]netip.Addr {
-	return s.OptionalDoubleArrayStringIpv6
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringMAC returns the value of OptionalDoubleArrayStringMAC.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringMAC() [][]net.HardwareAddr {
-	return s.OptionalDoubleArrayStringMAC
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringPassword returns the value of OptionalDoubleArrayStringPassword.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringPassword() [][]string {
-	return s.OptionalDoubleArrayStringPassword
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringTime returns the value of OptionalDoubleArrayStringTime.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringTime() [][]time.Time {
-	return s.OptionalDoubleArrayStringTime
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint returns the value of OptionalDoubleArrayStringUint.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUint() [][]uint {
-	return s.OptionalDoubleArrayStringUint
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint16 returns the value of OptionalDoubleArrayStringUint16.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUint16() [][]uint16 {
-	return s.OptionalDoubleArrayStringUint16
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint32 returns the value of OptionalDoubleArrayStringUint32.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUint32() [][]uint32 {
-	return s.OptionalDoubleArrayStringUint32
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint64 returns the value of OptionalDoubleArrayStringUint64.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUint64() [][]uint64 {
-	return s.OptionalDoubleArrayStringUint64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUint8 returns the value of OptionalDoubleArrayStringUint8.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUint8() [][]uint8 {
-	return s.OptionalDoubleArrayStringUint8
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnix returns the value of OptionalDoubleArrayStringUnix.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUnix() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnix
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusMicro returns the value of OptionalDoubleArrayStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUnixMinusMicro() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusMilli returns the value of OptionalDoubleArrayStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUnixMinusMilli() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusNano returns the value of OptionalDoubleArrayStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUnixMinusNano() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUnixMinusSeconds returns the value of OptionalDoubleArrayStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUnixMinusSeconds() [][]time.Time {
-	return s.OptionalDoubleArrayStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringURI returns the value of OptionalDoubleArrayStringURI.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringURI() [][]url.URL {
-	return s.OptionalDoubleArrayStringURI
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalDoubleArrayStringUUID returns the value of OptionalDoubleArrayStringUUID.
 func (s *TestResponseFormatTestOK) GetOptionalDoubleArrayStringUUID() [][]uuid.UUID {
-	return s.OptionalDoubleArrayStringUUID
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalInteger returns the value of OptionalInteger.
 func (s *TestResponseFormatTestOK) GetOptionalInteger() OptInt {
-	return s.OptionalInteger
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalIntegerInt16 returns the value of OptionalIntegerInt16.
+	new(OptInt)
 }
 
-// GetOptionalIntegerInt16 returns the value of OptionalIntegerInt16.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerInt16() OptInt16 {
-	return s.OptionalIntegerInt16
+	_ = "STUB: not implemented"
+	return *new(OptInt16)
 }
 
 // GetOptionalIntegerInt32 returns the value of OptionalIntegerInt32.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerInt32() OptInt32 {
-	return s.OptionalIntegerInt32
+	_ = "STUB: not implemented"
+	return *new(OptInt32)
 }
 
 // GetOptionalIntegerInt64 returns the value of OptionalIntegerInt64.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerInt64() OptInt64 {
-	return s.OptionalIntegerInt64
+	_ = "STUB: not implemented"
+	return *new(OptInt64)
 }
 
 // GetOptionalIntegerInt8 returns the value of OptionalIntegerInt8.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerInt8() OptInt8 {
-	return s.OptionalIntegerInt8
+	_ = "STUB: not implemented"
+	return *new(OptInt8)
 }
 
 // GetOptionalIntegerUint returns the value of OptionalIntegerUint.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerUint() OptUint {
-	return s.OptionalIntegerUint
+	_ = "STUB: not implemented"
+	return *new(OptUint)
 }
 
 // GetOptionalIntegerUint16 returns the value of OptionalIntegerUint16.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerUint16() OptUint16 {
-	return s.OptionalIntegerUint16
+	_ = "STUB: not implemented"
+	return *new(OptUint16)
 }
 
 // GetOptionalIntegerUint32 returns the value of OptionalIntegerUint32.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerUint32() OptUint32 {
-	return s.OptionalIntegerUint32
+	_ = "STUB: not implemented"
+	return *new(OptUint32)
 }
 
 // GetOptionalIntegerUint64 returns the value of OptionalIntegerUint64.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerUint64() OptUint64 {
-	return s.OptionalIntegerUint64
+	_ = "STUB: not implemented"
+	return *new(OptUint64)
 }
 
 // GetOptionalIntegerUint8 returns the value of OptionalIntegerUint8.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerUint8() OptUint8 {
-	return s.OptionalIntegerUint8
+	_ = "STUB: not implemented"
+	return *new(OptUint8)
 }
 
 // GetOptionalIntegerUnix returns the value of OptionalIntegerUnix.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerUnix() OptUnixSeconds {
-	return s.OptionalIntegerUnix
+	_ = "STUB: not implemented"
+	return *new(OptUnixSeconds)
 }
 
 // GetOptionalIntegerUnixMinusMicro returns the value of OptionalIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerUnixMinusMicro() OptUnixMicro {
-	return s.OptionalIntegerUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(OptUnixMicro)
 }
 
 // GetOptionalIntegerUnixMinusMilli returns the value of OptionalIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerUnixMinusMilli() OptUnixMilli {
-	return s.OptionalIntegerUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(OptUnixMilli)
 }
 
 // GetOptionalIntegerUnixMinusNano returns the value of OptionalIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerUnixMinusNano() OptUnixNano {
-	return s.OptionalIntegerUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(OptUnixNano)
 }
 
 // GetOptionalIntegerUnixMinusSeconds returns the value of OptionalIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetOptionalIntegerUnixMinusSeconds() OptUnixSeconds {
-	return s.OptionalIntegerUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(OptUnixSeconds)
 }
 
 // GetOptionalNull returns the value of OptionalNull.
 func (s *TestResponseFormatTestOK) GetOptionalNull() OptNull {
-	return s.OptionalNull
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalNumber returns the value of OptionalNumber.
+	new(OptNull)
 }
 
-// GetOptionalNumber returns the value of OptionalNumber.
 func (s *TestResponseFormatTestOK) GetOptionalNumber() OptFloat64 {
-	return s.OptionalNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalNumberDecimal returns the value of OptionalNumberDecimal.
+	new(OptFloat64)
 }
 
-// GetOptionalNumberDecimal returns the value of OptionalNumberDecimal.
 func (s *TestResponseFormatTestOK) GetOptionalNumberDecimal() OptDecimal {
-	return s.OptionalNumberDecimal
+	_ = "STUB: not implemented"
+	return *new(OptDecimal)
 }
 
 // GetOptionalNumberDouble returns the value of OptionalNumberDouble.
 func (s *TestResponseFormatTestOK) GetOptionalNumberDouble() OptFloat64 {
-	return s.OptionalNumberDouble
+	_ = "STUB: not implemented"
+	return *new(OptFloat64)
 }
 
 // GetOptionalNumberFloat returns the value of OptionalNumberFloat.
 func (s *TestResponseFormatTestOK) GetOptionalNumberFloat() OptFloat32 {
-	return s.OptionalNumberFloat
+	_ = "STUB: not implemented"
+	return *new(OptFloat32)
 }
 
 // GetOptionalNumberInt32 returns the value of OptionalNumberInt32.
 func (s *TestResponseFormatTestOK) GetOptionalNumberInt32() OptInt32 {
-	return s.OptionalNumberInt32
+	_ = "STUB: not implemented"
+	return *new(OptInt32)
 }
 
 // GetOptionalNumberInt64 returns the value of OptionalNumberInt64.
 func (s *TestResponseFormatTestOK) GetOptionalNumberInt64() OptInt64 {
-	return s.OptionalNumberInt64
+	_ = "STUB: not implemented"
+	return *new(OptInt64)
 }
 
 // GetOptionalString returns the value of OptionalString.
 func (s *TestResponseFormatTestOK) GetOptionalString() OptString {
-	return s.OptionalString
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalStringBase64 returns the value of OptionalStringBase64.
+	new(OptString)
 }
 
-// GetOptionalStringBase64 returns the value of OptionalStringBase64.
 func (s *TestResponseFormatTestOK) GetOptionalStringBase64() []byte {
-	return s.OptionalStringBase64
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalStringBinary returns the value of OptionalStringBinary.
 func (s *TestResponseFormatTestOK) GetOptionalStringBinary() OptString {
-	return s.OptionalStringBinary
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringByte returns the value of OptionalStringByte.
 func (s *TestResponseFormatTestOK) GetOptionalStringByte() []byte {
-	return s.OptionalStringByte
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOptionalStringDate returns the value of OptionalStringDate.
 func (s *TestResponseFormatTestOK) GetOptionalStringDate() OptDate {
-	return s.OptionalStringDate
+	_ = "STUB: not implemented"
+	return *new(OptDate)
 }
 
 // GetOptionalStringDateMinusTime returns the value of OptionalStringDateMinusTime.
 func (s *TestResponseFormatTestOK) GetOptionalStringDateMinusTime() OptDateTime {
-	return s.OptionalStringDateMinusTime
+	_ = "STUB: not implemented"
+	return *new(OptDateTime)
 }
 
 // GetOptionalStringDecimal returns the value of OptionalStringDecimal.
 func (s *TestResponseFormatTestOK) GetOptionalStringDecimal() OptStringDecimal {
-	return s.OptionalStringDecimal
+	_ = "STUB: not implemented"
+	return *new(OptStringDecimal)
 }
 
 // GetOptionalStringDuration returns the value of OptionalStringDuration.
 func (s *TestResponseFormatTestOK) GetOptionalStringDuration() OptDuration {
-	return s.OptionalStringDuration
+	_ = "STUB: not implemented"
+	return *new(OptDuration)
 }
 
 // GetOptionalStringEmail returns the value of OptionalStringEmail.
 func (s *TestResponseFormatTestOK) GetOptionalStringEmail() OptString {
-	return s.OptionalStringEmail
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringFloat32 returns the value of OptionalStringFloat32.
 func (s *TestResponseFormatTestOK) GetOptionalStringFloat32() OptStringFloat32 {
-	return s.OptionalStringFloat32
+	_ = "STUB: not implemented"
+	return *new(OptStringFloat32)
 }
 
 // GetOptionalStringFloat64 returns the value of OptionalStringFloat64.
 func (s *TestResponseFormatTestOK) GetOptionalStringFloat64() OptStringFloat64 {
-	return s.OptionalStringFloat64
+	_ = "STUB: not implemented"
+	return *new(OptStringFloat64)
 }
 
 // GetOptionalStringHostname returns the value of OptionalStringHostname.
 func (s *TestResponseFormatTestOK) GetOptionalStringHostname() OptString {
-	return s.OptionalStringHostname
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringHTTPMinusDate returns the value of OptionalStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) GetOptionalStringHTTPMinusDate() OptHTTPDate {
-	return s.OptionalStringHTTPMinusDate
+	_ = "STUB: not implemented"
+	return *new(OptHTTPDate)
 }
 
 // GetOptionalStringInt returns the value of OptionalStringInt.
 func (s *TestResponseFormatTestOK) GetOptionalStringInt() OptStringInt {
-	return s.OptionalStringInt
+	_ = "STUB: not implemented"
+	return *new(OptStringInt)
 }
 
 // GetOptionalStringInt16 returns the value of OptionalStringInt16.
 func (s *TestResponseFormatTestOK) GetOptionalStringInt16() OptStringInt16 {
-	return s.OptionalStringInt16
+	_ = "STUB: not implemented"
+	return *new(OptStringInt16)
 }
 
 // GetOptionalStringInt32 returns the value of OptionalStringInt32.
 func (s *TestResponseFormatTestOK) GetOptionalStringInt32() OptStringInt32 {
-	return s.OptionalStringInt32
+	_ = "STUB: not implemented"
+	return *new(OptStringInt32)
 }
 
 // GetOptionalStringInt64 returns the value of OptionalStringInt64.
 func (s *TestResponseFormatTestOK) GetOptionalStringInt64() OptStringInt64 {
-	return s.OptionalStringInt64
+	_ = "STUB: not implemented"
+	return *new(OptStringInt64)
 }
 
 // GetOptionalStringInt8 returns the value of OptionalStringInt8.
 func (s *TestResponseFormatTestOK) GetOptionalStringInt8() OptStringInt8 {
-	return s.OptionalStringInt8
+	_ = "STUB: not implemented"
+	return *new(OptStringInt8)
 }
 
 // GetOptionalStringIP returns the value of OptionalStringIP.
 func (s *TestResponseFormatTestOK) GetOptionalStringIP() OptIP {
-	return s.OptionalStringIP
+	_ = "STUB: not implemented"
+	return *new(OptIP)
 }
 
 // GetOptionalStringIpv4 returns the value of OptionalStringIpv4.
 func (s *TestResponseFormatTestOK) GetOptionalStringIpv4() OptIPv4 {
-	return s.OptionalStringIpv4
+	_ = "STUB: not implemented"
+	return *new(OptIPv4)
 }
 
 // GetOptionalStringIpv6 returns the value of OptionalStringIpv6.
 func (s *TestResponseFormatTestOK) GetOptionalStringIpv6() OptIPv6 {
-	return s.OptionalStringIpv6
+	_ = "STUB: not implemented"
+	return *new(OptIPv6)
 }
 
 // GetOptionalStringMAC returns the value of OptionalStringMAC.
 func (s *TestResponseFormatTestOK) GetOptionalStringMAC() OptHardwareAddr {
-	return s.OptionalStringMAC
+	_ = "STUB: not implemented"
+	return *new(OptHardwareAddr)
 }
 
 // GetOptionalStringPassword returns the value of OptionalStringPassword.
 func (s *TestResponseFormatTestOK) GetOptionalStringPassword() OptString {
-	return s.OptionalStringPassword
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOptionalStringTime returns the value of OptionalStringTime.
 func (s *TestResponseFormatTestOK) GetOptionalStringTime() OptTime {
-	return s.OptionalStringTime
+	_ = "STUB: not implemented"
+	return *new(OptTime)
 }
 
 // GetOptionalStringUint returns the value of OptionalStringUint.
 func (s *TestResponseFormatTestOK) GetOptionalStringUint() OptStringUint {
-	return s.OptionalStringUint
+	_ = "STUB: not implemented"
+	return *new(OptStringUint)
 }
 
 // GetOptionalStringUint16 returns the value of OptionalStringUint16.
 func (s *TestResponseFormatTestOK) GetOptionalStringUint16() OptStringUint16 {
-	return s.OptionalStringUint16
+	_ = "STUB: not implemented"
+	return *new(OptStringUint16)
 }
 
 // GetOptionalStringUint32 returns the value of OptionalStringUint32.
 func (s *TestResponseFormatTestOK) GetOptionalStringUint32() OptStringUint32 {
-	return s.OptionalStringUint32
+	_ = "STUB: not implemented"
+	return *new(OptStringUint32)
 }
 
 // GetOptionalStringUint64 returns the value of OptionalStringUint64.
 func (s *TestResponseFormatTestOK) GetOptionalStringUint64() OptStringUint64 {
-	return s.OptionalStringUint64
+	_ = "STUB: not implemented"
+	return *new(OptStringUint64)
 }
 
 // GetOptionalStringUint8 returns the value of OptionalStringUint8.
 func (s *TestResponseFormatTestOK) GetOptionalStringUint8() OptStringUint8 {
-	return s.OptionalStringUint8
+	_ = "STUB: not implemented"
+	return *new(OptStringUint8)
 }
 
 // GetOptionalStringUnix returns the value of OptionalStringUnix.
 func (s *TestResponseFormatTestOK) GetOptionalStringUnix() OptStringUnixSeconds {
-	return s.OptionalStringUnix
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixSeconds)
 }
 
 // GetOptionalStringUnixMinusMicro returns the value of OptionalStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) GetOptionalStringUnixMinusMicro() OptStringUnixMicro {
-	return s.OptionalStringUnixMinusMicro
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixMicro)
 }
 
 // GetOptionalStringUnixMinusMilli returns the value of OptionalStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) GetOptionalStringUnixMinusMilli() OptStringUnixMilli {
-	return s.OptionalStringUnixMinusMilli
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixMilli)
 }
 
 // GetOptionalStringUnixMinusNano returns the value of OptionalStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) GetOptionalStringUnixMinusNano() OptStringUnixNano {
-	return s.OptionalStringUnixMinusNano
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixNano)
 }
 
 // GetOptionalStringUnixMinusSeconds returns the value of OptionalStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) GetOptionalStringUnixMinusSeconds() OptStringUnixSeconds {
-	return s.OptionalStringUnixMinusSeconds
+	_ = "STUB: not implemented"
+	return *new(OptStringUnixSeconds)
 }
 
 // GetOptionalStringURI returns the value of OptionalStringURI.
 func (s *TestResponseFormatTestOK) GetOptionalStringURI() OptURI {
-	return s.OptionalStringURI
+	_ = "STUB: not implemented"
+	return *new(OptURI)
 }
 
 // GetOptionalStringUUID returns the value of OptionalStringUUID.
 func (s *TestResponseFormatTestOK) GetOptionalStringUUID() OptUUID {
-	return s.OptionalStringUUID
+	_ = "STUB: not implemented"
+	return *new(OptUUID)
 }
 
 // SetRequiredAny sets the value of RequiredAny.
-func (s *TestResponseFormatTestOK) SetRequiredAny(val jx.Raw) {
-	s.RequiredAny = val
-}
+func (s *TestResponseFormatTestOK) SetRequiredAny(val jx.Raw) { _ = "STUB: not implemented"; return }
 
 // SetRequiredArrayAny sets the value of RequiredArrayAny.
 func (s *TestResponseFormatTestOK) SetRequiredArrayAny(val []jx.Raw) {
-	s.RequiredArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayBoolean sets the value of RequiredArrayBoolean.
 func (s *TestResponseFormatTestOK) SetRequiredArrayBoolean(val []bool) {
-	s.RequiredArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayInteger sets the value of RequiredArrayInteger.
 func (s *TestResponseFormatTestOK) SetRequiredArrayInteger(val []int) {
-	s.RequiredArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt16 sets the value of RequiredArrayIntegerInt16.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerInt16(val []int16) {
-	s.RequiredArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt32 sets the value of RequiredArrayIntegerInt32.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerInt32(val []int32) {
-	s.RequiredArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt64 sets the value of RequiredArrayIntegerInt64.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerInt64(val []int64) {
-	s.RequiredArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerInt8 sets the value of RequiredArrayIntegerInt8.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerInt8(val []int8) {
-	s.RequiredArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint sets the value of RequiredArrayIntegerUint.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerUint(val []uint) {
-	s.RequiredArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint16 sets the value of RequiredArrayIntegerUint16.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerUint16(val []uint16) {
-	s.RequiredArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint32 sets the value of RequiredArrayIntegerUint32.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerUint32(val []uint32) {
-	s.RequiredArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint64 sets the value of RequiredArrayIntegerUint64.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerUint64(val []uint64) {
-	s.RequiredArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUint8 sets the value of RequiredArrayIntegerUint8.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerUint8(val []uint8) {
-	s.RequiredArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnix sets the value of RequiredArrayIntegerUnix.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerUnix(val []time.Time) {
-	s.RequiredArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusMicro sets the value of RequiredArrayIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerUnixMinusMicro(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusMilli sets the value of RequiredArrayIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerUnixMinusMilli(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusNano sets the value of RequiredArrayIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerUnixMinusNano(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayIntegerUnixMinusSeconds sets the value of RequiredArrayIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetRequiredArrayIntegerUnixMinusSeconds(val []time.Time) {
-	s.RequiredArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNull sets the value of RequiredArrayNull.
 func (s *TestResponseFormatTestOK) SetRequiredArrayNull(val []struct{}) {
-	s.RequiredArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumber sets the value of RequiredArrayNumber.
 func (s *TestResponseFormatTestOK) SetRequiredArrayNumber(val []float64) {
-	s.RequiredArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberDecimal sets the value of RequiredArrayNumberDecimal.
 func (s *TestResponseFormatTestOK) SetRequiredArrayNumberDecimal(val []decimal.Decimal) {
-	s.RequiredArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberDouble sets the value of RequiredArrayNumberDouble.
 func (s *TestResponseFormatTestOK) SetRequiredArrayNumberDouble(val []float64) {
-	s.RequiredArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberFloat sets the value of RequiredArrayNumberFloat.
 func (s *TestResponseFormatTestOK) SetRequiredArrayNumberFloat(val []float32) {
-	s.RequiredArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberInt32 sets the value of RequiredArrayNumberInt32.
 func (s *TestResponseFormatTestOK) SetRequiredArrayNumberInt32(val []int32) {
-	s.RequiredArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayNumberInt64 sets the value of RequiredArrayNumberInt64.
 func (s *TestResponseFormatTestOK) SetRequiredArrayNumberInt64(val []int64) {
-	s.RequiredArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayString sets the value of RequiredArrayString.
 func (s *TestResponseFormatTestOK) SetRequiredArrayString(val []string) {
-	s.RequiredArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringBase64 sets the value of RequiredArrayStringBase64.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringBase64(val [][]byte) {
-	s.RequiredArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringBinary sets the value of RequiredArrayStringBinary.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringBinary(val []string) {
-	s.RequiredArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringByte sets the value of RequiredArrayStringByte.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringByte(val [][]byte) {
-	s.RequiredArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDate sets the value of RequiredArrayStringDate.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringDate(val []time.Time) {
-	s.RequiredArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDateMinusTime sets the value of RequiredArrayStringDateMinusTime.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringDateMinusTime(val []time.Time) {
-	s.RequiredArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDecimal sets the value of RequiredArrayStringDecimal.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringDecimal(val []decimal.Decimal) {
-	s.RequiredArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringDuration sets the value of RequiredArrayStringDuration.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringDuration(val []time.Duration) {
-	s.RequiredArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringEmail sets the value of RequiredArrayStringEmail.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringEmail(val []string) {
-	s.RequiredArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringFloat32 sets the value of RequiredArrayStringFloat32.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringFloat32(val []float32) {
-	s.RequiredArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringFloat64 sets the value of RequiredArrayStringFloat64.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringFloat64(val []float64) {
-	s.RequiredArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringHostname sets the value of RequiredArrayStringHostname.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringHostname(val []string) {
-	s.RequiredArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringHTTPMinusDate sets the value of RequiredArrayStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringHTTPMinusDate(val []time.Time) {
-	s.RequiredArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt sets the value of RequiredArrayStringInt.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringInt(val []int) {
-	s.RequiredArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt16 sets the value of RequiredArrayStringInt16.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringInt16(val []int16) {
-	s.RequiredArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt32 sets the value of RequiredArrayStringInt32.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringInt32(val []int32) {
-	s.RequiredArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt64 sets the value of RequiredArrayStringInt64.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringInt64(val []int64) {
-	s.RequiredArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringInt8 sets the value of RequiredArrayStringInt8.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringInt8(val []int8) {
-	s.RequiredArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringIP sets the value of RequiredArrayStringIP.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringIP(val []netip.Addr) {
-	s.RequiredArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringIpv4 sets the value of RequiredArrayStringIpv4.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringIpv4(val []netip.Addr) {
-	s.RequiredArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringIpv6 sets the value of RequiredArrayStringIpv6.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringIpv6(val []netip.Addr) {
-	s.RequiredArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringMAC sets the value of RequiredArrayStringMAC.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringMAC(val []net.HardwareAddr) {
-	s.RequiredArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringPassword sets the value of RequiredArrayStringPassword.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringPassword(val []string) {
-	s.RequiredArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringTime sets the value of RequiredArrayStringTime.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringTime(val []time.Time) {
-	s.RequiredArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint sets the value of RequiredArrayStringUint.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUint(val []uint) {
-	s.RequiredArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint16 sets the value of RequiredArrayStringUint16.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUint16(val []uint16) {
-	s.RequiredArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint32 sets the value of RequiredArrayStringUint32.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUint32(val []uint32) {
-	s.RequiredArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint64 sets the value of RequiredArrayStringUint64.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUint64(val []uint64) {
-	s.RequiredArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUint8 sets the value of RequiredArrayStringUint8.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUint8(val []uint8) {
-	s.RequiredArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnix sets the value of RequiredArrayStringUnix.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUnix(val []time.Time) {
-	s.RequiredArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusMicro sets the value of RequiredArrayStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUnixMinusMicro(val []time.Time) {
-	s.RequiredArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusMilli sets the value of RequiredArrayStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUnixMinusMilli(val []time.Time) {
-	s.RequiredArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusNano sets the value of RequiredArrayStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUnixMinusNano(val []time.Time) {
-	s.RequiredArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUnixMinusSeconds sets the value of RequiredArrayStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUnixMinusSeconds(val []time.Time) {
-	s.RequiredArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringURI sets the value of RequiredArrayStringURI.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringURI(val []url.URL) {
-	s.RequiredArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredArrayStringUUID sets the value of RequiredArrayStringUUID.
 func (s *TestResponseFormatTestOK) SetRequiredArrayStringUUID(val []uuid.UUID) {
-	s.RequiredArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredBoolean sets the value of RequiredBoolean.
-func (s *TestResponseFormatTestOK) SetRequiredBoolean(val bool) {
-	s.RequiredBoolean = val
-}
+func (s *TestResponseFormatTestOK) SetRequiredBoolean(val bool) { _ = "STUB: not implemented"; return }
 
 // SetRequiredDoubleArrayAny sets the value of RequiredDoubleArrayAny.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayAny(val [][]jx.Raw) {
-	s.RequiredDoubleArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayBoolean sets the value of RequiredDoubleArrayBoolean.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayBoolean(val [][]bool) {
-	s.RequiredDoubleArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayInteger sets the value of RequiredDoubleArrayInteger.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayInteger(val [][]int) {
-	s.RequiredDoubleArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt16 sets the value of RequiredDoubleArrayIntegerInt16.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerInt16(val [][]int16) {
-	s.RequiredDoubleArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt32 sets the value of RequiredDoubleArrayIntegerInt32.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerInt32(val [][]int32) {
-	s.RequiredDoubleArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt64 sets the value of RequiredDoubleArrayIntegerInt64.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerInt64(val [][]int64) {
-	s.RequiredDoubleArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerInt8 sets the value of RequiredDoubleArrayIntegerInt8.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerInt8(val [][]int8) {
-	s.RequiredDoubleArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint sets the value of RequiredDoubleArrayIntegerUint.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerUint(val [][]uint) {
-	s.RequiredDoubleArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint16 sets the value of RequiredDoubleArrayIntegerUint16.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerUint16(val [][]uint16) {
-	s.RequiredDoubleArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint32 sets the value of RequiredDoubleArrayIntegerUint32.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerUint32(val [][]uint32) {
-	s.RequiredDoubleArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint64 sets the value of RequiredDoubleArrayIntegerUint64.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerUint64(val [][]uint64) {
-	s.RequiredDoubleArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUint8 sets the value of RequiredDoubleArrayIntegerUint8.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerUint8(val [][]uint8) {
-	s.RequiredDoubleArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnix sets the value of RequiredDoubleArrayIntegerUnix.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerUnix(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusMicro sets the value of RequiredDoubleArrayIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerUnixMinusMicro(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusMilli sets the value of RequiredDoubleArrayIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerUnixMinusMilli(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusNano sets the value of RequiredDoubleArrayIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerUnixMinusNano(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayIntegerUnixMinusSeconds sets the value of RequiredDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayIntegerUnixMinusSeconds(val [][]time.Time) {
-	s.RequiredDoubleArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNull sets the value of RequiredDoubleArrayNull.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayNull(val [][]struct{}) {
-	s.RequiredDoubleArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumber sets the value of RequiredDoubleArrayNumber.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayNumber(val [][]float64) {
-	s.RequiredDoubleArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberDecimal sets the value of RequiredDoubleArrayNumberDecimal.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayNumberDecimal(val [][]decimal.Decimal) {
-	s.RequiredDoubleArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberDouble sets the value of RequiredDoubleArrayNumberDouble.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayNumberDouble(val [][]float64) {
-	s.RequiredDoubleArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberFloat sets the value of RequiredDoubleArrayNumberFloat.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayNumberFloat(val [][]float32) {
-	s.RequiredDoubleArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberInt32 sets the value of RequiredDoubleArrayNumberInt32.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayNumberInt32(val [][]int32) {
-	s.RequiredDoubleArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayNumberInt64 sets the value of RequiredDoubleArrayNumberInt64.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayNumberInt64(val [][]int64) {
-	s.RequiredDoubleArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayString sets the value of RequiredDoubleArrayString.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayString(val [][]string) {
-	s.RequiredDoubleArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringBase64 sets the value of RequiredDoubleArrayStringBase64.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringBase64(val [][][]byte) {
-	s.RequiredDoubleArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringBinary sets the value of RequiredDoubleArrayStringBinary.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringBinary(val [][]string) {
-	s.RequiredDoubleArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringByte sets the value of RequiredDoubleArrayStringByte.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringByte(val [][][]byte) {
-	s.RequiredDoubleArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDate sets the value of RequiredDoubleArrayStringDate.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringDate(val [][]time.Time) {
-	s.RequiredDoubleArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDateMinusTime sets the value of RequiredDoubleArrayStringDateMinusTime.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringDateMinusTime(val [][]time.Time) {
-	s.RequiredDoubleArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDecimal sets the value of RequiredDoubleArrayStringDecimal.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringDecimal(val [][]decimal.Decimal) {
-	s.RequiredDoubleArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringDuration sets the value of RequiredDoubleArrayStringDuration.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringDuration(val [][]time.Duration) {
-	s.RequiredDoubleArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringEmail sets the value of RequiredDoubleArrayStringEmail.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringEmail(val [][]string) {
-	s.RequiredDoubleArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringFloat32 sets the value of RequiredDoubleArrayStringFloat32.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringFloat32(val [][]float32) {
-	s.RequiredDoubleArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringFloat64 sets the value of RequiredDoubleArrayStringFloat64.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringFloat64(val [][]float64) {
-	s.RequiredDoubleArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringHostname sets the value of RequiredDoubleArrayStringHostname.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringHostname(val [][]string) {
-	s.RequiredDoubleArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringHTTPMinusDate sets the value of RequiredDoubleArrayStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringHTTPMinusDate(val [][]time.Time) {
-	s.RequiredDoubleArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt sets the value of RequiredDoubleArrayStringInt.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringInt(val [][]int) {
-	s.RequiredDoubleArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt16 sets the value of RequiredDoubleArrayStringInt16.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringInt16(val [][]int16) {
-	s.RequiredDoubleArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt32 sets the value of RequiredDoubleArrayStringInt32.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringInt32(val [][]int32) {
-	s.RequiredDoubleArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt64 sets the value of RequiredDoubleArrayStringInt64.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringInt64(val [][]int64) {
-	s.RequiredDoubleArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringInt8 sets the value of RequiredDoubleArrayStringInt8.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringInt8(val [][]int8) {
-	s.RequiredDoubleArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringIP sets the value of RequiredDoubleArrayStringIP.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringIP(val [][]netip.Addr) {
-	s.RequiredDoubleArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringIpv4 sets the value of RequiredDoubleArrayStringIpv4.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringIpv4(val [][]netip.Addr) {
-	s.RequiredDoubleArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringIpv6 sets the value of RequiredDoubleArrayStringIpv6.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringIpv6(val [][]netip.Addr) {
-	s.RequiredDoubleArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringMAC sets the value of RequiredDoubleArrayStringMAC.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringMAC(val [][]net.HardwareAddr) {
-	s.RequiredDoubleArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringPassword sets the value of RequiredDoubleArrayStringPassword.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringPassword(val [][]string) {
-	s.RequiredDoubleArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringTime sets the value of RequiredDoubleArrayStringTime.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringTime(val [][]time.Time) {
-	s.RequiredDoubleArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint sets the value of RequiredDoubleArrayStringUint.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUint(val [][]uint) {
-	s.RequiredDoubleArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint16 sets the value of RequiredDoubleArrayStringUint16.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUint16(val [][]uint16) {
-	s.RequiredDoubleArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint32 sets the value of RequiredDoubleArrayStringUint32.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUint32(val [][]uint32) {
-	s.RequiredDoubleArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint64 sets the value of RequiredDoubleArrayStringUint64.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUint64(val [][]uint64) {
-	s.RequiredDoubleArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUint8 sets the value of RequiredDoubleArrayStringUint8.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUint8(val [][]uint8) {
-	s.RequiredDoubleArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnix sets the value of RequiredDoubleArrayStringUnix.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUnix(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusMicro sets the value of RequiredDoubleArrayStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUnixMinusMicro(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusMilli sets the value of RequiredDoubleArrayStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUnixMinusMilli(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusNano sets the value of RequiredDoubleArrayStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUnixMinusNano(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUnixMinusSeconds sets the value of RequiredDoubleArrayStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUnixMinusSeconds(val [][]time.Time) {
-	s.RequiredDoubleArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringURI sets the value of RequiredDoubleArrayStringURI.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringURI(val [][]url.URL) {
-	s.RequiredDoubleArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredDoubleArrayStringUUID sets the value of RequiredDoubleArrayStringUUID.
 func (s *TestResponseFormatTestOK) SetRequiredDoubleArrayStringUUID(val [][]uuid.UUID) {
-	s.RequiredDoubleArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredInteger sets the value of RequiredInteger.
-func (s *TestResponseFormatTestOK) SetRequiredInteger(val int) {
-	s.RequiredInteger = val
-}
+func (s *TestResponseFormatTestOK) SetRequiredInteger(val int) { _ = "STUB: not implemented"; return }
 
 // SetRequiredIntegerInt16 sets the value of RequiredIntegerInt16.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerInt16(val int16) {
-	s.RequiredIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerInt32 sets the value of RequiredIntegerInt32.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerInt32(val int32) {
-	s.RequiredIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerInt64 sets the value of RequiredIntegerInt64.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerInt64(val int64) {
-	s.RequiredIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerInt8 sets the value of RequiredIntegerInt8.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerInt8(val int8) {
-	s.RequiredIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint sets the value of RequiredIntegerUint.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerUint(val uint) {
-	s.RequiredIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint16 sets the value of RequiredIntegerUint16.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerUint16(val uint16) {
-	s.RequiredIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint32 sets the value of RequiredIntegerUint32.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerUint32(val uint32) {
-	s.RequiredIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint64 sets the value of RequiredIntegerUint64.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerUint64(val uint64) {
-	s.RequiredIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUint8 sets the value of RequiredIntegerUint8.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerUint8(val uint8) {
-	s.RequiredIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnix sets the value of RequiredIntegerUnix.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerUnix(val time.Time) {
-	s.RequiredIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusMicro sets the value of RequiredIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerUnixMinusMicro(val time.Time) {
-	s.RequiredIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusMilli sets the value of RequiredIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerUnixMinusMilli(val time.Time) {
-	s.RequiredIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusNano sets the value of RequiredIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerUnixMinusNano(val time.Time) {
-	s.RequiredIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredIntegerUnixMinusSeconds sets the value of RequiredIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetRequiredIntegerUnixMinusSeconds(val time.Time) {
-	s.RequiredIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNull sets the value of RequiredNull.
-func (s *TestResponseFormatTestOK) SetRequiredNull(val struct{}) {
-	s.RequiredNull = val
-}
+func (s *TestResponseFormatTestOK) SetRequiredNull(val struct{}) { _ = "STUB: not implemented"; return }
 
 // SetRequiredNumber sets the value of RequiredNumber.
 func (s *TestResponseFormatTestOK) SetRequiredNumber(val float64) {
-	s.RequiredNumber = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetRequiredNumberDecimal sets the value of RequiredNumberDecimal.
 }
 
-// SetRequiredNumberDecimal sets the value of RequiredNumberDecimal.
 func (s *TestResponseFormatTestOK) SetRequiredNumberDecimal(val decimal.Decimal) {
-	s.RequiredNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberDouble sets the value of RequiredNumberDouble.
 func (s *TestResponseFormatTestOK) SetRequiredNumberDouble(val float64) {
-	s.RequiredNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberFloat sets the value of RequiredNumberFloat.
 func (s *TestResponseFormatTestOK) SetRequiredNumberFloat(val float32) {
-	s.RequiredNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberInt32 sets the value of RequiredNumberInt32.
 func (s *TestResponseFormatTestOK) SetRequiredNumberInt32(val int32) {
-	s.RequiredNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredNumberInt64 sets the value of RequiredNumberInt64.
 func (s *TestResponseFormatTestOK) SetRequiredNumberInt64(val int64) {
-	s.RequiredNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredString sets the value of RequiredString.
-func (s *TestResponseFormatTestOK) SetRequiredString(val string) {
-	s.RequiredString = val
-}
+func (s *TestResponseFormatTestOK) SetRequiredString(val string) { _ = "STUB: not implemented"; return }
 
 // SetRequiredStringBase64 sets the value of RequiredStringBase64.
 func (s *TestResponseFormatTestOK) SetRequiredStringBase64(val []byte) {
-	s.RequiredStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringBinary sets the value of RequiredStringBinary.
 func (s *TestResponseFormatTestOK) SetRequiredStringBinary(val string) {
-	s.RequiredStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringByte sets the value of RequiredStringByte.
 func (s *TestResponseFormatTestOK) SetRequiredStringByte(val []byte) {
-	s.RequiredStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDate sets the value of RequiredStringDate.
 func (s *TestResponseFormatTestOK) SetRequiredStringDate(val time.Time) {
-	s.RequiredStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDateMinusTime sets the value of RequiredStringDateMinusTime.
 func (s *TestResponseFormatTestOK) SetRequiredStringDateMinusTime(val time.Time) {
-	s.RequiredStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDecimal sets the value of RequiredStringDecimal.
 func (s *TestResponseFormatTestOK) SetRequiredStringDecimal(val decimal.Decimal) {
-	s.RequiredStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringDuration sets the value of RequiredStringDuration.
 func (s *TestResponseFormatTestOK) SetRequiredStringDuration(val time.Duration) {
-	s.RequiredStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringEmail sets the value of RequiredStringEmail.
 func (s *TestResponseFormatTestOK) SetRequiredStringEmail(val string) {
-	s.RequiredStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringFloat32 sets the value of RequiredStringFloat32.
 func (s *TestResponseFormatTestOK) SetRequiredStringFloat32(val float32) {
-	s.RequiredStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringFloat64 sets the value of RequiredStringFloat64.
 func (s *TestResponseFormatTestOK) SetRequiredStringFloat64(val float64) {
-	s.RequiredStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringHostname sets the value of RequiredStringHostname.
 func (s *TestResponseFormatTestOK) SetRequiredStringHostname(val string) {
-	s.RequiredStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringHTTPMinusDate sets the value of RequiredStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) SetRequiredStringHTTPMinusDate(val time.Time) {
-	s.RequiredStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt sets the value of RequiredStringInt.
-func (s *TestResponseFormatTestOK) SetRequiredStringInt(val int) {
-	s.RequiredStringInt = val
-}
+func (s *TestResponseFormatTestOK) SetRequiredStringInt(val int) { _ = "STUB: not implemented"; return }
 
 // SetRequiredStringInt16 sets the value of RequiredStringInt16.
 func (s *TestResponseFormatTestOK) SetRequiredStringInt16(val int16) {
-	s.RequiredStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt32 sets the value of RequiredStringInt32.
 func (s *TestResponseFormatTestOK) SetRequiredStringInt32(val int32) {
-	s.RequiredStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt64 sets the value of RequiredStringInt64.
 func (s *TestResponseFormatTestOK) SetRequiredStringInt64(val int64) {
-	s.RequiredStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringInt8 sets the value of RequiredStringInt8.
 func (s *TestResponseFormatTestOK) SetRequiredStringInt8(val int8) {
-	s.RequiredStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringIP sets the value of RequiredStringIP.
 func (s *TestResponseFormatTestOK) SetRequiredStringIP(val netip.Addr) {
-	s.RequiredStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringIpv4 sets the value of RequiredStringIpv4.
 func (s *TestResponseFormatTestOK) SetRequiredStringIpv4(val netip.Addr) {
-	s.RequiredStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringIpv6 sets the value of RequiredStringIpv6.
 func (s *TestResponseFormatTestOK) SetRequiredStringIpv6(val netip.Addr) {
-	s.RequiredStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringMAC sets the value of RequiredStringMAC.
 func (s *TestResponseFormatTestOK) SetRequiredStringMAC(val net.HardwareAddr) {
-	s.RequiredStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringPassword sets the value of RequiredStringPassword.
 func (s *TestResponseFormatTestOK) SetRequiredStringPassword(val string) {
-	s.RequiredStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringTime sets the value of RequiredStringTime.
 func (s *TestResponseFormatTestOK) SetRequiredStringTime(val time.Time) {
-	s.RequiredStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint sets the value of RequiredStringUint.
 func (s *TestResponseFormatTestOK) SetRequiredStringUint(val uint) {
-	s.RequiredStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint16 sets the value of RequiredStringUint16.
 func (s *TestResponseFormatTestOK) SetRequiredStringUint16(val uint16) {
-	s.RequiredStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint32 sets the value of RequiredStringUint32.
 func (s *TestResponseFormatTestOK) SetRequiredStringUint32(val uint32) {
-	s.RequiredStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint64 sets the value of RequiredStringUint64.
 func (s *TestResponseFormatTestOK) SetRequiredStringUint64(val uint64) {
-	s.RequiredStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUint8 sets the value of RequiredStringUint8.
 func (s *TestResponseFormatTestOK) SetRequiredStringUint8(val uint8) {
-	s.RequiredStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnix sets the value of RequiredStringUnix.
 func (s *TestResponseFormatTestOK) SetRequiredStringUnix(val time.Time) {
-	s.RequiredStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusMicro sets the value of RequiredStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetRequiredStringUnixMinusMicro(val time.Time) {
-	s.RequiredStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusMilli sets the value of RequiredStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetRequiredStringUnixMinusMilli(val time.Time) {
-	s.RequiredStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusNano sets the value of RequiredStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetRequiredStringUnixMinusNano(val time.Time) {
-	s.RequiredStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUnixMinusSeconds sets the value of RequiredStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetRequiredStringUnixMinusSeconds(val time.Time) {
-	s.RequiredStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringURI sets the value of RequiredStringURI.
 func (s *TestResponseFormatTestOK) SetRequiredStringURI(val url.URL) {
-	s.RequiredStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetRequiredStringUUID sets the value of RequiredStringUUID.
 func (s *TestResponseFormatTestOK) SetRequiredStringUUID(val uuid.UUID) {
-	s.RequiredStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalAny sets the value of OptionalAny.
-func (s *TestResponseFormatTestOK) SetOptionalAny(val jx.Raw) {
-	s.OptionalAny = val
-}
+func (s *TestResponseFormatTestOK) SetOptionalAny(val jx.Raw) { _ = "STUB: not implemented"; return }
 
 // SetOptionalArrayAny sets the value of OptionalArrayAny.
 func (s *TestResponseFormatTestOK) SetOptionalArrayAny(val []jx.Raw) {
-	s.OptionalArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayBoolean sets the value of OptionalArrayBoolean.
 func (s *TestResponseFormatTestOK) SetOptionalArrayBoolean(val []bool) {
-	s.OptionalArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayInteger sets the value of OptionalArrayInteger.
 func (s *TestResponseFormatTestOK) SetOptionalArrayInteger(val []int) {
-	s.OptionalArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt16 sets the value of OptionalArrayIntegerInt16.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerInt16(val []int16) {
-	s.OptionalArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt32 sets the value of OptionalArrayIntegerInt32.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerInt32(val []int32) {
-	s.OptionalArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt64 sets the value of OptionalArrayIntegerInt64.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerInt64(val []int64) {
-	s.OptionalArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerInt8 sets the value of OptionalArrayIntegerInt8.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerInt8(val []int8) {
-	s.OptionalArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint sets the value of OptionalArrayIntegerUint.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerUint(val []uint) {
-	s.OptionalArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint16 sets the value of OptionalArrayIntegerUint16.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerUint16(val []uint16) {
-	s.OptionalArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint32 sets the value of OptionalArrayIntegerUint32.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerUint32(val []uint32) {
-	s.OptionalArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint64 sets the value of OptionalArrayIntegerUint64.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerUint64(val []uint64) {
-	s.OptionalArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUint8 sets the value of OptionalArrayIntegerUint8.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerUint8(val []uint8) {
-	s.OptionalArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnix sets the value of OptionalArrayIntegerUnix.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerUnix(val []time.Time) {
-	s.OptionalArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusMicro sets the value of OptionalArrayIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerUnixMinusMicro(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusMilli sets the value of OptionalArrayIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerUnixMinusMilli(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusNano sets the value of OptionalArrayIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerUnixMinusNano(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayIntegerUnixMinusSeconds sets the value of OptionalArrayIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetOptionalArrayIntegerUnixMinusSeconds(val []time.Time) {
-	s.OptionalArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNull sets the value of OptionalArrayNull.
 func (s *TestResponseFormatTestOK) SetOptionalArrayNull(val []struct{}) {
-	s.OptionalArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumber sets the value of OptionalArrayNumber.
 func (s *TestResponseFormatTestOK) SetOptionalArrayNumber(val []float64) {
-	s.OptionalArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberDecimal sets the value of OptionalArrayNumberDecimal.
 func (s *TestResponseFormatTestOK) SetOptionalArrayNumberDecimal(val []decimal.Decimal) {
-	s.OptionalArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberDouble sets the value of OptionalArrayNumberDouble.
 func (s *TestResponseFormatTestOK) SetOptionalArrayNumberDouble(val []float64) {
-	s.OptionalArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberFloat sets the value of OptionalArrayNumberFloat.
 func (s *TestResponseFormatTestOK) SetOptionalArrayNumberFloat(val []float32) {
-	s.OptionalArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberInt32 sets the value of OptionalArrayNumberInt32.
 func (s *TestResponseFormatTestOK) SetOptionalArrayNumberInt32(val []int32) {
-	s.OptionalArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayNumberInt64 sets the value of OptionalArrayNumberInt64.
 func (s *TestResponseFormatTestOK) SetOptionalArrayNumberInt64(val []int64) {
-	s.OptionalArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayString sets the value of OptionalArrayString.
 func (s *TestResponseFormatTestOK) SetOptionalArrayString(val []string) {
-	s.OptionalArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringBase64 sets the value of OptionalArrayStringBase64.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringBase64(val [][]byte) {
-	s.OptionalArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringBinary sets the value of OptionalArrayStringBinary.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringBinary(val []string) {
-	s.OptionalArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringByte sets the value of OptionalArrayStringByte.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringByte(val [][]byte) {
-	s.OptionalArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDate sets the value of OptionalArrayStringDate.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringDate(val []time.Time) {
-	s.OptionalArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDateMinusTime sets the value of OptionalArrayStringDateMinusTime.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringDateMinusTime(val []time.Time) {
-	s.OptionalArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDecimal sets the value of OptionalArrayStringDecimal.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringDecimal(val []decimal.Decimal) {
-	s.OptionalArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringDuration sets the value of OptionalArrayStringDuration.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringDuration(val []time.Duration) {
-	s.OptionalArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringEmail sets the value of OptionalArrayStringEmail.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringEmail(val []string) {
-	s.OptionalArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringFloat32 sets the value of OptionalArrayStringFloat32.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringFloat32(val []float32) {
-	s.OptionalArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringFloat64 sets the value of OptionalArrayStringFloat64.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringFloat64(val []float64) {
-	s.OptionalArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringHostname sets the value of OptionalArrayStringHostname.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringHostname(val []string) {
-	s.OptionalArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringHTTPMinusDate sets the value of OptionalArrayStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringHTTPMinusDate(val []time.Time) {
-	s.OptionalArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt sets the value of OptionalArrayStringInt.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringInt(val []int) {
-	s.OptionalArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt16 sets the value of OptionalArrayStringInt16.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringInt16(val []int16) {
-	s.OptionalArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt32 sets the value of OptionalArrayStringInt32.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringInt32(val []int32) {
-	s.OptionalArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt64 sets the value of OptionalArrayStringInt64.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringInt64(val []int64) {
-	s.OptionalArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringInt8 sets the value of OptionalArrayStringInt8.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringInt8(val []int8) {
-	s.OptionalArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringIP sets the value of OptionalArrayStringIP.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringIP(val []netip.Addr) {
-	s.OptionalArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringIpv4 sets the value of OptionalArrayStringIpv4.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringIpv4(val []netip.Addr) {
-	s.OptionalArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringIpv6 sets the value of OptionalArrayStringIpv6.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringIpv6(val []netip.Addr) {
-	s.OptionalArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringMAC sets the value of OptionalArrayStringMAC.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringMAC(val []net.HardwareAddr) {
-	s.OptionalArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringPassword sets the value of OptionalArrayStringPassword.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringPassword(val []string) {
-	s.OptionalArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringTime sets the value of OptionalArrayStringTime.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringTime(val []time.Time) {
-	s.OptionalArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint sets the value of OptionalArrayStringUint.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUint(val []uint) {
-	s.OptionalArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint16 sets the value of OptionalArrayStringUint16.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUint16(val []uint16) {
-	s.OptionalArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint32 sets the value of OptionalArrayStringUint32.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUint32(val []uint32) {
-	s.OptionalArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint64 sets the value of OptionalArrayStringUint64.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUint64(val []uint64) {
-	s.OptionalArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUint8 sets the value of OptionalArrayStringUint8.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUint8(val []uint8) {
-	s.OptionalArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnix sets the value of OptionalArrayStringUnix.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUnix(val []time.Time) {
-	s.OptionalArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusMicro sets the value of OptionalArrayStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUnixMinusMicro(val []time.Time) {
-	s.OptionalArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusMilli sets the value of OptionalArrayStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUnixMinusMilli(val []time.Time) {
-	s.OptionalArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusNano sets the value of OptionalArrayStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUnixMinusNano(val []time.Time) {
-	s.OptionalArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUnixMinusSeconds sets the value of OptionalArrayStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUnixMinusSeconds(val []time.Time) {
-	s.OptionalArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringURI sets the value of OptionalArrayStringURI.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringURI(val []url.URL) {
-	s.OptionalArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalArrayStringUUID sets the value of OptionalArrayStringUUID.
 func (s *TestResponseFormatTestOK) SetOptionalArrayStringUUID(val []uuid.UUID) {
-	s.OptionalArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalBoolean sets the value of OptionalBoolean.
 func (s *TestResponseFormatTestOK) SetOptionalBoolean(val OptBool) {
-	s.OptionalBoolean = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalDoubleArrayAny sets the value of OptionalDoubleArrayAny.
 }
 
-// SetOptionalDoubleArrayAny sets the value of OptionalDoubleArrayAny.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayAny(val [][]jx.Raw) {
-	s.OptionalDoubleArrayAny = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayBoolean sets the value of OptionalDoubleArrayBoolean.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayBoolean(val [][]bool) {
-	s.OptionalDoubleArrayBoolean = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayInteger sets the value of OptionalDoubleArrayInteger.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayInteger(val [][]int) {
-	s.OptionalDoubleArrayInteger = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt16 sets the value of OptionalDoubleArrayIntegerInt16.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerInt16(val [][]int16) {
-	s.OptionalDoubleArrayIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt32 sets the value of OptionalDoubleArrayIntegerInt32.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerInt32(val [][]int32) {
-	s.OptionalDoubleArrayIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt64 sets the value of OptionalDoubleArrayIntegerInt64.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerInt64(val [][]int64) {
-	s.OptionalDoubleArrayIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerInt8 sets the value of OptionalDoubleArrayIntegerInt8.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerInt8(val [][]int8) {
-	s.OptionalDoubleArrayIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint sets the value of OptionalDoubleArrayIntegerUint.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerUint(val [][]uint) {
-	s.OptionalDoubleArrayIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint16 sets the value of OptionalDoubleArrayIntegerUint16.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerUint16(val [][]uint16) {
-	s.OptionalDoubleArrayIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint32 sets the value of OptionalDoubleArrayIntegerUint32.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerUint32(val [][]uint32) {
-	s.OptionalDoubleArrayIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint64 sets the value of OptionalDoubleArrayIntegerUint64.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerUint64(val [][]uint64) {
-	s.OptionalDoubleArrayIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUint8 sets the value of OptionalDoubleArrayIntegerUint8.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerUint8(val [][]uint8) {
-	s.OptionalDoubleArrayIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnix sets the value of OptionalDoubleArrayIntegerUnix.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerUnix(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusMicro sets the value of OptionalDoubleArrayIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerUnixMinusMicro(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusMilli sets the value of OptionalDoubleArrayIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerUnixMinusMilli(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusNano sets the value of OptionalDoubleArrayIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerUnixMinusNano(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayIntegerUnixMinusSeconds sets the value of OptionalDoubleArrayIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayIntegerUnixMinusSeconds(val [][]time.Time) {
-	s.OptionalDoubleArrayIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNull sets the value of OptionalDoubleArrayNull.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayNull(val [][]struct{}) {
-	s.OptionalDoubleArrayNull = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumber sets the value of OptionalDoubleArrayNumber.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayNumber(val [][]float64) {
-	s.OptionalDoubleArrayNumber = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberDecimal sets the value of OptionalDoubleArrayNumberDecimal.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayNumberDecimal(val [][]decimal.Decimal) {
-	s.OptionalDoubleArrayNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberDouble sets the value of OptionalDoubleArrayNumberDouble.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayNumberDouble(val [][]float64) {
-	s.OptionalDoubleArrayNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberFloat sets the value of OptionalDoubleArrayNumberFloat.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayNumberFloat(val [][]float32) {
-	s.OptionalDoubleArrayNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberInt32 sets the value of OptionalDoubleArrayNumberInt32.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayNumberInt32(val [][]int32) {
-	s.OptionalDoubleArrayNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayNumberInt64 sets the value of OptionalDoubleArrayNumberInt64.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayNumberInt64(val [][]int64) {
-	s.OptionalDoubleArrayNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayString sets the value of OptionalDoubleArrayString.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayString(val [][]string) {
-	s.OptionalDoubleArrayString = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringBase64 sets the value of OptionalDoubleArrayStringBase64.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringBase64(val [][][]byte) {
-	s.OptionalDoubleArrayStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringBinary sets the value of OptionalDoubleArrayStringBinary.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringBinary(val [][]string) {
-	s.OptionalDoubleArrayStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringByte sets the value of OptionalDoubleArrayStringByte.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringByte(val [][][]byte) {
-	s.OptionalDoubleArrayStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDate sets the value of OptionalDoubleArrayStringDate.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringDate(val [][]time.Time) {
-	s.OptionalDoubleArrayStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDateMinusTime sets the value of OptionalDoubleArrayStringDateMinusTime.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringDateMinusTime(val [][]time.Time) {
-	s.OptionalDoubleArrayStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDecimal sets the value of OptionalDoubleArrayStringDecimal.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringDecimal(val [][]decimal.Decimal) {
-	s.OptionalDoubleArrayStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringDuration sets the value of OptionalDoubleArrayStringDuration.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringDuration(val [][]time.Duration) {
-	s.OptionalDoubleArrayStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringEmail sets the value of OptionalDoubleArrayStringEmail.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringEmail(val [][]string) {
-	s.OptionalDoubleArrayStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringFloat32 sets the value of OptionalDoubleArrayStringFloat32.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringFloat32(val [][]float32) {
-	s.OptionalDoubleArrayStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringFloat64 sets the value of OptionalDoubleArrayStringFloat64.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringFloat64(val [][]float64) {
-	s.OptionalDoubleArrayStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringHostname sets the value of OptionalDoubleArrayStringHostname.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringHostname(val [][]string) {
-	s.OptionalDoubleArrayStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringHTTPMinusDate sets the value of OptionalDoubleArrayStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringHTTPMinusDate(val [][]time.Time) {
-	s.OptionalDoubleArrayStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt sets the value of OptionalDoubleArrayStringInt.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringInt(val [][]int) {
-	s.OptionalDoubleArrayStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt16 sets the value of OptionalDoubleArrayStringInt16.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringInt16(val [][]int16) {
-	s.OptionalDoubleArrayStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt32 sets the value of OptionalDoubleArrayStringInt32.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringInt32(val [][]int32) {
-	s.OptionalDoubleArrayStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt64 sets the value of OptionalDoubleArrayStringInt64.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringInt64(val [][]int64) {
-	s.OptionalDoubleArrayStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringInt8 sets the value of OptionalDoubleArrayStringInt8.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringInt8(val [][]int8) {
-	s.OptionalDoubleArrayStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringIP sets the value of OptionalDoubleArrayStringIP.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringIP(val [][]netip.Addr) {
-	s.OptionalDoubleArrayStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringIpv4 sets the value of OptionalDoubleArrayStringIpv4.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringIpv4(val [][]netip.Addr) {
-	s.OptionalDoubleArrayStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringIpv6 sets the value of OptionalDoubleArrayStringIpv6.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringIpv6(val [][]netip.Addr) {
-	s.OptionalDoubleArrayStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringMAC sets the value of OptionalDoubleArrayStringMAC.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringMAC(val [][]net.HardwareAddr) {
-	s.OptionalDoubleArrayStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringPassword sets the value of OptionalDoubleArrayStringPassword.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringPassword(val [][]string) {
-	s.OptionalDoubleArrayStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringTime sets the value of OptionalDoubleArrayStringTime.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringTime(val [][]time.Time) {
-	s.OptionalDoubleArrayStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint sets the value of OptionalDoubleArrayStringUint.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUint(val [][]uint) {
-	s.OptionalDoubleArrayStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint16 sets the value of OptionalDoubleArrayStringUint16.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUint16(val [][]uint16) {
-	s.OptionalDoubleArrayStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint32 sets the value of OptionalDoubleArrayStringUint32.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUint32(val [][]uint32) {
-	s.OptionalDoubleArrayStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint64 sets the value of OptionalDoubleArrayStringUint64.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUint64(val [][]uint64) {
-	s.OptionalDoubleArrayStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUint8 sets the value of OptionalDoubleArrayStringUint8.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUint8(val [][]uint8) {
-	s.OptionalDoubleArrayStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnix sets the value of OptionalDoubleArrayStringUnix.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUnix(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusMicro sets the value of OptionalDoubleArrayStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUnixMinusMicro(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusMilli sets the value of OptionalDoubleArrayStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUnixMinusMilli(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusNano sets the value of OptionalDoubleArrayStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUnixMinusNano(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUnixMinusSeconds sets the value of OptionalDoubleArrayStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUnixMinusSeconds(val [][]time.Time) {
-	s.OptionalDoubleArrayStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringURI sets the value of OptionalDoubleArrayStringURI.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringURI(val [][]url.URL) {
-	s.OptionalDoubleArrayStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalDoubleArrayStringUUID sets the value of OptionalDoubleArrayStringUUID.
 func (s *TestResponseFormatTestOK) SetOptionalDoubleArrayStringUUID(val [][]uuid.UUID) {
-	s.OptionalDoubleArrayStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalInteger sets the value of OptionalInteger.
 func (s *TestResponseFormatTestOK) SetOptionalInteger(val OptInt) {
-	s.OptionalInteger = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalIntegerInt16 sets the value of OptionalIntegerInt16.
 }
 
-// SetOptionalIntegerInt16 sets the value of OptionalIntegerInt16.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerInt16(val OptInt16) {
-	s.OptionalIntegerInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerInt32 sets the value of OptionalIntegerInt32.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerInt32(val OptInt32) {
-	s.OptionalIntegerInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerInt64 sets the value of OptionalIntegerInt64.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerInt64(val OptInt64) {
-	s.OptionalIntegerInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerInt8 sets the value of OptionalIntegerInt8.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerInt8(val OptInt8) {
-	s.OptionalIntegerInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint sets the value of OptionalIntegerUint.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerUint(val OptUint) {
-	s.OptionalIntegerUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint16 sets the value of OptionalIntegerUint16.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerUint16(val OptUint16) {
-	s.OptionalIntegerUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint32 sets the value of OptionalIntegerUint32.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerUint32(val OptUint32) {
-	s.OptionalIntegerUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint64 sets the value of OptionalIntegerUint64.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerUint64(val OptUint64) {
-	s.OptionalIntegerUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUint8 sets the value of OptionalIntegerUint8.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerUint8(val OptUint8) {
-	s.OptionalIntegerUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnix sets the value of OptionalIntegerUnix.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerUnix(val OptUnixSeconds) {
-	s.OptionalIntegerUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusMicro sets the value of OptionalIntegerUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerUnixMinusMicro(val OptUnixMicro) {
-	s.OptionalIntegerUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusMilli sets the value of OptionalIntegerUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerUnixMinusMilli(val OptUnixMilli) {
-	s.OptionalIntegerUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusNano sets the value of OptionalIntegerUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerUnixMinusNano(val OptUnixNano) {
-	s.OptionalIntegerUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalIntegerUnixMinusSeconds sets the value of OptionalIntegerUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetOptionalIntegerUnixMinusSeconds(val OptUnixSeconds) {
-	s.OptionalIntegerUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNull sets the value of OptionalNull.
-func (s *TestResponseFormatTestOK) SetOptionalNull(val OptNull) {
-	s.OptionalNull = val
-}
+func (s *TestResponseFormatTestOK) SetOptionalNull(val OptNull) { _ = "STUB: not implemented"; return }
 
 // SetOptionalNumber sets the value of OptionalNumber.
 func (s *TestResponseFormatTestOK) SetOptionalNumber(val OptFloat64) {
-	s.OptionalNumber = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalNumberDecimal sets the value of OptionalNumberDecimal.
 }
 
-// SetOptionalNumberDecimal sets the value of OptionalNumberDecimal.
 func (s *TestResponseFormatTestOK) SetOptionalNumberDecimal(val OptDecimal) {
-	s.OptionalNumberDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberDouble sets the value of OptionalNumberDouble.
 func (s *TestResponseFormatTestOK) SetOptionalNumberDouble(val OptFloat64) {
-	s.OptionalNumberDouble = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberFloat sets the value of OptionalNumberFloat.
 func (s *TestResponseFormatTestOK) SetOptionalNumberFloat(val OptFloat32) {
-	s.OptionalNumberFloat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberInt32 sets the value of OptionalNumberInt32.
 func (s *TestResponseFormatTestOK) SetOptionalNumberInt32(val OptInt32) {
-	s.OptionalNumberInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalNumberInt64 sets the value of OptionalNumberInt64.
 func (s *TestResponseFormatTestOK) SetOptionalNumberInt64(val OptInt64) {
-	s.OptionalNumberInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalString sets the value of OptionalString.
 func (s *TestResponseFormatTestOK) SetOptionalString(val OptString) {
-	s.OptionalString = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalStringBase64 sets the value of OptionalStringBase64.
 }
 
-// SetOptionalStringBase64 sets the value of OptionalStringBase64.
 func (s *TestResponseFormatTestOK) SetOptionalStringBase64(val []byte) {
-	s.OptionalStringBase64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringBinary sets the value of OptionalStringBinary.
 func (s *TestResponseFormatTestOK) SetOptionalStringBinary(val OptString) {
-	s.OptionalStringBinary = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringByte sets the value of OptionalStringByte.
 func (s *TestResponseFormatTestOK) SetOptionalStringByte(val []byte) {
-	s.OptionalStringByte = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDate sets the value of OptionalStringDate.
 func (s *TestResponseFormatTestOK) SetOptionalStringDate(val OptDate) {
-	s.OptionalStringDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDateMinusTime sets the value of OptionalStringDateMinusTime.
 func (s *TestResponseFormatTestOK) SetOptionalStringDateMinusTime(val OptDateTime) {
-	s.OptionalStringDateMinusTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDecimal sets the value of OptionalStringDecimal.
 func (s *TestResponseFormatTestOK) SetOptionalStringDecimal(val OptStringDecimal) {
-	s.OptionalStringDecimal = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringDuration sets the value of OptionalStringDuration.
 func (s *TestResponseFormatTestOK) SetOptionalStringDuration(val OptDuration) {
-	s.OptionalStringDuration = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringEmail sets the value of OptionalStringEmail.
 func (s *TestResponseFormatTestOK) SetOptionalStringEmail(val OptString) {
-	s.OptionalStringEmail = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringFloat32 sets the value of OptionalStringFloat32.
 func (s *TestResponseFormatTestOK) SetOptionalStringFloat32(val OptStringFloat32) {
-	s.OptionalStringFloat32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringFloat64 sets the value of OptionalStringFloat64.
 func (s *TestResponseFormatTestOK) SetOptionalStringFloat64(val OptStringFloat64) {
-	s.OptionalStringFloat64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringHostname sets the value of OptionalStringHostname.
 func (s *TestResponseFormatTestOK) SetOptionalStringHostname(val OptString) {
-	s.OptionalStringHostname = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringHTTPMinusDate sets the value of OptionalStringHTTPMinusDate.
 func (s *TestResponseFormatTestOK) SetOptionalStringHTTPMinusDate(val OptHTTPDate) {
-	s.OptionalStringHTTPMinusDate = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt sets the value of OptionalStringInt.
 func (s *TestResponseFormatTestOK) SetOptionalStringInt(val OptStringInt) {
-	s.OptionalStringInt = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt16 sets the value of OptionalStringInt16.
 func (s *TestResponseFormatTestOK) SetOptionalStringInt16(val OptStringInt16) {
-	s.OptionalStringInt16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt32 sets the value of OptionalStringInt32.
 func (s *TestResponseFormatTestOK) SetOptionalStringInt32(val OptStringInt32) {
-	s.OptionalStringInt32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt64 sets the value of OptionalStringInt64.
 func (s *TestResponseFormatTestOK) SetOptionalStringInt64(val OptStringInt64) {
-	s.OptionalStringInt64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringInt8 sets the value of OptionalStringInt8.
 func (s *TestResponseFormatTestOK) SetOptionalStringInt8(val OptStringInt8) {
-	s.OptionalStringInt8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringIP sets the value of OptionalStringIP.
 func (s *TestResponseFormatTestOK) SetOptionalStringIP(val OptIP) {
-	s.OptionalStringIP = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringIpv4 sets the value of OptionalStringIpv4.
 func (s *TestResponseFormatTestOK) SetOptionalStringIpv4(val OptIPv4) {
-	s.OptionalStringIpv4 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringIpv6 sets the value of OptionalStringIpv6.
 func (s *TestResponseFormatTestOK) SetOptionalStringIpv6(val OptIPv6) {
-	s.OptionalStringIpv6 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringMAC sets the value of OptionalStringMAC.
 func (s *TestResponseFormatTestOK) SetOptionalStringMAC(val OptHardwareAddr) {
-	s.OptionalStringMAC = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringPassword sets the value of OptionalStringPassword.
 func (s *TestResponseFormatTestOK) SetOptionalStringPassword(val OptString) {
-	s.OptionalStringPassword = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringTime sets the value of OptionalStringTime.
 func (s *TestResponseFormatTestOK) SetOptionalStringTime(val OptTime) {
-	s.OptionalStringTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint sets the value of OptionalStringUint.
 func (s *TestResponseFormatTestOK) SetOptionalStringUint(val OptStringUint) {
-	s.OptionalStringUint = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint16 sets the value of OptionalStringUint16.
 func (s *TestResponseFormatTestOK) SetOptionalStringUint16(val OptStringUint16) {
-	s.OptionalStringUint16 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint32 sets the value of OptionalStringUint32.
 func (s *TestResponseFormatTestOK) SetOptionalStringUint32(val OptStringUint32) {
-	s.OptionalStringUint32 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint64 sets the value of OptionalStringUint64.
 func (s *TestResponseFormatTestOK) SetOptionalStringUint64(val OptStringUint64) {
-	s.OptionalStringUint64 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUint8 sets the value of OptionalStringUint8.
 func (s *TestResponseFormatTestOK) SetOptionalStringUint8(val OptStringUint8) {
-	s.OptionalStringUint8 = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnix sets the value of OptionalStringUnix.
 func (s *TestResponseFormatTestOK) SetOptionalStringUnix(val OptStringUnixSeconds) {
-	s.OptionalStringUnix = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusMicro sets the value of OptionalStringUnixMinusMicro.
 func (s *TestResponseFormatTestOK) SetOptionalStringUnixMinusMicro(val OptStringUnixMicro) {
-	s.OptionalStringUnixMinusMicro = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusMilli sets the value of OptionalStringUnixMinusMilli.
 func (s *TestResponseFormatTestOK) SetOptionalStringUnixMinusMilli(val OptStringUnixMilli) {
-	s.OptionalStringUnixMinusMilli = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusNano sets the value of OptionalStringUnixMinusNano.
 func (s *TestResponseFormatTestOK) SetOptionalStringUnixMinusNano(val OptStringUnixNano) {
-	s.OptionalStringUnixMinusNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUnixMinusSeconds sets the value of OptionalStringUnixMinusSeconds.
 func (s *TestResponseFormatTestOK) SetOptionalStringUnixMinusSeconds(val OptStringUnixSeconds) {
-	s.OptionalStringUnixMinusSeconds = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringURI sets the value of OptionalStringURI.
 func (s *TestResponseFormatTestOK) SetOptionalStringURI(val OptURI) {
-	s.OptionalStringURI = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOptionalStringUUID sets the value of OptionalStringUUID.
 func (s *TestResponseFormatTestOK) SetOptionalStringUUID(val OptUUID) {
-	s.OptionalStringUUID = val
+	_ = "STUB: not implemented"
+	return
 }

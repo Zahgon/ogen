@@ -13,15 +13,18 @@ type GetMixedDataOKApplicationJSON struct {
 
 // GetMessage returns the value of Message.
 func (s *GetMixedDataOKApplicationJSON) GetMessage() OptString {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return *new(OptString)
 }
 
-// SetMessage sets the value of Message.
 func (s *GetMixedDataOKApplicationJSON) SetMessage(val OptString) {
-	s.Message = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*GetMixedDataOKApplicationJSON) getMixedDataRes() {}
+func (*GetMixedDataOKApplicationJSON) getMixedDataRes() { _ = "STUB: not implemented"; return }
 
 type GetMixedDataOKApplicationOctetStream struct {
 	Data io.Reader
@@ -31,10 +34,8 @@ type GetMixedDataOKApplicationOctetStream struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s GetMixedDataOKApplicationOctetStream) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // GetMixedDataOKRawApplicationOctetStream represents raw HTTP response for GetMixedData application/octet-stream.
@@ -44,15 +45,21 @@ type GetMixedDataOKRawApplicationOctetStream struct {
 
 // GetResponse returns the value of Response.
 func (s *GetMixedDataOKRawApplicationOctetStream) GetResponse() *http.Response {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return nil
 }
 
-// SetResponse sets the value of Response.
 func (s *GetMixedDataOKRawApplicationOctetStream) SetResponse(val *http.Response) {
-	s.Response = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*GetMixedDataOKRawApplicationOctetStream) getMixedDataRes() {}
+func (*GetMixedDataOKRawApplicationOctetStream) getMixedDataRes() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type GetNormalDataOK struct {
 	Message OptString `json:"message"`
@@ -60,13 +67,13 @@ type GetNormalDataOK struct {
 
 // GetMessage returns the value of Message.
 func (s *GetNormalDataOK) GetMessage() OptString {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return *new(OptString)
 }
 
-// SetMessage sets the value of Message.
-func (s *GetNormalDataOK) SetMessage(val OptString) {
-	s.Message = val
-}
+func (s *GetNormalDataOK) SetMessage(val OptString) { _ = "STUB: not implemented"; return }
 
 type GetRawDataInsideOperationGroupOK struct {
 	Message OptString `json:"message"`
@@ -74,30 +81,40 @@ type GetRawDataInsideOperationGroupOK struct {
 
 // GetMessage returns the value of Message.
 func (s *GetRawDataInsideOperationGroupOK) GetMessage() OptString {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return *new(OptString)
 }
 
-// SetMessage sets the value of Message.
 func (s *GetRawDataInsideOperationGroupOK) SetMessage(val OptString) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// GetRawDataInsideOperationGroupOKRawApplicationJSON represents raw HTTP response for GetRawDataInsideOperationGroup application/json.
+	return
 }
 
-// GetRawDataInsideOperationGroupOKRawApplicationJSON represents raw HTTP response for GetRawDataInsideOperationGroup application/json.
 type GetRawDataInsideOperationGroupOKRawApplicationJSON struct {
 	Response *http.Response `json:"-"`
 }
 
 // GetResponse returns the value of Response.
 func (s *GetRawDataInsideOperationGroupOKRawApplicationJSON) GetResponse() *http.Response {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return nil
 }
 
-// SetResponse sets the value of Response.
 func (s *GetRawDataInsideOperationGroupOKRawApplicationJSON) SetResponse(val *http.Response) {
-	s.Response = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*GetRawDataInsideOperationGroupOKRawApplicationJSON) getRawDataInsideOperationGroupRes() {}
+func (*GetRawDataInsideOperationGroupOKRawApplicationJSON) getRawDataInsideOperationGroupRes() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type GetRawDataOK struct {
 	Message OptString `json:"message"`
@@ -105,38 +122,44 @@ type GetRawDataOK struct {
 
 // GetMessage returns the value of Message.
 func (s *GetRawDataOK) GetMessage() OptString {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return *new(OptString)
 }
 
-// SetMessage sets the value of Message.
 func (s *GetRawDataOK) SetMessage(val OptString) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// GetRawDataOKRawApplicationJSON represents raw HTTP response for GetRawData application/json.
+	return
 }
 
-// GetRawDataOKRawApplicationJSON represents raw HTTP response for GetRawData application/json.
 type GetRawDataOKRawApplicationJSON struct {
 	Response *http.Response `json:"-"`
 }
 
 // GetResponse returns the value of Response.
 func (s *GetRawDataOKRawApplicationJSON) GetResponse() *http.Response {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return nil
 }
 
-// SetResponse sets the value of Response.
 func (s *GetRawDataOKRawApplicationJSON) SetResponse(val *http.Response) {
-	s.Response = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*GetRawDataOKRawApplicationJSON) getRawDataRes() {}
+func (*GetRawDataOKRawApplicationJSON) getRawDataRes() {
+	_ = "STUB: not implemented"
 
-// NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
+	// NewOptString returns new OptString with value set to v.
+	return
 }
+
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -145,33 +168,20 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }

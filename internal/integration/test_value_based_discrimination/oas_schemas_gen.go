@@ -4,8 +4,6 @@ package api
 
 import (
 	"time"
-
-	"github.com/go-faster/errors"
 )
 
 // Ref: #/components/schemas/ActiveStatus
@@ -17,25 +15,34 @@ type ActiveStatus struct {
 
 // GetStatus returns the value of Status.
 func (s *ActiveStatus) GetStatus() ActiveStatusStatus {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetLastActive returns the value of LastActive.
+	return *new(ActiveStatusStatus)
 }
 
-// GetLastActive returns the value of LastActive.
 func (s *ActiveStatus) GetLastActive() time.Time {
-	return s.LastActive
+	_ = "STUB: not implemented"
+	return *
+
+	// SetStatus sets the value of Status.
+	new(time.Time)
 }
 
-// SetStatus sets the value of Status.
 func (s *ActiveStatus) SetStatus(val ActiveStatusStatus) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetLastActive sets the value of LastActive.
+	return
 }
 
-// SetLastActive sets the value of LastActive.
 func (s *ActiveStatus) SetLastActive(val time.Time) {
-	s.LastActive = val
+	_ = "STUB: not implemented"
+
+	// Active states.
+	return
 }
 
-// Active states.
 type ActiveStatusStatus string
 
 const (
@@ -44,37 +51,18 @@ const (
 )
 
 // AllValues returns all ActiveStatusStatus values.
-func (ActiveStatusStatus) AllValues() []ActiveStatusStatus {
-	return []ActiveStatusStatus{
-		ActiveStatusStatusActive,
-		ActiveStatusStatusPending,
-	}
-}
+func (ActiveStatusStatus) AllValues() []ActiveStatusStatus { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s ActiveStatusStatus) MarshalText() ([]byte, error) {
-	switch s {
-	case ActiveStatusStatusActive:
-		return []byte(s), nil
-	case ActiveStatusStatusPending:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *ActiveStatusStatus) UnmarshalText(data []byte) error {
-	switch ActiveStatusStatus(data) {
-	case ActiveStatusStatusActive:
-		*s = ActiveStatusStatusActive
-		return nil
-	case ActiveStatusStatusPending:
-		*s = ActiveStatusStatusPending
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/AdminResource
@@ -88,35 +76,47 @@ type AdminResource struct {
 
 // GetType returns the value of Type.
 func (s *AdminResource) GetType() AdminResourceType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetRole returns the value of Role.
+	return *new(AdminResourceType)
 }
 
-// GetRole returns the value of Role.
 func (s *AdminResource) GetRole() AdminResourceRole {
-	return s.Role
+	_ = "STUB: not implemented"
+
+	// GetAdminId returns the value of AdminId.
+	return *new(AdminResourceRole)
 }
 
-// GetAdminId returns the value of AdminId.
 func (s *AdminResource) GetAdminId() string {
-	return s.AdminId
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return ""
 }
 
-// SetType sets the value of Type.
 func (s *AdminResource) SetType(val AdminResourceType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetRole sets the value of Role.
+	return
 }
 
-// SetRole sets the value of Role.
 func (s *AdminResource) SetRole(val AdminResourceRole) {
-	s.Role = val
+	_ = "STUB: not implemented"
+
+	// SetAdminId sets the value of AdminId.
+	return
 }
 
-// SetAdminId sets the value of AdminId.
 func (s *AdminResource) SetAdminId(val string) {
-	s.AdminId = val
+	_ = "STUB: not implemented"
+
+	// Admin roles.
+	return
 }
 
-// Admin roles.
 type AdminResourceRole string
 
 const (
@@ -125,38 +125,16 @@ const (
 )
 
 // AllValues returns all AdminResourceRole values.
-func (AdminResourceRole) AllValues() []AdminResourceRole {
-	return []AdminResourceRole{
-		AdminResourceRoleSuperadmin,
-		AdminResourceRoleModerator,
-	}
-}
+func (AdminResourceRole) AllValues() []AdminResourceRole { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s AdminResourceRole) MarshalText() ([]byte, error) {
-	switch s {
-	case AdminResourceRoleSuperadmin:
-		return []byte(s), nil
-	case AdminResourceRoleModerator:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *AdminResourceRole) UnmarshalText(data []byte) error {
-	switch AdminResourceRole(data) {
-	case AdminResourceRoleSuperadmin:
-		*s = AdminResourceRoleSuperadmin
-		return nil
-	case AdminResourceRoleModerator:
-		*s = AdminResourceRoleModerator
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *AdminResourceRole) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Resource type.
 type AdminResourceType string
@@ -166,32 +144,16 @@ const (
 )
 
 // AllValues returns all AdminResourceType values.
-func (AdminResourceType) AllValues() []AdminResourceType {
-	return []AdminResourceType{
-		AdminResourceTypeAdmin,
-	}
-}
+func (AdminResourceType) AllValues() []AdminResourceType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s AdminResourceType) MarshalText() ([]byte, error) {
-	switch s {
-	case AdminResourceTypeAdmin:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *AdminResourceType) UnmarshalText(data []byte) error {
-	switch AdminResourceType(data) {
-	case AdminResourceTypeAdmin:
-		*s = AdminResourceTypeAdmin
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *AdminResourceType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Mixed discrimination - some fields by type, some by value.
 // Ref: #/components/schemas/Event
@@ -214,76 +176,49 @@ const (
 )
 
 // IsUserEvent reports whether Event is UserEvent.
-func (s Event) IsUserEvent() bool { return s.Type == UserEventEvent }
+func (s Event) IsUserEvent() bool { _ = "STUB: not implemented"; return false }
 
 // IsSystemEvent reports whether Event is SystemEvent.
-func (s Event) IsSystemEvent() bool { return s.Type == SystemEventEvent }
+func (s Event) IsSystemEvent() bool { _ = "STUB: not implemented"; return false }
 
 // IsMetricEvent reports whether Event is MetricEvent.
-func (s Event) IsMetricEvent() bool { return s.Type == MetricEventEvent }
+func (s Event) IsMetricEvent() bool { _ = "STUB: not implemented"; return false }
 
 // SetUserEvent sets Event to UserEvent.
-func (s *Event) SetUserEvent(v UserEvent) {
-	s.Type = UserEventEvent
-	s.UserEvent = v
-}
+func (s *Event) SetUserEvent(v UserEvent) { _ = "STUB: not implemented"; return }
 
 // GetUserEvent returns UserEvent and true boolean if Event is UserEvent.
 func (s Event) GetUserEvent() (v UserEvent, ok bool) {
-	if !s.IsUserEvent() {
-		return v, false
-	}
-	return s.UserEvent, true
+	_ = "STUB: not implemented"
+	return *new(UserEvent), false
 }
 
 // NewUserEventEvent returns new Event from UserEvent.
-func NewUserEventEvent(v UserEvent) Event {
-	var s Event
-	s.SetUserEvent(v)
-	return s
-}
+func NewUserEventEvent(v UserEvent) Event { _ = "STUB: not implemented"; return *new(Event) }
 
 // SetSystemEvent sets Event to SystemEvent.
-func (s *Event) SetSystemEvent(v SystemEvent) {
-	s.Type = SystemEventEvent
-	s.SystemEvent = v
-}
+func (s *Event) SetSystemEvent(v SystemEvent) { _ = "STUB: not implemented"; return }
 
 // GetSystemEvent returns SystemEvent and true boolean if Event is SystemEvent.
 func (s Event) GetSystemEvent() (v SystemEvent, ok bool) {
-	if !s.IsSystemEvent() {
-		return v, false
-	}
-	return s.SystemEvent, true
+	_ = "STUB: not implemented"
+	return *new(SystemEvent), false
 }
 
 // NewSystemEventEvent returns new Event from SystemEvent.
-func NewSystemEventEvent(v SystemEvent) Event {
-	var s Event
-	s.SetSystemEvent(v)
-	return s
-}
+func NewSystemEventEvent(v SystemEvent) Event { _ = "STUB: not implemented"; return *new(Event) }
 
 // SetMetricEvent sets Event to MetricEvent.
-func (s *Event) SetMetricEvent(v MetricEvent) {
-	s.Type = MetricEventEvent
-	s.MetricEvent = v
-}
+func (s *Event) SetMetricEvent(v MetricEvent) { _ = "STUB: not implemented"; return }
 
 // GetMetricEvent returns MetricEvent and true boolean if Event is MetricEvent.
 func (s Event) GetMetricEvent() (v MetricEvent, ok bool) {
-	if !s.IsMetricEvent() {
-		return v, false
-	}
-	return s.MetricEvent, true
+	_ = "STUB: not implemented"
+	return *new(MetricEvent), false
 }
 
 // NewMetricEventEvent returns new Event from MetricEvent.
-func NewMetricEventEvent(v MetricEvent) Event {
-	var s Event
-	s.SetMetricEvent(v)
-	return s
-}
+func NewMetricEventEvent(v MetricEvent) Event { _ = "STUB: not implemented"; return *new(Event) }
 
 // Ref: #/components/schemas/FedExShippingOption
 type FedExShippingOption struct {
@@ -295,25 +230,34 @@ type FedExShippingOption struct {
 
 // GetCarrier returns the value of Carrier.
 func (s *FedExShippingOption) GetCarrier() FedExShippingOptionCarrier {
-	return s.Carrier
+	_ = "STUB: not implemented"
+
+	// GetSignature returns the value of Signature.
+	return *new(FedExShippingOptionCarrier)
 }
 
-// GetSignature returns the value of Signature.
 func (s *FedExShippingOption) GetSignature() FedExShippingOptionSignature {
-	return s.Signature
+	_ = "STUB: not implemented"
+	return *
+
+	// SetCarrier sets the value of Carrier.
+	new(FedExShippingOptionSignature)
 }
 
-// SetCarrier sets the value of Carrier.
 func (s *FedExShippingOption) SetCarrier(val FedExShippingOptionCarrier) {
-	s.Carrier = val
+	_ = "STUB: not implemented"
+
+	// SetSignature sets the value of Signature.
+	return
 }
 
-// SetSignature sets the value of Signature.
 func (s *FedExShippingOption) SetSignature(val FedExShippingOptionSignature) {
-	s.Signature = val
+	_ = "STUB: not implemented"
+
+	// Carrier identifier - unique enum value for discrimination.
+	return
 }
 
-// Carrier identifier - unique enum value for discrimination.
 type FedExShippingOptionCarrier string
 
 const (
@@ -322,30 +266,20 @@ const (
 
 // AllValues returns all FedExShippingOptionCarrier values.
 func (FedExShippingOptionCarrier) AllValues() []FedExShippingOptionCarrier {
-	return []FedExShippingOptionCarrier{
-		FedExShippingOptionCarrierFedex,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s FedExShippingOptionCarrier) MarshalText() ([]byte, error) {
-	switch s {
-	case FedExShippingOptionCarrierFedex:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *FedExShippingOptionCarrier) UnmarshalText(data []byte) error {
-	switch FedExShippingOptionCarrier(data) {
-	case FedExShippingOptionCarrierFedex:
-		*s = FedExShippingOptionCarrierFedex
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Signature type - has overlapping values with USPS.
@@ -359,42 +293,20 @@ const (
 
 // AllValues returns all FedExShippingOptionSignature values.
 func (FedExShippingOptionSignature) AllValues() []FedExShippingOptionSignature {
-	return []FedExShippingOptionSignature{
-		FedExShippingOptionSignatureGift,
-		FedExShippingOptionSignatureSample,
-		FedExShippingOptionSignatureExpress,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s FedExShippingOptionSignature) MarshalText() ([]byte, error) {
-	switch s {
-	case FedExShippingOptionSignatureGift:
-		return []byte(s), nil
-	case FedExShippingOptionSignatureSample:
-		return []byte(s), nil
-	case FedExShippingOptionSignatureExpress:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *FedExShippingOptionSignature) UnmarshalText(data []byte) error {
-	switch FedExShippingOptionSignature(data) {
-	case FedExShippingOptionSignatureGift:
-		*s = FedExShippingOptionSignatureGift
-		return nil
-	case FedExShippingOptionSignatureSample:
-		*s = FedExShippingOptionSignatureSample
-		return nil
-	case FedExShippingOptionSignatureExpress:
-		*s = FedExShippingOptionSignatureExpress
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/InactiveStatus
@@ -406,25 +318,34 @@ type InactiveStatus struct {
 
 // GetStatus returns the value of Status.
 func (s *InactiveStatus) GetStatus() InactiveStatusStatus {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetDeletedAt returns the value of DeletedAt.
+	return *new(InactiveStatusStatus)
 }
 
-// GetDeletedAt returns the value of DeletedAt.
 func (s *InactiveStatus) GetDeletedAt() time.Time {
-	return s.DeletedAt
+	_ = "STUB: not implemented"
+	return *
+
+	// SetStatus sets the value of Status.
+	new(time.Time)
 }
 
-// SetStatus sets the value of Status.
 func (s *InactiveStatus) SetStatus(val InactiveStatusStatus) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetDeletedAt sets the value of DeletedAt.
+	return
 }
 
-// SetDeletedAt sets the value of DeletedAt.
 func (s *InactiveStatus) SetDeletedAt(val time.Time) {
-	s.DeletedAt = val
+	_ = "STUB: not implemented"
+
+	// Inactive states.
+	return
 }
 
-// Inactive states.
 type InactiveStatusStatus string
 
 const (
@@ -434,36 +355,20 @@ const (
 
 // AllValues returns all InactiveStatusStatus values.
 func (InactiveStatusStatus) AllValues() []InactiveStatusStatus {
-	return []InactiveStatusStatus{
-		InactiveStatusStatusInactive,
-		InactiveStatusStatusDeleted,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s InactiveStatusStatus) MarshalText() ([]byte, error) {
-	switch s {
-	case InactiveStatusStatusInactive:
-		return []byte(s), nil
-	case InactiveStatusStatusDeleted:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *InactiveStatusStatus) UnmarshalText(data []byte) error {
-	switch InactiveStatusStatus(data) {
-	case InactiveStatusStatusInactive:
-		*s = InactiveStatusStatusInactive
-		return nil
-	case InactiveStatusStatusDeleted:
-		*s = InactiveStatusStatusDeleted
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // LogEventOK is response for LogEvent operation.
@@ -481,35 +386,48 @@ type MetricEvent struct {
 
 // GetEventType returns the value of EventType.
 func (s *MetricEvent) GetEventType() MetricEventEventType {
-	return s.EventType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPriority returns the value of Priority.
+	new(MetricEventEventType)
 }
 
-// GetPriority returns the value of Priority.
 func (s *MetricEvent) GetPriority() float64 {
-	return s.Priority
+	_ = "STUB: not implemented"
+
+	// GetMetricId returns the value of MetricId.
+	return 0
 }
 
-// GetMetricId returns the value of MetricId.
 func (s *MetricEvent) GetMetricId() string {
-	return s.MetricId
+	_ = "STUB: not implemented"
+
+	// SetEventType sets the value of EventType.
+	return ""
 }
 
-// SetEventType sets the value of EventType.
 func (s *MetricEvent) SetEventType(val MetricEventEventType) {
-	s.EventType = val
+	_ = "STUB: not implemented"
+
+	// SetPriority sets the value of Priority.
+	return
 }
 
-// SetPriority sets the value of Priority.
 func (s *MetricEvent) SetPriority(val float64) {
-	s.Priority = val
+	_ = "STUB: not implemented"
+
+	// SetMetricId sets the value of MetricId.
+	return
 }
 
-// SetMetricId sets the value of MetricId.
 func (s *MetricEvent) SetMetricId(val string) {
-	s.MetricId = val
+	_ = "STUB: not implemented"
+
+	// Metric event types - discriminated by value.
+	return
 }
 
-// Metric event types - discriminated by value.
 type MetricEventEventType string
 
 const (
@@ -519,36 +437,20 @@ const (
 
 // AllValues returns all MetricEventEventType values.
 func (MetricEventEventType) AllValues() []MetricEventEventType {
-	return []MetricEventEventType{
-		MetricEventEventTypeMetricUpdate,
-		MetricEventEventTypeMetricAlert,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s MetricEventEventType) MarshalText() ([]byte, error) {
-	switch s {
-	case MetricEventEventTypeMetricUpdate:
-		return []byte(s), nil
-	case MetricEventEventTypeMetricAlert:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *MetricEventEventType) UnmarshalText(data []byte) error {
-	switch MetricEventEventType(data) {
-	case MetricEventEventTypeMetricUpdate:
-		*s = MetricEventEventTypeMetricUpdate
-		return nil
-	case MetricEventEventTypeMetricAlert:
-		*s = MetricEventEventTypeMetricAlert
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Multiple fields with value-based discrimination.
@@ -570,51 +472,39 @@ const (
 )
 
 // IsUserResource reports whether Resource is UserResource.
-func (s Resource) IsUserResource() bool { return s.Type == UserResourceResource }
+func (s Resource) IsUserResource() bool { _ = "STUB: not implemented"; return false }
 
 // IsAdminResource reports whether Resource is AdminResource.
-func (s Resource) IsAdminResource() bool { return s.Type == AdminResourceResource }
+func (s Resource) IsAdminResource() bool { _ = "STUB: not implemented"; return false }
 
 // SetUserResource sets Resource to UserResource.
-func (s *Resource) SetUserResource(v UserResource) {
-	s.Type = UserResourceResource
-	s.UserResource = v
-}
+func (s *Resource) SetUserResource(v UserResource) { _ = "STUB: not implemented"; return }
 
 // GetUserResource returns UserResource and true boolean if Resource is UserResource.
 func (s Resource) GetUserResource() (v UserResource, ok bool) {
-	if !s.IsUserResource() {
-		return v, false
-	}
-	return s.UserResource, true
+	_ = "STUB: not implemented"
+	return *new(UserResource), false
 }
 
 // NewUserResourceResource returns new Resource from UserResource.
 func NewUserResourceResource(v UserResource) Resource {
-	var s Resource
-	s.SetUserResource(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Resource)
 }
 
 // SetAdminResource sets Resource to AdminResource.
-func (s *Resource) SetAdminResource(v AdminResource) {
-	s.Type = AdminResourceResource
-	s.AdminResource = v
-}
+func (s *Resource) SetAdminResource(v AdminResource) { _ = "STUB: not implemented"; return }
 
 // GetAdminResource returns AdminResource and true boolean if Resource is AdminResource.
 func (s Resource) GetAdminResource() (v AdminResource, ok bool) {
-	if !s.IsAdminResource() {
-		return v, false
-	}
-	return s.AdminResource, true
+	_ = "STUB: not implemented"
+	return *new(AdminResource), false
 }
 
 // NewAdminResourceResource returns new Resource from AdminResource.
 func NewAdminResourceResource(v AdminResource) Resource {
-	var s Resource
-	s.SetAdminResource(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Resource)
 }
 
 // Overlapping enum values with a discriminating field - carrier field discriminates, signature has
@@ -637,55 +527,45 @@ const (
 )
 
 // IsUSPSShippingOption reports whether ShippingOption is USPSShippingOption.
-func (s ShippingOption) IsUSPSShippingOption() bool {
-	return s.Type == USPSShippingOptionShippingOption
-}
+func (s ShippingOption) IsUSPSShippingOption() bool { _ = "STUB: not implemented"; return false }
 
 // IsFedExShippingOption reports whether ShippingOption is FedExShippingOption.
-func (s ShippingOption) IsFedExShippingOption() bool {
-	return s.Type == FedExShippingOptionShippingOption
-}
+func (s ShippingOption) IsFedExShippingOption() bool { _ = "STUB: not implemented"; return false }
 
 // SetUSPSShippingOption sets ShippingOption to USPSShippingOption.
 func (s *ShippingOption) SetUSPSShippingOption(v USPSShippingOption) {
-	s.Type = USPSShippingOptionShippingOption
-	s.USPSShippingOption = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetUSPSShippingOption returns USPSShippingOption and true boolean if ShippingOption is USPSShippingOption.
 func (s ShippingOption) GetUSPSShippingOption() (v USPSShippingOption, ok bool) {
-	if !s.IsUSPSShippingOption() {
-		return v, false
-	}
-	return s.USPSShippingOption, true
+	_ = "STUB: not implemented"
+	return *new(USPSShippingOption), false
 }
 
 // NewUSPSShippingOptionShippingOption returns new ShippingOption from USPSShippingOption.
 func NewUSPSShippingOptionShippingOption(v USPSShippingOption) ShippingOption {
-	var s ShippingOption
-	s.SetUSPSShippingOption(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ShippingOption)
 }
 
 // SetFedExShippingOption sets ShippingOption to FedExShippingOption.
 func (s *ShippingOption) SetFedExShippingOption(v FedExShippingOption) {
-	s.Type = FedExShippingOptionShippingOption
-	s.FedExShippingOption = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetFedExShippingOption returns FedExShippingOption and true boolean if ShippingOption is FedExShippingOption.
 func (s ShippingOption) GetFedExShippingOption() (v FedExShippingOption, ok bool) {
-	if !s.IsFedExShippingOption() {
-		return v, false
-	}
-	return s.FedExShippingOption, true
+	_ = "STUB: not implemented"
+	return *new(FedExShippingOption), false
 }
 
 // NewFedExShippingOptionShippingOption returns new ShippingOption from FedExShippingOption.
 func NewFedExShippingOptionShippingOption(v FedExShippingOption) ShippingOption {
-	var s ShippingOption
-	s.SetFedExShippingOption(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ShippingOption)
 }
 
 // Basic enum value discrimination - different enum values for same field.
@@ -707,51 +587,39 @@ const (
 )
 
 // IsActiveStatus reports whether StatusResponse is ActiveStatus.
-func (s StatusResponse) IsActiveStatus() bool { return s.Type == ActiveStatusStatusResponse }
+func (s StatusResponse) IsActiveStatus() bool { _ = "STUB: not implemented"; return false }
 
 // IsInactiveStatus reports whether StatusResponse is InactiveStatus.
-func (s StatusResponse) IsInactiveStatus() bool { return s.Type == InactiveStatusStatusResponse }
+func (s StatusResponse) IsInactiveStatus() bool { _ = "STUB: not implemented"; return false }
 
 // SetActiveStatus sets StatusResponse to ActiveStatus.
-func (s *StatusResponse) SetActiveStatus(v ActiveStatus) {
-	s.Type = ActiveStatusStatusResponse
-	s.ActiveStatus = v
-}
+func (s *StatusResponse) SetActiveStatus(v ActiveStatus) { _ = "STUB: not implemented"; return }
 
 // GetActiveStatus returns ActiveStatus and true boolean if StatusResponse is ActiveStatus.
 func (s StatusResponse) GetActiveStatus() (v ActiveStatus, ok bool) {
-	if !s.IsActiveStatus() {
-		return v, false
-	}
-	return s.ActiveStatus, true
+	_ = "STUB: not implemented"
+	return *new(ActiveStatus), false
 }
 
 // NewActiveStatusStatusResponse returns new StatusResponse from ActiveStatus.
 func NewActiveStatusStatusResponse(v ActiveStatus) StatusResponse {
-	var s StatusResponse
-	s.SetActiveStatus(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(StatusResponse)
 }
 
 // SetInactiveStatus sets StatusResponse to InactiveStatus.
-func (s *StatusResponse) SetInactiveStatus(v InactiveStatus) {
-	s.Type = InactiveStatusStatusResponse
-	s.InactiveStatus = v
-}
+func (s *StatusResponse) SetInactiveStatus(v InactiveStatus) { _ = "STUB: not implemented"; return }
 
 // GetInactiveStatus returns InactiveStatus and true boolean if StatusResponse is InactiveStatus.
 func (s StatusResponse) GetInactiveStatus() (v InactiveStatus, ok bool) {
-	if !s.IsInactiveStatus() {
-		return v, false
-	}
-	return s.InactiveStatus, true
+	_ = "STUB: not implemented"
+	return *new(InactiveStatus), false
 }
 
 // NewInactiveStatusStatusResponse returns new StatusResponse from InactiveStatus.
 func NewInactiveStatusStatusResponse(v InactiveStatus) StatusResponse {
-	var s StatusResponse
-	s.SetInactiveStatus(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(StatusResponse)
 }
 
 // Ref: #/components/schemas/SystemEvent
@@ -766,35 +634,48 @@ type SystemEvent struct {
 
 // GetEventType returns the value of EventType.
 func (s *SystemEvent) GetEventType() SystemEventEventType {
-	return s.EventType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPriority returns the value of Priority.
+	new(SystemEventEventType)
 }
 
-// GetPriority returns the value of Priority.
 func (s *SystemEvent) GetPriority() int {
-	return s.Priority
+	_ = "STUB: not implemented"
+
+	// GetSystemId returns the value of SystemId.
+	return 0
 }
 
-// GetSystemId returns the value of SystemId.
 func (s *SystemEvent) GetSystemId() string {
-	return s.SystemId
+	_ = "STUB: not implemented"
+
+	// SetEventType sets the value of EventType.
+	return ""
 }
 
-// SetEventType sets the value of EventType.
 func (s *SystemEvent) SetEventType(val SystemEventEventType) {
-	s.EventType = val
+	_ = "STUB: not implemented"
+
+	// SetPriority sets the value of Priority.
+	return
 }
 
-// SetPriority sets the value of Priority.
 func (s *SystemEvent) SetPriority(val int) {
-	s.Priority = val
+	_ = "STUB: not implemented"
+
+	// SetSystemId sets the value of SystemId.
+	return
 }
 
-// SetSystemId sets the value of SystemId.
 func (s *SystemEvent) SetSystemId(val string) {
-	s.SystemId = val
+	_ = "STUB: not implemented"
+
+	// System event types - discriminated by value.
+	return
 }
 
-// System event types - discriminated by value.
 type SystemEventEventType string
 
 const (
@@ -804,36 +685,20 @@ const (
 
 // AllValues returns all SystemEventEventType values.
 func (SystemEventEventType) AllValues() []SystemEventEventType {
-	return []SystemEventEventType{
-		SystemEventEventTypeSystemStart,
-		SystemEventEventTypeSystemStop,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s SystemEventEventType) MarshalText() ([]byte, error) {
-	switch s {
-	case SystemEventEventTypeSystemStart:
-		return []byte(s), nil
-	case SystemEventEventTypeSystemStop:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *SystemEventEventType) UnmarshalText(data []byte) error {
-	switch SystemEventEventType(data) {
-	case SystemEventEventTypeSystemStart:
-		*s = SystemEventEventTypeSystemStart
-		return nil
-	case SystemEventEventTypeSystemStop:
-		*s = SystemEventEventTypeSystemStop
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/USPSShippingOption
@@ -846,25 +711,34 @@ type USPSShippingOption struct {
 
 // GetCarrier returns the value of Carrier.
 func (s *USPSShippingOption) GetCarrier() USPSShippingOptionCarrier {
-	return s.Carrier
+	_ = "STUB: not implemented"
+
+	// GetSignature returns the value of Signature.
+	return *new(USPSShippingOptionCarrier)
 }
 
-// GetSignature returns the value of Signature.
 func (s *USPSShippingOption) GetSignature() USPSShippingOptionSignature {
-	return s.Signature
+	_ = "STUB: not implemented"
+	return *
+
+	// SetCarrier sets the value of Carrier.
+	new(USPSShippingOptionSignature)
 }
 
-// SetCarrier sets the value of Carrier.
 func (s *USPSShippingOption) SetCarrier(val USPSShippingOptionCarrier) {
-	s.Carrier = val
+	_ = "STUB: not implemented"
+
+	// SetSignature sets the value of Signature.
+	return
 }
 
-// SetSignature sets the value of Signature.
 func (s *USPSShippingOption) SetSignature(val USPSShippingOptionSignature) {
-	s.Signature = val
+	_ = "STUB: not implemented"
+
+	// Carrier identifier - unique enum value for discrimination.
+	return
 }
 
-// Carrier identifier - unique enum value for discrimination.
 type USPSShippingOptionCarrier string
 
 const (
@@ -873,30 +747,20 @@ const (
 
 // AllValues returns all USPSShippingOptionCarrier values.
 func (USPSShippingOptionCarrier) AllValues() []USPSShippingOptionCarrier {
-	return []USPSShippingOptionCarrier{
-		USPSShippingOptionCarrierUsps,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s USPSShippingOptionCarrier) MarshalText() ([]byte, error) {
-	switch s {
-	case USPSShippingOptionCarrierUsps:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *USPSShippingOptionCarrier) UnmarshalText(data []byte) error {
-	switch USPSShippingOptionCarrier(data) {
-	case USPSShippingOptionCarrierUsps:
-		*s = USPSShippingOptionCarrierUsps
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Signature type - has overlapping values with FedEx.
@@ -910,42 +774,20 @@ const (
 
 // AllValues returns all USPSShippingOptionSignature values.
 func (USPSShippingOptionSignature) AllValues() []USPSShippingOptionSignature {
-	return []USPSShippingOptionSignature{
-		USPSShippingOptionSignatureGift,
-		USPSShippingOptionSignatureSample,
-		USPSShippingOptionSignatureStandard,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s USPSShippingOptionSignature) MarshalText() ([]byte, error) {
-	switch s {
-	case USPSShippingOptionSignatureGift:
-		return []byte(s), nil
-	case USPSShippingOptionSignatureSample:
-		return []byte(s), nil
-	case USPSShippingOptionSignatureStandard:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *USPSShippingOptionSignature) UnmarshalText(data []byte) error {
-	switch USPSShippingOptionSignature(data) {
-	case USPSShippingOptionSignatureGift:
-		*s = USPSShippingOptionSignatureGift
-		return nil
-	case USPSShippingOptionSignatureSample:
-		*s = USPSShippingOptionSignatureSample
-		return nil
-	case USPSShippingOptionSignatureStandard:
-		*s = USPSShippingOptionSignatureStandard
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/UserEvent
@@ -960,35 +802,48 @@ type UserEvent struct {
 
 // GetEventType returns the value of EventType.
 func (s *UserEvent) GetEventType() UserEventEventType {
-	return s.EventType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPriority returns the value of Priority.
+	new(UserEventEventType)
 }
 
-// GetPriority returns the value of Priority.
 func (s *UserEvent) GetPriority() string {
-	return s.Priority
+	_ = "STUB: not implemented"
+
+	// GetUserId returns the value of UserId.
+	return ""
 }
 
-// GetUserId returns the value of UserId.
 func (s *UserEvent) GetUserId() string {
-	return s.UserId
+	_ = "STUB: not implemented"
+
+	// SetEventType sets the value of EventType.
+	return ""
 }
 
-// SetEventType sets the value of EventType.
 func (s *UserEvent) SetEventType(val UserEventEventType) {
-	s.EventType = val
+	_ = "STUB: not implemented"
+
+	// SetPriority sets the value of Priority.
+	return
 }
 
-// SetPriority sets the value of Priority.
 func (s *UserEvent) SetPriority(val string) {
-	s.Priority = val
+	_ = "STUB: not implemented"
+
+	// SetUserId sets the value of UserId.
+	return
 }
 
-// SetUserId sets the value of UserId.
 func (s *UserEvent) SetUserId(val string) {
-	s.UserId = val
+	_ = "STUB: not implemented"
+
+	// User event types - discriminated by value.
+	return
 }
 
-// User event types - discriminated by value.
 type UserEventEventType string
 
 const (
@@ -997,37 +852,18 @@ const (
 )
 
 // AllValues returns all UserEventEventType values.
-func (UserEventEventType) AllValues() []UserEventEventType {
-	return []UserEventEventType{
-		UserEventEventTypeUserLogin,
-		UserEventEventTypeUserLogout,
-	}
-}
+func (UserEventEventType) AllValues() []UserEventEventType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s UserEventEventType) MarshalText() ([]byte, error) {
-	switch s {
-	case UserEventEventTypeUserLogin:
-		return []byte(s), nil
-	case UserEventEventTypeUserLogout:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *UserEventEventType) UnmarshalText(data []byte) error {
-	switch UserEventEventType(data) {
-	case UserEventEventTypeUserLogin:
-		*s = UserEventEventTypeUserLogin
-		return nil
-	case UserEventEventTypeUserLogout:
-		*s = UserEventEventTypeUserLogout
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/UserResource
@@ -1041,35 +877,47 @@ type UserResource struct {
 
 // GetType returns the value of Type.
 func (s *UserResource) GetType() UserResourceType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetRole returns the value of Role.
+	return *new(UserResourceType)
 }
 
-// GetRole returns the value of Role.
 func (s *UserResource) GetRole() UserResourceRole {
-	return s.Role
+	_ = "STUB: not implemented"
+
+	// GetUserId returns the value of UserId.
+	return *new(UserResourceRole)
 }
 
-// GetUserId returns the value of UserId.
 func (s *UserResource) GetUserId() string {
-	return s.UserId
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return ""
 }
 
-// SetType sets the value of Type.
 func (s *UserResource) SetType(val UserResourceType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetRole sets the value of Role.
+	return
 }
 
-// SetRole sets the value of Role.
 func (s *UserResource) SetRole(val UserResourceRole) {
-	s.Role = val
+	_ = "STUB: not implemented"
+
+	// SetUserId sets the value of UserId.
+	return
 }
 
-// SetUserId sets the value of UserId.
 func (s *UserResource) SetUserId(val string) {
-	s.UserId = val
+	_ = "STUB: not implemented"
+
+	// User roles.
+	return
 }
 
-// User roles.
 type UserResourceRole string
 
 const (
@@ -1078,38 +926,13 @@ const (
 )
 
 // AllValues returns all UserResourceRole values.
-func (UserResourceRole) AllValues() []UserResourceRole {
-	return []UserResourceRole{
-		UserResourceRoleViewer,
-		UserResourceRoleEditor,
-	}
-}
+func (UserResourceRole) AllValues() []UserResourceRole { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s UserResourceRole) MarshalText() ([]byte, error) {
-	switch s {
-	case UserResourceRoleViewer:
-		return []byte(s), nil
-	case UserResourceRoleEditor:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s UserResourceRole) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *UserResourceRole) UnmarshalText(data []byte) error {
-	switch UserResourceRole(data) {
-	case UserResourceRoleViewer:
-		*s = UserResourceRoleViewer
-		return nil
-	case UserResourceRoleEditor:
-		*s = UserResourceRoleEditor
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *UserResourceRole) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Resource type.
 type UserResourceType string
@@ -1119,29 +942,10 @@ const (
 )
 
 // AllValues returns all UserResourceType values.
-func (UserResourceType) AllValues() []UserResourceType {
-	return []UserResourceType{
-		UserResourceTypeUser,
-	}
-}
+func (UserResourceType) AllValues() []UserResourceType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s UserResourceType) MarshalText() ([]byte, error) {
-	switch s {
-	case UserResourceTypeUser:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s UserResourceType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *UserResourceType) UnmarshalText(data []byte) error {
-	switch UserResourceType(data) {
-	case UserResourceTypeUser:
-		*s = UserResourceTypeUser
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *UserResourceType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }

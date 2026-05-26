@@ -5,10 +5,6 @@ package api
 import (
 	"context"
 	"net/http"
-	"strings"
-
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/ogenerrors"
 )
 
 // SecurityHandler is handler for security parameters.
@@ -19,17 +15,7 @@ type SecurityHandler interface {
 }
 
 func findAuthorization(h http.Header, prefix string) (string, bool) {
-	v, ok := h["Authorization"]
-	if !ok {
-		return "", false
-	}
-	for _, vv := range v {
-		scheme, value, ok := strings.Cut(vv, " ")
-		if !ok || !strings.EqualFold(scheme, prefix) {
-			continue
-		}
-		return value, true
-	}
+	_ = "STUB: not implemented"
 	return "", false
 }
 
@@ -606,33 +592,13 @@ var operationRolesBearerToken = map[string][]string{
 //	requiredRoles := GetRolesForBearerToken(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForBearerToken(operation string) []string {
-	roles, ok := operationRolesBearerToken[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForBearerToken(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 func (s *Server) securityBearerToken(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t BearerToken
-	const parameterName = "authorization"
-	value := req.Header.Get(parameterName)
-	if value == "" {
-		return ctx, false, nil
-	}
-	t.APIKey = value
-	t.Roles = operationRolesBearerToken[operationName]
-	rctx, err := s.sec.HandleBearerToken(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
 // SecuritySource is provider of security values (tokens, passwords, etc.).
@@ -643,10 +609,6 @@ type SecuritySource interface {
 }
 
 func (s *Client) securityBearerToken(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.BearerToken(ctx, operationName)
-	if err != nil {
-		return errors.Wrap(err, "security source \"BearerToken\"")
-	}
-	req.Header.Set("authorization", t.APIKey)
+	_ = "STUB: not implemented"
 	return nil
 }

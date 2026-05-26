@@ -5,7 +5,6 @@ package api
 import (
 	"io"
 
-	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
 )
 
@@ -17,10 +16,8 @@ type AnyContentTypeBinaryStringSchemaDefaultDef struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s AnyContentTypeBinaryStringSchemaDefaultDef) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // AnyContentTypeBinaryStringSchemaDefaultDefStatusCodeWithHeaders wraps AnyContentTypeBinaryStringSchemaDefaultDef with status code and response headers.
@@ -32,32 +29,43 @@ type AnyContentTypeBinaryStringSchemaDefaultDefStatusCodeWithHeaders struct {
 
 // GetStatusCode returns the value of StatusCode.
 func (s *AnyContentTypeBinaryStringSchemaDefaultDefStatusCodeWithHeaders) GetStatusCode() int {
-	return s.StatusCode
+	_ = "STUB: not implemented"
+	return 0
+
+	// GetContentType returns the value of ContentType.
 }
 
-// GetContentType returns the value of ContentType.
 func (s *AnyContentTypeBinaryStringSchemaDefaultDefStatusCodeWithHeaders) GetContentType() string {
-	return s.ContentType
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetResponse returns the value of Response.
 }
 
-// GetResponse returns the value of Response.
 func (s *AnyContentTypeBinaryStringSchemaDefaultDefStatusCodeWithHeaders) GetResponse() AnyContentTypeBinaryStringSchemaDefaultDef {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(AnyContentTypeBinaryStringSchemaDefaultDef)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *AnyContentTypeBinaryStringSchemaDefaultDefStatusCodeWithHeaders) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetContentType sets the value of ContentType.
 }
 
-// SetContentType sets the value of ContentType.
 func (s *AnyContentTypeBinaryStringSchemaDefaultDefStatusCodeWithHeaders) SetContentType(val string) {
-	s.ContentType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetResponse sets the value of Response.
 }
 
-// SetResponse sets the value of Response.
 func (s *AnyContentTypeBinaryStringSchemaDefaultDefStatusCodeWithHeaders) SetResponse(val AnyContentTypeBinaryStringSchemaDefaultDef) {
-	s.Response = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type AnyContentTypeBinaryStringSchemaOK struct {
@@ -68,10 +76,8 @@ type AnyContentTypeBinaryStringSchemaOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s AnyContentTypeBinaryStringSchemaOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // AnyContentTypeBinaryStringSchemaOKHeaders wraps AnyContentTypeBinaryStringSchemaOK with response headers.
@@ -82,107 +88,123 @@ type AnyContentTypeBinaryStringSchemaOKHeaders struct {
 
 // GetContentType returns the value of ContentType.
 func (s *AnyContentTypeBinaryStringSchemaOKHeaders) GetContentType() string {
-	return s.ContentType
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetResponse returns the value of Response.
 }
 
-// GetResponse returns the value of Response.
 func (s *AnyContentTypeBinaryStringSchemaOKHeaders) GetResponse() AnyContentTypeBinaryStringSchemaOK {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetContentType sets the value of ContentType.
+	return *new(AnyContentTypeBinaryStringSchemaOK)
 }
 
-// SetContentType sets the value of ContentType.
 func (s *AnyContentTypeBinaryStringSchemaOKHeaders) SetContentType(val string) {
-	s.ContentType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetResponse sets the value of Response.
 }
 
-// SetResponse sets the value of Response.
 func (s *AnyContentTypeBinaryStringSchemaOKHeaders) SetResponse(val AnyContentTypeBinaryStringSchemaOK) {
-	s.Response = val
+	_ = "STUB: not implemented"
+
+	// Combined2XXStatusCode wraps int with StatusCode.
+	return
 }
 
-// Combined2XXStatusCode wraps int with StatusCode.
 type Combined2XXStatusCode struct {
 	StatusCode int
 	Response   int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *Combined2XXStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *Combined2XXStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *Combined2XXStatusCode) GetResponse() int {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return 0
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *Combined2XXStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
-func (s *Combined2XXStatusCode) SetResponse(val int) {
-	s.Response = val
+func (s *Combined2XXStatusCode) SetResponse(val int) { _ = "STUB: not implemented"; return }
+
+func (*Combined2XXStatusCode) combinedRes() {
+	_ = "STUB: not implemented"
+
+	// Combined5XXStatusCode wraps bool with StatusCode.
+	return
 }
 
-func (*Combined2XXStatusCode) combinedRes() {}
-
-// Combined5XXStatusCode wraps bool with StatusCode.
 type Combined5XXStatusCode struct {
 	StatusCode int
 	Response   bool
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *Combined5XXStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *Combined5XXStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *Combined5XXStatusCode) GetResponse() bool {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return false
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *Combined5XXStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
-func (s *Combined5XXStatusCode) SetResponse(val bool) {
-	s.Response = val
+func (s *Combined5XXStatusCode) SetResponse(val bool) { _ = "STUB: not implemented"; return }
+
+func (*Combined5XXStatusCode) combinedRes() {
+	_ = "STUB: not implemented"
+
+	// CombinedDefStatusCode wraps []string with StatusCode.
+	return
 }
 
-func (*Combined5XXStatusCode) combinedRes() {}
-
-// CombinedDefStatusCode wraps []string with StatusCode.
 type CombinedDefStatusCode struct {
 	StatusCode int
 	Response   []string
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *CombinedDefStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *CombinedDefStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *CombinedDefStatusCode) GetResponse() []string {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return nil
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *CombinedDefStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
-func (s *CombinedDefStatusCode) SetResponse(val []string) {
-	s.Response = val
-}
+func (s *CombinedDefStatusCode) SetResponse(val []string) { _ = "STUB: not implemented"; return }
 
-func (*CombinedDefStatusCode) combinedRes() {}
+func (*CombinedDefStatusCode) combinedRes() { _ = "STUB: not implemented"; return }
 
 type CombinedOK struct {
 	Ok string `json:"ok"`
@@ -190,15 +212,15 @@ type CombinedOK struct {
 
 // GetOk returns the value of Ok.
 func (s *CombinedOK) GetOk() string {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return ""
 }
 
-// SetOk sets the value of Ok.
-func (s *CombinedOK) SetOk(val string) {
-	s.Ok = val
-}
+func (s *CombinedOK) SetOk(val string) { _ = "STUB: not implemented"; return }
 
-func (*CombinedOK) combinedRes() {}
+func (*CombinedOK) combinedRes() { _ = "STUB: not implemented"; return }
 
 type CombinedType string
 
@@ -210,50 +232,13 @@ const (
 )
 
 // AllValues returns all CombinedType values.
-func (CombinedType) AllValues() []CombinedType {
-	return []CombinedType{
-		CombinedType200,
-		CombinedType2XX,
-		CombinedType5XX,
-		CombinedTypeDefault,
-	}
-}
+func (CombinedType) AllValues() []CombinedType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s CombinedType) MarshalText() ([]byte, error) {
-	switch s {
-	case CombinedType200:
-		return []byte(s), nil
-	case CombinedType2XX:
-		return []byte(s), nil
-	case CombinedType5XX:
-		return []byte(s), nil
-	case CombinedTypeDefault:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s CombinedType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *CombinedType) UnmarshalText(data []byte) error {
-	switch CombinedType(data) {
-	case CombinedType200:
-		*s = CombinedType200
-		return nil
-	case CombinedType2XX:
-		*s = CombinedType2XX
-		return nil
-	case CombinedType5XX:
-		*s = CombinedType5XX
-		return nil
-	case CombinedTypeDefault:
-		*s = CombinedTypeDefault
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *CombinedType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/Error
 type Error struct {
@@ -262,30 +247,30 @@ type Error struct {
 
 // GetError returns the value of Error.
 func (s *Error) GetError() string {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return ""
 }
 
-// SetError sets the value of Error.
-func (s *Error) SetError(val string) {
-	s.Error = val
+func (s *Error) SetError(val string) { _ = "STUB: not implemented"; return }
+
+func (*Error) streamJSONRes() {
+	_ = "STUB: not implemented"
+
+	// Headers200OK is response for Headers200 operation.
+	return
 }
 
-func (*Error) streamJSONRes() {}
-
-// Headers200OK is response for Headers200 operation.
 type Headers200OK struct {
 	XTestHeader string
 }
 
 // GetXTestHeader returns the value of XTestHeader.
-func (s *Headers200OK) GetXTestHeader() string {
-	return s.XTestHeader
-}
+func (s *Headers200OK) GetXTestHeader() string { _ = "STUB: not implemented"; return "" }
 
 // SetXTestHeader sets the value of XTestHeader.
-func (s *Headers200OK) SetXTestHeader(val string) {
-	s.XTestHeader = val
-}
+func (s *Headers200OK) SetXTestHeader(val string) { _ = "STUB: not implemented"; return }
 
 // HeadersCombined4XX is 4XX pattern response for HeadersCombined operation.
 type HeadersCombined4XX struct {
@@ -294,71 +279,59 @@ type HeadersCombined4XX struct {
 }
 
 // GetXTestHeader returns the value of XTestHeader.
-func (s *HeadersCombined4XX) GetXTestHeader() string {
-	return s.XTestHeader
-}
+func (s *HeadersCombined4XX) GetXTestHeader() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *HeadersCombined4XX) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *HeadersCombined4XX) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetXTestHeader sets the value of XTestHeader.
-func (s *HeadersCombined4XX) SetXTestHeader(val string) {
-	s.XTestHeader = val
-}
+func (s *HeadersCombined4XX) SetXTestHeader(val string) { _ = "STUB: not implemented"; return }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *HeadersCombined4XX) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *HeadersCombined4XX) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*HeadersCombined4XX) headersCombinedRes() {
+	_ = "STUB: not implemented"
+
+	// HeadersCombinedDef is default response for HeadersCombined operation.
+	return
 }
 
-func (*HeadersCombined4XX) headersCombinedRes() {}
-
-// HeadersCombinedDef is default response for HeadersCombined operation.
 type HeadersCombinedDef struct {
 	XTestHeader string
 	StatusCode  int
 }
 
 // GetXTestHeader returns the value of XTestHeader.
-func (s *HeadersCombinedDef) GetXTestHeader() string {
-	return s.XTestHeader
-}
+func (s *HeadersCombinedDef) GetXTestHeader() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *HeadersCombinedDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *HeadersCombinedDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetXTestHeader sets the value of XTestHeader.
-func (s *HeadersCombinedDef) SetXTestHeader(val string) {
-	s.XTestHeader = val
-}
+func (s *HeadersCombinedDef) SetXTestHeader(val string) { _ = "STUB: not implemented"; return }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *HeadersCombinedDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *HeadersCombinedDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*HeadersCombinedDef) headersCombinedRes() {
+	_ = "STUB: not implemented"
+
+	// HeadersCombinedOK is response for HeadersCombined operation.
+	return
 }
 
-func (*HeadersCombinedDef) headersCombinedRes() {}
-
-// HeadersCombinedOK is response for HeadersCombined operation.
 type HeadersCombinedOK struct {
 	XTestHeader string
 }
 
 // GetXTestHeader returns the value of XTestHeader.
-func (s *HeadersCombinedOK) GetXTestHeader() string {
-	return s.XTestHeader
-}
+func (s *HeadersCombinedOK) GetXTestHeader() string { _ = "STUB: not implemented"; return "" }
 
 // SetXTestHeader sets the value of XTestHeader.
-func (s *HeadersCombinedOK) SetXTestHeader(val string) {
-	s.XTestHeader = val
-}
+func (s *HeadersCombinedOK) SetXTestHeader(val string) { _ = "STUB: not implemented"; return }
 
-func (*HeadersCombinedOK) headersCombinedRes() {}
+func (*HeadersCombinedOK) headersCombinedRes() { _ = "STUB: not implemented"; return }
 
 type HeadersCombinedType string
 
@@ -369,43 +342,18 @@ const (
 )
 
 // AllValues returns all HeadersCombinedType values.
-func (HeadersCombinedType) AllValues() []HeadersCombinedType {
-	return []HeadersCombinedType{
-		HeadersCombinedType200,
-		HeadersCombinedTypeDefault,
-		HeadersCombinedType4XX,
-	}
-}
+func (HeadersCombinedType) AllValues() []HeadersCombinedType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s HeadersCombinedType) MarshalText() ([]byte, error) {
-	switch s {
-	case HeadersCombinedType200:
-		return []byte(s), nil
-	case HeadersCombinedTypeDefault:
-		return []byte(s), nil
-	case HeadersCombinedType4XX:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *HeadersCombinedType) UnmarshalText(data []byte) error {
-	switch HeadersCombinedType(data) {
-	case HeadersCombinedType200:
-		*s = HeadersCombinedType200
-		return nil
-	case HeadersCombinedTypeDefault:
-		*s = HeadersCombinedTypeDefault
-		return nil
-	case HeadersCombinedType4XX:
-		*s = HeadersCombinedType4XX
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // HeadersDefaultDef is default response for HeadersDefault operation.
@@ -415,26 +363,22 @@ type HeadersDefaultDef struct {
 }
 
 // GetXTestHeader returns the value of XTestHeader.
-func (s *HeadersDefaultDef) GetXTestHeader() string {
-	return s.XTestHeader
-}
+func (s *HeadersDefaultDef) GetXTestHeader() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *HeadersDefaultDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *HeadersDefaultDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetXTestHeader sets the value of XTestHeader.
-func (s *HeadersDefaultDef) SetXTestHeader(val string) {
-	s.XTestHeader = val
-}
+func (s *HeadersDefaultDef) SetXTestHeader(val string) { _ = "STUB: not implemented"; return }
 
 // SetStatusCode sets the value of StatusCode.
 func (s *HeadersDefaultDef) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// HeadersJSONOK is response for HeadersJSON operation.
+	return
 }
 
-// HeadersJSONOK is response for HeadersJSON operation.
 type HeadersJSONOK struct {
 	XJSONCustomHeader jx.Raw
 	XJSONHeader       User
@@ -442,23 +386,23 @@ type HeadersJSONOK struct {
 
 // GetXJSONCustomHeader returns the value of XJSONCustomHeader.
 func (s *HeadersJSONOK) GetXJSONCustomHeader() jx.Raw {
-	return s.XJSONCustomHeader
+	_ = "STUB: not implemented"
+	return *new(jx.Raw)
 }
 
 // GetXJSONHeader returns the value of XJSONHeader.
 func (s *HeadersJSONOK) GetXJSONHeader() User {
-	return s.XJSONHeader
+	_ = "STUB: not implemented"
+	return *
+
+	// SetXJSONCustomHeader sets the value of XJSONCustomHeader.
+	new(User)
 }
 
-// SetXJSONCustomHeader sets the value of XJSONCustomHeader.
-func (s *HeadersJSONOK) SetXJSONCustomHeader(val jx.Raw) {
-	s.XJSONCustomHeader = val
-}
+func (s *HeadersJSONOK) SetXJSONCustomHeader(val jx.Raw) { _ = "STUB: not implemented"; return }
 
 // SetXJSONHeader sets the value of XJSONHeader.
-func (s *HeadersJSONOK) SetXJSONHeader(val User) {
-	s.XJSONHeader = val
-}
+func (s *HeadersJSONOK) SetXJSONHeader(val User) { _ = "STUB: not implemented"; return }
 
 // HeadersPattern4XX is 4XX pattern response for HeadersPattern operation.
 type HeadersPattern4XX struct {
@@ -467,26 +411,22 @@ type HeadersPattern4XX struct {
 }
 
 // GetXTestHeader returns the value of XTestHeader.
-func (s *HeadersPattern4XX) GetXTestHeader() string {
-	return s.XTestHeader
-}
+func (s *HeadersPattern4XX) GetXTestHeader() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *HeadersPattern4XX) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *HeadersPattern4XX) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetXTestHeader sets the value of XTestHeader.
-func (s *HeadersPattern4XX) SetXTestHeader(val string) {
-	s.XTestHeader = val
-}
+func (s *HeadersPattern4XX) SetXTestHeader(val string) { _ = "STUB: not implemented"; return }
 
 // SetStatusCode sets the value of StatusCode.
 func (s *HeadersPattern4XX) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// IntersectPatternCode2XXStatusCode wraps int with StatusCode.
+	return
 }
 
-// IntersectPatternCode2XXStatusCode wraps int with StatusCode.
 type IntersectPatternCode2XXStatusCode struct {
 	StatusCode int
 	Response   int
@@ -494,36 +434,43 @@ type IntersectPatternCode2XXStatusCode struct {
 
 // GetStatusCode returns the value of StatusCode.
 func (s *IntersectPatternCode2XXStatusCode) GetStatusCode() int {
-	return s.StatusCode
+	_ = "STUB: not implemented"
+	return 0
+
+	// GetResponse returns the value of Response.
 }
 
-// GetResponse returns the value of Response.
 func (s *IntersectPatternCode2XXStatusCode) GetResponse() int {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return 0
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *IntersectPatternCode2XXStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetResponse sets the value of Response.
 }
 
-// SetResponse sets the value of Response.
-func (s *IntersectPatternCode2XXStatusCode) SetResponse(val int) {
-	s.Response = val
-}
+func (s *IntersectPatternCode2XXStatusCode) SetResponse(val int) { _ = "STUB: not implemented"; return }
 
-func (*IntersectPatternCode2XXStatusCode) intersectPatternCodeRes() {}
+func (*IntersectPatternCode2XXStatusCode) intersectPatternCodeRes() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type IntersectPatternCodeOKApplicationJSON string
 
-func (*IntersectPatternCodeOKApplicationJSON) intersectPatternCodeRes() {}
+func (*IntersectPatternCodeOKApplicationJSON) intersectPatternCodeRes() {
+	_ = "STUB: not implemented"
 
-// NewNilInt returns new NilInt with value set to v.
-func NewNilInt(v int) NilInt {
-	return NilInt{
-		Value: v,
-	}
+	// NewNilInt returns new NilInt with value set to v.
+	return
 }
+
+func NewNilInt(v int) NilInt { _ = "STUB: not implemented"; return *new(NilInt) }
 
 // NilInt is nullable int.
 type NilInt struct {
@@ -532,45 +479,32 @@ type NilInt struct {
 }
 
 // SetTo sets value to v.
-func (o *NilInt) SetTo(v int) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilInt) IsNull() bool { return o.Null }
+func (o NilInt) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilInt) SetToNull() {
-	o.Null = true
-	var v int
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilInt) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilInt) Get() (v int, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+func (o NilInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
+
+func (*NilInt) multipleGenericResponsesRes() {
+	_ = "STUB: not implemented"
+
+	// NewNilString returns new NilString with value set to v.
+	return
 }
 
-func (*NilInt) multipleGenericResponsesRes() {}
-
-// NewNilString returns new NilString with value set to v.
-func NewNilString(v string) NilString {
-	return NilString{
-		Value: v,
-	}
-}
+func NewNilString(v string) NilString { _ = "STUB: not implemented"; return *new(NilString) }
 
 // NilString is nullable string.
 type NilString struct {
@@ -579,38 +513,25 @@ type NilString struct {
 }
 
 // SetTo sets value to v.
-func (o *NilString) SetTo(v string) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilString) IsNull() bool { return o.Null }
+func (o NilString) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilString) SetToNull() {
-	o.Null = true
-	var v string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilString) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilString) Get() (v string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
-func (*NilString) multipleGenericResponsesRes() {}
+func (*NilString) multipleGenericResponsesRes() { _ = "STUB: not implemented"; return }
 
 type OctetStreamBinaryStringSchemaOK struct {
 	Data io.Reader
@@ -620,10 +541,8 @@ type OctetStreamBinaryStringSchemaOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s OctetStreamBinaryStringSchemaOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 type OctetStreamEmptySchemaOK struct {
@@ -634,19 +553,12 @@ type OctetStreamEmptySchemaOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s OctetStreamEmptySchemaOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -655,36 +567,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // OptionalHeadersOK is response for OptionalHeaders operation.
 type OptionalHeadersOK struct {
@@ -694,27 +593,32 @@ type OptionalHeadersOK struct {
 
 // GetXOptional returns the value of XOptional.
 func (s *OptionalHeadersOK) GetXOptional() OptString {
-	return s.XOptional
+	_ = "STUB: not implemented"
+	return *
+
+	// GetXRequired returns the value of XRequired.
+	new(OptString)
 }
 
-// GetXRequired returns the value of XRequired.
 func (s *OptionalHeadersOK) GetXRequired() string {
-	return s.XRequired
+	_ = "STUB: not implemented"
+
+	// SetXOptional sets the value of XOptional.
+	return ""
 }
 
-// SetXOptional sets the value of XOptional.
 func (s *OptionalHeadersOK) SetXOptional(val OptString) {
-	s.XOptional = val
+	_ = "STUB: not implemented"
+
+	// SetXRequired sets the value of XRequired.
+	return
 }
 
-// SetXRequired sets the value of XRequired.
-func (s *OptionalHeadersOK) SetXRequired(val string) {
-	s.XRequired = val
-}
+func (s *OptionalHeadersOK) SetXRequired(val string) { _ = "STUB: not implemented"; return }
 
 type QueryData []float64
 
-func (*QueryData) streamJSONRes() {}
+func (*QueryData) streamJSONRes() { _ = "STUB: not implemented"; return }
 
 type TextPlainBinaryStringSchemaOK struct {
 	Data io.Reader
@@ -724,10 +628,8 @@ type TextPlainBinaryStringSchemaOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s TextPlainBinaryStringSchemaOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // Ref: #/components/schemas/User
@@ -740,43 +642,55 @@ type User struct {
 
 // GetID returns the value of ID.
 func (s *User) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetUsername returns the value of Username.
+	return 0
 }
 
-// GetUsername returns the value of Username.
 func (s *User) GetUsername() string {
-	return s.Username
+	_ = "STUB: not implemented"
+
+	// GetRole returns the value of Role.
+	return ""
 }
 
-// GetRole returns the value of Role.
 func (s *User) GetRole() UserRole {
-	return s.Role
+	_ = "STUB: not implemented"
+
+	// GetFriends returns the value of Friends.
+	return *new(UserRole)
 }
 
-// GetFriends returns the value of Friends.
 func (s *User) GetFriends() []User {
-	return s.Friends
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return nil
 }
 
-// SetID sets the value of ID.
 func (s *User) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetUsername sets the value of Username.
+	return
 }
 
-// SetUsername sets the value of Username.
 func (s *User) SetUsername(val string) {
-	s.Username = val
+	_ = "STUB: not implemented"
+
+	// SetRole sets the value of Role.
+	return
 }
 
-// SetRole sets the value of Role.
 func (s *User) SetRole(val UserRole) {
-	s.Role = val
+	_ = "STUB: not implemented"
+
+	// SetFriends sets the value of Friends.
+	return
 }
 
-// SetFriends sets the value of Friends.
-func (s *User) SetFriends(val []User) {
-	s.Friends = val
-}
+func (s *User) SetFriends(val []User) { _ = "STUB: not implemented"; return }
 
 type UserRole string
 
@@ -787,41 +701,10 @@ const (
 )
 
 // AllValues returns all UserRole values.
-func (UserRole) AllValues() []UserRole {
-	return []UserRole{
-		UserRoleAdmin,
-		UserRoleUser,
-		UserRoleBot,
-	}
-}
+func (UserRole) AllValues() []UserRole { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s UserRole) MarshalText() ([]byte, error) {
-	switch s {
-	case UserRoleAdmin:
-		return []byte(s), nil
-	case UserRoleUser:
-		return []byte(s), nil
-	case UserRoleBot:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s UserRole) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *UserRole) UnmarshalText(data []byte) error {
-	switch UserRole(data) {
-	case UserRoleAdmin:
-		*s = UserRoleAdmin
-		return nil
-	case UserRoleUser:
-		*s = UserRoleUser
-		return nil
-	case UserRoleBot:
-		*s = UserRoleBot
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *UserRole) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }

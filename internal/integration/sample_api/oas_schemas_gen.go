@@ -8,7 +8,6 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
@@ -21,25 +20,33 @@ type APIKey struct {
 
 // GetAPIKey returns the value of APIKey.
 func (s *APIKey) GetAPIKey() string {
-	return s.APIKey
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *APIKey) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetAPIKey sets the value of APIKey.
+	return nil
 }
 
-// SetAPIKey sets the value of APIKey.
 func (s *APIKey) SetAPIKey(val string) {
-	s.APIKey = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
 func (s *APIKey) SetRoles(val []string) {
-	s.Roles = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/AnyTest
+	return
 }
 
-// Ref: #/components/schemas/AnyTest
 type AnyTest struct {
 	Empty    jx.Raw           `json:"empty"`
 	AnyMap   OptAnyTestAnyMap `json:"any_map"`
@@ -48,33 +55,41 @@ type AnyTest struct {
 
 // GetEmpty returns the value of Empty.
 func (s *AnyTest) GetEmpty() jx.Raw {
-	return s.Empty
+	_ = "STUB: not implemented"
+
+	// GetAnyMap returns the value of AnyMap.
+	return *new(jx.Raw)
 }
 
-// GetAnyMap returns the value of AnyMap.
 func (s *AnyTest) GetAnyMap() OptAnyTestAnyMap {
-	return s.AnyMap
+	_ = "STUB: not implemented"
+
+	// GetAnyArray returns the value of AnyArray.
+	return *new(OptAnyTestAnyMap)
 }
 
-// GetAnyArray returns the value of AnyArray.
 func (s *AnyTest) GetAnyArray() []jx.Raw {
-	return s.AnyArray
+	_ = "STUB: not implemented"
+
+	// SetEmpty sets the value of Empty.
+	return nil
 }
 
-// SetEmpty sets the value of Empty.
 func (s *AnyTest) SetEmpty(val jx.Raw) {
-	s.Empty = val
+	_ = "STUB: not implemented"
+
+	// SetAnyMap sets the value of AnyMap.
+	return
 }
 
-// SetAnyMap sets the value of AnyMap.
 func (s *AnyTest) SetAnyMap(val OptAnyTestAnyMap) {
-	s.AnyMap = val
+	_ = "STUB: not implemented"
+
+	// SetAnyArray sets the value of AnyArray.
+	return
 }
 
-// SetAnyArray sets the value of AnyArray.
-func (s *AnyTest) SetAnyArray(val []jx.Raw) {
-	s.AnyArray = val
-}
+func (s *AnyTest) SetAnyArray(val []jx.Raw) { _ = "STUB: not implemented"; return }
 
 type AnyTestAnyMap map[string]jx.Raw
 
@@ -98,43 +113,46 @@ type ArrayTest struct {
 
 // GetRequired returns the value of Required.
 func (s *ArrayTest) GetRequired() []string {
-	return s.Required
+	_ = "STUB: not implemented"
+
+	// GetOptional returns the value of Optional.
+	return nil
 }
 
-// GetOptional returns the value of Optional.
 func (s *ArrayTest) GetOptional() []string {
-	return s.Optional
+	_ = "STUB: not implemented"
+
+	// GetNullableRequired returns the value of NullableRequired.
+	return nil
 }
 
-// GetNullableRequired returns the value of NullableRequired.
-func (s *ArrayTest) GetNullableRequired() []string {
-	return s.NullableRequired
-}
+func (s *ArrayTest) GetNullableRequired() []string { _ = "STUB: not implemented"; return nil }
 
 // GetNullableOptional returns the value of NullableOptional.
 func (s *ArrayTest) GetNullableOptional() OptNilStringArray {
-	return s.NullableOptional
+	_ = "STUB: not implemented"
+	return *new(OptNilStringArray)
 }
 
 // SetRequired sets the value of Required.
 func (s *ArrayTest) SetRequired(val []string) {
-	s.Required = val
+	_ = "STUB: not implemented"
+
+	// SetOptional sets the value of Optional.
+	return
 }
 
-// SetOptional sets the value of Optional.
 func (s *ArrayTest) SetOptional(val []string) {
-	s.Optional = val
+	_ = "STUB: not implemented"
+
+	// SetNullableRequired sets the value of NullableRequired.
+	return
 }
 
-// SetNullableRequired sets the value of NullableRequired.
-func (s *ArrayTest) SetNullableRequired(val []string) {
-	s.NullableRequired = val
-}
+func (s *ArrayTest) SetNullableRequired(val []string) { _ = "STUB: not implemented"; return }
 
 // SetNullableOptional sets the value of NullableOptional.
-func (s *ArrayTest) SetNullableOptional(val OptNilStringArray) {
-	s.NullableOptional = val
-}
+func (s *ArrayTest) SetNullableOptional(val OptNilStringArray) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/Data
 type Data struct {
@@ -149,73 +167,95 @@ type Data struct {
 
 // GetID returns the value of ID.
 func (s *Data) GetID() ID {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(ID)
 }
 
-// GetDescription returns the value of Description.
 func (s *Data) GetDescription() DataDescription {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetEmail returns the value of Email.
+	new(DataDescription)
 }
 
-// GetEmail returns the value of Email.
 func (s *Data) GetEmail() string {
-	return s.Email
+	_ = "STUB: not implemented"
+
+	// GetHostname returns the value of Hostname.
+	return ""
 }
 
-// GetHostname returns the value of Hostname.
 func (s *Data) GetHostname() string {
-	return s.Hostname
+	_ = "STUB: not implemented"
+
+	// GetFormat returns the value of Format.
+	return ""
 }
 
-// GetFormat returns the value of Format.
 func (s *Data) GetFormat() string {
-	return s.Format
+	_ = "STUB: not implemented"
+
+	// GetBase64 returns the value of Base64.
+	return ""
 }
 
-// GetBase64 returns the value of Base64.
 func (s *Data) GetBase64() []byte {
-	return s.Base64
+	_ = "STUB: not implemented"
+
+	// GetNullableEnum returns the value of NullableEnum.
+	return nil
 }
 
-// GetNullableEnum returns the value of NullableEnum.
 func (s *Data) GetNullableEnum() OptNullableEnums {
-	return s.NullableEnum
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptNullableEnums)
 }
 
-// SetID sets the value of ID.
 func (s *Data) SetID(val ID) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Data) SetDescription(val DataDescription) {
-	s.Description = val
-}
+func (s *Data) SetDescription(val DataDescription) { _ = "STUB: not implemented"; return }
 
 // SetEmail sets the value of Email.
 func (s *Data) SetEmail(val string) {
-	s.Email = val
+	_ = "STUB: not implemented"
+
+	// SetHostname sets the value of Hostname.
+	return
 }
 
-// SetHostname sets the value of Hostname.
 func (s *Data) SetHostname(val string) {
-	s.Hostname = val
+	_ = "STUB: not implemented"
+
+	// SetFormat sets the value of Format.
+	return
 }
 
-// SetFormat sets the value of Format.
 func (s *Data) SetFormat(val string) {
-	s.Format = val
+	_ = "STUB: not implemented"
+
+	// SetBase64 sets the value of Base64.
+	return
 }
 
-// SetBase64 sets the value of Base64.
 func (s *Data) SetBase64(val []byte) {
-	s.Base64 = val
+	_ = "STUB: not implemented"
+
+	// SetNullableEnum sets the value of NullableEnum.
+	return
 }
 
-// SetNullableEnum sets the value of NullableEnum.
-func (s *Data) SetNullableEnum(val OptNullableEnums) {
-	s.NullableEnum = val
-}
+func (s *Data) SetNullableEnum(val OptNullableEnums) { _ = "STUB: not implemented"; return }
 
 // DataDescription represents sum type.
 type DataDescription struct {
@@ -234,55 +274,45 @@ const (
 )
 
 // IsDescriptionDetailed reports whether DataDescription is DescriptionDetailed.
-func (s DataDescription) IsDescriptionDetailed() bool {
-	return s.Type == DescriptionDetailedDataDescription
-}
+func (s DataDescription) IsDescriptionDetailed() bool { _ = "STUB: not implemented"; return false }
 
 // IsDescriptionSimple reports whether DataDescription is DescriptionSimple.
-func (s DataDescription) IsDescriptionSimple() bool {
-	return s.Type == DescriptionSimpleDataDescription
-}
+func (s DataDescription) IsDescriptionSimple() bool { _ = "STUB: not implemented"; return false }
 
 // SetDescriptionDetailed sets DataDescription to DescriptionDetailed.
 func (s *DataDescription) SetDescriptionDetailed(v DescriptionDetailed) {
-	s.Type = DescriptionDetailedDataDescription
-	s.DescriptionDetailed = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetDescriptionDetailed returns DescriptionDetailed and true boolean if DataDescription is DescriptionDetailed.
 func (s DataDescription) GetDescriptionDetailed() (v DescriptionDetailed, ok bool) {
-	if !s.IsDescriptionDetailed() {
-		return v, false
-	}
-	return s.DescriptionDetailed, true
+	_ = "STUB: not implemented"
+	return *new(DescriptionDetailed), false
 }
 
 // NewDescriptionDetailedDataDescription returns new DataDescription from DescriptionDetailed.
 func NewDescriptionDetailedDataDescription(v DescriptionDetailed) DataDescription {
-	var s DataDescription
-	s.SetDescriptionDetailed(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(DataDescription)
 }
 
 // SetDescriptionSimple sets DataDescription to DescriptionSimple.
 func (s *DataDescription) SetDescriptionSimple(v DescriptionSimple) {
-	s.Type = DescriptionSimpleDataDescription
-	s.DescriptionSimple = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetDescriptionSimple returns DescriptionSimple and true boolean if DataDescription is DescriptionSimple.
 func (s DataDescription) GetDescriptionSimple() (v DescriptionSimple, ok bool) {
-	if !s.IsDescriptionSimple() {
-		return v, false
-	}
-	return s.DescriptionSimple, true
+	_ = "STUB: not implemented"
+	return *new(DescriptionSimple), false
 }
 
 // NewDescriptionSimpleDataDescription returns new DataDescription from DescriptionSimple.
 func NewDescriptionSimpleDataDescription(v DescriptionSimple) DataDescription {
-	var s DataDescription
-	s.SetDescriptionSimple(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(DataDescription)
 }
 
 // Ref: #/components/schemas/DefaultTest
@@ -306,153 +336,209 @@ type DefaultTest struct {
 
 // GetRequired returns the value of Required.
 func (s *DefaultTest) GetRequired() string {
-	return s.Required
+	_ = "STUB: not implemented"
+
+	// GetStr returns the value of Str.
+	return ""
 }
 
-// GetStr returns the value of Str.
 func (s *DefaultTest) GetStr() OptString {
-	return s.Str
+	_ = "STUB: not implemented"
+
+	// GetNullStr returns the value of NullStr.
+	return *new(OptString)
 }
 
-// GetNullStr returns the value of NullStr.
 func (s *DefaultTest) GetNullStr() OptNilString {
-	return s.NullStr
+	_ = "STUB: not implemented"
+
+	// GetEnum returns the value of Enum.
+	return *new(OptNilString)
 }
 
-// GetEnum returns the value of Enum.
 func (s *DefaultTest) GetEnum() OptDefaultTestEnum {
-	return s.Enum
+	_ = "STUB: not implemented"
+
+	// GetUUID returns the value of UUID.
+	return *new(OptDefaultTestEnum)
 }
 
-// GetUUID returns the value of UUID.
 func (s *DefaultTest) GetUUID() OptUUID {
-	return s.UUID
+	_ = "STUB: not implemented"
+
+	// GetIP returns the value of IP.
+	return *new(OptUUID)
 }
 
-// GetIP returns the value of IP.
 func (s *DefaultTest) GetIP() OptIP {
-	return s.IP
+	_ = "STUB: not implemented"
+
+	// GetIPV4 returns the value of IPV4.
+	return *new(OptIP)
 }
 
-// GetIPV4 returns the value of IPV4.
 func (s *DefaultTest) GetIPV4() OptIPv4 {
-	return s.IPV4
+	_ = "STUB: not implemented"
+
+	// GetIPV6 returns the value of IPV6.
+	return *new(OptIPv4)
 }
 
-// GetIPV6 returns the value of IPV6.
 func (s *DefaultTest) GetIPV6() OptIPv6 {
-	return s.IPV6
+	_ = "STUB: not implemented"
+
+	// GetURI returns the value of URI.
+	return *new(OptIPv6)
 }
 
-// GetURI returns the value of URI.
 func (s *DefaultTest) GetURI() OptURI {
-	return s.URI
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(OptURI)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *DefaultTest) GetBirthday() OptDate {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// GetRate returns the value of Rate.
+	return *new(OptDate)
 }
 
-// GetRate returns the value of Rate.
 func (s *DefaultTest) GetRate() OptDuration {
-	return s.Rate
+	_ = "STUB: not implemented"
+
+	// GetEmail returns the value of Email.
+	return *new(OptDuration)
 }
 
-// GetEmail returns the value of Email.
 func (s *DefaultTest) GetEmail() OptString {
-	return s.Email
+	_ = "STUB: not implemented"
+
+	// GetHostname returns the value of Hostname.
+	return *new(OptString)
 }
 
-// GetHostname returns the value of Hostname.
 func (s *DefaultTest) GetHostname() OptString {
-	return s.Hostname
+	_ = "STUB: not implemented"
+
+	// GetFormat returns the value of Format.
+	return *new(OptString)
 }
 
-// GetFormat returns the value of Format.
 func (s *DefaultTest) GetFormat() OptString {
-	return s.Format
+	_ = "STUB: not implemented"
+
+	// GetBase64 returns the value of Base64.
+	return *new(OptString)
 }
 
-// GetBase64 returns the value of Base64.
 func (s *DefaultTest) GetBase64() []byte {
-	return s.Base64
+	_ = "STUB: not implemented"
+
+	// SetRequired sets the value of Required.
+	return nil
 }
 
-// SetRequired sets the value of Required.
 func (s *DefaultTest) SetRequired(val string) {
-	s.Required = val
+	_ = "STUB: not implemented"
+
+	// SetStr sets the value of Str.
+	return
 }
 
-// SetStr sets the value of Str.
 func (s *DefaultTest) SetStr(val OptString) {
-	s.Str = val
+	_ = "STUB: not implemented"
+
+	// SetNullStr sets the value of NullStr.
+	return
 }
 
-// SetNullStr sets the value of NullStr.
 func (s *DefaultTest) SetNullStr(val OptNilString) {
-	s.NullStr = val
+	_ = "STUB: not implemented"
+
+	// SetEnum sets the value of Enum.
+	return
 }
 
-// SetEnum sets the value of Enum.
 func (s *DefaultTest) SetEnum(val OptDefaultTestEnum) {
-	s.Enum = val
+	_ = "STUB: not implemented"
+
+	// SetUUID sets the value of UUID.
+	return
 }
 
-// SetUUID sets the value of UUID.
 func (s *DefaultTest) SetUUID(val OptUUID) {
-	s.UUID = val
+	_ = "STUB: not implemented"
+
+	// SetIP sets the value of IP.
+	return
 }
 
-// SetIP sets the value of IP.
 func (s *DefaultTest) SetIP(val OptIP) {
-	s.IP = val
+	_ = "STUB: not implemented"
+
+	// SetIPV4 sets the value of IPV4.
+	return
 }
 
-// SetIPV4 sets the value of IPV4.
 func (s *DefaultTest) SetIPV4(val OptIPv4) {
-	s.IPV4 = val
+	_ = "STUB: not implemented"
+
+	// SetIPV6 sets the value of IPV6.
+	return
 }
 
-// SetIPV6 sets the value of IPV6.
 func (s *DefaultTest) SetIPV6(val OptIPv6) {
-	s.IPV6 = val
+	_ = "STUB: not implemented"
+
+	// SetURI sets the value of URI.
+	return
 }
 
-// SetURI sets the value of URI.
 func (s *DefaultTest) SetURI(val OptURI) {
-	s.URI = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
 func (s *DefaultTest) SetBirthday(val OptDate) {
-	s.Birthday = val
+	_ = "STUB: not implemented"
+
+	// SetRate sets the value of Rate.
+	return
 }
 
-// SetRate sets the value of Rate.
 func (s *DefaultTest) SetRate(val OptDuration) {
-	s.Rate = val
+	_ = "STUB: not implemented"
+
+	// SetEmail sets the value of Email.
+	return
 }
 
-// SetEmail sets the value of Email.
 func (s *DefaultTest) SetEmail(val OptString) {
-	s.Email = val
+	_ = "STUB: not implemented"
+
+	// SetHostname sets the value of Hostname.
+	return
 }
 
-// SetHostname sets the value of Hostname.
 func (s *DefaultTest) SetHostname(val OptString) {
-	s.Hostname = val
+	_ = "STUB: not implemented"
+
+	// SetFormat sets the value of Format.
+	return
 }
 
-// SetFormat sets the value of Format.
 func (s *DefaultTest) SetFormat(val OptString) {
-	s.Format = val
+	_ = "STUB: not implemented"
+
+	// SetBase64 sets the value of Base64.
+	return
 }
 
-// SetBase64 sets the value of Base64.
-func (s *DefaultTest) SetBase64(val []byte) {
-	s.Base64 = val
-}
+func (s *DefaultTest) SetBase64(val []byte) { _ = "STUB: not implemented"; return }
 
 type DefaultTestEnum string
 
@@ -462,38 +548,13 @@ const (
 )
 
 // AllValues returns all DefaultTestEnum values.
-func (DefaultTestEnum) AllValues() []DefaultTestEnum {
-	return []DefaultTestEnum{
-		DefaultTestEnumBig,
-		DefaultTestEnumSmol,
-	}
-}
+func (DefaultTestEnum) AllValues() []DefaultTestEnum { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s DefaultTestEnum) MarshalText() ([]byte, error) {
-	switch s {
-	case DefaultTestEnumBig:
-		return []byte(s), nil
-	case DefaultTestEnumSmol:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s DefaultTestEnum) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *DefaultTestEnum) UnmarshalText(data []byte) error {
-	switch DefaultTestEnum(data) {
-	case DefaultTestEnumBig:
-		*s = DefaultTestEnumBig
-		return nil
-	case DefaultTestEnumSmol:
-		*s = DefaultTestEnumSmol
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *DefaultTestEnum) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/DescriptionDetailed
 type DescriptionDetailed struct {
@@ -504,48 +565,56 @@ type DescriptionDetailed struct {
 
 // GetName returns the value of Name.
 func (s *DescriptionDetailed) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetCount returns the value of Count.
+	return ""
 }
 
-// GetCount returns the value of Count.
 func (s *DescriptionDetailed) GetCount() int {
-	return s.Count
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return 0
 }
 
-// GetID returns the value of ID.
 func (s *DescriptionDetailed) GetID() OptID {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return *new(OptID)
 }
 
-// SetName sets the value of Name.
 func (s *DescriptionDetailed) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetCount sets the value of Count.
+	return
 }
 
-// SetCount sets the value of Count.
 func (s *DescriptionDetailed) SetCount(val int) {
-	s.Count = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *DescriptionDetailed) SetID(val OptID) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/DescriptionSimple
+	return
 }
 
-// Ref: #/components/schemas/DescriptionSimple
 type DescriptionSimple struct {
 	Description string `json:"description"`
 }
 
 // GetDescription returns the value of Description.
-func (s *DescriptionSimple) GetDescription() string {
-	return s.Description
-}
+func (s *DescriptionSimple) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 // SetDescription sets the value of Description.
-func (s *DescriptionSimple) SetDescription(val string) {
-	s.Description = val
-}
+func (s *DescriptionSimple) SetDescription(val string) { _ = "STUB: not implemented"; return }
 
 type Error struct {
 	Code    int64  `json:"code"`
@@ -554,72 +623,84 @@ type Error struct {
 
 // GetCode returns the value of Code.
 func (s *Error) GetCode() int64 {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return 0
 }
 
-// GetMessage returns the value of Message.
 func (s *Error) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return ""
 }
 
-// SetCode sets the value of Code.
 func (s *Error) SetCode(val int64) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *Error) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// ErrorStatusCode wraps Error with StatusCode.
+	return
 }
 
-// ErrorStatusCode wraps Error with StatusCode.
 type ErrorStatusCode struct {
 	StatusCode int
 	Response   Error
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorStatusCode) GetResponse() Error {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(Error)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
-func (s *ErrorStatusCode) SetResponse(val Error) {
-	s.Response = val
+func (s *ErrorStatusCode) SetResponse(val Error) { _ = "STUB: not implemented"; return }
+
+func (*ErrorStatusCode) foobarPostRes()         { _ = "STUB: not implemented"; return }
+func (*ErrorStatusCode) petGetAvatarByIDRes()   { _ = "STUB: not implemented"; return }
+func (*ErrorStatusCode) petGetAvatarByNameRes() { _ = "STUB: not implemented"; return }
+func (*ErrorStatusCode) petUploadAvatarByIDRes() {
+	_ = "STUB: not implemented"
+
+	// FoobarPutDef is default response for FoobarPut operation.
+	return
 }
 
-func (*ErrorStatusCode) foobarPostRes()          {}
-func (*ErrorStatusCode) petGetAvatarByIDRes()    {}
-func (*ErrorStatusCode) petGetAvatarByNameRes()  {}
-func (*ErrorStatusCode) petUploadAvatarByIDRes() {}
-
-// FoobarPutDef is default response for FoobarPut operation.
 type FoobarPutDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *FoobarPutDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *FoobarPutDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
 func (s *FoobarPutDef) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ID
+	// ID represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/ID
-// ID represents sum type.
 type ID struct {
 	Type   IDType // switch on this field
 	String string
@@ -636,52 +717,28 @@ const (
 )
 
 // IsString reports whether ID is string.
-func (s ID) IsString() bool { return s.Type == StringID }
+func (s ID) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsInt reports whether ID is int.
-func (s ID) IsInt() bool { return s.Type == IntID }
+func (s ID) IsInt() bool { _ = "STUB: not implemented"; return false }
 
 // SetString sets ID to string.
-func (s *ID) SetString(v string) {
-	s.Type = StringID
-	s.String = v
-}
+func (s *ID) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if ID is string.
-func (s ID) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
-}
+func (s ID) GetString() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // NewStringID returns new ID from string.
-func NewStringID(v string) ID {
-	var s ID
-	s.SetString(v)
-	return s
-}
+func NewStringID(v string) ID { _ = "STUB: not implemented"; return *new(ID) }
 
 // SetInt sets ID to int.
-func (s *ID) SetInt(v int) {
-	s.Type = IntID
-	s.Int = v
-}
+func (s *ID) SetInt(v int) { _ = "STUB: not implemented"; return }
 
 // GetInt returns int and true boolean if ID is int.
-func (s ID) GetInt() (v int, ok bool) {
-	if !s.IsInt() {
-		return v, false
-	}
-	return s.Int, true
-}
+func (s ID) GetInt() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // NewIntID returns new ID from int.
-func NewIntID(v int) ID {
-	var s ID
-	s.SetInt(v)
-	return s
-}
+func NewIntID(v int) ID { _ = "STUB: not implemented"; return *new(ID) }
 
 // Ref: #/components/schemas/InlineDiscriminatorOneOf
 type InlineDiscriminatorOneOf struct {
@@ -691,25 +748,33 @@ type InlineDiscriminatorOneOf struct {
 
 // GetCommon returns the value of Common.
 func (s *InlineDiscriminatorOneOf) GetCommon() string {
-	return s.Common
+	_ = "STUB: not implemented"
+
+	// GetOneOf returns the value of OneOf.
+	return ""
 }
 
-// GetOneOf returns the value of OneOf.
 func (s *InlineDiscriminatorOneOf) GetOneOf() InlineDiscriminatorOneOfSum {
-	return s.OneOf
+	_ = "STUB: not implemented"
+
+	// SetCommon sets the value of Common.
+	return *new(InlineDiscriminatorOneOfSum)
 }
 
-// SetCommon sets the value of Common.
 func (s *InlineDiscriminatorOneOf) SetCommon(val string) {
-	s.Common = val
+	_ = "STUB: not implemented"
+
+	// SetOneOf sets the value of OneOf.
+	return
 }
 
-// SetOneOf sets the value of OneOf.
 func (s *InlineDiscriminatorOneOf) SetOneOf(val InlineDiscriminatorOneOfSum) {
-	s.OneOf = val
+	_ = "STUB: not implemented"
+
+	// InlineDiscriminatorOneOfSum represents sum type.
+	return
 }
 
-// InlineDiscriminatorOneOfSum represents sum type.
 type InlineDiscriminatorOneOfSum struct {
 	Type           InlineDiscriminatorOneOfSumType // switch on this field
 	InlineOneOfFoo InlineOneOfFoo
@@ -727,54 +792,50 @@ const (
 
 // IsInlineOneOfFoo reports whether InlineDiscriminatorOneOfSum is InlineOneOfFoo.
 func (s InlineDiscriminatorOneOfSum) IsInlineOneOfFoo() bool {
-	return s.Type == InlineOneOfFooInlineDiscriminatorOneOfSum
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineOneOfBar reports whether InlineDiscriminatorOneOfSum is InlineOneOfBar.
 func (s InlineDiscriminatorOneOfSum) IsInlineOneOfBar() bool {
-	return s.Type == InlineOneOfBarInlineDiscriminatorOneOfSum
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetInlineOneOfFoo sets InlineDiscriminatorOneOfSum to InlineOneOfFoo.
 func (s *InlineDiscriminatorOneOfSum) SetInlineOneOfFoo(v InlineOneOfFoo) {
-	s.Type = InlineOneOfFooInlineDiscriminatorOneOfSum
-	s.InlineOneOfFoo = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineOneOfFoo returns InlineOneOfFoo and true boolean if InlineDiscriminatorOneOfSum is InlineOneOfFoo.
 func (s InlineDiscriminatorOneOfSum) GetInlineOneOfFoo() (v InlineOneOfFoo, ok bool) {
-	if !s.IsInlineOneOfFoo() {
-		return v, false
-	}
-	return s.InlineOneOfFoo, true
+	_ = "STUB: not implemented"
+	return *new(InlineOneOfFoo), false
 }
 
 // NewInlineOneOfFooInlineDiscriminatorOneOfSum returns new InlineDiscriminatorOneOfSum from InlineOneOfFoo.
 func NewInlineOneOfFooInlineDiscriminatorOneOfSum(v InlineOneOfFoo) InlineDiscriminatorOneOfSum {
-	var s InlineDiscriminatorOneOfSum
-	s.SetInlineOneOfFoo(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineDiscriminatorOneOfSum)
 }
 
 // SetInlineOneOfBar sets InlineDiscriminatorOneOfSum to InlineOneOfBar.
 func (s *InlineDiscriminatorOneOfSum) SetInlineOneOfBar(v InlineOneOfBar) {
-	s.Type = InlineOneOfBarInlineDiscriminatorOneOfSum
-	s.InlineOneOfBar = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineOneOfBar returns InlineOneOfBar and true boolean if InlineDiscriminatorOneOfSum is InlineOneOfBar.
 func (s InlineDiscriminatorOneOfSum) GetInlineOneOfBar() (v InlineOneOfBar, ok bool) {
-	if !s.IsInlineOneOfBar() {
-		return v, false
-	}
-	return s.InlineOneOfBar, true
+	_ = "STUB: not implemented"
+	return *new(InlineOneOfBar), false
 }
 
 // NewInlineOneOfBarInlineDiscriminatorOneOfSum returns new InlineDiscriminatorOneOfSum from InlineOneOfBar.
 func NewInlineOneOfBarInlineDiscriminatorOneOfSum(v InlineOneOfBar) InlineDiscriminatorOneOfSum {
-	var s InlineDiscriminatorOneOfSum
-	s.SetInlineOneOfBar(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineDiscriminatorOneOfSum)
 }
 
 // Ref: #/components/schemas/InlineOneOfBar
@@ -785,25 +846,33 @@ type InlineOneOfBar struct {
 
 // GetKind returns the value of Kind.
 func (s *InlineOneOfBar) GetKind() OptString {
-	return s.Kind
+	_ = "STUB: not implemented"
+
+	// GetBar returns the value of Bar.
+	return *new(OptString)
 }
 
-// GetBar returns the value of Bar.
 func (s *InlineOneOfBar) GetBar() OptString {
-	return s.Bar
+	_ = "STUB: not implemented"
+
+	// SetKind sets the value of Kind.
+	return *new(OptString)
 }
 
-// SetKind sets the value of Kind.
 func (s *InlineOneOfBar) SetKind(val OptString) {
-	s.Kind = val
+	_ = "STUB: not implemented"
+
+	// SetBar sets the value of Bar.
+	return
 }
 
-// SetBar sets the value of Bar.
 func (s *InlineOneOfBar) SetBar(val OptString) {
-	s.Bar = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/InlineOneOfFoo
+	return
 }
 
-// Ref: #/components/schemas/InlineOneOfFoo
 type InlineOneOfFoo struct {
 	Kind OptString `json:"kind"`
 	Foo  OptString `json:"foo"`
@@ -811,25 +880,33 @@ type InlineOneOfFoo struct {
 
 // GetKind returns the value of Kind.
 func (s *InlineOneOfFoo) GetKind() OptString {
-	return s.Kind
+	_ = "STUB: not implemented"
+
+	// GetFoo returns the value of Foo.
+	return *new(OptString)
 }
 
-// GetFoo returns the value of Foo.
 func (s *InlineOneOfFoo) GetFoo() OptString {
-	return s.Foo
+	_ = "STUB: not implemented"
+
+	// SetKind sets the value of Kind.
+	return *new(OptString)
 }
 
-// SetKind sets the value of Kind.
 func (s *InlineOneOfFoo) SetKind(val OptString) {
-	s.Kind = val
+	_ = "STUB: not implemented"
+
+	// SetFoo sets the value of Foo.
+	return
 }
 
-// SetFoo sets the value of Foo.
 func (s *InlineOneOfFoo) SetFoo(val OptString) {
-	s.Foo = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/InlineUniqueFieldsOneOf
+	return
 }
 
-// Ref: #/components/schemas/InlineUniqueFieldsOneOf
 type InlineUniqueFieldsOneOf struct {
 	Common string `json:"common"`
 	OneOf  InlineUniqueFieldsOneOfSum
@@ -837,25 +914,33 @@ type InlineUniqueFieldsOneOf struct {
 
 // GetCommon returns the value of Common.
 func (s *InlineUniqueFieldsOneOf) GetCommon() string {
-	return s.Common
+	_ = "STUB: not implemented"
+
+	// GetOneOf returns the value of OneOf.
+	return ""
 }
 
-// GetOneOf returns the value of OneOf.
 func (s *InlineUniqueFieldsOneOf) GetOneOf() InlineUniqueFieldsOneOfSum {
-	return s.OneOf
+	_ = "STUB: not implemented"
+
+	// SetCommon sets the value of Common.
+	return *new(InlineUniqueFieldsOneOfSum)
 }
 
-// SetCommon sets the value of Common.
 func (s *InlineUniqueFieldsOneOf) SetCommon(val string) {
-	s.Common = val
+	_ = "STUB: not implemented"
+
+	// SetOneOf sets the value of OneOf.
+	return
 }
 
-// SetOneOf sets the value of OneOf.
 func (s *InlineUniqueFieldsOneOf) SetOneOf(val InlineUniqueFieldsOneOfSum) {
-	s.OneOf = val
+	_ = "STUB: not implemented"
+
+	// InlineUniqueFieldsOneOfSum represents sum type.
+	return
 }
 
-// InlineUniqueFieldsOneOfSum represents sum type.
 type InlineUniqueFieldsOneOfSum struct {
 	Type           InlineUniqueFieldsOneOfSumType // switch on this field
 	InlineOneOfFoo InlineOneOfFoo
@@ -873,54 +958,50 @@ const (
 
 // IsInlineOneOfFoo reports whether InlineUniqueFieldsOneOfSum is InlineOneOfFoo.
 func (s InlineUniqueFieldsOneOfSum) IsInlineOneOfFoo() bool {
-	return s.Type == InlineOneOfFooInlineUniqueFieldsOneOfSum
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineOneOfBar reports whether InlineUniqueFieldsOneOfSum is InlineOneOfBar.
 func (s InlineUniqueFieldsOneOfSum) IsInlineOneOfBar() bool {
-	return s.Type == InlineOneOfBarInlineUniqueFieldsOneOfSum
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetInlineOneOfFoo sets InlineUniqueFieldsOneOfSum to InlineOneOfFoo.
 func (s *InlineUniqueFieldsOneOfSum) SetInlineOneOfFoo(v InlineOneOfFoo) {
-	s.Type = InlineOneOfFooInlineUniqueFieldsOneOfSum
-	s.InlineOneOfFoo = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineOneOfFoo returns InlineOneOfFoo and true boolean if InlineUniqueFieldsOneOfSum is InlineOneOfFoo.
 func (s InlineUniqueFieldsOneOfSum) GetInlineOneOfFoo() (v InlineOneOfFoo, ok bool) {
-	if !s.IsInlineOneOfFoo() {
-		return v, false
-	}
-	return s.InlineOneOfFoo, true
+	_ = "STUB: not implemented"
+	return *new(InlineOneOfFoo), false
 }
 
 // NewInlineOneOfFooInlineUniqueFieldsOneOfSum returns new InlineUniqueFieldsOneOfSum from InlineOneOfFoo.
 func NewInlineOneOfFooInlineUniqueFieldsOneOfSum(v InlineOneOfFoo) InlineUniqueFieldsOneOfSum {
-	var s InlineUniqueFieldsOneOfSum
-	s.SetInlineOneOfFoo(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineUniqueFieldsOneOfSum)
 }
 
 // SetInlineOneOfBar sets InlineUniqueFieldsOneOfSum to InlineOneOfBar.
 func (s *InlineUniqueFieldsOneOfSum) SetInlineOneOfBar(v InlineOneOfBar) {
-	s.Type = InlineOneOfBarInlineUniqueFieldsOneOfSum
-	s.InlineOneOfBar = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineOneOfBar returns InlineOneOfBar and true boolean if InlineUniqueFieldsOneOfSum is InlineOneOfBar.
 func (s InlineUniqueFieldsOneOfSum) GetInlineOneOfBar() (v InlineOneOfBar, ok bool) {
-	if !s.IsInlineOneOfBar() {
-		return v, false
-	}
-	return s.InlineOneOfBar, true
+	_ = "STUB: not implemented"
+	return *new(InlineOneOfBar), false
 }
 
 // NewInlineOneOfBarInlineUniqueFieldsOneOfSum returns new InlineUniqueFieldsOneOfSum from InlineOneOfBar.
 func NewInlineOneOfBarInlineUniqueFieldsOneOfSum(v InlineOneOfBar) InlineUniqueFieldsOneOfSum {
-	var s InlineUniqueFieldsOneOfSum
-	s.SetInlineOneOfBar(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineUniqueFieldsOneOfSum)
 }
 
 // An API error.
@@ -937,35 +1018,48 @@ type Issue1310 struct {
 
 // GetTitle returns the value of Title.
 func (s *Issue1310) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetDetails returns the value of Details.
+	return *new(OptString)
 }
 
-// GetDetails returns the value of Details.
 func (s *Issue1310) GetDetails() OptString {
-	return s.Details
+	_ = "STUB: not implemented"
+
+	// GetProperties returns the value of Properties.
+	return *new(OptString)
 }
 
-// GetProperties returns the value of Properties.
 func (s *Issue1310) GetProperties() OptIssue1310Properties {
-	return s.Properties
+	_ = "STUB: not implemented"
+	return *
+
+	// SetTitle sets the value of Title.
+	new(OptIssue1310Properties)
 }
 
-// SetTitle sets the value of Title.
 func (s *Issue1310) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetDetails sets the value of Details.
+	return
 }
 
-// SetDetails sets the value of Details.
 func (s *Issue1310) SetDetails(val OptString) {
-	s.Details = val
+	_ = "STUB: not implemented"
+
+	// SetProperties sets the value of Properties.
+	return
 }
 
-// SetProperties sets the value of Properties.
 func (s *Issue1310) SetProperties(val OptIssue1310Properties) {
-	s.Properties = val
+	_ = "STUB: not implemented"
+
+	// Optional map of properties.
+	return
 }
 
-// Optional map of properties.
 type Issue1310Properties struct{}
 
 // Ref: #/components/schemas/Issue143
@@ -990,100 +1084,64 @@ const (
 )
 
 // IsIssue1430 reports whether Issue143 is Issue1430.
-func (s Issue143) IsIssue1430() bool { return s.Type == Issue1430Issue143 }
+func (s Issue143) IsIssue1430() bool { _ = "STUB: not implemented"; return false }
 
 // IsIssue1431 reports whether Issue143 is Issue1431.
-func (s Issue143) IsIssue1431() bool { return s.Type == Issue1431Issue143 }
+func (s Issue143) IsIssue1431() bool { _ = "STUB: not implemented"; return false }
 
 // IsIssue1432 reports whether Issue143 is Issue1432.
-func (s Issue143) IsIssue1432() bool { return s.Type == Issue1432Issue143 }
+func (s Issue143) IsIssue1432() bool { _ = "STUB: not implemented"; return false }
 
 // IsIssue1433 reports whether Issue143 is Issue1433.
-func (s Issue143) IsIssue1433() bool { return s.Type == Issue1433Issue143 }
+func (s Issue143) IsIssue1433() bool { _ = "STUB: not implemented"; return false }
 
 // SetIssue1430 sets Issue143 to Issue1430.
-func (s *Issue143) SetIssue1430(v Issue1430) {
-	s.Type = Issue1430Issue143
-	s.Issue1430 = v
-}
+func (s *Issue143) SetIssue1430(v Issue1430) { _ = "STUB: not implemented"; return }
 
 // GetIssue1430 returns Issue1430 and true boolean if Issue143 is Issue1430.
 func (s Issue143) GetIssue1430() (v Issue1430, ok bool) {
-	if !s.IsIssue1430() {
-		return v, false
-	}
-	return s.Issue1430, true
+	_ = "STUB: not implemented"
+	return *new(Issue1430), false
 }
 
 // NewIssue1430Issue143 returns new Issue143 from Issue1430.
-func NewIssue1430Issue143(v Issue1430) Issue143 {
-	var s Issue143
-	s.SetIssue1430(v)
-	return s
-}
+func NewIssue1430Issue143(v Issue1430) Issue143 { _ = "STUB: not implemented"; return *new(Issue143) }
 
 // SetIssue1431 sets Issue143 to Issue1431.
-func (s *Issue143) SetIssue1431(v Issue1431) {
-	s.Type = Issue1431Issue143
-	s.Issue1431 = v
-}
+func (s *Issue143) SetIssue1431(v Issue1431) { _ = "STUB: not implemented"; return }
 
 // GetIssue1431 returns Issue1431 and true boolean if Issue143 is Issue1431.
 func (s Issue143) GetIssue1431() (v Issue1431, ok bool) {
-	if !s.IsIssue1431() {
-		return v, false
-	}
-	return s.Issue1431, true
+	_ = "STUB: not implemented"
+	return *new(Issue1431), false
 }
 
 // NewIssue1431Issue143 returns new Issue143 from Issue1431.
-func NewIssue1431Issue143(v Issue1431) Issue143 {
-	var s Issue143
-	s.SetIssue1431(v)
-	return s
-}
+func NewIssue1431Issue143(v Issue1431) Issue143 { _ = "STUB: not implemented"; return *new(Issue143) }
 
 // SetIssue1432 sets Issue143 to Issue1432.
-func (s *Issue143) SetIssue1432(v Issue1432) {
-	s.Type = Issue1432Issue143
-	s.Issue1432 = v
-}
+func (s *Issue143) SetIssue1432(v Issue1432) { _ = "STUB: not implemented"; return }
 
 // GetIssue1432 returns Issue1432 and true boolean if Issue143 is Issue1432.
 func (s Issue143) GetIssue1432() (v Issue1432, ok bool) {
-	if !s.IsIssue1432() {
-		return v, false
-	}
-	return s.Issue1432, true
+	_ = "STUB: not implemented"
+	return *new(Issue1432), false
 }
 
 // NewIssue1432Issue143 returns new Issue143 from Issue1432.
-func NewIssue1432Issue143(v Issue1432) Issue143 {
-	var s Issue143
-	s.SetIssue1432(v)
-	return s
-}
+func NewIssue1432Issue143(v Issue1432) Issue143 { _ = "STUB: not implemented"; return *new(Issue143) }
 
 // SetIssue1433 sets Issue143 to Issue1433.
-func (s *Issue143) SetIssue1433(v Issue1433) {
-	s.Type = Issue1433Issue143
-	s.Issue1433 = v
-}
+func (s *Issue143) SetIssue1433(v Issue1433) { _ = "STUB: not implemented"; return }
 
 // GetIssue1433 returns Issue1433 and true boolean if Issue143 is Issue1433.
 func (s Issue143) GetIssue1433() (v Issue1433, ok bool) {
-	if !s.IsIssue1433() {
-		return v, false
-	}
-	return s.Issue1433, true
+	_ = "STUB: not implemented"
+	return *new(Issue1433), false
 }
 
 // NewIssue1433Issue143 returns new Issue143 from Issue1433.
-func NewIssue1433Issue143(v Issue1433) Issue143 {
-	var s Issue143
-	s.SetIssue1433(v)
-	return s
-}
+func NewIssue1433Issue143(v Issue1433) Issue143 { _ = "STUB: not implemented"; return *new(Issue143) }
 
 type Issue1430 struct {
 	CommonMinus1 string `json:"common-1"`
@@ -1092,34 +1150,22 @@ type Issue1430 struct {
 }
 
 // GetCommonMinus1 returns the value of CommonMinus1.
-func (s *Issue1430) GetCommonMinus1() string {
-	return s.CommonMinus1
-}
+func (s *Issue1430) GetCommonMinus1() string { _ = "STUB: not implemented"; return "" }
 
 // GetCommonMinus2 returns the value of CommonMinus2.
-func (s *Issue1430) GetCommonMinus2() int {
-	return s.CommonMinus2
-}
+func (s *Issue1430) GetCommonMinus2() int { _ = "STUB: not implemented"; return 0 }
 
 // GetUniqueMinus1 returns the value of UniqueMinus1.
-func (s *Issue1430) GetUniqueMinus1() string {
-	return s.UniqueMinus1
-}
+func (s *Issue1430) GetUniqueMinus1() string { _ = "STUB: not implemented"; return "" }
 
 // SetCommonMinus1 sets the value of CommonMinus1.
-func (s *Issue1430) SetCommonMinus1(val string) {
-	s.CommonMinus1 = val
-}
+func (s *Issue1430) SetCommonMinus1(val string) { _ = "STUB: not implemented"; return }
 
 // SetCommonMinus2 sets the value of CommonMinus2.
-func (s *Issue1430) SetCommonMinus2(val int) {
-	s.CommonMinus2 = val
-}
+func (s *Issue1430) SetCommonMinus2(val int) { _ = "STUB: not implemented"; return }
 
 // SetUniqueMinus1 sets the value of UniqueMinus1.
-func (s *Issue1430) SetUniqueMinus1(val string) {
-	s.UniqueMinus1 = val
-}
+func (s *Issue1430) SetUniqueMinus1(val string) { _ = "STUB: not implemented"; return }
 
 type Issue1431 struct {
 	CommonMinus1 string `json:"common-1"`
@@ -1128,34 +1174,22 @@ type Issue1431 struct {
 }
 
 // GetCommonMinus1 returns the value of CommonMinus1.
-func (s *Issue1431) GetCommonMinus1() string {
-	return s.CommonMinus1
-}
+func (s *Issue1431) GetCommonMinus1() string { _ = "STUB: not implemented"; return "" }
 
 // GetCommonMinus2 returns the value of CommonMinus2.
-func (s *Issue1431) GetCommonMinus2() int {
-	return s.CommonMinus2
-}
+func (s *Issue1431) GetCommonMinus2() int { _ = "STUB: not implemented"; return 0 }
 
 // GetUniqueMinus2 returns the value of UniqueMinus2.
-func (s *Issue1431) GetUniqueMinus2() string {
-	return s.UniqueMinus2
-}
+func (s *Issue1431) GetUniqueMinus2() string { _ = "STUB: not implemented"; return "" }
 
 // SetCommonMinus1 sets the value of CommonMinus1.
-func (s *Issue1431) SetCommonMinus1(val string) {
-	s.CommonMinus1 = val
-}
+func (s *Issue1431) SetCommonMinus1(val string) { _ = "STUB: not implemented"; return }
 
 // SetCommonMinus2 sets the value of CommonMinus2.
-func (s *Issue1431) SetCommonMinus2(val int) {
-	s.CommonMinus2 = val
-}
+func (s *Issue1431) SetCommonMinus2(val int) { _ = "STUB: not implemented"; return }
 
 // SetUniqueMinus2 sets the value of UniqueMinus2.
-func (s *Issue1431) SetUniqueMinus2(val string) {
-	s.UniqueMinus2 = val
-}
+func (s *Issue1431) SetUniqueMinus2(val string) { _ = "STUB: not implemented"; return }
 
 type Issue1432 struct {
 	CommonMinus1 string `json:"common-1"`
@@ -1165,44 +1199,33 @@ type Issue1432 struct {
 }
 
 // GetCommonMinus1 returns the value of CommonMinus1.
-func (s *Issue1432) GetCommonMinus1() string {
-	return s.CommonMinus1
-}
+func (s *Issue1432) GetCommonMinus1() string { _ = "STUB: not implemented"; return "" }
 
 // GetCommonMinus2 returns the value of CommonMinus2.
-func (s *Issue1432) GetCommonMinus2() int {
-	return s.CommonMinus2
-}
+func (s *Issue1432) GetCommonMinus2() int { _ = "STUB: not implemented"; return 0 }
 
 // GetCommonMinus3 returns the value of CommonMinus3.
 func (s *Issue1432) GetCommonMinus3() OptInt {
-	return s.CommonMinus3
+	_ = "STUB: not implemented"
+	return *
+
+	// GetUniqueMinus3 returns the value of UniqueMinus3.
+	new(OptInt)
 }
 
-// GetUniqueMinus3 returns the value of UniqueMinus3.
-func (s *Issue1432) GetUniqueMinus3() string {
-	return s.UniqueMinus3
-}
+func (s *Issue1432) GetUniqueMinus3() string { _ = "STUB: not implemented"; return "" }
 
 // SetCommonMinus1 sets the value of CommonMinus1.
-func (s *Issue1432) SetCommonMinus1(val string) {
-	s.CommonMinus1 = val
-}
+func (s *Issue1432) SetCommonMinus1(val string) { _ = "STUB: not implemented"; return }
 
 // SetCommonMinus2 sets the value of CommonMinus2.
-func (s *Issue1432) SetCommonMinus2(val int) {
-	s.CommonMinus2 = val
-}
+func (s *Issue1432) SetCommonMinus2(val int) { _ = "STUB: not implemented"; return }
 
 // SetCommonMinus3 sets the value of CommonMinus3.
-func (s *Issue1432) SetCommonMinus3(val OptInt) {
-	s.CommonMinus3 = val
-}
+func (s *Issue1432) SetCommonMinus3(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetUniqueMinus3 sets the value of UniqueMinus3.
-func (s *Issue1432) SetUniqueMinus3(val string) {
-	s.UniqueMinus3 = val
-}
+func (s *Issue1432) SetUniqueMinus3(val string) { _ = "STUB: not implemented"; return }
 
 type Issue1433 struct {
 	CommonMinus3 OptInt `json:"common-3"`
@@ -1211,23 +1234,20 @@ type Issue1433 struct {
 
 // GetCommonMinus3 returns the value of CommonMinus3.
 func (s *Issue1433) GetCommonMinus3() OptInt {
-	return s.CommonMinus3
+	_ = "STUB: not implemented"
+	return *
+
+	// GetUniqueMinus4 returns the value of UniqueMinus4.
+	new(OptInt)
 }
 
-// GetUniqueMinus4 returns the value of UniqueMinus4.
-func (s *Issue1433) GetUniqueMinus4() string {
-	return s.UniqueMinus4
-}
+func (s *Issue1433) GetUniqueMinus4() string { _ = "STUB: not implemented"; return "" }
 
 // SetCommonMinus3 sets the value of CommonMinus3.
-func (s *Issue1433) SetCommonMinus3(val OptInt) {
-	s.CommonMinus3 = val
-}
+func (s *Issue1433) SetCommonMinus3(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetUniqueMinus4 sets the value of UniqueMinus4.
-func (s *Issue1433) SetUniqueMinus4(val string) {
-	s.UniqueMinus4 = val
-}
+func (s *Issue1433) SetUniqueMinus4(val string) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/Issue1461
 type Issue1461 struct {
@@ -1239,42 +1259,59 @@ type Issue1461 struct {
 
 // GetRequiredTest returns the value of RequiredTest.
 func (s *Issue1461) GetRequiredTest() OptIssue1461RequiredTest {
-	return s.RequiredTest
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOptionalTest returns the value of OptionalTest.
+	new(OptIssue1461RequiredTest)
 }
 
-// GetOptionalTest returns the value of OptionalTest.
 func (s *Issue1461) GetOptionalTest() OptIssue1461OptionalTest {
-	return s.OptionalTest
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNullableTest returns the value of NullableTest.
+	new(OptIssue1461OptionalTest)
 }
 
-// GetNullableTest returns the value of NullableTest.
 func (s *Issue1461) GetNullableTest() OptIssue1461NullableTest {
-	return s.NullableTest
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNullableOptionalTest returns the value of NullableOptionalTest.
+	new(OptIssue1461NullableTest)
 }
 
-// GetNullableOptionalTest returns the value of NullableOptionalTest.
 func (s *Issue1461) GetNullableOptionalTest() OptIssue1461NullableOptionalTest {
-	return s.NullableOptionalTest
+	_ = "STUB: not implemented"
+	return *new(OptIssue1461NullableOptionalTest)
 }
 
 // SetRequiredTest sets the value of RequiredTest.
 func (s *Issue1461) SetRequiredTest(val OptIssue1461RequiredTest) {
-	s.RequiredTest = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOptionalTest sets the value of OptionalTest.
 }
 
-// SetOptionalTest sets the value of OptionalTest.
 func (s *Issue1461) SetOptionalTest(val OptIssue1461OptionalTest) {
-	s.OptionalTest = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetNullableTest sets the value of NullableTest.
 }
 
-// SetNullableTest sets the value of NullableTest.
 func (s *Issue1461) SetNullableTest(val OptIssue1461NullableTest) {
-	s.NullableTest = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetNullableOptionalTest sets the value of NullableOptionalTest.
 }
 
-// SetNullableOptionalTest sets the value of NullableOptionalTest.
 func (s *Issue1461) SetNullableOptionalTest(val OptIssue1461NullableOptionalTest) {
-	s.NullableOptionalTest = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type Issue1461NullableOptionalTest struct {
@@ -1283,12 +1320,15 @@ type Issue1461NullableOptionalTest struct {
 
 // GetBanana returns the value of Banana.
 func (s *Issue1461NullableOptionalTest) GetBanana() OptNilStringArray {
-	return s.Banana
+	_ = "STUB: not implemented"
+
+	// SetBanana sets the value of Banana.
+	return *new(OptNilStringArray)
 }
 
-// SetBanana sets the value of Banana.
 func (s *Issue1461NullableOptionalTest) SetBanana(val OptNilStringArray) {
-	s.Banana = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type Issue1461NullableTest struct {
@@ -1297,13 +1337,13 @@ type Issue1461NullableTest struct {
 
 // GetBanana returns the value of Banana.
 func (s *Issue1461NullableTest) GetBanana() []string {
-	return s.Banana
+	_ = "STUB: not implemented"
+
+	// SetBanana sets the value of Banana.
+	return nil
 }
 
-// SetBanana sets the value of Banana.
-func (s *Issue1461NullableTest) SetBanana(val []string) {
-	s.Banana = val
-}
+func (s *Issue1461NullableTest) SetBanana(val []string) { _ = "STUB: not implemented"; return }
 
 type Issue1461OptionalTest struct {
 	Banana []string `json:"banana"`
@@ -1311,13 +1351,13 @@ type Issue1461OptionalTest struct {
 
 // GetBanana returns the value of Banana.
 func (s *Issue1461OptionalTest) GetBanana() []string {
-	return s.Banana
+	_ = "STUB: not implemented"
+
+	// SetBanana sets the value of Banana.
+	return nil
 }
 
-// SetBanana sets the value of Banana.
-func (s *Issue1461OptionalTest) SetBanana(val []string) {
-	s.Banana = val
-}
+func (s *Issue1461OptionalTest) SetBanana(val []string) { _ = "STUB: not implemented"; return }
 
 type Issue1461RequiredTest struct {
 	Banana []string `json:"banana"`
@@ -1325,16 +1365,20 @@ type Issue1461RequiredTest struct {
 
 // GetBanana returns the value of Banana.
 func (s *Issue1461RequiredTest) GetBanana() []string {
-	return s.Banana
+	_ = "STUB: not implemented"
+
+	// SetBanana sets the value of Banana.
+	return nil
 }
 
-// SetBanana sets the value of Banana.
 func (s *Issue1461RequiredTest) SetBanana(val []string) {
-	s.Banana = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Issue943
+	// Issue943 represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/Issue943
-// Issue943 represents sum type.
 type Issue943 struct {
 	Type             Issue943Type // switch on this field
 	Issue943Variant1 Issue943Variant1
@@ -1353,75 +1397,57 @@ const (
 )
 
 // IsIssue943Variant1 reports whether Issue943 is Issue943Variant1.
-func (s Issue943) IsIssue943Variant1() bool { return s.Type == Issue943Variant1Issue943 }
+func (s Issue943) IsIssue943Variant1() bool { _ = "STUB: not implemented"; return false }
 
 // IsIssue943Variant2 reports whether Issue943 is Issue943Variant2.
-func (s Issue943) IsIssue943Variant2() bool { return s.Type == Issue943Variant2Issue943 }
+func (s Issue943) IsIssue943Variant2() bool { _ = "STUB: not implemented"; return false }
 
 // IsIssue943Map reports whether Issue943 is Issue943Map.
-func (s Issue943) IsIssue943Map() bool { return s.Type == Issue943MapIssue943 }
+func (s Issue943) IsIssue943Map() bool { _ = "STUB: not implemented"; return false }
 
 // SetIssue943Variant1 sets Issue943 to Issue943Variant1.
-func (s *Issue943) SetIssue943Variant1(v Issue943Variant1) {
-	s.Type = Issue943Variant1Issue943
-	s.Issue943Variant1 = v
-}
+func (s *Issue943) SetIssue943Variant1(v Issue943Variant1) { _ = "STUB: not implemented"; return }
 
 // GetIssue943Variant1 returns Issue943Variant1 and true boolean if Issue943 is Issue943Variant1.
 func (s Issue943) GetIssue943Variant1() (v Issue943Variant1, ok bool) {
-	if !s.IsIssue943Variant1() {
-		return v, false
-	}
-	return s.Issue943Variant1, true
+	_ = "STUB: not implemented"
+	return *new(Issue943Variant1), false
 }
 
 // NewIssue943Variant1Issue943 returns new Issue943 from Issue943Variant1.
 func NewIssue943Variant1Issue943(v Issue943Variant1) Issue943 {
-	var s Issue943
-	s.SetIssue943Variant1(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Issue943)
 }
 
 // SetIssue943Variant2 sets Issue943 to Issue943Variant2.
-func (s *Issue943) SetIssue943Variant2(v Issue943Variant2) {
-	s.Type = Issue943Variant2Issue943
-	s.Issue943Variant2 = v
-}
+func (s *Issue943) SetIssue943Variant2(v Issue943Variant2) { _ = "STUB: not implemented"; return }
 
 // GetIssue943Variant2 returns Issue943Variant2 and true boolean if Issue943 is Issue943Variant2.
 func (s Issue943) GetIssue943Variant2() (v Issue943Variant2, ok bool) {
-	if !s.IsIssue943Variant2() {
-		return v, false
-	}
-	return s.Issue943Variant2, true
+	_ = "STUB: not implemented"
+	return *new(Issue943Variant2), false
 }
 
 // NewIssue943Variant2Issue943 returns new Issue943 from Issue943Variant2.
 func NewIssue943Variant2Issue943(v Issue943Variant2) Issue943 {
-	var s Issue943
-	s.SetIssue943Variant2(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Issue943)
 }
 
 // SetIssue943Map sets Issue943 to Issue943Map.
-func (s *Issue943) SetIssue943Map(v Issue943Map) {
-	s.Type = Issue943MapIssue943
-	s.Issue943Map = v
-}
+func (s *Issue943) SetIssue943Map(v Issue943Map) { _ = "STUB: not implemented"; return }
 
 // GetIssue943Map returns Issue943Map and true boolean if Issue943 is Issue943Map.
 func (s Issue943) GetIssue943Map() (v Issue943Map, ok bool) {
-	if !s.IsIssue943Map() {
-		return v, false
-	}
-	return s.Issue943Map, true
+	_ = "STUB: not implemented"
+	return *new(Issue943Map), false
 }
 
 // NewIssue943MapIssue943 returns new Issue943 from Issue943Map.
 func NewIssue943MapIssue943(v Issue943Map) Issue943 {
-	var s Issue943
-	s.SetIssue943Map(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Issue943)
 }
 
 // Ref: #/components/schemas/Issue943Map
@@ -1433,23 +1459,28 @@ type Issue943Map struct {
 
 // GetSelector returns the value of Selector.
 func (s *Issue943Map) GetSelector() string {
-	return s.Selector
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return ""
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Issue943Map) GetPattern0Props() Issue943MapPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetSelector sets the value of Selector.
+	new(Issue943MapPattern0)
 }
 
-// SetSelector sets the value of Selector.
 func (s *Issue943Map) SetSelector(val string) {
-	s.Selector = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Issue943Map) SetPattern0Props(val Issue943MapPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Issue943Map) SetPattern0Props(val Issue943MapPattern0) { _ = "STUB: not implemented"; return }
 
 type Issue943MapPattern0 map[string]string
 
@@ -1470,23 +1501,23 @@ type Issue943Variant1 struct {
 
 // GetSelector returns the value of Selector.
 func (s *Issue943Variant1) GetSelector() string {
-	return s.Selector
+	_ = "STUB: not implemented"
+
+	// GetVariant1Field returns the value of Variant1Field.
+	return ""
 }
 
-// GetVariant1Field returns the value of Variant1Field.
-func (s *Issue943Variant1) GetVariant1Field() int {
-	return s.Variant1Field
-}
+func (s *Issue943Variant1) GetVariant1Field() int { _ = "STUB: not implemented"; return 0 }
 
 // SetSelector sets the value of Selector.
 func (s *Issue943Variant1) SetSelector(val string) {
-	s.Selector = val
+	_ = "STUB: not implemented"
+
+	// SetVariant1Field sets the value of Variant1Field.
+	return
 }
 
-// SetVariant1Field sets the value of Variant1Field.
-func (s *Issue943Variant1) SetVariant1Field(val int) {
-	s.Variant1Field = val
-}
+func (s *Issue943Variant1) SetVariant1Field(val int) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/Issue943Variant2
 type Issue943Variant2 struct {
@@ -1496,23 +1527,23 @@ type Issue943Variant2 struct {
 
 // GetSelector returns the value of Selector.
 func (s *Issue943Variant2) GetSelector() string {
-	return s.Selector
+	_ = "STUB: not implemented"
+
+	// GetVariant2Field returns the value of Variant2Field.
+	return ""
 }
 
-// GetVariant2Field returns the value of Variant2Field.
-func (s *Issue943Variant2) GetVariant2Field() bool {
-	return s.Variant2Field
-}
+func (s *Issue943Variant2) GetVariant2Field() bool { _ = "STUB: not implemented"; return false }
 
 // SetSelector sets the value of Selector.
 func (s *Issue943Variant2) SetSelector(val string) {
-	s.Selector = val
+	_ = "STUB: not implemented"
+
+	// SetVariant2Field sets the value of Variant2Field.
+	return
 }
 
-// SetVariant2Field sets the value of Variant2Field.
-func (s *Issue943Variant2) SetVariant2Field(val bool) {
-	s.Variant2Field = val
-}
+func (s *Issue943Variant2) SetVariant2Field(val bool) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/MapWithProperties
 type MapWithProperties struct {
@@ -1526,62 +1557,88 @@ type MapWithProperties struct {
 
 // GetRequired returns the value of Required.
 func (s *MapWithProperties) GetRequired() int {
-	return s.Required
+	_ = "STUB: not implemented"
+
+	// GetOptional returns the value of Optional.
+	return 0
 }
 
-// GetOptional returns the value of Optional.
 func (s *MapWithProperties) GetOptional() OptInt {
-	return s.Optional
+	_ = "STUB: not implemented"
+
+	// GetSubMap returns the value of SubMap.
+	return *new(OptInt)
 }
 
-// GetSubMap returns the value of SubMap.
 func (s *MapWithProperties) GetSubMap() OptStringMap {
-	return s.SubMap
+	_ = "STUB: not implemented"
+
+	// GetInlinedSubMap returns the value of InlinedSubMap.
+	return *new(OptStringMap)
 }
 
-// GetInlinedSubMap returns the value of InlinedSubMap.
 func (s *MapWithProperties) GetInlinedSubMap() OptMapWithPropertiesInlinedSubMap {
-	return s.InlinedSubMap
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMapValidation returns the value of MapValidation.
+	new(OptMapWithPropertiesInlinedSubMap)
 }
 
-// GetMapValidation returns the value of MapValidation.
 func (s *MapWithProperties) GetMapValidation() OptValidationStringMap {
-	return s.MapValidation
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAdditionalProps returns the value of AdditionalProps.
+	new(OptValidationStringMap)
 }
 
-// GetAdditionalProps returns the value of AdditionalProps.
 func (s *MapWithProperties) GetAdditionalProps() MapWithPropertiesAdditional {
-	return s.AdditionalProps
+	_ = "STUB: not implemented"
+	return *
+
+	// SetRequired sets the value of Required.
+	new(MapWithPropertiesAdditional)
 }
 
-// SetRequired sets the value of Required.
 func (s *MapWithProperties) SetRequired(val int) {
-	s.Required = val
+	_ = "STUB: not implemented"
+
+	// SetOptional sets the value of Optional.
+	return
 }
 
-// SetOptional sets the value of Optional.
 func (s *MapWithProperties) SetOptional(val OptInt) {
-	s.Optional = val
+	_ = "STUB: not implemented"
+
+	// SetSubMap sets the value of SubMap.
+	return
 }
 
-// SetSubMap sets the value of SubMap.
 func (s *MapWithProperties) SetSubMap(val OptStringMap) {
-	s.SubMap = val
+	_ = "STUB: not implemented"
+
+	// SetInlinedSubMap sets the value of InlinedSubMap.
+	return
 }
 
-// SetInlinedSubMap sets the value of InlinedSubMap.
 func (s *MapWithProperties) SetInlinedSubMap(val OptMapWithPropertiesInlinedSubMap) {
-	s.InlinedSubMap = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetMapValidation sets the value of MapValidation.
 }
 
-// SetMapValidation sets the value of MapValidation.
 func (s *MapWithProperties) SetMapValidation(val OptValidationStringMap) {
-	s.MapValidation = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetAdditionalProps sets the value of AdditionalProps.
 }
 
-// SetAdditionalProps sets the value of AdditionalProps.
 func (s *MapWithProperties) SetAdditionalProps(val MapWithPropertiesAdditional) {
-	s.AdditionalProps = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type MapWithPropertiesAdditional map[string]string
@@ -1616,46 +1673,62 @@ type MaxPropertiesTest struct {
 
 // GetRequired returns the value of Required.
 func (s *MaxPropertiesTest) GetRequired() int {
-	return s.Required
+	_ = "STUB: not implemented"
+
+	// GetOptionalA returns the value of OptionalA.
+	return 0
 }
 
-// GetOptionalA returns the value of OptionalA.
 func (s *MaxPropertiesTest) GetOptionalA() OptInt {
-	return s.OptionalA
+	_ = "STUB: not implemented"
+
+	// GetOptionalB returns the value of OptionalB.
+	return *new(OptInt)
 }
 
-// GetOptionalB returns the value of OptionalB.
 func (s *MaxPropertiesTest) GetOptionalB() OptInt {
-	return s.OptionalB
+	_ = "STUB: not implemented"
+
+	// GetOptionalC returns the value of OptionalC.
+	return *new(OptInt)
 }
 
-// GetOptionalC returns the value of OptionalC.
 func (s *MaxPropertiesTest) GetOptionalC() OptInt {
-	return s.OptionalC
+	_ = "STUB: not implemented"
+
+	// SetRequired sets the value of Required.
+	return *new(OptInt)
 }
 
-// SetRequired sets the value of Required.
 func (s *MaxPropertiesTest) SetRequired(val int) {
-	s.Required = val
+	_ = "STUB: not implemented"
+
+	// SetOptionalA sets the value of OptionalA.
+	return
 }
 
-// SetOptionalA sets the value of OptionalA.
 func (s *MaxPropertiesTest) SetOptionalA(val OptInt) {
-	s.OptionalA = val
+	_ = "STUB: not implemented"
+
+	// SetOptionalB sets the value of OptionalB.
+	return
 }
 
-// SetOptionalB sets the value of OptionalB.
 func (s *MaxPropertiesTest) SetOptionalB(val OptInt) {
-	s.OptionalB = val
+	_ = "STUB: not implemented"
+
+	// SetOptionalC sets the value of OptionalC.
+	return
 }
 
-// SetOptionalC sets the value of OptionalC.
 func (s *MaxPropertiesTest) SetOptionalC(val OptInt) {
-	s.OptionalC = val
+	_ = "STUB: not implemented"
+
+	// Merged schema.
+	// Ref: #/components/schemas/MergeDiscriminatorOneOf
+	return
 }
 
-// Merged schema.
-// Ref: #/components/schemas/MergeDiscriminatorOneOf
 type MergeDiscriminatorOneOf struct {
 	Common string `json:"common"`
 	OneOf  MergeDiscriminatorOneOfSum
@@ -1663,25 +1736,33 @@ type MergeDiscriminatorOneOf struct {
 
 // GetCommon returns the value of Common.
 func (s *MergeDiscriminatorOneOf) GetCommon() string {
-	return s.Common
+	_ = "STUB: not implemented"
+
+	// GetOneOf returns the value of OneOf.
+	return ""
 }
 
-// GetOneOf returns the value of OneOf.
 func (s *MergeDiscriminatorOneOf) GetOneOf() MergeDiscriminatorOneOfSum {
-	return s.OneOf
+	_ = "STUB: not implemented"
+
+	// SetCommon sets the value of Common.
+	return *new(MergeDiscriminatorOneOfSum)
 }
 
-// SetCommon sets the value of Common.
 func (s *MergeDiscriminatorOneOf) SetCommon(val string) {
-	s.Common = val
+	_ = "STUB: not implemented"
+
+	// SetOneOf sets the value of OneOf.
+	return
 }
 
-// SetOneOf sets the value of OneOf.
 func (s *MergeDiscriminatorOneOf) SetOneOf(val MergeDiscriminatorOneOfSum) {
-	s.OneOf = val
+	_ = "STUB: not implemented"
+
+	// MergeDiscriminatorOneOfSum represents sum type.
+	return
 }
 
-// MergeDiscriminatorOneOfSum represents sum type.
 type MergeDiscriminatorOneOfSum struct {
 	Type           MergeDiscriminatorOneOfSumType // switch on this field
 	InlineOneOfFoo InlineOneOfFoo
@@ -1699,54 +1780,50 @@ const (
 
 // IsInlineOneOfFoo reports whether MergeDiscriminatorOneOfSum is InlineOneOfFoo.
 func (s MergeDiscriminatorOneOfSum) IsInlineOneOfFoo() bool {
-	return s.Type == InlineOneOfFooMergeDiscriminatorOneOfSum
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineOneOfBar reports whether MergeDiscriminatorOneOfSum is InlineOneOfBar.
 func (s MergeDiscriminatorOneOfSum) IsInlineOneOfBar() bool {
-	return s.Type == InlineOneOfBarMergeDiscriminatorOneOfSum
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetInlineOneOfFoo sets MergeDiscriminatorOneOfSum to InlineOneOfFoo.
 func (s *MergeDiscriminatorOneOfSum) SetInlineOneOfFoo(v InlineOneOfFoo) {
-	s.Type = InlineOneOfFooMergeDiscriminatorOneOfSum
-	s.InlineOneOfFoo = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineOneOfFoo returns InlineOneOfFoo and true boolean if MergeDiscriminatorOneOfSum is InlineOneOfFoo.
 func (s MergeDiscriminatorOneOfSum) GetInlineOneOfFoo() (v InlineOneOfFoo, ok bool) {
-	if !s.IsInlineOneOfFoo() {
-		return v, false
-	}
-	return s.InlineOneOfFoo, true
+	_ = "STUB: not implemented"
+	return *new(InlineOneOfFoo), false
 }
 
 // NewInlineOneOfFooMergeDiscriminatorOneOfSum returns new MergeDiscriminatorOneOfSum from InlineOneOfFoo.
 func NewInlineOneOfFooMergeDiscriminatorOneOfSum(v InlineOneOfFoo) MergeDiscriminatorOneOfSum {
-	var s MergeDiscriminatorOneOfSum
-	s.SetInlineOneOfFoo(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(MergeDiscriminatorOneOfSum)
 }
 
 // SetInlineOneOfBar sets MergeDiscriminatorOneOfSum to InlineOneOfBar.
 func (s *MergeDiscriminatorOneOfSum) SetInlineOneOfBar(v InlineOneOfBar) {
-	s.Type = InlineOneOfBarMergeDiscriminatorOneOfSum
-	s.InlineOneOfBar = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineOneOfBar returns InlineOneOfBar and true boolean if MergeDiscriminatorOneOfSum is InlineOneOfBar.
 func (s MergeDiscriminatorOneOfSum) GetInlineOneOfBar() (v InlineOneOfBar, ok bool) {
-	if !s.IsInlineOneOfBar() {
-		return v, false
-	}
-	return s.InlineOneOfBar, true
+	_ = "STUB: not implemented"
+	return *new(InlineOneOfBar), false
 }
 
 // NewInlineOneOfBarMergeDiscriminatorOneOfSum returns new MergeDiscriminatorOneOfSum from InlineOneOfBar.
 func NewInlineOneOfBarMergeDiscriminatorOneOfSum(v InlineOneOfBar) MergeDiscriminatorOneOfSum {
-	var s MergeDiscriminatorOneOfSum
-	s.SetInlineOneOfBar(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(MergeDiscriminatorOneOfSum)
 }
 
 // Merged schema.
@@ -1758,25 +1835,33 @@ type MergeUniqueFieldsOneOf struct {
 
 // GetCommon returns the value of Common.
 func (s *MergeUniqueFieldsOneOf) GetCommon() string {
-	return s.Common
+	_ = "STUB: not implemented"
+
+	// GetOneOf returns the value of OneOf.
+	return ""
 }
 
-// GetOneOf returns the value of OneOf.
 func (s *MergeUniqueFieldsOneOf) GetOneOf() MergeUniqueFieldsOneOfSum {
-	return s.OneOf
+	_ = "STUB: not implemented"
+
+	// SetCommon sets the value of Common.
+	return *new(MergeUniqueFieldsOneOfSum)
 }
 
-// SetCommon sets the value of Common.
 func (s *MergeUniqueFieldsOneOf) SetCommon(val string) {
-	s.Common = val
+	_ = "STUB: not implemented"
+
+	// SetOneOf sets the value of OneOf.
+	return
 }
 
-// SetOneOf sets the value of OneOf.
 func (s *MergeUniqueFieldsOneOf) SetOneOf(val MergeUniqueFieldsOneOfSum) {
-	s.OneOf = val
+	_ = "STUB: not implemented"
+
+	// MergeUniqueFieldsOneOfSum represents sum type.
+	return
 }
 
-// MergeUniqueFieldsOneOfSum represents sum type.
 type MergeUniqueFieldsOneOfSum struct {
 	Type           MergeUniqueFieldsOneOfSumType // switch on this field
 	InlineOneOfFoo InlineOneOfFoo
@@ -1793,63 +1878,49 @@ const (
 )
 
 // IsInlineOneOfFoo reports whether MergeUniqueFieldsOneOfSum is InlineOneOfFoo.
-func (s MergeUniqueFieldsOneOfSum) IsInlineOneOfFoo() bool {
-	return s.Type == InlineOneOfFooMergeUniqueFieldsOneOfSum
-}
+func (s MergeUniqueFieldsOneOfSum) IsInlineOneOfFoo() bool { _ = "STUB: not implemented"; return false }
 
 // IsInlineOneOfBar reports whether MergeUniqueFieldsOneOfSum is InlineOneOfBar.
-func (s MergeUniqueFieldsOneOfSum) IsInlineOneOfBar() bool {
-	return s.Type == InlineOneOfBarMergeUniqueFieldsOneOfSum
-}
+func (s MergeUniqueFieldsOneOfSum) IsInlineOneOfBar() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineOneOfFoo sets MergeUniqueFieldsOneOfSum to InlineOneOfFoo.
 func (s *MergeUniqueFieldsOneOfSum) SetInlineOneOfFoo(v InlineOneOfFoo) {
-	s.Type = InlineOneOfFooMergeUniqueFieldsOneOfSum
-	s.InlineOneOfFoo = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineOneOfFoo returns InlineOneOfFoo and true boolean if MergeUniqueFieldsOneOfSum is InlineOneOfFoo.
 func (s MergeUniqueFieldsOneOfSum) GetInlineOneOfFoo() (v InlineOneOfFoo, ok bool) {
-	if !s.IsInlineOneOfFoo() {
-		return v, false
-	}
-	return s.InlineOneOfFoo, true
+	_ = "STUB: not implemented"
+	return *new(InlineOneOfFoo), false
 }
 
 // NewInlineOneOfFooMergeUniqueFieldsOneOfSum returns new MergeUniqueFieldsOneOfSum from InlineOneOfFoo.
 func NewInlineOneOfFooMergeUniqueFieldsOneOfSum(v InlineOneOfFoo) MergeUniqueFieldsOneOfSum {
-	var s MergeUniqueFieldsOneOfSum
-	s.SetInlineOneOfFoo(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(MergeUniqueFieldsOneOfSum)
 }
 
 // SetInlineOneOfBar sets MergeUniqueFieldsOneOfSum to InlineOneOfBar.
 func (s *MergeUniqueFieldsOneOfSum) SetInlineOneOfBar(v InlineOneOfBar) {
-	s.Type = InlineOneOfBarMergeUniqueFieldsOneOfSum
-	s.InlineOneOfBar = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineOneOfBar returns InlineOneOfBar and true boolean if MergeUniqueFieldsOneOfSum is InlineOneOfBar.
 func (s MergeUniqueFieldsOneOfSum) GetInlineOneOfBar() (v InlineOneOfBar, ok bool) {
-	if !s.IsInlineOneOfBar() {
-		return v, false
-	}
-	return s.InlineOneOfBar, true
+	_ = "STUB: not implemented"
+	return *new(InlineOneOfBar), false
 }
 
 // NewInlineOneOfBarMergeUniqueFieldsOneOfSum returns new MergeUniqueFieldsOneOfSum from InlineOneOfBar.
 func NewInlineOneOfBarMergeUniqueFieldsOneOfSum(v InlineOneOfBar) MergeUniqueFieldsOneOfSum {
-	var s MergeUniqueFieldsOneOfSum
-	s.SetInlineOneOfBar(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(MergeUniqueFieldsOneOfSum)
 }
 
 // NewNilInt returns new NilInt with value set to v.
-func NewNilInt(v int) NilInt {
-	return NilInt{
-		Value: v,
-	}
-}
+func NewNilInt(v int) NilInt { _ = "STUB: not implemented"; return *new(NilInt) }
 
 // NilInt is nullable int.
 type NilInt struct {
@@ -1858,36 +1929,23 @@ type NilInt struct {
 }
 
 // SetTo sets value to v.
-func (o *NilInt) SetTo(v int) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilInt) IsNull() bool { return o.Null }
+func (o NilInt) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilInt) SetToNull() {
-	o.Null = true
-	var v int
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilInt) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilInt) Get() (v int, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NilIntStatusCode wraps NilInt with StatusCode.
 type NilIntStatusCode struct {
@@ -1896,30 +1954,33 @@ type NilIntStatusCode struct {
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *NilIntStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *NilIntStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *NilIntStatusCode) GetResponse() NilInt {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(NilInt)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *NilIntStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
 func (s *NilIntStatusCode) SetResponse(val NilInt) {
-	s.Response = val
+	_ = "STUB: not implemented"
+
+	// NewNilNullableEnumsBoth returns new NilNullableEnumsBoth with value set to v.
+	return
 }
 
-// NewNilNullableEnumsBoth returns new NilNullableEnumsBoth with value set to v.
 func NewNilNullableEnumsBoth(v NullableEnumsBoth) NilNullableEnumsBoth {
-	return NilNullableEnumsBoth{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilNullableEnumsBoth)
 }
 
 // NilNullableEnumsBoth is nullable NullableEnumsBoth.
@@ -1929,42 +1990,34 @@ type NilNullableEnumsBoth struct {
 }
 
 // SetTo sets value to v.
-func (o *NilNullableEnumsBoth) SetTo(v NullableEnumsBoth) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilNullableEnumsBoth) SetTo(v NullableEnumsBoth) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilNullableEnumsBoth) IsNull() bool { return o.Null }
+func (o NilNullableEnumsBoth) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilNullableEnumsBoth) SetToNull() {
-	o.Null = true
-	var v NullableEnumsBoth
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilNullableEnumsBoth) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilNullableEnumsBoth) Get() (v NullableEnumsBoth, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(NullableEnumsBoth), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilNullableEnumsBoth) Or(d NullableEnumsBoth) NullableEnumsBoth {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(NullableEnumsBoth)
 }
 
 // NewNilNullableEnumsOnlyNullValue returns new NilNullableEnumsOnlyNullValue with value set to v.
 func NewNilNullableEnumsOnlyNullValue(v NullableEnumsOnlyNullValue) NilNullableEnumsOnlyNullValue {
-	return NilNullableEnumsOnlyNullValue{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilNullableEnumsOnlyNullValue)
 }
 
 // NilNullableEnumsOnlyNullValue is nullable NullableEnumsOnlyNullValue.
@@ -1975,41 +2028,36 @@ type NilNullableEnumsOnlyNullValue struct {
 
 // SetTo sets value to v.
 func (o *NilNullableEnumsOnlyNullValue) SetTo(v NullableEnumsOnlyNullValue) {
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o NilNullableEnumsOnlyNullValue) IsNull() bool { return o.Null }
+func (o NilNullableEnumsOnlyNullValue) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilNullableEnumsOnlyNullValue) SetToNull() {
-	o.Null = true
-	var v NullableEnumsOnlyNullValue
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilNullableEnumsOnlyNullValue) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilNullableEnumsOnlyNullValue) Get() (v NullableEnumsOnlyNullValue, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(NullableEnumsOnlyNullValue), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilNullableEnumsOnlyNullValue) Or(d NullableEnumsOnlyNullValue) NullableEnumsOnlyNullValue {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(NullableEnumsOnlyNullValue)
 }
 
 // NewNilNullableEnumsOnlyNullable returns new NilNullableEnumsOnlyNullable with value set to v.
 func NewNilNullableEnumsOnlyNullable(v NullableEnumsOnlyNullable) NilNullableEnumsOnlyNullable {
-	return NilNullableEnumsOnlyNullable{
-		Value: v,
-	}
+	_ = "STUB: not implemented"
+	return *new(NilNullableEnumsOnlyNullable)
 }
 
 // NilNullableEnumsOnlyNullable is nullable NullableEnumsOnlyNullable.
@@ -2020,42 +2068,34 @@ type NilNullableEnumsOnlyNullable struct {
 
 // SetTo sets value to v.
 func (o *NilNullableEnumsOnlyNullable) SetTo(v NullableEnumsOnlyNullable) {
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o NilNullableEnumsOnlyNullable) IsNull() bool { return o.Null }
+func (o NilNullableEnumsOnlyNullable) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilNullableEnumsOnlyNullable) SetToNull() {
-	o.Null = true
-	var v NullableEnumsOnlyNullable
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilNullableEnumsOnlyNullable) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o NilNullableEnumsOnlyNullable) Get() (v NullableEnumsOnlyNullable, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(NullableEnumsOnlyNullable), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o NilNullableEnumsOnlyNullable) Or(d NullableEnumsOnlyNullable) NullableEnumsOnlyNullable {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(NullableEnumsOnlyNullable)
 }
 
 // NewNilString returns new NilString with value set to v.
-func NewNilString(v string) NilString {
-	return NilString{
-		Value: v,
-	}
-}
+func NewNilString(v string) NilString { _ = "STUB: not implemented"; return *new(NilString) }
 
 // NilString is nullable string.
 type NilString struct {
@@ -2064,36 +2104,23 @@ type NilString struct {
 }
 
 // SetTo sets value to v.
-func (o *NilString) SetTo(v string) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilString) IsNull() bool { return o.Null }
+func (o NilString) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilString) SetToNull() {
-	o.Null = true
-	var v string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilString) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilString) Get() (v string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/NoAdditionalPropertiesTest
 type NoAdditionalPropertiesTest struct {
@@ -2104,42 +2131,56 @@ type NoAdditionalPropertiesTest struct {
 
 // GetEmpty returns the value of Empty.
 func (s *NoAdditionalPropertiesTest) GetEmpty() *OnlyEmptyObject {
-	return s.Empty
+	_ = "STUB: not implemented"
+
+	// GetOneProperty returns the value of OneProperty.
+	return nil
 }
 
-// GetOneProperty returns the value of OneProperty.
 func (s *NoAdditionalPropertiesTest) GetOneProperty() OptOnePropertyObject {
-	return s.OneProperty
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOnlyPatterned returns the value of OnlyPatterned.
+	new(OptOnePropertyObject)
 }
 
-// GetOnlyPatterned returns the value of OnlyPatterned.
 func (s *NoAdditionalPropertiesTest) GetOnlyPatterned() OptOnlyPatternedPropsObject {
-	return s.OnlyPatterned
+	_ = "STUB: not implemented"
+	return *
+
+	// SetEmpty sets the value of Empty.
+	new(OptOnlyPatternedPropsObject)
 }
 
-// SetEmpty sets the value of Empty.
 func (s *NoAdditionalPropertiesTest) SetEmpty(val *OnlyEmptyObject) {
-	s.Empty = val
+	_ = "STUB: not implemented"
+
+	// SetOneProperty sets the value of OneProperty.
+	return
 }
 
-// SetOneProperty sets the value of OneProperty.
 func (s *NoAdditionalPropertiesTest) SetOneProperty(val OptOnePropertyObject) {
-	s.OneProperty = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOnlyPatterned sets the value of OnlyPatterned.
 }
 
-// SetOnlyPatterned sets the value of OnlyPatterned.
 func (s *NoAdditionalPropertiesTest) SetOnlyPatterned(val OptOnlyPatternedPropsObject) {
-	s.OnlyPatterned = val
+	_ = "STUB: not implemented"
+	return
+
+	// Ref: #/components/responses/NotFound
 }
 
-// Ref: #/components/responses/NotFound
 type NotFound struct{}
 
-func (*NotFound) foobarGetRes()           {}
-func (*NotFound) foobarPostRes()          {}
-func (*NotFound) petGetAvatarByIDRes()    {}
-func (*NotFound) petGetAvatarByNameRes()  {}
-func (*NotFound) petUploadAvatarByIDRes() {}
+func (*NotFound) foobarGetRes()           { _ = "STUB: not implemented"; return }
+func (*NotFound) foobarPostRes()          { _ = "STUB: not implemented"; return }
+func (*NotFound) petGetAvatarByIDRes()    { _ = "STUB: not implemented"; return }
+func (*NotFound) petGetAvatarByNameRes()  { _ = "STUB: not implemented"; return }
+func (*NotFound) petUploadAvatarByIDRes() { _ = "STUB: not implemented"; return }
 
 type NullValue struct{}
 
@@ -2155,35 +2196,49 @@ type NullableEnums struct {
 
 // GetOnlyNullable returns the value of OnlyNullable.
 func (s *NullableEnums) GetOnlyNullable() NilNullableEnumsOnlyNullable {
-	return s.OnlyNullable
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOnlyNullValue returns the value of OnlyNullValue.
+	new(NilNullableEnumsOnlyNullable)
 }
 
-// GetOnlyNullValue returns the value of OnlyNullValue.
 func (s *NullableEnums) GetOnlyNullValue() NilNullableEnumsOnlyNullValue {
-	return s.OnlyNullValue
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBoth returns the value of Both.
+	new(NilNullableEnumsOnlyNullValue)
 }
 
-// GetBoth returns the value of Both.
 func (s *NullableEnums) GetBoth() NilNullableEnumsBoth {
-	return s.Both
+	_ = "STUB: not implemented"
+
+	// SetOnlyNullable sets the value of OnlyNullable.
+	return *new(NilNullableEnumsBoth)
 }
 
-// SetOnlyNullable sets the value of OnlyNullable.
 func (s *NullableEnums) SetOnlyNullable(val NilNullableEnumsOnlyNullable) {
-	s.OnlyNullable = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOnlyNullValue sets the value of OnlyNullValue.
 }
 
-// SetOnlyNullValue sets the value of OnlyNullValue.
 func (s *NullableEnums) SetOnlyNullValue(val NilNullableEnumsOnlyNullValue) {
-	s.OnlyNullValue = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetBoth sets the value of Both.
 }
 
-// SetBoth sets the value of Both.
 func (s *NullableEnums) SetBoth(val NilNullableEnumsBoth) {
-	s.Both = val
+	_ = "STUB: not implemented"
+
+	// Must be nullable.
+	return
 }
 
-// Must be nullable.
 type NullableEnumsBoth string
 
 const (
@@ -2192,38 +2247,16 @@ const (
 )
 
 // AllValues returns all NullableEnumsBoth values.
-func (NullableEnumsBoth) AllValues() []NullableEnumsBoth {
-	return []NullableEnumsBoth{
-		NullableEnumsBothAsc,
-		NullableEnumsBothDesc,
-	}
-}
+func (NullableEnumsBoth) AllValues() []NullableEnumsBoth { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s NullableEnumsBoth) MarshalText() ([]byte, error) {
-	switch s {
-	case NullableEnumsBothAsc:
-		return []byte(s), nil
-	case NullableEnumsBothDesc:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *NullableEnumsBoth) UnmarshalText(data []byte) error {
-	switch NullableEnumsBoth(data) {
-	case NullableEnumsBothAsc:
-		*s = NullableEnumsBothAsc
-		return nil
-	case NullableEnumsBothDesc:
-		*s = NullableEnumsBothDesc
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *NullableEnumsBoth) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Must be nullable.
 type NullableEnumsOnlyNullValue string
@@ -2235,36 +2268,20 @@ const (
 
 // AllValues returns all NullableEnumsOnlyNullValue values.
 func (NullableEnumsOnlyNullValue) AllValues() []NullableEnumsOnlyNullValue {
-	return []NullableEnumsOnlyNullValue{
-		NullableEnumsOnlyNullValueAsc,
-		NullableEnumsOnlyNullValueDesc,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s NullableEnumsOnlyNullValue) MarshalText() ([]byte, error) {
-	switch s {
-	case NullableEnumsOnlyNullValueAsc:
-		return []byte(s), nil
-	case NullableEnumsOnlyNullValueDesc:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *NullableEnumsOnlyNullValue) UnmarshalText(data []byte) error {
-	switch NullableEnumsOnlyNullValue(data) {
-	case NullableEnumsOnlyNullValueAsc:
-		*s = NullableEnumsOnlyNullValueAsc
-		return nil
-	case NullableEnumsOnlyNullValueDesc:
-		*s = NullableEnumsOnlyNullValueDesc
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Must not be nullable.
@@ -2277,36 +2294,20 @@ const (
 
 // AllValues returns all NullableEnumsOnlyNullable values.
 func (NullableEnumsOnlyNullable) AllValues() []NullableEnumsOnlyNullable {
-	return []NullableEnumsOnlyNullable{
-		NullableEnumsOnlyNullableAsc,
-		NullableEnumsOnlyNullableDesc,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s NullableEnumsOnlyNullable) MarshalText() ([]byte, error) {
-	switch s {
-	case NullableEnumsOnlyNullableAsc:
-		return []byte(s), nil
-	case NullableEnumsOnlyNullableDesc:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *NullableEnumsOnlyNullable) UnmarshalText(data []byte) error {
-	switch NullableEnumsOnlyNullable(data) {
-	case NullableEnumsOnlyNullableAsc:
-		*s = NullableEnumsOnlyNullableAsc
-		return nil
-	case NullableEnumsOnlyNullableDesc:
-		*s = NullableEnumsOnlyNullableDesc
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/OneOfBooleanSumNullables
@@ -2327,58 +2328,51 @@ const (
 )
 
 // IsBool reports whether OneOfBooleanSumNullables is bool.
-func (s OneOfBooleanSumNullables) IsBool() bool { return s.Type == BoolOneOfBooleanSumNullables }
+func (s OneOfBooleanSumNullables) IsBool() bool { _ = "STUB: not implemented"; return false }
 
 // IsOneOfNullables reports whether OneOfBooleanSumNullables is OneOfNullables.
-func (s OneOfBooleanSumNullables) IsOneOfNullables() bool {
-	return s.Type == OneOfNullablesOneOfBooleanSumNullables
-}
+func (s OneOfBooleanSumNullables) IsOneOfNullables() bool { _ = "STUB: not implemented"; return false }
 
 // SetBool sets OneOfBooleanSumNullables to bool.
-func (s *OneOfBooleanSumNullables) SetBool(v bool) {
-	s.Type = BoolOneOfBooleanSumNullables
-	s.Bool = v
-}
+func (s *OneOfBooleanSumNullables) SetBool(v bool) { _ = "STUB: not implemented"; return }
 
 // GetBool returns bool and true boolean if OneOfBooleanSumNullables is bool.
 func (s OneOfBooleanSumNullables) GetBool() (v bool, ok bool) {
-	if !s.IsBool() {
-		return v, false
-	}
-	return s.Bool, true
+	_ = "STUB: not implemented"
+	return false, false
 }
 
 // NewBoolOneOfBooleanSumNullables returns new OneOfBooleanSumNullables from bool.
 func NewBoolOneOfBooleanSumNullables(v bool) OneOfBooleanSumNullables {
-	var s OneOfBooleanSumNullables
-	s.SetBool(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfBooleanSumNullables)
 }
 
 // SetOneOfNullables sets OneOfBooleanSumNullables to OneOfNullables.
 func (s *OneOfBooleanSumNullables) SetOneOfNullables(v OneOfNullables) {
-	s.Type = OneOfNullablesOneOfBooleanSumNullables
-	s.OneOfNullables = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetOneOfNullables returns OneOfNullables and true boolean if OneOfBooleanSumNullables is OneOfNullables.
 func (s OneOfBooleanSumNullables) GetOneOfNullables() (v OneOfNullables, ok bool) {
-	if !s.IsOneOfNullables() {
-		return v, false
-	}
-	return s.OneOfNullables, true
+	_ = "STUB: not implemented"
+	return *new(OneOfNullables), false
 }
 
 // NewOneOfNullablesOneOfBooleanSumNullables returns new OneOfBooleanSumNullables from OneOfNullables.
 func NewOneOfNullablesOneOfBooleanSumNullables(v OneOfNullables) OneOfBooleanSumNullables {
-	var s OneOfBooleanSumNullables
-	s.SetOneOfNullables(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfBooleanSumNullables)
 }
 
-func (*OneOfBooleanSumNullables) testNullableOneofsRes() {}
+func (*OneOfBooleanSumNullables) testNullableOneofsRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/OneOfBugs
+	// Ref: #/components/schemas/OneOfBugs
+	return
+}
+
 type OneOfBugs struct {
 	Issue143                        Issue143                    `json:"issue143"`
 	AdditionalMinusFields           OneVariantHasNoUniqueFields `json:"additional-fields"`
@@ -2389,56 +2383,70 @@ type OneOfBugs struct {
 
 // GetIssue143 returns the value of Issue143.
 func (s *OneOfBugs) GetIssue143() Issue143 {
-	return s.Issue143
+	_ = "STUB: not implemented"
+
+	// GetAdditionalMinusFields returns the value of AdditionalMinusFields.
+	return *new(Issue143)
 }
 
-// GetAdditionalMinusFields returns the value of AdditionalMinusFields.
 func (s *OneOfBugs) GetAdditionalMinusFields() OneVariantHasNoUniqueFields {
-	return s.AdditionalMinusFields
+	_ = "STUB: not implemented"
+	return *new(OneVariantHasNoUniqueFields)
 }
 
 // GetOneOfMinusUUIDMinusIntMinusEnum returns the value of OneOfMinusUUIDMinusIntMinusEnum.
 func (s *OneOfBugs) GetOneOfMinusUUIDMinusIntMinusEnum() OptOneOfUUIDAndIntEnum {
-	return s.OneOfMinusUUIDMinusIntMinusEnum
+	_ = "STUB: not implemented"
+	return *new(OptOneOfUUIDAndIntEnum)
 }
 
 // GetOneOfMinusMappingMinusReference returns the value of OneOfMinusMappingMinusReference.
 func (s *OneOfBugs) GetOneOfMinusMappingMinusReference() OptOneOfMappingReference {
-	return s.OneOfMinusMappingMinusReference
+	_ = "STUB: not implemented"
+	return *new(OptOneOfMappingReference)
 }
 
 // GetIssue943 returns the value of Issue943.
 func (s *OneOfBugs) GetIssue943() OptIssue943 {
-	return s.Issue943
+	_ = "STUB: not implemented"
+
+	// SetIssue143 sets the value of Issue143.
+	return *new(OptIssue943)
 }
 
-// SetIssue143 sets the value of Issue143.
 func (s *OneOfBugs) SetIssue143(val Issue143) {
-	s.Issue143 = val
+	_ = "STUB: not implemented"
+
+	// SetAdditionalMinusFields sets the value of AdditionalMinusFields.
+	return
 }
 
-// SetAdditionalMinusFields sets the value of AdditionalMinusFields.
 func (s *OneOfBugs) SetAdditionalMinusFields(val OneVariantHasNoUniqueFields) {
-	s.AdditionalMinusFields = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOneOfMinusUUIDMinusIntMinusEnum sets the value of OneOfMinusUUIDMinusIntMinusEnum.
 func (s *OneOfBugs) SetOneOfMinusUUIDMinusIntMinusEnum(val OptOneOfUUIDAndIntEnum) {
-	s.OneOfMinusUUIDMinusIntMinusEnum = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOneOfMinusMappingMinusReference sets the value of OneOfMinusMappingMinusReference.
 func (s *OneOfBugs) SetOneOfMinusMappingMinusReference(val OptOneOfMappingReference) {
-	s.OneOfMinusMappingMinusReference = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetIssue943 sets the value of Issue943.
 func (s *OneOfBugs) SetIssue943(val OptIssue943) {
-	s.Issue943 = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/OneOfMappingReference
+	// OneOfMappingReference represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/OneOfMappingReference
-// OneOfMappingReference represents sum type.
 type OneOfMappingReference struct {
 	Type                   OneOfMappingReferenceType // switch on this field
 	OneOfMappingReferenceA OneOfMappingReferenceA
@@ -2456,54 +2464,50 @@ const (
 
 // IsOneOfMappingReferenceA reports whether OneOfMappingReference is OneOfMappingReferenceA.
 func (s OneOfMappingReference) IsOneOfMappingReferenceA() bool {
-	return s.Type == OneOfMappingReferenceAOneOfMappingReference
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsOneOfMappingReferenceB reports whether OneOfMappingReference is OneOfMappingReferenceB.
 func (s OneOfMappingReference) IsOneOfMappingReferenceB() bool {
-	return s.Type == OneOfMappingReferenceBOneOfMappingReference
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetOneOfMappingReferenceA sets OneOfMappingReference to OneOfMappingReferenceA.
 func (s *OneOfMappingReference) SetOneOfMappingReferenceA(v OneOfMappingReferenceA) {
-	s.Type = OneOfMappingReferenceAOneOfMappingReference
-	s.OneOfMappingReferenceA = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetOneOfMappingReferenceA returns OneOfMappingReferenceA and true boolean if OneOfMappingReference is OneOfMappingReferenceA.
 func (s OneOfMappingReference) GetOneOfMappingReferenceA() (v OneOfMappingReferenceA, ok bool) {
-	if !s.IsOneOfMappingReferenceA() {
-		return v, false
-	}
-	return s.OneOfMappingReferenceA, true
+	_ = "STUB: not implemented"
+	return *new(OneOfMappingReferenceA), false
 }
 
 // NewOneOfMappingReferenceAOneOfMappingReference returns new OneOfMappingReference from OneOfMappingReferenceA.
 func NewOneOfMappingReferenceAOneOfMappingReference(v OneOfMappingReferenceA) OneOfMappingReference {
-	var s OneOfMappingReference
-	s.SetOneOfMappingReferenceA(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfMappingReference)
 }
 
 // SetOneOfMappingReferenceB sets OneOfMappingReference to OneOfMappingReferenceB.
 func (s *OneOfMappingReference) SetOneOfMappingReferenceB(v OneOfMappingReferenceB) {
-	s.Type = OneOfMappingReferenceBOneOfMappingReference
-	s.OneOfMappingReferenceB = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetOneOfMappingReferenceB returns OneOfMappingReferenceB and true boolean if OneOfMappingReference is OneOfMappingReferenceB.
 func (s OneOfMappingReference) GetOneOfMappingReferenceB() (v OneOfMappingReferenceB, ok bool) {
-	if !s.IsOneOfMappingReferenceB() {
-		return v, false
-	}
-	return s.OneOfMappingReferenceB, true
+	_ = "STUB: not implemented"
+	return *new(OneOfMappingReferenceB), false
 }
 
 // NewOneOfMappingReferenceBOneOfMappingReference returns new OneOfMappingReference from OneOfMappingReferenceB.
 func NewOneOfMappingReferenceBOneOfMappingReference(v OneOfMappingReferenceB) OneOfMappingReference {
-	var s OneOfMappingReference
-	s.SetOneOfMappingReferenceB(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfMappingReference)
 }
 
 // Ref: #/components/schemas/OneOfMappingReferenceA
@@ -2514,23 +2518,28 @@ type OneOfMappingReferenceA struct {
 
 // GetInfoType returns the value of InfoType.
 func (s *OneOfMappingReferenceA) GetInfoType() OptString {
-	return s.InfoType
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(OptString)
 }
 
-// GetDescription returns the value of Description.
 func (s *OneOfMappingReferenceA) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// SetInfoType sets the value of InfoType.
+	new(OptString)
 }
 
-// SetInfoType sets the value of InfoType.
 func (s *OneOfMappingReferenceA) SetInfoType(val OptString) {
-	s.InfoType = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *OneOfMappingReferenceA) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *OneOfMappingReferenceA) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/OneOfMappingReferenceB
 type OneOfMappingReferenceB struct {
@@ -2542,43 +2551,55 @@ type OneOfMappingReferenceB struct {
 
 // GetInfoType returns the value of InfoType.
 func (s *OneOfMappingReferenceB) GetInfoType() OptString {
-	return s.InfoType
+	_ = "STUB: not implemented"
+
+	// GetCode returns the value of Code.
+	return *new(OptString)
 }
 
-// GetCode returns the value of Code.
 func (s *OneOfMappingReferenceB) GetCode() OptInt32 {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetData returns the value of Data.
+	return *new(OptInt32)
 }
 
-// GetData returns the value of Data.
 func (s *OneOfMappingReferenceB) GetData() *OneOfMappingReferenceBData {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// GetInfo returns the value of Info.
+	return nil
 }
 
-// GetInfo returns the value of Info.
 func (s *OneOfMappingReferenceB) GetInfo() OptString {
-	return s.Info
+	_ = "STUB: not implemented"
+
+	// SetInfoType sets the value of InfoType.
+	return *new(OptString)
 }
 
-// SetInfoType sets the value of InfoType.
 func (s *OneOfMappingReferenceB) SetInfoType(val OptString) {
-	s.InfoType = val
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return
 }
 
-// SetCode sets the value of Code.
 func (s *OneOfMappingReferenceB) SetCode(val OptInt32) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return
 }
 
-// SetData sets the value of Data.
 func (s *OneOfMappingReferenceB) SetData(val *OneOfMappingReferenceBData) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// SetInfo sets the value of Info.
+	return
 }
 
-// SetInfo sets the value of Info.
-func (s *OneOfMappingReferenceB) SetInfo(val OptString) {
-	s.Info = val
-}
+func (s *OneOfMappingReferenceB) SetInfo(val OptString) { _ = "STUB: not implemented"; return }
 
 type OneOfMappingReferenceBData struct{}
 
@@ -2604,99 +2625,72 @@ const (
 )
 
 // IsNull reports whether OneOfNullables is struct{}.
-func (s OneOfNullables) IsNull() bool { return s.Type == NullOneOfNullables }
+func (s OneOfNullables) IsNull() bool { _ = "STUB: not implemented"; return false }
 
 // IsString reports whether OneOfNullables is string.
-func (s OneOfNullables) IsString() bool { return s.Type == StringOneOfNullables }
+func (s OneOfNullables) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsInt reports whether OneOfNullables is int.
-func (s OneOfNullables) IsInt() bool { return s.Type == IntOneOfNullables }
+func (s OneOfNullables) IsInt() bool { _ = "STUB: not implemented"; return false }
 
 // IsStringArray reports whether OneOfNullables is []string.
-func (s OneOfNullables) IsStringArray() bool { return s.Type == StringArrayOneOfNullables }
+func (s OneOfNullables) IsStringArray() bool { _ = "STUB: not implemented"; return false }
 
 // SetNull sets OneOfNullables to struct{}.
-func (s *OneOfNullables) SetNull(v struct{}) {
-	s.Type = NullOneOfNullables
-	s.Null = v
-}
+func (s *OneOfNullables) SetNull(v struct{}) { _ = "STUB: not implemented"; return }
 
 // GetNull returns struct{} and true boolean if OneOfNullables is struct{}.
 func (s OneOfNullables) GetNull() (v struct{}, ok bool) {
-	if !s.IsNull() {
-		return v, false
-	}
-	return s.Null, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewNullOneOfNullables returns new OneOfNullables from struct{}.
 func NewNullOneOfNullables(v struct{}) OneOfNullables {
-	var s OneOfNullables
-	s.SetNull(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfNullables)
 }
 
 // SetString sets OneOfNullables to string.
-func (s *OneOfNullables) SetString(v string) {
-	s.Type = StringOneOfNullables
-	s.String = v
-}
+func (s *OneOfNullables) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if OneOfNullables is string.
 func (s OneOfNullables) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringOneOfNullables returns new OneOfNullables from string.
 func NewStringOneOfNullables(v string) OneOfNullables {
-	var s OneOfNullables
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfNullables)
 }
 
 // SetInt sets OneOfNullables to int.
-func (s *OneOfNullables) SetInt(v int) {
-	s.Type = IntOneOfNullables
-	s.Int = v
-}
+func (s *OneOfNullables) SetInt(v int) { _ = "STUB: not implemented"; return }
 
 // GetInt returns int and true boolean if OneOfNullables is int.
-func (s OneOfNullables) GetInt() (v int, ok bool) {
-	if !s.IsInt() {
-		return v, false
-	}
-	return s.Int, true
-}
+func (s OneOfNullables) GetInt() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // NewIntOneOfNullables returns new OneOfNullables from int.
 func NewIntOneOfNullables(v int) OneOfNullables {
-	var s OneOfNullables
-	s.SetInt(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfNullables)
 }
 
 // SetStringArray sets OneOfNullables to []string.
-func (s *OneOfNullables) SetStringArray(v []string) {
-	s.Type = StringArrayOneOfNullables
-	s.StringArray = v
-}
+func (s *OneOfNullables) SetStringArray(v []string) { _ = "STUB: not implemented"; return }
 
 // GetStringArray returns []string and true boolean if OneOfNullables is []string.
 func (s OneOfNullables) GetStringArray() (v []string, ok bool) {
-	if !s.IsStringArray() {
-		return v, false
-	}
-	return s.StringArray, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewStringArrayOneOfNullables returns new OneOfNullables from []string.
 func NewStringArrayOneOfNullables(v []string) OneOfNullables {
-	var s OneOfNullables
-	s.SetStringArray(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfNullables)
 }
 
 // Ref: #/components/schemas/OneOfUUIDAndIntEnum
@@ -2717,53 +2711,42 @@ const (
 )
 
 // IsUUID reports whether OneOfUUIDAndIntEnum is uuid.UUID.
-func (s OneOfUUIDAndIntEnum) IsUUID() bool { return s.Type == UUIDOneOfUUIDAndIntEnum }
+func (s OneOfUUIDAndIntEnum) IsUUID() bool { _ = "STUB: not implemented"; return false }
 
 // IsOneOfUUIDAndIntEnum1 reports whether OneOfUUIDAndIntEnum is OneOfUUIDAndIntEnum1.
-func (s OneOfUUIDAndIntEnum) IsOneOfUUIDAndIntEnum1() bool {
-	return s.Type == OneOfUUIDAndIntEnum1OneOfUUIDAndIntEnum
-}
+func (s OneOfUUIDAndIntEnum) IsOneOfUUIDAndIntEnum1() bool { _ = "STUB: not implemented"; return false }
 
 // SetUUID sets OneOfUUIDAndIntEnum to uuid.UUID.
-func (s *OneOfUUIDAndIntEnum) SetUUID(v uuid.UUID) {
-	s.Type = UUIDOneOfUUIDAndIntEnum
-	s.UUID = v
-}
+func (s *OneOfUUIDAndIntEnum) SetUUID(v uuid.UUID) { _ = "STUB: not implemented"; return }
 
 // GetUUID returns uuid.UUID and true boolean if OneOfUUIDAndIntEnum is uuid.UUID.
 func (s OneOfUUIDAndIntEnum) GetUUID() (v uuid.UUID, ok bool) {
-	if !s.IsUUID() {
-		return v, false
-	}
-	return s.UUID, true
+	_ = "STUB: not implemented"
+	return *new(uuid.UUID), false
 }
 
 // NewUUIDOneOfUUIDAndIntEnum returns new OneOfUUIDAndIntEnum from uuid.UUID.
 func NewUUIDOneOfUUIDAndIntEnum(v uuid.UUID) OneOfUUIDAndIntEnum {
-	var s OneOfUUIDAndIntEnum
-	s.SetUUID(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfUUIDAndIntEnum)
 }
 
 // SetOneOfUUIDAndIntEnum1 sets OneOfUUIDAndIntEnum to OneOfUUIDAndIntEnum1.
 func (s *OneOfUUIDAndIntEnum) SetOneOfUUIDAndIntEnum1(v OneOfUUIDAndIntEnum1) {
-	s.Type = OneOfUUIDAndIntEnum1OneOfUUIDAndIntEnum
-	s.OneOfUUIDAndIntEnum1 = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetOneOfUUIDAndIntEnum1 returns OneOfUUIDAndIntEnum1 and true boolean if OneOfUUIDAndIntEnum is OneOfUUIDAndIntEnum1.
 func (s OneOfUUIDAndIntEnum) GetOneOfUUIDAndIntEnum1() (v OneOfUUIDAndIntEnum1, ok bool) {
-	if !s.IsOneOfUUIDAndIntEnum1() {
-		return v, false
-	}
-	return s.OneOfUUIDAndIntEnum1, true
+	_ = "STUB: not implemented"
+	return *new(OneOfUUIDAndIntEnum1), false
 }
 
 // NewOneOfUUIDAndIntEnum1OneOfUUIDAndIntEnum returns new OneOfUUIDAndIntEnum from OneOfUUIDAndIntEnum1.
 func NewOneOfUUIDAndIntEnum1OneOfUUIDAndIntEnum(v OneOfUUIDAndIntEnum1) OneOfUUIDAndIntEnum {
-	var s OneOfUUIDAndIntEnum
-	s.SetOneOfUUIDAndIntEnum1(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfUUIDAndIntEnum)
 }
 
 type OneOfUUIDAndIntEnum1 int
@@ -2775,10 +2758,8 @@ const (
 
 // AllValues returns all OneOfUUIDAndIntEnum1 values.
 func (OneOfUUIDAndIntEnum1) AllValues() []OneOfUUIDAndIntEnum1 {
-	return []OneOfUUIDAndIntEnum1{
-		OneOfUUIDAndIntEnum10,
-		OneOfUUIDAndIntEnum11,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/OneOfWithNullable
@@ -2803,99 +2784,72 @@ const (
 )
 
 // IsNull reports whether OneOfWithNullable is struct{}.
-func (s OneOfWithNullable) IsNull() bool { return s.Type == NullOneOfWithNullable }
+func (s OneOfWithNullable) IsNull() bool { _ = "STUB: not implemented"; return false }
 
 // IsString reports whether OneOfWithNullable is string.
-func (s OneOfWithNullable) IsString() bool { return s.Type == StringOneOfWithNullable }
+func (s OneOfWithNullable) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsInt reports whether OneOfWithNullable is int.
-func (s OneOfWithNullable) IsInt() bool { return s.Type == IntOneOfWithNullable }
+func (s OneOfWithNullable) IsInt() bool { _ = "STUB: not implemented"; return false }
 
 // IsStringArray reports whether OneOfWithNullable is []string.
-func (s OneOfWithNullable) IsStringArray() bool { return s.Type == StringArrayOneOfWithNullable }
+func (s OneOfWithNullable) IsStringArray() bool { _ = "STUB: not implemented"; return false }
 
 // SetNull sets OneOfWithNullable to struct{}.
-func (s *OneOfWithNullable) SetNull(v struct{}) {
-	s.Type = NullOneOfWithNullable
-	s.Null = v
-}
+func (s *OneOfWithNullable) SetNull(v struct{}) { _ = "STUB: not implemented"; return }
 
 // GetNull returns struct{} and true boolean if OneOfWithNullable is struct{}.
 func (s OneOfWithNullable) GetNull() (v struct{}, ok bool) {
-	if !s.IsNull() {
-		return v, false
-	}
-	return s.Null, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewNullOneOfWithNullable returns new OneOfWithNullable from struct{}.
 func NewNullOneOfWithNullable(v struct{}) OneOfWithNullable {
-	var s OneOfWithNullable
-	s.SetNull(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfWithNullable)
 }
 
 // SetString sets OneOfWithNullable to string.
-func (s *OneOfWithNullable) SetString(v string) {
-	s.Type = StringOneOfWithNullable
-	s.String = v
-}
+func (s *OneOfWithNullable) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if OneOfWithNullable is string.
 func (s OneOfWithNullable) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringOneOfWithNullable returns new OneOfWithNullable from string.
 func NewStringOneOfWithNullable(v string) OneOfWithNullable {
-	var s OneOfWithNullable
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfWithNullable)
 }
 
 // SetInt sets OneOfWithNullable to int.
-func (s *OneOfWithNullable) SetInt(v int) {
-	s.Type = IntOneOfWithNullable
-	s.Int = v
-}
+func (s *OneOfWithNullable) SetInt(v int) { _ = "STUB: not implemented"; return }
 
 // GetInt returns int and true boolean if OneOfWithNullable is int.
-func (s OneOfWithNullable) GetInt() (v int, ok bool) {
-	if !s.IsInt() {
-		return v, false
-	}
-	return s.Int, true
-}
+func (s OneOfWithNullable) GetInt() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // NewIntOneOfWithNullable returns new OneOfWithNullable from int.
 func NewIntOneOfWithNullable(v int) OneOfWithNullable {
-	var s OneOfWithNullable
-	s.SetInt(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfWithNullable)
 }
 
 // SetStringArray sets OneOfWithNullable to []string.
-func (s *OneOfWithNullable) SetStringArray(v []string) {
-	s.Type = StringArrayOneOfWithNullable
-	s.StringArray = v
-}
+func (s *OneOfWithNullable) SetStringArray(v []string) { _ = "STUB: not implemented"; return }
 
 // GetStringArray returns []string and true boolean if OneOfWithNullable is []string.
 func (s OneOfWithNullable) GetStringArray() (v []string, ok bool) {
-	if !s.IsStringArray() {
-		return v, false
-	}
-	return s.StringArray, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewStringArrayOneOfWithNullable returns new OneOfWithNullable from []string.
 func NewStringArrayOneOfWithNullable(v []string) OneOfWithNullable {
-	var s OneOfWithNullable
-	s.SetStringArray(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneOfWithNullable)
 }
 
 // Ref: #/components/schemas/OnePropertyObject
@@ -2905,16 +2859,20 @@ type OnePropertyObject struct {
 
 // GetFoo returns the value of Foo.
 func (s *OnePropertyObject) GetFoo() string {
-	return s.Foo
+	_ = "STUB: not implemented"
+
+	// SetFoo sets the value of Foo.
+	return ""
 }
 
-// SetFoo sets the value of Foo.
 func (s *OnePropertyObject) SetFoo(val string) {
-	s.Foo = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/OneVariantHasNoUniqueFields
+	// OneVariantHasNoUniqueFields represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/OneVariantHasNoUniqueFields
-// OneVariantHasNoUniqueFields represents sum type.
 type OneVariantHasNoUniqueFields struct {
 	Type                         OneVariantHasNoUniqueFieldsType // switch on this field
 	OneVariantHasNoUniqueFields0 OneVariantHasNoUniqueFields0
@@ -2932,54 +2890,50 @@ const (
 
 // IsOneVariantHasNoUniqueFields0 reports whether OneVariantHasNoUniqueFields is OneVariantHasNoUniqueFields0.
 func (s OneVariantHasNoUniqueFields) IsOneVariantHasNoUniqueFields0() bool {
-	return s.Type == OneVariantHasNoUniqueFields0OneVariantHasNoUniqueFields
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsOneVariantHasNoUniqueFields1 reports whether OneVariantHasNoUniqueFields is OneVariantHasNoUniqueFields1.
 func (s OneVariantHasNoUniqueFields) IsOneVariantHasNoUniqueFields1() bool {
-	return s.Type == OneVariantHasNoUniqueFields1OneVariantHasNoUniqueFields
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetOneVariantHasNoUniqueFields0 sets OneVariantHasNoUniqueFields to OneVariantHasNoUniqueFields0.
 func (s *OneVariantHasNoUniqueFields) SetOneVariantHasNoUniqueFields0(v OneVariantHasNoUniqueFields0) {
-	s.Type = OneVariantHasNoUniqueFields0OneVariantHasNoUniqueFields
-	s.OneVariantHasNoUniqueFields0 = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetOneVariantHasNoUniqueFields0 returns OneVariantHasNoUniqueFields0 and true boolean if OneVariantHasNoUniqueFields is OneVariantHasNoUniqueFields0.
 func (s OneVariantHasNoUniqueFields) GetOneVariantHasNoUniqueFields0() (v OneVariantHasNoUniqueFields0, ok bool) {
-	if !s.IsOneVariantHasNoUniqueFields0() {
-		return v, false
-	}
-	return s.OneVariantHasNoUniqueFields0, true
+	_ = "STUB: not implemented"
+	return *new(OneVariantHasNoUniqueFields0), false
 }
 
 // NewOneVariantHasNoUniqueFields0OneVariantHasNoUniqueFields returns new OneVariantHasNoUniqueFields from OneVariantHasNoUniqueFields0.
 func NewOneVariantHasNoUniqueFields0OneVariantHasNoUniqueFields(v OneVariantHasNoUniqueFields0) OneVariantHasNoUniqueFields {
-	var s OneVariantHasNoUniqueFields
-	s.SetOneVariantHasNoUniqueFields0(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneVariantHasNoUniqueFields)
 }
 
 // SetOneVariantHasNoUniqueFields1 sets OneVariantHasNoUniqueFields to OneVariantHasNoUniqueFields1.
 func (s *OneVariantHasNoUniqueFields) SetOneVariantHasNoUniqueFields1(v OneVariantHasNoUniqueFields1) {
-	s.Type = OneVariantHasNoUniqueFields1OneVariantHasNoUniqueFields
-	s.OneVariantHasNoUniqueFields1 = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetOneVariantHasNoUniqueFields1 returns OneVariantHasNoUniqueFields1 and true boolean if OneVariantHasNoUniqueFields is OneVariantHasNoUniqueFields1.
 func (s OneVariantHasNoUniqueFields) GetOneVariantHasNoUniqueFields1() (v OneVariantHasNoUniqueFields1, ok bool) {
-	if !s.IsOneVariantHasNoUniqueFields1() {
-		return v, false
-	}
-	return s.OneVariantHasNoUniqueFields1, true
+	_ = "STUB: not implemented"
+	return *new(OneVariantHasNoUniqueFields1), false
 }
 
 // NewOneVariantHasNoUniqueFields1OneVariantHasNoUniqueFields returns new OneVariantHasNoUniqueFields from OneVariantHasNoUniqueFields1.
 func NewOneVariantHasNoUniqueFields1OneVariantHasNoUniqueFields(v OneVariantHasNoUniqueFields1) OneVariantHasNoUniqueFields {
-	var s OneVariantHasNoUniqueFields
-	s.SetOneVariantHasNoUniqueFields1(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneVariantHasNoUniqueFields)
 }
 
 type OneVariantHasNoUniqueFields0 struct {
@@ -2990,33 +2944,41 @@ type OneVariantHasNoUniqueFields0 struct {
 
 // GetA returns the value of A.
 func (s *OneVariantHasNoUniqueFields0) GetA() string {
-	return s.A
+	_ = "STUB: not implemented"
+
+	// GetB returns the value of B.
+	return ""
 }
 
-// GetB returns the value of B.
 func (s *OneVariantHasNoUniqueFields0) GetB() OptInt {
-	return s.B
+	_ = "STUB: not implemented"
+
+	// GetC returns the value of C.
+	return *new(OptInt)
 }
 
-// GetC returns the value of C.
 func (s *OneVariantHasNoUniqueFields0) GetC() string {
-	return s.C
+	_ = "STUB: not implemented"
+
+	// SetA sets the value of A.
+	return ""
 }
 
-// SetA sets the value of A.
 func (s *OneVariantHasNoUniqueFields0) SetA(val string) {
-	s.A = val
+	_ = "STUB: not implemented"
+
+	// SetB sets the value of B.
+	return
 }
 
-// SetB sets the value of B.
 func (s *OneVariantHasNoUniqueFields0) SetB(val OptInt) {
-	s.B = val
+	_ = "STUB: not implemented"
+
+	// SetC sets the value of C.
+	return
 }
 
-// SetC sets the value of C.
-func (s *OneVariantHasNoUniqueFields0) SetC(val string) {
-	s.C = val
-}
+func (s *OneVariantHasNoUniqueFields0) SetC(val string) { _ = "STUB: not implemented"; return }
 
 type OneVariantHasNoUniqueFields1 struct {
 	A string `json:"a"`
@@ -3027,45 +2989,61 @@ type OneVariantHasNoUniqueFields1 struct {
 
 // GetA returns the value of A.
 func (s *OneVariantHasNoUniqueFields1) GetA() string {
-	return s.A
+	_ = "STUB: not implemented"
+
+	// GetB returns the value of B.
+	return ""
 }
 
-// GetB returns the value of B.
 func (s *OneVariantHasNoUniqueFields1) GetB() OptInt {
-	return s.B
+	_ = "STUB: not implemented"
+
+	// GetC returns the value of C.
+	return *new(OptInt)
 }
 
-// GetC returns the value of C.
 func (s *OneVariantHasNoUniqueFields1) GetC() string {
-	return s.C
+	_ = "STUB: not implemented"
+
+	// GetD returns the value of D.
+	return ""
 }
 
-// GetD returns the value of D.
 func (s *OneVariantHasNoUniqueFields1) GetD() OptInt {
-	return s.D
+	_ = "STUB: not implemented"
+
+	// SetA sets the value of A.
+	return *new(OptInt)
 }
 
-// SetA sets the value of A.
 func (s *OneVariantHasNoUniqueFields1) SetA(val string) {
-	s.A = val
+	_ = "STUB: not implemented"
+
+	// SetB sets the value of B.
+	return
 }
 
-// SetB sets the value of B.
 func (s *OneVariantHasNoUniqueFields1) SetB(val OptInt) {
-	s.B = val
+	_ = "STUB: not implemented"
+
+	// SetC sets the value of C.
+	return
 }
 
-// SetC sets the value of C.
 func (s *OneVariantHasNoUniqueFields1) SetC(val string) {
-	s.C = val
+	_ = "STUB: not implemented"
+
+	// SetD sets the value of D.
+	return
 }
 
-// SetD sets the value of D.
 func (s *OneVariantHasNoUniqueFields1) SetD(val OptInt) {
-	s.D = val
+	_ = "STUB: not implemented"
+
+	// OneofBugOK is response for OneofBug operation.
+	return
 }
 
-// OneofBugOK is response for OneofBug operation.
 type OneofBugOK struct{}
 
 // Ref: #/components/schemas/OnlyEmptyObject
@@ -3084,12 +3062,7 @@ func (s *OnlyPatternedPropsObject) init() OnlyPatternedPropsObject {
 }
 
 // NewOptAnyTest returns new OptAnyTest with value set to v.
-func NewOptAnyTest(v AnyTest) OptAnyTest {
-	return OptAnyTest{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptAnyTest(v AnyTest) OptAnyTest { _ = "STUB: not implemented"; return *new(OptAnyTest) }
 
 // OptAnyTest is optional AnyTest.
 type OptAnyTest struct {
@@ -3098,43 +3071,31 @@ type OptAnyTest struct {
 }
 
 // IsSet returns true if OptAnyTest was set.
-func (o OptAnyTest) IsSet() bool { return o.Set }
+func (o OptAnyTest) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptAnyTest) Reset() {
-	var v AnyTest
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptAnyTest) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptAnyTest) SetTo(v AnyTest) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptAnyTest) SetTo(v AnyTest) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptAnyTest) Get() (v AnyTest, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(AnyTest), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptAnyTest) Or(d AnyTest) AnyTest {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptAnyTest) Or(d AnyTest) AnyTest { _ = "STUB: not implemented"; return *new(AnyTest) }
 
 // NewOptAnyTestAnyMap returns new OptAnyTestAnyMap with value set to v.
 func NewOptAnyTestAnyMap(v AnyTestAnyMap) OptAnyTestAnyMap {
-	return OptAnyTestAnyMap{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptAnyTestAnyMap)
 }
 
 // OptAnyTestAnyMap is optional AnyTestAnyMap.
@@ -3144,43 +3105,34 @@ type OptAnyTestAnyMap struct {
 }
 
 // IsSet returns true if OptAnyTestAnyMap was set.
-func (o OptAnyTestAnyMap) IsSet() bool { return o.Set }
+func (o OptAnyTestAnyMap) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptAnyTestAnyMap) Reset() {
-	var v AnyTestAnyMap
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptAnyTestAnyMap) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptAnyTestAnyMap) SetTo(v AnyTestAnyMap) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptAnyTestAnyMap) SetTo(v AnyTestAnyMap) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptAnyTestAnyMap) Get() (v AnyTestAnyMap, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(AnyTestAnyMap), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptAnyTestAnyMap) Or(d AnyTestAnyMap) AnyTestAnyMap {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(AnyTestAnyMap)
 }
 
 // NewOptArrayTest returns new OptArrayTest with value set to v.
 func NewOptArrayTest(v ArrayTest) OptArrayTest {
-	return OptArrayTest{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptArrayTest)
 }
 
 // OptArrayTest is optional ArrayTest.
@@ -3190,44 +3142,29 @@ type OptArrayTest struct {
 }
 
 // IsSet returns true if OptArrayTest was set.
-func (o OptArrayTest) IsSet() bool { return o.Set }
+func (o OptArrayTest) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptArrayTest) Reset() {
-	var v ArrayTest
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptArrayTest) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptArrayTest) SetTo(v ArrayTest) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptArrayTest) SetTo(v ArrayTest) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptArrayTest) Get() (v ArrayTest, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ArrayTest), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptArrayTest) Or(d ArrayTest) ArrayTest {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptArrayTest) Or(d ArrayTest) ArrayTest { _ = "STUB: not implemented"; return *new(ArrayTest) }
 
 // NewOptData returns new OptData with value set to v.
-func NewOptData(v Data) OptData {
-	return OptData{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptData(v Data) OptData { _ = "STUB: not implemented"; return *new(OptData) }
 
 // OptData is optional Data.
 type OptData struct {
@@ -3236,44 +3173,26 @@ type OptData struct {
 }
 
 // IsSet returns true if OptData was set.
-func (o OptData) IsSet() bool { return o.Set }
+func (o OptData) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptData) Reset() {
-	var v Data
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptData) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptData) SetTo(v Data) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptData) SetTo(v Data) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptData) Get() (v Data, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptData) Get() (v Data, ok bool) { _ = "STUB: not implemented"; return *new(Data), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptData) Or(d Data) Data {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptData) Or(d Data) Data { _ = "STUB: not implemented"; return *new(Data) }
 
 // NewOptDate returns new OptDate with value set to v.
-func NewOptDate(v time.Time) OptDate {
-	return OptDate{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptDate(v time.Time) OptDate { _ = "STUB: not implemented"; return *new(OptDate) }
 
 // OptDate is optional time.Time.
 type OptDate struct {
@@ -3282,44 +3201,29 @@ type OptDate struct {
 }
 
 // IsSet returns true if OptDate was set.
-func (o OptDate) IsSet() bool { return o.Set }
+func (o OptDate) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDate) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDate) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDate) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDate) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDate) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDate) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDate) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptDateTime returns new OptDateTime with value set to v.
-func NewOptDateTime(v time.Time) OptDateTime {
-	return OptDateTime{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptDateTime(v time.Time) OptDateTime { _ = "STUB: not implemented"; return *new(OptDateTime) }
 
 // OptDateTime is optional time.Time.
 type OptDateTime struct {
@@ -3328,43 +3232,31 @@ type OptDateTime struct {
 }
 
 // IsSet returns true if OptDateTime was set.
-func (o OptDateTime) IsSet() bool { return o.Set }
+func (o OptDateTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDateTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDateTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDateTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDateTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDateTime) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDateTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDateTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptDefaultTestEnum returns new OptDefaultTestEnum with value set to v.
 func NewOptDefaultTestEnum(v DefaultTestEnum) OptDefaultTestEnum {
-	return OptDefaultTestEnum{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptDefaultTestEnum)
 }
 
 // OptDefaultTestEnum is optional DefaultTestEnum.
@@ -3374,43 +3266,34 @@ type OptDefaultTestEnum struct {
 }
 
 // IsSet returns true if OptDefaultTestEnum was set.
-func (o OptDefaultTestEnum) IsSet() bool { return o.Set }
+func (o OptDefaultTestEnum) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDefaultTestEnum) Reset() {
-	var v DefaultTestEnum
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDefaultTestEnum) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDefaultTestEnum) SetTo(v DefaultTestEnum) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDefaultTestEnum) SetTo(v DefaultTestEnum) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDefaultTestEnum) Get() (v DefaultTestEnum, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(DefaultTestEnum), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptDefaultTestEnum) Or(d DefaultTestEnum) DefaultTestEnum {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(DefaultTestEnum)
 }
 
 // NewOptDuration returns new OptDuration with value set to v.
 func NewOptDuration(v time.Duration) OptDuration {
-	return OptDuration{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptDuration)
 }
 
 // OptDuration is optional time.Duration.
@@ -3420,44 +3303,32 @@ type OptDuration struct {
 }
 
 // IsSet returns true if OptDuration was set.
-func (o OptDuration) IsSet() bool { return o.Set }
+func (o OptDuration) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDuration) Reset() {
-	var v time.Duration
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDuration) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDuration) SetTo(v time.Duration) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDuration) SetTo(v time.Duration) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDuration) Get() (v time.Duration, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Duration), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptDuration) Or(d time.Duration) time.Duration {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Duration)
 }
 
 // NewOptFloat64 returns new OptFloat64 with value set to v.
-func NewOptFloat64(v float64) OptFloat64 {
-	return OptFloat64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptFloat64(v float64) OptFloat64 { _ = "STUB: not implemented"; return *new(OptFloat64) }
 
 // OptFloat64 is optional float64.
 type OptFloat64 struct {
@@ -3466,44 +3337,26 @@ type OptFloat64 struct {
 }
 
 // IsSet returns true if OptFloat64 was set.
-func (o OptFloat64) IsSet() bool { return o.Set }
+func (o OptFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptFloat64) Get() (v float64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptID returns new OptID with value set to v.
-func NewOptID(v ID) OptID {
-	return OptID{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptID(v ID) OptID { _ = "STUB: not implemented"; return *new(OptID) }
 
 // OptID is optional ID.
 type OptID struct {
@@ -3512,44 +3365,26 @@ type OptID struct {
 }
 
 // IsSet returns true if OptID was set.
-func (o OptID) IsSet() bool { return o.Set }
+func (o OptID) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptID) Reset() {
-	var v ID
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptID) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptID) SetTo(v ID) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptID) SetTo(v ID) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptID) Get() (v ID, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptID) Get() (v ID, ok bool) { _ = "STUB: not implemented"; return *new(ID), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptID) Or(d ID) ID {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptID) Or(d ID) ID { _ = "STUB: not implemented"; return *new(ID) }
 
 // NewOptIP returns new OptIP with value set to v.
-func NewOptIP(v netip.Addr) OptIP {
-	return OptIP{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptIP(v netip.Addr) OptIP { _ = "STUB: not implemented"; return *new(OptIP) }
 
 // OptIP is optional netip.Addr.
 type OptIP struct {
@@ -3558,44 +3393,29 @@ type OptIP struct {
 }
 
 // IsSet returns true if OptIP was set.
-func (o OptIP) IsSet() bool { return o.Set }
+func (o OptIP) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIP) Reset() {
-	var v netip.Addr
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIP) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptIP) SetTo(v netip.Addr) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptIP) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIP) Get() (v netip.Addr, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptIP) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptIP) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewOptIPv4 returns new OptIPv4 with value set to v.
-func NewOptIPv4(v netip.Addr) OptIPv4 {
-	return OptIPv4{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptIPv4(v netip.Addr) OptIPv4 { _ = "STUB: not implemented"; return *new(OptIPv4) }
 
 // OptIPv4 is optional netip.Addr.
 type OptIPv4 struct {
@@ -3604,44 +3424,29 @@ type OptIPv4 struct {
 }
 
 // IsSet returns true if OptIPv4 was set.
-func (o OptIPv4) IsSet() bool { return o.Set }
+func (o OptIPv4) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIPv4) Reset() {
-	var v netip.Addr
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIPv4) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptIPv4) SetTo(v netip.Addr) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptIPv4) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIPv4) Get() (v netip.Addr, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptIPv4) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptIPv4) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewOptIPv6 returns new OptIPv6 with value set to v.
-func NewOptIPv6(v netip.Addr) OptIPv6 {
-	return OptIPv6{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptIPv6(v netip.Addr) OptIPv6 { _ = "STUB: not implemented"; return *new(OptIPv6) }
 
 // OptIPv6 is optional netip.Addr.
 type OptIPv6 struct {
@@ -3650,43 +3455,31 @@ type OptIPv6 struct {
 }
 
 // IsSet returns true if OptIPv6 was set.
-func (o OptIPv6) IsSet() bool { return o.Set }
+func (o OptIPv6) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIPv6) Reset() {
-	var v netip.Addr
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIPv6) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptIPv6) SetTo(v netip.Addr) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptIPv6) SetTo(v netip.Addr) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIPv6) Get() (v netip.Addr, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptIPv6) Or(d netip.Addr) netip.Addr {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptIPv6) Or(d netip.Addr) netip.Addr { _ = "STUB: not implemented"; return *new(netip.Addr) }
 
 // NewOptInlineDiscriminatorOneOf returns new OptInlineDiscriminatorOneOf with value set to v.
 func NewOptInlineDiscriminatorOneOf(v InlineDiscriminatorOneOf) OptInlineDiscriminatorOneOf {
-	return OptInlineDiscriminatorOneOf{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptInlineDiscriminatorOneOf)
 }
 
 // OptInlineDiscriminatorOneOf is optional InlineDiscriminatorOneOf.
@@ -3696,43 +3489,37 @@ type OptInlineDiscriminatorOneOf struct {
 }
 
 // IsSet returns true if OptInlineDiscriminatorOneOf was set.
-func (o OptInlineDiscriminatorOneOf) IsSet() bool { return o.Set }
+func (o OptInlineDiscriminatorOneOf) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInlineDiscriminatorOneOf) Reset() {
-	var v InlineDiscriminatorOneOf
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInlineDiscriminatorOneOf) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptInlineDiscriminatorOneOf) SetTo(v InlineDiscriminatorOneOf) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptInlineDiscriminatorOneOf) Get() (v InlineDiscriminatorOneOf, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(InlineDiscriminatorOneOf), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptInlineDiscriminatorOneOf) Or(d InlineDiscriminatorOneOf) InlineDiscriminatorOneOf {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(InlineDiscriminatorOneOf)
 }
 
 // NewOptInlineUniqueFieldsOneOf returns new OptInlineUniqueFieldsOneOf with value set to v.
 func NewOptInlineUniqueFieldsOneOf(v InlineUniqueFieldsOneOf) OptInlineUniqueFieldsOneOf {
-	return OptInlineUniqueFieldsOneOf{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptInlineUniqueFieldsOneOf)
 }
 
 // OptInlineUniqueFieldsOneOf is optional InlineUniqueFieldsOneOf.
@@ -3742,44 +3529,35 @@ type OptInlineUniqueFieldsOneOf struct {
 }
 
 // IsSet returns true if OptInlineUniqueFieldsOneOf was set.
-func (o OptInlineUniqueFieldsOneOf) IsSet() bool { return o.Set }
+func (o OptInlineUniqueFieldsOneOf) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInlineUniqueFieldsOneOf) Reset() {
-	var v InlineUniqueFieldsOneOf
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInlineUniqueFieldsOneOf) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptInlineUniqueFieldsOneOf) SetTo(v InlineUniqueFieldsOneOf) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptInlineUniqueFieldsOneOf) Get() (v InlineUniqueFieldsOneOf, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(InlineUniqueFieldsOneOf), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptInlineUniqueFieldsOneOf) Or(d InlineUniqueFieldsOneOf) InlineUniqueFieldsOneOf {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(InlineUniqueFieldsOneOf)
 }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -3788,44 +3566,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt32 returns new OptInt32 with value set to v.
-func NewOptInt32(v int32) OptInt32 {
-	return OptInt32{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt32(v int32) OptInt32 { _ = "STUB: not implemented"; return *new(OptInt32) }
 
 // OptInt32 is optional int32.
 type OptInt32 struct {
@@ -3834,43 +3594,28 @@ type OptInt32 struct {
 }
 
 // IsSet returns true if OptInt32 was set.
-func (o OptInt32) IsSet() bool { return o.Set }
+func (o OptInt32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt32) Reset() {
-	var v int32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt32) SetTo(v int32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt32) Get() (v int32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptIssue1310Properties returns new OptIssue1310Properties with value set to v.
 func NewOptIssue1310Properties(v *Issue1310Properties) OptIssue1310Properties {
-	return OptIssue1310Properties{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptIssue1310Properties)
 }
 
 // OptIssue1310Properties is optional *Issue1310Properties.
@@ -3880,43 +3625,34 @@ type OptIssue1310Properties struct {
 }
 
 // IsSet returns true if OptIssue1310Properties was set.
-func (o OptIssue1310Properties) IsSet() bool { return o.Set }
+func (o OptIssue1310Properties) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIssue1310Properties) Reset() {
-	var v *Issue1310Properties
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIssue1310Properties) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptIssue1310Properties) SetTo(v *Issue1310Properties) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptIssue1310Properties) SetTo(v *Issue1310Properties) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIssue1310Properties) Get() (v *Issue1310Properties, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptIssue1310Properties) Or(d *Issue1310Properties) *Issue1310Properties {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewOptIssue1461NullableOptionalTest returns new OptIssue1461NullableOptionalTest with value set to v.
 func NewOptIssue1461NullableOptionalTest(v Issue1461NullableOptionalTest) OptIssue1461NullableOptionalTest {
-	return OptIssue1461NullableOptionalTest{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptIssue1461NullableOptionalTest)
 }
 
 // OptIssue1461NullableOptionalTest is optional Issue1461NullableOptionalTest.
@@ -3926,43 +3662,37 @@ type OptIssue1461NullableOptionalTest struct {
 }
 
 // IsSet returns true if OptIssue1461NullableOptionalTest was set.
-func (o OptIssue1461NullableOptionalTest) IsSet() bool { return o.Set }
+func (o OptIssue1461NullableOptionalTest) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIssue1461NullableOptionalTest) Reset() {
-	var v Issue1461NullableOptionalTest
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIssue1461NullableOptionalTest) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptIssue1461NullableOptionalTest) SetTo(v Issue1461NullableOptionalTest) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIssue1461NullableOptionalTest) Get() (v Issue1461NullableOptionalTest, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Issue1461NullableOptionalTest), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptIssue1461NullableOptionalTest) Or(d Issue1461NullableOptionalTest) Issue1461NullableOptionalTest {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(Issue1461NullableOptionalTest)
 }
 
 // NewOptIssue1461NullableTest returns new OptIssue1461NullableTest with value set to v.
 func NewOptIssue1461NullableTest(v Issue1461NullableTest) OptIssue1461NullableTest {
-	return OptIssue1461NullableTest{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptIssue1461NullableTest)
 }
 
 // OptIssue1461NullableTest is optional Issue1461NullableTest.
@@ -3972,43 +3702,37 @@ type OptIssue1461NullableTest struct {
 }
 
 // IsSet returns true if OptIssue1461NullableTest was set.
-func (o OptIssue1461NullableTest) IsSet() bool { return o.Set }
+func (o OptIssue1461NullableTest) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIssue1461NullableTest) Reset() {
-	var v Issue1461NullableTest
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIssue1461NullableTest) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptIssue1461NullableTest) SetTo(v Issue1461NullableTest) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIssue1461NullableTest) Get() (v Issue1461NullableTest, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Issue1461NullableTest), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptIssue1461NullableTest) Or(d Issue1461NullableTest) Issue1461NullableTest {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(Issue1461NullableTest)
 }
 
 // NewOptIssue1461OptionalTest returns new OptIssue1461OptionalTest with value set to v.
 func NewOptIssue1461OptionalTest(v Issue1461OptionalTest) OptIssue1461OptionalTest {
-	return OptIssue1461OptionalTest{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptIssue1461OptionalTest)
 }
 
 // OptIssue1461OptionalTest is optional Issue1461OptionalTest.
@@ -4018,43 +3742,37 @@ type OptIssue1461OptionalTest struct {
 }
 
 // IsSet returns true if OptIssue1461OptionalTest was set.
-func (o OptIssue1461OptionalTest) IsSet() bool { return o.Set }
+func (o OptIssue1461OptionalTest) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIssue1461OptionalTest) Reset() {
-	var v Issue1461OptionalTest
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIssue1461OptionalTest) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptIssue1461OptionalTest) SetTo(v Issue1461OptionalTest) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIssue1461OptionalTest) Get() (v Issue1461OptionalTest, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Issue1461OptionalTest), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptIssue1461OptionalTest) Or(d Issue1461OptionalTest) Issue1461OptionalTest {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(Issue1461OptionalTest)
 }
 
 // NewOptIssue1461RequiredTest returns new OptIssue1461RequiredTest with value set to v.
 func NewOptIssue1461RequiredTest(v Issue1461RequiredTest) OptIssue1461RequiredTest {
-	return OptIssue1461RequiredTest{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptIssue1461RequiredTest)
 }
 
 // OptIssue1461RequiredTest is optional Issue1461RequiredTest.
@@ -4064,44 +3782,35 @@ type OptIssue1461RequiredTest struct {
 }
 
 // IsSet returns true if OptIssue1461RequiredTest was set.
-func (o OptIssue1461RequiredTest) IsSet() bool { return o.Set }
+func (o OptIssue1461RequiredTest) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIssue1461RequiredTest) Reset() {
-	var v Issue1461RequiredTest
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIssue1461RequiredTest) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptIssue1461RequiredTest) SetTo(v Issue1461RequiredTest) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIssue1461RequiredTest) Get() (v Issue1461RequiredTest, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Issue1461RequiredTest), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptIssue1461RequiredTest) Or(d Issue1461RequiredTest) Issue1461RequiredTest {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(Issue1461RequiredTest)
 }
 
 // NewOptIssue943 returns new OptIssue943 with value set to v.
-func NewOptIssue943(v Issue943) OptIssue943 {
-	return OptIssue943{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptIssue943(v Issue943) OptIssue943 { _ = "STUB: not implemented"; return *new(OptIssue943) }
 
 // OptIssue943 is optional Issue943.
 type OptIssue943 struct {
@@ -4110,43 +3819,31 @@ type OptIssue943 struct {
 }
 
 // IsSet returns true if OptIssue943 was set.
-func (o OptIssue943) IsSet() bool { return o.Set }
+func (o OptIssue943) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptIssue943) Reset() {
-	var v Issue943
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptIssue943) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptIssue943) SetTo(v Issue943) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptIssue943) SetTo(v Issue943) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptIssue943) Get() (v Issue943, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Issue943), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptIssue943) Or(d Issue943) Issue943 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptIssue943) Or(d Issue943) Issue943 { _ = "STUB: not implemented"; return *new(Issue943) }
 
 // NewOptMapWithProperties returns new OptMapWithProperties with value set to v.
 func NewOptMapWithProperties(v MapWithProperties) OptMapWithProperties {
-	return OptMapWithProperties{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMapWithProperties)
 }
 
 // OptMapWithProperties is optional MapWithProperties.
@@ -4156,43 +3853,34 @@ type OptMapWithProperties struct {
 }
 
 // IsSet returns true if OptMapWithProperties was set.
-func (o OptMapWithProperties) IsSet() bool { return o.Set }
+func (o OptMapWithProperties) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMapWithProperties) Reset() {
-	var v MapWithProperties
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMapWithProperties) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMapWithProperties) SetTo(v MapWithProperties) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMapWithProperties) SetTo(v MapWithProperties) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMapWithProperties) Get() (v MapWithProperties, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MapWithProperties), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMapWithProperties) Or(d MapWithProperties) MapWithProperties {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MapWithProperties)
 }
 
 // NewOptMapWithPropertiesInlinedSubMap returns new OptMapWithPropertiesInlinedSubMap with value set to v.
 func NewOptMapWithPropertiesInlinedSubMap(v MapWithPropertiesInlinedSubMap) OptMapWithPropertiesInlinedSubMap {
-	return OptMapWithPropertiesInlinedSubMap{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMapWithPropertiesInlinedSubMap)
 }
 
 // OptMapWithPropertiesInlinedSubMap is optional MapWithPropertiesInlinedSubMap.
@@ -4202,43 +3890,37 @@ type OptMapWithPropertiesInlinedSubMap struct {
 }
 
 // IsSet returns true if OptMapWithPropertiesInlinedSubMap was set.
-func (o OptMapWithPropertiesInlinedSubMap) IsSet() bool { return o.Set }
+func (o OptMapWithPropertiesInlinedSubMap) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMapWithPropertiesInlinedSubMap) Reset() {
-	var v MapWithPropertiesInlinedSubMap
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMapWithPropertiesInlinedSubMap) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptMapWithPropertiesInlinedSubMap) SetTo(v MapWithPropertiesInlinedSubMap) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMapWithPropertiesInlinedSubMap) Get() (v MapWithPropertiesInlinedSubMap, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MapWithPropertiesInlinedSubMap), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMapWithPropertiesInlinedSubMap) Or(d MapWithPropertiesInlinedSubMap) MapWithPropertiesInlinedSubMap {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MapWithPropertiesInlinedSubMap)
 }
 
 // NewOptMaxPropertiesTest returns new OptMaxPropertiesTest with value set to v.
 func NewOptMaxPropertiesTest(v MaxPropertiesTest) OptMaxPropertiesTest {
-	return OptMaxPropertiesTest{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMaxPropertiesTest)
 }
 
 // OptMaxPropertiesTest is optional MaxPropertiesTest.
@@ -4248,43 +3930,34 @@ type OptMaxPropertiesTest struct {
 }
 
 // IsSet returns true if OptMaxPropertiesTest was set.
-func (o OptMaxPropertiesTest) IsSet() bool { return o.Set }
+func (o OptMaxPropertiesTest) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMaxPropertiesTest) Reset() {
-	var v MaxPropertiesTest
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMaxPropertiesTest) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMaxPropertiesTest) SetTo(v MaxPropertiesTest) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMaxPropertiesTest) SetTo(v MaxPropertiesTest) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMaxPropertiesTest) Get() (v MaxPropertiesTest, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MaxPropertiesTest), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMaxPropertiesTest) Or(d MaxPropertiesTest) MaxPropertiesTest {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MaxPropertiesTest)
 }
 
 // NewOptMergeDiscriminatorOneOf returns new OptMergeDiscriminatorOneOf with value set to v.
 func NewOptMergeDiscriminatorOneOf(v MergeDiscriminatorOneOf) OptMergeDiscriminatorOneOf {
-	return OptMergeDiscriminatorOneOf{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMergeDiscriminatorOneOf)
 }
 
 // OptMergeDiscriminatorOneOf is optional MergeDiscriminatorOneOf.
@@ -4294,43 +3967,37 @@ type OptMergeDiscriminatorOneOf struct {
 }
 
 // IsSet returns true if OptMergeDiscriminatorOneOf was set.
-func (o OptMergeDiscriminatorOneOf) IsSet() bool { return o.Set }
+func (o OptMergeDiscriminatorOneOf) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMergeDiscriminatorOneOf) Reset() {
-	var v MergeDiscriminatorOneOf
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMergeDiscriminatorOneOf) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptMergeDiscriminatorOneOf) SetTo(v MergeDiscriminatorOneOf) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMergeDiscriminatorOneOf) Get() (v MergeDiscriminatorOneOf, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MergeDiscriminatorOneOf), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMergeDiscriminatorOneOf) Or(d MergeDiscriminatorOneOf) MergeDiscriminatorOneOf {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MergeDiscriminatorOneOf)
 }
 
 // NewOptMergeUniqueFieldsOneOf returns new OptMergeUniqueFieldsOneOf with value set to v.
 func NewOptMergeUniqueFieldsOneOf(v MergeUniqueFieldsOneOf) OptMergeUniqueFieldsOneOf {
-	return OptMergeUniqueFieldsOneOf{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMergeUniqueFieldsOneOf)
 }
 
 // OptMergeUniqueFieldsOneOf is optional MergeUniqueFieldsOneOf.
@@ -4340,44 +4007,35 @@ type OptMergeUniqueFieldsOneOf struct {
 }
 
 // IsSet returns true if OptMergeUniqueFieldsOneOf was set.
-func (o OptMergeUniqueFieldsOneOf) IsSet() bool { return o.Set }
+func (o OptMergeUniqueFieldsOneOf) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMergeUniqueFieldsOneOf) Reset() {
-	var v MergeUniqueFieldsOneOf
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMergeUniqueFieldsOneOf) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptMergeUniqueFieldsOneOf) SetTo(v MergeUniqueFieldsOneOf) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMergeUniqueFieldsOneOf) Get() (v MergeUniqueFieldsOneOf, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MergeUniqueFieldsOneOf), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMergeUniqueFieldsOneOf) Or(d MergeUniqueFieldsOneOf) MergeUniqueFieldsOneOf {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MergeUniqueFieldsOneOf)
 }
 
 // NewOptNilString returns new OptNilString with value set to v.
-func NewOptNilString(v string) OptNilString {
-	return OptNilString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilString(v string) OptNilString { _ = "STUB: not implemented"; return *new(OptNilString) }
 
 // OptNilString is optional nullable string.
 type OptNilString struct {
@@ -4387,64 +4045,41 @@ type OptNilString struct {
 }
 
 // IsSet returns true if OptNilString was set.
-func (o OptNilString) IsSet() bool { return o.Set }
+func (o OptNilString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilString) SetTo(v string) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilString) IsNull() bool { return o.Null }
+func (o OptNilString) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilString) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilString) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilString) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilString) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilString) Get() (v string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptNilStringArray returns new OptNilStringArray with value set to v.
 func NewOptNilStringArray(v []string) OptNilStringArray {
-	return OptNilStringArray{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringArray)
 }
 
 // OptNilStringArray is optional nullable []string.
@@ -4455,64 +4090,44 @@ type OptNilStringArray struct {
 }
 
 // IsSet returns true if OptNilStringArray was set.
-func (o OptNilStringArray) IsSet() bool { return o.Set }
+func (o OptNilStringArray) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringArray) Reset() {
-	var v []string
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringArray) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringArray) SetTo(v []string) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringArray) SetTo(v []string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringArray) IsNull() bool { return o.Null }
+func (o OptNilStringArray) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringArray) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v []string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringArray) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringArray) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringArray) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilStringArray) Get() (v []string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringArray) Or(d []string) []string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringArray) Or(d []string) []string { _ = "STUB: not implemented"; return nil }
 
 // NewOptNullValue returns new OptNullValue with value set to v.
 func NewOptNullValue(v NullValue) OptNullValue {
-	return OptNullValue{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNullValue)
 }
 
 // OptNullValue is optional NullValue.
@@ -4522,43 +4137,31 @@ type OptNullValue struct {
 }
 
 // IsSet returns true if OptNullValue was set.
-func (o OptNullValue) IsSet() bool { return o.Set }
+func (o OptNullValue) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNullValue) Reset() {
-	var v NullValue
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNullValue) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNullValue) SetTo(v NullValue) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptNullValue) SetTo(v NullValue) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNullValue) Get() (v NullValue, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(NullValue), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNullValue) Or(d NullValue) NullValue {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNullValue) Or(d NullValue) NullValue { _ = "STUB: not implemented"; return *new(NullValue) }
 
 // NewOptNullableEnums returns new OptNullableEnums with value set to v.
 func NewOptNullableEnums(v NullableEnums) OptNullableEnums {
-	return OptNullableEnums{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNullableEnums)
 }
 
 // OptNullableEnums is optional NullableEnums.
@@ -4568,43 +4171,34 @@ type OptNullableEnums struct {
 }
 
 // IsSet returns true if OptNullableEnums was set.
-func (o OptNullableEnums) IsSet() bool { return o.Set }
+func (o OptNullableEnums) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNullableEnums) Reset() {
-	var v NullableEnums
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNullableEnums) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNullableEnums) SetTo(v NullableEnums) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptNullableEnums) SetTo(v NullableEnums) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNullableEnums) Get() (v NullableEnums, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(NullableEnums), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNullableEnums) Or(d NullableEnums) NullableEnums {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(NullableEnums)
 }
 
 // NewOptOneOfMappingReference returns new OptOneOfMappingReference with value set to v.
 func NewOptOneOfMappingReference(v OneOfMappingReference) OptOneOfMappingReference {
-	return OptOneOfMappingReference{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOneOfMappingReference)
 }
 
 // OptOneOfMappingReference is optional OneOfMappingReference.
@@ -4614,43 +4208,37 @@ type OptOneOfMappingReference struct {
 }
 
 // IsSet returns true if OptOneOfMappingReference was set.
-func (o OptOneOfMappingReference) IsSet() bool { return o.Set }
+func (o OptOneOfMappingReference) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOneOfMappingReference) Reset() {
-	var v OneOfMappingReference
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOneOfMappingReference) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptOneOfMappingReference) SetTo(v OneOfMappingReference) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOneOfMappingReference) Get() (v OneOfMappingReference, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OneOfMappingReference), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOneOfMappingReference) Or(d OneOfMappingReference) OneOfMappingReference {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OneOfMappingReference)
 }
 
 // NewOptOneOfUUIDAndIntEnum returns new OptOneOfUUIDAndIntEnum with value set to v.
 func NewOptOneOfUUIDAndIntEnum(v OneOfUUIDAndIntEnum) OptOneOfUUIDAndIntEnum {
-	return OptOneOfUUIDAndIntEnum{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOneOfUUIDAndIntEnum)
 }
 
 // OptOneOfUUIDAndIntEnum is optional OneOfUUIDAndIntEnum.
@@ -4660,43 +4248,34 @@ type OptOneOfUUIDAndIntEnum struct {
 }
 
 // IsSet returns true if OptOneOfUUIDAndIntEnum was set.
-func (o OptOneOfUUIDAndIntEnum) IsSet() bool { return o.Set }
+func (o OptOneOfUUIDAndIntEnum) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOneOfUUIDAndIntEnum) Reset() {
-	var v OneOfUUIDAndIntEnum
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOneOfUUIDAndIntEnum) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptOneOfUUIDAndIntEnum) SetTo(v OneOfUUIDAndIntEnum) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptOneOfUUIDAndIntEnum) SetTo(v OneOfUUIDAndIntEnum) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOneOfUUIDAndIntEnum) Get() (v OneOfUUIDAndIntEnum, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OneOfUUIDAndIntEnum), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOneOfUUIDAndIntEnum) Or(d OneOfUUIDAndIntEnum) OneOfUUIDAndIntEnum {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OneOfUUIDAndIntEnum)
 }
 
 // NewOptOnePropertyObject returns new OptOnePropertyObject with value set to v.
 func NewOptOnePropertyObject(v OnePropertyObject) OptOnePropertyObject {
-	return OptOnePropertyObject{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOnePropertyObject)
 }
 
 // OptOnePropertyObject is optional OnePropertyObject.
@@ -4706,43 +4285,34 @@ type OptOnePropertyObject struct {
 }
 
 // IsSet returns true if OptOnePropertyObject was set.
-func (o OptOnePropertyObject) IsSet() bool { return o.Set }
+func (o OptOnePropertyObject) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOnePropertyObject) Reset() {
-	var v OnePropertyObject
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOnePropertyObject) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptOnePropertyObject) SetTo(v OnePropertyObject) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptOnePropertyObject) SetTo(v OnePropertyObject) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOnePropertyObject) Get() (v OnePropertyObject, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OnePropertyObject), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOnePropertyObject) Or(d OnePropertyObject) OnePropertyObject {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OnePropertyObject)
 }
 
 // NewOptOnlyPatternedPropsObject returns new OptOnlyPatternedPropsObject with value set to v.
 func NewOptOnlyPatternedPropsObject(v OnlyPatternedPropsObject) OptOnlyPatternedPropsObject {
-	return OptOnlyPatternedPropsObject{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOnlyPatternedPropsObject)
 }
 
 // OptOnlyPatternedPropsObject is optional OnlyPatternedPropsObject.
@@ -4752,44 +4322,35 @@ type OptOnlyPatternedPropsObject struct {
 }
 
 // IsSet returns true if OptOnlyPatternedPropsObject was set.
-func (o OptOnlyPatternedPropsObject) IsSet() bool { return o.Set }
+func (o OptOnlyPatternedPropsObject) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOnlyPatternedPropsObject) Reset() {
-	var v OnlyPatternedPropsObject
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOnlyPatternedPropsObject) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptOnlyPatternedPropsObject) SetTo(v OnlyPatternedPropsObject) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOnlyPatternedPropsObject) Get() (v OnlyPatternedPropsObject, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OnlyPatternedPropsObject), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOnlyPatternedPropsObject) Or(d OnlyPatternedPropsObject) OnlyPatternedPropsObject {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OnlyPatternedPropsObject)
 }
 
 // NewOptPet returns new OptPet with value set to v.
-func NewOptPet(v Pet) OptPet {
-	return OptPet{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptPet(v Pet) OptPet { _ = "STUB: not implemented"; return *new(OptPet) }
 
 // OptPet is optional Pet.
 type OptPet struct {
@@ -4798,44 +4359,26 @@ type OptPet struct {
 }
 
 // IsSet returns true if OptPet was set.
-func (o OptPet) IsSet() bool { return o.Set }
+func (o OptPet) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPet) Reset() {
-	var v Pet
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPet) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPet) SetTo(v Pet) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPet) SetTo(v Pet) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptPet) Get() (v Pet, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptPet) Get() (v Pet, ok bool) { _ = "STUB: not implemented"; return *new(Pet), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptPet) Or(d Pet) Pet {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptPet) Or(d Pet) Pet { _ = "STUB: not implemented"; return *new(Pet) }
 
 // NewOptPetName returns new OptPetName with value set to v.
-func NewOptPetName(v PetName) OptPetName {
-	return OptPetName{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptPetName(v PetName) OptPetName { _ = "STUB: not implemented"; return *new(OptPetName) }
 
 // OptPetName is optional PetName.
 type OptPetName struct {
@@ -4844,44 +4387,29 @@ type OptPetName struct {
 }
 
 // IsSet returns true if OptPetName was set.
-func (o OptPetName) IsSet() bool { return o.Set }
+func (o OptPetName) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPetName) Reset() {
-	var v PetName
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPetName) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPetName) SetTo(v PetName) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPetName) SetTo(v PetName) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPetName) Get() (v PetName, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(PetName), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptPetName) Or(d PetName) PetName {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptPetName) Or(d PetName) PetName { _ = "STUB: not implemented"; return *new(PetName) }
 
 // NewOptPetType returns new OptPetType with value set to v.
-func NewOptPetType(v PetType) OptPetType {
-	return OptPetType{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptPetType(v PetType) OptPetType { _ = "STUB: not implemented"; return *new(OptPetType) }
 
 // OptPetType is optional PetType.
 type OptPetType struct {
@@ -4890,44 +4418,29 @@ type OptPetType struct {
 }
 
 // IsSet returns true if OptPetType was set.
-func (o OptPetType) IsSet() bool { return o.Set }
+func (o OptPetType) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPetType) Reset() {
-	var v PetType
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPetType) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPetType) SetTo(v PetType) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPetType) SetTo(v PetType) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPetType) Get() (v PetType, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(PetType), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptPetType) Or(d PetType) PetType {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptPetType) Or(d PetType) PetType { _ = "STUB: not implemented"; return *new(PetType) }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -4936,43 +4449,28 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptStringMap returns new OptStringMap with value set to v.
 func NewOptStringMap(v StringMap) OptStringMap {
-	return OptStringMap{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringMap)
 }
 
 // OptStringMap is optional StringMap.
@@ -4982,43 +4480,31 @@ type OptStringMap struct {
 }
 
 // IsSet returns true if OptStringMap was set.
-func (o OptStringMap) IsSet() bool { return o.Set }
+func (o OptStringMap) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringMap) Reset() {
-	var v StringMap
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringMap) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringMap) SetTo(v StringMap) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringMap) SetTo(v StringMap) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStringMap) Get() (v StringMap, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(StringMap), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStringMap) Or(d StringMap) StringMap {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStringMap) Or(d StringMap) StringMap { _ = "STUB: not implemented"; return *new(StringMap) }
 
 // NewOptStringStringMap returns new OptStringStringMap with value set to v.
 func NewOptStringStringMap(v StringStringMap) OptStringStringMap {
-	return OptStringStringMap{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringStringMap)
 }
 
 // OptStringStringMap is optional StringStringMap.
@@ -5028,44 +4514,32 @@ type OptStringStringMap struct {
 }
 
 // IsSet returns true if OptStringStringMap was set.
-func (o OptStringStringMap) IsSet() bool { return o.Set }
+func (o OptStringStringMap) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringStringMap) Reset() {
-	var v StringStringMap
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringStringMap) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringStringMap) SetTo(v StringStringMap) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringStringMap) SetTo(v StringStringMap) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStringStringMap) Get() (v StringStringMap, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(StringStringMap), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptStringStringMap) Or(d StringStringMap) StringStringMap {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(StringStringMap)
 }
 
 // NewOptTime returns new OptTime with value set to v.
-func NewOptTime(v time.Time) OptTime {
-	return OptTime{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptTime(v time.Time) OptTime { _ = "STUB: not implemented"; return *new(OptTime) }
 
 // OptTime is optional time.Time.
 type OptTime struct {
@@ -5074,44 +4548,29 @@ type OptTime struct {
 }
 
 // IsSet returns true if OptTime was set.
-func (o OptTime) IsSet() bool { return o.Set }
+func (o OptTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTime) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptURI returns new OptURI with value set to v.
-func NewOptURI(v url.URL) OptURI {
-	return OptURI{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptURI(v url.URL) OptURI { _ = "STUB: not implemented"; return *new(OptURI) }
 
 // OptURI is optional url.URL.
 type OptURI struct {
@@ -5120,44 +4579,26 @@ type OptURI struct {
 }
 
 // IsSet returns true if OptURI was set.
-func (o OptURI) IsSet() bool { return o.Set }
+func (o OptURI) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptURI) Reset() {
-	var v url.URL
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptURI) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptURI) SetTo(v url.URL) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptURI) SetTo(v url.URL) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptURI) Get() (v url.URL, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptURI) Get() (v url.URL, ok bool) { _ = "STUB: not implemented"; return *new(url.URL), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptURI) Or(d url.URL) url.URL {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptURI) Or(d url.URL) url.URL { _ = "STUB: not implemented"; return *new(url.URL) }
 
 // NewOptUUID returns new OptUUID with value set to v.
-func NewOptUUID(v uuid.UUID) OptUUID {
-	return OptUUID{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUUID(v uuid.UUID) OptUUID { _ = "STUB: not implemented"; return *new(OptUUID) }
 
 // OptUUID is optional uuid.UUID.
 type OptUUID struct {
@@ -5166,43 +4607,31 @@ type OptUUID struct {
 }
 
 // IsSet returns true if OptUUID was set.
-func (o OptUUID) IsSet() bool { return o.Set }
+func (o OptUUID) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUUID) Reset() {
-	var v uuid.UUID
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUUID) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUUID) SetTo(v uuid.UUID) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUUID) SetTo(v uuid.UUID) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUUID) Get() (v uuid.UUID, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(uuid.UUID), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUUID) Or(d uuid.UUID) uuid.UUID {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUUID) Or(d uuid.UUID) uuid.UUID { _ = "STUB: not implemented"; return *new(uuid.UUID) }
 
 // NewOptValidationStringMap returns new OptValidationStringMap with value set to v.
 func NewOptValidationStringMap(v ValidationStringMap) OptValidationStringMap {
-	return OptValidationStringMap{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptValidationStringMap)
 }
 
 // OptValidationStringMap is optional ValidationStringMap.
@@ -5212,35 +4641,28 @@ type OptValidationStringMap struct {
 }
 
 // IsSet returns true if OptValidationStringMap was set.
-func (o OptValidationStringMap) IsSet() bool { return o.Set }
+func (o OptValidationStringMap) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptValidationStringMap) Reset() {
-	var v ValidationStringMap
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptValidationStringMap) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptValidationStringMap) SetTo(v ValidationStringMap) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptValidationStringMap) SetTo(v ValidationStringMap) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptValidationStringMap) Get() (v ValidationStringMap, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ValidationStringMap), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptValidationStringMap) Or(d ValidationStringMap) ValidationStringMap {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ValidationStringMap)
 }
 
 // Ref: #/components/schemas/PatternRecursiveMap
@@ -5293,317 +4715,416 @@ type Pet struct {
 
 // GetPrimary returns the value of Primary.
 func (s *Pet) GetPrimary() *Pet {
-	return s.Primary
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return nil
 }
 
-// GetID returns the value of ID.
 func (s *Pet) GetID() int64 {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetUniqueID returns the value of UniqueID.
+	return 0
 }
 
-// GetUniqueID returns the value of UniqueID.
 func (s *Pet) GetUniqueID() uuid.UUID {
-	return s.UniqueID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(uuid.UUID)
 }
 
-// GetName returns the value of Name.
 func (s *Pet) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *Pet) GetType() OptPetType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetKind returns the value of Kind.
+	return *new(OptPetType)
 }
 
-// GetKind returns the value of Kind.
 func (s *Pet) GetKind() PetKind {
-	return s.Kind
+	_ = "STUB: not implemented"
+
+	// GetTag returns the value of Tag.
+	return *new(PetKind)
 }
 
-// GetTag returns the value of Tag.
 func (s *Pet) GetTag() OptUUID {
-	return s.Tag
+	_ = "STUB: not implemented"
+
+	// GetIP returns the value of IP.
+	return *new(OptUUID)
 }
 
-// GetIP returns the value of IP.
 func (s *Pet) GetIP() netip.Addr {
-	return s.IP
+	_ = "STUB: not implemented"
+
+	// GetIPV4 returns the value of IPV4.
+	return *new(netip.Addr)
 }
 
-// GetIPV4 returns the value of IPV4.
 func (s *Pet) GetIPV4() netip.Addr {
-	return s.IPV4
+	_ = "STUB: not implemented"
+
+	// GetIPV6 returns the value of IPV6.
+	return *new(netip.Addr)
 }
 
-// GetIPV6 returns the value of IPV6.
 func (s *Pet) GetIPV6() netip.Addr {
-	return s.IPV6
+	_ = "STUB: not implemented"
+
+	// GetURI returns the value of URI.
+	return *new(netip.Addr)
 }
 
-// GetURI returns the value of URI.
 func (s *Pet) GetURI() url.URL {
-	return s.URI
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(url.URL)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *Pet) GetBirthday() time.Time {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// GetRate returns the value of Rate.
+	return *new(time.Time)
 }
 
-// GetRate returns the value of Rate.
 func (s *Pet) GetRate() time.Duration {
-	return s.Rate
+	_ = "STUB: not implemented"
+
+	// GetNickname returns the value of Nickname.
+	return *new(time.Duration)
 }
 
-// GetNickname returns the value of Nickname.
 func (s *Pet) GetNickname() NilString {
-	return s.Nickname
+	_ = "STUB: not implemented"
+
+	// GetNullStr returns the value of NullStr.
+	return *new(NilString)
 }
 
-// GetNullStr returns the value of NullStr.
 func (s *Pet) GetNullStr() OptNilString {
-	return s.NullStr
+	_ = "STUB: not implemented"
+
+	// GetFriends returns the value of Friends.
+	return *new(OptNilString)
 }
 
-// GetFriends returns the value of Friends.
 func (s *Pet) GetFriends() []Pet {
-	return s.Friends
+	_ = "STUB: not implemented"
+
+	// GetNext returns the value of Next.
+	return nil
 }
 
-// GetNext returns the value of Next.
 func (s *Pet) GetNext() OptData {
-	return s.Next
+	_ = "STUB: not implemented"
+
+	// GetTestInteger1 returns the value of TestInteger1.
+	return *new(OptData)
 }
 
-// GetTestInteger1 returns the value of TestInteger1.
 func (s *Pet) GetTestInteger1() OptInt {
-	return s.TestInteger1
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTestFloat1 returns the value of TestFloat1.
+	new(OptInt)
 }
 
-// GetTestFloat1 returns the value of TestFloat1.
 func (s *Pet) GetTestFloat1() OptFloat64 {
-	return s.TestFloat1
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTestArray1 returns the value of TestArray1.
+	new(OptFloat64)
 }
 
-// GetTestArray1 returns the value of TestArray1.
-func (s *Pet) GetTestArray1() [][]string {
-	return s.TestArray1
-}
+func (s *Pet) GetTestArray1() [][]string { _ = "STUB: not implemented"; return nil }
 
 // GetTestArray2 returns the value of TestArray2.
 func (s *Pet) GetTestArray2() OptArrayTest {
-	return s.TestArray2
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTestMap returns the value of TestMap.
+	new(OptArrayTest)
 }
 
-// GetTestMap returns the value of TestMap.
 func (s *Pet) GetTestMap() OptStringStringMap {
-	return s.TestMap
+	_ = "STUB: not implemented"
+
+	// GetTestMapWithProps returns the value of TestMapWithProps.
+	return *new(OptStringStringMap)
 }
 
-// GetTestMapWithProps returns the value of TestMapWithProps.
 func (s *Pet) GetTestMapWithProps() OptMapWithProperties {
-	return s.TestMapWithProps
+	_ = "STUB: not implemented"
+	return *new(OptMapWithProperties)
 }
 
 // GetTestAny returns the value of TestAny.
 func (s *Pet) GetTestAny() OptAnyTest {
-	return s.TestAny
+	_ = "STUB: not implemented"
+
+	// GetTestMaxProperties returns the value of TestMaxProperties.
+	return *new(OptAnyTest)
 }
 
-// GetTestMaxProperties returns the value of TestMaxProperties.
 func (s *Pet) GetTestMaxProperties() OptMaxPropertiesTest {
-	return s.TestMaxProperties
+	_ = "STUB: not implemented"
+	return *new(OptMaxPropertiesTest)
 }
 
 // GetTestDate returns the value of TestDate.
 func (s *Pet) GetTestDate() OptDate {
-	return s.TestDate
+	_ = "STUB: not implemented"
+
+	// GetTestDuration returns the value of TestDuration.
+	return *new(OptDate)
 }
 
-// GetTestDuration returns the value of TestDuration.
 func (s *Pet) GetTestDuration() OptDuration {
-	return s.TestDuration
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTestTime returns the value of TestTime.
+	new(OptDuration)
 }
 
-// GetTestTime returns the value of TestTime.
 func (s *Pet) GetTestTime() OptTime {
-	return s.TestTime
+	_ = "STUB: not implemented"
+
+	// GetTestDateTime returns the value of TestDateTime.
+	return *new(OptTime)
 }
 
-// GetTestDateTime returns the value of TestDateTime.
 func (s *Pet) GetTestDateTime() OptDateTime {
-	return s.TestDateTime
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNullValue returns the value of NullValue.
+	new(OptDateTime)
 }
 
-// GetNullValue returns the value of NullValue.
 func (s *Pet) GetNullValue() OptNullValue {
-	return s.NullValue
+	_ = "STUB: not implemented"
+
+	// GetExtraTags returns the value of ExtraTags.
+	return *new(OptNullValue)
 }
 
-// GetExtraTags returns the value of ExtraTags.
 func (s *Pet) GetExtraTags() OptString {
-	return s.ExtraTags
+	_ = "STUB: not implemented"
+
+	// SetPrimary sets the value of Primary.
+	return *new(OptString)
 }
 
-// SetPrimary sets the value of Primary.
 func (s *Pet) SetPrimary(val *Pet) {
-	s.Primary = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *Pet) SetID(val int64) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetUniqueID sets the value of UniqueID.
+	return
 }
 
-// SetUniqueID sets the value of UniqueID.
 func (s *Pet) SetUniqueID(val uuid.UUID) {
-	s.UniqueID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Pet) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *Pet) SetType(val OptPetType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetKind sets the value of Kind.
+	return
 }
 
-// SetKind sets the value of Kind.
 func (s *Pet) SetKind(val PetKind) {
-	s.Kind = val
+	_ = "STUB: not implemented"
+
+	// SetTag sets the value of Tag.
+	return
 }
 
-// SetTag sets the value of Tag.
 func (s *Pet) SetTag(val OptUUID) {
-	s.Tag = val
+	_ = "STUB: not implemented"
+
+	// SetIP sets the value of IP.
+	return
 }
 
-// SetIP sets the value of IP.
 func (s *Pet) SetIP(val netip.Addr) {
-	s.IP = val
+	_ = "STUB: not implemented"
+
+	// SetIPV4 sets the value of IPV4.
+	return
 }
 
-// SetIPV4 sets the value of IPV4.
 func (s *Pet) SetIPV4(val netip.Addr) {
-	s.IPV4 = val
+	_ = "STUB: not implemented"
+
+	// SetIPV6 sets the value of IPV6.
+	return
 }
 
-// SetIPV6 sets the value of IPV6.
 func (s *Pet) SetIPV6(val netip.Addr) {
-	s.IPV6 = val
+	_ = "STUB: not implemented"
+
+	// SetURI sets the value of URI.
+	return
 }
 
-// SetURI sets the value of URI.
 func (s *Pet) SetURI(val url.URL) {
-	s.URI = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
 func (s *Pet) SetBirthday(val time.Time) {
-	s.Birthday = val
+	_ = "STUB: not implemented"
+
+	// SetRate sets the value of Rate.
+	return
 }
 
-// SetRate sets the value of Rate.
 func (s *Pet) SetRate(val time.Duration) {
-	s.Rate = val
+	_ = "STUB: not implemented"
+
+	// SetNickname sets the value of Nickname.
+	return
 }
 
-// SetNickname sets the value of Nickname.
 func (s *Pet) SetNickname(val NilString) {
-	s.Nickname = val
+	_ = "STUB: not implemented"
+
+	// SetNullStr sets the value of NullStr.
+	return
 }
 
-// SetNullStr sets the value of NullStr.
 func (s *Pet) SetNullStr(val OptNilString) {
-	s.NullStr = val
+	_ = "STUB: not implemented"
+
+	// SetFriends sets the value of Friends.
+	return
 }
 
-// SetFriends sets the value of Friends.
 func (s *Pet) SetFriends(val []Pet) {
-	s.Friends = val
+	_ = "STUB: not implemented"
+
+	// SetNext sets the value of Next.
+	return
 }
 
-// SetNext sets the value of Next.
 func (s *Pet) SetNext(val OptData) {
-	s.Next = val
+	_ = "STUB: not implemented"
+
+	// SetTestInteger1 sets the value of TestInteger1.
+	return
 }
 
-// SetTestInteger1 sets the value of TestInteger1.
-func (s *Pet) SetTestInteger1(val OptInt) {
-	s.TestInteger1 = val
-}
+func (s *Pet) SetTestInteger1(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetTestFloat1 sets the value of TestFloat1.
 func (s *Pet) SetTestFloat1(val OptFloat64) {
-	s.TestFloat1 = val
+	_ = "STUB: not implemented"
+
+	// SetTestArray1 sets the value of TestArray1.
+	return
 }
 
-// SetTestArray1 sets the value of TestArray1.
 func (s *Pet) SetTestArray1(val [][]string) {
-	s.TestArray1 = val
+	_ = "STUB: not implemented"
+
+	// SetTestArray2 sets the value of TestArray2.
+	return
 }
 
-// SetTestArray2 sets the value of TestArray2.
 func (s *Pet) SetTestArray2(val OptArrayTest) {
-	s.TestArray2 = val
+	_ = "STUB: not implemented"
+
+	// SetTestMap sets the value of TestMap.
+	return
 }
 
-// SetTestMap sets the value of TestMap.
 func (s *Pet) SetTestMap(val OptStringStringMap) {
-	s.TestMap = val
+	_ = "STUB: not implemented"
+
+	// SetTestMapWithProps sets the value of TestMapWithProps.
+	return
 }
 
-// SetTestMapWithProps sets the value of TestMapWithProps.
-func (s *Pet) SetTestMapWithProps(val OptMapWithProperties) {
-	s.TestMapWithProps = val
-}
+func (s *Pet) SetTestMapWithProps(val OptMapWithProperties) { _ = "STUB: not implemented"; return }
 
 // SetTestAny sets the value of TestAny.
 func (s *Pet) SetTestAny(val OptAnyTest) {
-	s.TestAny = val
+	_ = "STUB: not implemented"
+
+	// SetTestMaxProperties sets the value of TestMaxProperties.
+	return
 }
 
-// SetTestMaxProperties sets the value of TestMaxProperties.
-func (s *Pet) SetTestMaxProperties(val OptMaxPropertiesTest) {
-	s.TestMaxProperties = val
-}
+func (s *Pet) SetTestMaxProperties(val OptMaxPropertiesTest) { _ = "STUB: not implemented"; return }
 
 // SetTestDate sets the value of TestDate.
 func (s *Pet) SetTestDate(val OptDate) {
-	s.TestDate = val
+	_ = "STUB: not implemented"
+
+	// SetTestDuration sets the value of TestDuration.
+	return
 }
 
-// SetTestDuration sets the value of TestDuration.
-func (s *Pet) SetTestDuration(val OptDuration) {
-	s.TestDuration = val
-}
+func (s *Pet) SetTestDuration(val OptDuration) { _ = "STUB: not implemented"; return }
 
 // SetTestTime sets the value of TestTime.
 func (s *Pet) SetTestTime(val OptTime) {
-	s.TestTime = val
+	_ = "STUB: not implemented"
+
+	// SetTestDateTime sets the value of TestDateTime.
+	return
 }
 
-// SetTestDateTime sets the value of TestDateTime.
-func (s *Pet) SetTestDateTime(val OptDateTime) {
-	s.TestDateTime = val
-}
+func (s *Pet) SetTestDateTime(val OptDateTime) { _ = "STUB: not implemented"; return }
 
 // SetNullValue sets the value of NullValue.
 func (s *Pet) SetNullValue(val OptNullValue) {
-	s.NullValue = val
+	_ = "STUB: not implemented"
+
+	// SetExtraTags sets the value of ExtraTags.
+	return
 }
 
-// SetExtraTags sets the value of ExtraTags.
-func (s *Pet) SetExtraTags(val OptString) {
-	s.ExtraTags = val
-}
+func (s *Pet) SetExtraTags(val OptString) { _ = "STUB: not implemented"; return }
 
-func (*Pet) foobarGetRes()  {}
-func (*Pet) foobarPostRes() {}
-func (*Pet) petGetRes()     {}
+func (*Pet) foobarGetRes()  { _ = "STUB: not implemented"; return }
+func (*Pet) foobarPostRes() { _ = "STUB: not implemented"; return }
+func (*Pet) petGetRes()     { _ = "STUB: not implemented"; return }
 
 type PetGetAvatarByIDOK struct {
 	Data io.Reader
@@ -5613,13 +5134,11 @@ type PetGetAvatarByIDOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s PetGetAvatarByIDOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
-func (*PetGetAvatarByIDOK) petGetAvatarByIDRes() {}
+func (*PetGetAvatarByIDOK) petGetAvatarByIDRes() { _ = "STUB: not implemented"; return }
 
 type PetGetAvatarByNameOK struct {
 	Data io.Reader
@@ -5629,13 +5148,11 @@ type PetGetAvatarByNameOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s PetGetAvatarByNameOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
-func (*PetGetAvatarByNameOK) petGetAvatarByNameRes() {}
+func (*PetGetAvatarByNameOK) petGetAvatarByNameRes() { _ = "STUB: not implemented"; return }
 
 type PetGetDef struct {
 	Message string `json:"message"`
@@ -5643,41 +5160,45 @@ type PetGetDef struct {
 
 // GetMessage returns the value of Message.
 func (s *PetGetDef) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return ""
 }
 
-// SetMessage sets the value of Message.
 func (s *PetGetDef) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// PetGetDefStatusCode wraps PetGetDef with StatusCode.
+	return
 }
 
-// PetGetDefStatusCode wraps PetGetDef with StatusCode.
 type PetGetDefStatusCode struct {
 	StatusCode int
 	Response   PetGetDef
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *PetGetDefStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *PetGetDefStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *PetGetDefStatusCode) GetResponse() PetGetDef {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(PetGetDef)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *PetGetDefStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
-func (s *PetGetDefStatusCode) SetResponse(val PetGetDef) {
-	s.Response = val
-}
+func (s *PetGetDefStatusCode) SetResponse(val PetGetDef) { _ = "STUB: not implemented"; return }
 
-func (*PetGetDefStatusCode) petGetRes() {}
+func (*PetGetDefStatusCode) petGetRes() { _ = "STUB: not implemented"; return }
 
 type PetKind string
 
@@ -5687,38 +5208,13 @@ const (
 )
 
 // AllValues returns all PetKind values.
-func (PetKind) AllValues() []PetKind {
-	return []PetKind{
-		PetKindBig,
-		PetKindSmol,
-	}
-}
+func (PetKind) AllValues() []PetKind { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s PetKind) MarshalText() ([]byte, error) {
-	switch s {
-	case PetKindBig:
-		return []byte(s), nil
-	case PetKindSmol:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s PetKind) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *PetKind) UnmarshalText(data []byte) error {
-	switch PetKind(data) {
-	case PetKindBig:
-		*s = PetKindBig
-		return nil
-	case PetKindSmol:
-		*s = PetKindSmol
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *PetKind) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 type PetName string
 
@@ -5730,38 +5226,13 @@ const (
 )
 
 // AllValues returns all PetType values.
-func (PetType) AllValues() []PetType {
-	return []PetType{
-		PetTypeFifa,
-		PetTypeFofa,
-	}
-}
+func (PetType) AllValues() []PetType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s PetType) MarshalText() ([]byte, error) {
-	switch s {
-	case PetTypeFifa:
-		return []byte(s), nil
-	case PetTypeFofa:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s PetType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *PetType) UnmarshalText(data []byte) error {
-	switch PetType(data) {
-	case PetTypeFifa:
-		*s = PetTypeFifa
-		return nil
-	case PetTypeFofa:
-		*s = PetTypeFofa
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *PetType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // PetUpdateNameAliasPostDef is default response for PetUpdateNameAliasPost operation.
 type PetUpdateNameAliasPostDef struct {
@@ -5769,34 +5240,34 @@ type PetUpdateNameAliasPostDef struct {
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *PetUpdateNameAliasPostDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *PetUpdateNameAliasPostDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
 func (s *PetUpdateNameAliasPostDef) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// PetUpdateNamePostDef is default response for PetUpdateNamePost operation.
+	return
 }
 
-// PetUpdateNamePostDef is default response for PetUpdateNamePost operation.
 type PetUpdateNamePostDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *PetUpdateNamePostDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *PetUpdateNamePostDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
 func (s *PetUpdateNamePostDef) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// PetUploadAvatarByIDOK is response for PetUploadAvatarByID operation.
+	return
 }
 
-// PetUploadAvatarByIDOK is response for PetUploadAvatarByID operation.
 type PetUploadAvatarByIDOK struct{}
 
-func (*PetUploadAvatarByIDOK) petUploadAvatarByIDRes() {}
+func (*PetUploadAvatarByIDOK) petUploadAvatarByIDRes() { _ = "STUB: not implemented"; return }
 
 type PetUploadAvatarByIDReq struct {
 	Data io.Reader
@@ -5806,10 +5277,8 @@ type PetUploadAvatarByIDReq struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s PetUploadAvatarByIDReq) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 type RecursiveArray []RecursiveArray
@@ -5822,22 +5291,28 @@ type RecursiveMap struct {
 
 // GetOptionalRecursiveField returns the value of OptionalRecursiveField.
 func (s *RecursiveMap) GetOptionalRecursiveField() *RecursiveMap {
-	return s.OptionalRecursiveField
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetAdditionalProps returns the value of AdditionalProps.
 func (s *RecursiveMap) GetAdditionalProps() RecursiveMapAdditional {
-	return s.AdditionalProps
+	_ = "STUB: not implemented"
+	return *
+
+	// SetOptionalRecursiveField sets the value of OptionalRecursiveField.
+	new(RecursiveMapAdditional)
 }
 
-// SetOptionalRecursiveField sets the value of OptionalRecursiveField.
 func (s *RecursiveMap) SetOptionalRecursiveField(val *RecursiveMap) {
-	s.OptionalRecursiveField = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetAdditionalProps sets the value of AdditionalProps.
 func (s *RecursiveMap) SetAdditionalProps(val RecursiveMapAdditional) {
-	s.AdditionalProps = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type RecursiveMapAdditional map[string]RecursiveMap
@@ -5860,22 +5335,31 @@ type StringIntMap struct {
 
 // GetAdditionalProps returns the value of AdditionalProps.
 func (s *StringIntMap) GetAdditionalProps() StringIntMapAdditional {
-	return s.AdditionalProps
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	new(StringIntMapAdditional)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *StringIntMap) GetPattern0Props() StringIntMapPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetAdditionalProps sets the value of AdditionalProps.
+	new(StringIntMapPattern0)
 }
 
-// SetAdditionalProps sets the value of AdditionalProps.
 func (s *StringIntMap) SetAdditionalProps(val StringIntMapAdditional) {
-	s.AdditionalProps = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetPattern0Props sets the value of Pattern0Props.
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
 func (s *StringIntMap) SetPattern0Props(val StringIntMapPattern0) {
-	s.Pattern0Props = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type StringIntMapAdditional map[string]int
@@ -5932,25 +5416,34 @@ type TestDecimalValidation struct {
 
 // GetMinmax returns the value of Minmax.
 func (s *TestDecimalValidation) GetMinmax() decimal.Decimal {
-	return s.Minmax
+	_ = "STUB: not implemented"
+
+	// GetMultipleOf returns the value of MultipleOf.
+	return *new(decimal.Decimal)
 }
 
-// GetMultipleOf returns the value of MultipleOf.
 func (s *TestDecimalValidation) GetMultipleOf() decimal.Decimal {
-	return s.MultipleOf
+	_ = "STUB: not implemented"
+	return *
+
+	// SetMinmax sets the value of Minmax.
+	new(decimal.Decimal)
 }
 
-// SetMinmax sets the value of Minmax.
 func (s *TestDecimalValidation) SetMinmax(val decimal.Decimal) {
-	s.Minmax = val
+	_ = "STUB: not implemented"
+
+	// SetMultipleOf sets the value of MultipleOf.
+	return
 }
 
-// SetMultipleOf sets the value of MultipleOf.
 func (s *TestDecimalValidation) SetMultipleOf(val decimal.Decimal) {
-	s.MultipleOf = val
+	_ = "STUB: not implemented"
+	return
+
+	// TestDecimalValidationOK is response for TestDecimalValidation operation.
 }
 
-// TestDecimalValidationOK is response for TestDecimalValidation operation.
 type TestDecimalValidationOK struct{}
 
 // Ref: #/components/schemas/TestFloatValidation
@@ -5961,25 +5454,29 @@ type TestFloatValidation struct {
 
 // GetMinmax returns the value of Minmax.
 func (s *TestFloatValidation) GetMinmax() float64 {
-	return s.Minmax
+	_ = "STUB: not implemented"
+
+	// GetMultipleOf returns the value of MultipleOf.
+	return 0
 }
 
-// GetMultipleOf returns the value of MultipleOf.
-func (s *TestFloatValidation) GetMultipleOf() float64 {
-	return s.MultipleOf
-}
+func (s *TestFloatValidation) GetMultipleOf() float64 { _ = "STUB: not implemented"; return 0 }
 
 // SetMinmax sets the value of Minmax.
 func (s *TestFloatValidation) SetMinmax(val float64) {
-	s.Minmax = val
+	_ = "STUB: not implemented"
+
+	// SetMultipleOf sets the value of MultipleOf.
+	return
 }
 
-// SetMultipleOf sets the value of MultipleOf.
 func (s *TestFloatValidation) SetMultipleOf(val float64) {
-	s.MultipleOf = val
+	_ = "STUB: not implemented"
+
+	// TestFloatValidationOK is response for TestFloatValidation operation.
+	return
 }
 
-// TestFloatValidationOK is response for TestFloatValidation operation.
 type TestFloatValidationOK struct{}
 
 // Ref: #/components/schemas/TestInlineOneOf
@@ -5992,53 +5489,65 @@ type TestInlineOneOf struct {
 
 // GetInlineDiscriminator returns the value of InlineDiscriminator.
 func (s *TestInlineOneOf) GetInlineDiscriminator() OptInlineDiscriminatorOneOf {
-	return s.InlineDiscriminator
+	_ = "STUB: not implemented"
+	return *new(OptInlineDiscriminatorOneOf)
 }
 
 // GetMergeDiscriminator returns the value of MergeDiscriminator.
 func (s *TestInlineOneOf) GetMergeDiscriminator() OptMergeDiscriminatorOneOf {
-	return s.MergeDiscriminator
+	_ = "STUB: not implemented"
+	return *new(OptMergeDiscriminatorOneOf)
 }
 
 // GetInlineUniqueFields returns the value of InlineUniqueFields.
 func (s *TestInlineOneOf) GetInlineUniqueFields() OptInlineUniqueFieldsOneOf {
-	return s.InlineUniqueFields
+	_ = "STUB: not implemented"
+	return *new(OptInlineUniqueFieldsOneOf)
 }
 
 // GetMergeUniqueFields returns the value of MergeUniqueFields.
 func (s *TestInlineOneOf) GetMergeUniqueFields() OptMergeUniqueFieldsOneOf {
-	return s.MergeUniqueFields
+	_ = "STUB: not implemented"
+	return *new(OptMergeUniqueFieldsOneOf)
 }
 
 // SetInlineDiscriminator sets the value of InlineDiscriminator.
 func (s *TestInlineOneOf) SetInlineDiscriminator(val OptInlineDiscriminatorOneOf) {
-	s.InlineDiscriminator = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetMergeDiscriminator sets the value of MergeDiscriminator.
 func (s *TestInlineOneOf) SetMergeDiscriminator(val OptMergeDiscriminatorOneOf) {
-	s.MergeDiscriminator = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetInlineUniqueFields sets the value of InlineUniqueFields.
 func (s *TestInlineOneOf) SetInlineUniqueFields(val OptInlineUniqueFieldsOneOf) {
-	s.InlineUniqueFields = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetMergeUniqueFields sets the value of MergeUniqueFields.
 func (s *TestInlineOneOf) SetMergeUniqueFields(val OptMergeUniqueFieldsOneOf) {
-	s.MergeUniqueFields = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type TestNullableOneofsCreated OneOfWithNullable
 
-func (*TestNullableOneofsCreated) testNullableOneofsRes() {}
+func (*TestNullableOneofsCreated) testNullableOneofsRes() { _ = "STUB: not implemented"; return }
 
 type TestNullableOneofsOK OneOfWithNullable
 
-func (*TestNullableOneofsOK) testNullableOneofsRes() {}
+func (*TestNullableOneofsOK) testNullableOneofsRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/TupleNamedTest
+	// Ref: #/components/schemas/TupleNamedTest
+	return
+}
+
 type TupleNamedTest struct {
 	Integer int
 	Boolean bool
@@ -6049,53 +5558,69 @@ type TupleNamedTest struct {
 
 // GetInteger returns the value of Integer.
 func (s *TupleNamedTest) GetInteger() int {
-	return s.Integer
+	_ = "STUB: not implemented"
+
+	// GetBoolean returns the value of Boolean.
+	return 0
 }
 
-// GetBoolean returns the value of Boolean.
 func (s *TupleNamedTest) GetBoolean() bool {
-	return s.Boolean
+	_ = "STUB: not implemented"
+
+	// GetV2 returns the value of V2.
+	return false
 }
 
-// GetV2 returns the value of V2.
 func (s *TupleNamedTest) GetV2() string {
-	return s.V2
+	_ = "STUB: not implemented"
+
+	// GetV3 returns the value of V3.
+	return ""
 }
 
-// GetV3 returns the value of V3.
 func (s *TupleNamedTest) GetV3() [][]string {
-	return s.V3
+	_ = "STUB: not implemented"
+
+	// GetV4 returns the value of V4.
+	return nil
 }
 
-// GetV4 returns the value of V4.
 func (s *TupleNamedTest) GetV4() TupleNamedTestV4 {
-	return s.V4
+	_ = "STUB: not implemented"
+
+	// SetInteger sets the value of Integer.
+	return *new(TupleNamedTestV4)
 }
 
-// SetInteger sets the value of Integer.
 func (s *TupleNamedTest) SetInteger(val int) {
-	s.Integer = val
+	_ = "STUB: not implemented"
+
+	// SetBoolean sets the value of Boolean.
+	return
 }
 
-// SetBoolean sets the value of Boolean.
 func (s *TupleNamedTest) SetBoolean(val bool) {
-	s.Boolean = val
+	_ = "STUB: not implemented"
+
+	// SetV2 sets the value of V2.
+	return
 }
 
-// SetV2 sets the value of V2.
 func (s *TupleNamedTest) SetV2(val string) {
-	s.V2 = val
+	_ = "STUB: not implemented"
+
+	// SetV3 sets the value of V3.
+	return
 }
 
-// SetV3 sets the value of V3.
 func (s *TupleNamedTest) SetV3(val [][]string) {
-	s.V3 = val
+	_ = "STUB: not implemented"
+
+	// SetV4 sets the value of V4.
+	return
 }
 
-// SetV4 sets the value of V4.
-func (s *TupleNamedTest) SetV4(val TupleNamedTestV4) {
-	s.V4 = val
-}
+func (s *TupleNamedTest) SetV4(val TupleNamedTestV4) { _ = "STUB: not implemented"; return }
 
 type TupleNamedTestV4 struct {
 	Foo string    `json:"foo"`
@@ -6104,25 +5629,33 @@ type TupleNamedTestV4 struct {
 
 // GetFoo returns the value of Foo.
 func (s *TupleNamedTestV4) GetFoo() string {
-	return s.Foo
+	_ = "STUB: not implemented"
+
+	// GetBar returns the value of Bar.
+	return ""
 }
 
-// GetBar returns the value of Bar.
 func (s *TupleNamedTestV4) GetBar() OptString {
-	return s.Bar
+	_ = "STUB: not implemented"
+
+	// SetFoo sets the value of Foo.
+	return *new(OptString)
 }
 
-// SetFoo sets the value of Foo.
 func (s *TupleNamedTestV4) SetFoo(val string) {
-	s.Foo = val
+	_ = "STUB: not implemented"
+
+	// SetBar sets the value of Bar.
+	return
 }
 
-// SetBar sets the value of Bar.
 func (s *TupleNamedTestV4) SetBar(val OptString) {
-	s.Bar = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/TupleTest
+	return
 }
 
-// Ref: #/components/schemas/TupleTest
 type TupleTest struct {
 	V0 int
 	V1 bool
@@ -6133,53 +5666,69 @@ type TupleTest struct {
 
 // GetV0 returns the value of V0.
 func (s *TupleTest) GetV0() int {
-	return s.V0
+	_ = "STUB: not implemented"
+
+	// GetV1 returns the value of V1.
+	return 0
 }
 
-// GetV1 returns the value of V1.
 func (s *TupleTest) GetV1() bool {
-	return s.V1
+	_ = "STUB: not implemented"
+
+	// GetV2 returns the value of V2.
+	return false
 }
 
-// GetV2 returns the value of V2.
 func (s *TupleTest) GetV2() string {
-	return s.V2
+	_ = "STUB: not implemented"
+
+	// GetV3 returns the value of V3.
+	return ""
 }
 
-// GetV3 returns the value of V3.
 func (s *TupleTest) GetV3() [][]string {
-	return s.V3
+	_ = "STUB: not implemented"
+
+	// GetV4 returns the value of V4.
+	return nil
 }
 
-// GetV4 returns the value of V4.
 func (s *TupleTest) GetV4() TupleTestV4 {
-	return s.V4
+	_ = "STUB: not implemented"
+
+	// SetV0 sets the value of V0.
+	return *new(TupleTestV4)
 }
 
-// SetV0 sets the value of V0.
 func (s *TupleTest) SetV0(val int) {
-	s.V0 = val
+	_ = "STUB: not implemented"
+
+	// SetV1 sets the value of V1.
+	return
 }
 
-// SetV1 sets the value of V1.
 func (s *TupleTest) SetV1(val bool) {
-	s.V1 = val
+	_ = "STUB: not implemented"
+
+	// SetV2 sets the value of V2.
+	return
 }
 
-// SetV2 sets the value of V2.
 func (s *TupleTest) SetV2(val string) {
-	s.V2 = val
+	_ = "STUB: not implemented"
+
+	// SetV3 sets the value of V3.
+	return
 }
 
-// SetV3 sets the value of V3.
 func (s *TupleTest) SetV3(val [][]string) {
-	s.V3 = val
+	_ = "STUB: not implemented"
+
+	// SetV4 sets the value of V4.
+	return
 }
 
-// SetV4 sets the value of V4.
-func (s *TupleTest) SetV4(val TupleTestV4) {
-	s.V4 = val
-}
+func (s *TupleTest) SetV4(val TupleTestV4) { _ = "STUB: not implemented"; return }
 
 type TupleTestV4 struct {
 	Foo string    `json:"foo"`
@@ -6188,48 +5737,54 @@ type TupleTestV4 struct {
 
 // GetFoo returns the value of Foo.
 func (s *TupleTestV4) GetFoo() string {
-	return s.Foo
+	_ = "STUB: not implemented"
+
+	// GetBar returns the value of Bar.
+	return ""
 }
 
-// GetBar returns the value of Bar.
 func (s *TupleTestV4) GetBar() OptString {
-	return s.Bar
+	_ = "STUB: not implemented"
+
+	// SetFoo sets the value of Foo.
+	return *new(OptString)
 }
 
-// SetFoo sets the value of Foo.
 func (s *TupleTestV4) SetFoo(val string) {
-	s.Foo = val
+	_ = "STUB: not implemented"
+
+	// SetBar sets the value of Bar.
+	return
 }
 
-// SetBar sets the value of Bar.
 func (s *TupleTestV4) SetBar(val OptString) {
-	s.Bar = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/UniqueItemsTest
+	return
 }
 
-// Ref: #/components/schemas/UniqueItemsTest
 type UniqueItemsTest struct {
 	RequiredUnique         []string          `json:"required_unique"`
 	NullableOptionalUnique OptNilStringArray `json:"nullable_optional_unique"`
 }
 
 // GetRequiredUnique returns the value of RequiredUnique.
-func (s *UniqueItemsTest) GetRequiredUnique() []string {
-	return s.RequiredUnique
-}
+func (s *UniqueItemsTest) GetRequiredUnique() []string { _ = "STUB: not implemented"; return nil }
 
 // GetNullableOptionalUnique returns the value of NullableOptionalUnique.
 func (s *UniqueItemsTest) GetNullableOptionalUnique() OptNilStringArray {
-	return s.NullableOptionalUnique
+	_ = "STUB: not implemented"
+	return *new(OptNilStringArray)
 }
 
 // SetRequiredUnique sets the value of RequiredUnique.
-func (s *UniqueItemsTest) SetRequiredUnique(val []string) {
-	s.RequiredUnique = val
-}
+func (s *UniqueItemsTest) SetRequiredUnique(val []string) { _ = "STUB: not implemented"; return }
 
 // SetNullableOptionalUnique sets the value of NullableOptionalUnique.
 func (s *UniqueItemsTest) SetNullableOptionalUnique(val OptNilStringArray) {
-	s.NullableOptionalUnique = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Ref: #/components/schemas/ValidationStringMap

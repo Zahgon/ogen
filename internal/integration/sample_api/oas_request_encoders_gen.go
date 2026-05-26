@@ -3,24 +3,14 @@
 package api
 
 import (
-	"bytes"
 	"net/http"
-
-	"github.com/go-faster/jx"
-	ht "github.com/ogen-go/ogen/http"
 )
 
 func encodeDefaultTestRequest(
 	req *DefaultTest,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -28,33 +18,17 @@ func encodeFoobarPostRequest(
 	req OptPet,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeOneofBugRequest(
 	req *OneOfBugs,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -62,69 +36,37 @@ func encodePetCreateRequest(
 	req OptPet,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodePetUpdateNameAliasPostRequest(
 	req OptPetName,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodePetUpdateNamePostRequest(
 	req OptString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodePetUploadAvatarByIDRequest(
 	req PetUploadAvatarByIDReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/octet-stream"
-	body := req
-	ht.SetBody(r, body, contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -132,13 +74,7 @@ func encodeTestDecimalValidationRequest(
 	req *TestDecimalValidation,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -146,12 +82,6 @@ func encodeTestFloatValidationRequest(
 	req *TestFloatValidation,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }

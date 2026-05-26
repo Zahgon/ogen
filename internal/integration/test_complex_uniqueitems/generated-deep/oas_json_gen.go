@@ -3,42 +3,14 @@
 package api
 
 import (
-	"math/bits"
-	"strconv"
-
-	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/validate"
 )
 
 // Encode implements json.Marshaler.
-func (s *Condition) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Condition) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Condition) encodeFields(e *jx.Encoder) {
-	{
-		if s.Type.Set {
-			e.FieldStart("type")
-			s.Type.Encode(e)
-		}
-	}
-	{
-		if s.Negated.Set {
-			e.FieldStart("negated")
-			s.Negated.Encode(e)
-		}
-	}
-	{
-		if s.Configuration.Set {
-			e.FieldStart("configuration")
-			s.Configuration.Encode(e)
-		}
-	}
-}
+func (s *Condition) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfCondition = [3]string{
 	0: "type",
@@ -47,89 +19,19 @@ var jsonFieldsNameOfCondition = [3]string{
 }
 
 // Decode decodes Condition from json.
-func (s *Condition) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Condition to nil")
-	}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "type":
-			if err := func() error {
-				s.Type.Reset()
-				if err := s.Type.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"type\"")
-			}
-		case "negated":
-			if err := func() error {
-				s.Negated.Reset()
-				if err := s.Negated.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"negated\"")
-			}
-		case "configuration":
-			if err := func() error {
-				s.Configuration.Reset()
-				if err := s.Configuration.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"configuration\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Condition")
-	}
-
-	return nil
-}
+func (s *Condition) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Condition) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Condition) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Condition) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Condition) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *ConditionGroup) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *ConditionGroup) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *ConditionGroup) encodeFields(e *jx.Encoder) {
-	{
-		if s.Operator.Set {
-			e.FieldStart("operator")
-			s.Operator.Encode(e)
-		}
-	}
-	{
-		if s.Condition.Set {
-			e.FieldStart("condition")
-			s.Condition.Encode(e)
-		}
-	}
-}
+func (s *ConditionGroup) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfConditionGroup = [2]string{
 	0: "operator",
@@ -137,112 +39,45 @@ var jsonFieldsNameOfConditionGroup = [2]string{
 }
 
 // Decode decodes ConditionGroup from json.
-func (s *ConditionGroup) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ConditionGroup to nil")
-	}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "operator":
-			if err := func() error {
-				s.Operator.Reset()
-				if err := s.Operator.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"operator\"")
-			}
-		case "condition":
-			if err := func() error {
-				s.Condition.Reset()
-				if err := s.Condition.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"condition\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ConditionGroup")
-	}
-
-	return nil
-}
+func (s *ConditionGroup) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *ConditionGroup) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *ConditionGroup) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ConditionGroup) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ConditionGroup) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ConditionGroupOperator as json.
 func (s ConditionGroupOperator) Encode(e *jx.Encoder) {
-	e.Str(string(s))
+	_ = "STUB: not implemented"
+
+	// Decode decodes ConditionGroupOperator from json.
+	return
 }
 
-// Decode decodes ConditionGroupOperator from json.
-func (s *ConditionGroupOperator) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ConditionGroupOperator to nil")
-	}
-	v, err := d.StrBytes()
-	if err != nil {
-		return err
-	}
-	// Try to use constant string.
-	switch ConditionGroupOperator(v) {
-	case ConditionGroupOperatorAND:
-		*s = ConditionGroupOperatorAND
-	case ConditionGroupOperatorOR:
-		*s = ConditionGroupOperatorOR
-	default:
-		*s = ConditionGroupOperator(v)
-	}
+func (s *ConditionGroupOperator) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	return nil
-}
+// Try to use constant string.
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ConditionGroupOperator) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ConditionGroupOperator) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *CreateWorkflowTransitionsOK) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *CreateWorkflowTransitionsOK) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
 func (s *CreateWorkflowTransitionsOK) encodeFields(e *jx.Encoder) {
-	{
-		if s.Created.Set {
-			e.FieldStart("created")
-			s.Created.Encode(e)
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 var jsonFieldsNameOfCreateWorkflowTransitionsOK = [1]string{
@@ -251,63 +86,29 @@ var jsonFieldsNameOfCreateWorkflowTransitionsOK = [1]string{
 
 // Decode decodes CreateWorkflowTransitionsOK from json.
 func (s *CreateWorkflowTransitionsOK) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode CreateWorkflowTransitionsOK to nil")
-	}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "created":
-			if err := func() error {
-				s.Created.Reset()
-				if err := s.Created.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"created\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode CreateWorkflowTransitionsOK")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s *CreateWorkflowTransitionsOK) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *CreateWorkflowTransitionsOK) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *CreateWorkflowTransitionsReq) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *CreateWorkflowTransitionsReq) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
 func (s *CreateWorkflowTransitionsReq) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("transitions")
-		e.ArrStart()
-		for _, elem := range s.Transitions {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 var jsonFieldsNameOfCreateWorkflowTransitionsReq = [1]string{
@@ -316,514 +117,213 @@ var jsonFieldsNameOfCreateWorkflowTransitionsReq = [1]string{
 
 // Decode decodes CreateWorkflowTransitionsReq from json.
 func (s *CreateWorkflowTransitionsReq) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode CreateWorkflowTransitionsReq to nil")
-	}
-	var requiredBitSet [1]uint8
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "transitions":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				s.Transitions = make([]WorkflowTransition, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem WorkflowTransition
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Transitions = append(s.Transitions, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"transitions\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode CreateWorkflowTransitionsReq")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfCreateWorkflowTransitionsReq) {
-					name = jsonFieldsNameOfCreateWorkflowTransitionsReq[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Validate required fields.
+
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s *CreateWorkflowTransitionsReq) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *CreateWorkflowTransitionsReq) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes bool as json.
-func (o OptBool) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Bool(bool(o.Value))
-}
+func (o OptBool) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes bool from json.
-func (o *OptBool) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptBool to nil")
-	}
-	o.Set = true
-	v, err := d.Bool()
-	if err != nil {
-		return err
-	}
-	o.Value = bool(v)
-	return nil
-}
+func (o *OptBool) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptBool) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptBool) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptBool) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptBool) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Condition as json.
-func (o OptCondition) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptCondition) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Condition from json.
-func (o *OptCondition) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptCondition to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptCondition) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptCondition) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptCondition) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptCondition) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptCondition) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ConditionGroup as json.
-func (o OptConditionGroup) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptConditionGroup) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ConditionGroup from json.
-func (o *OptConditionGroup) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptConditionGroup to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptConditionGroup) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptConditionGroup) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptConditionGroup) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptConditionGroup) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ConditionGroupOperator as json.
-func (o OptConditionGroupOperator) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Str(string(o.Value))
-}
+func (o OptConditionGroupOperator) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ConditionGroupOperator from json.
 func (o *OptConditionGroupOperator) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptConditionGroupOperator to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptConditionGroupOperator) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptConditionGroupOperator) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes float64 as json.
-func (o OptFloat64) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Float64(float64(o.Value))
-}
+func (o OptFloat64) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes float64 from json.
-func (o *OptFloat64) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptFloat64 to nil")
-	}
-	o.Set = true
-	v, err := d.Float64()
-	if err != nil {
-		return err
-	}
-	o.Value = float64(v)
-	return nil
-}
+func (o *OptFloat64) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptFloat64) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptFloat64) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptFloat64) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptFloat64) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes int as json.
-func (o OptInt) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Int(int(o.Value))
-}
+func (o OptInt) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes int from json.
-func (o *OptInt) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptInt to nil")
-	}
-	o.Set = true
-	v, err := d.Int()
-	if err != nil {
-		return err
-	}
-	o.Value = int(v)
-	return nil
-}
+func (o *OptInt) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptInt) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptInt) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptInt) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptInt) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Parameter as json.
-func (o OptParameter) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptParameter) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Parameter from json.
-func (o *OptParameter) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptParameter to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptParameter) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptParameter) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptParameter) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptParameter) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptParameter) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ParameterGroup as json.
-func (o OptParameterGroup) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptParameterGroup) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ParameterGroup from json.
-func (o *OptParameterGroup) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptParameterGroup to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptParameterGroup) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptParameterGroup) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptParameterGroup) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptParameterGroup) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ParameterValue as json.
-func (o OptParameterValue) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptParameterValue) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ParameterValue from json.
-func (o *OptParameterValue) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptParameterValue to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptParameterValue) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptParameterValue) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptParameterValue) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptParameterValue) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ParameterValueMetadata as json.
-func (o OptParameterValueMetadata) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptParameterValueMetadata) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ParameterValueMetadata from json.
 func (o *OptParameterValueMetadata) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptParameterValueMetadata to nil")
-	}
-	o.Set = true
-	o.Value = make(ParameterValueMetadata)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptParameterValueMetadata) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptParameterValueMetadata) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode encodes RuleConfiguration as json.
-func (o OptRuleConfiguration) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
-
-// Decode decodes RuleConfiguration from json.
-func (o *OptRuleConfiguration) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptRuleConfiguration to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode encodes RuleConfiguration as json.
+func (o OptRuleConfiguration) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes RuleConfiguration from json.
+func (o *OptRuleConfiguration) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptRuleConfiguration) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptRuleConfiguration) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode encodes string as json.
-func (o OptString) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Str(string(o.Value))
-}
-
-// Decode decodes string from json.
-func (o *OptString) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptString to nil")
-	}
-	o.Set = true
-	v, err := d.Str()
-	if err != nil {
-		return err
-	}
-	o.Value = string(v)
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode encodes string as json.
+func (o OptString) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes string from json.
+func (o *OptString) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptString) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptString) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptString) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptString) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Parameter) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Parameter) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Parameter) encodeFields(e *jx.Encoder) {
-	{
-		if s.Key.Set {
-			e.FieldStart("key")
-			s.Key.Encode(e)
-		}
-	}
-	{
-		if s.Value.Set {
-			e.FieldStart("value")
-			s.Value.Encode(e)
-		}
-	}
-}
+func (s *Parameter) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfParameter = [2]string{
 	0: "key",
@@ -831,79 +331,19 @@ var jsonFieldsNameOfParameter = [2]string{
 }
 
 // Decode decodes Parameter from json.
-func (s *Parameter) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Parameter to nil")
-	}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "key":
-			if err := func() error {
-				s.Key.Reset()
-				if err := s.Key.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"key\"")
-			}
-		case "value":
-			if err := func() error {
-				s.Value.Reset()
-				if err := s.Value.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"value\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Parameter")
-	}
-
-	return nil
-}
+func (s *Parameter) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Parameter) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Parameter) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Parameter) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Parameter) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *ParameterGroup) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *ParameterGroup) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *ParameterGroup) encodeFields(e *jx.Encoder) {
-	{
-		if s.GroupName.Set {
-			e.FieldStart("groupName")
-			s.GroupName.Encode(e)
-		}
-	}
-	{
-		if s.Parameter.Set {
-			e.FieldStart("parameter")
-			s.Parameter.Encode(e)
-		}
-	}
-}
+func (s *ParameterGroup) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfParameterGroup = [2]string{
 	0: "groupName",
@@ -911,91 +351,19 @@ var jsonFieldsNameOfParameterGroup = [2]string{
 }
 
 // Decode decodes ParameterGroup from json.
-func (s *ParameterGroup) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ParameterGroup to nil")
-	}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "groupName":
-			if err := func() error {
-				s.GroupName.Reset()
-				if err := s.GroupName.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"groupName\"")
-			}
-		case "parameter":
-			if err := func() error {
-				s.Parameter.Reset()
-				if err := s.Parameter.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"parameter\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ParameterGroup")
-	}
-
-	return nil
-}
+func (s *ParameterGroup) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *ParameterGroup) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *ParameterGroup) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ParameterGroup) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ParameterGroup) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *ParameterValue) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *ParameterValue) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *ParameterValue) encodeFields(e *jx.Encoder) {
-	{
-		if s.StringValue.Set {
-			e.FieldStart("stringValue")
-			s.StringValue.Encode(e)
-		}
-	}
-	{
-		if s.NumberValue.Set {
-			e.FieldStart("numberValue")
-			s.NumberValue.Encode(e)
-		}
-	}
-	{
-		if s.BooleanValue.Set {
-			e.FieldStart("booleanValue")
-			s.BooleanValue.Encode(e)
-		}
-	}
-	{
-		if s.Metadata.Set {
-			e.FieldStart("metadata")
-			s.Metadata.Encode(e)
-		}
-	}
-}
+func (s *ParameterValue) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfParameterValue = [4]string{
 	0: "stringValue",
@@ -1005,155 +373,40 @@ var jsonFieldsNameOfParameterValue = [4]string{
 }
 
 // Decode decodes ParameterValue from json.
-func (s *ParameterValue) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ParameterValue to nil")
-	}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "stringValue":
-			if err := func() error {
-				s.StringValue.Reset()
-				if err := s.StringValue.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"stringValue\"")
-			}
-		case "numberValue":
-			if err := func() error {
-				s.NumberValue.Reset()
-				if err := s.NumberValue.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"numberValue\"")
-			}
-		case "booleanValue":
-			if err := func() error {
-				s.BooleanValue.Reset()
-				if err := s.BooleanValue.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"booleanValue\"")
-			}
-		case "metadata":
-			if err := func() error {
-				s.Metadata.Reset()
-				if err := s.Metadata.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"metadata\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ParameterValue")
-	}
-
-	return nil
-}
+func (s *ParameterValue) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *ParameterValue) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *ParameterValue) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ParameterValue) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ParameterValue) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s ParameterValueMetadata) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ParameterValueMetadata) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ParameterValueMetadata) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		e.Str(elem)
-	}
-}
+func (s ParameterValueMetadata) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ParameterValueMetadata from json.
-func (s *ParameterValueMetadata) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ParameterValueMetadata to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem string
-		if err := func() error {
-			v, err := d.Str()
-			elem = string(v)
-			if err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ParameterValueMetadata")
-	}
-
-	return nil
-}
+func (s *ParameterValueMetadata) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ParameterValueMetadata) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ParameterValueMetadata) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *RuleConfiguration) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *RuleConfiguration) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *RuleConfiguration) encodeFields(e *jx.Encoder) {
-	{
-		if s.RuleKey.Set {
-			e.FieldStart("ruleKey")
-			s.RuleKey.Encode(e)
-		}
-	}
-	{
-		if s.ParameterGroup.Set {
-			e.FieldStart("parameterGroup")
-			s.ParameterGroup.Encode(e)
-		}
-	}
-}
+func (s *RuleConfiguration) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfRuleConfiguration = [2]string{
 	0: "ruleKey",
@@ -1161,93 +414,22 @@ var jsonFieldsNameOfRuleConfiguration = [2]string{
 }
 
 // Decode decodes RuleConfiguration from json.
-func (s *RuleConfiguration) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode RuleConfiguration to nil")
-	}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "ruleKey":
-			if err := func() error {
-				s.RuleKey.Reset()
-				if err := s.RuleKey.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"ruleKey\"")
-			}
-		case "parameterGroup":
-			if err := func() error {
-				s.ParameterGroup.Reset()
-				if err := s.ParameterGroup.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"parameterGroup\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode RuleConfiguration")
-	}
-
-	return nil
-}
+func (s *RuleConfiguration) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s *RuleConfiguration) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *RuleConfiguration) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *RuleConfiguration) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *WorkflowTransition) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *WorkflowTransition) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *WorkflowTransition) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("id")
-		e.Str(s.ID)
-	}
-	{
-		e.FieldStart("name")
-		e.Str(s.Name)
-	}
-	{
-		if s.FromStatusId.Set {
-			e.FieldStart("fromStatusId")
-			s.FromStatusId.Encode(e)
-		}
-	}
-	{
-		if s.ToStatusId.Set {
-			e.FieldStart("toStatusId")
-			s.ToStatusId.Encode(e)
-		}
-	}
-	{
-		if s.Conditions.Set {
-			e.FieldStart("conditions")
-			s.Conditions.Encode(e)
-		}
-	}
-}
+func (s *WorkflowTransition) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfWorkflowTransition = [5]string{
 	0: "id",
@@ -1258,120 +440,25 @@ var jsonFieldsNameOfWorkflowTransition = [5]string{
 }
 
 // Decode decodes WorkflowTransition from json.
-func (s *WorkflowTransition) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode WorkflowTransition to nil")
-	}
-	var requiredBitSet [1]uint8
+func (s *WorkflowTransition) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "id":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.ID = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"id\"")
-			}
-		case "name":
-			requiredBitSet[0] |= 1 << 1
-			if err := func() error {
-				v, err := d.Str()
-				s.Name = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"name\"")
-			}
-		case "fromStatusId":
-			if err := func() error {
-				s.FromStatusId.Reset()
-				if err := s.FromStatusId.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"fromStatusId\"")
-			}
-		case "toStatusId":
-			if err := func() error {
-				s.ToStatusId.Reset()
-				if err := s.ToStatusId.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"toStatusId\"")
-			}
-		case "conditions":
-			if err := func() error {
-				s.Conditions.Reset()
-				if err := s.Conditions.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"conditions\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode WorkflowTransition")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000011,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfWorkflowTransition) {
-					name = jsonFieldsNameOfWorkflowTransition[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s *WorkflowTransition) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *WorkflowTransition) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }

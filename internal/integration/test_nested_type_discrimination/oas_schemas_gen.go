@@ -15,26 +15,34 @@ type BinaryData struct {
 
 // GetData returns the value of Data.
 func (s *BinaryData) GetData() []byte {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// GetSize returns the value of Size.
+	return nil
 }
 
-// GetSize returns the value of Size.
 func (s *BinaryData) GetSize() OptInt {
-	return s.Size
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return *new(OptInt)
 }
 
-// SetData sets the value of Data.
 func (s *BinaryData) SetData(val []byte) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// SetSize sets the value of Size.
+	return
 }
 
-// SetSize sets the value of Size.
 func (s *BinaryData) SetSize(val OptInt) {
-	s.Size = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/DataContent
+	// DataContent represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/DataContent
-// DataContent represents sum type.
 type DataContent struct {
 	Type           DataContentType // switch on this field
 	BinaryData     BinaryData
@@ -51,51 +59,39 @@ const (
 )
 
 // IsBinaryData reports whether DataContent is BinaryData.
-func (s DataContent) IsBinaryData() bool { return s.Type == BinaryDataDataContent }
+func (s DataContent) IsBinaryData() bool { _ = "STUB: not implemented"; return false }
 
 // IsStructuredData reports whether DataContent is StructuredData.
-func (s DataContent) IsStructuredData() bool { return s.Type == StructuredDataDataContent }
+func (s DataContent) IsStructuredData() bool { _ = "STUB: not implemented"; return false }
 
 // SetBinaryData sets DataContent to BinaryData.
-func (s *DataContent) SetBinaryData(v BinaryData) {
-	s.Type = BinaryDataDataContent
-	s.BinaryData = v
-}
+func (s *DataContent) SetBinaryData(v BinaryData) { _ = "STUB: not implemented"; return }
 
 // GetBinaryData returns BinaryData and true boolean if DataContent is BinaryData.
 func (s DataContent) GetBinaryData() (v BinaryData, ok bool) {
-	if !s.IsBinaryData() {
-		return v, false
-	}
-	return s.BinaryData, true
+	_ = "STUB: not implemented"
+	return *new(BinaryData), false
 }
 
 // NewBinaryDataDataContent returns new DataContent from BinaryData.
 func NewBinaryDataDataContent(v BinaryData) DataContent {
-	var s DataContent
-	s.SetBinaryData(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(DataContent)
 }
 
 // SetStructuredData sets DataContent to StructuredData.
-func (s *DataContent) SetStructuredData(v StructuredData) {
-	s.Type = StructuredDataDataContent
-	s.StructuredData = v
-}
+func (s *DataContent) SetStructuredData(v StructuredData) { _ = "STUB: not implemented"; return }
 
 // GetStructuredData returns StructuredData and true boolean if DataContent is StructuredData.
 func (s DataContent) GetStructuredData() (v StructuredData, ok bool) {
-	if !s.IsStructuredData() {
-		return v, false
-	}
-	return s.StructuredData, true
+	_ = "STUB: not implemented"
+	return *new(StructuredData), false
 }
 
 // NewStructuredDataDataContent returns new DataContent from StructuredData.
 func NewStructuredDataDataContent(v StructuredData) DataContent {
-	var s DataContent
-	s.SetStructuredData(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(DataContent)
 }
 
 // Ref: #/components/schemas/DataMessage
@@ -108,35 +104,47 @@ type DataMessage struct {
 
 // GetSender returns the value of Sender.
 func (s *DataMessage) GetSender() string {
-	return s.Sender
+	_ = "STUB: not implemented"
+
+	// GetContent returns the value of Content.
+	return ""
 }
 
-// GetContent returns the value of Content.
 func (s *DataMessage) GetContent() DataContent {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// GetEncoding returns the value of Encoding.
+	return *new(DataContent)
 }
 
-// GetEncoding returns the value of Encoding.
 func (s *DataMessage) GetEncoding() OptString {
-	return s.Encoding
+	_ = "STUB: not implemented"
+
+	// SetSender sets the value of Sender.
+	return *new(OptString)
 }
 
-// SetSender sets the value of Sender.
 func (s *DataMessage) SetSender(val string) {
-	s.Sender = val
+	_ = "STUB: not implemented"
+
+	// SetContent sets the value of Content.
+	return
 }
 
-// SetContent sets the value of Content.
 func (s *DataMessage) SetContent(val DataContent) {
-	s.Content = val
+	_ = "STUB: not implemented"
+
+	// SetEncoding sets the value of Encoding.
+	return
 }
 
-// SetEncoding sets the value of Encoding.
 func (s *DataMessage) SetEncoding(val OptString) {
-	s.Encoding = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/FormattedText
+	return
 }
 
-// Ref: #/components/schemas/FormattedText
 type FormattedText struct {
 	Text string `json:"text"`
 	// Unique to FormattedText.
@@ -145,26 +153,34 @@ type FormattedText struct {
 
 // GetText returns the value of Text.
 func (s *FormattedText) GetText() string {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetFormat returns the value of Format.
+	return ""
 }
 
-// GetFormat returns the value of Format.
 func (s *FormattedText) GetFormat() string {
-	return s.Format
+	_ = "STUB: not implemented"
+
+	// SetText sets the value of Text.
+	return ""
 }
 
-// SetText sets the value of Text.
 func (s *FormattedText) SetText(val string) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetFormat sets the value of Format.
+	return
 }
 
-// SetFormat sets the value of Format.
 func (s *FormattedText) SetFormat(val string) {
-	s.Format = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Message
+	// Message represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/Message
-// Message represents sum type.
 type Message struct {
 	Type        MessageType // switch on this field
 	TextMessage TextMessage
@@ -181,60 +197,37 @@ const (
 )
 
 // IsTextMessage reports whether Message is TextMessage.
-func (s Message) IsTextMessage() bool { return s.Type == TextMessageMessage }
+func (s Message) IsTextMessage() bool { _ = "STUB: not implemented"; return false }
 
 // IsDataMessage reports whether Message is DataMessage.
-func (s Message) IsDataMessage() bool { return s.Type == DataMessageMessage }
+func (s Message) IsDataMessage() bool { _ = "STUB: not implemented"; return false }
 
 // SetTextMessage sets Message to TextMessage.
-func (s *Message) SetTextMessage(v TextMessage) {
-	s.Type = TextMessageMessage
-	s.TextMessage = v
-}
+func (s *Message) SetTextMessage(v TextMessage) { _ = "STUB: not implemented"; return }
 
 // GetTextMessage returns TextMessage and true boolean if Message is TextMessage.
 func (s Message) GetTextMessage() (v TextMessage, ok bool) {
-	if !s.IsTextMessage() {
-		return v, false
-	}
-	return s.TextMessage, true
+	_ = "STUB: not implemented"
+	return *new(TextMessage), false
 }
 
 // NewTextMessageMessage returns new Message from TextMessage.
-func NewTextMessageMessage(v TextMessage) Message {
-	var s Message
-	s.SetTextMessage(v)
-	return s
-}
+func NewTextMessageMessage(v TextMessage) Message { _ = "STUB: not implemented"; return *new(Message) }
 
 // SetDataMessage sets Message to DataMessage.
-func (s *Message) SetDataMessage(v DataMessage) {
-	s.Type = DataMessageMessage
-	s.DataMessage = v
-}
+func (s *Message) SetDataMessage(v DataMessage) { _ = "STUB: not implemented"; return }
 
 // GetDataMessage returns DataMessage and true boolean if Message is DataMessage.
 func (s Message) GetDataMessage() (v DataMessage, ok bool) {
-	if !s.IsDataMessage() {
-		return v, false
-	}
-	return s.DataMessage, true
+	_ = "STUB: not implemented"
+	return *new(DataMessage), false
 }
 
 // NewDataMessageMessage returns new Message from DataMessage.
-func NewDataMessageMessage(v DataMessage) Message {
-	var s Message
-	s.SetDataMessage(v)
-	return s
-}
+func NewDataMessageMessage(v DataMessage) Message { _ = "STUB: not implemented"; return *new(Message) }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -243,44 +236,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -289,36 +264,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/PlainText
 type PlainText struct {
@@ -327,15 +289,19 @@ type PlainText struct {
 
 // GetText returns the value of Text.
 func (s *PlainText) GetText() string {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// SetText sets the value of Text.
+	return ""
 }
 
-// SetText sets the value of Text.
 func (s *PlainText) SetText(val string) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SendMessageOK is response for SendMessage operation.
+	return
 }
 
-// SendMessageOK is response for SendMessage operation.
 type SendMessageOK struct{}
 
 // Ref: #/components/schemas/StructuredData
@@ -347,23 +313,27 @@ type StructuredData struct {
 
 // GetData returns the value of Data.
 func (s *StructuredData) GetData() StructuredDataData {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// GetSchema returns the value of Schema.
+	return *new(StructuredDataData)
 }
 
-// GetSchema returns the value of Schema.
 func (s *StructuredData) GetSchema() OptString {
-	return s.Schema
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return *new(OptString)
 }
 
-// SetData sets the value of Data.
 func (s *StructuredData) SetData(val StructuredDataData) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// SetSchema sets the value of Schema.
+	return
 }
 
-// SetSchema sets the value of Schema.
-func (s *StructuredData) SetSchema(val OptString) {
-	s.Schema = val
-}
+func (s *StructuredData) SetSchema(val OptString) { _ = "STUB: not implemented"; return }
 
 type StructuredDataData map[string]jx.Raw
 
@@ -394,51 +364,39 @@ const (
 )
 
 // IsPlainText reports whether TextContent is PlainText.
-func (s TextContent) IsPlainText() bool { return s.Type == PlainTextTextContent }
+func (s TextContent) IsPlainText() bool { _ = "STUB: not implemented"; return false }
 
 // IsFormattedText reports whether TextContent is FormattedText.
-func (s TextContent) IsFormattedText() bool { return s.Type == FormattedTextTextContent }
+func (s TextContent) IsFormattedText() bool { _ = "STUB: not implemented"; return false }
 
 // SetPlainText sets TextContent to PlainText.
-func (s *TextContent) SetPlainText(v PlainText) {
-	s.Type = PlainTextTextContent
-	s.PlainText = v
-}
+func (s *TextContent) SetPlainText(v PlainText) { _ = "STUB: not implemented"; return }
 
 // GetPlainText returns PlainText and true boolean if TextContent is PlainText.
 func (s TextContent) GetPlainText() (v PlainText, ok bool) {
-	if !s.IsPlainText() {
-		return v, false
-	}
-	return s.PlainText, true
+	_ = "STUB: not implemented"
+	return *new(PlainText), false
 }
 
 // NewPlainTextTextContent returns new TextContent from PlainText.
 func NewPlainTextTextContent(v PlainText) TextContent {
-	var s TextContent
-	s.SetPlainText(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(TextContent)
 }
 
 // SetFormattedText sets TextContent to FormattedText.
-func (s *TextContent) SetFormattedText(v FormattedText) {
-	s.Type = FormattedTextTextContent
-	s.FormattedText = v
-}
+func (s *TextContent) SetFormattedText(v FormattedText) { _ = "STUB: not implemented"; return }
 
 // GetFormattedText returns FormattedText and true boolean if TextContent is FormattedText.
 func (s TextContent) GetFormattedText() (v FormattedText, ok bool) {
-	if !s.IsFormattedText() {
-		return v, false
-	}
-	return s.FormattedText, true
+	_ = "STUB: not implemented"
+	return *new(FormattedText), false
 }
 
 // NewFormattedTextTextContent returns new TextContent from FormattedText.
 func NewFormattedTextTextContent(v FormattedText) TextContent {
-	var s TextContent
-	s.SetFormattedText(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(TextContent)
 }
 
 // Ref: #/components/schemas/TextMessage
@@ -451,30 +409,39 @@ type TextMessage struct {
 
 // GetSender returns the value of Sender.
 func (s *TextMessage) GetSender() string {
-	return s.Sender
+	_ = "STUB: not implemented"
+
+	// GetContent returns the value of Content.
+	return ""
 }
 
-// GetContent returns the value of Content.
 func (s *TextMessage) GetContent() TextContent {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// GetMessageType returns the value of MessageType.
+	return *new(TextContent)
 }
 
-// GetMessageType returns the value of MessageType.
 func (s *TextMessage) GetMessageType() OptString {
-	return s.MessageType
+	_ = "STUB: not implemented"
+	return *
+
+	// SetSender sets the value of Sender.
+	new(OptString)
 }
 
-// SetSender sets the value of Sender.
 func (s *TextMessage) SetSender(val string) {
-	s.Sender = val
+	_ = "STUB: not implemented"
+
+	// SetContent sets the value of Content.
+	return
 }
 
-// SetContent sets the value of Content.
 func (s *TextMessage) SetContent(val TextContent) {
-	s.Content = val
+	_ = "STUB: not implemented"
+
+	// SetMessageType sets the value of MessageType.
+	return
 }
 
-// SetMessageType sets the value of MessageType.
-func (s *TextMessage) SetMessageType(val OptString) {
-	s.MessageType = val
-}
+func (s *TextMessage) SetMessageType(val OptString) { _ = "STUB: not implemented"; return }

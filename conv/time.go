@@ -10,18 +10,10 @@ const (
 	httpDateLayout = "Mon, 02 Jan 2006 15:04:05 GMT"
 )
 
-func Date(t time.Time) time.Time {
-	return time.Date(t.Year(), t.Month(), t.Day(), 0, 0, 0, 0, t.Location())
-}
+func Date(t time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
-func Time(t time.Time) time.Time {
-	return time.Date(0, 0, 0, t.Hour(), t.Minute(), t.Second(), 0, t.Location())
-}
+func Time(t time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
-func DateTime(t time.Time) time.Time {
-	return time.Date(t.Year(), t.Month(), t.Day(), t.Hour(), t.Minute(), t.Second(), 0, t.Location())
-}
+func DateTime(t time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
-func HTTPDate(t time.Time) time.Time {
-	return time.Date(t.Year(), t.Month(), t.Day(), t.Hour(), t.Minute(), t.Second(), 0, t.Location())
-}
+func HTTPDate(t time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }

@@ -4,26 +4,10 @@ package api
 
 import (
 	"context"
-	"fmt"
 	"net/url"
-	"strings"
-	"time"
-
-	"github.com/go-faster/errors"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/otelogen"
-	"github.com/ogen-go/ogen/uri"
-	"go.opentelemetry.io/otel/attribute"
-	"go.opentelemetry.io/otel/codes"
-	"go.opentelemetry.io/otel/metric"
-	semconv "go.opentelemetry.io/otel/semconv/v1.37.0"
-	"go.opentelemetry.io/otel/trace"
 )
 
-func trimTrailingSlashes(u *url.URL) {
-	u.Path = strings.TrimRight(u.Path, "/")
-	u.RawPath = strings.TrimRight(u.RawPath, "/")
-}
+func trimTrailingSlashes(u *url.URL) { _ = "STUB: not implemented"; return }
 
 // Invoker invokes operations described by OpenAPI v3 specification.
 type Invoker interface {
@@ -59,36 +43,19 @@ var _ Handler = struct {
 
 // NewClient initializes new Client defined by OAS.
 func NewClient(serverURL string, opts ...ClientOption) (*Client, error) {
-	u, err := url.Parse(serverURL)
-	if err != nil {
-		return nil, err
-	}
-	trimTrailingSlashes(u)
-
-	c, err := newClientConfig(opts...).baseClient()
-	if err != nil {
-		return nil, err
-	}
-	return &Client{
-		serverURL:  u,
-		baseClient: c,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type serverURLKey struct{}
 
 // WithServerURL sets context key to override server URL.
 func WithServerURL(ctx context.Context, u *url.URL) context.Context {
-	return context.WithValue(ctx, serverURLKey{}, u)
+	_ = "STUB: not implemented"
+	return *new(context.Context)
 }
 
-func (c *Client) requestURL(ctx context.Context) *url.URL {
-	u, ok := ctx.Value(serverURLKey{}).(*url.URL)
-	if !ok {
-		return c.serverURL
-	}
-	return u
-}
+func (c *Client) requestURL(ctx context.Context) *url.URL { _ = "STUB: not implemented"; return nil }
 
 // AnyArrayParam invokes anyArrayParam operation.
 //
@@ -96,105 +63,26 @@ func (c *Client) requestURL(ctx context.Context) *url.URL {
 //
 // GET /any/array
 func (c *Client) AnyArrayParam(ctx context.Context, params AnyArrayParamParams) (*AnyArrayParamOK, error) {
-	res, err := c.sendAnyArrayParam(ctx, params)
-	return res, err
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *Client) sendAnyArrayParam(ctx context.Context, params AnyArrayParamParams) (res *AnyArrayParamOK, err error) {
-	otelAttrs := []attribute.KeyValue{
-		otelogen.OperationID("anyArrayParam"),
-		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/any/array"),
-	}
-	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
-
-	// Run stopwatch.
-	startTime := time.Now()
-	defer func() {
-		// Use floating point division here for higher precision (instead of Millisecond method).
-		elapsedDuration := time.Since(startTime)
-		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
-	}()
-
-	// Increment request counter.
-	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-
-	// Start a span for this request.
-	ctx, span := c.cfg.Tracer.Start(ctx, AnyArrayParamOperation,
-		trace.WithAttributes(otelAttrs...),
-		clientSpanKind,
-	)
-	// Track stage for error reporting.
-	var stage string
-	defer func() {
-		if err != nil {
-			span.RecordError(err)
-			span.SetStatus(codes.Error, stage)
-			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-		}
-		span.End()
-	}()
-
-	stage = "BuildURL"
-	u := uri.Clone(c.requestURL(ctx))
-	var pathParts [1]string
-	pathParts[0] = "/any/array"
-	uri.AddPathParts(u, pathParts[:]...)
-
-	stage = "EncodeQueryParams"
-	q := uri.NewQueryEncoder()
-	{
-		// Encode "items" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "items",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			if params.Items != nil {
-				return e.EncodeArray(func(e uri.Encoder) error {
-					for i, item := range params.Items {
-						if err := func() error {
-							if item != nil {
-								return e.EncodeValue(fmt.Sprint(item))
-							}
-							return nil
-						}(); err != nil {
-							return errors.Wrapf(err, "[%d]", i)
-						}
-					}
-					return nil
-				})
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	u.RawQuery = q.Values().Encode()
-
-	stage = "EncodeRequest"
-	r, err := ht.NewRequest(ctx, "GET", u)
-	if err != nil {
-		return res, errors.Wrap(err, "create request")
-	}
-
-	stage = "SendRequest"
-	resp, err := c.cfg.Client.Do(r)
-	if err != nil {
-		return res, errors.Wrap(err, "do request")
-	}
-	defer resp.Body.Close()
-
-	stage = "DecodeResponse"
-	result, err := decodeAnyArrayParamResponse(resp)
-	if err != nil {
-		return res, errors.Wrap(err, "decode response")
-	}
-
-	return result, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Run stopwatch.
+
+// Use floating point division here for higher precision (instead of Millisecond method).
+
+// Increment request counter.
+
+// Start a span for this request.
+
+// Track stage for error reporting.
+
+// Encode "items" parameter.
 
 // AnyParams invokes anyParams operation.
 //
@@ -202,150 +90,30 @@ func (c *Client) sendAnyArrayParam(ctx context.Context, params AnyArrayParamPara
 //
 // GET /any/{pathParam}
 func (c *Client) AnyParams(ctx context.Context, params AnyParamsParams) (*AnyParamsOK, error) {
-	res, err := c.sendAnyParams(ctx, params)
-	return res, err
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *Client) sendAnyParams(ctx context.Context, params AnyParamsParams) (res *AnyParamsOK, err error) {
-	otelAttrs := []attribute.KeyValue{
-		otelogen.OperationID("anyParams"),
-		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/any/{pathParam}"),
-	}
-	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
-
-	// Run stopwatch.
-	startTime := time.Now()
-	defer func() {
-		// Use floating point division here for higher precision (instead of Millisecond method).
-		elapsedDuration := time.Since(startTime)
-		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
-	}()
-
-	// Increment request counter.
-	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-
-	// Start a span for this request.
-	ctx, span := c.cfg.Tracer.Start(ctx, AnyParamsOperation,
-		trace.WithAttributes(otelAttrs...),
-		clientSpanKind,
-	)
-	// Track stage for error reporting.
-	var stage string
-	defer func() {
-		if err != nil {
-			span.RecordError(err)
-			span.SetStatus(codes.Error, stage)
-			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-		}
-		span.End()
-	}()
-
-	stage = "BuildURL"
-	u := uri.Clone(c.requestURL(ctx))
-	var pathParts [2]string
-	pathParts[0] = "/any/"
-	{
-		// Encode "pathParam" parameter.
-		e := uri.NewPathEncoder(uri.PathEncoderConfig{
-			Param:   "pathParam",
-			Style:   uri.PathStyleSimple,
-			Explode: false,
-		})
-		if err := func() error {
-			if params.PathParam != nil {
-				return e.EncodeValue(fmt.Sprint(params.PathParam))
-			}
-			return nil
-		}(); err != nil {
-			return res, errors.Wrap(err, "encode path")
-		}
-		encoded, err := e.Result()
-		if err != nil {
-			return res, errors.Wrap(err, "encode path")
-		}
-		pathParts[1] = encoded
-	}
-	uri.AddPathParts(u, pathParts[:]...)
-
-	stage = "EncodeQueryParams"
-	q := uri.NewQueryEncoder()
-	{
-		// Encode "queryParam" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "queryParam",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			if params.QueryParam != nil {
-				return e.EncodeValue(fmt.Sprint(params.QueryParam))
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	u.RawQuery = q.Values().Encode()
-
-	stage = "EncodeRequest"
-	r, err := ht.NewRequest(ctx, "GET", u)
-	if err != nil {
-		return res, errors.Wrap(err, "create request")
-	}
-
-	stage = "EncodeHeaderParams"
-	h := uri.NewHeaderEncoder(r.Header)
-	{
-		cfg := uri.HeaderParameterEncodingConfig{
-			Name:    "X-Header-Param",
-			Explode: false,
-		}
-		if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-			if params.XHeaderParam != nil {
-				return e.EncodeValue(fmt.Sprint(params.XHeaderParam))
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode header")
-		}
-	}
-
-	stage = "EncodeCookieParams"
-	cookie := uri.NewCookieEncoder(r)
-	{
-		// Encode "cookieParam" parameter.
-		cfg := uri.CookieParameterEncodingConfig{
-			Name:    "cookieParam",
-			Explode: true,
-		}
-
-		if err := cookie.EncodeParam(cfg, func(e uri.Encoder) error {
-			if params.CookieParam != nil {
-				return e.EncodeValue(fmt.Sprint(params.CookieParam))
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode cookie")
-		}
-	}
-
-	stage = "SendRequest"
-	resp, err := c.cfg.Client.Do(r)
-	if err != nil {
-		return res, errors.Wrap(err, "do request")
-	}
-	defer resp.Body.Close()
-
-	stage = "DecodeResponse"
-	result, err := decodeAnyParamsResponse(resp)
-	if err != nil {
-		return res, errors.Wrap(err, "decode response")
-	}
-
-	return result, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Run stopwatch.
+
+// Use floating point division here for higher precision (instead of Millisecond method).
+
+// Increment request counter.
+
+// Start a span for this request.
+
+// Track stage for error reporting.
+
+// Encode "pathParam" parameter.
+
+// Encode "queryParam" parameter.
+
+// Encode "cookieParam" parameter.
 
 // AnyParamsRequired invokes anyParamsRequired operation.
 //
@@ -353,128 +121,25 @@ func (c *Client) sendAnyParams(ctx context.Context, params AnyParamsParams) (res
 //
 // GET /any/required/{pathParam}
 func (c *Client) AnyParamsRequired(ctx context.Context, params AnyParamsRequiredParams) (*AnyParamsRequiredOK, error) {
-	res, err := c.sendAnyParamsRequired(ctx, params)
-	return res, err
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *Client) sendAnyParamsRequired(ctx context.Context, params AnyParamsRequiredParams) (res *AnyParamsRequiredOK, err error) {
-	otelAttrs := []attribute.KeyValue{
-		otelogen.OperationID("anyParamsRequired"),
-		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/any/required/{pathParam}"),
-	}
-	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
-
-	// Run stopwatch.
-	startTime := time.Now()
-	defer func() {
-		// Use floating point division here for higher precision (instead of Millisecond method).
-		elapsedDuration := time.Since(startTime)
-		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
-	}()
-
-	// Increment request counter.
-	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-
-	// Start a span for this request.
-	ctx, span := c.cfg.Tracer.Start(ctx, AnyParamsRequiredOperation,
-		trace.WithAttributes(otelAttrs...),
-		clientSpanKind,
-	)
-	// Track stage for error reporting.
-	var stage string
-	defer func() {
-		if err != nil {
-			span.RecordError(err)
-			span.SetStatus(codes.Error, stage)
-			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-		}
-		span.End()
-	}()
-
-	stage = "BuildURL"
-	u := uri.Clone(c.requestURL(ctx))
-	var pathParts [2]string
-	pathParts[0] = "/any/required/"
-	{
-		// Encode "pathParam" parameter.
-		e := uri.NewPathEncoder(uri.PathEncoderConfig{
-			Param:   "pathParam",
-			Style:   uri.PathStyleSimple,
-			Explode: false,
-		})
-		if err := func() error {
-			if params.PathParam != nil {
-				return e.EncodeValue(fmt.Sprint(params.PathParam))
-			}
-			return nil
-		}(); err != nil {
-			return res, errors.Wrap(err, "encode path")
-		}
-		encoded, err := e.Result()
-		if err != nil {
-			return res, errors.Wrap(err, "encode path")
-		}
-		pathParts[1] = encoded
-	}
-	uri.AddPathParts(u, pathParts[:]...)
-
-	stage = "EncodeQueryParams"
-	q := uri.NewQueryEncoder()
-	{
-		// Encode "queryParam" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "queryParam",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			if params.QueryParam != nil {
-				return e.EncodeValue(fmt.Sprint(params.QueryParam))
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	u.RawQuery = q.Values().Encode()
-
-	stage = "EncodeRequest"
-	r, err := ht.NewRequest(ctx, "GET", u)
-	if err != nil {
-		return res, errors.Wrap(err, "create request")
-	}
-
-	stage = "EncodeHeaderParams"
-	h := uri.NewHeaderEncoder(r.Header)
-	{
-		cfg := uri.HeaderParameterEncodingConfig{
-			Name:    "X-Header-Param",
-			Explode: false,
-		}
-		if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-			if params.XHeaderParam != nil {
-				return e.EncodeValue(fmt.Sprint(params.XHeaderParam))
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode header")
-		}
-	}
-
-	stage = "SendRequest"
-	resp, err := c.cfg.Client.Do(r)
-	if err != nil {
-		return res, errors.Wrap(err, "do request")
-	}
-	defer resp.Body.Close()
-
-	stage = "DecodeResponse"
-	result, err := decodeAnyParamsRequiredResponse(resp)
-	if err != nil {
-		return res, errors.Wrap(err, "decode response")
-	}
-
-	return result, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Run stopwatch.
+
+// Use floating point division here for higher precision (instead of Millisecond method).
+
+// Increment request counter.
+
+// Start a span for this request.
+
+// Track stage for error reporting.
+
+// Encode "pathParam" parameter.
+
+// Encode "queryParam" parameter.

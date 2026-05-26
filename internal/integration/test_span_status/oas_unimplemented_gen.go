@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -17,19 +15,23 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /span-status
 func (UnimplementedHandler) SpanStatusBody(ctx context.Context) (r SpanStatusBodyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SpanStatusBodyRes), nil
 }
 
 // SpanStatusNoBody implements spanStatusNoBody operation.
 //
 // PUT /span-status
 func (UnimplementedHandler) SpanStatusNoBody(ctx context.Context) (r *SpanStatusNoBodyDef, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SpanStatusRequestChecks implements spanStatusRequestChecks operation.
+	//
+	// POST /span-status
 }
 
-// SpanStatusRequestChecks implements spanStatusRequestChecks operation.
-//
-// POST /span-status
 func (UnimplementedHandler) SpanStatusRequestChecks(ctx context.Context, req *SpanStatusRequestChecksReq, params SpanStatusRequestChecksParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }

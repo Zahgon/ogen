@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,25 +17,30 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /admin/foo
 func (UnimplementedHandler) GetAdminFoo(ctx context.Context) (r *GetAdminFooOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetFoo implements getFoo operation.
+	//
+	// Returns a Foo (base schema with $ref nested types).
+	//
+	// GET /foo
 }
 
-// GetFoo implements getFoo operation.
-//
-// Returns a Foo (base schema with $ref nested types).
-//
-// GET /foo
 func (UnimplementedHandler) GetFoo(ctx context.Context) (r *Foo, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// NullableStrings implements nullableStrings operation.
+	//
+	// Nullable strings.
+	//
+	// POST /nullableStrings
 }
 
-// NullableStrings implements nullableStrings operation.
-//
-// Nullable strings.
-//
-// POST /nullableStrings
 func (UnimplementedHandler) NullableStrings(ctx context.Context, req NilString) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ObjectsWithConflictingArrayProperty implements objectsWithConflictingArrayProperty operation.
@@ -46,7 +49,8 @@ func (UnimplementedHandler) NullableStrings(ctx context.Context, req NilString) 
 //
 // POST /objectsWithConflictingArrayProperty
 func (UnimplementedHandler) ObjectsWithConflictingArrayProperty(ctx context.Context, req *ObjectsWithConflictingArrayPropertyReq) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ObjectsWithConflictingProperties implements objectsWithConflictingProperties operation.
@@ -55,7 +59,8 @@ func (UnimplementedHandler) ObjectsWithConflictingArrayProperty(ctx context.Cont
 //
 // POST /objectsWithConflictingProperties
 func (UnimplementedHandler) ObjectsWithConflictingProperties(ctx context.Context, req *ObjectsWithConflictingPropertiesReq) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReferencedAllOfNullable implements referencedAllOfNullable operation.
@@ -64,7 +69,8 @@ func (UnimplementedHandler) ObjectsWithConflictingProperties(ctx context.Context
 //
 // POST /referencedAllOfNullable
 func (UnimplementedHandler) ReferencedAllOfNullable(ctx context.Context, req ReferencedAllOfNullableReq) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReferencedAllof implements referencedAllof operation.
@@ -73,7 +79,8 @@ func (UnimplementedHandler) ReferencedAllOfNullable(ctx context.Context, req Ref
 //
 // POST /referencedAllof
 func (UnimplementedHandler) ReferencedAllof(ctx context.Context, req ReferencedAllofReq) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReferencedAllofOptional implements referencedAllofOptional operation.
@@ -82,7 +89,8 @@ func (UnimplementedHandler) ReferencedAllof(ctx context.Context, req ReferencedA
 //
 // POST /referencedAllofOptional
 func (UnimplementedHandler) ReferencedAllofOptional(ctx context.Context, req ReferencedAllofOptionalReq) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SimpleInteger implements simpleInteger operation.
@@ -91,7 +99,8 @@ func (UnimplementedHandler) ReferencedAllofOptional(ctx context.Context, req Ref
 //
 // POST /simpleInteger
 func (UnimplementedHandler) SimpleInteger(ctx context.Context, req int) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SimpleObjects implements simpleObjects operation.
@@ -100,12 +109,14 @@ func (UnimplementedHandler) SimpleInteger(ctx context.Context, req int) error {
 //
 // POST /simpleObjects
 func (UnimplementedHandler) SimpleObjects(ctx context.Context, req *SimpleObjectsReq) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // StringsNotype implements stringsNotype operation.
 //
 // POST /stringsNotype
 func (UnimplementedHandler) StringsNotype(ctx context.Context, req NilString) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -5,24 +5,9 @@ package api
 import (
 	"context"
 	"net/url"
-	"strings"
-	"time"
-
-	"github.com/go-faster/errors"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/otelogen"
-	"github.com/ogen-go/ogen/uri"
-	"go.opentelemetry.io/otel/attribute"
-	"go.opentelemetry.io/otel/codes"
-	"go.opentelemetry.io/otel/metric"
-	semconv "go.opentelemetry.io/otel/semconv/v1.39.0"
-	"go.opentelemetry.io/otel/trace"
 )
 
-func trimTrailingSlashes(u *url.URL) {
-	u.Path = strings.TrimRight(u.Path, "/")
-	u.RawPath = strings.TrimRight(u.RawPath, "/")
-}
+func trimTrailingSlashes(u *url.URL) { _ = "STUB: not implemented"; return }
 
 // Invoker invokes operations described by OpenAPI v3 specification.
 type Invoker interface {
@@ -44,315 +29,78 @@ type Client struct {
 
 // NewClient initializes new Client defined by OAS.
 func NewClient(serverURL string, opts ...ClientOption) (*Client, error) {
-	u, err := url.Parse(serverURL)
-	if err != nil {
-		return nil, err
-	}
-	trimTrailingSlashes(u)
-
-	c, err := newClientConfig(opts...).baseClient()
-	if err != nil {
-		return nil, err
-	}
-	return &Client{
-		serverURL:  u,
-		baseClient: c,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type serverURLKey struct{}
 
 // WithServerURL sets context key to override server URL.
 func WithServerURL(ctx context.Context, u *url.URL) context.Context {
-	return context.WithValue(ctx, serverURLKey{}, u)
+	_ = "STUB: not implemented"
+	return *new(context.Context)
 }
 
-func (c *Client) requestURL(ctx context.Context) *url.URL {
-	u, ok := ctx.Value(serverURLKey{}).(*url.URL)
-	if !ok {
-		return c.serverURL
-	}
-	return u
-}
+func (c *Client) requestURL(ctx context.Context) *url.URL { _ = "STUB: not implemented"; return nil }
 
 // Optional invokes optional operation.
 //
 // GET /optional
 func (c *Client) Optional(ctx context.Context, params OptionalParams) (*OptionalOK, error) {
-	res, err := c.sendOptional(ctx, params)
-	return res, err
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *Client) sendOptional(ctx context.Context, params OptionalParams) (res *OptionalOK, err error) {
-	otelAttrs := []attribute.KeyValue{
-		otelogen.OperationID("optional"),
-		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/optional"),
-	}
-	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
-
-	// Run stopwatch.
-	startTime := time.Now()
-	defer func() {
-		// Use floating point division here for higher precision (instead of Millisecond method).
-		elapsedDuration := time.Since(startTime)
-		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
-	}()
-
-	// Increment request counter.
-	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-
-	// Start a span for this request.
-	ctx, span := c.cfg.Tracer.Start(ctx, OptionalOperation,
-		trace.WithAttributes(otelAttrs...),
-		clientSpanKind,
-	)
-	// Track stage for error reporting.
-	var stage string
-	defer func() {
-		if err != nil {
-			span.RecordError(err)
-			span.SetStatus(codes.Error, stage)
-			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-		}
-		span.End()
-	}()
-
-	stage = "BuildURL"
-	u := uri.Clone(c.requestURL(ctx))
-	var pathParts [1]string
-	pathParts[0] = "/optional"
-	uri.AddPathParts(u, pathParts[:]...)
-
-	stage = "EncodeQueryParams"
-	q := uri.NewQueryEncoder()
-	{
-		// Encode "date" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "date",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			if val, ok := params.Date.Get(); ok {
-				return e.EncodeValue(val.Format("02/01/2006"))
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	{
-		// Encode "time" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "time",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			if val, ok := params.Time.Get(); ok {
-				return e.EncodeValue(val.Format("3:04PM"))
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	{
-		// Encode "dateTime" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "dateTime",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			if val, ok := params.DateTime.Get(); ok {
-				return e.EncodeValue(val.Format("2006-01-02T15:04:05.999999999Z07:00"))
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	{
-		// Encode "alias" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "alias",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			if val, ok := params.Alias.Get(); ok {
-				if unwrapped := time.Time(val); true {
-					return e.EncodeValue(unwrapped.Format("02/01/2006 3:04:05PM"))
-				}
-				return nil
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	u.RawQuery = q.Values().Encode()
-
-	stage = "EncodeRequest"
-	r, err := ht.NewRequest(ctx, "GET", u)
-	if err != nil {
-		return res, errors.Wrap(err, "create request")
-	}
-
-	stage = "SendRequest"
-	resp, err := c.cfg.Client.Do(r)
-	if err != nil {
-		return res, errors.Wrap(err, "do request")
-	}
-	body := resp.Body
-	defer body.Close()
-
-	stage = "DecodeResponse"
-	result, err := decodeOptionalResponse(resp)
-	if err != nil {
-		return res, errors.Wrap(err, "decode response")
-	}
-
-	return result, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Run stopwatch.
+
+// Use floating point division here for higher precision (instead of Millisecond method).
+
+// Increment request counter.
+
+// Start a span for this request.
+
+// Track stage for error reporting.
+
+// Encode "date" parameter.
+
+// Encode "time" parameter.
+
+// Encode "dateTime" parameter.
+
+// Encode "alias" parameter.
 
 // Required invokes required operation.
 //
 // GET /required
 func (c *Client) Required(ctx context.Context, params RequiredParams) (*RequiredOK, error) {
-	res, err := c.sendRequired(ctx, params)
-	return res, err
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *Client) sendRequired(ctx context.Context, params RequiredParams) (res *RequiredOK, err error) {
-	otelAttrs := []attribute.KeyValue{
-		otelogen.OperationID("required"),
-		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/required"),
-	}
-	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
-
-	// Run stopwatch.
-	startTime := time.Now()
-	defer func() {
-		// Use floating point division here for higher precision (instead of Millisecond method).
-		elapsedDuration := time.Since(startTime)
-		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
-	}()
-
-	// Increment request counter.
-	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-
-	// Start a span for this request.
-	ctx, span := c.cfg.Tracer.Start(ctx, RequiredOperation,
-		trace.WithAttributes(otelAttrs...),
-		clientSpanKind,
-	)
-	// Track stage for error reporting.
-	var stage string
-	defer func() {
-		if err != nil {
-			span.RecordError(err)
-			span.SetStatus(codes.Error, stage)
-			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-		}
-		span.End()
-	}()
-
-	stage = "BuildURL"
-	u := uri.Clone(c.requestURL(ctx))
-	var pathParts [1]string
-	pathParts[0] = "/required"
-	uri.AddPathParts(u, pathParts[:]...)
-
-	stage = "EncodeQueryParams"
-	q := uri.NewQueryEncoder()
-	{
-		// Encode "date" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "date",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			return e.EncodeValue(params.Date.Format("02/01/2006"))
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	{
-		// Encode "time" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "time",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			return e.EncodeValue(params.Time.Format("3:04PM"))
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	{
-		// Encode "dateTime" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "dateTime",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			return e.EncodeValue(params.DateTime.Format("2006-01-02T15:04:05.999999999Z07:00"))
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	{
-		// Encode "alias" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "alias",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			if unwrapped := time.Time(params.Alias); true {
-				return e.EncodeValue(unwrapped.Format("02/01/2006 3:04:05PM"))
-			}
-			return nil
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	u.RawQuery = q.Values().Encode()
-
-	stage = "EncodeRequest"
-	r, err := ht.NewRequest(ctx, "GET", u)
-	if err != nil {
-		return res, errors.Wrap(err, "create request")
-	}
-
-	stage = "SendRequest"
-	resp, err := c.cfg.Client.Do(r)
-	if err != nil {
-		return res, errors.Wrap(err, "do request")
-	}
-	body := resp.Body
-	defer body.Close()
-
-	stage = "DecodeResponse"
-	result, err := decodeRequiredResponse(resp)
-	if err != nil {
-		return res, errors.Wrap(err, "decode response")
-	}
-
-	return result, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Run stopwatch.
+
+// Use floating point division here for higher precision (instead of Millisecond method).
+
+// Increment request counter.
+
+// Start a span for this request.
+
+// Track stage for error reporting.
+
+// Encode "date" parameter.
+
+// Encode "time" parameter.
+
+// Encode "dateTime" parameter.
+
+// Encode "alias" parameter.

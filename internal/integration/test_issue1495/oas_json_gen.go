@@ -3,108 +3,33 @@
 package api
 
 import (
-	"math/bits"
-	"strconv"
-
-	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/_testdata/testtypes/baz/v2"
-	"github.com/ogen-go/ogen/json"
-	"github.com/ogen-go/ogen/validate"
 )
 
 // Encode implements json.Marshaler.
-func (s *TestOK) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *TestOK) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *TestOK) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("test")
-		json.EncodeExternal(e, s.Test)
-	}
-}
+func (s *TestOK) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfTestOK = [1]string{
 	0: "test",
 }
 
 // Decode decodes TestOK from json.
-func (s *TestOK) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode TestOK to nil")
-	}
-	var requiredBitSet [1]uint8
+func (s *TestOK) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "test":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := json.DecodeExternal[baz.Test](d)
-				s.Test = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"test\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode TestOK")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfTestOK) {
-					name = jsonFieldsNameOfTestOK[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *TestOK) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *TestOK) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *TestOK) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *TestOK) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }

@@ -2,44 +2,8 @@
 
 package api
 
-import (
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/validate"
-)
+func (s *CollectionResource) Validate() error { _ = "STUB: not implemented"; return nil }
 
-func (s *CollectionResource) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
+func (s Resource) Validate() error { _ = "STUB: not implemented"; return nil }
 
-	var failures []validate.FieldError
-	if err := func() error {
-		if s.Items == nil {
-			return errors.New("nil is invalid value")
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "items",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s Resource) Validate() error {
-	switch s.Type {
-	case CollectionResourceResource:
-		if err := s.CollectionResource.Validate(); err != nil {
-			return err
-		}
-		return nil
-	case SingleResourceResource:
-		return nil // no validation needed
-	default:
-		return errors.Errorf("invalid type %q", s.Type)
-	}
-}
+// no validation needed

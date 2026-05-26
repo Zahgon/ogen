@@ -1,10 +1,6 @@
 package openapi
 
 import (
-	"strconv"
-
-	"github.com/go-faster/errors"
-
 	"github.com/ogen-go/ogen/location"
 )
 
@@ -67,32 +63,8 @@ type Responses struct {
 
 // Add adds a response to the Responses.
 func (r *Responses) Add(pattern string, resp *Response) error {
-	switch pattern {
-	case "default":
-		r.Default = resp
-	case "1XX":
-		r.Pattern[0] = resp
-	case "2XX":
-		r.Pattern[1] = resp
-	case "3XX":
-		r.Pattern[2] = resp
-	case "4XX":
-		r.Pattern[3] = resp
-	case "5XX":
-		r.Pattern[4] = resp
-	default:
-		code, err := strconv.Atoi(pattern)
-		if err != nil {
-			// Do not return parsing error, it could be a bit confusing.
-			return errors.Errorf("invalid response pattern %q", pattern)
-		}
-		if code < 100 || code > 599 {
-			return errors.Errorf("invalid status code: %d", code)
-		}
-		if r.StatusCode == nil {
-			r.StatusCode = make(map[int]*Response)
-		}
-		r.StatusCode[code] = resp
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Do not return parsing error, it could be a bit confusing.

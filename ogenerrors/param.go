@@ -2,7 +2,6 @@ package ogenerrors
 
 import (
 	"fmt"
-	"net/http"
 
 	"github.com/go-faster/errors"
 
@@ -16,30 +15,26 @@ type DecodeParamsError struct {
 }
 
 // Code returns http code to respond.
-func (d *DecodeParamsError) Code() int {
-	return http.StatusBadRequest
-}
+func (d *DecodeParamsError) Code() int { _ = "STUB: not implemented"; return 0 }
 
 // Unwrap returns child error.
 func (d *DecodeParamsError) Unwrap() error {
-	return d.Err
+	_ = "STUB: not implemented"
+
+	// FormatError implements errors.Formatter.
+	return nil
 }
 
-// FormatError implements errors.Formatter.
 func (d *DecodeParamsError) FormatError(p errors.Printer) (next error) {
-	p.Printf("operation %s: decode params", d.OperationName())
-	return d.Err
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Format implements fmt.Formatter.
-func (d *DecodeParamsError) Format(s fmt.State, verb rune) {
-	errors.FormatError(d, s, verb)
-}
+func (d *DecodeParamsError) Format(s fmt.State, verb rune) { _ = "STUB: not implemented"; return }
 
 // Error implements error.
-func (d *DecodeParamsError) Error() string {
-	return fmt.Sprintf("operation %s: decode params: %s", d.OperationName(), d.Err)
-}
+func (d *DecodeParamsError) Error() string { _ = "STUB: not implemented"; return "" }
 
 // DecodeParamError reports that error caused by parameter decoder.
 type DecodeParamError struct {
@@ -50,21 +45,19 @@ type DecodeParamError struct {
 
 // Unwrap returns child error.
 func (d *DecodeParamError) Unwrap() error {
-	return d.Err
+	_ = "STUB: not implemented"
+
+	// FormatError implements errors.Formatter.
+	return nil
 }
 
-// FormatError implements errors.Formatter.
 func (d *DecodeParamError) FormatError(p errors.Printer) (next error) {
-	p.Printf("%s: %q", d.In, d.Name)
-	return d.Err
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Format implements fmt.Formatter.
-func (d *DecodeParamError) Format(s fmt.State, verb rune) {
-	errors.FormatError(d, s, verb)
-}
+func (d *DecodeParamError) Format(s fmt.State, verb rune) { _ = "STUB: not implemented"; return }
 
 // Error implements error.
-func (d *DecodeParamError) Error() string {
-	return fmt.Sprintf("%s: %q: %s", d.In, d.Name, d.Err)
-}
+func (d *DecodeParamError) Error() string { _ = "STUB: not implemented"; return "" }

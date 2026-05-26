@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -17,19 +15,24 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /integerNumber
 func (UnimplementedHandler) IntegerNumber(ctx context.Context) (r *IntegerNumber, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// JaegerAnyOf implements jaegerAnyOf operation.
+	//
+	// GET /jaegerAnyOf
 }
 
-// JaegerAnyOf implements jaegerAnyOf operation.
-//
-// GET /jaegerAnyOf
 func (UnimplementedHandler) JaegerAnyOf(ctx context.Context) (r *JaegerAnyOf, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// OneUUID implements oneUUID operation.
+	//
+	// GET /oneUUID
 }
 
-// OneUUID implements oneUUID operation.
-//
-// GET /oneUUID
 func (UnimplementedHandler) OneUUID(ctx context.Context) (r *OneUUID, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
 }

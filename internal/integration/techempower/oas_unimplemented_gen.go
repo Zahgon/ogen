@@ -4,8 +4,6 @@ package techempower
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -24,7 +22,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /cached-worlds
 func (UnimplementedHandler) Caching(ctx context.Context, params CachingParams) (r WorldObjects, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WorldObjects), nil
 }
 
 // DB implements DB operation.
@@ -34,30 +33,35 @@ func (UnimplementedHandler) Caching(ctx context.Context, params CachingParams) (
 //
 // GET /db
 func (UnimplementedHandler) DB(ctx context.Context) (r *WorldObject, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// JSON implements json operation.
+	//
+	// Test #1. The JSON Serialization test exercises the framework fundamentals including keep-alive
+	// support, request routing, request header parsing, object instantiation, JSON serialization,
+	// response header generation, and request count throughput.
+	//
+	// GET /json
 }
 
-// JSON implements json operation.
-//
-// Test #1. The JSON Serialization test exercises the framework fundamentals including keep-alive
-// support, request routing, request header parsing, object instantiation, JSON serialization,
-// response header generation, and request count throughput.
-//
-// GET /json
 func (UnimplementedHandler) JSON(ctx context.Context) (r *HelloWorld, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// Queries implements Queries operation.
+	//
+	// Test #3. The Multiple Database Queries test is a variation of Test #2 and also uses the World
+	// table. Multiple rows are fetched to more dramatically punish the database driver and connection
+	// pool. At the highest queries-per-request tested (20), this test demonstrates all frameworks'
+	// convergence toward zero requests-per-second as database activity increases.
+	//
+	// GET /queries
 }
 
-// Queries implements Queries operation.
-//
-// Test #3. The Multiple Database Queries test is a variation of Test #2 and also uses the World
-// table. Multiple rows are fetched to more dramatically punish the database driver and connection
-// pool. At the highest queries-per-request tested (20), this test demonstrates all frameworks'
-// convergence toward zero requests-per-second as database activity increases.
-//
-// GET /queries
 func (UnimplementedHandler) Queries(ctx context.Context, params QueriesParams) (r WorldObjects, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WorldObjects), nil
 }
 
 // Updates implements Updates operation.
@@ -68,5 +72,6 @@ func (UnimplementedHandler) Queries(ctx context.Context, params QueriesParams) (
 //
 // GET /updates
 func (UnimplementedHandler) Updates(ctx context.Context, params UpdatesParams) (r WorldObjects, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WorldObjects), nil
 }

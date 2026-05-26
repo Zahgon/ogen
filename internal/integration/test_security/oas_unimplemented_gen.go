@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -17,26 +15,30 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /customSecurity
 func (UnimplementedHandler) CustomSecurity(ctx context.Context) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // DisjointSecurity implements disjointSecurity operation.
 //
 // GET /disjointSecurity
 func (UnimplementedHandler) DisjointSecurity(ctx context.Context) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // IntersectSecurity implements intersectSecurity operation.
 //
 // GET /intersectSecurity
 func (UnimplementedHandler) IntersectSecurity(ctx context.Context) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // OptionalSecurity implements optionalSecurity operation.
 //
 // GET /optionalSecurity
 func (UnimplementedHandler) OptionalSecurity(ctx context.Context) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -4,14 +4,8 @@ package api
 
 import (
 	"net/http"
-	"net/url"
 
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
 	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
 )
 
 // PatchGuestDriveByIDParams is parameters of patchGuestDriveByID operation.
@@ -21,63 +15,14 @@ type PatchGuestDriveByIDParams struct {
 }
 
 func unpackPatchGuestDriveByIDParams(packed middleware.Parameters) (params PatchGuestDriveByIDParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "drive_id",
-			In:   "path",
-		}
-		params.DriveID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(PatchGuestDriveByIDParams)
 }
 
 func decodePatchGuestDriveByIDParams(args [1]string, argsEscaped bool, r *http.Request) (params PatchGuestDriveByIDParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: drive_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "drive_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.DriveID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "drive_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(PatchGuestDriveByIDParams), nil
 }
 
 // PatchGuestNetworkInterfaceByIDParams is parameters of patchGuestNetworkInterfaceByID operation.
@@ -87,63 +32,14 @@ type PatchGuestNetworkInterfaceByIDParams struct {
 }
 
 func unpackPatchGuestNetworkInterfaceByIDParams(packed middleware.Parameters) (params PatchGuestNetworkInterfaceByIDParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "iface_id",
-			In:   "path",
-		}
-		params.IfaceID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(PatchGuestNetworkInterfaceByIDParams)
 }
 
 func decodePatchGuestNetworkInterfaceByIDParams(args [1]string, argsEscaped bool, r *http.Request) (params PatchGuestNetworkInterfaceByIDParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: iface_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "iface_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.IfaceID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "iface_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(PatchGuestNetworkInterfaceByIDParams), nil
 }
 
 // PutGuestDriveByIDParams is parameters of putGuestDriveByID operation.
@@ -153,63 +49,14 @@ type PutGuestDriveByIDParams struct {
 }
 
 func unpackPutGuestDriveByIDParams(packed middleware.Parameters) (params PutGuestDriveByIDParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "drive_id",
-			In:   "path",
-		}
-		params.DriveID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(PutGuestDriveByIDParams)
 }
 
 func decodePutGuestDriveByIDParams(args [1]string, argsEscaped bool, r *http.Request) (params PutGuestDriveByIDParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: drive_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "drive_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.DriveID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "drive_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(PutGuestDriveByIDParams), nil
 }
 
 // PutGuestNetworkInterfaceByIDParams is parameters of putGuestNetworkInterfaceByID operation.
@@ -219,61 +66,12 @@ type PutGuestNetworkInterfaceByIDParams struct {
 }
 
 func unpackPutGuestNetworkInterfaceByIDParams(packed middleware.Parameters) (params PutGuestNetworkInterfaceByIDParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "iface_id",
-			In:   "path",
-		}
-		params.IfaceID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(PutGuestNetworkInterfaceByIDParams)
 }
 
 func decodePutGuestNetworkInterfaceByIDParams(args [1]string, argsEscaped bool, r *http.Request) (params PutGuestNetworkInterfaceByIDParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: iface_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "iface_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.IfaceID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "iface_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(PutGuestNetworkInterfaceByIDParams), nil
 }

@@ -4,42 +4,32 @@ package api
 
 import (
 	"net/http"
-
-	"github.com/ogen-go/ogen/validate"
 )
 
 func decodeCustomSecurityResponse(resp *http.Response) (res *CustomSecurityOK, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &CustomSecurityOK{}, nil
-	}
-	return res, validate.UnexpectedStatusCodeWithResponse(resp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Code 200.
 
 func decodeDisjointSecurityResponse(resp *http.Response) (res *DisjointSecurityOK, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &DisjointSecurityOK{}, nil
-	}
-	return res, validate.UnexpectedStatusCodeWithResponse(resp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Code 200.
 
 func decodeIntersectSecurityResponse(resp *http.Response) (res *IntersectSecurityOK, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &IntersectSecurityOK{}, nil
-	}
-	return res, validate.UnexpectedStatusCodeWithResponse(resp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
+// Code 200.
+
 func decodeOptionalSecurityResponse(resp *http.Response) (res *OptionalSecurityOK, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &OptionalSecurityOK{}, nil
-	}
-	return res, validate.UnexpectedStatusCodeWithResponse(resp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Code 200.

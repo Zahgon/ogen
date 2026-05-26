@@ -13,42 +13,39 @@ type IssueTypesWorkflowMapping struct {
 }
 
 // GetWorkflowId returns the value of WorkflowId.
-func (s *IssueTypesWorkflowMapping) GetWorkflowId() string {
-	return s.WorkflowId
-}
+func (s *IssueTypesWorkflowMapping) GetWorkflowId() string { _ = "STUB: not implemented"; return "" }
 
 // GetIssueTypes returns the value of IssueTypes.
-func (s *IssueTypesWorkflowMapping) GetIssueTypes() []string {
-	return s.IssueTypes
-}
+func (s *IssueTypesWorkflowMapping) GetIssueTypes() []string { _ = "STUB: not implemented"; return nil }
 
 // GetUpdateDraftIfNeeded returns the value of UpdateDraftIfNeeded.
 func (s *IssueTypesWorkflowMapping) GetUpdateDraftIfNeeded() OptBool {
-	return s.UpdateDraftIfNeeded
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // SetWorkflowId sets the value of WorkflowId.
 func (s *IssueTypesWorkflowMapping) SetWorkflowId(val string) {
-	s.WorkflowId = val
+	_ = "STUB: not implemented"
+
+	// SetIssueTypes sets the value of IssueTypes.
+	return
 }
 
-// SetIssueTypes sets the value of IssueTypes.
 func (s *IssueTypesWorkflowMapping) SetIssueTypes(val []string) {
-	s.IssueTypes = val
+	_ = "STUB: not implemented"
+
+	// SetUpdateDraftIfNeeded sets the value of UpdateDraftIfNeeded.
+	return
 }
 
-// SetUpdateDraftIfNeeded sets the value of UpdateDraftIfNeeded.
 func (s *IssueTypesWorkflowMapping) SetUpdateDraftIfNeeded(val OptBool) {
-	s.UpdateDraftIfNeeded = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -57,44 +54,26 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -103,44 +82,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -149,43 +110,28 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptWorkflowSchemeIssueTypeMappings returns new OptWorkflowSchemeIssueTypeMappings with value set to v.
 func NewOptWorkflowSchemeIssueTypeMappings(v WorkflowSchemeIssueTypeMappings) OptWorkflowSchemeIssueTypeMappings {
-	return OptWorkflowSchemeIssueTypeMappings{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptWorkflowSchemeIssueTypeMappings)
 }
 
 // OptWorkflowSchemeIssueTypeMappings is optional WorkflowSchemeIssueTypeMappings.
@@ -195,43 +141,37 @@ type OptWorkflowSchemeIssueTypeMappings struct {
 }
 
 // IsSet returns true if OptWorkflowSchemeIssueTypeMappings was set.
-func (o OptWorkflowSchemeIssueTypeMappings) IsSet() bool { return o.Set }
+func (o OptWorkflowSchemeIssueTypeMappings) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptWorkflowSchemeIssueTypeMappings) Reset() {
-	var v WorkflowSchemeIssueTypeMappings
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptWorkflowSchemeIssueTypeMappings) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptWorkflowSchemeIssueTypeMappings) SetTo(v WorkflowSchemeIssueTypeMappings) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptWorkflowSchemeIssueTypeMappings) Get() (v WorkflowSchemeIssueTypeMappings, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(WorkflowSchemeIssueTypeMappings), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptWorkflowSchemeIssueTypeMappings) Or(d WorkflowSchemeIssueTypeMappings) WorkflowSchemeIssueTypeMappings {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(WorkflowSchemeIssueTypeMappings)
 }
 
 // NewOptWorkflowTransitionRuleConfiguration returns new OptWorkflowTransitionRuleConfiguration with value set to v.
 func NewOptWorkflowTransitionRuleConfiguration(v WorkflowTransitionRuleConfiguration) OptWorkflowTransitionRuleConfiguration {
-	return OptWorkflowTransitionRuleConfiguration{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptWorkflowTransitionRuleConfiguration)
 }
 
 // OptWorkflowTransitionRuleConfiguration is optional WorkflowTransitionRuleConfiguration.
@@ -241,48 +181,52 @@ type OptWorkflowTransitionRuleConfiguration struct {
 }
 
 // IsSet returns true if OptWorkflowTransitionRuleConfiguration was set.
-func (o OptWorkflowTransitionRuleConfiguration) IsSet() bool { return o.Set }
+func (o OptWorkflowTransitionRuleConfiguration) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptWorkflowTransitionRuleConfiguration) Reset() {
-	var v WorkflowTransitionRuleConfiguration
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptWorkflowTransitionRuleConfiguration) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptWorkflowTransitionRuleConfiguration) SetTo(v WorkflowTransitionRuleConfiguration) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptWorkflowTransitionRuleConfiguration) Get() (v WorkflowTransitionRuleConfiguration, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(WorkflowTransitionRuleConfiguration), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptWorkflowTransitionRuleConfiguration) Or(d WorkflowTransitionRuleConfiguration) WorkflowTransitionRuleConfiguration {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(WorkflowTransitionRuleConfiguration)
 }
 
 // UpdateWorkflowMappingBadRequest is response for UpdateWorkflowMapping operation.
 type UpdateWorkflowMappingBadRequest struct{}
 
-func (*UpdateWorkflowMappingBadRequest) updateWorkflowMappingRes() {}
+func (*UpdateWorkflowMappingBadRequest) updateWorkflowMappingRes() {
+	_ = "STUB: not implemented"
 
-// UpdateWorkflowTransitionRulesBadRequest is response for UpdateWorkflowTransitionRules operation.
+	// UpdateWorkflowTransitionRulesBadRequest is response for UpdateWorkflowTransitionRules operation.
+	return
+}
+
 type UpdateWorkflowTransitionRulesBadRequest struct{}
 
-func (*UpdateWorkflowTransitionRulesBadRequest) updateWorkflowTransitionRulesRes() {}
+func (*UpdateWorkflowTransitionRulesBadRequest) updateWorkflowTransitionRulesRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/WorkflowScheme
+	// Ref: #/components/schemas/WorkflowScheme
+	return
+}
+
 type WorkflowScheme struct {
 	ID                OptInt                             `json:"id"`
 	Name              OptString                          `json:"name"`
@@ -295,77 +239,97 @@ type WorkflowScheme struct {
 
 // GetID returns the value of ID.
 func (s *WorkflowScheme) GetID() OptInt {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(OptInt)
 }
 
-// GetName returns the value of Name.
 func (s *WorkflowScheme) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(OptString)
 }
 
-// GetDescription returns the value of Description.
 func (s *WorkflowScheme) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetDefaultWorkflow returns the value of DefaultWorkflow.
+	new(OptString)
 }
 
-// GetDefaultWorkflow returns the value of DefaultWorkflow.
 func (s *WorkflowScheme) GetDefaultWorkflow() OptString {
-	return s.DefaultWorkflow
+	_ = "STUB: not implemented"
+	return *
+
+	// GetIssueTypeMappings returns the value of IssueTypeMappings.
+	new(OptString)
 }
 
-// GetIssueTypeMappings returns the value of IssueTypeMappings.
 func (s *WorkflowScheme) GetIssueTypeMappings() OptWorkflowSchemeIssueTypeMappings {
-	return s.IssueTypeMappings
+	_ = "STUB: not implemented"
+	return *new(OptWorkflowSchemeIssueTypeMappings)
 }
 
 // GetDraft returns the value of Draft.
 func (s *WorkflowScheme) GetDraft() OptBool {
-	return s.Draft
+	_ = "STUB: not implemented"
+
+	// GetSelf returns the value of Self.
+	return *new(OptBool)
 }
 
-// GetSelf returns the value of Self.
 func (s *WorkflowScheme) GetSelf() OptString {
-	return s.Self
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptString)
 }
 
-// SetID sets the value of ID.
 func (s *WorkflowScheme) SetID(val OptInt) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *WorkflowScheme) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *WorkflowScheme) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *WorkflowScheme) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetDefaultWorkflow sets the value of DefaultWorkflow.
-func (s *WorkflowScheme) SetDefaultWorkflow(val OptString) {
-	s.DefaultWorkflow = val
-}
+func (s *WorkflowScheme) SetDefaultWorkflow(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetIssueTypeMappings sets the value of IssueTypeMappings.
 func (s *WorkflowScheme) SetIssueTypeMappings(val OptWorkflowSchemeIssueTypeMappings) {
-	s.IssueTypeMappings = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetDraft sets the value of Draft.
 func (s *WorkflowScheme) SetDraft(val OptBool) {
-	s.Draft = val
+	_ = "STUB: not implemented"
+
+	// SetSelf sets the value of Self.
+	return
 }
 
-// SetSelf sets the value of Self.
-func (s *WorkflowScheme) SetSelf(val OptString) {
-	s.Self = val
+func (s *WorkflowScheme) SetSelf(val OptString) { _ = "STUB: not implemented"; return }
+
+func (*WorkflowScheme) updateWorkflowMappingRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/WorkflowSchemeAssociations
+	return
 }
 
-func (*WorkflowScheme) updateWorkflowMappingRes() {}
-
-// Ref: #/components/schemas/WorkflowSchemeAssociations
 type WorkflowSchemeAssociations struct {
 	IssueTypeMappings []IssueTypesWorkflowMapping `json:"issueTypeMappings"`
 	DefaultWorkflowId OptString                   `json:"defaultWorkflowId"`
@@ -373,22 +337,27 @@ type WorkflowSchemeAssociations struct {
 
 // GetIssueTypeMappings returns the value of IssueTypeMappings.
 func (s *WorkflowSchemeAssociations) GetIssueTypeMappings() []IssueTypesWorkflowMapping {
-	return s.IssueTypeMappings
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetDefaultWorkflowId returns the value of DefaultWorkflowId.
 }
 
-// GetDefaultWorkflowId returns the value of DefaultWorkflowId.
 func (s *WorkflowSchemeAssociations) GetDefaultWorkflowId() OptString {
-	return s.DefaultWorkflowId
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // SetIssueTypeMappings sets the value of IssueTypeMappings.
 func (s *WorkflowSchemeAssociations) SetIssueTypeMappings(val []IssueTypesWorkflowMapping) {
-	s.IssueTypeMappings = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetDefaultWorkflowId sets the value of DefaultWorkflowId.
 func (s *WorkflowSchemeAssociations) SetDefaultWorkflowId(val OptString) {
-	s.DefaultWorkflowId = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type WorkflowSchemeIssueTypeMappings map[string]string
@@ -414,35 +383,48 @@ type WorkflowTransitionRule struct {
 
 // GetRuleKey returns the value of RuleKey.
 func (s *WorkflowTransitionRule) GetRuleKey() string {
-	return s.RuleKey
+	_ = "STUB: not implemented"
+
+	// GetConfiguration returns the value of Configuration.
+	return ""
 }
 
-// GetConfiguration returns the value of Configuration.
 func (s *WorkflowTransitionRule) GetConfiguration() OptWorkflowTransitionRuleConfiguration {
-	return s.Configuration
+	_ = "STUB: not implemented"
+	return *
+
+	// GetID returns the value of ID.
+	new(OptWorkflowTransitionRuleConfiguration)
 }
 
-// GetID returns the value of ID.
 func (s *WorkflowTransitionRule) GetID() OptString {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// SetRuleKey sets the value of RuleKey.
+	return *new(OptString)
 }
 
-// SetRuleKey sets the value of RuleKey.
 func (s *WorkflowTransitionRule) SetRuleKey(val string) {
-	s.RuleKey = val
+	_ = "STUB: not implemented"
+
+	// SetConfiguration sets the value of Configuration.
+	return
 }
 
-// SetConfiguration sets the value of Configuration.
 func (s *WorkflowTransitionRule) SetConfiguration(val OptWorkflowTransitionRuleConfiguration) {
-	s.Configuration = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetID sets the value of ID.
 }
 
-// SetID sets the value of ID.
 func (s *WorkflowTransitionRule) SetID(val OptString) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// Rule configuration parameters.
+	return
 }
 
-// Rule configuration parameters.
 type WorkflowTransitionRuleConfiguration map[string]string
 
 func (s *WorkflowTransitionRuleConfiguration) init() WorkflowTransitionRuleConfiguration {
@@ -463,58 +445,76 @@ type WorkflowTransitionRules struct {
 }
 
 // GetWorkflowId returns the value of WorkflowId.
-func (s *WorkflowTransitionRules) GetWorkflowId() string {
-	return s.WorkflowId
-}
+func (s *WorkflowTransitionRules) GetWorkflowId() string { _ = "STUB: not implemented"; return "" }
 
 // GetPostFunctions returns the value of PostFunctions.
 func (s *WorkflowTransitionRules) GetPostFunctions() []WorkflowTransitionRule {
-	return s.PostFunctions
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetConditions returns the value of Conditions.
 }
 
-// GetConditions returns the value of Conditions.
 func (s *WorkflowTransitionRules) GetConditions() []WorkflowTransitionRule {
-	return s.Conditions
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetValidators returns the value of Validators.
 }
 
-// GetValidators returns the value of Validators.
 func (s *WorkflowTransitionRules) GetValidators() []WorkflowTransitionRule {
-	return s.Validators
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetWorkflowId sets the value of WorkflowId.
 }
 
-// SetWorkflowId sets the value of WorkflowId.
 func (s *WorkflowTransitionRules) SetWorkflowId(val string) {
-	s.WorkflowId = val
+	_ = "STUB: not implemented"
+
+	// SetPostFunctions sets the value of PostFunctions.
+	return
 }
 
-// SetPostFunctions sets the value of PostFunctions.
 func (s *WorkflowTransitionRules) SetPostFunctions(val []WorkflowTransitionRule) {
-	s.PostFunctions = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetConditions sets the value of Conditions.
 }
 
-// SetConditions sets the value of Conditions.
 func (s *WorkflowTransitionRules) SetConditions(val []WorkflowTransitionRule) {
-	s.Conditions = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetValidators sets the value of Validators.
 }
 
-// SetValidators sets the value of Validators.
 func (s *WorkflowTransitionRules) SetValidators(val []WorkflowTransitionRule) {
-	s.Validators = val
+	_ = "STUB: not implemented"
+	return
+
+	// Ref: #/components/schemas/WorkflowTransitionRulesUpdate
 }
 
-// Ref: #/components/schemas/WorkflowTransitionRulesUpdate
 type WorkflowTransitionRulesUpdate struct {
 	Workflows []WorkflowTransitionRules `json:"workflows"`
 }
 
 // GetWorkflows returns the value of Workflows.
 func (s *WorkflowTransitionRulesUpdate) GetWorkflows() []WorkflowTransitionRules {
-	return s.Workflows
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetWorkflows sets the value of Workflows.
 }
 
-// SetWorkflows sets the value of Workflows.
 func (s *WorkflowTransitionRulesUpdate) SetWorkflows(val []WorkflowTransitionRules) {
-	s.Workflows = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*WorkflowTransitionRulesUpdate) updateWorkflowTransitionRulesRes() {}
+func (*WorkflowTransitionRulesUpdate) updateWorkflowTransitionRulesRes() {
+	_ = "STUB: not implemented"
+	return
+}

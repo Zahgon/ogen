@@ -2,13 +2,7 @@
 
 package api
 
-import (
-	"fmt"
-)
-
-func (s *ErrorResponseStatusCode) Error() string {
-	return fmt.Sprintf("code %d: %+v", s.StatusCode, s.Response)
-}
+func (s *ErrorResponseStatusCode) Error() string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/CommonResponse
 type CommonResponse struct {
@@ -18,100 +12,118 @@ type CommonResponse struct {
 
 // GetStatus returns the value of Status.
 func (s *CommonResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetData returns the value of Data.
+	return ""
 }
 
-// GetData returns the value of Data.
 func (s *CommonResponse) GetData() string {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return ""
 }
 
-// SetStatus sets the value of Status.
 func (s *CommonResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return
 }
 
-// SetData sets the value of Data.
 func (s *CommonResponse) SetData(val string) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// CommonResponseStatusCode wraps CommonResponse with StatusCode.
+	return
 }
 
-// CommonResponseStatusCode wraps CommonResponse with StatusCode.
 type CommonResponseStatusCode struct {
 	StatusCode int
 	Response   CommonResponse
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *CommonResponseStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *CommonResponseStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *CommonResponseStatusCode) GetResponse() CommonResponse {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(CommonResponse)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *CommonResponseStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
 func (s *CommonResponseStatusCode) SetResponse(val CommonResponse) {
-	s.Response = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*CommonResponseStatusCode) testOperationRes() {}
+func (*CommonResponseStatusCode) testOperationRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/ErrorResponse
+	// Ref: #/components/schemas/ErrorResponse
+	return
+}
+
 type ErrorResponse struct {
 	Error string `json:"error"`
 }
 
 // GetError returns the value of Error.
 func (s *ErrorResponse) GetError() string {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return ""
 }
 
-// SetError sets the value of Error.
 func (s *ErrorResponse) SetError(val string) {
-	s.Error = val
+	_ = "STUB: not implemented"
+
+	// ErrorResponseStatusCode wraps ErrorResponse with StatusCode.
+	return
 }
 
-// ErrorResponseStatusCode wraps ErrorResponse with StatusCode.
 type ErrorResponseStatusCode struct {
 	StatusCode int
 	Response   ErrorResponse
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorResponseStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorResponseStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorResponseStatusCode) GetResponse() ErrorResponse {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(ErrorResponse)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorResponseStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
 func (s *ErrorResponseStatusCode) SetResponse(val ErrorResponse) {
-	s.Response = val
+	_ = "STUB: not implemented"
+
+	// NewOptString returns new OptString with value set to v.
+	return
 }
 
-// NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -120,36 +132,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 type TestOperationReq struct {
 	Message OptString `json:"message"`
@@ -157,10 +156,10 @@ type TestOperationReq struct {
 
 // GetMessage returns the value of Message.
 func (s *TestOperationReq) GetMessage() OptString {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return *new(OptString)
 }
 
-// SetMessage sets the value of Message.
-func (s *TestOperationReq) SetMessage(val OptString) {
-	s.Message = val
-}
+func (s *TestOperationReq) SetMessage(val OptString) { _ = "STUB: not implemented"; return }

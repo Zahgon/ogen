@@ -2,7 +2,6 @@ package json
 
 import (
 	"encoding"
-	"encoding/base64"
 	"encoding/json"
 
 	"github.com/go-faster/jx"
@@ -45,104 +44,64 @@ type (
 
 // EncodeNative encodes a value using [Marshaler] interface.
 func EncodeNative[T any, P marshaler[T]](e *jx.Encoder, v T) {
-	P(&v).Encode(e)
+	_ = "STUB: not implemented"
+
+	// DecodeNative decodes a value using [Unmarshaler] interface.
+	return
 }
 
-// DecodeNative decodes a value using [Unmarshaler] interface.
 func DecodeNative[T any, P unmarshaler[T]](d *jx.Decoder) (T, error) {
-	var v T
-	err := P(&v).Decode(d)
-	return v, err
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
 // EncodeText encodes a value using [encoding.TextMarshaler] interface.
-func EncodeText[T any, P textMarshaler[T]](e *jx.Encoder, v T) {
-	b, _ := P(&v).MarshalText()
-	e.Raw(b)
-}
+func EncodeText[T any, P textMarshaler[T]](e *jx.Encoder, v T) { _ = "STUB: not implemented"; return }
 
 // DecodeText decodes a value using [encoding.TextUnmarshaler] interface.
 func DecodeText[T any, P textUnmarshaler[T]](d *jx.Decoder) (T, error) {
-	var v T
-	b, err := d.Raw()
-	if err != nil {
-		return v, err
-	}
-	err = P(&v).UnmarshalText(b)
-	return v, err
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
 // EncodeStringText encodes a string value using [encoding.TextMarshaler] interface.
 func EncodeStringText[T any, P textMarshaler[T]](e *jx.Encoder, v T) {
-	b, _ := P(&v).MarshalText()
-	e.ByteStr(b)
+	_ = "STUB: not implemented"
+	return
 }
 
 // DecodeStringText decodes a string value using [encoding.TextUnmarshaler] interface.
 func DecodeStringText[T any, P textUnmarshaler[T]](d *jx.Decoder) (T, error) {
-	var v T
-	b, err := d.StrBytes()
-	if err != nil {
-		return v, err
-	}
-	err = P(&v).UnmarshalText(b)
-	return v, err
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
 // EncodeBinary encodes a value using [encoding.BinaryMarshaler] interface.
 func EncodeBinary[T any, P binaryMarshaler[T]](e *jx.Encoder, v T) {
-	raw, _ := P(&v).MarshalBinary()
-	encoded := make([]byte, base64.StdEncoding.EncodedLen(len(raw)))
-	base64.StdEncoding.Encode(encoded, raw)
-	e.ByteStr(encoded)
+	_ = "STUB: not implemented"
+	return
 }
 
 // DecodeBinary decodes a value using [encoding.BinaryUnmarshaler] interface.
 func DecodeBinary[T any, P binaryUnmarshaler[T]](d *jx.Decoder) (T, error) {
-	var v T
-	raw, err := d.StrBytes()
-	if err != nil {
-		return v, err
-	}
-	decoded := make([]byte, base64.StdEncoding.DecodedLen(len(raw)))
-	n, err := base64.StdEncoding.Decode(decoded, raw)
-	if err != nil {
-		return v, err
-	}
-	err = P(&v).UnmarshalBinary(decoded[:n])
-	return v, err
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
 // EncodeJSON encodes a value using [json.Marshaler] interface.
-func EncodeJSON[T any, P jsonMarshaler[T]](e *jx.Encoder, v T) {
-	b, _ := P(&v).MarshalJSON()
-	e.Raw(b)
-}
+func EncodeJSON[T any, P jsonMarshaler[T]](e *jx.Encoder, v T) { _ = "STUB: not implemented"; return }
 
 // DecodeJSON decodes a value using [json.Marshaler] interface.
 func DecodeJSON[T any, P jsonUnmarshaler[T]](d *jx.Decoder) (T, error) {
-	var v T
-	b, err := d.Raw()
-	if err != nil {
-		return v, err
-	}
-	err = P(&v).UnmarshalJSON(b)
-	return v, err
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
 // EncodeExternal encodes a value using [json.Marshal].
-func EncodeExternal[T any](e *jx.Encoder, v T) {
-	b, _ := json.Marshal(v)
-	e.Raw(b)
-}
+func EncodeExternal[T any](e *jx.Encoder, v T) { _ = "STUB: not implemented"; return }
 
 // DecodeExternal decodes a value using [json.Unmarshal].
 func DecodeExternal[T any](d *jx.Decoder) (T, error) {
-	var v T
-	b, err := d.Raw()
-	if err != nil {
-		return v, err
-	}
-	err = json.Unmarshal(b, &v)
-	return v, err
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }

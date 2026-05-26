@@ -2,38 +2,17 @@
 
 package api
 
-import (
-	"fmt"
-	"hash/fnv"
-)
-
 // Hash computes a hash value for User using FNV-1a.
 // Equal objects must produce equal hashes.
 func (a User) Hash() uint64 {
-	h := fnv.New64a()
+	_ = "STUB: not implemented"
 
 	// Hash primitive field: Username
-	h.Write([]byte(fmt.Sprintf("%v", a.Username)))
-	// Hash optional field: Email
-	if a.Email.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Email.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: FullName
-	if a.FullName.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.FullName.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Verified
-	if a.Verified.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Verified.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	return h.Sum64()
+	return 0
 }
+
+// Hash optional field: Email
+
+// Hash optional field: FullName
+
+// Hash optional field: Verified

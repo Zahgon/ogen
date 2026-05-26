@@ -2,13 +2,7 @@
 
 package api
 
-import (
-	"fmt"
-)
-
-func (s *ErrorStatusCode) Error() string {
-	return fmt.Sprintf("code %d: %+v", s.StatusCode, s.Response)
-}
+func (s *ErrorStatusCode) Error() string { _ = "STUB: not implemented"; return "" }
 
 // Represents error object.
 // Ref: #/components/schemas/Error
@@ -19,46 +13,54 @@ type Error struct {
 
 // GetCode returns the value of Code.
 func (s *Error) GetCode() int64 {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return 0
 }
 
-// GetMessage returns the value of Message.
 func (s *Error) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return ""
 }
 
-// SetCode sets the value of Code.
 func (s *Error) SetCode(val int64) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *Error) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// ErrorStatusCode wraps Error with StatusCode.
+	return
 }
 
-// ErrorStatusCode wraps Error with StatusCode.
 type ErrorStatusCode struct {
 	StatusCode int
 	Response   Error
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorStatusCode) GetResponse() Error {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(Error)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
-func (s *ErrorStatusCode) SetResponse(val Error) {
-	s.Response = val
-}
+func (s *ErrorStatusCode) SetResponse(val Error) { _ = "STUB: not implemented"; return }

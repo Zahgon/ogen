@@ -5,10 +5,6 @@ package api
 import (
 	"context"
 	"net/http"
-	"strings"
-
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/ogenerrors"
 )
 
 // SecurityHandler is handler for security parameters.
@@ -18,17 +14,7 @@ type SecurityHandler interface {
 }
 
 func findAuthorization(h http.Header, prefix string) (string, bool) {
-	v, ok := h["Authorization"]
-	if !ok {
-		return "", false
-	}
-	for _, vv := range v {
-		scheme, value, ok := strings.Cut(vv, " ")
-		if !ok || !strings.EqualFold(scheme, prefix) {
-			continue
-		}
-		return value, true
-	}
+	_ = "STUB: not implemented"
 	return "", false
 }
 
@@ -52,32 +38,13 @@ var oauth2ScopesOauth2Alt = map[string][]string{
 //	token := exchangeTokenWithScopes(requiredScopes, "https://api.example.com")
 //
 // Returns nil if the operation has no scope requirements or if the operation is unknown.
-func GetOAuth2ScopesForOauth2Alt(operation string) []string {
-	scopes, ok := oauth2ScopesOauth2Alt[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(scopes))
-	copy(result, scopes)
-	return result
-}
+func GetOAuth2ScopesForOauth2Alt(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 func (s *Server) securityOauth2Alt(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t Oauth2Alt
-	token, ok := findAuthorization(req.Header, "Bearer")
-	if !ok {
-		return ctx, false, nil
-	}
-	t.Token = token
-	t.Scopes = oauth2ScopesOauth2Alt[operationName]
-	rctx, err := s.sec.HandleOauth2Alt(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
 // SecuritySource is provider of security values (tokens, passwords, etc.).
@@ -87,10 +54,6 @@ type SecuritySource interface {
 }
 
 func (s *Client) securityOauth2Alt(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.Oauth2Alt(ctx, operationName)
-	if err != nil {
-		return errors.Wrap(err, "security source \"Oauth2Alt\"")
-	}
-	req.Header.Set("Authorization", "Bearer "+t.Token)
+	_ = "STUB: not implemented"
 	return nil
 }

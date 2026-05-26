@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,7 +17,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // POST /pets
 func (UnimplementedHandler) CreatePet(ctx context.Context, req Pet) (r Pet, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(Pet), nil
 }
 
 // ListNotifications implements listNotifications operation.
@@ -28,23 +27,28 @@ func (UnimplementedHandler) CreatePet(ctx context.Context, req Pet) (r Pet, _ er
 //
 // GET /notifications
 func (UnimplementedHandler) ListNotifications(ctx context.Context) (r []Notification, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ListPets implements listPets operation.
+	//
+	// List pets.
+	//
+	// GET /pets
 }
 
-// ListPets implements listPets operation.
-//
-// List pets.
-//
-// GET /pets
 func (UnimplementedHandler) ListPets(ctx context.Context) (r []Pet, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ListVehicles implements listVehicles operation.
+	//
+	// List vehicles.
+	//
+	// GET /vehicles
 }
 
-// ListVehicles implements listVehicles operation.
-//
-// List vehicles.
-//
-// GET /vehicles
 func (UnimplementedHandler) ListVehicles(ctx context.Context) (r []Vehicle, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
 }

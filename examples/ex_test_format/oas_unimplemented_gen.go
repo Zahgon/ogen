@@ -11,7 +11,6 @@ import (
 
 	"github.com/go-faster/jx"
 	"github.com/google/uuid"
-	ht "github.com/ogen-go/ogen/http"
 	"github.com/shopspring/decimal"
 )
 
@@ -24,7502 +23,9532 @@ var _ Handler = UnimplementedHandler{}
 //
 // POST /test_query_parameter
 func (UnimplementedHandler) TestQueryParameter(ctx context.Context, req string, params TestQueryParameterParams) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestAny implements test_request_Any operation.
+	//
+	// POST /test_request_Any
 }
 
-// TestRequestAny implements test_request_Any operation.
-//
-// POST /test_request_Any
 func (UnimplementedHandler) TestRequestAny(ctx context.Context, req jx.Raw) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestBoolean implements test_request_boolean operation.
+	//
+	// POST /test_request_boolean
 }
 
-// TestRequestBoolean implements test_request_boolean operation.
-//
-// POST /test_request_boolean
 func (UnimplementedHandler) TestRequestBoolean(ctx context.Context, req OptBool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestBooleanArray implements test_request_boolean_array operation.
+	//
+	// POST /test_request_boolean_array
 }
 
-// TestRequestBooleanArray implements test_request_boolean_array operation.
-//
-// POST /test_request_boolean_array
 func (UnimplementedHandler) TestRequestBooleanArray(ctx context.Context, req []bool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestBooleanArrayArray implements test_request_boolean_array_array operation.
+	//
+	// POST /test_request_boolean_array_array
 }
 
-// TestRequestBooleanArrayArray implements test_request_boolean_array_array operation.
-//
-// POST /test_request_boolean_array_array
 func (UnimplementedHandler) TestRequestBooleanArrayArray(ctx context.Context, req [][]bool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestBooleanNullable implements test_request_boolean_nullable operation.
+	//
+	// POST /test_request_boolean_nullable
 }
 
-// TestRequestBooleanNullable implements test_request_boolean_nullable operation.
-//
-// POST /test_request_boolean_nullable
 func (UnimplementedHandler) TestRequestBooleanNullable(ctx context.Context, req OptNilBool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestBooleanNullableArray implements test_request_boolean_nullable_array operation.
+	//
+	// POST /test_request_boolean_nullable_array
 }
 
-// TestRequestBooleanNullableArray implements test_request_boolean_nullable_array operation.
-//
-// POST /test_request_boolean_nullable_array
 func (UnimplementedHandler) TestRequestBooleanNullableArray(ctx context.Context, req []NilBool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestBooleanNullableArrayArray implements test_request_boolean_nullable_array_array operation.
+	//
+	// POST /test_request_boolean_nullable_array_array
 }
 
-// TestRequestBooleanNullableArrayArray implements test_request_boolean_nullable_array_array operation.
-//
-// POST /test_request_boolean_nullable_array_array
 func (UnimplementedHandler) TestRequestBooleanNullableArrayArray(ctx context.Context, req [][]NilBool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestEmptyStruct implements test_request_EmptyStruct operation.
+	//
+	// POST /test_request_EmptyStruct
 }
 
-// TestRequestEmptyStruct implements test_request_EmptyStruct operation.
-//
-// POST /test_request_EmptyStruct
 func (UnimplementedHandler) TestRequestEmptyStruct(ctx context.Context, req *TestRequestEmptyStructReq) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestFormatTest implements test_request_FormatTest operation.
+	//
+	// POST /test_request_FormatTest
 }
 
-// TestRequestFormatTest implements test_request_FormatTest operation.
-//
-// POST /test_request_FormatTest
 func (UnimplementedHandler) TestRequestFormatTest(ctx context.Context, req OptTestRequestFormatTestReq) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestInteger implements test_request_integer operation.
+	//
+	// POST /test_request_integer
 }
 
-// TestRequestInteger implements test_request_integer operation.
-//
-// POST /test_request_integer
 func (UnimplementedHandler) TestRequestInteger(ctx context.Context, req OptInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerArray implements test_request_integer_array operation.
+	//
+	// POST /test_request_integer_array
 }
 
-// TestRequestIntegerArray implements test_request_integer_array operation.
-//
-// POST /test_request_integer_array
 func (UnimplementedHandler) TestRequestIntegerArray(ctx context.Context, req []int) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerArrayArray implements test_request_integer_array_array operation.
+	//
+	// POST /test_request_integer_array_array
 }
 
-// TestRequestIntegerArrayArray implements test_request_integer_array_array operation.
-//
-// POST /test_request_integer_array_array
 func (UnimplementedHandler) TestRequestIntegerArrayArray(ctx context.Context, req [][]int) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt16 implements test_request_integer_int16 operation.
+	//
+	// POST /test_request_integer_int16
 }
 
-// TestRequestIntegerInt16 implements test_request_integer_int16 operation.
-//
-// POST /test_request_integer_int16
 func (UnimplementedHandler) TestRequestIntegerInt16(ctx context.Context, req OptInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt16Array implements test_request_integer_int16_array operation.
+	//
+	// POST /test_request_integer_int16_array
 }
 
-// TestRequestIntegerInt16Array implements test_request_integer_int16_array operation.
-//
-// POST /test_request_integer_int16_array
 func (UnimplementedHandler) TestRequestIntegerInt16Array(ctx context.Context, req []int16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt16ArrayArray implements test_request_integer_int16_array_array operation.
+	//
+	// POST /test_request_integer_int16_array_array
 }
 
-// TestRequestIntegerInt16ArrayArray implements test_request_integer_int16_array_array operation.
-//
-// POST /test_request_integer_int16_array_array
 func (UnimplementedHandler) TestRequestIntegerInt16ArrayArray(ctx context.Context, req [][]int16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt16Nullable implements test_request_integer_int16_nullable operation.
+	//
+	// POST /test_request_integer_int16_nullable
 }
 
-// TestRequestIntegerInt16Nullable implements test_request_integer_int16_nullable operation.
-//
-// POST /test_request_integer_int16_nullable
 func (UnimplementedHandler) TestRequestIntegerInt16Nullable(ctx context.Context, req OptNilInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt16NullableArray implements test_request_integer_int16_nullable_array operation.
+	//
+	// POST /test_request_integer_int16_nullable_array
 }
 
-// TestRequestIntegerInt16NullableArray implements test_request_integer_int16_nullable_array operation.
-//
-// POST /test_request_integer_int16_nullable_array
 func (UnimplementedHandler) TestRequestIntegerInt16NullableArray(ctx context.Context, req []NilInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt16NullableArrayArray implements test_request_integer_int16_nullable_array_array operation.
+	//
+	// POST /test_request_integer_int16_nullable_array_array
 }
 
-// TestRequestIntegerInt16NullableArrayArray implements test_request_integer_int16_nullable_array_array operation.
-//
-// POST /test_request_integer_int16_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerInt16NullableArrayArray(ctx context.Context, req [][]NilInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt32 implements test_request_integer_int32 operation.
+	//
+	// POST /test_request_integer_int32
 }
 
-// TestRequestIntegerInt32 implements test_request_integer_int32 operation.
-//
-// POST /test_request_integer_int32
 func (UnimplementedHandler) TestRequestIntegerInt32(ctx context.Context, req OptInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt32Array implements test_request_integer_int32_array operation.
+	//
+	// POST /test_request_integer_int32_array
 }
 
-// TestRequestIntegerInt32Array implements test_request_integer_int32_array operation.
-//
-// POST /test_request_integer_int32_array
 func (UnimplementedHandler) TestRequestIntegerInt32Array(ctx context.Context, req []int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt32ArrayArray implements test_request_integer_int32_array_array operation.
+	//
+	// POST /test_request_integer_int32_array_array
 }
 
-// TestRequestIntegerInt32ArrayArray implements test_request_integer_int32_array_array operation.
-//
-// POST /test_request_integer_int32_array_array
 func (UnimplementedHandler) TestRequestIntegerInt32ArrayArray(ctx context.Context, req [][]int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt32Nullable implements test_request_integer_int32_nullable operation.
+	//
+	// POST /test_request_integer_int32_nullable
 }
 
-// TestRequestIntegerInt32Nullable implements test_request_integer_int32_nullable operation.
-//
-// POST /test_request_integer_int32_nullable
 func (UnimplementedHandler) TestRequestIntegerInt32Nullable(ctx context.Context, req OptNilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt32NullableArray implements test_request_integer_int32_nullable_array operation.
+	//
+	// POST /test_request_integer_int32_nullable_array
 }
 
-// TestRequestIntegerInt32NullableArray implements test_request_integer_int32_nullable_array operation.
-//
-// POST /test_request_integer_int32_nullable_array
 func (UnimplementedHandler) TestRequestIntegerInt32NullableArray(ctx context.Context, req []NilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt32NullableArrayArray implements test_request_integer_int32_nullable_array_array operation.
+	//
+	// POST /test_request_integer_int32_nullable_array_array
 }
 
-// TestRequestIntegerInt32NullableArrayArray implements test_request_integer_int32_nullable_array_array operation.
-//
-// POST /test_request_integer_int32_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerInt32NullableArrayArray(ctx context.Context, req [][]NilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt64 implements test_request_integer_int64 operation.
+	//
+	// POST /test_request_integer_int64
 }
 
-// TestRequestIntegerInt64 implements test_request_integer_int64 operation.
-//
-// POST /test_request_integer_int64
 func (UnimplementedHandler) TestRequestIntegerInt64(ctx context.Context, req OptInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt64Array implements test_request_integer_int64_array operation.
+	//
+	// POST /test_request_integer_int64_array
 }
 
-// TestRequestIntegerInt64Array implements test_request_integer_int64_array operation.
-//
-// POST /test_request_integer_int64_array
 func (UnimplementedHandler) TestRequestIntegerInt64Array(ctx context.Context, req []int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt64ArrayArray implements test_request_integer_int64_array_array operation.
+	//
+	// POST /test_request_integer_int64_array_array
 }
 
-// TestRequestIntegerInt64ArrayArray implements test_request_integer_int64_array_array operation.
-//
-// POST /test_request_integer_int64_array_array
 func (UnimplementedHandler) TestRequestIntegerInt64ArrayArray(ctx context.Context, req [][]int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt64Nullable implements test_request_integer_int64_nullable operation.
+	//
+	// POST /test_request_integer_int64_nullable
 }
 
-// TestRequestIntegerInt64Nullable implements test_request_integer_int64_nullable operation.
-//
-// POST /test_request_integer_int64_nullable
 func (UnimplementedHandler) TestRequestIntegerInt64Nullable(ctx context.Context, req OptNilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt64NullableArray implements test_request_integer_int64_nullable_array operation.
+	//
+	// POST /test_request_integer_int64_nullable_array
 }
 
-// TestRequestIntegerInt64NullableArray implements test_request_integer_int64_nullable_array operation.
-//
-// POST /test_request_integer_int64_nullable_array
 func (UnimplementedHandler) TestRequestIntegerInt64NullableArray(ctx context.Context, req []NilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt64NullableArrayArray implements test_request_integer_int64_nullable_array_array operation.
+	//
+	// POST /test_request_integer_int64_nullable_array_array
 }
 
-// TestRequestIntegerInt64NullableArrayArray implements test_request_integer_int64_nullable_array_array operation.
-//
-// POST /test_request_integer_int64_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerInt64NullableArrayArray(ctx context.Context, req [][]NilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt8 implements test_request_integer_int8 operation.
+	//
+	// POST /test_request_integer_int8
 }
 
-// TestRequestIntegerInt8 implements test_request_integer_int8 operation.
-//
-// POST /test_request_integer_int8
 func (UnimplementedHandler) TestRequestIntegerInt8(ctx context.Context, req OptInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt8Array implements test_request_integer_int8_array operation.
+	//
+	// POST /test_request_integer_int8_array
 }
 
-// TestRequestIntegerInt8Array implements test_request_integer_int8_array operation.
-//
-// POST /test_request_integer_int8_array
 func (UnimplementedHandler) TestRequestIntegerInt8Array(ctx context.Context, req []int8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt8ArrayArray implements test_request_integer_int8_array_array operation.
+	//
+	// POST /test_request_integer_int8_array_array
 }
 
-// TestRequestIntegerInt8ArrayArray implements test_request_integer_int8_array_array operation.
-//
-// POST /test_request_integer_int8_array_array
 func (UnimplementedHandler) TestRequestIntegerInt8ArrayArray(ctx context.Context, req [][]int8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt8Nullable implements test_request_integer_int8_nullable operation.
+	//
+	// POST /test_request_integer_int8_nullable
 }
 
-// TestRequestIntegerInt8Nullable implements test_request_integer_int8_nullable operation.
-//
-// POST /test_request_integer_int8_nullable
 func (UnimplementedHandler) TestRequestIntegerInt8Nullable(ctx context.Context, req OptNilInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt8NullableArray implements test_request_integer_int8_nullable_array operation.
+	//
+	// POST /test_request_integer_int8_nullable_array
 }
 
-// TestRequestIntegerInt8NullableArray implements test_request_integer_int8_nullable_array operation.
-//
-// POST /test_request_integer_int8_nullable_array
 func (UnimplementedHandler) TestRequestIntegerInt8NullableArray(ctx context.Context, req []NilInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerInt8NullableArrayArray implements test_request_integer_int8_nullable_array_array operation.
+	//
+	// POST /test_request_integer_int8_nullable_array_array
 }
 
-// TestRequestIntegerInt8NullableArrayArray implements test_request_integer_int8_nullable_array_array operation.
-//
-// POST /test_request_integer_int8_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerInt8NullableArrayArray(ctx context.Context, req [][]NilInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerNullable implements test_request_integer_nullable operation.
+	//
+	// POST /test_request_integer_nullable
 }
 
-// TestRequestIntegerNullable implements test_request_integer_nullable operation.
-//
-// POST /test_request_integer_nullable
 func (UnimplementedHandler) TestRequestIntegerNullable(ctx context.Context, req OptNilInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerNullableArray implements test_request_integer_nullable_array operation.
+	//
+	// POST /test_request_integer_nullable_array
 }
 
-// TestRequestIntegerNullableArray implements test_request_integer_nullable_array operation.
-//
-// POST /test_request_integer_nullable_array
 func (UnimplementedHandler) TestRequestIntegerNullableArray(ctx context.Context, req []NilInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerNullableArrayArray implements test_request_integer_nullable_array_array operation.
+	//
+	// POST /test_request_integer_nullable_array_array
 }
 
-// TestRequestIntegerNullableArrayArray implements test_request_integer_nullable_array_array operation.
-//
-// POST /test_request_integer_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerNullableArrayArray(ctx context.Context, req [][]NilInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint implements test_request_integer_uint operation.
+	//
+	// POST /test_request_integer_uint
 }
 
-// TestRequestIntegerUint implements test_request_integer_uint operation.
-//
-// POST /test_request_integer_uint
 func (UnimplementedHandler) TestRequestIntegerUint(ctx context.Context, req OptUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint16 implements test_request_integer_uint16 operation.
+	//
+	// POST /test_request_integer_uint16
 }
 
-// TestRequestIntegerUint16 implements test_request_integer_uint16 operation.
-//
-// POST /test_request_integer_uint16
 func (UnimplementedHandler) TestRequestIntegerUint16(ctx context.Context, req OptUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint16Array implements test_request_integer_uint16_array operation.
+	//
+	// POST /test_request_integer_uint16_array
 }
 
-// TestRequestIntegerUint16Array implements test_request_integer_uint16_array operation.
-//
-// POST /test_request_integer_uint16_array
 func (UnimplementedHandler) TestRequestIntegerUint16Array(ctx context.Context, req []uint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint16ArrayArray implements test_request_integer_uint16_array_array operation.
+	//
+	// POST /test_request_integer_uint16_array_array
 }
 
-// TestRequestIntegerUint16ArrayArray implements test_request_integer_uint16_array_array operation.
-//
-// POST /test_request_integer_uint16_array_array
 func (UnimplementedHandler) TestRequestIntegerUint16ArrayArray(ctx context.Context, req [][]uint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint16Nullable implements test_request_integer_uint16_nullable operation.
+	//
+	// POST /test_request_integer_uint16_nullable
 }
 
-// TestRequestIntegerUint16Nullable implements test_request_integer_uint16_nullable operation.
-//
-// POST /test_request_integer_uint16_nullable
 func (UnimplementedHandler) TestRequestIntegerUint16Nullable(ctx context.Context, req OptNilUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint16NullableArray implements test_request_integer_uint16_nullable_array operation.
+	//
+	// POST /test_request_integer_uint16_nullable_array
 }
 
-// TestRequestIntegerUint16NullableArray implements test_request_integer_uint16_nullable_array operation.
-//
-// POST /test_request_integer_uint16_nullable_array
 func (UnimplementedHandler) TestRequestIntegerUint16NullableArray(ctx context.Context, req []NilUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint16NullableArrayArray implements test_request_integer_uint16_nullable_array_array operation.
+	//
+	// POST /test_request_integer_uint16_nullable_array_array
 }
 
-// TestRequestIntegerUint16NullableArrayArray implements test_request_integer_uint16_nullable_array_array operation.
-//
-// POST /test_request_integer_uint16_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerUint16NullableArrayArray(ctx context.Context, req [][]NilUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint32 implements test_request_integer_uint32 operation.
+	//
+	// POST /test_request_integer_uint32
 }
 
-// TestRequestIntegerUint32 implements test_request_integer_uint32 operation.
-//
-// POST /test_request_integer_uint32
 func (UnimplementedHandler) TestRequestIntegerUint32(ctx context.Context, req OptUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint32Array implements test_request_integer_uint32_array operation.
+	//
+	// POST /test_request_integer_uint32_array
 }
 
-// TestRequestIntegerUint32Array implements test_request_integer_uint32_array operation.
-//
-// POST /test_request_integer_uint32_array
 func (UnimplementedHandler) TestRequestIntegerUint32Array(ctx context.Context, req []uint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint32ArrayArray implements test_request_integer_uint32_array_array operation.
+	//
+	// POST /test_request_integer_uint32_array_array
 }
 
-// TestRequestIntegerUint32ArrayArray implements test_request_integer_uint32_array_array operation.
-//
-// POST /test_request_integer_uint32_array_array
 func (UnimplementedHandler) TestRequestIntegerUint32ArrayArray(ctx context.Context, req [][]uint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint32Nullable implements test_request_integer_uint32_nullable operation.
+	//
+	// POST /test_request_integer_uint32_nullable
 }
 
-// TestRequestIntegerUint32Nullable implements test_request_integer_uint32_nullable operation.
-//
-// POST /test_request_integer_uint32_nullable
 func (UnimplementedHandler) TestRequestIntegerUint32Nullable(ctx context.Context, req OptNilUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint32NullableArray implements test_request_integer_uint32_nullable_array operation.
+	//
+	// POST /test_request_integer_uint32_nullable_array
 }
 
-// TestRequestIntegerUint32NullableArray implements test_request_integer_uint32_nullable_array operation.
-//
-// POST /test_request_integer_uint32_nullable_array
 func (UnimplementedHandler) TestRequestIntegerUint32NullableArray(ctx context.Context, req []NilUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint32NullableArrayArray implements test_request_integer_uint32_nullable_array_array operation.
+	//
+	// POST /test_request_integer_uint32_nullable_array_array
 }
 
-// TestRequestIntegerUint32NullableArrayArray implements test_request_integer_uint32_nullable_array_array operation.
-//
-// POST /test_request_integer_uint32_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerUint32NullableArrayArray(ctx context.Context, req [][]NilUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint64 implements test_request_integer_uint64 operation.
+	//
+	// POST /test_request_integer_uint64
 }
 
-// TestRequestIntegerUint64 implements test_request_integer_uint64 operation.
-//
-// POST /test_request_integer_uint64
 func (UnimplementedHandler) TestRequestIntegerUint64(ctx context.Context, req OptUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint64Array implements test_request_integer_uint64_array operation.
+	//
+	// POST /test_request_integer_uint64_array
 }
 
-// TestRequestIntegerUint64Array implements test_request_integer_uint64_array operation.
-//
-// POST /test_request_integer_uint64_array
 func (UnimplementedHandler) TestRequestIntegerUint64Array(ctx context.Context, req []uint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint64ArrayArray implements test_request_integer_uint64_array_array operation.
+	//
+	// POST /test_request_integer_uint64_array_array
 }
 
-// TestRequestIntegerUint64ArrayArray implements test_request_integer_uint64_array_array operation.
-//
-// POST /test_request_integer_uint64_array_array
 func (UnimplementedHandler) TestRequestIntegerUint64ArrayArray(ctx context.Context, req [][]uint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint64Nullable implements test_request_integer_uint64_nullable operation.
+	//
+	// POST /test_request_integer_uint64_nullable
 }
 
-// TestRequestIntegerUint64Nullable implements test_request_integer_uint64_nullable operation.
-//
-// POST /test_request_integer_uint64_nullable
 func (UnimplementedHandler) TestRequestIntegerUint64Nullable(ctx context.Context, req OptNilUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint64NullableArray implements test_request_integer_uint64_nullable_array operation.
+	//
+	// POST /test_request_integer_uint64_nullable_array
 }
 
-// TestRequestIntegerUint64NullableArray implements test_request_integer_uint64_nullable_array operation.
-//
-// POST /test_request_integer_uint64_nullable_array
 func (UnimplementedHandler) TestRequestIntegerUint64NullableArray(ctx context.Context, req []NilUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint64NullableArrayArray implements test_request_integer_uint64_nullable_array_array operation.
+	//
+	// POST /test_request_integer_uint64_nullable_array_array
 }
 
-// TestRequestIntegerUint64NullableArrayArray implements test_request_integer_uint64_nullable_array_array operation.
-//
-// POST /test_request_integer_uint64_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerUint64NullableArrayArray(ctx context.Context, req [][]NilUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint8 implements test_request_integer_uint8 operation.
+	//
+	// POST /test_request_integer_uint8
 }
 
-// TestRequestIntegerUint8 implements test_request_integer_uint8 operation.
-//
-// POST /test_request_integer_uint8
 func (UnimplementedHandler) TestRequestIntegerUint8(ctx context.Context, req OptUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint8Array implements test_request_integer_uint8_array operation.
+	//
+	// POST /test_request_integer_uint8_array
 }
 
-// TestRequestIntegerUint8Array implements test_request_integer_uint8_array operation.
-//
-// POST /test_request_integer_uint8_array
 func (UnimplementedHandler) TestRequestIntegerUint8Array(ctx context.Context, req []uint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint8ArrayArray implements test_request_integer_uint8_array_array operation.
+	//
+	// POST /test_request_integer_uint8_array_array
 }
 
-// TestRequestIntegerUint8ArrayArray implements test_request_integer_uint8_array_array operation.
-//
-// POST /test_request_integer_uint8_array_array
 func (UnimplementedHandler) TestRequestIntegerUint8ArrayArray(ctx context.Context, req [][]uint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint8Nullable implements test_request_integer_uint8_nullable operation.
+	//
+	// POST /test_request_integer_uint8_nullable
 }
 
-// TestRequestIntegerUint8Nullable implements test_request_integer_uint8_nullable operation.
-//
-// POST /test_request_integer_uint8_nullable
 func (UnimplementedHandler) TestRequestIntegerUint8Nullable(ctx context.Context, req OptNilUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint8NullableArray implements test_request_integer_uint8_nullable_array operation.
+	//
+	// POST /test_request_integer_uint8_nullable_array
 }
 
-// TestRequestIntegerUint8NullableArray implements test_request_integer_uint8_nullable_array operation.
-//
-// POST /test_request_integer_uint8_nullable_array
 func (UnimplementedHandler) TestRequestIntegerUint8NullableArray(ctx context.Context, req []NilUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUint8NullableArrayArray implements test_request_integer_uint8_nullable_array_array operation.
+	//
+	// POST /test_request_integer_uint8_nullable_array_array
 }
 
-// TestRequestIntegerUint8NullableArrayArray implements test_request_integer_uint8_nullable_array_array operation.
-//
-// POST /test_request_integer_uint8_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerUint8NullableArrayArray(ctx context.Context, req [][]NilUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUintArray implements test_request_integer_uint_array operation.
+	//
+	// POST /test_request_integer_uint_array
 }
 
-// TestRequestIntegerUintArray implements test_request_integer_uint_array operation.
-//
-// POST /test_request_integer_uint_array
 func (UnimplementedHandler) TestRequestIntegerUintArray(ctx context.Context, req []uint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUintArrayArray implements test_request_integer_uint_array_array operation.
+	//
+	// POST /test_request_integer_uint_array_array
 }
 
-// TestRequestIntegerUintArrayArray implements test_request_integer_uint_array_array operation.
-//
-// POST /test_request_integer_uint_array_array
 func (UnimplementedHandler) TestRequestIntegerUintArrayArray(ctx context.Context, req [][]uint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUintNullable implements test_request_integer_uint_nullable operation.
+	//
+	// POST /test_request_integer_uint_nullable
 }
 
-// TestRequestIntegerUintNullable implements test_request_integer_uint_nullable operation.
-//
-// POST /test_request_integer_uint_nullable
 func (UnimplementedHandler) TestRequestIntegerUintNullable(ctx context.Context, req OptNilUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUintNullableArray implements test_request_integer_uint_nullable_array operation.
+	//
+	// POST /test_request_integer_uint_nullable_array
 }
 
-// TestRequestIntegerUintNullableArray implements test_request_integer_uint_nullable_array operation.
-//
-// POST /test_request_integer_uint_nullable_array
 func (UnimplementedHandler) TestRequestIntegerUintNullableArray(ctx context.Context, req []NilUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUintNullableArrayArray implements test_request_integer_uint_nullable_array_array operation.
+	//
+	// POST /test_request_integer_uint_nullable_array_array
 }
 
-// TestRequestIntegerUintNullableArrayArray implements test_request_integer_uint_nullable_array_array operation.
-//
-// POST /test_request_integer_uint_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerUintNullableArrayArray(ctx context.Context, req [][]NilUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnix implements test_request_integer_unix operation.
+	//
+	// POST /test_request_integer_unix
 }
 
-// TestRequestIntegerUnix implements test_request_integer_unix operation.
-//
-// POST /test_request_integer_unix
 func (UnimplementedHandler) TestRequestIntegerUnix(ctx context.Context, req OptUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixArray implements test_request_integer_unix_array operation.
+	//
+	// POST /test_request_integer_unix_array
 }
 
-// TestRequestIntegerUnixArray implements test_request_integer_unix_array operation.
-//
-// POST /test_request_integer_unix_array
 func (UnimplementedHandler) TestRequestIntegerUnixArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixArrayArray implements test_request_integer_unix_array_array operation.
+	//
+	// POST /test_request_integer_unix_array_array
 }
 
-// TestRequestIntegerUnixArrayArray implements test_request_integer_unix_array_array operation.
-//
-// POST /test_request_integer_unix_array_array
 func (UnimplementedHandler) TestRequestIntegerUnixArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMicro implements test_request_integer_unix-micro operation.
+	//
+	// POST /test_request_integer_unix-micro
 }
 
-// TestRequestIntegerUnixMicro implements test_request_integer_unix-micro operation.
-//
-// POST /test_request_integer_unix-micro
 func (UnimplementedHandler) TestRequestIntegerUnixMicro(ctx context.Context, req OptUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMicroArray implements test_request_integer_unix-micro_array operation.
+	//
+	// POST /test_request_integer_unix-micro_array
 }
 
-// TestRequestIntegerUnixMicroArray implements test_request_integer_unix-micro_array operation.
-//
-// POST /test_request_integer_unix-micro_array
 func (UnimplementedHandler) TestRequestIntegerUnixMicroArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMicroArrayArray implements test_request_integer_unix-micro_array_array operation.
+	//
+	// POST /test_request_integer_unix-micro_array_array
 }
 
-// TestRequestIntegerUnixMicroArrayArray implements test_request_integer_unix-micro_array_array operation.
-//
-// POST /test_request_integer_unix-micro_array_array
 func (UnimplementedHandler) TestRequestIntegerUnixMicroArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMicroNullable implements test_request_integer_unix-micro_nullable operation.
+	//
+	// POST /test_request_integer_unix-micro_nullable
 }
 
-// TestRequestIntegerUnixMicroNullable implements test_request_integer_unix-micro_nullable operation.
-//
-// POST /test_request_integer_unix-micro_nullable
 func (UnimplementedHandler) TestRequestIntegerUnixMicroNullable(ctx context.Context, req OptNilUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMicroNullableArray implements test_request_integer_unix-micro_nullable_array operation.
+	//
+	// POST /test_request_integer_unix-micro_nullable_array
 }
 
-// TestRequestIntegerUnixMicroNullableArray implements test_request_integer_unix-micro_nullable_array operation.
-//
-// POST /test_request_integer_unix-micro_nullable_array
 func (UnimplementedHandler) TestRequestIntegerUnixMicroNullableArray(ctx context.Context, req []NilUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMicroNullableArrayArray implements test_request_integer_unix-micro_nullable_array_array operation.
+	//
+	// POST /test_request_integer_unix-micro_nullable_array_array
 }
 
-// TestRequestIntegerUnixMicroNullableArrayArray implements test_request_integer_unix-micro_nullable_array_array operation.
-//
-// POST /test_request_integer_unix-micro_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerUnixMicroNullableArrayArray(ctx context.Context, req [][]NilUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMilli implements test_request_integer_unix-milli operation.
+	//
+	// POST /test_request_integer_unix-milli
 }
 
-// TestRequestIntegerUnixMilli implements test_request_integer_unix-milli operation.
-//
-// POST /test_request_integer_unix-milli
 func (UnimplementedHandler) TestRequestIntegerUnixMilli(ctx context.Context, req OptUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMilliArray implements test_request_integer_unix-milli_array operation.
+	//
+	// POST /test_request_integer_unix-milli_array
 }
 
-// TestRequestIntegerUnixMilliArray implements test_request_integer_unix-milli_array operation.
-//
-// POST /test_request_integer_unix-milli_array
 func (UnimplementedHandler) TestRequestIntegerUnixMilliArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMilliArrayArray implements test_request_integer_unix-milli_array_array operation.
+	//
+	// POST /test_request_integer_unix-milli_array_array
 }
 
-// TestRequestIntegerUnixMilliArrayArray implements test_request_integer_unix-milli_array_array operation.
-//
-// POST /test_request_integer_unix-milli_array_array
 func (UnimplementedHandler) TestRequestIntegerUnixMilliArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMilliNullable implements test_request_integer_unix-milli_nullable operation.
+	//
+	// POST /test_request_integer_unix-milli_nullable
 }
 
-// TestRequestIntegerUnixMilliNullable implements test_request_integer_unix-milli_nullable operation.
-//
-// POST /test_request_integer_unix-milli_nullable
 func (UnimplementedHandler) TestRequestIntegerUnixMilliNullable(ctx context.Context, req OptNilUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMilliNullableArray implements test_request_integer_unix-milli_nullable_array operation.
+	//
+	// POST /test_request_integer_unix-milli_nullable_array
 }
 
-// TestRequestIntegerUnixMilliNullableArray implements test_request_integer_unix-milli_nullable_array operation.
-//
-// POST /test_request_integer_unix-milli_nullable_array
 func (UnimplementedHandler) TestRequestIntegerUnixMilliNullableArray(ctx context.Context, req []NilUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixMilliNullableArrayArray implements test_request_integer_unix-milli_nullable_array_array operation.
+	//
+	// POST /test_request_integer_unix-milli_nullable_array_array
 }
 
-// TestRequestIntegerUnixMilliNullableArrayArray implements test_request_integer_unix-milli_nullable_array_array operation.
-//
-// POST /test_request_integer_unix-milli_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerUnixMilliNullableArrayArray(ctx context.Context, req [][]NilUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixNano implements test_request_integer_unix-nano operation.
+	//
+	// POST /test_request_integer_unix-nano
 }
 
-// TestRequestIntegerUnixNano implements test_request_integer_unix-nano operation.
-//
-// POST /test_request_integer_unix-nano
 func (UnimplementedHandler) TestRequestIntegerUnixNano(ctx context.Context, req OptUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixNanoArray implements test_request_integer_unix-nano_array operation.
+	//
+	// POST /test_request_integer_unix-nano_array
 }
 
-// TestRequestIntegerUnixNanoArray implements test_request_integer_unix-nano_array operation.
-//
-// POST /test_request_integer_unix-nano_array
 func (UnimplementedHandler) TestRequestIntegerUnixNanoArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixNanoArrayArray implements test_request_integer_unix-nano_array_array operation.
+	//
+	// POST /test_request_integer_unix-nano_array_array
 }
 
-// TestRequestIntegerUnixNanoArrayArray implements test_request_integer_unix-nano_array_array operation.
-//
-// POST /test_request_integer_unix-nano_array_array
 func (UnimplementedHandler) TestRequestIntegerUnixNanoArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixNanoNullable implements test_request_integer_unix-nano_nullable operation.
+	//
+	// POST /test_request_integer_unix-nano_nullable
 }
 
-// TestRequestIntegerUnixNanoNullable implements test_request_integer_unix-nano_nullable operation.
-//
-// POST /test_request_integer_unix-nano_nullable
 func (UnimplementedHandler) TestRequestIntegerUnixNanoNullable(ctx context.Context, req OptNilUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixNanoNullableArray implements test_request_integer_unix-nano_nullable_array operation.
+	//
+	// POST /test_request_integer_unix-nano_nullable_array
 }
 
-// TestRequestIntegerUnixNanoNullableArray implements test_request_integer_unix-nano_nullable_array operation.
-//
-// POST /test_request_integer_unix-nano_nullable_array
 func (UnimplementedHandler) TestRequestIntegerUnixNanoNullableArray(ctx context.Context, req []NilUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixNanoNullableArrayArray implements test_request_integer_unix-nano_nullable_array_array operation.
+	//
+	// POST /test_request_integer_unix-nano_nullable_array_array
 }
 
-// TestRequestIntegerUnixNanoNullableArrayArray implements test_request_integer_unix-nano_nullable_array_array operation.
-//
-// POST /test_request_integer_unix-nano_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerUnixNanoNullableArrayArray(ctx context.Context, req [][]NilUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixNullable implements test_request_integer_unix_nullable operation.
+	//
+	// POST /test_request_integer_unix_nullable
 }
 
-// TestRequestIntegerUnixNullable implements test_request_integer_unix_nullable operation.
-//
-// POST /test_request_integer_unix_nullable
 func (UnimplementedHandler) TestRequestIntegerUnixNullable(ctx context.Context, req OptNilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixNullableArray implements test_request_integer_unix_nullable_array operation.
+	//
+	// POST /test_request_integer_unix_nullable_array
 }
 
-// TestRequestIntegerUnixNullableArray implements test_request_integer_unix_nullable_array operation.
-//
-// POST /test_request_integer_unix_nullable_array
 func (UnimplementedHandler) TestRequestIntegerUnixNullableArray(ctx context.Context, req []NilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixNullableArrayArray implements test_request_integer_unix_nullable_array_array operation.
+	//
+	// POST /test_request_integer_unix_nullable_array_array
 }
 
-// TestRequestIntegerUnixNullableArrayArray implements test_request_integer_unix_nullable_array_array operation.
-//
-// POST /test_request_integer_unix_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerUnixNullableArrayArray(ctx context.Context, req [][]NilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixSeconds implements test_request_integer_unix-seconds operation.
+	//
+	// POST /test_request_integer_unix-seconds
 }
 
-// TestRequestIntegerUnixSeconds implements test_request_integer_unix-seconds operation.
-//
-// POST /test_request_integer_unix-seconds
 func (UnimplementedHandler) TestRequestIntegerUnixSeconds(ctx context.Context, req OptUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixSecondsArray implements test_request_integer_unix-seconds_array operation.
+	//
+	// POST /test_request_integer_unix-seconds_array
 }
 
-// TestRequestIntegerUnixSecondsArray implements test_request_integer_unix-seconds_array operation.
-//
-// POST /test_request_integer_unix-seconds_array
 func (UnimplementedHandler) TestRequestIntegerUnixSecondsArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixSecondsArrayArray implements test_request_integer_unix-seconds_array_array operation.
+	//
+	// POST /test_request_integer_unix-seconds_array_array
 }
 
-// TestRequestIntegerUnixSecondsArrayArray implements test_request_integer_unix-seconds_array_array operation.
-//
-// POST /test_request_integer_unix-seconds_array_array
 func (UnimplementedHandler) TestRequestIntegerUnixSecondsArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixSecondsNullable implements test_request_integer_unix-seconds_nullable operation.
+	//
+	// POST /test_request_integer_unix-seconds_nullable
 }
 
-// TestRequestIntegerUnixSecondsNullable implements test_request_integer_unix-seconds_nullable operation.
-//
-// POST /test_request_integer_unix-seconds_nullable
 func (UnimplementedHandler) TestRequestIntegerUnixSecondsNullable(ctx context.Context, req OptNilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixSecondsNullableArray implements test_request_integer_unix-seconds_nullable_array operation.
+	//
+	// POST /test_request_integer_unix-seconds_nullable_array
 }
 
-// TestRequestIntegerUnixSecondsNullableArray implements test_request_integer_unix-seconds_nullable_array operation.
-//
-// POST /test_request_integer_unix-seconds_nullable_array
 func (UnimplementedHandler) TestRequestIntegerUnixSecondsNullableArray(ctx context.Context, req []NilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestIntegerUnixSecondsNullableArrayArray implements test_request_integer_unix-seconds_nullable_array_array operation.
+	//
+	// POST /test_request_integer_unix-seconds_nullable_array_array
 }
 
-// TestRequestIntegerUnixSecondsNullableArrayArray implements test_request_integer_unix-seconds_nullable_array_array operation.
-//
-// POST /test_request_integer_unix-seconds_nullable_array_array
 func (UnimplementedHandler) TestRequestIntegerUnixSecondsNullableArrayArray(ctx context.Context, req [][]NilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNull implements test_request_null operation.
+	//
+	// POST /test_request_null
 }
 
-// TestRequestNull implements test_request_null operation.
-//
-// POST /test_request_null
 func (UnimplementedHandler) TestRequestNull(ctx context.Context, req OptNull) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNullArray implements test_request_null_array operation.
+	//
+	// POST /test_request_null_array
 }
 
-// TestRequestNullArray implements test_request_null_array operation.
-//
-// POST /test_request_null_array
 func (UnimplementedHandler) TestRequestNullArray(ctx context.Context, req []struct{}) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNullArrayArray implements test_request_null_array_array operation.
+	//
+	// POST /test_request_null_array_array
 }
 
-// TestRequestNullArrayArray implements test_request_null_array_array operation.
-//
-// POST /test_request_null_array_array
 func (UnimplementedHandler) TestRequestNullArrayArray(ctx context.Context, req [][]struct{}) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNullNullable implements test_request_null_nullable operation.
+	//
+	// POST /test_request_null_nullable
 }
 
-// TestRequestNullNullable implements test_request_null_nullable operation.
-//
-// POST /test_request_null_nullable
 func (UnimplementedHandler) TestRequestNullNullable(ctx context.Context, req OptNull) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNullNullableArray implements test_request_null_nullable_array operation.
+	//
+	// POST /test_request_null_nullable_array
 }
 
-// TestRequestNullNullableArray implements test_request_null_nullable_array operation.
-//
-// POST /test_request_null_nullable_array
 func (UnimplementedHandler) TestRequestNullNullableArray(ctx context.Context, req []struct{}) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNullNullableArrayArray implements test_request_null_nullable_array_array operation.
+	//
+	// POST /test_request_null_nullable_array_array
 }
 
-// TestRequestNullNullableArrayArray implements test_request_null_nullable_array_array operation.
-//
-// POST /test_request_null_nullable_array_array
 func (UnimplementedHandler) TestRequestNullNullableArrayArray(ctx context.Context, req [][]struct{}) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumber implements test_request_number operation.
+	//
+	// POST /test_request_number
 }
 
-// TestRequestNumber implements test_request_number operation.
-//
-// POST /test_request_number
 func (UnimplementedHandler) TestRequestNumber(ctx context.Context, req OptFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberArray implements test_request_number_array operation.
+	//
+	// POST /test_request_number_array
 }
 
-// TestRequestNumberArray implements test_request_number_array operation.
-//
-// POST /test_request_number_array
 func (UnimplementedHandler) TestRequestNumberArray(ctx context.Context, req []float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberArrayArray implements test_request_number_array_array operation.
+	//
+	// POST /test_request_number_array_array
 }
 
-// TestRequestNumberArrayArray implements test_request_number_array_array operation.
-//
-// POST /test_request_number_array_array
 func (UnimplementedHandler) TestRequestNumberArrayArray(ctx context.Context, req [][]float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDecimal implements test_request_number_decimal operation.
+	//
+	// POST /test_request_number_decimal
 }
 
-// TestRequestNumberDecimal implements test_request_number_decimal operation.
-//
-// POST /test_request_number_decimal
 func (UnimplementedHandler) TestRequestNumberDecimal(ctx context.Context, req OptDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDecimalArray implements test_request_number_decimal_array operation.
+	//
+	// POST /test_request_number_decimal_array
 }
 
-// TestRequestNumberDecimalArray implements test_request_number_decimal_array operation.
-//
-// POST /test_request_number_decimal_array
 func (UnimplementedHandler) TestRequestNumberDecimalArray(ctx context.Context, req []decimal.Decimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDecimalArrayArray implements test_request_number_decimal_array_array operation.
+	//
+	// POST /test_request_number_decimal_array_array
 }
 
-// TestRequestNumberDecimalArrayArray implements test_request_number_decimal_array_array operation.
-//
-// POST /test_request_number_decimal_array_array
 func (UnimplementedHandler) TestRequestNumberDecimalArrayArray(ctx context.Context, req [][]decimal.Decimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDecimalNullable implements test_request_number_decimal_nullable operation.
+	//
+	// POST /test_request_number_decimal_nullable
 }
 
-// TestRequestNumberDecimalNullable implements test_request_number_decimal_nullable operation.
-//
-// POST /test_request_number_decimal_nullable
 func (UnimplementedHandler) TestRequestNumberDecimalNullable(ctx context.Context, req OptNilDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDecimalNullableArray implements test_request_number_decimal_nullable_array operation.
+	//
+	// POST /test_request_number_decimal_nullable_array
 }
 
-// TestRequestNumberDecimalNullableArray implements test_request_number_decimal_nullable_array operation.
-//
-// POST /test_request_number_decimal_nullable_array
 func (UnimplementedHandler) TestRequestNumberDecimalNullableArray(ctx context.Context, req []NilDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDecimalNullableArrayArray implements test_request_number_decimal_nullable_array_array operation.
+	//
+	// POST /test_request_number_decimal_nullable_array_array
 }
 
-// TestRequestNumberDecimalNullableArrayArray implements test_request_number_decimal_nullable_array_array operation.
-//
-// POST /test_request_number_decimal_nullable_array_array
 func (UnimplementedHandler) TestRequestNumberDecimalNullableArrayArray(ctx context.Context, req [][]NilDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDouble implements test_request_number_double operation.
+	//
+	// POST /test_request_number_double
 }
 
-// TestRequestNumberDouble implements test_request_number_double operation.
-//
-// POST /test_request_number_double
 func (UnimplementedHandler) TestRequestNumberDouble(ctx context.Context, req OptFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDoubleArray implements test_request_number_double_array operation.
+	//
+	// POST /test_request_number_double_array
 }
 
-// TestRequestNumberDoubleArray implements test_request_number_double_array operation.
-//
-// POST /test_request_number_double_array
 func (UnimplementedHandler) TestRequestNumberDoubleArray(ctx context.Context, req []float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDoubleArrayArray implements test_request_number_double_array_array operation.
+	//
+	// POST /test_request_number_double_array_array
 }
 
-// TestRequestNumberDoubleArrayArray implements test_request_number_double_array_array operation.
-//
-// POST /test_request_number_double_array_array
 func (UnimplementedHandler) TestRequestNumberDoubleArrayArray(ctx context.Context, req [][]float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDoubleNullable implements test_request_number_double_nullable operation.
+	//
+	// POST /test_request_number_double_nullable
 }
 
-// TestRequestNumberDoubleNullable implements test_request_number_double_nullable operation.
-//
-// POST /test_request_number_double_nullable
 func (UnimplementedHandler) TestRequestNumberDoubleNullable(ctx context.Context, req OptNilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDoubleNullableArray implements test_request_number_double_nullable_array operation.
+	//
+	// POST /test_request_number_double_nullable_array
 }
 
-// TestRequestNumberDoubleNullableArray implements test_request_number_double_nullable_array operation.
-//
-// POST /test_request_number_double_nullable_array
 func (UnimplementedHandler) TestRequestNumberDoubleNullableArray(ctx context.Context, req []NilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberDoubleNullableArrayArray implements test_request_number_double_nullable_array_array operation.
+	//
+	// POST /test_request_number_double_nullable_array_array
 }
 
-// TestRequestNumberDoubleNullableArrayArray implements test_request_number_double_nullable_array_array operation.
-//
-// POST /test_request_number_double_nullable_array_array
 func (UnimplementedHandler) TestRequestNumberDoubleNullableArrayArray(ctx context.Context, req [][]NilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberFloat implements test_request_number_float operation.
+	//
+	// POST /test_request_number_float
 }
 
-// TestRequestNumberFloat implements test_request_number_float operation.
-//
-// POST /test_request_number_float
 func (UnimplementedHandler) TestRequestNumberFloat(ctx context.Context, req OptFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberFloatArray implements test_request_number_float_array operation.
+	//
+	// POST /test_request_number_float_array
 }
 
-// TestRequestNumberFloatArray implements test_request_number_float_array operation.
-//
-// POST /test_request_number_float_array
 func (UnimplementedHandler) TestRequestNumberFloatArray(ctx context.Context, req []float32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberFloatArrayArray implements test_request_number_float_array_array operation.
+	//
+	// POST /test_request_number_float_array_array
 }
 
-// TestRequestNumberFloatArrayArray implements test_request_number_float_array_array operation.
-//
-// POST /test_request_number_float_array_array
 func (UnimplementedHandler) TestRequestNumberFloatArrayArray(ctx context.Context, req [][]float32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberFloatNullable implements test_request_number_float_nullable operation.
+	//
+	// POST /test_request_number_float_nullable
 }
 
-// TestRequestNumberFloatNullable implements test_request_number_float_nullable operation.
-//
-// POST /test_request_number_float_nullable
 func (UnimplementedHandler) TestRequestNumberFloatNullable(ctx context.Context, req OptNilFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberFloatNullableArray implements test_request_number_float_nullable_array operation.
+	//
+	// POST /test_request_number_float_nullable_array
 }
 
-// TestRequestNumberFloatNullableArray implements test_request_number_float_nullable_array operation.
-//
-// POST /test_request_number_float_nullable_array
 func (UnimplementedHandler) TestRequestNumberFloatNullableArray(ctx context.Context, req []NilFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberFloatNullableArrayArray implements test_request_number_float_nullable_array_array operation.
+	//
+	// POST /test_request_number_float_nullable_array_array
 }
 
-// TestRequestNumberFloatNullableArrayArray implements test_request_number_float_nullable_array_array operation.
-//
-// POST /test_request_number_float_nullable_array_array
 func (UnimplementedHandler) TestRequestNumberFloatNullableArrayArray(ctx context.Context, req [][]NilFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt32 implements test_request_number_int32 operation.
+	//
+	// POST /test_request_number_int32
 }
 
-// TestRequestNumberInt32 implements test_request_number_int32 operation.
-//
-// POST /test_request_number_int32
 func (UnimplementedHandler) TestRequestNumberInt32(ctx context.Context, req OptInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt32Array implements test_request_number_int32_array operation.
+	//
+	// POST /test_request_number_int32_array
 }
 
-// TestRequestNumberInt32Array implements test_request_number_int32_array operation.
-//
-// POST /test_request_number_int32_array
 func (UnimplementedHandler) TestRequestNumberInt32Array(ctx context.Context, req []int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt32ArrayArray implements test_request_number_int32_array_array operation.
+	//
+	// POST /test_request_number_int32_array_array
 }
 
-// TestRequestNumberInt32ArrayArray implements test_request_number_int32_array_array operation.
-//
-// POST /test_request_number_int32_array_array
 func (UnimplementedHandler) TestRequestNumberInt32ArrayArray(ctx context.Context, req [][]int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt32Nullable implements test_request_number_int32_nullable operation.
+	//
+	// POST /test_request_number_int32_nullable
 }
 
-// TestRequestNumberInt32Nullable implements test_request_number_int32_nullable operation.
-//
-// POST /test_request_number_int32_nullable
 func (UnimplementedHandler) TestRequestNumberInt32Nullable(ctx context.Context, req OptNilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt32NullableArray implements test_request_number_int32_nullable_array operation.
+	//
+	// POST /test_request_number_int32_nullable_array
 }
 
-// TestRequestNumberInt32NullableArray implements test_request_number_int32_nullable_array operation.
-//
-// POST /test_request_number_int32_nullable_array
 func (UnimplementedHandler) TestRequestNumberInt32NullableArray(ctx context.Context, req []NilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt32NullableArrayArray implements test_request_number_int32_nullable_array_array operation.
+	//
+	// POST /test_request_number_int32_nullable_array_array
 }
 
-// TestRequestNumberInt32NullableArrayArray implements test_request_number_int32_nullable_array_array operation.
-//
-// POST /test_request_number_int32_nullable_array_array
 func (UnimplementedHandler) TestRequestNumberInt32NullableArrayArray(ctx context.Context, req [][]NilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt64 implements test_request_number_int64 operation.
+	//
+	// POST /test_request_number_int64
 }
 
-// TestRequestNumberInt64 implements test_request_number_int64 operation.
-//
-// POST /test_request_number_int64
 func (UnimplementedHandler) TestRequestNumberInt64(ctx context.Context, req OptInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt64Array implements test_request_number_int64_array operation.
+	//
+	// POST /test_request_number_int64_array
 }
 
-// TestRequestNumberInt64Array implements test_request_number_int64_array operation.
-//
-// POST /test_request_number_int64_array
 func (UnimplementedHandler) TestRequestNumberInt64Array(ctx context.Context, req []int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt64ArrayArray implements test_request_number_int64_array_array operation.
+	//
+	// POST /test_request_number_int64_array_array
 }
 
-// TestRequestNumberInt64ArrayArray implements test_request_number_int64_array_array operation.
-//
-// POST /test_request_number_int64_array_array
 func (UnimplementedHandler) TestRequestNumberInt64ArrayArray(ctx context.Context, req [][]int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt64Nullable implements test_request_number_int64_nullable operation.
+	//
+	// POST /test_request_number_int64_nullable
 }
 
-// TestRequestNumberInt64Nullable implements test_request_number_int64_nullable operation.
-//
-// POST /test_request_number_int64_nullable
 func (UnimplementedHandler) TestRequestNumberInt64Nullable(ctx context.Context, req OptNilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt64NullableArray implements test_request_number_int64_nullable_array operation.
+	//
+	// POST /test_request_number_int64_nullable_array
 }
 
-// TestRequestNumberInt64NullableArray implements test_request_number_int64_nullable_array operation.
-//
-// POST /test_request_number_int64_nullable_array
 func (UnimplementedHandler) TestRequestNumberInt64NullableArray(ctx context.Context, req []NilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberInt64NullableArrayArray implements test_request_number_int64_nullable_array_array operation.
+	//
+	// POST /test_request_number_int64_nullable_array_array
 }
 
-// TestRequestNumberInt64NullableArrayArray implements test_request_number_int64_nullable_array_array operation.
-//
-// POST /test_request_number_int64_nullable_array_array
 func (UnimplementedHandler) TestRequestNumberInt64NullableArrayArray(ctx context.Context, req [][]NilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberNullable implements test_request_number_nullable operation.
+	//
+	// POST /test_request_number_nullable
 }
 
-// TestRequestNumberNullable implements test_request_number_nullable operation.
-//
-// POST /test_request_number_nullable
 func (UnimplementedHandler) TestRequestNumberNullable(ctx context.Context, req OptNilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberNullableArray implements test_request_number_nullable_array operation.
+	//
+	// POST /test_request_number_nullable_array
 }
 
-// TestRequestNumberNullableArray implements test_request_number_nullable_array operation.
-//
-// POST /test_request_number_nullable_array
 func (UnimplementedHandler) TestRequestNumberNullableArray(ctx context.Context, req []NilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestNumberNullableArrayArray implements test_request_number_nullable_array_array operation.
+	//
+	// POST /test_request_number_nullable_array_array
 }
 
-// TestRequestNumberNullableArrayArray implements test_request_number_nullable_array_array operation.
-//
-// POST /test_request_number_nullable_array_array
 func (UnimplementedHandler) TestRequestNumberNullableArrayArray(ctx context.Context, req [][]NilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredAny implements test_request_required_Any operation.
+	//
+	// POST /test_request_required_Any
 }
 
-// TestRequestRequiredAny implements test_request_required_Any operation.
-//
-// POST /test_request_required_Any
 func (UnimplementedHandler) TestRequestRequiredAny(ctx context.Context, req jx.Raw) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredBoolean implements test_request_required_boolean operation.
+	//
+	// POST /test_request_required_boolean
 }
 
-// TestRequestRequiredBoolean implements test_request_required_boolean operation.
-//
-// POST /test_request_required_boolean
 func (UnimplementedHandler) TestRequestRequiredBoolean(ctx context.Context, req bool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredBooleanArray implements test_request_required_boolean_array operation.
+	//
+	// POST /test_request_required_boolean_array
 }
 
-// TestRequestRequiredBooleanArray implements test_request_required_boolean_array operation.
-//
-// POST /test_request_required_boolean_array
 func (UnimplementedHandler) TestRequestRequiredBooleanArray(ctx context.Context, req []bool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredBooleanArrayArray implements test_request_required_boolean_array_array operation.
+	//
+	// POST /test_request_required_boolean_array_array
 }
 
-// TestRequestRequiredBooleanArrayArray implements test_request_required_boolean_array_array operation.
-//
-// POST /test_request_required_boolean_array_array
 func (UnimplementedHandler) TestRequestRequiredBooleanArrayArray(ctx context.Context, req [][]bool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredBooleanNullable implements test_request_required_boolean_nullable operation.
+	//
+	// POST /test_request_required_boolean_nullable
 }
 
-// TestRequestRequiredBooleanNullable implements test_request_required_boolean_nullable operation.
-//
-// POST /test_request_required_boolean_nullable
 func (UnimplementedHandler) TestRequestRequiredBooleanNullable(ctx context.Context, req NilBool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredBooleanNullableArray implements test_request_required_boolean_nullable_array operation.
+	//
+	// POST /test_request_required_boolean_nullable_array
 }
 
-// TestRequestRequiredBooleanNullableArray implements test_request_required_boolean_nullable_array operation.
-//
-// POST /test_request_required_boolean_nullable_array
 func (UnimplementedHandler) TestRequestRequiredBooleanNullableArray(ctx context.Context, req []NilBool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredBooleanNullableArrayArray implements test_request_required_boolean_nullable_array_array operation.
+	//
+	// POST /test_request_required_boolean_nullable_array_array
 }
 
-// TestRequestRequiredBooleanNullableArrayArray implements test_request_required_boolean_nullable_array_array operation.
-//
-// POST /test_request_required_boolean_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredBooleanNullableArrayArray(ctx context.Context, req [][]NilBool) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredEmptyStruct implements test_request_required_EmptyStruct operation.
+	//
+	// POST /test_request_required_EmptyStruct
 }
 
-// TestRequestRequiredEmptyStruct implements test_request_required_EmptyStruct operation.
-//
-// POST /test_request_required_EmptyStruct
 func (UnimplementedHandler) TestRequestRequiredEmptyStruct(ctx context.Context, req *TestRequestRequiredEmptyStructReq) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredFormatTest implements test_request_required_FormatTest operation.
+	//
+	// POST /test_request_required_FormatTest
 }
 
-// TestRequestRequiredFormatTest implements test_request_required_FormatTest operation.
-//
-// POST /test_request_required_FormatTest
 func (UnimplementedHandler) TestRequestRequiredFormatTest(ctx context.Context, req *TestRequestRequiredFormatTestReq) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredInteger implements test_request_required_integer operation.
+	//
+	// POST /test_request_required_integer
 }
 
-// TestRequestRequiredInteger implements test_request_required_integer operation.
-//
-// POST /test_request_required_integer
 func (UnimplementedHandler) TestRequestRequiredInteger(ctx context.Context, req int) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerArray implements test_request_required_integer_array operation.
+	//
+	// POST /test_request_required_integer_array
 }
 
-// TestRequestRequiredIntegerArray implements test_request_required_integer_array operation.
-//
-// POST /test_request_required_integer_array
 func (UnimplementedHandler) TestRequestRequiredIntegerArray(ctx context.Context, req []int) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerArrayArray implements test_request_required_integer_array_array operation.
+	//
+	// POST /test_request_required_integer_array_array
 }
 
-// TestRequestRequiredIntegerArrayArray implements test_request_required_integer_array_array operation.
-//
-// POST /test_request_required_integer_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerArrayArray(ctx context.Context, req [][]int) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt16 implements test_request_required_integer_int16 operation.
+	//
+	// POST /test_request_required_integer_int16
 }
 
-// TestRequestRequiredIntegerInt16 implements test_request_required_integer_int16 operation.
-//
-// POST /test_request_required_integer_int16
 func (UnimplementedHandler) TestRequestRequiredIntegerInt16(ctx context.Context, req int16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt16Array implements test_request_required_integer_int16_array operation.
+	//
+	// POST /test_request_required_integer_int16_array
 }
 
-// TestRequestRequiredIntegerInt16Array implements test_request_required_integer_int16_array operation.
-//
-// POST /test_request_required_integer_int16_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt16Array(ctx context.Context, req []int16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt16ArrayArray implements test_request_required_integer_int16_array_array operation.
+	//
+	// POST /test_request_required_integer_int16_array_array
 }
 
-// TestRequestRequiredIntegerInt16ArrayArray implements test_request_required_integer_int16_array_array operation.
-//
-// POST /test_request_required_integer_int16_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt16ArrayArray(ctx context.Context, req [][]int16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt16Nullable implements test_request_required_integer_int16_nullable operation.
+	//
+	// POST /test_request_required_integer_int16_nullable
 }
 
-// TestRequestRequiredIntegerInt16Nullable implements test_request_required_integer_int16_nullable operation.
-//
-// POST /test_request_required_integer_int16_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerInt16Nullable(ctx context.Context, req NilInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt16NullableArray implements test_request_required_integer_int16_nullable_array operation.
+	//
+	// POST /test_request_required_integer_int16_nullable_array
 }
 
-// TestRequestRequiredIntegerInt16NullableArray implements test_request_required_integer_int16_nullable_array operation.
-//
-// POST /test_request_required_integer_int16_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt16NullableArray(ctx context.Context, req []NilInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt16NullableArrayArray implements test_request_required_integer_int16_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_int16_nullable_array_array
 }
 
-// TestRequestRequiredIntegerInt16NullableArrayArray implements test_request_required_integer_int16_nullable_array_array operation.
-//
-// POST /test_request_required_integer_int16_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt16NullableArrayArray(ctx context.Context, req [][]NilInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt32 implements test_request_required_integer_int32 operation.
+	//
+	// POST /test_request_required_integer_int32
 }
 
-// TestRequestRequiredIntegerInt32 implements test_request_required_integer_int32 operation.
-//
-// POST /test_request_required_integer_int32
 func (UnimplementedHandler) TestRequestRequiredIntegerInt32(ctx context.Context, req int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt32Array implements test_request_required_integer_int32_array operation.
+	//
+	// POST /test_request_required_integer_int32_array
 }
 
-// TestRequestRequiredIntegerInt32Array implements test_request_required_integer_int32_array operation.
-//
-// POST /test_request_required_integer_int32_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt32Array(ctx context.Context, req []int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt32ArrayArray implements test_request_required_integer_int32_array_array operation.
+	//
+	// POST /test_request_required_integer_int32_array_array
 }
 
-// TestRequestRequiredIntegerInt32ArrayArray implements test_request_required_integer_int32_array_array operation.
-//
-// POST /test_request_required_integer_int32_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt32ArrayArray(ctx context.Context, req [][]int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt32Nullable implements test_request_required_integer_int32_nullable operation.
+	//
+	// POST /test_request_required_integer_int32_nullable
 }
 
-// TestRequestRequiredIntegerInt32Nullable implements test_request_required_integer_int32_nullable operation.
-//
-// POST /test_request_required_integer_int32_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerInt32Nullable(ctx context.Context, req NilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt32NullableArray implements test_request_required_integer_int32_nullable_array operation.
+	//
+	// POST /test_request_required_integer_int32_nullable_array
 }
 
-// TestRequestRequiredIntegerInt32NullableArray implements test_request_required_integer_int32_nullable_array operation.
-//
-// POST /test_request_required_integer_int32_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt32NullableArray(ctx context.Context, req []NilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt32NullableArrayArray implements test_request_required_integer_int32_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_int32_nullable_array_array
 }
 
-// TestRequestRequiredIntegerInt32NullableArrayArray implements test_request_required_integer_int32_nullable_array_array operation.
-//
-// POST /test_request_required_integer_int32_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt32NullableArrayArray(ctx context.Context, req [][]NilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt64 implements test_request_required_integer_int64 operation.
+	//
+	// POST /test_request_required_integer_int64
 }
 
-// TestRequestRequiredIntegerInt64 implements test_request_required_integer_int64 operation.
-//
-// POST /test_request_required_integer_int64
 func (UnimplementedHandler) TestRequestRequiredIntegerInt64(ctx context.Context, req int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt64Array implements test_request_required_integer_int64_array operation.
+	//
+	// POST /test_request_required_integer_int64_array
 }
 
-// TestRequestRequiredIntegerInt64Array implements test_request_required_integer_int64_array operation.
-//
-// POST /test_request_required_integer_int64_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt64Array(ctx context.Context, req []int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt64ArrayArray implements test_request_required_integer_int64_array_array operation.
+	//
+	// POST /test_request_required_integer_int64_array_array
 }
 
-// TestRequestRequiredIntegerInt64ArrayArray implements test_request_required_integer_int64_array_array operation.
-//
-// POST /test_request_required_integer_int64_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt64ArrayArray(ctx context.Context, req [][]int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt64Nullable implements test_request_required_integer_int64_nullable operation.
+	//
+	// POST /test_request_required_integer_int64_nullable
 }
 
-// TestRequestRequiredIntegerInt64Nullable implements test_request_required_integer_int64_nullable operation.
-//
-// POST /test_request_required_integer_int64_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerInt64Nullable(ctx context.Context, req NilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt64NullableArray implements test_request_required_integer_int64_nullable_array operation.
+	//
+	// POST /test_request_required_integer_int64_nullable_array
 }
 
-// TestRequestRequiredIntegerInt64NullableArray implements test_request_required_integer_int64_nullable_array operation.
-//
-// POST /test_request_required_integer_int64_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt64NullableArray(ctx context.Context, req []NilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt64NullableArrayArray implements test_request_required_integer_int64_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_int64_nullable_array_array
 }
 
-// TestRequestRequiredIntegerInt64NullableArrayArray implements test_request_required_integer_int64_nullable_array_array operation.
-//
-// POST /test_request_required_integer_int64_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt64NullableArrayArray(ctx context.Context, req [][]NilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt8 implements test_request_required_integer_int8 operation.
+	//
+	// POST /test_request_required_integer_int8
 }
 
-// TestRequestRequiredIntegerInt8 implements test_request_required_integer_int8 operation.
-//
-// POST /test_request_required_integer_int8
 func (UnimplementedHandler) TestRequestRequiredIntegerInt8(ctx context.Context, req int8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt8Array implements test_request_required_integer_int8_array operation.
+	//
+	// POST /test_request_required_integer_int8_array
 }
 
-// TestRequestRequiredIntegerInt8Array implements test_request_required_integer_int8_array operation.
-//
-// POST /test_request_required_integer_int8_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt8Array(ctx context.Context, req []int8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt8ArrayArray implements test_request_required_integer_int8_array_array operation.
+	//
+	// POST /test_request_required_integer_int8_array_array
 }
 
-// TestRequestRequiredIntegerInt8ArrayArray implements test_request_required_integer_int8_array_array operation.
-//
-// POST /test_request_required_integer_int8_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt8ArrayArray(ctx context.Context, req [][]int8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt8Nullable implements test_request_required_integer_int8_nullable operation.
+	//
+	// POST /test_request_required_integer_int8_nullable
 }
 
-// TestRequestRequiredIntegerInt8Nullable implements test_request_required_integer_int8_nullable operation.
-//
-// POST /test_request_required_integer_int8_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerInt8Nullable(ctx context.Context, req NilInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt8NullableArray implements test_request_required_integer_int8_nullable_array operation.
+	//
+	// POST /test_request_required_integer_int8_nullable_array
 }
 
-// TestRequestRequiredIntegerInt8NullableArray implements test_request_required_integer_int8_nullable_array operation.
-//
-// POST /test_request_required_integer_int8_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt8NullableArray(ctx context.Context, req []NilInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerInt8NullableArrayArray implements test_request_required_integer_int8_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_int8_nullable_array_array
 }
 
-// TestRequestRequiredIntegerInt8NullableArrayArray implements test_request_required_integer_int8_nullable_array_array operation.
-//
-// POST /test_request_required_integer_int8_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerInt8NullableArrayArray(ctx context.Context, req [][]NilInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerNullable implements test_request_required_integer_nullable operation.
+	//
+	// POST /test_request_required_integer_nullable
 }
 
-// TestRequestRequiredIntegerNullable implements test_request_required_integer_nullable operation.
-//
-// POST /test_request_required_integer_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerNullable(ctx context.Context, req NilInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerNullableArray implements test_request_required_integer_nullable_array operation.
+	//
+	// POST /test_request_required_integer_nullable_array
 }
 
-// TestRequestRequiredIntegerNullableArray implements test_request_required_integer_nullable_array operation.
-//
-// POST /test_request_required_integer_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerNullableArray(ctx context.Context, req []NilInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerNullableArrayArray implements test_request_required_integer_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_nullable_array_array
 }
 
-// TestRequestRequiredIntegerNullableArrayArray implements test_request_required_integer_nullable_array_array operation.
-//
-// POST /test_request_required_integer_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerNullableArrayArray(ctx context.Context, req [][]NilInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint implements test_request_required_integer_uint operation.
+	//
+	// POST /test_request_required_integer_uint
 }
 
-// TestRequestRequiredIntegerUint implements test_request_required_integer_uint operation.
-//
-// POST /test_request_required_integer_uint
 func (UnimplementedHandler) TestRequestRequiredIntegerUint(ctx context.Context, req uint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint16 implements test_request_required_integer_uint16 operation.
+	//
+	// POST /test_request_required_integer_uint16
 }
 
-// TestRequestRequiredIntegerUint16 implements test_request_required_integer_uint16 operation.
-//
-// POST /test_request_required_integer_uint16
 func (UnimplementedHandler) TestRequestRequiredIntegerUint16(ctx context.Context, req uint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint16Array implements test_request_required_integer_uint16_array operation.
+	//
+	// POST /test_request_required_integer_uint16_array
 }
 
-// TestRequestRequiredIntegerUint16Array implements test_request_required_integer_uint16_array operation.
-//
-// POST /test_request_required_integer_uint16_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint16Array(ctx context.Context, req []uint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint16ArrayArray implements test_request_required_integer_uint16_array_array operation.
+	//
+	// POST /test_request_required_integer_uint16_array_array
 }
 
-// TestRequestRequiredIntegerUint16ArrayArray implements test_request_required_integer_uint16_array_array operation.
-//
-// POST /test_request_required_integer_uint16_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint16ArrayArray(ctx context.Context, req [][]uint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint16Nullable implements test_request_required_integer_uint16_nullable operation.
+	//
+	// POST /test_request_required_integer_uint16_nullable
 }
 
-// TestRequestRequiredIntegerUint16Nullable implements test_request_required_integer_uint16_nullable operation.
-//
-// POST /test_request_required_integer_uint16_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerUint16Nullable(ctx context.Context, req NilUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint16NullableArray implements test_request_required_integer_uint16_nullable_array operation.
+	//
+	// POST /test_request_required_integer_uint16_nullable_array
 }
 
-// TestRequestRequiredIntegerUint16NullableArray implements test_request_required_integer_uint16_nullable_array operation.
-//
-// POST /test_request_required_integer_uint16_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint16NullableArray(ctx context.Context, req []NilUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint16NullableArrayArray implements test_request_required_integer_uint16_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_uint16_nullable_array_array
 }
 
-// TestRequestRequiredIntegerUint16NullableArrayArray implements test_request_required_integer_uint16_nullable_array_array operation.
-//
-// POST /test_request_required_integer_uint16_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint16NullableArrayArray(ctx context.Context, req [][]NilUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint32 implements test_request_required_integer_uint32 operation.
+	//
+	// POST /test_request_required_integer_uint32
 }
 
-// TestRequestRequiredIntegerUint32 implements test_request_required_integer_uint32 operation.
-//
-// POST /test_request_required_integer_uint32
 func (UnimplementedHandler) TestRequestRequiredIntegerUint32(ctx context.Context, req uint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint32Array implements test_request_required_integer_uint32_array operation.
+	//
+	// POST /test_request_required_integer_uint32_array
 }
 
-// TestRequestRequiredIntegerUint32Array implements test_request_required_integer_uint32_array operation.
-//
-// POST /test_request_required_integer_uint32_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint32Array(ctx context.Context, req []uint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint32ArrayArray implements test_request_required_integer_uint32_array_array operation.
+	//
+	// POST /test_request_required_integer_uint32_array_array
 }
 
-// TestRequestRequiredIntegerUint32ArrayArray implements test_request_required_integer_uint32_array_array operation.
-//
-// POST /test_request_required_integer_uint32_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint32ArrayArray(ctx context.Context, req [][]uint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint32Nullable implements test_request_required_integer_uint32_nullable operation.
+	//
+	// POST /test_request_required_integer_uint32_nullable
 }
 
-// TestRequestRequiredIntegerUint32Nullable implements test_request_required_integer_uint32_nullable operation.
-//
-// POST /test_request_required_integer_uint32_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerUint32Nullable(ctx context.Context, req NilUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint32NullableArray implements test_request_required_integer_uint32_nullable_array operation.
+	//
+	// POST /test_request_required_integer_uint32_nullable_array
 }
 
-// TestRequestRequiredIntegerUint32NullableArray implements test_request_required_integer_uint32_nullable_array operation.
-//
-// POST /test_request_required_integer_uint32_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint32NullableArray(ctx context.Context, req []NilUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint32NullableArrayArray implements test_request_required_integer_uint32_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_uint32_nullable_array_array
 }
 
-// TestRequestRequiredIntegerUint32NullableArrayArray implements test_request_required_integer_uint32_nullable_array_array operation.
-//
-// POST /test_request_required_integer_uint32_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint32NullableArrayArray(ctx context.Context, req [][]NilUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint64 implements test_request_required_integer_uint64 operation.
+	//
+	// POST /test_request_required_integer_uint64
 }
 
-// TestRequestRequiredIntegerUint64 implements test_request_required_integer_uint64 operation.
-//
-// POST /test_request_required_integer_uint64
 func (UnimplementedHandler) TestRequestRequiredIntegerUint64(ctx context.Context, req uint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint64Array implements test_request_required_integer_uint64_array operation.
+	//
+	// POST /test_request_required_integer_uint64_array
 }
 
-// TestRequestRequiredIntegerUint64Array implements test_request_required_integer_uint64_array operation.
-//
-// POST /test_request_required_integer_uint64_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint64Array(ctx context.Context, req []uint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint64ArrayArray implements test_request_required_integer_uint64_array_array operation.
+	//
+	// POST /test_request_required_integer_uint64_array_array
 }
 
-// TestRequestRequiredIntegerUint64ArrayArray implements test_request_required_integer_uint64_array_array operation.
-//
-// POST /test_request_required_integer_uint64_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint64ArrayArray(ctx context.Context, req [][]uint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint64Nullable implements test_request_required_integer_uint64_nullable operation.
+	//
+	// POST /test_request_required_integer_uint64_nullable
 }
 
-// TestRequestRequiredIntegerUint64Nullable implements test_request_required_integer_uint64_nullable operation.
-//
-// POST /test_request_required_integer_uint64_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerUint64Nullable(ctx context.Context, req NilUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint64NullableArray implements test_request_required_integer_uint64_nullable_array operation.
+	//
+	// POST /test_request_required_integer_uint64_nullable_array
 }
 
-// TestRequestRequiredIntegerUint64NullableArray implements test_request_required_integer_uint64_nullable_array operation.
-//
-// POST /test_request_required_integer_uint64_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint64NullableArray(ctx context.Context, req []NilUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint64NullableArrayArray implements test_request_required_integer_uint64_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_uint64_nullable_array_array
 }
 
-// TestRequestRequiredIntegerUint64NullableArrayArray implements test_request_required_integer_uint64_nullable_array_array operation.
-//
-// POST /test_request_required_integer_uint64_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint64NullableArrayArray(ctx context.Context, req [][]NilUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint8 implements test_request_required_integer_uint8 operation.
+	//
+	// POST /test_request_required_integer_uint8
 }
 
-// TestRequestRequiredIntegerUint8 implements test_request_required_integer_uint8 operation.
-//
-// POST /test_request_required_integer_uint8
 func (UnimplementedHandler) TestRequestRequiredIntegerUint8(ctx context.Context, req uint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint8Array implements test_request_required_integer_uint8_array operation.
+	//
+	// POST /test_request_required_integer_uint8_array
 }
 
-// TestRequestRequiredIntegerUint8Array implements test_request_required_integer_uint8_array operation.
-//
-// POST /test_request_required_integer_uint8_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint8Array(ctx context.Context, req []uint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint8ArrayArray implements test_request_required_integer_uint8_array_array operation.
+	//
+	// POST /test_request_required_integer_uint8_array_array
 }
 
-// TestRequestRequiredIntegerUint8ArrayArray implements test_request_required_integer_uint8_array_array operation.
-//
-// POST /test_request_required_integer_uint8_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint8ArrayArray(ctx context.Context, req [][]uint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint8Nullable implements test_request_required_integer_uint8_nullable operation.
+	//
+	// POST /test_request_required_integer_uint8_nullable
 }
 
-// TestRequestRequiredIntegerUint8Nullable implements test_request_required_integer_uint8_nullable operation.
-//
-// POST /test_request_required_integer_uint8_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerUint8Nullable(ctx context.Context, req NilUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint8NullableArray implements test_request_required_integer_uint8_nullable_array operation.
+	//
+	// POST /test_request_required_integer_uint8_nullable_array
 }
 
-// TestRequestRequiredIntegerUint8NullableArray implements test_request_required_integer_uint8_nullable_array operation.
-//
-// POST /test_request_required_integer_uint8_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint8NullableArray(ctx context.Context, req []NilUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUint8NullableArrayArray implements test_request_required_integer_uint8_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_uint8_nullable_array_array
 }
 
-// TestRequestRequiredIntegerUint8NullableArrayArray implements test_request_required_integer_uint8_nullable_array_array operation.
-//
-// POST /test_request_required_integer_uint8_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUint8NullableArrayArray(ctx context.Context, req [][]NilUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUintArray implements test_request_required_integer_uint_array operation.
+	//
+	// POST /test_request_required_integer_uint_array
 }
 
-// TestRequestRequiredIntegerUintArray implements test_request_required_integer_uint_array operation.
-//
-// POST /test_request_required_integer_uint_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUintArray(ctx context.Context, req []uint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUintArrayArray implements test_request_required_integer_uint_array_array operation.
+	//
+	// POST /test_request_required_integer_uint_array_array
 }
 
-// TestRequestRequiredIntegerUintArrayArray implements test_request_required_integer_uint_array_array operation.
-//
-// POST /test_request_required_integer_uint_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUintArrayArray(ctx context.Context, req [][]uint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUintNullable implements test_request_required_integer_uint_nullable operation.
+	//
+	// POST /test_request_required_integer_uint_nullable
 }
 
-// TestRequestRequiredIntegerUintNullable implements test_request_required_integer_uint_nullable operation.
-//
-// POST /test_request_required_integer_uint_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerUintNullable(ctx context.Context, req NilUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUintNullableArray implements test_request_required_integer_uint_nullable_array operation.
+	//
+	// POST /test_request_required_integer_uint_nullable_array
 }
 
-// TestRequestRequiredIntegerUintNullableArray implements test_request_required_integer_uint_nullable_array operation.
-//
-// POST /test_request_required_integer_uint_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUintNullableArray(ctx context.Context, req []NilUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUintNullableArrayArray implements test_request_required_integer_uint_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_uint_nullable_array_array
 }
 
-// TestRequestRequiredIntegerUintNullableArrayArray implements test_request_required_integer_uint_nullable_array_array operation.
-//
-// POST /test_request_required_integer_uint_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUintNullableArrayArray(ctx context.Context, req [][]NilUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnix implements test_request_required_integer_unix operation.
+	//
+	// POST /test_request_required_integer_unix
 }
 
-// TestRequestRequiredIntegerUnix implements test_request_required_integer_unix operation.
-//
-// POST /test_request_required_integer_unix
 func (UnimplementedHandler) TestRequestRequiredIntegerUnix(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixArray implements test_request_required_integer_unix_array operation.
+	//
+	// POST /test_request_required_integer_unix_array
 }
 
-// TestRequestRequiredIntegerUnixArray implements test_request_required_integer_unix_array operation.
-//
-// POST /test_request_required_integer_unix_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixArrayArray implements test_request_required_integer_unix_array_array operation.
+	//
+	// POST /test_request_required_integer_unix_array_array
 }
 
-// TestRequestRequiredIntegerUnixArrayArray implements test_request_required_integer_unix_array_array operation.
-//
-// POST /test_request_required_integer_unix_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMicro implements test_request_required_integer_unix-micro operation.
+	//
+	// POST /test_request_required_integer_unix-micro
 }
 
-// TestRequestRequiredIntegerUnixMicro implements test_request_required_integer_unix-micro operation.
-//
-// POST /test_request_required_integer_unix-micro
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMicro(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMicroArray implements test_request_required_integer_unix-micro_array operation.
+	//
+	// POST /test_request_required_integer_unix-micro_array
 }
 
-// TestRequestRequiredIntegerUnixMicroArray implements test_request_required_integer_unix-micro_array operation.
-//
-// POST /test_request_required_integer_unix-micro_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMicroArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMicroArrayArray implements test_request_required_integer_unix-micro_array_array operation.
+	//
+	// POST /test_request_required_integer_unix-micro_array_array
 }
 
-// TestRequestRequiredIntegerUnixMicroArrayArray implements test_request_required_integer_unix-micro_array_array operation.
-//
-// POST /test_request_required_integer_unix-micro_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMicroArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMicroNullable implements test_request_required_integer_unix-micro_nullable operation.
+	//
+	// POST /test_request_required_integer_unix-micro_nullable
 }
 
-// TestRequestRequiredIntegerUnixMicroNullable implements test_request_required_integer_unix-micro_nullable operation.
-//
-// POST /test_request_required_integer_unix-micro_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMicroNullable(ctx context.Context, req NilUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMicroNullableArray implements test_request_required_integer_unix-micro_nullable_array operation.
+	//
+	// POST /test_request_required_integer_unix-micro_nullable_array
 }
 
-// TestRequestRequiredIntegerUnixMicroNullableArray implements test_request_required_integer_unix-micro_nullable_array operation.
-//
-// POST /test_request_required_integer_unix-micro_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMicroNullableArray(ctx context.Context, req []NilUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMicroNullableArrayArray implements test_request_required_integer_unix-micro_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_unix-micro_nullable_array_array
 }
 
-// TestRequestRequiredIntegerUnixMicroNullableArrayArray implements test_request_required_integer_unix-micro_nullable_array_array operation.
-//
-// POST /test_request_required_integer_unix-micro_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMicroNullableArrayArray(ctx context.Context, req [][]NilUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMilli implements test_request_required_integer_unix-milli operation.
+	//
+	// POST /test_request_required_integer_unix-milli
 }
 
-// TestRequestRequiredIntegerUnixMilli implements test_request_required_integer_unix-milli operation.
-//
-// POST /test_request_required_integer_unix-milli
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMilli(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMilliArray implements test_request_required_integer_unix-milli_array operation.
+	//
+	// POST /test_request_required_integer_unix-milli_array
 }
 
-// TestRequestRequiredIntegerUnixMilliArray implements test_request_required_integer_unix-milli_array operation.
-//
-// POST /test_request_required_integer_unix-milli_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMilliArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMilliArrayArray implements test_request_required_integer_unix-milli_array_array operation.
+	//
+	// POST /test_request_required_integer_unix-milli_array_array
 }
 
-// TestRequestRequiredIntegerUnixMilliArrayArray implements test_request_required_integer_unix-milli_array_array operation.
-//
-// POST /test_request_required_integer_unix-milli_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMilliArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMilliNullable implements test_request_required_integer_unix-milli_nullable operation.
+	//
+	// POST /test_request_required_integer_unix-milli_nullable
 }
 
-// TestRequestRequiredIntegerUnixMilliNullable implements test_request_required_integer_unix-milli_nullable operation.
-//
-// POST /test_request_required_integer_unix-milli_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMilliNullable(ctx context.Context, req NilUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMilliNullableArray implements test_request_required_integer_unix-milli_nullable_array operation.
+	//
+	// POST /test_request_required_integer_unix-milli_nullable_array
 }
 
-// TestRequestRequiredIntegerUnixMilliNullableArray implements test_request_required_integer_unix-milli_nullable_array operation.
-//
-// POST /test_request_required_integer_unix-milli_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMilliNullableArray(ctx context.Context, req []NilUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixMilliNullableArrayArray implements test_request_required_integer_unix-milli_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_unix-milli_nullable_array_array
 }
 
-// TestRequestRequiredIntegerUnixMilliNullableArrayArray implements test_request_required_integer_unix-milli_nullable_array_array operation.
-//
-// POST /test_request_required_integer_unix-milli_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixMilliNullableArrayArray(ctx context.Context, req [][]NilUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixNano implements test_request_required_integer_unix-nano operation.
+	//
+	// POST /test_request_required_integer_unix-nano
 }
 
-// TestRequestRequiredIntegerUnixNano implements test_request_required_integer_unix-nano operation.
-//
-// POST /test_request_required_integer_unix-nano
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixNano(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixNanoArray implements test_request_required_integer_unix-nano_array operation.
+	//
+	// POST /test_request_required_integer_unix-nano_array
 }
 
-// TestRequestRequiredIntegerUnixNanoArray implements test_request_required_integer_unix-nano_array operation.
-//
-// POST /test_request_required_integer_unix-nano_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixNanoArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixNanoArrayArray implements test_request_required_integer_unix-nano_array_array operation.
+	//
+	// POST /test_request_required_integer_unix-nano_array_array
 }
 
-// TestRequestRequiredIntegerUnixNanoArrayArray implements test_request_required_integer_unix-nano_array_array operation.
-//
-// POST /test_request_required_integer_unix-nano_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixNanoArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixNanoNullable implements test_request_required_integer_unix-nano_nullable operation.
+	//
+	// POST /test_request_required_integer_unix-nano_nullable
 }
 
-// TestRequestRequiredIntegerUnixNanoNullable implements test_request_required_integer_unix-nano_nullable operation.
-//
-// POST /test_request_required_integer_unix-nano_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixNanoNullable(ctx context.Context, req NilUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixNanoNullableArray implements test_request_required_integer_unix-nano_nullable_array operation.
+	//
+	// POST /test_request_required_integer_unix-nano_nullable_array
 }
 
-// TestRequestRequiredIntegerUnixNanoNullableArray implements test_request_required_integer_unix-nano_nullable_array operation.
-//
-// POST /test_request_required_integer_unix-nano_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixNanoNullableArray(ctx context.Context, req []NilUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixNanoNullableArrayArray implements test_request_required_integer_unix-nano_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_unix-nano_nullable_array_array
 }
 
-// TestRequestRequiredIntegerUnixNanoNullableArrayArray implements test_request_required_integer_unix-nano_nullable_array_array operation.
-//
-// POST /test_request_required_integer_unix-nano_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixNanoNullableArrayArray(ctx context.Context, req [][]NilUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixNullable implements test_request_required_integer_unix_nullable operation.
+	//
+	// POST /test_request_required_integer_unix_nullable
 }
 
-// TestRequestRequiredIntegerUnixNullable implements test_request_required_integer_unix_nullable operation.
-//
-// POST /test_request_required_integer_unix_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixNullable(ctx context.Context, req NilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixNullableArray implements test_request_required_integer_unix_nullable_array operation.
+	//
+	// POST /test_request_required_integer_unix_nullable_array
 }
 
-// TestRequestRequiredIntegerUnixNullableArray implements test_request_required_integer_unix_nullable_array operation.
-//
-// POST /test_request_required_integer_unix_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixNullableArray(ctx context.Context, req []NilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixNullableArrayArray implements test_request_required_integer_unix_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_unix_nullable_array_array
 }
 
-// TestRequestRequiredIntegerUnixNullableArrayArray implements test_request_required_integer_unix_nullable_array_array operation.
-//
-// POST /test_request_required_integer_unix_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixNullableArrayArray(ctx context.Context, req [][]NilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixSeconds implements test_request_required_integer_unix-seconds operation.
+	//
+	// POST /test_request_required_integer_unix-seconds
 }
 
-// TestRequestRequiredIntegerUnixSeconds implements test_request_required_integer_unix-seconds operation.
-//
-// POST /test_request_required_integer_unix-seconds
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixSeconds(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixSecondsArray implements test_request_required_integer_unix-seconds_array operation.
+	//
+	// POST /test_request_required_integer_unix-seconds_array
 }
 
-// TestRequestRequiredIntegerUnixSecondsArray implements test_request_required_integer_unix-seconds_array operation.
-//
-// POST /test_request_required_integer_unix-seconds_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixSecondsArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixSecondsArrayArray implements test_request_required_integer_unix-seconds_array_array operation.
+	//
+	// POST /test_request_required_integer_unix-seconds_array_array
 }
 
-// TestRequestRequiredIntegerUnixSecondsArrayArray implements test_request_required_integer_unix-seconds_array_array operation.
-//
-// POST /test_request_required_integer_unix-seconds_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixSecondsArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixSecondsNullable implements test_request_required_integer_unix-seconds_nullable operation.
+	//
+	// POST /test_request_required_integer_unix-seconds_nullable
 }
 
-// TestRequestRequiredIntegerUnixSecondsNullable implements test_request_required_integer_unix-seconds_nullable operation.
-//
-// POST /test_request_required_integer_unix-seconds_nullable
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixSecondsNullable(ctx context.Context, req NilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixSecondsNullableArray implements test_request_required_integer_unix-seconds_nullable_array operation.
+	//
+	// POST /test_request_required_integer_unix-seconds_nullable_array
 }
 
-// TestRequestRequiredIntegerUnixSecondsNullableArray implements test_request_required_integer_unix-seconds_nullable_array operation.
-//
-// POST /test_request_required_integer_unix-seconds_nullable_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixSecondsNullableArray(ctx context.Context, req []NilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredIntegerUnixSecondsNullableArrayArray implements test_request_required_integer_unix-seconds_nullable_array_array operation.
+	//
+	// POST /test_request_required_integer_unix-seconds_nullable_array_array
 }
 
-// TestRequestRequiredIntegerUnixSecondsNullableArrayArray implements test_request_required_integer_unix-seconds_nullable_array_array operation.
-//
-// POST /test_request_required_integer_unix-seconds_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredIntegerUnixSecondsNullableArrayArray(ctx context.Context, req [][]NilUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNull implements test_request_required_null operation.
+	//
+	// POST /test_request_required_null
 }
 
-// TestRequestRequiredNull implements test_request_required_null operation.
-//
-// POST /test_request_required_null
 func (UnimplementedHandler) TestRequestRequiredNull(ctx context.Context, req struct{}) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNullArray implements test_request_required_null_array operation.
+	//
+	// POST /test_request_required_null_array
 }
 
-// TestRequestRequiredNullArray implements test_request_required_null_array operation.
-//
-// POST /test_request_required_null_array
 func (UnimplementedHandler) TestRequestRequiredNullArray(ctx context.Context, req []struct{}) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNullArrayArray implements test_request_required_null_array_array operation.
+	//
+	// POST /test_request_required_null_array_array
 }
 
-// TestRequestRequiredNullArrayArray implements test_request_required_null_array_array operation.
-//
-// POST /test_request_required_null_array_array
 func (UnimplementedHandler) TestRequestRequiredNullArrayArray(ctx context.Context, req [][]struct{}) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNullNullable implements test_request_required_null_nullable operation.
+	//
+	// POST /test_request_required_null_nullable
 }
 
-// TestRequestRequiredNullNullable implements test_request_required_null_nullable operation.
-//
-// POST /test_request_required_null_nullable
 func (UnimplementedHandler) TestRequestRequiredNullNullable(ctx context.Context, req struct{}) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNullNullableArray implements test_request_required_null_nullable_array operation.
+	//
+	// POST /test_request_required_null_nullable_array
 }
 
-// TestRequestRequiredNullNullableArray implements test_request_required_null_nullable_array operation.
-//
-// POST /test_request_required_null_nullable_array
 func (UnimplementedHandler) TestRequestRequiredNullNullableArray(ctx context.Context, req []struct{}) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNullNullableArrayArray implements test_request_required_null_nullable_array_array operation.
+	//
+	// POST /test_request_required_null_nullable_array_array
 }
 
-// TestRequestRequiredNullNullableArrayArray implements test_request_required_null_nullable_array_array operation.
-//
-// POST /test_request_required_null_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredNullNullableArrayArray(ctx context.Context, req [][]struct{}) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumber implements test_request_required_number operation.
+	//
+	// POST /test_request_required_number
 }
 
-// TestRequestRequiredNumber implements test_request_required_number operation.
-//
-// POST /test_request_required_number
 func (UnimplementedHandler) TestRequestRequiredNumber(ctx context.Context, req float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberArray implements test_request_required_number_array operation.
+	//
+	// POST /test_request_required_number_array
 }
 
-// TestRequestRequiredNumberArray implements test_request_required_number_array operation.
-//
-// POST /test_request_required_number_array
 func (UnimplementedHandler) TestRequestRequiredNumberArray(ctx context.Context, req []float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberArrayArray implements test_request_required_number_array_array operation.
+	//
+	// POST /test_request_required_number_array_array
 }
 
-// TestRequestRequiredNumberArrayArray implements test_request_required_number_array_array operation.
-//
-// POST /test_request_required_number_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberArrayArray(ctx context.Context, req [][]float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDecimal implements test_request_required_number_decimal operation.
+	//
+	// POST /test_request_required_number_decimal
 }
 
-// TestRequestRequiredNumberDecimal implements test_request_required_number_decimal operation.
-//
-// POST /test_request_required_number_decimal
 func (UnimplementedHandler) TestRequestRequiredNumberDecimal(ctx context.Context, req decimal.Decimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDecimalArray implements test_request_required_number_decimal_array operation.
+	//
+	// POST /test_request_required_number_decimal_array
 }
 
-// TestRequestRequiredNumberDecimalArray implements test_request_required_number_decimal_array operation.
-//
-// POST /test_request_required_number_decimal_array
 func (UnimplementedHandler) TestRequestRequiredNumberDecimalArray(ctx context.Context, req []decimal.Decimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDecimalArrayArray implements test_request_required_number_decimal_array_array operation.
+	//
+	// POST /test_request_required_number_decimal_array_array
 }
 
-// TestRequestRequiredNumberDecimalArrayArray implements test_request_required_number_decimal_array_array operation.
-//
-// POST /test_request_required_number_decimal_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberDecimalArrayArray(ctx context.Context, req [][]decimal.Decimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDecimalNullable implements test_request_required_number_decimal_nullable operation.
+	//
+	// POST /test_request_required_number_decimal_nullable
 }
 
-// TestRequestRequiredNumberDecimalNullable implements test_request_required_number_decimal_nullable operation.
-//
-// POST /test_request_required_number_decimal_nullable
 func (UnimplementedHandler) TestRequestRequiredNumberDecimalNullable(ctx context.Context, req NilDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDecimalNullableArray implements test_request_required_number_decimal_nullable_array operation.
+	//
+	// POST /test_request_required_number_decimal_nullable_array
 }
 
-// TestRequestRequiredNumberDecimalNullableArray implements test_request_required_number_decimal_nullable_array operation.
-//
-// POST /test_request_required_number_decimal_nullable_array
 func (UnimplementedHandler) TestRequestRequiredNumberDecimalNullableArray(ctx context.Context, req []NilDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDecimalNullableArrayArray implements test_request_required_number_decimal_nullable_array_array operation.
+	//
+	// POST /test_request_required_number_decimal_nullable_array_array
 }
 
-// TestRequestRequiredNumberDecimalNullableArrayArray implements test_request_required_number_decimal_nullable_array_array operation.
-//
-// POST /test_request_required_number_decimal_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberDecimalNullableArrayArray(ctx context.Context, req [][]NilDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDouble implements test_request_required_number_double operation.
+	//
+	// POST /test_request_required_number_double
 }
 
-// TestRequestRequiredNumberDouble implements test_request_required_number_double operation.
-//
-// POST /test_request_required_number_double
 func (UnimplementedHandler) TestRequestRequiredNumberDouble(ctx context.Context, req float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDoubleArray implements test_request_required_number_double_array operation.
+	//
+	// POST /test_request_required_number_double_array
 }
 
-// TestRequestRequiredNumberDoubleArray implements test_request_required_number_double_array operation.
-//
-// POST /test_request_required_number_double_array
 func (UnimplementedHandler) TestRequestRequiredNumberDoubleArray(ctx context.Context, req []float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDoubleArrayArray implements test_request_required_number_double_array_array operation.
+	//
+	// POST /test_request_required_number_double_array_array
 }
 
-// TestRequestRequiredNumberDoubleArrayArray implements test_request_required_number_double_array_array operation.
-//
-// POST /test_request_required_number_double_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberDoubleArrayArray(ctx context.Context, req [][]float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDoubleNullable implements test_request_required_number_double_nullable operation.
+	//
+	// POST /test_request_required_number_double_nullable
 }
 
-// TestRequestRequiredNumberDoubleNullable implements test_request_required_number_double_nullable operation.
-//
-// POST /test_request_required_number_double_nullable
 func (UnimplementedHandler) TestRequestRequiredNumberDoubleNullable(ctx context.Context, req NilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDoubleNullableArray implements test_request_required_number_double_nullable_array operation.
+	//
+	// POST /test_request_required_number_double_nullable_array
 }
 
-// TestRequestRequiredNumberDoubleNullableArray implements test_request_required_number_double_nullable_array operation.
-//
-// POST /test_request_required_number_double_nullable_array
 func (UnimplementedHandler) TestRequestRequiredNumberDoubleNullableArray(ctx context.Context, req []NilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberDoubleNullableArrayArray implements test_request_required_number_double_nullable_array_array operation.
+	//
+	// POST /test_request_required_number_double_nullable_array_array
 }
 
-// TestRequestRequiredNumberDoubleNullableArrayArray implements test_request_required_number_double_nullable_array_array operation.
-//
-// POST /test_request_required_number_double_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberDoubleNullableArrayArray(ctx context.Context, req [][]NilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberFloat implements test_request_required_number_float operation.
+	//
+	// POST /test_request_required_number_float
 }
 
-// TestRequestRequiredNumberFloat implements test_request_required_number_float operation.
-//
-// POST /test_request_required_number_float
 func (UnimplementedHandler) TestRequestRequiredNumberFloat(ctx context.Context, req float32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberFloatArray implements test_request_required_number_float_array operation.
+	//
+	// POST /test_request_required_number_float_array
 }
 
-// TestRequestRequiredNumberFloatArray implements test_request_required_number_float_array operation.
-//
-// POST /test_request_required_number_float_array
 func (UnimplementedHandler) TestRequestRequiredNumberFloatArray(ctx context.Context, req []float32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberFloatArrayArray implements test_request_required_number_float_array_array operation.
+	//
+	// POST /test_request_required_number_float_array_array
 }
 
-// TestRequestRequiredNumberFloatArrayArray implements test_request_required_number_float_array_array operation.
-//
-// POST /test_request_required_number_float_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberFloatArrayArray(ctx context.Context, req [][]float32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberFloatNullable implements test_request_required_number_float_nullable operation.
+	//
+	// POST /test_request_required_number_float_nullable
 }
 
-// TestRequestRequiredNumberFloatNullable implements test_request_required_number_float_nullable operation.
-//
-// POST /test_request_required_number_float_nullable
 func (UnimplementedHandler) TestRequestRequiredNumberFloatNullable(ctx context.Context, req NilFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberFloatNullableArray implements test_request_required_number_float_nullable_array operation.
+	//
+	// POST /test_request_required_number_float_nullable_array
 }
 
-// TestRequestRequiredNumberFloatNullableArray implements test_request_required_number_float_nullable_array operation.
-//
-// POST /test_request_required_number_float_nullable_array
 func (UnimplementedHandler) TestRequestRequiredNumberFloatNullableArray(ctx context.Context, req []NilFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberFloatNullableArrayArray implements test_request_required_number_float_nullable_array_array operation.
+	//
+	// POST /test_request_required_number_float_nullable_array_array
 }
 
-// TestRequestRequiredNumberFloatNullableArrayArray implements test_request_required_number_float_nullable_array_array operation.
-//
-// POST /test_request_required_number_float_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberFloatNullableArrayArray(ctx context.Context, req [][]NilFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt32 implements test_request_required_number_int32 operation.
+	//
+	// POST /test_request_required_number_int32
 }
 
-// TestRequestRequiredNumberInt32 implements test_request_required_number_int32 operation.
-//
-// POST /test_request_required_number_int32
 func (UnimplementedHandler) TestRequestRequiredNumberInt32(ctx context.Context, req int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt32Array implements test_request_required_number_int32_array operation.
+	//
+	// POST /test_request_required_number_int32_array
 }
 
-// TestRequestRequiredNumberInt32Array implements test_request_required_number_int32_array operation.
-//
-// POST /test_request_required_number_int32_array
 func (UnimplementedHandler) TestRequestRequiredNumberInt32Array(ctx context.Context, req []int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt32ArrayArray implements test_request_required_number_int32_array_array operation.
+	//
+	// POST /test_request_required_number_int32_array_array
 }
 
-// TestRequestRequiredNumberInt32ArrayArray implements test_request_required_number_int32_array_array operation.
-//
-// POST /test_request_required_number_int32_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberInt32ArrayArray(ctx context.Context, req [][]int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt32Nullable implements test_request_required_number_int32_nullable operation.
+	//
+	// POST /test_request_required_number_int32_nullable
 }
 
-// TestRequestRequiredNumberInt32Nullable implements test_request_required_number_int32_nullable operation.
-//
-// POST /test_request_required_number_int32_nullable
 func (UnimplementedHandler) TestRequestRequiredNumberInt32Nullable(ctx context.Context, req NilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt32NullableArray implements test_request_required_number_int32_nullable_array operation.
+	//
+	// POST /test_request_required_number_int32_nullable_array
 }
 
-// TestRequestRequiredNumberInt32NullableArray implements test_request_required_number_int32_nullable_array operation.
-//
-// POST /test_request_required_number_int32_nullable_array
 func (UnimplementedHandler) TestRequestRequiredNumberInt32NullableArray(ctx context.Context, req []NilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt32NullableArrayArray implements test_request_required_number_int32_nullable_array_array operation.
+	//
+	// POST /test_request_required_number_int32_nullable_array_array
 }
 
-// TestRequestRequiredNumberInt32NullableArrayArray implements test_request_required_number_int32_nullable_array_array operation.
-//
-// POST /test_request_required_number_int32_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberInt32NullableArrayArray(ctx context.Context, req [][]NilInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt64 implements test_request_required_number_int64 operation.
+	//
+	// POST /test_request_required_number_int64
 }
 
-// TestRequestRequiredNumberInt64 implements test_request_required_number_int64 operation.
-//
-// POST /test_request_required_number_int64
 func (UnimplementedHandler) TestRequestRequiredNumberInt64(ctx context.Context, req int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt64Array implements test_request_required_number_int64_array operation.
+	//
+	// POST /test_request_required_number_int64_array
 }
 
-// TestRequestRequiredNumberInt64Array implements test_request_required_number_int64_array operation.
-//
-// POST /test_request_required_number_int64_array
 func (UnimplementedHandler) TestRequestRequiredNumberInt64Array(ctx context.Context, req []int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt64ArrayArray implements test_request_required_number_int64_array_array operation.
+	//
+	// POST /test_request_required_number_int64_array_array
 }
 
-// TestRequestRequiredNumberInt64ArrayArray implements test_request_required_number_int64_array_array operation.
-//
-// POST /test_request_required_number_int64_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberInt64ArrayArray(ctx context.Context, req [][]int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt64Nullable implements test_request_required_number_int64_nullable operation.
+	//
+	// POST /test_request_required_number_int64_nullable
 }
 
-// TestRequestRequiredNumberInt64Nullable implements test_request_required_number_int64_nullable operation.
-//
-// POST /test_request_required_number_int64_nullable
 func (UnimplementedHandler) TestRequestRequiredNumberInt64Nullable(ctx context.Context, req NilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt64NullableArray implements test_request_required_number_int64_nullable_array operation.
+	//
+	// POST /test_request_required_number_int64_nullable_array
 }
 
-// TestRequestRequiredNumberInt64NullableArray implements test_request_required_number_int64_nullable_array operation.
-//
-// POST /test_request_required_number_int64_nullable_array
 func (UnimplementedHandler) TestRequestRequiredNumberInt64NullableArray(ctx context.Context, req []NilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberInt64NullableArrayArray implements test_request_required_number_int64_nullable_array_array operation.
+	//
+	// POST /test_request_required_number_int64_nullable_array_array
 }
 
-// TestRequestRequiredNumberInt64NullableArrayArray implements test_request_required_number_int64_nullable_array_array operation.
-//
-// POST /test_request_required_number_int64_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberInt64NullableArrayArray(ctx context.Context, req [][]NilInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberNullable implements test_request_required_number_nullable operation.
+	//
+	// POST /test_request_required_number_nullable
 }
 
-// TestRequestRequiredNumberNullable implements test_request_required_number_nullable operation.
-//
-// POST /test_request_required_number_nullable
 func (UnimplementedHandler) TestRequestRequiredNumberNullable(ctx context.Context, req NilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberNullableArray implements test_request_required_number_nullable_array operation.
+	//
+	// POST /test_request_required_number_nullable_array
 }
 
-// TestRequestRequiredNumberNullableArray implements test_request_required_number_nullable_array operation.
-//
-// POST /test_request_required_number_nullable_array
 func (UnimplementedHandler) TestRequestRequiredNumberNullableArray(ctx context.Context, req []NilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredNumberNullableArrayArray implements test_request_required_number_nullable_array_array operation.
+	//
+	// POST /test_request_required_number_nullable_array_array
 }
 
-// TestRequestRequiredNumberNullableArrayArray implements test_request_required_number_nullable_array_array operation.
-//
-// POST /test_request_required_number_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredNumberNullableArrayArray(ctx context.Context, req [][]NilFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredString implements test_request_required_string operation.
+	//
+	// POST /test_request_required_string
 }
 
-// TestRequestRequiredString implements test_request_required_string operation.
-//
-// POST /test_request_required_string
 func (UnimplementedHandler) TestRequestRequiredString(ctx context.Context, req string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringArray implements test_request_required_string_array operation.
+	//
+	// POST /test_request_required_string_array
 }
 
-// TestRequestRequiredStringArray implements test_request_required_string_array operation.
-//
-// POST /test_request_required_string_array
 func (UnimplementedHandler) TestRequestRequiredStringArray(ctx context.Context, req []string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringArrayArray implements test_request_required_string_array_array operation.
+	//
+	// POST /test_request_required_string_array_array
 }
 
-// TestRequestRequiredStringArrayArray implements test_request_required_string_array_array operation.
-//
-// POST /test_request_required_string_array_array
 func (UnimplementedHandler) TestRequestRequiredStringArrayArray(ctx context.Context, req [][]string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBase64 implements test_request_required_string_base64 operation.
+	//
+	// POST /test_request_required_string_base64
 }
 
-// TestRequestRequiredStringBase64 implements test_request_required_string_base64 operation.
-//
-// POST /test_request_required_string_base64
 func (UnimplementedHandler) TestRequestRequiredStringBase64(ctx context.Context, req []byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBase64Array implements test_request_required_string_base64_array operation.
+	//
+	// POST /test_request_required_string_base64_array
 }
 
-// TestRequestRequiredStringBase64Array implements test_request_required_string_base64_array operation.
-//
-// POST /test_request_required_string_base64_array
 func (UnimplementedHandler) TestRequestRequiredStringBase64Array(ctx context.Context, req [][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBase64ArrayArray implements test_request_required_string_base64_array_array operation.
+	//
+	// POST /test_request_required_string_base64_array_array
 }
 
-// TestRequestRequiredStringBase64ArrayArray implements test_request_required_string_base64_array_array operation.
-//
-// POST /test_request_required_string_base64_array_array
 func (UnimplementedHandler) TestRequestRequiredStringBase64ArrayArray(ctx context.Context, req [][][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBase64Nullable implements test_request_required_string_base64_nullable operation.
+	//
+	// POST /test_request_required_string_base64_nullable
 }
 
-// TestRequestRequiredStringBase64Nullable implements test_request_required_string_base64_nullable operation.
-//
-// POST /test_request_required_string_base64_nullable
 func (UnimplementedHandler) TestRequestRequiredStringBase64Nullable(ctx context.Context, req []byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBase64NullableArray implements test_request_required_string_base64_nullable_array operation.
+	//
+	// POST /test_request_required_string_base64_nullable_array
 }
 
-// TestRequestRequiredStringBase64NullableArray implements test_request_required_string_base64_nullable_array operation.
-//
-// POST /test_request_required_string_base64_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringBase64NullableArray(ctx context.Context, req [][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBase64NullableArrayArray implements test_request_required_string_base64_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_base64_nullable_array_array
 }
 
-// TestRequestRequiredStringBase64NullableArrayArray implements test_request_required_string_base64_nullable_array_array operation.
-//
-// POST /test_request_required_string_base64_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringBase64NullableArrayArray(ctx context.Context, req [][][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBinary implements test_request_required_string_binary operation.
+	//
+	// POST /test_request_required_string_binary
 }
 
-// TestRequestRequiredStringBinary implements test_request_required_string_binary operation.
-//
-// POST /test_request_required_string_binary
 func (UnimplementedHandler) TestRequestRequiredStringBinary(ctx context.Context, req string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBinaryArray implements test_request_required_string_binary_array operation.
+	//
+	// POST /test_request_required_string_binary_array
 }
 
-// TestRequestRequiredStringBinaryArray implements test_request_required_string_binary_array operation.
-//
-// POST /test_request_required_string_binary_array
 func (UnimplementedHandler) TestRequestRequiredStringBinaryArray(ctx context.Context, req []string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBinaryArrayArray implements test_request_required_string_binary_array_array operation.
+	//
+	// POST /test_request_required_string_binary_array_array
 }
 
-// TestRequestRequiredStringBinaryArrayArray implements test_request_required_string_binary_array_array operation.
-//
-// POST /test_request_required_string_binary_array_array
 func (UnimplementedHandler) TestRequestRequiredStringBinaryArrayArray(ctx context.Context, req [][]string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBinaryNullable implements test_request_required_string_binary_nullable operation.
+	//
+	// POST /test_request_required_string_binary_nullable
 }
 
-// TestRequestRequiredStringBinaryNullable implements test_request_required_string_binary_nullable operation.
-//
-// POST /test_request_required_string_binary_nullable
 func (UnimplementedHandler) TestRequestRequiredStringBinaryNullable(ctx context.Context, req NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBinaryNullableArray implements test_request_required_string_binary_nullable_array operation.
+	//
+	// POST /test_request_required_string_binary_nullable_array
 }
 
-// TestRequestRequiredStringBinaryNullableArray implements test_request_required_string_binary_nullable_array operation.
-//
-// POST /test_request_required_string_binary_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringBinaryNullableArray(ctx context.Context, req []NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringBinaryNullableArrayArray implements test_request_required_string_binary_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_binary_nullable_array_array
 }
 
-// TestRequestRequiredStringBinaryNullableArrayArray implements test_request_required_string_binary_nullable_array_array operation.
-//
-// POST /test_request_required_string_binary_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringBinaryNullableArrayArray(ctx context.Context, req [][]NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringByte implements test_request_required_string_byte operation.
+	//
+	// POST /test_request_required_string_byte
 }
 
-// TestRequestRequiredStringByte implements test_request_required_string_byte operation.
-//
-// POST /test_request_required_string_byte
 func (UnimplementedHandler) TestRequestRequiredStringByte(ctx context.Context, req []byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringByteArray implements test_request_required_string_byte_array operation.
+	//
+	// POST /test_request_required_string_byte_array
 }
 
-// TestRequestRequiredStringByteArray implements test_request_required_string_byte_array operation.
-//
-// POST /test_request_required_string_byte_array
 func (UnimplementedHandler) TestRequestRequiredStringByteArray(ctx context.Context, req [][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringByteArrayArray implements test_request_required_string_byte_array_array operation.
+	//
+	// POST /test_request_required_string_byte_array_array
 }
 
-// TestRequestRequiredStringByteArrayArray implements test_request_required_string_byte_array_array operation.
-//
-// POST /test_request_required_string_byte_array_array
 func (UnimplementedHandler) TestRequestRequiredStringByteArrayArray(ctx context.Context, req [][][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringByteNullable implements test_request_required_string_byte_nullable operation.
+	//
+	// POST /test_request_required_string_byte_nullable
 }
 
-// TestRequestRequiredStringByteNullable implements test_request_required_string_byte_nullable operation.
-//
-// POST /test_request_required_string_byte_nullable
 func (UnimplementedHandler) TestRequestRequiredStringByteNullable(ctx context.Context, req []byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringByteNullableArray implements test_request_required_string_byte_nullable_array operation.
+	//
+	// POST /test_request_required_string_byte_nullable_array
 }
 
-// TestRequestRequiredStringByteNullableArray implements test_request_required_string_byte_nullable_array operation.
-//
-// POST /test_request_required_string_byte_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringByteNullableArray(ctx context.Context, req [][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringByteNullableArrayArray implements test_request_required_string_byte_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_byte_nullable_array_array
 }
 
-// TestRequestRequiredStringByteNullableArrayArray implements test_request_required_string_byte_nullable_array_array operation.
-//
-// POST /test_request_required_string_byte_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringByteNullableArrayArray(ctx context.Context, req [][][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDate implements test_request_required_string_date operation.
+	//
+	// POST /test_request_required_string_date
 }
 
-// TestRequestRequiredStringDate implements test_request_required_string_date operation.
-//
-// POST /test_request_required_string_date
 func (UnimplementedHandler) TestRequestRequiredStringDate(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateArray implements test_request_required_string_date_array operation.
+	//
+	// POST /test_request_required_string_date_array
 }
 
-// TestRequestRequiredStringDateArray implements test_request_required_string_date_array operation.
-//
-// POST /test_request_required_string_date_array
 func (UnimplementedHandler) TestRequestRequiredStringDateArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateArrayArray implements test_request_required_string_date_array_array operation.
+	//
+	// POST /test_request_required_string_date_array_array
 }
 
-// TestRequestRequiredStringDateArrayArray implements test_request_required_string_date_array_array operation.
-//
-// POST /test_request_required_string_date_array_array
 func (UnimplementedHandler) TestRequestRequiredStringDateArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateNullable implements test_request_required_string_date_nullable operation.
+	//
+	// POST /test_request_required_string_date_nullable
 }
 
-// TestRequestRequiredStringDateNullable implements test_request_required_string_date_nullable operation.
-//
-// POST /test_request_required_string_date_nullable
 func (UnimplementedHandler) TestRequestRequiredStringDateNullable(ctx context.Context, req NilDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateNullableArray implements test_request_required_string_date_nullable_array operation.
+	//
+	// POST /test_request_required_string_date_nullable_array
 }
 
-// TestRequestRequiredStringDateNullableArray implements test_request_required_string_date_nullable_array operation.
-//
-// POST /test_request_required_string_date_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringDateNullableArray(ctx context.Context, req []NilDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateNullableArrayArray implements test_request_required_string_date_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_date_nullable_array_array
 }
 
-// TestRequestRequiredStringDateNullableArrayArray implements test_request_required_string_date_nullable_array_array operation.
-//
-// POST /test_request_required_string_date_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringDateNullableArrayArray(ctx context.Context, req [][]NilDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateTime implements test_request_required_string_date-time operation.
+	//
+	// POST /test_request_required_string_date-time
 }
 
-// TestRequestRequiredStringDateTime implements test_request_required_string_date-time operation.
-//
-// POST /test_request_required_string_date-time
 func (UnimplementedHandler) TestRequestRequiredStringDateTime(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateTimeArray implements test_request_required_string_date-time_array operation.
+	//
+	// POST /test_request_required_string_date-time_array
 }
 
-// TestRequestRequiredStringDateTimeArray implements test_request_required_string_date-time_array operation.
-//
-// POST /test_request_required_string_date-time_array
 func (UnimplementedHandler) TestRequestRequiredStringDateTimeArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateTimeArrayArray implements test_request_required_string_date-time_array_array operation.
+	//
+	// POST /test_request_required_string_date-time_array_array
 }
 
-// TestRequestRequiredStringDateTimeArrayArray implements test_request_required_string_date-time_array_array operation.
-//
-// POST /test_request_required_string_date-time_array_array
 func (UnimplementedHandler) TestRequestRequiredStringDateTimeArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateTimeNullable implements test_request_required_string_date-time_nullable operation.
+	//
+	// POST /test_request_required_string_date-time_nullable
 }
 
-// TestRequestRequiredStringDateTimeNullable implements test_request_required_string_date-time_nullable operation.
-//
-// POST /test_request_required_string_date-time_nullable
 func (UnimplementedHandler) TestRequestRequiredStringDateTimeNullable(ctx context.Context, req NilDateTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateTimeNullableArray implements test_request_required_string_date-time_nullable_array operation.
+	//
+	// POST /test_request_required_string_date-time_nullable_array
 }
 
-// TestRequestRequiredStringDateTimeNullableArray implements test_request_required_string_date-time_nullable_array operation.
-//
-// POST /test_request_required_string_date-time_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringDateTimeNullableArray(ctx context.Context, req []NilDateTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDateTimeNullableArrayArray implements test_request_required_string_date-time_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_date-time_nullable_array_array
 }
 
-// TestRequestRequiredStringDateTimeNullableArrayArray implements test_request_required_string_date-time_nullable_array_array operation.
-//
-// POST /test_request_required_string_date-time_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringDateTimeNullableArrayArray(ctx context.Context, req [][]NilDateTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDecimal implements test_request_required_string_decimal operation.
+	//
+	// POST /test_request_required_string_decimal
 }
 
-// TestRequestRequiredStringDecimal implements test_request_required_string_decimal operation.
-//
-// POST /test_request_required_string_decimal
 func (UnimplementedHandler) TestRequestRequiredStringDecimal(ctx context.Context, req decimal.Decimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDecimalArray implements test_request_required_string_decimal_array operation.
+	//
+	// POST /test_request_required_string_decimal_array
 }
 
-// TestRequestRequiredStringDecimalArray implements test_request_required_string_decimal_array operation.
-//
-// POST /test_request_required_string_decimal_array
 func (UnimplementedHandler) TestRequestRequiredStringDecimalArray(ctx context.Context, req []decimal.Decimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDecimalArrayArray implements test_request_required_string_decimal_array_array operation.
+	//
+	// POST /test_request_required_string_decimal_array_array
 }
 
-// TestRequestRequiredStringDecimalArrayArray implements test_request_required_string_decimal_array_array operation.
-//
-// POST /test_request_required_string_decimal_array_array
 func (UnimplementedHandler) TestRequestRequiredStringDecimalArrayArray(ctx context.Context, req [][]decimal.Decimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDecimalNullable implements test_request_required_string_decimal_nullable operation.
+	//
+	// POST /test_request_required_string_decimal_nullable
 }
 
-// TestRequestRequiredStringDecimalNullable implements test_request_required_string_decimal_nullable operation.
-//
-// POST /test_request_required_string_decimal_nullable
 func (UnimplementedHandler) TestRequestRequiredStringDecimalNullable(ctx context.Context, req NilStringDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDecimalNullableArray implements test_request_required_string_decimal_nullable_array operation.
+	//
+	// POST /test_request_required_string_decimal_nullable_array
 }
 
-// TestRequestRequiredStringDecimalNullableArray implements test_request_required_string_decimal_nullable_array operation.
-//
-// POST /test_request_required_string_decimal_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringDecimalNullableArray(ctx context.Context, req []NilStringDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDecimalNullableArrayArray implements test_request_required_string_decimal_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_decimal_nullable_array_array
 }
 
-// TestRequestRequiredStringDecimalNullableArrayArray implements test_request_required_string_decimal_nullable_array_array operation.
-//
-// POST /test_request_required_string_decimal_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringDecimalNullableArrayArray(ctx context.Context, req [][]NilStringDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDuration implements test_request_required_string_duration operation.
+	//
+	// POST /test_request_required_string_duration
 }
 
-// TestRequestRequiredStringDuration implements test_request_required_string_duration operation.
-//
-// POST /test_request_required_string_duration
 func (UnimplementedHandler) TestRequestRequiredStringDuration(ctx context.Context, req time.Duration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDurationArray implements test_request_required_string_duration_array operation.
+	//
+	// POST /test_request_required_string_duration_array
 }
 
-// TestRequestRequiredStringDurationArray implements test_request_required_string_duration_array operation.
-//
-// POST /test_request_required_string_duration_array
 func (UnimplementedHandler) TestRequestRequiredStringDurationArray(ctx context.Context, req []time.Duration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDurationArrayArray implements test_request_required_string_duration_array_array operation.
+	//
+	// POST /test_request_required_string_duration_array_array
 }
 
-// TestRequestRequiredStringDurationArrayArray implements test_request_required_string_duration_array_array operation.
-//
-// POST /test_request_required_string_duration_array_array
 func (UnimplementedHandler) TestRequestRequiredStringDurationArrayArray(ctx context.Context, req [][]time.Duration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDurationNullable implements test_request_required_string_duration_nullable operation.
+	//
+	// POST /test_request_required_string_duration_nullable
 }
 
-// TestRequestRequiredStringDurationNullable implements test_request_required_string_duration_nullable operation.
-//
-// POST /test_request_required_string_duration_nullable
 func (UnimplementedHandler) TestRequestRequiredStringDurationNullable(ctx context.Context, req NilDuration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDurationNullableArray implements test_request_required_string_duration_nullable_array operation.
+	//
+	// POST /test_request_required_string_duration_nullable_array
 }
 
-// TestRequestRequiredStringDurationNullableArray implements test_request_required_string_duration_nullable_array operation.
-//
-// POST /test_request_required_string_duration_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringDurationNullableArray(ctx context.Context, req []NilDuration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringDurationNullableArrayArray implements test_request_required_string_duration_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_duration_nullable_array_array
 }
 
-// TestRequestRequiredStringDurationNullableArrayArray implements test_request_required_string_duration_nullable_array_array operation.
-//
-// POST /test_request_required_string_duration_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringDurationNullableArrayArray(ctx context.Context, req [][]NilDuration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringEmail implements test_request_required_string_email operation.
+	//
+	// POST /test_request_required_string_email
 }
 
-// TestRequestRequiredStringEmail implements test_request_required_string_email operation.
-//
-// POST /test_request_required_string_email
 func (UnimplementedHandler) TestRequestRequiredStringEmail(ctx context.Context, req string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringEmailArray implements test_request_required_string_email_array operation.
+	//
+	// POST /test_request_required_string_email_array
 }
 
-// TestRequestRequiredStringEmailArray implements test_request_required_string_email_array operation.
-//
-// POST /test_request_required_string_email_array
 func (UnimplementedHandler) TestRequestRequiredStringEmailArray(ctx context.Context, req []string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringEmailArrayArray implements test_request_required_string_email_array_array operation.
+	//
+	// POST /test_request_required_string_email_array_array
 }
 
-// TestRequestRequiredStringEmailArrayArray implements test_request_required_string_email_array_array operation.
-//
-// POST /test_request_required_string_email_array_array
 func (UnimplementedHandler) TestRequestRequiredStringEmailArrayArray(ctx context.Context, req [][]string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringEmailNullable implements test_request_required_string_email_nullable operation.
+	//
+	// POST /test_request_required_string_email_nullable
 }
 
-// TestRequestRequiredStringEmailNullable implements test_request_required_string_email_nullable operation.
-//
-// POST /test_request_required_string_email_nullable
 func (UnimplementedHandler) TestRequestRequiredStringEmailNullable(ctx context.Context, req NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringEmailNullableArray implements test_request_required_string_email_nullable_array operation.
+	//
+	// POST /test_request_required_string_email_nullable_array
 }
 
-// TestRequestRequiredStringEmailNullableArray implements test_request_required_string_email_nullable_array operation.
-//
-// POST /test_request_required_string_email_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringEmailNullableArray(ctx context.Context, req []NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringEmailNullableArrayArray implements test_request_required_string_email_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_email_nullable_array_array
 }
 
-// TestRequestRequiredStringEmailNullableArrayArray implements test_request_required_string_email_nullable_array_array operation.
-//
-// POST /test_request_required_string_email_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringEmailNullableArrayArray(ctx context.Context, req [][]NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat32 implements test_request_required_string_float32 operation.
+	//
+	// POST /test_request_required_string_float32
 }
 
-// TestRequestRequiredStringFloat32 implements test_request_required_string_float32 operation.
-//
-// POST /test_request_required_string_float32
 func (UnimplementedHandler) TestRequestRequiredStringFloat32(ctx context.Context, req float32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat32Array implements test_request_required_string_float32_array operation.
+	//
+	// POST /test_request_required_string_float32_array
 }
 
-// TestRequestRequiredStringFloat32Array implements test_request_required_string_float32_array operation.
-//
-// POST /test_request_required_string_float32_array
 func (UnimplementedHandler) TestRequestRequiredStringFloat32Array(ctx context.Context, req []float32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat32ArrayArray implements test_request_required_string_float32_array_array operation.
+	//
+	// POST /test_request_required_string_float32_array_array
 }
 
-// TestRequestRequiredStringFloat32ArrayArray implements test_request_required_string_float32_array_array operation.
-//
-// POST /test_request_required_string_float32_array_array
 func (UnimplementedHandler) TestRequestRequiredStringFloat32ArrayArray(ctx context.Context, req [][]float32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat32Nullable implements test_request_required_string_float32_nullable operation.
+	//
+	// POST /test_request_required_string_float32_nullable
 }
 
-// TestRequestRequiredStringFloat32Nullable implements test_request_required_string_float32_nullable operation.
-//
-// POST /test_request_required_string_float32_nullable
 func (UnimplementedHandler) TestRequestRequiredStringFloat32Nullable(ctx context.Context, req NilStringFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat32NullableArray implements test_request_required_string_float32_nullable_array operation.
+	//
+	// POST /test_request_required_string_float32_nullable_array
 }
 
-// TestRequestRequiredStringFloat32NullableArray implements test_request_required_string_float32_nullable_array operation.
-//
-// POST /test_request_required_string_float32_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringFloat32NullableArray(ctx context.Context, req []NilStringFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat32NullableArrayArray implements test_request_required_string_float32_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_float32_nullable_array_array
 }
 
-// TestRequestRequiredStringFloat32NullableArrayArray implements test_request_required_string_float32_nullable_array_array operation.
-//
-// POST /test_request_required_string_float32_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringFloat32NullableArrayArray(ctx context.Context, req [][]NilStringFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat64 implements test_request_required_string_float64 operation.
+	//
+	// POST /test_request_required_string_float64
 }
 
-// TestRequestRequiredStringFloat64 implements test_request_required_string_float64 operation.
-//
-// POST /test_request_required_string_float64
 func (UnimplementedHandler) TestRequestRequiredStringFloat64(ctx context.Context, req float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat64Array implements test_request_required_string_float64_array operation.
+	//
+	// POST /test_request_required_string_float64_array
 }
 
-// TestRequestRequiredStringFloat64Array implements test_request_required_string_float64_array operation.
-//
-// POST /test_request_required_string_float64_array
 func (UnimplementedHandler) TestRequestRequiredStringFloat64Array(ctx context.Context, req []float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat64ArrayArray implements test_request_required_string_float64_array_array operation.
+	//
+	// POST /test_request_required_string_float64_array_array
 }
 
-// TestRequestRequiredStringFloat64ArrayArray implements test_request_required_string_float64_array_array operation.
-//
-// POST /test_request_required_string_float64_array_array
 func (UnimplementedHandler) TestRequestRequiredStringFloat64ArrayArray(ctx context.Context, req [][]float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat64Nullable implements test_request_required_string_float64_nullable operation.
+	//
+	// POST /test_request_required_string_float64_nullable
 }
 
-// TestRequestRequiredStringFloat64Nullable implements test_request_required_string_float64_nullable operation.
-//
-// POST /test_request_required_string_float64_nullable
 func (UnimplementedHandler) TestRequestRequiredStringFloat64Nullable(ctx context.Context, req NilStringFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat64NullableArray implements test_request_required_string_float64_nullable_array operation.
+	//
+	// POST /test_request_required_string_float64_nullable_array
 }
 
-// TestRequestRequiredStringFloat64NullableArray implements test_request_required_string_float64_nullable_array operation.
-//
-// POST /test_request_required_string_float64_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringFloat64NullableArray(ctx context.Context, req []NilStringFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringFloat64NullableArrayArray implements test_request_required_string_float64_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_float64_nullable_array_array
 }
 
-// TestRequestRequiredStringFloat64NullableArrayArray implements test_request_required_string_float64_nullable_array_array operation.
-//
-// POST /test_request_required_string_float64_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringFloat64NullableArrayArray(ctx context.Context, req [][]NilStringFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHTTPDate implements test_request_required_string_http-date operation.
+	//
+	// POST /test_request_required_string_http-date
 }
 
-// TestRequestRequiredStringHTTPDate implements test_request_required_string_http-date operation.
-//
-// POST /test_request_required_string_http-date
 func (UnimplementedHandler) TestRequestRequiredStringHTTPDate(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHTTPDateArray implements test_request_required_string_http-date_array operation.
+	//
+	// POST /test_request_required_string_http-date_array
 }
 
-// TestRequestRequiredStringHTTPDateArray implements test_request_required_string_http-date_array operation.
-//
-// POST /test_request_required_string_http-date_array
 func (UnimplementedHandler) TestRequestRequiredStringHTTPDateArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHTTPDateArrayArray implements test_request_required_string_http-date_array_array operation.
+	//
+	// POST /test_request_required_string_http-date_array_array
 }
 
-// TestRequestRequiredStringHTTPDateArrayArray implements test_request_required_string_http-date_array_array operation.
-//
-// POST /test_request_required_string_http-date_array_array
 func (UnimplementedHandler) TestRequestRequiredStringHTTPDateArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHTTPDateNullable implements test_request_required_string_http-date_nullable operation.
+	//
+	// POST /test_request_required_string_http-date_nullable
 }
 
-// TestRequestRequiredStringHTTPDateNullable implements test_request_required_string_http-date_nullable operation.
-//
-// POST /test_request_required_string_http-date_nullable
 func (UnimplementedHandler) TestRequestRequiredStringHTTPDateNullable(ctx context.Context, req NilHTTPDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHTTPDateNullableArray implements test_request_required_string_http-date_nullable_array operation.
+	//
+	// POST /test_request_required_string_http-date_nullable_array
 }
 
-// TestRequestRequiredStringHTTPDateNullableArray implements test_request_required_string_http-date_nullable_array operation.
-//
-// POST /test_request_required_string_http-date_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringHTTPDateNullableArray(ctx context.Context, req []NilHTTPDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHTTPDateNullableArrayArray implements test_request_required_string_http-date_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_http-date_nullable_array_array
 }
 
-// TestRequestRequiredStringHTTPDateNullableArrayArray implements test_request_required_string_http-date_nullable_array_array operation.
-//
-// POST /test_request_required_string_http-date_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringHTTPDateNullableArrayArray(ctx context.Context, req [][]NilHTTPDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHostname implements test_request_required_string_hostname operation.
+	//
+	// POST /test_request_required_string_hostname
 }
 
-// TestRequestRequiredStringHostname implements test_request_required_string_hostname operation.
-//
-// POST /test_request_required_string_hostname
 func (UnimplementedHandler) TestRequestRequiredStringHostname(ctx context.Context, req string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHostnameArray implements test_request_required_string_hostname_array operation.
+	//
+	// POST /test_request_required_string_hostname_array
 }
 
-// TestRequestRequiredStringHostnameArray implements test_request_required_string_hostname_array operation.
-//
-// POST /test_request_required_string_hostname_array
 func (UnimplementedHandler) TestRequestRequiredStringHostnameArray(ctx context.Context, req []string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHostnameArrayArray implements test_request_required_string_hostname_array_array operation.
+	//
+	// POST /test_request_required_string_hostname_array_array
 }
 
-// TestRequestRequiredStringHostnameArrayArray implements test_request_required_string_hostname_array_array operation.
-//
-// POST /test_request_required_string_hostname_array_array
 func (UnimplementedHandler) TestRequestRequiredStringHostnameArrayArray(ctx context.Context, req [][]string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHostnameNullable implements test_request_required_string_hostname_nullable operation.
+	//
+	// POST /test_request_required_string_hostname_nullable
 }
 
-// TestRequestRequiredStringHostnameNullable implements test_request_required_string_hostname_nullable operation.
-//
-// POST /test_request_required_string_hostname_nullable
 func (UnimplementedHandler) TestRequestRequiredStringHostnameNullable(ctx context.Context, req NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHostnameNullableArray implements test_request_required_string_hostname_nullable_array operation.
+	//
+	// POST /test_request_required_string_hostname_nullable_array
 }
 
-// TestRequestRequiredStringHostnameNullableArray implements test_request_required_string_hostname_nullable_array operation.
-//
-// POST /test_request_required_string_hostname_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringHostnameNullableArray(ctx context.Context, req []NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringHostnameNullableArrayArray implements test_request_required_string_hostname_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_hostname_nullable_array_array
 }
 
-// TestRequestRequiredStringHostnameNullableArrayArray implements test_request_required_string_hostname_nullable_array_array operation.
-//
-// POST /test_request_required_string_hostname_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringHostnameNullableArrayArray(ctx context.Context, req [][]NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIP implements test_request_required_string_ip operation.
+	//
+	// POST /test_request_required_string_ip
 }
 
-// TestRequestRequiredStringIP implements test_request_required_string_ip operation.
-//
-// POST /test_request_required_string_ip
 func (UnimplementedHandler) TestRequestRequiredStringIP(ctx context.Context, req netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIPArray implements test_request_required_string_ip_array operation.
+	//
+	// POST /test_request_required_string_ip_array
 }
 
-// TestRequestRequiredStringIPArray implements test_request_required_string_ip_array operation.
-//
-// POST /test_request_required_string_ip_array
 func (UnimplementedHandler) TestRequestRequiredStringIPArray(ctx context.Context, req []netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIPArrayArray implements test_request_required_string_ip_array_array operation.
+	//
+	// POST /test_request_required_string_ip_array_array
 }
 
-// TestRequestRequiredStringIPArrayArray implements test_request_required_string_ip_array_array operation.
-//
-// POST /test_request_required_string_ip_array_array
 func (UnimplementedHandler) TestRequestRequiredStringIPArrayArray(ctx context.Context, req [][]netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIPNullable implements test_request_required_string_ip_nullable operation.
+	//
+	// POST /test_request_required_string_ip_nullable
 }
 
-// TestRequestRequiredStringIPNullable implements test_request_required_string_ip_nullable operation.
-//
-// POST /test_request_required_string_ip_nullable
 func (UnimplementedHandler) TestRequestRequiredStringIPNullable(ctx context.Context, req NilIP) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIPNullableArray implements test_request_required_string_ip_nullable_array operation.
+	//
+	// POST /test_request_required_string_ip_nullable_array
 }
 
-// TestRequestRequiredStringIPNullableArray implements test_request_required_string_ip_nullable_array operation.
-//
-// POST /test_request_required_string_ip_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringIPNullableArray(ctx context.Context, req []NilIP) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIPNullableArrayArray implements test_request_required_string_ip_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_ip_nullable_array_array
 }
 
-// TestRequestRequiredStringIPNullableArrayArray implements test_request_required_string_ip_nullable_array_array operation.
-//
-// POST /test_request_required_string_ip_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringIPNullableArrayArray(ctx context.Context, req [][]NilIP) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt implements test_request_required_string_int operation.
+	//
+	// POST /test_request_required_string_int
 }
 
-// TestRequestRequiredStringInt implements test_request_required_string_int operation.
-//
-// POST /test_request_required_string_int
 func (UnimplementedHandler) TestRequestRequiredStringInt(ctx context.Context, req int) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt16 implements test_request_required_string_int16 operation.
+	//
+	// POST /test_request_required_string_int16
 }
 
-// TestRequestRequiredStringInt16 implements test_request_required_string_int16 operation.
-//
-// POST /test_request_required_string_int16
 func (UnimplementedHandler) TestRequestRequiredStringInt16(ctx context.Context, req int16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt16Array implements test_request_required_string_int16_array operation.
+	//
+	// POST /test_request_required_string_int16_array
 }
 
-// TestRequestRequiredStringInt16Array implements test_request_required_string_int16_array operation.
-//
-// POST /test_request_required_string_int16_array
 func (UnimplementedHandler) TestRequestRequiredStringInt16Array(ctx context.Context, req []int16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt16ArrayArray implements test_request_required_string_int16_array_array operation.
+	//
+	// POST /test_request_required_string_int16_array_array
 }
 
-// TestRequestRequiredStringInt16ArrayArray implements test_request_required_string_int16_array_array operation.
-//
-// POST /test_request_required_string_int16_array_array
 func (UnimplementedHandler) TestRequestRequiredStringInt16ArrayArray(ctx context.Context, req [][]int16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt16Nullable implements test_request_required_string_int16_nullable operation.
+	//
+	// POST /test_request_required_string_int16_nullable
 }
 
-// TestRequestRequiredStringInt16Nullable implements test_request_required_string_int16_nullable operation.
-//
-// POST /test_request_required_string_int16_nullable
 func (UnimplementedHandler) TestRequestRequiredStringInt16Nullable(ctx context.Context, req NilStringInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt16NullableArray implements test_request_required_string_int16_nullable_array operation.
+	//
+	// POST /test_request_required_string_int16_nullable_array
 }
 
-// TestRequestRequiredStringInt16NullableArray implements test_request_required_string_int16_nullable_array operation.
-//
-// POST /test_request_required_string_int16_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringInt16NullableArray(ctx context.Context, req []NilStringInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt16NullableArrayArray implements test_request_required_string_int16_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_int16_nullable_array_array
 }
 
-// TestRequestRequiredStringInt16NullableArrayArray implements test_request_required_string_int16_nullable_array_array operation.
-//
-// POST /test_request_required_string_int16_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringInt16NullableArrayArray(ctx context.Context, req [][]NilStringInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt32 implements test_request_required_string_int32 operation.
+	//
+	// POST /test_request_required_string_int32
 }
 
-// TestRequestRequiredStringInt32 implements test_request_required_string_int32 operation.
-//
-// POST /test_request_required_string_int32
 func (UnimplementedHandler) TestRequestRequiredStringInt32(ctx context.Context, req int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt32Array implements test_request_required_string_int32_array operation.
+	//
+	// POST /test_request_required_string_int32_array
 }
 
-// TestRequestRequiredStringInt32Array implements test_request_required_string_int32_array operation.
-//
-// POST /test_request_required_string_int32_array
 func (UnimplementedHandler) TestRequestRequiredStringInt32Array(ctx context.Context, req []int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt32ArrayArray implements test_request_required_string_int32_array_array operation.
+	//
+	// POST /test_request_required_string_int32_array_array
 }
 
-// TestRequestRequiredStringInt32ArrayArray implements test_request_required_string_int32_array_array operation.
-//
-// POST /test_request_required_string_int32_array_array
 func (UnimplementedHandler) TestRequestRequiredStringInt32ArrayArray(ctx context.Context, req [][]int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt32Nullable implements test_request_required_string_int32_nullable operation.
+	//
+	// POST /test_request_required_string_int32_nullable
 }
 
-// TestRequestRequiredStringInt32Nullable implements test_request_required_string_int32_nullable operation.
-//
-// POST /test_request_required_string_int32_nullable
 func (UnimplementedHandler) TestRequestRequiredStringInt32Nullable(ctx context.Context, req NilStringInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt32NullableArray implements test_request_required_string_int32_nullable_array operation.
+	//
+	// POST /test_request_required_string_int32_nullable_array
 }
 
-// TestRequestRequiredStringInt32NullableArray implements test_request_required_string_int32_nullable_array operation.
-//
-// POST /test_request_required_string_int32_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringInt32NullableArray(ctx context.Context, req []NilStringInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt32NullableArrayArray implements test_request_required_string_int32_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_int32_nullable_array_array
 }
 
-// TestRequestRequiredStringInt32NullableArrayArray implements test_request_required_string_int32_nullable_array_array operation.
-//
-// POST /test_request_required_string_int32_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringInt32NullableArrayArray(ctx context.Context, req [][]NilStringInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt64 implements test_request_required_string_int64 operation.
+	//
+	// POST /test_request_required_string_int64
 }
 
-// TestRequestRequiredStringInt64 implements test_request_required_string_int64 operation.
-//
-// POST /test_request_required_string_int64
 func (UnimplementedHandler) TestRequestRequiredStringInt64(ctx context.Context, req int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt64Array implements test_request_required_string_int64_array operation.
+	//
+	// POST /test_request_required_string_int64_array
 }
 
-// TestRequestRequiredStringInt64Array implements test_request_required_string_int64_array operation.
-//
-// POST /test_request_required_string_int64_array
 func (UnimplementedHandler) TestRequestRequiredStringInt64Array(ctx context.Context, req []int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt64ArrayArray implements test_request_required_string_int64_array_array operation.
+	//
+	// POST /test_request_required_string_int64_array_array
 }
 
-// TestRequestRequiredStringInt64ArrayArray implements test_request_required_string_int64_array_array operation.
-//
-// POST /test_request_required_string_int64_array_array
 func (UnimplementedHandler) TestRequestRequiredStringInt64ArrayArray(ctx context.Context, req [][]int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt64Nullable implements test_request_required_string_int64_nullable operation.
+	//
+	// POST /test_request_required_string_int64_nullable
 }
 
-// TestRequestRequiredStringInt64Nullable implements test_request_required_string_int64_nullable operation.
-//
-// POST /test_request_required_string_int64_nullable
 func (UnimplementedHandler) TestRequestRequiredStringInt64Nullable(ctx context.Context, req NilStringInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt64NullableArray implements test_request_required_string_int64_nullable_array operation.
+	//
+	// POST /test_request_required_string_int64_nullable_array
 }
 
-// TestRequestRequiredStringInt64NullableArray implements test_request_required_string_int64_nullable_array operation.
-//
-// POST /test_request_required_string_int64_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringInt64NullableArray(ctx context.Context, req []NilStringInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt64NullableArrayArray implements test_request_required_string_int64_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_int64_nullable_array_array
 }
 
-// TestRequestRequiredStringInt64NullableArrayArray implements test_request_required_string_int64_nullable_array_array operation.
-//
-// POST /test_request_required_string_int64_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringInt64NullableArrayArray(ctx context.Context, req [][]NilStringInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt8 implements test_request_required_string_int8 operation.
+	//
+	// POST /test_request_required_string_int8
 }
 
-// TestRequestRequiredStringInt8 implements test_request_required_string_int8 operation.
-//
-// POST /test_request_required_string_int8
 func (UnimplementedHandler) TestRequestRequiredStringInt8(ctx context.Context, req int8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt8Array implements test_request_required_string_int8_array operation.
+	//
+	// POST /test_request_required_string_int8_array
 }
 
-// TestRequestRequiredStringInt8Array implements test_request_required_string_int8_array operation.
-//
-// POST /test_request_required_string_int8_array
 func (UnimplementedHandler) TestRequestRequiredStringInt8Array(ctx context.Context, req []int8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt8ArrayArray implements test_request_required_string_int8_array_array operation.
+	//
+	// POST /test_request_required_string_int8_array_array
 }
 
-// TestRequestRequiredStringInt8ArrayArray implements test_request_required_string_int8_array_array operation.
-//
-// POST /test_request_required_string_int8_array_array
 func (UnimplementedHandler) TestRequestRequiredStringInt8ArrayArray(ctx context.Context, req [][]int8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt8Nullable implements test_request_required_string_int8_nullable operation.
+	//
+	// POST /test_request_required_string_int8_nullable
 }
 
-// TestRequestRequiredStringInt8Nullable implements test_request_required_string_int8_nullable operation.
-//
-// POST /test_request_required_string_int8_nullable
 func (UnimplementedHandler) TestRequestRequiredStringInt8Nullable(ctx context.Context, req NilStringInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt8NullableArray implements test_request_required_string_int8_nullable_array operation.
+	//
+	// POST /test_request_required_string_int8_nullable_array
 }
 
-// TestRequestRequiredStringInt8NullableArray implements test_request_required_string_int8_nullable_array operation.
-//
-// POST /test_request_required_string_int8_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringInt8NullableArray(ctx context.Context, req []NilStringInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringInt8NullableArrayArray implements test_request_required_string_int8_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_int8_nullable_array_array
 }
 
-// TestRequestRequiredStringInt8NullableArrayArray implements test_request_required_string_int8_nullable_array_array operation.
-//
-// POST /test_request_required_string_int8_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringInt8NullableArrayArray(ctx context.Context, req [][]NilStringInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIntArray implements test_request_required_string_int_array operation.
+	//
+	// POST /test_request_required_string_int_array
 }
 
-// TestRequestRequiredStringIntArray implements test_request_required_string_int_array operation.
-//
-// POST /test_request_required_string_int_array
 func (UnimplementedHandler) TestRequestRequiredStringIntArray(ctx context.Context, req []int) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIntArrayArray implements test_request_required_string_int_array_array operation.
+	//
+	// POST /test_request_required_string_int_array_array
 }
 
-// TestRequestRequiredStringIntArrayArray implements test_request_required_string_int_array_array operation.
-//
-// POST /test_request_required_string_int_array_array
 func (UnimplementedHandler) TestRequestRequiredStringIntArrayArray(ctx context.Context, req [][]int) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIntNullable implements test_request_required_string_int_nullable operation.
+	//
+	// POST /test_request_required_string_int_nullable
 }
 
-// TestRequestRequiredStringIntNullable implements test_request_required_string_int_nullable operation.
-//
-// POST /test_request_required_string_int_nullable
 func (UnimplementedHandler) TestRequestRequiredStringIntNullable(ctx context.Context, req NilStringInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIntNullableArray implements test_request_required_string_int_nullable_array operation.
+	//
+	// POST /test_request_required_string_int_nullable_array
 }
 
-// TestRequestRequiredStringIntNullableArray implements test_request_required_string_int_nullable_array operation.
-//
-// POST /test_request_required_string_int_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringIntNullableArray(ctx context.Context, req []NilStringInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIntNullableArrayArray implements test_request_required_string_int_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_int_nullable_array_array
 }
 
-// TestRequestRequiredStringIntNullableArrayArray implements test_request_required_string_int_nullable_array_array operation.
-//
-// POST /test_request_required_string_int_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringIntNullableArrayArray(ctx context.Context, req [][]NilStringInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv4 implements test_request_required_string_ipv4 operation.
+	//
+	// POST /test_request_required_string_ipv4
 }
 
-// TestRequestRequiredStringIpv4 implements test_request_required_string_ipv4 operation.
-//
-// POST /test_request_required_string_ipv4
 func (UnimplementedHandler) TestRequestRequiredStringIpv4(ctx context.Context, req netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv4Array implements test_request_required_string_ipv4_array operation.
+	//
+	// POST /test_request_required_string_ipv4_array
 }
 
-// TestRequestRequiredStringIpv4Array implements test_request_required_string_ipv4_array operation.
-//
-// POST /test_request_required_string_ipv4_array
 func (UnimplementedHandler) TestRequestRequiredStringIpv4Array(ctx context.Context, req []netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv4ArrayArray implements test_request_required_string_ipv4_array_array operation.
+	//
+	// POST /test_request_required_string_ipv4_array_array
 }
 
-// TestRequestRequiredStringIpv4ArrayArray implements test_request_required_string_ipv4_array_array operation.
-//
-// POST /test_request_required_string_ipv4_array_array
 func (UnimplementedHandler) TestRequestRequiredStringIpv4ArrayArray(ctx context.Context, req [][]netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv4Nullable implements test_request_required_string_ipv4_nullable operation.
+	//
+	// POST /test_request_required_string_ipv4_nullable
 }
 
-// TestRequestRequiredStringIpv4Nullable implements test_request_required_string_ipv4_nullable operation.
-//
-// POST /test_request_required_string_ipv4_nullable
 func (UnimplementedHandler) TestRequestRequiredStringIpv4Nullable(ctx context.Context, req NilIPv4) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv4NullableArray implements test_request_required_string_ipv4_nullable_array operation.
+	//
+	// POST /test_request_required_string_ipv4_nullable_array
 }
 
-// TestRequestRequiredStringIpv4NullableArray implements test_request_required_string_ipv4_nullable_array operation.
-//
-// POST /test_request_required_string_ipv4_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringIpv4NullableArray(ctx context.Context, req []NilIPv4) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv4NullableArrayArray implements test_request_required_string_ipv4_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_ipv4_nullable_array_array
 }
 
-// TestRequestRequiredStringIpv4NullableArrayArray implements test_request_required_string_ipv4_nullable_array_array operation.
-//
-// POST /test_request_required_string_ipv4_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringIpv4NullableArrayArray(ctx context.Context, req [][]NilIPv4) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv6 implements test_request_required_string_ipv6 operation.
+	//
+	// POST /test_request_required_string_ipv6
 }
 
-// TestRequestRequiredStringIpv6 implements test_request_required_string_ipv6 operation.
-//
-// POST /test_request_required_string_ipv6
 func (UnimplementedHandler) TestRequestRequiredStringIpv6(ctx context.Context, req netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv6Array implements test_request_required_string_ipv6_array operation.
+	//
+	// POST /test_request_required_string_ipv6_array
 }
 
-// TestRequestRequiredStringIpv6Array implements test_request_required_string_ipv6_array operation.
-//
-// POST /test_request_required_string_ipv6_array
 func (UnimplementedHandler) TestRequestRequiredStringIpv6Array(ctx context.Context, req []netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv6ArrayArray implements test_request_required_string_ipv6_array_array operation.
+	//
+	// POST /test_request_required_string_ipv6_array_array
 }
 
-// TestRequestRequiredStringIpv6ArrayArray implements test_request_required_string_ipv6_array_array operation.
-//
-// POST /test_request_required_string_ipv6_array_array
 func (UnimplementedHandler) TestRequestRequiredStringIpv6ArrayArray(ctx context.Context, req [][]netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv6Nullable implements test_request_required_string_ipv6_nullable operation.
+	//
+	// POST /test_request_required_string_ipv6_nullable
 }
 
-// TestRequestRequiredStringIpv6Nullable implements test_request_required_string_ipv6_nullable operation.
-//
-// POST /test_request_required_string_ipv6_nullable
 func (UnimplementedHandler) TestRequestRequiredStringIpv6Nullable(ctx context.Context, req NilIPv6) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv6NullableArray implements test_request_required_string_ipv6_nullable_array operation.
+	//
+	// POST /test_request_required_string_ipv6_nullable_array
 }
 
-// TestRequestRequiredStringIpv6NullableArray implements test_request_required_string_ipv6_nullable_array operation.
-//
-// POST /test_request_required_string_ipv6_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringIpv6NullableArray(ctx context.Context, req []NilIPv6) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringIpv6NullableArrayArray implements test_request_required_string_ipv6_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_ipv6_nullable_array_array
 }
 
-// TestRequestRequiredStringIpv6NullableArrayArray implements test_request_required_string_ipv6_nullable_array_array operation.
-//
-// POST /test_request_required_string_ipv6_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringIpv6NullableArrayArray(ctx context.Context, req [][]NilIPv6) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringMAC implements test_request_required_string_mac operation.
+	//
+	// POST /test_request_required_string_mac
 }
 
-// TestRequestRequiredStringMAC implements test_request_required_string_mac operation.
-//
-// POST /test_request_required_string_mac
 func (UnimplementedHandler) TestRequestRequiredStringMAC(ctx context.Context, req net.HardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringMACArray implements test_request_required_string_mac_array operation.
+	//
+	// POST /test_request_required_string_mac_array
 }
 
-// TestRequestRequiredStringMACArray implements test_request_required_string_mac_array operation.
-//
-// POST /test_request_required_string_mac_array
 func (UnimplementedHandler) TestRequestRequiredStringMACArray(ctx context.Context, req []net.HardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringMACArrayArray implements test_request_required_string_mac_array_array operation.
+	//
+	// POST /test_request_required_string_mac_array_array
 }
 
-// TestRequestRequiredStringMACArrayArray implements test_request_required_string_mac_array_array operation.
-//
-// POST /test_request_required_string_mac_array_array
 func (UnimplementedHandler) TestRequestRequiredStringMACArrayArray(ctx context.Context, req [][]net.HardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringMACNullable implements test_request_required_string_mac_nullable operation.
+	//
+	// POST /test_request_required_string_mac_nullable
 }
 
-// TestRequestRequiredStringMACNullable implements test_request_required_string_mac_nullable operation.
-//
-// POST /test_request_required_string_mac_nullable
 func (UnimplementedHandler) TestRequestRequiredStringMACNullable(ctx context.Context, req NilHardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringMACNullableArray implements test_request_required_string_mac_nullable_array operation.
+	//
+	// POST /test_request_required_string_mac_nullable_array
 }
 
-// TestRequestRequiredStringMACNullableArray implements test_request_required_string_mac_nullable_array operation.
-//
-// POST /test_request_required_string_mac_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringMACNullableArray(ctx context.Context, req []NilHardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringMACNullableArrayArray implements test_request_required_string_mac_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_mac_nullable_array_array
 }
 
-// TestRequestRequiredStringMACNullableArrayArray implements test_request_required_string_mac_nullable_array_array operation.
-//
-// POST /test_request_required_string_mac_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringMACNullableArrayArray(ctx context.Context, req [][]NilHardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringNullable implements test_request_required_string_nullable operation.
+	//
+	// POST /test_request_required_string_nullable
 }
 
-// TestRequestRequiredStringNullable implements test_request_required_string_nullable operation.
-//
-// POST /test_request_required_string_nullable
 func (UnimplementedHandler) TestRequestRequiredStringNullable(ctx context.Context, req NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringNullableArray implements test_request_required_string_nullable_array operation.
+	//
+	// POST /test_request_required_string_nullable_array
 }
 
-// TestRequestRequiredStringNullableArray implements test_request_required_string_nullable_array operation.
-//
-// POST /test_request_required_string_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringNullableArray(ctx context.Context, req []NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringNullableArrayArray implements test_request_required_string_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_nullable_array_array
 }
 
-// TestRequestRequiredStringNullableArrayArray implements test_request_required_string_nullable_array_array operation.
-//
-// POST /test_request_required_string_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringNullableArrayArray(ctx context.Context, req [][]NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringPassword implements test_request_required_string_password operation.
+	//
+	// POST /test_request_required_string_password
 }
 
-// TestRequestRequiredStringPassword implements test_request_required_string_password operation.
-//
-// POST /test_request_required_string_password
 func (UnimplementedHandler) TestRequestRequiredStringPassword(ctx context.Context, req string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringPasswordArray implements test_request_required_string_password_array operation.
+	//
+	// POST /test_request_required_string_password_array
 }
 
-// TestRequestRequiredStringPasswordArray implements test_request_required_string_password_array operation.
-//
-// POST /test_request_required_string_password_array
 func (UnimplementedHandler) TestRequestRequiredStringPasswordArray(ctx context.Context, req []string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringPasswordArrayArray implements test_request_required_string_password_array_array operation.
+	//
+	// POST /test_request_required_string_password_array_array
 }
 
-// TestRequestRequiredStringPasswordArrayArray implements test_request_required_string_password_array_array operation.
-//
-// POST /test_request_required_string_password_array_array
 func (UnimplementedHandler) TestRequestRequiredStringPasswordArrayArray(ctx context.Context, req [][]string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringPasswordNullable implements test_request_required_string_password_nullable operation.
+	//
+	// POST /test_request_required_string_password_nullable
 }
 
-// TestRequestRequiredStringPasswordNullable implements test_request_required_string_password_nullable operation.
-//
-// POST /test_request_required_string_password_nullable
 func (UnimplementedHandler) TestRequestRequiredStringPasswordNullable(ctx context.Context, req NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringPasswordNullableArray implements test_request_required_string_password_nullable_array operation.
+	//
+	// POST /test_request_required_string_password_nullable_array
 }
 
-// TestRequestRequiredStringPasswordNullableArray implements test_request_required_string_password_nullable_array operation.
-//
-// POST /test_request_required_string_password_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringPasswordNullableArray(ctx context.Context, req []NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringPasswordNullableArrayArray implements test_request_required_string_password_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_password_nullable_array_array
 }
 
-// TestRequestRequiredStringPasswordNullableArrayArray implements test_request_required_string_password_nullable_array_array operation.
-//
-// POST /test_request_required_string_password_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringPasswordNullableArrayArray(ctx context.Context, req [][]NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringTime implements test_request_required_string_time operation.
+	//
+	// POST /test_request_required_string_time
 }
 
-// TestRequestRequiredStringTime implements test_request_required_string_time operation.
-//
-// POST /test_request_required_string_time
 func (UnimplementedHandler) TestRequestRequiredStringTime(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringTimeArray implements test_request_required_string_time_array operation.
+	//
+	// POST /test_request_required_string_time_array
 }
 
-// TestRequestRequiredStringTimeArray implements test_request_required_string_time_array operation.
-//
-// POST /test_request_required_string_time_array
 func (UnimplementedHandler) TestRequestRequiredStringTimeArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringTimeArrayArray implements test_request_required_string_time_array_array operation.
+	//
+	// POST /test_request_required_string_time_array_array
 }
 
-// TestRequestRequiredStringTimeArrayArray implements test_request_required_string_time_array_array operation.
-//
-// POST /test_request_required_string_time_array_array
 func (UnimplementedHandler) TestRequestRequiredStringTimeArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringTimeNullable implements test_request_required_string_time_nullable operation.
+	//
+	// POST /test_request_required_string_time_nullable
 }
 
-// TestRequestRequiredStringTimeNullable implements test_request_required_string_time_nullable operation.
-//
-// POST /test_request_required_string_time_nullable
 func (UnimplementedHandler) TestRequestRequiredStringTimeNullable(ctx context.Context, req NilTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringTimeNullableArray implements test_request_required_string_time_nullable_array operation.
+	//
+	// POST /test_request_required_string_time_nullable_array
 }
 
-// TestRequestRequiredStringTimeNullableArray implements test_request_required_string_time_nullable_array operation.
-//
-// POST /test_request_required_string_time_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringTimeNullableArray(ctx context.Context, req []NilTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringTimeNullableArrayArray implements test_request_required_string_time_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_time_nullable_array_array
 }
 
-// TestRequestRequiredStringTimeNullableArrayArray implements test_request_required_string_time_nullable_array_array operation.
-//
-// POST /test_request_required_string_time_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringTimeNullableArrayArray(ctx context.Context, req [][]NilTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringURI implements test_request_required_string_uri operation.
+	//
+	// POST /test_request_required_string_uri
 }
 
-// TestRequestRequiredStringURI implements test_request_required_string_uri operation.
-//
-// POST /test_request_required_string_uri
 func (UnimplementedHandler) TestRequestRequiredStringURI(ctx context.Context, req url.URL) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringURIArray implements test_request_required_string_uri_array operation.
+	//
+	// POST /test_request_required_string_uri_array
 }
 
-// TestRequestRequiredStringURIArray implements test_request_required_string_uri_array operation.
-//
-// POST /test_request_required_string_uri_array
 func (UnimplementedHandler) TestRequestRequiredStringURIArray(ctx context.Context, req []url.URL) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringURIArrayArray implements test_request_required_string_uri_array_array operation.
+	//
+	// POST /test_request_required_string_uri_array_array
 }
 
-// TestRequestRequiredStringURIArrayArray implements test_request_required_string_uri_array_array operation.
-//
-// POST /test_request_required_string_uri_array_array
 func (UnimplementedHandler) TestRequestRequiredStringURIArrayArray(ctx context.Context, req [][]url.URL) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringURINullable implements test_request_required_string_uri_nullable operation.
+	//
+	// POST /test_request_required_string_uri_nullable
 }
 
-// TestRequestRequiredStringURINullable implements test_request_required_string_uri_nullable operation.
-//
-// POST /test_request_required_string_uri_nullable
 func (UnimplementedHandler) TestRequestRequiredStringURINullable(ctx context.Context, req NilURI) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringURINullableArray implements test_request_required_string_uri_nullable_array operation.
+	//
+	// POST /test_request_required_string_uri_nullable_array
 }
 
-// TestRequestRequiredStringURINullableArray implements test_request_required_string_uri_nullable_array operation.
-//
-// POST /test_request_required_string_uri_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringURINullableArray(ctx context.Context, req []NilURI) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringURINullableArrayArray implements test_request_required_string_uri_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_uri_nullable_array_array
 }
 
-// TestRequestRequiredStringURINullableArrayArray implements test_request_required_string_uri_nullable_array_array operation.
-//
-// POST /test_request_required_string_uri_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringURINullableArrayArray(ctx context.Context, req [][]NilURI) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUUID implements test_request_required_string_uuid operation.
+	//
+	// POST /test_request_required_string_uuid
 }
 
-// TestRequestRequiredStringUUID implements test_request_required_string_uuid operation.
-//
-// POST /test_request_required_string_uuid
 func (UnimplementedHandler) TestRequestRequiredStringUUID(ctx context.Context, req uuid.UUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUUIDArray implements test_request_required_string_uuid_array operation.
+	//
+	// POST /test_request_required_string_uuid_array
 }
 
-// TestRequestRequiredStringUUIDArray implements test_request_required_string_uuid_array operation.
-//
-// POST /test_request_required_string_uuid_array
 func (UnimplementedHandler) TestRequestRequiredStringUUIDArray(ctx context.Context, req []uuid.UUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUUIDArrayArray implements test_request_required_string_uuid_array_array operation.
+	//
+	// POST /test_request_required_string_uuid_array_array
 }
 
-// TestRequestRequiredStringUUIDArrayArray implements test_request_required_string_uuid_array_array operation.
-//
-// POST /test_request_required_string_uuid_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUUIDArrayArray(ctx context.Context, req [][]uuid.UUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUUIDNullable implements test_request_required_string_uuid_nullable operation.
+	//
+	// POST /test_request_required_string_uuid_nullable
 }
 
-// TestRequestRequiredStringUUIDNullable implements test_request_required_string_uuid_nullable operation.
-//
-// POST /test_request_required_string_uuid_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUUIDNullable(ctx context.Context, req NilUUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUUIDNullableArray implements test_request_required_string_uuid_nullable_array operation.
+	//
+	// POST /test_request_required_string_uuid_nullable_array
 }
 
-// TestRequestRequiredStringUUIDNullableArray implements test_request_required_string_uuid_nullable_array operation.
-//
-// POST /test_request_required_string_uuid_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUUIDNullableArray(ctx context.Context, req []NilUUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUUIDNullableArrayArray implements test_request_required_string_uuid_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_uuid_nullable_array_array
 }
 
-// TestRequestRequiredStringUUIDNullableArrayArray implements test_request_required_string_uuid_nullable_array_array operation.
-//
-// POST /test_request_required_string_uuid_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUUIDNullableArrayArray(ctx context.Context, req [][]NilUUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint implements test_request_required_string_uint operation.
+	//
+	// POST /test_request_required_string_uint
 }
 
-// TestRequestRequiredStringUint implements test_request_required_string_uint operation.
-//
-// POST /test_request_required_string_uint
 func (UnimplementedHandler) TestRequestRequiredStringUint(ctx context.Context, req uint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint16 implements test_request_required_string_uint16 operation.
+	//
+	// POST /test_request_required_string_uint16
 }
 
-// TestRequestRequiredStringUint16 implements test_request_required_string_uint16 operation.
-//
-// POST /test_request_required_string_uint16
 func (UnimplementedHandler) TestRequestRequiredStringUint16(ctx context.Context, req uint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint16Array implements test_request_required_string_uint16_array operation.
+	//
+	// POST /test_request_required_string_uint16_array
 }
 
-// TestRequestRequiredStringUint16Array implements test_request_required_string_uint16_array operation.
-//
-// POST /test_request_required_string_uint16_array
 func (UnimplementedHandler) TestRequestRequiredStringUint16Array(ctx context.Context, req []uint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint16ArrayArray implements test_request_required_string_uint16_array_array operation.
+	//
+	// POST /test_request_required_string_uint16_array_array
 }
 
-// TestRequestRequiredStringUint16ArrayArray implements test_request_required_string_uint16_array_array operation.
-//
-// POST /test_request_required_string_uint16_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUint16ArrayArray(ctx context.Context, req [][]uint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint16Nullable implements test_request_required_string_uint16_nullable operation.
+	//
+	// POST /test_request_required_string_uint16_nullable
 }
 
-// TestRequestRequiredStringUint16Nullable implements test_request_required_string_uint16_nullable operation.
-//
-// POST /test_request_required_string_uint16_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUint16Nullable(ctx context.Context, req NilStringUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint16NullableArray implements test_request_required_string_uint16_nullable_array operation.
+	//
+	// POST /test_request_required_string_uint16_nullable_array
 }
 
-// TestRequestRequiredStringUint16NullableArray implements test_request_required_string_uint16_nullable_array operation.
-//
-// POST /test_request_required_string_uint16_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUint16NullableArray(ctx context.Context, req []NilStringUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint16NullableArrayArray implements test_request_required_string_uint16_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_uint16_nullable_array_array
 }
 
-// TestRequestRequiredStringUint16NullableArrayArray implements test_request_required_string_uint16_nullable_array_array operation.
-//
-// POST /test_request_required_string_uint16_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUint16NullableArrayArray(ctx context.Context, req [][]NilStringUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint32 implements test_request_required_string_uint32 operation.
+	//
+	// POST /test_request_required_string_uint32
 }
 
-// TestRequestRequiredStringUint32 implements test_request_required_string_uint32 operation.
-//
-// POST /test_request_required_string_uint32
 func (UnimplementedHandler) TestRequestRequiredStringUint32(ctx context.Context, req uint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint32Array implements test_request_required_string_uint32_array operation.
+	//
+	// POST /test_request_required_string_uint32_array
 }
 
-// TestRequestRequiredStringUint32Array implements test_request_required_string_uint32_array operation.
-//
-// POST /test_request_required_string_uint32_array
 func (UnimplementedHandler) TestRequestRequiredStringUint32Array(ctx context.Context, req []uint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint32ArrayArray implements test_request_required_string_uint32_array_array operation.
+	//
+	// POST /test_request_required_string_uint32_array_array
 }
 
-// TestRequestRequiredStringUint32ArrayArray implements test_request_required_string_uint32_array_array operation.
-//
-// POST /test_request_required_string_uint32_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUint32ArrayArray(ctx context.Context, req [][]uint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint32Nullable implements test_request_required_string_uint32_nullable operation.
+	//
+	// POST /test_request_required_string_uint32_nullable
 }
 
-// TestRequestRequiredStringUint32Nullable implements test_request_required_string_uint32_nullable operation.
-//
-// POST /test_request_required_string_uint32_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUint32Nullable(ctx context.Context, req NilStringUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint32NullableArray implements test_request_required_string_uint32_nullable_array operation.
+	//
+	// POST /test_request_required_string_uint32_nullable_array
 }
 
-// TestRequestRequiredStringUint32NullableArray implements test_request_required_string_uint32_nullable_array operation.
-//
-// POST /test_request_required_string_uint32_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUint32NullableArray(ctx context.Context, req []NilStringUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint32NullableArrayArray implements test_request_required_string_uint32_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_uint32_nullable_array_array
 }
 
-// TestRequestRequiredStringUint32NullableArrayArray implements test_request_required_string_uint32_nullable_array_array operation.
-//
-// POST /test_request_required_string_uint32_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUint32NullableArrayArray(ctx context.Context, req [][]NilStringUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint64 implements test_request_required_string_uint64 operation.
+	//
+	// POST /test_request_required_string_uint64
 }
 
-// TestRequestRequiredStringUint64 implements test_request_required_string_uint64 operation.
-//
-// POST /test_request_required_string_uint64
 func (UnimplementedHandler) TestRequestRequiredStringUint64(ctx context.Context, req uint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint64Array implements test_request_required_string_uint64_array operation.
+	//
+	// POST /test_request_required_string_uint64_array
 }
 
-// TestRequestRequiredStringUint64Array implements test_request_required_string_uint64_array operation.
-//
-// POST /test_request_required_string_uint64_array
 func (UnimplementedHandler) TestRequestRequiredStringUint64Array(ctx context.Context, req []uint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint64ArrayArray implements test_request_required_string_uint64_array_array operation.
+	//
+	// POST /test_request_required_string_uint64_array_array
 }
 
-// TestRequestRequiredStringUint64ArrayArray implements test_request_required_string_uint64_array_array operation.
-//
-// POST /test_request_required_string_uint64_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUint64ArrayArray(ctx context.Context, req [][]uint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint64Nullable implements test_request_required_string_uint64_nullable operation.
+	//
+	// POST /test_request_required_string_uint64_nullable
 }
 
-// TestRequestRequiredStringUint64Nullable implements test_request_required_string_uint64_nullable operation.
-//
-// POST /test_request_required_string_uint64_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUint64Nullable(ctx context.Context, req NilStringUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint64NullableArray implements test_request_required_string_uint64_nullable_array operation.
+	//
+	// POST /test_request_required_string_uint64_nullable_array
 }
 
-// TestRequestRequiredStringUint64NullableArray implements test_request_required_string_uint64_nullable_array operation.
-//
-// POST /test_request_required_string_uint64_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUint64NullableArray(ctx context.Context, req []NilStringUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint64NullableArrayArray implements test_request_required_string_uint64_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_uint64_nullable_array_array
 }
 
-// TestRequestRequiredStringUint64NullableArrayArray implements test_request_required_string_uint64_nullable_array_array operation.
-//
-// POST /test_request_required_string_uint64_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUint64NullableArrayArray(ctx context.Context, req [][]NilStringUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint8 implements test_request_required_string_uint8 operation.
+	//
+	// POST /test_request_required_string_uint8
 }
 
-// TestRequestRequiredStringUint8 implements test_request_required_string_uint8 operation.
-//
-// POST /test_request_required_string_uint8
 func (UnimplementedHandler) TestRequestRequiredStringUint8(ctx context.Context, req uint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint8Array implements test_request_required_string_uint8_array operation.
+	//
+	// POST /test_request_required_string_uint8_array
 }
 
-// TestRequestRequiredStringUint8Array implements test_request_required_string_uint8_array operation.
-//
-// POST /test_request_required_string_uint8_array
 func (UnimplementedHandler) TestRequestRequiredStringUint8Array(ctx context.Context, req []uint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint8ArrayArray implements test_request_required_string_uint8_array_array operation.
+	//
+	// POST /test_request_required_string_uint8_array_array
 }
 
-// TestRequestRequiredStringUint8ArrayArray implements test_request_required_string_uint8_array_array operation.
-//
-// POST /test_request_required_string_uint8_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUint8ArrayArray(ctx context.Context, req [][]uint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint8Nullable implements test_request_required_string_uint8_nullable operation.
+	//
+	// POST /test_request_required_string_uint8_nullable
 }
 
-// TestRequestRequiredStringUint8Nullable implements test_request_required_string_uint8_nullable operation.
-//
-// POST /test_request_required_string_uint8_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUint8Nullable(ctx context.Context, req NilStringUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint8NullableArray implements test_request_required_string_uint8_nullable_array operation.
+	//
+	// POST /test_request_required_string_uint8_nullable_array
 }
 
-// TestRequestRequiredStringUint8NullableArray implements test_request_required_string_uint8_nullable_array operation.
-//
-// POST /test_request_required_string_uint8_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUint8NullableArray(ctx context.Context, req []NilStringUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUint8NullableArrayArray implements test_request_required_string_uint8_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_uint8_nullable_array_array
 }
 
-// TestRequestRequiredStringUint8NullableArrayArray implements test_request_required_string_uint8_nullable_array_array operation.
-//
-// POST /test_request_required_string_uint8_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUint8NullableArrayArray(ctx context.Context, req [][]NilStringUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUintArray implements test_request_required_string_uint_array operation.
+	//
+	// POST /test_request_required_string_uint_array
 }
 
-// TestRequestRequiredStringUintArray implements test_request_required_string_uint_array operation.
-//
-// POST /test_request_required_string_uint_array
 func (UnimplementedHandler) TestRequestRequiredStringUintArray(ctx context.Context, req []uint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUintArrayArray implements test_request_required_string_uint_array_array operation.
+	//
+	// POST /test_request_required_string_uint_array_array
 }
 
-// TestRequestRequiredStringUintArrayArray implements test_request_required_string_uint_array_array operation.
-//
-// POST /test_request_required_string_uint_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUintArrayArray(ctx context.Context, req [][]uint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUintNullable implements test_request_required_string_uint_nullable operation.
+	//
+	// POST /test_request_required_string_uint_nullable
 }
 
-// TestRequestRequiredStringUintNullable implements test_request_required_string_uint_nullable operation.
-//
-// POST /test_request_required_string_uint_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUintNullable(ctx context.Context, req NilStringUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUintNullableArray implements test_request_required_string_uint_nullable_array operation.
+	//
+	// POST /test_request_required_string_uint_nullable_array
 }
 
-// TestRequestRequiredStringUintNullableArray implements test_request_required_string_uint_nullable_array operation.
-//
-// POST /test_request_required_string_uint_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUintNullableArray(ctx context.Context, req []NilStringUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUintNullableArrayArray implements test_request_required_string_uint_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_uint_nullable_array_array
 }
 
-// TestRequestRequiredStringUintNullableArrayArray implements test_request_required_string_uint_nullable_array_array operation.
-//
-// POST /test_request_required_string_uint_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUintNullableArrayArray(ctx context.Context, req [][]NilStringUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnix implements test_request_required_string_unix operation.
+	//
+	// POST /test_request_required_string_unix
 }
 
-// TestRequestRequiredStringUnix implements test_request_required_string_unix operation.
-//
-// POST /test_request_required_string_unix
 func (UnimplementedHandler) TestRequestRequiredStringUnix(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixArray implements test_request_required_string_unix_array operation.
+	//
+	// POST /test_request_required_string_unix_array
 }
 
-// TestRequestRequiredStringUnixArray implements test_request_required_string_unix_array operation.
-//
-// POST /test_request_required_string_unix_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixArrayArray implements test_request_required_string_unix_array_array operation.
+	//
+	// POST /test_request_required_string_unix_array_array
 }
 
-// TestRequestRequiredStringUnixArrayArray implements test_request_required_string_unix_array_array operation.
-//
-// POST /test_request_required_string_unix_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMicro implements test_request_required_string_unix-micro operation.
+	//
+	// POST /test_request_required_string_unix-micro
 }
 
-// TestRequestRequiredStringUnixMicro implements test_request_required_string_unix-micro operation.
-//
-// POST /test_request_required_string_unix-micro
 func (UnimplementedHandler) TestRequestRequiredStringUnixMicro(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMicroArray implements test_request_required_string_unix-micro_array operation.
+	//
+	// POST /test_request_required_string_unix-micro_array
 }
 
-// TestRequestRequiredStringUnixMicroArray implements test_request_required_string_unix-micro_array operation.
-//
-// POST /test_request_required_string_unix-micro_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixMicroArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMicroArrayArray implements test_request_required_string_unix-micro_array_array operation.
+	//
+	// POST /test_request_required_string_unix-micro_array_array
 }
 
-// TestRequestRequiredStringUnixMicroArrayArray implements test_request_required_string_unix-micro_array_array operation.
-//
-// POST /test_request_required_string_unix-micro_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixMicroArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMicroNullable implements test_request_required_string_unix-micro_nullable operation.
+	//
+	// POST /test_request_required_string_unix-micro_nullable
 }
 
-// TestRequestRequiredStringUnixMicroNullable implements test_request_required_string_unix-micro_nullable operation.
-//
-// POST /test_request_required_string_unix-micro_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUnixMicroNullable(ctx context.Context, req NilStringUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMicroNullableArray implements test_request_required_string_unix-micro_nullable_array operation.
+	//
+	// POST /test_request_required_string_unix-micro_nullable_array
 }
 
-// TestRequestRequiredStringUnixMicroNullableArray implements test_request_required_string_unix-micro_nullable_array operation.
-//
-// POST /test_request_required_string_unix-micro_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixMicroNullableArray(ctx context.Context, req []NilStringUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMicroNullableArrayArray implements test_request_required_string_unix-micro_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_unix-micro_nullable_array_array
 }
 
-// TestRequestRequiredStringUnixMicroNullableArrayArray implements test_request_required_string_unix-micro_nullable_array_array operation.
-//
-// POST /test_request_required_string_unix-micro_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixMicroNullableArrayArray(ctx context.Context, req [][]NilStringUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMilli implements test_request_required_string_unix-milli operation.
+	//
+	// POST /test_request_required_string_unix-milli
 }
 
-// TestRequestRequiredStringUnixMilli implements test_request_required_string_unix-milli operation.
-//
-// POST /test_request_required_string_unix-milli
 func (UnimplementedHandler) TestRequestRequiredStringUnixMilli(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMilliArray implements test_request_required_string_unix-milli_array operation.
+	//
+	// POST /test_request_required_string_unix-milli_array
 }
 
-// TestRequestRequiredStringUnixMilliArray implements test_request_required_string_unix-milli_array operation.
-//
-// POST /test_request_required_string_unix-milli_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixMilliArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMilliArrayArray implements test_request_required_string_unix-milli_array_array operation.
+	//
+	// POST /test_request_required_string_unix-milli_array_array
 }
 
-// TestRequestRequiredStringUnixMilliArrayArray implements test_request_required_string_unix-milli_array_array operation.
-//
-// POST /test_request_required_string_unix-milli_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixMilliArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMilliNullable implements test_request_required_string_unix-milli_nullable operation.
+	//
+	// POST /test_request_required_string_unix-milli_nullable
 }
 
-// TestRequestRequiredStringUnixMilliNullable implements test_request_required_string_unix-milli_nullable operation.
-//
-// POST /test_request_required_string_unix-milli_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUnixMilliNullable(ctx context.Context, req NilStringUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMilliNullableArray implements test_request_required_string_unix-milli_nullable_array operation.
+	//
+	// POST /test_request_required_string_unix-milli_nullable_array
 }
 
-// TestRequestRequiredStringUnixMilliNullableArray implements test_request_required_string_unix-milli_nullable_array operation.
-//
-// POST /test_request_required_string_unix-milli_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixMilliNullableArray(ctx context.Context, req []NilStringUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixMilliNullableArrayArray implements test_request_required_string_unix-milli_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_unix-milli_nullable_array_array
 }
 
-// TestRequestRequiredStringUnixMilliNullableArrayArray implements test_request_required_string_unix-milli_nullable_array_array operation.
-//
-// POST /test_request_required_string_unix-milli_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixMilliNullableArrayArray(ctx context.Context, req [][]NilStringUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixNano implements test_request_required_string_unix-nano operation.
+	//
+	// POST /test_request_required_string_unix-nano
 }
 
-// TestRequestRequiredStringUnixNano implements test_request_required_string_unix-nano operation.
-//
-// POST /test_request_required_string_unix-nano
 func (UnimplementedHandler) TestRequestRequiredStringUnixNano(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixNanoArray implements test_request_required_string_unix-nano_array operation.
+	//
+	// POST /test_request_required_string_unix-nano_array
 }
 
-// TestRequestRequiredStringUnixNanoArray implements test_request_required_string_unix-nano_array operation.
-//
-// POST /test_request_required_string_unix-nano_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixNanoArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixNanoArrayArray implements test_request_required_string_unix-nano_array_array operation.
+	//
+	// POST /test_request_required_string_unix-nano_array_array
 }
 
-// TestRequestRequiredStringUnixNanoArrayArray implements test_request_required_string_unix-nano_array_array operation.
-//
-// POST /test_request_required_string_unix-nano_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixNanoArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixNanoNullable implements test_request_required_string_unix-nano_nullable operation.
+	//
+	// POST /test_request_required_string_unix-nano_nullable
 }
 
-// TestRequestRequiredStringUnixNanoNullable implements test_request_required_string_unix-nano_nullable operation.
-//
-// POST /test_request_required_string_unix-nano_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUnixNanoNullable(ctx context.Context, req NilStringUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixNanoNullableArray implements test_request_required_string_unix-nano_nullable_array operation.
+	//
+	// POST /test_request_required_string_unix-nano_nullable_array
 }
 
-// TestRequestRequiredStringUnixNanoNullableArray implements test_request_required_string_unix-nano_nullable_array operation.
-//
-// POST /test_request_required_string_unix-nano_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixNanoNullableArray(ctx context.Context, req []NilStringUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixNanoNullableArrayArray implements test_request_required_string_unix-nano_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_unix-nano_nullable_array_array
 }
 
-// TestRequestRequiredStringUnixNanoNullableArrayArray implements test_request_required_string_unix-nano_nullable_array_array operation.
-//
-// POST /test_request_required_string_unix-nano_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixNanoNullableArrayArray(ctx context.Context, req [][]NilStringUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixNullable implements test_request_required_string_unix_nullable operation.
+	//
+	// POST /test_request_required_string_unix_nullable
 }
 
-// TestRequestRequiredStringUnixNullable implements test_request_required_string_unix_nullable operation.
-//
-// POST /test_request_required_string_unix_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUnixNullable(ctx context.Context, req NilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixNullableArray implements test_request_required_string_unix_nullable_array operation.
+	//
+	// POST /test_request_required_string_unix_nullable_array
 }
 
-// TestRequestRequiredStringUnixNullableArray implements test_request_required_string_unix_nullable_array operation.
-//
-// POST /test_request_required_string_unix_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixNullableArray(ctx context.Context, req []NilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixNullableArrayArray implements test_request_required_string_unix_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_unix_nullable_array_array
 }
 
-// TestRequestRequiredStringUnixNullableArrayArray implements test_request_required_string_unix_nullable_array_array operation.
-//
-// POST /test_request_required_string_unix_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixNullableArrayArray(ctx context.Context, req [][]NilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixSeconds implements test_request_required_string_unix-seconds operation.
+	//
+	// POST /test_request_required_string_unix-seconds
 }
 
-// TestRequestRequiredStringUnixSeconds implements test_request_required_string_unix-seconds operation.
-//
-// POST /test_request_required_string_unix-seconds
 func (UnimplementedHandler) TestRequestRequiredStringUnixSeconds(ctx context.Context, req time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixSecondsArray implements test_request_required_string_unix-seconds_array operation.
+	//
+	// POST /test_request_required_string_unix-seconds_array
 }
 
-// TestRequestRequiredStringUnixSecondsArray implements test_request_required_string_unix-seconds_array operation.
-//
-// POST /test_request_required_string_unix-seconds_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixSecondsArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixSecondsArrayArray implements test_request_required_string_unix-seconds_array_array operation.
+	//
+	// POST /test_request_required_string_unix-seconds_array_array
 }
 
-// TestRequestRequiredStringUnixSecondsArrayArray implements test_request_required_string_unix-seconds_array_array operation.
-//
-// POST /test_request_required_string_unix-seconds_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixSecondsArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixSecondsNullable implements test_request_required_string_unix-seconds_nullable operation.
+	//
+	// POST /test_request_required_string_unix-seconds_nullable
 }
 
-// TestRequestRequiredStringUnixSecondsNullable implements test_request_required_string_unix-seconds_nullable operation.
-//
-// POST /test_request_required_string_unix-seconds_nullable
 func (UnimplementedHandler) TestRequestRequiredStringUnixSecondsNullable(ctx context.Context, req NilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixSecondsNullableArray implements test_request_required_string_unix-seconds_nullable_array operation.
+	//
+	// POST /test_request_required_string_unix-seconds_nullable_array
 }
 
-// TestRequestRequiredStringUnixSecondsNullableArray implements test_request_required_string_unix-seconds_nullable_array operation.
-//
-// POST /test_request_required_string_unix-seconds_nullable_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixSecondsNullableArray(ctx context.Context, req []NilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestRequiredStringUnixSecondsNullableArrayArray implements test_request_required_string_unix-seconds_nullable_array_array operation.
+	//
+	// POST /test_request_required_string_unix-seconds_nullable_array_array
 }
 
-// TestRequestRequiredStringUnixSecondsNullableArrayArray implements test_request_required_string_unix-seconds_nullable_array_array operation.
-//
-// POST /test_request_required_string_unix-seconds_nullable_array_array
 func (UnimplementedHandler) TestRequestRequiredStringUnixSecondsNullableArrayArray(ctx context.Context, req [][]NilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestString implements test_request_string operation.
+	//
+	// POST /test_request_string
 }
 
-// TestRequestString implements test_request_string operation.
-//
-// POST /test_request_string
 func (UnimplementedHandler) TestRequestString(ctx context.Context, req OptString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringArray implements test_request_string_array operation.
+	//
+	// POST /test_request_string_array
 }
 
-// TestRequestStringArray implements test_request_string_array operation.
-//
-// POST /test_request_string_array
 func (UnimplementedHandler) TestRequestStringArray(ctx context.Context, req []string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringArrayArray implements test_request_string_array_array operation.
+	//
+	// POST /test_request_string_array_array
 }
 
-// TestRequestStringArrayArray implements test_request_string_array_array operation.
-//
-// POST /test_request_string_array_array
 func (UnimplementedHandler) TestRequestStringArrayArray(ctx context.Context, req [][]string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBase64 implements test_request_string_base64 operation.
+	//
+	// POST /test_request_string_base64
 }
 
-// TestRequestStringBase64 implements test_request_string_base64 operation.
-//
-// POST /test_request_string_base64
 func (UnimplementedHandler) TestRequestStringBase64(ctx context.Context, req []byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBase64Array implements test_request_string_base64_array operation.
+	//
+	// POST /test_request_string_base64_array
 }
 
-// TestRequestStringBase64Array implements test_request_string_base64_array operation.
-//
-// POST /test_request_string_base64_array
 func (UnimplementedHandler) TestRequestStringBase64Array(ctx context.Context, req [][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBase64ArrayArray implements test_request_string_base64_array_array operation.
+	//
+	// POST /test_request_string_base64_array_array
 }
 
-// TestRequestStringBase64ArrayArray implements test_request_string_base64_array_array operation.
-//
-// POST /test_request_string_base64_array_array
 func (UnimplementedHandler) TestRequestStringBase64ArrayArray(ctx context.Context, req [][][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBase64Nullable implements test_request_string_base64_nullable operation.
+	//
+	// POST /test_request_string_base64_nullable
 }
 
-// TestRequestStringBase64Nullable implements test_request_string_base64_nullable operation.
-//
-// POST /test_request_string_base64_nullable
 func (UnimplementedHandler) TestRequestStringBase64Nullable(ctx context.Context, req OptNilByte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBase64NullableArray implements test_request_string_base64_nullable_array operation.
+	//
+	// POST /test_request_string_base64_nullable_array
 }
 
-// TestRequestStringBase64NullableArray implements test_request_string_base64_nullable_array operation.
-//
-// POST /test_request_string_base64_nullable_array
 func (UnimplementedHandler) TestRequestStringBase64NullableArray(ctx context.Context, req [][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBase64NullableArrayArray implements test_request_string_base64_nullable_array_array operation.
+	//
+	// POST /test_request_string_base64_nullable_array_array
 }
 
-// TestRequestStringBase64NullableArrayArray implements test_request_string_base64_nullable_array_array operation.
-//
-// POST /test_request_string_base64_nullable_array_array
 func (UnimplementedHandler) TestRequestStringBase64NullableArrayArray(ctx context.Context, req [][][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBinary implements test_request_string_binary operation.
+	//
+	// POST /test_request_string_binary
 }
 
-// TestRequestStringBinary implements test_request_string_binary operation.
-//
-// POST /test_request_string_binary
 func (UnimplementedHandler) TestRequestStringBinary(ctx context.Context, req OptString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBinaryArray implements test_request_string_binary_array operation.
+	//
+	// POST /test_request_string_binary_array
 }
 
-// TestRequestStringBinaryArray implements test_request_string_binary_array operation.
-//
-// POST /test_request_string_binary_array
 func (UnimplementedHandler) TestRequestStringBinaryArray(ctx context.Context, req []string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBinaryArrayArray implements test_request_string_binary_array_array operation.
+	//
+	// POST /test_request_string_binary_array_array
 }
 
-// TestRequestStringBinaryArrayArray implements test_request_string_binary_array_array operation.
-//
-// POST /test_request_string_binary_array_array
 func (UnimplementedHandler) TestRequestStringBinaryArrayArray(ctx context.Context, req [][]string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBinaryNullable implements test_request_string_binary_nullable operation.
+	//
+	// POST /test_request_string_binary_nullable
 }
 
-// TestRequestStringBinaryNullable implements test_request_string_binary_nullable operation.
-//
-// POST /test_request_string_binary_nullable
 func (UnimplementedHandler) TestRequestStringBinaryNullable(ctx context.Context, req OptNilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBinaryNullableArray implements test_request_string_binary_nullable_array operation.
+	//
+	// POST /test_request_string_binary_nullable_array
 }
 
-// TestRequestStringBinaryNullableArray implements test_request_string_binary_nullable_array operation.
-//
-// POST /test_request_string_binary_nullable_array
 func (UnimplementedHandler) TestRequestStringBinaryNullableArray(ctx context.Context, req []NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringBinaryNullableArrayArray implements test_request_string_binary_nullable_array_array operation.
+	//
+	// POST /test_request_string_binary_nullable_array_array
 }
 
-// TestRequestStringBinaryNullableArrayArray implements test_request_string_binary_nullable_array_array operation.
-//
-// POST /test_request_string_binary_nullable_array_array
 func (UnimplementedHandler) TestRequestStringBinaryNullableArrayArray(ctx context.Context, req [][]NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringByte implements test_request_string_byte operation.
+	//
+	// POST /test_request_string_byte
 }
 
-// TestRequestStringByte implements test_request_string_byte operation.
-//
-// POST /test_request_string_byte
 func (UnimplementedHandler) TestRequestStringByte(ctx context.Context, req []byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringByteArray implements test_request_string_byte_array operation.
+	//
+	// POST /test_request_string_byte_array
 }
 
-// TestRequestStringByteArray implements test_request_string_byte_array operation.
-//
-// POST /test_request_string_byte_array
 func (UnimplementedHandler) TestRequestStringByteArray(ctx context.Context, req [][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringByteArrayArray implements test_request_string_byte_array_array operation.
+	//
+	// POST /test_request_string_byte_array_array
 }
 
-// TestRequestStringByteArrayArray implements test_request_string_byte_array_array operation.
-//
-// POST /test_request_string_byte_array_array
 func (UnimplementedHandler) TestRequestStringByteArrayArray(ctx context.Context, req [][][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringByteNullable implements test_request_string_byte_nullable operation.
+	//
+	// POST /test_request_string_byte_nullable
 }
 
-// TestRequestStringByteNullable implements test_request_string_byte_nullable operation.
-//
-// POST /test_request_string_byte_nullable
 func (UnimplementedHandler) TestRequestStringByteNullable(ctx context.Context, req OptNilByte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringByteNullableArray implements test_request_string_byte_nullable_array operation.
+	//
+	// POST /test_request_string_byte_nullable_array
 }
 
-// TestRequestStringByteNullableArray implements test_request_string_byte_nullable_array operation.
-//
-// POST /test_request_string_byte_nullable_array
 func (UnimplementedHandler) TestRequestStringByteNullableArray(ctx context.Context, req [][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringByteNullableArrayArray implements test_request_string_byte_nullable_array_array operation.
+	//
+	// POST /test_request_string_byte_nullable_array_array
 }
 
-// TestRequestStringByteNullableArrayArray implements test_request_string_byte_nullable_array_array operation.
-//
-// POST /test_request_string_byte_nullable_array_array
 func (UnimplementedHandler) TestRequestStringByteNullableArrayArray(ctx context.Context, req [][][]byte) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDate implements test_request_string_date operation.
+	//
+	// POST /test_request_string_date
 }
 
-// TestRequestStringDate implements test_request_string_date operation.
-//
-// POST /test_request_string_date
 func (UnimplementedHandler) TestRequestStringDate(ctx context.Context, req OptDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateArray implements test_request_string_date_array operation.
+	//
+	// POST /test_request_string_date_array
 }
 
-// TestRequestStringDateArray implements test_request_string_date_array operation.
-//
-// POST /test_request_string_date_array
 func (UnimplementedHandler) TestRequestStringDateArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateArrayArray implements test_request_string_date_array_array operation.
+	//
+	// POST /test_request_string_date_array_array
 }
 
-// TestRequestStringDateArrayArray implements test_request_string_date_array_array operation.
-//
-// POST /test_request_string_date_array_array
 func (UnimplementedHandler) TestRequestStringDateArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateNullable implements test_request_string_date_nullable operation.
+	//
+	// POST /test_request_string_date_nullable
 }
 
-// TestRequestStringDateNullable implements test_request_string_date_nullable operation.
-//
-// POST /test_request_string_date_nullable
 func (UnimplementedHandler) TestRequestStringDateNullable(ctx context.Context, req OptNilDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateNullableArray implements test_request_string_date_nullable_array operation.
+	//
+	// POST /test_request_string_date_nullable_array
 }
 
-// TestRequestStringDateNullableArray implements test_request_string_date_nullable_array operation.
-//
-// POST /test_request_string_date_nullable_array
 func (UnimplementedHandler) TestRequestStringDateNullableArray(ctx context.Context, req []NilDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateNullableArrayArray implements test_request_string_date_nullable_array_array operation.
+	//
+	// POST /test_request_string_date_nullable_array_array
 }
 
-// TestRequestStringDateNullableArrayArray implements test_request_string_date_nullable_array_array operation.
-//
-// POST /test_request_string_date_nullable_array_array
 func (UnimplementedHandler) TestRequestStringDateNullableArrayArray(ctx context.Context, req [][]NilDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateTime implements test_request_string_date-time operation.
+	//
+	// POST /test_request_string_date-time
 }
 
-// TestRequestStringDateTime implements test_request_string_date-time operation.
-//
-// POST /test_request_string_date-time
 func (UnimplementedHandler) TestRequestStringDateTime(ctx context.Context, req OptDateTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateTimeArray implements test_request_string_date-time_array operation.
+	//
+	// POST /test_request_string_date-time_array
 }
 
-// TestRequestStringDateTimeArray implements test_request_string_date-time_array operation.
-//
-// POST /test_request_string_date-time_array
 func (UnimplementedHandler) TestRequestStringDateTimeArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateTimeArrayArray implements test_request_string_date-time_array_array operation.
+	//
+	// POST /test_request_string_date-time_array_array
 }
 
-// TestRequestStringDateTimeArrayArray implements test_request_string_date-time_array_array operation.
-//
-// POST /test_request_string_date-time_array_array
 func (UnimplementedHandler) TestRequestStringDateTimeArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateTimeNullable implements test_request_string_date-time_nullable operation.
+	//
+	// POST /test_request_string_date-time_nullable
 }
 
-// TestRequestStringDateTimeNullable implements test_request_string_date-time_nullable operation.
-//
-// POST /test_request_string_date-time_nullable
 func (UnimplementedHandler) TestRequestStringDateTimeNullable(ctx context.Context, req OptNilDateTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateTimeNullableArray implements test_request_string_date-time_nullable_array operation.
+	//
+	// POST /test_request_string_date-time_nullable_array
 }
 
-// TestRequestStringDateTimeNullableArray implements test_request_string_date-time_nullable_array operation.
-//
-// POST /test_request_string_date-time_nullable_array
 func (UnimplementedHandler) TestRequestStringDateTimeNullableArray(ctx context.Context, req []NilDateTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDateTimeNullableArrayArray implements test_request_string_date-time_nullable_array_array operation.
+	//
+	// POST /test_request_string_date-time_nullable_array_array
 }
 
-// TestRequestStringDateTimeNullableArrayArray implements test_request_string_date-time_nullable_array_array operation.
-//
-// POST /test_request_string_date-time_nullable_array_array
 func (UnimplementedHandler) TestRequestStringDateTimeNullableArrayArray(ctx context.Context, req [][]NilDateTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDecimal implements test_request_string_decimal operation.
+	//
+	// POST /test_request_string_decimal
 }
 
-// TestRequestStringDecimal implements test_request_string_decimal operation.
-//
-// POST /test_request_string_decimal
 func (UnimplementedHandler) TestRequestStringDecimal(ctx context.Context, req OptStringDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDecimalArray implements test_request_string_decimal_array operation.
+	//
+	// POST /test_request_string_decimal_array
 }
 
-// TestRequestStringDecimalArray implements test_request_string_decimal_array operation.
-//
-// POST /test_request_string_decimal_array
 func (UnimplementedHandler) TestRequestStringDecimalArray(ctx context.Context, req []decimal.Decimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDecimalArrayArray implements test_request_string_decimal_array_array operation.
+	//
+	// POST /test_request_string_decimal_array_array
 }
 
-// TestRequestStringDecimalArrayArray implements test_request_string_decimal_array_array operation.
-//
-// POST /test_request_string_decimal_array_array
 func (UnimplementedHandler) TestRequestStringDecimalArrayArray(ctx context.Context, req [][]decimal.Decimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDecimalNullable implements test_request_string_decimal_nullable operation.
+	//
+	// POST /test_request_string_decimal_nullable
 }
 
-// TestRequestStringDecimalNullable implements test_request_string_decimal_nullable operation.
-//
-// POST /test_request_string_decimal_nullable
 func (UnimplementedHandler) TestRequestStringDecimalNullable(ctx context.Context, req OptNilStringDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDecimalNullableArray implements test_request_string_decimal_nullable_array operation.
+	//
+	// POST /test_request_string_decimal_nullable_array
 }
 
-// TestRequestStringDecimalNullableArray implements test_request_string_decimal_nullable_array operation.
-//
-// POST /test_request_string_decimal_nullable_array
 func (UnimplementedHandler) TestRequestStringDecimalNullableArray(ctx context.Context, req []NilStringDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDecimalNullableArrayArray implements test_request_string_decimal_nullable_array_array operation.
+	//
+	// POST /test_request_string_decimal_nullable_array_array
 }
 
-// TestRequestStringDecimalNullableArrayArray implements test_request_string_decimal_nullable_array_array operation.
-//
-// POST /test_request_string_decimal_nullable_array_array
 func (UnimplementedHandler) TestRequestStringDecimalNullableArrayArray(ctx context.Context, req [][]NilStringDecimal) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDuration implements test_request_string_duration operation.
+	//
+	// POST /test_request_string_duration
 }
 
-// TestRequestStringDuration implements test_request_string_duration operation.
-//
-// POST /test_request_string_duration
 func (UnimplementedHandler) TestRequestStringDuration(ctx context.Context, req OptDuration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDurationArray implements test_request_string_duration_array operation.
+	//
+	// POST /test_request_string_duration_array
 }
 
-// TestRequestStringDurationArray implements test_request_string_duration_array operation.
-//
-// POST /test_request_string_duration_array
 func (UnimplementedHandler) TestRequestStringDurationArray(ctx context.Context, req []time.Duration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDurationArrayArray implements test_request_string_duration_array_array operation.
+	//
+	// POST /test_request_string_duration_array_array
 }
 
-// TestRequestStringDurationArrayArray implements test_request_string_duration_array_array operation.
-//
-// POST /test_request_string_duration_array_array
 func (UnimplementedHandler) TestRequestStringDurationArrayArray(ctx context.Context, req [][]time.Duration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDurationNullable implements test_request_string_duration_nullable operation.
+	//
+	// POST /test_request_string_duration_nullable
 }
 
-// TestRequestStringDurationNullable implements test_request_string_duration_nullable operation.
-//
-// POST /test_request_string_duration_nullable
 func (UnimplementedHandler) TestRequestStringDurationNullable(ctx context.Context, req OptNilDuration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDurationNullableArray implements test_request_string_duration_nullable_array operation.
+	//
+	// POST /test_request_string_duration_nullable_array
 }
 
-// TestRequestStringDurationNullableArray implements test_request_string_duration_nullable_array operation.
-//
-// POST /test_request_string_duration_nullable_array
 func (UnimplementedHandler) TestRequestStringDurationNullableArray(ctx context.Context, req []NilDuration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringDurationNullableArrayArray implements test_request_string_duration_nullable_array_array operation.
+	//
+	// POST /test_request_string_duration_nullable_array_array
 }
 
-// TestRequestStringDurationNullableArrayArray implements test_request_string_duration_nullable_array_array operation.
-//
-// POST /test_request_string_duration_nullable_array_array
 func (UnimplementedHandler) TestRequestStringDurationNullableArrayArray(ctx context.Context, req [][]NilDuration) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringEmail implements test_request_string_email operation.
+	//
+	// POST /test_request_string_email
 }
 
-// TestRequestStringEmail implements test_request_string_email operation.
-//
-// POST /test_request_string_email
 func (UnimplementedHandler) TestRequestStringEmail(ctx context.Context, req OptString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringEmailArray implements test_request_string_email_array operation.
+	//
+	// POST /test_request_string_email_array
 }
 
-// TestRequestStringEmailArray implements test_request_string_email_array operation.
-//
-// POST /test_request_string_email_array
 func (UnimplementedHandler) TestRequestStringEmailArray(ctx context.Context, req []string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringEmailArrayArray implements test_request_string_email_array_array operation.
+	//
+	// POST /test_request_string_email_array_array
 }
 
-// TestRequestStringEmailArrayArray implements test_request_string_email_array_array operation.
-//
-// POST /test_request_string_email_array_array
 func (UnimplementedHandler) TestRequestStringEmailArrayArray(ctx context.Context, req [][]string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringEmailNullable implements test_request_string_email_nullable operation.
+	//
+	// POST /test_request_string_email_nullable
 }
 
-// TestRequestStringEmailNullable implements test_request_string_email_nullable operation.
-//
-// POST /test_request_string_email_nullable
 func (UnimplementedHandler) TestRequestStringEmailNullable(ctx context.Context, req OptNilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringEmailNullableArray implements test_request_string_email_nullable_array operation.
+	//
+	// POST /test_request_string_email_nullable_array
 }
 
-// TestRequestStringEmailNullableArray implements test_request_string_email_nullable_array operation.
-//
-// POST /test_request_string_email_nullable_array
 func (UnimplementedHandler) TestRequestStringEmailNullableArray(ctx context.Context, req []NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringEmailNullableArrayArray implements test_request_string_email_nullable_array_array operation.
+	//
+	// POST /test_request_string_email_nullable_array_array
 }
 
-// TestRequestStringEmailNullableArrayArray implements test_request_string_email_nullable_array_array operation.
-//
-// POST /test_request_string_email_nullable_array_array
 func (UnimplementedHandler) TestRequestStringEmailNullableArrayArray(ctx context.Context, req [][]NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat32 implements test_request_string_float32 operation.
+	//
+	// POST /test_request_string_float32
 }
 
-// TestRequestStringFloat32 implements test_request_string_float32 operation.
-//
-// POST /test_request_string_float32
 func (UnimplementedHandler) TestRequestStringFloat32(ctx context.Context, req OptStringFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat32Array implements test_request_string_float32_array operation.
+	//
+	// POST /test_request_string_float32_array
 }
 
-// TestRequestStringFloat32Array implements test_request_string_float32_array operation.
-//
-// POST /test_request_string_float32_array
 func (UnimplementedHandler) TestRequestStringFloat32Array(ctx context.Context, req []float32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat32ArrayArray implements test_request_string_float32_array_array operation.
+	//
+	// POST /test_request_string_float32_array_array
 }
 
-// TestRequestStringFloat32ArrayArray implements test_request_string_float32_array_array operation.
-//
-// POST /test_request_string_float32_array_array
 func (UnimplementedHandler) TestRequestStringFloat32ArrayArray(ctx context.Context, req [][]float32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat32Nullable implements test_request_string_float32_nullable operation.
+	//
+	// POST /test_request_string_float32_nullable
 }
 
-// TestRequestStringFloat32Nullable implements test_request_string_float32_nullable operation.
-//
-// POST /test_request_string_float32_nullable
 func (UnimplementedHandler) TestRequestStringFloat32Nullable(ctx context.Context, req OptNilStringFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat32NullableArray implements test_request_string_float32_nullable_array operation.
+	//
+	// POST /test_request_string_float32_nullable_array
 }
 
-// TestRequestStringFloat32NullableArray implements test_request_string_float32_nullable_array operation.
-//
-// POST /test_request_string_float32_nullable_array
 func (UnimplementedHandler) TestRequestStringFloat32NullableArray(ctx context.Context, req []NilStringFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat32NullableArrayArray implements test_request_string_float32_nullable_array_array operation.
+	//
+	// POST /test_request_string_float32_nullable_array_array
 }
 
-// TestRequestStringFloat32NullableArrayArray implements test_request_string_float32_nullable_array_array operation.
-//
-// POST /test_request_string_float32_nullable_array_array
 func (UnimplementedHandler) TestRequestStringFloat32NullableArrayArray(ctx context.Context, req [][]NilStringFloat32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat64 implements test_request_string_float64 operation.
+	//
+	// POST /test_request_string_float64
 }
 
-// TestRequestStringFloat64 implements test_request_string_float64 operation.
-//
-// POST /test_request_string_float64
 func (UnimplementedHandler) TestRequestStringFloat64(ctx context.Context, req OptStringFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat64Array implements test_request_string_float64_array operation.
+	//
+	// POST /test_request_string_float64_array
 }
 
-// TestRequestStringFloat64Array implements test_request_string_float64_array operation.
-//
-// POST /test_request_string_float64_array
 func (UnimplementedHandler) TestRequestStringFloat64Array(ctx context.Context, req []float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat64ArrayArray implements test_request_string_float64_array_array operation.
+	//
+	// POST /test_request_string_float64_array_array
 }
 
-// TestRequestStringFloat64ArrayArray implements test_request_string_float64_array_array operation.
-//
-// POST /test_request_string_float64_array_array
 func (UnimplementedHandler) TestRequestStringFloat64ArrayArray(ctx context.Context, req [][]float64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat64Nullable implements test_request_string_float64_nullable operation.
+	//
+	// POST /test_request_string_float64_nullable
 }
 
-// TestRequestStringFloat64Nullable implements test_request_string_float64_nullable operation.
-//
-// POST /test_request_string_float64_nullable
 func (UnimplementedHandler) TestRequestStringFloat64Nullable(ctx context.Context, req OptNilStringFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat64NullableArray implements test_request_string_float64_nullable_array operation.
+	//
+	// POST /test_request_string_float64_nullable_array
 }
 
-// TestRequestStringFloat64NullableArray implements test_request_string_float64_nullable_array operation.
-//
-// POST /test_request_string_float64_nullable_array
 func (UnimplementedHandler) TestRequestStringFloat64NullableArray(ctx context.Context, req []NilStringFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringFloat64NullableArrayArray implements test_request_string_float64_nullable_array_array operation.
+	//
+	// POST /test_request_string_float64_nullable_array_array
 }
 
-// TestRequestStringFloat64NullableArrayArray implements test_request_string_float64_nullable_array_array operation.
-//
-// POST /test_request_string_float64_nullable_array_array
 func (UnimplementedHandler) TestRequestStringFloat64NullableArrayArray(ctx context.Context, req [][]NilStringFloat64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHTTPDate implements test_request_string_http-date operation.
+	//
+	// POST /test_request_string_http-date
 }
 
-// TestRequestStringHTTPDate implements test_request_string_http-date operation.
-//
-// POST /test_request_string_http-date
 func (UnimplementedHandler) TestRequestStringHTTPDate(ctx context.Context, req OptHTTPDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHTTPDateArray implements test_request_string_http-date_array operation.
+	//
+	// POST /test_request_string_http-date_array
 }
 
-// TestRequestStringHTTPDateArray implements test_request_string_http-date_array operation.
-//
-// POST /test_request_string_http-date_array
 func (UnimplementedHandler) TestRequestStringHTTPDateArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHTTPDateArrayArray implements test_request_string_http-date_array_array operation.
+	//
+	// POST /test_request_string_http-date_array_array
 }
 
-// TestRequestStringHTTPDateArrayArray implements test_request_string_http-date_array_array operation.
-//
-// POST /test_request_string_http-date_array_array
 func (UnimplementedHandler) TestRequestStringHTTPDateArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHTTPDateNullable implements test_request_string_http-date_nullable operation.
+	//
+	// POST /test_request_string_http-date_nullable
 }
 
-// TestRequestStringHTTPDateNullable implements test_request_string_http-date_nullable operation.
-//
-// POST /test_request_string_http-date_nullable
 func (UnimplementedHandler) TestRequestStringHTTPDateNullable(ctx context.Context, req OptNilHTTPDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHTTPDateNullableArray implements test_request_string_http-date_nullable_array operation.
+	//
+	// POST /test_request_string_http-date_nullable_array
 }
 
-// TestRequestStringHTTPDateNullableArray implements test_request_string_http-date_nullable_array operation.
-//
-// POST /test_request_string_http-date_nullable_array
 func (UnimplementedHandler) TestRequestStringHTTPDateNullableArray(ctx context.Context, req []NilHTTPDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHTTPDateNullableArrayArray implements test_request_string_http-date_nullable_array_array operation.
+	//
+	// POST /test_request_string_http-date_nullable_array_array
 }
 
-// TestRequestStringHTTPDateNullableArrayArray implements test_request_string_http-date_nullable_array_array operation.
-//
-// POST /test_request_string_http-date_nullable_array_array
 func (UnimplementedHandler) TestRequestStringHTTPDateNullableArrayArray(ctx context.Context, req [][]NilHTTPDate) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHostname implements test_request_string_hostname operation.
+	//
+	// POST /test_request_string_hostname
 }
 
-// TestRequestStringHostname implements test_request_string_hostname operation.
-//
-// POST /test_request_string_hostname
 func (UnimplementedHandler) TestRequestStringHostname(ctx context.Context, req OptString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHostnameArray implements test_request_string_hostname_array operation.
+	//
+	// POST /test_request_string_hostname_array
 }
 
-// TestRequestStringHostnameArray implements test_request_string_hostname_array operation.
-//
-// POST /test_request_string_hostname_array
 func (UnimplementedHandler) TestRequestStringHostnameArray(ctx context.Context, req []string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHostnameArrayArray implements test_request_string_hostname_array_array operation.
+	//
+	// POST /test_request_string_hostname_array_array
 }
 
-// TestRequestStringHostnameArrayArray implements test_request_string_hostname_array_array operation.
-//
-// POST /test_request_string_hostname_array_array
 func (UnimplementedHandler) TestRequestStringHostnameArrayArray(ctx context.Context, req [][]string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHostnameNullable implements test_request_string_hostname_nullable operation.
+	//
+	// POST /test_request_string_hostname_nullable
 }
 
-// TestRequestStringHostnameNullable implements test_request_string_hostname_nullable operation.
-//
-// POST /test_request_string_hostname_nullable
 func (UnimplementedHandler) TestRequestStringHostnameNullable(ctx context.Context, req OptNilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHostnameNullableArray implements test_request_string_hostname_nullable_array operation.
+	//
+	// POST /test_request_string_hostname_nullable_array
 }
 
-// TestRequestStringHostnameNullableArray implements test_request_string_hostname_nullable_array operation.
-//
-// POST /test_request_string_hostname_nullable_array
 func (UnimplementedHandler) TestRequestStringHostnameNullableArray(ctx context.Context, req []NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringHostnameNullableArrayArray implements test_request_string_hostname_nullable_array_array operation.
+	//
+	// POST /test_request_string_hostname_nullable_array_array
 }
 
-// TestRequestStringHostnameNullableArrayArray implements test_request_string_hostname_nullable_array_array operation.
-//
-// POST /test_request_string_hostname_nullable_array_array
 func (UnimplementedHandler) TestRequestStringHostnameNullableArrayArray(ctx context.Context, req [][]NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIP implements test_request_string_ip operation.
+	//
+	// POST /test_request_string_ip
 }
 
-// TestRequestStringIP implements test_request_string_ip operation.
-//
-// POST /test_request_string_ip
 func (UnimplementedHandler) TestRequestStringIP(ctx context.Context, req OptIP) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIPArray implements test_request_string_ip_array operation.
+	//
+	// POST /test_request_string_ip_array
 }
 
-// TestRequestStringIPArray implements test_request_string_ip_array operation.
-//
-// POST /test_request_string_ip_array
 func (UnimplementedHandler) TestRequestStringIPArray(ctx context.Context, req []netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIPArrayArray implements test_request_string_ip_array_array operation.
+	//
+	// POST /test_request_string_ip_array_array
 }
 
-// TestRequestStringIPArrayArray implements test_request_string_ip_array_array operation.
-//
-// POST /test_request_string_ip_array_array
 func (UnimplementedHandler) TestRequestStringIPArrayArray(ctx context.Context, req [][]netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIPNullable implements test_request_string_ip_nullable operation.
+	//
+	// POST /test_request_string_ip_nullable
 }
 
-// TestRequestStringIPNullable implements test_request_string_ip_nullable operation.
-//
-// POST /test_request_string_ip_nullable
 func (UnimplementedHandler) TestRequestStringIPNullable(ctx context.Context, req OptNilIP) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIPNullableArray implements test_request_string_ip_nullable_array operation.
+	//
+	// POST /test_request_string_ip_nullable_array
 }
 
-// TestRequestStringIPNullableArray implements test_request_string_ip_nullable_array operation.
-//
-// POST /test_request_string_ip_nullable_array
 func (UnimplementedHandler) TestRequestStringIPNullableArray(ctx context.Context, req []NilIP) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIPNullableArrayArray implements test_request_string_ip_nullable_array_array operation.
+	//
+	// POST /test_request_string_ip_nullable_array_array
 }
 
-// TestRequestStringIPNullableArrayArray implements test_request_string_ip_nullable_array_array operation.
-//
-// POST /test_request_string_ip_nullable_array_array
 func (UnimplementedHandler) TestRequestStringIPNullableArrayArray(ctx context.Context, req [][]NilIP) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt implements test_request_string_int operation.
+	//
+	// POST /test_request_string_int
 }
 
-// TestRequestStringInt implements test_request_string_int operation.
-//
-// POST /test_request_string_int
 func (UnimplementedHandler) TestRequestStringInt(ctx context.Context, req OptStringInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt16 implements test_request_string_int16 operation.
+	//
+	// POST /test_request_string_int16
 }
 
-// TestRequestStringInt16 implements test_request_string_int16 operation.
-//
-// POST /test_request_string_int16
 func (UnimplementedHandler) TestRequestStringInt16(ctx context.Context, req OptStringInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt16Array implements test_request_string_int16_array operation.
+	//
+	// POST /test_request_string_int16_array
 }
 
-// TestRequestStringInt16Array implements test_request_string_int16_array operation.
-//
-// POST /test_request_string_int16_array
 func (UnimplementedHandler) TestRequestStringInt16Array(ctx context.Context, req []int16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt16ArrayArray implements test_request_string_int16_array_array operation.
+	//
+	// POST /test_request_string_int16_array_array
 }
 
-// TestRequestStringInt16ArrayArray implements test_request_string_int16_array_array operation.
-//
-// POST /test_request_string_int16_array_array
 func (UnimplementedHandler) TestRequestStringInt16ArrayArray(ctx context.Context, req [][]int16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt16Nullable implements test_request_string_int16_nullable operation.
+	//
+	// POST /test_request_string_int16_nullable
 }
 
-// TestRequestStringInt16Nullable implements test_request_string_int16_nullable operation.
-//
-// POST /test_request_string_int16_nullable
 func (UnimplementedHandler) TestRequestStringInt16Nullable(ctx context.Context, req OptNilStringInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt16NullableArray implements test_request_string_int16_nullable_array operation.
+	//
+	// POST /test_request_string_int16_nullable_array
 }
 
-// TestRequestStringInt16NullableArray implements test_request_string_int16_nullable_array operation.
-//
-// POST /test_request_string_int16_nullable_array
 func (UnimplementedHandler) TestRequestStringInt16NullableArray(ctx context.Context, req []NilStringInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt16NullableArrayArray implements test_request_string_int16_nullable_array_array operation.
+	//
+	// POST /test_request_string_int16_nullable_array_array
 }
 
-// TestRequestStringInt16NullableArrayArray implements test_request_string_int16_nullable_array_array operation.
-//
-// POST /test_request_string_int16_nullable_array_array
 func (UnimplementedHandler) TestRequestStringInt16NullableArrayArray(ctx context.Context, req [][]NilStringInt16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt32 implements test_request_string_int32 operation.
+	//
+	// POST /test_request_string_int32
 }
 
-// TestRequestStringInt32 implements test_request_string_int32 operation.
-//
-// POST /test_request_string_int32
 func (UnimplementedHandler) TestRequestStringInt32(ctx context.Context, req OptStringInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt32Array implements test_request_string_int32_array operation.
+	//
+	// POST /test_request_string_int32_array
 }
 
-// TestRequestStringInt32Array implements test_request_string_int32_array operation.
-//
-// POST /test_request_string_int32_array
 func (UnimplementedHandler) TestRequestStringInt32Array(ctx context.Context, req []int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt32ArrayArray implements test_request_string_int32_array_array operation.
+	//
+	// POST /test_request_string_int32_array_array
 }
 
-// TestRequestStringInt32ArrayArray implements test_request_string_int32_array_array operation.
-//
-// POST /test_request_string_int32_array_array
 func (UnimplementedHandler) TestRequestStringInt32ArrayArray(ctx context.Context, req [][]int32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt32Nullable implements test_request_string_int32_nullable operation.
+	//
+	// POST /test_request_string_int32_nullable
 }
 
-// TestRequestStringInt32Nullable implements test_request_string_int32_nullable operation.
-//
-// POST /test_request_string_int32_nullable
 func (UnimplementedHandler) TestRequestStringInt32Nullable(ctx context.Context, req OptNilStringInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt32NullableArray implements test_request_string_int32_nullable_array operation.
+	//
+	// POST /test_request_string_int32_nullable_array
 }
 
-// TestRequestStringInt32NullableArray implements test_request_string_int32_nullable_array operation.
-//
-// POST /test_request_string_int32_nullable_array
 func (UnimplementedHandler) TestRequestStringInt32NullableArray(ctx context.Context, req []NilStringInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt32NullableArrayArray implements test_request_string_int32_nullable_array_array operation.
+	//
+	// POST /test_request_string_int32_nullable_array_array
 }
 
-// TestRequestStringInt32NullableArrayArray implements test_request_string_int32_nullable_array_array operation.
-//
-// POST /test_request_string_int32_nullable_array_array
 func (UnimplementedHandler) TestRequestStringInt32NullableArrayArray(ctx context.Context, req [][]NilStringInt32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt64 implements test_request_string_int64 operation.
+	//
+	// POST /test_request_string_int64
 }
 
-// TestRequestStringInt64 implements test_request_string_int64 operation.
-//
-// POST /test_request_string_int64
 func (UnimplementedHandler) TestRequestStringInt64(ctx context.Context, req OptStringInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt64Array implements test_request_string_int64_array operation.
+	//
+	// POST /test_request_string_int64_array
 }
 
-// TestRequestStringInt64Array implements test_request_string_int64_array operation.
-//
-// POST /test_request_string_int64_array
 func (UnimplementedHandler) TestRequestStringInt64Array(ctx context.Context, req []int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt64ArrayArray implements test_request_string_int64_array_array operation.
+	//
+	// POST /test_request_string_int64_array_array
 }
 
-// TestRequestStringInt64ArrayArray implements test_request_string_int64_array_array operation.
-//
-// POST /test_request_string_int64_array_array
 func (UnimplementedHandler) TestRequestStringInt64ArrayArray(ctx context.Context, req [][]int64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt64Nullable implements test_request_string_int64_nullable operation.
+	//
+	// POST /test_request_string_int64_nullable
 }
 
-// TestRequestStringInt64Nullable implements test_request_string_int64_nullable operation.
-//
-// POST /test_request_string_int64_nullable
 func (UnimplementedHandler) TestRequestStringInt64Nullable(ctx context.Context, req OptNilStringInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt64NullableArray implements test_request_string_int64_nullable_array operation.
+	//
+	// POST /test_request_string_int64_nullable_array
 }
 
-// TestRequestStringInt64NullableArray implements test_request_string_int64_nullable_array operation.
-//
-// POST /test_request_string_int64_nullable_array
 func (UnimplementedHandler) TestRequestStringInt64NullableArray(ctx context.Context, req []NilStringInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt64NullableArrayArray implements test_request_string_int64_nullable_array_array operation.
+	//
+	// POST /test_request_string_int64_nullable_array_array
 }
 
-// TestRequestStringInt64NullableArrayArray implements test_request_string_int64_nullable_array_array operation.
-//
-// POST /test_request_string_int64_nullable_array_array
 func (UnimplementedHandler) TestRequestStringInt64NullableArrayArray(ctx context.Context, req [][]NilStringInt64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt8 implements test_request_string_int8 operation.
+	//
+	// POST /test_request_string_int8
 }
 
-// TestRequestStringInt8 implements test_request_string_int8 operation.
-//
-// POST /test_request_string_int8
 func (UnimplementedHandler) TestRequestStringInt8(ctx context.Context, req OptStringInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt8Array implements test_request_string_int8_array operation.
+	//
+	// POST /test_request_string_int8_array
 }
 
-// TestRequestStringInt8Array implements test_request_string_int8_array operation.
-//
-// POST /test_request_string_int8_array
 func (UnimplementedHandler) TestRequestStringInt8Array(ctx context.Context, req []int8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt8ArrayArray implements test_request_string_int8_array_array operation.
+	//
+	// POST /test_request_string_int8_array_array
 }
 
-// TestRequestStringInt8ArrayArray implements test_request_string_int8_array_array operation.
-//
-// POST /test_request_string_int8_array_array
 func (UnimplementedHandler) TestRequestStringInt8ArrayArray(ctx context.Context, req [][]int8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt8Nullable implements test_request_string_int8_nullable operation.
+	//
+	// POST /test_request_string_int8_nullable
 }
 
-// TestRequestStringInt8Nullable implements test_request_string_int8_nullable operation.
-//
-// POST /test_request_string_int8_nullable
 func (UnimplementedHandler) TestRequestStringInt8Nullable(ctx context.Context, req OptNilStringInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt8NullableArray implements test_request_string_int8_nullable_array operation.
+	//
+	// POST /test_request_string_int8_nullable_array
 }
 
-// TestRequestStringInt8NullableArray implements test_request_string_int8_nullable_array operation.
-//
-// POST /test_request_string_int8_nullable_array
 func (UnimplementedHandler) TestRequestStringInt8NullableArray(ctx context.Context, req []NilStringInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringInt8NullableArrayArray implements test_request_string_int8_nullable_array_array operation.
+	//
+	// POST /test_request_string_int8_nullable_array_array
 }
 
-// TestRequestStringInt8NullableArrayArray implements test_request_string_int8_nullable_array_array operation.
-//
-// POST /test_request_string_int8_nullable_array_array
 func (UnimplementedHandler) TestRequestStringInt8NullableArrayArray(ctx context.Context, req [][]NilStringInt8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIntArray implements test_request_string_int_array operation.
+	//
+	// POST /test_request_string_int_array
 }
 
-// TestRequestStringIntArray implements test_request_string_int_array operation.
-//
-// POST /test_request_string_int_array
 func (UnimplementedHandler) TestRequestStringIntArray(ctx context.Context, req []int) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIntArrayArray implements test_request_string_int_array_array operation.
+	//
+	// POST /test_request_string_int_array_array
 }
 
-// TestRequestStringIntArrayArray implements test_request_string_int_array_array operation.
-//
-// POST /test_request_string_int_array_array
 func (UnimplementedHandler) TestRequestStringIntArrayArray(ctx context.Context, req [][]int) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIntNullable implements test_request_string_int_nullable operation.
+	//
+	// POST /test_request_string_int_nullable
 }
 
-// TestRequestStringIntNullable implements test_request_string_int_nullable operation.
-//
-// POST /test_request_string_int_nullable
 func (UnimplementedHandler) TestRequestStringIntNullable(ctx context.Context, req OptNilStringInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIntNullableArray implements test_request_string_int_nullable_array operation.
+	//
+	// POST /test_request_string_int_nullable_array
 }
 
-// TestRequestStringIntNullableArray implements test_request_string_int_nullable_array operation.
-//
-// POST /test_request_string_int_nullable_array
 func (UnimplementedHandler) TestRequestStringIntNullableArray(ctx context.Context, req []NilStringInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIntNullableArrayArray implements test_request_string_int_nullable_array_array operation.
+	//
+	// POST /test_request_string_int_nullable_array_array
 }
 
-// TestRequestStringIntNullableArrayArray implements test_request_string_int_nullable_array_array operation.
-//
-// POST /test_request_string_int_nullable_array_array
 func (UnimplementedHandler) TestRequestStringIntNullableArrayArray(ctx context.Context, req [][]NilStringInt) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv4 implements test_request_string_ipv4 operation.
+	//
+	// POST /test_request_string_ipv4
 }
 
-// TestRequestStringIpv4 implements test_request_string_ipv4 operation.
-//
-// POST /test_request_string_ipv4
 func (UnimplementedHandler) TestRequestStringIpv4(ctx context.Context, req OptIPv4) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv4Array implements test_request_string_ipv4_array operation.
+	//
+	// POST /test_request_string_ipv4_array
 }
 
-// TestRequestStringIpv4Array implements test_request_string_ipv4_array operation.
-//
-// POST /test_request_string_ipv4_array
 func (UnimplementedHandler) TestRequestStringIpv4Array(ctx context.Context, req []netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv4ArrayArray implements test_request_string_ipv4_array_array operation.
+	//
+	// POST /test_request_string_ipv4_array_array
 }
 
-// TestRequestStringIpv4ArrayArray implements test_request_string_ipv4_array_array operation.
-//
-// POST /test_request_string_ipv4_array_array
 func (UnimplementedHandler) TestRequestStringIpv4ArrayArray(ctx context.Context, req [][]netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv4Nullable implements test_request_string_ipv4_nullable operation.
+	//
+	// POST /test_request_string_ipv4_nullable
 }
 
-// TestRequestStringIpv4Nullable implements test_request_string_ipv4_nullable operation.
-//
-// POST /test_request_string_ipv4_nullable
 func (UnimplementedHandler) TestRequestStringIpv4Nullable(ctx context.Context, req OptNilIPv4) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv4NullableArray implements test_request_string_ipv4_nullable_array operation.
+	//
+	// POST /test_request_string_ipv4_nullable_array
 }
 
-// TestRequestStringIpv4NullableArray implements test_request_string_ipv4_nullable_array operation.
-//
-// POST /test_request_string_ipv4_nullable_array
 func (UnimplementedHandler) TestRequestStringIpv4NullableArray(ctx context.Context, req []NilIPv4) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv4NullableArrayArray implements test_request_string_ipv4_nullable_array_array operation.
+	//
+	// POST /test_request_string_ipv4_nullable_array_array
 }
 
-// TestRequestStringIpv4NullableArrayArray implements test_request_string_ipv4_nullable_array_array operation.
-//
-// POST /test_request_string_ipv4_nullable_array_array
 func (UnimplementedHandler) TestRequestStringIpv4NullableArrayArray(ctx context.Context, req [][]NilIPv4) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv6 implements test_request_string_ipv6 operation.
+	//
+	// POST /test_request_string_ipv6
 }
 
-// TestRequestStringIpv6 implements test_request_string_ipv6 operation.
-//
-// POST /test_request_string_ipv6
 func (UnimplementedHandler) TestRequestStringIpv6(ctx context.Context, req OptIPv6) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv6Array implements test_request_string_ipv6_array operation.
+	//
+	// POST /test_request_string_ipv6_array
 }
 
-// TestRequestStringIpv6Array implements test_request_string_ipv6_array operation.
-//
-// POST /test_request_string_ipv6_array
 func (UnimplementedHandler) TestRequestStringIpv6Array(ctx context.Context, req []netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv6ArrayArray implements test_request_string_ipv6_array_array operation.
+	//
+	// POST /test_request_string_ipv6_array_array
 }
 
-// TestRequestStringIpv6ArrayArray implements test_request_string_ipv6_array_array operation.
-//
-// POST /test_request_string_ipv6_array_array
 func (UnimplementedHandler) TestRequestStringIpv6ArrayArray(ctx context.Context, req [][]netip.Addr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv6Nullable implements test_request_string_ipv6_nullable operation.
+	//
+	// POST /test_request_string_ipv6_nullable
 }
 
-// TestRequestStringIpv6Nullable implements test_request_string_ipv6_nullable operation.
-//
-// POST /test_request_string_ipv6_nullable
 func (UnimplementedHandler) TestRequestStringIpv6Nullable(ctx context.Context, req OptNilIPv6) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv6NullableArray implements test_request_string_ipv6_nullable_array operation.
+	//
+	// POST /test_request_string_ipv6_nullable_array
 }
 
-// TestRequestStringIpv6NullableArray implements test_request_string_ipv6_nullable_array operation.
-//
-// POST /test_request_string_ipv6_nullable_array
 func (UnimplementedHandler) TestRequestStringIpv6NullableArray(ctx context.Context, req []NilIPv6) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringIpv6NullableArrayArray implements test_request_string_ipv6_nullable_array_array operation.
+	//
+	// POST /test_request_string_ipv6_nullable_array_array
 }
 
-// TestRequestStringIpv6NullableArrayArray implements test_request_string_ipv6_nullable_array_array operation.
-//
-// POST /test_request_string_ipv6_nullable_array_array
 func (UnimplementedHandler) TestRequestStringIpv6NullableArrayArray(ctx context.Context, req [][]NilIPv6) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringMAC implements test_request_string_mac operation.
+	//
+	// POST /test_request_string_mac
 }
 
-// TestRequestStringMAC implements test_request_string_mac operation.
-//
-// POST /test_request_string_mac
 func (UnimplementedHandler) TestRequestStringMAC(ctx context.Context, req OptHardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringMACArray implements test_request_string_mac_array operation.
+	//
+	// POST /test_request_string_mac_array
 }
 
-// TestRequestStringMACArray implements test_request_string_mac_array operation.
-//
-// POST /test_request_string_mac_array
 func (UnimplementedHandler) TestRequestStringMACArray(ctx context.Context, req []net.HardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringMACArrayArray implements test_request_string_mac_array_array operation.
+	//
+	// POST /test_request_string_mac_array_array
 }
 
-// TestRequestStringMACArrayArray implements test_request_string_mac_array_array operation.
-//
-// POST /test_request_string_mac_array_array
 func (UnimplementedHandler) TestRequestStringMACArrayArray(ctx context.Context, req [][]net.HardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringMACNullable implements test_request_string_mac_nullable operation.
+	//
+	// POST /test_request_string_mac_nullable
 }
 
-// TestRequestStringMACNullable implements test_request_string_mac_nullable operation.
-//
-// POST /test_request_string_mac_nullable
 func (UnimplementedHandler) TestRequestStringMACNullable(ctx context.Context, req OptNilHardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringMACNullableArray implements test_request_string_mac_nullable_array operation.
+	//
+	// POST /test_request_string_mac_nullable_array
 }
 
-// TestRequestStringMACNullableArray implements test_request_string_mac_nullable_array operation.
-//
-// POST /test_request_string_mac_nullable_array
 func (UnimplementedHandler) TestRequestStringMACNullableArray(ctx context.Context, req []NilHardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringMACNullableArrayArray implements test_request_string_mac_nullable_array_array operation.
+	//
+	// POST /test_request_string_mac_nullable_array_array
 }
 
-// TestRequestStringMACNullableArrayArray implements test_request_string_mac_nullable_array_array operation.
-//
-// POST /test_request_string_mac_nullable_array_array
 func (UnimplementedHandler) TestRequestStringMACNullableArrayArray(ctx context.Context, req [][]NilHardwareAddr) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringNullable implements test_request_string_nullable operation.
+	//
+	// POST /test_request_string_nullable
 }
 
-// TestRequestStringNullable implements test_request_string_nullable operation.
-//
-// POST /test_request_string_nullable
 func (UnimplementedHandler) TestRequestStringNullable(ctx context.Context, req OptNilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringNullableArray implements test_request_string_nullable_array operation.
+	//
+	// POST /test_request_string_nullable_array
 }
 
-// TestRequestStringNullableArray implements test_request_string_nullable_array operation.
-//
-// POST /test_request_string_nullable_array
 func (UnimplementedHandler) TestRequestStringNullableArray(ctx context.Context, req []NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringNullableArrayArray implements test_request_string_nullable_array_array operation.
+	//
+	// POST /test_request_string_nullable_array_array
 }
 
-// TestRequestStringNullableArrayArray implements test_request_string_nullable_array_array operation.
-//
-// POST /test_request_string_nullable_array_array
 func (UnimplementedHandler) TestRequestStringNullableArrayArray(ctx context.Context, req [][]NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringPassword implements test_request_string_password operation.
+	//
+	// POST /test_request_string_password
 }
 
-// TestRequestStringPassword implements test_request_string_password operation.
-//
-// POST /test_request_string_password
 func (UnimplementedHandler) TestRequestStringPassword(ctx context.Context, req OptString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringPasswordArray implements test_request_string_password_array operation.
+	//
+	// POST /test_request_string_password_array
 }
 
-// TestRequestStringPasswordArray implements test_request_string_password_array operation.
-//
-// POST /test_request_string_password_array
 func (UnimplementedHandler) TestRequestStringPasswordArray(ctx context.Context, req []string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringPasswordArrayArray implements test_request_string_password_array_array operation.
+	//
+	// POST /test_request_string_password_array_array
 }
 
-// TestRequestStringPasswordArrayArray implements test_request_string_password_array_array operation.
-//
-// POST /test_request_string_password_array_array
 func (UnimplementedHandler) TestRequestStringPasswordArrayArray(ctx context.Context, req [][]string) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringPasswordNullable implements test_request_string_password_nullable operation.
+	//
+	// POST /test_request_string_password_nullable
 }
 
-// TestRequestStringPasswordNullable implements test_request_string_password_nullable operation.
-//
-// POST /test_request_string_password_nullable
 func (UnimplementedHandler) TestRequestStringPasswordNullable(ctx context.Context, req OptNilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringPasswordNullableArray implements test_request_string_password_nullable_array operation.
+	//
+	// POST /test_request_string_password_nullable_array
 }
 
-// TestRequestStringPasswordNullableArray implements test_request_string_password_nullable_array operation.
-//
-// POST /test_request_string_password_nullable_array
 func (UnimplementedHandler) TestRequestStringPasswordNullableArray(ctx context.Context, req []NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringPasswordNullableArrayArray implements test_request_string_password_nullable_array_array operation.
+	//
+	// POST /test_request_string_password_nullable_array_array
 }
 
-// TestRequestStringPasswordNullableArrayArray implements test_request_string_password_nullable_array_array operation.
-//
-// POST /test_request_string_password_nullable_array_array
 func (UnimplementedHandler) TestRequestStringPasswordNullableArrayArray(ctx context.Context, req [][]NilString) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringTime implements test_request_string_time operation.
+	//
+	// POST /test_request_string_time
 }
 
-// TestRequestStringTime implements test_request_string_time operation.
-//
-// POST /test_request_string_time
 func (UnimplementedHandler) TestRequestStringTime(ctx context.Context, req OptTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringTimeArray implements test_request_string_time_array operation.
+	//
+	// POST /test_request_string_time_array
 }
 
-// TestRequestStringTimeArray implements test_request_string_time_array operation.
-//
-// POST /test_request_string_time_array
 func (UnimplementedHandler) TestRequestStringTimeArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringTimeArrayArray implements test_request_string_time_array_array operation.
+	//
+	// POST /test_request_string_time_array_array
 }
 
-// TestRequestStringTimeArrayArray implements test_request_string_time_array_array operation.
-//
-// POST /test_request_string_time_array_array
 func (UnimplementedHandler) TestRequestStringTimeArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringTimeNullable implements test_request_string_time_nullable operation.
+	//
+	// POST /test_request_string_time_nullable
 }
 
-// TestRequestStringTimeNullable implements test_request_string_time_nullable operation.
-//
-// POST /test_request_string_time_nullable
 func (UnimplementedHandler) TestRequestStringTimeNullable(ctx context.Context, req OptNilTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringTimeNullableArray implements test_request_string_time_nullable_array operation.
+	//
+	// POST /test_request_string_time_nullable_array
 }
 
-// TestRequestStringTimeNullableArray implements test_request_string_time_nullable_array operation.
-//
-// POST /test_request_string_time_nullable_array
 func (UnimplementedHandler) TestRequestStringTimeNullableArray(ctx context.Context, req []NilTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringTimeNullableArrayArray implements test_request_string_time_nullable_array_array operation.
+	//
+	// POST /test_request_string_time_nullable_array_array
 }
 
-// TestRequestStringTimeNullableArrayArray implements test_request_string_time_nullable_array_array operation.
-//
-// POST /test_request_string_time_nullable_array_array
 func (UnimplementedHandler) TestRequestStringTimeNullableArrayArray(ctx context.Context, req [][]NilTime) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringURI implements test_request_string_uri operation.
+	//
+	// POST /test_request_string_uri
 }
 
-// TestRequestStringURI implements test_request_string_uri operation.
-//
-// POST /test_request_string_uri
 func (UnimplementedHandler) TestRequestStringURI(ctx context.Context, req OptURI) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringURIArray implements test_request_string_uri_array operation.
+	//
+	// POST /test_request_string_uri_array
 }
 
-// TestRequestStringURIArray implements test_request_string_uri_array operation.
-//
-// POST /test_request_string_uri_array
 func (UnimplementedHandler) TestRequestStringURIArray(ctx context.Context, req []url.URL) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringURIArrayArray implements test_request_string_uri_array_array operation.
+	//
+	// POST /test_request_string_uri_array_array
 }
 
-// TestRequestStringURIArrayArray implements test_request_string_uri_array_array operation.
-//
-// POST /test_request_string_uri_array_array
 func (UnimplementedHandler) TestRequestStringURIArrayArray(ctx context.Context, req [][]url.URL) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringURINullable implements test_request_string_uri_nullable operation.
+	//
+	// POST /test_request_string_uri_nullable
 }
 
-// TestRequestStringURINullable implements test_request_string_uri_nullable operation.
-//
-// POST /test_request_string_uri_nullable
 func (UnimplementedHandler) TestRequestStringURINullable(ctx context.Context, req OptNilURI) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringURINullableArray implements test_request_string_uri_nullable_array operation.
+	//
+	// POST /test_request_string_uri_nullable_array
 }
 
-// TestRequestStringURINullableArray implements test_request_string_uri_nullable_array operation.
-//
-// POST /test_request_string_uri_nullable_array
 func (UnimplementedHandler) TestRequestStringURINullableArray(ctx context.Context, req []NilURI) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringURINullableArrayArray implements test_request_string_uri_nullable_array_array operation.
+	//
+	// POST /test_request_string_uri_nullable_array_array
 }
 
-// TestRequestStringURINullableArrayArray implements test_request_string_uri_nullable_array_array operation.
-//
-// POST /test_request_string_uri_nullable_array_array
 func (UnimplementedHandler) TestRequestStringURINullableArrayArray(ctx context.Context, req [][]NilURI) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUUID implements test_request_string_uuid operation.
+	//
+	// POST /test_request_string_uuid
 }
 
-// TestRequestStringUUID implements test_request_string_uuid operation.
-//
-// POST /test_request_string_uuid
 func (UnimplementedHandler) TestRequestStringUUID(ctx context.Context, req OptUUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUUIDArray implements test_request_string_uuid_array operation.
+	//
+	// POST /test_request_string_uuid_array
 }
 
-// TestRequestStringUUIDArray implements test_request_string_uuid_array operation.
-//
-// POST /test_request_string_uuid_array
 func (UnimplementedHandler) TestRequestStringUUIDArray(ctx context.Context, req []uuid.UUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUUIDArrayArray implements test_request_string_uuid_array_array operation.
+	//
+	// POST /test_request_string_uuid_array_array
 }
 
-// TestRequestStringUUIDArrayArray implements test_request_string_uuid_array_array operation.
-//
-// POST /test_request_string_uuid_array_array
 func (UnimplementedHandler) TestRequestStringUUIDArrayArray(ctx context.Context, req [][]uuid.UUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUUIDNullable implements test_request_string_uuid_nullable operation.
+	//
+	// POST /test_request_string_uuid_nullable
 }
 
-// TestRequestStringUUIDNullable implements test_request_string_uuid_nullable operation.
-//
-// POST /test_request_string_uuid_nullable
 func (UnimplementedHandler) TestRequestStringUUIDNullable(ctx context.Context, req OptNilUUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUUIDNullableArray implements test_request_string_uuid_nullable_array operation.
+	//
+	// POST /test_request_string_uuid_nullable_array
 }
 
-// TestRequestStringUUIDNullableArray implements test_request_string_uuid_nullable_array operation.
-//
-// POST /test_request_string_uuid_nullable_array
 func (UnimplementedHandler) TestRequestStringUUIDNullableArray(ctx context.Context, req []NilUUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUUIDNullableArrayArray implements test_request_string_uuid_nullable_array_array operation.
+	//
+	// POST /test_request_string_uuid_nullable_array_array
 }
 
-// TestRequestStringUUIDNullableArrayArray implements test_request_string_uuid_nullable_array_array operation.
-//
-// POST /test_request_string_uuid_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUUIDNullableArrayArray(ctx context.Context, req [][]NilUUID) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint implements test_request_string_uint operation.
+	//
+	// POST /test_request_string_uint
 }
 
-// TestRequestStringUint implements test_request_string_uint operation.
-//
-// POST /test_request_string_uint
 func (UnimplementedHandler) TestRequestStringUint(ctx context.Context, req OptStringUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint16 implements test_request_string_uint16 operation.
+	//
+	// POST /test_request_string_uint16
 }
 
-// TestRequestStringUint16 implements test_request_string_uint16 operation.
-//
-// POST /test_request_string_uint16
 func (UnimplementedHandler) TestRequestStringUint16(ctx context.Context, req OptStringUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint16Array implements test_request_string_uint16_array operation.
+	//
+	// POST /test_request_string_uint16_array
 }
 
-// TestRequestStringUint16Array implements test_request_string_uint16_array operation.
-//
-// POST /test_request_string_uint16_array
 func (UnimplementedHandler) TestRequestStringUint16Array(ctx context.Context, req []uint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint16ArrayArray implements test_request_string_uint16_array_array operation.
+	//
+	// POST /test_request_string_uint16_array_array
 }
 
-// TestRequestStringUint16ArrayArray implements test_request_string_uint16_array_array operation.
-//
-// POST /test_request_string_uint16_array_array
 func (UnimplementedHandler) TestRequestStringUint16ArrayArray(ctx context.Context, req [][]uint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint16Nullable implements test_request_string_uint16_nullable operation.
+	//
+	// POST /test_request_string_uint16_nullable
 }
 
-// TestRequestStringUint16Nullable implements test_request_string_uint16_nullable operation.
-//
-// POST /test_request_string_uint16_nullable
 func (UnimplementedHandler) TestRequestStringUint16Nullable(ctx context.Context, req OptNilStringUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint16NullableArray implements test_request_string_uint16_nullable_array operation.
+	//
+	// POST /test_request_string_uint16_nullable_array
 }
 
-// TestRequestStringUint16NullableArray implements test_request_string_uint16_nullable_array operation.
-//
-// POST /test_request_string_uint16_nullable_array
 func (UnimplementedHandler) TestRequestStringUint16NullableArray(ctx context.Context, req []NilStringUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint16NullableArrayArray implements test_request_string_uint16_nullable_array_array operation.
+	//
+	// POST /test_request_string_uint16_nullable_array_array
 }
 
-// TestRequestStringUint16NullableArrayArray implements test_request_string_uint16_nullable_array_array operation.
-//
-// POST /test_request_string_uint16_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUint16NullableArrayArray(ctx context.Context, req [][]NilStringUint16) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint32 implements test_request_string_uint32 operation.
+	//
+	// POST /test_request_string_uint32
 }
 
-// TestRequestStringUint32 implements test_request_string_uint32 operation.
-//
-// POST /test_request_string_uint32
 func (UnimplementedHandler) TestRequestStringUint32(ctx context.Context, req OptStringUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint32Array implements test_request_string_uint32_array operation.
+	//
+	// POST /test_request_string_uint32_array
 }
 
-// TestRequestStringUint32Array implements test_request_string_uint32_array operation.
-//
-// POST /test_request_string_uint32_array
 func (UnimplementedHandler) TestRequestStringUint32Array(ctx context.Context, req []uint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint32ArrayArray implements test_request_string_uint32_array_array operation.
+	//
+	// POST /test_request_string_uint32_array_array
 }
 
-// TestRequestStringUint32ArrayArray implements test_request_string_uint32_array_array operation.
-//
-// POST /test_request_string_uint32_array_array
 func (UnimplementedHandler) TestRequestStringUint32ArrayArray(ctx context.Context, req [][]uint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint32Nullable implements test_request_string_uint32_nullable operation.
+	//
+	// POST /test_request_string_uint32_nullable
 }
 
-// TestRequestStringUint32Nullable implements test_request_string_uint32_nullable operation.
-//
-// POST /test_request_string_uint32_nullable
 func (UnimplementedHandler) TestRequestStringUint32Nullable(ctx context.Context, req OptNilStringUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint32NullableArray implements test_request_string_uint32_nullable_array operation.
+	//
+	// POST /test_request_string_uint32_nullable_array
 }
 
-// TestRequestStringUint32NullableArray implements test_request_string_uint32_nullable_array operation.
-//
-// POST /test_request_string_uint32_nullable_array
 func (UnimplementedHandler) TestRequestStringUint32NullableArray(ctx context.Context, req []NilStringUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint32NullableArrayArray implements test_request_string_uint32_nullable_array_array operation.
+	//
+	// POST /test_request_string_uint32_nullable_array_array
 }
 
-// TestRequestStringUint32NullableArrayArray implements test_request_string_uint32_nullable_array_array operation.
-//
-// POST /test_request_string_uint32_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUint32NullableArrayArray(ctx context.Context, req [][]NilStringUint32) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint64 implements test_request_string_uint64 operation.
+	//
+	// POST /test_request_string_uint64
 }
 
-// TestRequestStringUint64 implements test_request_string_uint64 operation.
-//
-// POST /test_request_string_uint64
 func (UnimplementedHandler) TestRequestStringUint64(ctx context.Context, req OptStringUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint64Array implements test_request_string_uint64_array operation.
+	//
+	// POST /test_request_string_uint64_array
 }
 
-// TestRequestStringUint64Array implements test_request_string_uint64_array operation.
-//
-// POST /test_request_string_uint64_array
 func (UnimplementedHandler) TestRequestStringUint64Array(ctx context.Context, req []uint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint64ArrayArray implements test_request_string_uint64_array_array operation.
+	//
+	// POST /test_request_string_uint64_array_array
 }
 
-// TestRequestStringUint64ArrayArray implements test_request_string_uint64_array_array operation.
-//
-// POST /test_request_string_uint64_array_array
 func (UnimplementedHandler) TestRequestStringUint64ArrayArray(ctx context.Context, req [][]uint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint64Nullable implements test_request_string_uint64_nullable operation.
+	//
+	// POST /test_request_string_uint64_nullable
 }
 
-// TestRequestStringUint64Nullable implements test_request_string_uint64_nullable operation.
-//
-// POST /test_request_string_uint64_nullable
 func (UnimplementedHandler) TestRequestStringUint64Nullable(ctx context.Context, req OptNilStringUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint64NullableArray implements test_request_string_uint64_nullable_array operation.
+	//
+	// POST /test_request_string_uint64_nullable_array
 }
 
-// TestRequestStringUint64NullableArray implements test_request_string_uint64_nullable_array operation.
-//
-// POST /test_request_string_uint64_nullable_array
 func (UnimplementedHandler) TestRequestStringUint64NullableArray(ctx context.Context, req []NilStringUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint64NullableArrayArray implements test_request_string_uint64_nullable_array_array operation.
+	//
+	// POST /test_request_string_uint64_nullable_array_array
 }
 
-// TestRequestStringUint64NullableArrayArray implements test_request_string_uint64_nullable_array_array operation.
-//
-// POST /test_request_string_uint64_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUint64NullableArrayArray(ctx context.Context, req [][]NilStringUint64) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint8 implements test_request_string_uint8 operation.
+	//
+	// POST /test_request_string_uint8
 }
 
-// TestRequestStringUint8 implements test_request_string_uint8 operation.
-//
-// POST /test_request_string_uint8
 func (UnimplementedHandler) TestRequestStringUint8(ctx context.Context, req OptStringUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint8Array implements test_request_string_uint8_array operation.
+	//
+	// POST /test_request_string_uint8_array
 }
 
-// TestRequestStringUint8Array implements test_request_string_uint8_array operation.
-//
-// POST /test_request_string_uint8_array
 func (UnimplementedHandler) TestRequestStringUint8Array(ctx context.Context, req []uint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint8ArrayArray implements test_request_string_uint8_array_array operation.
+	//
+	// POST /test_request_string_uint8_array_array
 }
 
-// TestRequestStringUint8ArrayArray implements test_request_string_uint8_array_array operation.
-//
-// POST /test_request_string_uint8_array_array
 func (UnimplementedHandler) TestRequestStringUint8ArrayArray(ctx context.Context, req [][]uint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint8Nullable implements test_request_string_uint8_nullable operation.
+	//
+	// POST /test_request_string_uint8_nullable
 }
 
-// TestRequestStringUint8Nullable implements test_request_string_uint8_nullable operation.
-//
-// POST /test_request_string_uint8_nullable
 func (UnimplementedHandler) TestRequestStringUint8Nullable(ctx context.Context, req OptNilStringUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint8NullableArray implements test_request_string_uint8_nullable_array operation.
+	//
+	// POST /test_request_string_uint8_nullable_array
 }
 
-// TestRequestStringUint8NullableArray implements test_request_string_uint8_nullable_array operation.
-//
-// POST /test_request_string_uint8_nullable_array
 func (UnimplementedHandler) TestRequestStringUint8NullableArray(ctx context.Context, req []NilStringUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUint8NullableArrayArray implements test_request_string_uint8_nullable_array_array operation.
+	//
+	// POST /test_request_string_uint8_nullable_array_array
 }
 
-// TestRequestStringUint8NullableArrayArray implements test_request_string_uint8_nullable_array_array operation.
-//
-// POST /test_request_string_uint8_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUint8NullableArrayArray(ctx context.Context, req [][]NilStringUint8) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUintArray implements test_request_string_uint_array operation.
+	//
+	// POST /test_request_string_uint_array
 }
 
-// TestRequestStringUintArray implements test_request_string_uint_array operation.
-//
-// POST /test_request_string_uint_array
 func (UnimplementedHandler) TestRequestStringUintArray(ctx context.Context, req []uint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUintArrayArray implements test_request_string_uint_array_array operation.
+	//
+	// POST /test_request_string_uint_array_array
 }
 
-// TestRequestStringUintArrayArray implements test_request_string_uint_array_array operation.
-//
-// POST /test_request_string_uint_array_array
 func (UnimplementedHandler) TestRequestStringUintArrayArray(ctx context.Context, req [][]uint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUintNullable implements test_request_string_uint_nullable operation.
+	//
+	// POST /test_request_string_uint_nullable
 }
 
-// TestRequestStringUintNullable implements test_request_string_uint_nullable operation.
-//
-// POST /test_request_string_uint_nullable
 func (UnimplementedHandler) TestRequestStringUintNullable(ctx context.Context, req OptNilStringUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUintNullableArray implements test_request_string_uint_nullable_array operation.
+	//
+	// POST /test_request_string_uint_nullable_array
 }
 
-// TestRequestStringUintNullableArray implements test_request_string_uint_nullable_array operation.
-//
-// POST /test_request_string_uint_nullable_array
 func (UnimplementedHandler) TestRequestStringUintNullableArray(ctx context.Context, req []NilStringUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUintNullableArrayArray implements test_request_string_uint_nullable_array_array operation.
+	//
+	// POST /test_request_string_uint_nullable_array_array
 }
 
-// TestRequestStringUintNullableArrayArray implements test_request_string_uint_nullable_array_array operation.
-//
-// POST /test_request_string_uint_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUintNullableArrayArray(ctx context.Context, req [][]NilStringUint) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnix implements test_request_string_unix operation.
+	//
+	// POST /test_request_string_unix
 }
 
-// TestRequestStringUnix implements test_request_string_unix operation.
-//
-// POST /test_request_string_unix
 func (UnimplementedHandler) TestRequestStringUnix(ctx context.Context, req OptStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixArray implements test_request_string_unix_array operation.
+	//
+	// POST /test_request_string_unix_array
 }
 
-// TestRequestStringUnixArray implements test_request_string_unix_array operation.
-//
-// POST /test_request_string_unix_array
 func (UnimplementedHandler) TestRequestStringUnixArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixArrayArray implements test_request_string_unix_array_array operation.
+	//
+	// POST /test_request_string_unix_array_array
 }
 
-// TestRequestStringUnixArrayArray implements test_request_string_unix_array_array operation.
-//
-// POST /test_request_string_unix_array_array
 func (UnimplementedHandler) TestRequestStringUnixArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMicro implements test_request_string_unix-micro operation.
+	//
+	// POST /test_request_string_unix-micro
 }
 
-// TestRequestStringUnixMicro implements test_request_string_unix-micro operation.
-//
-// POST /test_request_string_unix-micro
 func (UnimplementedHandler) TestRequestStringUnixMicro(ctx context.Context, req OptStringUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMicroArray implements test_request_string_unix-micro_array operation.
+	//
+	// POST /test_request_string_unix-micro_array
 }
 
-// TestRequestStringUnixMicroArray implements test_request_string_unix-micro_array operation.
-//
-// POST /test_request_string_unix-micro_array
 func (UnimplementedHandler) TestRequestStringUnixMicroArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMicroArrayArray implements test_request_string_unix-micro_array_array operation.
+	//
+	// POST /test_request_string_unix-micro_array_array
 }
 
-// TestRequestStringUnixMicroArrayArray implements test_request_string_unix-micro_array_array operation.
-//
-// POST /test_request_string_unix-micro_array_array
 func (UnimplementedHandler) TestRequestStringUnixMicroArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMicroNullable implements test_request_string_unix-micro_nullable operation.
+	//
+	// POST /test_request_string_unix-micro_nullable
 }
 
-// TestRequestStringUnixMicroNullable implements test_request_string_unix-micro_nullable operation.
-//
-// POST /test_request_string_unix-micro_nullable
 func (UnimplementedHandler) TestRequestStringUnixMicroNullable(ctx context.Context, req OptNilStringUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMicroNullableArray implements test_request_string_unix-micro_nullable_array operation.
+	//
+	// POST /test_request_string_unix-micro_nullable_array
 }
 
-// TestRequestStringUnixMicroNullableArray implements test_request_string_unix-micro_nullable_array operation.
-//
-// POST /test_request_string_unix-micro_nullable_array
 func (UnimplementedHandler) TestRequestStringUnixMicroNullableArray(ctx context.Context, req []NilStringUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMicroNullableArrayArray implements test_request_string_unix-micro_nullable_array_array operation.
+	//
+	// POST /test_request_string_unix-micro_nullable_array_array
 }
 
-// TestRequestStringUnixMicroNullableArrayArray implements test_request_string_unix-micro_nullable_array_array operation.
-//
-// POST /test_request_string_unix-micro_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUnixMicroNullableArrayArray(ctx context.Context, req [][]NilStringUnixMicro) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMilli implements test_request_string_unix-milli operation.
+	//
+	// POST /test_request_string_unix-milli
 }
 
-// TestRequestStringUnixMilli implements test_request_string_unix-milli operation.
-//
-// POST /test_request_string_unix-milli
 func (UnimplementedHandler) TestRequestStringUnixMilli(ctx context.Context, req OptStringUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMilliArray implements test_request_string_unix-milli_array operation.
+	//
+	// POST /test_request_string_unix-milli_array
 }
 
-// TestRequestStringUnixMilliArray implements test_request_string_unix-milli_array operation.
-//
-// POST /test_request_string_unix-milli_array
 func (UnimplementedHandler) TestRequestStringUnixMilliArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMilliArrayArray implements test_request_string_unix-milli_array_array operation.
+	//
+	// POST /test_request_string_unix-milli_array_array
 }
 
-// TestRequestStringUnixMilliArrayArray implements test_request_string_unix-milli_array_array operation.
-//
-// POST /test_request_string_unix-milli_array_array
 func (UnimplementedHandler) TestRequestStringUnixMilliArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMilliNullable implements test_request_string_unix-milli_nullable operation.
+	//
+	// POST /test_request_string_unix-milli_nullable
 }
 
-// TestRequestStringUnixMilliNullable implements test_request_string_unix-milli_nullable operation.
-//
-// POST /test_request_string_unix-milli_nullable
 func (UnimplementedHandler) TestRequestStringUnixMilliNullable(ctx context.Context, req OptNilStringUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMilliNullableArray implements test_request_string_unix-milli_nullable_array operation.
+	//
+	// POST /test_request_string_unix-milli_nullable_array
 }
 
-// TestRequestStringUnixMilliNullableArray implements test_request_string_unix-milli_nullable_array operation.
-//
-// POST /test_request_string_unix-milli_nullable_array
 func (UnimplementedHandler) TestRequestStringUnixMilliNullableArray(ctx context.Context, req []NilStringUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixMilliNullableArrayArray implements test_request_string_unix-milli_nullable_array_array operation.
+	//
+	// POST /test_request_string_unix-milli_nullable_array_array
 }
 
-// TestRequestStringUnixMilliNullableArrayArray implements test_request_string_unix-milli_nullable_array_array operation.
-//
-// POST /test_request_string_unix-milli_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUnixMilliNullableArrayArray(ctx context.Context, req [][]NilStringUnixMilli) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixNano implements test_request_string_unix-nano operation.
+	//
+	// POST /test_request_string_unix-nano
 }
 
-// TestRequestStringUnixNano implements test_request_string_unix-nano operation.
-//
-// POST /test_request_string_unix-nano
 func (UnimplementedHandler) TestRequestStringUnixNano(ctx context.Context, req OptStringUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixNanoArray implements test_request_string_unix-nano_array operation.
+	//
+	// POST /test_request_string_unix-nano_array
 }
 
-// TestRequestStringUnixNanoArray implements test_request_string_unix-nano_array operation.
-//
-// POST /test_request_string_unix-nano_array
 func (UnimplementedHandler) TestRequestStringUnixNanoArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixNanoArrayArray implements test_request_string_unix-nano_array_array operation.
+	//
+	// POST /test_request_string_unix-nano_array_array
 }
 
-// TestRequestStringUnixNanoArrayArray implements test_request_string_unix-nano_array_array operation.
-//
-// POST /test_request_string_unix-nano_array_array
 func (UnimplementedHandler) TestRequestStringUnixNanoArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixNanoNullable implements test_request_string_unix-nano_nullable operation.
+	//
+	// POST /test_request_string_unix-nano_nullable
 }
 
-// TestRequestStringUnixNanoNullable implements test_request_string_unix-nano_nullable operation.
-//
-// POST /test_request_string_unix-nano_nullable
 func (UnimplementedHandler) TestRequestStringUnixNanoNullable(ctx context.Context, req OptNilStringUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixNanoNullableArray implements test_request_string_unix-nano_nullable_array operation.
+	//
+	// POST /test_request_string_unix-nano_nullable_array
 }
 
-// TestRequestStringUnixNanoNullableArray implements test_request_string_unix-nano_nullable_array operation.
-//
-// POST /test_request_string_unix-nano_nullable_array
 func (UnimplementedHandler) TestRequestStringUnixNanoNullableArray(ctx context.Context, req []NilStringUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixNanoNullableArrayArray implements test_request_string_unix-nano_nullable_array_array operation.
+	//
+	// POST /test_request_string_unix-nano_nullable_array_array
 }
 
-// TestRequestStringUnixNanoNullableArrayArray implements test_request_string_unix-nano_nullable_array_array operation.
-//
-// POST /test_request_string_unix-nano_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUnixNanoNullableArrayArray(ctx context.Context, req [][]NilStringUnixNano) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixNullable implements test_request_string_unix_nullable operation.
+	//
+	// POST /test_request_string_unix_nullable
 }
 
-// TestRequestStringUnixNullable implements test_request_string_unix_nullable operation.
-//
-// POST /test_request_string_unix_nullable
 func (UnimplementedHandler) TestRequestStringUnixNullable(ctx context.Context, req OptNilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixNullableArray implements test_request_string_unix_nullable_array operation.
+	//
+	// POST /test_request_string_unix_nullable_array
 }
 
-// TestRequestStringUnixNullableArray implements test_request_string_unix_nullable_array operation.
-//
-// POST /test_request_string_unix_nullable_array
 func (UnimplementedHandler) TestRequestStringUnixNullableArray(ctx context.Context, req []NilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixNullableArrayArray implements test_request_string_unix_nullable_array_array operation.
+	//
+	// POST /test_request_string_unix_nullable_array_array
 }
 
-// TestRequestStringUnixNullableArrayArray implements test_request_string_unix_nullable_array_array operation.
-//
-// POST /test_request_string_unix_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUnixNullableArrayArray(ctx context.Context, req [][]NilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixSeconds implements test_request_string_unix-seconds operation.
+	//
+	// POST /test_request_string_unix-seconds
 }
 
-// TestRequestStringUnixSeconds implements test_request_string_unix-seconds operation.
-//
-// POST /test_request_string_unix-seconds
 func (UnimplementedHandler) TestRequestStringUnixSeconds(ctx context.Context, req OptStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixSecondsArray implements test_request_string_unix-seconds_array operation.
+	//
+	// POST /test_request_string_unix-seconds_array
 }
 
-// TestRequestStringUnixSecondsArray implements test_request_string_unix-seconds_array operation.
-//
-// POST /test_request_string_unix-seconds_array
 func (UnimplementedHandler) TestRequestStringUnixSecondsArray(ctx context.Context, req []time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixSecondsArrayArray implements test_request_string_unix-seconds_array_array operation.
+	//
+	// POST /test_request_string_unix-seconds_array_array
 }
 
-// TestRequestStringUnixSecondsArrayArray implements test_request_string_unix-seconds_array_array operation.
-//
-// POST /test_request_string_unix-seconds_array_array
 func (UnimplementedHandler) TestRequestStringUnixSecondsArrayArray(ctx context.Context, req [][]time.Time) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixSecondsNullable implements test_request_string_unix-seconds_nullable operation.
+	//
+	// POST /test_request_string_unix-seconds_nullable
 }
 
-// TestRequestStringUnixSecondsNullable implements test_request_string_unix-seconds_nullable operation.
-//
-// POST /test_request_string_unix-seconds_nullable
 func (UnimplementedHandler) TestRequestStringUnixSecondsNullable(ctx context.Context, req OptNilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixSecondsNullableArray implements test_request_string_unix-seconds_nullable_array operation.
+	//
+	// POST /test_request_string_unix-seconds_nullable_array
 }
 
-// TestRequestStringUnixSecondsNullableArray implements test_request_string_unix-seconds_nullable_array operation.
-//
-// POST /test_request_string_unix-seconds_nullable_array
 func (UnimplementedHandler) TestRequestStringUnixSecondsNullableArray(ctx context.Context, req []NilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestRequestStringUnixSecondsNullableArrayArray implements test_request_string_unix-seconds_nullable_array_array operation.
+	//
+	// POST /test_request_string_unix-seconds_nullable_array_array
 }
 
-// TestRequestStringUnixSecondsNullableArrayArray implements test_request_string_unix-seconds_nullable_array_array operation.
-//
-// POST /test_request_string_unix-seconds_nullable_array_array
 func (UnimplementedHandler) TestRequestStringUnixSecondsNullableArrayArray(ctx context.Context, req [][]NilStringUnixSeconds) (r *Error, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseAny implements test_response_Any operation.
+	//
+	// POST /test_response_Any
 }
 
-// TestResponseAny implements test_response_Any operation.
-//
-// POST /test_response_Any
 func (UnimplementedHandler) TestResponseAny(ctx context.Context, req string) (r jx.Raw, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(jx.Raw), nil
 }
 
 // TestResponseBoolean implements test_response_boolean operation.
 //
 // POST /test_response_boolean
 func (UnimplementedHandler) TestResponseBoolean(ctx context.Context, req string) (r bool, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return false, nil
+
+	// TestResponseBooleanArray implements test_response_boolean_array operation.
+	//
+	// POST /test_response_boolean_array
 }
 
-// TestResponseBooleanArray implements test_response_boolean_array operation.
-//
-// POST /test_response_boolean_array
 func (UnimplementedHandler) TestResponseBooleanArray(ctx context.Context, req string) (r []bool, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseBooleanArrayArray implements test_response_boolean_array_array operation.
+	//
+	// POST /test_response_boolean_array_array
 }
 
-// TestResponseBooleanArrayArray implements test_response_boolean_array_array operation.
-//
-// POST /test_response_boolean_array_array
 func (UnimplementedHandler) TestResponseBooleanArrayArray(ctx context.Context, req string) (r [][]bool, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseBooleanNullable implements test_response_boolean_nullable operation.
+	//
+	// POST /test_response_boolean_nullable
 }
 
-// TestResponseBooleanNullable implements test_response_boolean_nullable operation.
-//
-// POST /test_response_boolean_nullable
 func (UnimplementedHandler) TestResponseBooleanNullable(ctx context.Context, req string) (r NilBool, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilBool), nil
 }
 
 // TestResponseBooleanNullableArray implements test_response_boolean_nullable_array operation.
 //
 // POST /test_response_boolean_nullable_array
 func (UnimplementedHandler) TestResponseBooleanNullableArray(ctx context.Context, req string) (r []NilBool, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseBooleanNullableArrayArray implements test_response_boolean_nullable_array_array operation.
+	//
+	// POST /test_response_boolean_nullable_array_array
 }
 
-// TestResponseBooleanNullableArrayArray implements test_response_boolean_nullable_array_array operation.
-//
-// POST /test_response_boolean_nullable_array_array
 func (UnimplementedHandler) TestResponseBooleanNullableArrayArray(ctx context.Context, req string) (r [][]NilBool, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseEmptyStruct implements test_response_EmptyStruct operation.
+	//
+	// POST /test_response_EmptyStruct
 }
 
-// TestResponseEmptyStruct implements test_response_EmptyStruct operation.
-//
-// POST /test_response_EmptyStruct
 func (UnimplementedHandler) TestResponseEmptyStruct(ctx context.Context, req string) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TestResponseFormatTest implements test_response_FormatTest operation.
 //
 // POST /test_response_FormatTest
 func (UnimplementedHandler) TestResponseFormatTest(ctx context.Context, req string) (r *TestResponseFormatTestOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseInteger implements test_response_integer operation.
+	//
+	// POST /test_response_integer
 }
 
-// TestResponseInteger implements test_response_integer operation.
-//
-// POST /test_response_integer
 func (UnimplementedHandler) TestResponseInteger(ctx context.Context, req string) (r int, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseIntegerArray implements test_response_integer_array operation.
 //
 // POST /test_response_integer_array
 func (UnimplementedHandler) TestResponseIntegerArray(ctx context.Context, req string) (r []int, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerArrayArray implements test_response_integer_array_array operation.
+	//
+	// POST /test_response_integer_array_array
 }
 
-// TestResponseIntegerArrayArray implements test_response_integer_array_array operation.
-//
-// POST /test_response_integer_array_array
 func (UnimplementedHandler) TestResponseIntegerArrayArray(ctx context.Context, req string) (r [][]int, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt16 implements test_response_integer_int16 operation.
+	//
+	// POST /test_response_integer_int16
 }
 
-// TestResponseIntegerInt16 implements test_response_integer_int16 operation.
-//
-// POST /test_response_integer_int16
 func (UnimplementedHandler) TestResponseIntegerInt16(ctx context.Context, req string) (r int16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseIntegerInt16Array implements test_response_integer_int16_array operation.
 //
 // POST /test_response_integer_int16_array
 func (UnimplementedHandler) TestResponseIntegerInt16Array(ctx context.Context, req string) (r []int16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt16ArrayArray implements test_response_integer_int16_array_array operation.
+	//
+	// POST /test_response_integer_int16_array_array
 }
 
-// TestResponseIntegerInt16ArrayArray implements test_response_integer_int16_array_array operation.
-//
-// POST /test_response_integer_int16_array_array
 func (UnimplementedHandler) TestResponseIntegerInt16ArrayArray(ctx context.Context, req string) (r [][]int16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt16Nullable implements test_response_integer_int16_nullable operation.
+	//
+	// POST /test_response_integer_int16_nullable
 }
 
-// TestResponseIntegerInt16Nullable implements test_response_integer_int16_nullable operation.
-//
-// POST /test_response_integer_int16_nullable
 func (UnimplementedHandler) TestResponseIntegerInt16Nullable(ctx context.Context, req string) (r NilInt16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilInt16), nil
 }
 
 // TestResponseIntegerInt16NullableArray implements test_response_integer_int16_nullable_array operation.
 //
 // POST /test_response_integer_int16_nullable_array
 func (UnimplementedHandler) TestResponseIntegerInt16NullableArray(ctx context.Context, req string) (r []NilInt16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt16NullableArrayArray implements test_response_integer_int16_nullable_array_array operation.
+	//
+	// POST /test_response_integer_int16_nullable_array_array
 }
 
-// TestResponseIntegerInt16NullableArrayArray implements test_response_integer_int16_nullable_array_array operation.
-//
-// POST /test_response_integer_int16_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerInt16NullableArrayArray(ctx context.Context, req string) (r [][]NilInt16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt32 implements test_response_integer_int32 operation.
+	//
+	// POST /test_response_integer_int32
 }
 
-// TestResponseIntegerInt32 implements test_response_integer_int32 operation.
-//
-// POST /test_response_integer_int32
 func (UnimplementedHandler) TestResponseIntegerInt32(ctx context.Context, req string) (r int32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseIntegerInt32Array implements test_response_integer_int32_array operation.
 //
 // POST /test_response_integer_int32_array
 func (UnimplementedHandler) TestResponseIntegerInt32Array(ctx context.Context, req string) (r []int32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt32ArrayArray implements test_response_integer_int32_array_array operation.
+	//
+	// POST /test_response_integer_int32_array_array
 }
 
-// TestResponseIntegerInt32ArrayArray implements test_response_integer_int32_array_array operation.
-//
-// POST /test_response_integer_int32_array_array
 func (UnimplementedHandler) TestResponseIntegerInt32ArrayArray(ctx context.Context, req string) (r [][]int32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt32Nullable implements test_response_integer_int32_nullable operation.
+	//
+	// POST /test_response_integer_int32_nullable
 }
 
-// TestResponseIntegerInt32Nullable implements test_response_integer_int32_nullable operation.
-//
-// POST /test_response_integer_int32_nullable
 func (UnimplementedHandler) TestResponseIntegerInt32Nullable(ctx context.Context, req string) (r NilInt32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilInt32), nil
 }
 
 // TestResponseIntegerInt32NullableArray implements test_response_integer_int32_nullable_array operation.
 //
 // POST /test_response_integer_int32_nullable_array
 func (UnimplementedHandler) TestResponseIntegerInt32NullableArray(ctx context.Context, req string) (r []NilInt32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt32NullableArrayArray implements test_response_integer_int32_nullable_array_array operation.
+	//
+	// POST /test_response_integer_int32_nullable_array_array
 }
 
-// TestResponseIntegerInt32NullableArrayArray implements test_response_integer_int32_nullable_array_array operation.
-//
-// POST /test_response_integer_int32_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerInt32NullableArrayArray(ctx context.Context, req string) (r [][]NilInt32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt64 implements test_response_integer_int64 operation.
+	//
+	// POST /test_response_integer_int64
 }
 
-// TestResponseIntegerInt64 implements test_response_integer_int64 operation.
-//
-// POST /test_response_integer_int64
 func (UnimplementedHandler) TestResponseIntegerInt64(ctx context.Context, req string) (r int64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseIntegerInt64Array implements test_response_integer_int64_array operation.
 //
 // POST /test_response_integer_int64_array
 func (UnimplementedHandler) TestResponseIntegerInt64Array(ctx context.Context, req string) (r []int64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt64ArrayArray implements test_response_integer_int64_array_array operation.
+	//
+	// POST /test_response_integer_int64_array_array
 }
 
-// TestResponseIntegerInt64ArrayArray implements test_response_integer_int64_array_array operation.
-//
-// POST /test_response_integer_int64_array_array
 func (UnimplementedHandler) TestResponseIntegerInt64ArrayArray(ctx context.Context, req string) (r [][]int64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt64Nullable implements test_response_integer_int64_nullable operation.
+	//
+	// POST /test_response_integer_int64_nullable
 }
 
-// TestResponseIntegerInt64Nullable implements test_response_integer_int64_nullable operation.
-//
-// POST /test_response_integer_int64_nullable
 func (UnimplementedHandler) TestResponseIntegerInt64Nullable(ctx context.Context, req string) (r NilInt64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilInt64), nil
 }
 
 // TestResponseIntegerInt64NullableArray implements test_response_integer_int64_nullable_array operation.
 //
 // POST /test_response_integer_int64_nullable_array
 func (UnimplementedHandler) TestResponseIntegerInt64NullableArray(ctx context.Context, req string) (r []NilInt64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt64NullableArrayArray implements test_response_integer_int64_nullable_array_array operation.
+	//
+	// POST /test_response_integer_int64_nullable_array_array
 }
 
-// TestResponseIntegerInt64NullableArrayArray implements test_response_integer_int64_nullable_array_array operation.
-//
-// POST /test_response_integer_int64_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerInt64NullableArrayArray(ctx context.Context, req string) (r [][]NilInt64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt8 implements test_response_integer_int8 operation.
+	//
+	// POST /test_response_integer_int8
 }
 
-// TestResponseIntegerInt8 implements test_response_integer_int8 operation.
-//
-// POST /test_response_integer_int8
 func (UnimplementedHandler) TestResponseIntegerInt8(ctx context.Context, req string) (r int8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseIntegerInt8Array implements test_response_integer_int8_array operation.
 //
 // POST /test_response_integer_int8_array
 func (UnimplementedHandler) TestResponseIntegerInt8Array(ctx context.Context, req string) (r []int8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt8ArrayArray implements test_response_integer_int8_array_array operation.
+	//
+	// POST /test_response_integer_int8_array_array
 }
 
-// TestResponseIntegerInt8ArrayArray implements test_response_integer_int8_array_array operation.
-//
-// POST /test_response_integer_int8_array_array
 func (UnimplementedHandler) TestResponseIntegerInt8ArrayArray(ctx context.Context, req string) (r [][]int8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt8Nullable implements test_response_integer_int8_nullable operation.
+	//
+	// POST /test_response_integer_int8_nullable
 }
 
-// TestResponseIntegerInt8Nullable implements test_response_integer_int8_nullable operation.
-//
-// POST /test_response_integer_int8_nullable
 func (UnimplementedHandler) TestResponseIntegerInt8Nullable(ctx context.Context, req string) (r NilInt8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilInt8), nil
 }
 
 // TestResponseIntegerInt8NullableArray implements test_response_integer_int8_nullable_array operation.
 //
 // POST /test_response_integer_int8_nullable_array
 func (UnimplementedHandler) TestResponseIntegerInt8NullableArray(ctx context.Context, req string) (r []NilInt8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerInt8NullableArrayArray implements test_response_integer_int8_nullable_array_array operation.
+	//
+	// POST /test_response_integer_int8_nullable_array_array
 }
 
-// TestResponseIntegerInt8NullableArrayArray implements test_response_integer_int8_nullable_array_array operation.
-//
-// POST /test_response_integer_int8_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerInt8NullableArrayArray(ctx context.Context, req string) (r [][]NilInt8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerNullable implements test_response_integer_nullable operation.
+	//
+	// POST /test_response_integer_nullable
 }
 
-// TestResponseIntegerNullable implements test_response_integer_nullable operation.
-//
-// POST /test_response_integer_nullable
 func (UnimplementedHandler) TestResponseIntegerNullable(ctx context.Context, req string) (r NilInt, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilInt), nil
 }
 
 // TestResponseIntegerNullableArray implements test_response_integer_nullable_array operation.
 //
 // POST /test_response_integer_nullable_array
 func (UnimplementedHandler) TestResponseIntegerNullableArray(ctx context.Context, req string) (r []NilInt, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerNullableArrayArray implements test_response_integer_nullable_array_array operation.
+	//
+	// POST /test_response_integer_nullable_array_array
 }
 
-// TestResponseIntegerNullableArrayArray implements test_response_integer_nullable_array_array operation.
-//
-// POST /test_response_integer_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerNullableArrayArray(ctx context.Context, req string) (r [][]NilInt, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint implements test_response_integer_uint operation.
+	//
+	// POST /test_response_integer_uint
 }
 
-// TestResponseIntegerUint implements test_response_integer_uint operation.
-//
-// POST /test_response_integer_uint
 func (UnimplementedHandler) TestResponseIntegerUint(ctx context.Context, req string) (r uint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseIntegerUint16 implements test_response_integer_uint16 operation.
 //
 // POST /test_response_integer_uint16
 func (UnimplementedHandler) TestResponseIntegerUint16(ctx context.Context, req string) (r uint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseIntegerUint16Array implements test_response_integer_uint16_array operation.
 //
 // POST /test_response_integer_uint16_array
 func (UnimplementedHandler) TestResponseIntegerUint16Array(ctx context.Context, req string) (r []uint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint16ArrayArray implements test_response_integer_uint16_array_array operation.
+	//
+	// POST /test_response_integer_uint16_array_array
 }
 
-// TestResponseIntegerUint16ArrayArray implements test_response_integer_uint16_array_array operation.
-//
-// POST /test_response_integer_uint16_array_array
 func (UnimplementedHandler) TestResponseIntegerUint16ArrayArray(ctx context.Context, req string) (r [][]uint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint16Nullable implements test_response_integer_uint16_nullable operation.
+	//
+	// POST /test_response_integer_uint16_nullable
 }
 
-// TestResponseIntegerUint16Nullable implements test_response_integer_uint16_nullable operation.
-//
-// POST /test_response_integer_uint16_nullable
 func (UnimplementedHandler) TestResponseIntegerUint16Nullable(ctx context.Context, req string) (r NilUint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUint16), nil
 }
 
 // TestResponseIntegerUint16NullableArray implements test_response_integer_uint16_nullable_array operation.
 //
 // POST /test_response_integer_uint16_nullable_array
 func (UnimplementedHandler) TestResponseIntegerUint16NullableArray(ctx context.Context, req string) (r []NilUint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint16NullableArrayArray implements test_response_integer_uint16_nullable_array_array operation.
+	//
+	// POST /test_response_integer_uint16_nullable_array_array
 }
 
-// TestResponseIntegerUint16NullableArrayArray implements test_response_integer_uint16_nullable_array_array operation.
-//
-// POST /test_response_integer_uint16_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerUint16NullableArrayArray(ctx context.Context, req string) (r [][]NilUint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint32 implements test_response_integer_uint32 operation.
+	//
+	// POST /test_response_integer_uint32
 }
 
-// TestResponseIntegerUint32 implements test_response_integer_uint32 operation.
-//
-// POST /test_response_integer_uint32
 func (UnimplementedHandler) TestResponseIntegerUint32(ctx context.Context, req string) (r uint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseIntegerUint32Array implements test_response_integer_uint32_array operation.
 //
 // POST /test_response_integer_uint32_array
 func (UnimplementedHandler) TestResponseIntegerUint32Array(ctx context.Context, req string) (r []uint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint32ArrayArray implements test_response_integer_uint32_array_array operation.
+	//
+	// POST /test_response_integer_uint32_array_array
 }
 
-// TestResponseIntegerUint32ArrayArray implements test_response_integer_uint32_array_array operation.
-//
-// POST /test_response_integer_uint32_array_array
 func (UnimplementedHandler) TestResponseIntegerUint32ArrayArray(ctx context.Context, req string) (r [][]uint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint32Nullable implements test_response_integer_uint32_nullable operation.
+	//
+	// POST /test_response_integer_uint32_nullable
 }
 
-// TestResponseIntegerUint32Nullable implements test_response_integer_uint32_nullable operation.
-//
-// POST /test_response_integer_uint32_nullable
 func (UnimplementedHandler) TestResponseIntegerUint32Nullable(ctx context.Context, req string) (r NilUint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUint32), nil
 }
 
 // TestResponseIntegerUint32NullableArray implements test_response_integer_uint32_nullable_array operation.
 //
 // POST /test_response_integer_uint32_nullable_array
 func (UnimplementedHandler) TestResponseIntegerUint32NullableArray(ctx context.Context, req string) (r []NilUint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint32NullableArrayArray implements test_response_integer_uint32_nullable_array_array operation.
+	//
+	// POST /test_response_integer_uint32_nullable_array_array
 }
 
-// TestResponseIntegerUint32NullableArrayArray implements test_response_integer_uint32_nullable_array_array operation.
-//
-// POST /test_response_integer_uint32_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerUint32NullableArrayArray(ctx context.Context, req string) (r [][]NilUint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint64 implements test_response_integer_uint64 operation.
+	//
+	// POST /test_response_integer_uint64
 }
 
-// TestResponseIntegerUint64 implements test_response_integer_uint64 operation.
-//
-// POST /test_response_integer_uint64
 func (UnimplementedHandler) TestResponseIntegerUint64(ctx context.Context, req string) (r uint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseIntegerUint64Array implements test_response_integer_uint64_array operation.
 //
 // POST /test_response_integer_uint64_array
 func (UnimplementedHandler) TestResponseIntegerUint64Array(ctx context.Context, req string) (r []uint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint64ArrayArray implements test_response_integer_uint64_array_array operation.
+	//
+	// POST /test_response_integer_uint64_array_array
 }
 
-// TestResponseIntegerUint64ArrayArray implements test_response_integer_uint64_array_array operation.
-//
-// POST /test_response_integer_uint64_array_array
 func (UnimplementedHandler) TestResponseIntegerUint64ArrayArray(ctx context.Context, req string) (r [][]uint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint64Nullable implements test_response_integer_uint64_nullable operation.
+	//
+	// POST /test_response_integer_uint64_nullable
 }
 
-// TestResponseIntegerUint64Nullable implements test_response_integer_uint64_nullable operation.
-//
-// POST /test_response_integer_uint64_nullable
 func (UnimplementedHandler) TestResponseIntegerUint64Nullable(ctx context.Context, req string) (r NilUint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUint64), nil
 }
 
 // TestResponseIntegerUint64NullableArray implements test_response_integer_uint64_nullable_array operation.
 //
 // POST /test_response_integer_uint64_nullable_array
 func (UnimplementedHandler) TestResponseIntegerUint64NullableArray(ctx context.Context, req string) (r []NilUint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint64NullableArrayArray implements test_response_integer_uint64_nullable_array_array operation.
+	//
+	// POST /test_response_integer_uint64_nullable_array_array
 }
 
-// TestResponseIntegerUint64NullableArrayArray implements test_response_integer_uint64_nullable_array_array operation.
-//
-// POST /test_response_integer_uint64_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerUint64NullableArrayArray(ctx context.Context, req string) (r [][]NilUint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint8 implements test_response_integer_uint8 operation.
+	//
+	// POST /test_response_integer_uint8
 }
 
-// TestResponseIntegerUint8 implements test_response_integer_uint8 operation.
-//
-// POST /test_response_integer_uint8
 func (UnimplementedHandler) TestResponseIntegerUint8(ctx context.Context, req string) (r uint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseIntegerUint8Array implements test_response_integer_uint8_array operation.
 //
 // POST /test_response_integer_uint8_array
 func (UnimplementedHandler) TestResponseIntegerUint8Array(ctx context.Context, req string) (r []uint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint8ArrayArray implements test_response_integer_uint8_array_array operation.
+	//
+	// POST /test_response_integer_uint8_array_array
 }
 
-// TestResponseIntegerUint8ArrayArray implements test_response_integer_uint8_array_array operation.
-//
-// POST /test_response_integer_uint8_array_array
 func (UnimplementedHandler) TestResponseIntegerUint8ArrayArray(ctx context.Context, req string) (r [][]uint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint8Nullable implements test_response_integer_uint8_nullable operation.
+	//
+	// POST /test_response_integer_uint8_nullable
 }
 
-// TestResponseIntegerUint8Nullable implements test_response_integer_uint8_nullable operation.
-//
-// POST /test_response_integer_uint8_nullable
 func (UnimplementedHandler) TestResponseIntegerUint8Nullable(ctx context.Context, req string) (r NilUint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUint8), nil
 }
 
 // TestResponseIntegerUint8NullableArray implements test_response_integer_uint8_nullable_array operation.
 //
 // POST /test_response_integer_uint8_nullable_array
 func (UnimplementedHandler) TestResponseIntegerUint8NullableArray(ctx context.Context, req string) (r []NilUint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUint8NullableArrayArray implements test_response_integer_uint8_nullable_array_array operation.
+	//
+	// POST /test_response_integer_uint8_nullable_array_array
 }
 
-// TestResponseIntegerUint8NullableArrayArray implements test_response_integer_uint8_nullable_array_array operation.
-//
-// POST /test_response_integer_uint8_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerUint8NullableArrayArray(ctx context.Context, req string) (r [][]NilUint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUintArray implements test_response_integer_uint_array operation.
+	//
+	// POST /test_response_integer_uint_array
 }
 
-// TestResponseIntegerUintArray implements test_response_integer_uint_array operation.
-//
-// POST /test_response_integer_uint_array
 func (UnimplementedHandler) TestResponseIntegerUintArray(ctx context.Context, req string) (r []uint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUintArrayArray implements test_response_integer_uint_array_array operation.
+	//
+	// POST /test_response_integer_uint_array_array
 }
 
-// TestResponseIntegerUintArrayArray implements test_response_integer_uint_array_array operation.
-//
-// POST /test_response_integer_uint_array_array
 func (UnimplementedHandler) TestResponseIntegerUintArrayArray(ctx context.Context, req string) (r [][]uint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUintNullable implements test_response_integer_uint_nullable operation.
+	//
+	// POST /test_response_integer_uint_nullable
 }
 
-// TestResponseIntegerUintNullable implements test_response_integer_uint_nullable operation.
-//
-// POST /test_response_integer_uint_nullable
 func (UnimplementedHandler) TestResponseIntegerUintNullable(ctx context.Context, req string) (r NilUint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUint), nil
 }
 
 // TestResponseIntegerUintNullableArray implements test_response_integer_uint_nullable_array operation.
 //
 // POST /test_response_integer_uint_nullable_array
 func (UnimplementedHandler) TestResponseIntegerUintNullableArray(ctx context.Context, req string) (r []NilUint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUintNullableArrayArray implements test_response_integer_uint_nullable_array_array operation.
+	//
+	// POST /test_response_integer_uint_nullable_array_array
 }
 
-// TestResponseIntegerUintNullableArrayArray implements test_response_integer_uint_nullable_array_array operation.
-//
-// POST /test_response_integer_uint_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerUintNullableArrayArray(ctx context.Context, req string) (r [][]NilUint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnix implements test_response_integer_unix operation.
+	//
+	// POST /test_response_integer_unix
 }
 
-// TestResponseIntegerUnix implements test_response_integer_unix operation.
-//
-// POST /test_response_integer_unix
 func (UnimplementedHandler) TestResponseIntegerUnix(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseIntegerUnixArray implements test_response_integer_unix_array operation.
 //
 // POST /test_response_integer_unix_array
 func (UnimplementedHandler) TestResponseIntegerUnixArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixArrayArray implements test_response_integer_unix_array_array operation.
+	//
+	// POST /test_response_integer_unix_array_array
 }
 
-// TestResponseIntegerUnixArrayArray implements test_response_integer_unix_array_array operation.
-//
-// POST /test_response_integer_unix_array_array
 func (UnimplementedHandler) TestResponseIntegerUnixArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixMicro implements test_response_integer_unix-micro operation.
+	//
+	// POST /test_response_integer_unix-micro
 }
 
-// TestResponseIntegerUnixMicro implements test_response_integer_unix-micro operation.
-//
-// POST /test_response_integer_unix-micro
 func (UnimplementedHandler) TestResponseIntegerUnixMicro(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseIntegerUnixMicroArray implements test_response_integer_unix-micro_array operation.
 //
 // POST /test_response_integer_unix-micro_array
 func (UnimplementedHandler) TestResponseIntegerUnixMicroArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixMicroArrayArray implements test_response_integer_unix-micro_array_array operation.
+	//
+	// POST /test_response_integer_unix-micro_array_array
 }
 
-// TestResponseIntegerUnixMicroArrayArray implements test_response_integer_unix-micro_array_array operation.
-//
-// POST /test_response_integer_unix-micro_array_array
 func (UnimplementedHandler) TestResponseIntegerUnixMicroArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixMicroNullable implements test_response_integer_unix-micro_nullable operation.
+	//
+	// POST /test_response_integer_unix-micro_nullable
 }
 
-// TestResponseIntegerUnixMicroNullable implements test_response_integer_unix-micro_nullable operation.
-//
-// POST /test_response_integer_unix-micro_nullable
 func (UnimplementedHandler) TestResponseIntegerUnixMicroNullable(ctx context.Context, req string) (r NilUnixMicro, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUnixMicro), nil
 }
 
 // TestResponseIntegerUnixMicroNullableArray implements test_response_integer_unix-micro_nullable_array operation.
 //
 // POST /test_response_integer_unix-micro_nullable_array
 func (UnimplementedHandler) TestResponseIntegerUnixMicroNullableArray(ctx context.Context, req string) (r []NilUnixMicro, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixMicroNullableArrayArray implements test_response_integer_unix-micro_nullable_array_array operation.
+	//
+	// POST /test_response_integer_unix-micro_nullable_array_array
 }
 
-// TestResponseIntegerUnixMicroNullableArrayArray implements test_response_integer_unix-micro_nullable_array_array operation.
-//
-// POST /test_response_integer_unix-micro_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerUnixMicroNullableArrayArray(ctx context.Context, req string) (r [][]NilUnixMicro, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixMilli implements test_response_integer_unix-milli operation.
+	//
+	// POST /test_response_integer_unix-milli
 }
 
-// TestResponseIntegerUnixMilli implements test_response_integer_unix-milli operation.
-//
-// POST /test_response_integer_unix-milli
 func (UnimplementedHandler) TestResponseIntegerUnixMilli(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseIntegerUnixMilliArray implements test_response_integer_unix-milli_array operation.
 //
 // POST /test_response_integer_unix-milli_array
 func (UnimplementedHandler) TestResponseIntegerUnixMilliArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixMilliArrayArray implements test_response_integer_unix-milli_array_array operation.
+	//
+	// POST /test_response_integer_unix-milli_array_array
 }
 
-// TestResponseIntegerUnixMilliArrayArray implements test_response_integer_unix-milli_array_array operation.
-//
-// POST /test_response_integer_unix-milli_array_array
 func (UnimplementedHandler) TestResponseIntegerUnixMilliArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixMilliNullable implements test_response_integer_unix-milli_nullable operation.
+	//
+	// POST /test_response_integer_unix-milli_nullable
 }
 
-// TestResponseIntegerUnixMilliNullable implements test_response_integer_unix-milli_nullable operation.
-//
-// POST /test_response_integer_unix-milli_nullable
 func (UnimplementedHandler) TestResponseIntegerUnixMilliNullable(ctx context.Context, req string) (r NilUnixMilli, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUnixMilli), nil
 }
 
 // TestResponseIntegerUnixMilliNullableArray implements test_response_integer_unix-milli_nullable_array operation.
 //
 // POST /test_response_integer_unix-milli_nullable_array
 func (UnimplementedHandler) TestResponseIntegerUnixMilliNullableArray(ctx context.Context, req string) (r []NilUnixMilli, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixMilliNullableArrayArray implements test_response_integer_unix-milli_nullable_array_array operation.
+	//
+	// POST /test_response_integer_unix-milli_nullable_array_array
 }
 
-// TestResponseIntegerUnixMilliNullableArrayArray implements test_response_integer_unix-milli_nullable_array_array operation.
-//
-// POST /test_response_integer_unix-milli_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerUnixMilliNullableArrayArray(ctx context.Context, req string) (r [][]NilUnixMilli, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixNano implements test_response_integer_unix-nano operation.
+	//
+	// POST /test_response_integer_unix-nano
 }
 
-// TestResponseIntegerUnixNano implements test_response_integer_unix-nano operation.
-//
-// POST /test_response_integer_unix-nano
 func (UnimplementedHandler) TestResponseIntegerUnixNano(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseIntegerUnixNanoArray implements test_response_integer_unix-nano_array operation.
 //
 // POST /test_response_integer_unix-nano_array
 func (UnimplementedHandler) TestResponseIntegerUnixNanoArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixNanoArrayArray implements test_response_integer_unix-nano_array_array operation.
+	//
+	// POST /test_response_integer_unix-nano_array_array
 }
 
-// TestResponseIntegerUnixNanoArrayArray implements test_response_integer_unix-nano_array_array operation.
-//
-// POST /test_response_integer_unix-nano_array_array
 func (UnimplementedHandler) TestResponseIntegerUnixNanoArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixNanoNullable implements test_response_integer_unix-nano_nullable operation.
+	//
+	// POST /test_response_integer_unix-nano_nullable
 }
 
-// TestResponseIntegerUnixNanoNullable implements test_response_integer_unix-nano_nullable operation.
-//
-// POST /test_response_integer_unix-nano_nullable
 func (UnimplementedHandler) TestResponseIntegerUnixNanoNullable(ctx context.Context, req string) (r NilUnixNano, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUnixNano), nil
 }
 
 // TestResponseIntegerUnixNanoNullableArray implements test_response_integer_unix-nano_nullable_array operation.
 //
 // POST /test_response_integer_unix-nano_nullable_array
 func (UnimplementedHandler) TestResponseIntegerUnixNanoNullableArray(ctx context.Context, req string) (r []NilUnixNano, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixNanoNullableArrayArray implements test_response_integer_unix-nano_nullable_array_array operation.
+	//
+	// POST /test_response_integer_unix-nano_nullable_array_array
 }
 
-// TestResponseIntegerUnixNanoNullableArrayArray implements test_response_integer_unix-nano_nullable_array_array operation.
-//
-// POST /test_response_integer_unix-nano_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerUnixNanoNullableArrayArray(ctx context.Context, req string) (r [][]NilUnixNano, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixNullable implements test_response_integer_unix_nullable operation.
+	//
+	// POST /test_response_integer_unix_nullable
 }
 
-// TestResponseIntegerUnixNullable implements test_response_integer_unix_nullable operation.
-//
-// POST /test_response_integer_unix_nullable
 func (UnimplementedHandler) TestResponseIntegerUnixNullable(ctx context.Context, req string) (r NilUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUnixSeconds), nil
 }
 
 // TestResponseIntegerUnixNullableArray implements test_response_integer_unix_nullable_array operation.
 //
 // POST /test_response_integer_unix_nullable_array
 func (UnimplementedHandler) TestResponseIntegerUnixNullableArray(ctx context.Context, req string) (r []NilUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixNullableArrayArray implements test_response_integer_unix_nullable_array_array operation.
+	//
+	// POST /test_response_integer_unix_nullable_array_array
 }
 
-// TestResponseIntegerUnixNullableArrayArray implements test_response_integer_unix_nullable_array_array operation.
-//
-// POST /test_response_integer_unix_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerUnixNullableArrayArray(ctx context.Context, req string) (r [][]NilUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixSeconds implements test_response_integer_unix-seconds operation.
+	//
+	// POST /test_response_integer_unix-seconds
 }
 
-// TestResponseIntegerUnixSeconds implements test_response_integer_unix-seconds operation.
-//
-// POST /test_response_integer_unix-seconds
 func (UnimplementedHandler) TestResponseIntegerUnixSeconds(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseIntegerUnixSecondsArray implements test_response_integer_unix-seconds_array operation.
 //
 // POST /test_response_integer_unix-seconds_array
 func (UnimplementedHandler) TestResponseIntegerUnixSecondsArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixSecondsArrayArray implements test_response_integer_unix-seconds_array_array operation.
+	//
+	// POST /test_response_integer_unix-seconds_array_array
 }
 
-// TestResponseIntegerUnixSecondsArrayArray implements test_response_integer_unix-seconds_array_array operation.
-//
-// POST /test_response_integer_unix-seconds_array_array
 func (UnimplementedHandler) TestResponseIntegerUnixSecondsArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixSecondsNullable implements test_response_integer_unix-seconds_nullable operation.
+	//
+	// POST /test_response_integer_unix-seconds_nullable
 }
 
-// TestResponseIntegerUnixSecondsNullable implements test_response_integer_unix-seconds_nullable operation.
-//
-// POST /test_response_integer_unix-seconds_nullable
 func (UnimplementedHandler) TestResponseIntegerUnixSecondsNullable(ctx context.Context, req string) (r NilUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUnixSeconds), nil
 }
 
 // TestResponseIntegerUnixSecondsNullableArray implements test_response_integer_unix-seconds_nullable_array operation.
 //
 // POST /test_response_integer_unix-seconds_nullable_array
 func (UnimplementedHandler) TestResponseIntegerUnixSecondsNullableArray(ctx context.Context, req string) (r []NilUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseIntegerUnixSecondsNullableArrayArray implements test_response_integer_unix-seconds_nullable_array_array operation.
+	//
+	// POST /test_response_integer_unix-seconds_nullable_array_array
 }
 
-// TestResponseIntegerUnixSecondsNullableArrayArray implements test_response_integer_unix-seconds_nullable_array_array operation.
-//
-// POST /test_response_integer_unix-seconds_nullable_array_array
 func (UnimplementedHandler) TestResponseIntegerUnixSecondsNullableArrayArray(ctx context.Context, req string) (r [][]NilUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNull implements test_response_null operation.
+	//
+	// POST /test_response_null
 }
 
-// TestResponseNull implements test_response_null operation.
-//
-// POST /test_response_null
 func (UnimplementedHandler) TestResponseNull(ctx context.Context, req string) (r struct{}, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNullArray implements test_response_null_array operation.
+	//
+	// POST /test_response_null_array
 }
 
-// TestResponseNullArray implements test_response_null_array operation.
-//
-// POST /test_response_null_array
 func (UnimplementedHandler) TestResponseNullArray(ctx context.Context, req string) (r []struct{}, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNullArrayArray implements test_response_null_array_array operation.
+	//
+	// POST /test_response_null_array_array
 }
 
-// TestResponseNullArrayArray implements test_response_null_array_array operation.
-//
-// POST /test_response_null_array_array
 func (UnimplementedHandler) TestResponseNullArrayArray(ctx context.Context, req string) (r [][]struct{}, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNullNullable implements test_response_null_nullable operation.
+	//
+	// POST /test_response_null_nullable
 }
 
-// TestResponseNullNullable implements test_response_null_nullable operation.
-//
-// POST /test_response_null_nullable
 func (UnimplementedHandler) TestResponseNullNullable(ctx context.Context, req string) (r struct{}, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNullNullableArray implements test_response_null_nullable_array operation.
+	//
+	// POST /test_response_null_nullable_array
 }
 
-// TestResponseNullNullableArray implements test_response_null_nullable_array operation.
-//
-// POST /test_response_null_nullable_array
 func (UnimplementedHandler) TestResponseNullNullableArray(ctx context.Context, req string) (r []struct{}, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNullNullableArrayArray implements test_response_null_nullable_array_array operation.
+	//
+	// POST /test_response_null_nullable_array_array
 }
 
-// TestResponseNullNullableArrayArray implements test_response_null_nullable_array_array operation.
-//
-// POST /test_response_null_nullable_array_array
 func (UnimplementedHandler) TestResponseNullNullableArrayArray(ctx context.Context, req string) (r [][]struct{}, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumber implements test_response_number operation.
+	//
+	// POST /test_response_number
 }
 
-// TestResponseNumber implements test_response_number operation.
-//
-// POST /test_response_number
 func (UnimplementedHandler) TestResponseNumber(ctx context.Context, req string) (r float64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseNumberArray implements test_response_number_array operation.
 //
 // POST /test_response_number_array
 func (UnimplementedHandler) TestResponseNumberArray(ctx context.Context, req string) (r []float64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberArrayArray implements test_response_number_array_array operation.
+	//
+	// POST /test_response_number_array_array
 }
 
-// TestResponseNumberArrayArray implements test_response_number_array_array operation.
-//
-// POST /test_response_number_array_array
 func (UnimplementedHandler) TestResponseNumberArrayArray(ctx context.Context, req string) (r [][]float64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberDecimal implements test_response_number_decimal operation.
+	//
+	// POST /test_response_number_decimal
 }
 
-// TestResponseNumberDecimal implements test_response_number_decimal operation.
-//
-// POST /test_response_number_decimal
 func (UnimplementedHandler) TestResponseNumberDecimal(ctx context.Context, req string) (r decimal.Decimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal), nil
 }
 
 // TestResponseNumberDecimalArray implements test_response_number_decimal_array operation.
 //
 // POST /test_response_number_decimal_array
 func (UnimplementedHandler) TestResponseNumberDecimalArray(ctx context.Context, req string) (r []decimal.Decimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberDecimalArrayArray implements test_response_number_decimal_array_array operation.
+	//
+	// POST /test_response_number_decimal_array_array
 }
 
-// TestResponseNumberDecimalArrayArray implements test_response_number_decimal_array_array operation.
-//
-// POST /test_response_number_decimal_array_array
 func (UnimplementedHandler) TestResponseNumberDecimalArrayArray(ctx context.Context, req string) (r [][]decimal.Decimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberDecimalNullable implements test_response_number_decimal_nullable operation.
+	//
+	// POST /test_response_number_decimal_nullable
 }
 
-// TestResponseNumberDecimalNullable implements test_response_number_decimal_nullable operation.
-//
-// POST /test_response_number_decimal_nullable
 func (UnimplementedHandler) TestResponseNumberDecimalNullable(ctx context.Context, req string) (r NilDecimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilDecimal), nil
 }
 
 // TestResponseNumberDecimalNullableArray implements test_response_number_decimal_nullable_array operation.
 //
 // POST /test_response_number_decimal_nullable_array
 func (UnimplementedHandler) TestResponseNumberDecimalNullableArray(ctx context.Context, req string) (r []NilDecimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberDecimalNullableArrayArray implements test_response_number_decimal_nullable_array_array operation.
+	//
+	// POST /test_response_number_decimal_nullable_array_array
 }
 
-// TestResponseNumberDecimalNullableArrayArray implements test_response_number_decimal_nullable_array_array operation.
-//
-// POST /test_response_number_decimal_nullable_array_array
 func (UnimplementedHandler) TestResponseNumberDecimalNullableArrayArray(ctx context.Context, req string) (r [][]NilDecimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberDouble implements test_response_number_double operation.
+	//
+	// POST /test_response_number_double
 }
 
-// TestResponseNumberDouble implements test_response_number_double operation.
-//
-// POST /test_response_number_double
 func (UnimplementedHandler) TestResponseNumberDouble(ctx context.Context, req string) (r float64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseNumberDoubleArray implements test_response_number_double_array operation.
 //
 // POST /test_response_number_double_array
 func (UnimplementedHandler) TestResponseNumberDoubleArray(ctx context.Context, req string) (r []float64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberDoubleArrayArray implements test_response_number_double_array_array operation.
+	//
+	// POST /test_response_number_double_array_array
 }
 
-// TestResponseNumberDoubleArrayArray implements test_response_number_double_array_array operation.
-//
-// POST /test_response_number_double_array_array
 func (UnimplementedHandler) TestResponseNumberDoubleArrayArray(ctx context.Context, req string) (r [][]float64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberDoubleNullable implements test_response_number_double_nullable operation.
+	//
+	// POST /test_response_number_double_nullable
 }
 
-// TestResponseNumberDoubleNullable implements test_response_number_double_nullable operation.
-//
-// POST /test_response_number_double_nullable
 func (UnimplementedHandler) TestResponseNumberDoubleNullable(ctx context.Context, req string) (r NilFloat64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilFloat64), nil
 }
 
 // TestResponseNumberDoubleNullableArray implements test_response_number_double_nullable_array operation.
 //
 // POST /test_response_number_double_nullable_array
 func (UnimplementedHandler) TestResponseNumberDoubleNullableArray(ctx context.Context, req string) (r []NilFloat64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberDoubleNullableArrayArray implements test_response_number_double_nullable_array_array operation.
+	//
+	// POST /test_response_number_double_nullable_array_array
 }
 
-// TestResponseNumberDoubleNullableArrayArray implements test_response_number_double_nullable_array_array operation.
-//
-// POST /test_response_number_double_nullable_array_array
 func (UnimplementedHandler) TestResponseNumberDoubleNullableArrayArray(ctx context.Context, req string) (r [][]NilFloat64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberFloat implements test_response_number_float operation.
+	//
+	// POST /test_response_number_float
 }
 
-// TestResponseNumberFloat implements test_response_number_float operation.
-//
-// POST /test_response_number_float
 func (UnimplementedHandler) TestResponseNumberFloat(ctx context.Context, req string) (r float32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseNumberFloatArray implements test_response_number_float_array operation.
 //
 // POST /test_response_number_float_array
 func (UnimplementedHandler) TestResponseNumberFloatArray(ctx context.Context, req string) (r []float32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberFloatArrayArray implements test_response_number_float_array_array operation.
+	//
+	// POST /test_response_number_float_array_array
 }
 
-// TestResponseNumberFloatArrayArray implements test_response_number_float_array_array operation.
-//
-// POST /test_response_number_float_array_array
 func (UnimplementedHandler) TestResponseNumberFloatArrayArray(ctx context.Context, req string) (r [][]float32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberFloatNullable implements test_response_number_float_nullable operation.
+	//
+	// POST /test_response_number_float_nullable
 }
 
-// TestResponseNumberFloatNullable implements test_response_number_float_nullable operation.
-//
-// POST /test_response_number_float_nullable
 func (UnimplementedHandler) TestResponseNumberFloatNullable(ctx context.Context, req string) (r NilFloat32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilFloat32), nil
 }
 
 // TestResponseNumberFloatNullableArray implements test_response_number_float_nullable_array operation.
 //
 // POST /test_response_number_float_nullable_array
 func (UnimplementedHandler) TestResponseNumberFloatNullableArray(ctx context.Context, req string) (r []NilFloat32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberFloatNullableArrayArray implements test_response_number_float_nullable_array_array operation.
+	//
+	// POST /test_response_number_float_nullable_array_array
 }
 
-// TestResponseNumberFloatNullableArrayArray implements test_response_number_float_nullable_array_array operation.
-//
-// POST /test_response_number_float_nullable_array_array
 func (UnimplementedHandler) TestResponseNumberFloatNullableArrayArray(ctx context.Context, req string) (r [][]NilFloat32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberInt32 implements test_response_number_int32 operation.
+	//
+	// POST /test_response_number_int32
 }
 
-// TestResponseNumberInt32 implements test_response_number_int32 operation.
-//
-// POST /test_response_number_int32
 func (UnimplementedHandler) TestResponseNumberInt32(ctx context.Context, req string) (r int32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseNumberInt32Array implements test_response_number_int32_array operation.
 //
 // POST /test_response_number_int32_array
 func (UnimplementedHandler) TestResponseNumberInt32Array(ctx context.Context, req string) (r []int32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberInt32ArrayArray implements test_response_number_int32_array_array operation.
+	//
+	// POST /test_response_number_int32_array_array
 }
 
-// TestResponseNumberInt32ArrayArray implements test_response_number_int32_array_array operation.
-//
-// POST /test_response_number_int32_array_array
 func (UnimplementedHandler) TestResponseNumberInt32ArrayArray(ctx context.Context, req string) (r [][]int32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberInt32Nullable implements test_response_number_int32_nullable operation.
+	//
+	// POST /test_response_number_int32_nullable
 }
 
-// TestResponseNumberInt32Nullable implements test_response_number_int32_nullable operation.
-//
-// POST /test_response_number_int32_nullable
 func (UnimplementedHandler) TestResponseNumberInt32Nullable(ctx context.Context, req string) (r NilInt32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilInt32), nil
 }
 
 // TestResponseNumberInt32NullableArray implements test_response_number_int32_nullable_array operation.
 //
 // POST /test_response_number_int32_nullable_array
 func (UnimplementedHandler) TestResponseNumberInt32NullableArray(ctx context.Context, req string) (r []NilInt32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberInt32NullableArrayArray implements test_response_number_int32_nullable_array_array operation.
+	//
+	// POST /test_response_number_int32_nullable_array_array
 }
 
-// TestResponseNumberInt32NullableArrayArray implements test_response_number_int32_nullable_array_array operation.
-//
-// POST /test_response_number_int32_nullable_array_array
 func (UnimplementedHandler) TestResponseNumberInt32NullableArrayArray(ctx context.Context, req string) (r [][]NilInt32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberInt64 implements test_response_number_int64 operation.
+	//
+	// POST /test_response_number_int64
 }
 
-// TestResponseNumberInt64 implements test_response_number_int64 operation.
-//
-// POST /test_response_number_int64
 func (UnimplementedHandler) TestResponseNumberInt64(ctx context.Context, req string) (r int64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseNumberInt64Array implements test_response_number_int64_array operation.
 //
 // POST /test_response_number_int64_array
 func (UnimplementedHandler) TestResponseNumberInt64Array(ctx context.Context, req string) (r []int64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberInt64ArrayArray implements test_response_number_int64_array_array operation.
+	//
+	// POST /test_response_number_int64_array_array
 }
 
-// TestResponseNumberInt64ArrayArray implements test_response_number_int64_array_array operation.
-//
-// POST /test_response_number_int64_array_array
 func (UnimplementedHandler) TestResponseNumberInt64ArrayArray(ctx context.Context, req string) (r [][]int64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberInt64Nullable implements test_response_number_int64_nullable operation.
+	//
+	// POST /test_response_number_int64_nullable
 }
 
-// TestResponseNumberInt64Nullable implements test_response_number_int64_nullable operation.
-//
-// POST /test_response_number_int64_nullable
 func (UnimplementedHandler) TestResponseNumberInt64Nullable(ctx context.Context, req string) (r NilInt64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilInt64), nil
 }
 
 // TestResponseNumberInt64NullableArray implements test_response_number_int64_nullable_array operation.
 //
 // POST /test_response_number_int64_nullable_array
 func (UnimplementedHandler) TestResponseNumberInt64NullableArray(ctx context.Context, req string) (r []NilInt64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberInt64NullableArrayArray implements test_response_number_int64_nullable_array_array operation.
+	//
+	// POST /test_response_number_int64_nullable_array_array
 }
 
-// TestResponseNumberInt64NullableArrayArray implements test_response_number_int64_nullable_array_array operation.
-//
-// POST /test_response_number_int64_nullable_array_array
 func (UnimplementedHandler) TestResponseNumberInt64NullableArrayArray(ctx context.Context, req string) (r [][]NilInt64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberNullable implements test_response_number_nullable operation.
+	//
+	// POST /test_response_number_nullable
 }
 
-// TestResponseNumberNullable implements test_response_number_nullable operation.
-//
-// POST /test_response_number_nullable
 func (UnimplementedHandler) TestResponseNumberNullable(ctx context.Context, req string) (r NilFloat64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilFloat64), nil
 }
 
 // TestResponseNumberNullableArray implements test_response_number_nullable_array operation.
 //
 // POST /test_response_number_nullable_array
 func (UnimplementedHandler) TestResponseNumberNullableArray(ctx context.Context, req string) (r []NilFloat64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseNumberNullableArrayArray implements test_response_number_nullable_array_array operation.
+	//
+	// POST /test_response_number_nullable_array_array
 }
 
-// TestResponseNumberNullableArrayArray implements test_response_number_nullable_array_array operation.
-//
-// POST /test_response_number_nullable_array_array
 func (UnimplementedHandler) TestResponseNumberNullableArrayArray(ctx context.Context, req string) (r [][]NilFloat64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseString implements test_response_string operation.
+	//
+	// POST /test_response_string
 }
 
-// TestResponseString implements test_response_string operation.
-//
-// POST /test_response_string
 func (UnimplementedHandler) TestResponseString(ctx context.Context, req string) (r string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 // TestResponseStringArray implements test_response_string_array operation.
 //
 // POST /test_response_string_array
 func (UnimplementedHandler) TestResponseStringArray(ctx context.Context, req string) (r []string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringArrayArray implements test_response_string_array_array operation.
+	//
+	// POST /test_response_string_array_array
 }
 
-// TestResponseStringArrayArray implements test_response_string_array_array operation.
-//
-// POST /test_response_string_array_array
 func (UnimplementedHandler) TestResponseStringArrayArray(ctx context.Context, req string) (r [][]string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringBase64 implements test_response_string_base64 operation.
+	//
+	// POST /test_response_string_base64
 }
 
-// TestResponseStringBase64 implements test_response_string_base64 operation.
-//
-// POST /test_response_string_base64
 func (UnimplementedHandler) TestResponseStringBase64(ctx context.Context, req string) (r []byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringBase64Array implements test_response_string_base64_array operation.
+	//
+	// POST /test_response_string_base64_array
 }
 
-// TestResponseStringBase64Array implements test_response_string_base64_array operation.
-//
-// POST /test_response_string_base64_array
 func (UnimplementedHandler) TestResponseStringBase64Array(ctx context.Context, req string) (r [][]byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringBase64ArrayArray implements test_response_string_base64_array_array operation.
+	//
+	// POST /test_response_string_base64_array_array
 }
 
-// TestResponseStringBase64ArrayArray implements test_response_string_base64_array_array operation.
-//
-// POST /test_response_string_base64_array_array
 func (UnimplementedHandler) TestResponseStringBase64ArrayArray(ctx context.Context, req string) (r [][][]byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringBase64Nullable implements test_response_string_base64_nullable operation.
+	//
+	// POST /test_response_string_base64_nullable
 }
 
-// TestResponseStringBase64Nullable implements test_response_string_base64_nullable operation.
-//
-// POST /test_response_string_base64_nullable
 func (UnimplementedHandler) TestResponseStringBase64Nullable(ctx context.Context, req string) (r []byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringBase64NullableArray implements test_response_string_base64_nullable_array operation.
+	//
+	// POST /test_response_string_base64_nullable_array
 }
 
-// TestResponseStringBase64NullableArray implements test_response_string_base64_nullable_array operation.
-//
-// POST /test_response_string_base64_nullable_array
 func (UnimplementedHandler) TestResponseStringBase64NullableArray(ctx context.Context, req string) (r [][]byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringBase64NullableArrayArray implements test_response_string_base64_nullable_array_array operation.
+	//
+	// POST /test_response_string_base64_nullable_array_array
 }
 
-// TestResponseStringBase64NullableArrayArray implements test_response_string_base64_nullable_array_array operation.
-//
-// POST /test_response_string_base64_nullable_array_array
 func (UnimplementedHandler) TestResponseStringBase64NullableArrayArray(ctx context.Context, req string) (r [][][]byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringBinary implements test_response_string_binary operation.
+	//
+	// POST /test_response_string_binary
 }
 
-// TestResponseStringBinary implements test_response_string_binary operation.
-//
-// POST /test_response_string_binary
 func (UnimplementedHandler) TestResponseStringBinary(ctx context.Context, req string) (r string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 // TestResponseStringBinaryArray implements test_response_string_binary_array operation.
 //
 // POST /test_response_string_binary_array
 func (UnimplementedHandler) TestResponseStringBinaryArray(ctx context.Context, req string) (r []string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringBinaryArrayArray implements test_response_string_binary_array_array operation.
+	//
+	// POST /test_response_string_binary_array_array
 }
 
-// TestResponseStringBinaryArrayArray implements test_response_string_binary_array_array operation.
-//
-// POST /test_response_string_binary_array_array
 func (UnimplementedHandler) TestResponseStringBinaryArrayArray(ctx context.Context, req string) (r [][]string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringBinaryNullable implements test_response_string_binary_nullable operation.
+	//
+	// POST /test_response_string_binary_nullable
 }
 
-// TestResponseStringBinaryNullable implements test_response_string_binary_nullable operation.
-//
-// POST /test_response_string_binary_nullable
 func (UnimplementedHandler) TestResponseStringBinaryNullable(ctx context.Context, req string) (r NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilString), nil
 }
 
 // TestResponseStringBinaryNullableArray implements test_response_string_binary_nullable_array operation.
 //
 // POST /test_response_string_binary_nullable_array
 func (UnimplementedHandler) TestResponseStringBinaryNullableArray(ctx context.Context, req string) (r []NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringBinaryNullableArrayArray implements test_response_string_binary_nullable_array_array operation.
+	//
+	// POST /test_response_string_binary_nullable_array_array
 }
 
-// TestResponseStringBinaryNullableArrayArray implements test_response_string_binary_nullable_array_array operation.
-//
-// POST /test_response_string_binary_nullable_array_array
 func (UnimplementedHandler) TestResponseStringBinaryNullableArrayArray(ctx context.Context, req string) (r [][]NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringByte implements test_response_string_byte operation.
+	//
+	// POST /test_response_string_byte
 }
 
-// TestResponseStringByte implements test_response_string_byte operation.
-//
-// POST /test_response_string_byte
 func (UnimplementedHandler) TestResponseStringByte(ctx context.Context, req string) (r []byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringByteArray implements test_response_string_byte_array operation.
+	//
+	// POST /test_response_string_byte_array
 }
 
-// TestResponseStringByteArray implements test_response_string_byte_array operation.
-//
-// POST /test_response_string_byte_array
 func (UnimplementedHandler) TestResponseStringByteArray(ctx context.Context, req string) (r [][]byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringByteArrayArray implements test_response_string_byte_array_array operation.
+	//
+	// POST /test_response_string_byte_array_array
 }
 
-// TestResponseStringByteArrayArray implements test_response_string_byte_array_array operation.
-//
-// POST /test_response_string_byte_array_array
 func (UnimplementedHandler) TestResponseStringByteArrayArray(ctx context.Context, req string) (r [][][]byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringByteNullable implements test_response_string_byte_nullable operation.
+	//
+	// POST /test_response_string_byte_nullable
 }
 
-// TestResponseStringByteNullable implements test_response_string_byte_nullable operation.
-//
-// POST /test_response_string_byte_nullable
 func (UnimplementedHandler) TestResponseStringByteNullable(ctx context.Context, req string) (r []byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringByteNullableArray implements test_response_string_byte_nullable_array operation.
+	//
+	// POST /test_response_string_byte_nullable_array
 }
 
-// TestResponseStringByteNullableArray implements test_response_string_byte_nullable_array operation.
-//
-// POST /test_response_string_byte_nullable_array
 func (UnimplementedHandler) TestResponseStringByteNullableArray(ctx context.Context, req string) (r [][]byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringByteNullableArrayArray implements test_response_string_byte_nullable_array_array operation.
+	//
+	// POST /test_response_string_byte_nullable_array_array
 }
 
-// TestResponseStringByteNullableArrayArray implements test_response_string_byte_nullable_array_array operation.
-//
-// POST /test_response_string_byte_nullable_array_array
 func (UnimplementedHandler) TestResponseStringByteNullableArrayArray(ctx context.Context, req string) (r [][][]byte, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDate implements test_response_string_date operation.
+	//
+	// POST /test_response_string_date
 }
 
-// TestResponseStringDate implements test_response_string_date operation.
-//
-// POST /test_response_string_date
 func (UnimplementedHandler) TestResponseStringDate(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseStringDateArray implements test_response_string_date_array operation.
 //
 // POST /test_response_string_date_array
 func (UnimplementedHandler) TestResponseStringDateArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDateArrayArray implements test_response_string_date_array_array operation.
+	//
+	// POST /test_response_string_date_array_array
 }
 
-// TestResponseStringDateArrayArray implements test_response_string_date_array_array operation.
-//
-// POST /test_response_string_date_array_array
 func (UnimplementedHandler) TestResponseStringDateArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDateNullable implements test_response_string_date_nullable operation.
+	//
+	// POST /test_response_string_date_nullable
 }
 
-// TestResponseStringDateNullable implements test_response_string_date_nullable operation.
-//
-// POST /test_response_string_date_nullable
 func (UnimplementedHandler) TestResponseStringDateNullable(ctx context.Context, req string) (r NilDate, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilDate), nil
 }
 
 // TestResponseStringDateNullableArray implements test_response_string_date_nullable_array operation.
 //
 // POST /test_response_string_date_nullable_array
 func (UnimplementedHandler) TestResponseStringDateNullableArray(ctx context.Context, req string) (r []NilDate, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDateNullableArrayArray implements test_response_string_date_nullable_array_array operation.
+	//
+	// POST /test_response_string_date_nullable_array_array
 }
 
-// TestResponseStringDateNullableArrayArray implements test_response_string_date_nullable_array_array operation.
-//
-// POST /test_response_string_date_nullable_array_array
 func (UnimplementedHandler) TestResponseStringDateNullableArrayArray(ctx context.Context, req string) (r [][]NilDate, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDateTime implements test_response_string_date-time operation.
+	//
+	// POST /test_response_string_date-time
 }
 
-// TestResponseStringDateTime implements test_response_string_date-time operation.
-//
-// POST /test_response_string_date-time
 func (UnimplementedHandler) TestResponseStringDateTime(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseStringDateTimeArray implements test_response_string_date-time_array operation.
 //
 // POST /test_response_string_date-time_array
 func (UnimplementedHandler) TestResponseStringDateTimeArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDateTimeArrayArray implements test_response_string_date-time_array_array operation.
+	//
+	// POST /test_response_string_date-time_array_array
 }
 
-// TestResponseStringDateTimeArrayArray implements test_response_string_date-time_array_array operation.
-//
-// POST /test_response_string_date-time_array_array
 func (UnimplementedHandler) TestResponseStringDateTimeArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDateTimeNullable implements test_response_string_date-time_nullable operation.
+	//
+	// POST /test_response_string_date-time_nullable
 }
 
-// TestResponseStringDateTimeNullable implements test_response_string_date-time_nullable operation.
-//
-// POST /test_response_string_date-time_nullable
 func (UnimplementedHandler) TestResponseStringDateTimeNullable(ctx context.Context, req string) (r NilDateTime, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilDateTime), nil
 }
 
 // TestResponseStringDateTimeNullableArray implements test_response_string_date-time_nullable_array operation.
 //
 // POST /test_response_string_date-time_nullable_array
 func (UnimplementedHandler) TestResponseStringDateTimeNullableArray(ctx context.Context, req string) (r []NilDateTime, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDateTimeNullableArrayArray implements test_response_string_date-time_nullable_array_array operation.
+	//
+	// POST /test_response_string_date-time_nullable_array_array
 }
 
-// TestResponseStringDateTimeNullableArrayArray implements test_response_string_date-time_nullable_array_array operation.
-//
-// POST /test_response_string_date-time_nullable_array_array
 func (UnimplementedHandler) TestResponseStringDateTimeNullableArrayArray(ctx context.Context, req string) (r [][]NilDateTime, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDecimal implements test_response_string_decimal operation.
+	//
+	// POST /test_response_string_decimal
 }
 
-// TestResponseStringDecimal implements test_response_string_decimal operation.
-//
-// POST /test_response_string_decimal
 func (UnimplementedHandler) TestResponseStringDecimal(ctx context.Context, req string) (r decimal.Decimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal), nil
 }
 
 // TestResponseStringDecimalArray implements test_response_string_decimal_array operation.
 //
 // POST /test_response_string_decimal_array
 func (UnimplementedHandler) TestResponseStringDecimalArray(ctx context.Context, req string) (r []decimal.Decimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDecimalArrayArray implements test_response_string_decimal_array_array operation.
+	//
+	// POST /test_response_string_decimal_array_array
 }
 
-// TestResponseStringDecimalArrayArray implements test_response_string_decimal_array_array operation.
-//
-// POST /test_response_string_decimal_array_array
 func (UnimplementedHandler) TestResponseStringDecimalArrayArray(ctx context.Context, req string) (r [][]decimal.Decimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDecimalNullable implements test_response_string_decimal_nullable operation.
+	//
+	// POST /test_response_string_decimal_nullable
 }
 
-// TestResponseStringDecimalNullable implements test_response_string_decimal_nullable operation.
-//
-// POST /test_response_string_decimal_nullable
 func (UnimplementedHandler) TestResponseStringDecimalNullable(ctx context.Context, req string) (r NilStringDecimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringDecimal), nil
 }
 
 // TestResponseStringDecimalNullableArray implements test_response_string_decimal_nullable_array operation.
 //
 // POST /test_response_string_decimal_nullable_array
 func (UnimplementedHandler) TestResponseStringDecimalNullableArray(ctx context.Context, req string) (r []NilStringDecimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDecimalNullableArrayArray implements test_response_string_decimal_nullable_array_array operation.
+	//
+	// POST /test_response_string_decimal_nullable_array_array
 }
 
-// TestResponseStringDecimalNullableArrayArray implements test_response_string_decimal_nullable_array_array operation.
-//
-// POST /test_response_string_decimal_nullable_array_array
 func (UnimplementedHandler) TestResponseStringDecimalNullableArrayArray(ctx context.Context, req string) (r [][]NilStringDecimal, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDuration implements test_response_string_duration operation.
+	//
+	// POST /test_response_string_duration
 }
 
-// TestResponseStringDuration implements test_response_string_duration operation.
-//
-// POST /test_response_string_duration
 func (UnimplementedHandler) TestResponseStringDuration(ctx context.Context, req string) (r time.Duration, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Duration), nil
 }
 
 // TestResponseStringDurationArray implements test_response_string_duration_array operation.
 //
 // POST /test_response_string_duration_array
 func (UnimplementedHandler) TestResponseStringDurationArray(ctx context.Context, req string) (r []time.Duration, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDurationArrayArray implements test_response_string_duration_array_array operation.
+	//
+	// POST /test_response_string_duration_array_array
 }
 
-// TestResponseStringDurationArrayArray implements test_response_string_duration_array_array operation.
-//
-// POST /test_response_string_duration_array_array
 func (UnimplementedHandler) TestResponseStringDurationArrayArray(ctx context.Context, req string) (r [][]time.Duration, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDurationNullable implements test_response_string_duration_nullable operation.
+	//
+	// POST /test_response_string_duration_nullable
 }
 
-// TestResponseStringDurationNullable implements test_response_string_duration_nullable operation.
-//
-// POST /test_response_string_duration_nullable
 func (UnimplementedHandler) TestResponseStringDurationNullable(ctx context.Context, req string) (r NilDuration, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilDuration), nil
 }
 
 // TestResponseStringDurationNullableArray implements test_response_string_duration_nullable_array operation.
 //
 // POST /test_response_string_duration_nullable_array
 func (UnimplementedHandler) TestResponseStringDurationNullableArray(ctx context.Context, req string) (r []NilDuration, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringDurationNullableArrayArray implements test_response_string_duration_nullable_array_array operation.
+	//
+	// POST /test_response_string_duration_nullable_array_array
 }
 
-// TestResponseStringDurationNullableArrayArray implements test_response_string_duration_nullable_array_array operation.
-//
-// POST /test_response_string_duration_nullable_array_array
 func (UnimplementedHandler) TestResponseStringDurationNullableArrayArray(ctx context.Context, req string) (r [][]NilDuration, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringEmail implements test_response_string_email operation.
+	//
+	// POST /test_response_string_email
 }
 
-// TestResponseStringEmail implements test_response_string_email operation.
-//
-// POST /test_response_string_email
 func (UnimplementedHandler) TestResponseStringEmail(ctx context.Context, req string) (r string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 // TestResponseStringEmailArray implements test_response_string_email_array operation.
 //
 // POST /test_response_string_email_array
 func (UnimplementedHandler) TestResponseStringEmailArray(ctx context.Context, req string) (r []string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringEmailArrayArray implements test_response_string_email_array_array operation.
+	//
+	// POST /test_response_string_email_array_array
 }
 
-// TestResponseStringEmailArrayArray implements test_response_string_email_array_array operation.
-//
-// POST /test_response_string_email_array_array
 func (UnimplementedHandler) TestResponseStringEmailArrayArray(ctx context.Context, req string) (r [][]string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringEmailNullable implements test_response_string_email_nullable operation.
+	//
+	// POST /test_response_string_email_nullable
 }
 
-// TestResponseStringEmailNullable implements test_response_string_email_nullable operation.
-//
-// POST /test_response_string_email_nullable
 func (UnimplementedHandler) TestResponseStringEmailNullable(ctx context.Context, req string) (r NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilString), nil
 }
 
 // TestResponseStringEmailNullableArray implements test_response_string_email_nullable_array operation.
 //
 // POST /test_response_string_email_nullable_array
 func (UnimplementedHandler) TestResponseStringEmailNullableArray(ctx context.Context, req string) (r []NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringEmailNullableArrayArray implements test_response_string_email_nullable_array_array operation.
+	//
+	// POST /test_response_string_email_nullable_array_array
 }
 
-// TestResponseStringEmailNullableArrayArray implements test_response_string_email_nullable_array_array operation.
-//
-// POST /test_response_string_email_nullable_array_array
 func (UnimplementedHandler) TestResponseStringEmailNullableArrayArray(ctx context.Context, req string) (r [][]NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringFloat32 implements test_response_string_float32 operation.
+	//
+	// POST /test_response_string_float32
 }
 
-// TestResponseStringFloat32 implements test_response_string_float32 operation.
-//
-// POST /test_response_string_float32
 func (UnimplementedHandler) TestResponseStringFloat32(ctx context.Context, req string) (r float32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringFloat32Array implements test_response_string_float32_array operation.
 //
 // POST /test_response_string_float32_array
 func (UnimplementedHandler) TestResponseStringFloat32Array(ctx context.Context, req string) (r []float32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringFloat32ArrayArray implements test_response_string_float32_array_array operation.
+	//
+	// POST /test_response_string_float32_array_array
 }
 
-// TestResponseStringFloat32ArrayArray implements test_response_string_float32_array_array operation.
-//
-// POST /test_response_string_float32_array_array
 func (UnimplementedHandler) TestResponseStringFloat32ArrayArray(ctx context.Context, req string) (r [][]float32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringFloat32Nullable implements test_response_string_float32_nullable operation.
+	//
+	// POST /test_response_string_float32_nullable
 }
 
-// TestResponseStringFloat32Nullable implements test_response_string_float32_nullable operation.
-//
-// POST /test_response_string_float32_nullable
 func (UnimplementedHandler) TestResponseStringFloat32Nullable(ctx context.Context, req string) (r NilStringFloat32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringFloat32), nil
 }
 
 // TestResponseStringFloat32NullableArray implements test_response_string_float32_nullable_array operation.
 //
 // POST /test_response_string_float32_nullable_array
 func (UnimplementedHandler) TestResponseStringFloat32NullableArray(ctx context.Context, req string) (r []NilStringFloat32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringFloat32NullableArrayArray implements test_response_string_float32_nullable_array_array operation.
+	//
+	// POST /test_response_string_float32_nullable_array_array
 }
 
-// TestResponseStringFloat32NullableArrayArray implements test_response_string_float32_nullable_array_array operation.
-//
-// POST /test_response_string_float32_nullable_array_array
 func (UnimplementedHandler) TestResponseStringFloat32NullableArrayArray(ctx context.Context, req string) (r [][]NilStringFloat32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringFloat64 implements test_response_string_float64 operation.
+	//
+	// POST /test_response_string_float64
 }
 
-// TestResponseStringFloat64 implements test_response_string_float64 operation.
-//
-// POST /test_response_string_float64
 func (UnimplementedHandler) TestResponseStringFloat64(ctx context.Context, req string) (r float64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringFloat64Array implements test_response_string_float64_array operation.
 //
 // POST /test_response_string_float64_array
 func (UnimplementedHandler) TestResponseStringFloat64Array(ctx context.Context, req string) (r []float64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringFloat64ArrayArray implements test_response_string_float64_array_array operation.
+	//
+	// POST /test_response_string_float64_array_array
 }
 
-// TestResponseStringFloat64ArrayArray implements test_response_string_float64_array_array operation.
-//
-// POST /test_response_string_float64_array_array
 func (UnimplementedHandler) TestResponseStringFloat64ArrayArray(ctx context.Context, req string) (r [][]float64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringFloat64Nullable implements test_response_string_float64_nullable operation.
+	//
+	// POST /test_response_string_float64_nullable
 }
 
-// TestResponseStringFloat64Nullable implements test_response_string_float64_nullable operation.
-//
-// POST /test_response_string_float64_nullable
 func (UnimplementedHandler) TestResponseStringFloat64Nullable(ctx context.Context, req string) (r NilStringFloat64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringFloat64), nil
 }
 
 // TestResponseStringFloat64NullableArray implements test_response_string_float64_nullable_array operation.
 //
 // POST /test_response_string_float64_nullable_array
 func (UnimplementedHandler) TestResponseStringFloat64NullableArray(ctx context.Context, req string) (r []NilStringFloat64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringFloat64NullableArrayArray implements test_response_string_float64_nullable_array_array operation.
+	//
+	// POST /test_response_string_float64_nullable_array_array
 }
 
-// TestResponseStringFloat64NullableArrayArray implements test_response_string_float64_nullable_array_array operation.
-//
-// POST /test_response_string_float64_nullable_array_array
 func (UnimplementedHandler) TestResponseStringFloat64NullableArrayArray(ctx context.Context, req string) (r [][]NilStringFloat64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringHTTPDate implements test_response_string_http-date operation.
+	//
+	// POST /test_response_string_http-date
 }
 
-// TestResponseStringHTTPDate implements test_response_string_http-date operation.
-//
-// POST /test_response_string_http-date
 func (UnimplementedHandler) TestResponseStringHTTPDate(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseStringHTTPDateArray implements test_response_string_http-date_array operation.
 //
 // POST /test_response_string_http-date_array
 func (UnimplementedHandler) TestResponseStringHTTPDateArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringHTTPDateArrayArray implements test_response_string_http-date_array_array operation.
+	//
+	// POST /test_response_string_http-date_array_array
 }
 
-// TestResponseStringHTTPDateArrayArray implements test_response_string_http-date_array_array operation.
-//
-// POST /test_response_string_http-date_array_array
 func (UnimplementedHandler) TestResponseStringHTTPDateArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringHTTPDateNullable implements test_response_string_http-date_nullable operation.
+	//
+	// POST /test_response_string_http-date_nullable
 }
 
-// TestResponseStringHTTPDateNullable implements test_response_string_http-date_nullable operation.
-//
-// POST /test_response_string_http-date_nullable
 func (UnimplementedHandler) TestResponseStringHTTPDateNullable(ctx context.Context, req string) (r NilHTTPDate, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilHTTPDate), nil
 }
 
 // TestResponseStringHTTPDateNullableArray implements test_response_string_http-date_nullable_array operation.
 //
 // POST /test_response_string_http-date_nullable_array
 func (UnimplementedHandler) TestResponseStringHTTPDateNullableArray(ctx context.Context, req string) (r []NilHTTPDate, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringHTTPDateNullableArrayArray implements test_response_string_http-date_nullable_array_array operation.
+	//
+	// POST /test_response_string_http-date_nullable_array_array
 }
 
-// TestResponseStringHTTPDateNullableArrayArray implements test_response_string_http-date_nullable_array_array operation.
-//
-// POST /test_response_string_http-date_nullable_array_array
 func (UnimplementedHandler) TestResponseStringHTTPDateNullableArrayArray(ctx context.Context, req string) (r [][]NilHTTPDate, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringHostname implements test_response_string_hostname operation.
+	//
+	// POST /test_response_string_hostname
 }
 
-// TestResponseStringHostname implements test_response_string_hostname operation.
-//
-// POST /test_response_string_hostname
 func (UnimplementedHandler) TestResponseStringHostname(ctx context.Context, req string) (r string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 // TestResponseStringHostnameArray implements test_response_string_hostname_array operation.
 //
 // POST /test_response_string_hostname_array
 func (UnimplementedHandler) TestResponseStringHostnameArray(ctx context.Context, req string) (r []string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringHostnameArrayArray implements test_response_string_hostname_array_array operation.
+	//
+	// POST /test_response_string_hostname_array_array
 }
 
-// TestResponseStringHostnameArrayArray implements test_response_string_hostname_array_array operation.
-//
-// POST /test_response_string_hostname_array_array
 func (UnimplementedHandler) TestResponseStringHostnameArrayArray(ctx context.Context, req string) (r [][]string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringHostnameNullable implements test_response_string_hostname_nullable operation.
+	//
+	// POST /test_response_string_hostname_nullable
 }
 
-// TestResponseStringHostnameNullable implements test_response_string_hostname_nullable operation.
-//
-// POST /test_response_string_hostname_nullable
 func (UnimplementedHandler) TestResponseStringHostnameNullable(ctx context.Context, req string) (r NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilString), nil
 }
 
 // TestResponseStringHostnameNullableArray implements test_response_string_hostname_nullable_array operation.
 //
 // POST /test_response_string_hostname_nullable_array
 func (UnimplementedHandler) TestResponseStringHostnameNullableArray(ctx context.Context, req string) (r []NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringHostnameNullableArrayArray implements test_response_string_hostname_nullable_array_array operation.
+	//
+	// POST /test_response_string_hostname_nullable_array_array
 }
 
-// TestResponseStringHostnameNullableArrayArray implements test_response_string_hostname_nullable_array_array operation.
-//
-// POST /test_response_string_hostname_nullable_array_array
 func (UnimplementedHandler) TestResponseStringHostnameNullableArrayArray(ctx context.Context, req string) (r [][]NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIP implements test_response_string_ip operation.
+	//
+	// POST /test_response_string_ip
 }
 
-// TestResponseStringIP implements test_response_string_ip operation.
-//
-// POST /test_response_string_ip
 func (UnimplementedHandler) TestResponseStringIP(ctx context.Context, req string) (r netip.Addr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), nil
 }
 
 // TestResponseStringIPArray implements test_response_string_ip_array operation.
 //
 // POST /test_response_string_ip_array
 func (UnimplementedHandler) TestResponseStringIPArray(ctx context.Context, req string) (r []netip.Addr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIPArrayArray implements test_response_string_ip_array_array operation.
+	//
+	// POST /test_response_string_ip_array_array
 }
 
-// TestResponseStringIPArrayArray implements test_response_string_ip_array_array operation.
-//
-// POST /test_response_string_ip_array_array
 func (UnimplementedHandler) TestResponseStringIPArrayArray(ctx context.Context, req string) (r [][]netip.Addr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIPNullable implements test_response_string_ip_nullable operation.
+	//
+	// POST /test_response_string_ip_nullable
 }
 
-// TestResponseStringIPNullable implements test_response_string_ip_nullable operation.
-//
-// POST /test_response_string_ip_nullable
 func (UnimplementedHandler) TestResponseStringIPNullable(ctx context.Context, req string) (r NilIP, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilIP), nil
 }
 
 // TestResponseStringIPNullableArray implements test_response_string_ip_nullable_array operation.
 //
 // POST /test_response_string_ip_nullable_array
 func (UnimplementedHandler) TestResponseStringIPNullableArray(ctx context.Context, req string) (r []NilIP, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIPNullableArrayArray implements test_response_string_ip_nullable_array_array operation.
+	//
+	// POST /test_response_string_ip_nullable_array_array
 }
 
-// TestResponseStringIPNullableArrayArray implements test_response_string_ip_nullable_array_array operation.
-//
-// POST /test_response_string_ip_nullable_array_array
 func (UnimplementedHandler) TestResponseStringIPNullableArrayArray(ctx context.Context, req string) (r [][]NilIP, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt implements test_response_string_int operation.
+	//
+	// POST /test_response_string_int
 }
 
-// TestResponseStringInt implements test_response_string_int operation.
-//
-// POST /test_response_string_int
 func (UnimplementedHandler) TestResponseStringInt(ctx context.Context, req string) (r int, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringInt16 implements test_response_string_int16 operation.
 //
 // POST /test_response_string_int16
 func (UnimplementedHandler) TestResponseStringInt16(ctx context.Context, req string) (r int16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringInt16Array implements test_response_string_int16_array operation.
 //
 // POST /test_response_string_int16_array
 func (UnimplementedHandler) TestResponseStringInt16Array(ctx context.Context, req string) (r []int16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt16ArrayArray implements test_response_string_int16_array_array operation.
+	//
+	// POST /test_response_string_int16_array_array
 }
 
-// TestResponseStringInt16ArrayArray implements test_response_string_int16_array_array operation.
-//
-// POST /test_response_string_int16_array_array
 func (UnimplementedHandler) TestResponseStringInt16ArrayArray(ctx context.Context, req string) (r [][]int16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt16Nullable implements test_response_string_int16_nullable operation.
+	//
+	// POST /test_response_string_int16_nullable
 }
 
-// TestResponseStringInt16Nullable implements test_response_string_int16_nullable operation.
-//
-// POST /test_response_string_int16_nullable
 func (UnimplementedHandler) TestResponseStringInt16Nullable(ctx context.Context, req string) (r NilStringInt16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringInt16), nil
 }
 
 // TestResponseStringInt16NullableArray implements test_response_string_int16_nullable_array operation.
 //
 // POST /test_response_string_int16_nullable_array
 func (UnimplementedHandler) TestResponseStringInt16NullableArray(ctx context.Context, req string) (r []NilStringInt16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt16NullableArrayArray implements test_response_string_int16_nullable_array_array operation.
+	//
+	// POST /test_response_string_int16_nullable_array_array
 }
 
-// TestResponseStringInt16NullableArrayArray implements test_response_string_int16_nullable_array_array operation.
-//
-// POST /test_response_string_int16_nullable_array_array
 func (UnimplementedHandler) TestResponseStringInt16NullableArrayArray(ctx context.Context, req string) (r [][]NilStringInt16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt32 implements test_response_string_int32 operation.
+	//
+	// POST /test_response_string_int32
 }
 
-// TestResponseStringInt32 implements test_response_string_int32 operation.
-//
-// POST /test_response_string_int32
 func (UnimplementedHandler) TestResponseStringInt32(ctx context.Context, req string) (r int32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringInt32Array implements test_response_string_int32_array operation.
 //
 // POST /test_response_string_int32_array
 func (UnimplementedHandler) TestResponseStringInt32Array(ctx context.Context, req string) (r []int32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt32ArrayArray implements test_response_string_int32_array_array operation.
+	//
+	// POST /test_response_string_int32_array_array
 }
 
-// TestResponseStringInt32ArrayArray implements test_response_string_int32_array_array operation.
-//
-// POST /test_response_string_int32_array_array
 func (UnimplementedHandler) TestResponseStringInt32ArrayArray(ctx context.Context, req string) (r [][]int32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt32Nullable implements test_response_string_int32_nullable operation.
+	//
+	// POST /test_response_string_int32_nullable
 }
 
-// TestResponseStringInt32Nullable implements test_response_string_int32_nullable operation.
-//
-// POST /test_response_string_int32_nullable
 func (UnimplementedHandler) TestResponseStringInt32Nullable(ctx context.Context, req string) (r NilStringInt32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringInt32), nil
 }
 
 // TestResponseStringInt32NullableArray implements test_response_string_int32_nullable_array operation.
 //
 // POST /test_response_string_int32_nullable_array
 func (UnimplementedHandler) TestResponseStringInt32NullableArray(ctx context.Context, req string) (r []NilStringInt32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt32NullableArrayArray implements test_response_string_int32_nullable_array_array operation.
+	//
+	// POST /test_response_string_int32_nullable_array_array
 }
 
-// TestResponseStringInt32NullableArrayArray implements test_response_string_int32_nullable_array_array operation.
-//
-// POST /test_response_string_int32_nullable_array_array
 func (UnimplementedHandler) TestResponseStringInt32NullableArrayArray(ctx context.Context, req string) (r [][]NilStringInt32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt64 implements test_response_string_int64 operation.
+	//
+	// POST /test_response_string_int64
 }
 
-// TestResponseStringInt64 implements test_response_string_int64 operation.
-//
-// POST /test_response_string_int64
 func (UnimplementedHandler) TestResponseStringInt64(ctx context.Context, req string) (r int64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringInt64Array implements test_response_string_int64_array operation.
 //
 // POST /test_response_string_int64_array
 func (UnimplementedHandler) TestResponseStringInt64Array(ctx context.Context, req string) (r []int64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt64ArrayArray implements test_response_string_int64_array_array operation.
+	//
+	// POST /test_response_string_int64_array_array
 }
 
-// TestResponseStringInt64ArrayArray implements test_response_string_int64_array_array operation.
-//
-// POST /test_response_string_int64_array_array
 func (UnimplementedHandler) TestResponseStringInt64ArrayArray(ctx context.Context, req string) (r [][]int64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt64Nullable implements test_response_string_int64_nullable operation.
+	//
+	// POST /test_response_string_int64_nullable
 }
 
-// TestResponseStringInt64Nullable implements test_response_string_int64_nullable operation.
-//
-// POST /test_response_string_int64_nullable
 func (UnimplementedHandler) TestResponseStringInt64Nullable(ctx context.Context, req string) (r NilStringInt64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringInt64), nil
 }
 
 // TestResponseStringInt64NullableArray implements test_response_string_int64_nullable_array operation.
 //
 // POST /test_response_string_int64_nullable_array
 func (UnimplementedHandler) TestResponseStringInt64NullableArray(ctx context.Context, req string) (r []NilStringInt64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt64NullableArrayArray implements test_response_string_int64_nullable_array_array operation.
+	//
+	// POST /test_response_string_int64_nullable_array_array
 }
 
-// TestResponseStringInt64NullableArrayArray implements test_response_string_int64_nullable_array_array operation.
-//
-// POST /test_response_string_int64_nullable_array_array
 func (UnimplementedHandler) TestResponseStringInt64NullableArrayArray(ctx context.Context, req string) (r [][]NilStringInt64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt8 implements test_response_string_int8 operation.
+	//
+	// POST /test_response_string_int8
 }
 
-// TestResponseStringInt8 implements test_response_string_int8 operation.
-//
-// POST /test_response_string_int8
 func (UnimplementedHandler) TestResponseStringInt8(ctx context.Context, req string) (r int8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringInt8Array implements test_response_string_int8_array operation.
 //
 // POST /test_response_string_int8_array
 func (UnimplementedHandler) TestResponseStringInt8Array(ctx context.Context, req string) (r []int8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt8ArrayArray implements test_response_string_int8_array_array operation.
+	//
+	// POST /test_response_string_int8_array_array
 }
 
-// TestResponseStringInt8ArrayArray implements test_response_string_int8_array_array operation.
-//
-// POST /test_response_string_int8_array_array
 func (UnimplementedHandler) TestResponseStringInt8ArrayArray(ctx context.Context, req string) (r [][]int8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt8Nullable implements test_response_string_int8_nullable operation.
+	//
+	// POST /test_response_string_int8_nullable
 }
 
-// TestResponseStringInt8Nullable implements test_response_string_int8_nullable operation.
-//
-// POST /test_response_string_int8_nullable
 func (UnimplementedHandler) TestResponseStringInt8Nullable(ctx context.Context, req string) (r NilStringInt8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringInt8), nil
 }
 
 // TestResponseStringInt8NullableArray implements test_response_string_int8_nullable_array operation.
 //
 // POST /test_response_string_int8_nullable_array
 func (UnimplementedHandler) TestResponseStringInt8NullableArray(ctx context.Context, req string) (r []NilStringInt8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringInt8NullableArrayArray implements test_response_string_int8_nullable_array_array operation.
+	//
+	// POST /test_response_string_int8_nullable_array_array
 }
 
-// TestResponseStringInt8NullableArrayArray implements test_response_string_int8_nullable_array_array operation.
-//
-// POST /test_response_string_int8_nullable_array_array
 func (UnimplementedHandler) TestResponseStringInt8NullableArrayArray(ctx context.Context, req string) (r [][]NilStringInt8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIntArray implements test_response_string_int_array operation.
+	//
+	// POST /test_response_string_int_array
 }
 
-// TestResponseStringIntArray implements test_response_string_int_array operation.
-//
-// POST /test_response_string_int_array
 func (UnimplementedHandler) TestResponseStringIntArray(ctx context.Context, req string) (r []int, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIntArrayArray implements test_response_string_int_array_array operation.
+	//
+	// POST /test_response_string_int_array_array
 }
 
-// TestResponseStringIntArrayArray implements test_response_string_int_array_array operation.
-//
-// POST /test_response_string_int_array_array
 func (UnimplementedHandler) TestResponseStringIntArrayArray(ctx context.Context, req string) (r [][]int, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIntNullable implements test_response_string_int_nullable operation.
+	//
+	// POST /test_response_string_int_nullable
 }
 
-// TestResponseStringIntNullable implements test_response_string_int_nullable operation.
-//
-// POST /test_response_string_int_nullable
 func (UnimplementedHandler) TestResponseStringIntNullable(ctx context.Context, req string) (r NilStringInt, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringInt), nil
 }
 
 // TestResponseStringIntNullableArray implements test_response_string_int_nullable_array operation.
 //
 // POST /test_response_string_int_nullable_array
 func (UnimplementedHandler) TestResponseStringIntNullableArray(ctx context.Context, req string) (r []NilStringInt, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIntNullableArrayArray implements test_response_string_int_nullable_array_array operation.
+	//
+	// POST /test_response_string_int_nullable_array_array
 }
 
-// TestResponseStringIntNullableArrayArray implements test_response_string_int_nullable_array_array operation.
-//
-// POST /test_response_string_int_nullable_array_array
 func (UnimplementedHandler) TestResponseStringIntNullableArrayArray(ctx context.Context, req string) (r [][]NilStringInt, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIpv4 implements test_response_string_ipv4 operation.
+	//
+	// POST /test_response_string_ipv4
 }
 
-// TestResponseStringIpv4 implements test_response_string_ipv4 operation.
-//
-// POST /test_response_string_ipv4
 func (UnimplementedHandler) TestResponseStringIpv4(ctx context.Context, req string) (r netip.Addr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), nil
 }
 
 // TestResponseStringIpv4Array implements test_response_string_ipv4_array operation.
 //
 // POST /test_response_string_ipv4_array
 func (UnimplementedHandler) TestResponseStringIpv4Array(ctx context.Context, req string) (r []netip.Addr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIpv4ArrayArray implements test_response_string_ipv4_array_array operation.
+	//
+	// POST /test_response_string_ipv4_array_array
 }
 
-// TestResponseStringIpv4ArrayArray implements test_response_string_ipv4_array_array operation.
-//
-// POST /test_response_string_ipv4_array_array
 func (UnimplementedHandler) TestResponseStringIpv4ArrayArray(ctx context.Context, req string) (r [][]netip.Addr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIpv4Nullable implements test_response_string_ipv4_nullable operation.
+	//
+	// POST /test_response_string_ipv4_nullable
 }
 
-// TestResponseStringIpv4Nullable implements test_response_string_ipv4_nullable operation.
-//
-// POST /test_response_string_ipv4_nullable
 func (UnimplementedHandler) TestResponseStringIpv4Nullable(ctx context.Context, req string) (r NilIPv4, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilIPv4), nil
 }
 
 // TestResponseStringIpv4NullableArray implements test_response_string_ipv4_nullable_array operation.
 //
 // POST /test_response_string_ipv4_nullable_array
 func (UnimplementedHandler) TestResponseStringIpv4NullableArray(ctx context.Context, req string) (r []NilIPv4, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIpv4NullableArrayArray implements test_response_string_ipv4_nullable_array_array operation.
+	//
+	// POST /test_response_string_ipv4_nullable_array_array
 }
 
-// TestResponseStringIpv4NullableArrayArray implements test_response_string_ipv4_nullable_array_array operation.
-//
-// POST /test_response_string_ipv4_nullable_array_array
 func (UnimplementedHandler) TestResponseStringIpv4NullableArrayArray(ctx context.Context, req string) (r [][]NilIPv4, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIpv6 implements test_response_string_ipv6 operation.
+	//
+	// POST /test_response_string_ipv6
 }
 
-// TestResponseStringIpv6 implements test_response_string_ipv6 operation.
-//
-// POST /test_response_string_ipv6
 func (UnimplementedHandler) TestResponseStringIpv6(ctx context.Context, req string) (r netip.Addr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(netip.Addr), nil
 }
 
 // TestResponseStringIpv6Array implements test_response_string_ipv6_array operation.
 //
 // POST /test_response_string_ipv6_array
 func (UnimplementedHandler) TestResponseStringIpv6Array(ctx context.Context, req string) (r []netip.Addr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIpv6ArrayArray implements test_response_string_ipv6_array_array operation.
+	//
+	// POST /test_response_string_ipv6_array_array
 }
 
-// TestResponseStringIpv6ArrayArray implements test_response_string_ipv6_array_array operation.
-//
-// POST /test_response_string_ipv6_array_array
 func (UnimplementedHandler) TestResponseStringIpv6ArrayArray(ctx context.Context, req string) (r [][]netip.Addr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIpv6Nullable implements test_response_string_ipv6_nullable operation.
+	//
+	// POST /test_response_string_ipv6_nullable
 }
 
-// TestResponseStringIpv6Nullable implements test_response_string_ipv6_nullable operation.
-//
-// POST /test_response_string_ipv6_nullable
 func (UnimplementedHandler) TestResponseStringIpv6Nullable(ctx context.Context, req string) (r NilIPv6, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilIPv6), nil
 }
 
 // TestResponseStringIpv6NullableArray implements test_response_string_ipv6_nullable_array operation.
 //
 // POST /test_response_string_ipv6_nullable_array
 func (UnimplementedHandler) TestResponseStringIpv6NullableArray(ctx context.Context, req string) (r []NilIPv6, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringIpv6NullableArrayArray implements test_response_string_ipv6_nullable_array_array operation.
+	//
+	// POST /test_response_string_ipv6_nullable_array_array
 }
 
-// TestResponseStringIpv6NullableArrayArray implements test_response_string_ipv6_nullable_array_array operation.
-//
-// POST /test_response_string_ipv6_nullable_array_array
 func (UnimplementedHandler) TestResponseStringIpv6NullableArrayArray(ctx context.Context, req string) (r [][]NilIPv6, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringMAC implements test_response_string_mac operation.
+	//
+	// POST /test_response_string_mac
 }
 
-// TestResponseStringMAC implements test_response_string_mac operation.
-//
-// POST /test_response_string_mac
 func (UnimplementedHandler) TestResponseStringMAC(ctx context.Context, req string) (r net.HardwareAddr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr), nil
 }
 
 // TestResponseStringMACArray implements test_response_string_mac_array operation.
 //
 // POST /test_response_string_mac_array
 func (UnimplementedHandler) TestResponseStringMACArray(ctx context.Context, req string) (r []net.HardwareAddr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringMACArrayArray implements test_response_string_mac_array_array operation.
+	//
+	// POST /test_response_string_mac_array_array
 }
 
-// TestResponseStringMACArrayArray implements test_response_string_mac_array_array operation.
-//
-// POST /test_response_string_mac_array_array
 func (UnimplementedHandler) TestResponseStringMACArrayArray(ctx context.Context, req string) (r [][]net.HardwareAddr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringMACNullable implements test_response_string_mac_nullable operation.
+	//
+	// POST /test_response_string_mac_nullable
 }
 
-// TestResponseStringMACNullable implements test_response_string_mac_nullable operation.
-//
-// POST /test_response_string_mac_nullable
 func (UnimplementedHandler) TestResponseStringMACNullable(ctx context.Context, req string) (r NilHardwareAddr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilHardwareAddr), nil
 }
 
 // TestResponseStringMACNullableArray implements test_response_string_mac_nullable_array operation.
 //
 // POST /test_response_string_mac_nullable_array
 func (UnimplementedHandler) TestResponseStringMACNullableArray(ctx context.Context, req string) (r []NilHardwareAddr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringMACNullableArrayArray implements test_response_string_mac_nullable_array_array operation.
+	//
+	// POST /test_response_string_mac_nullable_array_array
 }
 
-// TestResponseStringMACNullableArrayArray implements test_response_string_mac_nullable_array_array operation.
-//
-// POST /test_response_string_mac_nullable_array_array
 func (UnimplementedHandler) TestResponseStringMACNullableArrayArray(ctx context.Context, req string) (r [][]NilHardwareAddr, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringNullable implements test_response_string_nullable operation.
+	//
+	// POST /test_response_string_nullable
 }
 
-// TestResponseStringNullable implements test_response_string_nullable operation.
-//
-// POST /test_response_string_nullable
 func (UnimplementedHandler) TestResponseStringNullable(ctx context.Context, req string) (r NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilString), nil
 }
 
 // TestResponseStringNullableArray implements test_response_string_nullable_array operation.
 //
 // POST /test_response_string_nullable_array
 func (UnimplementedHandler) TestResponseStringNullableArray(ctx context.Context, req string) (r []NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringNullableArrayArray implements test_response_string_nullable_array_array operation.
+	//
+	// POST /test_response_string_nullable_array_array
 }
 
-// TestResponseStringNullableArrayArray implements test_response_string_nullable_array_array operation.
-//
-// POST /test_response_string_nullable_array_array
 func (UnimplementedHandler) TestResponseStringNullableArrayArray(ctx context.Context, req string) (r [][]NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringPassword implements test_response_string_password operation.
+	//
+	// POST /test_response_string_password
 }
 
-// TestResponseStringPassword implements test_response_string_password operation.
-//
-// POST /test_response_string_password
 func (UnimplementedHandler) TestResponseStringPassword(ctx context.Context, req string) (r string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 // TestResponseStringPasswordArray implements test_response_string_password_array operation.
 //
 // POST /test_response_string_password_array
 func (UnimplementedHandler) TestResponseStringPasswordArray(ctx context.Context, req string) (r []string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringPasswordArrayArray implements test_response_string_password_array_array operation.
+	//
+	// POST /test_response_string_password_array_array
 }
 
-// TestResponseStringPasswordArrayArray implements test_response_string_password_array_array operation.
-//
-// POST /test_response_string_password_array_array
 func (UnimplementedHandler) TestResponseStringPasswordArrayArray(ctx context.Context, req string) (r [][]string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringPasswordNullable implements test_response_string_password_nullable operation.
+	//
+	// POST /test_response_string_password_nullable
 }
 
-// TestResponseStringPasswordNullable implements test_response_string_password_nullable operation.
-//
-// POST /test_response_string_password_nullable
 func (UnimplementedHandler) TestResponseStringPasswordNullable(ctx context.Context, req string) (r NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilString), nil
 }
 
 // TestResponseStringPasswordNullableArray implements test_response_string_password_nullable_array operation.
 //
 // POST /test_response_string_password_nullable_array
 func (UnimplementedHandler) TestResponseStringPasswordNullableArray(ctx context.Context, req string) (r []NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringPasswordNullableArrayArray implements test_response_string_password_nullable_array_array operation.
+	//
+	// POST /test_response_string_password_nullable_array_array
 }
 
-// TestResponseStringPasswordNullableArrayArray implements test_response_string_password_nullable_array_array operation.
-//
-// POST /test_response_string_password_nullable_array_array
 func (UnimplementedHandler) TestResponseStringPasswordNullableArrayArray(ctx context.Context, req string) (r [][]NilString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringTime implements test_response_string_time operation.
+	//
+	// POST /test_response_string_time
 }
 
-// TestResponseStringTime implements test_response_string_time operation.
-//
-// POST /test_response_string_time
 func (UnimplementedHandler) TestResponseStringTime(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseStringTimeArray implements test_response_string_time_array operation.
 //
 // POST /test_response_string_time_array
 func (UnimplementedHandler) TestResponseStringTimeArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringTimeArrayArray implements test_response_string_time_array_array operation.
+	//
+	// POST /test_response_string_time_array_array
 }
 
-// TestResponseStringTimeArrayArray implements test_response_string_time_array_array operation.
-//
-// POST /test_response_string_time_array_array
 func (UnimplementedHandler) TestResponseStringTimeArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringTimeNullable implements test_response_string_time_nullable operation.
+	//
+	// POST /test_response_string_time_nullable
 }
 
-// TestResponseStringTimeNullable implements test_response_string_time_nullable operation.
-//
-// POST /test_response_string_time_nullable
 func (UnimplementedHandler) TestResponseStringTimeNullable(ctx context.Context, req string) (r NilTime, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilTime), nil
 }
 
 // TestResponseStringTimeNullableArray implements test_response_string_time_nullable_array operation.
 //
 // POST /test_response_string_time_nullable_array
 func (UnimplementedHandler) TestResponseStringTimeNullableArray(ctx context.Context, req string) (r []NilTime, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringTimeNullableArrayArray implements test_response_string_time_nullable_array_array operation.
+	//
+	// POST /test_response_string_time_nullable_array_array
 }
 
-// TestResponseStringTimeNullableArrayArray implements test_response_string_time_nullable_array_array operation.
-//
-// POST /test_response_string_time_nullable_array_array
 func (UnimplementedHandler) TestResponseStringTimeNullableArrayArray(ctx context.Context, req string) (r [][]NilTime, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringURI implements test_response_string_uri operation.
+	//
+	// POST /test_response_string_uri
 }
 
-// TestResponseStringURI implements test_response_string_uri operation.
-//
-// POST /test_response_string_uri
 func (UnimplementedHandler) TestResponseStringURI(ctx context.Context, req string) (r url.URL, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(url.URL), nil
 }
 
 // TestResponseStringURIArray implements test_response_string_uri_array operation.
 //
 // POST /test_response_string_uri_array
 func (UnimplementedHandler) TestResponseStringURIArray(ctx context.Context, req string) (r []url.URL, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringURIArrayArray implements test_response_string_uri_array_array operation.
+	//
+	// POST /test_response_string_uri_array_array
 }
 
-// TestResponseStringURIArrayArray implements test_response_string_uri_array_array operation.
-//
-// POST /test_response_string_uri_array_array
 func (UnimplementedHandler) TestResponseStringURIArrayArray(ctx context.Context, req string) (r [][]url.URL, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringURINullable implements test_response_string_uri_nullable operation.
+	//
+	// POST /test_response_string_uri_nullable
 }
 
-// TestResponseStringURINullable implements test_response_string_uri_nullable operation.
-//
-// POST /test_response_string_uri_nullable
 func (UnimplementedHandler) TestResponseStringURINullable(ctx context.Context, req string) (r NilURI, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilURI), nil
 }
 
 // TestResponseStringURINullableArray implements test_response_string_uri_nullable_array operation.
 //
 // POST /test_response_string_uri_nullable_array
 func (UnimplementedHandler) TestResponseStringURINullableArray(ctx context.Context, req string) (r []NilURI, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringURINullableArrayArray implements test_response_string_uri_nullable_array_array operation.
+	//
+	// POST /test_response_string_uri_nullable_array_array
 }
 
-// TestResponseStringURINullableArrayArray implements test_response_string_uri_nullable_array_array operation.
-//
-// POST /test_response_string_uri_nullable_array_array
 func (UnimplementedHandler) TestResponseStringURINullableArrayArray(ctx context.Context, req string) (r [][]NilURI, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUUID implements test_response_string_uuid operation.
+	//
+	// POST /test_response_string_uuid
 }
 
-// TestResponseStringUUID implements test_response_string_uuid operation.
-//
-// POST /test_response_string_uuid
 func (UnimplementedHandler) TestResponseStringUUID(ctx context.Context, req string) (r uuid.UUID, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(uuid.UUID), nil
 }
 
 // TestResponseStringUUIDArray implements test_response_string_uuid_array operation.
 //
 // POST /test_response_string_uuid_array
 func (UnimplementedHandler) TestResponseStringUUIDArray(ctx context.Context, req string) (r []uuid.UUID, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUUIDArrayArray implements test_response_string_uuid_array_array operation.
+	//
+	// POST /test_response_string_uuid_array_array
 }
 
-// TestResponseStringUUIDArrayArray implements test_response_string_uuid_array_array operation.
-//
-// POST /test_response_string_uuid_array_array
 func (UnimplementedHandler) TestResponseStringUUIDArrayArray(ctx context.Context, req string) (r [][]uuid.UUID, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUUIDNullable implements test_response_string_uuid_nullable operation.
+	//
+	// POST /test_response_string_uuid_nullable
 }
 
-// TestResponseStringUUIDNullable implements test_response_string_uuid_nullable operation.
-//
-// POST /test_response_string_uuid_nullable
 func (UnimplementedHandler) TestResponseStringUUIDNullable(ctx context.Context, req string) (r NilUUID, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilUUID), nil
 }
 
 // TestResponseStringUUIDNullableArray implements test_response_string_uuid_nullable_array operation.
 //
 // POST /test_response_string_uuid_nullable_array
 func (UnimplementedHandler) TestResponseStringUUIDNullableArray(ctx context.Context, req string) (r []NilUUID, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUUIDNullableArrayArray implements test_response_string_uuid_nullable_array_array operation.
+	//
+	// POST /test_response_string_uuid_nullable_array_array
 }
 
-// TestResponseStringUUIDNullableArrayArray implements test_response_string_uuid_nullable_array_array operation.
-//
-// POST /test_response_string_uuid_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUUIDNullableArrayArray(ctx context.Context, req string) (r [][]NilUUID, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint implements test_response_string_uint operation.
+	//
+	// POST /test_response_string_uint
 }
 
-// TestResponseStringUint implements test_response_string_uint operation.
-//
-// POST /test_response_string_uint
 func (UnimplementedHandler) TestResponseStringUint(ctx context.Context, req string) (r uint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringUint16 implements test_response_string_uint16 operation.
 //
 // POST /test_response_string_uint16
 func (UnimplementedHandler) TestResponseStringUint16(ctx context.Context, req string) (r uint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringUint16Array implements test_response_string_uint16_array operation.
 //
 // POST /test_response_string_uint16_array
 func (UnimplementedHandler) TestResponseStringUint16Array(ctx context.Context, req string) (r []uint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint16ArrayArray implements test_response_string_uint16_array_array operation.
+	//
+	// POST /test_response_string_uint16_array_array
 }
 
-// TestResponseStringUint16ArrayArray implements test_response_string_uint16_array_array operation.
-//
-// POST /test_response_string_uint16_array_array
 func (UnimplementedHandler) TestResponseStringUint16ArrayArray(ctx context.Context, req string) (r [][]uint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint16Nullable implements test_response_string_uint16_nullable operation.
+	//
+	// POST /test_response_string_uint16_nullable
 }
 
-// TestResponseStringUint16Nullable implements test_response_string_uint16_nullable operation.
-//
-// POST /test_response_string_uint16_nullable
 func (UnimplementedHandler) TestResponseStringUint16Nullable(ctx context.Context, req string) (r NilStringUint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringUint16), nil
 }
 
 // TestResponseStringUint16NullableArray implements test_response_string_uint16_nullable_array operation.
 //
 // POST /test_response_string_uint16_nullable_array
 func (UnimplementedHandler) TestResponseStringUint16NullableArray(ctx context.Context, req string) (r []NilStringUint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint16NullableArrayArray implements test_response_string_uint16_nullable_array_array operation.
+	//
+	// POST /test_response_string_uint16_nullable_array_array
 }
 
-// TestResponseStringUint16NullableArrayArray implements test_response_string_uint16_nullable_array_array operation.
-//
-// POST /test_response_string_uint16_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUint16NullableArrayArray(ctx context.Context, req string) (r [][]NilStringUint16, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint32 implements test_response_string_uint32 operation.
+	//
+	// POST /test_response_string_uint32
 }
 
-// TestResponseStringUint32 implements test_response_string_uint32 operation.
-//
-// POST /test_response_string_uint32
 func (UnimplementedHandler) TestResponseStringUint32(ctx context.Context, req string) (r uint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringUint32Array implements test_response_string_uint32_array operation.
 //
 // POST /test_response_string_uint32_array
 func (UnimplementedHandler) TestResponseStringUint32Array(ctx context.Context, req string) (r []uint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint32ArrayArray implements test_response_string_uint32_array_array operation.
+	//
+	// POST /test_response_string_uint32_array_array
 }
 
-// TestResponseStringUint32ArrayArray implements test_response_string_uint32_array_array operation.
-//
-// POST /test_response_string_uint32_array_array
 func (UnimplementedHandler) TestResponseStringUint32ArrayArray(ctx context.Context, req string) (r [][]uint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint32Nullable implements test_response_string_uint32_nullable operation.
+	//
+	// POST /test_response_string_uint32_nullable
 }
 
-// TestResponseStringUint32Nullable implements test_response_string_uint32_nullable operation.
-//
-// POST /test_response_string_uint32_nullable
 func (UnimplementedHandler) TestResponseStringUint32Nullable(ctx context.Context, req string) (r NilStringUint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringUint32), nil
 }
 
 // TestResponseStringUint32NullableArray implements test_response_string_uint32_nullable_array operation.
 //
 // POST /test_response_string_uint32_nullable_array
 func (UnimplementedHandler) TestResponseStringUint32NullableArray(ctx context.Context, req string) (r []NilStringUint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint32NullableArrayArray implements test_response_string_uint32_nullable_array_array operation.
+	//
+	// POST /test_response_string_uint32_nullable_array_array
 }
 
-// TestResponseStringUint32NullableArrayArray implements test_response_string_uint32_nullable_array_array operation.
-//
-// POST /test_response_string_uint32_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUint32NullableArrayArray(ctx context.Context, req string) (r [][]NilStringUint32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint64 implements test_response_string_uint64 operation.
+	//
+	// POST /test_response_string_uint64
 }
 
-// TestResponseStringUint64 implements test_response_string_uint64 operation.
-//
-// POST /test_response_string_uint64
 func (UnimplementedHandler) TestResponseStringUint64(ctx context.Context, req string) (r uint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringUint64Array implements test_response_string_uint64_array operation.
 //
 // POST /test_response_string_uint64_array
 func (UnimplementedHandler) TestResponseStringUint64Array(ctx context.Context, req string) (r []uint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint64ArrayArray implements test_response_string_uint64_array_array operation.
+	//
+	// POST /test_response_string_uint64_array_array
 }
 
-// TestResponseStringUint64ArrayArray implements test_response_string_uint64_array_array operation.
-//
-// POST /test_response_string_uint64_array_array
 func (UnimplementedHandler) TestResponseStringUint64ArrayArray(ctx context.Context, req string) (r [][]uint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint64Nullable implements test_response_string_uint64_nullable operation.
+	//
+	// POST /test_response_string_uint64_nullable
 }
 
-// TestResponseStringUint64Nullable implements test_response_string_uint64_nullable operation.
-//
-// POST /test_response_string_uint64_nullable
 func (UnimplementedHandler) TestResponseStringUint64Nullable(ctx context.Context, req string) (r NilStringUint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringUint64), nil
 }
 
 // TestResponseStringUint64NullableArray implements test_response_string_uint64_nullable_array operation.
 //
 // POST /test_response_string_uint64_nullable_array
 func (UnimplementedHandler) TestResponseStringUint64NullableArray(ctx context.Context, req string) (r []NilStringUint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint64NullableArrayArray implements test_response_string_uint64_nullable_array_array operation.
+	//
+	// POST /test_response_string_uint64_nullable_array_array
 }
 
-// TestResponseStringUint64NullableArrayArray implements test_response_string_uint64_nullable_array_array operation.
-//
-// POST /test_response_string_uint64_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUint64NullableArrayArray(ctx context.Context, req string) (r [][]NilStringUint64, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint8 implements test_response_string_uint8 operation.
+	//
+	// POST /test_response_string_uint8
 }
 
-// TestResponseStringUint8 implements test_response_string_uint8 operation.
-//
-// POST /test_response_string_uint8
 func (UnimplementedHandler) TestResponseStringUint8(ctx context.Context, req string) (r uint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // TestResponseStringUint8Array implements test_response_string_uint8_array operation.
 //
 // POST /test_response_string_uint8_array
 func (UnimplementedHandler) TestResponseStringUint8Array(ctx context.Context, req string) (r []uint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint8ArrayArray implements test_response_string_uint8_array_array operation.
+	//
+	// POST /test_response_string_uint8_array_array
 }
 
-// TestResponseStringUint8ArrayArray implements test_response_string_uint8_array_array operation.
-//
-// POST /test_response_string_uint8_array_array
 func (UnimplementedHandler) TestResponseStringUint8ArrayArray(ctx context.Context, req string) (r [][]uint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint8Nullable implements test_response_string_uint8_nullable operation.
+	//
+	// POST /test_response_string_uint8_nullable
 }
 
-// TestResponseStringUint8Nullable implements test_response_string_uint8_nullable operation.
-//
-// POST /test_response_string_uint8_nullable
 func (UnimplementedHandler) TestResponseStringUint8Nullable(ctx context.Context, req string) (r NilStringUint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringUint8), nil
 }
 
 // TestResponseStringUint8NullableArray implements test_response_string_uint8_nullable_array operation.
 //
 // POST /test_response_string_uint8_nullable_array
 func (UnimplementedHandler) TestResponseStringUint8NullableArray(ctx context.Context, req string) (r []NilStringUint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUint8NullableArrayArray implements test_response_string_uint8_nullable_array_array operation.
+	//
+	// POST /test_response_string_uint8_nullable_array_array
 }
 
-// TestResponseStringUint8NullableArrayArray implements test_response_string_uint8_nullable_array_array operation.
-//
-// POST /test_response_string_uint8_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUint8NullableArrayArray(ctx context.Context, req string) (r [][]NilStringUint8, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUintArray implements test_response_string_uint_array operation.
+	//
+	// POST /test_response_string_uint_array
 }
 
-// TestResponseStringUintArray implements test_response_string_uint_array operation.
-//
-// POST /test_response_string_uint_array
 func (UnimplementedHandler) TestResponseStringUintArray(ctx context.Context, req string) (r []uint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUintArrayArray implements test_response_string_uint_array_array operation.
+	//
+	// POST /test_response_string_uint_array_array
 }
 
-// TestResponseStringUintArrayArray implements test_response_string_uint_array_array operation.
-//
-// POST /test_response_string_uint_array_array
 func (UnimplementedHandler) TestResponseStringUintArrayArray(ctx context.Context, req string) (r [][]uint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUintNullable implements test_response_string_uint_nullable operation.
+	//
+	// POST /test_response_string_uint_nullable
 }
 
-// TestResponseStringUintNullable implements test_response_string_uint_nullable operation.
-//
-// POST /test_response_string_uint_nullable
 func (UnimplementedHandler) TestResponseStringUintNullable(ctx context.Context, req string) (r NilStringUint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringUint), nil
 }
 
 // TestResponseStringUintNullableArray implements test_response_string_uint_nullable_array operation.
 //
 // POST /test_response_string_uint_nullable_array
 func (UnimplementedHandler) TestResponseStringUintNullableArray(ctx context.Context, req string) (r []NilStringUint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUintNullableArrayArray implements test_response_string_uint_nullable_array_array operation.
+	//
+	// POST /test_response_string_uint_nullable_array_array
 }
 
-// TestResponseStringUintNullableArrayArray implements test_response_string_uint_nullable_array_array operation.
-//
-// POST /test_response_string_uint_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUintNullableArrayArray(ctx context.Context, req string) (r [][]NilStringUint, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnix implements test_response_string_unix operation.
+	//
+	// POST /test_response_string_unix
 }
 
-// TestResponseStringUnix implements test_response_string_unix operation.
-//
-// POST /test_response_string_unix
 func (UnimplementedHandler) TestResponseStringUnix(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseStringUnixArray implements test_response_string_unix_array operation.
 //
 // POST /test_response_string_unix_array
 func (UnimplementedHandler) TestResponseStringUnixArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixArrayArray implements test_response_string_unix_array_array operation.
+	//
+	// POST /test_response_string_unix_array_array
 }
 
-// TestResponseStringUnixArrayArray implements test_response_string_unix_array_array operation.
-//
-// POST /test_response_string_unix_array_array
 func (UnimplementedHandler) TestResponseStringUnixArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixMicro implements test_response_string_unix-micro operation.
+	//
+	// POST /test_response_string_unix-micro
 }
 
-// TestResponseStringUnixMicro implements test_response_string_unix-micro operation.
-//
-// POST /test_response_string_unix-micro
 func (UnimplementedHandler) TestResponseStringUnixMicro(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseStringUnixMicroArray implements test_response_string_unix-micro_array operation.
 //
 // POST /test_response_string_unix-micro_array
 func (UnimplementedHandler) TestResponseStringUnixMicroArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixMicroArrayArray implements test_response_string_unix-micro_array_array operation.
+	//
+	// POST /test_response_string_unix-micro_array_array
 }
 
-// TestResponseStringUnixMicroArrayArray implements test_response_string_unix-micro_array_array operation.
-//
-// POST /test_response_string_unix-micro_array_array
 func (UnimplementedHandler) TestResponseStringUnixMicroArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixMicroNullable implements test_response_string_unix-micro_nullable operation.
+	//
+	// POST /test_response_string_unix-micro_nullable
 }
 
-// TestResponseStringUnixMicroNullable implements test_response_string_unix-micro_nullable operation.
-//
-// POST /test_response_string_unix-micro_nullable
 func (UnimplementedHandler) TestResponseStringUnixMicroNullable(ctx context.Context, req string) (r NilStringUnixMicro, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringUnixMicro), nil
 }
 
 // TestResponseStringUnixMicroNullableArray implements test_response_string_unix-micro_nullable_array operation.
 //
 // POST /test_response_string_unix-micro_nullable_array
 func (UnimplementedHandler) TestResponseStringUnixMicroNullableArray(ctx context.Context, req string) (r []NilStringUnixMicro, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixMicroNullableArrayArray implements test_response_string_unix-micro_nullable_array_array operation.
+	//
+	// POST /test_response_string_unix-micro_nullable_array_array
 }
 
-// TestResponseStringUnixMicroNullableArrayArray implements test_response_string_unix-micro_nullable_array_array operation.
-//
-// POST /test_response_string_unix-micro_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUnixMicroNullableArrayArray(ctx context.Context, req string) (r [][]NilStringUnixMicro, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixMilli implements test_response_string_unix-milli operation.
+	//
+	// POST /test_response_string_unix-milli
 }
 
-// TestResponseStringUnixMilli implements test_response_string_unix-milli operation.
-//
-// POST /test_response_string_unix-milli
 func (UnimplementedHandler) TestResponseStringUnixMilli(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseStringUnixMilliArray implements test_response_string_unix-milli_array operation.
 //
 // POST /test_response_string_unix-milli_array
 func (UnimplementedHandler) TestResponseStringUnixMilliArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixMilliArrayArray implements test_response_string_unix-milli_array_array operation.
+	//
+	// POST /test_response_string_unix-milli_array_array
 }
 
-// TestResponseStringUnixMilliArrayArray implements test_response_string_unix-milli_array_array operation.
-//
-// POST /test_response_string_unix-milli_array_array
 func (UnimplementedHandler) TestResponseStringUnixMilliArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixMilliNullable implements test_response_string_unix-milli_nullable operation.
+	//
+	// POST /test_response_string_unix-milli_nullable
 }
 
-// TestResponseStringUnixMilliNullable implements test_response_string_unix-milli_nullable operation.
-//
-// POST /test_response_string_unix-milli_nullable
 func (UnimplementedHandler) TestResponseStringUnixMilliNullable(ctx context.Context, req string) (r NilStringUnixMilli, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringUnixMilli), nil
 }
 
 // TestResponseStringUnixMilliNullableArray implements test_response_string_unix-milli_nullable_array operation.
 //
 // POST /test_response_string_unix-milli_nullable_array
 func (UnimplementedHandler) TestResponseStringUnixMilliNullableArray(ctx context.Context, req string) (r []NilStringUnixMilli, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixMilliNullableArrayArray implements test_response_string_unix-milli_nullable_array_array operation.
+	//
+	// POST /test_response_string_unix-milli_nullable_array_array
 }
 
-// TestResponseStringUnixMilliNullableArrayArray implements test_response_string_unix-milli_nullable_array_array operation.
-//
-// POST /test_response_string_unix-milli_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUnixMilliNullableArrayArray(ctx context.Context, req string) (r [][]NilStringUnixMilli, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixNano implements test_response_string_unix-nano operation.
+	//
+	// POST /test_response_string_unix-nano
 }
 
-// TestResponseStringUnixNano implements test_response_string_unix-nano operation.
-//
-// POST /test_response_string_unix-nano
 func (UnimplementedHandler) TestResponseStringUnixNano(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseStringUnixNanoArray implements test_response_string_unix-nano_array operation.
 //
 // POST /test_response_string_unix-nano_array
 func (UnimplementedHandler) TestResponseStringUnixNanoArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixNanoArrayArray implements test_response_string_unix-nano_array_array operation.
+	//
+	// POST /test_response_string_unix-nano_array_array
 }
 
-// TestResponseStringUnixNanoArrayArray implements test_response_string_unix-nano_array_array operation.
-//
-// POST /test_response_string_unix-nano_array_array
 func (UnimplementedHandler) TestResponseStringUnixNanoArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixNanoNullable implements test_response_string_unix-nano_nullable operation.
+	//
+	// POST /test_response_string_unix-nano_nullable
 }
 
-// TestResponseStringUnixNanoNullable implements test_response_string_unix-nano_nullable operation.
-//
-// POST /test_response_string_unix-nano_nullable
 func (UnimplementedHandler) TestResponseStringUnixNanoNullable(ctx context.Context, req string) (r NilStringUnixNano, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringUnixNano), nil
 }
 
 // TestResponseStringUnixNanoNullableArray implements test_response_string_unix-nano_nullable_array operation.
 //
 // POST /test_response_string_unix-nano_nullable_array
 func (UnimplementedHandler) TestResponseStringUnixNanoNullableArray(ctx context.Context, req string) (r []NilStringUnixNano, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixNanoNullableArrayArray implements test_response_string_unix-nano_nullable_array_array operation.
+	//
+	// POST /test_response_string_unix-nano_nullable_array_array
 }
 
-// TestResponseStringUnixNanoNullableArrayArray implements test_response_string_unix-nano_nullable_array_array operation.
-//
-// POST /test_response_string_unix-nano_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUnixNanoNullableArrayArray(ctx context.Context, req string) (r [][]NilStringUnixNano, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixNullable implements test_response_string_unix_nullable operation.
+	//
+	// POST /test_response_string_unix_nullable
 }
 
-// TestResponseStringUnixNullable implements test_response_string_unix_nullable operation.
-//
-// POST /test_response_string_unix_nullable
 func (UnimplementedHandler) TestResponseStringUnixNullable(ctx context.Context, req string) (r NilStringUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringUnixSeconds), nil
 }
 
 // TestResponseStringUnixNullableArray implements test_response_string_unix_nullable_array operation.
 //
 // POST /test_response_string_unix_nullable_array
 func (UnimplementedHandler) TestResponseStringUnixNullableArray(ctx context.Context, req string) (r []NilStringUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixNullableArrayArray implements test_response_string_unix_nullable_array_array operation.
+	//
+	// POST /test_response_string_unix_nullable_array_array
 }
 
-// TestResponseStringUnixNullableArrayArray implements test_response_string_unix_nullable_array_array operation.
-//
-// POST /test_response_string_unix_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUnixNullableArrayArray(ctx context.Context, req string) (r [][]NilStringUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixSeconds implements test_response_string_unix-seconds operation.
+	//
+	// POST /test_response_string_unix-seconds
 }
 
-// TestResponseStringUnixSeconds implements test_response_string_unix-seconds operation.
-//
-// POST /test_response_string_unix-seconds
 func (UnimplementedHandler) TestResponseStringUnixSeconds(ctx context.Context, req string) (r time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // TestResponseStringUnixSecondsArray implements test_response_string_unix-seconds_array operation.
 //
 // POST /test_response_string_unix-seconds_array
 func (UnimplementedHandler) TestResponseStringUnixSecondsArray(ctx context.Context, req string) (r []time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixSecondsArrayArray implements test_response_string_unix-seconds_array_array operation.
+	//
+	// POST /test_response_string_unix-seconds_array_array
 }
 
-// TestResponseStringUnixSecondsArrayArray implements test_response_string_unix-seconds_array_array operation.
-//
-// POST /test_response_string_unix-seconds_array_array
 func (UnimplementedHandler) TestResponseStringUnixSecondsArrayArray(ctx context.Context, req string) (r [][]time.Time, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixSecondsNullable implements test_response_string_unix-seconds_nullable operation.
+	//
+	// POST /test_response_string_unix-seconds_nullable
 }
 
-// TestResponseStringUnixSecondsNullable implements test_response_string_unix-seconds_nullable operation.
-//
-// POST /test_response_string_unix-seconds_nullable
 func (UnimplementedHandler) TestResponseStringUnixSecondsNullable(ctx context.Context, req string) (r NilStringUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(NilStringUnixSeconds), nil
 }
 
 // TestResponseStringUnixSecondsNullableArray implements test_response_string_unix-seconds_nullable_array operation.
 //
 // POST /test_response_string_unix-seconds_nullable_array
 func (UnimplementedHandler) TestResponseStringUnixSecondsNullableArray(ctx context.Context, req string) (r []NilStringUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestResponseStringUnixSecondsNullableArrayArray implements test_response_string_unix-seconds_nullable_array_array operation.
+	//
+	// POST /test_response_string_unix-seconds_nullable_array_array
 }
 
-// TestResponseStringUnixSecondsNullableArrayArray implements test_response_string_unix-seconds_nullable_array_array operation.
-//
-// POST /test_response_string_unix-seconds_nullable_array_array
 func (UnimplementedHandler) TestResponseStringUnixSecondsNullableArrayArray(ctx context.Context, req string) (r [][]NilStringUnixSeconds, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
 }

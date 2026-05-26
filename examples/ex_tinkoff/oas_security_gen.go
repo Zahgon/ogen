@@ -5,10 +5,6 @@ package api
 import (
 	"context"
 	"net/http"
-	"strings"
-
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/ogenerrors"
 )
 
 // SecurityHandler is handler for security parameters.
@@ -18,17 +14,7 @@ type SecurityHandler interface {
 }
 
 func findAuthorization(h http.Header, prefix string) (string, bool) {
-	v, ok := h["Authorization"]
-	if !ok {
-		return "", false
-	}
-	for _, vv := range v {
-		scheme, value, ok := strings.Cut(vv, " ")
-		if !ok || !strings.EqualFold(scheme, prefix) {
-			continue
-		}
-		return value, true
-	}
+	_ = "STUB: not implemented"
 	return "", false
 }
 
@@ -67,32 +53,13 @@ var operationRolesSSOAuth = map[string][]string{
 //	requiredRoles := GetRolesForSSOAuth(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForSSOAuth(operation string) []string {
-	roles, ok := operationRolesSSOAuth[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForSSOAuth(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 func (s *Server) securitySSOAuth(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t SSOAuth
-	token, ok := findAuthorization(req.Header, "Bearer")
-	if !ok {
-		return ctx, false, nil
-	}
-	t.Token = token
-	t.Roles = operationRolesSSOAuth[operationName]
-	rctx, err := s.sec.HandleSSOAuth(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
 // SecuritySource is provider of security values (tokens, passwords, etc.).
@@ -102,10 +69,6 @@ type SecuritySource interface {
 }
 
 func (s *Client) securitySSOAuth(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.SSOAuth(ctx, operationName)
-	if err != nil {
-		return errors.Wrap(err, "security source \"SSOAuth\"")
-	}
-	req.Header.Set("Authorization", "Bearer "+t.Token)
+	_ = "STUB: not implemented"
 	return nil
 }

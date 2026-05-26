@@ -6,8 +6,6 @@ import (
 	"net/http"
 
 	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
 )
 
 // QueryWithAdditionalPropertiesParams is parameters of queryWithAdditionalProperties operation.
@@ -16,49 +14,13 @@ type QueryWithAdditionalPropertiesParams struct {
 }
 
 func unpackQueryWithAdditionalPropertiesParams(packed middleware.Parameters) (params QueryWithAdditionalPropertiesParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "object",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Object = v.(OptQueryWithAdditionalPropertiesObject)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(QueryWithAdditionalPropertiesParams)
 }
 
 func decodeQueryWithAdditionalPropertiesParams(args [0]string, argsEscaped bool, r *http.Request) (params QueryWithAdditionalPropertiesParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: object.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "object",
-			Style:   uri.QueryStyleDeepObject,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotObjectVal QueryWithAdditionalPropertiesObject
-				if err := func() error {
-					return paramsDotObjectVal.DecodeURI(d)
-				}(); err != nil {
-					return err
-				}
-				params.Object.SetTo(paramsDotObjectVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "object",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(QueryWithAdditionalPropertiesParams), nil
 }
+
+// Decode query: object.

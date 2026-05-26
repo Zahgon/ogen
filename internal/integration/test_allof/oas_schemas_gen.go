@@ -3,7 +3,6 @@
 package api
 
 import (
-	"github.com/go-faster/errors"
 	"github.com/google/uuid"
 )
 
@@ -15,25 +14,33 @@ type Bar struct {
 
 // GetUUID returns the value of UUID.
 func (s *Bar) GetUUID() uuid.UUID {
-	return s.UUID
+	_ = "STUB: not implemented"
+
+	// GetValue returns the value of Value.
+	return *new(uuid.UUID)
 }
 
-// GetValue returns the value of Value.
 func (s *Bar) GetValue() float64 {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetUUID sets the value of UUID.
+	return 0
 }
 
-// SetUUID sets the value of UUID.
 func (s *Bar) SetUUID(val uuid.UUID) {
-	s.UUID = val
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return
 }
 
-// SetValue sets the value of Value.
 func (s *Bar) SetValue(val float64) {
-	s.Value = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/BazStatus
+	return
 }
 
-// Ref: #/components/schemas/BazStatus
 type BazStatus string
 
 const (
@@ -43,44 +50,13 @@ const (
 )
 
 // AllValues returns all BazStatus values.
-func (BazStatus) AllValues() []BazStatus {
-	return []BazStatus{
-		BazStatusActive,
-		BazStatusInactive,
-		BazStatusDecommissioned,
-	}
-}
+func (BazStatus) AllValues() []BazStatus { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s BazStatus) MarshalText() ([]byte, error) {
-	switch s {
-	case BazStatusActive:
-		return []byte(s), nil
-	case BazStatusInactive:
-		return []byte(s), nil
-	case BazStatusDecommissioned:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s BazStatus) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *BazStatus) UnmarshalText(data []byte) error {
-	switch BazStatus(data) {
-	case BazStatusActive:
-		*s = BazStatusActive
-		return nil
-	case BazStatusInactive:
-		*s = BazStatusInactive
-		return nil
-	case BazStatusDecommissioned:
-		*s = BazStatusDecommissioned
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *BazStatus) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/Foo
 type Foo struct {
@@ -92,60 +68,80 @@ type Foo struct {
 
 // GetID returns the value of ID.
 func (s *Foo) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *Foo) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetConfig returns the value of Config.
+	return ""
 }
 
-// GetConfig returns the value of Config.
 func (s *Foo) GetConfig() FooConfig {
-	return s.Config
+	_ = "STUB: not implemented"
+
+	// GetBar returns the value of Bar.
+	return *new(FooConfig)
 }
 
-// GetBar returns the value of Bar.
 func (s *Foo) GetBar() NilBar {
-	return s.Bar
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(NilBar)
 }
 
-// SetID sets the value of ID.
 func (s *Foo) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Foo) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetConfig sets the value of Config.
+	return
 }
 
-// SetConfig sets the value of Config.
 func (s *Foo) SetConfig(val FooConfig) {
-	s.Config = val
+	_ = "STUB: not implemented"
+
+	// SetBar sets the value of Bar.
+	return
 }
 
-// SetBar sets the value of Bar.
 func (s *Foo) SetBar(val NilBar) {
-	s.Bar = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/FooConfig
+	return
 }
 
-// Ref: #/components/schemas/FooConfig
 type FooConfig struct {
 	Interval OptInt `json:"interval"`
 }
 
 // GetInterval returns the value of Interval.
 func (s *FooConfig) GetInterval() OptInt {
-	return s.Interval
+	_ = "STUB: not implemented"
+
+	// SetInterval sets the value of Interval.
+	return *new(OptInt)
 }
 
-// SetInterval sets the value of Interval.
 func (s *FooConfig) SetInterval(val OptInt) {
-	s.Interval = val
+	_ = "STUB: not implemented"
+
+	// Merged schema.
+	return
 }
 
-// Merged schema.
 type GetAdminFooOK struct {
 	ID        string    `json:"id"`
 	Name      string    `json:"name"`
@@ -156,55 +152,75 @@ type GetAdminFooOK struct {
 
 // GetID returns the value of ID.
 func (s *GetAdminFooOK) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *GetAdminFooOK) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetConfig returns the value of Config.
+	return ""
 }
 
-// GetConfig returns the value of Config.
 func (s *GetAdminFooOK) GetConfig() FooConfig {
-	return s.Config
+	_ = "STUB: not implemented"
+
+	// GetBar returns the value of Bar.
+	return *new(FooConfig)
 }
 
-// GetBar returns the value of Bar.
 func (s *GetAdminFooOK) GetBar() NilBar {
-	return s.Bar
+	_ = "STUB: not implemented"
+
+	// GetBazStatus returns the value of BazStatus.
+	return *new(NilBar)
 }
 
-// GetBazStatus returns the value of BazStatus.
 func (s *GetAdminFooOK) GetBazStatus() BazStatus {
-	return s.BazStatus
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(BazStatus)
 }
 
-// SetID sets the value of ID.
 func (s *GetAdminFooOK) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *GetAdminFooOK) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetConfig sets the value of Config.
+	return
 }
 
-// SetConfig sets the value of Config.
 func (s *GetAdminFooOK) SetConfig(val FooConfig) {
-	s.Config = val
+	_ = "STUB: not implemented"
+
+	// SetBar sets the value of Bar.
+	return
 }
 
-// SetBar sets the value of Bar.
 func (s *GetAdminFooOK) SetBar(val NilBar) {
-	s.Bar = val
+	_ = "STUB: not implemented"
+
+	// SetBazStatus sets the value of BazStatus.
+	return
 }
 
-// SetBazStatus sets the value of BazStatus.
 func (s *GetAdminFooOK) SetBazStatus(val BazStatus) {
-	s.BazStatus = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Location
+	return
 }
 
-// Ref: #/components/schemas/Location
 type Location struct {
 	Lat float64 `json:"lat"`
 	Lon float64 `json:"lon"`
@@ -212,30 +228,34 @@ type Location struct {
 
 // GetLat returns the value of Lat.
 func (s *Location) GetLat() float64 {
-	return s.Lat
+	_ = "STUB: not implemented"
+
+	// GetLon returns the value of Lon.
+	return 0
 }
 
-// GetLon returns the value of Lon.
 func (s *Location) GetLon() float64 {
-	return s.Lon
+	_ = "STUB: not implemented"
+
+	// SetLat sets the value of Lat.
+	return 0
 }
 
-// SetLat sets the value of Lat.
 func (s *Location) SetLat(val float64) {
-	s.Lat = val
+	_ = "STUB: not implemented"
+
+	// SetLon sets the value of Lon.
+	return
 }
 
-// SetLon sets the value of Lon.
 func (s *Location) SetLon(val float64) {
-	s.Lon = val
+	_ = "STUB: not implemented"
+
+	// NewNilBar returns new NilBar with value set to v.
+	return
 }
 
-// NewNilBar returns new NilBar with value set to v.
-func NewNilBar(v Bar) NilBar {
-	return NilBar{
-		Value: v,
-	}
-}
+func NewNilBar(v Bar) NilBar { _ = "STUB: not implemented"; return *new(NilBar) }
 
 // NilBar is nullable Bar.
 type NilBar struct {
@@ -244,43 +264,26 @@ type NilBar struct {
 }
 
 // SetTo sets value to v.
-func (o *NilBar) SetTo(v Bar) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilBar) SetTo(v Bar) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilBar) IsNull() bool { return o.Null }
+func (o NilBar) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilBar) SetToNull() {
-	o.Null = true
-	var v Bar
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilBar) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilBar) Get() (v Bar, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilBar) Get() (v Bar, ok bool) { _ = "STUB: not implemented"; return *new(Bar), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilBar) Or(d Bar) Bar {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilBar) Or(d Bar) Bar { _ = "STUB: not implemented"; return *new(Bar) }
 
 // NewNilString returns new NilString with value set to v.
-func NewNilString(v string) NilString {
-	return NilString{
-		Value: v,
-	}
-}
+func NewNilString(v string) NilString { _ = "STUB: not implemented"; return *new(NilString) }
 
 // NilString is nullable string.
 type NilString struct {
@@ -289,36 +292,23 @@ type NilString struct {
 }
 
 // SetTo sets value to v.
-func (o *NilString) SetTo(v string) {
-	o.Null = false
-	o.Value = v
-}
+func (o *NilString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o NilString) IsNull() bool { return o.Null }
+func (o NilString) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *NilString) SetToNull() {
-	o.Null = true
-	var v string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *NilString) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o NilString) Get() (v string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o NilString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o NilString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o NilString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NullableStringsOK is response for NullableStrings operation.
 type NullableStringsOK struct{}
@@ -335,25 +325,33 @@ type ObjectsWithConflictingArrayPropertyReq struct {
 
 // GetFoo returns the value of Foo.
 func (s *ObjectsWithConflictingArrayPropertyReq) GetFoo() []int {
-	return s.Foo
+	_ = "STUB: not implemented"
+
+	// GetBar returns the value of Bar.
+	return nil
 }
 
-// GetBar returns the value of Bar.
 func (s *ObjectsWithConflictingArrayPropertyReq) GetBar() int {
-	return s.Bar
+	_ = "STUB: not implemented"
+
+	// SetFoo sets the value of Foo.
+	return 0
 }
 
-// SetFoo sets the value of Foo.
 func (s *ObjectsWithConflictingArrayPropertyReq) SetFoo(val []int) {
-	s.Foo = val
+	_ = "STUB: not implemented"
+
+	// SetBar sets the value of Bar.
+	return
 }
 
-// SetBar sets the value of Bar.
 func (s *ObjectsWithConflictingArrayPropertyReq) SetBar(val int) {
-	s.Bar = val
+	_ = "STUB: not implemented"
+
+	// ObjectsWithConflictingPropertiesOK is response for ObjectsWithConflictingProperties operation.
+	return
 }
 
-// ObjectsWithConflictingPropertiesOK is response for ObjectsWithConflictingProperties operation.
 type ObjectsWithConflictingPropertiesOK struct{}
 
 // Merged schema.
@@ -365,31 +363,34 @@ type ObjectsWithConflictingPropertiesReq struct {
 
 // GetFoo returns the value of Foo.
 func (s *ObjectsWithConflictingPropertiesReq) GetFoo() string {
-	return s.Foo
+	_ = "STUB: not implemented"
+
+	// GetBar returns the value of Bar.
+	return ""
 }
 
-// GetBar returns the value of Bar.
 func (s *ObjectsWithConflictingPropertiesReq) GetBar() OptInt {
-	return s.Bar
+	_ = "STUB: not implemented"
+
+	// SetFoo sets the value of Foo.
+	return *new(OptInt)
 }
 
-// SetFoo sets the value of Foo.
 func (s *ObjectsWithConflictingPropertiesReq) SetFoo(val string) {
-	s.Foo = val
+	_ = "STUB: not implemented"
+
+	// SetBar sets the value of Bar.
+	return
 }
 
-// SetBar sets the value of Bar.
 func (s *ObjectsWithConflictingPropertiesReq) SetBar(val OptInt) {
-	s.Bar = val
+	_ = "STUB: not implemented"
+
+	// NewOptBool returns new OptBool with value set to v.
+	return
 }
 
-// NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -398,44 +399,26 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -444,44 +427,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptLocation returns new OptLocation with value set to v.
-func NewOptLocation(v Location) OptLocation {
-	return OptLocation{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLocation(v Location) OptLocation { _ = "STUB: not implemented"; return *new(OptLocation) }
 
 // OptLocation is optional Location.
 type OptLocation struct {
@@ -490,43 +455,31 @@ type OptLocation struct {
 }
 
 // IsSet returns true if OptLocation was set.
-func (o OptLocation) IsSet() bool { return o.Set }
+func (o OptLocation) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLocation) Reset() {
-	var v Location
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLocation) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLocation) SetTo(v Location) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLocation) SetTo(v Location) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptLocation) Get() (v Location, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Location), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLocation) Or(d Location) Location {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLocation) Or(d Location) Location { _ = "STUB: not implemented"; return *new(Location) }
 
 // NewOptNilLocation returns new OptNilLocation with value set to v.
 func NewOptNilLocation(v Location) OptNilLocation {
-	return OptNilLocation{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilLocation)
 }
 
 // OptNilLocation is optional nullable Location.
@@ -537,65 +490,42 @@ type OptNilLocation struct {
 }
 
 // IsSet returns true if OptNilLocation was set.
-func (o OptNilLocation) IsSet() bool { return o.Set }
+func (o OptNilLocation) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilLocation) Reset() {
-	var v Location
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilLocation) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilLocation) SetTo(v Location) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilLocation) SetTo(v Location) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilLocation) IsNull() bool { return o.Null }
+func (o OptNilLocation) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilLocation) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v Location
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilLocation) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilLocation) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilLocation) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilLocation) Get() (v Location, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Location), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilLocation) Or(d Location) Location {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilLocation) Or(d Location) Location { _ = "STUB: not implemented"; return *new(Location) }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -604,36 +534,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/ReferencedAllOfNullable
 type ReferencedAllOfNullable struct {
@@ -644,37 +561,52 @@ type ReferencedAllOfNullable struct {
 
 // GetLocation returns the value of Location.
 func (s *ReferencedAllOfNullable) GetLocation() OptLocation {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// GetAllOfLocation returns the value of AllOfLocation.
+	return *new(OptLocation)
 }
 
-// GetAllOfLocation returns the value of AllOfLocation.
 func (s *ReferencedAllOfNullable) GetAllOfLocation() OptLocation {
-	return s.AllOfLocation
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNullableAllOfLocation returns the value of NullableAllOfLocation.
+	new(OptLocation)
 }
 
-// GetNullableAllOfLocation returns the value of NullableAllOfLocation.
 func (s *ReferencedAllOfNullable) GetNullableAllOfLocation() OptNilLocation {
-	return s.NullableAllOfLocation
+	_ = "STUB: not implemented"
+	return *new(OptNilLocation)
 }
 
 // SetLocation sets the value of Location.
 func (s *ReferencedAllOfNullable) SetLocation(val OptLocation) {
-	s.Location = val
+	_ = "STUB: not implemented"
+
+	// SetAllOfLocation sets the value of AllOfLocation.
+	return
 }
 
-// SetAllOfLocation sets the value of AllOfLocation.
 func (s *ReferencedAllOfNullable) SetAllOfLocation(val OptLocation) {
-	s.AllOfLocation = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetNullableAllOfLocation sets the value of NullableAllOfLocation.
 }
 
-// SetNullableAllOfLocation sets the value of NullableAllOfLocation.
 func (s *ReferencedAllOfNullable) SetNullableAllOfLocation(val OptNilLocation) {
-	s.NullableAllOfLocation = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*ReferencedAllOfNullable) referencedAllOfNullableReq() {}
+func (*ReferencedAllOfNullable) referencedAllOfNullableReq() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/ReferencedAllOfNullable
+	// Ref: #/components/schemas/ReferencedAllOfNullable
+	return
+}
+
 type ReferencedAllOfNullableMultipart struct {
 	Location              OptLocation    `json:"location"`
 	AllOfLocation         OptLocation    `json:"allOfLocation"`
@@ -683,44 +615,63 @@ type ReferencedAllOfNullableMultipart struct {
 
 // GetLocation returns the value of Location.
 func (s *ReferencedAllOfNullableMultipart) GetLocation() OptLocation {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// GetAllOfLocation returns the value of AllOfLocation.
+	return *new(OptLocation)
 }
 
-// GetAllOfLocation returns the value of AllOfLocation.
 func (s *ReferencedAllOfNullableMultipart) GetAllOfLocation() OptLocation {
-	return s.AllOfLocation
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNullableAllOfLocation returns the value of NullableAllOfLocation.
+	new(OptLocation)
 }
 
-// GetNullableAllOfLocation returns the value of NullableAllOfLocation.
 func (s *ReferencedAllOfNullableMultipart) GetNullableAllOfLocation() OptNilLocation {
-	return s.NullableAllOfLocation
+	_ = "STUB: not implemented"
+	return *new(OptNilLocation)
 }
 
 // SetLocation sets the value of Location.
 func (s *ReferencedAllOfNullableMultipart) SetLocation(val OptLocation) {
-	s.Location = val
+	_ = "STUB: not implemented"
+
+	// SetAllOfLocation sets the value of AllOfLocation.
+	return
 }
 
-// SetAllOfLocation sets the value of AllOfLocation.
 func (s *ReferencedAllOfNullableMultipart) SetAllOfLocation(val OptLocation) {
-	s.AllOfLocation = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetNullableAllOfLocation sets the value of NullableAllOfLocation.
 }
 
-// SetNullableAllOfLocation sets the value of NullableAllOfLocation.
 func (s *ReferencedAllOfNullableMultipart) SetNullableAllOfLocation(val OptNilLocation) {
-	s.NullableAllOfLocation = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*ReferencedAllOfNullableMultipart) referencedAllOfNullableReq() {}
+func (*ReferencedAllOfNullableMultipart) referencedAllOfNullableReq() {
+	_ = "STUB: not implemented"
 
-// ReferencedAllOfNullableOK is response for ReferencedAllOfNullable operation.
+	// ReferencedAllOfNullableOK is response for ReferencedAllOfNullable operation.
+	return
+}
+
 type ReferencedAllOfNullableOK struct{}
 
 type ReferencedAllOfNullableReqEmptyBody struct{}
 
-func (*ReferencedAllOfNullableReqEmptyBody) referencedAllOfNullableReq() {}
+func (*ReferencedAllOfNullableReqEmptyBody) referencedAllOfNullableReq() {
+	_ = "STUB: not implemented"
 
-// ReferencedAllofOK is response for ReferencedAllof operation.
+	// ReferencedAllofOK is response for ReferencedAllof operation.
+	return
+}
+
 type ReferencedAllofOK struct{}
 
 // ReferencedAllofOptionalOK is response for ReferencedAllofOptional operation.
@@ -728,10 +679,14 @@ type ReferencedAllofOptionalOK struct{}
 
 type ReferencedAllofOptionalReqEmptyBody struct{}
 
-func (*ReferencedAllofOptionalReqEmptyBody) referencedAllofOptionalReq() {}
+func (*ReferencedAllofOptionalReqEmptyBody) referencedAllofOptionalReq() {
+	_ = "STUB: not implemented"
 
-// Merged schema.
-// Ref: #/components/schemas/Robot
+	// Merged schema.
+	// Ref: #/components/schemas/Robot
+	return
+}
+
 type Robot struct {
 	State    RobotState `json:"state"`
 	ID       uuid.UUID  `json:"id"`
@@ -740,39 +695,51 @@ type Robot struct {
 
 // GetState returns the value of State.
 func (s *Robot) GetState() RobotState {
-	return s.State
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return *new(RobotState)
 }
 
-// GetID returns the value of ID.
 func (s *Robot) GetID() uuid.UUID {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetLocation returns the value of Location.
+	return *new(uuid.UUID)
 }
 
-// GetLocation returns the value of Location.
 func (s *Robot) GetLocation() Location {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// SetState sets the value of State.
+	return *new(Location)
 }
 
-// SetState sets the value of State.
 func (s *Robot) SetState(val RobotState) {
-	s.State = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *Robot) SetID(val uuid.UUID) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetLocation sets the value of Location.
+	return
 }
 
-// SetLocation sets the value of Location.
-func (s *Robot) SetLocation(val Location) {
-	s.Location = val
+func (s *Robot) SetLocation(val Location) { _ = "STUB: not implemented"; return }
+
+func (*Robot) referencedAllofOptionalReq() { _ = "STUB: not implemented"; return }
+func (*Robot) referencedAllofReq() {
+	_ = "STUB: not implemented"
+
+	// Merged schema.
+	// Ref: #/components/schemas/Robot
+	return
 }
 
-func (*Robot) referencedAllofOptionalReq() {}
-func (*Robot) referencedAllofReq()         {}
-
-// Merged schema.
-// Ref: #/components/schemas/Robot
 type RobotMultipart struct {
 	State    RobotMultipartState `json:"state"`
 	ID       uuid.UUID           `json:"id"`
@@ -781,36 +748,44 @@ type RobotMultipart struct {
 
 // GetState returns the value of State.
 func (s *RobotMultipart) GetState() RobotMultipartState {
-	return s.State
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return *new(RobotMultipartState)
 }
 
-// GetID returns the value of ID.
 func (s *RobotMultipart) GetID() uuid.UUID {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetLocation returns the value of Location.
+	return *new(uuid.UUID)
 }
 
-// GetLocation returns the value of Location.
 func (s *RobotMultipart) GetLocation() Location {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// SetState sets the value of State.
+	return *new(Location)
 }
 
-// SetState sets the value of State.
 func (s *RobotMultipart) SetState(val RobotMultipartState) {
-	s.State = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *RobotMultipart) SetID(val uuid.UUID) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetLocation sets the value of Location.
+	return
 }
 
-// SetLocation sets the value of Location.
-func (s *RobotMultipart) SetLocation(val Location) {
-	s.Location = val
-}
+func (s *RobotMultipart) SetLocation(val Location) { _ = "STUB: not implemented"; return }
 
-func (*RobotMultipart) referencedAllofOptionalReq() {}
-func (*RobotMultipart) referencedAllofReq()         {}
+func (*RobotMultipart) referencedAllofOptionalReq() { _ = "STUB: not implemented"; return }
+func (*RobotMultipart) referencedAllofReq()         { _ = "STUB: not implemented"; return }
 
 type RobotMultipartState string
 
@@ -820,37 +795,18 @@ const (
 )
 
 // AllValues returns all RobotMultipartState values.
-func (RobotMultipartState) AllValues() []RobotMultipartState {
-	return []RobotMultipartState{
-		RobotMultipartStateOn,
-		RobotMultipartStateOff,
-	}
-}
+func (RobotMultipartState) AllValues() []RobotMultipartState { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s RobotMultipartState) MarshalText() ([]byte, error) {
-	switch s {
-	case RobotMultipartStateOn:
-		return []byte(s), nil
-	case RobotMultipartStateOff:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *RobotMultipartState) UnmarshalText(data []byte) error {
-	switch RobotMultipartState(data) {
-	case RobotMultipartStateOn:
-		*s = RobotMultipartStateOn
-		return nil
-	case RobotMultipartStateOff:
-		*s = RobotMultipartStateOff
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type RobotState string
@@ -861,38 +817,13 @@ const (
 )
 
 // AllValues returns all RobotState values.
-func (RobotState) AllValues() []RobotState {
-	return []RobotState{
-		RobotStateOn,
-		RobotStateOff,
-	}
-}
+func (RobotState) AllValues() []RobotState { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s RobotState) MarshalText() ([]byte, error) {
-	switch s {
-	case RobotStateOn:
-		return []byte(s), nil
-	case RobotStateOff:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s RobotState) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *RobotState) UnmarshalText(data []byte) error {
-	switch RobotState(data) {
-	case RobotStateOn:
-		*s = RobotStateOn
-		return nil
-	case RobotStateOff:
-		*s = RobotStateOff
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *RobotState) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // SimpleIntegerOK is response for SimpleInteger operation.
 type SimpleIntegerOK struct{}
@@ -908,23 +839,31 @@ type SimpleObjectsReq struct {
 
 // GetFoo returns the value of Foo.
 func (s *SimpleObjectsReq) GetFoo() OptString {
-	return s.Foo
+	_ = "STUB: not implemented"
+
+	// GetBar returns the value of Bar.
+	return *new(OptString)
 }
 
-// GetBar returns the value of Bar.
 func (s *SimpleObjectsReq) GetBar() OptBool {
-	return s.Bar
+	_ = "STUB: not implemented"
+
+	// SetFoo sets the value of Foo.
+	return *new(OptBool)
 }
 
-// SetFoo sets the value of Foo.
 func (s *SimpleObjectsReq) SetFoo(val OptString) {
-	s.Foo = val
+	_ = "STUB: not implemented"
+
+	// SetBar sets the value of Bar.
+	return
 }
 
-// SetBar sets the value of Bar.
 func (s *SimpleObjectsReq) SetBar(val OptBool) {
-	s.Bar = val
+	_ = "STUB: not implemented"
+
+	// StringsNotypeOK is response for StringsNotype operation.
+	return
 }
 
-// StringsNotypeOK is response for StringsNotype operation.
 type StringsNotypeOK struct{}

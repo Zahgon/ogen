@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,7 +17,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /market/bonds
 func (UnimplementedHandler) MarketBondsGet(ctx context.Context) (r MarketBondsGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MarketBondsGetRes), nil
 }
 
 // MarketCandlesGet implements GET /market/candles operation.
@@ -28,7 +27,8 @@ func (UnimplementedHandler) MarketBondsGet(ctx context.Context) (r MarketBondsGe
 //
 // GET /market/candles
 func (UnimplementedHandler) MarketCandlesGet(ctx context.Context, params MarketCandlesGetParams) (r MarketCandlesGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MarketCandlesGetRes), nil
 }
 
 // MarketCurrenciesGet implements GET /market/currencies operation.
@@ -37,7 +37,8 @@ func (UnimplementedHandler) MarketCandlesGet(ctx context.Context, params MarketC
 //
 // GET /market/currencies
 func (UnimplementedHandler) MarketCurrenciesGet(ctx context.Context) (r MarketCurrenciesGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MarketCurrenciesGetRes), nil
 }
 
 // MarketEtfsGet implements GET /market/etfs operation.
@@ -46,7 +47,8 @@ func (UnimplementedHandler) MarketCurrenciesGet(ctx context.Context) (r MarketCu
 //
 // GET /market/etfs
 func (UnimplementedHandler) MarketEtfsGet(ctx context.Context) (r MarketEtfsGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MarketEtfsGetRes), nil
 }
 
 // MarketOrderbookGet implements GET /market/orderbook operation.
@@ -55,7 +57,8 @@ func (UnimplementedHandler) MarketEtfsGet(ctx context.Context) (r MarketEtfsGetR
 //
 // GET /market/orderbook
 func (UnimplementedHandler) MarketOrderbookGet(ctx context.Context, params MarketOrderbookGetParams) (r MarketOrderbookGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MarketOrderbookGetRes), nil
 }
 
 // MarketSearchByFigiGet implements GET /market/search/by-figi operation.
@@ -64,7 +67,8 @@ func (UnimplementedHandler) MarketOrderbookGet(ctx context.Context, params Marke
 //
 // GET /market/search/by-figi
 func (UnimplementedHandler) MarketSearchByFigiGet(ctx context.Context, params MarketSearchByFigiGetParams) (r MarketSearchByFigiGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MarketSearchByFigiGetRes), nil
 }
 
 // MarketSearchByTickerGet implements GET /market/search/by-ticker operation.
@@ -73,7 +77,8 @@ func (UnimplementedHandler) MarketSearchByFigiGet(ctx context.Context, params Ma
 //
 // GET /market/search/by-ticker
 func (UnimplementedHandler) MarketSearchByTickerGet(ctx context.Context, params MarketSearchByTickerGetParams) (r MarketSearchByTickerGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MarketSearchByTickerGetRes), nil
 }
 
 // MarketStocksGet implements GET /market/stocks operation.
@@ -82,7 +87,8 @@ func (UnimplementedHandler) MarketSearchByTickerGet(ctx context.Context, params 
 //
 // GET /market/stocks
 func (UnimplementedHandler) MarketStocksGet(ctx context.Context) (r MarketStocksGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MarketStocksGetRes), nil
 }
 
 // OperationsGet implements GET /operations operation.
@@ -91,7 +97,8 @@ func (UnimplementedHandler) MarketStocksGet(ctx context.Context) (r MarketStocks
 //
 // GET /operations
 func (UnimplementedHandler) OperationsGet(ctx context.Context, params OperationsGetParams) (r OperationsGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OperationsGetRes), nil
 }
 
 // OrdersCancelPost implements POST /orders/cancel operation.
@@ -100,7 +107,8 @@ func (UnimplementedHandler) OperationsGet(ctx context.Context, params Operations
 //
 // POST /orders/cancel
 func (UnimplementedHandler) OrdersCancelPost(ctx context.Context, params OrdersCancelPostParams) (r OrdersCancelPostRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrdersCancelPostRes), nil
 }
 
 // OrdersGet implements GET /orders operation.
@@ -109,7 +117,8 @@ func (UnimplementedHandler) OrdersCancelPost(ctx context.Context, params OrdersC
 //
 // GET /orders
 func (UnimplementedHandler) OrdersGet(ctx context.Context, params OrdersGetParams) (r OrdersGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrdersGetRes), nil
 }
 
 // OrdersLimitOrderPost implements POST /orders/limit-order operation.
@@ -118,7 +127,8 @@ func (UnimplementedHandler) OrdersGet(ctx context.Context, params OrdersGetParam
 //
 // POST /orders/limit-order
 func (UnimplementedHandler) OrdersLimitOrderPost(ctx context.Context, req *LimitOrderRequest, params OrdersLimitOrderPostParams) (r OrdersLimitOrderPostRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrdersLimitOrderPostRes), nil
 }
 
 // OrdersMarketOrderPost implements POST /orders/market-order operation.
@@ -127,7 +137,8 @@ func (UnimplementedHandler) OrdersLimitOrderPost(ctx context.Context, req *Limit
 //
 // POST /orders/market-order
 func (UnimplementedHandler) OrdersMarketOrderPost(ctx context.Context, req *MarketOrderRequest, params OrdersMarketOrderPostParams) (r OrdersMarketOrderPostRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrdersMarketOrderPostRes), nil
 }
 
 // PortfolioCurrenciesGet implements GET /portfolio/currencies operation.
@@ -136,7 +147,8 @@ func (UnimplementedHandler) OrdersMarketOrderPost(ctx context.Context, req *Mark
 //
 // GET /portfolio/currencies
 func (UnimplementedHandler) PortfolioCurrenciesGet(ctx context.Context, params PortfolioCurrenciesGetParams) (r PortfolioCurrenciesGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PortfolioCurrenciesGetRes), nil
 }
 
 // PortfolioGet implements GET /portfolio operation.
@@ -145,7 +157,8 @@ func (UnimplementedHandler) PortfolioCurrenciesGet(ctx context.Context, params P
 //
 // GET /portfolio
 func (UnimplementedHandler) PortfolioGet(ctx context.Context, params PortfolioGetParams) (r PortfolioGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PortfolioGetRes), nil
 }
 
 // SandboxClearPost implements POST /sandbox/clear operation.
@@ -154,7 +167,8 @@ func (UnimplementedHandler) PortfolioGet(ctx context.Context, params PortfolioGe
 //
 // POST /sandbox/clear
 func (UnimplementedHandler) SandboxClearPost(ctx context.Context, params SandboxClearPostParams) (r SandboxClearPostRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SandboxClearPostRes), nil
 }
 
 // SandboxCurrenciesBalancePost implements POST /sandbox/currencies/balance operation.
@@ -163,7 +177,8 @@ func (UnimplementedHandler) SandboxClearPost(ctx context.Context, params Sandbox
 //
 // POST /sandbox/currencies/balance
 func (UnimplementedHandler) SandboxCurrenciesBalancePost(ctx context.Context, req *SandboxSetCurrencyBalanceRequest, params SandboxCurrenciesBalancePostParams) (r SandboxCurrenciesBalancePostRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SandboxCurrenciesBalancePostRes), nil
 }
 
 // SandboxPositionsBalancePost implements POST /sandbox/positions/balance operation.
@@ -172,7 +187,8 @@ func (UnimplementedHandler) SandboxCurrenciesBalancePost(ctx context.Context, re
 //
 // POST /sandbox/positions/balance
 func (UnimplementedHandler) SandboxPositionsBalancePost(ctx context.Context, req *SandboxSetPositionBalanceRequest, params SandboxPositionsBalancePostParams) (r SandboxPositionsBalancePostRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SandboxPositionsBalancePostRes), nil
 }
 
 // SandboxRegisterPost implements POST /sandbox/register operation.
@@ -181,7 +197,8 @@ func (UnimplementedHandler) SandboxPositionsBalancePost(ctx context.Context, req
 //
 // POST /sandbox/register
 func (UnimplementedHandler) SandboxRegisterPost(ctx context.Context, req OptSandboxRegisterRequest) (r SandboxRegisterPostRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SandboxRegisterPostRes), nil
 }
 
 // SandboxRemovePost implements POST /sandbox/remove operation.
@@ -190,7 +207,8 @@ func (UnimplementedHandler) SandboxRegisterPost(ctx context.Context, req OptSand
 //
 // POST /sandbox/remove
 func (UnimplementedHandler) SandboxRemovePost(ctx context.Context, params SandboxRemovePostParams) (r SandboxRemovePostRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SandboxRemovePostRes), nil
 }
 
 // UserAccountsGet implements GET /user/accounts operation.
@@ -199,5 +217,6 @@ func (UnimplementedHandler) SandboxRemovePost(ctx context.Context, params Sandbo
 //
 // GET /user/accounts
 func (UnimplementedHandler) UserAccountsGet(ctx context.Context) (r UserAccountsGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UserAccountsGetRes), nil
 }

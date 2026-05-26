@@ -23,75 +23,57 @@ const (
 )
 
 // IsObjectEnumFoo reports whether ObjectEnum is ObjectEnumFoo.
-func (s ObjectEnum) IsObjectEnumFoo() bool { return s.Type == ObjectEnumFooObjectEnum }
+func (s ObjectEnum) IsObjectEnumFoo() bool { _ = "STUB: not implemented"; return false }
 
 // IsObjectEnumBar reports whether ObjectEnum is ObjectEnumBar.
-func (s ObjectEnum) IsObjectEnumBar() bool { return s.Type == ObjectEnumBarObjectEnum }
+func (s ObjectEnum) IsObjectEnumBar() bool { _ = "STUB: not implemented"; return false }
 
 // IsObjectEnumBaz reports whether ObjectEnum is ObjectEnumBaz.
-func (s ObjectEnum) IsObjectEnumBaz() bool { return s.Type == ObjectEnumBazObjectEnum }
+func (s ObjectEnum) IsObjectEnumBaz() bool { _ = "STUB: not implemented"; return false }
 
 // SetObjectEnumFoo sets ObjectEnum to ObjectEnumFoo.
-func (s *ObjectEnum) SetObjectEnumFoo(v ObjectEnumFoo) {
-	s.Type = ObjectEnumFooObjectEnum
-	s.ObjectEnumFoo = v
-}
+func (s *ObjectEnum) SetObjectEnumFoo(v ObjectEnumFoo) { _ = "STUB: not implemented"; return }
 
 // GetObjectEnumFoo returns ObjectEnumFoo and true boolean if ObjectEnum is ObjectEnumFoo.
 func (s ObjectEnum) GetObjectEnumFoo() (v ObjectEnumFoo, ok bool) {
-	if !s.IsObjectEnumFoo() {
-		return v, false
-	}
-	return s.ObjectEnumFoo, true
+	_ = "STUB: not implemented"
+	return *new(ObjectEnumFoo), false
 }
 
 // NewObjectEnumFooObjectEnum returns new ObjectEnum from ObjectEnumFoo.
 func NewObjectEnumFooObjectEnum(v ObjectEnumFoo) ObjectEnum {
-	var s ObjectEnum
-	s.SetObjectEnumFoo(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ObjectEnum)
 }
 
 // SetObjectEnumBar sets ObjectEnum to ObjectEnumBar.
-func (s *ObjectEnum) SetObjectEnumBar(v ObjectEnumBar) {
-	s.Type = ObjectEnumBarObjectEnum
-	s.ObjectEnumBar = v
-}
+func (s *ObjectEnum) SetObjectEnumBar(v ObjectEnumBar) { _ = "STUB: not implemented"; return }
 
 // GetObjectEnumBar returns ObjectEnumBar and true boolean if ObjectEnum is ObjectEnumBar.
 func (s ObjectEnum) GetObjectEnumBar() (v ObjectEnumBar, ok bool) {
-	if !s.IsObjectEnumBar() {
-		return v, false
-	}
-	return s.ObjectEnumBar, true
+	_ = "STUB: not implemented"
+	return *new(ObjectEnumBar), false
 }
 
 // NewObjectEnumBarObjectEnum returns new ObjectEnum from ObjectEnumBar.
 func NewObjectEnumBarObjectEnum(v ObjectEnumBar) ObjectEnum {
-	var s ObjectEnum
-	s.SetObjectEnumBar(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ObjectEnum)
 }
 
 // SetObjectEnumBaz sets ObjectEnum to ObjectEnumBaz.
-func (s *ObjectEnum) SetObjectEnumBaz(v ObjectEnumBaz) {
-	s.Type = ObjectEnumBazObjectEnum
-	s.ObjectEnumBaz = v
-}
+func (s *ObjectEnum) SetObjectEnumBaz(v ObjectEnumBaz) { _ = "STUB: not implemented"; return }
 
 // GetObjectEnumBaz returns ObjectEnumBaz and true boolean if ObjectEnum is ObjectEnumBaz.
 func (s ObjectEnum) GetObjectEnumBaz() (v ObjectEnumBaz, ok bool) {
-	if !s.IsObjectEnumBaz() {
-		return v, false
-	}
-	return s.ObjectEnumBaz, true
+	_ = "STUB: not implemented"
+	return *new(ObjectEnumBaz), false
 }
 
 // NewObjectEnumBazObjectEnum returns new ObjectEnum from ObjectEnumBaz.
 func NewObjectEnumBazObjectEnum(v ObjectEnumBaz) ObjectEnum {
-	var s ObjectEnum
-	s.SetObjectEnumBaz(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ObjectEnum)
 }
 
 type ObjectEnumBar struct {
@@ -101,23 +83,27 @@ type ObjectEnumBar struct {
 
 // GetType returns the value of Type.
 func (s *ObjectEnumBar) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetValue returns the value of Value.
+	return ""
 }
 
-// GetValue returns the value of Value.
 func (s *ObjectEnumBar) GetValue() int64 {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return 0
 }
 
-// SetType sets the value of Type.
 func (s *ObjectEnumBar) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return
 }
 
-// SetValue sets the value of Value.
-func (s *ObjectEnumBar) SetValue(val int64) {
-	s.Value = val
-}
+func (s *ObjectEnumBar) SetValue(val int64) { _ = "STUB: not implemented"; return }
 
 type ObjectEnumBaz struct {
 	Type  string `json:"type"`
@@ -126,23 +112,27 @@ type ObjectEnumBaz struct {
 
 // GetType returns the value of Type.
 func (s *ObjectEnumBaz) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetValue returns the value of Value.
+	return ""
 }
 
-// GetValue returns the value of Value.
 func (s *ObjectEnumBaz) GetValue() int64 {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return 0
 }
 
-// SetType sets the value of Type.
 func (s *ObjectEnumBaz) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return
 }
 
-// SetValue sets the value of Value.
-func (s *ObjectEnumBaz) SetValue(val int64) {
-	s.Value = val
-}
+func (s *ObjectEnumBaz) SetValue(val int64) { _ = "STUB: not implemented"; return }
 
 type ObjectEnumFoo struct {
 	Type  string `json:"type"`
@@ -151,20 +141,24 @@ type ObjectEnumFoo struct {
 
 // GetType returns the value of Type.
 func (s *ObjectEnumFoo) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetValue returns the value of Value.
+	return ""
 }
 
-// GetValue returns the value of Value.
 func (s *ObjectEnumFoo) GetValue() int64 {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return 0
 }
 
-// SetType sets the value of Type.
 func (s *ObjectEnumFoo) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return
 }
 
-// SetValue sets the value of Value.
-func (s *ObjectEnumFoo) SetValue(val int64) {
-	s.Value = val
-}
+func (s *ObjectEnumFoo) SetValue(val int64) { _ = "STUB: not implemented"; return }

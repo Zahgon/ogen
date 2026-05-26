@@ -2,10 +2,6 @@
 
 package api
 
-import (
-	"fmt"
-)
-
 // Ref: #/components/schemas/Bird
 type Bird struct {
 	PetType string  `json:"petType"`
@@ -16,45 +12,61 @@ type Bird struct {
 
 // GetPetType returns the value of PetType.
 func (s *Bird) GetPetType() string {
-	return s.PetType
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *Bird) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetSpecies returns the value of Species.
+	return ""
 }
 
-// GetSpecies returns the value of Species.
 func (s *Bird) GetSpecies() string {
-	return s.Species
+	_ = "STUB: not implemented"
+
+	// GetCanTalk returns the value of CanTalk.
+	return ""
 }
 
-// GetCanTalk returns the value of CanTalk.
 func (s *Bird) GetCanTalk() OptBool {
-	return s.CanTalk
+	_ = "STUB: not implemented"
+
+	// SetPetType sets the value of PetType.
+	return *new(OptBool)
 }
 
-// SetPetType sets the value of PetType.
 func (s *Bird) SetPetType(val string) {
-	s.PetType = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Bird) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetSpecies sets the value of Species.
+	return
 }
 
-// SetSpecies sets the value of Species.
 func (s *Bird) SetSpecies(val string) {
-	s.Species = val
+	_ = "STUB: not implemented"
+
+	// SetCanTalk sets the value of CanTalk.
+	return
 }
 
-// SetCanTalk sets the value of CanTalk.
 func (s *Bird) SetCanTalk(val OptBool) {
-	s.CanTalk = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Car
+	return
 }
 
-// Ref: #/components/schemas/Car
 type Car struct {
 	VehicleType string `json:"vehicleType"`
 	Make        string `json:"make"`
@@ -63,46 +75,54 @@ type Car struct {
 }
 
 // GetVehicleType returns the value of VehicleType.
-func (s *Car) GetVehicleType() string {
-	return s.VehicleType
-}
+func (s *Car) GetVehicleType() string { _ = "STUB: not implemented"; return "" }
 
 // GetMake returns the value of Make.
 func (s *Car) GetMake() string {
-	return s.Make
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return ""
 }
 
-// GetModel returns the value of Model.
 func (s *Car) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetDoors returns the value of Doors.
+	return ""
 }
 
-// GetDoors returns the value of Doors.
 func (s *Car) GetDoors() OptInt {
-	return s.Doors
+	_ = "STUB: not implemented"
+
+	// SetVehicleType sets the value of VehicleType.
+	return *new(OptInt)
 }
 
-// SetVehicleType sets the value of VehicleType.
-func (s *Car) SetVehicleType(val string) {
-	s.VehicleType = val
-}
+func (s *Car) SetVehicleType(val string) { _ = "STUB: not implemented"; return }
 
 // SetMake sets the value of Make.
 func (s *Car) SetMake(val string) {
-	s.Make = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *Car) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetDoors sets the value of Doors.
+	return
 }
 
-// SetDoors sets the value of Doors.
 func (s *Car) SetDoors(val OptInt) {
-	s.Doors = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Cat
+	return
 }
 
-// Ref: #/components/schemas/Cat
 type Cat struct {
 	PetType    string `json:"petType"`
 	Name       string `json:"name"`
@@ -112,45 +132,62 @@ type Cat struct {
 
 // GetPetType returns the value of PetType.
 func (s *Cat) GetPetType() string {
-	return s.PetType
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *Cat) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetBreed returns the value of Breed.
+	return ""
 }
 
-// GetBreed returns the value of Breed.
 func (s *Cat) GetBreed() string {
-	return s.Breed
+	_ = "STUB: not implemented"
+
+	// GetMeowVolume returns the value of MeowVolume.
+	return ""
 }
 
-// GetMeowVolume returns the value of MeowVolume.
 func (s *Cat) GetMeowVolume() OptInt {
-	return s.MeowVolume
+	_ = "STUB: not implemented"
+	return *
+
+	// SetPetType sets the value of PetType.
+	new(OptInt)
 }
 
-// SetPetType sets the value of PetType.
 func (s *Cat) SetPetType(val string) {
-	s.PetType = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Cat) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetBreed sets the value of Breed.
+	return
 }
 
-// SetBreed sets the value of Breed.
 func (s *Cat) SetBreed(val string) {
-	s.Breed = val
+	_ = "STUB: not implemented"
+
+	// SetMeowVolume sets the value of MeowVolume.
+	return
 }
 
-// SetMeowVolume sets the value of MeowVolume.
 func (s *Cat) SetMeowVolume(val OptInt) {
-	s.MeowVolume = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Dog
+	return
 }
 
-// Ref: #/components/schemas/Dog
 type Dog struct {
 	PetType      string `json:"petType"`
 	Name         string `json:"name"`
@@ -160,43 +197,56 @@ type Dog struct {
 
 // GetPetType returns the value of PetType.
 func (s *Dog) GetPetType() string {
-	return s.PetType
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *Dog) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetBreed returns the value of Breed.
+	return ""
 }
 
-// GetBreed returns the value of Breed.
 func (s *Dog) GetBreed() string {
-	return s.Breed
+	_ = "STUB: not implemented"
+
+	// GetBarkLoudness returns the value of BarkLoudness.
+	return ""
 }
 
-// GetBarkLoudness returns the value of BarkLoudness.
 func (s *Dog) GetBarkLoudness() OptInt {
-	return s.BarkLoudness
+	_ = "STUB: not implemented"
+	return *
+
+	// SetPetType sets the value of PetType.
+	new(OptInt)
 }
 
-// SetPetType sets the value of PetType.
 func (s *Dog) SetPetType(val string) {
-	s.PetType = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Dog) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetBreed sets the value of Breed.
+	return
 }
 
-// SetBreed sets the value of Breed.
 func (s *Dog) SetBreed(val string) {
-	s.Breed = val
+	_ = "STUB: not implemented"
+
+	// SetBarkLoudness sets the value of BarkLoudness.
+	return
 }
 
-// SetBarkLoudness sets the value of BarkLoudness.
-func (s *Dog) SetBarkLoudness(val OptInt) {
-	s.BarkLoudness = val
-}
+func (s *Dog) SetBarkLoudness(val OptInt) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/EmailNotification
 type EmailNotification struct {
@@ -207,46 +257,54 @@ type EmailNotification struct {
 }
 
 // GetNotificationType returns the value of NotificationType.
-func (s *EmailNotification) GetNotificationType() string {
-	return s.NotificationType
-}
+func (s *EmailNotification) GetNotificationType() string { _ = "STUB: not implemented"; return "" }
 
 // GetRecipient returns the value of Recipient.
 func (s *EmailNotification) GetRecipient() string {
-	return s.Recipient
+	_ = "STUB: not implemented"
+
+	// GetSubject returns the value of Subject.
+	return ""
 }
 
-// GetSubject returns the value of Subject.
 func (s *EmailNotification) GetSubject() string {
-	return s.Subject
+	_ = "STUB: not implemented"
+
+	// GetBody returns the value of Body.
+	return ""
 }
 
-// GetBody returns the value of Body.
 func (s *EmailNotification) GetBody() OptString {
-	return s.Body
+	_ = "STUB: not implemented"
+
+	// SetNotificationType sets the value of NotificationType.
+	return *new(OptString)
 }
 
-// SetNotificationType sets the value of NotificationType.
-func (s *EmailNotification) SetNotificationType(val string) {
-	s.NotificationType = val
-}
+func (s *EmailNotification) SetNotificationType(val string) { _ = "STUB: not implemented"; return }
 
 // SetRecipient sets the value of Recipient.
 func (s *EmailNotification) SetRecipient(val string) {
-	s.Recipient = val
+	_ = "STUB: not implemented"
+
+	// SetSubject sets the value of Subject.
+	return
 }
 
-// SetSubject sets the value of Subject.
 func (s *EmailNotification) SetSubject(val string) {
-	s.Subject = val
+	_ = "STUB: not implemented"
+
+	// SetBody sets the value of Body.
+	return
 }
 
-// SetBody sets the value of Body.
 func (s *EmailNotification) SetBody(val OptString) {
-	s.Body = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Motorcycle
+	return
 }
 
-// Ref: #/components/schemas/Motorcycle
 type Motorcycle struct {
 	VehicleType string     `json:"vehicleType"`
 	Make        string     `json:"make"`
@@ -255,47 +313,56 @@ type Motorcycle struct {
 }
 
 // GetVehicleType returns the value of VehicleType.
-func (s *Motorcycle) GetVehicleType() string {
-	return s.VehicleType
-}
+func (s *Motorcycle) GetVehicleType() string { _ = "STUB: not implemented"; return "" }
 
 // GetMake returns the value of Make.
 func (s *Motorcycle) GetMake() string {
-	return s.Make
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return ""
 }
 
-// GetModel returns the value of Model.
 func (s *Motorcycle) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetEngineSize returns the value of EngineSize.
+	return ""
 }
 
-// GetEngineSize returns the value of EngineSize.
 func (s *Motorcycle) GetEngineSize() OptFloat64 {
-	return s.EngineSize
+	_ = "STUB: not implemented"
+	return *
+
+	// SetVehicleType sets the value of VehicleType.
+	new(OptFloat64)
 }
 
-// SetVehicleType sets the value of VehicleType.
-func (s *Motorcycle) SetVehicleType(val string) {
-	s.VehicleType = val
-}
+func (s *Motorcycle) SetVehicleType(val string) { _ = "STUB: not implemented"; return }
 
 // SetMake sets the value of Make.
 func (s *Motorcycle) SetMake(val string) {
-	s.Make = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *Motorcycle) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetEngineSize sets the value of EngineSize.
+	return
 }
 
-// SetEngineSize sets the value of EngineSize.
 func (s *Motorcycle) SetEngineSize(val OptFloat64) {
-	s.EngineSize = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Notification
+	// Notification represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/Notification
-// Notification represents sum type.
 type Notification struct {
 	Type              NotificationType // switch on this field
 	EmailNotification EmailNotification
@@ -317,138 +384,91 @@ const (
 )
 
 // IsEmailNotification reports whether Notification is EmailNotification.
-func (s Notification) IsEmailNotification() bool {
-	switch s.Type {
-	case NotificationEmailNotification, NotificationMailNotification:
-		return true
-	default:
-		return false
-	}
-}
+func (s Notification) IsEmailNotification() bool { _ = "STUB: not implemented"; return false }
 
 // IsSMSNotification reports whether Notification is SMSNotification.
-func (s Notification) IsSMSNotification() bool {
-	switch s.Type {
-	case NotificationSMSNotification, NotificationTextNotification:
-		return true
-	default:
-		return false
-	}
-}
+func (s Notification) IsSMSNotification() bool { _ = "STUB: not implemented"; return false }
 
 // IsPushNotification reports whether Notification is PushNotification.
-func (s Notification) IsPushNotification() bool {
-	switch s.Type {
-	case NotificationMobileNotification, NotificationPushNotification:
-		return true
-	default:
-		return false
-	}
-}
+func (s Notification) IsPushNotification() bool { _ = "STUB: not implemented"; return false }
 
 // SetEmailNotification sets Notification to EmailNotification.
 // panics if `t` is not associated with EmailNotification
 func (s *Notification) SetEmailNotification(t NotificationType, v EmailNotification) {
-	s.Type = t
-	s.EmailNotification = v
-	if !s.IsEmailNotification() {
-		panic(fmt.Errorf("invariant: %v is not EmailNotification", t))
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetEmailNotification returns EmailNotification and true boolean if Notification is EmailNotification.
 func (s Notification) GetEmailNotification() (v EmailNotification, ok bool) {
-	if !s.IsEmailNotification() {
-		return v, false
-	}
-	return s.EmailNotification, true
+	_ = "STUB: not implemented"
+	return *new(EmailNotification), false
 }
 
 // NewNotificationEmailNotification returns new Notification from EmailNotification.
 func NewNotificationEmailNotification(v EmailNotification) Notification {
-	var s Notification
-	s.SetEmailNotification(NotificationEmailNotification, v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Notification)
 }
 
 // NewNotificationMailNotification returns new Notification from EmailNotification.
 func NewNotificationMailNotification(v EmailNotification) Notification {
-	var s Notification
-	s.SetEmailNotification(NotificationMailNotification, v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Notification)
 }
 
 // SetSMSNotification sets Notification to SMSNotification.
 // panics if `t` is not associated with SMSNotification
 func (s *Notification) SetSMSNotification(t NotificationType, v SMSNotification) {
-	s.Type = t
-	s.SMSNotification = v
-	if !s.IsSMSNotification() {
-		panic(fmt.Errorf("invariant: %v is not SMSNotification", t))
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetSMSNotification returns SMSNotification and true boolean if Notification is SMSNotification.
 func (s Notification) GetSMSNotification() (v SMSNotification, ok bool) {
-	if !s.IsSMSNotification() {
-		return v, false
-	}
-	return s.SMSNotification, true
+	_ = "STUB: not implemented"
+	return *new(SMSNotification), false
 }
 
 // NewNotificationSMSNotification returns new Notification from SMSNotification.
 func NewNotificationSMSNotification(v SMSNotification) Notification {
-	var s Notification
-	s.SetSMSNotification(NotificationSMSNotification, v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Notification)
 }
 
 // NewNotificationTextNotification returns new Notification from SMSNotification.
 func NewNotificationTextNotification(v SMSNotification) Notification {
-	var s Notification
-	s.SetSMSNotification(NotificationTextNotification, v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Notification)
 }
 
 // SetPushNotification sets Notification to PushNotification.
 // panics if `t` is not associated with PushNotification
 func (s *Notification) SetPushNotification(t NotificationType, v PushNotification) {
-	s.Type = t
-	s.PushNotification = v
-	if !s.IsPushNotification() {
-		panic(fmt.Errorf("invariant: %v is not PushNotification", t))
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPushNotification returns PushNotification and true boolean if Notification is PushNotification.
 func (s Notification) GetPushNotification() (v PushNotification, ok bool) {
-	if !s.IsPushNotification() {
-		return v, false
-	}
-	return s.PushNotification, true
+	_ = "STUB: not implemented"
+	return *new(PushNotification), false
 }
 
 // NewNotificationMobileNotification returns new Notification from PushNotification.
 func NewNotificationMobileNotification(v PushNotification) Notification {
-	var s Notification
-	s.SetPushNotification(NotificationMobileNotification, v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Notification)
 }
 
 // NewNotificationPushNotification returns new Notification from PushNotification.
 func NewNotificationPushNotification(v PushNotification) Notification {
-	var s Notification
-	s.SetPushNotification(NotificationPushNotification, v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Notification)
 }
 
 // NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -457,44 +477,26 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptFloat64 returns new OptFloat64 with value set to v.
-func NewOptFloat64(v float64) OptFloat64 {
-	return OptFloat64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptFloat64(v float64) OptFloat64 { _ = "STUB: not implemented"; return *new(OptFloat64) }
 
 // OptFloat64 is optional float64.
 type OptFloat64 struct {
@@ -503,44 +505,26 @@ type OptFloat64 struct {
 }
 
 // IsSet returns true if OptFloat64 was set.
-func (o OptFloat64) IsSet() bool { return o.Set }
+func (o OptFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptFloat64) Get() (v float64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -549,44 +533,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -595,36 +561,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/Pet
 // Pet represents sum type.
@@ -649,130 +602,52 @@ const (
 )
 
 // IsDog reports whether Pet is Dog.
-func (s Pet) IsDog() bool {
-	switch s.Type {
-	case PetCaninePet, PetDogPet:
-		return true
-	default:
-		return false
-	}
-}
+func (s Pet) IsDog() bool { _ = "STUB: not implemented"; return false }
 
 // IsCat reports whether Pet is Cat.
-func (s Pet) IsCat() bool {
-	switch s.Type {
-	case PetCatPet, PetFelinePet:
-		return true
-	default:
-		return false
-	}
-}
+func (s Pet) IsCat() bool { _ = "STUB: not implemented"; return false }
 
 // IsBird reports whether Pet is Bird.
-func (s Pet) IsBird() bool {
-	switch s.Type {
-	case PetAvianPet, PetBirdPet:
-		return true
-	default:
-		return false
-	}
-}
+func (s Pet) IsBird() bool { _ = "STUB: not implemented"; return false }
 
 // SetDog sets Pet to Dog.
 // panics if `t` is not associated with Dog
-func (s *Pet) SetDog(t PetType, v Dog) {
-	s.Type = t
-	s.Dog = v
-	if !s.IsDog() {
-		panic(fmt.Errorf("invariant: %v is not Dog", t))
-	}
-}
+func (s *Pet) SetDog(t PetType, v Dog) { _ = "STUB: not implemented"; return }
 
 // GetDog returns Dog and true boolean if Pet is Dog.
-func (s Pet) GetDog() (v Dog, ok bool) {
-	if !s.IsDog() {
-		return v, false
-	}
-	return s.Dog, true
-}
+func (s Pet) GetDog() (v Dog, ok bool) { _ = "STUB: not implemented"; return *new(Dog), false }
 
 // NewPetCaninePet returns new Pet from Dog.
-func NewPetCaninePet(v Dog) Pet {
-	var s Pet
-	s.SetDog(PetCaninePet, v)
-	return s
-}
+func NewPetCaninePet(v Dog) Pet { _ = "STUB: not implemented"; return *new(Pet) }
 
 // NewPetDogPet returns new Pet from Dog.
-func NewPetDogPet(v Dog) Pet {
-	var s Pet
-	s.SetDog(PetDogPet, v)
-	return s
-}
+func NewPetDogPet(v Dog) Pet { _ = "STUB: not implemented"; return *new(Pet) }
 
 // SetCat sets Pet to Cat.
 // panics if `t` is not associated with Cat
-func (s *Pet) SetCat(t PetType, v Cat) {
-	s.Type = t
-	s.Cat = v
-	if !s.IsCat() {
-		panic(fmt.Errorf("invariant: %v is not Cat", t))
-	}
-}
+func (s *Pet) SetCat(t PetType, v Cat) { _ = "STUB: not implemented"; return }
 
 // GetCat returns Cat and true boolean if Pet is Cat.
-func (s Pet) GetCat() (v Cat, ok bool) {
-	if !s.IsCat() {
-		return v, false
-	}
-	return s.Cat, true
-}
+func (s Pet) GetCat() (v Cat, ok bool) { _ = "STUB: not implemented"; return *new(Cat), false }
 
 // NewPetCatPet returns new Pet from Cat.
-func NewPetCatPet(v Cat) Pet {
-	var s Pet
-	s.SetCat(PetCatPet, v)
-	return s
-}
+func NewPetCatPet(v Cat) Pet { _ = "STUB: not implemented"; return *new(Pet) }
 
 // NewPetFelinePet returns new Pet from Cat.
-func NewPetFelinePet(v Cat) Pet {
-	var s Pet
-	s.SetCat(PetFelinePet, v)
-	return s
-}
+func NewPetFelinePet(v Cat) Pet { _ = "STUB: not implemented"; return *new(Pet) }
 
 // SetBird sets Pet to Bird.
 // panics if `t` is not associated with Bird
-func (s *Pet) SetBird(t PetType, v Bird) {
-	s.Type = t
-	s.Bird = v
-	if !s.IsBird() {
-		panic(fmt.Errorf("invariant: %v is not Bird", t))
-	}
-}
+func (s *Pet) SetBird(t PetType, v Bird) { _ = "STUB: not implemented"; return }
 
 // GetBird returns Bird and true boolean if Pet is Bird.
-func (s Pet) GetBird() (v Bird, ok bool) {
-	if !s.IsBird() {
-		return v, false
-	}
-	return s.Bird, true
-}
+func (s Pet) GetBird() (v Bird, ok bool) { _ = "STUB: not implemented"; return *new(Bird), false }
 
 // NewPetAvianPet returns new Pet from Bird.
-func NewPetAvianPet(v Bird) Pet {
-	var s Pet
-	s.SetBird(PetAvianPet, v)
-	return s
-}
+func NewPetAvianPet(v Bird) Pet { _ = "STUB: not implemented"; return *new(Pet) }
 
 // NewPetBirdPet returns new Pet from Bird.
-func NewPetBirdPet(v Bird) Pet {
-	var s Pet
-	s.SetBird(PetBirdPet, v)
-	return s
-}
+func NewPetBirdPet(v Bird) Pet { _ = "STUB: not implemented"; return *new(Pet) }
 
 // Ref: #/components/schemas/PushNotification
 type PushNotification struct {
@@ -784,56 +659,68 @@ type PushNotification struct {
 }
 
 // GetNotificationType returns the value of NotificationType.
-func (s *PushNotification) GetNotificationType() string {
-	return s.NotificationType
-}
+func (s *PushNotification) GetNotificationType() string { _ = "STUB: not implemented"; return "" }
 
 // GetDeviceId returns the value of DeviceId.
 func (s *PushNotification) GetDeviceId() string {
-	return s.DeviceId
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return ""
 }
 
-// GetTitle returns the value of Title.
 func (s *PushNotification) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetBody returns the value of Body.
+	return ""
 }
 
-// GetBody returns the value of Body.
 func (s *PushNotification) GetBody() OptString {
-	return s.Body
+	_ = "STUB: not implemented"
+
+	// GetBadge returns the value of Badge.
+	return *new(OptString)
 }
 
-// GetBadge returns the value of Badge.
 func (s *PushNotification) GetBadge() OptInt {
-	return s.Badge
+	_ = "STUB: not implemented"
+
+	// SetNotificationType sets the value of NotificationType.
+	return *new(OptInt)
 }
 
-// SetNotificationType sets the value of NotificationType.
-func (s *PushNotification) SetNotificationType(val string) {
-	s.NotificationType = val
-}
+func (s *PushNotification) SetNotificationType(val string) { _ = "STUB: not implemented"; return }
 
 // SetDeviceId sets the value of DeviceId.
 func (s *PushNotification) SetDeviceId(val string) {
-	s.DeviceId = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *PushNotification) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetBody sets the value of Body.
+	return
 }
 
-// SetBody sets the value of Body.
 func (s *PushNotification) SetBody(val OptString) {
-	s.Body = val
+	_ = "STUB: not implemented"
+
+	// SetBadge sets the value of Badge.
+	return
 }
 
-// SetBadge sets the value of Badge.
 func (s *PushNotification) SetBadge(val OptInt) {
-	s.Badge = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/SMSNotification
+	return
 }
 
-// Ref: #/components/schemas/SMSNotification
 type SMSNotification struct {
 	NotificationType string `json:"notificationType"`
 	PhoneNumber      string `json:"phoneNumber"`
@@ -841,37 +728,33 @@ type SMSNotification struct {
 }
 
 // GetNotificationType returns the value of NotificationType.
-func (s *SMSNotification) GetNotificationType() string {
-	return s.NotificationType
-}
+func (s *SMSNotification) GetNotificationType() string { _ = "STUB: not implemented"; return "" }
 
 // GetPhoneNumber returns the value of PhoneNumber.
-func (s *SMSNotification) GetPhoneNumber() string {
-	return s.PhoneNumber
-}
+func (s *SMSNotification) GetPhoneNumber() string { _ = "STUB: not implemented"; return "" }
 
 // GetMessage returns the value of Message.
 func (s *SMSNotification) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetNotificationType sets the value of NotificationType.
+	return ""
 }
 
-// SetNotificationType sets the value of NotificationType.
-func (s *SMSNotification) SetNotificationType(val string) {
-	s.NotificationType = val
-}
+func (s *SMSNotification) SetNotificationType(val string) { _ = "STUB: not implemented"; return }
 
 // SetPhoneNumber sets the value of PhoneNumber.
-func (s *SMSNotification) SetPhoneNumber(val string) {
-	s.PhoneNumber = val
-}
+func (s *SMSNotification) SetPhoneNumber(val string) { _ = "STUB: not implemented"; return }
 
 // SetMessage sets the value of Message.
 func (s *SMSNotification) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Vehicle
+	// Vehicle represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/Vehicle
-// Vehicle represents sum type.
 type Vehicle struct {
 	Type       VehicleType // switch on this field
 	Car        Car
@@ -888,49 +771,28 @@ const (
 )
 
 // IsCar reports whether Vehicle is Car.
-func (s Vehicle) IsCar() bool { return s.Type == CarVehicle }
+func (s Vehicle) IsCar() bool { _ = "STUB: not implemented"; return false }
 
 // IsMotorcycle reports whether Vehicle is Motorcycle.
-func (s Vehicle) IsMotorcycle() bool { return s.Type == MotorcycleVehicle }
+func (s Vehicle) IsMotorcycle() bool { _ = "STUB: not implemented"; return false }
 
 // SetCar sets Vehicle to Car.
-func (s *Vehicle) SetCar(v Car) {
-	s.Type = CarVehicle
-	s.Car = v
-}
+func (s *Vehicle) SetCar(v Car) { _ = "STUB: not implemented"; return }
 
 // GetCar returns Car and true boolean if Vehicle is Car.
-func (s Vehicle) GetCar() (v Car, ok bool) {
-	if !s.IsCar() {
-		return v, false
-	}
-	return s.Car, true
-}
+func (s Vehicle) GetCar() (v Car, ok bool) { _ = "STUB: not implemented"; return *new(Car), false }
 
 // NewCarVehicle returns new Vehicle from Car.
-func NewCarVehicle(v Car) Vehicle {
-	var s Vehicle
-	s.SetCar(v)
-	return s
-}
+func NewCarVehicle(v Car) Vehicle { _ = "STUB: not implemented"; return *new(Vehicle) }
 
 // SetMotorcycle sets Vehicle to Motorcycle.
-func (s *Vehicle) SetMotorcycle(v Motorcycle) {
-	s.Type = MotorcycleVehicle
-	s.Motorcycle = v
-}
+func (s *Vehicle) SetMotorcycle(v Motorcycle) { _ = "STUB: not implemented"; return }
 
 // GetMotorcycle returns Motorcycle and true boolean if Vehicle is Motorcycle.
 func (s Vehicle) GetMotorcycle() (v Motorcycle, ok bool) {
-	if !s.IsMotorcycle() {
-		return v, false
-	}
-	return s.Motorcycle, true
+	_ = "STUB: not implemented"
+	return *new(Motorcycle), false
 }
 
 // NewMotorcycleVehicle returns new Vehicle from Motorcycle.
-func NewMotorcycleVehicle(v Motorcycle) Vehicle {
-	var s Vehicle
-	s.SetMotorcycle(v)
-	return s
-}
+func NewMotorcycleVehicle(v Motorcycle) Vehicle { _ = "STUB: not implemented"; return *new(Vehicle) }

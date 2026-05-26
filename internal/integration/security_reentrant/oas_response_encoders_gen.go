@@ -9,25 +9,21 @@ import (
 )
 
 func encodeCustomSecurityResponse(response *CustomSecurityOK, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(200)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeDisjointSecurityResponse(response *DisjointSecurityOK, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(200)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeIntersectSecurityResponse(response *IntersectSecurityOK, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(200)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeOptionalSecurityResponse(response *OptionalSecurityOK, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(200)
-
+	_ = "STUB: not implemented"
 	return nil
 }

@@ -2,20 +2,19 @@
 package json
 
 import (
-	std "encoding/json"
-
 	"github.com/go-faster/jx"
 )
 
 // Marshal value to json.
 func Marshal(val any) ([]byte, error) {
-	return std.Marshal(val)
+	_ = "STUB: not implemented"
+	return nil,
+
+		// Unmarshal value from json.
+		nil
 }
 
-// Unmarshal value from json.
-func Unmarshal(data []byte, val any) error {
-	return std.Unmarshal(data, val)
-}
+func Unmarshal(data []byte, val any) error { _ = "STUB: not implemented"; return nil }
 
 // Unmarshaler implements json reading.
 type Unmarshaler interface {
@@ -50,8 +49,4 @@ type Nullable interface {
 }
 
 // Encode Marshaler to byte slice.
-func Encode(m Marshaler) []byte {
-	e := &jx.Encoder{}
-	m.Encode(e)
-	return e.Bytes()
-}
+func Encode(m Marshaler) []byte { _ = "STUB: not implemented"; return nil }

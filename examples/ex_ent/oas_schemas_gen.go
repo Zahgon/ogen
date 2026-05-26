@@ -13,23 +13,27 @@ type CreatePetCategoriesReq struct {
 
 // GetName returns the value of Name.
 func (s *CreatePetCategoriesReq) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetPets returns the value of Pets.
+	return ""
 }
 
-// GetPets returns the value of Pets.
 func (s *CreatePetCategoriesReq) GetPets() []int {
-	return s.Pets
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return nil
 }
 
-// SetName sets the value of Name.
 func (s *CreatePetCategoriesReq) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetPets sets the value of Pets.
+	return
 }
 
-// SetPets sets the value of Pets.
-func (s *CreatePetCategoriesReq) SetPets(val []int) {
-	s.Pets = val
-}
+func (s *CreatePetCategoriesReq) SetPets(val []int) { _ = "STUB: not implemented"; return }
 
 type CreatePetFriendsReq struct {
 	Name       string      `json:"name"`
@@ -42,63 +46,79 @@ type CreatePetFriendsReq struct {
 
 // GetName returns the value of Name.
 func (s *CreatePetFriendsReq) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetWeight returns the value of Weight.
+	return ""
 }
 
-// GetWeight returns the value of Weight.
 func (s *CreatePetFriendsReq) GetWeight() OptInt {
-	return s.Weight
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(OptInt)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *CreatePetFriendsReq) GetBirthday() OptDateTime {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// GetCategories returns the value of Categories.
+	return *new(OptDateTime)
 }
 
-// GetCategories returns the value of Categories.
-func (s *CreatePetFriendsReq) GetCategories() []int {
-	return s.Categories
-}
+func (s *CreatePetFriendsReq) GetCategories() []int { _ = "STUB: not implemented"; return nil }
 
 // GetOwner returns the value of Owner.
 func (s *CreatePetFriendsReq) GetOwner() int {
-	return s.Owner
+	_ = "STUB: not implemented"
+
+	// GetFriends returns the value of Friends.
+	return 0
 }
 
-// GetFriends returns the value of Friends.
 func (s *CreatePetFriendsReq) GetFriends() []int {
-	return s.Friends
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return nil
 }
 
-// SetName sets the value of Name.
 func (s *CreatePetFriendsReq) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetWeight sets the value of Weight.
+	return
 }
 
-// SetWeight sets the value of Weight.
 func (s *CreatePetFriendsReq) SetWeight(val OptInt) {
-	s.Weight = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
 func (s *CreatePetFriendsReq) SetBirthday(val OptDateTime) {
-	s.Birthday = val
+	_ = "STUB: not implemented"
+
+	// SetCategories sets the value of Categories.
+	return
 }
 
-// SetCategories sets the value of Categories.
 func (s *CreatePetFriendsReq) SetCategories(val []int) {
-	s.Categories = val
+	_ = "STUB: not implemented"
+
+	// SetOwner sets the value of Owner.
+	return
 }
 
-// SetOwner sets the value of Owner.
 func (s *CreatePetFriendsReq) SetOwner(val int) {
-	s.Owner = val
+	_ = "STUB: not implemented"
+
+	// SetFriends sets the value of Friends.
+	return
 }
 
-// SetFriends sets the value of Friends.
-func (s *CreatePetFriendsReq) SetFriends(val []int) {
-	s.Friends = val
-}
+func (s *CreatePetFriendsReq) SetFriends(val []int) { _ = "STUB: not implemented"; return }
 
 type CreatePetOwnerReq struct {
 	Name string `json:"name"`
@@ -108,33 +128,41 @@ type CreatePetOwnerReq struct {
 
 // GetName returns the value of Name.
 func (s *CreatePetOwnerReq) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetAge returns the value of Age.
+	return ""
 }
 
-// GetAge returns the value of Age.
 func (s *CreatePetOwnerReq) GetAge() int {
-	return s.Age
+	_ = "STUB: not implemented"
+
+	// GetPets returns the value of Pets.
+	return 0
 }
 
-// GetPets returns the value of Pets.
 func (s *CreatePetOwnerReq) GetPets() []int {
-	return s.Pets
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return nil
 }
 
-// SetName sets the value of Name.
 func (s *CreatePetOwnerReq) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetAge sets the value of Age.
+	return
 }
 
-// SetAge sets the value of Age.
 func (s *CreatePetOwnerReq) SetAge(val int) {
-	s.Age = val
+	_ = "STUB: not implemented"
+
+	// SetPets sets the value of Pets.
+	return
 }
 
-// SetPets sets the value of Pets.
-func (s *CreatePetOwnerReq) SetPets(val []int) {
-	s.Pets = val
-}
+func (s *CreatePetOwnerReq) SetPets(val []int) { _ = "STUB: not implemented"; return }
 
 type CreatePetReq struct {
 	Name       string      `json:"name"`
@@ -147,93 +175,119 @@ type CreatePetReq struct {
 
 // GetName returns the value of Name.
 func (s *CreatePetReq) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetWeight returns the value of Weight.
+	return ""
 }
 
-// GetWeight returns the value of Weight.
 func (s *CreatePetReq) GetWeight() OptInt {
-	return s.Weight
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(OptInt)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *CreatePetReq) GetBirthday() OptDateTime {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// GetCategories returns the value of Categories.
+	return *new(OptDateTime)
 }
 
-// GetCategories returns the value of Categories.
-func (s *CreatePetReq) GetCategories() []int {
-	return s.Categories
-}
+func (s *CreatePetReq) GetCategories() []int { _ = "STUB: not implemented"; return nil }
 
 // GetOwner returns the value of Owner.
 func (s *CreatePetReq) GetOwner() int {
-	return s.Owner
+	_ = "STUB: not implemented"
+
+	// GetFriends returns the value of Friends.
+	return 0
 }
 
-// GetFriends returns the value of Friends.
 func (s *CreatePetReq) GetFriends() []int {
-	return s.Friends
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return nil
 }
 
-// SetName sets the value of Name.
 func (s *CreatePetReq) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetWeight sets the value of Weight.
+	return
 }
 
-// SetWeight sets the value of Weight.
 func (s *CreatePetReq) SetWeight(val OptInt) {
-	s.Weight = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
 func (s *CreatePetReq) SetBirthday(val OptDateTime) {
-	s.Birthday = val
+	_ = "STUB: not implemented"
+
+	// SetCategories sets the value of Categories.
+	return
 }
 
-// SetCategories sets the value of Categories.
 func (s *CreatePetReq) SetCategories(val []int) {
-	s.Categories = val
+	_ = "STUB: not implemented"
+
+	// SetOwner sets the value of Owner.
+	return
 }
 
-// SetOwner sets the value of Owner.
 func (s *CreatePetReq) SetOwner(val int) {
-	s.Owner = val
+	_ = "STUB: not implemented"
+
+	// SetFriends sets the value of Friends.
+	return
 }
 
-// SetFriends sets the value of Friends.
 func (s *CreatePetReq) SetFriends(val []int) {
-	s.Friends = val
+	_ = "STUB: not implemented"
+
+	// DeletePetNoContent is response for DeletePet operation.
+	return
 }
 
-// DeletePetNoContent is response for DeletePet operation.
 type DeletePetNoContent struct{}
 
-func (*DeletePetNoContent) deletePetRes() {}
+func (*DeletePetNoContent) deletePetRes() {
+	_ = "STUB: not implemented"
 
-// DeletePetOwnerNoContent is response for DeletePetOwner operation.
+	// DeletePetOwnerNoContent is response for DeletePetOwner operation.
+	return
+}
+
 type DeletePetOwnerNoContent struct{}
 
-func (*DeletePetOwnerNoContent) deletePetOwnerRes() {}
+func (*DeletePetOwnerNoContent) deletePetOwnerRes() { _ = "STUB: not implemented"; return }
 
 type ListPetCategoriesOKApplicationJSON []PetCategoriesList
 
-func (*ListPetCategoriesOKApplicationJSON) listPetCategoriesRes() {}
+func (*ListPetCategoriesOKApplicationJSON) listPetCategoriesRes() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type ListPetFriendsOKApplicationJSON []PetFriendsList
 
-func (*ListPetFriendsOKApplicationJSON) listPetFriendsRes() {}
+func (*ListPetFriendsOKApplicationJSON) listPetFriendsRes() { _ = "STUB: not implemented"; return }
 
 type ListPetOKApplicationJSON []PetList
 
-func (*ListPetOKApplicationJSON) listPetRes() {}
+func (*ListPetOKApplicationJSON) listPetRes() {
+	_ = "STUB: not implemented"
 
-// NewOptDateTime returns new OptDateTime with value set to v.
-func NewOptDateTime(v time.Time) OptDateTime {
-	return OptDateTime{
-		Value: v,
-		Set:   true,
-	}
+	// NewOptDateTime returns new OptDateTime with value set to v.
+	return
 }
+
+func NewOptDateTime(v time.Time) OptDateTime { _ = "STUB: not implemented"; return *new(OptDateTime) }
 
 // OptDateTime is optional time.Time.
 type OptDateTime struct {
@@ -242,44 +296,29 @@ type OptDateTime struct {
 }
 
 // IsSet returns true if OptDateTime was set.
-func (o OptDateTime) IsSet() bool { return o.Set }
+func (o OptDateTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDateTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDateTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDateTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDateTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDateTime) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDateTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDateTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -288,44 +327,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt32 returns new OptInt32 with value set to v.
-func NewOptInt32(v int32) OptInt32 {
-	return OptInt32{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt32(v int32) OptInt32 { _ = "STUB: not implemented"; return *new(OptInt32) }
 
 // OptInt32 is optional int32.
 type OptInt32 struct {
@@ -334,36 +355,23 @@ type OptInt32 struct {
 }
 
 // IsSet returns true if OptInt32 was set.
-func (o OptInt32) IsSet() bool { return o.Set }
+func (o OptInt32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt32) Reset() {
-	var v int32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt32) SetTo(v int32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt32) Get() (v int32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // Ref: #/components/schemas/Pet_CategoriesCreate
 type PetCategoriesCreate struct {
@@ -373,27 +381,35 @@ type PetCategoriesCreate struct {
 
 // GetID returns the value of ID.
 func (s *PetCategoriesCreate) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetCategoriesCreate) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return ""
 }
 
-// SetID sets the value of ID.
 func (s *PetCategoriesCreate) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
-func (s *PetCategoriesCreate) SetName(val string) {
-	s.Name = val
+func (s *PetCategoriesCreate) SetName(val string) { _ = "STUB: not implemented"; return }
+
+func (*PetCategoriesCreate) createPetCategoriesRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Pet_CategoriesList
+	return
 }
 
-func (*PetCategoriesCreate) createPetCategoriesRes() {}
-
-// Ref: #/components/schemas/Pet_CategoriesList
 type PetCategoriesList struct {
 	ID   int    `json:"id"`
 	Name string `json:"name"`
@@ -401,25 +417,33 @@ type PetCategoriesList struct {
 
 // GetID returns the value of ID.
 func (s *PetCategoriesList) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetCategoriesList) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return ""
 }
 
-// SetID sets the value of ID.
 func (s *PetCategoriesList) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetCategoriesList) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PetCreate
+	return
 }
 
-// Ref: #/components/schemas/PetCreate
 type PetCreate struct {
 	ID         int                   `json:"id"`
 	Name       string                `json:"name"`
@@ -431,67 +455,87 @@ type PetCreate struct {
 
 // GetID returns the value of ID.
 func (s *PetCreate) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetCreate) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetWeight returns the value of Weight.
+	return ""
 }
 
-// GetWeight returns the value of Weight.
 func (s *PetCreate) GetWeight() OptInt {
-	return s.Weight
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(OptInt)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *PetCreate) GetBirthday() OptDateTime {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// GetCategories returns the value of Categories.
+	return *new(OptDateTime)
 }
 
-// GetCategories returns the value of Categories.
-func (s *PetCreate) GetCategories() []PetCreateCategories {
-	return s.Categories
-}
+func (s *PetCreate) GetCategories() []PetCreateCategories { _ = "STUB: not implemented"; return nil }
 
 // GetOwner returns the value of Owner.
 func (s *PetCreate) GetOwner() PetCreateOwner {
-	return s.Owner
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(PetCreateOwner)
 }
 
-// SetID sets the value of ID.
 func (s *PetCreate) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetCreate) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetWeight sets the value of Weight.
+	return
 }
 
-// SetWeight sets the value of Weight.
 func (s *PetCreate) SetWeight(val OptInt) {
-	s.Weight = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
 func (s *PetCreate) SetBirthday(val OptDateTime) {
-	s.Birthday = val
+	_ = "STUB: not implemented"
+
+	// SetCategories sets the value of Categories.
+	return
 }
 
-// SetCategories sets the value of Categories.
 func (s *PetCreate) SetCategories(val []PetCreateCategories) {
-	s.Categories = val
+	_ = "STUB: not implemented"
+
+	// SetOwner sets the value of Owner.
+	return
 }
 
-// SetOwner sets the value of Owner.
-func (s *PetCreate) SetOwner(val PetCreateOwner) {
-	s.Owner = val
+func (s *PetCreate) SetOwner(val PetCreateOwner) { _ = "STUB: not implemented"; return }
+
+func (*PetCreate) createPetRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PetCreate_Categories
+	return
 }
 
-func (*PetCreate) createPetRes() {}
-
-// Ref: #/components/schemas/PetCreate_Categories
 type PetCreateCategories struct {
 	ID   int    `json:"id"`
 	Name string `json:"name"`
@@ -499,25 +543,33 @@ type PetCreateCategories struct {
 
 // GetID returns the value of ID.
 func (s *PetCreateCategories) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetCreateCategories) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return ""
 }
 
-// SetID sets the value of ID.
 func (s *PetCreateCategories) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetCreateCategories) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PetCreate_Owner
+	return
 }
 
-// Ref: #/components/schemas/PetCreate_Owner
 type PetCreateOwner struct {
 	ID   int    `json:"id"`
 	Name string `json:"name"`
@@ -526,35 +578,47 @@ type PetCreateOwner struct {
 
 // GetID returns the value of ID.
 func (s *PetCreateOwner) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetCreateOwner) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetAge returns the value of Age.
+	return ""
 }
 
-// GetAge returns the value of Age.
 func (s *PetCreateOwner) GetAge() int {
-	return s.Age
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return 0
 }
 
-// SetID sets the value of ID.
 func (s *PetCreateOwner) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetCreateOwner) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetAge sets the value of Age.
+	return
 }
 
-// SetAge sets the value of Age.
 func (s *PetCreateOwner) SetAge(val int) {
-	s.Age = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Pet_FriendsCreate
+	return
 }
 
-// Ref: #/components/schemas/Pet_FriendsCreate
 type PetFriendsCreate struct {
 	ID       int         `json:"id"`
 	Name     string      `json:"name"`
@@ -564,47 +628,63 @@ type PetFriendsCreate struct {
 
 // GetID returns the value of ID.
 func (s *PetFriendsCreate) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetFriendsCreate) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetWeight returns the value of Weight.
+	return ""
 }
 
-// GetWeight returns the value of Weight.
 func (s *PetFriendsCreate) GetWeight() OptInt {
-	return s.Weight
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(OptInt)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *PetFriendsCreate) GetBirthday() OptDateTime {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptDateTime)
 }
 
-// SetID sets the value of ID.
 func (s *PetFriendsCreate) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetFriendsCreate) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetWeight sets the value of Weight.
+	return
 }
 
-// SetWeight sets the value of Weight.
 func (s *PetFriendsCreate) SetWeight(val OptInt) {
-	s.Weight = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
-func (s *PetFriendsCreate) SetBirthday(val OptDateTime) {
-	s.Birthday = val
+func (s *PetFriendsCreate) SetBirthday(val OptDateTime) { _ = "STUB: not implemented"; return }
+
+func (*PetFriendsCreate) createPetFriendsRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Pet_FriendsList
+	return
 }
 
-func (*PetFriendsCreate) createPetFriendsRes() {}
-
-// Ref: #/components/schemas/Pet_FriendsList
 type PetFriendsList struct {
 	ID       int         `json:"id"`
 	Name     string      `json:"name"`
@@ -614,45 +694,61 @@ type PetFriendsList struct {
 
 // GetID returns the value of ID.
 func (s *PetFriendsList) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetFriendsList) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetWeight returns the value of Weight.
+	return ""
 }
 
-// GetWeight returns the value of Weight.
 func (s *PetFriendsList) GetWeight() OptInt {
-	return s.Weight
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(OptInt)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *PetFriendsList) GetBirthday() OptDateTime {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptDateTime)
 }
 
-// SetID sets the value of ID.
 func (s *PetFriendsList) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetFriendsList) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetWeight sets the value of Weight.
+	return
 }
 
-// SetWeight sets the value of Weight.
 func (s *PetFriendsList) SetWeight(val OptInt) {
-	s.Weight = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
 func (s *PetFriendsList) SetBirthday(val OptDateTime) {
-	s.Birthday = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PetList
+	return
 }
 
-// Ref: #/components/schemas/PetList
 type PetList struct {
 	ID       int         `json:"id"`
 	Name     string      `json:"name"`
@@ -662,45 +758,61 @@ type PetList struct {
 
 // GetID returns the value of ID.
 func (s *PetList) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetList) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetWeight returns the value of Weight.
+	return ""
 }
 
-// GetWeight returns the value of Weight.
 func (s *PetList) GetWeight() OptInt {
-	return s.Weight
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(OptInt)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *PetList) GetBirthday() OptDateTime {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptDateTime)
 }
 
-// SetID sets the value of ID.
 func (s *PetList) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetList) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetWeight sets the value of Weight.
+	return
 }
 
-// SetWeight sets the value of Weight.
 func (s *PetList) SetWeight(val OptInt) {
-	s.Weight = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
 func (s *PetList) SetBirthday(val OptDateTime) {
-	s.Birthday = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Pet_OwnerCreate
+	return
 }
 
-// Ref: #/components/schemas/Pet_OwnerCreate
 type PetOwnerCreate struct {
 	ID   int    `json:"id"`
 	Name string `json:"name"`
@@ -709,37 +821,49 @@ type PetOwnerCreate struct {
 
 // GetID returns the value of ID.
 func (s *PetOwnerCreate) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetOwnerCreate) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetAge returns the value of Age.
+	return ""
 }
 
-// GetAge returns the value of Age.
 func (s *PetOwnerCreate) GetAge() int {
-	return s.Age
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return 0
 }
 
-// SetID sets the value of ID.
 func (s *PetOwnerCreate) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetOwnerCreate) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetAge sets the value of Age.
+	return
 }
 
-// SetAge sets the value of Age.
-func (s *PetOwnerCreate) SetAge(val int) {
-	s.Age = val
+func (s *PetOwnerCreate) SetAge(val int) { _ = "STUB: not implemented"; return }
+
+func (*PetOwnerCreate) createPetOwnerRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Pet_OwnerRead
+	return
 }
 
-func (*PetOwnerCreate) createPetOwnerRes() {}
-
-// Ref: #/components/schemas/Pet_OwnerRead
 type PetOwnerRead struct {
 	ID   int    `json:"id"`
 	Name string `json:"name"`
@@ -748,37 +872,49 @@ type PetOwnerRead struct {
 
 // GetID returns the value of ID.
 func (s *PetOwnerRead) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetOwnerRead) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetAge returns the value of Age.
+	return ""
 }
 
-// GetAge returns the value of Age.
 func (s *PetOwnerRead) GetAge() int {
-	return s.Age
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return 0
 }
 
-// SetID sets the value of ID.
 func (s *PetOwnerRead) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetOwnerRead) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetAge sets the value of Age.
+	return
 }
 
-// SetAge sets the value of Age.
-func (s *PetOwnerRead) SetAge(val int) {
-	s.Age = val
+func (s *PetOwnerRead) SetAge(val int) { _ = "STUB: not implemented"; return }
+
+func (*PetOwnerRead) readPetOwnerRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PetRead
+	return
 }
 
-func (*PetOwnerRead) readPetOwnerRes() {}
-
-// Ref: #/components/schemas/PetRead
 type PetRead struct {
 	ID       int         `json:"id"`
 	Name     string      `json:"name"`
@@ -788,47 +924,63 @@ type PetRead struct {
 
 // GetID returns the value of ID.
 func (s *PetRead) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetRead) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetWeight returns the value of Weight.
+	return ""
 }
 
-// GetWeight returns the value of Weight.
 func (s *PetRead) GetWeight() OptInt {
-	return s.Weight
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(OptInt)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *PetRead) GetBirthday() OptDateTime {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptDateTime)
 }
 
-// SetID sets the value of ID.
 func (s *PetRead) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetRead) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetWeight sets the value of Weight.
+	return
 }
 
-// SetWeight sets the value of Weight.
 func (s *PetRead) SetWeight(val OptInt) {
-	s.Weight = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
-func (s *PetRead) SetBirthday(val OptDateTime) {
-	s.Birthday = val
+func (s *PetRead) SetBirthday(val OptDateTime) { _ = "STUB: not implemented"; return }
+
+func (*PetRead) readPetRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PetUpdate
+	return
 }
 
-func (*PetRead) readPetRes() {}
-
-// Ref: #/components/schemas/PetUpdate
 type PetUpdate struct {
 	ID       int         `json:"id"`
 	Name     string      `json:"name"`
@@ -838,45 +990,57 @@ type PetUpdate struct {
 
 // GetID returns the value of ID.
 func (s *PetUpdate) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *PetUpdate) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetWeight returns the value of Weight.
+	return ""
 }
 
-// GetWeight returns the value of Weight.
 func (s *PetUpdate) GetWeight() OptInt {
-	return s.Weight
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(OptInt)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *PetUpdate) GetBirthday() OptDateTime {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptDateTime)
 }
 
-// SetID sets the value of ID.
 func (s *PetUpdate) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *PetUpdate) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetWeight sets the value of Weight.
+	return
 }
 
-// SetWeight sets the value of Weight.
 func (s *PetUpdate) SetWeight(val OptInt) {
-	s.Weight = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
-func (s *PetUpdate) SetBirthday(val OptDateTime) {
-	s.Birthday = val
-}
+func (s *PetUpdate) SetBirthday(val OptDateTime) { _ = "STUB: not implemented"; return }
 
-func (*PetUpdate) updatePetRes() {}
+func (*PetUpdate) updatePetRes() { _ = "STUB: not implemented"; return }
 
 type R400 struct {
 	Code   int    `json:"code"`
@@ -885,36 +1049,40 @@ type R400 struct {
 
 // GetCode returns the value of Code.
 func (s *R400) GetCode() int {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetStatus returns the value of Status.
+	return 0
 }
 
-// GetStatus returns the value of Status.
 func (s *R400) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return ""
 }
 
-// SetCode sets the value of Code.
 func (s *R400) SetCode(val int) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
-func (s *R400) SetStatus(val string) {
-	s.Status = val
-}
+func (s *R400) SetStatus(val string) { _ = "STUB: not implemented"; return }
 
-func (*R400) createPetCategoriesRes() {}
-func (*R400) createPetFriendsRes()    {}
-func (*R400) createPetOwnerRes()      {}
-func (*R400) createPetRes()           {}
-func (*R400) deletePetOwnerRes()      {}
-func (*R400) deletePetRes()           {}
-func (*R400) listPetCategoriesRes()   {}
-func (*R400) listPetFriendsRes()      {}
-func (*R400) listPetRes()             {}
-func (*R400) readPetOwnerRes()        {}
-func (*R400) readPetRes()             {}
-func (*R400) updatePetRes()           {}
+func (*R400) createPetCategoriesRes() { _ = "STUB: not implemented"; return }
+func (*R400) createPetFriendsRes()    { _ = "STUB: not implemented"; return }
+func (*R400) createPetOwnerRes()      { _ = "STUB: not implemented"; return }
+func (*R400) createPetRes()           { _ = "STUB: not implemented"; return }
+func (*R400) deletePetOwnerRes()      { _ = "STUB: not implemented"; return }
+func (*R400) deletePetRes()           { _ = "STUB: not implemented"; return }
+func (*R400) listPetCategoriesRes()   { _ = "STUB: not implemented"; return }
+func (*R400) listPetFriendsRes()      { _ = "STUB: not implemented"; return }
+func (*R400) listPetRes()             { _ = "STUB: not implemented"; return }
+func (*R400) readPetOwnerRes()        { _ = "STUB: not implemented"; return }
+func (*R400) readPetRes()             { _ = "STUB: not implemented"; return }
+func (*R400) updatePetRes()           { _ = "STUB: not implemented"; return }
 
 type R404 struct {
 	Code   int    `json:"code"`
@@ -923,32 +1091,36 @@ type R404 struct {
 
 // GetCode returns the value of Code.
 func (s *R404) GetCode() int {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetStatus returns the value of Status.
+	return 0
 }
 
-// GetStatus returns the value of Status.
 func (s *R404) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return ""
 }
 
-// SetCode sets the value of Code.
 func (s *R404) SetCode(val int) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
-func (s *R404) SetStatus(val string) {
-	s.Status = val
-}
+func (s *R404) SetStatus(val string) { _ = "STUB: not implemented"; return }
 
-func (*R404) deletePetOwnerRes()    {}
-func (*R404) deletePetRes()         {}
-func (*R404) listPetCategoriesRes() {}
-func (*R404) listPetFriendsRes()    {}
-func (*R404) listPetRes()           {}
-func (*R404) readPetOwnerRes()      {}
-func (*R404) readPetRes()           {}
-func (*R404) updatePetRes()         {}
+func (*R404) deletePetOwnerRes()    { _ = "STUB: not implemented"; return }
+func (*R404) deletePetRes()         { _ = "STUB: not implemented"; return }
+func (*R404) listPetCategoriesRes() { _ = "STUB: not implemented"; return }
+func (*R404) listPetFriendsRes()    { _ = "STUB: not implemented"; return }
+func (*R404) listPetRes()           { _ = "STUB: not implemented"; return }
+func (*R404) readPetOwnerRes()      { _ = "STUB: not implemented"; return }
+func (*R404) readPetRes()           { _ = "STUB: not implemented"; return }
+func (*R404) updatePetRes()         { _ = "STUB: not implemented"; return }
 
 type R409 struct {
 	Code   int    `json:"code"`
@@ -957,28 +1129,32 @@ type R409 struct {
 
 // GetCode returns the value of Code.
 func (s *R409) GetCode() int {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetStatus returns the value of Status.
+	return 0
 }
 
-// GetStatus returns the value of Status.
 func (s *R409) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return ""
 }
 
-// SetCode sets the value of Code.
 func (s *R409) SetCode(val int) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
-func (s *R409) SetStatus(val string) {
-	s.Status = val
-}
+func (s *R409) SetStatus(val string) { _ = "STUB: not implemented"; return }
 
-func (*R409) createPetCategoriesRes() {}
-func (*R409) createPetFriendsRes()    {}
-func (*R409) createPetOwnerRes()      {}
-func (*R409) createPetRes()           {}
+func (*R409) createPetCategoriesRes() { _ = "STUB: not implemented"; return }
+func (*R409) createPetFriendsRes()    { _ = "STUB: not implemented"; return }
+func (*R409) createPetOwnerRes()      { _ = "STUB: not implemented"; return }
+func (*R409) createPetRes()           { _ = "STUB: not implemented"; return }
 
 type R500 struct {
 	Code   int    `json:"code"`
@@ -987,36 +1163,40 @@ type R500 struct {
 
 // GetCode returns the value of Code.
 func (s *R500) GetCode() int {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetStatus returns the value of Status.
+	return 0
 }
 
-// GetStatus returns the value of Status.
 func (s *R500) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return ""
 }
 
-// SetCode sets the value of Code.
 func (s *R500) SetCode(val int) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
-func (s *R500) SetStatus(val string) {
-	s.Status = val
-}
+func (s *R500) SetStatus(val string) { _ = "STUB: not implemented"; return }
 
-func (*R500) createPetCategoriesRes() {}
-func (*R500) createPetFriendsRes()    {}
-func (*R500) createPetOwnerRes()      {}
-func (*R500) createPetRes()           {}
-func (*R500) deletePetOwnerRes()      {}
-func (*R500) deletePetRes()           {}
-func (*R500) listPetCategoriesRes()   {}
-func (*R500) listPetFriendsRes()      {}
-func (*R500) listPetRes()             {}
-func (*R500) readPetOwnerRes()        {}
-func (*R500) readPetRes()             {}
-func (*R500) updatePetRes()           {}
+func (*R500) createPetCategoriesRes() { _ = "STUB: not implemented"; return }
+func (*R500) createPetFriendsRes()    { _ = "STUB: not implemented"; return }
+func (*R500) createPetOwnerRes()      { _ = "STUB: not implemented"; return }
+func (*R500) createPetRes()           { _ = "STUB: not implemented"; return }
+func (*R500) deletePetOwnerRes()      { _ = "STUB: not implemented"; return }
+func (*R500) deletePetRes()           { _ = "STUB: not implemented"; return }
+func (*R500) listPetCategoriesRes()   { _ = "STUB: not implemented"; return }
+func (*R500) listPetFriendsRes()      { _ = "STUB: not implemented"; return }
+func (*R500) listPetRes()             { _ = "STUB: not implemented"; return }
+func (*R500) readPetOwnerRes()        { _ = "STUB: not implemented"; return }
+func (*R500) readPetRes()             { _ = "STUB: not implemented"; return }
+func (*R500) updatePetRes()           { _ = "STUB: not implemented"; return }
 
 type UpdatePetReq struct {
 	Name       string      `json:"name"`
@@ -1029,60 +1209,76 @@ type UpdatePetReq struct {
 
 // GetName returns the value of Name.
 func (s *UpdatePetReq) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetWeight returns the value of Weight.
+	return ""
 }
 
-// GetWeight returns the value of Weight.
 func (s *UpdatePetReq) GetWeight() OptInt {
-	return s.Weight
+	_ = "STUB: not implemented"
+
+	// GetBirthday returns the value of Birthday.
+	return *new(OptInt)
 }
 
-// GetBirthday returns the value of Birthday.
 func (s *UpdatePetReq) GetBirthday() OptDateTime {
-	return s.Birthday
+	_ = "STUB: not implemented"
+
+	// GetCategories returns the value of Categories.
+	return *new(OptDateTime)
 }
 
-// GetCategories returns the value of Categories.
-func (s *UpdatePetReq) GetCategories() []int {
-	return s.Categories
-}
+func (s *UpdatePetReq) GetCategories() []int { _ = "STUB: not implemented"; return nil }
 
 // GetOwner returns the value of Owner.
 func (s *UpdatePetReq) GetOwner() int {
-	return s.Owner
+	_ = "STUB: not implemented"
+
+	// GetFriends returns the value of Friends.
+	return 0
 }
 
-// GetFriends returns the value of Friends.
 func (s *UpdatePetReq) GetFriends() []int {
-	return s.Friends
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return nil
 }
 
-// SetName sets the value of Name.
 func (s *UpdatePetReq) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetWeight sets the value of Weight.
+	return
 }
 
-// SetWeight sets the value of Weight.
 func (s *UpdatePetReq) SetWeight(val OptInt) {
-	s.Weight = val
+	_ = "STUB: not implemented"
+
+	// SetBirthday sets the value of Birthday.
+	return
 }
 
-// SetBirthday sets the value of Birthday.
 func (s *UpdatePetReq) SetBirthday(val OptDateTime) {
-	s.Birthday = val
+	_ = "STUB: not implemented"
+
+	// SetCategories sets the value of Categories.
+	return
 }
 
-// SetCategories sets the value of Categories.
 func (s *UpdatePetReq) SetCategories(val []int) {
-	s.Categories = val
+	_ = "STUB: not implemented"
+
+	// SetOwner sets the value of Owner.
+	return
 }
 
-// SetOwner sets the value of Owner.
 func (s *UpdatePetReq) SetOwner(val int) {
-	s.Owner = val
+	_ = "STUB: not implemented"
+
+	// SetFriends sets the value of Friends.
+	return
 }
 
-// SetFriends sets the value of Friends.
-func (s *UpdatePetReq) SetFriends(val []int) {
-	s.Friends = val
-}
+func (s *UpdatePetReq) SetFriends(val []int) { _ = "STUB: not implemented"; return }

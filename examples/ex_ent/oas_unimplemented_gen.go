@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,7 +17,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // POST /pets
 func (UnimplementedHandler) CreatePet(ctx context.Context, req *CreatePetReq) (r CreatePetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CreatePetRes), nil
 }
 
 // CreatePetCategories implements createPetCategories operation.
@@ -28,7 +27,8 @@ func (UnimplementedHandler) CreatePet(ctx context.Context, req *CreatePetReq) (r
 //
 // POST /pets/{id}/categories
 func (UnimplementedHandler) CreatePetCategories(ctx context.Context, req *CreatePetCategoriesReq, params CreatePetCategoriesParams) (r CreatePetCategoriesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CreatePetCategoriesRes), nil
 }
 
 // CreatePetFriends implements createPetFriends operation.
@@ -37,7 +37,8 @@ func (UnimplementedHandler) CreatePetCategories(ctx context.Context, req *Create
 //
 // POST /pets/{id}/friends
 func (UnimplementedHandler) CreatePetFriends(ctx context.Context, req *CreatePetFriendsReq, params CreatePetFriendsParams) (r CreatePetFriendsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CreatePetFriendsRes), nil
 }
 
 // CreatePetOwner implements createPetOwner operation.
@@ -46,7 +47,8 @@ func (UnimplementedHandler) CreatePetFriends(ctx context.Context, req *CreatePet
 //
 // POST /pets/{id}/owner
 func (UnimplementedHandler) CreatePetOwner(ctx context.Context, req *CreatePetOwnerReq, params CreatePetOwnerParams) (r CreatePetOwnerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CreatePetOwnerRes), nil
 }
 
 // DeletePet implements deletePet operation.
@@ -55,7 +57,8 @@ func (UnimplementedHandler) CreatePetOwner(ctx context.Context, req *CreatePetOw
 //
 // DELETE /pets/{id}
 func (UnimplementedHandler) DeletePet(ctx context.Context, params DeletePetParams) (r DeletePetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(DeletePetRes), nil
 }
 
 // DeletePetOwner implements deletePetOwner operation.
@@ -64,7 +67,8 @@ func (UnimplementedHandler) DeletePet(ctx context.Context, params DeletePetParam
 //
 // DELETE /pets/{id}/owner
 func (UnimplementedHandler) DeletePetOwner(ctx context.Context, params DeletePetOwnerParams) (r DeletePetOwnerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(DeletePetOwnerRes), nil
 }
 
 // ListPet implements listPet operation.
@@ -73,7 +77,8 @@ func (UnimplementedHandler) DeletePetOwner(ctx context.Context, params DeletePet
 //
 // GET /pets
 func (UnimplementedHandler) ListPet(ctx context.Context, params ListPetParams) (r ListPetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListPetRes), nil
 }
 
 // ListPetCategories implements listPetCategories operation.
@@ -82,7 +87,8 @@ func (UnimplementedHandler) ListPet(ctx context.Context, params ListPetParams) (
 //
 // GET /pets/{id}/categories
 func (UnimplementedHandler) ListPetCategories(ctx context.Context, params ListPetCategoriesParams) (r ListPetCategoriesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListPetCategoriesRes), nil
 }
 
 // ListPetFriends implements listPetFriends operation.
@@ -91,7 +97,8 @@ func (UnimplementedHandler) ListPetCategories(ctx context.Context, params ListPe
 //
 // GET /pets/{id}/friends
 func (UnimplementedHandler) ListPetFriends(ctx context.Context, params ListPetFriendsParams) (r ListPetFriendsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListPetFriendsRes), nil
 }
 
 // ReadPet implements readPet operation.
@@ -100,7 +107,8 @@ func (UnimplementedHandler) ListPetFriends(ctx context.Context, params ListPetFr
 //
 // GET /pets/{id}
 func (UnimplementedHandler) ReadPet(ctx context.Context, params ReadPetParams) (r ReadPetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadPetRes), nil
 }
 
 // ReadPetOwner implements readPetOwner operation.
@@ -109,7 +117,8 @@ func (UnimplementedHandler) ReadPet(ctx context.Context, params ReadPetParams) (
 //
 // GET /pets/{id}/owner
 func (UnimplementedHandler) ReadPetOwner(ctx context.Context, params ReadPetOwnerParams) (r ReadPetOwnerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadPetOwnerRes), nil
 }
 
 // UpdatePet implements updatePet operation.
@@ -118,5 +127,6 @@ func (UnimplementedHandler) ReadPetOwner(ctx context.Context, params ReadPetOwne
 //
 // PATCH /pets/{id}
 func (UnimplementedHandler) UpdatePet(ctx context.Context, req *UpdatePetReq, params UpdatePetParams) (r UpdatePetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UpdatePetRes), nil
 }

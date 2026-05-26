@@ -5,192 +5,44 @@ package techempower
 import (
 	"net/http"
 	"net/url"
-	"strings"
-
-	"github.com/ogen-go/ogen/uri"
 )
 
-func (s *Server) cutPrefix(path string) (string, bool) {
-	prefix := s.cfg.Prefix
-	if prefix == "" {
-		return path, true
-	}
-	if !strings.HasPrefix(path, prefix) {
-		// Prefix doesn't match.
-		return "", false
-	}
-	// Cut prefix from the path.
-	return strings.TrimPrefix(path, prefix), true
-}
+func (s *Server) cutPrefix(path string) (string, bool) { _ = "STUB: not implemented"; return "", false }
+
+// Prefix doesn't match.
+
+// Cut prefix from the path.
 
 // ServeHTTP serves http request as defined by OpenAPI v3 specification,
 // calling handler that matches the path or returning not found error.
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	elem := r.URL.Path
-	elemIsEscaped := false
-	if rawPath := r.URL.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-			elemIsEscaped = strings.ContainsRune(elem, '%')
-		}
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok || len(elem) == 0 {
-		s.notFound(w, r)
-		return
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'c': // Prefix: "cached-worlds"
-
-				if l := len("cached-worlds"); len(elem) >= l && elem[0:l] == "cached-worlds" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleCachingRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'd': // Prefix: "db"
-
-				if l := len("db"); len(elem) >= l && elem[0:l] == "db" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleDBRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'j': // Prefix: "json"
-
-				if l := len("json"); len(elem) >= l && elem[0:l] == "json" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleJSONRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'q': // Prefix: "queries"
-
-				if l := len("queries"); len(elem) >= l && elem[0:l] == "queries" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleQueriesRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'u': // Prefix: "updates"
-
-				if l := len("updates"); len(elem) >= l && elem[0:l] == "updates" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleUpdatesRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			}
-
-		}
-	}
-	s.notFound(w, r)
+	_ = "STUB: not implemented"
+	return
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "cached-worlds"
+
+// Leaf node.
+
+// Prefix: "db"
+
+// Leaf node.
+
+// Prefix: "json"
+
+// Leaf node.
+
+// Prefix: "queries"
+
+// Leaf node.
+
+// Prefix: "updates"
+
+// Leaf node.
 
 // Route is route object.
 type Route struct {
@@ -207,212 +59,64 @@ type Route struct {
 //
 // It is guaranteed to be unique and not empty.
 func (r Route) Name() string {
-	return r.name
+	_ = "STUB: not implemented"
+
+	// Summary returns OpenAPI summary.
+	return ""
 }
 
-// Summary returns OpenAPI summary.
 func (r Route) Summary() string {
-	return r.summary
+	_ = "STUB: not implemented"
+
+	// OperationID returns OpenAPI operationId.
+	return ""
 }
 
-// OperationID returns OpenAPI operationId.
-func (r Route) OperationID() string {
-	return r.operationID
-}
+func (r Route) OperationID() string { _ = "STUB: not implemented"; return "" }
 
 // OperationGroup returns the x-ogen-operation-group value.
-func (r Route) OperationGroup() string {
-	return r.operationGroup
-}
+func (r Route) OperationGroup() string { _ = "STUB: not implemented"; return "" }
 
 // PathPattern returns OpenAPI path.
-func (r Route) PathPattern() string {
-	return r.pathPattern
-}
+func (r Route) PathPattern() string { _ = "STUB: not implemented"; return "" }
 
 // Args returns parsed arguments.
-func (r Route) Args() []string {
-	return r.args[:r.count]
-}
+func (r Route) Args() []string { _ = "STUB: not implemented"; return nil }
 
 // FindRoute finds Route for given method and path.
 //
 // Note: this method does not unescape path or handle reserved characters in path properly. Use FindPath instead.
 func (s *Server) FindRoute(method, path string) (Route, bool) {
-	return s.FindPath(method, &url.URL{Path: path})
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
 
 // FindPath finds Route for given method and URL.
 func (s *Server) FindPath(method string, u *url.URL) (r Route, _ bool) {
-	var (
-		elem = u.Path
-		args = r.args
-	)
-	if rawPath := u.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-		}
-		defer func() {
-			for i, arg := range r.args[:r.count] {
-				if unescaped, err := url.PathUnescape(arg); err == nil {
-					r.args[i] = unescaped
-				}
-			}
-		}()
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok {
-		return r, false
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'c': // Prefix: "cached-worlds"
-
-				if l := len("cached-worlds"); len(elem) >= l && elem[0:l] == "cached-worlds" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = CachingOperation
-						r.summary = "Test #7. The Caching test exercises the preferred in-memory or separate-process caching technology for the platform or framework. For implementation simplicity, the requirements are very similar to the multiple database-query test Test #3, but use a separate database table. The requirements are quite generous, affording each framework fairly broad freedom to meet the requirements in the manner that best represents the canonical non-distributed caching approach for the framework. (Note: a distributed caching test type could be added later.)"
-						r.operationID = "Caching"
-						r.operationGroup = ""
-						r.pathPattern = "/cached-worlds"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'd': // Prefix: "db"
-
-				if l := len("db"); len(elem) >= l && elem[0:l] == "db" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = DBOperation
-						r.summary = "Test #2. The Single Database Query test exercises the framework's object-relational mapper (ORM), random number generator, database driver, and database connection pool."
-						r.operationID = "DB"
-						r.operationGroup = ""
-						r.pathPattern = "/db"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'j': // Prefix: "json"
-
-				if l := len("json"); len(elem) >= l && elem[0:l] == "json" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = JSONOperation
-						r.summary = "Test #1. The JSON Serialization test exercises the framework fundamentals including keep-alive support, request routing, request header parsing, object instantiation, JSON serialization, response header generation, and request count throughput."
-						r.operationID = "json"
-						r.operationGroup = ""
-						r.pathPattern = "/json"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'q': // Prefix: "queries"
-
-				if l := len("queries"); len(elem) >= l && elem[0:l] == "queries" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = QueriesOperation
-						r.summary = "Test #3. The Multiple Database Queries test is a variation of Test #2 and also uses the World table. Multiple rows are fetched to more dramatically punish the database driver and connection pool. At the highest queries-per-request tested (20), this test demonstrates all frameworks' convergence toward zero requests-per-second as database activity increases."
-						r.operationID = "Queries"
-						r.operationGroup = ""
-						r.pathPattern = "/queries"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'u': // Prefix: "updates"
-
-				if l := len("updates"); len(elem) >= l && elem[0:l] == "updates" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = UpdatesOperation
-						r.summary = "Test #5. The Database Updates test is a variation of Test #3 that exercises the ORM's persistence of objects and the database driver's performance at running UPDATE statements or similar. The spirit of this test is to exercise a variable number of read-then-write style database operations."
-						r.operationID = "Updates"
-						r.operationGroup = ""
-						r.pathPattern = "/updates"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			}
-
-		}
-	}
-	return r, false
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "cached-worlds"
+
+// Leaf node.
+
+// Prefix: "db"
+
+// Leaf node.
+
+// Prefix: "json"
+
+// Leaf node.
+
+// Prefix: "queries"
+
+// Leaf node.
+
+// Prefix: "updates"
+
+// Leaf node.

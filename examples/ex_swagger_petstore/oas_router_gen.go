@@ -5,9 +5,6 @@ package api
 import (
 	"net/http"
 	"net/url"
-	"strings"
-
-	"github.com/ogen-go/ogen/uri"
 )
 
 var (
@@ -46,504 +43,81 @@ var (
 	}
 )
 
-func (s *Server) cutPrefix(path string) (string, bool) {
-	prefix := s.cfg.Prefix
-	if prefix == "" {
-		return path, true
-	}
-	if !strings.HasPrefix(path, prefix) {
-		// Prefix doesn't match.
-		return "", false
-	}
-	// Cut prefix from the path.
-	return strings.TrimPrefix(path, prefix), true
-}
+func (s *Server) cutPrefix(path string) (string, bool) { _ = "STUB: not implemented"; return "", false }
+
+// Prefix doesn't match.
+
+// Cut prefix from the path.
 
 // ServeHTTP serves http request as defined by OpenAPI v3 specification,
 // calling handler that matches the path or returning not found error.
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	elem := r.URL.Path
-	elemIsEscaped := false
-	if rawPath := r.URL.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-			elemIsEscaped = strings.ContainsRune(elem, '%')
-		}
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok || len(elem) == 0 {
-		s.notFound(w, r)
-		return
-	}
-	args := [1]string{}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'p': // Prefix: "pet"
-
-				if l := len("pet"); len(elem) >= l && elem[0:l] == "pet" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					switch r.Method {
-					case "POST":
-						s.handleAddPetRequest([0]string{}, elemIsEscaped, w, r)
-					case "PUT":
-						s.handleUpdatePetRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "POST,PUT",
-							allowedHeaders: rn1AllowedHeaders,
-							acceptPost:     "application/json",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-				switch elem[0] {
-				case '/': // Prefix: "/"
-
-					if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'f': // Prefix: "findBy"
-						origElem := elem
-						if l := len("findBy"); len(elem) >= l && elem[0:l] == "findBy" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'S': // Prefix: "Status"
-
-							if l := len("Status"); len(elem) >= l && elem[0:l] == "Status" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								// Leaf node.
-								switch r.Method {
-								case "GET":
-									s.handleFindPetsByStatusRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn11AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-
-						case 'T': // Prefix: "Tags"
-
-							if l := len("Tags"); len(elem) >= l && elem[0:l] == "Tags" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								// Leaf node.
-								switch r.Method {
-								case "GET":
-									s.handleFindPetsByTagsRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn13AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-
-						}
-
-						elem = origElem
-					}
-					// Param: "petId"
-					// Match until "/"
-					idx := strings.IndexByte(elem, '/')
-					if idx < 0 {
-						idx = len(elem)
-					}
-					args[0] = elem[:idx]
-					elem = elem[idx:]
-
-					if len(elem) == 0 {
-						switch r.Method {
-						case "DELETE":
-							s.handleDeletePetRequest([1]string{
-								args[0],
-							}, elemIsEscaped, w, r)
-						case "GET":
-							s.handleGetPetByIdRequest([1]string{
-								args[0],
-							}, elemIsEscaped, w, r)
-						case "POST":
-							s.handleUpdatePetWithFormRequest([1]string{
-								args[0],
-							}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "DELETE,GET,POST",
-								allowedHeaders: rn8AllowedHeaders,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-					switch elem[0] {
-					case '/': // Prefix: "/uploadImage"
-
-						if l := len("/uploadImage"); len(elem) >= l && elem[0:l] == "/uploadImage" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "POST":
-								s.handleUploadFileRequest([1]string{
-									args[0],
-								}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "POST",
-									allowedHeaders: rn20AllowedHeaders,
-									acceptPost:     "application/octet-stream",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					}
-
-				}
-
-			case 's': // Prefix: "store/"
-
-				if l := len("store/"); len(elem) >= l && elem[0:l] == "store/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'i': // Prefix: "inventory"
-
-					if l := len("inventory"); len(elem) >= l && elem[0:l] == "inventory" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleGetInventoryRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: rn15AllowedHeaders,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				case 'o': // Prefix: "order"
-
-					if l := len("order"); len(elem) >= l && elem[0:l] == "order" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						switch r.Method {
-						case "POST":
-							s.handlePlaceOrderRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "POST",
-								allowedHeaders: rn19AllowedHeaders,
-								acceptPost:     "application/json,application/x-www-form-urlencoded",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-					switch elem[0] {
-					case '/': // Prefix: "/"
-
-						if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						// Param: "orderId"
-						// Leaf parameter, slashes are prohibited
-						idx := strings.IndexByte(elem, '/')
-						if idx >= 0 {
-							break
-						}
-						args[0] = elem
-						elem = ""
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "DELETE":
-								s.handleDeleteOrderRequest([1]string{
-									args[0],
-								}, elemIsEscaped, w, r)
-							case "GET":
-								s.handleGetOrderByIdRequest([1]string{
-									args[0],
-								}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "DELETE,GET",
-									allowedHeaders: nil,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					}
-
-				}
-
-			case 'u': // Prefix: "user"
-
-				if l := len("user"); len(elem) >= l && elem[0:l] == "user" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					switch r.Method {
-					case "POST":
-						s.handleCreateUserRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "POST",
-							allowedHeaders: rn3AllowedHeaders,
-							acceptPost:     "application/json,application/x-www-form-urlencoded",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-				switch elem[0] {
-				case '/': // Prefix: "/"
-
-					if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'c': // Prefix: "createWithList"
-						origElem := elem
-						if l := len("createWithList"); len(elem) >= l && elem[0:l] == "createWithList" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "POST":
-								s.handleCreateUsersWithListInputRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "POST",
-									allowedHeaders: rn4AllowedHeaders,
-									acceptPost:     "application/json",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-						elem = origElem
-					case 'l': // Prefix: "log"
-						origElem := elem
-						if l := len("log"); len(elem) >= l && elem[0:l] == "log" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'i': // Prefix: "in"
-
-							if l := len("in"); len(elem) >= l && elem[0:l] == "in" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								// Leaf node.
-								switch r.Method {
-								case "GET":
-									s.handleLoginUserRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: nil,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-
-						case 'o': // Prefix: "out"
-
-							if l := len("out"); len(elem) >= l && elem[0:l] == "out" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								// Leaf node.
-								switch r.Method {
-								case "GET":
-									s.handleLogoutUserRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: nil,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-
-						}
-
-						elem = origElem
-					}
-					// Param: "username"
-					// Leaf parameter, slashes are prohibited
-					idx := strings.IndexByte(elem, '/')
-					if idx >= 0 {
-						break
-					}
-					args[0] = elem
-					elem = ""
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "DELETE":
-							s.handleDeleteUserRequest([1]string{
-								args[0],
-							}, elemIsEscaped, w, r)
-						case "GET":
-							s.handleGetUserByNameRequest([1]string{
-								args[0],
-							}, elemIsEscaped, w, r)
-						case "PUT":
-							s.handleUpdateUserRequest([1]string{
-								args[0],
-							}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "DELETE,GET,PUT",
-								allowedHeaders: rn10AllowedHeaders,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				}
-
-			}
-
-		}
-	}
-	s.notFound(w, r)
+	_ = "STUB: not implemented"
+	return
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "pet"
+
+// Prefix: "/"
+
+// Prefix: "findBy"
+
+// Prefix: "Status"
+
+// Leaf node.
+
+// Prefix: "Tags"
+
+// Leaf node.
+
+// Param: "petId"
+// Match until "/"
+
+// Prefix: "/uploadImage"
+
+// Leaf node.
+
+// Prefix: "store/"
+
+// Prefix: "inventory"
+
+// Leaf node.
+
+// Prefix: "order"
+
+// Prefix: "/"
+
+// Param: "orderId"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "user"
+
+// Prefix: "/"
+
+// Prefix: "createWithList"
+
+// Leaf node.
+
+// Prefix: "log"
+
+// Prefix: "in"
+
+// Leaf node.
+
+// Prefix: "out"
+
+// Leaf node.
+
+// Param: "username"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
 
 // Route is route object.
 type Route struct {
@@ -560,552 +134,103 @@ type Route struct {
 //
 // It is guaranteed to be unique and not empty.
 func (r Route) Name() string {
-	return r.name
+	_ = "STUB: not implemented"
+
+	// Summary returns OpenAPI summary.
+	return ""
 }
 
-// Summary returns OpenAPI summary.
 func (r Route) Summary() string {
-	return r.summary
+	_ = "STUB: not implemented"
+
+	// OperationID returns OpenAPI operationId.
+	return ""
 }
 
-// OperationID returns OpenAPI operationId.
-func (r Route) OperationID() string {
-	return r.operationID
-}
+func (r Route) OperationID() string { _ = "STUB: not implemented"; return "" }
 
 // OperationGroup returns the x-ogen-operation-group value.
-func (r Route) OperationGroup() string {
-	return r.operationGroup
-}
+func (r Route) OperationGroup() string { _ = "STUB: not implemented"; return "" }
 
 // PathPattern returns OpenAPI path.
-func (r Route) PathPattern() string {
-	return r.pathPattern
-}
+func (r Route) PathPattern() string { _ = "STUB: not implemented"; return "" }
 
 // Args returns parsed arguments.
-func (r Route) Args() []string {
-	return r.args[:r.count]
-}
+func (r Route) Args() []string { _ = "STUB: not implemented"; return nil }
 
 // FindRoute finds Route for given method and path.
 //
 // Note: this method does not unescape path or handle reserved characters in path properly. Use FindPath instead.
 func (s *Server) FindRoute(method, path string) (Route, bool) {
-	return s.FindPath(method, &url.URL{Path: path})
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
 
 // FindPath finds Route for given method and URL.
 func (s *Server) FindPath(method string, u *url.URL) (r Route, _ bool) {
-	var (
-		elem = u.Path
-		args = r.args
-	)
-	if rawPath := u.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-		}
-		defer func() {
-			for i, arg := range r.args[:r.count] {
-				if unescaped, err := url.PathUnescape(arg); err == nil {
-					r.args[i] = unescaped
-				}
-			}
-		}()
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok {
-		return r, false
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'p': // Prefix: "pet"
-
-				if l := len("pet"); len(elem) >= l && elem[0:l] == "pet" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					switch method {
-					case "POST":
-						r.name = AddPetOperation
-						r.summary = "Add a new pet to the store."
-						r.operationID = "addPet"
-						r.operationGroup = ""
-						r.pathPattern = "/pet"
-						r.args = args
-						r.count = 0
-						return r, true
-					case "PUT":
-						r.name = UpdatePetOperation
-						r.summary = "Update an existing pet."
-						r.operationID = "updatePet"
-						r.operationGroup = ""
-						r.pathPattern = "/pet"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-				switch elem[0] {
-				case '/': // Prefix: "/"
-
-					if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'f': // Prefix: "findBy"
-						origElem := elem
-						if l := len("findBy"); len(elem) >= l && elem[0:l] == "findBy" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'S': // Prefix: "Status"
-
-							if l := len("Status"); len(elem) >= l && elem[0:l] == "Status" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								// Leaf node.
-								switch method {
-								case "GET":
-									r.name = FindPetsByStatusOperation
-									r.summary = "Finds Pets by status."
-									r.operationID = "findPetsByStatus"
-									r.operationGroup = ""
-									r.pathPattern = "/pet/findByStatus"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-
-						case 'T': // Prefix: "Tags"
-
-							if l := len("Tags"); len(elem) >= l && elem[0:l] == "Tags" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								// Leaf node.
-								switch method {
-								case "GET":
-									r.name = FindPetsByTagsOperation
-									r.summary = "Finds Pets by tags."
-									r.operationID = "findPetsByTags"
-									r.operationGroup = ""
-									r.pathPattern = "/pet/findByTags"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-
-						}
-
-						elem = origElem
-					}
-					// Param: "petId"
-					// Match until "/"
-					idx := strings.IndexByte(elem, '/')
-					if idx < 0 {
-						idx = len(elem)
-					}
-					args[0] = elem[:idx]
-					elem = elem[idx:]
-
-					if len(elem) == 0 {
-						switch method {
-						case "DELETE":
-							r.name = DeletePetOperation
-							r.summary = "Deletes a pet."
-							r.operationID = "deletePet"
-							r.operationGroup = ""
-							r.pathPattern = "/pet/{petId}"
-							r.args = args
-							r.count = 1
-							return r, true
-						case "GET":
-							r.name = GetPetByIdOperation
-							r.summary = "Find pet by ID."
-							r.operationID = "getPetById"
-							r.operationGroup = ""
-							r.pathPattern = "/pet/{petId}"
-							r.args = args
-							r.count = 1
-							return r, true
-						case "POST":
-							r.name = UpdatePetWithFormOperation
-							r.summary = "Updates a pet in the store with form data."
-							r.operationID = "updatePetWithForm"
-							r.operationGroup = ""
-							r.pathPattern = "/pet/{petId}"
-							r.args = args
-							r.count = 1
-							return r, true
-						default:
-							return
-						}
-					}
-					switch elem[0] {
-					case '/': // Prefix: "/uploadImage"
-
-						if l := len("/uploadImage"); len(elem) >= l && elem[0:l] == "/uploadImage" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "POST":
-								r.name = UploadFileOperation
-								r.summary = "Uploads an image."
-								r.operationID = "uploadFile"
-								r.operationGroup = ""
-								r.pathPattern = "/pet/{petId}/uploadImage"
-								r.args = args
-								r.count = 1
-								return r, true
-							default:
-								return
-							}
-						}
-
-					}
-
-				}
-
-			case 's': // Prefix: "store/"
-
-				if l := len("store/"); len(elem) >= l && elem[0:l] == "store/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'i': // Prefix: "inventory"
-
-					if l := len("inventory"); len(elem) >= l && elem[0:l] == "inventory" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = GetInventoryOperation
-							r.summary = "Returns pet inventories by status."
-							r.operationID = "getInventory"
-							r.operationGroup = ""
-							r.pathPattern = "/store/inventory"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				case 'o': // Prefix: "order"
-
-					if l := len("order"); len(elem) >= l && elem[0:l] == "order" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						switch method {
-						case "POST":
-							r.name = PlaceOrderOperation
-							r.summary = "Place an order for a pet."
-							r.operationID = "placeOrder"
-							r.operationGroup = ""
-							r.pathPattern = "/store/order"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-					switch elem[0] {
-					case '/': // Prefix: "/"
-
-						if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						// Param: "orderId"
-						// Leaf parameter, slashes are prohibited
-						idx := strings.IndexByte(elem, '/')
-						if idx >= 0 {
-							break
-						}
-						args[0] = elem
-						elem = ""
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "DELETE":
-								r.name = DeleteOrderOperation
-								r.summary = "Delete purchase order by identifier."
-								r.operationID = "deleteOrder"
-								r.operationGroup = ""
-								r.pathPattern = "/store/order/{orderId}"
-								r.args = args
-								r.count = 1
-								return r, true
-							case "GET":
-								r.name = GetOrderByIdOperation
-								r.summary = "Find purchase order by ID."
-								r.operationID = "getOrderById"
-								r.operationGroup = ""
-								r.pathPattern = "/store/order/{orderId}"
-								r.args = args
-								r.count = 1
-								return r, true
-							default:
-								return
-							}
-						}
-
-					}
-
-				}
-
-			case 'u': // Prefix: "user"
-
-				if l := len("user"); len(elem) >= l && elem[0:l] == "user" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					switch method {
-					case "POST":
-						r.name = CreateUserOperation
-						r.summary = "Create user."
-						r.operationID = "createUser"
-						r.operationGroup = ""
-						r.pathPattern = "/user"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-				switch elem[0] {
-				case '/': // Prefix: "/"
-
-					if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'c': // Prefix: "createWithList"
-						origElem := elem
-						if l := len("createWithList"); len(elem) >= l && elem[0:l] == "createWithList" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "POST":
-								r.name = CreateUsersWithListInputOperation
-								r.summary = "Creates list of users with given input array."
-								r.operationID = "createUsersWithListInput"
-								r.operationGroup = ""
-								r.pathPattern = "/user/createWithList"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-
-						elem = origElem
-					case 'l': // Prefix: "log"
-						origElem := elem
-						if l := len("log"); len(elem) >= l && elem[0:l] == "log" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'i': // Prefix: "in"
-
-							if l := len("in"); len(elem) >= l && elem[0:l] == "in" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								// Leaf node.
-								switch method {
-								case "GET":
-									r.name = LoginUserOperation
-									r.summary = "Logs user into the system."
-									r.operationID = "loginUser"
-									r.operationGroup = ""
-									r.pathPattern = "/user/login"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-
-						case 'o': // Prefix: "out"
-
-							if l := len("out"); len(elem) >= l && elem[0:l] == "out" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								// Leaf node.
-								switch method {
-								case "GET":
-									r.name = LogoutUserOperation
-									r.summary = "Logs out current logged in user session."
-									r.operationID = "logoutUser"
-									r.operationGroup = ""
-									r.pathPattern = "/user/logout"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-
-						}
-
-						elem = origElem
-					}
-					// Param: "username"
-					// Leaf parameter, slashes are prohibited
-					idx := strings.IndexByte(elem, '/')
-					if idx >= 0 {
-						break
-					}
-					args[0] = elem
-					elem = ""
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "DELETE":
-							r.name = DeleteUserOperation
-							r.summary = "Delete user resource."
-							r.operationID = "deleteUser"
-							r.operationGroup = ""
-							r.pathPattern = "/user/{username}"
-							r.args = args
-							r.count = 1
-							return r, true
-						case "GET":
-							r.name = GetUserByNameOperation
-							r.summary = "Get user by user name."
-							r.operationID = "getUserByName"
-							r.operationGroup = ""
-							r.pathPattern = "/user/{username}"
-							r.args = args
-							r.count = 1
-							return r, true
-						case "PUT":
-							r.name = UpdateUserOperation
-							r.summary = "Update user resource."
-							r.operationID = "updateUser"
-							r.operationGroup = ""
-							r.pathPattern = "/user/{username}"
-							r.args = args
-							r.count = 1
-							return r, true
-						default:
-							return
-						}
-					}
-
-				}
-
-			}
-
-		}
-	}
-	return r, false
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "pet"
+
+// Prefix: "/"
+
+// Prefix: "findBy"
+
+// Prefix: "Status"
+
+// Leaf node.
+
+// Prefix: "Tags"
+
+// Leaf node.
+
+// Param: "petId"
+// Match until "/"
+
+// Prefix: "/uploadImage"
+
+// Leaf node.
+
+// Prefix: "store/"
+
+// Prefix: "inventory"
+
+// Leaf node.
+
+// Prefix: "order"
+
+// Prefix: "/"
+
+// Param: "orderId"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "user"
+
+// Prefix: "/"
+
+// Prefix: "createWithList"
+
+// Leaf node.
+
+// Prefix: "log"
+
+// Prefix: "in"
+
+// Leaf node.
+
+// Prefix: "out"
+
+// Leaf node.
+
+// Param: "username"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.

@@ -5,8 +5,6 @@ package api
 import (
 	"io"
 	"time"
-
-	"github.com/go-faster/errors"
 )
 
 type APIKey struct {
@@ -16,52 +14,68 @@ type APIKey struct {
 
 // GetAPIKey returns the value of APIKey.
 func (s *APIKey) GetAPIKey() string {
-	return s.APIKey
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *APIKey) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetAPIKey sets the value of APIKey.
+	return nil
 }
 
-// SetAPIKey sets the value of APIKey.
 func (s *APIKey) SetAPIKey(val string) {
-	s.APIKey = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
 func (s *APIKey) SetRoles(val []string) {
-	s.Roles = val
+	_ = "STUB: not implemented"
+
+	// AddPetBadRequest is response for AddPet operation.
+	return
 }
 
-// AddPetBadRequest is response for AddPet operation.
 type AddPetBadRequest struct{}
 
-func (*AddPetBadRequest) addPetRes() {}
+func (*AddPetBadRequest) addPetRes() {
+	_ = "STUB: not implemented"
 
-// AddPetDef is default response for AddPet operation.
+	// AddPetDef is default response for AddPet operation.
+	return
+}
+
 type AddPetDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *AddPetDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *AddPetDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *AddPetDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *AddPetDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*AddPetDef) addPetRes() {
+	_ = "STUB: not implemented"
+
+	// AddPetUnprocessableEntity is response for AddPet operation.
+	return
 }
 
-func (*AddPetDef) addPetRes() {}
-
-// AddPetUnprocessableEntity is response for AddPet operation.
 type AddPetUnprocessableEntity struct{}
 
-func (*AddPetUnprocessableEntity) addPetRes() {}
+func (*AddPetUnprocessableEntity) addPetRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/ApiResponse
+	// Ref: #/components/schemas/ApiResponse
+	return
+}
+
 type ApiResponse struct {
 	Code    OptInt32  `json:"code"`
 	Type    OptString `json:"type"`
@@ -70,37 +84,49 @@ type ApiResponse struct {
 
 // GetCode returns the value of Code.
 func (s *ApiResponse) GetCode() OptInt32 {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return *new(OptInt32)
 }
 
-// GetType returns the value of Type.
 func (s *ApiResponse) GetType() OptString {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return *new(OptString)
 }
 
-// GetMessage returns the value of Message.
 func (s *ApiResponse) GetMessage() OptString {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return *new(OptString)
 }
 
-// SetCode sets the value of Code.
 func (s *ApiResponse) SetCode(val OptInt32) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *ApiResponse) SetType(val OptString) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
-func (s *ApiResponse) SetMessage(val OptString) {
-	s.Message = val
+func (s *ApiResponse) SetMessage(val OptString) { _ = "STUB: not implemented"; return }
+
+func (*ApiResponse) uploadFileRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Category
+	return
 }
 
-func (*ApiResponse) uploadFileRes() {}
-
-// Ref: #/components/schemas/Category
 type Category struct {
 	ID   OptInt64  `json:"id"`
 	Name OptString `json:"name"`
@@ -108,186 +134,226 @@ type Category struct {
 
 // GetID returns the value of ID.
 func (s *Category) GetID() OptInt64 {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(OptInt64)
 }
 
-// GetName returns the value of Name.
 func (s *Category) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptString)
 }
 
-// SetID sets the value of ID.
 func (s *Category) SetID(val OptInt64) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
-func (s *Category) SetName(val OptString) {
-	s.Name = val
-}
+func (s *Category) SetName(val OptString) { _ = "STUB: not implemented"; return }
 
 type CreateUserApplicationJSON User
 
-func (*CreateUserApplicationJSON) createUserReq() {}
+func (*CreateUserApplicationJSON) createUserReq() { _ = "STUB: not implemented"; return }
 
 type CreateUserApplicationXWwwFormUrlencoded User
 
-func (*CreateUserApplicationXWwwFormUrlencoded) createUserReq() {}
+func (*CreateUserApplicationXWwwFormUrlencoded) createUserReq() {
+	_ = "STUB: not implemented"
 
-// CreateUserDef is default response for CreateUser operation.
+	// CreateUserDef is default response for CreateUser operation.
+	return
+}
+
 type CreateUserDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *CreateUserDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *CreateUserDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *CreateUserDef) SetStatusCode(val int) {
-	s.StatusCode = val
-}
+func (s *CreateUserDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
 
-func (*CreateUserDef) createUserRes() {}
+func (*CreateUserDef) createUserRes() { _ = "STUB: not implemented"; return }
 
 type CreateUserReqEmptyBody struct{}
 
-func (*CreateUserReqEmptyBody) createUserReq() {}
+func (*CreateUserReqEmptyBody) createUserReq() {
+	_ = "STUB: not implemented"
 
-// CreateUsersWithListInputDef is default response for CreateUsersWithListInput operation.
+	// CreateUsersWithListInputDef is default response for CreateUsersWithListInput operation.
+	return
+}
+
 type CreateUsersWithListInputDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *CreateUsersWithListInputDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *CreateUsersWithListInputDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *CreateUsersWithListInputDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *CreateUsersWithListInputDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*CreateUsersWithListInputDef) createUsersWithListInputRes() {
+	_ = "STUB: not implemented"
+
+	// DeleteOrderBadRequest is response for DeleteOrder operation.
+	return
 }
 
-func (*CreateUsersWithListInputDef) createUsersWithListInputRes() {}
-
-// DeleteOrderBadRequest is response for DeleteOrder operation.
 type DeleteOrderBadRequest struct{}
 
-func (*DeleteOrderBadRequest) deleteOrderRes() {}
+func (*DeleteOrderBadRequest) deleteOrderRes() {
+	_ = "STUB: not implemented"
 
-// DeleteOrderDef is default response for DeleteOrder operation.
+	// DeleteOrderDef is default response for DeleteOrder operation.
+	return
+}
+
 type DeleteOrderDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *DeleteOrderDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *DeleteOrderDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *DeleteOrderDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *DeleteOrderDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*DeleteOrderDef) deleteOrderRes() {
+	_ = "STUB: not implemented"
+
+	// DeleteOrderNotFound is response for DeleteOrder operation.
+	return
 }
 
-func (*DeleteOrderDef) deleteOrderRes() {}
-
-// DeleteOrderNotFound is response for DeleteOrder operation.
 type DeleteOrderNotFound struct{}
 
-func (*DeleteOrderNotFound) deleteOrderRes() {}
+func (*DeleteOrderNotFound) deleteOrderRes() {
+	_ = "STUB: not implemented"
 
-// DeleteOrderOK is response for DeleteOrder operation.
+	// DeleteOrderOK is response for DeleteOrder operation.
+	return
+}
+
 type DeleteOrderOK struct{}
 
-func (*DeleteOrderOK) deleteOrderRes() {}
+func (*DeleteOrderOK) deleteOrderRes() {
+	_ = "STUB: not implemented"
 
-// DeletePetBadRequest is response for DeletePet operation.
+	// DeletePetBadRequest is response for DeletePet operation.
+	return
+}
+
 type DeletePetBadRequest struct{}
 
-func (*DeletePetBadRequest) deletePetRes() {}
+func (*DeletePetBadRequest) deletePetRes() {
+	_ = "STUB: not implemented"
 
-// DeletePetDef is default response for DeletePet operation.
+	// DeletePetDef is default response for DeletePet operation.
+	return
+}
+
 type DeletePetDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *DeletePetDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *DeletePetDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *DeletePetDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *DeletePetDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*DeletePetDef) deletePetRes() {
+	_ = "STUB: not implemented"
+
+	// DeletePetOK is response for DeletePet operation.
+	return
 }
 
-func (*DeletePetDef) deletePetRes() {}
-
-// DeletePetOK is response for DeletePet operation.
 type DeletePetOK struct{}
 
-func (*DeletePetOK) deletePetRes() {}
+func (*DeletePetOK) deletePetRes() {
+	_ = "STUB: not implemented"
 
-// DeleteUserBadRequest is response for DeleteUser operation.
+	// DeleteUserBadRequest is response for DeleteUser operation.
+	return
+}
+
 type DeleteUserBadRequest struct{}
 
-func (*DeleteUserBadRequest) deleteUserRes() {}
+func (*DeleteUserBadRequest) deleteUserRes() {
+	_ = "STUB: not implemented"
 
-// DeleteUserDef is default response for DeleteUser operation.
+	// DeleteUserDef is default response for DeleteUser operation.
+	return
+}
+
 type DeleteUserDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *DeleteUserDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *DeleteUserDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *DeleteUserDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *DeleteUserDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*DeleteUserDef) deleteUserRes() {
+	_ = "STUB: not implemented"
+
+	// DeleteUserNotFound is response for DeleteUser operation.
+	return
 }
 
-func (*DeleteUserDef) deleteUserRes() {}
-
-// DeleteUserNotFound is response for DeleteUser operation.
 type DeleteUserNotFound struct{}
 
-func (*DeleteUserNotFound) deleteUserRes() {}
+func (*DeleteUserNotFound) deleteUserRes() {
+	_ = "STUB: not implemented"
 
-// DeleteUserOK is response for DeleteUser operation.
+	// DeleteUserOK is response for DeleteUser operation.
+	return
+}
+
 type DeleteUserOK struct{}
 
-func (*DeleteUserOK) deleteUserRes() {}
+func (*DeleteUserOK) deleteUserRes() {
+	_ = "STUB: not implemented"
 
-// FindPetsByStatusBadRequest is response for FindPetsByStatus operation.
+	// FindPetsByStatusBadRequest is response for FindPetsByStatus operation.
+	return
+}
+
 type FindPetsByStatusBadRequest struct{}
 
-func (*FindPetsByStatusBadRequest) findPetsByStatusRes() {}
+func (*FindPetsByStatusBadRequest) findPetsByStatusRes() {
+	_ = "STUB: not implemented"
 
-// FindPetsByStatusDef is default response for FindPetsByStatus operation.
+	// FindPetsByStatusDef is default response for FindPetsByStatus operation.
+	return
+}
+
 type FindPetsByStatusDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *FindPetsByStatusDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *FindPetsByStatusDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *FindPetsByStatusDef) SetStatusCode(val int) {
-	s.StatusCode = val
-}
+func (s *FindPetsByStatusDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
 
-func (*FindPetsByStatusDef) findPetsByStatusRes() {}
+func (*FindPetsByStatusDef) findPetsByStatusRes() { _ = "STUB: not implemented"; return }
 
 type FindPetsByStatusOKApplicationJSON []Pet
 
-func (*FindPetsByStatusOKApplicationJSON) findPetsByStatusRes() {}
+func (*FindPetsByStatusOKApplicationJSON) findPetsByStatusRes() { _ = "STUB: not implemented"; return }
 
 type FindPetsByStatusStatus string
 
@@ -299,86 +365,64 @@ const (
 
 // AllValues returns all FindPetsByStatusStatus values.
 func (FindPetsByStatusStatus) AllValues() []FindPetsByStatusStatus {
-	return []FindPetsByStatusStatus{
-		FindPetsByStatusStatusAvailable,
-		FindPetsByStatusStatusPending,
-		FindPetsByStatusStatusSold,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s FindPetsByStatusStatus) MarshalText() ([]byte, error) {
-	switch s {
-	case FindPetsByStatusStatusAvailable:
-		return []byte(s), nil
-	case FindPetsByStatusStatusPending:
-		return []byte(s), nil
-	case FindPetsByStatusStatusSold:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *FindPetsByStatusStatus) UnmarshalText(data []byte) error {
-	switch FindPetsByStatusStatus(data) {
-	case FindPetsByStatusStatusAvailable:
-		*s = FindPetsByStatusStatusAvailable
-		return nil
-	case FindPetsByStatusStatusPending:
-		*s = FindPetsByStatusStatusPending
-		return nil
-	case FindPetsByStatusStatusSold:
-		*s = FindPetsByStatusStatusSold
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // FindPetsByTagsBadRequest is response for FindPetsByTags operation.
 type FindPetsByTagsBadRequest struct{}
 
-func (*FindPetsByTagsBadRequest) findPetsByTagsRes() {}
+func (*FindPetsByTagsBadRequest) findPetsByTagsRes() {
+	_ = "STUB: not implemented"
 
-// FindPetsByTagsDef is default response for FindPetsByTags operation.
+	// FindPetsByTagsDef is default response for FindPetsByTags operation.
+	return
+}
+
 type FindPetsByTagsDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *FindPetsByTagsDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *FindPetsByTagsDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *FindPetsByTagsDef) SetStatusCode(val int) {
-	s.StatusCode = val
-}
+func (s *FindPetsByTagsDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
 
-func (*FindPetsByTagsDef) findPetsByTagsRes() {}
+func (*FindPetsByTagsDef) findPetsByTagsRes() { _ = "STUB: not implemented"; return }
 
 type FindPetsByTagsOKApplicationJSON []Pet
 
-func (*FindPetsByTagsOKApplicationJSON) findPetsByTagsRes() {}
+func (*FindPetsByTagsOKApplicationJSON) findPetsByTagsRes() {
+	_ = "STUB: not implemented"
 
-// GetInventoryDef is default response for GetInventory operation.
+	// GetInventoryDef is default response for GetInventory operation.
+	return
+}
+
 type GetInventoryDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *GetInventoryDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *GetInventoryDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *GetInventoryDef) SetStatusCode(val int) {
-	s.StatusCode = val
-}
+func (s *GetInventoryDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
 
-func (*GetInventoryDef) getInventoryRes() {}
+func (*GetInventoryDef) getInventoryRes() { _ = "STUB: not implemented"; return }
 
 type GetInventoryOK map[string]int32
 
@@ -391,112 +435,144 @@ func (s *GetInventoryOK) init() GetInventoryOK {
 	return m
 }
 
-func (*GetInventoryOK) getInventoryRes() {}
+func (*GetInventoryOK) getInventoryRes() {
+	_ = "STUB: not implemented"
 
-// GetOrderByIdBadRequest is response for GetOrderById operation.
+	// GetOrderByIdBadRequest is response for GetOrderById operation.
+	return
+}
+
 type GetOrderByIdBadRequest struct{}
 
-func (*GetOrderByIdBadRequest) getOrderByIdRes() {}
+func (*GetOrderByIdBadRequest) getOrderByIdRes() {
+	_ = "STUB: not implemented"
 
-// GetOrderByIdDef is default response for GetOrderById operation.
+	// GetOrderByIdDef is default response for GetOrderById operation.
+	return
+}
+
 type GetOrderByIdDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *GetOrderByIdDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *GetOrderByIdDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *GetOrderByIdDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *GetOrderByIdDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*GetOrderByIdDef) getOrderByIdRes() {
+	_ = "STUB: not implemented"
+
+	// GetOrderByIdNotFound is response for GetOrderById operation.
+	return
 }
 
-func (*GetOrderByIdDef) getOrderByIdRes() {}
-
-// GetOrderByIdNotFound is response for GetOrderById operation.
 type GetOrderByIdNotFound struct{}
 
-func (*GetOrderByIdNotFound) getOrderByIdRes() {}
+func (*GetOrderByIdNotFound) getOrderByIdRes() {
+	_ = "STUB: not implemented"
 
-// GetPetByIdBadRequest is response for GetPetById operation.
+	// GetPetByIdBadRequest is response for GetPetById operation.
+	return
+}
+
 type GetPetByIdBadRequest struct{}
 
-func (*GetPetByIdBadRequest) getPetByIdRes() {}
+func (*GetPetByIdBadRequest) getPetByIdRes() {
+	_ = "STUB: not implemented"
 
-// GetPetByIdDef is default response for GetPetById operation.
+	// GetPetByIdDef is default response for GetPetById operation.
+	return
+}
+
 type GetPetByIdDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *GetPetByIdDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *GetPetByIdDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *GetPetByIdDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *GetPetByIdDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*GetPetByIdDef) getPetByIdRes() {
+	_ = "STUB: not implemented"
+
+	// GetPetByIdNotFound is response for GetPetById operation.
+	return
 }
 
-func (*GetPetByIdDef) getPetByIdRes() {}
-
-// GetPetByIdNotFound is response for GetPetById operation.
 type GetPetByIdNotFound struct{}
 
-func (*GetPetByIdNotFound) getPetByIdRes() {}
+func (*GetPetByIdNotFound) getPetByIdRes() {
+	_ = "STUB: not implemented"
 
-// GetUserByNameBadRequest is response for GetUserByName operation.
+	// GetUserByNameBadRequest is response for GetUserByName operation.
+	return
+}
+
 type GetUserByNameBadRequest struct{}
 
-func (*GetUserByNameBadRequest) getUserByNameRes() {}
+func (*GetUserByNameBadRequest) getUserByNameRes() {
+	_ = "STUB: not implemented"
 
-// GetUserByNameDef is default response for GetUserByName operation.
+	// GetUserByNameDef is default response for GetUserByName operation.
+	return
+}
+
 type GetUserByNameDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *GetUserByNameDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *GetUserByNameDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *GetUserByNameDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *GetUserByNameDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*GetUserByNameDef) getUserByNameRes() {
+	_ = "STUB: not implemented"
+
+	// GetUserByNameNotFound is response for GetUserByName operation.
+	return
 }
 
-func (*GetUserByNameDef) getUserByNameRes() {}
-
-// GetUserByNameNotFound is response for GetUserByName operation.
 type GetUserByNameNotFound struct{}
 
-func (*GetUserByNameNotFound) getUserByNameRes() {}
+func (*GetUserByNameNotFound) getUserByNameRes() {
+	_ = "STUB: not implemented"
 
-// LoginUserBadRequest is response for LoginUser operation.
+	// LoginUserBadRequest is response for LoginUser operation.
+	return
+}
+
 type LoginUserBadRequest struct{}
 
-func (*LoginUserBadRequest) loginUserRes() {}
+func (*LoginUserBadRequest) loginUserRes() {
+	_ = "STUB: not implemented"
 
-// LoginUserDef is default response for LoginUser operation.
+	// LoginUserDef is default response for LoginUser operation.
+	return
+}
+
 type LoginUserDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *LoginUserDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *LoginUserDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *LoginUserDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *LoginUserDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*LoginUserDef) loginUserRes() {
+	_ = "STUB: not implemented"
+
+	// LoginUserOKApplicationJSONHeaders wraps string with response headers.
+	return
 }
 
-func (*LoginUserDef) loginUserRes() {}
-
-// LoginUserOKApplicationJSONHeaders wraps string with response headers.
 type LoginUserOKApplicationJSONHeaders struct {
 	XExpiresAfter OptDateTime
 	XRateLimit    OptInt32
@@ -505,35 +581,48 @@ type LoginUserOKApplicationJSONHeaders struct {
 
 // GetXExpiresAfter returns the value of XExpiresAfter.
 func (s *LoginUserOKApplicationJSONHeaders) GetXExpiresAfter() OptDateTime {
-	return s.XExpiresAfter
+	_ = "STUB: not implemented"
+	return *
+
+	// GetXRateLimit returns the value of XRateLimit.
+	new(OptDateTime)
 }
 
-// GetXRateLimit returns the value of XRateLimit.
 func (s *LoginUserOKApplicationJSONHeaders) GetXRateLimit() OptInt32 {
-	return s.XRateLimit
+	_ = "STUB: not implemented"
+	return *
+
+	// GetResponse returns the value of Response.
+	new(OptInt32)
 }
 
-// GetResponse returns the value of Response.
 func (s *LoginUserOKApplicationJSONHeaders) GetResponse() string {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetXExpiresAfter sets the value of XExpiresAfter.
+	return ""
 }
 
-// SetXExpiresAfter sets the value of XExpiresAfter.
 func (s *LoginUserOKApplicationJSONHeaders) SetXExpiresAfter(val OptDateTime) {
-	s.XExpiresAfter = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetXRateLimit sets the value of XRateLimit.
 }
 
-// SetXRateLimit sets the value of XRateLimit.
 func (s *LoginUserOKApplicationJSONHeaders) SetXRateLimit(val OptInt32) {
-	s.XRateLimit = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetResponse sets the value of Response.
 }
 
-// SetResponse sets the value of Response.
 func (s *LoginUserOKApplicationJSONHeaders) SetResponse(val string) {
-	s.Response = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*LoginUserOKApplicationJSONHeaders) loginUserRes() {}
+func (*LoginUserOKApplicationJSONHeaders) loginUserRes() { _ = "STUB: not implemented"; return }
 
 type LoginUserOKApplicationXML struct {
 	Data io.Reader
@@ -543,10 +632,8 @@ type LoginUserOKApplicationXML struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s LoginUserOKApplicationXML) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // LoginUserOKApplicationXMLHeaders wraps LoginUserOKApplicationXML with response headers.
@@ -558,65 +645,81 @@ type LoginUserOKApplicationXMLHeaders struct {
 
 // GetXExpiresAfter returns the value of XExpiresAfter.
 func (s *LoginUserOKApplicationXMLHeaders) GetXExpiresAfter() OptDateTime {
-	return s.XExpiresAfter
+	_ = "STUB: not implemented"
+	return *
+
+	// GetXRateLimit returns the value of XRateLimit.
+	new(OptDateTime)
 }
 
-// GetXRateLimit returns the value of XRateLimit.
 func (s *LoginUserOKApplicationXMLHeaders) GetXRateLimit() OptInt32 {
-	return s.XRateLimit
+	_ = "STUB: not implemented"
+	return *
+
+	// GetResponse returns the value of Response.
+	new(OptInt32)
 }
 
-// GetResponse returns the value of Response.
 func (s *LoginUserOKApplicationXMLHeaders) GetResponse() LoginUserOKApplicationXML {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetXExpiresAfter sets the value of XExpiresAfter.
+	return *new(LoginUserOKApplicationXML)
 }
 
-// SetXExpiresAfter sets the value of XExpiresAfter.
 func (s *LoginUserOKApplicationXMLHeaders) SetXExpiresAfter(val OptDateTime) {
-	s.XExpiresAfter = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetXRateLimit sets the value of XRateLimit.
 }
 
-// SetXRateLimit sets the value of XRateLimit.
 func (s *LoginUserOKApplicationXMLHeaders) SetXRateLimit(val OptInt32) {
-	s.XRateLimit = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetResponse sets the value of Response.
 }
 
-// SetResponse sets the value of Response.
 func (s *LoginUserOKApplicationXMLHeaders) SetResponse(val LoginUserOKApplicationXML) {
-	s.Response = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*LoginUserOKApplicationXMLHeaders) loginUserRes() {}
+func (*LoginUserOKApplicationXMLHeaders) loginUserRes() {
+	_ = "STUB: not implemented"
 
-// LogoutUserDef is default response for LogoutUser operation.
+	// LogoutUserDef is default response for LogoutUser operation.
+	return
+}
+
 type LogoutUserDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *LogoutUserDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *LogoutUserDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *LogoutUserDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *LogoutUserDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*LogoutUserDef) logoutUserRes() {
+	_ = "STUB: not implemented"
+
+	// LogoutUserOK is response for LogoutUser operation.
+	return
 }
 
-func (*LogoutUserDef) logoutUserRes() {}
-
-// LogoutUserOK is response for LogoutUser operation.
 type LogoutUserOK struct{}
 
-func (*LogoutUserOK) logoutUserRes() {}
+func (*LogoutUserOK) logoutUserRes() {
+	_ = "STUB: not implemented"
 
-// NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
+	// NewOptBool returns new OptBool with value set to v.
+	return
 }
+
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -625,44 +728,26 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptCategory returns new OptCategory with value set to v.
-func NewOptCategory(v Category) OptCategory {
-	return OptCategory{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptCategory(v Category) OptCategory { _ = "STUB: not implemented"; return *new(OptCategory) }
 
 // OptCategory is optional Category.
 type OptCategory struct {
@@ -671,44 +756,29 @@ type OptCategory struct {
 }
 
 // IsSet returns true if OptCategory was set.
-func (o OptCategory) IsSet() bool { return o.Set }
+func (o OptCategory) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCategory) Reset() {
-	var v Category
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCategory) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptCategory) SetTo(v Category) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptCategory) SetTo(v Category) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCategory) Get() (v Category, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Category), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptCategory) Or(d Category) Category {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptCategory) Or(d Category) Category { _ = "STUB: not implemented"; return *new(Category) }
 
 // NewOptDateTime returns new OptDateTime with value set to v.
-func NewOptDateTime(v time.Time) OptDateTime {
-	return OptDateTime{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptDateTime(v time.Time) OptDateTime { _ = "STUB: not implemented"; return *new(OptDateTime) }
 
 // OptDateTime is optional time.Time.
 type OptDateTime struct {
@@ -717,44 +787,29 @@ type OptDateTime struct {
 }
 
 // IsSet returns true if OptDateTime was set.
-func (o OptDateTime) IsSet() bool { return o.Set }
+func (o OptDateTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDateTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDateTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDateTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDateTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDateTime) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDateTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDateTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptInt32 returns new OptInt32 with value set to v.
-func NewOptInt32(v int32) OptInt32 {
-	return OptInt32{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt32(v int32) OptInt32 { _ = "STUB: not implemented"; return *new(OptInt32) }
 
 // OptInt32 is optional int32.
 type OptInt32 struct {
@@ -763,44 +818,26 @@ type OptInt32 struct {
 }
 
 // IsSet returns true if OptInt32 was set.
-func (o OptInt32) IsSet() bool { return o.Set }
+func (o OptInt32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt32) Reset() {
-	var v int32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt32) SetTo(v int32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt32) Get() (v int32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt64 returns new OptInt64 with value set to v.
-func NewOptInt64(v int64) OptInt64 {
-	return OptInt64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt64(v int64) OptInt64 { _ = "STUB: not implemented"; return *new(OptInt64) }
 
 // OptInt64 is optional int64.
 type OptInt64 struct {
@@ -809,43 +846,28 @@ type OptInt64 struct {
 }
 
 // IsSet returns true if OptInt64 was set.
-func (o OptInt64) IsSet() bool { return o.Set }
+func (o OptInt64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt64) Reset() {
-	var v int64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt64) SetTo(v int64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt64) SetTo(v int64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt64) Get() (v int64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt64) Get() (v int64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt64) Or(d int64) int64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt64) Or(d int64) int64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptOrderStatus returns new OptOrderStatus with value set to v.
 func NewOptOrderStatus(v OrderStatus) OptOrderStatus {
-	return OptOrderStatus{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOrderStatus)
 }
 
 // OptOrderStatus is optional OrderStatus.
@@ -855,43 +877,34 @@ type OptOrderStatus struct {
 }
 
 // IsSet returns true if OptOrderStatus was set.
-func (o OptOrderStatus) IsSet() bool { return o.Set }
+func (o OptOrderStatus) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOrderStatus) Reset() {
-	var v OrderStatus
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOrderStatus) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptOrderStatus) SetTo(v OrderStatus) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptOrderStatus) SetTo(v OrderStatus) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOrderStatus) Get() (v OrderStatus, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OrderStatus), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOrderStatus) Or(d OrderStatus) OrderStatus {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OrderStatus)
 }
 
 // NewOptPetStatus returns new OptPetStatus with value set to v.
 func NewOptPetStatus(v PetStatus) OptPetStatus {
-	return OptPetStatus{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptPetStatus)
 }
 
 // OptPetStatus is optional PetStatus.
@@ -901,44 +914,29 @@ type OptPetStatus struct {
 }
 
 // IsSet returns true if OptPetStatus was set.
-func (o OptPetStatus) IsSet() bool { return o.Set }
+func (o OptPetStatus) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPetStatus) Reset() {
-	var v PetStatus
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPetStatus) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPetStatus) SetTo(v PetStatus) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPetStatus) SetTo(v PetStatus) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPetStatus) Get() (v PetStatus, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(PetStatus), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptPetStatus) Or(d PetStatus) PetStatus {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptPetStatus) Or(d PetStatus) PetStatus { _ = "STUB: not implemented"; return *new(PetStatus) }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -947,36 +945,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/Order
 type Order struct {
@@ -991,68 +976,92 @@ type Order struct {
 
 // GetID returns the value of ID.
 func (s *Order) GetID() OptInt64 {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetPetId returns the value of PetId.
+	return *new(OptInt64)
 }
 
-// GetPetId returns the value of PetId.
 func (s *Order) GetPetId() OptInt64 {
-	return s.PetId
+	_ = "STUB: not implemented"
+
+	// GetQuantity returns the value of Quantity.
+	return *new(OptInt64)
 }
 
-// GetQuantity returns the value of Quantity.
 func (s *Order) GetQuantity() OptInt32 {
-	return s.Quantity
+	_ = "STUB: not implemented"
+
+	// GetShipDate returns the value of ShipDate.
+	return *new(OptInt32)
 }
 
-// GetShipDate returns the value of ShipDate.
 func (s *Order) GetShipDate() OptDateTime {
-	return s.ShipDate
+	_ = "STUB: not implemented"
+
+	// GetStatus returns the value of Status.
+	return *new(OptDateTime)
 }
 
-// GetStatus returns the value of Status.
 func (s *Order) GetStatus() OptOrderStatus {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetComplete returns the value of Complete.
+	return *new(OptOrderStatus)
 }
 
-// GetComplete returns the value of Complete.
 func (s *Order) GetComplete() OptBool {
-	return s.Complete
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptBool)
 }
 
-// SetID sets the value of ID.
 func (s *Order) SetID(val OptInt64) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetPetId sets the value of PetId.
+	return
 }
 
-// SetPetId sets the value of PetId.
 func (s *Order) SetPetId(val OptInt64) {
-	s.PetId = val
+	_ = "STUB: not implemented"
+
+	// SetQuantity sets the value of Quantity.
+	return
 }
 
-// SetQuantity sets the value of Quantity.
 func (s *Order) SetQuantity(val OptInt32) {
-	s.Quantity = val
+	_ = "STUB: not implemented"
+
+	// SetShipDate sets the value of ShipDate.
+	return
 }
 
-// SetShipDate sets the value of ShipDate.
 func (s *Order) SetShipDate(val OptDateTime) {
-	s.ShipDate = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *Order) SetStatus(val OptOrderStatus) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetComplete sets the value of Complete.
+	return
 }
 
-// SetComplete sets the value of Complete.
-func (s *Order) SetComplete(val OptBool) {
-	s.Complete = val
+func (s *Order) SetComplete(val OptBool) { _ = "STUB: not implemented"; return }
+
+func (*Order) getOrderByIdRes() { _ = "STUB: not implemented"; return }
+func (*Order) placeOrderRes() {
+	_ = "STUB: not implemented"
+
+	// Order Status.
+	return
 }
 
-func (*Order) getOrderByIdRes() {}
-func (*Order) placeOrderRes()   {}
-
-// Order Status.
 type OrderStatus string
 
 const (
@@ -1062,44 +1071,13 @@ const (
 )
 
 // AllValues returns all OrderStatus values.
-func (OrderStatus) AllValues() []OrderStatus {
-	return []OrderStatus{
-		OrderStatusPlaced,
-		OrderStatusApproved,
-		OrderStatusDelivered,
-	}
-}
+func (OrderStatus) AllValues() []OrderStatus { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s OrderStatus) MarshalText() ([]byte, error) {
-	switch s {
-	case OrderStatusPlaced:
-		return []byte(s), nil
-	case OrderStatusApproved:
-		return []byte(s), nil
-	case OrderStatusDelivered:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s OrderStatus) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *OrderStatus) UnmarshalText(data []byte) error {
-	switch OrderStatus(data) {
-	case OrderStatusPlaced:
-		*s = OrderStatusPlaced
-		return nil
-	case OrderStatusApproved:
-		*s = OrderStatusApproved
-		return nil
-	case OrderStatusDelivered:
-		*s = OrderStatusDelivered
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *OrderStatus) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/Pet
 type Pet struct {
@@ -1114,70 +1092,94 @@ type Pet struct {
 
 // GetID returns the value of ID.
 func (s *Pet) GetID() OptInt64 {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(OptInt64)
 }
 
-// GetName returns the value of Name.
 func (s *Pet) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetCategory returns the value of Category.
+	return ""
 }
 
-// GetCategory returns the value of Category.
 func (s *Pet) GetCategory() OptCategory {
-	return s.Category
+	_ = "STUB: not implemented"
+
+	// GetPhotoUrls returns the value of PhotoUrls.
+	return *new(OptCategory)
 }
 
-// GetPhotoUrls returns the value of PhotoUrls.
 func (s *Pet) GetPhotoUrls() []string {
-	return s.PhotoUrls
+	_ = "STUB: not implemented"
+
+	// GetTags returns the value of Tags.
+	return nil
 }
 
-// GetTags returns the value of Tags.
 func (s *Pet) GetTags() []Tag {
-	return s.Tags
+	_ = "STUB: not implemented"
+
+	// GetStatus returns the value of Status.
+	return nil
 }
 
-// GetStatus returns the value of Status.
 func (s *Pet) GetStatus() OptPetStatus {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptPetStatus)
 }
 
-// SetID sets the value of ID.
 func (s *Pet) SetID(val OptInt64) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Pet) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetCategory sets the value of Category.
+	return
 }
 
-// SetCategory sets the value of Category.
 func (s *Pet) SetCategory(val OptCategory) {
-	s.Category = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoUrls sets the value of PhotoUrls.
+	return
 }
 
-// SetPhotoUrls sets the value of PhotoUrls.
 func (s *Pet) SetPhotoUrls(val []string) {
-	s.PhotoUrls = val
+	_ = "STUB: not implemented"
+
+	// SetTags sets the value of Tags.
+	return
 }
 
-// SetTags sets the value of Tags.
 func (s *Pet) SetTags(val []Tag) {
-	s.Tags = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
-func (s *Pet) SetStatus(val OptPetStatus) {
-	s.Status = val
+func (s *Pet) SetStatus(val OptPetStatus) { _ = "STUB: not implemented"; return }
+
+func (*Pet) addPetRes()     { _ = "STUB: not implemented"; return }
+func (*Pet) getPetByIdRes() { _ = "STUB: not implemented"; return }
+func (*Pet) updatePetRes()  { _ = "STUB: not implemented"; return }
+func (*Pet) updatePetWithFormRes() {
+	_ = "STUB: not implemented"
+
+	// Pet status in the store.
+	return
 }
 
-func (*Pet) addPetRes()            {}
-func (*Pet) getPetByIdRes()        {}
-func (*Pet) updatePetRes()         {}
-func (*Pet) updatePetWithFormRes() {}
-
-// Pet status in the store.
 type PetStatus string
 
 const (
@@ -1187,44 +1189,13 @@ const (
 )
 
 // AllValues returns all PetStatus values.
-func (PetStatus) AllValues() []PetStatus {
-	return []PetStatus{
-		PetStatusAvailable,
-		PetStatusPending,
-		PetStatusSold,
-	}
-}
+func (PetStatus) AllValues() []PetStatus { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s PetStatus) MarshalText() ([]byte, error) {
-	switch s {
-	case PetStatusAvailable:
-		return []byte(s), nil
-	case PetStatusPending:
-		return []byte(s), nil
-	case PetStatusSold:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s PetStatus) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *PetStatus) UnmarshalText(data []byte) error {
-	switch PetStatus(data) {
-	case PetStatusAvailable:
-		*s = PetStatusAvailable
-		return nil
-	case PetStatusPending:
-		*s = PetStatusPending
-		return nil
-	case PetStatusSold:
-		*s = PetStatusSold
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *PetStatus) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 type PetstoreAuth struct {
 	Token  string
@@ -1233,64 +1204,80 @@ type PetstoreAuth struct {
 
 // GetToken returns the value of Token.
 func (s *PetstoreAuth) GetToken() string {
-	return s.Token
+	_ = "STUB: not implemented"
+
+	// GetScopes returns the value of Scopes.
+	return ""
 }
 
-// GetScopes returns the value of Scopes.
 func (s *PetstoreAuth) GetScopes() []string {
-	return s.Scopes
+	_ = "STUB: not implemented"
+
+	// SetToken sets the value of Token.
+	return nil
 }
 
-// SetToken sets the value of Token.
 func (s *PetstoreAuth) SetToken(val string) {
-	s.Token = val
+	_ = "STUB: not implemented"
+
+	// SetScopes sets the value of Scopes.
+	return
 }
 
-// SetScopes sets the value of Scopes.
-func (s *PetstoreAuth) SetScopes(val []string) {
-	s.Scopes = val
-}
+func (s *PetstoreAuth) SetScopes(val []string) { _ = "STUB: not implemented"; return }
 
 type PlaceOrderApplicationJSON Order
 
-func (*PlaceOrderApplicationJSON) placeOrderReq() {}
+func (*PlaceOrderApplicationJSON) placeOrderReq() { _ = "STUB: not implemented"; return }
 
 type PlaceOrderApplicationXWwwFormUrlencoded Order
 
-func (*PlaceOrderApplicationXWwwFormUrlencoded) placeOrderReq() {}
+func (*PlaceOrderApplicationXWwwFormUrlencoded) placeOrderReq() {
+	_ = "STUB: not implemented"
 
-// PlaceOrderBadRequest is response for PlaceOrder operation.
+	// PlaceOrderBadRequest is response for PlaceOrder operation.
+	return
+}
+
 type PlaceOrderBadRequest struct{}
 
-func (*PlaceOrderBadRequest) placeOrderRes() {}
+func (*PlaceOrderBadRequest) placeOrderRes() {
+	_ = "STUB: not implemented"
 
-// PlaceOrderDef is default response for PlaceOrder operation.
+	// PlaceOrderDef is default response for PlaceOrder operation.
+	return
+}
+
 type PlaceOrderDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *PlaceOrderDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *PlaceOrderDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *PlaceOrderDef) SetStatusCode(val int) {
-	s.StatusCode = val
-}
+func (s *PlaceOrderDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
 
-func (*PlaceOrderDef) placeOrderRes() {}
+func (*PlaceOrderDef) placeOrderRes() { _ = "STUB: not implemented"; return }
 
 type PlaceOrderReqEmptyBody struct{}
 
-func (*PlaceOrderReqEmptyBody) placeOrderReq() {}
+func (*PlaceOrderReqEmptyBody) placeOrderReq() {
+	_ = "STUB: not implemented"
 
-// PlaceOrderUnprocessableEntity is response for PlaceOrder operation.
+	// PlaceOrderUnprocessableEntity is response for PlaceOrder operation.
+	return
+}
+
 type PlaceOrderUnprocessableEntity struct{}
 
-func (*PlaceOrderUnprocessableEntity) placeOrderRes() {}
+func (*PlaceOrderUnprocessableEntity) placeOrderRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/Tag
+	// Ref: #/components/schemas/Tag
+	return
+}
+
 type Tag struct {
 	ID   OptInt64  `json:"id"`
 	Name OptString `json:"name"`
@@ -1298,148 +1285,188 @@ type Tag struct {
 
 // GetID returns the value of ID.
 func (s *Tag) GetID() OptInt64 {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(OptInt64)
 }
 
-// GetName returns the value of Name.
 func (s *Tag) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptString)
 }
 
-// SetID sets the value of ID.
 func (s *Tag) SetID(val OptInt64) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Tag) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// UpdatePetBadRequest is response for UpdatePet operation.
+	return
 }
 
-// UpdatePetBadRequest is response for UpdatePet operation.
 type UpdatePetBadRequest struct{}
 
-func (*UpdatePetBadRequest) updatePetRes() {}
+func (*UpdatePetBadRequest) updatePetRes() {
+	_ = "STUB: not implemented"
 
-// UpdatePetDef is default response for UpdatePet operation.
+	// UpdatePetDef is default response for UpdatePet operation.
+	return
+}
+
 type UpdatePetDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *UpdatePetDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *UpdatePetDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *UpdatePetDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *UpdatePetDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*UpdatePetDef) updatePetRes() {
+	_ = "STUB: not implemented"
+
+	// UpdatePetNotFound is response for UpdatePet operation.
+	return
 }
 
-func (*UpdatePetDef) updatePetRes() {}
-
-// UpdatePetNotFound is response for UpdatePet operation.
 type UpdatePetNotFound struct{}
 
-func (*UpdatePetNotFound) updatePetRes() {}
+func (*UpdatePetNotFound) updatePetRes() {
+	_ = "STUB: not implemented"
 
-// UpdatePetUnprocessableEntity is response for UpdatePet operation.
+	// UpdatePetUnprocessableEntity is response for UpdatePet operation.
+	return
+}
+
 type UpdatePetUnprocessableEntity struct{}
 
-func (*UpdatePetUnprocessableEntity) updatePetRes() {}
+func (*UpdatePetUnprocessableEntity) updatePetRes() {
+	_ = "STUB: not implemented"
 
-// UpdatePetWithFormBadRequest is response for UpdatePetWithForm operation.
+	// UpdatePetWithFormBadRequest is response for UpdatePetWithForm operation.
+	return
+}
+
 type UpdatePetWithFormBadRequest struct{}
 
-func (*UpdatePetWithFormBadRequest) updatePetWithFormRes() {}
+func (*UpdatePetWithFormBadRequest) updatePetWithFormRes() {
+	_ = "STUB: not implemented"
 
-// UpdatePetWithFormDef is default response for UpdatePetWithForm operation.
+	// UpdatePetWithFormDef is default response for UpdatePetWithForm operation.
+	return
+}
+
 type UpdatePetWithFormDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *UpdatePetWithFormDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *UpdatePetWithFormDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *UpdatePetWithFormDef) SetStatusCode(val int) {
-	s.StatusCode = val
-}
+func (s *UpdatePetWithFormDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
 
-func (*UpdatePetWithFormDef) updatePetWithFormRes() {}
+func (*UpdatePetWithFormDef) updatePetWithFormRes() { _ = "STUB: not implemented"; return }
 
 type UpdateUserApplicationJSON User
 
-func (*UpdateUserApplicationJSON) updateUserReq() {}
+func (*UpdateUserApplicationJSON) updateUserReq() { _ = "STUB: not implemented"; return }
 
 type UpdateUserApplicationXWwwFormUrlencoded User
 
-func (*UpdateUserApplicationXWwwFormUrlencoded) updateUserReq() {}
+func (*UpdateUserApplicationXWwwFormUrlencoded) updateUserReq() {
+	_ = "STUB: not implemented"
 
-// UpdateUserBadRequest is response for UpdateUser operation.
+	// UpdateUserBadRequest is response for UpdateUser operation.
+	return
+}
+
 type UpdateUserBadRequest struct{}
 
-func (*UpdateUserBadRequest) updateUserRes() {}
+func (*UpdateUserBadRequest) updateUserRes() {
+	_ = "STUB: not implemented"
 
-// UpdateUserDef is default response for UpdateUser operation.
+	// UpdateUserDef is default response for UpdateUser operation.
+	return
+}
+
 type UpdateUserDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *UpdateUserDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *UpdateUserDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *UpdateUserDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *UpdateUserDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*UpdateUserDef) updateUserRes() {
+	_ = "STUB: not implemented"
+
+	// UpdateUserNotFound is response for UpdateUser operation.
+	return
 }
 
-func (*UpdateUserDef) updateUserRes() {}
-
-// UpdateUserNotFound is response for UpdateUser operation.
 type UpdateUserNotFound struct{}
 
-func (*UpdateUserNotFound) updateUserRes() {}
+func (*UpdateUserNotFound) updateUserRes() {
+	_ = "STUB: not implemented"
 
-// UpdateUserOK is response for UpdateUser operation.
+	// UpdateUserOK is response for UpdateUser operation.
+	return
+}
+
 type UpdateUserOK struct{}
 
-func (*UpdateUserOK) updateUserRes() {}
+func (*UpdateUserOK) updateUserRes() { _ = "STUB: not implemented"; return }
 
 type UpdateUserReqEmptyBody struct{}
 
-func (*UpdateUserReqEmptyBody) updateUserReq() {}
+func (*UpdateUserReqEmptyBody) updateUserReq() {
+	_ = "STUB: not implemented"
 
-// UploadFileBadRequest is response for UploadFile operation.
+	// UploadFileBadRequest is response for UploadFile operation.
+	return
+}
+
 type UploadFileBadRequest struct{}
 
-func (*UploadFileBadRequest) uploadFileRes() {}
+func (*UploadFileBadRequest) uploadFileRes() {
+	_ = "STUB: not implemented"
 
-// UploadFileDef is default response for UploadFile operation.
+	// UploadFileDef is default response for UploadFile operation.
+	return
+}
+
 type UploadFileDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *UploadFileDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *UploadFileDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
-func (s *UploadFileDef) SetStatusCode(val int) {
-	s.StatusCode = val
+func (s *UploadFileDef) SetStatusCode(val int) { _ = "STUB: not implemented"; return }
+
+func (*UploadFileDef) uploadFileRes() {
+	_ = "STUB: not implemented"
+
+	// UploadFileNotFound is response for UploadFile operation.
+	return
 }
 
-func (*UploadFileDef) uploadFileRes() {}
-
-// UploadFileNotFound is response for UploadFile operation.
 type UploadFileNotFound struct{}
 
-func (*UploadFileNotFound) uploadFileRes() {}
+func (*UploadFileNotFound) uploadFileRes() { _ = "STUB: not implemented"; return }
 
 type UploadFileReq struct {
 	Data io.Reader
@@ -1448,12 +1475,7 @@ type UploadFileReq struct {
 // Read reads data from the Data reader.
 //
 // Kept to satisfy the io.Reader interface.
-func (s UploadFileReq) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
-}
+func (s UploadFileReq) Read(p []byte) (n int, err error) { _ = "STUB: not implemented"; return 0, nil }
 
 // Ref: #/components/schemas/User
 type User struct {
@@ -1470,84 +1492,113 @@ type User struct {
 
 // GetID returns the value of ID.
 func (s *User) GetID() OptInt64 {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetUsername returns the value of Username.
+	return *new(OptInt64)
 }
 
-// GetUsername returns the value of Username.
 func (s *User) GetUsername() OptString {
-	return s.Username
+	_ = "STUB: not implemented"
+
+	// GetFirstName returns the value of FirstName.
+	return *new(OptString)
 }
 
-// GetFirstName returns the value of FirstName.
 func (s *User) GetFirstName() OptString {
-	return s.FirstName
+	_ = "STUB: not implemented"
+
+	// GetLastName returns the value of LastName.
+	return *new(OptString)
 }
 
-// GetLastName returns the value of LastName.
 func (s *User) GetLastName() OptString {
-	return s.LastName
+	_ = "STUB: not implemented"
+
+	// GetEmail returns the value of Email.
+	return *new(OptString)
 }
 
-// GetEmail returns the value of Email.
 func (s *User) GetEmail() OptString {
-	return s.Email
+	_ = "STUB: not implemented"
+
+	// GetPassword returns the value of Password.
+	return *new(OptString)
 }
 
-// GetPassword returns the value of Password.
 func (s *User) GetPassword() OptString {
-	return s.Password
+	_ = "STUB: not implemented"
+
+	// GetPhone returns the value of Phone.
+	return *new(OptString)
 }
 
-// GetPhone returns the value of Phone.
 func (s *User) GetPhone() OptString {
-	return s.Phone
+	_ = "STUB: not implemented"
+
+	// GetUserStatus returns the value of UserStatus.
+	return *new(OptString)
 }
 
-// GetUserStatus returns the value of UserStatus.
 func (s *User) GetUserStatus() OptInt32 {
-	return s.UserStatus
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptInt32)
 }
 
-// SetID sets the value of ID.
 func (s *User) SetID(val OptInt64) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetUsername sets the value of Username.
+	return
 }
 
-// SetUsername sets the value of Username.
 func (s *User) SetUsername(val OptString) {
-	s.Username = val
+	_ = "STUB: not implemented"
+
+	// SetFirstName sets the value of FirstName.
+	return
 }
 
-// SetFirstName sets the value of FirstName.
 func (s *User) SetFirstName(val OptString) {
-	s.FirstName = val
+	_ = "STUB: not implemented"
+
+	// SetLastName sets the value of LastName.
+	return
 }
 
-// SetLastName sets the value of LastName.
 func (s *User) SetLastName(val OptString) {
-	s.LastName = val
+	_ = "STUB: not implemented"
+
+	// SetEmail sets the value of Email.
+	return
 }
 
-// SetEmail sets the value of Email.
 func (s *User) SetEmail(val OptString) {
-	s.Email = val
+	_ = "STUB: not implemented"
+
+	// SetPassword sets the value of Password.
+	return
 }
 
-// SetPassword sets the value of Password.
 func (s *User) SetPassword(val OptString) {
-	s.Password = val
+	_ = "STUB: not implemented"
+
+	// SetPhone sets the value of Phone.
+	return
 }
 
-// SetPhone sets the value of Phone.
 func (s *User) SetPhone(val OptString) {
-	s.Phone = val
+	_ = "STUB: not implemented"
+
+	// SetUserStatus sets the value of UserStatus.
+	return
 }
 
-// SetUserStatus sets the value of UserStatus.
-func (s *User) SetUserStatus(val OptInt32) {
-	s.UserStatus = val
-}
+func (s *User) SetUserStatus(val OptInt32) { _ = "STUB: not implemented"; return }
 
-func (*User) createUserRes()               {}
-func (*User) createUsersWithListInputRes() {}
-func (*User) getUserByNameRes()            {}
+func (*User) createUserRes()               { _ = "STUB: not implemented"; return }
+func (*User) createUsersWithListInputRes() { _ = "STUB: not implemented"; return }
+func (*User) getUserByNameRes()            { _ = "STUB: not implemented"; return }

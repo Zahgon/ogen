@@ -13,12 +13,7 @@ type EchoOK struct {
 // Read reads data from the Data reader.
 //
 // Kept to satisfy the io.Reader interface.
-func (s EchoOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
-}
+func (s EchoOK) Read(p []byte) (n int, err error) { _ = "STUB: not implemented"; return 0, nil }
 
 type EchoReq struct {
 	Data io.Reader
@@ -27,9 +22,4 @@ type EchoReq struct {
 // Read reads data from the Data reader.
 //
 // Kept to satisfy the io.Reader interface.
-func (s EchoReq) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
-}
+func (s EchoReq) Read(p []byte) (n int, err error) { _ = "STUB: not implemented"; return 0, nil }

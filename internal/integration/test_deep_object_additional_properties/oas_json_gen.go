@@ -3,62 +3,32 @@
 package api
 
 import (
-	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
 )
 
 // Encode implements json.Marshaler.
-func (s QueryWithAdditionalPropertiesOK) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s QueryWithAdditionalPropertiesOK) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
 func (s QueryWithAdditionalPropertiesOK) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		e.Str(elem)
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes QueryWithAdditionalPropertiesOK from json.
 func (s *QueryWithAdditionalPropertiesOK) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode QueryWithAdditionalPropertiesOK to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem string
-		if err := func() error {
-			v, err := d.Str()
-			elem = string(v)
-			if err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode QueryWithAdditionalPropertiesOK")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s QueryWithAdditionalPropertiesOK) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *QueryWithAdditionalPropertiesOK) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }

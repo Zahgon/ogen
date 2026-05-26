@@ -3,284 +3,40 @@
 package api
 
 // setDefaults set default value of fields.
-func (s *CreateAnswerRequest) setDefaults() {
-	{
-		val := string("ada")
-		s.SearchModel.SetTo(val)
-	}
-	{
-		val := int(200)
-		s.MaxRerank.SetTo(val)
-	}
-	{
-		val := float64(0)
-		s.Temperature.SetTo(val)
-	}
-	{
-		s.Logprobs.Null = true
-	}
-	{
-		val := int(16)
-		s.MaxTokens.SetTo(val)
-	}
-	{
-		val := int(1)
-		s.N.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.ReturnMetadata.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.ReturnPrompt.SetTo(val)
-	}
-}
+func (s *CreateAnswerRequest) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateChatCompletionRequest) setDefaults() {
-	{
-		val := float64(1)
-		s.Temperature.SetTo(val)
-	}
-	{
-		val := float64(1)
-		s.TopP.SetTo(val)
-	}
-	{
-		val := int(1)
-		s.N.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.Stream.SetTo(val)
-	}
-	{
-		val := float64(0)
-		s.PresencePenalty.SetTo(val)
-	}
-	{
-		val := float64(0)
-		s.FrequencyPenalty.SetTo(val)
-	}
-}
+func (s *CreateChatCompletionRequest) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateClassificationRequest) setDefaults() {
-	{
-		val := string("ada")
-		s.SearchModel.SetTo(val)
-	}
-	{
-		val := float64(0)
-		s.Temperature.SetTo(val)
-	}
-	{
-		s.Logprobs.Null = true
-	}
-	{
-		val := int(200)
-		s.MaxExamples.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.ReturnPrompt.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.ReturnMetadata.SetTo(val)
-	}
-}
+func (s *CreateClassificationRequest) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateCompletionRequest) setDefaults() {
-	{
-		s.Suffix.Null = true
-	}
-	{
-		val := int(16)
-		s.MaxTokens.SetTo(val)
-	}
-	{
-		val := float64(1)
-		s.Temperature.SetTo(val)
-	}
-	{
-		val := float64(1)
-		s.TopP.SetTo(val)
-	}
-	{
-		val := int(1)
-		s.N.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.Stream.SetTo(val)
-	}
-	{
-		s.Logprobs.Null = true
-	}
-	{
-		val := bool(false)
-		s.Echo.SetTo(val)
-	}
-	{
-		val := float64(0)
-		s.PresencePenalty.SetTo(val)
-	}
-	{
-		val := float64(0)
-		s.FrequencyPenalty.SetTo(val)
-	}
-	{
-		val := int(1)
-		s.BestOf.SetTo(val)
-	}
-}
+func (s *CreateCompletionRequest) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateEditRequest) setDefaults() {
-	{
-		val := string("")
-		s.Input.SetTo(val)
-	}
-	{
-		val := int(1)
-		s.N.SetTo(val)
-	}
-	{
-		val := float64(1)
-		s.Temperature.SetTo(val)
-	}
-	{
-		val := float64(1)
-		s.TopP.SetTo(val)
-	}
-}
+func (s *CreateEditRequest) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateFineTuneRequest) setDefaults() {
-	{
-		val := string("curie")
-		s.Model.SetTo(val)
-	}
-	{
-		val := int(4)
-		s.NEpochs.SetTo(val)
-	}
-	{
-		s.BatchSize.Null = true
-	}
-	{
-		s.LearningRateMultiplier.Null = true
-	}
-	{
-		val := float64(0.01)
-		s.PromptLossWeight.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.ComputeClassificationMetrics.SetTo(val)
-	}
-	{
-		s.ClassificationNClasses.Null = true
-	}
-	{
-		s.ClassificationPositiveClass.Null = true
-	}
-	{
-		s.Suffix.Null = true
-	}
-}
+func (s *CreateFineTuneRequest) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateImageEditRequestMultipart) setDefaults() {
-	{
-		val := int(1)
-		s.N.SetTo(val)
-	}
-	{
-		val := CreateImageEditRequestMultipartSize("1024x1024")
-		s.Size.SetTo(val)
-	}
-	{
-		val := CreateImageEditRequestMultipartResponseFormat("url")
-		s.ResponseFormat.SetTo(val)
-	}
-}
+func (s *CreateImageEditRequestMultipart) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateImageRequest) setDefaults() {
-	{
-		val := int(1)
-		s.N.SetTo(val)
-	}
-	{
-		val := CreateImageRequestSize("1024x1024")
-		s.Size.SetTo(val)
-	}
-	{
-		val := CreateImageRequestResponseFormat("url")
-		s.ResponseFormat.SetTo(val)
-	}
-}
+func (s *CreateImageRequest) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateImageVariationRequestMultipart) setDefaults() {
-	{
-		val := int(1)
-		s.N.SetTo(val)
-	}
-	{
-		val := CreateImageVariationRequestMultipartSize("1024x1024")
-		s.Size.SetTo(val)
-	}
-	{
-		val := CreateImageVariationRequestMultipartResponseFormat("url")
-		s.ResponseFormat.SetTo(val)
-	}
-}
+func (s *CreateImageVariationRequestMultipart) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateModerationRequest) setDefaults() {
-	{
-		val := string("text-moderation-latest")
-		s.Model.SetTo(val)
-	}
-}
+func (s *CreateModerationRequest) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateSearchRequest) setDefaults() {
-	{
-		val := int(200)
-		s.MaxRerank.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.ReturnMetadata.SetTo(val)
-	}
-}
+func (s *CreateSearchRequest) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateTranscriptionRequestMultipart) setDefaults() {
-	{
-		val := string("json")
-		s.ResponseFormat.SetTo(val)
-	}
-	{
-		val := float64(0)
-		s.Temperature.SetTo(val)
-	}
-}
+func (s *CreateTranscriptionRequestMultipart) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *CreateTranslationRequestMultipart) setDefaults() {
-	{
-		val := string("json")
-		s.ResponseFormat.SetTo(val)
-	}
-	{
-		val := float64(0)
-		s.Temperature.SetTo(val)
-	}
-}
+func (s *CreateTranslationRequestMultipart) setDefaults() { _ = "STUB: not implemented"; return }

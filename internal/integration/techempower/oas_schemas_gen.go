@@ -10,15 +10,19 @@ type HelloWorld struct {
 
 // GetMessage returns the value of Message.
 func (s *HelloWorld) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return ""
 }
 
-// SetMessage sets the value of Message.
 func (s *HelloWorld) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/WorldObject
+	return
 }
 
-// Ref: #/components/schemas/WorldObject
 type WorldObject struct {
 	ID           int64 `json:"id"`
 	RandomNumber int64 `json:"randomNumber"`
@@ -26,22 +30,22 @@ type WorldObject struct {
 
 // GetID returns the value of ID.
 func (s *WorldObject) GetID() int64 {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetRandomNumber returns the value of RandomNumber.
+	return 0
 }
 
-// GetRandomNumber returns the value of RandomNumber.
-func (s *WorldObject) GetRandomNumber() int64 {
-	return s.RandomNumber
-}
+func (s *WorldObject) GetRandomNumber() int64 { _ = "STUB: not implemented"; return 0 }
 
 // SetID sets the value of ID.
 func (s *WorldObject) SetID(val int64) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetRandomNumber sets the value of RandomNumber.
+	return
 }
 
-// SetRandomNumber sets the value of RandomNumber.
-func (s *WorldObject) SetRandomNumber(val int64) {
-	s.RandomNumber = val
-}
+func (s *WorldObject) SetRandomNumber(val int64) { _ = "STUB: not implemented"; return }
 
 type WorldObjects []WorldObject

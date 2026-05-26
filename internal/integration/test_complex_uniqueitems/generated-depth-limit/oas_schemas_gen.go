@@ -8,13 +8,13 @@ type CreateItemsOK struct {
 
 // GetCreated returns the value of Created.
 func (s *CreateItemsOK) GetCreated() OptInt {
-	return s.Created
+	_ = "STUB: not implemented"
+
+	// SetCreated sets the value of Created.
+	return *new(OptInt)
 }
 
-// SetCreated sets the value of Created.
-func (s *CreateItemsOK) SetCreated(val OptInt) {
-	s.Created = val
-}
+func (s *CreateItemsOK) SetCreated(val OptInt) { _ = "STUB: not implemented"; return }
 
 type CreateItemsReq struct {
 	Items []Level1 `json:"items"`
@@ -22,16 +22,20 @@ type CreateItemsReq struct {
 
 // GetItems returns the value of Items.
 func (s *CreateItemsReq) GetItems() []Level1 {
-	return s.Items
+	_ = "STUB: not implemented"
+
+	// SetItems sets the value of Items.
+	return nil
 }
 
-// SetItems sets the value of Items.
 func (s *CreateItemsReq) SetItems(val []Level1) {
-	s.Items = val
+	_ = "STUB: not implemented"
+
+	// Level 1 of 12.
+	// Ref: #/components/schemas/Level1
+	return
 }
 
-// Level 1 of 12.
-// Ref: #/components/schemas/Level1
 type Level1 struct {
 	ID     string    `json:"id"`
 	Nested OptLevel2 `json:"nested"`
@@ -39,207 +43,254 @@ type Level1 struct {
 
 // GetID returns the value of ID.
 func (s *Level1) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetNested returns the value of Nested.
+	return ""
 }
 
-// GetNested returns the value of Nested.
 func (s *Level1) GetNested() OptLevel2 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptLevel2)
 }
 
-// SetID sets the value of ID.
 func (s *Level1) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return
 }
 
-// SetNested sets the value of Nested.
 func (s *Level1) SetNested(val OptLevel2) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// Level 10 of 12.
+	// Ref: #/components/schemas/Level10
+	return
 }
 
-// Level 10 of 12.
-// Ref: #/components/schemas/Level10
 type Level10 struct {
 	Nested OptLevel11 `json:"nested"`
 }
 
 // GetNested returns the value of Nested.
 func (s *Level10) GetNested() OptLevel11 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return *new(OptLevel11)
 }
 
-// SetNested sets the value of Nested.
 func (s *Level10) SetNested(val OptLevel11) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// Level 11 of 12.
+	// Ref: #/components/schemas/Level11
+	return
 }
 
-// Level 11 of 12.
-// Ref: #/components/schemas/Level11
 type Level11 struct {
 	Nested OptLevel12 `json:"nested"`
 }
 
 // GetNested returns the value of Nested.
 func (s *Level11) GetNested() OptLevel12 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return *new(OptLevel12)
 }
 
-// SetNested sets the value of Nested.
 func (s *Level11) SetNested(val OptLevel12) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// Level 12 of 12 (deepest level).
+	// Ref: #/components/schemas/Level12
+	return
 }
 
-// Level 12 of 12 (deepest level).
-// Ref: #/components/schemas/Level12
 type Level12 struct {
 	Value OptString `json:"value"`
 }
 
 // GetValue returns the value of Value.
 func (s *Level12) GetValue() OptString {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return *new(OptString)
 }
 
-// SetValue sets the value of Value.
 func (s *Level12) SetValue(val OptString) {
-	s.Value = val
+	_ = "STUB: not implemented"
+
+	// Level 2 of 12.
+	// Ref: #/components/schemas/Level2
+	return
 }
 
-// Level 2 of 12.
-// Ref: #/components/schemas/Level2
 type Level2 struct {
 	Nested OptLevel3 `json:"nested"`
 }
 
 // GetNested returns the value of Nested.
 func (s *Level2) GetNested() OptLevel3 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return *new(OptLevel3)
 }
 
-// SetNested sets the value of Nested.
 func (s *Level2) SetNested(val OptLevel3) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// Level 3 of 12.
+	// Ref: #/components/schemas/Level3
+	return
 }
 
-// Level 3 of 12.
-// Ref: #/components/schemas/Level3
 type Level3 struct {
 	Nested OptLevel4 `json:"nested"`
 }
 
 // GetNested returns the value of Nested.
 func (s *Level3) GetNested() OptLevel4 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return *new(OptLevel4)
 }
 
-// SetNested sets the value of Nested.
 func (s *Level3) SetNested(val OptLevel4) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// Level 4 of 12.
+	// Ref: #/components/schemas/Level4
+	return
 }
 
-// Level 4 of 12.
-// Ref: #/components/schemas/Level4
 type Level4 struct {
 	Nested OptLevel5 `json:"nested"`
 }
 
 // GetNested returns the value of Nested.
 func (s *Level4) GetNested() OptLevel5 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return *new(OptLevel5)
 }
 
-// SetNested sets the value of Nested.
 func (s *Level4) SetNested(val OptLevel5) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// Level 5 of 12.
+	// Ref: #/components/schemas/Level5
+	return
 }
 
-// Level 5 of 12.
-// Ref: #/components/schemas/Level5
 type Level5 struct {
 	Nested OptLevel6 `json:"nested"`
 }
 
 // GetNested returns the value of Nested.
 func (s *Level5) GetNested() OptLevel6 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return *new(OptLevel6)
 }
 
-// SetNested sets the value of Nested.
 func (s *Level5) SetNested(val OptLevel6) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// Level 6 of 12.
+	// Ref: #/components/schemas/Level6
+	return
 }
 
-// Level 6 of 12.
-// Ref: #/components/schemas/Level6
 type Level6 struct {
 	Nested OptLevel7 `json:"nested"`
 }
 
 // GetNested returns the value of Nested.
 func (s *Level6) GetNested() OptLevel7 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return *new(OptLevel7)
 }
 
-// SetNested sets the value of Nested.
 func (s *Level6) SetNested(val OptLevel7) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// Level 7 of 12.
+	// Ref: #/components/schemas/Level7
+	return
 }
 
-// Level 7 of 12.
-// Ref: #/components/schemas/Level7
 type Level7 struct {
 	Nested OptLevel8 `json:"nested"`
 }
 
 // GetNested returns the value of Nested.
 func (s *Level7) GetNested() OptLevel8 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return *new(OptLevel8)
 }
 
-// SetNested sets the value of Nested.
 func (s *Level7) SetNested(val OptLevel8) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// Level 8 of 12.
+	// Ref: #/components/schemas/Level8
+	return
 }
 
-// Level 8 of 12.
-// Ref: #/components/schemas/Level8
 type Level8 struct {
 	Nested OptLevel9 `json:"nested"`
 }
 
 // GetNested returns the value of Nested.
 func (s *Level8) GetNested() OptLevel9 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return *new(OptLevel9)
 }
 
-// SetNested sets the value of Nested.
 func (s *Level8) SetNested(val OptLevel9) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// Level 9 of 12.
+	// Ref: #/components/schemas/Level9
+	return
 }
 
-// Level 9 of 12.
-// Ref: #/components/schemas/Level9
 type Level9 struct {
 	Nested OptLevel10 `json:"nested"`
 }
 
 // GetNested returns the value of Nested.
 func (s *Level9) GetNested() OptLevel10 {
-	return s.Nested
+	_ = "STUB: not implemented"
+
+	// SetNested sets the value of Nested.
+	return *new(OptLevel10)
 }
 
-// SetNested sets the value of Nested.
 func (s *Level9) SetNested(val OptLevel10) {
-	s.Nested = val
+	_ = "STUB: not implemented"
+
+	// NewOptInt returns new OptInt with value set to v.
+	return
 }
 
-// NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -248,44 +299,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptLevel10 returns new OptLevel10 with value set to v.
-func NewOptLevel10(v Level10) OptLevel10 {
-	return OptLevel10{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel10(v Level10) OptLevel10 { _ = "STUB: not implemented"; return *new(OptLevel10) }
 
 // OptLevel10 is optional Level10.
 type OptLevel10 struct {
@@ -294,44 +327,29 @@ type OptLevel10 struct {
 }
 
 // IsSet returns true if OptLevel10 was set.
-func (o OptLevel10) IsSet() bool { return o.Set }
+func (o OptLevel10) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel10) Reset() {
-	var v Level10
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel10) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel10) SetTo(v Level10) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel10) SetTo(v Level10) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptLevel10) Get() (v Level10, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Level10), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel10) Or(d Level10) Level10 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel10) Or(d Level10) Level10 { _ = "STUB: not implemented"; return *new(Level10) }
 
 // NewOptLevel11 returns new OptLevel11 with value set to v.
-func NewOptLevel11(v Level11) OptLevel11 {
-	return OptLevel11{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel11(v Level11) OptLevel11 { _ = "STUB: not implemented"; return *new(OptLevel11) }
 
 // OptLevel11 is optional Level11.
 type OptLevel11 struct {
@@ -340,44 +358,29 @@ type OptLevel11 struct {
 }
 
 // IsSet returns true if OptLevel11 was set.
-func (o OptLevel11) IsSet() bool { return o.Set }
+func (o OptLevel11) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel11) Reset() {
-	var v Level11
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel11) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel11) SetTo(v Level11) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel11) SetTo(v Level11) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptLevel11) Get() (v Level11, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Level11), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel11) Or(d Level11) Level11 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel11) Or(d Level11) Level11 { _ = "STUB: not implemented"; return *new(Level11) }
 
 // NewOptLevel12 returns new OptLevel12 with value set to v.
-func NewOptLevel12(v Level12) OptLevel12 {
-	return OptLevel12{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel12(v Level12) OptLevel12 { _ = "STUB: not implemented"; return *new(OptLevel12) }
 
 // OptLevel12 is optional Level12.
 type OptLevel12 struct {
@@ -386,44 +389,29 @@ type OptLevel12 struct {
 }
 
 // IsSet returns true if OptLevel12 was set.
-func (o OptLevel12) IsSet() bool { return o.Set }
+func (o OptLevel12) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel12) Reset() {
-	var v Level12
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel12) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel12) SetTo(v Level12) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel12) SetTo(v Level12) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptLevel12) Get() (v Level12, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Level12), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel12) Or(d Level12) Level12 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel12) Or(d Level12) Level12 { _ = "STUB: not implemented"; return *new(Level12) }
 
 // NewOptLevel2 returns new OptLevel2 with value set to v.
-func NewOptLevel2(v Level2) OptLevel2 {
-	return OptLevel2{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel2(v Level2) OptLevel2 { _ = "STUB: not implemented"; return *new(OptLevel2) }
 
 // OptLevel2 is optional Level2.
 type OptLevel2 struct {
@@ -432,44 +420,26 @@ type OptLevel2 struct {
 }
 
 // IsSet returns true if OptLevel2 was set.
-func (o OptLevel2) IsSet() bool { return o.Set }
+func (o OptLevel2) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel2) Reset() {
-	var v Level2
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel2) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel2) SetTo(v Level2) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel2) SetTo(v Level2) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptLevel2) Get() (v Level2, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptLevel2) Get() (v Level2, ok bool) { _ = "STUB: not implemented"; return *new(Level2), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel2) Or(d Level2) Level2 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel2) Or(d Level2) Level2 { _ = "STUB: not implemented"; return *new(Level2) }
 
 // NewOptLevel3 returns new OptLevel3 with value set to v.
-func NewOptLevel3(v Level3) OptLevel3 {
-	return OptLevel3{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel3(v Level3) OptLevel3 { _ = "STUB: not implemented"; return *new(OptLevel3) }
 
 // OptLevel3 is optional Level3.
 type OptLevel3 struct {
@@ -478,44 +448,26 @@ type OptLevel3 struct {
 }
 
 // IsSet returns true if OptLevel3 was set.
-func (o OptLevel3) IsSet() bool { return o.Set }
+func (o OptLevel3) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel3) Reset() {
-	var v Level3
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel3) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel3) SetTo(v Level3) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel3) SetTo(v Level3) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptLevel3) Get() (v Level3, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptLevel3) Get() (v Level3, ok bool) { _ = "STUB: not implemented"; return *new(Level3), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel3) Or(d Level3) Level3 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel3) Or(d Level3) Level3 { _ = "STUB: not implemented"; return *new(Level3) }
 
 // NewOptLevel4 returns new OptLevel4 with value set to v.
-func NewOptLevel4(v Level4) OptLevel4 {
-	return OptLevel4{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel4(v Level4) OptLevel4 { _ = "STUB: not implemented"; return *new(OptLevel4) }
 
 // OptLevel4 is optional Level4.
 type OptLevel4 struct {
@@ -524,44 +476,26 @@ type OptLevel4 struct {
 }
 
 // IsSet returns true if OptLevel4 was set.
-func (o OptLevel4) IsSet() bool { return o.Set }
+func (o OptLevel4) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel4) Reset() {
-	var v Level4
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel4) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel4) SetTo(v Level4) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel4) SetTo(v Level4) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptLevel4) Get() (v Level4, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptLevel4) Get() (v Level4, ok bool) { _ = "STUB: not implemented"; return *new(Level4), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel4) Or(d Level4) Level4 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel4) Or(d Level4) Level4 { _ = "STUB: not implemented"; return *new(Level4) }
 
 // NewOptLevel5 returns new OptLevel5 with value set to v.
-func NewOptLevel5(v Level5) OptLevel5 {
-	return OptLevel5{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel5(v Level5) OptLevel5 { _ = "STUB: not implemented"; return *new(OptLevel5) }
 
 // OptLevel5 is optional Level5.
 type OptLevel5 struct {
@@ -570,44 +504,26 @@ type OptLevel5 struct {
 }
 
 // IsSet returns true if OptLevel5 was set.
-func (o OptLevel5) IsSet() bool { return o.Set }
+func (o OptLevel5) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel5) Reset() {
-	var v Level5
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel5) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel5) SetTo(v Level5) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel5) SetTo(v Level5) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptLevel5) Get() (v Level5, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptLevel5) Get() (v Level5, ok bool) { _ = "STUB: not implemented"; return *new(Level5), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel5) Or(d Level5) Level5 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel5) Or(d Level5) Level5 { _ = "STUB: not implemented"; return *new(Level5) }
 
 // NewOptLevel6 returns new OptLevel6 with value set to v.
-func NewOptLevel6(v Level6) OptLevel6 {
-	return OptLevel6{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel6(v Level6) OptLevel6 { _ = "STUB: not implemented"; return *new(OptLevel6) }
 
 // OptLevel6 is optional Level6.
 type OptLevel6 struct {
@@ -616,44 +532,26 @@ type OptLevel6 struct {
 }
 
 // IsSet returns true if OptLevel6 was set.
-func (o OptLevel6) IsSet() bool { return o.Set }
+func (o OptLevel6) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel6) Reset() {
-	var v Level6
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel6) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel6) SetTo(v Level6) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel6) SetTo(v Level6) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptLevel6) Get() (v Level6, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptLevel6) Get() (v Level6, ok bool) { _ = "STUB: not implemented"; return *new(Level6), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel6) Or(d Level6) Level6 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel6) Or(d Level6) Level6 { _ = "STUB: not implemented"; return *new(Level6) }
 
 // NewOptLevel7 returns new OptLevel7 with value set to v.
-func NewOptLevel7(v Level7) OptLevel7 {
-	return OptLevel7{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel7(v Level7) OptLevel7 { _ = "STUB: not implemented"; return *new(OptLevel7) }
 
 // OptLevel7 is optional Level7.
 type OptLevel7 struct {
@@ -662,44 +560,26 @@ type OptLevel7 struct {
 }
 
 // IsSet returns true if OptLevel7 was set.
-func (o OptLevel7) IsSet() bool { return o.Set }
+func (o OptLevel7) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel7) Reset() {
-	var v Level7
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel7) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel7) SetTo(v Level7) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel7) SetTo(v Level7) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptLevel7) Get() (v Level7, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptLevel7) Get() (v Level7, ok bool) { _ = "STUB: not implemented"; return *new(Level7), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel7) Or(d Level7) Level7 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel7) Or(d Level7) Level7 { _ = "STUB: not implemented"; return *new(Level7) }
 
 // NewOptLevel8 returns new OptLevel8 with value set to v.
-func NewOptLevel8(v Level8) OptLevel8 {
-	return OptLevel8{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel8(v Level8) OptLevel8 { _ = "STUB: not implemented"; return *new(OptLevel8) }
 
 // OptLevel8 is optional Level8.
 type OptLevel8 struct {
@@ -708,44 +588,26 @@ type OptLevel8 struct {
 }
 
 // IsSet returns true if OptLevel8 was set.
-func (o OptLevel8) IsSet() bool { return o.Set }
+func (o OptLevel8) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel8) Reset() {
-	var v Level8
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel8) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel8) SetTo(v Level8) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel8) SetTo(v Level8) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptLevel8) Get() (v Level8, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptLevel8) Get() (v Level8, ok bool) { _ = "STUB: not implemented"; return *new(Level8), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel8) Or(d Level8) Level8 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel8) Or(d Level8) Level8 { _ = "STUB: not implemented"; return *new(Level8) }
 
 // NewOptLevel9 returns new OptLevel9 with value set to v.
-func NewOptLevel9(v Level9) OptLevel9 {
-	return OptLevel9{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLevel9(v Level9) OptLevel9 { _ = "STUB: not implemented"; return *new(OptLevel9) }
 
 // OptLevel9 is optional Level9.
 type OptLevel9 struct {
@@ -754,44 +616,26 @@ type OptLevel9 struct {
 }
 
 // IsSet returns true if OptLevel9 was set.
-func (o OptLevel9) IsSet() bool { return o.Set }
+func (o OptLevel9) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLevel9) Reset() {
-	var v Level9
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLevel9) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLevel9) SetTo(v Level9) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLevel9) SetTo(v Level9) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptLevel9) Get() (v Level9, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptLevel9) Get() (v Level9, ok bool) { _ = "STUB: not implemented"; return *new(Level9), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLevel9) Or(d Level9) Level9 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLevel9) Or(d Level9) Level9 { _ = "STUB: not implemented"; return *new(Level9) }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -800,33 +644,20 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }

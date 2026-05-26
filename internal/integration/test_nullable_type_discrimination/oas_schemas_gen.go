@@ -20,52 +20,34 @@ const (
 )
 
 // IsStringData reports whether Data is StringData.
-func (s Data) IsStringData() bool { return s.Type == StringDataData }
+func (s Data) IsStringData() bool { _ = "STUB: not implemented"; return false }
 
 // IsNumberData reports whether Data is NumberData.
-func (s Data) IsNumberData() bool { return s.Type == NumberDataData }
+func (s Data) IsNumberData() bool { _ = "STUB: not implemented"; return false }
 
 // SetStringData sets Data to StringData.
-func (s *Data) SetStringData(v StringData) {
-	s.Type = StringDataData
-	s.StringData = v
-}
+func (s *Data) SetStringData(v StringData) { _ = "STUB: not implemented"; return }
 
 // GetStringData returns StringData and true boolean if Data is StringData.
 func (s Data) GetStringData() (v StringData, ok bool) {
-	if !s.IsStringData() {
-		return v, false
-	}
-	return s.StringData, true
+	_ = "STUB: not implemented"
+	return *new(StringData), false
 }
 
 // NewStringDataData returns new Data from StringData.
-func NewStringDataData(v StringData) Data {
-	var s Data
-	s.SetStringData(v)
-	return s
-}
+func NewStringDataData(v StringData) Data { _ = "STUB: not implemented"; return *new(Data) }
 
 // SetNumberData sets Data to NumberData.
-func (s *Data) SetNumberData(v NumberData) {
-	s.Type = NumberDataData
-	s.NumberData = v
-}
+func (s *Data) SetNumberData(v NumberData) { _ = "STUB: not implemented"; return }
 
 // GetNumberData returns NumberData and true boolean if Data is NumberData.
 func (s Data) GetNumberData() (v NumberData, ok bool) {
-	if !s.IsNumberData() {
-		return v, false
-	}
-	return s.NumberData, true
+	_ = "STUB: not implemented"
+	return *new(NumberData), false
 }
 
 // NewNumberDataData returns new Data from NumberData.
-func NewNumberDataData(v NumberData) Data {
-	var s Data
-	s.SetNumberData(v)
-	return s
-}
+func NewNumberDataData(v NumberData) Data { _ = "STUB: not implemented"; return *new(Data) }
 
 // Ref: #/components/schemas/NumberData
 type NumberData struct {
@@ -76,31 +58,34 @@ type NumberData struct {
 
 // GetName returns the value of Name.
 func (s *NumberData) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetCount returns the value of Count.
+	return ""
 }
 
-// GetCount returns the value of Count.
 func (s *NumberData) GetCount() OptNilInt {
-	return s.Count
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return *new(OptNilInt)
 }
 
-// SetName sets the value of Name.
 func (s *NumberData) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetCount sets the value of Count.
+	return
 }
 
-// SetCount sets the value of Count.
 func (s *NumberData) SetCount(val OptNilInt) {
-	s.Count = val
+	_ = "STUB: not implemented"
+
+	// NewOptNilInt returns new OptNilInt with value set to v.
+	return
 }
 
-// NewOptNilInt returns new OptNilInt with value set to v.
-func NewOptNilInt(v int) OptNilInt {
-	return OptNilInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilInt(v int) OptNilInt { _ = "STUB: not implemented"; return *new(OptNilInt) }
 
 // OptNilInt is optional nullable int.
 type OptNilInt struct {
@@ -110,65 +95,39 @@ type OptNilInt struct {
 }
 
 // IsSet returns true if OptNilInt was set.
-func (o OptNilInt) IsSet() bool { return o.Set }
+func (o OptNilInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilInt) SetTo(v int) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilInt) IsNull() bool { return o.Null }
+func (o OptNilInt) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilInt) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilInt) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilInt) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilInt) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilInt) Get() (v int, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilString returns new OptNilString with value set to v.
-func NewOptNilString(v string) OptNilString {
-	return OptNilString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilString(v string) OptNilString { _ = "STUB: not implemented"; return *new(OptNilString) }
 
 // OptNilString is optional nullable string.
 type OptNilString struct {
@@ -178,57 +137,36 @@ type OptNilString struct {
 }
 
 // IsSet returns true if OptNilString was set.
-func (o OptNilString) IsSet() bool { return o.Set }
+func (o OptNilString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilString) SetTo(v string) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilString) IsNull() bool { return o.Null }
+func (o OptNilString) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilString) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilString) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilString) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilString) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilString) Get() (v string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/StringData
 type StringData struct {
@@ -239,20 +177,24 @@ type StringData struct {
 
 // GetName returns the value of Name.
 func (s *StringData) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetMetadata returns the value of Metadata.
+	return ""
 }
 
-// GetMetadata returns the value of Metadata.
 func (s *StringData) GetMetadata() OptNilString {
-	return s.Metadata
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return *new(OptNilString)
 }
 
-// SetName sets the value of Name.
 func (s *StringData) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetMetadata sets the value of Metadata.
+	return
 }
 
-// SetMetadata sets the value of Metadata.
-func (s *StringData) SetMetadata(val OptNilString) {
-	s.Metadata = val
-}
+func (s *StringData) SetMetadata(val OptNilString) { _ = "STUB: not implemented"; return }

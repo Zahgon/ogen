@@ -3,713 +3,165 @@
 package api
 
 // SetFake set fake values.
-func (s *Balloon) SetFake() {
-	{
-		{
-			s.AmountMib = int(0)
-		}
-	}
-	{
-		{
-			s.DeflateOnOom = true
-		}
-	}
-	{
-		{
-			s.StatsPollingIntervalS.SetFake()
-		}
-	}
-}
+func (s *Balloon) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BalloonStats) SetFake() {
-	{
-		{
-			s.TargetPages = int(0)
-		}
-	}
-	{
-		{
-			s.ActualPages = int(0)
-		}
-	}
-	{
-		{
-			s.TargetMib = int(0)
-		}
-	}
-	{
-		{
-			s.ActualMib = int(0)
-		}
-	}
-	{
-		{
-			s.SwapIn.SetFake()
-		}
-	}
-	{
-		{
-			s.SwapOut.SetFake()
-		}
-	}
-	{
-		{
-			s.MajorFaults.SetFake()
-		}
-	}
-	{
-		{
-			s.MinorFaults.SetFake()
-		}
-	}
-	{
-		{
-			s.FreeMemory.SetFake()
-		}
-	}
-	{
-		{
-			s.TotalMemory.SetFake()
-		}
-	}
-	{
-		{
-			s.AvailableMemory.SetFake()
-		}
-	}
-	{
-		{
-			s.DiskCaches.SetFake()
-		}
-	}
-	{
-		{
-			s.HugetlbAllocations.SetFake()
-		}
-	}
-	{
-		{
-			s.HugetlbFailures.SetFake()
-		}
-	}
-}
+func (s *BalloonStats) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BalloonStatsUpdate) SetFake() {
-	{
-		{
-			s.StatsPollingIntervalS = int(0)
-		}
-	}
-}
+func (s *BalloonStatsUpdate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BalloonUpdate) SetFake() {
-	{
-		{
-			s.AmountMib = int(0)
-		}
-	}
-}
+func (s *BalloonUpdate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BootSource) SetFake() {
-	{
-		{
-			s.BootArgs.SetFake()
-		}
-	}
-	{
-		{
-			s.InitrdPath.SetFake()
-		}
-	}
-	{
-		{
-			s.KernelImagePath = "string"
-		}
-	}
-}
+func (s *BootSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *CpuTemplate) SetFake() {
-	*s = CpuTemplateC3
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *Drive) SetFake() {
-	{
-		{
-			s.DriveID = "string"
-		}
-	}
-	{
-		{
-			s.CacheType.SetFake()
-		}
-	}
-	{
-		{
-			s.IsReadOnly = true
-		}
-	}
-	{
-		{
-			s.IsRootDevice = true
-		}
-	}
-	{
-		{
-			s.Partuuid.SetFake()
-		}
-	}
-	{
-		{
-			s.PathOnHost = "string"
-		}
-	}
-	{
-		{
-			s.RateLimiter.SetFake()
-		}
-	}
-}
+func (s *Drive) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Error) SetFake() {
-	{
-		{
-			s.FaultMessage.SetFake()
-		}
-	}
-}
+func (s *Error) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FullVmConfiguration) SetFake() {
-	{
-		{
-			s.BalloonDevice.SetFake()
-		}
-	}
-	{
-		{
-			s.BlockDevices = nil
-			for i := 0; i < 0; i++ {
-				var elem Drive
-				{
-					elem.SetFake()
-				}
-				s.BlockDevices = append(s.BlockDevices, elem)
-			}
-		}
-	}
-	{
-		{
-			s.BootSource.SetFake()
-		}
-	}
-	{
-		{
-			s.Logger.SetFake()
-		}
-	}
-	{
-		{
-			s.MachineConfig.SetFake()
-		}
-	}
-	{
-		{
-			s.Metrics.SetFake()
-		}
-	}
-	{
-		{
-			s.MmdsConfig.SetFake()
-		}
-	}
-	{
-		{
-			s.NetDevices = nil
-			for i := 0; i < 0; i++ {
-				var elem NetworkInterface
-				{
-					elem.SetFake()
-				}
-				s.NetDevices = append(s.NetDevices, elem)
-			}
-		}
-	}
-	{
-		{
-			s.VsockDevice.SetFake()
-		}
-	}
-}
+func (s *FullVmConfiguration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InstanceActionInfo) SetFake() {
-	{
-		{
-			s.ActionType.SetFake()
-		}
-	}
-}
+func (s *InstanceActionInfo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InstanceActionInfoActionType) SetFake() {
-	*s = InstanceActionInfoActionTypeFlushMetrics
-}
+func (s *InstanceActionInfoActionType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InstanceInfo) SetFake() {
-	{
-		{
-			s.AppName = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.VmmVersion = "string"
-		}
-	}
-}
+func (s *InstanceInfo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InstanceInfoState) SetFake() {
-	*s = InstanceInfoStateNotStarted
-}
+func (s *InstanceInfoState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Logger) SetFake() {
-	{
-		{
-			s.Level.SetFake()
-		}
-	}
-	{
-		{
-			s.LogPath = "string"
-		}
-	}
-	{
-		{
-			s.ShowLevel.SetFake()
-		}
-	}
-	{
-		{
-			s.ShowLogOrigin.SetFake()
-		}
-	}
-}
+func (s *Logger) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LoggerLevel) SetFake() {
-	*s = LoggerLevelError
-}
+func (s *LoggerLevel) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MachineConfiguration) SetFake() {
-	{
-		{
-			s.CPUTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.HtEnabled = true
-		}
-	}
-	{
-		{
-			s.MemSizeMib = int(0)
-		}
-	}
-	{
-		{
-			s.TrackDirtyPages.SetFake()
-		}
-	}
-	{
-		{
-			s.VcpuCount = int(0)
-		}
-	}
-}
+func (s *MachineConfiguration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Metrics) SetFake() {
-	{
-		{
-			s.MetricsPath = "string"
-		}
-	}
-}
+func (s *Metrics) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MmdsConfig) SetFake() {
-	{
-		{
-			s.Ipv4Address.SetFake()
-		}
-	}
-}
+func (s *MmdsConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *MmdsGetOK) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *MmdsPatchReq) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *MmdsPutReq) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *NetworkInterface) SetFake() {
-	{
-		{
-			s.AllowMmdsRequests.SetFake()
-		}
-	}
-	{
-		{
-			s.GuestMAC.SetFake()
-		}
-	}
-	{
-		{
-			s.HostDevName = "string"
-		}
-	}
-	{
-		{
-			s.IfaceID = "string"
-		}
-	}
-	{
-		{
-			s.RxRateLimiter.SetFake()
-		}
-	}
-	{
-		{
-			s.TxRateLimiter.SetFake()
-		}
-	}
-}
+func (s *NetworkInterface) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBalloon) SetFake() {
-	var elem Balloon
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBalloon) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBool) SetFake() {
-	var elem bool
-	{
-		elem = true
-	}
-	s.SetTo(elem)
-}
+func (s *OptBool) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBootSource) SetFake() {
-	var elem BootSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBootSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCpuTemplate) SetFake() {
-	var elem CpuTemplate
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCpuTemplate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt) SetFake() {
-	var elem int
-	{
-		elem = int(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt64) SetFake() {
-	var elem int64
-	{
-		elem = int64(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt64) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptLogger) SetFake() {
-	var elem Logger
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptLogger) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptLoggerLevel) SetFake() {
-	var elem LoggerLevel
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptLoggerLevel) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMachineConfiguration) SetFake() {
-	var elem MachineConfiguration
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMachineConfiguration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMetrics) SetFake() {
-	var elem Metrics
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMetrics) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMmdsConfig) SetFake() {
-	var elem MmdsConfig
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMmdsConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptRateLimiter) SetFake() {
-	var elem RateLimiter
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptRateLimiter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSnapshotCreateParamsSnapshotType) SetFake() {
-	var elem SnapshotCreateParamsSnapshotType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptSnapshotCreateParamsSnapshotType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptString) SetFake() {
-	var elem string
-	{
-		elem = "string"
-	}
-	s.SetTo(elem)
-}
+func (s *OptString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTokenBucket) SetFake() {
-	var elem TokenBucket
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTokenBucket) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptVsock) SetFake() {
-	var elem Vsock
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptVsock) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PartialDrive) SetFake() {
-	{
-		{
-			s.DriveID = "string"
-		}
-	}
-	{
-		{
-			s.PathOnHost.SetFake()
-		}
-	}
-	{
-		{
-			s.RateLimiter.SetFake()
-		}
-	}
-}
+func (s *PartialDrive) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PartialNetworkInterface) SetFake() {
-	{
-		{
-			s.IfaceID = "string"
-		}
-	}
-	{
-		{
-			s.RxRateLimiter.SetFake()
-		}
-	}
-	{
-		{
-			s.TxRateLimiter.SetFake()
-		}
-	}
-}
+func (s *PartialNetworkInterface) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RateLimiter) SetFake() {
-	{
-		{
-			s.Bandwidth.SetFake()
-		}
-	}
-	{
-		{
-			s.Ops.SetFake()
-		}
-	}
-}
+func (s *RateLimiter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SnapshotCreateParams) SetFake() {
-	{
-		{
-			s.MemFilePath = "string"
-		}
-	}
-	{
-		{
-			s.SnapshotPath = "string"
-		}
-	}
-	{
-		{
-			s.SnapshotType.SetFake()
-		}
-	}
-	{
-		{
-			s.Version.SetFake()
-		}
-	}
-}
+func (s *SnapshotCreateParams) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SnapshotCreateParamsSnapshotType) SetFake() {
-	*s = SnapshotCreateParamsSnapshotTypeFull
-}
+func (s *SnapshotCreateParamsSnapshotType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SnapshotLoadParams) SetFake() {
-	{
-		{
-			s.EnableDiffSnapshots.SetFake()
-		}
-	}
-	{
-		{
-			s.MemFilePath = "string"
-		}
-	}
-	{
-		{
-			s.SnapshotPath = "string"
-		}
-	}
-	{
-		{
-			s.ResumeVM.SetFake()
-		}
-	}
-}
+func (s *SnapshotLoadParams) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TokenBucket) SetFake() {
-	{
-		{
-			s.OneTimeBurst.SetFake()
-		}
-	}
-	{
-		{
-			s.RefillTime = int64(0)
-		}
-	}
-	{
-		{
-			s.Size = int64(0)
-		}
-	}
-}
+func (s *TokenBucket) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *VM) SetFake() {
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-}
+func (s *VM) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *VMState) SetFake() {
-	*s = VMStatePaused
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *Vsock) SetFake() {
-	{
-		{
-			s.GuestCid = int(0)
-		}
-	}
-	{
-		{
-			s.UdsPath = "string"
-		}
-	}
-	{
-		{
-			s.VsockID = "string"
-		}
-	}
-}
+func (s *Vsock) SetFake() { _ = "STUB: not implemented"; return }

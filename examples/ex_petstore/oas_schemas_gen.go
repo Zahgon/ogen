@@ -2,13 +2,7 @@
 
 package api
 
-import (
-	"fmt"
-)
-
-func (s *ErrorStatusCode) Error() string {
-	return fmt.Sprintf("code %d: %+v", s.StatusCode, s.Response)
-}
+func (s *ErrorStatusCode) Error() string { _ = "STUB: not implemented"; return "" }
 
 // CreatePetsCreated is response for CreatePets operation.
 type CreatePetsCreated struct{}
@@ -21,57 +15,64 @@ type Error struct {
 
 // GetCode returns the value of Code.
 func (s *Error) GetCode() int32 {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return 0
 }
 
-// GetMessage returns the value of Message.
 func (s *Error) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return ""
 }
 
-// SetCode sets the value of Code.
 func (s *Error) SetCode(val int32) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *Error) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// ErrorStatusCode wraps Error with StatusCode.
+	return
 }
 
-// ErrorStatusCode wraps Error with StatusCode.
 type ErrorStatusCode struct {
 	StatusCode int
 	Response   Error
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorStatusCode) GetResponse() Error {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(Error)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
 func (s *ErrorStatusCode) SetResponse(val Error) {
-	s.Response = val
+	_ = "STUB: not implemented"
+
+	// NewOptInt32 returns new OptInt32 with value set to v.
+	return
 }
 
-// NewOptInt32 returns new OptInt32 with value set to v.
-func NewOptInt32(v int32) OptInt32 {
-	return OptInt32{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt32(v int32) OptInt32 { _ = "STUB: not implemented"; return *new(OptInt32) }
 
 // OptInt32 is optional int32.
 type OptInt32 struct {
@@ -80,44 +81,26 @@ type OptInt32 struct {
 }
 
 // IsSet returns true if OptInt32 was set.
-func (o OptInt32) IsSet() bool { return o.Set }
+func (o OptInt32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt32) Reset() {
-	var v int32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt32) SetTo(v int32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt32) Get() (v int32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -126,36 +109,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/Pet
 type Pet struct {
@@ -166,33 +136,41 @@ type Pet struct {
 
 // GetID returns the value of ID.
 func (s *Pet) GetID() int64 {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *Pet) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetTag returns the value of Tag.
+	return ""
 }
 
-// GetTag returns the value of Tag.
 func (s *Pet) GetTag() OptString {
-	return s.Tag
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptString)
 }
 
-// SetID sets the value of ID.
 func (s *Pet) SetID(val int64) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Pet) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetTag sets the value of Tag.
+	return
 }
 
-// SetTag sets the value of Tag.
-func (s *Pet) SetTag(val OptString) {
-	s.Tag = val
-}
+func (s *Pet) SetTag(val OptString) { _ = "STUB: not implemented"; return }
 
 type Pets []Pet
 
@@ -204,20 +182,24 @@ type PetsHeaders struct {
 
 // GetXNext returns the value of XNext.
 func (s *PetsHeaders) GetXNext() OptString {
-	return s.XNext
+	_ = "STUB: not implemented"
+
+	// GetResponse returns the value of Response.
+	return *new(OptString)
 }
 
-// GetResponse returns the value of Response.
 func (s *PetsHeaders) GetResponse() Pets {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetXNext sets the value of XNext.
+	return *new(Pets)
 }
 
-// SetXNext sets the value of XNext.
 func (s *PetsHeaders) SetXNext(val OptString) {
-	s.XNext = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
-func (s *PetsHeaders) SetResponse(val Pets) {
-	s.Response = val
-}
+func (s *PetsHeaders) SetResponse(val Pets) { _ = "STUB: not implemented"; return }

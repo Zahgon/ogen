@@ -9,25 +9,33 @@ type APIKey struct {
 
 // GetAPIKey returns the value of APIKey.
 func (s *APIKey) GetAPIKey() string {
-	return s.APIKey
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *APIKey) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetAPIKey sets the value of APIKey.
+	return nil
 }
 
-// SetAPIKey sets the value of APIKey.
 func (s *APIKey) SetAPIKey(val string) {
-	s.APIKey = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
 func (s *APIKey) SetRoles(val []string) {
-	s.Roles = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Error
+	return
 }
 
-// Ref: #/components/schemas/Error
 type Error struct {
 	Code    int64  `json:"code"`
 	Message string `json:"message"`
@@ -35,61 +43,77 @@ type Error struct {
 
 // GetCode returns the value of Code.
 func (s *Error) GetCode() int64 {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return 0
 }
 
-// GetMessage returns the value of Message.
 func (s *Error) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return ""
 }
 
-// SetCode sets the value of Code.
 func (s *Error) SetCode(val int64) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *Error) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// ErrorStatusCode wraps Error with StatusCode.
+	return
 }
 
-// ErrorStatusCode wraps Error with StatusCode.
 type ErrorStatusCode struct {
 	StatusCode int
 	Response   Error
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorStatusCode) GetResponse() Error {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(Error)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
-func (s *ErrorStatusCode) SetResponse(val Error) {
-	s.Response = val
+func (s *ErrorStatusCode) SetResponse(val Error) { _ = "STUB: not implemented"; return }
+
+func (*ErrorStatusCode) spanStatusBodyRes() {
+	_ = "STUB: not implemented"
+
+	// SpanStatusBodyInternalServerError is response for SpanStatusBody operation.
+	return
 }
 
-func (*ErrorStatusCode) spanStatusBodyRes() {}
-
-// SpanStatusBodyInternalServerError is response for SpanStatusBody operation.
 type SpanStatusBodyInternalServerError struct{}
 
-func (*SpanStatusBodyInternalServerError) spanStatusBodyRes() {}
+func (*SpanStatusBodyInternalServerError) spanStatusBodyRes() {
+	_ = "STUB: not implemented"
 
-// SpanStatusBodyNotFound is response for SpanStatusBody operation.
+	// SpanStatusBodyNotFound is response for SpanStatusBody operation.
+	return
+}
+
 type SpanStatusBodyNotFound struct{}
 
-func (*SpanStatusBodyNotFound) spanStatusBodyRes() {}
+func (*SpanStatusBodyNotFound) spanStatusBodyRes() { _ = "STUB: not implemented"; return }
 
 type SpanStatusBodyOK struct {
 	Message string `json:"message"`
@@ -97,32 +121,36 @@ type SpanStatusBodyOK struct {
 
 // GetMessage returns the value of Message.
 func (s *SpanStatusBodyOK) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return ""
 }
 
-// SetMessage sets the value of Message.
-func (s *SpanStatusBodyOK) SetMessage(val string) {
-	s.Message = val
+func (s *SpanStatusBodyOK) SetMessage(val string) { _ = "STUB: not implemented"; return }
+
+func (*SpanStatusBodyOK) spanStatusBodyRes() {
+	_ = "STUB: not implemented"
+
+	// SpanStatusNoBodyDef is default response for SpanStatusNoBody operation.
+	return
 }
 
-func (*SpanStatusBodyOK) spanStatusBodyRes() {}
-
-// SpanStatusNoBodyDef is default response for SpanStatusNoBody operation.
 type SpanStatusNoBodyDef struct {
 	StatusCode int
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *SpanStatusNoBodyDef) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *SpanStatusNoBodyDef) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatusCode sets the value of StatusCode.
 func (s *SpanStatusNoBodyDef) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SpanStatusRequestChecksOK is response for SpanStatusRequestChecks operation.
+	return
 }
 
-// SpanStatusRequestChecksOK is response for SpanStatusRequestChecks operation.
 type SpanStatusRequestChecksOK struct{}
 
 type SpanStatusRequestChecksReq struct {
@@ -131,10 +159,10 @@ type SpanStatusRequestChecksReq struct {
 
 // GetMessage returns the value of Message.
 func (s *SpanStatusRequestChecksReq) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return ""
 }
 
-// SetMessage sets the value of Message.
-func (s *SpanStatusRequestChecksReq) SetMessage(val string) {
-	s.Message = val
-}
+func (s *SpanStatusRequestChecksReq) SetMessage(val string) { _ = "STUB: not implemented"; return }

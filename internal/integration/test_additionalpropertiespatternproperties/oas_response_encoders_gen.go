@@ -9,7 +9,6 @@ import (
 )
 
 func encodeAliveResponse(response *AliveOK, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(200)
-
+	_ = "STUB: not implemented"
 	return nil
 }

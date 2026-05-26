@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,7 +17,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // POST /pets
 func (UnimplementedHandler) CreatePets(ctx context.Context) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ListPets implements listPets operation.
@@ -28,22 +27,26 @@ func (UnimplementedHandler) CreatePets(ctx context.Context) error {
 //
 // GET /pets
 func (UnimplementedHandler) ListPets(ctx context.Context, params ListPetsParams) (r *PetsHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ShowPetById implements showPetById operation.
+	//
+	// Info for a specific pet.
+	//
+	// GET /pets/{petId}
 }
 
-// ShowPetById implements showPetById operation.
-//
-// Info for a specific pet.
-//
-// GET /pets/{petId}
 func (UnimplementedHandler) ShowPetById(ctx context.Context, params ShowPetByIdParams) (r *Pet, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// NewError creates *ErrorStatusCode from error returned by handler.
+	//
+	// Used for common default response.
 }
 
-// NewError creates *ErrorStatusCode from error returned by handler.
-//
-// Used for common default response.
 func (UnimplementedHandler) NewError(ctx context.Context, err error) (r *ErrorStatusCode) {
-	r = new(ErrorStatusCode)
-	return r
+	_ = "STUB: not implemented"
+	return nil
 }

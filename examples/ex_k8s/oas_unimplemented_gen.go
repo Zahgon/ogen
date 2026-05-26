@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,7 +17,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // DELETE /api/v1/namespaces/{namespace}/pods/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1DeleteNamespacedPodProxy(ctx context.Context, params ConnectCoreV1DeleteNamespacedPodProxyParams) (r ConnectCoreV1DeleteNamespacedPodProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1DeleteNamespacedPodProxyRes), nil
 }
 
 // ConnectCoreV1DeleteNamespacedPodProxyWithPath implements connectCoreV1DeleteNamespacedPodProxyWithPath operation.
@@ -28,7 +27,8 @@ func (UnimplementedHandler) ConnectCoreV1DeleteNamespacedPodProxy(ctx context.Co
 //
 // DELETE /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1DeleteNamespacedPodProxyWithPath(ctx context.Context, params ConnectCoreV1DeleteNamespacedPodProxyWithPathParams) (r ConnectCoreV1DeleteNamespacedPodProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1DeleteNamespacedPodProxyWithPathRes), nil
 }
 
 // ConnectCoreV1DeleteNamespacedServiceProxy implements connectCoreV1DeleteNamespacedServiceProxy operation.
@@ -37,7 +37,8 @@ func (UnimplementedHandler) ConnectCoreV1DeleteNamespacedPodProxyWithPath(ctx co
 //
 // DELETE /api/v1/namespaces/{namespace}/services/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1DeleteNamespacedServiceProxy(ctx context.Context, params ConnectCoreV1DeleteNamespacedServiceProxyParams) (r ConnectCoreV1DeleteNamespacedServiceProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1DeleteNamespacedServiceProxyRes), nil
 }
 
 // ConnectCoreV1DeleteNamespacedServiceProxyWithPath implements connectCoreV1DeleteNamespacedServiceProxyWithPath operation.
@@ -46,7 +47,8 @@ func (UnimplementedHandler) ConnectCoreV1DeleteNamespacedServiceProxy(ctx contex
 //
 // DELETE /api/v1/namespaces/{namespace}/services/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1DeleteNamespacedServiceProxyWithPath(ctx context.Context, params ConnectCoreV1DeleteNamespacedServiceProxyWithPathParams) (r ConnectCoreV1DeleteNamespacedServiceProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1DeleteNamespacedServiceProxyWithPathRes), nil
 }
 
 // ConnectCoreV1DeleteNodeProxy implements connectCoreV1DeleteNodeProxy operation.
@@ -55,7 +57,8 @@ func (UnimplementedHandler) ConnectCoreV1DeleteNamespacedServiceProxyWithPath(ct
 //
 // DELETE /api/v1/nodes/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1DeleteNodeProxy(ctx context.Context, params ConnectCoreV1DeleteNodeProxyParams) (r ConnectCoreV1DeleteNodeProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1DeleteNodeProxyRes), nil
 }
 
 // ConnectCoreV1DeleteNodeProxyWithPath implements connectCoreV1DeleteNodeProxyWithPath operation.
@@ -64,7 +67,8 @@ func (UnimplementedHandler) ConnectCoreV1DeleteNodeProxy(ctx context.Context, pa
 //
 // DELETE /api/v1/nodes/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1DeleteNodeProxyWithPath(ctx context.Context, params ConnectCoreV1DeleteNodeProxyWithPathParams) (r ConnectCoreV1DeleteNodeProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1DeleteNodeProxyWithPathRes), nil
 }
 
 // ConnectCoreV1GetNamespacedPodAttach implements connectCoreV1GetNamespacedPodAttach operation.
@@ -73,7 +77,8 @@ func (UnimplementedHandler) ConnectCoreV1DeleteNodeProxyWithPath(ctx context.Con
 //
 // GET /api/v1/namespaces/{namespace}/pods/{name}/attach
 func (UnimplementedHandler) ConnectCoreV1GetNamespacedPodAttach(ctx context.Context, params ConnectCoreV1GetNamespacedPodAttachParams) (r ConnectCoreV1GetNamespacedPodAttachRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1GetNamespacedPodAttachRes), nil
 }
 
 // ConnectCoreV1GetNamespacedPodExec implements connectCoreV1GetNamespacedPodExec operation.
@@ -82,7 +87,8 @@ func (UnimplementedHandler) ConnectCoreV1GetNamespacedPodAttach(ctx context.Cont
 //
 // GET /api/v1/namespaces/{namespace}/pods/{name}/exec
 func (UnimplementedHandler) ConnectCoreV1GetNamespacedPodExec(ctx context.Context, params ConnectCoreV1GetNamespacedPodExecParams) (r ConnectCoreV1GetNamespacedPodExecRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1GetNamespacedPodExecRes), nil
 }
 
 // ConnectCoreV1GetNamespacedPodPortforward implements connectCoreV1GetNamespacedPodPortforward operation.
@@ -91,7 +97,8 @@ func (UnimplementedHandler) ConnectCoreV1GetNamespacedPodExec(ctx context.Contex
 //
 // GET /api/v1/namespaces/{namespace}/pods/{name}/portforward
 func (UnimplementedHandler) ConnectCoreV1GetNamespacedPodPortforward(ctx context.Context, params ConnectCoreV1GetNamespacedPodPortforwardParams) (r ConnectCoreV1GetNamespacedPodPortforwardRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1GetNamespacedPodPortforwardRes), nil
 }
 
 // ConnectCoreV1GetNamespacedPodProxy implements connectCoreV1GetNamespacedPodProxy operation.
@@ -100,7 +107,8 @@ func (UnimplementedHandler) ConnectCoreV1GetNamespacedPodPortforward(ctx context
 //
 // GET /api/v1/namespaces/{namespace}/pods/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1GetNamespacedPodProxy(ctx context.Context, params ConnectCoreV1GetNamespacedPodProxyParams) (r ConnectCoreV1GetNamespacedPodProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1GetNamespacedPodProxyRes), nil
 }
 
 // ConnectCoreV1GetNamespacedPodProxyWithPath implements connectCoreV1GetNamespacedPodProxyWithPath operation.
@@ -109,7 +117,8 @@ func (UnimplementedHandler) ConnectCoreV1GetNamespacedPodProxy(ctx context.Conte
 //
 // GET /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1GetNamespacedPodProxyWithPath(ctx context.Context, params ConnectCoreV1GetNamespacedPodProxyWithPathParams) (r ConnectCoreV1GetNamespacedPodProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1GetNamespacedPodProxyWithPathRes), nil
 }
 
 // ConnectCoreV1GetNamespacedServiceProxy implements connectCoreV1GetNamespacedServiceProxy operation.
@@ -118,7 +127,8 @@ func (UnimplementedHandler) ConnectCoreV1GetNamespacedPodProxyWithPath(ctx conte
 //
 // GET /api/v1/namespaces/{namespace}/services/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1GetNamespacedServiceProxy(ctx context.Context, params ConnectCoreV1GetNamespacedServiceProxyParams) (r ConnectCoreV1GetNamespacedServiceProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1GetNamespacedServiceProxyRes), nil
 }
 
 // ConnectCoreV1GetNamespacedServiceProxyWithPath implements connectCoreV1GetNamespacedServiceProxyWithPath operation.
@@ -127,7 +137,8 @@ func (UnimplementedHandler) ConnectCoreV1GetNamespacedServiceProxy(ctx context.C
 //
 // GET /api/v1/namespaces/{namespace}/services/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1GetNamespacedServiceProxyWithPath(ctx context.Context, params ConnectCoreV1GetNamespacedServiceProxyWithPathParams) (r ConnectCoreV1GetNamespacedServiceProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1GetNamespacedServiceProxyWithPathRes), nil
 }
 
 // ConnectCoreV1GetNodeProxy implements connectCoreV1GetNodeProxy operation.
@@ -136,7 +147,8 @@ func (UnimplementedHandler) ConnectCoreV1GetNamespacedServiceProxyWithPath(ctx c
 //
 // GET /api/v1/nodes/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1GetNodeProxy(ctx context.Context, params ConnectCoreV1GetNodeProxyParams) (r ConnectCoreV1GetNodeProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1GetNodeProxyRes), nil
 }
 
 // ConnectCoreV1GetNodeProxyWithPath implements connectCoreV1GetNodeProxyWithPath operation.
@@ -145,7 +157,8 @@ func (UnimplementedHandler) ConnectCoreV1GetNodeProxy(ctx context.Context, param
 //
 // GET /api/v1/nodes/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1GetNodeProxyWithPath(ctx context.Context, params ConnectCoreV1GetNodeProxyWithPathParams) (r ConnectCoreV1GetNodeProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1GetNodeProxyWithPathRes), nil
 }
 
 // ConnectCoreV1HeadNamespacedPodProxy implements connectCoreV1HeadNamespacedPodProxy operation.
@@ -154,7 +167,8 @@ func (UnimplementedHandler) ConnectCoreV1GetNodeProxyWithPath(ctx context.Contex
 //
 // HEAD /api/v1/namespaces/{namespace}/pods/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1HeadNamespacedPodProxy(ctx context.Context, params ConnectCoreV1HeadNamespacedPodProxyParams) (r ConnectCoreV1HeadNamespacedPodProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1HeadNamespacedPodProxyRes), nil
 }
 
 // ConnectCoreV1HeadNamespacedPodProxyWithPath implements connectCoreV1HeadNamespacedPodProxyWithPath operation.
@@ -163,7 +177,8 @@ func (UnimplementedHandler) ConnectCoreV1HeadNamespacedPodProxy(ctx context.Cont
 //
 // HEAD /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1HeadNamespacedPodProxyWithPath(ctx context.Context, params ConnectCoreV1HeadNamespacedPodProxyWithPathParams) (r ConnectCoreV1HeadNamespacedPodProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1HeadNamespacedPodProxyWithPathRes), nil
 }
 
 // ConnectCoreV1HeadNamespacedServiceProxy implements connectCoreV1HeadNamespacedServiceProxy operation.
@@ -172,7 +187,8 @@ func (UnimplementedHandler) ConnectCoreV1HeadNamespacedPodProxyWithPath(ctx cont
 //
 // HEAD /api/v1/namespaces/{namespace}/services/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1HeadNamespacedServiceProxy(ctx context.Context, params ConnectCoreV1HeadNamespacedServiceProxyParams) (r ConnectCoreV1HeadNamespacedServiceProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1HeadNamespacedServiceProxyRes), nil
 }
 
 // ConnectCoreV1HeadNamespacedServiceProxyWithPath implements connectCoreV1HeadNamespacedServiceProxyWithPath operation.
@@ -181,7 +197,8 @@ func (UnimplementedHandler) ConnectCoreV1HeadNamespacedServiceProxy(ctx context.
 //
 // HEAD /api/v1/namespaces/{namespace}/services/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1HeadNamespacedServiceProxyWithPath(ctx context.Context, params ConnectCoreV1HeadNamespacedServiceProxyWithPathParams) (r ConnectCoreV1HeadNamespacedServiceProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1HeadNamespacedServiceProxyWithPathRes), nil
 }
 
 // ConnectCoreV1HeadNodeProxy implements connectCoreV1HeadNodeProxy operation.
@@ -190,7 +207,8 @@ func (UnimplementedHandler) ConnectCoreV1HeadNamespacedServiceProxyWithPath(ctx 
 //
 // HEAD /api/v1/nodes/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1HeadNodeProxy(ctx context.Context, params ConnectCoreV1HeadNodeProxyParams) (r ConnectCoreV1HeadNodeProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1HeadNodeProxyRes), nil
 }
 
 // ConnectCoreV1HeadNodeProxyWithPath implements connectCoreV1HeadNodeProxyWithPath operation.
@@ -199,7 +217,8 @@ func (UnimplementedHandler) ConnectCoreV1HeadNodeProxy(ctx context.Context, para
 //
 // HEAD /api/v1/nodes/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1HeadNodeProxyWithPath(ctx context.Context, params ConnectCoreV1HeadNodeProxyWithPathParams) (r ConnectCoreV1HeadNodeProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1HeadNodeProxyWithPathRes), nil
 }
 
 // ConnectCoreV1OptionsNamespacedPodProxy implements connectCoreV1OptionsNamespacedPodProxy operation.
@@ -208,7 +227,8 @@ func (UnimplementedHandler) ConnectCoreV1HeadNodeProxyWithPath(ctx context.Conte
 //
 // OPTIONS /api/v1/namespaces/{namespace}/pods/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1OptionsNamespacedPodProxy(ctx context.Context, params ConnectCoreV1OptionsNamespacedPodProxyParams) (r ConnectCoreV1OptionsNamespacedPodProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1OptionsNamespacedPodProxyRes), nil
 }
 
 // ConnectCoreV1OptionsNamespacedPodProxyWithPath implements connectCoreV1OptionsNamespacedPodProxyWithPath operation.
@@ -217,7 +237,8 @@ func (UnimplementedHandler) ConnectCoreV1OptionsNamespacedPodProxy(ctx context.C
 //
 // OPTIONS /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1OptionsNamespacedPodProxyWithPath(ctx context.Context, params ConnectCoreV1OptionsNamespacedPodProxyWithPathParams) (r ConnectCoreV1OptionsNamespacedPodProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1OptionsNamespacedPodProxyWithPathRes), nil
 }
 
 // ConnectCoreV1OptionsNamespacedServiceProxy implements connectCoreV1OptionsNamespacedServiceProxy operation.
@@ -226,7 +247,8 @@ func (UnimplementedHandler) ConnectCoreV1OptionsNamespacedPodProxyWithPath(ctx c
 //
 // OPTIONS /api/v1/namespaces/{namespace}/services/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1OptionsNamespacedServiceProxy(ctx context.Context, params ConnectCoreV1OptionsNamespacedServiceProxyParams) (r ConnectCoreV1OptionsNamespacedServiceProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1OptionsNamespacedServiceProxyRes), nil
 }
 
 // ConnectCoreV1OptionsNamespacedServiceProxyWithPath implements connectCoreV1OptionsNamespacedServiceProxyWithPath operation.
@@ -235,7 +257,8 @@ func (UnimplementedHandler) ConnectCoreV1OptionsNamespacedServiceProxy(ctx conte
 //
 // OPTIONS /api/v1/namespaces/{namespace}/services/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1OptionsNamespacedServiceProxyWithPath(ctx context.Context, params ConnectCoreV1OptionsNamespacedServiceProxyWithPathParams) (r ConnectCoreV1OptionsNamespacedServiceProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1OptionsNamespacedServiceProxyWithPathRes), nil
 }
 
 // ConnectCoreV1OptionsNodeProxy implements connectCoreV1OptionsNodeProxy operation.
@@ -244,7 +267,8 @@ func (UnimplementedHandler) ConnectCoreV1OptionsNamespacedServiceProxyWithPath(c
 //
 // OPTIONS /api/v1/nodes/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1OptionsNodeProxy(ctx context.Context, params ConnectCoreV1OptionsNodeProxyParams) (r ConnectCoreV1OptionsNodeProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1OptionsNodeProxyRes), nil
 }
 
 // ConnectCoreV1OptionsNodeProxyWithPath implements connectCoreV1OptionsNodeProxyWithPath operation.
@@ -253,7 +277,8 @@ func (UnimplementedHandler) ConnectCoreV1OptionsNodeProxy(ctx context.Context, p
 //
 // OPTIONS /api/v1/nodes/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1OptionsNodeProxyWithPath(ctx context.Context, params ConnectCoreV1OptionsNodeProxyWithPathParams) (r ConnectCoreV1OptionsNodeProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1OptionsNodeProxyWithPathRes), nil
 }
 
 // ConnectCoreV1PatchNamespacedPodProxy implements connectCoreV1PatchNamespacedPodProxy operation.
@@ -262,7 +287,8 @@ func (UnimplementedHandler) ConnectCoreV1OptionsNodeProxyWithPath(ctx context.Co
 //
 // PATCH /api/v1/namespaces/{namespace}/pods/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1PatchNamespacedPodProxy(ctx context.Context, params ConnectCoreV1PatchNamespacedPodProxyParams) (r ConnectCoreV1PatchNamespacedPodProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PatchNamespacedPodProxyRes), nil
 }
 
 // ConnectCoreV1PatchNamespacedPodProxyWithPath implements connectCoreV1PatchNamespacedPodProxyWithPath operation.
@@ -271,7 +297,8 @@ func (UnimplementedHandler) ConnectCoreV1PatchNamespacedPodProxy(ctx context.Con
 //
 // PATCH /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1PatchNamespacedPodProxyWithPath(ctx context.Context, params ConnectCoreV1PatchNamespacedPodProxyWithPathParams) (r ConnectCoreV1PatchNamespacedPodProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PatchNamespacedPodProxyWithPathRes), nil
 }
 
 // ConnectCoreV1PatchNamespacedServiceProxy implements connectCoreV1PatchNamespacedServiceProxy operation.
@@ -280,7 +307,8 @@ func (UnimplementedHandler) ConnectCoreV1PatchNamespacedPodProxyWithPath(ctx con
 //
 // PATCH /api/v1/namespaces/{namespace}/services/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1PatchNamespacedServiceProxy(ctx context.Context, params ConnectCoreV1PatchNamespacedServiceProxyParams) (r ConnectCoreV1PatchNamespacedServiceProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PatchNamespacedServiceProxyRes), nil
 }
 
 // ConnectCoreV1PatchNamespacedServiceProxyWithPath implements connectCoreV1PatchNamespacedServiceProxyWithPath operation.
@@ -289,7 +317,8 @@ func (UnimplementedHandler) ConnectCoreV1PatchNamespacedServiceProxy(ctx context
 //
 // PATCH /api/v1/namespaces/{namespace}/services/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1PatchNamespacedServiceProxyWithPath(ctx context.Context, params ConnectCoreV1PatchNamespacedServiceProxyWithPathParams) (r ConnectCoreV1PatchNamespacedServiceProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PatchNamespacedServiceProxyWithPathRes), nil
 }
 
 // ConnectCoreV1PatchNodeProxy implements connectCoreV1PatchNodeProxy operation.
@@ -298,7 +327,8 @@ func (UnimplementedHandler) ConnectCoreV1PatchNamespacedServiceProxyWithPath(ctx
 //
 // PATCH /api/v1/nodes/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1PatchNodeProxy(ctx context.Context, params ConnectCoreV1PatchNodeProxyParams) (r ConnectCoreV1PatchNodeProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PatchNodeProxyRes), nil
 }
 
 // ConnectCoreV1PatchNodeProxyWithPath implements connectCoreV1PatchNodeProxyWithPath operation.
@@ -307,7 +337,8 @@ func (UnimplementedHandler) ConnectCoreV1PatchNodeProxy(ctx context.Context, par
 //
 // PATCH /api/v1/nodes/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1PatchNodeProxyWithPath(ctx context.Context, params ConnectCoreV1PatchNodeProxyWithPathParams) (r ConnectCoreV1PatchNodeProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PatchNodeProxyWithPathRes), nil
 }
 
 // ConnectCoreV1PostNamespacedPodAttach implements connectCoreV1PostNamespacedPodAttach operation.
@@ -316,7 +347,8 @@ func (UnimplementedHandler) ConnectCoreV1PatchNodeProxyWithPath(ctx context.Cont
 //
 // POST /api/v1/namespaces/{namespace}/pods/{name}/attach
 func (UnimplementedHandler) ConnectCoreV1PostNamespacedPodAttach(ctx context.Context, params ConnectCoreV1PostNamespacedPodAttachParams) (r ConnectCoreV1PostNamespacedPodAttachRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PostNamespacedPodAttachRes), nil
 }
 
 // ConnectCoreV1PostNamespacedPodExec implements connectCoreV1PostNamespacedPodExec operation.
@@ -325,7 +357,8 @@ func (UnimplementedHandler) ConnectCoreV1PostNamespacedPodAttach(ctx context.Con
 //
 // POST /api/v1/namespaces/{namespace}/pods/{name}/exec
 func (UnimplementedHandler) ConnectCoreV1PostNamespacedPodExec(ctx context.Context, params ConnectCoreV1PostNamespacedPodExecParams) (r ConnectCoreV1PostNamespacedPodExecRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PostNamespacedPodExecRes), nil
 }
 
 // ConnectCoreV1PostNamespacedPodPortforward implements connectCoreV1PostNamespacedPodPortforward operation.
@@ -334,7 +367,8 @@ func (UnimplementedHandler) ConnectCoreV1PostNamespacedPodExec(ctx context.Conte
 //
 // POST /api/v1/namespaces/{namespace}/pods/{name}/portforward
 func (UnimplementedHandler) ConnectCoreV1PostNamespacedPodPortforward(ctx context.Context, params ConnectCoreV1PostNamespacedPodPortforwardParams) (r ConnectCoreV1PostNamespacedPodPortforwardRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PostNamespacedPodPortforwardRes), nil
 }
 
 // ConnectCoreV1PostNamespacedPodProxy implements connectCoreV1PostNamespacedPodProxy operation.
@@ -343,7 +377,8 @@ func (UnimplementedHandler) ConnectCoreV1PostNamespacedPodPortforward(ctx contex
 //
 // POST /api/v1/namespaces/{namespace}/pods/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1PostNamespacedPodProxy(ctx context.Context, params ConnectCoreV1PostNamespacedPodProxyParams) (r ConnectCoreV1PostNamespacedPodProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PostNamespacedPodProxyRes), nil
 }
 
 // ConnectCoreV1PostNamespacedPodProxyWithPath implements connectCoreV1PostNamespacedPodProxyWithPath operation.
@@ -352,7 +387,8 @@ func (UnimplementedHandler) ConnectCoreV1PostNamespacedPodProxy(ctx context.Cont
 //
 // POST /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1PostNamespacedPodProxyWithPath(ctx context.Context, params ConnectCoreV1PostNamespacedPodProxyWithPathParams) (r ConnectCoreV1PostNamespacedPodProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PostNamespacedPodProxyWithPathRes), nil
 }
 
 // ConnectCoreV1PostNamespacedServiceProxy implements connectCoreV1PostNamespacedServiceProxy operation.
@@ -361,7 +397,8 @@ func (UnimplementedHandler) ConnectCoreV1PostNamespacedPodProxyWithPath(ctx cont
 //
 // POST /api/v1/namespaces/{namespace}/services/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1PostNamespacedServiceProxy(ctx context.Context, params ConnectCoreV1PostNamespacedServiceProxyParams) (r ConnectCoreV1PostNamespacedServiceProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PostNamespacedServiceProxyRes), nil
 }
 
 // ConnectCoreV1PostNamespacedServiceProxyWithPath implements connectCoreV1PostNamespacedServiceProxyWithPath operation.
@@ -370,7 +407,8 @@ func (UnimplementedHandler) ConnectCoreV1PostNamespacedServiceProxy(ctx context.
 //
 // POST /api/v1/namespaces/{namespace}/services/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1PostNamespacedServiceProxyWithPath(ctx context.Context, params ConnectCoreV1PostNamespacedServiceProxyWithPathParams) (r ConnectCoreV1PostNamespacedServiceProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PostNamespacedServiceProxyWithPathRes), nil
 }
 
 // ConnectCoreV1PostNodeProxy implements connectCoreV1PostNodeProxy operation.
@@ -379,7 +417,8 @@ func (UnimplementedHandler) ConnectCoreV1PostNamespacedServiceProxyWithPath(ctx 
 //
 // POST /api/v1/nodes/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1PostNodeProxy(ctx context.Context, params ConnectCoreV1PostNodeProxyParams) (r ConnectCoreV1PostNodeProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PostNodeProxyRes), nil
 }
 
 // ConnectCoreV1PostNodeProxyWithPath implements connectCoreV1PostNodeProxyWithPath operation.
@@ -388,7 +427,8 @@ func (UnimplementedHandler) ConnectCoreV1PostNodeProxy(ctx context.Context, para
 //
 // POST /api/v1/nodes/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1PostNodeProxyWithPath(ctx context.Context, params ConnectCoreV1PostNodeProxyWithPathParams) (r ConnectCoreV1PostNodeProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PostNodeProxyWithPathRes), nil
 }
 
 // ConnectCoreV1PutNamespacedPodProxy implements connectCoreV1PutNamespacedPodProxy operation.
@@ -397,7 +437,8 @@ func (UnimplementedHandler) ConnectCoreV1PostNodeProxyWithPath(ctx context.Conte
 //
 // PUT /api/v1/namespaces/{namespace}/pods/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1PutNamespacedPodProxy(ctx context.Context, params ConnectCoreV1PutNamespacedPodProxyParams) (r ConnectCoreV1PutNamespacedPodProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PutNamespacedPodProxyRes), nil
 }
 
 // ConnectCoreV1PutNamespacedPodProxyWithPath implements connectCoreV1PutNamespacedPodProxyWithPath operation.
@@ -406,7 +447,8 @@ func (UnimplementedHandler) ConnectCoreV1PutNamespacedPodProxy(ctx context.Conte
 //
 // PUT /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1PutNamespacedPodProxyWithPath(ctx context.Context, params ConnectCoreV1PutNamespacedPodProxyWithPathParams) (r ConnectCoreV1PutNamespacedPodProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PutNamespacedPodProxyWithPathRes), nil
 }
 
 // ConnectCoreV1PutNamespacedServiceProxy implements connectCoreV1PutNamespacedServiceProxy operation.
@@ -415,7 +457,8 @@ func (UnimplementedHandler) ConnectCoreV1PutNamespacedPodProxyWithPath(ctx conte
 //
 // PUT /api/v1/namespaces/{namespace}/services/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1PutNamespacedServiceProxy(ctx context.Context, params ConnectCoreV1PutNamespacedServiceProxyParams) (r ConnectCoreV1PutNamespacedServiceProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PutNamespacedServiceProxyRes), nil
 }
 
 // ConnectCoreV1PutNamespacedServiceProxyWithPath implements connectCoreV1PutNamespacedServiceProxyWithPath operation.
@@ -424,7 +467,8 @@ func (UnimplementedHandler) ConnectCoreV1PutNamespacedServiceProxy(ctx context.C
 //
 // PUT /api/v1/namespaces/{namespace}/services/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1PutNamespacedServiceProxyWithPath(ctx context.Context, params ConnectCoreV1PutNamespacedServiceProxyWithPathParams) (r ConnectCoreV1PutNamespacedServiceProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PutNamespacedServiceProxyWithPathRes), nil
 }
 
 // ConnectCoreV1PutNodeProxy implements connectCoreV1PutNodeProxy operation.
@@ -433,7 +477,8 @@ func (UnimplementedHandler) ConnectCoreV1PutNamespacedServiceProxyWithPath(ctx c
 //
 // PUT /api/v1/nodes/{name}/proxy
 func (UnimplementedHandler) ConnectCoreV1PutNodeProxy(ctx context.Context, params ConnectCoreV1PutNodeProxyParams) (r ConnectCoreV1PutNodeProxyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PutNodeProxyRes), nil
 }
 
 // ConnectCoreV1PutNodeProxyWithPath implements connectCoreV1PutNodeProxyWithPath operation.
@@ -442,7 +487,8 @@ func (UnimplementedHandler) ConnectCoreV1PutNodeProxy(ctx context.Context, param
 //
 // PUT /api/v1/nodes/{name}/proxy/{path}
 func (UnimplementedHandler) ConnectCoreV1PutNodeProxyWithPath(ctx context.Context, params ConnectCoreV1PutNodeProxyWithPathParams) (r ConnectCoreV1PutNodeProxyWithPathRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ConnectCoreV1PutNodeProxyWithPathRes), nil
 }
 
 // GetAPIVersions implements getAPIVersions operation.
@@ -451,7 +497,8 @@ func (UnimplementedHandler) ConnectCoreV1PutNodeProxyWithPath(ctx context.Contex
 //
 // GET /apis/
 func (UnimplementedHandler) GetAPIVersions(ctx context.Context) (r GetAPIVersionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAPIVersionsRes), nil
 }
 
 // GetAdmissionregistrationAPIGroup implements getAdmissionregistrationAPIGroup operation.
@@ -460,7 +507,8 @@ func (UnimplementedHandler) GetAPIVersions(ctx context.Context) (r GetAPIVersion
 //
 // GET /apis/admissionregistration.k8s.io/
 func (UnimplementedHandler) GetAdmissionregistrationAPIGroup(ctx context.Context) (r GetAdmissionregistrationAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAdmissionregistrationAPIGroupRes), nil
 }
 
 // GetAdmissionregistrationV1APIResources implements getAdmissionregistrationV1APIResources operation.
@@ -469,7 +517,8 @@ func (UnimplementedHandler) GetAdmissionregistrationAPIGroup(ctx context.Context
 //
 // GET /apis/admissionregistration.k8s.io/v1/
 func (UnimplementedHandler) GetAdmissionregistrationV1APIResources(ctx context.Context) (r GetAdmissionregistrationV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAdmissionregistrationV1APIResourcesRes), nil
 }
 
 // GetApiextensionsAPIGroup implements getApiextensionsAPIGroup operation.
@@ -478,7 +527,8 @@ func (UnimplementedHandler) GetAdmissionregistrationV1APIResources(ctx context.C
 //
 // GET /apis/apiextensions.k8s.io/
 func (UnimplementedHandler) GetApiextensionsAPIGroup(ctx context.Context) (r GetApiextensionsAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetApiextensionsAPIGroupRes), nil
 }
 
 // GetApiextensionsV1APIResources implements getApiextensionsV1APIResources operation.
@@ -487,7 +537,8 @@ func (UnimplementedHandler) GetApiextensionsAPIGroup(ctx context.Context) (r Get
 //
 // GET /apis/apiextensions.k8s.io/v1/
 func (UnimplementedHandler) GetApiextensionsV1APIResources(ctx context.Context) (r GetApiextensionsV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetApiextensionsV1APIResourcesRes), nil
 }
 
 // GetApiregistrationAPIGroup implements getApiregistrationAPIGroup operation.
@@ -496,7 +547,8 @@ func (UnimplementedHandler) GetApiextensionsV1APIResources(ctx context.Context) 
 //
 // GET /apis/apiregistration.k8s.io/
 func (UnimplementedHandler) GetApiregistrationAPIGroup(ctx context.Context) (r GetApiregistrationAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetApiregistrationAPIGroupRes), nil
 }
 
 // GetApiregistrationV1APIResources implements getApiregistrationV1APIResources operation.
@@ -505,7 +557,8 @@ func (UnimplementedHandler) GetApiregistrationAPIGroup(ctx context.Context) (r G
 //
 // GET /apis/apiregistration.k8s.io/v1/
 func (UnimplementedHandler) GetApiregistrationV1APIResources(ctx context.Context) (r GetApiregistrationV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetApiregistrationV1APIResourcesRes), nil
 }
 
 // GetAppsAPIGroup implements getAppsAPIGroup operation.
@@ -514,7 +567,8 @@ func (UnimplementedHandler) GetApiregistrationV1APIResources(ctx context.Context
 //
 // GET /apis/apps/
 func (UnimplementedHandler) GetAppsAPIGroup(ctx context.Context) (r GetAppsAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAppsAPIGroupRes), nil
 }
 
 // GetAppsV1APIResources implements getAppsV1APIResources operation.
@@ -523,7 +577,8 @@ func (UnimplementedHandler) GetAppsAPIGroup(ctx context.Context) (r GetAppsAPIGr
 //
 // GET /apis/apps/v1/
 func (UnimplementedHandler) GetAppsV1APIResources(ctx context.Context) (r GetAppsV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAppsV1APIResourcesRes), nil
 }
 
 // GetAuthenticationAPIGroup implements getAuthenticationAPIGroup operation.
@@ -532,7 +587,8 @@ func (UnimplementedHandler) GetAppsV1APIResources(ctx context.Context) (r GetApp
 //
 // GET /apis/authentication.k8s.io/
 func (UnimplementedHandler) GetAuthenticationAPIGroup(ctx context.Context) (r GetAuthenticationAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAuthenticationAPIGroupRes), nil
 }
 
 // GetAuthenticationV1APIResources implements getAuthenticationV1APIResources operation.
@@ -541,7 +597,8 @@ func (UnimplementedHandler) GetAuthenticationAPIGroup(ctx context.Context) (r Ge
 //
 // GET /apis/authentication.k8s.io/v1/
 func (UnimplementedHandler) GetAuthenticationV1APIResources(ctx context.Context) (r GetAuthenticationV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAuthenticationV1APIResourcesRes), nil
 }
 
 // GetAuthorizationAPIGroup implements getAuthorizationAPIGroup operation.
@@ -550,7 +607,8 @@ func (UnimplementedHandler) GetAuthenticationV1APIResources(ctx context.Context)
 //
 // GET /apis/authorization.k8s.io/
 func (UnimplementedHandler) GetAuthorizationAPIGroup(ctx context.Context) (r GetAuthorizationAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAuthorizationAPIGroupRes), nil
 }
 
 // GetAuthorizationV1APIResources implements getAuthorizationV1APIResources operation.
@@ -559,7 +617,8 @@ func (UnimplementedHandler) GetAuthorizationAPIGroup(ctx context.Context) (r Get
 //
 // GET /apis/authorization.k8s.io/v1/
 func (UnimplementedHandler) GetAuthorizationV1APIResources(ctx context.Context) (r GetAuthorizationV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAuthorizationV1APIResourcesRes), nil
 }
 
 // GetAutoscalingAPIGroup implements getAutoscalingAPIGroup operation.
@@ -568,7 +627,8 @@ func (UnimplementedHandler) GetAuthorizationV1APIResources(ctx context.Context) 
 //
 // GET /apis/autoscaling/
 func (UnimplementedHandler) GetAutoscalingAPIGroup(ctx context.Context) (r GetAutoscalingAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAutoscalingAPIGroupRes), nil
 }
 
 // GetAutoscalingV1APIResources implements getAutoscalingV1APIResources operation.
@@ -577,7 +637,8 @@ func (UnimplementedHandler) GetAutoscalingAPIGroup(ctx context.Context) (r GetAu
 //
 // GET /apis/autoscaling/v1/
 func (UnimplementedHandler) GetAutoscalingV1APIResources(ctx context.Context) (r GetAutoscalingV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAutoscalingV1APIResourcesRes), nil
 }
 
 // GetAutoscalingV2beta1APIResources implements getAutoscalingV2beta1APIResources operation.
@@ -586,7 +647,8 @@ func (UnimplementedHandler) GetAutoscalingV1APIResources(ctx context.Context) (r
 //
 // GET /apis/autoscaling/v2beta1/
 func (UnimplementedHandler) GetAutoscalingV2beta1APIResources(ctx context.Context) (r GetAutoscalingV2beta1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAutoscalingV2beta1APIResourcesRes), nil
 }
 
 // GetAutoscalingV2beta2APIResources implements getAutoscalingV2beta2APIResources operation.
@@ -595,7 +657,8 @@ func (UnimplementedHandler) GetAutoscalingV2beta1APIResources(ctx context.Contex
 //
 // GET /apis/autoscaling/v2beta2/
 func (UnimplementedHandler) GetAutoscalingV2beta2APIResources(ctx context.Context) (r GetAutoscalingV2beta2APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetAutoscalingV2beta2APIResourcesRes), nil
 }
 
 // GetBatchAPIGroup implements getBatchAPIGroup operation.
@@ -604,7 +667,8 @@ func (UnimplementedHandler) GetAutoscalingV2beta2APIResources(ctx context.Contex
 //
 // GET /apis/batch/
 func (UnimplementedHandler) GetBatchAPIGroup(ctx context.Context) (r GetBatchAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetBatchAPIGroupRes), nil
 }
 
 // GetBatchV1APIResources implements getBatchV1APIResources operation.
@@ -613,7 +677,8 @@ func (UnimplementedHandler) GetBatchAPIGroup(ctx context.Context) (r GetBatchAPI
 //
 // GET /apis/batch/v1/
 func (UnimplementedHandler) GetBatchV1APIResources(ctx context.Context) (r GetBatchV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetBatchV1APIResourcesRes), nil
 }
 
 // GetBatchV1beta1APIResources implements getBatchV1beta1APIResources operation.
@@ -622,7 +687,8 @@ func (UnimplementedHandler) GetBatchV1APIResources(ctx context.Context) (r GetBa
 //
 // GET /apis/batch/v1beta1/
 func (UnimplementedHandler) GetBatchV1beta1APIResources(ctx context.Context) (r GetBatchV1beta1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetBatchV1beta1APIResourcesRes), nil
 }
 
 // GetCertificatesAPIGroup implements getCertificatesAPIGroup operation.
@@ -631,7 +697,8 @@ func (UnimplementedHandler) GetBatchV1beta1APIResources(ctx context.Context) (r 
 //
 // GET /apis/certificates.k8s.io/
 func (UnimplementedHandler) GetCertificatesAPIGroup(ctx context.Context) (r GetCertificatesAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetCertificatesAPIGroupRes), nil
 }
 
 // GetCertificatesV1APIResources implements getCertificatesV1APIResources operation.
@@ -640,7 +707,8 @@ func (UnimplementedHandler) GetCertificatesAPIGroup(ctx context.Context) (r GetC
 //
 // GET /apis/certificates.k8s.io/v1/
 func (UnimplementedHandler) GetCertificatesV1APIResources(ctx context.Context) (r GetCertificatesV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetCertificatesV1APIResourcesRes), nil
 }
 
 // GetCodeVersion implements getCodeVersion operation.
@@ -649,7 +717,8 @@ func (UnimplementedHandler) GetCertificatesV1APIResources(ctx context.Context) (
 //
 // GET /version/
 func (UnimplementedHandler) GetCodeVersion(ctx context.Context) (r GetCodeVersionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetCodeVersionRes), nil
 }
 
 // GetCoordinationAPIGroup implements getCoordinationAPIGroup operation.
@@ -658,7 +727,8 @@ func (UnimplementedHandler) GetCodeVersion(ctx context.Context) (r GetCodeVersio
 //
 // GET /apis/coordination.k8s.io/
 func (UnimplementedHandler) GetCoordinationAPIGroup(ctx context.Context) (r GetCoordinationAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetCoordinationAPIGroupRes), nil
 }
 
 // GetCoordinationV1APIResources implements getCoordinationV1APIResources operation.
@@ -667,7 +737,8 @@ func (UnimplementedHandler) GetCoordinationAPIGroup(ctx context.Context) (r GetC
 //
 // GET /apis/coordination.k8s.io/v1/
 func (UnimplementedHandler) GetCoordinationV1APIResources(ctx context.Context) (r GetCoordinationV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetCoordinationV1APIResourcesRes), nil
 }
 
 // GetCoreAPIVersions implements getCoreAPIVersions operation.
@@ -676,7 +747,8 @@ func (UnimplementedHandler) GetCoordinationV1APIResources(ctx context.Context) (
 //
 // GET /api/
 func (UnimplementedHandler) GetCoreAPIVersions(ctx context.Context) (r GetCoreAPIVersionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetCoreAPIVersionsRes), nil
 }
 
 // GetCoreV1APIResources implements getCoreV1APIResources operation.
@@ -685,7 +757,8 @@ func (UnimplementedHandler) GetCoreAPIVersions(ctx context.Context) (r GetCoreAP
 //
 // GET /api/v1/
 func (UnimplementedHandler) GetCoreV1APIResources(ctx context.Context) (r GetCoreV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetCoreV1APIResourcesRes), nil
 }
 
 // GetDiscoveryAPIGroup implements getDiscoveryAPIGroup operation.
@@ -694,7 +767,8 @@ func (UnimplementedHandler) GetCoreV1APIResources(ctx context.Context) (r GetCor
 //
 // GET /apis/discovery.k8s.io/
 func (UnimplementedHandler) GetDiscoveryAPIGroup(ctx context.Context) (r GetDiscoveryAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetDiscoveryAPIGroupRes), nil
 }
 
 // GetDiscoveryV1APIResources implements getDiscoveryV1APIResources operation.
@@ -703,7 +777,8 @@ func (UnimplementedHandler) GetDiscoveryAPIGroup(ctx context.Context) (r GetDisc
 //
 // GET /apis/discovery.k8s.io/v1/
 func (UnimplementedHandler) GetDiscoveryV1APIResources(ctx context.Context) (r GetDiscoveryV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetDiscoveryV1APIResourcesRes), nil
 }
 
 // GetDiscoveryV1beta1APIResources implements getDiscoveryV1beta1APIResources operation.
@@ -712,7 +787,8 @@ func (UnimplementedHandler) GetDiscoveryV1APIResources(ctx context.Context) (r G
 //
 // GET /apis/discovery.k8s.io/v1beta1/
 func (UnimplementedHandler) GetDiscoveryV1beta1APIResources(ctx context.Context) (r GetDiscoveryV1beta1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetDiscoveryV1beta1APIResourcesRes), nil
 }
 
 // GetEventsAPIGroup implements getEventsAPIGroup operation.
@@ -721,7 +797,8 @@ func (UnimplementedHandler) GetDiscoveryV1beta1APIResources(ctx context.Context)
 //
 // GET /apis/events.k8s.io/
 func (UnimplementedHandler) GetEventsAPIGroup(ctx context.Context) (r GetEventsAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetEventsAPIGroupRes), nil
 }
 
 // GetEventsV1APIResources implements getEventsV1APIResources operation.
@@ -730,7 +807,8 @@ func (UnimplementedHandler) GetEventsAPIGroup(ctx context.Context) (r GetEventsA
 //
 // GET /apis/events.k8s.io/v1/
 func (UnimplementedHandler) GetEventsV1APIResources(ctx context.Context) (r GetEventsV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetEventsV1APIResourcesRes), nil
 }
 
 // GetEventsV1beta1APIResources implements getEventsV1beta1APIResources operation.
@@ -739,7 +817,8 @@ func (UnimplementedHandler) GetEventsV1APIResources(ctx context.Context) (r GetE
 //
 // GET /apis/events.k8s.io/v1beta1/
 func (UnimplementedHandler) GetEventsV1beta1APIResources(ctx context.Context) (r GetEventsV1beta1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetEventsV1beta1APIResourcesRes), nil
 }
 
 // GetFlowcontrolApiserverAPIGroup implements getFlowcontrolApiserverAPIGroup operation.
@@ -748,7 +827,8 @@ func (UnimplementedHandler) GetEventsV1beta1APIResources(ctx context.Context) (r
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/
 func (UnimplementedHandler) GetFlowcontrolApiserverAPIGroup(ctx context.Context) (r GetFlowcontrolApiserverAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetFlowcontrolApiserverAPIGroupRes), nil
 }
 
 // GetFlowcontrolApiserverV1beta1APIResources implements getFlowcontrolApiserverV1beta1APIResources operation.
@@ -757,7 +837,8 @@ func (UnimplementedHandler) GetFlowcontrolApiserverAPIGroup(ctx context.Context)
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/
 func (UnimplementedHandler) GetFlowcontrolApiserverV1beta1APIResources(ctx context.Context) (r GetFlowcontrolApiserverV1beta1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetFlowcontrolApiserverV1beta1APIResourcesRes), nil
 }
 
 // GetFlowcontrolApiserverV1beta2APIResources implements getFlowcontrolApiserverV1beta2APIResources operation.
@@ -766,7 +847,8 @@ func (UnimplementedHandler) GetFlowcontrolApiserverV1beta1APIResources(ctx conte
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/
 func (UnimplementedHandler) GetFlowcontrolApiserverV1beta2APIResources(ctx context.Context) (r GetFlowcontrolApiserverV1beta2APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetFlowcontrolApiserverV1beta2APIResourcesRes), nil
 }
 
 // GetInternalApiserverAPIGroup implements getInternalApiserverAPIGroup operation.
@@ -775,7 +857,8 @@ func (UnimplementedHandler) GetFlowcontrolApiserverV1beta2APIResources(ctx conte
 //
 // GET /apis/internal.apiserver.k8s.io/
 func (UnimplementedHandler) GetInternalApiserverAPIGroup(ctx context.Context) (r GetInternalApiserverAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetInternalApiserverAPIGroupRes), nil
 }
 
 // GetInternalApiserverV1alpha1APIResources implements getInternalApiserverV1alpha1APIResources operation.
@@ -784,7 +867,8 @@ func (UnimplementedHandler) GetInternalApiserverAPIGroup(ctx context.Context) (r
 //
 // GET /apis/internal.apiserver.k8s.io/v1alpha1/
 func (UnimplementedHandler) GetInternalApiserverV1alpha1APIResources(ctx context.Context) (r GetInternalApiserverV1alpha1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetInternalApiserverV1alpha1APIResourcesRes), nil
 }
 
 // GetNetworkingAPIGroup implements getNetworkingAPIGroup operation.
@@ -793,7 +877,8 @@ func (UnimplementedHandler) GetInternalApiserverV1alpha1APIResources(ctx context
 //
 // GET /apis/networking.k8s.io/
 func (UnimplementedHandler) GetNetworkingAPIGroup(ctx context.Context) (r GetNetworkingAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetNetworkingAPIGroupRes), nil
 }
 
 // GetNetworkingV1APIResources implements getNetworkingV1APIResources operation.
@@ -802,7 +887,8 @@ func (UnimplementedHandler) GetNetworkingAPIGroup(ctx context.Context) (r GetNet
 //
 // GET /apis/networking.k8s.io/v1/
 func (UnimplementedHandler) GetNetworkingV1APIResources(ctx context.Context) (r GetNetworkingV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetNetworkingV1APIResourcesRes), nil
 }
 
 // GetNodeAPIGroup implements getNodeAPIGroup operation.
@@ -811,7 +897,8 @@ func (UnimplementedHandler) GetNetworkingV1APIResources(ctx context.Context) (r 
 //
 // GET /apis/node.k8s.io/
 func (UnimplementedHandler) GetNodeAPIGroup(ctx context.Context) (r GetNodeAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetNodeAPIGroupRes), nil
 }
 
 // GetNodeV1APIResources implements getNodeV1APIResources operation.
@@ -820,7 +907,8 @@ func (UnimplementedHandler) GetNodeAPIGroup(ctx context.Context) (r GetNodeAPIGr
 //
 // GET /apis/node.k8s.io/v1/
 func (UnimplementedHandler) GetNodeV1APIResources(ctx context.Context) (r GetNodeV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetNodeV1APIResourcesRes), nil
 }
 
 // GetNodeV1alpha1APIResources implements getNodeV1alpha1APIResources operation.
@@ -829,7 +917,8 @@ func (UnimplementedHandler) GetNodeV1APIResources(ctx context.Context) (r GetNod
 //
 // GET /apis/node.k8s.io/v1alpha1/
 func (UnimplementedHandler) GetNodeV1alpha1APIResources(ctx context.Context) (r GetNodeV1alpha1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetNodeV1alpha1APIResourcesRes), nil
 }
 
 // GetNodeV1beta1APIResources implements getNodeV1beta1APIResources operation.
@@ -838,7 +927,8 @@ func (UnimplementedHandler) GetNodeV1alpha1APIResources(ctx context.Context) (r 
 //
 // GET /apis/node.k8s.io/v1beta1/
 func (UnimplementedHandler) GetNodeV1beta1APIResources(ctx context.Context) (r GetNodeV1beta1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetNodeV1beta1APIResourcesRes), nil
 }
 
 // GetPolicyAPIGroup implements getPolicyAPIGroup operation.
@@ -847,7 +937,8 @@ func (UnimplementedHandler) GetNodeV1beta1APIResources(ctx context.Context) (r G
 //
 // GET /apis/policy/
 func (UnimplementedHandler) GetPolicyAPIGroup(ctx context.Context) (r GetPolicyAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetPolicyAPIGroupRes), nil
 }
 
 // GetPolicyV1APIResources implements getPolicyV1APIResources operation.
@@ -856,7 +947,8 @@ func (UnimplementedHandler) GetPolicyAPIGroup(ctx context.Context) (r GetPolicyA
 //
 // GET /apis/policy/v1/
 func (UnimplementedHandler) GetPolicyV1APIResources(ctx context.Context) (r GetPolicyV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetPolicyV1APIResourcesRes), nil
 }
 
 // GetPolicyV1beta1APIResources implements getPolicyV1beta1APIResources operation.
@@ -865,7 +957,8 @@ func (UnimplementedHandler) GetPolicyV1APIResources(ctx context.Context) (r GetP
 //
 // GET /apis/policy/v1beta1/
 func (UnimplementedHandler) GetPolicyV1beta1APIResources(ctx context.Context) (r GetPolicyV1beta1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetPolicyV1beta1APIResourcesRes), nil
 }
 
 // GetRbacAuthorizationAPIGroup implements getRbacAuthorizationAPIGroup operation.
@@ -874,7 +967,8 @@ func (UnimplementedHandler) GetPolicyV1beta1APIResources(ctx context.Context) (r
 //
 // GET /apis/rbac.authorization.k8s.io/
 func (UnimplementedHandler) GetRbacAuthorizationAPIGroup(ctx context.Context) (r GetRbacAuthorizationAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetRbacAuthorizationAPIGroupRes), nil
 }
 
 // GetRbacAuthorizationV1APIResources implements getRbacAuthorizationV1APIResources operation.
@@ -883,7 +977,8 @@ func (UnimplementedHandler) GetRbacAuthorizationAPIGroup(ctx context.Context) (r
 //
 // GET /apis/rbac.authorization.k8s.io/v1/
 func (UnimplementedHandler) GetRbacAuthorizationV1APIResources(ctx context.Context) (r GetRbacAuthorizationV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetRbacAuthorizationV1APIResourcesRes), nil
 }
 
 // GetSchedulingAPIGroup implements getSchedulingAPIGroup operation.
@@ -892,7 +987,8 @@ func (UnimplementedHandler) GetRbacAuthorizationV1APIResources(ctx context.Conte
 //
 // GET /apis/scheduling.k8s.io/
 func (UnimplementedHandler) GetSchedulingAPIGroup(ctx context.Context) (r GetSchedulingAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetSchedulingAPIGroupRes), nil
 }
 
 // GetSchedulingV1APIResources implements getSchedulingV1APIResources operation.
@@ -901,7 +997,8 @@ func (UnimplementedHandler) GetSchedulingAPIGroup(ctx context.Context) (r GetSch
 //
 // GET /apis/scheduling.k8s.io/v1/
 func (UnimplementedHandler) GetSchedulingV1APIResources(ctx context.Context) (r GetSchedulingV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetSchedulingV1APIResourcesRes), nil
 }
 
 // GetServiceAccountIssuerOpenIDConfiguration implements getServiceAccountIssuerOpenIDConfiguration operation.
@@ -910,7 +1007,8 @@ func (UnimplementedHandler) GetSchedulingV1APIResources(ctx context.Context) (r 
 //
 // GET /.well-known/openid-configuration/
 func (UnimplementedHandler) GetServiceAccountIssuerOpenIDConfiguration(ctx context.Context) (r GetServiceAccountIssuerOpenIDConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetServiceAccountIssuerOpenIDConfigurationRes), nil
 }
 
 // GetServiceAccountIssuerOpenIDKeyset implements getServiceAccountIssuerOpenIDKeyset operation.
@@ -919,7 +1017,8 @@ func (UnimplementedHandler) GetServiceAccountIssuerOpenIDConfiguration(ctx conte
 //
 // GET /openid/v1/jwks/
 func (UnimplementedHandler) GetServiceAccountIssuerOpenIDKeyset(ctx context.Context) (r GetServiceAccountIssuerOpenIDKeysetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetServiceAccountIssuerOpenIDKeysetRes), nil
 }
 
 // GetStorageAPIGroup implements getStorageAPIGroup operation.
@@ -928,7 +1027,8 @@ func (UnimplementedHandler) GetServiceAccountIssuerOpenIDKeyset(ctx context.Cont
 //
 // GET /apis/storage.k8s.io/
 func (UnimplementedHandler) GetStorageAPIGroup(ctx context.Context) (r GetStorageAPIGroupRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetStorageAPIGroupRes), nil
 }
 
 // GetStorageV1APIResources implements getStorageV1APIResources operation.
@@ -937,7 +1037,8 @@ func (UnimplementedHandler) GetStorageAPIGroup(ctx context.Context) (r GetStorag
 //
 // GET /apis/storage.k8s.io/v1/
 func (UnimplementedHandler) GetStorageV1APIResources(ctx context.Context) (r GetStorageV1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetStorageV1APIResourcesRes), nil
 }
 
 // GetStorageV1alpha1APIResources implements getStorageV1alpha1APIResources operation.
@@ -946,7 +1047,8 @@ func (UnimplementedHandler) GetStorageV1APIResources(ctx context.Context) (r Get
 //
 // GET /apis/storage.k8s.io/v1alpha1/
 func (UnimplementedHandler) GetStorageV1alpha1APIResources(ctx context.Context) (r GetStorageV1alpha1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetStorageV1alpha1APIResourcesRes), nil
 }
 
 // GetStorageV1beta1APIResources implements getStorageV1beta1APIResources operation.
@@ -955,7 +1057,8 @@ func (UnimplementedHandler) GetStorageV1alpha1APIResources(ctx context.Context) 
 //
 // GET /apis/storage.k8s.io/v1beta1/
 func (UnimplementedHandler) GetStorageV1beta1APIResources(ctx context.Context) (r GetStorageV1beta1APIResourcesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetStorageV1beta1APIResourcesRes), nil
 }
 
 // ListAdmissionregistrationV1MutatingWebhookConfiguration implements listAdmissionregistrationV1MutatingWebhookConfiguration operation.
@@ -964,7 +1067,8 @@ func (UnimplementedHandler) GetStorageV1beta1APIResources(ctx context.Context) (
 //
 // GET /apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations
 func (UnimplementedHandler) ListAdmissionregistrationV1MutatingWebhookConfiguration(ctx context.Context, params ListAdmissionregistrationV1MutatingWebhookConfigurationParams) (r ListAdmissionregistrationV1MutatingWebhookConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAdmissionregistrationV1MutatingWebhookConfigurationRes), nil
 }
 
 // ListAdmissionregistrationV1ValidatingWebhookConfiguration implements listAdmissionregistrationV1ValidatingWebhookConfiguration operation.
@@ -973,7 +1077,8 @@ func (UnimplementedHandler) ListAdmissionregistrationV1MutatingWebhookConfigurat
 //
 // GET /apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations
 func (UnimplementedHandler) ListAdmissionregistrationV1ValidatingWebhookConfiguration(ctx context.Context, params ListAdmissionregistrationV1ValidatingWebhookConfigurationParams) (r ListAdmissionregistrationV1ValidatingWebhookConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAdmissionregistrationV1ValidatingWebhookConfigurationRes), nil
 }
 
 // ListApiextensionsV1CustomResourceDefinition implements listApiextensionsV1CustomResourceDefinition operation.
@@ -982,7 +1087,8 @@ func (UnimplementedHandler) ListAdmissionregistrationV1ValidatingWebhookConfigur
 //
 // GET /apis/apiextensions.k8s.io/v1/customresourcedefinitions
 func (UnimplementedHandler) ListApiextensionsV1CustomResourceDefinition(ctx context.Context, params ListApiextensionsV1CustomResourceDefinitionParams) (r ListApiextensionsV1CustomResourceDefinitionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListApiextensionsV1CustomResourceDefinitionRes), nil
 }
 
 // ListApiregistrationV1APIService implements listApiregistrationV1APIService operation.
@@ -991,7 +1097,8 @@ func (UnimplementedHandler) ListApiextensionsV1CustomResourceDefinition(ctx cont
 //
 // GET /apis/apiregistration.k8s.io/v1/apiservices
 func (UnimplementedHandler) ListApiregistrationV1APIService(ctx context.Context, params ListApiregistrationV1APIServiceParams) (r ListApiregistrationV1APIServiceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListApiregistrationV1APIServiceRes), nil
 }
 
 // ListAppsV1ControllerRevisionForAllNamespaces implements listAppsV1ControllerRevisionForAllNamespaces operation.
@@ -1000,7 +1107,8 @@ func (UnimplementedHandler) ListApiregistrationV1APIService(ctx context.Context,
 //
 // GET /apis/apps/v1/controllerrevisions
 func (UnimplementedHandler) ListAppsV1ControllerRevisionForAllNamespaces(ctx context.Context, params ListAppsV1ControllerRevisionForAllNamespacesParams) (r ListAppsV1ControllerRevisionForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAppsV1ControllerRevisionForAllNamespacesRes), nil
 }
 
 // ListAppsV1DaemonSetForAllNamespaces implements listAppsV1DaemonSetForAllNamespaces operation.
@@ -1009,7 +1117,8 @@ func (UnimplementedHandler) ListAppsV1ControllerRevisionForAllNamespaces(ctx con
 //
 // GET /apis/apps/v1/daemonsets
 func (UnimplementedHandler) ListAppsV1DaemonSetForAllNamespaces(ctx context.Context, params ListAppsV1DaemonSetForAllNamespacesParams) (r ListAppsV1DaemonSetForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAppsV1DaemonSetForAllNamespacesRes), nil
 }
 
 // ListAppsV1DeploymentForAllNamespaces implements listAppsV1DeploymentForAllNamespaces operation.
@@ -1018,7 +1127,8 @@ func (UnimplementedHandler) ListAppsV1DaemonSetForAllNamespaces(ctx context.Cont
 //
 // GET /apis/apps/v1/deployments
 func (UnimplementedHandler) ListAppsV1DeploymentForAllNamespaces(ctx context.Context, params ListAppsV1DeploymentForAllNamespacesParams) (r ListAppsV1DeploymentForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAppsV1DeploymentForAllNamespacesRes), nil
 }
 
 // ListAppsV1NamespacedControllerRevision implements listAppsV1NamespacedControllerRevision operation.
@@ -1027,7 +1137,8 @@ func (UnimplementedHandler) ListAppsV1DeploymentForAllNamespaces(ctx context.Con
 //
 // GET /apis/apps/v1/namespaces/{namespace}/controllerrevisions
 func (UnimplementedHandler) ListAppsV1NamespacedControllerRevision(ctx context.Context, params ListAppsV1NamespacedControllerRevisionParams) (r ListAppsV1NamespacedControllerRevisionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAppsV1NamespacedControllerRevisionRes), nil
 }
 
 // ListAppsV1NamespacedDaemonSet implements listAppsV1NamespacedDaemonSet operation.
@@ -1036,7 +1147,8 @@ func (UnimplementedHandler) ListAppsV1NamespacedControllerRevision(ctx context.C
 //
 // GET /apis/apps/v1/namespaces/{namespace}/daemonsets
 func (UnimplementedHandler) ListAppsV1NamespacedDaemonSet(ctx context.Context, params ListAppsV1NamespacedDaemonSetParams) (r ListAppsV1NamespacedDaemonSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAppsV1NamespacedDaemonSetRes), nil
 }
 
 // ListAppsV1NamespacedDeployment implements listAppsV1NamespacedDeployment operation.
@@ -1045,7 +1157,8 @@ func (UnimplementedHandler) ListAppsV1NamespacedDaemonSet(ctx context.Context, p
 //
 // GET /apis/apps/v1/namespaces/{namespace}/deployments
 func (UnimplementedHandler) ListAppsV1NamespacedDeployment(ctx context.Context, params ListAppsV1NamespacedDeploymentParams) (r ListAppsV1NamespacedDeploymentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAppsV1NamespacedDeploymentRes), nil
 }
 
 // ListAppsV1NamespacedReplicaSet implements listAppsV1NamespacedReplicaSet operation.
@@ -1054,7 +1167,8 @@ func (UnimplementedHandler) ListAppsV1NamespacedDeployment(ctx context.Context, 
 //
 // GET /apis/apps/v1/namespaces/{namespace}/replicasets
 func (UnimplementedHandler) ListAppsV1NamespacedReplicaSet(ctx context.Context, params ListAppsV1NamespacedReplicaSetParams) (r ListAppsV1NamespacedReplicaSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAppsV1NamespacedReplicaSetRes), nil
 }
 
 // ListAppsV1NamespacedStatefulSet implements listAppsV1NamespacedStatefulSet operation.
@@ -1063,7 +1177,8 @@ func (UnimplementedHandler) ListAppsV1NamespacedReplicaSet(ctx context.Context, 
 //
 // GET /apis/apps/v1/namespaces/{namespace}/statefulsets
 func (UnimplementedHandler) ListAppsV1NamespacedStatefulSet(ctx context.Context, params ListAppsV1NamespacedStatefulSetParams) (r ListAppsV1NamespacedStatefulSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAppsV1NamespacedStatefulSetRes), nil
 }
 
 // ListAppsV1ReplicaSetForAllNamespaces implements listAppsV1ReplicaSetForAllNamespaces operation.
@@ -1072,7 +1187,8 @@ func (UnimplementedHandler) ListAppsV1NamespacedStatefulSet(ctx context.Context,
 //
 // GET /apis/apps/v1/replicasets
 func (UnimplementedHandler) ListAppsV1ReplicaSetForAllNamespaces(ctx context.Context, params ListAppsV1ReplicaSetForAllNamespacesParams) (r ListAppsV1ReplicaSetForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAppsV1ReplicaSetForAllNamespacesRes), nil
 }
 
 // ListAppsV1StatefulSetForAllNamespaces implements listAppsV1StatefulSetForAllNamespaces operation.
@@ -1081,7 +1197,8 @@ func (UnimplementedHandler) ListAppsV1ReplicaSetForAllNamespaces(ctx context.Con
 //
 // GET /apis/apps/v1/statefulsets
 func (UnimplementedHandler) ListAppsV1StatefulSetForAllNamespaces(ctx context.Context, params ListAppsV1StatefulSetForAllNamespacesParams) (r ListAppsV1StatefulSetForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAppsV1StatefulSetForAllNamespacesRes), nil
 }
 
 // ListAutoscalingV1HorizontalPodAutoscalerForAllNamespaces implements listAutoscalingV1HorizontalPodAutoscalerForAllNamespaces operation.
@@ -1090,7 +1207,8 @@ func (UnimplementedHandler) ListAppsV1StatefulSetForAllNamespaces(ctx context.Co
 //
 // GET /apis/autoscaling/v1/horizontalpodautoscalers
 func (UnimplementedHandler) ListAutoscalingV1HorizontalPodAutoscalerForAllNamespaces(ctx context.Context, params ListAutoscalingV1HorizontalPodAutoscalerForAllNamespacesParams) (r ListAutoscalingV1HorizontalPodAutoscalerForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAutoscalingV1HorizontalPodAutoscalerForAllNamespacesRes), nil
 }
 
 // ListAutoscalingV1NamespacedHorizontalPodAutoscaler implements listAutoscalingV1NamespacedHorizontalPodAutoscaler operation.
@@ -1099,7 +1217,8 @@ func (UnimplementedHandler) ListAutoscalingV1HorizontalPodAutoscalerForAllNamesp
 //
 // GET /apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers
 func (UnimplementedHandler) ListAutoscalingV1NamespacedHorizontalPodAutoscaler(ctx context.Context, params ListAutoscalingV1NamespacedHorizontalPodAutoscalerParams) (r ListAutoscalingV1NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAutoscalingV1NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // ListAutoscalingV2beta1HorizontalPodAutoscalerForAllNamespaces implements listAutoscalingV2beta1HorizontalPodAutoscalerForAllNamespaces operation.
@@ -1108,7 +1227,8 @@ func (UnimplementedHandler) ListAutoscalingV1NamespacedHorizontalPodAutoscaler(c
 //
 // GET /apis/autoscaling/v2beta1/horizontalpodautoscalers
 func (UnimplementedHandler) ListAutoscalingV2beta1HorizontalPodAutoscalerForAllNamespaces(ctx context.Context, params ListAutoscalingV2beta1HorizontalPodAutoscalerForAllNamespacesParams) (r ListAutoscalingV2beta1HorizontalPodAutoscalerForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAutoscalingV2beta1HorizontalPodAutoscalerForAllNamespacesRes), nil
 }
 
 // ListAutoscalingV2beta1NamespacedHorizontalPodAutoscaler implements listAutoscalingV2beta1NamespacedHorizontalPodAutoscaler operation.
@@ -1117,7 +1237,8 @@ func (UnimplementedHandler) ListAutoscalingV2beta1HorizontalPodAutoscalerForAllN
 //
 // GET /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers
 func (UnimplementedHandler) ListAutoscalingV2beta1NamespacedHorizontalPodAutoscaler(ctx context.Context, params ListAutoscalingV2beta1NamespacedHorizontalPodAutoscalerParams) (r ListAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // ListAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespaces implements listAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespaces operation.
@@ -1126,7 +1247,8 @@ func (UnimplementedHandler) ListAutoscalingV2beta1NamespacedHorizontalPodAutosca
 //
 // GET /apis/autoscaling/v2beta2/horizontalpodautoscalers
 func (UnimplementedHandler) ListAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespaces(ctx context.Context, params ListAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespacesParams) (r ListAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespacesRes), nil
 }
 
 // ListAutoscalingV2beta2NamespacedHorizontalPodAutoscaler implements listAutoscalingV2beta2NamespacedHorizontalPodAutoscaler operation.
@@ -1135,7 +1257,8 @@ func (UnimplementedHandler) ListAutoscalingV2beta2HorizontalPodAutoscalerForAllN
 //
 // GET /apis/autoscaling/v2beta2/namespaces/{namespace}/horizontalpodautoscalers
 func (UnimplementedHandler) ListAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(ctx context.Context, params ListAutoscalingV2beta2NamespacedHorizontalPodAutoscalerParams) (r ListAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // ListBatchV1CronJobForAllNamespaces implements listBatchV1CronJobForAllNamespaces operation.
@@ -1144,7 +1267,8 @@ func (UnimplementedHandler) ListAutoscalingV2beta2NamespacedHorizontalPodAutosca
 //
 // GET /apis/batch/v1/cronjobs
 func (UnimplementedHandler) ListBatchV1CronJobForAllNamespaces(ctx context.Context, params ListBatchV1CronJobForAllNamespacesParams) (r ListBatchV1CronJobForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListBatchV1CronJobForAllNamespacesRes), nil
 }
 
 // ListBatchV1JobForAllNamespaces implements listBatchV1JobForAllNamespaces operation.
@@ -1153,7 +1277,8 @@ func (UnimplementedHandler) ListBatchV1CronJobForAllNamespaces(ctx context.Conte
 //
 // GET /apis/batch/v1/jobs
 func (UnimplementedHandler) ListBatchV1JobForAllNamespaces(ctx context.Context, params ListBatchV1JobForAllNamespacesParams) (r ListBatchV1JobForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListBatchV1JobForAllNamespacesRes), nil
 }
 
 // ListBatchV1NamespacedCronJob implements listBatchV1NamespacedCronJob operation.
@@ -1162,7 +1287,8 @@ func (UnimplementedHandler) ListBatchV1JobForAllNamespaces(ctx context.Context, 
 //
 // GET /apis/batch/v1/namespaces/{namespace}/cronjobs
 func (UnimplementedHandler) ListBatchV1NamespacedCronJob(ctx context.Context, params ListBatchV1NamespacedCronJobParams) (r ListBatchV1NamespacedCronJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListBatchV1NamespacedCronJobRes), nil
 }
 
 // ListBatchV1NamespacedJob implements listBatchV1NamespacedJob operation.
@@ -1171,7 +1297,8 @@ func (UnimplementedHandler) ListBatchV1NamespacedCronJob(ctx context.Context, pa
 //
 // GET /apis/batch/v1/namespaces/{namespace}/jobs
 func (UnimplementedHandler) ListBatchV1NamespacedJob(ctx context.Context, params ListBatchV1NamespacedJobParams) (r ListBatchV1NamespacedJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListBatchV1NamespacedJobRes), nil
 }
 
 // ListBatchV1beta1CronJobForAllNamespaces implements listBatchV1beta1CronJobForAllNamespaces operation.
@@ -1180,7 +1307,8 @@ func (UnimplementedHandler) ListBatchV1NamespacedJob(ctx context.Context, params
 //
 // GET /apis/batch/v1beta1/cronjobs
 func (UnimplementedHandler) ListBatchV1beta1CronJobForAllNamespaces(ctx context.Context, params ListBatchV1beta1CronJobForAllNamespacesParams) (r ListBatchV1beta1CronJobForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListBatchV1beta1CronJobForAllNamespacesRes), nil
 }
 
 // ListBatchV1beta1NamespacedCronJob implements listBatchV1beta1NamespacedCronJob operation.
@@ -1189,7 +1317,8 @@ func (UnimplementedHandler) ListBatchV1beta1CronJobForAllNamespaces(ctx context.
 //
 // GET /apis/batch/v1beta1/namespaces/{namespace}/cronjobs
 func (UnimplementedHandler) ListBatchV1beta1NamespacedCronJob(ctx context.Context, params ListBatchV1beta1NamespacedCronJobParams) (r ListBatchV1beta1NamespacedCronJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListBatchV1beta1NamespacedCronJobRes), nil
 }
 
 // ListCertificatesV1CertificateSigningRequest implements listCertificatesV1CertificateSigningRequest operation.
@@ -1198,7 +1327,8 @@ func (UnimplementedHandler) ListBatchV1beta1NamespacedCronJob(ctx context.Contex
 //
 // GET /apis/certificates.k8s.io/v1/certificatesigningrequests
 func (UnimplementedHandler) ListCertificatesV1CertificateSigningRequest(ctx context.Context, params ListCertificatesV1CertificateSigningRequestParams) (r ListCertificatesV1CertificateSigningRequestRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCertificatesV1CertificateSigningRequestRes), nil
 }
 
 // ListCoordinationV1LeaseForAllNamespaces implements listCoordinationV1LeaseForAllNamespaces operation.
@@ -1207,7 +1337,8 @@ func (UnimplementedHandler) ListCertificatesV1CertificateSigningRequest(ctx cont
 //
 // GET /apis/coordination.k8s.io/v1/leases
 func (UnimplementedHandler) ListCoordinationV1LeaseForAllNamespaces(ctx context.Context, params ListCoordinationV1LeaseForAllNamespacesParams) (r ListCoordinationV1LeaseForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoordinationV1LeaseForAllNamespacesRes), nil
 }
 
 // ListCoordinationV1NamespacedLease implements listCoordinationV1NamespacedLease operation.
@@ -1216,7 +1347,8 @@ func (UnimplementedHandler) ListCoordinationV1LeaseForAllNamespaces(ctx context.
 //
 // GET /apis/coordination.k8s.io/v1/namespaces/{namespace}/leases
 func (UnimplementedHandler) ListCoordinationV1NamespacedLease(ctx context.Context, params ListCoordinationV1NamespacedLeaseParams) (r ListCoordinationV1NamespacedLeaseRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoordinationV1NamespacedLeaseRes), nil
 }
 
 // ListCoreV1ComponentStatus implements listCoreV1ComponentStatus operation.
@@ -1225,7 +1357,8 @@ func (UnimplementedHandler) ListCoordinationV1NamespacedLease(ctx context.Contex
 //
 // GET /api/v1/componentstatuses
 func (UnimplementedHandler) ListCoreV1ComponentStatus(ctx context.Context, params ListCoreV1ComponentStatusParams) (r ListCoreV1ComponentStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1ComponentStatusRes), nil
 }
 
 // ListCoreV1ConfigMapForAllNamespaces implements listCoreV1ConfigMapForAllNamespaces operation.
@@ -1234,7 +1367,8 @@ func (UnimplementedHandler) ListCoreV1ComponentStatus(ctx context.Context, param
 //
 // GET /api/v1/configmaps
 func (UnimplementedHandler) ListCoreV1ConfigMapForAllNamespaces(ctx context.Context, params ListCoreV1ConfigMapForAllNamespacesParams) (r ListCoreV1ConfigMapForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1ConfigMapForAllNamespacesRes), nil
 }
 
 // ListCoreV1EndpointsForAllNamespaces implements listCoreV1EndpointsForAllNamespaces operation.
@@ -1243,7 +1377,8 @@ func (UnimplementedHandler) ListCoreV1ConfigMapForAllNamespaces(ctx context.Cont
 //
 // GET /api/v1/endpoints
 func (UnimplementedHandler) ListCoreV1EndpointsForAllNamespaces(ctx context.Context, params ListCoreV1EndpointsForAllNamespacesParams) (r ListCoreV1EndpointsForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1EndpointsForAllNamespacesRes), nil
 }
 
 // ListCoreV1EventForAllNamespaces implements listCoreV1EventForAllNamespaces operation.
@@ -1252,7 +1387,8 @@ func (UnimplementedHandler) ListCoreV1EndpointsForAllNamespaces(ctx context.Cont
 //
 // GET /api/v1/events
 func (UnimplementedHandler) ListCoreV1EventForAllNamespaces(ctx context.Context, params ListCoreV1EventForAllNamespacesParams) (r ListCoreV1EventForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1EventForAllNamespacesRes), nil
 }
 
 // ListCoreV1LimitRangeForAllNamespaces implements listCoreV1LimitRangeForAllNamespaces operation.
@@ -1261,7 +1397,8 @@ func (UnimplementedHandler) ListCoreV1EventForAllNamespaces(ctx context.Context,
 //
 // GET /api/v1/limitranges
 func (UnimplementedHandler) ListCoreV1LimitRangeForAllNamespaces(ctx context.Context, params ListCoreV1LimitRangeForAllNamespacesParams) (r ListCoreV1LimitRangeForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1LimitRangeForAllNamespacesRes), nil
 }
 
 // ListCoreV1Namespace implements listCoreV1Namespace operation.
@@ -1270,7 +1407,8 @@ func (UnimplementedHandler) ListCoreV1LimitRangeForAllNamespaces(ctx context.Con
 //
 // GET /api/v1/namespaces
 func (UnimplementedHandler) ListCoreV1Namespace(ctx context.Context, params ListCoreV1NamespaceParams) (r ListCoreV1NamespaceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespaceRes), nil
 }
 
 // ListCoreV1NamespacedConfigMap implements listCoreV1NamespacedConfigMap operation.
@@ -1279,7 +1417,8 @@ func (UnimplementedHandler) ListCoreV1Namespace(ctx context.Context, params List
 //
 // GET /api/v1/namespaces/{namespace}/configmaps
 func (UnimplementedHandler) ListCoreV1NamespacedConfigMap(ctx context.Context, params ListCoreV1NamespacedConfigMapParams) (r ListCoreV1NamespacedConfigMapRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedConfigMapRes), nil
 }
 
 // ListCoreV1NamespacedEndpoints implements listCoreV1NamespacedEndpoints operation.
@@ -1288,7 +1427,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedConfigMap(ctx context.Context, p
 //
 // GET /api/v1/namespaces/{namespace}/endpoints
 func (UnimplementedHandler) ListCoreV1NamespacedEndpoints(ctx context.Context, params ListCoreV1NamespacedEndpointsParams) (r ListCoreV1NamespacedEndpointsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedEndpointsRes), nil
 }
 
 // ListCoreV1NamespacedEvent implements listCoreV1NamespacedEvent operation.
@@ -1297,7 +1437,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedEndpoints(ctx context.Context, p
 //
 // GET /api/v1/namespaces/{namespace}/events
 func (UnimplementedHandler) ListCoreV1NamespacedEvent(ctx context.Context, params ListCoreV1NamespacedEventParams) (r ListCoreV1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedEventRes), nil
 }
 
 // ListCoreV1NamespacedLimitRange implements listCoreV1NamespacedLimitRange operation.
@@ -1306,7 +1447,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedEvent(ctx context.Context, param
 //
 // GET /api/v1/namespaces/{namespace}/limitranges
 func (UnimplementedHandler) ListCoreV1NamespacedLimitRange(ctx context.Context, params ListCoreV1NamespacedLimitRangeParams) (r ListCoreV1NamespacedLimitRangeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedLimitRangeRes), nil
 }
 
 // ListCoreV1NamespacedPersistentVolumeClaim implements listCoreV1NamespacedPersistentVolumeClaim operation.
@@ -1315,7 +1457,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedLimitRange(ctx context.Context, 
 //
 // GET /api/v1/namespaces/{namespace}/persistentvolumeclaims
 func (UnimplementedHandler) ListCoreV1NamespacedPersistentVolumeClaim(ctx context.Context, params ListCoreV1NamespacedPersistentVolumeClaimParams) (r ListCoreV1NamespacedPersistentVolumeClaimRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedPersistentVolumeClaimRes), nil
 }
 
 // ListCoreV1NamespacedPod implements listCoreV1NamespacedPod operation.
@@ -1324,7 +1467,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedPersistentVolumeClaim(ctx contex
 //
 // GET /api/v1/namespaces/{namespace}/pods
 func (UnimplementedHandler) ListCoreV1NamespacedPod(ctx context.Context, params ListCoreV1NamespacedPodParams) (r ListCoreV1NamespacedPodRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedPodRes), nil
 }
 
 // ListCoreV1NamespacedPodTemplate implements listCoreV1NamespacedPodTemplate operation.
@@ -1333,7 +1477,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedPod(ctx context.Context, params 
 //
 // GET /api/v1/namespaces/{namespace}/podtemplates
 func (UnimplementedHandler) ListCoreV1NamespacedPodTemplate(ctx context.Context, params ListCoreV1NamespacedPodTemplateParams) (r ListCoreV1NamespacedPodTemplateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedPodTemplateRes), nil
 }
 
 // ListCoreV1NamespacedReplicationController implements listCoreV1NamespacedReplicationController operation.
@@ -1342,7 +1487,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedPodTemplate(ctx context.Context,
 //
 // GET /api/v1/namespaces/{namespace}/replicationcontrollers
 func (UnimplementedHandler) ListCoreV1NamespacedReplicationController(ctx context.Context, params ListCoreV1NamespacedReplicationControllerParams) (r ListCoreV1NamespacedReplicationControllerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedReplicationControllerRes), nil
 }
 
 // ListCoreV1NamespacedResourceQuota implements listCoreV1NamespacedResourceQuota operation.
@@ -1351,7 +1497,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedReplicationController(ctx contex
 //
 // GET /api/v1/namespaces/{namespace}/resourcequotas
 func (UnimplementedHandler) ListCoreV1NamespacedResourceQuota(ctx context.Context, params ListCoreV1NamespacedResourceQuotaParams) (r ListCoreV1NamespacedResourceQuotaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedResourceQuotaRes), nil
 }
 
 // ListCoreV1NamespacedSecret implements listCoreV1NamespacedSecret operation.
@@ -1360,7 +1507,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedResourceQuota(ctx context.Contex
 //
 // GET /api/v1/namespaces/{namespace}/secrets
 func (UnimplementedHandler) ListCoreV1NamespacedSecret(ctx context.Context, params ListCoreV1NamespacedSecretParams) (r ListCoreV1NamespacedSecretRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedSecretRes), nil
 }
 
 // ListCoreV1NamespacedService implements listCoreV1NamespacedService operation.
@@ -1369,7 +1517,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedSecret(ctx context.Context, para
 //
 // GET /api/v1/namespaces/{namespace}/services
 func (UnimplementedHandler) ListCoreV1NamespacedService(ctx context.Context, params ListCoreV1NamespacedServiceParams) (r ListCoreV1NamespacedServiceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedServiceRes), nil
 }
 
 // ListCoreV1NamespacedServiceAccount implements listCoreV1NamespacedServiceAccount operation.
@@ -1378,7 +1527,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedService(ctx context.Context, par
 //
 // GET /api/v1/namespaces/{namespace}/serviceaccounts
 func (UnimplementedHandler) ListCoreV1NamespacedServiceAccount(ctx context.Context, params ListCoreV1NamespacedServiceAccountParams) (r ListCoreV1NamespacedServiceAccountRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NamespacedServiceAccountRes), nil
 }
 
 // ListCoreV1Node implements listCoreV1Node operation.
@@ -1387,7 +1537,8 @@ func (UnimplementedHandler) ListCoreV1NamespacedServiceAccount(ctx context.Conte
 //
 // GET /api/v1/nodes
 func (UnimplementedHandler) ListCoreV1Node(ctx context.Context, params ListCoreV1NodeParams) (r ListCoreV1NodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1NodeRes), nil
 }
 
 // ListCoreV1PersistentVolume implements listCoreV1PersistentVolume operation.
@@ -1396,7 +1547,8 @@ func (UnimplementedHandler) ListCoreV1Node(ctx context.Context, params ListCoreV
 //
 // GET /api/v1/persistentvolumes
 func (UnimplementedHandler) ListCoreV1PersistentVolume(ctx context.Context, params ListCoreV1PersistentVolumeParams) (r ListCoreV1PersistentVolumeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1PersistentVolumeRes), nil
 }
 
 // ListCoreV1PersistentVolumeClaimForAllNamespaces implements listCoreV1PersistentVolumeClaimForAllNamespaces operation.
@@ -1405,7 +1557,8 @@ func (UnimplementedHandler) ListCoreV1PersistentVolume(ctx context.Context, para
 //
 // GET /api/v1/persistentvolumeclaims
 func (UnimplementedHandler) ListCoreV1PersistentVolumeClaimForAllNamespaces(ctx context.Context, params ListCoreV1PersistentVolumeClaimForAllNamespacesParams) (r ListCoreV1PersistentVolumeClaimForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1PersistentVolumeClaimForAllNamespacesRes), nil
 }
 
 // ListCoreV1PodForAllNamespaces implements listCoreV1PodForAllNamespaces operation.
@@ -1414,7 +1567,8 @@ func (UnimplementedHandler) ListCoreV1PersistentVolumeClaimForAllNamespaces(ctx 
 //
 // GET /api/v1/pods
 func (UnimplementedHandler) ListCoreV1PodForAllNamespaces(ctx context.Context, params ListCoreV1PodForAllNamespacesParams) (r ListCoreV1PodForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1PodForAllNamespacesRes), nil
 }
 
 // ListCoreV1PodTemplateForAllNamespaces implements listCoreV1PodTemplateForAllNamespaces operation.
@@ -1423,7 +1577,8 @@ func (UnimplementedHandler) ListCoreV1PodForAllNamespaces(ctx context.Context, p
 //
 // GET /api/v1/podtemplates
 func (UnimplementedHandler) ListCoreV1PodTemplateForAllNamespaces(ctx context.Context, params ListCoreV1PodTemplateForAllNamespacesParams) (r ListCoreV1PodTemplateForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1PodTemplateForAllNamespacesRes), nil
 }
 
 // ListCoreV1ReplicationControllerForAllNamespaces implements listCoreV1ReplicationControllerForAllNamespaces operation.
@@ -1432,7 +1587,8 @@ func (UnimplementedHandler) ListCoreV1PodTemplateForAllNamespaces(ctx context.Co
 //
 // GET /api/v1/replicationcontrollers
 func (UnimplementedHandler) ListCoreV1ReplicationControllerForAllNamespaces(ctx context.Context, params ListCoreV1ReplicationControllerForAllNamespacesParams) (r ListCoreV1ReplicationControllerForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1ReplicationControllerForAllNamespacesRes), nil
 }
 
 // ListCoreV1ResourceQuotaForAllNamespaces implements listCoreV1ResourceQuotaForAllNamespaces operation.
@@ -1441,7 +1597,8 @@ func (UnimplementedHandler) ListCoreV1ReplicationControllerForAllNamespaces(ctx 
 //
 // GET /api/v1/resourcequotas
 func (UnimplementedHandler) ListCoreV1ResourceQuotaForAllNamespaces(ctx context.Context, params ListCoreV1ResourceQuotaForAllNamespacesParams) (r ListCoreV1ResourceQuotaForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1ResourceQuotaForAllNamespacesRes), nil
 }
 
 // ListCoreV1SecretForAllNamespaces implements listCoreV1SecretForAllNamespaces operation.
@@ -1450,7 +1607,8 @@ func (UnimplementedHandler) ListCoreV1ResourceQuotaForAllNamespaces(ctx context.
 //
 // GET /api/v1/secrets
 func (UnimplementedHandler) ListCoreV1SecretForAllNamespaces(ctx context.Context, params ListCoreV1SecretForAllNamespacesParams) (r ListCoreV1SecretForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1SecretForAllNamespacesRes), nil
 }
 
 // ListCoreV1ServiceAccountForAllNamespaces implements listCoreV1ServiceAccountForAllNamespaces operation.
@@ -1459,7 +1617,8 @@ func (UnimplementedHandler) ListCoreV1SecretForAllNamespaces(ctx context.Context
 //
 // GET /api/v1/serviceaccounts
 func (UnimplementedHandler) ListCoreV1ServiceAccountForAllNamespaces(ctx context.Context, params ListCoreV1ServiceAccountForAllNamespacesParams) (r ListCoreV1ServiceAccountForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1ServiceAccountForAllNamespacesRes), nil
 }
 
 // ListCoreV1ServiceForAllNamespaces implements listCoreV1ServiceForAllNamespaces operation.
@@ -1468,7 +1627,8 @@ func (UnimplementedHandler) ListCoreV1ServiceAccountForAllNamespaces(ctx context
 //
 // GET /api/v1/services
 func (UnimplementedHandler) ListCoreV1ServiceForAllNamespaces(ctx context.Context, params ListCoreV1ServiceForAllNamespacesParams) (r ListCoreV1ServiceForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListCoreV1ServiceForAllNamespacesRes), nil
 }
 
 // ListDiscoveryV1EndpointSliceForAllNamespaces implements listDiscoveryV1EndpointSliceForAllNamespaces operation.
@@ -1477,7 +1637,8 @@ func (UnimplementedHandler) ListCoreV1ServiceForAllNamespaces(ctx context.Contex
 //
 // GET /apis/discovery.k8s.io/v1/endpointslices
 func (UnimplementedHandler) ListDiscoveryV1EndpointSliceForAllNamespaces(ctx context.Context, params ListDiscoveryV1EndpointSliceForAllNamespacesParams) (r ListDiscoveryV1EndpointSliceForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListDiscoveryV1EndpointSliceForAllNamespacesRes), nil
 }
 
 // ListDiscoveryV1NamespacedEndpointSlice implements listDiscoveryV1NamespacedEndpointSlice operation.
@@ -1486,7 +1647,8 @@ func (UnimplementedHandler) ListDiscoveryV1EndpointSliceForAllNamespaces(ctx con
 //
 // GET /apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices
 func (UnimplementedHandler) ListDiscoveryV1NamespacedEndpointSlice(ctx context.Context, params ListDiscoveryV1NamespacedEndpointSliceParams) (r ListDiscoveryV1NamespacedEndpointSliceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListDiscoveryV1NamespacedEndpointSliceRes), nil
 }
 
 // ListDiscoveryV1beta1EndpointSliceForAllNamespaces implements listDiscoveryV1beta1EndpointSliceForAllNamespaces operation.
@@ -1495,7 +1657,8 @@ func (UnimplementedHandler) ListDiscoveryV1NamespacedEndpointSlice(ctx context.C
 //
 // GET /apis/discovery.k8s.io/v1beta1/endpointslices
 func (UnimplementedHandler) ListDiscoveryV1beta1EndpointSliceForAllNamespaces(ctx context.Context, params ListDiscoveryV1beta1EndpointSliceForAllNamespacesParams) (r ListDiscoveryV1beta1EndpointSliceForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListDiscoveryV1beta1EndpointSliceForAllNamespacesRes), nil
 }
 
 // ListDiscoveryV1beta1NamespacedEndpointSlice implements listDiscoveryV1beta1NamespacedEndpointSlice operation.
@@ -1504,7 +1667,8 @@ func (UnimplementedHandler) ListDiscoveryV1beta1EndpointSliceForAllNamespaces(ct
 //
 // GET /apis/discovery.k8s.io/v1beta1/namespaces/{namespace}/endpointslices
 func (UnimplementedHandler) ListDiscoveryV1beta1NamespacedEndpointSlice(ctx context.Context, params ListDiscoveryV1beta1NamespacedEndpointSliceParams) (r ListDiscoveryV1beta1NamespacedEndpointSliceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListDiscoveryV1beta1NamespacedEndpointSliceRes), nil
 }
 
 // ListEventsV1EventForAllNamespaces implements listEventsV1EventForAllNamespaces operation.
@@ -1513,7 +1677,8 @@ func (UnimplementedHandler) ListDiscoveryV1beta1NamespacedEndpointSlice(ctx cont
 //
 // GET /apis/events.k8s.io/v1/events
 func (UnimplementedHandler) ListEventsV1EventForAllNamespaces(ctx context.Context, params ListEventsV1EventForAllNamespacesParams) (r ListEventsV1EventForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListEventsV1EventForAllNamespacesRes), nil
 }
 
 // ListEventsV1NamespacedEvent implements listEventsV1NamespacedEvent operation.
@@ -1522,7 +1687,8 @@ func (UnimplementedHandler) ListEventsV1EventForAllNamespaces(ctx context.Contex
 //
 // GET /apis/events.k8s.io/v1/namespaces/{namespace}/events
 func (UnimplementedHandler) ListEventsV1NamespacedEvent(ctx context.Context, params ListEventsV1NamespacedEventParams) (r ListEventsV1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListEventsV1NamespacedEventRes), nil
 }
 
 // ListEventsV1beta1EventForAllNamespaces implements listEventsV1beta1EventForAllNamespaces operation.
@@ -1531,7 +1697,8 @@ func (UnimplementedHandler) ListEventsV1NamespacedEvent(ctx context.Context, par
 //
 // GET /apis/events.k8s.io/v1beta1/events
 func (UnimplementedHandler) ListEventsV1beta1EventForAllNamespaces(ctx context.Context, params ListEventsV1beta1EventForAllNamespacesParams) (r ListEventsV1beta1EventForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListEventsV1beta1EventForAllNamespacesRes), nil
 }
 
 // ListEventsV1beta1NamespacedEvent implements listEventsV1beta1NamespacedEvent operation.
@@ -1540,7 +1707,8 @@ func (UnimplementedHandler) ListEventsV1beta1EventForAllNamespaces(ctx context.C
 //
 // GET /apis/events.k8s.io/v1beta1/namespaces/{namespace}/events
 func (UnimplementedHandler) ListEventsV1beta1NamespacedEvent(ctx context.Context, params ListEventsV1beta1NamespacedEventParams) (r ListEventsV1beta1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListEventsV1beta1NamespacedEventRes), nil
 }
 
 // ListFlowcontrolApiserverV1beta1FlowSchema implements listFlowcontrolApiserverV1beta1FlowSchema operation.
@@ -1549,7 +1717,8 @@ func (UnimplementedHandler) ListEventsV1beta1NamespacedEvent(ctx context.Context
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas
 func (UnimplementedHandler) ListFlowcontrolApiserverV1beta1FlowSchema(ctx context.Context, params ListFlowcontrolApiserverV1beta1FlowSchemaParams) (r ListFlowcontrolApiserverV1beta1FlowSchemaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListFlowcontrolApiserverV1beta1FlowSchemaRes), nil
 }
 
 // ListFlowcontrolApiserverV1beta1PriorityLevelConfiguration implements listFlowcontrolApiserverV1beta1PriorityLevelConfiguration operation.
@@ -1558,7 +1727,8 @@ func (UnimplementedHandler) ListFlowcontrolApiserverV1beta1FlowSchema(ctx contex
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations
 func (UnimplementedHandler) ListFlowcontrolApiserverV1beta1PriorityLevelConfiguration(ctx context.Context, params ListFlowcontrolApiserverV1beta1PriorityLevelConfigurationParams) (r ListFlowcontrolApiserverV1beta1PriorityLevelConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListFlowcontrolApiserverV1beta1PriorityLevelConfigurationRes), nil
 }
 
 // ListFlowcontrolApiserverV1beta2FlowSchema implements listFlowcontrolApiserverV1beta2FlowSchema operation.
@@ -1567,7 +1737,8 @@ func (UnimplementedHandler) ListFlowcontrolApiserverV1beta1PriorityLevelConfigur
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas
 func (UnimplementedHandler) ListFlowcontrolApiserverV1beta2FlowSchema(ctx context.Context, params ListFlowcontrolApiserverV1beta2FlowSchemaParams) (r ListFlowcontrolApiserverV1beta2FlowSchemaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListFlowcontrolApiserverV1beta2FlowSchemaRes), nil
 }
 
 // ListFlowcontrolApiserverV1beta2PriorityLevelConfiguration implements listFlowcontrolApiserverV1beta2PriorityLevelConfiguration operation.
@@ -1576,7 +1747,8 @@ func (UnimplementedHandler) ListFlowcontrolApiserverV1beta2FlowSchema(ctx contex
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations
 func (UnimplementedHandler) ListFlowcontrolApiserverV1beta2PriorityLevelConfiguration(ctx context.Context, params ListFlowcontrolApiserverV1beta2PriorityLevelConfigurationParams) (r ListFlowcontrolApiserverV1beta2PriorityLevelConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListFlowcontrolApiserverV1beta2PriorityLevelConfigurationRes), nil
 }
 
 // ListInternalApiserverV1alpha1StorageVersion implements listInternalApiserverV1alpha1StorageVersion operation.
@@ -1585,7 +1757,8 @@ func (UnimplementedHandler) ListFlowcontrolApiserverV1beta2PriorityLevelConfigur
 //
 // GET /apis/internal.apiserver.k8s.io/v1alpha1/storageversions
 func (UnimplementedHandler) ListInternalApiserverV1alpha1StorageVersion(ctx context.Context, params ListInternalApiserverV1alpha1StorageVersionParams) (r ListInternalApiserverV1alpha1StorageVersionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListInternalApiserverV1alpha1StorageVersionRes), nil
 }
 
 // ListNetworkingV1IngressClass implements listNetworkingV1IngressClass operation.
@@ -1594,7 +1767,8 @@ func (UnimplementedHandler) ListInternalApiserverV1alpha1StorageVersion(ctx cont
 //
 // GET /apis/networking.k8s.io/v1/ingressclasses
 func (UnimplementedHandler) ListNetworkingV1IngressClass(ctx context.Context, params ListNetworkingV1IngressClassParams) (r ListNetworkingV1IngressClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListNetworkingV1IngressClassRes), nil
 }
 
 // ListNetworkingV1IngressForAllNamespaces implements listNetworkingV1IngressForAllNamespaces operation.
@@ -1603,7 +1777,8 @@ func (UnimplementedHandler) ListNetworkingV1IngressClass(ctx context.Context, pa
 //
 // GET /apis/networking.k8s.io/v1/ingresses
 func (UnimplementedHandler) ListNetworkingV1IngressForAllNamespaces(ctx context.Context, params ListNetworkingV1IngressForAllNamespacesParams) (r ListNetworkingV1IngressForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListNetworkingV1IngressForAllNamespacesRes), nil
 }
 
 // ListNetworkingV1NamespacedIngress implements listNetworkingV1NamespacedIngress operation.
@@ -1612,7 +1787,8 @@ func (UnimplementedHandler) ListNetworkingV1IngressForAllNamespaces(ctx context.
 //
 // GET /apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses
 func (UnimplementedHandler) ListNetworkingV1NamespacedIngress(ctx context.Context, params ListNetworkingV1NamespacedIngressParams) (r ListNetworkingV1NamespacedIngressRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListNetworkingV1NamespacedIngressRes), nil
 }
 
 // ListNetworkingV1NamespacedNetworkPolicy implements listNetworkingV1NamespacedNetworkPolicy operation.
@@ -1621,7 +1797,8 @@ func (UnimplementedHandler) ListNetworkingV1NamespacedIngress(ctx context.Contex
 //
 // GET /apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies
 func (UnimplementedHandler) ListNetworkingV1NamespacedNetworkPolicy(ctx context.Context, params ListNetworkingV1NamespacedNetworkPolicyParams) (r ListNetworkingV1NamespacedNetworkPolicyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListNetworkingV1NamespacedNetworkPolicyRes), nil
 }
 
 // ListNetworkingV1NetworkPolicyForAllNamespaces implements listNetworkingV1NetworkPolicyForAllNamespaces operation.
@@ -1630,7 +1807,8 @@ func (UnimplementedHandler) ListNetworkingV1NamespacedNetworkPolicy(ctx context.
 //
 // GET /apis/networking.k8s.io/v1/networkpolicies
 func (UnimplementedHandler) ListNetworkingV1NetworkPolicyForAllNamespaces(ctx context.Context, params ListNetworkingV1NetworkPolicyForAllNamespacesParams) (r ListNetworkingV1NetworkPolicyForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListNetworkingV1NetworkPolicyForAllNamespacesRes), nil
 }
 
 // ListNodeV1RuntimeClass implements listNodeV1RuntimeClass operation.
@@ -1639,7 +1817,8 @@ func (UnimplementedHandler) ListNetworkingV1NetworkPolicyForAllNamespaces(ctx co
 //
 // GET /apis/node.k8s.io/v1/runtimeclasses
 func (UnimplementedHandler) ListNodeV1RuntimeClass(ctx context.Context, params ListNodeV1RuntimeClassParams) (r ListNodeV1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListNodeV1RuntimeClassRes), nil
 }
 
 // ListNodeV1alpha1RuntimeClass implements listNodeV1alpha1RuntimeClass operation.
@@ -1648,7 +1827,8 @@ func (UnimplementedHandler) ListNodeV1RuntimeClass(ctx context.Context, params L
 //
 // GET /apis/node.k8s.io/v1alpha1/runtimeclasses
 func (UnimplementedHandler) ListNodeV1alpha1RuntimeClass(ctx context.Context, params ListNodeV1alpha1RuntimeClassParams) (r ListNodeV1alpha1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListNodeV1alpha1RuntimeClassRes), nil
 }
 
 // ListNodeV1beta1RuntimeClass implements listNodeV1beta1RuntimeClass operation.
@@ -1657,7 +1837,8 @@ func (UnimplementedHandler) ListNodeV1alpha1RuntimeClass(ctx context.Context, pa
 //
 // GET /apis/node.k8s.io/v1beta1/runtimeclasses
 func (UnimplementedHandler) ListNodeV1beta1RuntimeClass(ctx context.Context, params ListNodeV1beta1RuntimeClassParams) (r ListNodeV1beta1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListNodeV1beta1RuntimeClassRes), nil
 }
 
 // ListPolicyV1NamespacedPodDisruptionBudget implements listPolicyV1NamespacedPodDisruptionBudget operation.
@@ -1666,7 +1847,8 @@ func (UnimplementedHandler) ListNodeV1beta1RuntimeClass(ctx context.Context, par
 //
 // GET /apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets
 func (UnimplementedHandler) ListPolicyV1NamespacedPodDisruptionBudget(ctx context.Context, params ListPolicyV1NamespacedPodDisruptionBudgetParams) (r ListPolicyV1NamespacedPodDisruptionBudgetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListPolicyV1NamespacedPodDisruptionBudgetRes), nil
 }
 
 // ListPolicyV1PodDisruptionBudgetForAllNamespaces implements listPolicyV1PodDisruptionBudgetForAllNamespaces operation.
@@ -1675,7 +1857,8 @@ func (UnimplementedHandler) ListPolicyV1NamespacedPodDisruptionBudget(ctx contex
 //
 // GET /apis/policy/v1/poddisruptionbudgets
 func (UnimplementedHandler) ListPolicyV1PodDisruptionBudgetForAllNamespaces(ctx context.Context, params ListPolicyV1PodDisruptionBudgetForAllNamespacesParams) (r ListPolicyV1PodDisruptionBudgetForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListPolicyV1PodDisruptionBudgetForAllNamespacesRes), nil
 }
 
 // ListPolicyV1beta1NamespacedPodDisruptionBudget implements listPolicyV1beta1NamespacedPodDisruptionBudget operation.
@@ -1684,7 +1867,8 @@ func (UnimplementedHandler) ListPolicyV1PodDisruptionBudgetForAllNamespaces(ctx 
 //
 // GET /apis/policy/v1beta1/namespaces/{namespace}/poddisruptionbudgets
 func (UnimplementedHandler) ListPolicyV1beta1NamespacedPodDisruptionBudget(ctx context.Context, params ListPolicyV1beta1NamespacedPodDisruptionBudgetParams) (r ListPolicyV1beta1NamespacedPodDisruptionBudgetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListPolicyV1beta1NamespacedPodDisruptionBudgetRes), nil
 }
 
 // ListPolicyV1beta1PodDisruptionBudgetForAllNamespaces implements listPolicyV1beta1PodDisruptionBudgetForAllNamespaces operation.
@@ -1693,7 +1877,8 @@ func (UnimplementedHandler) ListPolicyV1beta1NamespacedPodDisruptionBudget(ctx c
 //
 // GET /apis/policy/v1beta1/poddisruptionbudgets
 func (UnimplementedHandler) ListPolicyV1beta1PodDisruptionBudgetForAllNamespaces(ctx context.Context, params ListPolicyV1beta1PodDisruptionBudgetForAllNamespacesParams) (r ListPolicyV1beta1PodDisruptionBudgetForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListPolicyV1beta1PodDisruptionBudgetForAllNamespacesRes), nil
 }
 
 // ListPolicyV1beta1PodSecurityPolicy implements listPolicyV1beta1PodSecurityPolicy operation.
@@ -1702,7 +1887,8 @@ func (UnimplementedHandler) ListPolicyV1beta1PodDisruptionBudgetForAllNamespaces
 //
 // GET /apis/policy/v1beta1/podsecuritypolicies
 func (UnimplementedHandler) ListPolicyV1beta1PodSecurityPolicy(ctx context.Context, params ListPolicyV1beta1PodSecurityPolicyParams) (r ListPolicyV1beta1PodSecurityPolicyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListPolicyV1beta1PodSecurityPolicyRes), nil
 }
 
 // ListRbacAuthorizationV1ClusterRole implements listRbacAuthorizationV1ClusterRole operation.
@@ -1711,7 +1897,8 @@ func (UnimplementedHandler) ListPolicyV1beta1PodSecurityPolicy(ctx context.Conte
 //
 // GET /apis/rbac.authorization.k8s.io/v1/clusterroles
 func (UnimplementedHandler) ListRbacAuthorizationV1ClusterRole(ctx context.Context, params ListRbacAuthorizationV1ClusterRoleParams) (r ListRbacAuthorizationV1ClusterRoleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListRbacAuthorizationV1ClusterRoleRes), nil
 }
 
 // ListRbacAuthorizationV1ClusterRoleBinding implements listRbacAuthorizationV1ClusterRoleBinding operation.
@@ -1720,7 +1907,8 @@ func (UnimplementedHandler) ListRbacAuthorizationV1ClusterRole(ctx context.Conte
 //
 // GET /apis/rbac.authorization.k8s.io/v1/clusterrolebindings
 func (UnimplementedHandler) ListRbacAuthorizationV1ClusterRoleBinding(ctx context.Context, params ListRbacAuthorizationV1ClusterRoleBindingParams) (r ListRbacAuthorizationV1ClusterRoleBindingRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListRbacAuthorizationV1ClusterRoleBindingRes), nil
 }
 
 // ListRbacAuthorizationV1NamespacedRole implements listRbacAuthorizationV1NamespacedRole operation.
@@ -1729,7 +1917,8 @@ func (UnimplementedHandler) ListRbacAuthorizationV1ClusterRoleBinding(ctx contex
 //
 // GET /apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles
 func (UnimplementedHandler) ListRbacAuthorizationV1NamespacedRole(ctx context.Context, params ListRbacAuthorizationV1NamespacedRoleParams) (r ListRbacAuthorizationV1NamespacedRoleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListRbacAuthorizationV1NamespacedRoleRes), nil
 }
 
 // ListRbacAuthorizationV1NamespacedRoleBinding implements listRbacAuthorizationV1NamespacedRoleBinding operation.
@@ -1738,7 +1927,8 @@ func (UnimplementedHandler) ListRbacAuthorizationV1NamespacedRole(ctx context.Co
 //
 // GET /apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings
 func (UnimplementedHandler) ListRbacAuthorizationV1NamespacedRoleBinding(ctx context.Context, params ListRbacAuthorizationV1NamespacedRoleBindingParams) (r ListRbacAuthorizationV1NamespacedRoleBindingRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListRbacAuthorizationV1NamespacedRoleBindingRes), nil
 }
 
 // ListRbacAuthorizationV1RoleBindingForAllNamespaces implements listRbacAuthorizationV1RoleBindingForAllNamespaces operation.
@@ -1747,7 +1937,8 @@ func (UnimplementedHandler) ListRbacAuthorizationV1NamespacedRoleBinding(ctx con
 //
 // GET /apis/rbac.authorization.k8s.io/v1/rolebindings
 func (UnimplementedHandler) ListRbacAuthorizationV1RoleBindingForAllNamespaces(ctx context.Context, params ListRbacAuthorizationV1RoleBindingForAllNamespacesParams) (r ListRbacAuthorizationV1RoleBindingForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListRbacAuthorizationV1RoleBindingForAllNamespacesRes), nil
 }
 
 // ListRbacAuthorizationV1RoleForAllNamespaces implements listRbacAuthorizationV1RoleForAllNamespaces operation.
@@ -1756,7 +1947,8 @@ func (UnimplementedHandler) ListRbacAuthorizationV1RoleBindingForAllNamespaces(c
 //
 // GET /apis/rbac.authorization.k8s.io/v1/roles
 func (UnimplementedHandler) ListRbacAuthorizationV1RoleForAllNamespaces(ctx context.Context, params ListRbacAuthorizationV1RoleForAllNamespacesParams) (r ListRbacAuthorizationV1RoleForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListRbacAuthorizationV1RoleForAllNamespacesRes), nil
 }
 
 // ListSchedulingV1PriorityClass implements listSchedulingV1PriorityClass operation.
@@ -1765,7 +1957,8 @@ func (UnimplementedHandler) ListRbacAuthorizationV1RoleForAllNamespaces(ctx cont
 //
 // GET /apis/scheduling.k8s.io/v1/priorityclasses
 func (UnimplementedHandler) ListSchedulingV1PriorityClass(ctx context.Context, params ListSchedulingV1PriorityClassParams) (r ListSchedulingV1PriorityClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListSchedulingV1PriorityClassRes), nil
 }
 
 // ListStorageV1CSIDriver implements listStorageV1CSIDriver operation.
@@ -1774,7 +1967,8 @@ func (UnimplementedHandler) ListSchedulingV1PriorityClass(ctx context.Context, p
 //
 // GET /apis/storage.k8s.io/v1/csidrivers
 func (UnimplementedHandler) ListStorageV1CSIDriver(ctx context.Context, params ListStorageV1CSIDriverParams) (r ListStorageV1CSIDriverRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListStorageV1CSIDriverRes), nil
 }
 
 // ListStorageV1CSINode implements listStorageV1CSINode operation.
@@ -1783,7 +1977,8 @@ func (UnimplementedHandler) ListStorageV1CSIDriver(ctx context.Context, params L
 //
 // GET /apis/storage.k8s.io/v1/csinodes
 func (UnimplementedHandler) ListStorageV1CSINode(ctx context.Context, params ListStorageV1CSINodeParams) (r ListStorageV1CSINodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListStorageV1CSINodeRes), nil
 }
 
 // ListStorageV1StorageClass implements listStorageV1StorageClass operation.
@@ -1792,7 +1987,8 @@ func (UnimplementedHandler) ListStorageV1CSINode(ctx context.Context, params Lis
 //
 // GET /apis/storage.k8s.io/v1/storageclasses
 func (UnimplementedHandler) ListStorageV1StorageClass(ctx context.Context, params ListStorageV1StorageClassParams) (r ListStorageV1StorageClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListStorageV1StorageClassRes), nil
 }
 
 // ListStorageV1VolumeAttachment implements listStorageV1VolumeAttachment operation.
@@ -1801,7 +1997,8 @@ func (UnimplementedHandler) ListStorageV1StorageClass(ctx context.Context, param
 //
 // GET /apis/storage.k8s.io/v1/volumeattachments
 func (UnimplementedHandler) ListStorageV1VolumeAttachment(ctx context.Context, params ListStorageV1VolumeAttachmentParams) (r ListStorageV1VolumeAttachmentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListStorageV1VolumeAttachmentRes), nil
 }
 
 // ListStorageV1alpha1CSIStorageCapacityForAllNamespaces implements listStorageV1alpha1CSIStorageCapacityForAllNamespaces operation.
@@ -1810,7 +2007,8 @@ func (UnimplementedHandler) ListStorageV1VolumeAttachment(ctx context.Context, p
 //
 // GET /apis/storage.k8s.io/v1alpha1/csistoragecapacities
 func (UnimplementedHandler) ListStorageV1alpha1CSIStorageCapacityForAllNamespaces(ctx context.Context, params ListStorageV1alpha1CSIStorageCapacityForAllNamespacesParams) (r ListStorageV1alpha1CSIStorageCapacityForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListStorageV1alpha1CSIStorageCapacityForAllNamespacesRes), nil
 }
 
 // ListStorageV1alpha1NamespacedCSIStorageCapacity implements listStorageV1alpha1NamespacedCSIStorageCapacity operation.
@@ -1819,7 +2017,8 @@ func (UnimplementedHandler) ListStorageV1alpha1CSIStorageCapacityForAllNamespace
 //
 // GET /apis/storage.k8s.io/v1alpha1/namespaces/{namespace}/csistoragecapacities
 func (UnimplementedHandler) ListStorageV1alpha1NamespacedCSIStorageCapacity(ctx context.Context, params ListStorageV1alpha1NamespacedCSIStorageCapacityParams) (r ListStorageV1alpha1NamespacedCSIStorageCapacityRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListStorageV1alpha1NamespacedCSIStorageCapacityRes), nil
 }
 
 // ListStorageV1beta1CSIStorageCapacityForAllNamespaces implements listStorageV1beta1CSIStorageCapacityForAllNamespaces operation.
@@ -1828,7 +2027,8 @@ func (UnimplementedHandler) ListStorageV1alpha1NamespacedCSIStorageCapacity(ctx 
 //
 // GET /apis/storage.k8s.io/v1beta1/csistoragecapacities
 func (UnimplementedHandler) ListStorageV1beta1CSIStorageCapacityForAllNamespaces(ctx context.Context, params ListStorageV1beta1CSIStorageCapacityForAllNamespacesParams) (r ListStorageV1beta1CSIStorageCapacityForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListStorageV1beta1CSIStorageCapacityForAllNamespacesRes), nil
 }
 
 // ListStorageV1beta1NamespacedCSIStorageCapacity implements listStorageV1beta1NamespacedCSIStorageCapacity operation.
@@ -1837,21 +2037,24 @@ func (UnimplementedHandler) ListStorageV1beta1CSIStorageCapacityForAllNamespaces
 //
 // GET /apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities
 func (UnimplementedHandler) ListStorageV1beta1NamespacedCSIStorageCapacity(ctx context.Context, params ListStorageV1beta1NamespacedCSIStorageCapacityParams) (r ListStorageV1beta1NamespacedCSIStorageCapacityRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ListStorageV1beta1NamespacedCSIStorageCapacityRes), nil
 }
 
 // LogFileHandler implements logFileHandler operation.
 //
 // GET /logs/{logpath}
 func (UnimplementedHandler) LogFileHandler(ctx context.Context, params LogFileHandlerParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // LogFileListHandler implements logFileListHandler operation.
 //
 // GET /logs/
 func (UnimplementedHandler) LogFileListHandler(ctx context.Context) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // PatchAdmissionregistrationV1MutatingWebhookConfiguration implements patchAdmissionregistrationV1MutatingWebhookConfiguration operation.
@@ -1860,7 +2063,8 @@ func (UnimplementedHandler) LogFileListHandler(ctx context.Context) error {
 //
 // PATCH /apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}
 func (UnimplementedHandler) PatchAdmissionregistrationV1MutatingWebhookConfiguration(ctx context.Context, req PatchAdmissionregistrationV1MutatingWebhookConfigurationReq, params PatchAdmissionregistrationV1MutatingWebhookConfigurationParams) (r PatchAdmissionregistrationV1MutatingWebhookConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAdmissionregistrationV1MutatingWebhookConfigurationRes), nil
 }
 
 // PatchAdmissionregistrationV1ValidatingWebhookConfiguration implements patchAdmissionregistrationV1ValidatingWebhookConfiguration operation.
@@ -1869,7 +2073,8 @@ func (UnimplementedHandler) PatchAdmissionregistrationV1MutatingWebhookConfigura
 //
 // PATCH /apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}
 func (UnimplementedHandler) PatchAdmissionregistrationV1ValidatingWebhookConfiguration(ctx context.Context, req PatchAdmissionregistrationV1ValidatingWebhookConfigurationReq, params PatchAdmissionregistrationV1ValidatingWebhookConfigurationParams) (r PatchAdmissionregistrationV1ValidatingWebhookConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAdmissionregistrationV1ValidatingWebhookConfigurationRes), nil
 }
 
 // PatchApiextensionsV1CustomResourceDefinition implements patchApiextensionsV1CustomResourceDefinition operation.
@@ -1878,7 +2083,8 @@ func (UnimplementedHandler) PatchAdmissionregistrationV1ValidatingWebhookConfigu
 //
 // PATCH /apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}
 func (UnimplementedHandler) PatchApiextensionsV1CustomResourceDefinition(ctx context.Context, req PatchApiextensionsV1CustomResourceDefinitionReq, params PatchApiextensionsV1CustomResourceDefinitionParams) (r PatchApiextensionsV1CustomResourceDefinitionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchApiextensionsV1CustomResourceDefinitionRes), nil
 }
 
 // PatchApiextensionsV1CustomResourceDefinitionStatus implements patchApiextensionsV1CustomResourceDefinitionStatus operation.
@@ -1887,7 +2093,8 @@ func (UnimplementedHandler) PatchApiextensionsV1CustomResourceDefinition(ctx con
 //
 // PATCH /apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status
 func (UnimplementedHandler) PatchApiextensionsV1CustomResourceDefinitionStatus(ctx context.Context, req PatchApiextensionsV1CustomResourceDefinitionStatusReq, params PatchApiextensionsV1CustomResourceDefinitionStatusParams) (r PatchApiextensionsV1CustomResourceDefinitionStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchApiextensionsV1CustomResourceDefinitionStatusRes), nil
 }
 
 // PatchApiregistrationV1APIService implements patchApiregistrationV1APIService operation.
@@ -1896,7 +2103,8 @@ func (UnimplementedHandler) PatchApiextensionsV1CustomResourceDefinitionStatus(c
 //
 // PATCH /apis/apiregistration.k8s.io/v1/apiservices/{name}
 func (UnimplementedHandler) PatchApiregistrationV1APIService(ctx context.Context, req PatchApiregistrationV1APIServiceReq, params PatchApiregistrationV1APIServiceParams) (r PatchApiregistrationV1APIServiceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchApiregistrationV1APIServiceRes), nil
 }
 
 // PatchApiregistrationV1APIServiceStatus implements patchApiregistrationV1APIServiceStatus operation.
@@ -1905,7 +2113,8 @@ func (UnimplementedHandler) PatchApiregistrationV1APIService(ctx context.Context
 //
 // PATCH /apis/apiregistration.k8s.io/v1/apiservices/{name}/status
 func (UnimplementedHandler) PatchApiregistrationV1APIServiceStatus(ctx context.Context, req PatchApiregistrationV1APIServiceStatusReq, params PatchApiregistrationV1APIServiceStatusParams) (r PatchApiregistrationV1APIServiceStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchApiregistrationV1APIServiceStatusRes), nil
 }
 
 // PatchAppsV1NamespacedControllerRevision implements patchAppsV1NamespacedControllerRevision operation.
@@ -1914,7 +2123,8 @@ func (UnimplementedHandler) PatchApiregistrationV1APIServiceStatus(ctx context.C
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}
 func (UnimplementedHandler) PatchAppsV1NamespacedControllerRevision(ctx context.Context, req PatchAppsV1NamespacedControllerRevisionReq, params PatchAppsV1NamespacedControllerRevisionParams) (r PatchAppsV1NamespacedControllerRevisionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedControllerRevisionRes), nil
 }
 
 // PatchAppsV1NamespacedDaemonSet implements patchAppsV1NamespacedDaemonSet operation.
@@ -1923,7 +2133,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedControllerRevision(ctx context.
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/daemonsets/{name}
 func (UnimplementedHandler) PatchAppsV1NamespacedDaemonSet(ctx context.Context, req PatchAppsV1NamespacedDaemonSetReq, params PatchAppsV1NamespacedDaemonSetParams) (r PatchAppsV1NamespacedDaemonSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedDaemonSetRes), nil
 }
 
 // PatchAppsV1NamespacedDaemonSetStatus implements patchAppsV1NamespacedDaemonSetStatus operation.
@@ -1932,7 +2143,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedDaemonSet(ctx context.Context, 
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/daemonsets/{name}/status
 func (UnimplementedHandler) PatchAppsV1NamespacedDaemonSetStatus(ctx context.Context, req PatchAppsV1NamespacedDaemonSetStatusReq, params PatchAppsV1NamespacedDaemonSetStatusParams) (r PatchAppsV1NamespacedDaemonSetStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedDaemonSetStatusRes), nil
 }
 
 // PatchAppsV1NamespacedDeployment implements patchAppsV1NamespacedDeployment operation.
@@ -1941,7 +2153,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedDaemonSetStatus(ctx context.Con
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/deployments/{name}
 func (UnimplementedHandler) PatchAppsV1NamespacedDeployment(ctx context.Context, req PatchAppsV1NamespacedDeploymentReq, params PatchAppsV1NamespacedDeploymentParams) (r PatchAppsV1NamespacedDeploymentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedDeploymentRes), nil
 }
 
 // PatchAppsV1NamespacedDeploymentScale implements patchAppsV1NamespacedDeploymentScale operation.
@@ -1950,7 +2163,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedDeployment(ctx context.Context,
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/deployments/{name}/scale
 func (UnimplementedHandler) PatchAppsV1NamespacedDeploymentScale(ctx context.Context, req PatchAppsV1NamespacedDeploymentScaleReq, params PatchAppsV1NamespacedDeploymentScaleParams) (r PatchAppsV1NamespacedDeploymentScaleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedDeploymentScaleRes), nil
 }
 
 // PatchAppsV1NamespacedDeploymentStatus implements patchAppsV1NamespacedDeploymentStatus operation.
@@ -1959,7 +2173,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedDeploymentScale(ctx context.Con
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/deployments/{name}/status
 func (UnimplementedHandler) PatchAppsV1NamespacedDeploymentStatus(ctx context.Context, req PatchAppsV1NamespacedDeploymentStatusReq, params PatchAppsV1NamespacedDeploymentStatusParams) (r PatchAppsV1NamespacedDeploymentStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedDeploymentStatusRes), nil
 }
 
 // PatchAppsV1NamespacedReplicaSet implements patchAppsV1NamespacedReplicaSet operation.
@@ -1968,7 +2183,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedDeploymentStatus(ctx context.Co
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/replicasets/{name}
 func (UnimplementedHandler) PatchAppsV1NamespacedReplicaSet(ctx context.Context, req PatchAppsV1NamespacedReplicaSetReq, params PatchAppsV1NamespacedReplicaSetParams) (r PatchAppsV1NamespacedReplicaSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedReplicaSetRes), nil
 }
 
 // PatchAppsV1NamespacedReplicaSetScale implements patchAppsV1NamespacedReplicaSetScale operation.
@@ -1977,7 +2193,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedReplicaSet(ctx context.Context,
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/replicasets/{name}/scale
 func (UnimplementedHandler) PatchAppsV1NamespacedReplicaSetScale(ctx context.Context, req PatchAppsV1NamespacedReplicaSetScaleReq, params PatchAppsV1NamespacedReplicaSetScaleParams) (r PatchAppsV1NamespacedReplicaSetScaleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedReplicaSetScaleRes), nil
 }
 
 // PatchAppsV1NamespacedReplicaSetStatus implements patchAppsV1NamespacedReplicaSetStatus operation.
@@ -1986,7 +2203,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedReplicaSetScale(ctx context.Con
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/replicasets/{name}/status
 func (UnimplementedHandler) PatchAppsV1NamespacedReplicaSetStatus(ctx context.Context, req PatchAppsV1NamespacedReplicaSetStatusReq, params PatchAppsV1NamespacedReplicaSetStatusParams) (r PatchAppsV1NamespacedReplicaSetStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedReplicaSetStatusRes), nil
 }
 
 // PatchAppsV1NamespacedStatefulSet implements patchAppsV1NamespacedStatefulSet operation.
@@ -1995,7 +2213,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedReplicaSetStatus(ctx context.Co
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/statefulsets/{name}
 func (UnimplementedHandler) PatchAppsV1NamespacedStatefulSet(ctx context.Context, req PatchAppsV1NamespacedStatefulSetReq, params PatchAppsV1NamespacedStatefulSetParams) (r PatchAppsV1NamespacedStatefulSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedStatefulSetRes), nil
 }
 
 // PatchAppsV1NamespacedStatefulSetScale implements patchAppsV1NamespacedStatefulSetScale operation.
@@ -2004,7 +2223,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedStatefulSet(ctx context.Context
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/scale
 func (UnimplementedHandler) PatchAppsV1NamespacedStatefulSetScale(ctx context.Context, req PatchAppsV1NamespacedStatefulSetScaleReq, params PatchAppsV1NamespacedStatefulSetScaleParams) (r PatchAppsV1NamespacedStatefulSetScaleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedStatefulSetScaleRes), nil
 }
 
 // PatchAppsV1NamespacedStatefulSetStatus implements patchAppsV1NamespacedStatefulSetStatus operation.
@@ -2013,7 +2233,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedStatefulSetScale(ctx context.Co
 //
 // PATCH /apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/status
 func (UnimplementedHandler) PatchAppsV1NamespacedStatefulSetStatus(ctx context.Context, req PatchAppsV1NamespacedStatefulSetStatusReq, params PatchAppsV1NamespacedStatefulSetStatusParams) (r PatchAppsV1NamespacedStatefulSetStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAppsV1NamespacedStatefulSetStatusRes), nil
 }
 
 // PatchAutoscalingV1NamespacedHorizontalPodAutoscaler implements patchAutoscalingV1NamespacedHorizontalPodAutoscaler operation.
@@ -2022,7 +2243,8 @@ func (UnimplementedHandler) PatchAppsV1NamespacedStatefulSetStatus(ctx context.C
 //
 // PATCH /apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}
 func (UnimplementedHandler) PatchAutoscalingV1NamespacedHorizontalPodAutoscaler(ctx context.Context, req PatchAutoscalingV1NamespacedHorizontalPodAutoscalerReq, params PatchAutoscalingV1NamespacedHorizontalPodAutoscalerParams) (r PatchAutoscalingV1NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAutoscalingV1NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus implements patchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus operation.
@@ -2031,7 +2253,8 @@ func (UnimplementedHandler) PatchAutoscalingV1NamespacedHorizontalPodAutoscaler(
 //
 // PATCH /apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
 func (UnimplementedHandler) PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(ctx context.Context, req PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusReq, params PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusParams) (r PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusRes), nil
 }
 
 // PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscaler implements patchAutoscalingV2beta1NamespacedHorizontalPodAutoscaler operation.
@@ -2040,7 +2263,8 @@ func (UnimplementedHandler) PatchAutoscalingV1NamespacedHorizontalPodAutoscalerS
 //
 // PATCH /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}
 func (UnimplementedHandler) PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscaler(ctx context.Context, req PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerReq, params PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerParams) (r PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatus implements patchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatus operation.
@@ -2049,7 +2273,8 @@ func (UnimplementedHandler) PatchAutoscalingV2beta1NamespacedHorizontalPodAutosc
 //
 // PATCH /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
 func (UnimplementedHandler) PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatus(ctx context.Context, req PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusReq, params PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusParams) (r PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusRes), nil
 }
 
 // PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscaler implements patchAutoscalingV2beta2NamespacedHorizontalPodAutoscaler operation.
@@ -2058,7 +2283,8 @@ func (UnimplementedHandler) PatchAutoscalingV2beta1NamespacedHorizontalPodAutosc
 //
 // PATCH /apis/autoscaling/v2beta2/namespaces/{namespace}/horizontalpodautoscalers/{name}
 func (UnimplementedHandler) PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(ctx context.Context, req PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerReq, params PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerParams) (r PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatus implements patchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatus operation.
@@ -2067,7 +2293,8 @@ func (UnimplementedHandler) PatchAutoscalingV2beta2NamespacedHorizontalPodAutosc
 //
 // PATCH /apis/autoscaling/v2beta2/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
 func (UnimplementedHandler) PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatus(ctx context.Context, req PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusReq, params PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusParams) (r PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusRes), nil
 }
 
 // PatchBatchV1NamespacedCronJob implements patchBatchV1NamespacedCronJob operation.
@@ -2076,7 +2303,8 @@ func (UnimplementedHandler) PatchAutoscalingV2beta2NamespacedHorizontalPodAutosc
 //
 // PATCH /apis/batch/v1/namespaces/{namespace}/cronjobs/{name}
 func (UnimplementedHandler) PatchBatchV1NamespacedCronJob(ctx context.Context, req PatchBatchV1NamespacedCronJobReq, params PatchBatchV1NamespacedCronJobParams) (r PatchBatchV1NamespacedCronJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchBatchV1NamespacedCronJobRes), nil
 }
 
 // PatchBatchV1NamespacedCronJobStatus implements patchBatchV1NamespacedCronJobStatus operation.
@@ -2085,7 +2313,8 @@ func (UnimplementedHandler) PatchBatchV1NamespacedCronJob(ctx context.Context, r
 //
 // PATCH /apis/batch/v1/namespaces/{namespace}/cronjobs/{name}/status
 func (UnimplementedHandler) PatchBatchV1NamespacedCronJobStatus(ctx context.Context, req PatchBatchV1NamespacedCronJobStatusReq, params PatchBatchV1NamespacedCronJobStatusParams) (r PatchBatchV1NamespacedCronJobStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchBatchV1NamespacedCronJobStatusRes), nil
 }
 
 // PatchBatchV1NamespacedJob implements patchBatchV1NamespacedJob operation.
@@ -2094,7 +2323,8 @@ func (UnimplementedHandler) PatchBatchV1NamespacedCronJobStatus(ctx context.Cont
 //
 // PATCH /apis/batch/v1/namespaces/{namespace}/jobs/{name}
 func (UnimplementedHandler) PatchBatchV1NamespacedJob(ctx context.Context, req PatchBatchV1NamespacedJobReq, params PatchBatchV1NamespacedJobParams) (r PatchBatchV1NamespacedJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchBatchV1NamespacedJobRes), nil
 }
 
 // PatchBatchV1NamespacedJobStatus implements patchBatchV1NamespacedJobStatus operation.
@@ -2103,7 +2333,8 @@ func (UnimplementedHandler) PatchBatchV1NamespacedJob(ctx context.Context, req P
 //
 // PATCH /apis/batch/v1/namespaces/{namespace}/jobs/{name}/status
 func (UnimplementedHandler) PatchBatchV1NamespacedJobStatus(ctx context.Context, req PatchBatchV1NamespacedJobStatusReq, params PatchBatchV1NamespacedJobStatusParams) (r PatchBatchV1NamespacedJobStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchBatchV1NamespacedJobStatusRes), nil
 }
 
 // PatchBatchV1beta1NamespacedCronJob implements patchBatchV1beta1NamespacedCronJob operation.
@@ -2112,7 +2343,8 @@ func (UnimplementedHandler) PatchBatchV1NamespacedJobStatus(ctx context.Context,
 //
 // PATCH /apis/batch/v1beta1/namespaces/{namespace}/cronjobs/{name}
 func (UnimplementedHandler) PatchBatchV1beta1NamespacedCronJob(ctx context.Context, req PatchBatchV1beta1NamespacedCronJobReq, params PatchBatchV1beta1NamespacedCronJobParams) (r PatchBatchV1beta1NamespacedCronJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchBatchV1beta1NamespacedCronJobRes), nil
 }
 
 // PatchBatchV1beta1NamespacedCronJobStatus implements patchBatchV1beta1NamespacedCronJobStatus operation.
@@ -2121,7 +2353,8 @@ func (UnimplementedHandler) PatchBatchV1beta1NamespacedCronJob(ctx context.Conte
 //
 // PATCH /apis/batch/v1beta1/namespaces/{namespace}/cronjobs/{name}/status
 func (UnimplementedHandler) PatchBatchV1beta1NamespacedCronJobStatus(ctx context.Context, req PatchBatchV1beta1NamespacedCronJobStatusReq, params PatchBatchV1beta1NamespacedCronJobStatusParams) (r PatchBatchV1beta1NamespacedCronJobStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchBatchV1beta1NamespacedCronJobStatusRes), nil
 }
 
 // PatchCertificatesV1CertificateSigningRequest implements patchCertificatesV1CertificateSigningRequest operation.
@@ -2130,7 +2363,8 @@ func (UnimplementedHandler) PatchBatchV1beta1NamespacedCronJobStatus(ctx context
 //
 // PATCH /apis/certificates.k8s.io/v1/certificatesigningrequests/{name}
 func (UnimplementedHandler) PatchCertificatesV1CertificateSigningRequest(ctx context.Context, req PatchCertificatesV1CertificateSigningRequestReq, params PatchCertificatesV1CertificateSigningRequestParams) (r PatchCertificatesV1CertificateSigningRequestRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCertificatesV1CertificateSigningRequestRes), nil
 }
 
 // PatchCertificatesV1CertificateSigningRequestApproval implements patchCertificatesV1CertificateSigningRequestApproval operation.
@@ -2139,7 +2373,8 @@ func (UnimplementedHandler) PatchCertificatesV1CertificateSigningRequest(ctx con
 //
 // PATCH /apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/approval
 func (UnimplementedHandler) PatchCertificatesV1CertificateSigningRequestApproval(ctx context.Context, req PatchCertificatesV1CertificateSigningRequestApprovalReq, params PatchCertificatesV1CertificateSigningRequestApprovalParams) (r PatchCertificatesV1CertificateSigningRequestApprovalRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCertificatesV1CertificateSigningRequestApprovalRes), nil
 }
 
 // PatchCertificatesV1CertificateSigningRequestStatus implements patchCertificatesV1CertificateSigningRequestStatus operation.
@@ -2148,7 +2383,8 @@ func (UnimplementedHandler) PatchCertificatesV1CertificateSigningRequestApproval
 //
 // PATCH /apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/status
 func (UnimplementedHandler) PatchCertificatesV1CertificateSigningRequestStatus(ctx context.Context, req PatchCertificatesV1CertificateSigningRequestStatusReq, params PatchCertificatesV1CertificateSigningRequestStatusParams) (r PatchCertificatesV1CertificateSigningRequestStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCertificatesV1CertificateSigningRequestStatusRes), nil
 }
 
 // PatchCoordinationV1NamespacedLease implements patchCoordinationV1NamespacedLease operation.
@@ -2157,7 +2393,8 @@ func (UnimplementedHandler) PatchCertificatesV1CertificateSigningRequestStatus(c
 //
 // PATCH /apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}
 func (UnimplementedHandler) PatchCoordinationV1NamespacedLease(ctx context.Context, req PatchCoordinationV1NamespacedLeaseReq, params PatchCoordinationV1NamespacedLeaseParams) (r PatchCoordinationV1NamespacedLeaseRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoordinationV1NamespacedLeaseRes), nil
 }
 
 // PatchCoreV1Namespace implements patchCoreV1Namespace operation.
@@ -2166,7 +2403,8 @@ func (UnimplementedHandler) PatchCoordinationV1NamespacedLease(ctx context.Conte
 //
 // PATCH /api/v1/namespaces/{name}
 func (UnimplementedHandler) PatchCoreV1Namespace(ctx context.Context, req PatchCoreV1NamespaceReq, params PatchCoreV1NamespaceParams) (r PatchCoreV1NamespaceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespaceRes), nil
 }
 
 // PatchCoreV1NamespaceStatus implements patchCoreV1NamespaceStatus operation.
@@ -2175,7 +2413,8 @@ func (UnimplementedHandler) PatchCoreV1Namespace(ctx context.Context, req PatchC
 //
 // PATCH /api/v1/namespaces/{name}/status
 func (UnimplementedHandler) PatchCoreV1NamespaceStatus(ctx context.Context, req PatchCoreV1NamespaceStatusReq, params PatchCoreV1NamespaceStatusParams) (r PatchCoreV1NamespaceStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespaceStatusRes), nil
 }
 
 // PatchCoreV1NamespacedConfigMap implements patchCoreV1NamespacedConfigMap operation.
@@ -2184,7 +2423,8 @@ func (UnimplementedHandler) PatchCoreV1NamespaceStatus(ctx context.Context, req 
 //
 // PATCH /api/v1/namespaces/{namespace}/configmaps/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedConfigMap(ctx context.Context, req PatchCoreV1NamespacedConfigMapReq, params PatchCoreV1NamespacedConfigMapParams) (r PatchCoreV1NamespacedConfigMapRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedConfigMapRes), nil
 }
 
 // PatchCoreV1NamespacedEndpoints implements patchCoreV1NamespacedEndpoints operation.
@@ -2193,7 +2433,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedConfigMap(ctx context.Context, 
 //
 // PATCH /api/v1/namespaces/{namespace}/endpoints/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedEndpoints(ctx context.Context, req PatchCoreV1NamespacedEndpointsReq, params PatchCoreV1NamespacedEndpointsParams) (r PatchCoreV1NamespacedEndpointsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedEndpointsRes), nil
 }
 
 // PatchCoreV1NamespacedEvent implements patchCoreV1NamespacedEvent operation.
@@ -2202,7 +2443,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedEndpoints(ctx context.Context, 
 //
 // PATCH /api/v1/namespaces/{namespace}/events/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedEvent(ctx context.Context, req PatchCoreV1NamespacedEventReq, params PatchCoreV1NamespacedEventParams) (r PatchCoreV1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedEventRes), nil
 }
 
 // PatchCoreV1NamespacedLimitRange implements patchCoreV1NamespacedLimitRange operation.
@@ -2211,7 +2453,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedEvent(ctx context.Context, req 
 //
 // PATCH /api/v1/namespaces/{namespace}/limitranges/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedLimitRange(ctx context.Context, req PatchCoreV1NamespacedLimitRangeReq, params PatchCoreV1NamespacedLimitRangeParams) (r PatchCoreV1NamespacedLimitRangeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedLimitRangeRes), nil
 }
 
 // PatchCoreV1NamespacedPersistentVolumeClaim implements patchCoreV1NamespacedPersistentVolumeClaim operation.
@@ -2220,7 +2463,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedLimitRange(ctx context.Context,
 //
 // PATCH /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedPersistentVolumeClaim(ctx context.Context, req PatchCoreV1NamespacedPersistentVolumeClaimReq, params PatchCoreV1NamespacedPersistentVolumeClaimParams) (r PatchCoreV1NamespacedPersistentVolumeClaimRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedPersistentVolumeClaimRes), nil
 }
 
 // PatchCoreV1NamespacedPersistentVolumeClaimStatus implements patchCoreV1NamespacedPersistentVolumeClaimStatus operation.
@@ -2229,7 +2473,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedPersistentVolumeClaim(ctx conte
 //
 // PATCH /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status
 func (UnimplementedHandler) PatchCoreV1NamespacedPersistentVolumeClaimStatus(ctx context.Context, req PatchCoreV1NamespacedPersistentVolumeClaimStatusReq, params PatchCoreV1NamespacedPersistentVolumeClaimStatusParams) (r PatchCoreV1NamespacedPersistentVolumeClaimStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedPersistentVolumeClaimStatusRes), nil
 }
 
 // PatchCoreV1NamespacedPod implements patchCoreV1NamespacedPod operation.
@@ -2238,7 +2483,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedPersistentVolumeClaimStatus(ctx
 //
 // PATCH /api/v1/namespaces/{namespace}/pods/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedPod(ctx context.Context, req PatchCoreV1NamespacedPodReq, params PatchCoreV1NamespacedPodParams) (r PatchCoreV1NamespacedPodRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedPodRes), nil
 }
 
 // PatchCoreV1NamespacedPodEphemeralcontainers implements patchCoreV1NamespacedPodEphemeralcontainers operation.
@@ -2247,7 +2493,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedPod(ctx context.Context, req Pa
 //
 // PATCH /api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers
 func (UnimplementedHandler) PatchCoreV1NamespacedPodEphemeralcontainers(ctx context.Context, req PatchCoreV1NamespacedPodEphemeralcontainersReq, params PatchCoreV1NamespacedPodEphemeralcontainersParams) (r PatchCoreV1NamespacedPodEphemeralcontainersRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedPodEphemeralcontainersRes), nil
 }
 
 // PatchCoreV1NamespacedPodStatus implements patchCoreV1NamespacedPodStatus operation.
@@ -2256,7 +2503,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedPodEphemeralcontainers(ctx cont
 //
 // PATCH /api/v1/namespaces/{namespace}/pods/{name}/status
 func (UnimplementedHandler) PatchCoreV1NamespacedPodStatus(ctx context.Context, req PatchCoreV1NamespacedPodStatusReq, params PatchCoreV1NamespacedPodStatusParams) (r PatchCoreV1NamespacedPodStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedPodStatusRes), nil
 }
 
 // PatchCoreV1NamespacedPodTemplate implements patchCoreV1NamespacedPodTemplate operation.
@@ -2265,7 +2513,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedPodStatus(ctx context.Context, 
 //
 // PATCH /api/v1/namespaces/{namespace}/podtemplates/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedPodTemplate(ctx context.Context, req PatchCoreV1NamespacedPodTemplateReq, params PatchCoreV1NamespacedPodTemplateParams) (r PatchCoreV1NamespacedPodTemplateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedPodTemplateRes), nil
 }
 
 // PatchCoreV1NamespacedReplicationController implements patchCoreV1NamespacedReplicationController operation.
@@ -2274,7 +2523,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedPodTemplate(ctx context.Context
 //
 // PATCH /api/v1/namespaces/{namespace}/replicationcontrollers/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedReplicationController(ctx context.Context, req PatchCoreV1NamespacedReplicationControllerReq, params PatchCoreV1NamespacedReplicationControllerParams) (r PatchCoreV1NamespacedReplicationControllerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedReplicationControllerRes), nil
 }
 
 // PatchCoreV1NamespacedReplicationControllerScale implements patchCoreV1NamespacedReplicationControllerScale operation.
@@ -2283,7 +2533,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedReplicationController(ctx conte
 //
 // PATCH /api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale
 func (UnimplementedHandler) PatchCoreV1NamespacedReplicationControllerScale(ctx context.Context, req PatchCoreV1NamespacedReplicationControllerScaleReq, params PatchCoreV1NamespacedReplicationControllerScaleParams) (r PatchCoreV1NamespacedReplicationControllerScaleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedReplicationControllerScaleRes), nil
 }
 
 // PatchCoreV1NamespacedReplicationControllerStatus implements patchCoreV1NamespacedReplicationControllerStatus operation.
@@ -2292,7 +2543,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedReplicationControllerScale(ctx 
 //
 // PATCH /api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status
 func (UnimplementedHandler) PatchCoreV1NamespacedReplicationControllerStatus(ctx context.Context, req PatchCoreV1NamespacedReplicationControllerStatusReq, params PatchCoreV1NamespacedReplicationControllerStatusParams) (r PatchCoreV1NamespacedReplicationControllerStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedReplicationControllerStatusRes), nil
 }
 
 // PatchCoreV1NamespacedResourceQuota implements patchCoreV1NamespacedResourceQuota operation.
@@ -2301,7 +2553,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedReplicationControllerStatus(ctx
 //
 // PATCH /api/v1/namespaces/{namespace}/resourcequotas/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedResourceQuota(ctx context.Context, req PatchCoreV1NamespacedResourceQuotaReq, params PatchCoreV1NamespacedResourceQuotaParams) (r PatchCoreV1NamespacedResourceQuotaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedResourceQuotaRes), nil
 }
 
 // PatchCoreV1NamespacedResourceQuotaStatus implements patchCoreV1NamespacedResourceQuotaStatus operation.
@@ -2310,7 +2563,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedResourceQuota(ctx context.Conte
 //
 // PATCH /api/v1/namespaces/{namespace}/resourcequotas/{name}/status
 func (UnimplementedHandler) PatchCoreV1NamespacedResourceQuotaStatus(ctx context.Context, req PatchCoreV1NamespacedResourceQuotaStatusReq, params PatchCoreV1NamespacedResourceQuotaStatusParams) (r PatchCoreV1NamespacedResourceQuotaStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedResourceQuotaStatusRes), nil
 }
 
 // PatchCoreV1NamespacedSecret implements patchCoreV1NamespacedSecret operation.
@@ -2319,7 +2573,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedResourceQuotaStatus(ctx context
 //
 // PATCH /api/v1/namespaces/{namespace}/secrets/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedSecret(ctx context.Context, req PatchCoreV1NamespacedSecretReq, params PatchCoreV1NamespacedSecretParams) (r PatchCoreV1NamespacedSecretRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedSecretRes), nil
 }
 
 // PatchCoreV1NamespacedService implements patchCoreV1NamespacedService operation.
@@ -2328,7 +2583,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedSecret(ctx context.Context, req
 //
 // PATCH /api/v1/namespaces/{namespace}/services/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedService(ctx context.Context, req PatchCoreV1NamespacedServiceReq, params PatchCoreV1NamespacedServiceParams) (r PatchCoreV1NamespacedServiceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedServiceRes), nil
 }
 
 // PatchCoreV1NamespacedServiceAccount implements patchCoreV1NamespacedServiceAccount operation.
@@ -2337,7 +2593,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedService(ctx context.Context, re
 //
 // PATCH /api/v1/namespaces/{namespace}/serviceaccounts/{name}
 func (UnimplementedHandler) PatchCoreV1NamespacedServiceAccount(ctx context.Context, req PatchCoreV1NamespacedServiceAccountReq, params PatchCoreV1NamespacedServiceAccountParams) (r PatchCoreV1NamespacedServiceAccountRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedServiceAccountRes), nil
 }
 
 // PatchCoreV1NamespacedServiceStatus implements patchCoreV1NamespacedServiceStatus operation.
@@ -2346,7 +2603,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedServiceAccount(ctx context.Cont
 //
 // PATCH /api/v1/namespaces/{namespace}/services/{name}/status
 func (UnimplementedHandler) PatchCoreV1NamespacedServiceStatus(ctx context.Context, req PatchCoreV1NamespacedServiceStatusReq, params PatchCoreV1NamespacedServiceStatusParams) (r PatchCoreV1NamespacedServiceStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NamespacedServiceStatusRes), nil
 }
 
 // PatchCoreV1Node implements patchCoreV1Node operation.
@@ -2355,7 +2613,8 @@ func (UnimplementedHandler) PatchCoreV1NamespacedServiceStatus(ctx context.Conte
 //
 // PATCH /api/v1/nodes/{name}
 func (UnimplementedHandler) PatchCoreV1Node(ctx context.Context, req PatchCoreV1NodeReq, params PatchCoreV1NodeParams) (r PatchCoreV1NodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NodeRes), nil
 }
 
 // PatchCoreV1NodeStatus implements patchCoreV1NodeStatus operation.
@@ -2364,7 +2623,8 @@ func (UnimplementedHandler) PatchCoreV1Node(ctx context.Context, req PatchCoreV1
 //
 // PATCH /api/v1/nodes/{name}/status
 func (UnimplementedHandler) PatchCoreV1NodeStatus(ctx context.Context, req PatchCoreV1NodeStatusReq, params PatchCoreV1NodeStatusParams) (r PatchCoreV1NodeStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1NodeStatusRes), nil
 }
 
 // PatchCoreV1PersistentVolume implements patchCoreV1PersistentVolume operation.
@@ -2373,7 +2633,8 @@ func (UnimplementedHandler) PatchCoreV1NodeStatus(ctx context.Context, req Patch
 //
 // PATCH /api/v1/persistentvolumes/{name}
 func (UnimplementedHandler) PatchCoreV1PersistentVolume(ctx context.Context, req PatchCoreV1PersistentVolumeReq, params PatchCoreV1PersistentVolumeParams) (r PatchCoreV1PersistentVolumeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1PersistentVolumeRes), nil
 }
 
 // PatchCoreV1PersistentVolumeStatus implements patchCoreV1PersistentVolumeStatus operation.
@@ -2382,7 +2643,8 @@ func (UnimplementedHandler) PatchCoreV1PersistentVolume(ctx context.Context, req
 //
 // PATCH /api/v1/persistentvolumes/{name}/status
 func (UnimplementedHandler) PatchCoreV1PersistentVolumeStatus(ctx context.Context, req PatchCoreV1PersistentVolumeStatusReq, params PatchCoreV1PersistentVolumeStatusParams) (r PatchCoreV1PersistentVolumeStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchCoreV1PersistentVolumeStatusRes), nil
 }
 
 // PatchDiscoveryV1NamespacedEndpointSlice implements patchDiscoveryV1NamespacedEndpointSlice operation.
@@ -2391,7 +2653,8 @@ func (UnimplementedHandler) PatchCoreV1PersistentVolumeStatus(ctx context.Contex
 //
 // PATCH /apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}
 func (UnimplementedHandler) PatchDiscoveryV1NamespacedEndpointSlice(ctx context.Context, req PatchDiscoveryV1NamespacedEndpointSliceReq, params PatchDiscoveryV1NamespacedEndpointSliceParams) (r PatchDiscoveryV1NamespacedEndpointSliceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchDiscoveryV1NamespacedEndpointSliceRes), nil
 }
 
 // PatchDiscoveryV1beta1NamespacedEndpointSlice implements patchDiscoveryV1beta1NamespacedEndpointSlice operation.
@@ -2400,7 +2663,8 @@ func (UnimplementedHandler) PatchDiscoveryV1NamespacedEndpointSlice(ctx context.
 //
 // PATCH /apis/discovery.k8s.io/v1beta1/namespaces/{namespace}/endpointslices/{name}
 func (UnimplementedHandler) PatchDiscoveryV1beta1NamespacedEndpointSlice(ctx context.Context, req PatchDiscoveryV1beta1NamespacedEndpointSliceReq, params PatchDiscoveryV1beta1NamespacedEndpointSliceParams) (r PatchDiscoveryV1beta1NamespacedEndpointSliceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchDiscoveryV1beta1NamespacedEndpointSliceRes), nil
 }
 
 // PatchEventsV1NamespacedEvent implements patchEventsV1NamespacedEvent operation.
@@ -2409,7 +2673,8 @@ func (UnimplementedHandler) PatchDiscoveryV1beta1NamespacedEndpointSlice(ctx con
 //
 // PATCH /apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}
 func (UnimplementedHandler) PatchEventsV1NamespacedEvent(ctx context.Context, req PatchEventsV1NamespacedEventReq, params PatchEventsV1NamespacedEventParams) (r PatchEventsV1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchEventsV1NamespacedEventRes), nil
 }
 
 // PatchEventsV1beta1NamespacedEvent implements patchEventsV1beta1NamespacedEvent operation.
@@ -2418,7 +2683,8 @@ func (UnimplementedHandler) PatchEventsV1NamespacedEvent(ctx context.Context, re
 //
 // PATCH /apis/events.k8s.io/v1beta1/namespaces/{namespace}/events/{name}
 func (UnimplementedHandler) PatchEventsV1beta1NamespacedEvent(ctx context.Context, req PatchEventsV1beta1NamespacedEventReq, params PatchEventsV1beta1NamespacedEventParams) (r PatchEventsV1beta1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchEventsV1beta1NamespacedEventRes), nil
 }
 
 // PatchFlowcontrolApiserverV1beta1FlowSchema implements patchFlowcontrolApiserverV1beta1FlowSchema operation.
@@ -2427,7 +2693,8 @@ func (UnimplementedHandler) PatchEventsV1beta1NamespacedEvent(ctx context.Contex
 //
 // PATCH /apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas/{name}
 func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta1FlowSchema(ctx context.Context, req PatchFlowcontrolApiserverV1beta1FlowSchemaReq, params PatchFlowcontrolApiserverV1beta1FlowSchemaParams) (r PatchFlowcontrolApiserverV1beta1FlowSchemaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchFlowcontrolApiserverV1beta1FlowSchemaRes), nil
 }
 
 // PatchFlowcontrolApiserverV1beta1FlowSchemaStatus implements patchFlowcontrolApiserverV1beta1FlowSchemaStatus operation.
@@ -2436,7 +2703,8 @@ func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta1FlowSchema(ctx conte
 //
 // PATCH /apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas/{name}/status
 func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta1FlowSchemaStatus(ctx context.Context, req PatchFlowcontrolApiserverV1beta1FlowSchemaStatusReq, params PatchFlowcontrolApiserverV1beta1FlowSchemaStatusParams) (r PatchFlowcontrolApiserverV1beta1FlowSchemaStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchFlowcontrolApiserverV1beta1FlowSchemaStatusRes), nil
 }
 
 // PatchFlowcontrolApiserverV1beta1PriorityLevelConfiguration implements patchFlowcontrolApiserverV1beta1PriorityLevelConfiguration operation.
@@ -2445,7 +2713,8 @@ func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta1FlowSchemaStatus(ctx
 //
 // PATCH /apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations/{name}
 func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta1PriorityLevelConfiguration(ctx context.Context, req PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationReq, params PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationParams) (r PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationRes), nil
 }
 
 // PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatus implements patchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatus operation.
@@ -2454,7 +2723,8 @@ func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta1PriorityLevelConfigu
 //
 // PATCH /apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations/{name}/status
 func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatus(ctx context.Context, req PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusReq, params PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusParams) (r PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusRes), nil
 }
 
 // PatchFlowcontrolApiserverV1beta2FlowSchema implements patchFlowcontrolApiserverV1beta2FlowSchema operation.
@@ -2463,7 +2733,8 @@ func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta1PriorityLevelConfigu
 //
 // PATCH /apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}
 func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta2FlowSchema(ctx context.Context, req PatchFlowcontrolApiserverV1beta2FlowSchemaReq, params PatchFlowcontrolApiserverV1beta2FlowSchemaParams) (r PatchFlowcontrolApiserverV1beta2FlowSchemaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchFlowcontrolApiserverV1beta2FlowSchemaRes), nil
 }
 
 // PatchFlowcontrolApiserverV1beta2FlowSchemaStatus implements patchFlowcontrolApiserverV1beta2FlowSchemaStatus operation.
@@ -2472,7 +2743,8 @@ func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta2FlowSchema(ctx conte
 //
 // PATCH /apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}/status
 func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta2FlowSchemaStatus(ctx context.Context, req PatchFlowcontrolApiserverV1beta2FlowSchemaStatusReq, params PatchFlowcontrolApiserverV1beta2FlowSchemaStatusParams) (r PatchFlowcontrolApiserverV1beta2FlowSchemaStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchFlowcontrolApiserverV1beta2FlowSchemaStatusRes), nil
 }
 
 // PatchFlowcontrolApiserverV1beta2PriorityLevelConfiguration implements patchFlowcontrolApiserverV1beta2PriorityLevelConfiguration operation.
@@ -2481,7 +2753,8 @@ func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta2FlowSchemaStatus(ctx
 //
 // PATCH /apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}
 func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta2PriorityLevelConfiguration(ctx context.Context, req PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationReq, params PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationParams) (r PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationRes), nil
 }
 
 // PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus implements patchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus operation.
@@ -2490,7 +2763,8 @@ func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta2PriorityLevelConfigu
 //
 // PATCH /apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}/status
 func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus(ctx context.Context, req PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusReq, params PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusParams) (r PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusRes), nil
 }
 
 // PatchInternalApiserverV1alpha1StorageVersion implements patchInternalApiserverV1alpha1StorageVersion operation.
@@ -2499,7 +2773,8 @@ func (UnimplementedHandler) PatchFlowcontrolApiserverV1beta2PriorityLevelConfigu
 //
 // PATCH /apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}
 func (UnimplementedHandler) PatchInternalApiserverV1alpha1StorageVersion(ctx context.Context, req PatchInternalApiserverV1alpha1StorageVersionReq, params PatchInternalApiserverV1alpha1StorageVersionParams) (r PatchInternalApiserverV1alpha1StorageVersionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchInternalApiserverV1alpha1StorageVersionRes), nil
 }
 
 // PatchInternalApiserverV1alpha1StorageVersionStatus implements patchInternalApiserverV1alpha1StorageVersionStatus operation.
@@ -2508,7 +2783,8 @@ func (UnimplementedHandler) PatchInternalApiserverV1alpha1StorageVersion(ctx con
 //
 // PATCH /apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}/status
 func (UnimplementedHandler) PatchInternalApiserverV1alpha1StorageVersionStatus(ctx context.Context, req PatchInternalApiserverV1alpha1StorageVersionStatusReq, params PatchInternalApiserverV1alpha1StorageVersionStatusParams) (r PatchInternalApiserverV1alpha1StorageVersionStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchInternalApiserverV1alpha1StorageVersionStatusRes), nil
 }
 
 // PatchNetworkingV1IngressClass implements patchNetworkingV1IngressClass operation.
@@ -2517,7 +2793,8 @@ func (UnimplementedHandler) PatchInternalApiserverV1alpha1StorageVersionStatus(c
 //
 // PATCH /apis/networking.k8s.io/v1/ingressclasses/{name}
 func (UnimplementedHandler) PatchNetworkingV1IngressClass(ctx context.Context, req PatchNetworkingV1IngressClassReq, params PatchNetworkingV1IngressClassParams) (r PatchNetworkingV1IngressClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchNetworkingV1IngressClassRes), nil
 }
 
 // PatchNetworkingV1NamespacedIngress implements patchNetworkingV1NamespacedIngress operation.
@@ -2526,7 +2803,8 @@ func (UnimplementedHandler) PatchNetworkingV1IngressClass(ctx context.Context, r
 //
 // PATCH /apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}
 func (UnimplementedHandler) PatchNetworkingV1NamespacedIngress(ctx context.Context, req PatchNetworkingV1NamespacedIngressReq, params PatchNetworkingV1NamespacedIngressParams) (r PatchNetworkingV1NamespacedIngressRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchNetworkingV1NamespacedIngressRes), nil
 }
 
 // PatchNetworkingV1NamespacedIngressStatus implements patchNetworkingV1NamespacedIngressStatus operation.
@@ -2535,7 +2813,8 @@ func (UnimplementedHandler) PatchNetworkingV1NamespacedIngress(ctx context.Conte
 //
 // PATCH /apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}/status
 func (UnimplementedHandler) PatchNetworkingV1NamespacedIngressStatus(ctx context.Context, req PatchNetworkingV1NamespacedIngressStatusReq, params PatchNetworkingV1NamespacedIngressStatusParams) (r PatchNetworkingV1NamespacedIngressStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchNetworkingV1NamespacedIngressStatusRes), nil
 }
 
 // PatchNetworkingV1NamespacedNetworkPolicy implements patchNetworkingV1NamespacedNetworkPolicy operation.
@@ -2544,7 +2823,8 @@ func (UnimplementedHandler) PatchNetworkingV1NamespacedIngressStatus(ctx context
 //
 // PATCH /apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}
 func (UnimplementedHandler) PatchNetworkingV1NamespacedNetworkPolicy(ctx context.Context, req PatchNetworkingV1NamespacedNetworkPolicyReq, params PatchNetworkingV1NamespacedNetworkPolicyParams) (r PatchNetworkingV1NamespacedNetworkPolicyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchNetworkingV1NamespacedNetworkPolicyRes), nil
 }
 
 // PatchNodeV1RuntimeClass implements patchNodeV1RuntimeClass operation.
@@ -2553,7 +2833,8 @@ func (UnimplementedHandler) PatchNetworkingV1NamespacedNetworkPolicy(ctx context
 //
 // PATCH /apis/node.k8s.io/v1/runtimeclasses/{name}
 func (UnimplementedHandler) PatchNodeV1RuntimeClass(ctx context.Context, req PatchNodeV1RuntimeClassReq, params PatchNodeV1RuntimeClassParams) (r PatchNodeV1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchNodeV1RuntimeClassRes), nil
 }
 
 // PatchNodeV1alpha1RuntimeClass implements patchNodeV1alpha1RuntimeClass operation.
@@ -2562,7 +2843,8 @@ func (UnimplementedHandler) PatchNodeV1RuntimeClass(ctx context.Context, req Pat
 //
 // PATCH /apis/node.k8s.io/v1alpha1/runtimeclasses/{name}
 func (UnimplementedHandler) PatchNodeV1alpha1RuntimeClass(ctx context.Context, req PatchNodeV1alpha1RuntimeClassReq, params PatchNodeV1alpha1RuntimeClassParams) (r PatchNodeV1alpha1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchNodeV1alpha1RuntimeClassRes), nil
 }
 
 // PatchNodeV1beta1RuntimeClass implements patchNodeV1beta1RuntimeClass operation.
@@ -2571,7 +2853,8 @@ func (UnimplementedHandler) PatchNodeV1alpha1RuntimeClass(ctx context.Context, r
 //
 // PATCH /apis/node.k8s.io/v1beta1/runtimeclasses/{name}
 func (UnimplementedHandler) PatchNodeV1beta1RuntimeClass(ctx context.Context, req PatchNodeV1beta1RuntimeClassReq, params PatchNodeV1beta1RuntimeClassParams) (r PatchNodeV1beta1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchNodeV1beta1RuntimeClassRes), nil
 }
 
 // PatchPolicyV1NamespacedPodDisruptionBudget implements patchPolicyV1NamespacedPodDisruptionBudget operation.
@@ -2580,7 +2863,8 @@ func (UnimplementedHandler) PatchNodeV1beta1RuntimeClass(ctx context.Context, re
 //
 // PATCH /apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}
 func (UnimplementedHandler) PatchPolicyV1NamespacedPodDisruptionBudget(ctx context.Context, req PatchPolicyV1NamespacedPodDisruptionBudgetReq, params PatchPolicyV1NamespacedPodDisruptionBudgetParams) (r PatchPolicyV1NamespacedPodDisruptionBudgetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchPolicyV1NamespacedPodDisruptionBudgetRes), nil
 }
 
 // PatchPolicyV1NamespacedPodDisruptionBudgetStatus implements patchPolicyV1NamespacedPodDisruptionBudgetStatus operation.
@@ -2589,7 +2873,8 @@ func (UnimplementedHandler) PatchPolicyV1NamespacedPodDisruptionBudget(ctx conte
 //
 // PATCH /apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}/status
 func (UnimplementedHandler) PatchPolicyV1NamespacedPodDisruptionBudgetStatus(ctx context.Context, req PatchPolicyV1NamespacedPodDisruptionBudgetStatusReq, params PatchPolicyV1NamespacedPodDisruptionBudgetStatusParams) (r PatchPolicyV1NamespacedPodDisruptionBudgetStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchPolicyV1NamespacedPodDisruptionBudgetStatusRes), nil
 }
 
 // PatchPolicyV1beta1NamespacedPodDisruptionBudget implements patchPolicyV1beta1NamespacedPodDisruptionBudget operation.
@@ -2598,7 +2883,8 @@ func (UnimplementedHandler) PatchPolicyV1NamespacedPodDisruptionBudgetStatus(ctx
 //
 // PATCH /apis/policy/v1beta1/namespaces/{namespace}/poddisruptionbudgets/{name}
 func (UnimplementedHandler) PatchPolicyV1beta1NamespacedPodDisruptionBudget(ctx context.Context, req PatchPolicyV1beta1NamespacedPodDisruptionBudgetReq, params PatchPolicyV1beta1NamespacedPodDisruptionBudgetParams) (r PatchPolicyV1beta1NamespacedPodDisruptionBudgetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchPolicyV1beta1NamespacedPodDisruptionBudgetRes), nil
 }
 
 // PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatus implements patchPolicyV1beta1NamespacedPodDisruptionBudgetStatus operation.
@@ -2607,7 +2893,8 @@ func (UnimplementedHandler) PatchPolicyV1beta1NamespacedPodDisruptionBudget(ctx 
 //
 // PATCH /apis/policy/v1beta1/namespaces/{namespace}/poddisruptionbudgets/{name}/status
 func (UnimplementedHandler) PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatus(ctx context.Context, req PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusReq, params PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusParams) (r PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusRes), nil
 }
 
 // PatchPolicyV1beta1PodSecurityPolicy implements patchPolicyV1beta1PodSecurityPolicy operation.
@@ -2616,7 +2903,8 @@ func (UnimplementedHandler) PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatu
 //
 // PATCH /apis/policy/v1beta1/podsecuritypolicies/{name}
 func (UnimplementedHandler) PatchPolicyV1beta1PodSecurityPolicy(ctx context.Context, req PatchPolicyV1beta1PodSecurityPolicyReq, params PatchPolicyV1beta1PodSecurityPolicyParams) (r PatchPolicyV1beta1PodSecurityPolicyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchPolicyV1beta1PodSecurityPolicyRes), nil
 }
 
 // PatchRbacAuthorizationV1ClusterRole implements patchRbacAuthorizationV1ClusterRole operation.
@@ -2625,7 +2913,8 @@ func (UnimplementedHandler) PatchPolicyV1beta1PodSecurityPolicy(ctx context.Cont
 //
 // PATCH /apis/rbac.authorization.k8s.io/v1/clusterroles/{name}
 func (UnimplementedHandler) PatchRbacAuthorizationV1ClusterRole(ctx context.Context, req PatchRbacAuthorizationV1ClusterRoleReq, params PatchRbacAuthorizationV1ClusterRoleParams) (r PatchRbacAuthorizationV1ClusterRoleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchRbacAuthorizationV1ClusterRoleRes), nil
 }
 
 // PatchRbacAuthorizationV1ClusterRoleBinding implements patchRbacAuthorizationV1ClusterRoleBinding operation.
@@ -2634,7 +2923,8 @@ func (UnimplementedHandler) PatchRbacAuthorizationV1ClusterRole(ctx context.Cont
 //
 // PATCH /apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}
 func (UnimplementedHandler) PatchRbacAuthorizationV1ClusterRoleBinding(ctx context.Context, req PatchRbacAuthorizationV1ClusterRoleBindingReq, params PatchRbacAuthorizationV1ClusterRoleBindingParams) (r PatchRbacAuthorizationV1ClusterRoleBindingRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchRbacAuthorizationV1ClusterRoleBindingRes), nil
 }
 
 // PatchRbacAuthorizationV1NamespacedRole implements patchRbacAuthorizationV1NamespacedRole operation.
@@ -2643,7 +2933,8 @@ func (UnimplementedHandler) PatchRbacAuthorizationV1ClusterRoleBinding(ctx conte
 //
 // PATCH /apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}
 func (UnimplementedHandler) PatchRbacAuthorizationV1NamespacedRole(ctx context.Context, req PatchRbacAuthorizationV1NamespacedRoleReq, params PatchRbacAuthorizationV1NamespacedRoleParams) (r PatchRbacAuthorizationV1NamespacedRoleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchRbacAuthorizationV1NamespacedRoleRes), nil
 }
 
 // PatchRbacAuthorizationV1NamespacedRoleBinding implements patchRbacAuthorizationV1NamespacedRoleBinding operation.
@@ -2652,7 +2943,8 @@ func (UnimplementedHandler) PatchRbacAuthorizationV1NamespacedRole(ctx context.C
 //
 // PATCH /apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}
 func (UnimplementedHandler) PatchRbacAuthorizationV1NamespacedRoleBinding(ctx context.Context, req PatchRbacAuthorizationV1NamespacedRoleBindingReq, params PatchRbacAuthorizationV1NamespacedRoleBindingParams) (r PatchRbacAuthorizationV1NamespacedRoleBindingRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchRbacAuthorizationV1NamespacedRoleBindingRes), nil
 }
 
 // PatchSchedulingV1PriorityClass implements patchSchedulingV1PriorityClass operation.
@@ -2661,7 +2953,8 @@ func (UnimplementedHandler) PatchRbacAuthorizationV1NamespacedRoleBinding(ctx co
 //
 // PATCH /apis/scheduling.k8s.io/v1/priorityclasses/{name}
 func (UnimplementedHandler) PatchSchedulingV1PriorityClass(ctx context.Context, req PatchSchedulingV1PriorityClassReq, params PatchSchedulingV1PriorityClassParams) (r PatchSchedulingV1PriorityClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchSchedulingV1PriorityClassRes), nil
 }
 
 // PatchStorageV1CSIDriver implements patchStorageV1CSIDriver operation.
@@ -2670,7 +2963,8 @@ func (UnimplementedHandler) PatchSchedulingV1PriorityClass(ctx context.Context, 
 //
 // PATCH /apis/storage.k8s.io/v1/csidrivers/{name}
 func (UnimplementedHandler) PatchStorageV1CSIDriver(ctx context.Context, req PatchStorageV1CSIDriverReq, params PatchStorageV1CSIDriverParams) (r PatchStorageV1CSIDriverRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchStorageV1CSIDriverRes), nil
 }
 
 // PatchStorageV1CSINode implements patchStorageV1CSINode operation.
@@ -2679,7 +2973,8 @@ func (UnimplementedHandler) PatchStorageV1CSIDriver(ctx context.Context, req Pat
 //
 // PATCH /apis/storage.k8s.io/v1/csinodes/{name}
 func (UnimplementedHandler) PatchStorageV1CSINode(ctx context.Context, req PatchStorageV1CSINodeReq, params PatchStorageV1CSINodeParams) (r PatchStorageV1CSINodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchStorageV1CSINodeRes), nil
 }
 
 // PatchStorageV1StorageClass implements patchStorageV1StorageClass operation.
@@ -2688,7 +2983,8 @@ func (UnimplementedHandler) PatchStorageV1CSINode(ctx context.Context, req Patch
 //
 // PATCH /apis/storage.k8s.io/v1/storageclasses/{name}
 func (UnimplementedHandler) PatchStorageV1StorageClass(ctx context.Context, req PatchStorageV1StorageClassReq, params PatchStorageV1StorageClassParams) (r PatchStorageV1StorageClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchStorageV1StorageClassRes), nil
 }
 
 // PatchStorageV1VolumeAttachment implements patchStorageV1VolumeAttachment operation.
@@ -2697,7 +2993,8 @@ func (UnimplementedHandler) PatchStorageV1StorageClass(ctx context.Context, req 
 //
 // PATCH /apis/storage.k8s.io/v1/volumeattachments/{name}
 func (UnimplementedHandler) PatchStorageV1VolumeAttachment(ctx context.Context, req PatchStorageV1VolumeAttachmentReq, params PatchStorageV1VolumeAttachmentParams) (r PatchStorageV1VolumeAttachmentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchStorageV1VolumeAttachmentRes), nil
 }
 
 // PatchStorageV1VolumeAttachmentStatus implements patchStorageV1VolumeAttachmentStatus operation.
@@ -2706,7 +3003,8 @@ func (UnimplementedHandler) PatchStorageV1VolumeAttachment(ctx context.Context, 
 //
 // PATCH /apis/storage.k8s.io/v1/volumeattachments/{name}/status
 func (UnimplementedHandler) PatchStorageV1VolumeAttachmentStatus(ctx context.Context, req PatchStorageV1VolumeAttachmentStatusReq, params PatchStorageV1VolumeAttachmentStatusParams) (r PatchStorageV1VolumeAttachmentStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchStorageV1VolumeAttachmentStatusRes), nil
 }
 
 // PatchStorageV1alpha1NamespacedCSIStorageCapacity implements patchStorageV1alpha1NamespacedCSIStorageCapacity operation.
@@ -2715,7 +3013,8 @@ func (UnimplementedHandler) PatchStorageV1VolumeAttachmentStatus(ctx context.Con
 //
 // PATCH /apis/storage.k8s.io/v1alpha1/namespaces/{namespace}/csistoragecapacities/{name}
 func (UnimplementedHandler) PatchStorageV1alpha1NamespacedCSIStorageCapacity(ctx context.Context, req PatchStorageV1alpha1NamespacedCSIStorageCapacityReq, params PatchStorageV1alpha1NamespacedCSIStorageCapacityParams) (r PatchStorageV1alpha1NamespacedCSIStorageCapacityRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchStorageV1alpha1NamespacedCSIStorageCapacityRes), nil
 }
 
 // PatchStorageV1beta1NamespacedCSIStorageCapacity implements patchStorageV1beta1NamespacedCSIStorageCapacity operation.
@@ -2724,7 +3023,8 @@ func (UnimplementedHandler) PatchStorageV1alpha1NamespacedCSIStorageCapacity(ctx
 //
 // PATCH /apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}
 func (UnimplementedHandler) PatchStorageV1beta1NamespacedCSIStorageCapacity(ctx context.Context, req PatchStorageV1beta1NamespacedCSIStorageCapacityReq, params PatchStorageV1beta1NamespacedCSIStorageCapacityParams) (r PatchStorageV1beta1NamespacedCSIStorageCapacityRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchStorageV1beta1NamespacedCSIStorageCapacityRes), nil
 }
 
 // ReadAdmissionregistrationV1MutatingWebhookConfiguration implements readAdmissionregistrationV1MutatingWebhookConfiguration operation.
@@ -2733,7 +3033,8 @@ func (UnimplementedHandler) PatchStorageV1beta1NamespacedCSIStorageCapacity(ctx 
 //
 // GET /apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}
 func (UnimplementedHandler) ReadAdmissionregistrationV1MutatingWebhookConfiguration(ctx context.Context, params ReadAdmissionregistrationV1MutatingWebhookConfigurationParams) (r ReadAdmissionregistrationV1MutatingWebhookConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAdmissionregistrationV1MutatingWebhookConfigurationRes), nil
 }
 
 // ReadAdmissionregistrationV1ValidatingWebhookConfiguration implements readAdmissionregistrationV1ValidatingWebhookConfiguration operation.
@@ -2742,7 +3043,8 @@ func (UnimplementedHandler) ReadAdmissionregistrationV1MutatingWebhookConfigurat
 //
 // GET /apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}
 func (UnimplementedHandler) ReadAdmissionregistrationV1ValidatingWebhookConfiguration(ctx context.Context, params ReadAdmissionregistrationV1ValidatingWebhookConfigurationParams) (r ReadAdmissionregistrationV1ValidatingWebhookConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAdmissionregistrationV1ValidatingWebhookConfigurationRes), nil
 }
 
 // ReadApiextensionsV1CustomResourceDefinition implements readApiextensionsV1CustomResourceDefinition operation.
@@ -2751,7 +3053,8 @@ func (UnimplementedHandler) ReadAdmissionregistrationV1ValidatingWebhookConfigur
 //
 // GET /apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}
 func (UnimplementedHandler) ReadApiextensionsV1CustomResourceDefinition(ctx context.Context, params ReadApiextensionsV1CustomResourceDefinitionParams) (r ReadApiextensionsV1CustomResourceDefinitionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadApiextensionsV1CustomResourceDefinitionRes), nil
 }
 
 // ReadApiextensionsV1CustomResourceDefinitionStatus implements readApiextensionsV1CustomResourceDefinitionStatus operation.
@@ -2760,7 +3063,8 @@ func (UnimplementedHandler) ReadApiextensionsV1CustomResourceDefinition(ctx cont
 //
 // GET /apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status
 func (UnimplementedHandler) ReadApiextensionsV1CustomResourceDefinitionStatus(ctx context.Context, params ReadApiextensionsV1CustomResourceDefinitionStatusParams) (r ReadApiextensionsV1CustomResourceDefinitionStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadApiextensionsV1CustomResourceDefinitionStatusRes), nil
 }
 
 // ReadApiregistrationV1APIService implements readApiregistrationV1APIService operation.
@@ -2769,7 +3073,8 @@ func (UnimplementedHandler) ReadApiextensionsV1CustomResourceDefinitionStatus(ct
 //
 // GET /apis/apiregistration.k8s.io/v1/apiservices/{name}
 func (UnimplementedHandler) ReadApiregistrationV1APIService(ctx context.Context, params ReadApiregistrationV1APIServiceParams) (r ReadApiregistrationV1APIServiceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadApiregistrationV1APIServiceRes), nil
 }
 
 // ReadApiregistrationV1APIServiceStatus implements readApiregistrationV1APIServiceStatus operation.
@@ -2778,7 +3083,8 @@ func (UnimplementedHandler) ReadApiregistrationV1APIService(ctx context.Context,
 //
 // GET /apis/apiregistration.k8s.io/v1/apiservices/{name}/status
 func (UnimplementedHandler) ReadApiregistrationV1APIServiceStatus(ctx context.Context, params ReadApiregistrationV1APIServiceStatusParams) (r ReadApiregistrationV1APIServiceStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadApiregistrationV1APIServiceStatusRes), nil
 }
 
 // ReadAppsV1NamespacedControllerRevision implements readAppsV1NamespacedControllerRevision operation.
@@ -2787,7 +3093,8 @@ func (UnimplementedHandler) ReadApiregistrationV1APIServiceStatus(ctx context.Co
 //
 // GET /apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}
 func (UnimplementedHandler) ReadAppsV1NamespacedControllerRevision(ctx context.Context, params ReadAppsV1NamespacedControllerRevisionParams) (r ReadAppsV1NamespacedControllerRevisionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedControllerRevisionRes), nil
 }
 
 // ReadAppsV1NamespacedDaemonSet implements readAppsV1NamespacedDaemonSet operation.
@@ -2796,7 +3103,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedControllerRevision(ctx context.C
 //
 // GET /apis/apps/v1/namespaces/{namespace}/daemonsets/{name}
 func (UnimplementedHandler) ReadAppsV1NamespacedDaemonSet(ctx context.Context, params ReadAppsV1NamespacedDaemonSetParams) (r ReadAppsV1NamespacedDaemonSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedDaemonSetRes), nil
 }
 
 // ReadAppsV1NamespacedDaemonSetStatus implements readAppsV1NamespacedDaemonSetStatus operation.
@@ -2805,7 +3113,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedDaemonSet(ctx context.Context, p
 //
 // GET /apis/apps/v1/namespaces/{namespace}/daemonsets/{name}/status
 func (UnimplementedHandler) ReadAppsV1NamespacedDaemonSetStatus(ctx context.Context, params ReadAppsV1NamespacedDaemonSetStatusParams) (r ReadAppsV1NamespacedDaemonSetStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedDaemonSetStatusRes), nil
 }
 
 // ReadAppsV1NamespacedDeployment implements readAppsV1NamespacedDeployment operation.
@@ -2814,7 +3123,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedDaemonSetStatus(ctx context.Cont
 //
 // GET /apis/apps/v1/namespaces/{namespace}/deployments/{name}
 func (UnimplementedHandler) ReadAppsV1NamespacedDeployment(ctx context.Context, params ReadAppsV1NamespacedDeploymentParams) (r ReadAppsV1NamespacedDeploymentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedDeploymentRes), nil
 }
 
 // ReadAppsV1NamespacedDeploymentScale implements readAppsV1NamespacedDeploymentScale operation.
@@ -2823,7 +3133,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedDeployment(ctx context.Context, 
 //
 // GET /apis/apps/v1/namespaces/{namespace}/deployments/{name}/scale
 func (UnimplementedHandler) ReadAppsV1NamespacedDeploymentScale(ctx context.Context, params ReadAppsV1NamespacedDeploymentScaleParams) (r ReadAppsV1NamespacedDeploymentScaleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedDeploymentScaleRes), nil
 }
 
 // ReadAppsV1NamespacedDeploymentStatus implements readAppsV1NamespacedDeploymentStatus operation.
@@ -2832,7 +3143,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedDeploymentScale(ctx context.Cont
 //
 // GET /apis/apps/v1/namespaces/{namespace}/deployments/{name}/status
 func (UnimplementedHandler) ReadAppsV1NamespacedDeploymentStatus(ctx context.Context, params ReadAppsV1NamespacedDeploymentStatusParams) (r ReadAppsV1NamespacedDeploymentStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedDeploymentStatusRes), nil
 }
 
 // ReadAppsV1NamespacedReplicaSet implements readAppsV1NamespacedReplicaSet operation.
@@ -2841,7 +3153,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedDeploymentStatus(ctx context.Con
 //
 // GET /apis/apps/v1/namespaces/{namespace}/replicasets/{name}
 func (UnimplementedHandler) ReadAppsV1NamespacedReplicaSet(ctx context.Context, params ReadAppsV1NamespacedReplicaSetParams) (r ReadAppsV1NamespacedReplicaSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedReplicaSetRes), nil
 }
 
 // ReadAppsV1NamespacedReplicaSetScale implements readAppsV1NamespacedReplicaSetScale operation.
@@ -2850,7 +3163,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedReplicaSet(ctx context.Context, 
 //
 // GET /apis/apps/v1/namespaces/{namespace}/replicasets/{name}/scale
 func (UnimplementedHandler) ReadAppsV1NamespacedReplicaSetScale(ctx context.Context, params ReadAppsV1NamespacedReplicaSetScaleParams) (r ReadAppsV1NamespacedReplicaSetScaleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedReplicaSetScaleRes), nil
 }
 
 // ReadAppsV1NamespacedReplicaSetStatus implements readAppsV1NamespacedReplicaSetStatus operation.
@@ -2859,7 +3173,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedReplicaSetScale(ctx context.Cont
 //
 // GET /apis/apps/v1/namespaces/{namespace}/replicasets/{name}/status
 func (UnimplementedHandler) ReadAppsV1NamespacedReplicaSetStatus(ctx context.Context, params ReadAppsV1NamespacedReplicaSetStatusParams) (r ReadAppsV1NamespacedReplicaSetStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedReplicaSetStatusRes), nil
 }
 
 // ReadAppsV1NamespacedStatefulSet implements readAppsV1NamespacedStatefulSet operation.
@@ -2868,7 +3183,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedReplicaSetStatus(ctx context.Con
 //
 // GET /apis/apps/v1/namespaces/{namespace}/statefulsets/{name}
 func (UnimplementedHandler) ReadAppsV1NamespacedStatefulSet(ctx context.Context, params ReadAppsV1NamespacedStatefulSetParams) (r ReadAppsV1NamespacedStatefulSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedStatefulSetRes), nil
 }
 
 // ReadAppsV1NamespacedStatefulSetScale implements readAppsV1NamespacedStatefulSetScale operation.
@@ -2877,7 +3193,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedStatefulSet(ctx context.Context,
 //
 // GET /apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/scale
 func (UnimplementedHandler) ReadAppsV1NamespacedStatefulSetScale(ctx context.Context, params ReadAppsV1NamespacedStatefulSetScaleParams) (r ReadAppsV1NamespacedStatefulSetScaleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedStatefulSetScaleRes), nil
 }
 
 // ReadAppsV1NamespacedStatefulSetStatus implements readAppsV1NamespacedStatefulSetStatus operation.
@@ -2886,7 +3203,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedStatefulSetScale(ctx context.Con
 //
 // GET /apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/status
 func (UnimplementedHandler) ReadAppsV1NamespacedStatefulSetStatus(ctx context.Context, params ReadAppsV1NamespacedStatefulSetStatusParams) (r ReadAppsV1NamespacedStatefulSetStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAppsV1NamespacedStatefulSetStatusRes), nil
 }
 
 // ReadAutoscalingV1NamespacedHorizontalPodAutoscaler implements readAutoscalingV1NamespacedHorizontalPodAutoscaler operation.
@@ -2895,7 +3213,8 @@ func (UnimplementedHandler) ReadAppsV1NamespacedStatefulSetStatus(ctx context.Co
 //
 // GET /apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}
 func (UnimplementedHandler) ReadAutoscalingV1NamespacedHorizontalPodAutoscaler(ctx context.Context, params ReadAutoscalingV1NamespacedHorizontalPodAutoscalerParams) (r ReadAutoscalingV1NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAutoscalingV1NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // ReadAutoscalingV1NamespacedHorizontalPodAutoscalerStatus implements readAutoscalingV1NamespacedHorizontalPodAutoscalerStatus operation.
@@ -2904,7 +3223,8 @@ func (UnimplementedHandler) ReadAutoscalingV1NamespacedHorizontalPodAutoscaler(c
 //
 // GET /apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
 func (UnimplementedHandler) ReadAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(ctx context.Context, params ReadAutoscalingV1NamespacedHorizontalPodAutoscalerStatusParams) (r ReadAutoscalingV1NamespacedHorizontalPodAutoscalerStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAutoscalingV1NamespacedHorizontalPodAutoscalerStatusRes), nil
 }
 
 // ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscaler implements readAutoscalingV2beta1NamespacedHorizontalPodAutoscaler operation.
@@ -2913,7 +3233,8 @@ func (UnimplementedHandler) ReadAutoscalingV1NamespacedHorizontalPodAutoscalerSt
 //
 // GET /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}
 func (UnimplementedHandler) ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscaler(ctx context.Context, params ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerParams) (r ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatus implements readAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatus operation.
@@ -2922,7 +3243,8 @@ func (UnimplementedHandler) ReadAutoscalingV2beta1NamespacedHorizontalPodAutosca
 //
 // GET /apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
 func (UnimplementedHandler) ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatus(ctx context.Context, params ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusParams) (r ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusRes), nil
 }
 
 // ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscaler implements readAutoscalingV2beta2NamespacedHorizontalPodAutoscaler operation.
@@ -2931,7 +3253,8 @@ func (UnimplementedHandler) ReadAutoscalingV2beta1NamespacedHorizontalPodAutosca
 //
 // GET /apis/autoscaling/v2beta2/namespaces/{namespace}/horizontalpodautoscalers/{name}
 func (UnimplementedHandler) ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(ctx context.Context, params ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerParams) (r ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatus implements readAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatus operation.
@@ -2940,7 +3263,8 @@ func (UnimplementedHandler) ReadAutoscalingV2beta2NamespacedHorizontalPodAutosca
 //
 // GET /apis/autoscaling/v2beta2/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
 func (UnimplementedHandler) ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatus(ctx context.Context, params ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusParams) (r ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusRes), nil
 }
 
 // ReadBatchV1NamespacedCronJob implements readBatchV1NamespacedCronJob operation.
@@ -2949,7 +3273,8 @@ func (UnimplementedHandler) ReadAutoscalingV2beta2NamespacedHorizontalPodAutosca
 //
 // GET /apis/batch/v1/namespaces/{namespace}/cronjobs/{name}
 func (UnimplementedHandler) ReadBatchV1NamespacedCronJob(ctx context.Context, params ReadBatchV1NamespacedCronJobParams) (r ReadBatchV1NamespacedCronJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadBatchV1NamespacedCronJobRes), nil
 }
 
 // ReadBatchV1NamespacedCronJobStatus implements readBatchV1NamespacedCronJobStatus operation.
@@ -2958,7 +3283,8 @@ func (UnimplementedHandler) ReadBatchV1NamespacedCronJob(ctx context.Context, pa
 //
 // GET /apis/batch/v1/namespaces/{namespace}/cronjobs/{name}/status
 func (UnimplementedHandler) ReadBatchV1NamespacedCronJobStatus(ctx context.Context, params ReadBatchV1NamespacedCronJobStatusParams) (r ReadBatchV1NamespacedCronJobStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadBatchV1NamespacedCronJobStatusRes), nil
 }
 
 // ReadBatchV1NamespacedJob implements readBatchV1NamespacedJob operation.
@@ -2967,7 +3293,8 @@ func (UnimplementedHandler) ReadBatchV1NamespacedCronJobStatus(ctx context.Conte
 //
 // GET /apis/batch/v1/namespaces/{namespace}/jobs/{name}
 func (UnimplementedHandler) ReadBatchV1NamespacedJob(ctx context.Context, params ReadBatchV1NamespacedJobParams) (r ReadBatchV1NamespacedJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadBatchV1NamespacedJobRes), nil
 }
 
 // ReadBatchV1NamespacedJobStatus implements readBatchV1NamespacedJobStatus operation.
@@ -2976,7 +3303,8 @@ func (UnimplementedHandler) ReadBatchV1NamespacedJob(ctx context.Context, params
 //
 // GET /apis/batch/v1/namespaces/{namespace}/jobs/{name}/status
 func (UnimplementedHandler) ReadBatchV1NamespacedJobStatus(ctx context.Context, params ReadBatchV1NamespacedJobStatusParams) (r ReadBatchV1NamespacedJobStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadBatchV1NamespacedJobStatusRes), nil
 }
 
 // ReadBatchV1beta1NamespacedCronJob implements readBatchV1beta1NamespacedCronJob operation.
@@ -2985,7 +3313,8 @@ func (UnimplementedHandler) ReadBatchV1NamespacedJobStatus(ctx context.Context, 
 //
 // GET /apis/batch/v1beta1/namespaces/{namespace}/cronjobs/{name}
 func (UnimplementedHandler) ReadBatchV1beta1NamespacedCronJob(ctx context.Context, params ReadBatchV1beta1NamespacedCronJobParams) (r ReadBatchV1beta1NamespacedCronJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadBatchV1beta1NamespacedCronJobRes), nil
 }
 
 // ReadBatchV1beta1NamespacedCronJobStatus implements readBatchV1beta1NamespacedCronJobStatus operation.
@@ -2994,7 +3323,8 @@ func (UnimplementedHandler) ReadBatchV1beta1NamespacedCronJob(ctx context.Contex
 //
 // GET /apis/batch/v1beta1/namespaces/{namespace}/cronjobs/{name}/status
 func (UnimplementedHandler) ReadBatchV1beta1NamespacedCronJobStatus(ctx context.Context, params ReadBatchV1beta1NamespacedCronJobStatusParams) (r ReadBatchV1beta1NamespacedCronJobStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadBatchV1beta1NamespacedCronJobStatusRes), nil
 }
 
 // ReadCertificatesV1CertificateSigningRequest implements readCertificatesV1CertificateSigningRequest operation.
@@ -3003,7 +3333,8 @@ func (UnimplementedHandler) ReadBatchV1beta1NamespacedCronJobStatus(ctx context.
 //
 // GET /apis/certificates.k8s.io/v1/certificatesigningrequests/{name}
 func (UnimplementedHandler) ReadCertificatesV1CertificateSigningRequest(ctx context.Context, params ReadCertificatesV1CertificateSigningRequestParams) (r ReadCertificatesV1CertificateSigningRequestRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCertificatesV1CertificateSigningRequestRes), nil
 }
 
 // ReadCertificatesV1CertificateSigningRequestApproval implements readCertificatesV1CertificateSigningRequestApproval operation.
@@ -3012,7 +3343,8 @@ func (UnimplementedHandler) ReadCertificatesV1CertificateSigningRequest(ctx cont
 //
 // GET /apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/approval
 func (UnimplementedHandler) ReadCertificatesV1CertificateSigningRequestApproval(ctx context.Context, params ReadCertificatesV1CertificateSigningRequestApprovalParams) (r ReadCertificatesV1CertificateSigningRequestApprovalRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCertificatesV1CertificateSigningRequestApprovalRes), nil
 }
 
 // ReadCertificatesV1CertificateSigningRequestStatus implements readCertificatesV1CertificateSigningRequestStatus operation.
@@ -3021,7 +3353,8 @@ func (UnimplementedHandler) ReadCertificatesV1CertificateSigningRequestApproval(
 //
 // GET /apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/status
 func (UnimplementedHandler) ReadCertificatesV1CertificateSigningRequestStatus(ctx context.Context, params ReadCertificatesV1CertificateSigningRequestStatusParams) (r ReadCertificatesV1CertificateSigningRequestStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCertificatesV1CertificateSigningRequestStatusRes), nil
 }
 
 // ReadCoordinationV1NamespacedLease implements readCoordinationV1NamespacedLease operation.
@@ -3030,7 +3363,8 @@ func (UnimplementedHandler) ReadCertificatesV1CertificateSigningRequestStatus(ct
 //
 // GET /apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}
 func (UnimplementedHandler) ReadCoordinationV1NamespacedLease(ctx context.Context, params ReadCoordinationV1NamespacedLeaseParams) (r ReadCoordinationV1NamespacedLeaseRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoordinationV1NamespacedLeaseRes), nil
 }
 
 // ReadCoreV1ComponentStatus implements readCoreV1ComponentStatus operation.
@@ -3039,7 +3373,8 @@ func (UnimplementedHandler) ReadCoordinationV1NamespacedLease(ctx context.Contex
 //
 // GET /api/v1/componentstatuses/{name}
 func (UnimplementedHandler) ReadCoreV1ComponentStatus(ctx context.Context, params ReadCoreV1ComponentStatusParams) (r ReadCoreV1ComponentStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1ComponentStatusRes), nil
 }
 
 // ReadCoreV1Namespace implements readCoreV1Namespace operation.
@@ -3048,7 +3383,8 @@ func (UnimplementedHandler) ReadCoreV1ComponentStatus(ctx context.Context, param
 //
 // GET /api/v1/namespaces/{name}
 func (UnimplementedHandler) ReadCoreV1Namespace(ctx context.Context, params ReadCoreV1NamespaceParams) (r ReadCoreV1NamespaceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespaceRes), nil
 }
 
 // ReadCoreV1NamespaceStatus implements readCoreV1NamespaceStatus operation.
@@ -3057,7 +3393,8 @@ func (UnimplementedHandler) ReadCoreV1Namespace(ctx context.Context, params Read
 //
 // GET /api/v1/namespaces/{name}/status
 func (UnimplementedHandler) ReadCoreV1NamespaceStatus(ctx context.Context, params ReadCoreV1NamespaceStatusParams) (r ReadCoreV1NamespaceStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespaceStatusRes), nil
 }
 
 // ReadCoreV1NamespacedConfigMap implements readCoreV1NamespacedConfigMap operation.
@@ -3066,7 +3403,8 @@ func (UnimplementedHandler) ReadCoreV1NamespaceStatus(ctx context.Context, param
 //
 // GET /api/v1/namespaces/{namespace}/configmaps/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedConfigMap(ctx context.Context, params ReadCoreV1NamespacedConfigMapParams) (r ReadCoreV1NamespacedConfigMapRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedConfigMapRes), nil
 }
 
 // ReadCoreV1NamespacedEndpoints implements readCoreV1NamespacedEndpoints operation.
@@ -3075,7 +3413,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedConfigMap(ctx context.Context, p
 //
 // GET /api/v1/namespaces/{namespace}/endpoints/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedEndpoints(ctx context.Context, params ReadCoreV1NamespacedEndpointsParams) (r ReadCoreV1NamespacedEndpointsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedEndpointsRes), nil
 }
 
 // ReadCoreV1NamespacedEvent implements readCoreV1NamespacedEvent operation.
@@ -3084,7 +3423,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedEndpoints(ctx context.Context, p
 //
 // GET /api/v1/namespaces/{namespace}/events/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedEvent(ctx context.Context, params ReadCoreV1NamespacedEventParams) (r ReadCoreV1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedEventRes), nil
 }
 
 // ReadCoreV1NamespacedLimitRange implements readCoreV1NamespacedLimitRange operation.
@@ -3093,7 +3433,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedEvent(ctx context.Context, param
 //
 // GET /api/v1/namespaces/{namespace}/limitranges/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedLimitRange(ctx context.Context, params ReadCoreV1NamespacedLimitRangeParams) (r ReadCoreV1NamespacedLimitRangeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedLimitRangeRes), nil
 }
 
 // ReadCoreV1NamespacedPersistentVolumeClaim implements readCoreV1NamespacedPersistentVolumeClaim operation.
@@ -3102,7 +3443,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedLimitRange(ctx context.Context, 
 //
 // GET /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedPersistentVolumeClaim(ctx context.Context, params ReadCoreV1NamespacedPersistentVolumeClaimParams) (r ReadCoreV1NamespacedPersistentVolumeClaimRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedPersistentVolumeClaimRes), nil
 }
 
 // ReadCoreV1NamespacedPersistentVolumeClaimStatus implements readCoreV1NamespacedPersistentVolumeClaimStatus operation.
@@ -3111,7 +3453,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedPersistentVolumeClaim(ctx contex
 //
 // GET /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status
 func (UnimplementedHandler) ReadCoreV1NamespacedPersistentVolumeClaimStatus(ctx context.Context, params ReadCoreV1NamespacedPersistentVolumeClaimStatusParams) (r ReadCoreV1NamespacedPersistentVolumeClaimStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedPersistentVolumeClaimStatusRes), nil
 }
 
 // ReadCoreV1NamespacedPod implements readCoreV1NamespacedPod operation.
@@ -3120,7 +3463,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedPersistentVolumeClaimStatus(ctx 
 //
 // GET /api/v1/namespaces/{namespace}/pods/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedPod(ctx context.Context, params ReadCoreV1NamespacedPodParams) (r ReadCoreV1NamespacedPodRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedPodRes), nil
 }
 
 // ReadCoreV1NamespacedPodEphemeralcontainers implements readCoreV1NamespacedPodEphemeralcontainers operation.
@@ -3129,7 +3473,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedPod(ctx context.Context, params 
 //
 // GET /api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers
 func (UnimplementedHandler) ReadCoreV1NamespacedPodEphemeralcontainers(ctx context.Context, params ReadCoreV1NamespacedPodEphemeralcontainersParams) (r ReadCoreV1NamespacedPodEphemeralcontainersRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedPodEphemeralcontainersRes), nil
 }
 
 // ReadCoreV1NamespacedPodLog implements readCoreV1NamespacedPodLog operation.
@@ -3138,7 +3483,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedPodEphemeralcontainers(ctx conte
 //
 // GET /api/v1/namespaces/{namespace}/pods/{name}/log
 func (UnimplementedHandler) ReadCoreV1NamespacedPodLog(ctx context.Context, params ReadCoreV1NamespacedPodLogParams) (r ReadCoreV1NamespacedPodLogRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedPodLogRes), nil
 }
 
 // ReadCoreV1NamespacedPodStatus implements readCoreV1NamespacedPodStatus operation.
@@ -3147,7 +3493,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedPodLog(ctx context.Context, para
 //
 // GET /api/v1/namespaces/{namespace}/pods/{name}/status
 func (UnimplementedHandler) ReadCoreV1NamespacedPodStatus(ctx context.Context, params ReadCoreV1NamespacedPodStatusParams) (r ReadCoreV1NamespacedPodStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedPodStatusRes), nil
 }
 
 // ReadCoreV1NamespacedPodTemplate implements readCoreV1NamespacedPodTemplate operation.
@@ -3156,7 +3503,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedPodStatus(ctx context.Context, p
 //
 // GET /api/v1/namespaces/{namespace}/podtemplates/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedPodTemplate(ctx context.Context, params ReadCoreV1NamespacedPodTemplateParams) (r ReadCoreV1NamespacedPodTemplateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedPodTemplateRes), nil
 }
 
 // ReadCoreV1NamespacedReplicationController implements readCoreV1NamespacedReplicationController operation.
@@ -3165,7 +3513,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedPodTemplate(ctx context.Context,
 //
 // GET /api/v1/namespaces/{namespace}/replicationcontrollers/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedReplicationController(ctx context.Context, params ReadCoreV1NamespacedReplicationControllerParams) (r ReadCoreV1NamespacedReplicationControllerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedReplicationControllerRes), nil
 }
 
 // ReadCoreV1NamespacedReplicationControllerScale implements readCoreV1NamespacedReplicationControllerScale operation.
@@ -3174,7 +3523,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedReplicationController(ctx contex
 //
 // GET /api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale
 func (UnimplementedHandler) ReadCoreV1NamespacedReplicationControllerScale(ctx context.Context, params ReadCoreV1NamespacedReplicationControllerScaleParams) (r ReadCoreV1NamespacedReplicationControllerScaleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedReplicationControllerScaleRes), nil
 }
 
 // ReadCoreV1NamespacedReplicationControllerStatus implements readCoreV1NamespacedReplicationControllerStatus operation.
@@ -3183,7 +3533,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedReplicationControllerScale(ctx c
 //
 // GET /api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status
 func (UnimplementedHandler) ReadCoreV1NamespacedReplicationControllerStatus(ctx context.Context, params ReadCoreV1NamespacedReplicationControllerStatusParams) (r ReadCoreV1NamespacedReplicationControllerStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedReplicationControllerStatusRes), nil
 }
 
 // ReadCoreV1NamespacedResourceQuota implements readCoreV1NamespacedResourceQuota operation.
@@ -3192,7 +3543,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedReplicationControllerStatus(ctx 
 //
 // GET /api/v1/namespaces/{namespace}/resourcequotas/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedResourceQuota(ctx context.Context, params ReadCoreV1NamespacedResourceQuotaParams) (r ReadCoreV1NamespacedResourceQuotaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedResourceQuotaRes), nil
 }
 
 // ReadCoreV1NamespacedResourceQuotaStatus implements readCoreV1NamespacedResourceQuotaStatus operation.
@@ -3201,7 +3553,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedResourceQuota(ctx context.Contex
 //
 // GET /api/v1/namespaces/{namespace}/resourcequotas/{name}/status
 func (UnimplementedHandler) ReadCoreV1NamespacedResourceQuotaStatus(ctx context.Context, params ReadCoreV1NamespacedResourceQuotaStatusParams) (r ReadCoreV1NamespacedResourceQuotaStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedResourceQuotaStatusRes), nil
 }
 
 // ReadCoreV1NamespacedSecret implements readCoreV1NamespacedSecret operation.
@@ -3210,7 +3563,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedResourceQuotaStatus(ctx context.
 //
 // GET /api/v1/namespaces/{namespace}/secrets/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedSecret(ctx context.Context, params ReadCoreV1NamespacedSecretParams) (r ReadCoreV1NamespacedSecretRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedSecretRes), nil
 }
 
 // ReadCoreV1NamespacedService implements readCoreV1NamespacedService operation.
@@ -3219,7 +3573,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedSecret(ctx context.Context, para
 //
 // GET /api/v1/namespaces/{namespace}/services/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedService(ctx context.Context, params ReadCoreV1NamespacedServiceParams) (r ReadCoreV1NamespacedServiceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedServiceRes), nil
 }
 
 // ReadCoreV1NamespacedServiceAccount implements readCoreV1NamespacedServiceAccount operation.
@@ -3228,7 +3583,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedService(ctx context.Context, par
 //
 // GET /api/v1/namespaces/{namespace}/serviceaccounts/{name}
 func (UnimplementedHandler) ReadCoreV1NamespacedServiceAccount(ctx context.Context, params ReadCoreV1NamespacedServiceAccountParams) (r ReadCoreV1NamespacedServiceAccountRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedServiceAccountRes), nil
 }
 
 // ReadCoreV1NamespacedServiceStatus implements readCoreV1NamespacedServiceStatus operation.
@@ -3237,7 +3593,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedServiceAccount(ctx context.Conte
 //
 // GET /api/v1/namespaces/{namespace}/services/{name}/status
 func (UnimplementedHandler) ReadCoreV1NamespacedServiceStatus(ctx context.Context, params ReadCoreV1NamespacedServiceStatusParams) (r ReadCoreV1NamespacedServiceStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NamespacedServiceStatusRes), nil
 }
 
 // ReadCoreV1Node implements readCoreV1Node operation.
@@ -3246,7 +3603,8 @@ func (UnimplementedHandler) ReadCoreV1NamespacedServiceStatus(ctx context.Contex
 //
 // GET /api/v1/nodes/{name}
 func (UnimplementedHandler) ReadCoreV1Node(ctx context.Context, params ReadCoreV1NodeParams) (r ReadCoreV1NodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NodeRes), nil
 }
 
 // ReadCoreV1NodeStatus implements readCoreV1NodeStatus operation.
@@ -3255,7 +3613,8 @@ func (UnimplementedHandler) ReadCoreV1Node(ctx context.Context, params ReadCoreV
 //
 // GET /api/v1/nodes/{name}/status
 func (UnimplementedHandler) ReadCoreV1NodeStatus(ctx context.Context, params ReadCoreV1NodeStatusParams) (r ReadCoreV1NodeStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1NodeStatusRes), nil
 }
 
 // ReadCoreV1PersistentVolume implements readCoreV1PersistentVolume operation.
@@ -3264,7 +3623,8 @@ func (UnimplementedHandler) ReadCoreV1NodeStatus(ctx context.Context, params Rea
 //
 // GET /api/v1/persistentvolumes/{name}
 func (UnimplementedHandler) ReadCoreV1PersistentVolume(ctx context.Context, params ReadCoreV1PersistentVolumeParams) (r ReadCoreV1PersistentVolumeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1PersistentVolumeRes), nil
 }
 
 // ReadCoreV1PersistentVolumeStatus implements readCoreV1PersistentVolumeStatus operation.
@@ -3273,7 +3633,8 @@ func (UnimplementedHandler) ReadCoreV1PersistentVolume(ctx context.Context, para
 //
 // GET /api/v1/persistentvolumes/{name}/status
 func (UnimplementedHandler) ReadCoreV1PersistentVolumeStatus(ctx context.Context, params ReadCoreV1PersistentVolumeStatusParams) (r ReadCoreV1PersistentVolumeStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadCoreV1PersistentVolumeStatusRes), nil
 }
 
 // ReadDiscoveryV1NamespacedEndpointSlice implements readDiscoveryV1NamespacedEndpointSlice operation.
@@ -3282,7 +3643,8 @@ func (UnimplementedHandler) ReadCoreV1PersistentVolumeStatus(ctx context.Context
 //
 // GET /apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}
 func (UnimplementedHandler) ReadDiscoveryV1NamespacedEndpointSlice(ctx context.Context, params ReadDiscoveryV1NamespacedEndpointSliceParams) (r ReadDiscoveryV1NamespacedEndpointSliceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadDiscoveryV1NamespacedEndpointSliceRes), nil
 }
 
 // ReadDiscoveryV1beta1NamespacedEndpointSlice implements readDiscoveryV1beta1NamespacedEndpointSlice operation.
@@ -3291,7 +3653,8 @@ func (UnimplementedHandler) ReadDiscoveryV1NamespacedEndpointSlice(ctx context.C
 //
 // GET /apis/discovery.k8s.io/v1beta1/namespaces/{namespace}/endpointslices/{name}
 func (UnimplementedHandler) ReadDiscoveryV1beta1NamespacedEndpointSlice(ctx context.Context, params ReadDiscoveryV1beta1NamespacedEndpointSliceParams) (r ReadDiscoveryV1beta1NamespacedEndpointSliceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadDiscoveryV1beta1NamespacedEndpointSliceRes), nil
 }
 
 // ReadEventsV1NamespacedEvent implements readEventsV1NamespacedEvent operation.
@@ -3300,7 +3663,8 @@ func (UnimplementedHandler) ReadDiscoveryV1beta1NamespacedEndpointSlice(ctx cont
 //
 // GET /apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}
 func (UnimplementedHandler) ReadEventsV1NamespacedEvent(ctx context.Context, params ReadEventsV1NamespacedEventParams) (r ReadEventsV1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadEventsV1NamespacedEventRes), nil
 }
 
 // ReadEventsV1beta1NamespacedEvent implements readEventsV1beta1NamespacedEvent operation.
@@ -3309,7 +3673,8 @@ func (UnimplementedHandler) ReadEventsV1NamespacedEvent(ctx context.Context, par
 //
 // GET /apis/events.k8s.io/v1beta1/namespaces/{namespace}/events/{name}
 func (UnimplementedHandler) ReadEventsV1beta1NamespacedEvent(ctx context.Context, params ReadEventsV1beta1NamespacedEventParams) (r ReadEventsV1beta1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadEventsV1beta1NamespacedEventRes), nil
 }
 
 // ReadFlowcontrolApiserverV1beta1FlowSchema implements readFlowcontrolApiserverV1beta1FlowSchema operation.
@@ -3318,7 +3683,8 @@ func (UnimplementedHandler) ReadEventsV1beta1NamespacedEvent(ctx context.Context
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas/{name}
 func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta1FlowSchema(ctx context.Context, params ReadFlowcontrolApiserverV1beta1FlowSchemaParams) (r ReadFlowcontrolApiserverV1beta1FlowSchemaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadFlowcontrolApiserverV1beta1FlowSchemaRes), nil
 }
 
 // ReadFlowcontrolApiserverV1beta1FlowSchemaStatus implements readFlowcontrolApiserverV1beta1FlowSchemaStatus operation.
@@ -3327,7 +3693,8 @@ func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta1FlowSchema(ctx contex
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas/{name}/status
 func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta1FlowSchemaStatus(ctx context.Context, params ReadFlowcontrolApiserverV1beta1FlowSchemaStatusParams) (r ReadFlowcontrolApiserverV1beta1FlowSchemaStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadFlowcontrolApiserverV1beta1FlowSchemaStatusRes), nil
 }
 
 // ReadFlowcontrolApiserverV1beta1PriorityLevelConfiguration implements readFlowcontrolApiserverV1beta1PriorityLevelConfiguration operation.
@@ -3336,7 +3703,8 @@ func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta1FlowSchemaStatus(ctx 
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations/{name}
 func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta1PriorityLevelConfiguration(ctx context.Context, params ReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationParams) (r ReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationRes), nil
 }
 
 // ReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatus implements readFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatus operation.
@@ -3345,7 +3713,8 @@ func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta1PriorityLevelConfigur
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations/{name}/status
 func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatus(ctx context.Context, params ReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusParams) (r ReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusRes), nil
 }
 
 // ReadFlowcontrolApiserverV1beta2FlowSchema implements readFlowcontrolApiserverV1beta2FlowSchema operation.
@@ -3354,7 +3723,8 @@ func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta1PriorityLevelConfigur
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}
 func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta2FlowSchema(ctx context.Context, params ReadFlowcontrolApiserverV1beta2FlowSchemaParams) (r ReadFlowcontrolApiserverV1beta2FlowSchemaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadFlowcontrolApiserverV1beta2FlowSchemaRes), nil
 }
 
 // ReadFlowcontrolApiserverV1beta2FlowSchemaStatus implements readFlowcontrolApiserverV1beta2FlowSchemaStatus operation.
@@ -3363,7 +3733,8 @@ func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta2FlowSchema(ctx contex
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}/status
 func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta2FlowSchemaStatus(ctx context.Context, params ReadFlowcontrolApiserverV1beta2FlowSchemaStatusParams) (r ReadFlowcontrolApiserverV1beta2FlowSchemaStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadFlowcontrolApiserverV1beta2FlowSchemaStatusRes), nil
 }
 
 // ReadFlowcontrolApiserverV1beta2PriorityLevelConfiguration implements readFlowcontrolApiserverV1beta2PriorityLevelConfiguration operation.
@@ -3372,7 +3743,8 @@ func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta2FlowSchemaStatus(ctx 
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}
 func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta2PriorityLevelConfiguration(ctx context.Context, params ReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationParams) (r ReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationRes), nil
 }
 
 // ReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus implements readFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus operation.
@@ -3381,7 +3753,8 @@ func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta2PriorityLevelConfigur
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}/status
 func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus(ctx context.Context, params ReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusParams) (r ReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusRes), nil
 }
 
 // ReadInternalApiserverV1alpha1StorageVersion implements readInternalApiserverV1alpha1StorageVersion operation.
@@ -3390,7 +3763,8 @@ func (UnimplementedHandler) ReadFlowcontrolApiserverV1beta2PriorityLevelConfigur
 //
 // GET /apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}
 func (UnimplementedHandler) ReadInternalApiserverV1alpha1StorageVersion(ctx context.Context, params ReadInternalApiserverV1alpha1StorageVersionParams) (r ReadInternalApiserverV1alpha1StorageVersionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadInternalApiserverV1alpha1StorageVersionRes), nil
 }
 
 // ReadInternalApiserverV1alpha1StorageVersionStatus implements readInternalApiserverV1alpha1StorageVersionStatus operation.
@@ -3399,7 +3773,8 @@ func (UnimplementedHandler) ReadInternalApiserverV1alpha1StorageVersion(ctx cont
 //
 // GET /apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}/status
 func (UnimplementedHandler) ReadInternalApiserverV1alpha1StorageVersionStatus(ctx context.Context, params ReadInternalApiserverV1alpha1StorageVersionStatusParams) (r ReadInternalApiserverV1alpha1StorageVersionStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadInternalApiserverV1alpha1StorageVersionStatusRes), nil
 }
 
 // ReadNetworkingV1IngressClass implements readNetworkingV1IngressClass operation.
@@ -3408,7 +3783,8 @@ func (UnimplementedHandler) ReadInternalApiserverV1alpha1StorageVersionStatus(ct
 //
 // GET /apis/networking.k8s.io/v1/ingressclasses/{name}
 func (UnimplementedHandler) ReadNetworkingV1IngressClass(ctx context.Context, params ReadNetworkingV1IngressClassParams) (r ReadNetworkingV1IngressClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadNetworkingV1IngressClassRes), nil
 }
 
 // ReadNetworkingV1NamespacedIngress implements readNetworkingV1NamespacedIngress operation.
@@ -3417,7 +3793,8 @@ func (UnimplementedHandler) ReadNetworkingV1IngressClass(ctx context.Context, pa
 //
 // GET /apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}
 func (UnimplementedHandler) ReadNetworkingV1NamespacedIngress(ctx context.Context, params ReadNetworkingV1NamespacedIngressParams) (r ReadNetworkingV1NamespacedIngressRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadNetworkingV1NamespacedIngressRes), nil
 }
 
 // ReadNetworkingV1NamespacedIngressStatus implements readNetworkingV1NamespacedIngressStatus operation.
@@ -3426,7 +3803,8 @@ func (UnimplementedHandler) ReadNetworkingV1NamespacedIngress(ctx context.Contex
 //
 // GET /apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}/status
 func (UnimplementedHandler) ReadNetworkingV1NamespacedIngressStatus(ctx context.Context, params ReadNetworkingV1NamespacedIngressStatusParams) (r ReadNetworkingV1NamespacedIngressStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadNetworkingV1NamespacedIngressStatusRes), nil
 }
 
 // ReadNetworkingV1NamespacedNetworkPolicy implements readNetworkingV1NamespacedNetworkPolicy operation.
@@ -3435,7 +3813,8 @@ func (UnimplementedHandler) ReadNetworkingV1NamespacedIngressStatus(ctx context.
 //
 // GET /apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}
 func (UnimplementedHandler) ReadNetworkingV1NamespacedNetworkPolicy(ctx context.Context, params ReadNetworkingV1NamespacedNetworkPolicyParams) (r ReadNetworkingV1NamespacedNetworkPolicyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadNetworkingV1NamespacedNetworkPolicyRes), nil
 }
 
 // ReadNodeV1RuntimeClass implements readNodeV1RuntimeClass operation.
@@ -3444,7 +3823,8 @@ func (UnimplementedHandler) ReadNetworkingV1NamespacedNetworkPolicy(ctx context.
 //
 // GET /apis/node.k8s.io/v1/runtimeclasses/{name}
 func (UnimplementedHandler) ReadNodeV1RuntimeClass(ctx context.Context, params ReadNodeV1RuntimeClassParams) (r ReadNodeV1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadNodeV1RuntimeClassRes), nil
 }
 
 // ReadNodeV1alpha1RuntimeClass implements readNodeV1alpha1RuntimeClass operation.
@@ -3453,7 +3833,8 @@ func (UnimplementedHandler) ReadNodeV1RuntimeClass(ctx context.Context, params R
 //
 // GET /apis/node.k8s.io/v1alpha1/runtimeclasses/{name}
 func (UnimplementedHandler) ReadNodeV1alpha1RuntimeClass(ctx context.Context, params ReadNodeV1alpha1RuntimeClassParams) (r ReadNodeV1alpha1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadNodeV1alpha1RuntimeClassRes), nil
 }
 
 // ReadNodeV1beta1RuntimeClass implements readNodeV1beta1RuntimeClass operation.
@@ -3462,7 +3843,8 @@ func (UnimplementedHandler) ReadNodeV1alpha1RuntimeClass(ctx context.Context, pa
 //
 // GET /apis/node.k8s.io/v1beta1/runtimeclasses/{name}
 func (UnimplementedHandler) ReadNodeV1beta1RuntimeClass(ctx context.Context, params ReadNodeV1beta1RuntimeClassParams) (r ReadNodeV1beta1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadNodeV1beta1RuntimeClassRes), nil
 }
 
 // ReadPolicyV1NamespacedPodDisruptionBudget implements readPolicyV1NamespacedPodDisruptionBudget operation.
@@ -3471,7 +3853,8 @@ func (UnimplementedHandler) ReadNodeV1beta1RuntimeClass(ctx context.Context, par
 //
 // GET /apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}
 func (UnimplementedHandler) ReadPolicyV1NamespacedPodDisruptionBudget(ctx context.Context, params ReadPolicyV1NamespacedPodDisruptionBudgetParams) (r ReadPolicyV1NamespacedPodDisruptionBudgetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadPolicyV1NamespacedPodDisruptionBudgetRes), nil
 }
 
 // ReadPolicyV1NamespacedPodDisruptionBudgetStatus implements readPolicyV1NamespacedPodDisruptionBudgetStatus operation.
@@ -3480,7 +3863,8 @@ func (UnimplementedHandler) ReadPolicyV1NamespacedPodDisruptionBudget(ctx contex
 //
 // GET /apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}/status
 func (UnimplementedHandler) ReadPolicyV1NamespacedPodDisruptionBudgetStatus(ctx context.Context, params ReadPolicyV1NamespacedPodDisruptionBudgetStatusParams) (r ReadPolicyV1NamespacedPodDisruptionBudgetStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadPolicyV1NamespacedPodDisruptionBudgetStatusRes), nil
 }
 
 // ReadPolicyV1beta1NamespacedPodDisruptionBudget implements readPolicyV1beta1NamespacedPodDisruptionBudget operation.
@@ -3489,7 +3873,8 @@ func (UnimplementedHandler) ReadPolicyV1NamespacedPodDisruptionBudgetStatus(ctx 
 //
 // GET /apis/policy/v1beta1/namespaces/{namespace}/poddisruptionbudgets/{name}
 func (UnimplementedHandler) ReadPolicyV1beta1NamespacedPodDisruptionBudget(ctx context.Context, params ReadPolicyV1beta1NamespacedPodDisruptionBudgetParams) (r ReadPolicyV1beta1NamespacedPodDisruptionBudgetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadPolicyV1beta1NamespacedPodDisruptionBudgetRes), nil
 }
 
 // ReadPolicyV1beta1NamespacedPodDisruptionBudgetStatus implements readPolicyV1beta1NamespacedPodDisruptionBudgetStatus operation.
@@ -3498,7 +3883,8 @@ func (UnimplementedHandler) ReadPolicyV1beta1NamespacedPodDisruptionBudget(ctx c
 //
 // GET /apis/policy/v1beta1/namespaces/{namespace}/poddisruptionbudgets/{name}/status
 func (UnimplementedHandler) ReadPolicyV1beta1NamespacedPodDisruptionBudgetStatus(ctx context.Context, params ReadPolicyV1beta1NamespacedPodDisruptionBudgetStatusParams) (r ReadPolicyV1beta1NamespacedPodDisruptionBudgetStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadPolicyV1beta1NamespacedPodDisruptionBudgetStatusRes), nil
 }
 
 // ReadPolicyV1beta1PodSecurityPolicy implements readPolicyV1beta1PodSecurityPolicy operation.
@@ -3507,7 +3893,8 @@ func (UnimplementedHandler) ReadPolicyV1beta1NamespacedPodDisruptionBudgetStatus
 //
 // GET /apis/policy/v1beta1/podsecuritypolicies/{name}
 func (UnimplementedHandler) ReadPolicyV1beta1PodSecurityPolicy(ctx context.Context, params ReadPolicyV1beta1PodSecurityPolicyParams) (r ReadPolicyV1beta1PodSecurityPolicyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadPolicyV1beta1PodSecurityPolicyRes), nil
 }
 
 // ReadRbacAuthorizationV1ClusterRole implements readRbacAuthorizationV1ClusterRole operation.
@@ -3516,7 +3903,8 @@ func (UnimplementedHandler) ReadPolicyV1beta1PodSecurityPolicy(ctx context.Conte
 //
 // GET /apis/rbac.authorization.k8s.io/v1/clusterroles/{name}
 func (UnimplementedHandler) ReadRbacAuthorizationV1ClusterRole(ctx context.Context, params ReadRbacAuthorizationV1ClusterRoleParams) (r ReadRbacAuthorizationV1ClusterRoleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadRbacAuthorizationV1ClusterRoleRes), nil
 }
 
 // ReadRbacAuthorizationV1ClusterRoleBinding implements readRbacAuthorizationV1ClusterRoleBinding operation.
@@ -3525,7 +3913,8 @@ func (UnimplementedHandler) ReadRbacAuthorizationV1ClusterRole(ctx context.Conte
 //
 // GET /apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}
 func (UnimplementedHandler) ReadRbacAuthorizationV1ClusterRoleBinding(ctx context.Context, params ReadRbacAuthorizationV1ClusterRoleBindingParams) (r ReadRbacAuthorizationV1ClusterRoleBindingRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadRbacAuthorizationV1ClusterRoleBindingRes), nil
 }
 
 // ReadRbacAuthorizationV1NamespacedRole implements readRbacAuthorizationV1NamespacedRole operation.
@@ -3534,7 +3923,8 @@ func (UnimplementedHandler) ReadRbacAuthorizationV1ClusterRoleBinding(ctx contex
 //
 // GET /apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}
 func (UnimplementedHandler) ReadRbacAuthorizationV1NamespacedRole(ctx context.Context, params ReadRbacAuthorizationV1NamespacedRoleParams) (r ReadRbacAuthorizationV1NamespacedRoleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadRbacAuthorizationV1NamespacedRoleRes), nil
 }
 
 // ReadRbacAuthorizationV1NamespacedRoleBinding implements readRbacAuthorizationV1NamespacedRoleBinding operation.
@@ -3543,7 +3933,8 @@ func (UnimplementedHandler) ReadRbacAuthorizationV1NamespacedRole(ctx context.Co
 //
 // GET /apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}
 func (UnimplementedHandler) ReadRbacAuthorizationV1NamespacedRoleBinding(ctx context.Context, params ReadRbacAuthorizationV1NamespacedRoleBindingParams) (r ReadRbacAuthorizationV1NamespacedRoleBindingRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadRbacAuthorizationV1NamespacedRoleBindingRes), nil
 }
 
 // ReadSchedulingV1PriorityClass implements readSchedulingV1PriorityClass operation.
@@ -3552,7 +3943,8 @@ func (UnimplementedHandler) ReadRbacAuthorizationV1NamespacedRoleBinding(ctx con
 //
 // GET /apis/scheduling.k8s.io/v1/priorityclasses/{name}
 func (UnimplementedHandler) ReadSchedulingV1PriorityClass(ctx context.Context, params ReadSchedulingV1PriorityClassParams) (r ReadSchedulingV1PriorityClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadSchedulingV1PriorityClassRes), nil
 }
 
 // ReadStorageV1CSIDriver implements readStorageV1CSIDriver operation.
@@ -3561,7 +3953,8 @@ func (UnimplementedHandler) ReadSchedulingV1PriorityClass(ctx context.Context, p
 //
 // GET /apis/storage.k8s.io/v1/csidrivers/{name}
 func (UnimplementedHandler) ReadStorageV1CSIDriver(ctx context.Context, params ReadStorageV1CSIDriverParams) (r ReadStorageV1CSIDriverRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadStorageV1CSIDriverRes), nil
 }
 
 // ReadStorageV1CSINode implements readStorageV1CSINode operation.
@@ -3570,7 +3963,8 @@ func (UnimplementedHandler) ReadStorageV1CSIDriver(ctx context.Context, params R
 //
 // GET /apis/storage.k8s.io/v1/csinodes/{name}
 func (UnimplementedHandler) ReadStorageV1CSINode(ctx context.Context, params ReadStorageV1CSINodeParams) (r ReadStorageV1CSINodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadStorageV1CSINodeRes), nil
 }
 
 // ReadStorageV1StorageClass implements readStorageV1StorageClass operation.
@@ -3579,7 +3973,8 @@ func (UnimplementedHandler) ReadStorageV1CSINode(ctx context.Context, params Rea
 //
 // GET /apis/storage.k8s.io/v1/storageclasses/{name}
 func (UnimplementedHandler) ReadStorageV1StorageClass(ctx context.Context, params ReadStorageV1StorageClassParams) (r ReadStorageV1StorageClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadStorageV1StorageClassRes), nil
 }
 
 // ReadStorageV1VolumeAttachment implements readStorageV1VolumeAttachment operation.
@@ -3588,7 +3983,8 @@ func (UnimplementedHandler) ReadStorageV1StorageClass(ctx context.Context, param
 //
 // GET /apis/storage.k8s.io/v1/volumeattachments/{name}
 func (UnimplementedHandler) ReadStorageV1VolumeAttachment(ctx context.Context, params ReadStorageV1VolumeAttachmentParams) (r ReadStorageV1VolumeAttachmentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadStorageV1VolumeAttachmentRes), nil
 }
 
 // ReadStorageV1VolumeAttachmentStatus implements readStorageV1VolumeAttachmentStatus operation.
@@ -3597,7 +3993,8 @@ func (UnimplementedHandler) ReadStorageV1VolumeAttachment(ctx context.Context, p
 //
 // GET /apis/storage.k8s.io/v1/volumeattachments/{name}/status
 func (UnimplementedHandler) ReadStorageV1VolumeAttachmentStatus(ctx context.Context, params ReadStorageV1VolumeAttachmentStatusParams) (r ReadStorageV1VolumeAttachmentStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadStorageV1VolumeAttachmentStatusRes), nil
 }
 
 // ReadStorageV1alpha1NamespacedCSIStorageCapacity implements readStorageV1alpha1NamespacedCSIStorageCapacity operation.
@@ -3606,7 +4003,8 @@ func (UnimplementedHandler) ReadStorageV1VolumeAttachmentStatus(ctx context.Cont
 //
 // GET /apis/storage.k8s.io/v1alpha1/namespaces/{namespace}/csistoragecapacities/{name}
 func (UnimplementedHandler) ReadStorageV1alpha1NamespacedCSIStorageCapacity(ctx context.Context, params ReadStorageV1alpha1NamespacedCSIStorageCapacityParams) (r ReadStorageV1alpha1NamespacedCSIStorageCapacityRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadStorageV1alpha1NamespacedCSIStorageCapacityRes), nil
 }
 
 // ReadStorageV1beta1NamespacedCSIStorageCapacity implements readStorageV1beta1NamespacedCSIStorageCapacity operation.
@@ -3615,7 +4013,8 @@ func (UnimplementedHandler) ReadStorageV1alpha1NamespacedCSIStorageCapacity(ctx 
 //
 // GET /apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}
 func (UnimplementedHandler) ReadStorageV1beta1NamespacedCSIStorageCapacity(ctx context.Context, params ReadStorageV1beta1NamespacedCSIStorageCapacityParams) (r ReadStorageV1beta1NamespacedCSIStorageCapacityRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReadStorageV1beta1NamespacedCSIStorageCapacityRes), nil
 }
 
 // WatchAdmissionregistrationV1MutatingWebhookConfiguration implements watchAdmissionregistrationV1MutatingWebhookConfiguration operation.
@@ -3626,7 +4025,8 @@ func (UnimplementedHandler) ReadStorageV1beta1NamespacedCSIStorageCapacity(ctx c
 //
 // GET /apis/admissionregistration.k8s.io/v1/watch/mutatingwebhookconfigurations/{name}
 func (UnimplementedHandler) WatchAdmissionregistrationV1MutatingWebhookConfiguration(ctx context.Context, params WatchAdmissionregistrationV1MutatingWebhookConfigurationParams) (r WatchAdmissionregistrationV1MutatingWebhookConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAdmissionregistrationV1MutatingWebhookConfigurationRes), nil
 }
 
 // WatchAdmissionregistrationV1MutatingWebhookConfigurationList implements watchAdmissionregistrationV1MutatingWebhookConfigurationList operation.
@@ -3636,7 +4036,8 @@ func (UnimplementedHandler) WatchAdmissionregistrationV1MutatingWebhookConfigura
 //
 // GET /apis/admissionregistration.k8s.io/v1/watch/mutatingwebhookconfigurations
 func (UnimplementedHandler) WatchAdmissionregistrationV1MutatingWebhookConfigurationList(ctx context.Context, params WatchAdmissionregistrationV1MutatingWebhookConfigurationListParams) (r WatchAdmissionregistrationV1MutatingWebhookConfigurationListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAdmissionregistrationV1MutatingWebhookConfigurationListRes), nil
 }
 
 // WatchAdmissionregistrationV1ValidatingWebhookConfiguration implements watchAdmissionregistrationV1ValidatingWebhookConfiguration operation.
@@ -3647,7 +4048,8 @@ func (UnimplementedHandler) WatchAdmissionregistrationV1MutatingWebhookConfigura
 //
 // GET /apis/admissionregistration.k8s.io/v1/watch/validatingwebhookconfigurations/{name}
 func (UnimplementedHandler) WatchAdmissionregistrationV1ValidatingWebhookConfiguration(ctx context.Context, params WatchAdmissionregistrationV1ValidatingWebhookConfigurationParams) (r WatchAdmissionregistrationV1ValidatingWebhookConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAdmissionregistrationV1ValidatingWebhookConfigurationRes), nil
 }
 
 // WatchAdmissionregistrationV1ValidatingWebhookConfigurationList implements watchAdmissionregistrationV1ValidatingWebhookConfigurationList operation.
@@ -3657,7 +4059,8 @@ func (UnimplementedHandler) WatchAdmissionregistrationV1ValidatingWebhookConfigu
 //
 // GET /apis/admissionregistration.k8s.io/v1/watch/validatingwebhookconfigurations
 func (UnimplementedHandler) WatchAdmissionregistrationV1ValidatingWebhookConfigurationList(ctx context.Context, params WatchAdmissionregistrationV1ValidatingWebhookConfigurationListParams) (r WatchAdmissionregistrationV1ValidatingWebhookConfigurationListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAdmissionregistrationV1ValidatingWebhookConfigurationListRes), nil
 }
 
 // WatchApiextensionsV1CustomResourceDefinition implements watchApiextensionsV1CustomResourceDefinition operation.
@@ -3667,7 +4070,8 @@ func (UnimplementedHandler) WatchAdmissionregistrationV1ValidatingWebhookConfigu
 //
 // GET /apis/apiextensions.k8s.io/v1/watch/customresourcedefinitions/{name}
 func (UnimplementedHandler) WatchApiextensionsV1CustomResourceDefinition(ctx context.Context, params WatchApiextensionsV1CustomResourceDefinitionParams) (r WatchApiextensionsV1CustomResourceDefinitionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchApiextensionsV1CustomResourceDefinitionRes), nil
 }
 
 // WatchApiextensionsV1CustomResourceDefinitionList implements watchApiextensionsV1CustomResourceDefinitionList operation.
@@ -3677,7 +4081,8 @@ func (UnimplementedHandler) WatchApiextensionsV1CustomResourceDefinition(ctx con
 //
 // GET /apis/apiextensions.k8s.io/v1/watch/customresourcedefinitions
 func (UnimplementedHandler) WatchApiextensionsV1CustomResourceDefinitionList(ctx context.Context, params WatchApiextensionsV1CustomResourceDefinitionListParams) (r WatchApiextensionsV1CustomResourceDefinitionListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchApiextensionsV1CustomResourceDefinitionListRes), nil
 }
 
 // WatchApiregistrationV1APIService implements watchApiregistrationV1APIService operation.
@@ -3687,7 +4092,8 @@ func (UnimplementedHandler) WatchApiextensionsV1CustomResourceDefinitionList(ctx
 //
 // GET /apis/apiregistration.k8s.io/v1/watch/apiservices/{name}
 func (UnimplementedHandler) WatchApiregistrationV1APIService(ctx context.Context, params WatchApiregistrationV1APIServiceParams) (r WatchApiregistrationV1APIServiceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchApiregistrationV1APIServiceRes), nil
 }
 
 // WatchApiregistrationV1APIServiceList implements watchApiregistrationV1APIServiceList operation.
@@ -3697,7 +4103,8 @@ func (UnimplementedHandler) WatchApiregistrationV1APIService(ctx context.Context
 //
 // GET /apis/apiregistration.k8s.io/v1/watch/apiservices
 func (UnimplementedHandler) WatchApiregistrationV1APIServiceList(ctx context.Context, params WatchApiregistrationV1APIServiceListParams) (r WatchApiregistrationV1APIServiceListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchApiregistrationV1APIServiceListRes), nil
 }
 
 // WatchAppsV1ControllerRevisionListForAllNamespaces implements watchAppsV1ControllerRevisionListForAllNamespaces operation.
@@ -3707,7 +4114,8 @@ func (UnimplementedHandler) WatchApiregistrationV1APIServiceList(ctx context.Con
 //
 // GET /apis/apps/v1/watch/controllerrevisions
 func (UnimplementedHandler) WatchAppsV1ControllerRevisionListForAllNamespaces(ctx context.Context, params WatchAppsV1ControllerRevisionListForAllNamespacesParams) (r WatchAppsV1ControllerRevisionListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1ControllerRevisionListForAllNamespacesRes), nil
 }
 
 // WatchAppsV1DaemonSetListForAllNamespaces implements watchAppsV1DaemonSetListForAllNamespaces operation.
@@ -3717,7 +4125,8 @@ func (UnimplementedHandler) WatchAppsV1ControllerRevisionListForAllNamespaces(ct
 //
 // GET /apis/apps/v1/watch/daemonsets
 func (UnimplementedHandler) WatchAppsV1DaemonSetListForAllNamespaces(ctx context.Context, params WatchAppsV1DaemonSetListForAllNamespacesParams) (r WatchAppsV1DaemonSetListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1DaemonSetListForAllNamespacesRes), nil
 }
 
 // WatchAppsV1DeploymentListForAllNamespaces implements watchAppsV1DeploymentListForAllNamespaces operation.
@@ -3727,7 +4136,8 @@ func (UnimplementedHandler) WatchAppsV1DaemonSetListForAllNamespaces(ctx context
 //
 // GET /apis/apps/v1/watch/deployments
 func (UnimplementedHandler) WatchAppsV1DeploymentListForAllNamespaces(ctx context.Context, params WatchAppsV1DeploymentListForAllNamespacesParams) (r WatchAppsV1DeploymentListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1DeploymentListForAllNamespacesRes), nil
 }
 
 // WatchAppsV1NamespacedControllerRevision implements watchAppsV1NamespacedControllerRevision operation.
@@ -3737,7 +4147,8 @@ func (UnimplementedHandler) WatchAppsV1DeploymentListForAllNamespaces(ctx contex
 //
 // GET /apis/apps/v1/watch/namespaces/{namespace}/controllerrevisions/{name}
 func (UnimplementedHandler) WatchAppsV1NamespacedControllerRevision(ctx context.Context, params WatchAppsV1NamespacedControllerRevisionParams) (r WatchAppsV1NamespacedControllerRevisionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1NamespacedControllerRevisionRes), nil
 }
 
 // WatchAppsV1NamespacedControllerRevisionList implements watchAppsV1NamespacedControllerRevisionList operation.
@@ -3747,7 +4158,8 @@ func (UnimplementedHandler) WatchAppsV1NamespacedControllerRevision(ctx context.
 //
 // GET /apis/apps/v1/watch/namespaces/{namespace}/controllerrevisions
 func (UnimplementedHandler) WatchAppsV1NamespacedControllerRevisionList(ctx context.Context, params WatchAppsV1NamespacedControllerRevisionListParams) (r WatchAppsV1NamespacedControllerRevisionListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1NamespacedControllerRevisionListRes), nil
 }
 
 // WatchAppsV1NamespacedDaemonSet implements watchAppsV1NamespacedDaemonSet operation.
@@ -3757,7 +4169,8 @@ func (UnimplementedHandler) WatchAppsV1NamespacedControllerRevisionList(ctx cont
 //
 // GET /apis/apps/v1/watch/namespaces/{namespace}/daemonsets/{name}
 func (UnimplementedHandler) WatchAppsV1NamespacedDaemonSet(ctx context.Context, params WatchAppsV1NamespacedDaemonSetParams) (r WatchAppsV1NamespacedDaemonSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1NamespacedDaemonSetRes), nil
 }
 
 // WatchAppsV1NamespacedDaemonSetList implements watchAppsV1NamespacedDaemonSetList operation.
@@ -3767,7 +4180,8 @@ func (UnimplementedHandler) WatchAppsV1NamespacedDaemonSet(ctx context.Context, 
 //
 // GET /apis/apps/v1/watch/namespaces/{namespace}/daemonsets
 func (UnimplementedHandler) WatchAppsV1NamespacedDaemonSetList(ctx context.Context, params WatchAppsV1NamespacedDaemonSetListParams) (r WatchAppsV1NamespacedDaemonSetListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1NamespacedDaemonSetListRes), nil
 }
 
 // WatchAppsV1NamespacedDeployment implements watchAppsV1NamespacedDeployment operation.
@@ -3777,7 +4191,8 @@ func (UnimplementedHandler) WatchAppsV1NamespacedDaemonSetList(ctx context.Conte
 //
 // GET /apis/apps/v1/watch/namespaces/{namespace}/deployments/{name}
 func (UnimplementedHandler) WatchAppsV1NamespacedDeployment(ctx context.Context, params WatchAppsV1NamespacedDeploymentParams) (r WatchAppsV1NamespacedDeploymentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1NamespacedDeploymentRes), nil
 }
 
 // WatchAppsV1NamespacedDeploymentList implements watchAppsV1NamespacedDeploymentList operation.
@@ -3787,7 +4202,8 @@ func (UnimplementedHandler) WatchAppsV1NamespacedDeployment(ctx context.Context,
 //
 // GET /apis/apps/v1/watch/namespaces/{namespace}/deployments
 func (UnimplementedHandler) WatchAppsV1NamespacedDeploymentList(ctx context.Context, params WatchAppsV1NamespacedDeploymentListParams) (r WatchAppsV1NamespacedDeploymentListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1NamespacedDeploymentListRes), nil
 }
 
 // WatchAppsV1NamespacedReplicaSet implements watchAppsV1NamespacedReplicaSet operation.
@@ -3797,7 +4213,8 @@ func (UnimplementedHandler) WatchAppsV1NamespacedDeploymentList(ctx context.Cont
 //
 // GET /apis/apps/v1/watch/namespaces/{namespace}/replicasets/{name}
 func (UnimplementedHandler) WatchAppsV1NamespacedReplicaSet(ctx context.Context, params WatchAppsV1NamespacedReplicaSetParams) (r WatchAppsV1NamespacedReplicaSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1NamespacedReplicaSetRes), nil
 }
 
 // WatchAppsV1NamespacedReplicaSetList implements watchAppsV1NamespacedReplicaSetList operation.
@@ -3807,7 +4224,8 @@ func (UnimplementedHandler) WatchAppsV1NamespacedReplicaSet(ctx context.Context,
 //
 // GET /apis/apps/v1/watch/namespaces/{namespace}/replicasets
 func (UnimplementedHandler) WatchAppsV1NamespacedReplicaSetList(ctx context.Context, params WatchAppsV1NamespacedReplicaSetListParams) (r WatchAppsV1NamespacedReplicaSetListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1NamespacedReplicaSetListRes), nil
 }
 
 // WatchAppsV1NamespacedStatefulSet implements watchAppsV1NamespacedStatefulSet operation.
@@ -3817,7 +4235,8 @@ func (UnimplementedHandler) WatchAppsV1NamespacedReplicaSetList(ctx context.Cont
 //
 // GET /apis/apps/v1/watch/namespaces/{namespace}/statefulsets/{name}
 func (UnimplementedHandler) WatchAppsV1NamespacedStatefulSet(ctx context.Context, params WatchAppsV1NamespacedStatefulSetParams) (r WatchAppsV1NamespacedStatefulSetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1NamespacedStatefulSetRes), nil
 }
 
 // WatchAppsV1NamespacedStatefulSetList implements watchAppsV1NamespacedStatefulSetList operation.
@@ -3827,7 +4246,8 @@ func (UnimplementedHandler) WatchAppsV1NamespacedStatefulSet(ctx context.Context
 //
 // GET /apis/apps/v1/watch/namespaces/{namespace}/statefulsets
 func (UnimplementedHandler) WatchAppsV1NamespacedStatefulSetList(ctx context.Context, params WatchAppsV1NamespacedStatefulSetListParams) (r WatchAppsV1NamespacedStatefulSetListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1NamespacedStatefulSetListRes), nil
 }
 
 // WatchAppsV1ReplicaSetListForAllNamespaces implements watchAppsV1ReplicaSetListForAllNamespaces operation.
@@ -3837,7 +4257,8 @@ func (UnimplementedHandler) WatchAppsV1NamespacedStatefulSetList(ctx context.Con
 //
 // GET /apis/apps/v1/watch/replicasets
 func (UnimplementedHandler) WatchAppsV1ReplicaSetListForAllNamespaces(ctx context.Context, params WatchAppsV1ReplicaSetListForAllNamespacesParams) (r WatchAppsV1ReplicaSetListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1ReplicaSetListForAllNamespacesRes), nil
 }
 
 // WatchAppsV1StatefulSetListForAllNamespaces implements watchAppsV1StatefulSetListForAllNamespaces operation.
@@ -3847,7 +4268,8 @@ func (UnimplementedHandler) WatchAppsV1ReplicaSetListForAllNamespaces(ctx contex
 //
 // GET /apis/apps/v1/watch/statefulsets
 func (UnimplementedHandler) WatchAppsV1StatefulSetListForAllNamespaces(ctx context.Context, params WatchAppsV1StatefulSetListForAllNamespacesParams) (r WatchAppsV1StatefulSetListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAppsV1StatefulSetListForAllNamespacesRes), nil
 }
 
 // WatchAutoscalingV1HorizontalPodAutoscalerListForAllNamespaces implements watchAutoscalingV1HorizontalPodAutoscalerListForAllNamespaces operation.
@@ -3857,7 +4279,8 @@ func (UnimplementedHandler) WatchAppsV1StatefulSetListForAllNamespaces(ctx conte
 //
 // GET /apis/autoscaling/v1/watch/horizontalpodautoscalers
 func (UnimplementedHandler) WatchAutoscalingV1HorizontalPodAutoscalerListForAllNamespaces(ctx context.Context, params WatchAutoscalingV1HorizontalPodAutoscalerListForAllNamespacesParams) (r WatchAutoscalingV1HorizontalPodAutoscalerListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAutoscalingV1HorizontalPodAutoscalerListForAllNamespacesRes), nil
 }
 
 // WatchAutoscalingV1NamespacedHorizontalPodAutoscaler implements watchAutoscalingV1NamespacedHorizontalPodAutoscaler operation.
@@ -3867,7 +4290,8 @@ func (UnimplementedHandler) WatchAutoscalingV1HorizontalPodAutoscalerListForAllN
 //
 // GET /apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}
 func (UnimplementedHandler) WatchAutoscalingV1NamespacedHorizontalPodAutoscaler(ctx context.Context, params WatchAutoscalingV1NamespacedHorizontalPodAutoscalerParams) (r WatchAutoscalingV1NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAutoscalingV1NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // WatchAutoscalingV1NamespacedHorizontalPodAutoscalerList implements watchAutoscalingV1NamespacedHorizontalPodAutoscalerList operation.
@@ -3877,7 +4301,8 @@ func (UnimplementedHandler) WatchAutoscalingV1NamespacedHorizontalPodAutoscaler(
 //
 // GET /apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers
 func (UnimplementedHandler) WatchAutoscalingV1NamespacedHorizontalPodAutoscalerList(ctx context.Context, params WatchAutoscalingV1NamespacedHorizontalPodAutoscalerListParams) (r WatchAutoscalingV1NamespacedHorizontalPodAutoscalerListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAutoscalingV1NamespacedHorizontalPodAutoscalerListRes), nil
 }
 
 // WatchAutoscalingV2beta1HorizontalPodAutoscalerListForAllNamespaces implements watchAutoscalingV2beta1HorizontalPodAutoscalerListForAllNamespaces operation.
@@ -3887,7 +4312,8 @@ func (UnimplementedHandler) WatchAutoscalingV1NamespacedHorizontalPodAutoscalerL
 //
 // GET /apis/autoscaling/v2beta1/watch/horizontalpodautoscalers
 func (UnimplementedHandler) WatchAutoscalingV2beta1HorizontalPodAutoscalerListForAllNamespaces(ctx context.Context, params WatchAutoscalingV2beta1HorizontalPodAutoscalerListForAllNamespacesParams) (r WatchAutoscalingV2beta1HorizontalPodAutoscalerListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAutoscalingV2beta1HorizontalPodAutoscalerListForAllNamespacesRes), nil
 }
 
 // WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscaler implements watchAutoscalingV2beta1NamespacedHorizontalPodAutoscaler operation.
@@ -3897,7 +4323,8 @@ func (UnimplementedHandler) WatchAutoscalingV2beta1HorizontalPodAutoscalerListFo
 //
 // GET /apis/autoscaling/v2beta1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}
 func (UnimplementedHandler) WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscaler(ctx context.Context, params WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerParams) (r WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerList implements watchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerList operation.
@@ -3907,7 +4334,8 @@ func (UnimplementedHandler) WatchAutoscalingV2beta1NamespacedHorizontalPodAutosc
 //
 // GET /apis/autoscaling/v2beta1/watch/namespaces/{namespace}/horizontalpodautoscalers
 func (UnimplementedHandler) WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerList(ctx context.Context, params WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerListParams) (r WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerListRes), nil
 }
 
 // WatchAutoscalingV2beta2HorizontalPodAutoscalerListForAllNamespaces implements watchAutoscalingV2beta2HorizontalPodAutoscalerListForAllNamespaces operation.
@@ -3917,7 +4345,8 @@ func (UnimplementedHandler) WatchAutoscalingV2beta1NamespacedHorizontalPodAutosc
 //
 // GET /apis/autoscaling/v2beta2/watch/horizontalpodautoscalers
 func (UnimplementedHandler) WatchAutoscalingV2beta2HorizontalPodAutoscalerListForAllNamespaces(ctx context.Context, params WatchAutoscalingV2beta2HorizontalPodAutoscalerListForAllNamespacesParams) (r WatchAutoscalingV2beta2HorizontalPodAutoscalerListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAutoscalingV2beta2HorizontalPodAutoscalerListForAllNamespacesRes), nil
 }
 
 // WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscaler implements watchAutoscalingV2beta2NamespacedHorizontalPodAutoscaler operation.
@@ -3927,7 +4356,8 @@ func (UnimplementedHandler) WatchAutoscalingV2beta2HorizontalPodAutoscalerListFo
 //
 // GET /apis/autoscaling/v2beta2/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}
 func (UnimplementedHandler) WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscaler(ctx context.Context, params WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerParams) (r WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRes), nil
 }
 
 // WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerList implements watchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerList operation.
@@ -3937,7 +4367,8 @@ func (UnimplementedHandler) WatchAutoscalingV2beta2NamespacedHorizontalPodAutosc
 //
 // GET /apis/autoscaling/v2beta2/watch/namespaces/{namespace}/horizontalpodautoscalers
 func (UnimplementedHandler) WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerList(ctx context.Context, params WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerListParams) (r WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerListRes), nil
 }
 
 // WatchBatchV1CronJobListForAllNamespaces implements watchBatchV1CronJobListForAllNamespaces operation.
@@ -3947,7 +4378,8 @@ func (UnimplementedHandler) WatchAutoscalingV2beta2NamespacedHorizontalPodAutosc
 //
 // GET /apis/batch/v1/watch/cronjobs
 func (UnimplementedHandler) WatchBatchV1CronJobListForAllNamespaces(ctx context.Context, params WatchBatchV1CronJobListForAllNamespacesParams) (r WatchBatchV1CronJobListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchBatchV1CronJobListForAllNamespacesRes), nil
 }
 
 // WatchBatchV1JobListForAllNamespaces implements watchBatchV1JobListForAllNamespaces operation.
@@ -3957,7 +4389,8 @@ func (UnimplementedHandler) WatchBatchV1CronJobListForAllNamespaces(ctx context.
 //
 // GET /apis/batch/v1/watch/jobs
 func (UnimplementedHandler) WatchBatchV1JobListForAllNamespaces(ctx context.Context, params WatchBatchV1JobListForAllNamespacesParams) (r WatchBatchV1JobListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchBatchV1JobListForAllNamespacesRes), nil
 }
 
 // WatchBatchV1NamespacedCronJob implements watchBatchV1NamespacedCronJob operation.
@@ -3967,7 +4400,8 @@ func (UnimplementedHandler) WatchBatchV1JobListForAllNamespaces(ctx context.Cont
 //
 // GET /apis/batch/v1/watch/namespaces/{namespace}/cronjobs/{name}
 func (UnimplementedHandler) WatchBatchV1NamespacedCronJob(ctx context.Context, params WatchBatchV1NamespacedCronJobParams) (r WatchBatchV1NamespacedCronJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchBatchV1NamespacedCronJobRes), nil
 }
 
 // WatchBatchV1NamespacedCronJobList implements watchBatchV1NamespacedCronJobList operation.
@@ -3977,7 +4411,8 @@ func (UnimplementedHandler) WatchBatchV1NamespacedCronJob(ctx context.Context, p
 //
 // GET /apis/batch/v1/watch/namespaces/{namespace}/cronjobs
 func (UnimplementedHandler) WatchBatchV1NamespacedCronJobList(ctx context.Context, params WatchBatchV1NamespacedCronJobListParams) (r WatchBatchV1NamespacedCronJobListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchBatchV1NamespacedCronJobListRes), nil
 }
 
 // WatchBatchV1NamespacedJob implements watchBatchV1NamespacedJob operation.
@@ -3987,7 +4422,8 @@ func (UnimplementedHandler) WatchBatchV1NamespacedCronJobList(ctx context.Contex
 //
 // GET /apis/batch/v1/watch/namespaces/{namespace}/jobs/{name}
 func (UnimplementedHandler) WatchBatchV1NamespacedJob(ctx context.Context, params WatchBatchV1NamespacedJobParams) (r WatchBatchV1NamespacedJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchBatchV1NamespacedJobRes), nil
 }
 
 // WatchBatchV1NamespacedJobList implements watchBatchV1NamespacedJobList operation.
@@ -3997,7 +4433,8 @@ func (UnimplementedHandler) WatchBatchV1NamespacedJob(ctx context.Context, param
 //
 // GET /apis/batch/v1/watch/namespaces/{namespace}/jobs
 func (UnimplementedHandler) WatchBatchV1NamespacedJobList(ctx context.Context, params WatchBatchV1NamespacedJobListParams) (r WatchBatchV1NamespacedJobListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchBatchV1NamespacedJobListRes), nil
 }
 
 // WatchBatchV1beta1CronJobListForAllNamespaces implements watchBatchV1beta1CronJobListForAllNamespaces operation.
@@ -4007,7 +4444,8 @@ func (UnimplementedHandler) WatchBatchV1NamespacedJobList(ctx context.Context, p
 //
 // GET /apis/batch/v1beta1/watch/cronjobs
 func (UnimplementedHandler) WatchBatchV1beta1CronJobListForAllNamespaces(ctx context.Context, params WatchBatchV1beta1CronJobListForAllNamespacesParams) (r WatchBatchV1beta1CronJobListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchBatchV1beta1CronJobListForAllNamespacesRes), nil
 }
 
 // WatchBatchV1beta1NamespacedCronJob implements watchBatchV1beta1NamespacedCronJob operation.
@@ -4017,7 +4455,8 @@ func (UnimplementedHandler) WatchBatchV1beta1CronJobListForAllNamespaces(ctx con
 //
 // GET /apis/batch/v1beta1/watch/namespaces/{namespace}/cronjobs/{name}
 func (UnimplementedHandler) WatchBatchV1beta1NamespacedCronJob(ctx context.Context, params WatchBatchV1beta1NamespacedCronJobParams) (r WatchBatchV1beta1NamespacedCronJobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchBatchV1beta1NamespacedCronJobRes), nil
 }
 
 // WatchBatchV1beta1NamespacedCronJobList implements watchBatchV1beta1NamespacedCronJobList operation.
@@ -4027,7 +4466,8 @@ func (UnimplementedHandler) WatchBatchV1beta1NamespacedCronJob(ctx context.Conte
 //
 // GET /apis/batch/v1beta1/watch/namespaces/{namespace}/cronjobs
 func (UnimplementedHandler) WatchBatchV1beta1NamespacedCronJobList(ctx context.Context, params WatchBatchV1beta1NamespacedCronJobListParams) (r WatchBatchV1beta1NamespacedCronJobListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchBatchV1beta1NamespacedCronJobListRes), nil
 }
 
 // WatchCertificatesV1CertificateSigningRequest implements watchCertificatesV1CertificateSigningRequest operation.
@@ -4038,7 +4478,8 @@ func (UnimplementedHandler) WatchBatchV1beta1NamespacedCronJobList(ctx context.C
 //
 // GET /apis/certificates.k8s.io/v1/watch/certificatesigningrequests/{name}
 func (UnimplementedHandler) WatchCertificatesV1CertificateSigningRequest(ctx context.Context, params WatchCertificatesV1CertificateSigningRequestParams) (r WatchCertificatesV1CertificateSigningRequestRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCertificatesV1CertificateSigningRequestRes), nil
 }
 
 // WatchCertificatesV1CertificateSigningRequestList implements watchCertificatesV1CertificateSigningRequestList operation.
@@ -4048,7 +4489,8 @@ func (UnimplementedHandler) WatchCertificatesV1CertificateSigningRequest(ctx con
 //
 // GET /apis/certificates.k8s.io/v1/watch/certificatesigningrequests
 func (UnimplementedHandler) WatchCertificatesV1CertificateSigningRequestList(ctx context.Context, params WatchCertificatesV1CertificateSigningRequestListParams) (r WatchCertificatesV1CertificateSigningRequestListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCertificatesV1CertificateSigningRequestListRes), nil
 }
 
 // WatchCoordinationV1LeaseListForAllNamespaces implements watchCoordinationV1LeaseListForAllNamespaces operation.
@@ -4058,7 +4500,8 @@ func (UnimplementedHandler) WatchCertificatesV1CertificateSigningRequestList(ctx
 //
 // GET /apis/coordination.k8s.io/v1/watch/leases
 func (UnimplementedHandler) WatchCoordinationV1LeaseListForAllNamespaces(ctx context.Context, params WatchCoordinationV1LeaseListForAllNamespacesParams) (r WatchCoordinationV1LeaseListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoordinationV1LeaseListForAllNamespacesRes), nil
 }
 
 // WatchCoordinationV1NamespacedLease implements watchCoordinationV1NamespacedLease operation.
@@ -4068,7 +4511,8 @@ func (UnimplementedHandler) WatchCoordinationV1LeaseListForAllNamespaces(ctx con
 //
 // GET /apis/coordination.k8s.io/v1/watch/namespaces/{namespace}/leases/{name}
 func (UnimplementedHandler) WatchCoordinationV1NamespacedLease(ctx context.Context, params WatchCoordinationV1NamespacedLeaseParams) (r WatchCoordinationV1NamespacedLeaseRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoordinationV1NamespacedLeaseRes), nil
 }
 
 // WatchCoordinationV1NamespacedLeaseList implements watchCoordinationV1NamespacedLeaseList operation.
@@ -4078,7 +4522,8 @@ func (UnimplementedHandler) WatchCoordinationV1NamespacedLease(ctx context.Conte
 //
 // GET /apis/coordination.k8s.io/v1/watch/namespaces/{namespace}/leases
 func (UnimplementedHandler) WatchCoordinationV1NamespacedLeaseList(ctx context.Context, params WatchCoordinationV1NamespacedLeaseListParams) (r WatchCoordinationV1NamespacedLeaseListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoordinationV1NamespacedLeaseListRes), nil
 }
 
 // WatchCoreV1ConfigMapListForAllNamespaces implements watchCoreV1ConfigMapListForAllNamespaces operation.
@@ -4088,7 +4533,8 @@ func (UnimplementedHandler) WatchCoordinationV1NamespacedLeaseList(ctx context.C
 //
 // GET /api/v1/watch/configmaps
 func (UnimplementedHandler) WatchCoreV1ConfigMapListForAllNamespaces(ctx context.Context, params WatchCoreV1ConfigMapListForAllNamespacesParams) (r WatchCoreV1ConfigMapListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1ConfigMapListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1EndpointsListForAllNamespaces implements watchCoreV1EndpointsListForAllNamespaces operation.
@@ -4098,7 +4544,8 @@ func (UnimplementedHandler) WatchCoreV1ConfigMapListForAllNamespaces(ctx context
 //
 // GET /api/v1/watch/endpoints
 func (UnimplementedHandler) WatchCoreV1EndpointsListForAllNamespaces(ctx context.Context, params WatchCoreV1EndpointsListForAllNamespacesParams) (r WatchCoreV1EndpointsListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1EndpointsListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1EventListForAllNamespaces implements watchCoreV1EventListForAllNamespaces operation.
@@ -4108,7 +4555,8 @@ func (UnimplementedHandler) WatchCoreV1EndpointsListForAllNamespaces(ctx context
 //
 // GET /api/v1/watch/events
 func (UnimplementedHandler) WatchCoreV1EventListForAllNamespaces(ctx context.Context, params WatchCoreV1EventListForAllNamespacesParams) (r WatchCoreV1EventListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1EventListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1LimitRangeListForAllNamespaces implements watchCoreV1LimitRangeListForAllNamespaces operation.
@@ -4118,7 +4566,8 @@ func (UnimplementedHandler) WatchCoreV1EventListForAllNamespaces(ctx context.Con
 //
 // GET /api/v1/watch/limitranges
 func (UnimplementedHandler) WatchCoreV1LimitRangeListForAllNamespaces(ctx context.Context, params WatchCoreV1LimitRangeListForAllNamespacesParams) (r WatchCoreV1LimitRangeListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1LimitRangeListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1Namespace implements watchCoreV1Namespace operation.
@@ -4128,7 +4577,8 @@ func (UnimplementedHandler) WatchCoreV1LimitRangeListForAllNamespaces(ctx contex
 //
 // GET /api/v1/watch/namespaces/{name}
 func (UnimplementedHandler) WatchCoreV1Namespace(ctx context.Context, params WatchCoreV1NamespaceParams) (r WatchCoreV1NamespaceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespaceRes), nil
 }
 
 // WatchCoreV1NamespaceList implements watchCoreV1NamespaceList operation.
@@ -4138,7 +4588,8 @@ func (UnimplementedHandler) WatchCoreV1Namespace(ctx context.Context, params Wat
 //
 // GET /api/v1/watch/namespaces
 func (UnimplementedHandler) WatchCoreV1NamespaceList(ctx context.Context, params WatchCoreV1NamespaceListParams) (r WatchCoreV1NamespaceListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespaceListRes), nil
 }
 
 // WatchCoreV1NamespacedConfigMap implements watchCoreV1NamespacedConfigMap operation.
@@ -4148,7 +4599,8 @@ func (UnimplementedHandler) WatchCoreV1NamespaceList(ctx context.Context, params
 //
 // GET /api/v1/watch/namespaces/{namespace}/configmaps/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedConfigMap(ctx context.Context, params WatchCoreV1NamespacedConfigMapParams) (r WatchCoreV1NamespacedConfigMapRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedConfigMapRes), nil
 }
 
 // WatchCoreV1NamespacedConfigMapList implements watchCoreV1NamespacedConfigMapList operation.
@@ -4158,7 +4610,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedConfigMap(ctx context.Context, 
 //
 // GET /api/v1/watch/namespaces/{namespace}/configmaps
 func (UnimplementedHandler) WatchCoreV1NamespacedConfigMapList(ctx context.Context, params WatchCoreV1NamespacedConfigMapListParams) (r WatchCoreV1NamespacedConfigMapListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedConfigMapListRes), nil
 }
 
 // WatchCoreV1NamespacedEndpoints implements watchCoreV1NamespacedEndpoints operation.
@@ -4168,7 +4621,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedConfigMapList(ctx context.Conte
 //
 // GET /api/v1/watch/namespaces/{namespace}/endpoints/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedEndpoints(ctx context.Context, params WatchCoreV1NamespacedEndpointsParams) (r WatchCoreV1NamespacedEndpointsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedEndpointsRes), nil
 }
 
 // WatchCoreV1NamespacedEndpointsList implements watchCoreV1NamespacedEndpointsList operation.
@@ -4178,7 +4632,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedEndpoints(ctx context.Context, 
 //
 // GET /api/v1/watch/namespaces/{namespace}/endpoints
 func (UnimplementedHandler) WatchCoreV1NamespacedEndpointsList(ctx context.Context, params WatchCoreV1NamespacedEndpointsListParams) (r WatchCoreV1NamespacedEndpointsListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedEndpointsListRes), nil
 }
 
 // WatchCoreV1NamespacedEvent implements watchCoreV1NamespacedEvent operation.
@@ -4188,7 +4643,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedEndpointsList(ctx context.Conte
 //
 // GET /api/v1/watch/namespaces/{namespace}/events/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedEvent(ctx context.Context, params WatchCoreV1NamespacedEventParams) (r WatchCoreV1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedEventRes), nil
 }
 
 // WatchCoreV1NamespacedEventList implements watchCoreV1NamespacedEventList operation.
@@ -4198,7 +4654,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedEvent(ctx context.Context, para
 //
 // GET /api/v1/watch/namespaces/{namespace}/events
 func (UnimplementedHandler) WatchCoreV1NamespacedEventList(ctx context.Context, params WatchCoreV1NamespacedEventListParams) (r WatchCoreV1NamespacedEventListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedEventListRes), nil
 }
 
 // WatchCoreV1NamespacedLimitRange implements watchCoreV1NamespacedLimitRange operation.
@@ -4208,7 +4665,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedEventList(ctx context.Context, 
 //
 // GET /api/v1/watch/namespaces/{namespace}/limitranges/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedLimitRange(ctx context.Context, params WatchCoreV1NamespacedLimitRangeParams) (r WatchCoreV1NamespacedLimitRangeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedLimitRangeRes), nil
 }
 
 // WatchCoreV1NamespacedLimitRangeList implements watchCoreV1NamespacedLimitRangeList operation.
@@ -4218,7 +4676,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedLimitRange(ctx context.Context,
 //
 // GET /api/v1/watch/namespaces/{namespace}/limitranges
 func (UnimplementedHandler) WatchCoreV1NamespacedLimitRangeList(ctx context.Context, params WatchCoreV1NamespacedLimitRangeListParams) (r WatchCoreV1NamespacedLimitRangeListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedLimitRangeListRes), nil
 }
 
 // WatchCoreV1NamespacedPersistentVolumeClaim implements watchCoreV1NamespacedPersistentVolumeClaim operation.
@@ -4228,7 +4687,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedLimitRangeList(ctx context.Cont
 //
 // GET /api/v1/watch/namespaces/{namespace}/persistentvolumeclaims/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedPersistentVolumeClaim(ctx context.Context, params WatchCoreV1NamespacedPersistentVolumeClaimParams) (r WatchCoreV1NamespacedPersistentVolumeClaimRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedPersistentVolumeClaimRes), nil
 }
 
 // WatchCoreV1NamespacedPersistentVolumeClaimList implements watchCoreV1NamespacedPersistentVolumeClaimList operation.
@@ -4238,7 +4698,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedPersistentVolumeClaim(ctx conte
 //
 // GET /api/v1/watch/namespaces/{namespace}/persistentvolumeclaims
 func (UnimplementedHandler) WatchCoreV1NamespacedPersistentVolumeClaimList(ctx context.Context, params WatchCoreV1NamespacedPersistentVolumeClaimListParams) (r WatchCoreV1NamespacedPersistentVolumeClaimListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedPersistentVolumeClaimListRes), nil
 }
 
 // WatchCoreV1NamespacedPod implements watchCoreV1NamespacedPod operation.
@@ -4248,7 +4709,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedPersistentVolumeClaimList(ctx c
 //
 // GET /api/v1/watch/namespaces/{namespace}/pods/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedPod(ctx context.Context, params WatchCoreV1NamespacedPodParams) (r WatchCoreV1NamespacedPodRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedPodRes), nil
 }
 
 // WatchCoreV1NamespacedPodList implements watchCoreV1NamespacedPodList operation.
@@ -4258,7 +4720,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedPod(ctx context.Context, params
 //
 // GET /api/v1/watch/namespaces/{namespace}/pods
 func (UnimplementedHandler) WatchCoreV1NamespacedPodList(ctx context.Context, params WatchCoreV1NamespacedPodListParams) (r WatchCoreV1NamespacedPodListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedPodListRes), nil
 }
 
 // WatchCoreV1NamespacedPodTemplate implements watchCoreV1NamespacedPodTemplate operation.
@@ -4268,7 +4731,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedPodList(ctx context.Context, pa
 //
 // GET /api/v1/watch/namespaces/{namespace}/podtemplates/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedPodTemplate(ctx context.Context, params WatchCoreV1NamespacedPodTemplateParams) (r WatchCoreV1NamespacedPodTemplateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedPodTemplateRes), nil
 }
 
 // WatchCoreV1NamespacedPodTemplateList implements watchCoreV1NamespacedPodTemplateList operation.
@@ -4278,7 +4742,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedPodTemplate(ctx context.Context
 //
 // GET /api/v1/watch/namespaces/{namespace}/podtemplates
 func (UnimplementedHandler) WatchCoreV1NamespacedPodTemplateList(ctx context.Context, params WatchCoreV1NamespacedPodTemplateListParams) (r WatchCoreV1NamespacedPodTemplateListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedPodTemplateListRes), nil
 }
 
 // WatchCoreV1NamespacedReplicationController implements watchCoreV1NamespacedReplicationController operation.
@@ -4288,7 +4753,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedPodTemplateList(ctx context.Con
 //
 // GET /api/v1/watch/namespaces/{namespace}/replicationcontrollers/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedReplicationController(ctx context.Context, params WatchCoreV1NamespacedReplicationControllerParams) (r WatchCoreV1NamespacedReplicationControllerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedReplicationControllerRes), nil
 }
 
 // WatchCoreV1NamespacedReplicationControllerList implements watchCoreV1NamespacedReplicationControllerList operation.
@@ -4298,7 +4764,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedReplicationController(ctx conte
 //
 // GET /api/v1/watch/namespaces/{namespace}/replicationcontrollers
 func (UnimplementedHandler) WatchCoreV1NamespacedReplicationControllerList(ctx context.Context, params WatchCoreV1NamespacedReplicationControllerListParams) (r WatchCoreV1NamespacedReplicationControllerListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedReplicationControllerListRes), nil
 }
 
 // WatchCoreV1NamespacedResourceQuota implements watchCoreV1NamespacedResourceQuota operation.
@@ -4308,7 +4775,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedReplicationControllerList(ctx c
 //
 // GET /api/v1/watch/namespaces/{namespace}/resourcequotas/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedResourceQuota(ctx context.Context, params WatchCoreV1NamespacedResourceQuotaParams) (r WatchCoreV1NamespacedResourceQuotaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedResourceQuotaRes), nil
 }
 
 // WatchCoreV1NamespacedResourceQuotaList implements watchCoreV1NamespacedResourceQuotaList operation.
@@ -4318,7 +4786,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedResourceQuota(ctx context.Conte
 //
 // GET /api/v1/watch/namespaces/{namespace}/resourcequotas
 func (UnimplementedHandler) WatchCoreV1NamespacedResourceQuotaList(ctx context.Context, params WatchCoreV1NamespacedResourceQuotaListParams) (r WatchCoreV1NamespacedResourceQuotaListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedResourceQuotaListRes), nil
 }
 
 // WatchCoreV1NamespacedSecret implements watchCoreV1NamespacedSecret operation.
@@ -4328,7 +4797,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedResourceQuotaList(ctx context.C
 //
 // GET /api/v1/watch/namespaces/{namespace}/secrets/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedSecret(ctx context.Context, params WatchCoreV1NamespacedSecretParams) (r WatchCoreV1NamespacedSecretRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedSecretRes), nil
 }
 
 // WatchCoreV1NamespacedSecretList implements watchCoreV1NamespacedSecretList operation.
@@ -4338,7 +4808,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedSecret(ctx context.Context, par
 //
 // GET /api/v1/watch/namespaces/{namespace}/secrets
 func (UnimplementedHandler) WatchCoreV1NamespacedSecretList(ctx context.Context, params WatchCoreV1NamespacedSecretListParams) (r WatchCoreV1NamespacedSecretListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedSecretListRes), nil
 }
 
 // WatchCoreV1NamespacedService implements watchCoreV1NamespacedService operation.
@@ -4348,7 +4819,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedSecretList(ctx context.Context,
 //
 // GET /api/v1/watch/namespaces/{namespace}/services/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedService(ctx context.Context, params WatchCoreV1NamespacedServiceParams) (r WatchCoreV1NamespacedServiceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedServiceRes), nil
 }
 
 // WatchCoreV1NamespacedServiceAccount implements watchCoreV1NamespacedServiceAccount operation.
@@ -4358,7 +4830,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedService(ctx context.Context, pa
 //
 // GET /api/v1/watch/namespaces/{namespace}/serviceaccounts/{name}
 func (UnimplementedHandler) WatchCoreV1NamespacedServiceAccount(ctx context.Context, params WatchCoreV1NamespacedServiceAccountParams) (r WatchCoreV1NamespacedServiceAccountRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedServiceAccountRes), nil
 }
 
 // WatchCoreV1NamespacedServiceAccountList implements watchCoreV1NamespacedServiceAccountList operation.
@@ -4368,7 +4841,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedServiceAccount(ctx context.Cont
 //
 // GET /api/v1/watch/namespaces/{namespace}/serviceaccounts
 func (UnimplementedHandler) WatchCoreV1NamespacedServiceAccountList(ctx context.Context, params WatchCoreV1NamespacedServiceAccountListParams) (r WatchCoreV1NamespacedServiceAccountListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedServiceAccountListRes), nil
 }
 
 // WatchCoreV1NamespacedServiceList implements watchCoreV1NamespacedServiceList operation.
@@ -4378,7 +4852,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedServiceAccountList(ctx context.
 //
 // GET /api/v1/watch/namespaces/{namespace}/services
 func (UnimplementedHandler) WatchCoreV1NamespacedServiceList(ctx context.Context, params WatchCoreV1NamespacedServiceListParams) (r WatchCoreV1NamespacedServiceListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NamespacedServiceListRes), nil
 }
 
 // WatchCoreV1Node implements watchCoreV1Node operation.
@@ -4388,7 +4863,8 @@ func (UnimplementedHandler) WatchCoreV1NamespacedServiceList(ctx context.Context
 //
 // GET /api/v1/watch/nodes/{name}
 func (UnimplementedHandler) WatchCoreV1Node(ctx context.Context, params WatchCoreV1NodeParams) (r WatchCoreV1NodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NodeRes), nil
 }
 
 // WatchCoreV1NodeList implements watchCoreV1NodeList operation.
@@ -4398,7 +4874,8 @@ func (UnimplementedHandler) WatchCoreV1Node(ctx context.Context, params WatchCor
 //
 // GET /api/v1/watch/nodes
 func (UnimplementedHandler) WatchCoreV1NodeList(ctx context.Context, params WatchCoreV1NodeListParams) (r WatchCoreV1NodeListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1NodeListRes), nil
 }
 
 // WatchCoreV1PersistentVolume implements watchCoreV1PersistentVolume operation.
@@ -4408,7 +4885,8 @@ func (UnimplementedHandler) WatchCoreV1NodeList(ctx context.Context, params Watc
 //
 // GET /api/v1/watch/persistentvolumes/{name}
 func (UnimplementedHandler) WatchCoreV1PersistentVolume(ctx context.Context, params WatchCoreV1PersistentVolumeParams) (r WatchCoreV1PersistentVolumeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1PersistentVolumeRes), nil
 }
 
 // WatchCoreV1PersistentVolumeClaimListForAllNamespaces implements watchCoreV1PersistentVolumeClaimListForAllNamespaces operation.
@@ -4418,7 +4896,8 @@ func (UnimplementedHandler) WatchCoreV1PersistentVolume(ctx context.Context, par
 //
 // GET /api/v1/watch/persistentvolumeclaims
 func (UnimplementedHandler) WatchCoreV1PersistentVolumeClaimListForAllNamespaces(ctx context.Context, params WatchCoreV1PersistentVolumeClaimListForAllNamespacesParams) (r WatchCoreV1PersistentVolumeClaimListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1PersistentVolumeClaimListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1PersistentVolumeList implements watchCoreV1PersistentVolumeList operation.
@@ -4428,7 +4907,8 @@ func (UnimplementedHandler) WatchCoreV1PersistentVolumeClaimListForAllNamespaces
 //
 // GET /api/v1/watch/persistentvolumes
 func (UnimplementedHandler) WatchCoreV1PersistentVolumeList(ctx context.Context, params WatchCoreV1PersistentVolumeListParams) (r WatchCoreV1PersistentVolumeListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1PersistentVolumeListRes), nil
 }
 
 // WatchCoreV1PodListForAllNamespaces implements watchCoreV1PodListForAllNamespaces operation.
@@ -4438,7 +4918,8 @@ func (UnimplementedHandler) WatchCoreV1PersistentVolumeList(ctx context.Context,
 //
 // GET /api/v1/watch/pods
 func (UnimplementedHandler) WatchCoreV1PodListForAllNamespaces(ctx context.Context, params WatchCoreV1PodListForAllNamespacesParams) (r WatchCoreV1PodListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1PodListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1PodTemplateListForAllNamespaces implements watchCoreV1PodTemplateListForAllNamespaces operation.
@@ -4448,7 +4929,8 @@ func (UnimplementedHandler) WatchCoreV1PodListForAllNamespaces(ctx context.Conte
 //
 // GET /api/v1/watch/podtemplates
 func (UnimplementedHandler) WatchCoreV1PodTemplateListForAllNamespaces(ctx context.Context, params WatchCoreV1PodTemplateListForAllNamespacesParams) (r WatchCoreV1PodTemplateListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1PodTemplateListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1ReplicationControllerListForAllNamespaces implements watchCoreV1ReplicationControllerListForAllNamespaces operation.
@@ -4458,7 +4940,8 @@ func (UnimplementedHandler) WatchCoreV1PodTemplateListForAllNamespaces(ctx conte
 //
 // GET /api/v1/watch/replicationcontrollers
 func (UnimplementedHandler) WatchCoreV1ReplicationControllerListForAllNamespaces(ctx context.Context, params WatchCoreV1ReplicationControllerListForAllNamespacesParams) (r WatchCoreV1ReplicationControllerListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1ReplicationControllerListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1ResourceQuotaListForAllNamespaces implements watchCoreV1ResourceQuotaListForAllNamespaces operation.
@@ -4468,7 +4951,8 @@ func (UnimplementedHandler) WatchCoreV1ReplicationControllerListForAllNamespaces
 //
 // GET /api/v1/watch/resourcequotas
 func (UnimplementedHandler) WatchCoreV1ResourceQuotaListForAllNamespaces(ctx context.Context, params WatchCoreV1ResourceQuotaListForAllNamespacesParams) (r WatchCoreV1ResourceQuotaListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1ResourceQuotaListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1SecretListForAllNamespaces implements watchCoreV1SecretListForAllNamespaces operation.
@@ -4478,7 +4962,8 @@ func (UnimplementedHandler) WatchCoreV1ResourceQuotaListForAllNamespaces(ctx con
 //
 // GET /api/v1/watch/secrets
 func (UnimplementedHandler) WatchCoreV1SecretListForAllNamespaces(ctx context.Context, params WatchCoreV1SecretListForAllNamespacesParams) (r WatchCoreV1SecretListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1SecretListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1ServiceAccountListForAllNamespaces implements watchCoreV1ServiceAccountListForAllNamespaces operation.
@@ -4488,7 +4973,8 @@ func (UnimplementedHandler) WatchCoreV1SecretListForAllNamespaces(ctx context.Co
 //
 // GET /api/v1/watch/serviceaccounts
 func (UnimplementedHandler) WatchCoreV1ServiceAccountListForAllNamespaces(ctx context.Context, params WatchCoreV1ServiceAccountListForAllNamespacesParams) (r WatchCoreV1ServiceAccountListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1ServiceAccountListForAllNamespacesRes), nil
 }
 
 // WatchCoreV1ServiceListForAllNamespaces implements watchCoreV1ServiceListForAllNamespaces operation.
@@ -4498,7 +4984,8 @@ func (UnimplementedHandler) WatchCoreV1ServiceAccountListForAllNamespaces(ctx co
 //
 // GET /api/v1/watch/services
 func (UnimplementedHandler) WatchCoreV1ServiceListForAllNamespaces(ctx context.Context, params WatchCoreV1ServiceListForAllNamespacesParams) (r WatchCoreV1ServiceListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchCoreV1ServiceListForAllNamespacesRes), nil
 }
 
 // WatchDiscoveryV1EndpointSliceListForAllNamespaces implements watchDiscoveryV1EndpointSliceListForAllNamespaces operation.
@@ -4508,7 +4995,8 @@ func (UnimplementedHandler) WatchCoreV1ServiceListForAllNamespaces(ctx context.C
 //
 // GET /apis/discovery.k8s.io/v1/watch/endpointslices
 func (UnimplementedHandler) WatchDiscoveryV1EndpointSliceListForAllNamespaces(ctx context.Context, params WatchDiscoveryV1EndpointSliceListForAllNamespacesParams) (r WatchDiscoveryV1EndpointSliceListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchDiscoveryV1EndpointSliceListForAllNamespacesRes), nil
 }
 
 // WatchDiscoveryV1NamespacedEndpointSlice implements watchDiscoveryV1NamespacedEndpointSlice operation.
@@ -4518,7 +5006,8 @@ func (UnimplementedHandler) WatchDiscoveryV1EndpointSliceListForAllNamespaces(ct
 //
 // GET /apis/discovery.k8s.io/v1/watch/namespaces/{namespace}/endpointslices/{name}
 func (UnimplementedHandler) WatchDiscoveryV1NamespacedEndpointSlice(ctx context.Context, params WatchDiscoveryV1NamespacedEndpointSliceParams) (r WatchDiscoveryV1NamespacedEndpointSliceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchDiscoveryV1NamespacedEndpointSliceRes), nil
 }
 
 // WatchDiscoveryV1NamespacedEndpointSliceList implements watchDiscoveryV1NamespacedEndpointSliceList operation.
@@ -4528,7 +5017,8 @@ func (UnimplementedHandler) WatchDiscoveryV1NamespacedEndpointSlice(ctx context.
 //
 // GET /apis/discovery.k8s.io/v1/watch/namespaces/{namespace}/endpointslices
 func (UnimplementedHandler) WatchDiscoveryV1NamespacedEndpointSliceList(ctx context.Context, params WatchDiscoveryV1NamespacedEndpointSliceListParams) (r WatchDiscoveryV1NamespacedEndpointSliceListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchDiscoveryV1NamespacedEndpointSliceListRes), nil
 }
 
 // WatchDiscoveryV1beta1EndpointSliceListForAllNamespaces implements watchDiscoveryV1beta1EndpointSliceListForAllNamespaces operation.
@@ -4538,7 +5028,8 @@ func (UnimplementedHandler) WatchDiscoveryV1NamespacedEndpointSliceList(ctx cont
 //
 // GET /apis/discovery.k8s.io/v1beta1/watch/endpointslices
 func (UnimplementedHandler) WatchDiscoveryV1beta1EndpointSliceListForAllNamespaces(ctx context.Context, params WatchDiscoveryV1beta1EndpointSliceListForAllNamespacesParams) (r WatchDiscoveryV1beta1EndpointSliceListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchDiscoveryV1beta1EndpointSliceListForAllNamespacesRes), nil
 }
 
 // WatchDiscoveryV1beta1NamespacedEndpointSlice implements watchDiscoveryV1beta1NamespacedEndpointSlice operation.
@@ -4548,7 +5039,8 @@ func (UnimplementedHandler) WatchDiscoveryV1beta1EndpointSliceListForAllNamespac
 //
 // GET /apis/discovery.k8s.io/v1beta1/watch/namespaces/{namespace}/endpointslices/{name}
 func (UnimplementedHandler) WatchDiscoveryV1beta1NamespacedEndpointSlice(ctx context.Context, params WatchDiscoveryV1beta1NamespacedEndpointSliceParams) (r WatchDiscoveryV1beta1NamespacedEndpointSliceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchDiscoveryV1beta1NamespacedEndpointSliceRes), nil
 }
 
 // WatchDiscoveryV1beta1NamespacedEndpointSliceList implements watchDiscoveryV1beta1NamespacedEndpointSliceList operation.
@@ -4558,7 +5050,8 @@ func (UnimplementedHandler) WatchDiscoveryV1beta1NamespacedEndpointSlice(ctx con
 //
 // GET /apis/discovery.k8s.io/v1beta1/watch/namespaces/{namespace}/endpointslices
 func (UnimplementedHandler) WatchDiscoveryV1beta1NamespacedEndpointSliceList(ctx context.Context, params WatchDiscoveryV1beta1NamespacedEndpointSliceListParams) (r WatchDiscoveryV1beta1NamespacedEndpointSliceListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchDiscoveryV1beta1NamespacedEndpointSliceListRes), nil
 }
 
 // WatchEventsV1EventListForAllNamespaces implements watchEventsV1EventListForAllNamespaces operation.
@@ -4568,7 +5061,8 @@ func (UnimplementedHandler) WatchDiscoveryV1beta1NamespacedEndpointSliceList(ctx
 //
 // GET /apis/events.k8s.io/v1/watch/events
 func (UnimplementedHandler) WatchEventsV1EventListForAllNamespaces(ctx context.Context, params WatchEventsV1EventListForAllNamespacesParams) (r WatchEventsV1EventListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchEventsV1EventListForAllNamespacesRes), nil
 }
 
 // WatchEventsV1NamespacedEvent implements watchEventsV1NamespacedEvent operation.
@@ -4578,7 +5072,8 @@ func (UnimplementedHandler) WatchEventsV1EventListForAllNamespaces(ctx context.C
 //
 // GET /apis/events.k8s.io/v1/watch/namespaces/{namespace}/events/{name}
 func (UnimplementedHandler) WatchEventsV1NamespacedEvent(ctx context.Context, params WatchEventsV1NamespacedEventParams) (r WatchEventsV1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchEventsV1NamespacedEventRes), nil
 }
 
 // WatchEventsV1NamespacedEventList implements watchEventsV1NamespacedEventList operation.
@@ -4588,7 +5083,8 @@ func (UnimplementedHandler) WatchEventsV1NamespacedEvent(ctx context.Context, pa
 //
 // GET /apis/events.k8s.io/v1/watch/namespaces/{namespace}/events
 func (UnimplementedHandler) WatchEventsV1NamespacedEventList(ctx context.Context, params WatchEventsV1NamespacedEventListParams) (r WatchEventsV1NamespacedEventListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchEventsV1NamespacedEventListRes), nil
 }
 
 // WatchEventsV1beta1EventListForAllNamespaces implements watchEventsV1beta1EventListForAllNamespaces operation.
@@ -4598,7 +5094,8 @@ func (UnimplementedHandler) WatchEventsV1NamespacedEventList(ctx context.Context
 //
 // GET /apis/events.k8s.io/v1beta1/watch/events
 func (UnimplementedHandler) WatchEventsV1beta1EventListForAllNamespaces(ctx context.Context, params WatchEventsV1beta1EventListForAllNamespacesParams) (r WatchEventsV1beta1EventListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchEventsV1beta1EventListForAllNamespacesRes), nil
 }
 
 // WatchEventsV1beta1NamespacedEvent implements watchEventsV1beta1NamespacedEvent operation.
@@ -4608,7 +5105,8 @@ func (UnimplementedHandler) WatchEventsV1beta1EventListForAllNamespaces(ctx cont
 //
 // GET /apis/events.k8s.io/v1beta1/watch/namespaces/{namespace}/events/{name}
 func (UnimplementedHandler) WatchEventsV1beta1NamespacedEvent(ctx context.Context, params WatchEventsV1beta1NamespacedEventParams) (r WatchEventsV1beta1NamespacedEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchEventsV1beta1NamespacedEventRes), nil
 }
 
 // WatchEventsV1beta1NamespacedEventList implements watchEventsV1beta1NamespacedEventList operation.
@@ -4618,7 +5116,8 @@ func (UnimplementedHandler) WatchEventsV1beta1NamespacedEvent(ctx context.Contex
 //
 // GET /apis/events.k8s.io/v1beta1/watch/namespaces/{namespace}/events
 func (UnimplementedHandler) WatchEventsV1beta1NamespacedEventList(ctx context.Context, params WatchEventsV1beta1NamespacedEventListParams) (r WatchEventsV1beta1NamespacedEventListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchEventsV1beta1NamespacedEventListRes), nil
 }
 
 // WatchFlowcontrolApiserverV1beta1FlowSchema implements watchFlowcontrolApiserverV1beta1FlowSchema operation.
@@ -4628,7 +5127,8 @@ func (UnimplementedHandler) WatchEventsV1beta1NamespacedEventList(ctx context.Co
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/watch/flowschemas/{name}
 func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta1FlowSchema(ctx context.Context, params WatchFlowcontrolApiserverV1beta1FlowSchemaParams) (r WatchFlowcontrolApiserverV1beta1FlowSchemaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchFlowcontrolApiserverV1beta1FlowSchemaRes), nil
 }
 
 // WatchFlowcontrolApiserverV1beta1FlowSchemaList implements watchFlowcontrolApiserverV1beta1FlowSchemaList operation.
@@ -4638,7 +5138,8 @@ func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta1FlowSchema(ctx conte
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/watch/flowschemas
 func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta1FlowSchemaList(ctx context.Context, params WatchFlowcontrolApiserverV1beta1FlowSchemaListParams) (r WatchFlowcontrolApiserverV1beta1FlowSchemaListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchFlowcontrolApiserverV1beta1FlowSchemaListRes), nil
 }
 
 // WatchFlowcontrolApiserverV1beta1PriorityLevelConfiguration implements watchFlowcontrolApiserverV1beta1PriorityLevelConfiguration operation.
@@ -4649,7 +5150,8 @@ func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta1FlowSchemaList(ctx c
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/watch/prioritylevelconfigurations/{name}
 func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta1PriorityLevelConfiguration(ctx context.Context, params WatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationParams) (r WatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationRes), nil
 }
 
 // WatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationList implements watchFlowcontrolApiserverV1beta1PriorityLevelConfigurationList operation.
@@ -4659,7 +5161,8 @@ func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta1PriorityLevelConfigu
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta1/watch/prioritylevelconfigurations
 func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationList(ctx context.Context, params WatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationListParams) (r WatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationListRes), nil
 }
 
 // WatchFlowcontrolApiserverV1beta2FlowSchema implements watchFlowcontrolApiserverV1beta2FlowSchema operation.
@@ -4669,7 +5172,8 @@ func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta1PriorityLevelConfigu
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/flowschemas/{name}
 func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta2FlowSchema(ctx context.Context, params WatchFlowcontrolApiserverV1beta2FlowSchemaParams) (r WatchFlowcontrolApiserverV1beta2FlowSchemaRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchFlowcontrolApiserverV1beta2FlowSchemaRes), nil
 }
 
 // WatchFlowcontrolApiserverV1beta2FlowSchemaList implements watchFlowcontrolApiserverV1beta2FlowSchemaList operation.
@@ -4679,7 +5183,8 @@ func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta2FlowSchema(ctx conte
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/flowschemas
 func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta2FlowSchemaList(ctx context.Context, params WatchFlowcontrolApiserverV1beta2FlowSchemaListParams) (r WatchFlowcontrolApiserverV1beta2FlowSchemaListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchFlowcontrolApiserverV1beta2FlowSchemaListRes), nil
 }
 
 // WatchFlowcontrolApiserverV1beta2PriorityLevelConfiguration implements watchFlowcontrolApiserverV1beta2PriorityLevelConfiguration operation.
@@ -4690,7 +5195,8 @@ func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta2FlowSchemaList(ctx c
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/prioritylevelconfigurations/{name}
 func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta2PriorityLevelConfiguration(ctx context.Context, params WatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationParams) (r WatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationRes), nil
 }
 
 // WatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationList implements watchFlowcontrolApiserverV1beta2PriorityLevelConfigurationList operation.
@@ -4700,7 +5206,8 @@ func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta2PriorityLevelConfigu
 //
 // GET /apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/prioritylevelconfigurations
 func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationList(ctx context.Context, params WatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationListParams) (r WatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationListRes), nil
 }
 
 // WatchInternalApiserverV1alpha1StorageVersion implements watchInternalApiserverV1alpha1StorageVersion operation.
@@ -4710,7 +5217,8 @@ func (UnimplementedHandler) WatchFlowcontrolApiserverV1beta2PriorityLevelConfigu
 //
 // GET /apis/internal.apiserver.k8s.io/v1alpha1/watch/storageversions/{name}
 func (UnimplementedHandler) WatchInternalApiserverV1alpha1StorageVersion(ctx context.Context, params WatchInternalApiserverV1alpha1StorageVersionParams) (r WatchInternalApiserverV1alpha1StorageVersionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchInternalApiserverV1alpha1StorageVersionRes), nil
 }
 
 // WatchInternalApiserverV1alpha1StorageVersionList implements watchInternalApiserverV1alpha1StorageVersionList operation.
@@ -4720,7 +5228,8 @@ func (UnimplementedHandler) WatchInternalApiserverV1alpha1StorageVersion(ctx con
 //
 // GET /apis/internal.apiserver.k8s.io/v1alpha1/watch/storageversions
 func (UnimplementedHandler) WatchInternalApiserverV1alpha1StorageVersionList(ctx context.Context, params WatchInternalApiserverV1alpha1StorageVersionListParams) (r WatchInternalApiserverV1alpha1StorageVersionListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchInternalApiserverV1alpha1StorageVersionListRes), nil
 }
 
 // WatchNetworkingV1IngressClass implements watchNetworkingV1IngressClass operation.
@@ -4730,7 +5239,8 @@ func (UnimplementedHandler) WatchInternalApiserverV1alpha1StorageVersionList(ctx
 //
 // GET /apis/networking.k8s.io/v1/watch/ingressclasses/{name}
 func (UnimplementedHandler) WatchNetworkingV1IngressClass(ctx context.Context, params WatchNetworkingV1IngressClassParams) (r WatchNetworkingV1IngressClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNetworkingV1IngressClassRes), nil
 }
 
 // WatchNetworkingV1IngressClassList implements watchNetworkingV1IngressClassList operation.
@@ -4740,7 +5250,8 @@ func (UnimplementedHandler) WatchNetworkingV1IngressClass(ctx context.Context, p
 //
 // GET /apis/networking.k8s.io/v1/watch/ingressclasses
 func (UnimplementedHandler) WatchNetworkingV1IngressClassList(ctx context.Context, params WatchNetworkingV1IngressClassListParams) (r WatchNetworkingV1IngressClassListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNetworkingV1IngressClassListRes), nil
 }
 
 // WatchNetworkingV1IngressListForAllNamespaces implements watchNetworkingV1IngressListForAllNamespaces operation.
@@ -4750,7 +5261,8 @@ func (UnimplementedHandler) WatchNetworkingV1IngressClassList(ctx context.Contex
 //
 // GET /apis/networking.k8s.io/v1/watch/ingresses
 func (UnimplementedHandler) WatchNetworkingV1IngressListForAllNamespaces(ctx context.Context, params WatchNetworkingV1IngressListForAllNamespacesParams) (r WatchNetworkingV1IngressListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNetworkingV1IngressListForAllNamespacesRes), nil
 }
 
 // WatchNetworkingV1NamespacedIngress implements watchNetworkingV1NamespacedIngress operation.
@@ -4760,7 +5272,8 @@ func (UnimplementedHandler) WatchNetworkingV1IngressListForAllNamespaces(ctx con
 //
 // GET /apis/networking.k8s.io/v1/watch/namespaces/{namespace}/ingresses/{name}
 func (UnimplementedHandler) WatchNetworkingV1NamespacedIngress(ctx context.Context, params WatchNetworkingV1NamespacedIngressParams) (r WatchNetworkingV1NamespacedIngressRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNetworkingV1NamespacedIngressRes), nil
 }
 
 // WatchNetworkingV1NamespacedIngressList implements watchNetworkingV1NamespacedIngressList operation.
@@ -4770,7 +5283,8 @@ func (UnimplementedHandler) WatchNetworkingV1NamespacedIngress(ctx context.Conte
 //
 // GET /apis/networking.k8s.io/v1/watch/namespaces/{namespace}/ingresses
 func (UnimplementedHandler) WatchNetworkingV1NamespacedIngressList(ctx context.Context, params WatchNetworkingV1NamespacedIngressListParams) (r WatchNetworkingV1NamespacedIngressListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNetworkingV1NamespacedIngressListRes), nil
 }
 
 // WatchNetworkingV1NamespacedNetworkPolicy implements watchNetworkingV1NamespacedNetworkPolicy operation.
@@ -4780,7 +5294,8 @@ func (UnimplementedHandler) WatchNetworkingV1NamespacedIngressList(ctx context.C
 //
 // GET /apis/networking.k8s.io/v1/watch/namespaces/{namespace}/networkpolicies/{name}
 func (UnimplementedHandler) WatchNetworkingV1NamespacedNetworkPolicy(ctx context.Context, params WatchNetworkingV1NamespacedNetworkPolicyParams) (r WatchNetworkingV1NamespacedNetworkPolicyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNetworkingV1NamespacedNetworkPolicyRes), nil
 }
 
 // WatchNetworkingV1NamespacedNetworkPolicyList implements watchNetworkingV1NamespacedNetworkPolicyList operation.
@@ -4790,7 +5305,8 @@ func (UnimplementedHandler) WatchNetworkingV1NamespacedNetworkPolicy(ctx context
 //
 // GET /apis/networking.k8s.io/v1/watch/namespaces/{namespace}/networkpolicies
 func (UnimplementedHandler) WatchNetworkingV1NamespacedNetworkPolicyList(ctx context.Context, params WatchNetworkingV1NamespacedNetworkPolicyListParams) (r WatchNetworkingV1NamespacedNetworkPolicyListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNetworkingV1NamespacedNetworkPolicyListRes), nil
 }
 
 // WatchNetworkingV1NetworkPolicyListForAllNamespaces implements watchNetworkingV1NetworkPolicyListForAllNamespaces operation.
@@ -4800,7 +5316,8 @@ func (UnimplementedHandler) WatchNetworkingV1NamespacedNetworkPolicyList(ctx con
 //
 // GET /apis/networking.k8s.io/v1/watch/networkpolicies
 func (UnimplementedHandler) WatchNetworkingV1NetworkPolicyListForAllNamespaces(ctx context.Context, params WatchNetworkingV1NetworkPolicyListForAllNamespacesParams) (r WatchNetworkingV1NetworkPolicyListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNetworkingV1NetworkPolicyListForAllNamespacesRes), nil
 }
 
 // WatchNodeV1RuntimeClass implements watchNodeV1RuntimeClass operation.
@@ -4810,7 +5327,8 @@ func (UnimplementedHandler) WatchNetworkingV1NetworkPolicyListForAllNamespaces(c
 //
 // GET /apis/node.k8s.io/v1/watch/runtimeclasses/{name}
 func (UnimplementedHandler) WatchNodeV1RuntimeClass(ctx context.Context, params WatchNodeV1RuntimeClassParams) (r WatchNodeV1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNodeV1RuntimeClassRes), nil
 }
 
 // WatchNodeV1RuntimeClassList implements watchNodeV1RuntimeClassList operation.
@@ -4820,7 +5338,8 @@ func (UnimplementedHandler) WatchNodeV1RuntimeClass(ctx context.Context, params 
 //
 // GET /apis/node.k8s.io/v1/watch/runtimeclasses
 func (UnimplementedHandler) WatchNodeV1RuntimeClassList(ctx context.Context, params WatchNodeV1RuntimeClassListParams) (r WatchNodeV1RuntimeClassListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNodeV1RuntimeClassListRes), nil
 }
 
 // WatchNodeV1alpha1RuntimeClass implements watchNodeV1alpha1RuntimeClass operation.
@@ -4830,7 +5349,8 @@ func (UnimplementedHandler) WatchNodeV1RuntimeClassList(ctx context.Context, par
 //
 // GET /apis/node.k8s.io/v1alpha1/watch/runtimeclasses/{name}
 func (UnimplementedHandler) WatchNodeV1alpha1RuntimeClass(ctx context.Context, params WatchNodeV1alpha1RuntimeClassParams) (r WatchNodeV1alpha1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNodeV1alpha1RuntimeClassRes), nil
 }
 
 // WatchNodeV1alpha1RuntimeClassList implements watchNodeV1alpha1RuntimeClassList operation.
@@ -4840,7 +5360,8 @@ func (UnimplementedHandler) WatchNodeV1alpha1RuntimeClass(ctx context.Context, p
 //
 // GET /apis/node.k8s.io/v1alpha1/watch/runtimeclasses
 func (UnimplementedHandler) WatchNodeV1alpha1RuntimeClassList(ctx context.Context, params WatchNodeV1alpha1RuntimeClassListParams) (r WatchNodeV1alpha1RuntimeClassListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNodeV1alpha1RuntimeClassListRes), nil
 }
 
 // WatchNodeV1beta1RuntimeClass implements watchNodeV1beta1RuntimeClass operation.
@@ -4850,7 +5371,8 @@ func (UnimplementedHandler) WatchNodeV1alpha1RuntimeClassList(ctx context.Contex
 //
 // GET /apis/node.k8s.io/v1beta1/watch/runtimeclasses/{name}
 func (UnimplementedHandler) WatchNodeV1beta1RuntimeClass(ctx context.Context, params WatchNodeV1beta1RuntimeClassParams) (r WatchNodeV1beta1RuntimeClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNodeV1beta1RuntimeClassRes), nil
 }
 
 // WatchNodeV1beta1RuntimeClassList implements watchNodeV1beta1RuntimeClassList operation.
@@ -4860,7 +5382,8 @@ func (UnimplementedHandler) WatchNodeV1beta1RuntimeClass(ctx context.Context, pa
 //
 // GET /apis/node.k8s.io/v1beta1/watch/runtimeclasses
 func (UnimplementedHandler) WatchNodeV1beta1RuntimeClassList(ctx context.Context, params WatchNodeV1beta1RuntimeClassListParams) (r WatchNodeV1beta1RuntimeClassListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchNodeV1beta1RuntimeClassListRes), nil
 }
 
 // WatchPolicyV1NamespacedPodDisruptionBudget implements watchPolicyV1NamespacedPodDisruptionBudget operation.
@@ -4870,7 +5393,8 @@ func (UnimplementedHandler) WatchNodeV1beta1RuntimeClassList(ctx context.Context
 //
 // GET /apis/policy/v1/watch/namespaces/{namespace}/poddisruptionbudgets/{name}
 func (UnimplementedHandler) WatchPolicyV1NamespacedPodDisruptionBudget(ctx context.Context, params WatchPolicyV1NamespacedPodDisruptionBudgetParams) (r WatchPolicyV1NamespacedPodDisruptionBudgetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchPolicyV1NamespacedPodDisruptionBudgetRes), nil
 }
 
 // WatchPolicyV1NamespacedPodDisruptionBudgetList implements watchPolicyV1NamespacedPodDisruptionBudgetList operation.
@@ -4880,7 +5404,8 @@ func (UnimplementedHandler) WatchPolicyV1NamespacedPodDisruptionBudget(ctx conte
 //
 // GET /apis/policy/v1/watch/namespaces/{namespace}/poddisruptionbudgets
 func (UnimplementedHandler) WatchPolicyV1NamespacedPodDisruptionBudgetList(ctx context.Context, params WatchPolicyV1NamespacedPodDisruptionBudgetListParams) (r WatchPolicyV1NamespacedPodDisruptionBudgetListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchPolicyV1NamespacedPodDisruptionBudgetListRes), nil
 }
 
 // WatchPolicyV1PodDisruptionBudgetListForAllNamespaces implements watchPolicyV1PodDisruptionBudgetListForAllNamespaces operation.
@@ -4890,7 +5415,8 @@ func (UnimplementedHandler) WatchPolicyV1NamespacedPodDisruptionBudgetList(ctx c
 //
 // GET /apis/policy/v1/watch/poddisruptionbudgets
 func (UnimplementedHandler) WatchPolicyV1PodDisruptionBudgetListForAllNamespaces(ctx context.Context, params WatchPolicyV1PodDisruptionBudgetListForAllNamespacesParams) (r WatchPolicyV1PodDisruptionBudgetListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchPolicyV1PodDisruptionBudgetListForAllNamespacesRes), nil
 }
 
 // WatchPolicyV1beta1NamespacedPodDisruptionBudget implements watchPolicyV1beta1NamespacedPodDisruptionBudget operation.
@@ -4900,7 +5426,8 @@ func (UnimplementedHandler) WatchPolicyV1PodDisruptionBudgetListForAllNamespaces
 //
 // GET /apis/policy/v1beta1/watch/namespaces/{namespace}/poddisruptionbudgets/{name}
 func (UnimplementedHandler) WatchPolicyV1beta1NamespacedPodDisruptionBudget(ctx context.Context, params WatchPolicyV1beta1NamespacedPodDisruptionBudgetParams) (r WatchPolicyV1beta1NamespacedPodDisruptionBudgetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchPolicyV1beta1NamespacedPodDisruptionBudgetRes), nil
 }
 
 // WatchPolicyV1beta1NamespacedPodDisruptionBudgetList implements watchPolicyV1beta1NamespacedPodDisruptionBudgetList operation.
@@ -4910,7 +5437,8 @@ func (UnimplementedHandler) WatchPolicyV1beta1NamespacedPodDisruptionBudget(ctx 
 //
 // GET /apis/policy/v1beta1/watch/namespaces/{namespace}/poddisruptionbudgets
 func (UnimplementedHandler) WatchPolicyV1beta1NamespacedPodDisruptionBudgetList(ctx context.Context, params WatchPolicyV1beta1NamespacedPodDisruptionBudgetListParams) (r WatchPolicyV1beta1NamespacedPodDisruptionBudgetListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchPolicyV1beta1NamespacedPodDisruptionBudgetListRes), nil
 }
 
 // WatchPolicyV1beta1PodDisruptionBudgetListForAllNamespaces implements watchPolicyV1beta1PodDisruptionBudgetListForAllNamespaces operation.
@@ -4920,7 +5448,8 @@ func (UnimplementedHandler) WatchPolicyV1beta1NamespacedPodDisruptionBudgetList(
 //
 // GET /apis/policy/v1beta1/watch/poddisruptionbudgets
 func (UnimplementedHandler) WatchPolicyV1beta1PodDisruptionBudgetListForAllNamespaces(ctx context.Context, params WatchPolicyV1beta1PodDisruptionBudgetListForAllNamespacesParams) (r WatchPolicyV1beta1PodDisruptionBudgetListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchPolicyV1beta1PodDisruptionBudgetListForAllNamespacesRes), nil
 }
 
 // WatchPolicyV1beta1PodSecurityPolicy implements watchPolicyV1beta1PodSecurityPolicy operation.
@@ -4930,7 +5459,8 @@ func (UnimplementedHandler) WatchPolicyV1beta1PodDisruptionBudgetListForAllNames
 //
 // GET /apis/policy/v1beta1/watch/podsecuritypolicies/{name}
 func (UnimplementedHandler) WatchPolicyV1beta1PodSecurityPolicy(ctx context.Context, params WatchPolicyV1beta1PodSecurityPolicyParams) (r WatchPolicyV1beta1PodSecurityPolicyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchPolicyV1beta1PodSecurityPolicyRes), nil
 }
 
 // WatchPolicyV1beta1PodSecurityPolicyList implements watchPolicyV1beta1PodSecurityPolicyList operation.
@@ -4940,7 +5470,8 @@ func (UnimplementedHandler) WatchPolicyV1beta1PodSecurityPolicy(ctx context.Cont
 //
 // GET /apis/policy/v1beta1/watch/podsecuritypolicies
 func (UnimplementedHandler) WatchPolicyV1beta1PodSecurityPolicyList(ctx context.Context, params WatchPolicyV1beta1PodSecurityPolicyListParams) (r WatchPolicyV1beta1PodSecurityPolicyListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchPolicyV1beta1PodSecurityPolicyListRes), nil
 }
 
 // WatchRbacAuthorizationV1ClusterRole implements watchRbacAuthorizationV1ClusterRole operation.
@@ -4950,7 +5481,8 @@ func (UnimplementedHandler) WatchPolicyV1beta1PodSecurityPolicyList(ctx context.
 //
 // GET /apis/rbac.authorization.k8s.io/v1/watch/clusterroles/{name}
 func (UnimplementedHandler) WatchRbacAuthorizationV1ClusterRole(ctx context.Context, params WatchRbacAuthorizationV1ClusterRoleParams) (r WatchRbacAuthorizationV1ClusterRoleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchRbacAuthorizationV1ClusterRoleRes), nil
 }
 
 // WatchRbacAuthorizationV1ClusterRoleBinding implements watchRbacAuthorizationV1ClusterRoleBinding operation.
@@ -4960,7 +5492,8 @@ func (UnimplementedHandler) WatchRbacAuthorizationV1ClusterRole(ctx context.Cont
 //
 // GET /apis/rbac.authorization.k8s.io/v1/watch/clusterrolebindings/{name}
 func (UnimplementedHandler) WatchRbacAuthorizationV1ClusterRoleBinding(ctx context.Context, params WatchRbacAuthorizationV1ClusterRoleBindingParams) (r WatchRbacAuthorizationV1ClusterRoleBindingRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchRbacAuthorizationV1ClusterRoleBindingRes), nil
 }
 
 // WatchRbacAuthorizationV1ClusterRoleBindingList implements watchRbacAuthorizationV1ClusterRoleBindingList operation.
@@ -4970,7 +5503,8 @@ func (UnimplementedHandler) WatchRbacAuthorizationV1ClusterRoleBinding(ctx conte
 //
 // GET /apis/rbac.authorization.k8s.io/v1/watch/clusterrolebindings
 func (UnimplementedHandler) WatchRbacAuthorizationV1ClusterRoleBindingList(ctx context.Context, params WatchRbacAuthorizationV1ClusterRoleBindingListParams) (r WatchRbacAuthorizationV1ClusterRoleBindingListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchRbacAuthorizationV1ClusterRoleBindingListRes), nil
 }
 
 // WatchRbacAuthorizationV1ClusterRoleList implements watchRbacAuthorizationV1ClusterRoleList operation.
@@ -4980,7 +5514,8 @@ func (UnimplementedHandler) WatchRbacAuthorizationV1ClusterRoleBindingList(ctx c
 //
 // GET /apis/rbac.authorization.k8s.io/v1/watch/clusterroles
 func (UnimplementedHandler) WatchRbacAuthorizationV1ClusterRoleList(ctx context.Context, params WatchRbacAuthorizationV1ClusterRoleListParams) (r WatchRbacAuthorizationV1ClusterRoleListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchRbacAuthorizationV1ClusterRoleListRes), nil
 }
 
 // WatchRbacAuthorizationV1NamespacedRole implements watchRbacAuthorizationV1NamespacedRole operation.
@@ -4990,7 +5525,8 @@ func (UnimplementedHandler) WatchRbacAuthorizationV1ClusterRoleList(ctx context.
 //
 // GET /apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/roles/{name}
 func (UnimplementedHandler) WatchRbacAuthorizationV1NamespacedRole(ctx context.Context, params WatchRbacAuthorizationV1NamespacedRoleParams) (r WatchRbacAuthorizationV1NamespacedRoleRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchRbacAuthorizationV1NamespacedRoleRes), nil
 }
 
 // WatchRbacAuthorizationV1NamespacedRoleBinding implements watchRbacAuthorizationV1NamespacedRoleBinding operation.
@@ -5000,7 +5536,8 @@ func (UnimplementedHandler) WatchRbacAuthorizationV1NamespacedRole(ctx context.C
 //
 // GET /apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/rolebindings/{name}
 func (UnimplementedHandler) WatchRbacAuthorizationV1NamespacedRoleBinding(ctx context.Context, params WatchRbacAuthorizationV1NamespacedRoleBindingParams) (r WatchRbacAuthorizationV1NamespacedRoleBindingRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchRbacAuthorizationV1NamespacedRoleBindingRes), nil
 }
 
 // WatchRbacAuthorizationV1NamespacedRoleBindingList implements watchRbacAuthorizationV1NamespacedRoleBindingList operation.
@@ -5010,7 +5547,8 @@ func (UnimplementedHandler) WatchRbacAuthorizationV1NamespacedRoleBinding(ctx co
 //
 // GET /apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/rolebindings
 func (UnimplementedHandler) WatchRbacAuthorizationV1NamespacedRoleBindingList(ctx context.Context, params WatchRbacAuthorizationV1NamespacedRoleBindingListParams) (r WatchRbacAuthorizationV1NamespacedRoleBindingListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchRbacAuthorizationV1NamespacedRoleBindingListRes), nil
 }
 
 // WatchRbacAuthorizationV1NamespacedRoleList implements watchRbacAuthorizationV1NamespacedRoleList operation.
@@ -5020,7 +5558,8 @@ func (UnimplementedHandler) WatchRbacAuthorizationV1NamespacedRoleBindingList(ct
 //
 // GET /apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/roles
 func (UnimplementedHandler) WatchRbacAuthorizationV1NamespacedRoleList(ctx context.Context, params WatchRbacAuthorizationV1NamespacedRoleListParams) (r WatchRbacAuthorizationV1NamespacedRoleListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchRbacAuthorizationV1NamespacedRoleListRes), nil
 }
 
 // WatchRbacAuthorizationV1RoleBindingListForAllNamespaces implements watchRbacAuthorizationV1RoleBindingListForAllNamespaces operation.
@@ -5030,7 +5569,8 @@ func (UnimplementedHandler) WatchRbacAuthorizationV1NamespacedRoleList(ctx conte
 //
 // GET /apis/rbac.authorization.k8s.io/v1/watch/rolebindings
 func (UnimplementedHandler) WatchRbacAuthorizationV1RoleBindingListForAllNamespaces(ctx context.Context, params WatchRbacAuthorizationV1RoleBindingListForAllNamespacesParams) (r WatchRbacAuthorizationV1RoleBindingListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchRbacAuthorizationV1RoleBindingListForAllNamespacesRes), nil
 }
 
 // WatchRbacAuthorizationV1RoleListForAllNamespaces implements watchRbacAuthorizationV1RoleListForAllNamespaces operation.
@@ -5040,7 +5580,8 @@ func (UnimplementedHandler) WatchRbacAuthorizationV1RoleBindingListForAllNamespa
 //
 // GET /apis/rbac.authorization.k8s.io/v1/watch/roles
 func (UnimplementedHandler) WatchRbacAuthorizationV1RoleListForAllNamespaces(ctx context.Context, params WatchRbacAuthorizationV1RoleListForAllNamespacesParams) (r WatchRbacAuthorizationV1RoleListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchRbacAuthorizationV1RoleListForAllNamespacesRes), nil
 }
 
 // WatchSchedulingV1PriorityClass implements watchSchedulingV1PriorityClass operation.
@@ -5050,7 +5591,8 @@ func (UnimplementedHandler) WatchRbacAuthorizationV1RoleListForAllNamespaces(ctx
 //
 // GET /apis/scheduling.k8s.io/v1/watch/priorityclasses/{name}
 func (UnimplementedHandler) WatchSchedulingV1PriorityClass(ctx context.Context, params WatchSchedulingV1PriorityClassParams) (r WatchSchedulingV1PriorityClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchSchedulingV1PriorityClassRes), nil
 }
 
 // WatchSchedulingV1PriorityClassList implements watchSchedulingV1PriorityClassList operation.
@@ -5060,7 +5602,8 @@ func (UnimplementedHandler) WatchSchedulingV1PriorityClass(ctx context.Context, 
 //
 // GET /apis/scheduling.k8s.io/v1/watch/priorityclasses
 func (UnimplementedHandler) WatchSchedulingV1PriorityClassList(ctx context.Context, params WatchSchedulingV1PriorityClassListParams) (r WatchSchedulingV1PriorityClassListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchSchedulingV1PriorityClassListRes), nil
 }
 
 // WatchStorageV1CSIDriver implements watchStorageV1CSIDriver operation.
@@ -5070,7 +5613,8 @@ func (UnimplementedHandler) WatchSchedulingV1PriorityClassList(ctx context.Conte
 //
 // GET /apis/storage.k8s.io/v1/watch/csidrivers/{name}
 func (UnimplementedHandler) WatchStorageV1CSIDriver(ctx context.Context, params WatchStorageV1CSIDriverParams) (r WatchStorageV1CSIDriverRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1CSIDriverRes), nil
 }
 
 // WatchStorageV1CSIDriverList implements watchStorageV1CSIDriverList operation.
@@ -5080,7 +5624,8 @@ func (UnimplementedHandler) WatchStorageV1CSIDriver(ctx context.Context, params 
 //
 // GET /apis/storage.k8s.io/v1/watch/csidrivers
 func (UnimplementedHandler) WatchStorageV1CSIDriverList(ctx context.Context, params WatchStorageV1CSIDriverListParams) (r WatchStorageV1CSIDriverListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1CSIDriverListRes), nil
 }
 
 // WatchStorageV1CSINode implements watchStorageV1CSINode operation.
@@ -5090,7 +5635,8 @@ func (UnimplementedHandler) WatchStorageV1CSIDriverList(ctx context.Context, par
 //
 // GET /apis/storage.k8s.io/v1/watch/csinodes/{name}
 func (UnimplementedHandler) WatchStorageV1CSINode(ctx context.Context, params WatchStorageV1CSINodeParams) (r WatchStorageV1CSINodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1CSINodeRes), nil
 }
 
 // WatchStorageV1CSINodeList implements watchStorageV1CSINodeList operation.
@@ -5100,7 +5646,8 @@ func (UnimplementedHandler) WatchStorageV1CSINode(ctx context.Context, params Wa
 //
 // GET /apis/storage.k8s.io/v1/watch/csinodes
 func (UnimplementedHandler) WatchStorageV1CSINodeList(ctx context.Context, params WatchStorageV1CSINodeListParams) (r WatchStorageV1CSINodeListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1CSINodeListRes), nil
 }
 
 // WatchStorageV1StorageClass implements watchStorageV1StorageClass operation.
@@ -5110,7 +5657,8 @@ func (UnimplementedHandler) WatchStorageV1CSINodeList(ctx context.Context, param
 //
 // GET /apis/storage.k8s.io/v1/watch/storageclasses/{name}
 func (UnimplementedHandler) WatchStorageV1StorageClass(ctx context.Context, params WatchStorageV1StorageClassParams) (r WatchStorageV1StorageClassRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1StorageClassRes), nil
 }
 
 // WatchStorageV1StorageClassList implements watchStorageV1StorageClassList operation.
@@ -5120,7 +5668,8 @@ func (UnimplementedHandler) WatchStorageV1StorageClass(ctx context.Context, para
 //
 // GET /apis/storage.k8s.io/v1/watch/storageclasses
 func (UnimplementedHandler) WatchStorageV1StorageClassList(ctx context.Context, params WatchStorageV1StorageClassListParams) (r WatchStorageV1StorageClassListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1StorageClassListRes), nil
 }
 
 // WatchStorageV1VolumeAttachment implements watchStorageV1VolumeAttachment operation.
@@ -5130,7 +5679,8 @@ func (UnimplementedHandler) WatchStorageV1StorageClassList(ctx context.Context, 
 //
 // GET /apis/storage.k8s.io/v1/watch/volumeattachments/{name}
 func (UnimplementedHandler) WatchStorageV1VolumeAttachment(ctx context.Context, params WatchStorageV1VolumeAttachmentParams) (r WatchStorageV1VolumeAttachmentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1VolumeAttachmentRes), nil
 }
 
 // WatchStorageV1VolumeAttachmentList implements watchStorageV1VolumeAttachmentList operation.
@@ -5140,7 +5690,8 @@ func (UnimplementedHandler) WatchStorageV1VolumeAttachment(ctx context.Context, 
 //
 // GET /apis/storage.k8s.io/v1/watch/volumeattachments
 func (UnimplementedHandler) WatchStorageV1VolumeAttachmentList(ctx context.Context, params WatchStorageV1VolumeAttachmentListParams) (r WatchStorageV1VolumeAttachmentListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1VolumeAttachmentListRes), nil
 }
 
 // WatchStorageV1alpha1CSIStorageCapacityListForAllNamespaces implements watchStorageV1alpha1CSIStorageCapacityListForAllNamespaces operation.
@@ -5150,7 +5701,8 @@ func (UnimplementedHandler) WatchStorageV1VolumeAttachmentList(ctx context.Conte
 //
 // GET /apis/storage.k8s.io/v1alpha1/watch/csistoragecapacities
 func (UnimplementedHandler) WatchStorageV1alpha1CSIStorageCapacityListForAllNamespaces(ctx context.Context, params WatchStorageV1alpha1CSIStorageCapacityListForAllNamespacesParams) (r WatchStorageV1alpha1CSIStorageCapacityListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1alpha1CSIStorageCapacityListForAllNamespacesRes), nil
 }
 
 // WatchStorageV1alpha1NamespacedCSIStorageCapacity implements watchStorageV1alpha1NamespacedCSIStorageCapacity operation.
@@ -5160,7 +5712,8 @@ func (UnimplementedHandler) WatchStorageV1alpha1CSIStorageCapacityListForAllName
 //
 // GET /apis/storage.k8s.io/v1alpha1/watch/namespaces/{namespace}/csistoragecapacities/{name}
 func (UnimplementedHandler) WatchStorageV1alpha1NamespacedCSIStorageCapacity(ctx context.Context, params WatchStorageV1alpha1NamespacedCSIStorageCapacityParams) (r WatchStorageV1alpha1NamespacedCSIStorageCapacityRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1alpha1NamespacedCSIStorageCapacityRes), nil
 }
 
 // WatchStorageV1alpha1NamespacedCSIStorageCapacityList implements watchStorageV1alpha1NamespacedCSIStorageCapacityList operation.
@@ -5170,7 +5723,8 @@ func (UnimplementedHandler) WatchStorageV1alpha1NamespacedCSIStorageCapacity(ctx
 //
 // GET /apis/storage.k8s.io/v1alpha1/watch/namespaces/{namespace}/csistoragecapacities
 func (UnimplementedHandler) WatchStorageV1alpha1NamespacedCSIStorageCapacityList(ctx context.Context, params WatchStorageV1alpha1NamespacedCSIStorageCapacityListParams) (r WatchStorageV1alpha1NamespacedCSIStorageCapacityListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1alpha1NamespacedCSIStorageCapacityListRes), nil
 }
 
 // WatchStorageV1beta1CSIStorageCapacityListForAllNamespaces implements watchStorageV1beta1CSIStorageCapacityListForAllNamespaces operation.
@@ -5180,7 +5734,8 @@ func (UnimplementedHandler) WatchStorageV1alpha1NamespacedCSIStorageCapacityList
 //
 // GET /apis/storage.k8s.io/v1beta1/watch/csistoragecapacities
 func (UnimplementedHandler) WatchStorageV1beta1CSIStorageCapacityListForAllNamespaces(ctx context.Context, params WatchStorageV1beta1CSIStorageCapacityListForAllNamespacesParams) (r WatchStorageV1beta1CSIStorageCapacityListForAllNamespacesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1beta1CSIStorageCapacityListForAllNamespacesRes), nil
 }
 
 // WatchStorageV1beta1NamespacedCSIStorageCapacity implements watchStorageV1beta1NamespacedCSIStorageCapacity operation.
@@ -5190,7 +5745,8 @@ func (UnimplementedHandler) WatchStorageV1beta1CSIStorageCapacityListForAllNames
 //
 // GET /apis/storage.k8s.io/v1beta1/watch/namespaces/{namespace}/csistoragecapacities/{name}
 func (UnimplementedHandler) WatchStorageV1beta1NamespacedCSIStorageCapacity(ctx context.Context, params WatchStorageV1beta1NamespacedCSIStorageCapacityParams) (r WatchStorageV1beta1NamespacedCSIStorageCapacityRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1beta1NamespacedCSIStorageCapacityRes), nil
 }
 
 // WatchStorageV1beta1NamespacedCSIStorageCapacityList implements watchStorageV1beta1NamespacedCSIStorageCapacityList operation.
@@ -5200,5 +5756,6 @@ func (UnimplementedHandler) WatchStorageV1beta1NamespacedCSIStorageCapacity(ctx 
 //
 // GET /apis/storage.k8s.io/v1beta1/watch/namespaces/{namespace}/csistoragecapacities
 func (UnimplementedHandler) WatchStorageV1beta1NamespacedCSIStorageCapacityList(ctx context.Context, params WatchStorageV1beta1NamespacedCSIStorageCapacityListParams) (r WatchStorageV1beta1NamespacedCSIStorageCapacityListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(WatchStorageV1beta1NamespacedCSIStorageCapacityListRes), nil
 }

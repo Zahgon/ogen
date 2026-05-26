@@ -3,24 +3,14 @@
 package api
 
 import (
-	"bytes"
 	"net/http"
-
-	"github.com/go-faster/jx"
-	ht "github.com/ogen-go/ogen/http"
 )
 
 func encodeOrdersLimitOrderPostRequest(
 	req *LimitOrderRequest,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -28,13 +18,7 @@ func encodeOrdersMarketOrderPostRequest(
 	req *MarketOrderRequest,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -42,13 +26,7 @@ func encodeSandboxCurrenciesBalancePostRequest(
 	req *SandboxSetCurrencyBalanceRequest,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -56,13 +34,7 @@ func encodeSandboxPositionsBalancePostRequest(
 	req *SandboxSetPositionBalanceRequest,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -70,18 +42,8 @@ func encodeSandboxRegisterPostRequest(
 	req OptSandboxRegisterRequest,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.

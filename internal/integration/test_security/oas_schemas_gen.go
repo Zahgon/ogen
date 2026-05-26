@@ -14,33 +14,41 @@ type BasicAuth struct {
 
 // GetUsername returns the value of Username.
 func (s *BasicAuth) GetUsername() string {
-	return s.Username
+	_ = "STUB: not implemented"
+
+	// GetPassword returns the value of Password.
+	return ""
 }
 
-// GetPassword returns the value of Password.
 func (s *BasicAuth) GetPassword() string {
-	return s.Password
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *BasicAuth) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetUsername sets the value of Username.
+	return nil
 }
 
-// SetUsername sets the value of Username.
 func (s *BasicAuth) SetUsername(val string) {
-	s.Username = val
+	_ = "STUB: not implemented"
+
+	// SetPassword sets the value of Password.
+	return
 }
 
-// SetPassword sets the value of Password.
 func (s *BasicAuth) SetPassword(val string) {
-	s.Password = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
-func (s *BasicAuth) SetRoles(val []string) {
-	s.Roles = val
-}
+func (s *BasicAuth) SetRoles(val []string) { _ = "STUB: not implemented"; return }
 
 type BearerToken struct {
 	Token string
@@ -49,23 +57,27 @@ type BearerToken struct {
 
 // GetToken returns the value of Token.
 func (s *BearerToken) GetToken() string {
-	return s.Token
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *BearerToken) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetToken sets the value of Token.
+	return nil
 }
 
-// SetToken sets the value of Token.
 func (s *BearerToken) SetToken(val string) {
-	s.Token = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
-func (s *BearerToken) SetRoles(val []string) {
-	s.Roles = val
-}
+func (s *BearerToken) SetRoles(val []string) { _ = "STUB: not implemented"; return }
 
 type CookieKey struct {
 	APIKey string
@@ -74,23 +86,27 @@ type CookieKey struct {
 
 // GetAPIKey returns the value of APIKey.
 func (s *CookieKey) GetAPIKey() string {
-	return s.APIKey
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *CookieKey) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetAPIKey sets the value of APIKey.
+	return nil
 }
 
-// SetAPIKey sets the value of APIKey.
 func (s *CookieKey) SetAPIKey(val string) {
-	s.APIKey = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
-func (s *CookieKey) SetRoles(val []string) {
-	s.Roles = val
-}
+func (s *CookieKey) SetRoles(val []string) { _ = "STUB: not implemented"; return }
 
 type Custom struct {
 	Request *http.Request
@@ -99,25 +115,33 @@ type Custom struct {
 
 // GetRequest returns the value of Request.
 func (s *Custom) GetRequest() *http.Request {
-	return s.Request
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return nil
 }
 
-// GetRoles returns the value of Roles.
 func (s *Custom) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetRequest sets the value of Request.
+	return nil
 }
 
-// SetRequest sets the value of Request.
 func (s *Custom) SetRequest(val *http.Request) {
-	s.Request = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
 func (s *Custom) SetRoles(val []string) {
-	s.Roles = val
+	_ = "STUB: not implemented"
+
+	// CustomSecurityOK is response for CustomSecurity operation.
+	return
 }
 
-// CustomSecurityOK is response for CustomSecurity operation.
 type CustomSecurityOK struct{}
 
 // DisjointSecurityOK is response for DisjointSecurity operation.
@@ -130,25 +154,33 @@ type HeaderKey struct {
 
 // GetAPIKey returns the value of APIKey.
 func (s *HeaderKey) GetAPIKey() string {
-	return s.APIKey
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *HeaderKey) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetAPIKey sets the value of APIKey.
+	return nil
 }
 
-// SetAPIKey sets the value of APIKey.
 func (s *HeaderKey) SetAPIKey(val string) {
-	s.APIKey = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
 func (s *HeaderKey) SetRoles(val []string) {
-	s.Roles = val
+	_ = "STUB: not implemented"
+
+	// IntersectSecurityOK is response for IntersectSecurity operation.
+	return
 }
 
-// IntersectSecurityOK is response for IntersectSecurity operation.
 type IntersectSecurityOK struct{}
 
 // OptionalSecurityOK is response for OptionalSecurity operation.
@@ -161,20 +193,24 @@ type QueryKey struct {
 
 // GetAPIKey returns the value of APIKey.
 func (s *QueryKey) GetAPIKey() string {
-	return s.APIKey
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *QueryKey) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetAPIKey sets the value of APIKey.
+	return nil
 }
 
-// SetAPIKey sets the value of APIKey.
 func (s *QueryKey) SetAPIKey(val string) {
-	s.APIKey = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
-func (s *QueryKey) SetRoles(val []string) {
-	s.Roles = val
-}
+func (s *QueryKey) SetRoles(val []string) { _ = "STUB: not implemented"; return }

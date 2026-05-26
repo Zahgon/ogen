@@ -2,11 +2,8 @@ package gen
 
 import (
 	"fmt"
-	"slices"
-	"strings"
 
 	"github.com/go-faster/errors"
-	"go.uber.org/zap"
 
 	"github.com/ogen-go/ogen/gen/ir"
 )
@@ -41,24 +38,28 @@ type ErrNotImplemented struct {
 	Name string
 }
 
-func (e *ErrNotImplemented) unimplemented() {}
+func (e *ErrNotImplemented) unimplemented() {
+	_ = "STUB: not implemented"
 
-// Error implements error.
-func (e *ErrNotImplemented) Error() string {
-	return e.Name + " not implemented"
+	// Error implements error.
+	return
 }
+
+func (e *ErrNotImplemented) Error() string { _ = "STUB: not implemented"; return "" }
 
 // ErrUnsupportedContentTypes reports that ogen does not support such content-type(s).
 type ErrUnsupportedContentTypes struct {
 	ContentTypes []string
 }
 
-func (e *ErrUnsupportedContentTypes) unimplemented() {}
+func (e *ErrUnsupportedContentTypes) unimplemented() {
+	_ = "STUB: not implemented"
 
-// Error implements error.
-func (e *ErrUnsupportedContentTypes) Error() string {
-	return fmt.Sprintf("unsupported content types: [%s]", strings.Join(e.ContentTypes, ", "))
+	// Error implements error.
+	return
 }
+
+func (e *ErrUnsupportedContentTypes) Error() string { _ = "STUB: not implemented"; return "" }
 
 // ErrFieldsDiscriminatorInference reports fields discriminator inference failure.
 type ErrFieldsDiscriminatorInference struct {
@@ -66,16 +67,14 @@ type ErrFieldsDiscriminatorInference struct {
 	Types []BadVariant
 }
 
-func (e *ErrFieldsDiscriminatorInference) unimplemented() {}
+func (e *ErrFieldsDiscriminatorInference) unimplemented() {
+	_ = "STUB: not implemented"
 
-// Error implements error.
-func (e *ErrFieldsDiscriminatorInference) Error() string {
-	names := make([]string, len(e.Types))
-	for i, typ := range e.Types {
-		names[i] = typ.Type.Name
-	}
-	return fmt.Sprintf("can't infer fields discriminator: [%s]", strings.Join(names, ", "))
+	// Error implements error.
+	return
 }
+
+func (e *ErrFieldsDiscriminatorInference) Error() string { _ = "STUB: not implemented"; return "" }
 
 // BadVariant describes a sum type variant for what we unable to infer discriminator.
 type BadVariant struct {
@@ -84,61 +83,17 @@ type BadVariant struct {
 }
 
 func (g *Generator) trySkip(err error, msg string, l position) error {
-	if err == nil {
-		return nil
-	}
-	if err := g.fail(err); err != nil {
-		return err
-	}
-
-	if uErr, ok := errors.Into[unimplementedError](err); ok {
-		// Debug the original error "deep", to include the various messages added with Wrap*().
-		g.log.WithOptions(zap.AddCallerSkip(1)).Debug(msg,
-			zapPosition(l),
-			zap.String("reason_error", fmt.Errorf("%w", err).Error()),
-		)
-		// Then log the brief error briefly with Info.
-		g.log.WithOptions(zap.AddCallerSkip(1)).Info(msg,
-			zapPosition(l),
-			zap.String("reason_error", uErr.Error()),
-		)
-	} else {
-		// Log the original error "deep", to include the various messages added with Wrap*().
-		g.log.WithOptions(zap.AddCallerSkip(1)).Info(msg,
-			zapPosition(l),
-			zap.String("reason_error", fmt.Errorf("%w", err).Error()),
-		)
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (g *Generator) fail(err error) error {
-	if err == nil {
-		return nil
-	}
-	hasAll := slices.Contains(g.opt.IgnoreNotImplemented, "all")
-	handle := func(name string, err error) error {
-		if hook := g.opt.NotImplementedHook; hook != nil {
-			hook(name, err)
-		}
-		if hasAll || slices.Contains(g.opt.IgnoreNotImplemented, name) {
-			return nil
-		}
-		return err
-	}
-	if notImplementedErr, ok := errors.Into[*ErrNotImplemented](err); ok {
-		return handle(notImplementedErr.Name, err)
-	}
-	if _, ok := errors.Into[*ErrUnsupportedContentTypes](err); ok {
-		const name = "unsupported content types"
-		return handle(name, err)
-	}
-	if _, ok := errors.Into[*ErrFieldsDiscriminatorInference](err); ok {
-		const name = "discriminator inference"
-		return handle(name, err)
-	}
-	return err
-}
+// Debug the original error "deep", to include the various messages added with Wrap*().
+
+// Then log the brief error briefly with Info.
+
+// Log the original error "deep", to include the various messages added with Wrap*().
+
+func (g *Generator) fail(err error) error { _ = "STUB: not implemented"; return nil }
 
 // ErrParseSpec reports that specification parsing failed.
 type ErrParseSpec struct {
@@ -147,24 +102,22 @@ type ErrParseSpec struct {
 
 // Unwrap implements errors.Wrapper.
 func (e *ErrParseSpec) Unwrap() error {
-	return e.err
+	_ = "STUB: not implemented"
+
+	// FormatError implements errors.Formatter.
+	return nil
 }
 
-// FormatError implements errors.Formatter.
 func (e *ErrParseSpec) FormatError(p errors.Printer) (next error) {
-	p.Print("parse spec")
-	return e.err
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Format implements fmt.Formatter.
-func (e *ErrParseSpec) Format(s fmt.State, verb rune) {
-	errors.FormatError(e, s, verb)
-}
+func (e *ErrParseSpec) Format(s fmt.State, verb rune) { _ = "STUB: not implemented"; return }
 
 // Error implements error.
-func (e *ErrParseSpec) Error() string {
-	return fmt.Sprintf("parse spec: %s", e.err)
-}
+func (e *ErrParseSpec) Error() string { _ = "STUB: not implemented"; return "" }
 
 // ErrBuildRouter reports that route tree building failed.
 type ErrBuildRouter struct {
@@ -173,24 +126,22 @@ type ErrBuildRouter struct {
 
 // Unwrap implements errors.Wrapper.
 func (e *ErrBuildRouter) Unwrap() error {
-	return e.err
+	_ = "STUB: not implemented"
+
+	// FormatError implements errors.Formatter.
+	return nil
 }
 
-// FormatError implements errors.Formatter.
 func (e *ErrBuildRouter) FormatError(p errors.Printer) (next error) {
-	p.Print("build router")
-	return e.err
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Format implements fmt.Formatter.
-func (e *ErrBuildRouter) Format(s fmt.State, verb rune) {
-	errors.FormatError(e, s, verb)
-}
+func (e *ErrBuildRouter) Format(s fmt.State, verb rune) { _ = "STUB: not implemented"; return }
 
 // Error implements error.
-func (e *ErrBuildRouter) Error() string {
-	return fmt.Sprintf("build router: %s", e.err)
-}
+func (e *ErrBuildRouter) Error() string { _ = "STUB: not implemented"; return "" }
 
 // ErrGoFormat reports that generated code formatting failed.
 type ErrGoFormat struct {
@@ -199,21 +150,19 @@ type ErrGoFormat struct {
 
 // Unwrap implements errors.Wrapper.
 func (e *ErrGoFormat) Unwrap() error {
-	return e.err
+	_ = "STUB: not implemented"
+
+	// FormatError implements errors.Formatter.
+	return nil
 }
 
-// FormatError implements errors.Formatter.
 func (e *ErrGoFormat) FormatError(p errors.Printer) (next error) {
-	p.Print("goimports")
-	return e.err
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Format implements fmt.Formatter.
-func (e *ErrGoFormat) Format(s fmt.State, verb rune) {
-	errors.FormatError(e, s, verb)
-}
+func (e *ErrGoFormat) Format(s fmt.State, verb rune) { _ = "STUB: not implemented"; return }
 
 // Error implements error.
-func (e *ErrGoFormat) Error() string {
-	return fmt.Sprintf("goimports: %s", e.err)
-}
+func (e *ErrGoFormat) Error() string { _ = "STUB: not implemented"; return "" }

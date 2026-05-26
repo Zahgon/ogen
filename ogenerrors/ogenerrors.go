@@ -3,7 +3,6 @@ package ogenerrors
 
 import (
 	"fmt"
-	"net/http"
 
 	"github.com/go-faster/errors"
 )
@@ -33,15 +32,19 @@ type OperationContext struct {
 
 // OperationName returns operation Name.
 func (d OperationContext) OperationName() string {
-	return d.Name
+	_ = "STUB: not implemented"
+
+	// OperationID returns operation ID.
+	return ""
 }
 
-// OperationID returns operation ID.
 func (d OperationContext) OperationID() string {
-	return d.ID
+	_ = "STUB: not implemented"
+
+	// SecurityError reports that error caused by security handler.
+	return ""
 }
 
-// SecurityError reports that error caused by security handler.
 type SecurityError struct {
 	OperationContext
 	Security string
@@ -49,30 +52,26 @@ type SecurityError struct {
 }
 
 // Code returns http code to respond.
-func (d *SecurityError) Code() int {
-	return http.StatusUnauthorized
-}
+func (d *SecurityError) Code() int { _ = "STUB: not implemented"; return 0 }
 
 // Unwrap returns child error.
 func (d *SecurityError) Unwrap() error {
-	return d.Err
+	_ = "STUB: not implemented"
+
+	// FormatError implements errors.Formatter.
+	return nil
 }
 
-// FormatError implements errors.Formatter.
 func (d *SecurityError) FormatError(p errors.Printer) (next error) {
-	p.Printf("operation %s: security %q", d.OperationName(), d.Security)
-	return d.Err
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Format implements fmt.Formatter.
-func (d *SecurityError) Format(s fmt.State, verb rune) {
-	errors.FormatError(d, s, verb)
-}
+func (d *SecurityError) Format(s fmt.State, verb rune) { _ = "STUB: not implemented"; return }
 
 // Error implements error.
-func (d *SecurityError) Error() string {
-	return fmt.Sprintf("operation %s: security %q: %s", d.OperationName(), d.Security, d.Err)
-}
+func (d *SecurityError) Error() string { _ = "STUB: not implemented"; return "" }
 
 // DecodeRequestError reports that error caused by request decoder.
 type DecodeRequestError struct {
@@ -81,27 +80,23 @@ type DecodeRequestError struct {
 }
 
 // Code returns http code to respond.
-func (d *DecodeRequestError) Code() int {
-	return http.StatusBadRequest
-}
+func (d *DecodeRequestError) Code() int { _ = "STUB: not implemented"; return 0 }
 
 // Unwrap returns child error.
 func (d *DecodeRequestError) Unwrap() error {
-	return d.Err
+	_ = "STUB: not implemented"
+
+	// FormatError implements errors.Formatter.
+	return nil
 }
 
-// FormatError implements errors.Formatter.
 func (d *DecodeRequestError) FormatError(p errors.Printer) (next error) {
-	p.Printf("operation %s: decode request", d.OperationName())
-	return d.Err
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Format implements fmt.Formatter.
-func (d *DecodeRequestError) Format(s fmt.State, verb rune) {
-	errors.FormatError(d, s, verb)
-}
+func (d *DecodeRequestError) Format(s fmt.State, verb rune) { _ = "STUB: not implemented"; return }
 
 // Error implements error.
-func (d *DecodeRequestError) Error() string {
-	return fmt.Sprintf("operation %s: decode request: %s", d.OperationName(), d.Err)
-}
+func (d *DecodeRequestError) Error() string { _ = "STUB: not implemented"; return "" }

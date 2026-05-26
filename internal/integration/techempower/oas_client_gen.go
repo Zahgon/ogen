@@ -5,25 +5,9 @@ package techempower
 import (
 	"context"
 	"net/url"
-	"strings"
-	"time"
-
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/otelogen"
-	"github.com/ogen-go/ogen/uri"
-	"go.opentelemetry.io/otel/attribute"
-	"go.opentelemetry.io/otel/codes"
-	"go.opentelemetry.io/otel/metric"
-	semconv "go.opentelemetry.io/otel/semconv/v1.39.0"
-	"go.opentelemetry.io/otel/trace"
 )
 
-func trimTrailingSlashes(u *url.URL) {
-	u.Path = strings.TrimRight(u.Path, "/")
-	u.RawPath = strings.TrimRight(u.RawPath, "/")
-}
+func trimTrailingSlashes(u *url.URL) { _ = "STUB: not implemented"; return }
 
 // Invoker invokes operations described by OpenAPI v3 specification.
 type Invoker interface {
@@ -80,36 +64,19 @@ type Client struct {
 
 // NewClient initializes new Client defined by OAS.
 func NewClient(serverURL string, opts ...ClientOption) (*Client, error) {
-	u, err := url.Parse(serverURL)
-	if err != nil {
-		return nil, err
-	}
-	trimTrailingSlashes(u)
-
-	c, err := newClientConfig(opts...).baseClient()
-	if err != nil {
-		return nil, err
-	}
-	return &Client{
-		serverURL:  u,
-		baseClient: c,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type serverURLKey struct{}
 
 // WithServerURL sets context key to override server URL.
 func WithServerURL(ctx context.Context, u *url.URL) context.Context {
-	return context.WithValue(ctx, serverURLKey{}, u)
+	_ = "STUB: not implemented"
+	return *new(context.Context)
 }
 
-func (c *Client) requestURL(ctx context.Context) *url.URL {
-	u, ok := ctx.Value(serverURLKey{}).(*url.URL)
-	if !ok {
-		return c.serverURL
-	}
-	return u
-}
+func (c *Client) requestURL(ctx context.Context) *url.URL { _ = "STUB: not implemented"; return nil }
 
 // Caching invokes Caching operation.
 //
@@ -122,91 +89,26 @@ func (c *Client) requestURL(ctx context.Context) *url.URL {
 //
 // GET /cached-worlds
 func (c *Client) Caching(ctx context.Context, params CachingParams) (WorldObjects, error) {
-	res, err := c.sendCaching(ctx, params)
-	return res, err
+	_ = "STUB: not implemented"
+	return *new(WorldObjects), nil
 }
 
 func (c *Client) sendCaching(ctx context.Context, params CachingParams) (res WorldObjects, err error) {
-	otelAttrs := []attribute.KeyValue{
-		otelogen.OperationID("Caching"),
-		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/cached-worlds"),
-	}
-	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
-
-	// Run stopwatch.
-	startTime := time.Now()
-	defer func() {
-		// Use floating point division here for higher precision (instead of Millisecond method).
-		elapsedDuration := time.Since(startTime)
-		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
-	}()
-
-	// Increment request counter.
-	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-
-	// Start a span for this request.
-	ctx, span := c.cfg.Tracer.Start(ctx, CachingOperation,
-		trace.WithAttributes(otelAttrs...),
-		clientSpanKind,
-	)
-	// Track stage for error reporting.
-	var stage string
-	defer func() {
-		if err != nil {
-			span.RecordError(err)
-			span.SetStatus(codes.Error, stage)
-			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-		}
-		span.End()
-	}()
-
-	stage = "BuildURL"
-	u := uri.Clone(c.requestURL(ctx))
-	var pathParts [1]string
-	pathParts[0] = "/cached-worlds"
-	uri.AddPathParts(u, pathParts[:]...)
-
-	stage = "EncodeQueryParams"
-	q := uri.NewQueryEncoder()
-	{
-		// Encode "count" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "count",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			return e.EncodeValue(conv.Int64ToString(params.Count))
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	u.RawQuery = q.Values().Encode()
-
-	stage = "EncodeRequest"
-	r, err := ht.NewRequest(ctx, "GET", u)
-	if err != nil {
-		return res, errors.Wrap(err, "create request")
-	}
-
-	stage = "SendRequest"
-	resp, err := c.cfg.Client.Do(r)
-	if err != nil {
-		return res, errors.Wrap(err, "do request")
-	}
-	body := resp.Body
-	defer body.Close()
-
-	stage = "DecodeResponse"
-	result, err := decodeCachingResponse(resp)
-	if err != nil {
-		return res, errors.Wrap(err, "decode response")
-	}
-
-	return result, nil
+	_ = "STUB: not implemented"
+	return *new(WorldObjects), nil
 }
+
+// Run stopwatch.
+
+// Use floating point division here for higher precision (instead of Millisecond method).
+
+// Increment request counter.
+
+// Start a span for this request.
+
+// Track stage for error reporting.
+
+// Encode "count" parameter.
 
 // DB invokes DB operation.
 //
@@ -215,73 +117,24 @@ func (c *Client) sendCaching(ctx context.Context, params CachingParams) (res Wor
 //
 // GET /db
 func (c *Client) DB(ctx context.Context) (*WorldObject, error) {
-	res, err := c.sendDB(ctx)
-	return res, err
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *Client) sendDB(ctx context.Context) (res *WorldObject, err error) {
-	otelAttrs := []attribute.KeyValue{
-		otelogen.OperationID("DB"),
-		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/db"),
-	}
-	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
-
-	// Run stopwatch.
-	startTime := time.Now()
-	defer func() {
-		// Use floating point division here for higher precision (instead of Millisecond method).
-		elapsedDuration := time.Since(startTime)
-		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
-	}()
-
-	// Increment request counter.
-	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-
-	// Start a span for this request.
-	ctx, span := c.cfg.Tracer.Start(ctx, DBOperation,
-		trace.WithAttributes(otelAttrs...),
-		clientSpanKind,
-	)
-	// Track stage for error reporting.
-	var stage string
-	defer func() {
-		if err != nil {
-			span.RecordError(err)
-			span.SetStatus(codes.Error, stage)
-			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-		}
-		span.End()
-	}()
-
-	stage = "BuildURL"
-	u := uri.Clone(c.requestURL(ctx))
-	var pathParts [1]string
-	pathParts[0] = "/db"
-	uri.AddPathParts(u, pathParts[:]...)
-
-	stage = "EncodeRequest"
-	r, err := ht.NewRequest(ctx, "GET", u)
-	if err != nil {
-		return res, errors.Wrap(err, "create request")
-	}
-
-	stage = "SendRequest"
-	resp, err := c.cfg.Client.Do(r)
-	if err != nil {
-		return res, errors.Wrap(err, "do request")
-	}
-	body := resp.Body
-	defer body.Close()
-
-	stage = "DecodeResponse"
-	result, err := decodeDBResponse(resp)
-	if err != nil {
-		return res, errors.Wrap(err, "decode response")
-	}
-
-	return result, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Run stopwatch.
+
+// Use floating point division here for higher precision (instead of Millisecond method).
+
+// Increment request counter.
+
+// Start a span for this request.
+
+// Track stage for error reporting.
 
 // JSON invokes json operation.
 //
@@ -291,73 +144,24 @@ func (c *Client) sendDB(ctx context.Context) (res *WorldObject, err error) {
 //
 // GET /json
 func (c *Client) JSON(ctx context.Context) (*HelloWorld, error) {
-	res, err := c.sendJSON(ctx)
-	return res, err
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *Client) sendJSON(ctx context.Context) (res *HelloWorld, err error) {
-	otelAttrs := []attribute.KeyValue{
-		otelogen.OperationID("json"),
-		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/json"),
-	}
-	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
-
-	// Run stopwatch.
-	startTime := time.Now()
-	defer func() {
-		// Use floating point division here for higher precision (instead of Millisecond method).
-		elapsedDuration := time.Since(startTime)
-		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
-	}()
-
-	// Increment request counter.
-	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-
-	// Start a span for this request.
-	ctx, span := c.cfg.Tracer.Start(ctx, JSONOperation,
-		trace.WithAttributes(otelAttrs...),
-		clientSpanKind,
-	)
-	// Track stage for error reporting.
-	var stage string
-	defer func() {
-		if err != nil {
-			span.RecordError(err)
-			span.SetStatus(codes.Error, stage)
-			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-		}
-		span.End()
-	}()
-
-	stage = "BuildURL"
-	u := uri.Clone(c.requestURL(ctx))
-	var pathParts [1]string
-	pathParts[0] = "/json"
-	uri.AddPathParts(u, pathParts[:]...)
-
-	stage = "EncodeRequest"
-	r, err := ht.NewRequest(ctx, "GET", u)
-	if err != nil {
-		return res, errors.Wrap(err, "create request")
-	}
-
-	stage = "SendRequest"
-	resp, err := c.cfg.Client.Do(r)
-	if err != nil {
-		return res, errors.Wrap(err, "do request")
-	}
-	body := resp.Body
-	defer body.Close()
-
-	stage = "DecodeResponse"
-	result, err := decodeJSONResponse(resp)
-	if err != nil {
-		return res, errors.Wrap(err, "decode response")
-	}
-
-	return result, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Run stopwatch.
+
+// Use floating point division here for higher precision (instead of Millisecond method).
+
+// Increment request counter.
+
+// Start a span for this request.
+
+// Track stage for error reporting.
 
 // Queries invokes Queries operation.
 //
@@ -368,91 +172,26 @@ func (c *Client) sendJSON(ctx context.Context) (res *HelloWorld, err error) {
 //
 // GET /queries
 func (c *Client) Queries(ctx context.Context, params QueriesParams) (WorldObjects, error) {
-	res, err := c.sendQueries(ctx, params)
-	return res, err
+	_ = "STUB: not implemented"
+	return *new(WorldObjects), nil
 }
 
 func (c *Client) sendQueries(ctx context.Context, params QueriesParams) (res WorldObjects, err error) {
-	otelAttrs := []attribute.KeyValue{
-		otelogen.OperationID("Queries"),
-		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/queries"),
-	}
-	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
-
-	// Run stopwatch.
-	startTime := time.Now()
-	defer func() {
-		// Use floating point division here for higher precision (instead of Millisecond method).
-		elapsedDuration := time.Since(startTime)
-		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
-	}()
-
-	// Increment request counter.
-	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-
-	// Start a span for this request.
-	ctx, span := c.cfg.Tracer.Start(ctx, QueriesOperation,
-		trace.WithAttributes(otelAttrs...),
-		clientSpanKind,
-	)
-	// Track stage for error reporting.
-	var stage string
-	defer func() {
-		if err != nil {
-			span.RecordError(err)
-			span.SetStatus(codes.Error, stage)
-			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-		}
-		span.End()
-	}()
-
-	stage = "BuildURL"
-	u := uri.Clone(c.requestURL(ctx))
-	var pathParts [1]string
-	pathParts[0] = "/queries"
-	uri.AddPathParts(u, pathParts[:]...)
-
-	stage = "EncodeQueryParams"
-	q := uri.NewQueryEncoder()
-	{
-		// Encode "queries" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "queries",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			return e.EncodeValue(conv.Int64ToString(params.Queries))
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	u.RawQuery = q.Values().Encode()
-
-	stage = "EncodeRequest"
-	r, err := ht.NewRequest(ctx, "GET", u)
-	if err != nil {
-		return res, errors.Wrap(err, "create request")
-	}
-
-	stage = "SendRequest"
-	resp, err := c.cfg.Client.Do(r)
-	if err != nil {
-		return res, errors.Wrap(err, "do request")
-	}
-	body := resp.Body
-	defer body.Close()
-
-	stage = "DecodeResponse"
-	result, err := decodeQueriesResponse(resp)
-	if err != nil {
-		return res, errors.Wrap(err, "decode response")
-	}
-
-	return result, nil
+	_ = "STUB: not implemented"
+	return *new(WorldObjects), nil
 }
+
+// Run stopwatch.
+
+// Use floating point division here for higher precision (instead of Millisecond method).
+
+// Increment request counter.
+
+// Start a span for this request.
+
+// Track stage for error reporting.
+
+// Encode "queries" parameter.
 
 // Updates invokes Updates operation.
 //
@@ -462,88 +201,23 @@ func (c *Client) sendQueries(ctx context.Context, params QueriesParams) (res Wor
 //
 // GET /updates
 func (c *Client) Updates(ctx context.Context, params UpdatesParams) (WorldObjects, error) {
-	res, err := c.sendUpdates(ctx, params)
-	return res, err
+	_ = "STUB: not implemented"
+	return *new(WorldObjects), nil
 }
 
 func (c *Client) sendUpdates(ctx context.Context, params UpdatesParams) (res WorldObjects, err error) {
-	otelAttrs := []attribute.KeyValue{
-		otelogen.OperationID("Updates"),
-		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/updates"),
-	}
-	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
-
-	// Run stopwatch.
-	startTime := time.Now()
-	defer func() {
-		// Use floating point division here for higher precision (instead of Millisecond method).
-		elapsedDuration := time.Since(startTime)
-		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
-	}()
-
-	// Increment request counter.
-	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-
-	// Start a span for this request.
-	ctx, span := c.cfg.Tracer.Start(ctx, UpdatesOperation,
-		trace.WithAttributes(otelAttrs...),
-		clientSpanKind,
-	)
-	// Track stage for error reporting.
-	var stage string
-	defer func() {
-		if err != nil {
-			span.RecordError(err)
-			span.SetStatus(codes.Error, stage)
-			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
-		}
-		span.End()
-	}()
-
-	stage = "BuildURL"
-	u := uri.Clone(c.requestURL(ctx))
-	var pathParts [1]string
-	pathParts[0] = "/updates"
-	uri.AddPathParts(u, pathParts[:]...)
-
-	stage = "EncodeQueryParams"
-	q := uri.NewQueryEncoder()
-	{
-		// Encode "queries" parameter.
-		cfg := uri.QueryParameterEncodingConfig{
-			Name:    "queries",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.EncodeParam(cfg, func(e uri.Encoder) error {
-			return e.EncodeValue(conv.Int64ToString(params.Queries))
-		}); err != nil {
-			return res, errors.Wrap(err, "encode query")
-		}
-	}
-	u.RawQuery = q.Values().Encode()
-
-	stage = "EncodeRequest"
-	r, err := ht.NewRequest(ctx, "GET", u)
-	if err != nil {
-		return res, errors.Wrap(err, "create request")
-	}
-
-	stage = "SendRequest"
-	resp, err := c.cfg.Client.Do(r)
-	if err != nil {
-		return res, errors.Wrap(err, "do request")
-	}
-	body := resp.Body
-	defer body.Close()
-
-	stage = "DecodeResponse"
-	result, err := decodeUpdatesResponse(resp)
-	if err != nil {
-		return res, errors.Wrap(err, "decode response")
-	}
-
-	return result, nil
+	_ = "STUB: not implemented"
+	return *new(WorldObjects), nil
 }
+
+// Run stopwatch.
+
+// Use floating point division here for higher precision (instead of Millisecond method).
+
+// Increment request counter.
+
+// Start a span for this request.
+
+// Track stage for error reporting.
+
+// Encode "queries" parameter.

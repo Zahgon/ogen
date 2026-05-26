@@ -1,7 +1,6 @@
 package validate
 
 import (
-	"fmt"
 	"sync"
 )
 
@@ -15,61 +14,25 @@ type OgenValidatorRegistry struct {
 }
 
 // NewOgenValidatorRegistry creates a new OgenValidatorRegistry.
-func NewOgenValidatorRegistry() *OgenValidatorRegistry {
-	return &OgenValidatorRegistry{
-		validators: make(map[string]OgenValidator),
-	}
-}
+func NewOgenValidatorRegistry() *OgenValidatorRegistry { _ = "STUB: not implemented"; return nil }
 
 func (r *OgenValidatorRegistry) Register(name string, validator OgenValidator) error {
-	if name == "" {
-		return fmt.Errorf("validator name cannot be empty")
-	}
-	if validator == nil {
-		return fmt.Errorf("validator cannot be nil")
-	}
-
-	r.mu.Lock()
-	r.validators[name] = validator
-	r.mu.Unlock()
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (r *OgenValidatorRegistry) Get(name string) (OgenValidator, bool) {
-	r.mu.RLock()
-	validator, ok := r.validators[name]
-	r.mu.RUnlock()
-	return validator, ok
+	_ = "STUB: not implemented"
+	return *new(OgenValidator), false
 }
 
 // Validate validates a value using the specified validator and parameters.
 func (r *OgenValidatorRegistry) Validate(validatorName string, value, params any) error {
-	validator, exists := r.Get(validatorName)
-	if !exists {
-		return &ValidationError{
-			ValidatorName: validatorName,
-			Value:         value,
-			Params:        params,
-			Message:       fmt.Sprintf("validator '%s' not found", validatorName),
-		}
-	}
-
-	if err := validator(value, params); err != nil {
-		// Wrap in ValidationError if it's not already one
-		if _, ok := err.(*ValidationError); !ok {
-			return &ValidationError{
-				ValidatorName: validatorName,
-				Value:         value,
-				Params:        params,
-				Message:       err.Error(),
-			}
-		}
-		return err
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Wrap in ValidationError if it's not already one
 
 // ValidationError represents a validation error from a custom validator.
 type ValidationError struct {
@@ -80,24 +43,22 @@ type ValidationError struct {
 }
 
 // Error implements the error interface.
-func (e *ValidationError) Error() string {
-	return fmt.Sprintf("validation failed (%s): %s", e.ValidatorName, e.Message)
-}
+func (e *ValidationError) Error() string { _ = "STUB: not implemented"; return "" }
 
 // Default global registry
 var defaultRegistry = NewOgenValidatorRegistry()
 
 // RegisterValidator registers a validator in the default global registry.
 func RegisterValidator(name string, validator OgenValidator) error {
-	return defaultRegistry.Register(name, validator)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetValidator returns a validator from the default global registry.
 func GetValidator(name string) (OgenValidator, bool) {
-	return defaultRegistry.Get(name)
+	_ = "STUB: not implemented"
+	return *new(OgenValidator), false
 }
 
 // Ogen validates using the default global registry.
-func Ogen(name string, value, params any) error {
-	return defaultRegistry.Validate(name, value, params)
-}
+func Ogen(name string, value, params any) error { _ = "STUB: not implemented"; return nil }

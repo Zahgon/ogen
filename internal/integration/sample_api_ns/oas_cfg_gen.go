@@ -5,12 +5,9 @@ package api
 import (
 	"fmt"
 	"math/big"
-	"net/http"
 
 	ht "github.com/ogen-go/ogen/http"
 	"github.com/ogen-go/ogen/ogenregex"
-	"github.com/ogen-go/ogen/otelogen"
-	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 	"go.opentelemetry.io/otel/trace"
@@ -56,20 +53,7 @@ type otelConfig struct {
 	Attributes     []attribute.KeyValue
 }
 
-func (cfg *otelConfig) initOTEL() {
-	if cfg.TracerProvider == nil {
-		cfg.TracerProvider = otel.GetTracerProvider()
-	}
-	if cfg.MeterProvider == nil {
-		cfg.MeterProvider = otel.GetMeterProvider()
-	}
-	cfg.Tracer = cfg.TracerProvider.Tracer(otelogen.Name,
-		trace.WithInstrumentationVersion(otelogen.SemVersion()),
-	)
-	cfg.Meter = cfg.MeterProvider.Meter(otelogen.Name,
-		metric.WithInstrumentationVersion(otelogen.SemVersion()),
-	)
-}
+func (cfg *otelConfig) initOTEL() { _ = "STUB: not implemented"; return }
 
 type clientConfig struct {
 	otelConfig
@@ -83,25 +67,15 @@ type ClientOption interface {
 
 var _ ClientOption = (optionFunc[clientConfig])(nil)
 
-func (o optionFunc[C]) applyClient(c *C) {
-	o(c)
-}
+func (o optionFunc[C]) applyClient(c *C) { _ = "STUB: not implemented"; return }
 
 var _ ClientOption = (otelOptionFunc)(nil)
 
-func (o otelOptionFunc) applyClient(c *clientConfig) {
-	o(&c.otelConfig)
-}
+func (o otelOptionFunc) applyClient(c *clientConfig) { _ = "STUB: not implemented"; return }
 
 func newClientConfig(opts ...ClientOption) clientConfig {
-	cfg := clientConfig{
-		Client: http.DefaultClient,
-	}
-	for _, opt := range opts {
-		opt.applyClient(&cfg)
-	}
-	cfg.initOTEL()
-	return cfg
+	_ = "STUB: not implemented"
+	return *new(clientConfig)
 }
 
 type baseClient struct {
@@ -112,17 +86,8 @@ type baseClient struct {
 }
 
 func (cfg clientConfig) baseClient() (c baseClient, err error) {
-	c = baseClient{cfg: cfg}
-	if c.requests, err = otelogen.ClientRequestCountCounter(c.cfg.Meter); err != nil {
-		return c, err
-	}
-	if c.errors, err = otelogen.ClientErrorsCountCounter(c.cfg.Meter); err != nil {
-		return c, err
-	}
-	if c.duration, err = otelogen.ClientDurationHistogram(c.cfg.Meter); err != nil {
-		return c, err
-	}
-	return c, nil
+	_ = "STUB: not implemented"
+	return *new(baseClient), nil
 }
 
 // Option is config option.
@@ -134,36 +99,26 @@ type Option interface {
 //
 // If none is specified, the global provider is used.
 func WithTracerProvider(provider trace.TracerProvider) Option {
-	return otelOptionFunc(func(cfg *otelConfig) {
-		if provider != nil {
-			cfg.TracerProvider = provider
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(Option)
 }
 
 // WithMeterProvider specifies a meter provider to use for creating a meter.
 //
 // If none is specified, the otel.GetMeterProvider() is used.
 func WithMeterProvider(provider metric.MeterProvider) Option {
-	return otelOptionFunc(func(cfg *otelConfig) {
-		if provider != nil {
-			cfg.MeterProvider = provider
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(Option)
 }
 
 // WithAttributes specifies default otel attributes.
 func WithAttributes(attributes ...attribute.KeyValue) Option {
-	return otelOptionFunc(func(cfg *otelConfig) {
-		cfg.Attributes = attributes
-	})
+	_ = "STUB: not implemented"
+	return *new(Option)
 }
 
 // WithClient specifies http client to use.
 func WithClient(client ht.Client) ClientOption {
-	return optionFunc[clientConfig](func(cfg *clientConfig) {
-		if client != nil {
-			cfg.Client = client
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(ClientOption)
 }

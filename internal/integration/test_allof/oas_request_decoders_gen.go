@@ -3,18 +3,7 @@
 package api
 
 import (
-	"bytes"
-	"io"
-	"mime"
 	"net/http"
-	"net/url"
-
-	"github.com/go-faster/errors"
-	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
 )
 
 func (s *Server) decodeNullableStringsRequest(r *http.Request) (
@@ -23,97 +12,13 @@ func (s *Server) decodeNullableStringsRequest(r *http.Request) (
 	close func() error,
 	rerr error,
 ) {
-	var closers []func() error
-	close = func() error {
-		var merr error
-		// Close in reverse order, to match defer behavior.
-		for i := len(closers) - 1; i >= 0; i-- {
-			c := closers[i]
-			merr = errors.Join(merr, c())
-		}
-		return merr
-	}
-	defer func() {
-		if rerr != nil {
-			rerr = errors.Join(rerr, close())
-		}
-	}()
-	ct, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-	if err != nil {
-		return req, rawBody, close, errors.Wrap(err, "parse media type")
-	}
-	switch {
-	case ct == "application/json":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-		buf, err := io.ReadAll(r.Body)
-		defer func() {
-			_ = r.Body.Close()
-		}()
-		if err != nil {
-			return req, rawBody, close, err
-		}
-
-		// Reset the body to allow for downstream reading.
-		r.Body = io.NopCloser(bytes.NewBuffer(buf))
-
-		if len(buf) == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-
-		rawBody = append(rawBody, buf...)
-		d := jx.DecodeBytes(buf)
-
-		var request NilString
-		if err := func() error {
-			if err := request.Decode(d); err != nil {
-				return err
-			}
-			if err := d.Skip(); err != io.EOF {
-				return errors.New("unexpected trailing data")
-			}
-			return nil
-		}(); err != nil {
-			err = &ogenerrors.DecodeBodyError{
-				ContentType: ct,
-				Body:        buf,
-				Err:         err,
-			}
-			return req, rawBody, close, err
-		}
-		if err := func() error {
-			if value, ok := request.Get(); ok {
-				if err := func() error {
-					if err := (validate.String{
-						MinLength:     0,
-						MinLengthSet:  false,
-						MaxLength:     0,
-						MaxLengthSet:  false,
-						Email:         false,
-						Hostname:      false,
-						Regex:         regexMap["^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"],
-						MinNumeric:    0,
-						MinNumericSet: false,
-						MaxNumeric:    0,
-						MaxNumericSet: false,
-					}).Validate(string(value)); err != nil {
-						return errors.Wrap(err, "string")
-					}
-					return nil
-				}(); err != nil {
-					return err
-				}
-			}
-			return nil
-		}(); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "validate")
-		}
-		return request, rawBody, close, nil
-	default:
-		return req, rawBody, close, validate.InvalidContentType(ct)
-	}
+	_ = "STUB: not implemented"
+	return *new(NilString), nil, nil, nil
 }
+
+// Close in reverse order, to match defer behavior.
+
+// Reset the body to allow for downstream reading.
 
 func (s *Server) decodeObjectsWithConflictingArrayPropertyRequest(r *http.Request) (
 	req *ObjectsWithConflictingArrayPropertyReq,
@@ -121,78 +26,13 @@ func (s *Server) decodeObjectsWithConflictingArrayPropertyRequest(r *http.Reques
 	close func() error,
 	rerr error,
 ) {
-	var closers []func() error
-	close = func() error {
-		var merr error
-		// Close in reverse order, to match defer behavior.
-		for i := len(closers) - 1; i >= 0; i-- {
-			c := closers[i]
-			merr = errors.Join(merr, c())
-		}
-		return merr
-	}
-	defer func() {
-		if rerr != nil {
-			rerr = errors.Join(rerr, close())
-		}
-	}()
-	ct, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-	if err != nil {
-		return req, rawBody, close, errors.Wrap(err, "parse media type")
-	}
-	switch {
-	case ct == "application/json":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-		buf, err := io.ReadAll(r.Body)
-		defer func() {
-			_ = r.Body.Close()
-		}()
-		if err != nil {
-			return req, rawBody, close, err
-		}
-
-		// Reset the body to allow for downstream reading.
-		r.Body = io.NopCloser(bytes.NewBuffer(buf))
-
-		if len(buf) == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-
-		rawBody = append(rawBody, buf...)
-		d := jx.DecodeBytes(buf)
-
-		var request ObjectsWithConflictingArrayPropertyReq
-		if err := func() error {
-			if err := request.Decode(d); err != nil {
-				return err
-			}
-			if err := d.Skip(); err != io.EOF {
-				return errors.New("unexpected trailing data")
-			}
-			return nil
-		}(); err != nil {
-			err = &ogenerrors.DecodeBodyError{
-				ContentType: ct,
-				Body:        buf,
-				Err:         err,
-			}
-			return req, rawBody, close, err
-		}
-		if err := func() error {
-			if err := request.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "validate")
-		}
-		return &request, rawBody, close, nil
-	default:
-		return req, rawBody, close, validate.InvalidContentType(ct)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil, nil, nil
 }
+
+// Close in reverse order, to match defer behavior.
+
+// Reset the body to allow for downstream reading.
 
 func (s *Server) decodeObjectsWithConflictingPropertiesRequest(r *http.Request) (
 	req *ObjectsWithConflictingPropertiesReq,
@@ -200,78 +40,13 @@ func (s *Server) decodeObjectsWithConflictingPropertiesRequest(r *http.Request) 
 	close func() error,
 	rerr error,
 ) {
-	var closers []func() error
-	close = func() error {
-		var merr error
-		// Close in reverse order, to match defer behavior.
-		for i := len(closers) - 1; i >= 0; i-- {
-			c := closers[i]
-			merr = errors.Join(merr, c())
-		}
-		return merr
-	}
-	defer func() {
-		if rerr != nil {
-			rerr = errors.Join(rerr, close())
-		}
-	}()
-	ct, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-	if err != nil {
-		return req, rawBody, close, errors.Wrap(err, "parse media type")
-	}
-	switch {
-	case ct == "application/json":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-		buf, err := io.ReadAll(r.Body)
-		defer func() {
-			_ = r.Body.Close()
-		}()
-		if err != nil {
-			return req, rawBody, close, err
-		}
-
-		// Reset the body to allow for downstream reading.
-		r.Body = io.NopCloser(bytes.NewBuffer(buf))
-
-		if len(buf) == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-
-		rawBody = append(rawBody, buf...)
-		d := jx.DecodeBytes(buf)
-
-		var request ObjectsWithConflictingPropertiesReq
-		if err := func() error {
-			if err := request.Decode(d); err != nil {
-				return err
-			}
-			if err := d.Skip(); err != io.EOF {
-				return errors.New("unexpected trailing data")
-			}
-			return nil
-		}(); err != nil {
-			err = &ogenerrors.DecodeBodyError{
-				ContentType: ct,
-				Body:        buf,
-				Err:         err,
-			}
-			return req, rawBody, close, err
-		}
-		if err := func() error {
-			if err := request.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "validate")
-		}
-		return &request, rawBody, close, nil
-	default:
-		return req, rawBody, close, validate.InvalidContentType(ct)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil, nil, nil
 }
+
+// Close in reverse order, to match defer behavior.
+
+// Reset the body to allow for downstream reading.
 
 func (s *Server) decodeReferencedAllOfNullableRequest(r *http.Request) (
 	req ReferencedAllOfNullableReq,
@@ -279,227 +54,20 @@ func (s *Server) decodeReferencedAllOfNullableRequest(r *http.Request) (
 	close func() error,
 	rerr error,
 ) {
-	var closers []func() error
-	close = func() error {
-		var merr error
-		// Close in reverse order, to match defer behavior.
-		for i := len(closers) - 1; i >= 0; i-- {
-			c := closers[i]
-			merr = errors.Join(merr, c())
-		}
-		return merr
-	}
-	defer func() {
-		if rerr != nil {
-			rerr = errors.Join(rerr, close())
-		}
-	}()
-	req = &ReferencedAllOfNullableReqEmptyBody{}
-	if _, ok := r.Header["Content-Type"]; !ok && r.ContentLength == 0 {
-		return req, rawBody, close, nil
-	}
-	ct, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-	if err != nil {
-		return req, rawBody, close, errors.Wrap(err, "parse media type")
-	}
-	switch {
-	case ct == "application/json":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, nil
-		}
-		buf, err := io.ReadAll(r.Body)
-		defer func() {
-			_ = r.Body.Close()
-		}()
-		if err != nil {
-			return req, rawBody, close, err
-		}
-
-		// Reset the body to allow for downstream reading.
-		r.Body = io.NopCloser(bytes.NewBuffer(buf))
-
-		if len(buf) == 0 {
-			return req, rawBody, close, nil
-		}
-
-		rawBody = append(rawBody, buf...)
-		d := jx.DecodeBytes(buf)
-
-		var request ReferencedAllOfNullable
-		if err := func() error {
-			if err := request.Decode(d); err != nil {
-				return err
-			}
-			if err := d.Skip(); err != io.EOF {
-				return errors.New("unexpected trailing data")
-			}
-			return nil
-		}(); err != nil {
-			err = &ogenerrors.DecodeBodyError{
-				ContentType: ct,
-				Body:        buf,
-				Err:         err,
-			}
-			return req, rawBody, close, err
-		}
-		if err := func() error {
-			if err := request.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "validate")
-		}
-		return &request, rawBody, close, nil
-	case ct == "multipart/form-data":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, nil
-		}
-		if err := r.ParseMultipartForm(s.cfg.MaxMultipartMemory); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "parse multipart form")
-		}
-		// Remove all temporary files created by ParseMultipartForm when the request is done.
-		//
-		// Notice that the closers are called in reverse order, to match defer behavior, so
-		// any opened file will be closed before RemoveAll call.
-		closers = append(closers, r.MultipartForm.RemoveAll)
-		// Form values may be unused.
-		form := url.Values(r.MultipartForm.Value)
-		_ = form
-
-		var request ReferencedAllOfNullableMultipart
-		q := uri.NewQueryDecoder(form)
-		{
-			cfg := uri.QueryParameterDecodingConfig{
-				Name:    "location",
-				Style:   uri.QueryStyleForm,
-				Explode: true,
-			}
-			if err := q.HasParam(cfg); err == nil {
-				if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-					if err := func(d *jx.Decoder) error {
-						request.Location.Reset()
-						if err := request.Location.Decode(d); err != nil {
-							return err
-						}
-						return nil
-					}(jx.DecodeStr(val)); err != nil {
-						return err
-					}
-					return nil
-				}); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "decode \"location\"")
-				}
-				if err := func() error {
-					if value, ok := request.Location.Get(); ok {
-						if err := func() error {
-							if err := value.Validate(); err != nil {
-								return err
-							}
-							return nil
-						}(); err != nil {
-							return err
-						}
-					}
-					return nil
-				}(); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "validate")
-				}
-			}
-		}
-		{
-			cfg := uri.QueryParameterDecodingConfig{
-				Name:    "allOfLocation",
-				Style:   uri.QueryStyleForm,
-				Explode: true,
-			}
-			if err := q.HasParam(cfg); err == nil {
-				if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-					if err := func(d *jx.Decoder) error {
-						request.AllOfLocation.Reset()
-						if err := request.AllOfLocation.Decode(d); err != nil {
-							return err
-						}
-						return nil
-					}(jx.DecodeStr(val)); err != nil {
-						return err
-					}
-					return nil
-				}); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "decode \"allOfLocation\"")
-				}
-				if err := func() error {
-					if value, ok := request.AllOfLocation.Get(); ok {
-						if err := func() error {
-							if err := value.Validate(); err != nil {
-								return err
-							}
-							return nil
-						}(); err != nil {
-							return err
-						}
-					}
-					return nil
-				}(); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "validate")
-				}
-			}
-		}
-		{
-			cfg := uri.QueryParameterDecodingConfig{
-				Name:    "nullableAllOfLocation",
-				Style:   uri.QueryStyleForm,
-				Explode: true,
-			}
-			if err := q.HasParam(cfg); err == nil {
-				if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-					if err := func(d *jx.Decoder) error {
-						request.NullableAllOfLocation.Reset()
-						if err := request.NullableAllOfLocation.Decode(d); err != nil {
-							return err
-						}
-						return nil
-					}(jx.DecodeStr(val)); err != nil {
-						return err
-					}
-					return nil
-				}); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "decode \"nullableAllOfLocation\"")
-				}
-				if err := func() error {
-					if value, ok := request.NullableAllOfLocation.Get(); ok {
-						if err := func() error {
-							if err := value.Validate(); err != nil {
-								return err
-							}
-							return nil
-						}(); err != nil {
-							return err
-						}
-					}
-					return nil
-				}(); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "validate")
-				}
-			}
-		}
-		return &request, rawBody, close, nil
-	default:
-		return req, rawBody, close, validate.InvalidContentType(ct)
-	}
+	_ = "STUB: not implemented"
+	return *new(ReferencedAllOfNullableReq), nil, nil, nil
 }
+
+// Close in reverse order, to match defer behavior.
+
+// Reset the body to allow for downstream reading.
+
+// Remove all temporary files created by ParseMultipartForm when the request is done.
+//
+// Notice that the closers are called in reverse order, to match defer behavior, so
+// any opened file will be closed before RemoveAll call.
+
+// Form values may be unused.
 
 func (s *Server) decodeReferencedAllofRequest(r *http.Request) (
 	req ReferencedAllofReq,
@@ -507,195 +75,20 @@ func (s *Server) decodeReferencedAllofRequest(r *http.Request) (
 	close func() error,
 	rerr error,
 ) {
-	var closers []func() error
-	close = func() error {
-		var merr error
-		// Close in reverse order, to match defer behavior.
-		for i := len(closers) - 1; i >= 0; i-- {
-			c := closers[i]
-			merr = errors.Join(merr, c())
-		}
-		return merr
-	}
-	defer func() {
-		if rerr != nil {
-			rerr = errors.Join(rerr, close())
-		}
-	}()
-	ct, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-	if err != nil {
-		return req, rawBody, close, errors.Wrap(err, "parse media type")
-	}
-	switch {
-	case ct == "application/json":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-		buf, err := io.ReadAll(r.Body)
-		defer func() {
-			_ = r.Body.Close()
-		}()
-		if err != nil {
-			return req, rawBody, close, err
-		}
-
-		// Reset the body to allow for downstream reading.
-		r.Body = io.NopCloser(bytes.NewBuffer(buf))
-
-		if len(buf) == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-
-		rawBody = append(rawBody, buf...)
-		d := jx.DecodeBytes(buf)
-
-		var request Robot
-		if err := func() error {
-			if err := request.Decode(d); err != nil {
-				return err
-			}
-			if err := d.Skip(); err != io.EOF {
-				return errors.New("unexpected trailing data")
-			}
-			return nil
-		}(); err != nil {
-			err = &ogenerrors.DecodeBodyError{
-				ContentType: ct,
-				Body:        buf,
-				Err:         err,
-			}
-			return req, rawBody, close, err
-		}
-		if err := func() error {
-			if err := request.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "validate")
-		}
-		return &request, rawBody, close, nil
-	case ct == "multipart/form-data":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-		if err := r.ParseMultipartForm(s.cfg.MaxMultipartMemory); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "parse multipart form")
-		}
-		// Remove all temporary files created by ParseMultipartForm when the request is done.
-		//
-		// Notice that the closers are called in reverse order, to match defer behavior, so
-		// any opened file will be closed before RemoveAll call.
-		closers = append(closers, r.MultipartForm.RemoveAll)
-		// Form values may be unused.
-		form := url.Values(r.MultipartForm.Value)
-		_ = form
-
-		var request RobotMultipart
-		q := uri.NewQueryDecoder(form)
-		{
-			cfg := uri.QueryParameterDecodingConfig{
-				Name:    "state",
-				Style:   uri.QueryStyleForm,
-				Explode: true,
-			}
-			if err := q.HasParam(cfg); err == nil {
-				if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					request.State = RobotMultipartState(c)
-					return nil
-				}); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "decode \"state\"")
-				}
-				if err := func() error {
-					if err := request.State.Validate(); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "validate")
-				}
-			} else {
-				return req, rawBody, close, errors.Wrap(err, "query")
-			}
-		}
-		{
-			cfg := uri.QueryParameterDecodingConfig{
-				Name:    "id",
-				Style:   uri.QueryStyleForm,
-				Explode: true,
-			}
-			if err := q.HasParam(cfg); err == nil {
-				if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToUUID(val)
-					if err != nil {
-						return err
-					}
-
-					request.ID = c
-					return nil
-				}); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "decode \"id\"")
-				}
-			} else {
-				return req, rawBody, close, errors.Wrap(err, "query")
-			}
-		}
-		{
-			cfg := uri.QueryParameterDecodingConfig{
-				Name:    "location",
-				Style:   uri.QueryStyleForm,
-				Explode: true,
-			}
-			if err := q.HasParam(cfg); err == nil {
-				if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-					if err := func(d *jx.Decoder) error {
-						if err := request.Location.Decode(d); err != nil {
-							return err
-						}
-						return nil
-					}(jx.DecodeStr(val)); err != nil {
-						return err
-					}
-					return nil
-				}); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "decode \"location\"")
-				}
-				if err := func() error {
-					if err := request.Location.Validate(); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "validate")
-				}
-			} else {
-				return req, rawBody, close, errors.Wrap(err, "query")
-			}
-		}
-		return &request, rawBody, close, nil
-	default:
-		return req, rawBody, close, validate.InvalidContentType(ct)
-	}
+	_ = "STUB: not implemented"
+	return *new(ReferencedAllofReq), nil, nil, nil
 }
+
+// Close in reverse order, to match defer behavior.
+
+// Reset the body to allow for downstream reading.
+
+// Remove all temporary files created by ParseMultipartForm when the request is done.
+//
+// Notice that the closers are called in reverse order, to match defer behavior, so
+// any opened file will be closed before RemoveAll call.
+
+// Form values may be unused.
 
 func (s *Server) decodeReferencedAllofOptionalRequest(r *http.Request) (
 	req ReferencedAllofOptionalReq,
@@ -703,199 +96,20 @@ func (s *Server) decodeReferencedAllofOptionalRequest(r *http.Request) (
 	close func() error,
 	rerr error,
 ) {
-	var closers []func() error
-	close = func() error {
-		var merr error
-		// Close in reverse order, to match defer behavior.
-		for i := len(closers) - 1; i >= 0; i-- {
-			c := closers[i]
-			merr = errors.Join(merr, c())
-		}
-		return merr
-	}
-	defer func() {
-		if rerr != nil {
-			rerr = errors.Join(rerr, close())
-		}
-	}()
-	req = &ReferencedAllofOptionalReqEmptyBody{}
-	if _, ok := r.Header["Content-Type"]; !ok && r.ContentLength == 0 {
-		return req, rawBody, close, nil
-	}
-	ct, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-	if err != nil {
-		return req, rawBody, close, errors.Wrap(err, "parse media type")
-	}
-	switch {
-	case ct == "application/json":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, nil
-		}
-		buf, err := io.ReadAll(r.Body)
-		defer func() {
-			_ = r.Body.Close()
-		}()
-		if err != nil {
-			return req, rawBody, close, err
-		}
-
-		// Reset the body to allow for downstream reading.
-		r.Body = io.NopCloser(bytes.NewBuffer(buf))
-
-		if len(buf) == 0 {
-			return req, rawBody, close, nil
-		}
-
-		rawBody = append(rawBody, buf...)
-		d := jx.DecodeBytes(buf)
-
-		var request Robot
-		if err := func() error {
-			if err := request.Decode(d); err != nil {
-				return err
-			}
-			if err := d.Skip(); err != io.EOF {
-				return errors.New("unexpected trailing data")
-			}
-			return nil
-		}(); err != nil {
-			err = &ogenerrors.DecodeBodyError{
-				ContentType: ct,
-				Body:        buf,
-				Err:         err,
-			}
-			return req, rawBody, close, err
-		}
-		if err := func() error {
-			if err := request.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "validate")
-		}
-		return &request, rawBody, close, nil
-	case ct == "multipart/form-data":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, nil
-		}
-		if err := r.ParseMultipartForm(s.cfg.MaxMultipartMemory); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "parse multipart form")
-		}
-		// Remove all temporary files created by ParseMultipartForm when the request is done.
-		//
-		// Notice that the closers are called in reverse order, to match defer behavior, so
-		// any opened file will be closed before RemoveAll call.
-		closers = append(closers, r.MultipartForm.RemoveAll)
-		// Form values may be unused.
-		form := url.Values(r.MultipartForm.Value)
-		_ = form
-
-		var request RobotMultipart
-		q := uri.NewQueryDecoder(form)
-		{
-			cfg := uri.QueryParameterDecodingConfig{
-				Name:    "state",
-				Style:   uri.QueryStyleForm,
-				Explode: true,
-			}
-			if err := q.HasParam(cfg); err == nil {
-				if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					request.State = RobotMultipartState(c)
-					return nil
-				}); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "decode \"state\"")
-				}
-				if err := func() error {
-					if err := request.State.Validate(); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "validate")
-				}
-			} else {
-				return req, rawBody, close, errors.Wrap(err, "query")
-			}
-		}
-		{
-			cfg := uri.QueryParameterDecodingConfig{
-				Name:    "id",
-				Style:   uri.QueryStyleForm,
-				Explode: true,
-			}
-			if err := q.HasParam(cfg); err == nil {
-				if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToUUID(val)
-					if err != nil {
-						return err
-					}
-
-					request.ID = c
-					return nil
-				}); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "decode \"id\"")
-				}
-			} else {
-				return req, rawBody, close, errors.Wrap(err, "query")
-			}
-		}
-		{
-			cfg := uri.QueryParameterDecodingConfig{
-				Name:    "location",
-				Style:   uri.QueryStyleForm,
-				Explode: true,
-			}
-			if err := q.HasParam(cfg); err == nil {
-				if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-					if err := func(d *jx.Decoder) error {
-						if err := request.Location.Decode(d); err != nil {
-							return err
-						}
-						return nil
-					}(jx.DecodeStr(val)); err != nil {
-						return err
-					}
-					return nil
-				}); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "decode \"location\"")
-				}
-				if err := func() error {
-					if err := request.Location.Validate(); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return req, rawBody, close, errors.Wrap(err, "validate")
-				}
-			} else {
-				return req, rawBody, close, errors.Wrap(err, "query")
-			}
-		}
-		return &request, rawBody, close, nil
-	default:
-		return req, rawBody, close, validate.InvalidContentType(ct)
-	}
+	_ = "STUB: not implemented"
+	return *new(ReferencedAllofOptionalReq), nil, nil, nil
 }
+
+// Close in reverse order, to match defer behavior.
+
+// Reset the body to allow for downstream reading.
+
+// Remove all temporary files created by ParseMultipartForm when the request is done.
+//
+// Notice that the closers are called in reverse order, to match defer behavior, so
+// any opened file will be closed before RemoveAll call.
+
+// Form values may be unused.
 
 func (s *Server) decodeSimpleIntegerRequest(r *http.Request) (
 	req int,
@@ -903,90 +117,13 @@ func (s *Server) decodeSimpleIntegerRequest(r *http.Request) (
 	close func() error,
 	rerr error,
 ) {
-	var closers []func() error
-	close = func() error {
-		var merr error
-		// Close in reverse order, to match defer behavior.
-		for i := len(closers) - 1; i >= 0; i-- {
-			c := closers[i]
-			merr = errors.Join(merr, c())
-		}
-		return merr
-	}
-	defer func() {
-		if rerr != nil {
-			rerr = errors.Join(rerr, close())
-		}
-	}()
-	ct, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-	if err != nil {
-		return req, rawBody, close, errors.Wrap(err, "parse media type")
-	}
-	switch {
-	case ct == "application/json":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-		buf, err := io.ReadAll(r.Body)
-		defer func() {
-			_ = r.Body.Close()
-		}()
-		if err != nil {
-			return req, rawBody, close, err
-		}
-
-		// Reset the body to allow for downstream reading.
-		r.Body = io.NopCloser(bytes.NewBuffer(buf))
-
-		if len(buf) == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-
-		rawBody = append(rawBody, buf...)
-		d := jx.DecodeBytes(buf)
-
-		var request int
-		if err := func() error {
-			v, err := d.Int()
-			request = int(v)
-			if err != nil {
-				return err
-			}
-			if err := d.Skip(); err != io.EOF {
-				return errors.New("unexpected trailing data")
-			}
-			return nil
-		}(); err != nil {
-			err = &ogenerrors.DecodeBodyError{
-				ContentType: ct,
-				Body:        buf,
-				Err:         err,
-			}
-			return req, rawBody, close, err
-		}
-		if err := func() error {
-			if err := (validate.Int{
-				MinSet:        true,
-				Min:           -5,
-				MaxSet:        true,
-				Max:           5,
-				MinExclusive:  false,
-				MaxExclusive:  false,
-				MultipleOfSet: false,
-				MultipleOf:    0,
-				Pattern:       nil,
-			}).Validate(int64(request)); err != nil {
-				return errors.Wrap(err, "int")
-			}
-			return nil
-		}(); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "validate")
-		}
-		return request, rawBody, close, nil
-	default:
-		return req, rawBody, close, validate.InvalidContentType(ct)
-	}
+	_ = "STUB: not implemented"
+	return 0, nil, nil, nil
 }
+
+// Close in reverse order, to match defer behavior.
+
+// Reset the body to allow for downstream reading.
 
 func (s *Server) decodeSimpleObjectsRequest(r *http.Request) (
 	req *SimpleObjectsReq,
@@ -994,70 +131,13 @@ func (s *Server) decodeSimpleObjectsRequest(r *http.Request) (
 	close func() error,
 	rerr error,
 ) {
-	var closers []func() error
-	close = func() error {
-		var merr error
-		// Close in reverse order, to match defer behavior.
-		for i := len(closers) - 1; i >= 0; i-- {
-			c := closers[i]
-			merr = errors.Join(merr, c())
-		}
-		return merr
-	}
-	defer func() {
-		if rerr != nil {
-			rerr = errors.Join(rerr, close())
-		}
-	}()
-	ct, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-	if err != nil {
-		return req, rawBody, close, errors.Wrap(err, "parse media type")
-	}
-	switch {
-	case ct == "application/json":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-		buf, err := io.ReadAll(r.Body)
-		defer func() {
-			_ = r.Body.Close()
-		}()
-		if err != nil {
-			return req, rawBody, close, err
-		}
-
-		// Reset the body to allow for downstream reading.
-		r.Body = io.NopCloser(bytes.NewBuffer(buf))
-
-		if len(buf) == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-
-		rawBody = append(rawBody, buf...)
-		d := jx.DecodeBytes(buf)
-
-		var request SimpleObjectsReq
-		if err := func() error {
-			if err := request.Decode(d); err != nil {
-				return err
-			}
-			if err := d.Skip(); err != io.EOF {
-				return errors.New("unexpected trailing data")
-			}
-			return nil
-		}(); err != nil {
-			err = &ogenerrors.DecodeBodyError{
-				ContentType: ct,
-				Body:        buf,
-				Err:         err,
-			}
-			return req, rawBody, close, err
-		}
-		return &request, rawBody, close, nil
-	default:
-		return req, rawBody, close, validate.InvalidContentType(ct)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil, nil, nil
 }
+
+// Close in reverse order, to match defer behavior.
+
+// Reset the body to allow for downstream reading.
 
 func (s *Server) decodeStringsNotypeRequest(r *http.Request) (
 	req NilString,
@@ -1065,94 +145,10 @@ func (s *Server) decodeStringsNotypeRequest(r *http.Request) (
 	close func() error,
 	rerr error,
 ) {
-	var closers []func() error
-	close = func() error {
-		var merr error
-		// Close in reverse order, to match defer behavior.
-		for i := len(closers) - 1; i >= 0; i-- {
-			c := closers[i]
-			merr = errors.Join(merr, c())
-		}
-		return merr
-	}
-	defer func() {
-		if rerr != nil {
-			rerr = errors.Join(rerr, close())
-		}
-	}()
-	ct, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-	if err != nil {
-		return req, rawBody, close, errors.Wrap(err, "parse media type")
-	}
-	switch {
-	case ct == "application/json":
-		if r.ContentLength == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-		buf, err := io.ReadAll(r.Body)
-		defer func() {
-			_ = r.Body.Close()
-		}()
-		if err != nil {
-			return req, rawBody, close, err
-		}
-
-		// Reset the body to allow for downstream reading.
-		r.Body = io.NopCloser(bytes.NewBuffer(buf))
-
-		if len(buf) == 0 {
-			return req, rawBody, close, validate.ErrBodyRequired
-		}
-
-		rawBody = append(rawBody, buf...)
-		d := jx.DecodeBytes(buf)
-
-		var request NilString
-		if err := func() error {
-			if err := request.Decode(d); err != nil {
-				return err
-			}
-			if err := d.Skip(); err != io.EOF {
-				return errors.New("unexpected trailing data")
-			}
-			return nil
-		}(); err != nil {
-			err = &ogenerrors.DecodeBodyError{
-				ContentType: ct,
-				Body:        buf,
-				Err:         err,
-			}
-			return req, rawBody, close, err
-		}
-		if err := func() error {
-			if value, ok := request.Get(); ok {
-				if err := func() error {
-					if err := (validate.String{
-						MinLength:     0,
-						MinLengthSet:  false,
-						MaxLength:     15,
-						MaxLengthSet:  true,
-						Email:         false,
-						Hostname:      false,
-						Regex:         nil,
-						MinNumeric:    0,
-						MinNumericSet: false,
-						MaxNumeric:    0,
-						MaxNumericSet: false,
-					}).Validate(string(value)); err != nil {
-						return errors.Wrap(err, "string")
-					}
-					return nil
-				}(); err != nil {
-					return err
-				}
-			}
-			return nil
-		}(); err != nil {
-			return req, rawBody, close, errors.Wrap(err, "validate")
-		}
-		return request, rawBody, close, nil
-	default:
-		return req, rawBody, close, validate.InvalidContentType(ct)
-	}
+	_ = "STUB: not implemented"
+	return *new(NilString), nil, nil, nil
 }
+
+// Close in reverse order, to match defer behavior.
+
+// Reset the body to allow for downstream reading.

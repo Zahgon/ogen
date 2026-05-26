@@ -12,36 +12,48 @@ type ClientConfig struct {
 
 // GetHost returns the value of Host.
 func (s *ClientConfig) GetHost() string {
-	return s.Host
+	_ = "STUB: not implemented"
+
+	// GetPort returns the value of Port.
+	return ""
 }
 
-// GetPort returns the value of Port.
 func (s *ClientConfig) GetPort() OptString {
-	return s.Port
+	_ = "STUB: not implemented"
+
+	// GetTimeout returns the value of Timeout.
+	return *new(OptString)
 }
 
-// GetTimeout returns the value of Timeout.
 func (s *ClientConfig) GetTimeout() OptInt {
-	return s.Timeout
+	_ = "STUB: not implemented"
+
+	// SetHost sets the value of Host.
+	return *new(OptInt)
 }
 
-// SetHost sets the value of Host.
 func (s *ClientConfig) SetHost(val string) {
-	s.Host = val
+	_ = "STUB: not implemented"
+
+	// SetPort sets the value of Port.
+	return
 }
 
-// SetPort sets the value of Port.
 func (s *ClientConfig) SetPort(val OptString) {
-	s.Port = val
+	_ = "STUB: not implemented"
+
+	// SetTimeout sets the value of Timeout.
+	return
 }
 
-// SetTimeout sets the value of Timeout.
 func (s *ClientConfig) SetTimeout(val OptInt) {
-	s.Timeout = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Config
+	// Config represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/Config
-// Config represents sum type.
 type Config struct {
 	Type         ConfigType // switch on this field
 	ServerConfig ServerConfig
@@ -58,60 +70,37 @@ const (
 )
 
 // IsServerConfig reports whether Config is ServerConfig.
-func (s Config) IsServerConfig() bool { return s.Type == ServerConfigConfig }
+func (s Config) IsServerConfig() bool { _ = "STUB: not implemented"; return false }
 
 // IsClientConfig reports whether Config is ClientConfig.
-func (s Config) IsClientConfig() bool { return s.Type == ClientConfigConfig }
+func (s Config) IsClientConfig() bool { _ = "STUB: not implemented"; return false }
 
 // SetServerConfig sets Config to ServerConfig.
-func (s *Config) SetServerConfig(v ServerConfig) {
-	s.Type = ServerConfigConfig
-	s.ServerConfig = v
-}
+func (s *Config) SetServerConfig(v ServerConfig) { _ = "STUB: not implemented"; return }
 
 // GetServerConfig returns ServerConfig and true boolean if Config is ServerConfig.
 func (s Config) GetServerConfig() (v ServerConfig, ok bool) {
-	if !s.IsServerConfig() {
-		return v, false
-	}
-	return s.ServerConfig, true
+	_ = "STUB: not implemented"
+	return *new(ServerConfig), false
 }
 
 // NewServerConfigConfig returns new Config from ServerConfig.
-func NewServerConfigConfig(v ServerConfig) Config {
-	var s Config
-	s.SetServerConfig(v)
-	return s
-}
+func NewServerConfigConfig(v ServerConfig) Config { _ = "STUB: not implemented"; return *new(Config) }
 
 // SetClientConfig sets Config to ClientConfig.
-func (s *Config) SetClientConfig(v ClientConfig) {
-	s.Type = ClientConfigConfig
-	s.ClientConfig = v
-}
+func (s *Config) SetClientConfig(v ClientConfig) { _ = "STUB: not implemented"; return }
 
 // GetClientConfig returns ClientConfig and true boolean if Config is ClientConfig.
 func (s Config) GetClientConfig() (v ClientConfig, ok bool) {
-	if !s.IsClientConfig() {
-		return v, false
-	}
-	return s.ClientConfig, true
+	_ = "STUB: not implemented"
+	return *new(ClientConfig), false
 }
 
 // NewClientConfigConfig returns new Config from ClientConfig.
-func NewClientConfigConfig(v ClientConfig) Config {
-	var s Config
-	s.SetClientConfig(v)
-	return s
-}
+func NewClientConfigConfig(v ClientConfig) Config { _ = "STUB: not implemented"; return *new(Config) }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -120,44 +109,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -166,36 +137,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/ServerConfig
 type ServerConfig struct {
@@ -207,30 +165,38 @@ type ServerConfig struct {
 
 // GetHost returns the value of Host.
 func (s *ServerConfig) GetHost() string {
-	return s.Host
+	_ = "STUB: not implemented"
+
+	// GetPort returns the value of Port.
+	return ""
 }
 
-// GetPort returns the value of Port.
 func (s *ServerConfig) GetPort() OptInt {
-	return s.Port
+	_ = "STUB: not implemented"
+
+	// GetTimeout returns the value of Timeout.
+	return *new(OptInt)
 }
 
-// GetTimeout returns the value of Timeout.
 func (s *ServerConfig) GetTimeout() OptInt {
-	return s.Timeout
+	_ = "STUB: not implemented"
+
+	// SetHost sets the value of Host.
+	return *new(OptInt)
 }
 
-// SetHost sets the value of Host.
 func (s *ServerConfig) SetHost(val string) {
-	s.Host = val
+	_ = "STUB: not implemented"
+
+	// SetPort sets the value of Port.
+	return
 }
 
-// SetPort sets the value of Port.
 func (s *ServerConfig) SetPort(val OptInt) {
-	s.Port = val
+	_ = "STUB: not implemented"
+
+	// SetTimeout sets the value of Timeout.
+	return
 }
 
-// SetTimeout sets the value of Timeout.
-func (s *ServerConfig) SetTimeout(val OptInt) {
-	s.Timeout = val
-}
+func (s *ServerConfig) SetTimeout(val OptInt) { _ = "STUB: not implemented"; return }

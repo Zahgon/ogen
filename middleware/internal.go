@@ -11,24 +11,6 @@ func HookMiddleware[RequestType, ParamsType, ResponseType any](
 	unpack func(Parameters) ParamsType,
 	cb func(context.Context, RequestType, ParamsType) (ResponseType, error),
 ) (r ResponseType, err error) {
-	next := func(req Request) (Response, error) {
-		var request RequestType
-		if body := req.Body; body != nil {
-			request = body.(RequestType)
-		}
-		var params ParamsType
-		if unpack != nil {
-			params = unpack(req.Params)
-		}
-		response, err := cb(req.Context, request, params)
-		if err != nil {
-			return Response{}, err
-		}
-		return Response{Type: response}, nil
-	}
-	resp, err := m(req, next)
-	if err != nil {
-		return r, err
-	}
-	return resp.Type.(ResponseType), nil
+	_ = "STUB: not implemented"
+	return *new(ResponseType), nil
 }

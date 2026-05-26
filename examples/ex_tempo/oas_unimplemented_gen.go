@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -20,16 +18,19 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /api/status/buildinfo
 func (UnimplementedHandler) BuildInfo(ctx context.Context) (r *PrometheusVersion, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// Echo implements echo operation.
+	//
+	// Echo request for testing, issued by Grafana.
+	//
+	// GET /api/echo
 }
 
-// Echo implements echo operation.
-//
-// Echo request for testing, issued by Grafana.
-//
-// GET /api/echo
 func (UnimplementedHandler) Echo(ctx context.Context) (r EchoOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(EchoOK), nil
 }
 
 // Search implements search operation.
@@ -38,59 +39,70 @@ func (UnimplementedHandler) Echo(ctx context.Context) (r EchoOK, _ error) {
 //
 // GET /api/search
 func (UnimplementedHandler) Search(ctx context.Context, params SearchParams) (r *Traces, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SearchTagValues implements searchTagValues operation.
+	//
+	// This endpoint retrieves all discovered values for the given tag, which can be used in search.
+	//
+	// GET /api/search/tag/{tag_name}/values
 }
 
-// SearchTagValues implements searchTagValues operation.
-//
-// This endpoint retrieves all discovered values for the given tag, which can be used in search.
-//
-// GET /api/search/tag/{tag_name}/values
 func (UnimplementedHandler) SearchTagValues(ctx context.Context, params SearchTagValuesParams) (r *TagValues, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SearchTagValuesV2 implements searchTagValuesV2 operation.
+	//
+	// This endpoint retrieves all discovered values and their data types for the given TraceQL
+	// identifier.
+	//
+	// GET /api/v2/search/tag/{attribute_selector}/values
 }
 
-// SearchTagValuesV2 implements searchTagValuesV2 operation.
-//
-// This endpoint retrieves all discovered values and their data types for the given TraceQL
-// identifier.
-//
-// GET /api/v2/search/tag/{attribute_selector}/values
 func (UnimplementedHandler) SearchTagValuesV2(ctx context.Context, params SearchTagValuesV2Params) (r *TagValuesV2, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SearchTags implements searchTags operation.
+	//
+	// This endpoint retrieves all discovered tag names that can be used in search.
+	//
+	// GET /api/search/tags
 }
 
-// SearchTags implements searchTags operation.
-//
-// This endpoint retrieves all discovered tag names that can be used in search.
-//
-// GET /api/search/tags
 func (UnimplementedHandler) SearchTags(ctx context.Context, params SearchTagsParams) (r *TagNames, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SearchTagsV2 implements searchTagsV2 operation.
+	//
+	// This endpoint retrieves all discovered tag names that can be used in search.
+	//
+	// GET /api/v2/search/tags
 }
 
-// SearchTagsV2 implements searchTagsV2 operation.
-//
-// This endpoint retrieves all discovered tag names that can be used in search.
-//
-// GET /api/v2/search/tags
 func (UnimplementedHandler) SearchTagsV2(ctx context.Context, params SearchTagsV2Params) (r *TagNamesV2, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TraceByID implements traceByID operation.
+	//
+	// Querying traces by id.
+	//
+	// GET /api/traces/{traceID}
 }
 
-// TraceByID implements traceByID operation.
-//
-// Querying traces by id.
-//
-// GET /api/traces/{traceID}
 func (UnimplementedHandler) TraceByID(ctx context.Context, params TraceByIDParams) (r TraceByIDRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TraceByIDRes), nil
 }
 
 // NewError creates *ErrorStatusCode from error returned by handler.
 //
 // Used for common default response.
 func (UnimplementedHandler) NewError(ctx context.Context, err error) (r *ErrorStatusCode) {
-	r = new(ErrorStatusCode)
-	return r
+	_ = "STUB: not implemented"
+	return nil
 }

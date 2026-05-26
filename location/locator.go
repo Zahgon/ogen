@@ -21,58 +21,33 @@ type Locator struct {
 }
 
 // Pointer makes a Pointer from the Locator and given File.
-func (l Locator) Pointer(file File) Pointer {
-	return Pointer{
-		Source:  file,
-		Locator: l,
-	}
-}
+func (l Locator) Pointer(file File) Pointer { _ = "STUB: not implemented"; return *new(Pointer) }
 
 // SetPosition sets the position of the value.
-func (l *Locator) SetPosition(loc Position) {
-	l.position = loc
-	l.set = true
-}
+func (l *Locator) SetPosition(loc Position) { _ = "STUB: not implemented"; return }
 
 // Position returns the position of the value if it is set.
 func (l Locator) Position() (Position, bool) {
-	return l.position, l.set
+	_ = "STUB: not implemented"
+	return *
+
+	// Key tries to find the child node using given key and returns its position.
+	//
+	// See Key method of Position.
+	new(Position), false
 }
 
-// Key tries to find the child node using given key and returns its position.
-//
-// See Key method of Position.
-func (l Locator) Key(key string) (loc Locator) {
-	if l.set {
-		loc.SetPosition(l.position.Key(key))
-	}
-	return
-}
+func (l Locator) Key(key string) (loc Locator) { _ = "STUB: not implemented"; return *new(Locator) }
 
 // Field tries to find the child node using given key and returns its position.
 //
 // See Field method of Position.
-func (l Locator) Field(key string) (loc Locator) {
-	if l.set {
-		loc.SetPosition(l.position.Field(key))
-	}
-	return
-}
+func (l Locator) Field(key string) (loc Locator) { _ = "STUB: not implemented"; return *new(Locator) }
 
 // Index tries to find the child node using given index and returns its position.
 //
 // See Index method of Position.
-func (l Locator) Index(idx int) (loc Locator) {
-	if l.set {
-		loc.SetPosition(l.position.Index(idx))
-	}
-	return
-}
+func (l Locator) Index(idx int) (loc Locator) { _ = "STUB: not implemented"; return *new(Locator) }
 
 // UnmarshalYAML implements yaml.Unmarshaler.
-func (l *Locator) UnmarshalYAML(n *yaml.Node) error {
-	var loc Position
-	loc.FromNode(n)
-	l.SetPosition(loc)
-	return nil
-}
+func (l *Locator) UnmarshalYAML(n *yaml.Node) error { _ = "STUB: not implemented"; return nil }

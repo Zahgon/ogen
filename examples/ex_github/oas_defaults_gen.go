@@ -2,723 +2,155 @@
 
 package api
 
-import (
-	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/json"
-)
-
 // setDefaults set default value of fields.
 func (s *ActionsCreateSelfHostedRunnerGroupForOrgReq) setDefaults() {
-	{
-		val := ActionsCreateSelfHostedRunnerGroupForOrgReqVisibility("all")
-		s.Visibility.SetTo(val)
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // setDefaults set default value of fields.
-func (s *ActivitySetThreadSubscriptionReq) setDefaults() {
-	{
-		val := bool(false)
-		s.Ignored.SetTo(val)
-	}
-}
+func (s *ActivitySetThreadSubscriptionReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ChecksCreateReq) setDefaults() {
-	{
-		val := ChecksCreateReqStatus("queued")
-		s.Status.SetTo(val)
-	}
-}
+func (s *ChecksCreateReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
 func (s *ChecksSetSuitesPreferencesReqAutoTriggerChecksItem) setDefaults() {
-	{
-		val := bool(true)
-		s.Setting = val
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // setDefaults set default value of fields.
-func (s *DeploymentStatus) setDefaults() {
-	{
-		val := string("")
-		s.Description = val
-	}
-	{
-		val := string("")
-		s.Environment.SetTo(val)
-	}
-	{
-		val, _ := json.DecodeURI(jx.DecodeStr("\"\""))
-		s.TargetURL = val
-	}
-	{
-		val, _ := json.DecodeURI(jx.DecodeStr("\"\""))
-		s.EnvironmentURL.SetTo(val)
-	}
-	{
-		val, _ := json.DecodeURI(jx.DecodeStr("\"\""))
-		s.LogURL.SetTo(val)
-	}
-}
+func (s *DeploymentStatus) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
 func (s *EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseReq) setDefaults() {
-	{
-		val := EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseReqVisibility("all")
-		s.Visibility.SetTo(val)
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // setDefaults set default value of fields.
-func (s *FullRepository) setDefaults() {
-	{
-		val := bool(true)
-		s.AnonymousAccessEnabled.SetTo(val)
-	}
-}
+func (s *FullRepository) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *GitCreateBlobReq) setDefaults() {
-	{
-		val := string("utf-8")
-		s.Encoding.SetTo(val)
-	}
-}
+func (s *GitCreateBlobReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *GitUpdateRefReq) setDefaults() {
-	{
-		val := bool(false)
-		s.Force.SetTo(val)
-	}
-}
+func (s *GitUpdateRefReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *IssuesCreateMilestoneReq) setDefaults() {
-	{
-		val := IssuesCreateMilestoneReqState("open")
-		s.State.SetTo(val)
-	}
-}
+func (s *IssuesCreateMilestoneReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *IssuesUpdateMilestoneReq) setDefaults() {
-	{
-		val := IssuesUpdateMilestoneReqState("open")
-		s.State.SetTo(val)
-	}
-}
+func (s *IssuesUpdateMilestoneReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *MarkdownRenderReq) setDefaults() {
-	{
-		val := MarkdownRenderReqMode("markdown")
-		s.Mode.SetTo(val)
-	}
-}
+func (s *MarkdownRenderReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *MigrationsStartForOrgReq) setDefaults() {
-	{
-		val := bool(false)
-		s.LockRepositories.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.ExcludeAttachments.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.ExcludeReleases.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.ExcludeOwnerProjects.SetTo(val)
-	}
-}
+func (s *MigrationsStartForOrgReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *Milestone) setDefaults() {
-	{
-		val := MilestoneState("open")
-		s.State = val
-	}
-}
+func (s *Milestone) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *NullableMilestone) setDefaults() {
-	{
-		val := NullableMilestoneState("open")
-		s.State = val
-	}
-}
+func (s *NullableMilestone) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *NullableRepository) setDefaults() {
-	{
-		val := bool(false)
-		s.Private = val
-	}
-	{
-		val := bool(false)
-		s.IsTemplate.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasIssues = val
-	}
-	{
-		val := bool(true)
-		s.HasProjects = val
-	}
-	{
-		val := bool(true)
-		s.HasWiki = val
-	}
-	{
-		val := bool(true)
-		s.HasDownloads = val
-	}
-	{
-		val := bool(false)
-		s.Archived = val
-	}
-	{
-		val := string("public")
-		s.Visibility.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowRebaseMerge.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowSquashMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.AllowAutoMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.DeleteBranchOnMerge.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowMergeCommit.SetTo(val)
-	}
-}
+func (s *NullableRepository) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *OrgsCreateInvitationReq) setDefaults() {
-	{
-		val := OrgsCreateInvitationReqRole("direct_member")
-		s.Role.SetTo(val)
-	}
-}
+func (s *OrgsCreateInvitationReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *OrgsCreateWebhookReq) setDefaults() {
-	{
-		val := bool(true)
-		s.Active.SetTo(val)
-	}
-}
+func (s *OrgsCreateWebhookReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *OrgsSetMembershipForUserReq) setDefaults() {
-	{
-		val := OrgsSetMembershipForUserReqRole("member")
-		s.Role.SetTo(val)
-	}
-}
+func (s *OrgsSetMembershipForUserReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *OrgsUpdateWebhookReq) setDefaults() {
-	{
-		val := bool(true)
-		s.Active.SetTo(val)
-	}
-}
+func (s *OrgsUpdateWebhookReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *Page) setDefaults() {
-	{
-		val := bool(false)
-		s.Custom404 = val
-	}
-}
+func (s *Page) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ProjectsAddCollaboratorReq) setDefaults() {
-	{
-		val := ProjectsAddCollaboratorReqPermission("write")
-		s.Permission.SetTo(val)
-	}
-}
+func (s *ProjectsAddCollaboratorReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PullRequestReviewComment) setDefaults() {
-	{
-		val := PullRequestReviewCommentStartSide("RIGHT")
-		s.StartSide.SetTo(val)
-	}
-	{
-		val := PullRequestReviewCommentSide("RIGHT")
-		s.Side.SetTo(val)
-	}
-}
+func (s *PullRequestReviewComment) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposAddCollaboratorReq) setDefaults() {
-	{
-		val := ReposAddCollaboratorReqPermission("push")
-		s.Permission.SetTo(val)
-	}
-}
+func (s *ReposAddCollaboratorReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposCreateCommitStatusReq) setDefaults() {
-	{
-		val := string("default")
-		s.Context.SetTo(val)
-	}
-}
+func (s *ReposCreateCommitStatusReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposCreateDeploymentReq) setDefaults() {
-	{
-		val := string("deploy")
-		s.Task.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AutoMerge.SetTo(val)
-	}
-	{
-		val := string("production")
-		s.Environment.SetTo(val)
-	}
-	{
-		val := string("")
-		s.Description.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.TransientEnvironment.SetTo(val)
-	}
-}
+func (s *ReposCreateDeploymentReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposCreateDeploymentStatusReq) setDefaults() {
-	{
-		val := string("")
-		s.TargetURL.SetTo(val)
-	}
-	{
-		val := string("")
-		s.LogURL.SetTo(val)
-	}
-	{
-		val := string("")
-		s.Description.SetTo(val)
-	}
-	{
-		val := string("")
-		s.EnvironmentURL.SetTo(val)
-	}
-}
+func (s *ReposCreateDeploymentStatusReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposCreateForAuthenticatedUserReq) setDefaults() {
-	{
-		val := bool(false)
-		s.Private.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasIssues.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasProjects.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasWiki.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.AutoInit.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowSquashMerge.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowMergeCommit.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowRebaseMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.AllowAutoMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.DeleteBranchOnMerge.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasDownloads.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.IsTemplate.SetTo(val)
-	}
-}
+func (s *ReposCreateForAuthenticatedUserReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposCreateInOrgReq) setDefaults() {
-	{
-		val := bool(false)
-		s.Private.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasIssues.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasProjects.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasWiki.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.IsTemplate.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.AutoInit.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowSquashMerge.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowMergeCommit.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowRebaseMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.AllowAutoMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.DeleteBranchOnMerge.SetTo(val)
-	}
-}
+func (s *ReposCreateInOrgReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposCreatePagesSiteReqSource) setDefaults() {
-	{
-		val := ReposCreatePagesSiteReqSourcePath("/")
-		s.Path.SetTo(val)
-	}
-}
+func (s *ReposCreatePagesSiteReqSource) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposCreateReleaseReq) setDefaults() {
-	{
-		val := bool(false)
-		s.Draft.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.Prerelease.SetTo(val)
-	}
-}
+func (s *ReposCreateReleaseReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposCreateUsingTemplateReq) setDefaults() {
-	{
-		val := bool(false)
-		s.IncludeAllBranches.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.Private.SetTo(val)
-	}
-}
+func (s *ReposCreateUsingTemplateReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposCreateWebhookReq) setDefaults() {
-	{
-		val := bool(true)
-		s.Active.SetTo(val)
-	}
-}
+func (s *ReposCreateWebhookReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposUpdateReq) setDefaults() {
-	{
-		val := bool(false)
-		s.Private.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasIssues.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasProjects.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasWiki.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.IsTemplate.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowSquashMerge.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowMergeCommit.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowRebaseMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.AllowAutoMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.DeleteBranchOnMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.Archived.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.AllowForking.SetTo(val)
-	}
-}
+func (s *ReposUpdateReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReposUpdateWebhookReq) setDefaults() {
-	{
-		val := bool(true)
-		s.Active.SetTo(val)
-	}
-}
+func (s *ReposUpdateWebhookReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *Repository) setDefaults() {
-	{
-		val := bool(false)
-		s.Private = val
-	}
-	{
-		val := bool(false)
-		s.IsTemplate.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasIssues = val
-	}
-	{
-		val := bool(true)
-		s.HasProjects = val
-	}
-	{
-		val := bool(true)
-		s.HasWiki = val
-	}
-	{
-		val := bool(true)
-		s.HasDownloads = val
-	}
-	{
-		val := bool(false)
-		s.Archived = val
-	}
-	{
-		val := string("public")
-		s.Visibility.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowRebaseMerge.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowSquashMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.AllowAutoMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.DeleteBranchOnMerge.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowMergeCommit.SetTo(val)
-	}
-}
+func (s *Repository) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ReviewComment) setDefaults() {
-	{
-		val := ReviewCommentSide("RIGHT")
-		s.Side.SetTo(val)
-	}
-	{
-		val := ReviewCommentStartSide("RIGHT")
-		s.StartSide.SetTo(val)
-	}
-}
+func (s *ReviewComment) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *TeamMembership) setDefaults() {
-	{
-		val := TeamMembershipRole("member")
-		s.Role = val
-	}
-}
+func (s *TeamMembership) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *TeamRepository) setDefaults() {
-	{
-		val := bool(false)
-		s.Private = val
-	}
-	{
-		val := bool(false)
-		s.IsTemplate.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.HasIssues = val
-	}
-	{
-		val := bool(true)
-		s.HasProjects = val
-	}
-	{
-		val := bool(true)
-		s.HasWiki = val
-	}
-	{
-		val := bool(true)
-		s.HasDownloads = val
-	}
-	{
-		val := bool(false)
-		s.Archived = val
-	}
-	{
-		val := string("public")
-		s.Visibility.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowRebaseMerge.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowSquashMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.AllowAutoMerge.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.DeleteBranchOnMerge.SetTo(val)
-	}
-	{
-		val := bool(true)
-		s.AllowMergeCommit.SetTo(val)
-	}
-	{
-		val := bool(false)
-		s.AllowForking.SetTo(val)
-	}
-}
+func (s *TeamRepository) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
 func (s *TeamsAddOrUpdateMembershipForUserInOrgReq) setDefaults() {
-	{
-		val := TeamsAddOrUpdateMembershipForUserInOrgReqRole("member")
-		s.Role.SetTo(val)
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // setDefaults set default value of fields.
 func (s *TeamsAddOrUpdateMembershipForUserLegacyReq) setDefaults() {
-	{
-		val := TeamsAddOrUpdateMembershipForUserLegacyReqRole("member")
-		s.Role.SetTo(val)
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // setDefaults set default value of fields.
-func (s *TeamsCreateDiscussionInOrgReq) setDefaults() {
-	{
-		val := bool(false)
-		s.Private.SetTo(val)
-	}
-}
+func (s *TeamsCreateDiscussionInOrgReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *TeamsCreateDiscussionLegacyReq) setDefaults() {
-	{
-		val := bool(false)
-		s.Private.SetTo(val)
-	}
-}
+func (s *TeamsCreateDiscussionLegacyReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *TeamsCreateReq) setDefaults() {
-	{
-		val := TeamsCreateReqPermission("pull")
-		s.Permission.SetTo(val)
-	}
-}
+func (s *TeamsCreateReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *TeamsUpdateInOrgReq) setDefaults() {
-	{
-		val := TeamsUpdateInOrgReqPermission("pull")
-		s.Permission.SetTo(val)
-	}
-}
+func (s *TeamsUpdateInOrgReq) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *TeamsUpdateLegacyReq) setDefaults() {
-	{
-		val := TeamsUpdateLegacyReqPermission("pull")
-		s.Permission.SetTo(val)
-	}
-}
+func (s *TeamsUpdateLegacyReq) setDefaults() { _ = "STUB: not implemented"; return }

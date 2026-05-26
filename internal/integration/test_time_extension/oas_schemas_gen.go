@@ -9,12 +9,7 @@ import (
 type Alias time.Time
 
 // NewOptAlias returns new OptAlias with value set to v.
-func NewOptAlias(v Alias) OptAlias {
-	return OptAlias{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptAlias(v Alias) OptAlias { _ = "STUB: not implemented"; return *new(OptAlias) }
 
 // OptAlias is optional Alias.
 type OptAlias struct {
@@ -23,44 +18,26 @@ type OptAlias struct {
 }
 
 // IsSet returns true if OptAlias was set.
-func (o OptAlias) IsSet() bool { return o.Set }
+func (o OptAlias) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptAlias) Reset() {
-	var v Alias
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptAlias) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptAlias) SetTo(v Alias) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptAlias) SetTo(v Alias) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptAlias) Get() (v Alias, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptAlias) Get() (v Alias, ok bool) { _ = "STUB: not implemented"; return *new(Alias), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptAlias) Or(d Alias) Alias {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptAlias) Or(d Alias) Alias { _ = "STUB: not implemented"; return *new(Alias) }
 
 // NewOptDate returns new OptDate with value set to v.
-func NewOptDate(v time.Time) OptDate {
-	return OptDate{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptDate(v time.Time) OptDate { _ = "STUB: not implemented"; return *new(OptDate) }
 
 // OptDate is optional time.Time.
 type OptDate struct {
@@ -69,44 +46,29 @@ type OptDate struct {
 }
 
 // IsSet returns true if OptDate was set.
-func (o OptDate) IsSet() bool { return o.Set }
+func (o OptDate) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDate) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDate) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDate) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDate) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDate) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDate) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDate) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptDateTime returns new OptDateTime with value set to v.
-func NewOptDateTime(v time.Time) OptDateTime {
-	return OptDateTime{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptDateTime(v time.Time) OptDateTime { _ = "STUB: not implemented"; return *new(OptDateTime) }
 
 // OptDateTime is optional time.Time.
 type OptDateTime struct {
@@ -115,44 +77,29 @@ type OptDateTime struct {
 }
 
 // IsSet returns true if OptDateTime was set.
-func (o OptDateTime) IsSet() bool { return o.Set }
+func (o OptDateTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDateTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDateTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDateTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDateTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDateTime) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDateTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDateTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptTime returns new OptTime with value set to v.
-func NewOptTime(v time.Time) OptTime {
-	return OptTime{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptTime(v time.Time) OptTime { _ = "STUB: not implemented"; return *new(OptTime) }
 
 // OptTime is optional time.Time.
 type OptTime struct {
@@ -161,36 +108,26 @@ type OptTime struct {
 }
 
 // IsSet returns true if OptTime was set.
-func (o OptTime) IsSet() bool { return o.Set }
+func (o OptTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTime) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 type OptionalOK struct {
 	Date     OptDate     `json:"date"`
@@ -201,43 +138,55 @@ type OptionalOK struct {
 
 // GetDate returns the value of Date.
 func (s *OptionalOK) GetDate() OptDate {
-	return s.Date
+	_ = "STUB: not implemented"
+
+	// GetTime returns the value of Time.
+	return *new(OptDate)
 }
 
-// GetTime returns the value of Time.
 func (s *OptionalOK) GetTime() OptTime {
-	return s.Time
+	_ = "STUB: not implemented"
+
+	// GetDateTime returns the value of DateTime.
+	return *new(OptTime)
 }
 
-// GetDateTime returns the value of DateTime.
 func (s *OptionalOK) GetDateTime() OptDateTime {
-	return s.DateTime
+	_ = "STUB: not implemented"
+
+	// GetAlias returns the value of Alias.
+	return *new(OptDateTime)
 }
 
-// GetAlias returns the value of Alias.
 func (s *OptionalOK) GetAlias() OptAlias {
-	return s.Alias
+	_ = "STUB: not implemented"
+
+	// SetDate sets the value of Date.
+	return *new(OptAlias)
 }
 
-// SetDate sets the value of Date.
 func (s *OptionalOK) SetDate(val OptDate) {
-	s.Date = val
+	_ = "STUB: not implemented"
+
+	// SetTime sets the value of Time.
+	return
 }
 
-// SetTime sets the value of Time.
 func (s *OptionalOK) SetTime(val OptTime) {
-	s.Time = val
+	_ = "STUB: not implemented"
+
+	// SetDateTime sets the value of DateTime.
+	return
 }
 
-// SetDateTime sets the value of DateTime.
 func (s *OptionalOK) SetDateTime(val OptDateTime) {
-	s.DateTime = val
+	_ = "STUB: not implemented"
+
+	// SetAlias sets the value of Alias.
+	return
 }
 
-// SetAlias sets the value of Alias.
-func (s *OptionalOK) SetAlias(val OptAlias) {
-	s.Alias = val
-}
+func (s *OptionalOK) SetAlias(val OptAlias) { _ = "STUB: not implemented"; return }
 
 type RequiredOK struct {
 	Date     time.Time `json:"date"`
@@ -248,40 +197,52 @@ type RequiredOK struct {
 
 // GetDate returns the value of Date.
 func (s *RequiredOK) GetDate() time.Time {
-	return s.Date
+	_ = "STUB: not implemented"
+
+	// GetTime returns the value of Time.
+	return *new(time.Time)
 }
 
-// GetTime returns the value of Time.
 func (s *RequiredOK) GetTime() time.Time {
-	return s.Time
+	_ = "STUB: not implemented"
+
+	// GetDateTime returns the value of DateTime.
+	return *new(time.Time)
 }
 
-// GetDateTime returns the value of DateTime.
 func (s *RequiredOK) GetDateTime() time.Time {
-	return s.DateTime
+	_ = "STUB: not implemented"
+
+	// GetAlias returns the value of Alias.
+	return *new(time.Time)
 }
 
-// GetAlias returns the value of Alias.
 func (s *RequiredOK) GetAlias() Alias {
-	return s.Alias
+	_ = "STUB: not implemented"
+
+	// SetDate sets the value of Date.
+	return *new(Alias)
 }
 
-// SetDate sets the value of Date.
 func (s *RequiredOK) SetDate(val time.Time) {
-	s.Date = val
+	_ = "STUB: not implemented"
+
+	// SetTime sets the value of Time.
+	return
 }
 
-// SetTime sets the value of Time.
 func (s *RequiredOK) SetTime(val time.Time) {
-	s.Time = val
+	_ = "STUB: not implemented"
+
+	// SetDateTime sets the value of DateTime.
+	return
 }
 
-// SetDateTime sets the value of DateTime.
 func (s *RequiredOK) SetDateTime(val time.Time) {
-	s.DateTime = val
+	_ = "STUB: not implemented"
+
+	// SetAlias sets the value of Alias.
+	return
 }
 
-// SetAlias sets the value of Alias.
-func (s *RequiredOK) SetAlias(val Alias) {
-	s.Alias = val
-}
+func (s *RequiredOK) SetAlias(val Alias) { _ = "STUB: not implemented"; return }

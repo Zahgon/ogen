@@ -4,10 +4,8 @@ package api
 
 // NewOptQueryWithAdditionalPropertiesObject returns new OptQueryWithAdditionalPropertiesObject with value set to v.
 func NewOptQueryWithAdditionalPropertiesObject(v QueryWithAdditionalPropertiesObject) OptQueryWithAdditionalPropertiesObject {
-	return OptQueryWithAdditionalPropertiesObject{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptQueryWithAdditionalPropertiesObject)
 }
 
 // OptQueryWithAdditionalPropertiesObject is optional QueryWithAdditionalPropertiesObject.
@@ -17,35 +15,31 @@ type OptQueryWithAdditionalPropertiesObject struct {
 }
 
 // IsSet returns true if OptQueryWithAdditionalPropertiesObject was set.
-func (o OptQueryWithAdditionalPropertiesObject) IsSet() bool { return o.Set }
+func (o OptQueryWithAdditionalPropertiesObject) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptQueryWithAdditionalPropertiesObject) Reset() {
-	var v QueryWithAdditionalPropertiesObject
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptQueryWithAdditionalPropertiesObject) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptQueryWithAdditionalPropertiesObject) SetTo(v QueryWithAdditionalPropertiesObject) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptQueryWithAdditionalPropertiesObject) Get() (v QueryWithAdditionalPropertiesObject, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(QueryWithAdditionalPropertiesObject), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptQueryWithAdditionalPropertiesObject) Or(d QueryWithAdditionalPropertiesObject) QueryWithAdditionalPropertiesObject {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(QueryWithAdditionalPropertiesObject)
 }
 
 type QueryWithAdditionalPropertiesOK map[string]string

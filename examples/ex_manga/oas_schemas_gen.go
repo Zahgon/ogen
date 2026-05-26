@@ -4,8 +4,6 @@ package api
 
 import (
 	"io"
-
-	"github.com/go-faster/errors"
 )
 
 // Ref: #/components/schemas/Book
@@ -23,105 +21,147 @@ type Book struct {
 
 // GetID returns the value of ID.
 func (s *Book) GetID() OptInt {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetMediaID returns the value of MediaID.
+	return *new(OptInt)
 }
 
-// GetMediaID returns the value of MediaID.
 func (s *Book) GetMediaID() OptInt {
-	return s.MediaID
+	_ = "STUB: not implemented"
+
+	// GetImages returns the value of Images.
+	return *new(OptInt)
 }
 
-// GetImages returns the value of Images.
 func (s *Book) GetImages() OptImages {
-	return s.Images
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return *new(OptImages)
 }
 
-// GetTitle returns the value of Title.
 func (s *Book) GetTitle() OptTitle {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetTags returns the value of Tags.
+	return *new(OptTitle)
 }
 
-// GetTags returns the value of Tags.
 func (s *Book) GetTags() []Tag {
-	return s.Tags
+	_ = "STUB: not implemented"
+
+	// GetScanlator returns the value of Scanlator.
+	return nil
 }
 
-// GetScanlator returns the value of Scanlator.
 func (s *Book) GetScanlator() OptString {
-	return s.Scanlator
+	_ = "STUB: not implemented"
+
+	// GetUploadDate returns the value of UploadDate.
+	return *new(OptString)
 }
 
-// GetUploadDate returns the value of UploadDate.
 func (s *Book) GetUploadDate() OptInt {
-	return s.UploadDate
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNumPages returns the value of NumPages.
+	new(OptInt)
 }
 
-// GetNumPages returns the value of NumPages.
 func (s *Book) GetNumPages() OptInt {
-	return s.NumPages
+	_ = "STUB: not implemented"
+
+	// GetNumFavorites returns the value of NumFavorites.
+	return *new(OptInt)
 }
 
-// GetNumFavorites returns the value of NumFavorites.
 func (s *Book) GetNumFavorites() OptInt {
-	return s.NumFavorites
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptInt)
 }
 
-// SetID sets the value of ID.
 func (s *Book) SetID(val OptInt) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetMediaID sets the value of MediaID.
+	return
 }
 
-// SetMediaID sets the value of MediaID.
 func (s *Book) SetMediaID(val OptInt) {
-	s.MediaID = val
+	_ = "STUB: not implemented"
+
+	// SetImages sets the value of Images.
+	return
 }
 
-// SetImages sets the value of Images.
 func (s *Book) SetImages(val OptImages) {
-	s.Images = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *Book) SetTitle(val OptTitle) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetTags sets the value of Tags.
+	return
 }
 
-// SetTags sets the value of Tags.
 func (s *Book) SetTags(val []Tag) {
-	s.Tags = val
+	_ = "STUB: not implemented"
+
+	// SetScanlator sets the value of Scanlator.
+	return
 }
 
-// SetScanlator sets the value of Scanlator.
 func (s *Book) SetScanlator(val OptString) {
-	s.Scanlator = val
+	_ = "STUB: not implemented"
+
+	// SetUploadDate sets the value of UploadDate.
+	return
 }
 
-// SetUploadDate sets the value of UploadDate.
 func (s *Book) SetUploadDate(val OptInt) {
-	s.UploadDate = val
+	_ = "STUB: not implemented"
+
+	// SetNumPages sets the value of NumPages.
+	return
 }
 
-// SetNumPages sets the value of NumPages.
 func (s *Book) SetNumPages(val OptInt) {
-	s.NumPages = val
+	_ = "STUB: not implemented"
+
+	// SetNumFavorites sets the value of NumFavorites.
+	return
 }
 
-// SetNumFavorites sets the value of NumFavorites.
-func (s *Book) SetNumFavorites(val OptInt) {
-	s.NumFavorites = val
+func (s *Book) SetNumFavorites(val OptInt) { _ = "STUB: not implemented"; return }
+
+func (*Book) getBookRes() {
+	_ = "STUB: not implemented"
+
+	// GetBookForbidden is response for GetBook operation.
+	return
 }
 
-func (*Book) getBookRes() {}
-
-// GetBookForbidden is response for GetBook operation.
 type GetBookForbidden struct{}
 
-func (*GetBookForbidden) getBookRes() {}
+func (*GetBookForbidden) getBookRes() {
+	_ = "STUB: not implemented"
 
-// GetPageCoverImageForbidden is response for GetPageCoverImage operation.
+	// GetPageCoverImageForbidden is response for GetPageCoverImage operation.
+	return
+}
+
 type GetPageCoverImageForbidden struct{}
 
-func (*GetPageCoverImageForbidden) getPageCoverImageRes() {}
+func (*GetPageCoverImageForbidden) getPageCoverImageRes() { _ = "STUB: not implemented"; return }
 
 type GetPageCoverImageOK struct {
 	Data io.Reader
@@ -131,10 +171,8 @@ type GetPageCoverImageOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s GetPageCoverImageOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // GetPageCoverImageOKHeaders wraps GetPageCoverImageOK with response headers.
@@ -144,31 +182,34 @@ type GetPageCoverImageOKHeaders struct {
 }
 
 // GetContentType returns the value of ContentType.
-func (s *GetPageCoverImageOKHeaders) GetContentType() string {
-	return s.ContentType
-}
+func (s *GetPageCoverImageOKHeaders) GetContentType() string { _ = "STUB: not implemented"; return "" }
 
 // GetResponse returns the value of Response.
 func (s *GetPageCoverImageOKHeaders) GetResponse() GetPageCoverImageOK {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetContentType sets the value of ContentType.
+	return *new(GetPageCoverImageOK)
 }
 
-// SetContentType sets the value of ContentType.
-func (s *GetPageCoverImageOKHeaders) SetContentType(val string) {
-	s.ContentType = val
-}
+func (s *GetPageCoverImageOKHeaders) SetContentType(val string) { _ = "STUB: not implemented"; return }
 
 // SetResponse sets the value of Response.
 func (s *GetPageCoverImageOKHeaders) SetResponse(val GetPageCoverImageOK) {
-	s.Response = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*GetPageCoverImageOKHeaders) getPageCoverImageRes() {}
+func (*GetPageCoverImageOKHeaders) getPageCoverImageRes() {
+	_ = "STUB: not implemented"
 
-// GetPageImageForbidden is response for GetPageImage operation.
+	// GetPageImageForbidden is response for GetPageImage operation.
+	return
+}
+
 type GetPageImageForbidden struct{}
 
-func (*GetPageImageForbidden) getPageImageRes() {}
+func (*GetPageImageForbidden) getPageImageRes() { _ = "STUB: not implemented"; return }
 
 type GetPageImageOK struct {
 	Data io.Reader
@@ -177,12 +218,7 @@ type GetPageImageOK struct {
 // Read reads data from the Data reader.
 //
 // Kept to satisfy the io.Reader interface.
-func (s GetPageImageOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
-}
+func (s GetPageImageOK) Read(p []byte) (n int, err error) { _ = "STUB: not implemented"; return 0, nil }
 
 // GetPageImageOKHeaders wraps GetPageImageOK with response headers.
 type GetPageImageOKHeaders struct {
@@ -191,31 +227,34 @@ type GetPageImageOKHeaders struct {
 }
 
 // GetContentType returns the value of ContentType.
-func (s *GetPageImageOKHeaders) GetContentType() string {
-	return s.ContentType
-}
+func (s *GetPageImageOKHeaders) GetContentType() string { _ = "STUB: not implemented"; return "" }
 
 // GetResponse returns the value of Response.
 func (s *GetPageImageOKHeaders) GetResponse() GetPageImageOK {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetContentType sets the value of ContentType.
+	return *new(GetPageImageOK)
 }
 
-// SetContentType sets the value of ContentType.
-func (s *GetPageImageOKHeaders) SetContentType(val string) {
-	s.ContentType = val
-}
+func (s *GetPageImageOKHeaders) SetContentType(val string) { _ = "STUB: not implemented"; return }
 
 // SetResponse sets the value of Response.
-func (s *GetPageImageOKHeaders) SetResponse(val GetPageImageOK) {
-	s.Response = val
+func (s *GetPageImageOKHeaders) SetResponse(val GetPageImageOK) { _ = "STUB: not implemented"; return }
+
+func (*GetPageImageOKHeaders) getPageImageRes() {
+	_ = "STUB: not implemented"
+
+	// GetPageThumbnailImageForbidden is response for GetPageThumbnailImage operation.
+	return
 }
 
-func (*GetPageImageOKHeaders) getPageImageRes() {}
-
-// GetPageThumbnailImageForbidden is response for GetPageThumbnailImage operation.
 type GetPageThumbnailImageForbidden struct{}
 
-func (*GetPageThumbnailImageForbidden) getPageThumbnailImageRes() {}
+func (*GetPageThumbnailImageForbidden) getPageThumbnailImageRes() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type GetPageThumbnailImageOK struct {
 	Data io.Reader
@@ -225,10 +264,8 @@ type GetPageThumbnailImageOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s GetPageThumbnailImageOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // GetPageThumbnailImageOKHeaders wraps GetPageThumbnailImageOK with response headers.
@@ -239,27 +276,38 @@ type GetPageThumbnailImageOKHeaders struct {
 
 // GetContentType returns the value of ContentType.
 func (s *GetPageThumbnailImageOKHeaders) GetContentType() string {
-	return s.ContentType
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetResponse returns the value of Response.
 }
 
-// GetResponse returns the value of Response.
 func (s *GetPageThumbnailImageOKHeaders) GetResponse() GetPageThumbnailImageOK {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetContentType sets the value of ContentType.
+	return *new(GetPageThumbnailImageOK)
 }
 
-// SetContentType sets the value of ContentType.
 func (s *GetPageThumbnailImageOKHeaders) SetContentType(val string) {
-	s.ContentType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetResponse sets the value of Response.
 }
 
-// SetResponse sets the value of Response.
 func (s *GetPageThumbnailImageOKHeaders) SetResponse(val GetPageThumbnailImageOK) {
-	s.Response = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*GetPageThumbnailImageOKHeaders) getPageThumbnailImageRes() {}
+func (*GetPageThumbnailImageOKHeaders) getPageThumbnailImageRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/Image
+	// Ref: #/components/schemas/Image
+	return
+}
+
 type Image struct {
 	T OptString `json:"t"`
 	// Width of image.
@@ -270,35 +318,47 @@ type Image struct {
 
 // GetT returns the value of T.
 func (s *Image) GetT() OptString {
-	return s.T
+	_ = "STUB: not implemented"
+
+	// GetW returns the value of W.
+	return *new(OptString)
 }
 
-// GetW returns the value of W.
 func (s *Image) GetW() OptInt {
-	return s.W
+	_ = "STUB: not implemented"
+
+	// GetH returns the value of H.
+	return *new(OptInt)
 }
 
-// GetH returns the value of H.
 func (s *Image) GetH() OptInt {
-	return s.H
+	_ = "STUB: not implemented"
+
+	// SetT sets the value of T.
+	return *new(OptInt)
 }
 
-// SetT sets the value of T.
 func (s *Image) SetT(val OptString) {
-	s.T = val
+	_ = "STUB: not implemented"
+
+	// SetW sets the value of W.
+	return
 }
 
-// SetW sets the value of W.
 func (s *Image) SetW(val OptInt) {
-	s.W = val
+	_ = "STUB: not implemented"
+
+	// SetH sets the value of H.
+	return
 }
 
-// SetH sets the value of H.
 func (s *Image) SetH(val OptInt) {
-	s.H = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Images
+	return
 }
 
-// Ref: #/components/schemas/Images
 type Images struct {
 	Pages     []Image  `json:"pages"`
 	Cover     OptImage `json:"cover"`
@@ -307,41 +367,48 @@ type Images struct {
 
 // GetPages returns the value of Pages.
 func (s *Images) GetPages() []Image {
-	return s.Pages
+	_ = "STUB: not implemented"
+
+	// GetCover returns the value of Cover.
+	return nil
 }
 
-// GetCover returns the value of Cover.
 func (s *Images) GetCover() OptImage {
-	return s.Cover
+	_ = "STUB: not implemented"
+
+	// GetThumbnail returns the value of Thumbnail.
+	return *new(OptImage)
 }
 
-// GetThumbnail returns the value of Thumbnail.
 func (s *Images) GetThumbnail() OptImage {
-	return s.Thumbnail
+	_ = "STUB: not implemented"
+
+	// SetPages sets the value of Pages.
+	return *new(OptImage)
 }
 
-// SetPages sets the value of Pages.
 func (s *Images) SetPages(val []Image) {
-	s.Pages = val
+	_ = "STUB: not implemented"
+
+	// SetCover sets the value of Cover.
+	return
 }
 
-// SetCover sets the value of Cover.
 func (s *Images) SetCover(val OptImage) {
-	s.Cover = val
+	_ = "STUB: not implemented"
+
+	// SetThumbnail sets the value of Thumbnail.
+	return
 }
 
-// SetThumbnail sets the value of Thumbnail.
 func (s *Images) SetThumbnail(val OptImage) {
-	s.Thumbnail = val
+	_ = "STUB: not implemented"
+
+	// NewOptImage returns new OptImage with value set to v.
+	return
 }
 
-// NewOptImage returns new OptImage with value set to v.
-func NewOptImage(v Image) OptImage {
-	return OptImage{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptImage(v Image) OptImage { _ = "STUB: not implemented"; return *new(OptImage) }
 
 // OptImage is optional Image.
 type OptImage struct {
@@ -350,44 +417,26 @@ type OptImage struct {
 }
 
 // IsSet returns true if OptImage was set.
-func (o OptImage) IsSet() bool { return o.Set }
+func (o OptImage) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptImage) Reset() {
-	var v Image
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptImage) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptImage) SetTo(v Image) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptImage) SetTo(v Image) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptImage) Get() (v Image, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptImage) Get() (v Image, ok bool) { _ = "STUB: not implemented"; return *new(Image), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptImage) Or(d Image) Image {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptImage) Or(d Image) Image { _ = "STUB: not implemented"; return *new(Image) }
 
 // NewOptImages returns new OptImages with value set to v.
-func NewOptImages(v Images) OptImages {
-	return OptImages{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptImages(v Images) OptImages { _ = "STUB: not implemented"; return *new(OptImages) }
 
 // OptImages is optional Images.
 type OptImages struct {
@@ -396,44 +445,26 @@ type OptImages struct {
 }
 
 // IsSet returns true if OptImages was set.
-func (o OptImages) IsSet() bool { return o.Set }
+func (o OptImages) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptImages) Reset() {
-	var v Images
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptImages) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptImages) SetTo(v Images) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptImages) SetTo(v Images) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptImages) Get() (v Images, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptImages) Get() (v Images, ok bool) { _ = "STUB: not implemented"; return *new(Images), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptImages) Or(d Images) Images {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptImages) Or(d Images) Images { _ = "STUB: not implemented"; return *new(Images) }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -442,44 +473,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -488,44 +501,26 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptTagType returns new OptTagType with value set to v.
-func NewOptTagType(v TagType) OptTagType {
-	return OptTagType{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptTagType(v TagType) OptTagType { _ = "STUB: not implemented"; return *new(OptTagType) }
 
 // OptTagType is optional TagType.
 type OptTagType struct {
@@ -534,44 +529,29 @@ type OptTagType struct {
 }
 
 // IsSet returns true if OptTagType was set.
-func (o OptTagType) IsSet() bool { return o.Set }
+func (o OptTagType) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTagType) Reset() {
-	var v TagType
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTagType) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTagType) SetTo(v TagType) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTagType) SetTo(v TagType) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTagType) Get() (v TagType, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(TagType), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptTagType) Or(d TagType) TagType {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptTagType) Or(d TagType) TagType { _ = "STUB: not implemented"; return *new(TagType) }
 
 // NewOptTitle returns new OptTitle with value set to v.
-func NewOptTitle(v Title) OptTitle {
-	return OptTitle{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptTitle(v Title) OptTitle { _ = "STUB: not implemented"; return *new(OptTitle) }
 
 // OptTitle is optional Title.
 type OptTitle struct {
@@ -580,56 +560,51 @@ type OptTitle struct {
 }
 
 // IsSet returns true if OptTitle was set.
-func (o OptTitle) IsSet() bool { return o.Set }
+func (o OptTitle) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTitle) Reset() {
-	var v Title
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTitle) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTitle) SetTo(v Title) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTitle) SetTo(v Title) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptTitle) Get() (v Title, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptTitle) Get() (v Title, ok bool) { _ = "STUB: not implemented"; return *new(Title), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptTitle) Or(d Title) Title {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptTitle) Or(d Title) Title { _ = "STUB: not implemented"; return *new(Title) }
 
 // SearchByTagIDForbidden is response for SearchByTagID operation.
 type SearchByTagIDForbidden struct{}
 
-func (*SearchByTagIDForbidden) searchByTagIDRes() {}
+func (*SearchByTagIDForbidden) searchByTagIDRes() { _ = "STUB: not implemented"; return }
 
 type SearchByTagIDOKApplicationJSON []SearchResponse
 
-func (*SearchByTagIDOKApplicationJSON) searchByTagIDRes() {}
+func (*SearchByTagIDOKApplicationJSON) searchByTagIDRes() {
+	_ = "STUB: not implemented"
 
-// SearchForbidden is response for Search operation.
+	// SearchForbidden is response for Search operation.
+	return
+}
+
 type SearchForbidden struct{}
 
-func (*SearchForbidden) searchRes() {}
+func (*SearchForbidden) searchRes() { _ = "STUB: not implemented"; return }
 
 type SearchOKApplicationJSON []SearchResponse
 
-func (*SearchOKApplicationJSON) searchRes() {}
+func (*SearchOKApplicationJSON) searchRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/SearchResponse
+	// Ref: #/components/schemas/SearchResponse
+	return
+}
+
 type SearchResponse struct {
 	Result []Book `json:"result"`
 	// Total number of pages.
@@ -640,35 +615,47 @@ type SearchResponse struct {
 
 // GetResult returns the value of Result.
 func (s *SearchResponse) GetResult() []Book {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetNumPages returns the value of NumPages.
+	return nil
 }
 
-// GetNumPages returns the value of NumPages.
 func (s *SearchResponse) GetNumPages() OptInt {
-	return s.NumPages
+	_ = "STUB: not implemented"
+
+	// GetPerPage returns the value of PerPage.
+	return *new(OptInt)
 }
 
-// GetPerPage returns the value of PerPage.
 func (s *SearchResponse) GetPerPage() OptInt {
-	return s.PerPage
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return *new(OptInt)
 }
 
-// SetResult sets the value of Result.
 func (s *SearchResponse) SetResult(val []Book) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetNumPages sets the value of NumPages.
+	return
 }
 
-// SetNumPages sets the value of NumPages.
 func (s *SearchResponse) SetNumPages(val OptInt) {
-	s.NumPages = val
+	_ = "STUB: not implemented"
+
+	// SetPerPage sets the value of PerPage.
+	return
 }
 
-// SetPerPage sets the value of PerPage.
 func (s *SearchResponse) SetPerPage(val OptInt) {
-	s.PerPage = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Tag
+	return
 }
 
-// Ref: #/components/schemas/Tag
 type Tag struct {
 	ID    OptInt     `json:"id"`
 	Type  OptTagType `json:"type"`
@@ -679,53 +666,69 @@ type Tag struct {
 
 // GetID returns the value of ID.
 func (s *Tag) GetID() OptInt {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return *new(OptInt)
 }
 
-// GetType returns the value of Type.
 func (s *Tag) GetType() OptTagType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(OptTagType)
 }
 
-// GetName returns the value of Name.
 func (s *Tag) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetURL returns the value of URL.
+	return *new(OptString)
 }
 
-// GetURL returns the value of URL.
 func (s *Tag) GetURL() OptString {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetCount returns the value of Count.
+	return *new(OptString)
 }
 
-// GetCount returns the value of Count.
 func (s *Tag) GetCount() OptInt {
-	return s.Count
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptInt)
 }
 
-// SetID sets the value of ID.
 func (s *Tag) SetID(val OptInt) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *Tag) SetType(val OptTagType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Tag) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetURL sets the value of URL.
+	return
 }
 
-// SetURL sets the value of URL.
 func (s *Tag) SetURL(val OptString) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetCount sets the value of Count.
+	return
 }
 
-// SetCount sets the value of Count.
-func (s *Tag) SetCount(val OptInt) {
-	s.Count = val
-}
+func (s *Tag) SetCount(val OptInt) { _ = "STUB: not implemented"; return }
 
 type TagType string
 
@@ -740,68 +743,13 @@ const (
 )
 
 // AllValues returns all TagType values.
-func (TagType) AllValues() []TagType {
-	return []TagType{
-		TagTypeParody,
-		TagTypeCharacter,
-		TagTypeTag,
-		TagTypeArtist,
-		TagTypeGroup,
-		TagTypeCategory,
-		TagTypeLanguage,
-	}
-}
+func (TagType) AllValues() []TagType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s TagType) MarshalText() ([]byte, error) {
-	switch s {
-	case TagTypeParody:
-		return []byte(s), nil
-	case TagTypeCharacter:
-		return []byte(s), nil
-	case TagTypeTag:
-		return []byte(s), nil
-	case TagTypeArtist:
-		return []byte(s), nil
-	case TagTypeGroup:
-		return []byte(s), nil
-	case TagTypeCategory:
-		return []byte(s), nil
-	case TagTypeLanguage:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s TagType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *TagType) UnmarshalText(data []byte) error {
-	switch TagType(data) {
-	case TagTypeParody:
-		*s = TagTypeParody
-		return nil
-	case TagTypeCharacter:
-		*s = TagTypeCharacter
-		return nil
-	case TagTypeTag:
-		*s = TagTypeTag
-		return nil
-	case TagTypeArtist:
-		*s = TagTypeArtist
-		return nil
-	case TagTypeGroup:
-		*s = TagTypeGroup
-		return nil
-	case TagTypeCategory:
-		*s = TagTypeCategory
-		return nil
-	case TagTypeLanguage:
-		*s = TagTypeLanguage
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *TagType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/Title
 type Title struct {
@@ -812,30 +760,38 @@ type Title struct {
 
 // GetEnglish returns the value of English.
 func (s *Title) GetEnglish() OptString {
-	return s.English
+	_ = "STUB: not implemented"
+
+	// GetJapanese returns the value of Japanese.
+	return *new(OptString)
 }
 
-// GetJapanese returns the value of Japanese.
 func (s *Title) GetJapanese() OptString {
-	return s.Japanese
+	_ = "STUB: not implemented"
+
+	// GetPretty returns the value of Pretty.
+	return *new(OptString)
 }
 
-// GetPretty returns the value of Pretty.
 func (s *Title) GetPretty() OptString {
-	return s.Pretty
+	_ = "STUB: not implemented"
+
+	// SetEnglish sets the value of English.
+	return *new(OptString)
 }
 
-// SetEnglish sets the value of English.
 func (s *Title) SetEnglish(val OptString) {
-	s.English = val
+	_ = "STUB: not implemented"
+
+	// SetJapanese sets the value of Japanese.
+	return
 }
 
-// SetJapanese sets the value of Japanese.
 func (s *Title) SetJapanese(val OptString) {
-	s.Japanese = val
+	_ = "STUB: not implemented"
+
+	// SetPretty sets the value of Pretty.
+	return
 }
 
-// SetPretty sets the value of Pretty.
-func (s *Title) SetPretty(val OptString) {
-	s.Pretty = val
-}
+func (s *Title) SetPretty(val OptString) { _ = "STUB: not implemented"; return }

@@ -3,1121 +3,252 @@
 package api
 
 import (
-	"bytes"
-	"io"
-	"mime"
 	"net/http"
-	"time"
-
-	"github.com/go-faster/errors"
-	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
 )
 
 func decodeAddPetResponse(resp *http.Response) (res AddPetRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response Pet
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			// Validate response.
-			if err := func() error {
-				if err := response.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return res, errors.Wrap(err, "validate")
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &AddPetBadRequest{}, nil
-	case 422:
-		// Code 422.
-		return &AddPetUnprocessableEntity{}, nil
-	}
-	// Default response.
-	res, err := func() (res AddPetRes, err error) {
-		return &AddPetDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(AddPetRes), nil
 }
+
+// Code 200.
+
+// Validate response.
+
+// Code 400.
+
+// Code 422.
+
+// Default response.
 
 func decodeCreateUserResponse(resp *http.Response) (res CreateUserRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response User
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	}
-	// Default response.
-	res, err := func() (res CreateUserRes, err error) {
-		return &CreateUserDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(CreateUserRes), nil
 }
+
+// Code 200.
+
+// Default response.
 
 func decodeCreateUsersWithListInputResponse(resp *http.Response) (res CreateUsersWithListInputRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response User
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	}
-	// Default response.
-	res, err := func() (res CreateUsersWithListInputRes, err error) {
-		return &CreateUsersWithListInputDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(CreateUsersWithListInputRes), nil
 }
+
+// Code 200.
+
+// Default response.
 
 func decodeDeleteOrderResponse(resp *http.Response) (res DeleteOrderRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &DeleteOrderOK{}, nil
-	case 400:
-		// Code 400.
-		return &DeleteOrderBadRequest{}, nil
-	case 404:
-		// Code 404.
-		return &DeleteOrderNotFound{}, nil
-	}
-	// Default response.
-	res, err := func() (res DeleteOrderRes, err error) {
-		return &DeleteOrderDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(DeleteOrderRes), nil
 }
+
+// Code 200.
+
+// Code 400.
+
+// Code 404.
+
+// Default response.
 
 func decodeDeletePetResponse(resp *http.Response) (res DeletePetRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &DeletePetOK{}, nil
-	case 400:
-		// Code 400.
-		return &DeletePetBadRequest{}, nil
-	}
-	// Default response.
-	res, err := func() (res DeletePetRes, err error) {
-		return &DeletePetDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(DeletePetRes), nil
 }
+
+// Code 200.
+
+// Code 400.
+
+// Default response.
 
 func decodeDeleteUserResponse(resp *http.Response) (res DeleteUserRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &DeleteUserOK{}, nil
-	case 400:
-		// Code 400.
-		return &DeleteUserBadRequest{}, nil
-	case 404:
-		// Code 404.
-		return &DeleteUserNotFound{}, nil
-	}
-	// Default response.
-	res, err := func() (res DeleteUserRes, err error) {
-		return &DeleteUserDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(DeleteUserRes), nil
 }
+
+// Code 200.
+
+// Code 400.
+
+// Code 404.
+
+// Default response.
 
 func decodeFindPetsByStatusResponse(resp *http.Response) (res FindPetsByStatusRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response FindPetsByStatusOKApplicationJSON
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			// Validate response.
-			if err := func() error {
-				if err := response.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return res, errors.Wrap(err, "validate")
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &FindPetsByStatusBadRequest{}, nil
-	}
-	// Default response.
-	res, err := func() (res FindPetsByStatusRes, err error) {
-		return &FindPetsByStatusDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(FindPetsByStatusRes), nil
 }
+
+// Code 200.
+
+// Validate response.
+
+// Code 400.
+
+// Default response.
 
 func decodeFindPetsByTagsResponse(resp *http.Response) (res FindPetsByTagsRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response FindPetsByTagsOKApplicationJSON
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			// Validate response.
-			if err := func() error {
-				if err := response.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return res, errors.Wrap(err, "validate")
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &FindPetsByTagsBadRequest{}, nil
-	}
-	// Default response.
-	res, err := func() (res FindPetsByTagsRes, err error) {
-		return &FindPetsByTagsDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(FindPetsByTagsRes), nil
 }
+
+// Code 200.
+
+// Validate response.
+
+// Code 400.
+
+// Default response.
 
 func decodeGetInventoryResponse(resp *http.Response) (res GetInventoryRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response GetInventoryOK
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	}
-	// Default response.
-	res, err := func() (res GetInventoryRes, err error) {
-		return &GetInventoryDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(GetInventoryRes), nil
 }
+
+// Code 200.
+
+// Default response.
 
 func decodeGetOrderByIdResponse(resp *http.Response) (res GetOrderByIdRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response Order
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			// Validate response.
-			if err := func() error {
-				if err := response.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return res, errors.Wrap(err, "validate")
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &GetOrderByIdBadRequest{}, nil
-	case 404:
-		// Code 404.
-		return &GetOrderByIdNotFound{}, nil
-	}
-	// Default response.
-	res, err := func() (res GetOrderByIdRes, err error) {
-		return &GetOrderByIdDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(GetOrderByIdRes), nil
 }
+
+// Code 200.
+
+// Validate response.
+
+// Code 400.
+
+// Code 404.
+
+// Default response.
 
 func decodeGetPetByIdResponse(resp *http.Response) (res GetPetByIdRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response Pet
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			// Validate response.
-			if err := func() error {
-				if err := response.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return res, errors.Wrap(err, "validate")
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &GetPetByIdBadRequest{}, nil
-	case 404:
-		// Code 404.
-		return &GetPetByIdNotFound{}, nil
-	}
-	// Default response.
-	res, err := func() (res GetPetByIdRes, err error) {
-		return &GetPetByIdDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(GetPetByIdRes), nil
 }
+
+// Code 200.
+
+// Validate response.
+
+// Code 400.
+
+// Code 404.
+
+// Default response.
 
 func decodeGetUserByNameResponse(resp *http.Response) (res GetUserByNameRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response User
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &GetUserByNameBadRequest{}, nil
-	case 404:
-		// Code 404.
-		return &GetUserByNameNotFound{}, nil
-	}
-	// Default response.
-	res, err := func() (res GetUserByNameRes, err error) {
-		return &GetUserByNameDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(GetUserByNameRes), nil
 }
+
+// Code 200.
+
+// Code 400.
+
+// Code 404.
+
+// Default response.
 
 func decodeLoginUserResponse(resp *http.Response) (res LoginUserRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response string
-			if err := func() error {
-				v, err := d.Str()
-				response = string(v)
-				if err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			var wrapper LoginUserOKApplicationJSONHeaders
-			wrapper.Response = response
-			h := uri.NewHeaderDecoder(resp.Header)
-			// Parse "X-Expires-After" header.
-			{
-				cfg := uri.HeaderParameterDecodingConfig{
-					Name:    "X-Expires-After",
-					Explode: false,
-				}
-				if err := func() error {
-					if err := h.HasParam(cfg); err == nil {
-						if err := h.DecodeParam(cfg, func(d uri.Decoder) error {
-							var wrapperDotXExpiresAfterVal time.Time
-							if err := func() error {
-								val, err := d.DecodeValue()
-								if err != nil {
-									return err
-								}
-
-								c, err := conv.ToDateTime(val)
-								if err != nil {
-									return err
-								}
-
-								wrapperDotXExpiresAfterVal = c
-								return nil
-							}(); err != nil {
-								return err
-							}
-							wrapper.XExpiresAfter.SetTo(wrapperDotXExpiresAfterVal)
-							return nil
-						}); err != nil {
-							return err
-						}
-					}
-					return nil
-				}(); err != nil {
-					return res, errors.Wrap(err, "parse X-Expires-After header")
-				}
-			}
-			// Parse "X-Rate-Limit" header.
-			{
-				cfg := uri.HeaderParameterDecodingConfig{
-					Name:    "X-Rate-Limit",
-					Explode: false,
-				}
-				if err := func() error {
-					if err := h.HasParam(cfg); err == nil {
-						if err := h.DecodeParam(cfg, func(d uri.Decoder) error {
-							var wrapperDotXRateLimitVal int32
-							if err := func() error {
-								val, err := d.DecodeValue()
-								if err != nil {
-									return err
-								}
-
-								c, err := conv.ToInt32(val)
-								if err != nil {
-									return err
-								}
-
-								wrapperDotXRateLimitVal = c
-								return nil
-							}(); err != nil {
-								return err
-							}
-							wrapper.XRateLimit.SetTo(wrapperDotXRateLimitVal)
-							return nil
-						}); err != nil {
-							return err
-						}
-					}
-					return nil
-				}(); err != nil {
-					return res, errors.Wrap(err, "parse X-Rate-Limit header")
-				}
-			}
-			return &wrapper, nil
-		case ct == "application/xml":
-			reader := resp.Body
-			b, err := io.ReadAll(reader)
-			if err != nil {
-				return res, err
-			}
-
-			response := LoginUserOKApplicationXML{Data: bytes.NewReader(b)}
-			var wrapper LoginUserOKApplicationXMLHeaders
-			wrapper.Response = response
-			h := uri.NewHeaderDecoder(resp.Header)
-			// Parse "X-Expires-After" header.
-			{
-				cfg := uri.HeaderParameterDecodingConfig{
-					Name:    "X-Expires-After",
-					Explode: false,
-				}
-				if err := func() error {
-					if err := h.HasParam(cfg); err == nil {
-						if err := h.DecodeParam(cfg, func(d uri.Decoder) error {
-							var wrapperDotXExpiresAfterVal time.Time
-							if err := func() error {
-								val, err := d.DecodeValue()
-								if err != nil {
-									return err
-								}
-
-								c, err := conv.ToDateTime(val)
-								if err != nil {
-									return err
-								}
-
-								wrapperDotXExpiresAfterVal = c
-								return nil
-							}(); err != nil {
-								return err
-							}
-							wrapper.XExpiresAfter.SetTo(wrapperDotXExpiresAfterVal)
-							return nil
-						}); err != nil {
-							return err
-						}
-					}
-					return nil
-				}(); err != nil {
-					return res, errors.Wrap(err, "parse X-Expires-After header")
-				}
-			}
-			// Parse "X-Rate-Limit" header.
-			{
-				cfg := uri.HeaderParameterDecodingConfig{
-					Name:    "X-Rate-Limit",
-					Explode: false,
-				}
-				if err := func() error {
-					if err := h.HasParam(cfg); err == nil {
-						if err := h.DecodeParam(cfg, func(d uri.Decoder) error {
-							var wrapperDotXRateLimitVal int32
-							if err := func() error {
-								val, err := d.DecodeValue()
-								if err != nil {
-									return err
-								}
-
-								c, err := conv.ToInt32(val)
-								if err != nil {
-									return err
-								}
-
-								wrapperDotXRateLimitVal = c
-								return nil
-							}(); err != nil {
-								return err
-							}
-							wrapper.XRateLimit.SetTo(wrapperDotXRateLimitVal)
-							return nil
-						}); err != nil {
-							return err
-						}
-					}
-					return nil
-				}(); err != nil {
-					return res, errors.Wrap(err, "parse X-Rate-Limit header")
-				}
-			}
-			return &wrapper, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &LoginUserBadRequest{}, nil
-	}
-	// Default response.
-	res, err := func() (res LoginUserRes, err error) {
-		return &LoginUserDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(LoginUserRes), nil
 }
+
+// Code 200.
+
+// Parse "X-Expires-After" header.
+
+// Parse "X-Rate-Limit" header.
+
+// Parse "X-Expires-After" header.
+
+// Parse "X-Rate-Limit" header.
+
+// Code 400.
+
+// Default response.
 
 func decodeLogoutUserResponse(resp *http.Response) (res LogoutUserRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &LogoutUserOK{}, nil
-	}
-	// Default response.
-	res, err := func() (res LogoutUserRes, err error) {
-		return &LogoutUserDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(LogoutUserRes), nil
 }
+
+// Code 200.
+
+// Default response.
 
 func decodePlaceOrderResponse(resp *http.Response) (res PlaceOrderRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response Order
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			// Validate response.
-			if err := func() error {
-				if err := response.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return res, errors.Wrap(err, "validate")
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &PlaceOrderBadRequest{}, nil
-	case 422:
-		// Code 422.
-		return &PlaceOrderUnprocessableEntity{}, nil
-	}
-	// Default response.
-	res, err := func() (res PlaceOrderRes, err error) {
-		return &PlaceOrderDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(PlaceOrderRes), nil
 }
+
+// Code 200.
+
+// Validate response.
+
+// Code 400.
+
+// Code 422.
+
+// Default response.
 
 func decodeUpdatePetResponse(resp *http.Response) (res UpdatePetRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response Pet
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			// Validate response.
-			if err := func() error {
-				if err := response.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return res, errors.Wrap(err, "validate")
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &UpdatePetBadRequest{}, nil
-	case 404:
-		// Code 404.
-		return &UpdatePetNotFound{}, nil
-	case 422:
-		// Code 422.
-		return &UpdatePetUnprocessableEntity{}, nil
-	}
-	// Default response.
-	res, err := func() (res UpdatePetRes, err error) {
-		return &UpdatePetDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(UpdatePetRes), nil
 }
+
+// Code 200.
+
+// Validate response.
+
+// Code 400.
+
+// Code 404.
+
+// Code 422.
+
+// Default response.
 
 func decodeUpdatePetWithFormResponse(resp *http.Response) (res UpdatePetWithFormRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response Pet
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			// Validate response.
-			if err := func() error {
-				if err := response.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return res, errors.Wrap(err, "validate")
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &UpdatePetWithFormBadRequest{}, nil
-	}
-	// Default response.
-	res, err := func() (res UpdatePetWithFormRes, err error) {
-		return &UpdatePetWithFormDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(UpdatePetWithFormRes), nil
 }
+
+// Code 200.
+
+// Validate response.
+
+// Code 400.
+
+// Default response.
 
 func decodeUpdateUserResponse(resp *http.Response) (res UpdateUserRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &UpdateUserOK{}, nil
-	case 400:
-		// Code 400.
-		return &UpdateUserBadRequest{}, nil
-	case 404:
-		// Code 404.
-		return &UpdateUserNotFound{}, nil
-	}
-	// Default response.
-	res, err := func() (res UpdateUserRes, err error) {
-		return &UpdateUserDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(UpdateUserRes), nil
 }
+
+// Code 200.
+
+// Code 400.
+
+// Code 404.
+
+// Default response.
 
 func decodeUploadFileResponse(resp *http.Response) (res UploadFileRes, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		ct, _, err := mime.ParseMediaType(resp.Header.Get("Content-Type"))
-		if err != nil {
-			return res, errors.Wrap(err, "parse media type")
-		}
-		switch {
-		case ct == "application/json":
-			buf, err := io.ReadAll(resp.Body)
-			if err != nil {
-				return res, err
-			}
-			d := jx.DecodeBytes(buf)
-
-			var response ApiResponse
-			if err := func() error {
-				if err := response.Decode(d); err != nil {
-					return err
-				}
-				if err := d.Skip(); err != io.EOF {
-					return errors.New("unexpected trailing data")
-				}
-				return nil
-			}(); err != nil {
-				err = &ogenerrors.DecodeBodyError{
-					ContentType: ct,
-					Body:        buf,
-					Err:         err,
-				}
-				return res, err
-			}
-			return &response, nil
-		default:
-			return res, validate.InvalidContentType(ct)
-		}
-	case 400:
-		// Code 400.
-		return &UploadFileBadRequest{}, nil
-	case 404:
-		// Code 404.
-		return &UploadFileNotFound{}, nil
-	}
-	// Default response.
-	res, err := func() (res UploadFileRes, err error) {
-		return &UploadFileDef{
-			StatusCode: resp.StatusCode,
-		}, nil
-	}()
-	if err != nil {
-		return res, errors.Wrapf(err, "default (code %d)", resp.StatusCode)
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(UploadFileRes), nil
 }
+
+// Code 200.
+
+// Code 400.
+
+// Code 404.
+
+// Default response.

@@ -2,31 +2,15 @@
 
 package api
 
-import (
-	"fmt"
-	"hash/fnv"
-)
-
 // Hash computes a hash value for WorkflowTransitionRule using FNV-1a.
 // Equal objects must produce equal hashes.
 func (a WorkflowTransitionRule) Hash() uint64 {
-	h := fnv.New64a()
+	_ = "STUB: not implemented"
 
 	// Hash primitive field: RuleKey
-	h.Write([]byte(fmt.Sprintf("%v", a.RuleKey)))
-	// Hash optional field: Configuration
-	if a.Configuration.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Configuration.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: ID
-	if a.ID.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.ID.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	return h.Sum64()
+	return 0
 }
+
+// Hash optional field: Configuration
+
+// Hash optional field: ID

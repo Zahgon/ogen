@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -17,87 +15,105 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /anyContentTypeBinaryStringSchema
 func (UnimplementedHandler) AnyContentTypeBinaryStringSchema(ctx context.Context) (r *AnyContentTypeBinaryStringSchemaOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// AnyContentTypeBinaryStringSchemaDefault implements anyContentTypeBinaryStringSchemaDefault operation.
+	//
+	// GET /anyContentTypeBinaryStringSchemaDefault
 }
 
-// AnyContentTypeBinaryStringSchemaDefault implements anyContentTypeBinaryStringSchemaDefault operation.
-//
-// GET /anyContentTypeBinaryStringSchemaDefault
 func (UnimplementedHandler) AnyContentTypeBinaryStringSchemaDefault(ctx context.Context) (r *AnyContentTypeBinaryStringSchemaDefaultDefStatusCodeWithHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// Combined implements combined operation.
+	//
+	// GET /combined
 }
 
-// Combined implements combined operation.
-//
-// GET /combined
 func (UnimplementedHandler) Combined(ctx context.Context, params CombinedParams) (r CombinedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CombinedRes), nil
 }
 
 // Headers200 implements headers200 operation.
 //
 // GET /headers200
 func (UnimplementedHandler) Headers200(ctx context.Context) (r *Headers200OK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// HeadersCombined implements headersCombined operation.
+	//
+	// GET /headersCombined
 }
 
-// HeadersCombined implements headersCombined operation.
-//
-// GET /headersCombined
 func (UnimplementedHandler) HeadersCombined(ctx context.Context, params HeadersCombinedParams) (r HeadersCombinedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(HeadersCombinedRes), nil
 }
 
 // HeadersDefault implements headersDefault operation.
 //
 // GET /headersDefault
 func (UnimplementedHandler) HeadersDefault(ctx context.Context) (r *HeadersDefaultDef, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// HeadersJSON implements headersJSON operation.
+	//
+	// GET /headersJSON
 }
 
-// HeadersJSON implements headersJSON operation.
-//
-// GET /headersJSON
 func (UnimplementedHandler) HeadersJSON(ctx context.Context) (r *HeadersJSONOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// HeadersPattern implements headersPattern operation.
+	//
+	// GET /headersPattern
 }
 
-// HeadersPattern implements headersPattern operation.
-//
-// GET /headersPattern
 func (UnimplementedHandler) HeadersPattern(ctx context.Context) (r *HeadersPattern4XX, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// IntersectPatternCode implements intersectPatternCode operation.
+	//
+	// If a response is defined using an explicit code, the explicit code definition takes precedence
+	// over the range definition for that code.
+	//
+	// GET /intersectPatternCode
 }
 
-// IntersectPatternCode implements intersectPatternCode operation.
-//
-// If a response is defined using an explicit code, the explicit code definition takes precedence
-// over the range definition for that code.
-//
-// GET /intersectPatternCode
 func (UnimplementedHandler) IntersectPatternCode(ctx context.Context, params IntersectPatternCodeParams) (r IntersectPatternCodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IntersectPatternCodeRes), nil
 }
 
 // MultipleGenericResponses implements multipleGenericResponses operation.
 //
 // GET /multipleGenericResponses
 func (UnimplementedHandler) MultipleGenericResponses(ctx context.Context) (r MultipleGenericResponsesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MultipleGenericResponsesRes), nil
 }
 
 // OctetStreamBinaryStringSchema implements octetStreamBinaryStringSchema operation.
 //
 // GET /octetStreamBinaryStringSchema
 func (UnimplementedHandler) OctetStreamBinaryStringSchema(ctx context.Context) (r OctetStreamBinaryStringSchemaOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OctetStreamBinaryStringSchemaOK), nil
 }
 
 // OctetStreamEmptySchema implements octetStreamEmptySchema operation.
 //
 // GET /octetStreamEmptySchema
 func (UnimplementedHandler) OctetStreamEmptySchema(ctx context.Context) (r OctetStreamEmptySchemaOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OctetStreamEmptySchemaOK), nil
 }
 
 // OptionalHeaders implements optionalHeaders operation.
@@ -106,19 +122,23 @@ func (UnimplementedHandler) OctetStreamEmptySchema(ctx context.Context) (r Octet
 //
 // GET /optionalHeaders
 func (UnimplementedHandler) OptionalHeaders(ctx context.Context) (r *OptionalHeadersOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// StreamJSON implements streamJSON operation.
+	//
+	// POST /streamJSON
 }
 
-// StreamJSON implements streamJSON operation.
-//
-// POST /streamJSON
 func (UnimplementedHandler) StreamJSON(ctx context.Context, params StreamJSONParams) (r StreamJSONRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(StreamJSONRes), nil
 }
 
 // TextPlainBinaryStringSchema implements textPlainBinaryStringSchema operation.
 //
 // GET /textPlainBinaryStringSchema
 func (UnimplementedHandler) TextPlainBinaryStringSchema(ctx context.Context) (r TextPlainBinaryStringSchemaOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TextPlainBinaryStringSchemaOK), nil
 }

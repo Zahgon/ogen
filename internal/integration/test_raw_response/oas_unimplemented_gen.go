@@ -5,8 +5,6 @@ package api
 import (
 	"context"
 	"net/http"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,26 +17,31 @@ var _ RawHandler = UnimplementedHandler{}
 //
 // GET /mixed-data
 func (UnimplementedHandler) GetMixedData(ctx context.Context, w http.ResponseWriter) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetNormalData implements getNormalData operation.
 //
 // GET /normal-data
 func (UnimplementedHandler) GetNormalData(ctx context.Context) (r *GetNormalDataOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetRawData implements getRawData operation.
+	//
+	// GET /raw-data
 }
 
-// GetRawData implements getRawData operation.
-//
-// GET /raw-data
 func (UnimplementedHandler) GetRawData(ctx context.Context, w http.ResponseWriter) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRawDataInsideOperationGroup implements getRawDataInsideOperationGroup operation.
 //
 // GET /raw-data-inside-operation-group
 func (UnimplementedHandler) GetRawDataInsideOperationGroup(ctx context.Context, w http.ResponseWriter) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -1,34 +1,19 @@
 package ir
 
 import (
-	"strings"
-
 	"github.com/ogen-go/ogen/openapi"
 )
 
 // Servers is a list of servers.
 type Servers []Server
 
-func (s Servers) filter(cb func(Server) bool) (r []Server) {
-	for _, server := range s {
-		if cb(server) {
-			r = append(r, server)
-		}
-	}
-	return r
-}
+func (s Servers) filter(cb func(Server) bool) (r []Server) { _ = "STUB: not implemented"; return nil }
 
 // Templates returns a list of server URL templates.
-func (s Servers) Templates() []Server {
-	return s.filter(Server.IsTemplate)
-}
+func (s Servers) Templates() []Server { _ = "STUB: not implemented"; return nil }
 
 // Const return a list of constant server URLs.
-func (s Servers) Const() []Server {
-	return s.filter(func(server Server) bool {
-		return !server.IsTemplate()
-	})
-}
+func (s Servers) Const() []Server { _ = "STUB: not implemented"; return nil }
 
 // Server describes a OpenAPI server.
 type Server struct {
@@ -38,9 +23,7 @@ type Server struct {
 }
 
 // IsTemplate returns true if server URL has variables.
-func (s Server) IsTemplate() bool {
-	return len(s.Params) > 0
-}
+func (s Server) IsTemplate() bool { _ = "STUB: not implemented"; return false }
 
 // ServerParam describes a server template parameter.
 type ServerParam struct {
@@ -52,19 +35,7 @@ type ServerParam struct {
 // FormatString returns a format string (fmt.Sprintf) for the server.
 //
 // If the server has no variables, returns plain string.
-func (s Server) FormatString() string {
-	var sb strings.Builder
-	for _, part := range s.Spec.Template {
-		if part.IsParam() {
-			sb.WriteString("%s")
-		} else {
-			sb.WriteString(part.Raw)
-		}
-	}
-	return sb.String()
-}
+func (s Server) FormatString() string { _ = "STUB: not implemented"; return "" }
 
 // GoDoc returns GoDoc comment for the server.
-func (s Server) GoDoc() []string {
-	return prettyDoc(s.Spec.Description, "")
-}
+func (s Server) GoDoc() []string { _ = "STUB: not implemented"; return nil }

@@ -1,7 +1,6 @@
 package validate
 
 import (
-	"github.com/go-faster/errors"
 	"github.com/shopspring/decimal"
 )
 
@@ -20,63 +19,24 @@ type Decimal struct {
 }
 
 // SetMultipleOf sets multipleOf validator.
-func (t *Decimal) SetMultipleOf(d decimal.Decimal) {
-	t.MultipleOfSet = true
-	t.MultipleOf = d
-}
+func (t *Decimal) SetMultipleOf(d decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // SetExclusiveMinimum sets exclusive minimum value.
-func (t *Decimal) SetExclusiveMinimum(v decimal.Decimal) {
-	t.MinExclusive = true
-	t.SetMinimum(v)
-}
+func (t *Decimal) SetExclusiveMinimum(v decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // SetExclusiveMaximum sets exclusive maximum value.
-func (t *Decimal) SetExclusiveMaximum(v decimal.Decimal) {
-	t.MaxExclusive = true
-	t.SetMaximum(v)
-}
+func (t *Decimal) SetExclusiveMaximum(v decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // SetMinimum sets minimum value.
-func (t *Decimal) SetMinimum(v decimal.Decimal) {
-	t.Min = v
-	t.MinSet = true
-}
+func (t *Decimal) SetMinimum(v decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // SetMaximum sets maximum value.
-func (t *Decimal) SetMaximum(v decimal.Decimal) {
-	t.Max = v
-	t.MaxSet = true
-}
+func (t *Decimal) SetMaximum(v decimal.Decimal) { _ = "STUB: not implemented"; return }
 
 // Set reports whether any validations are set.
-func (t Decimal) Set() bool {
-	return t.MinSet || t.MaxSet || t.MultipleOfSet
-}
+func (t Decimal) Set() bool { _ = "STUB: not implemented"; return false }
 
 // Validate returns error if v does not match validation rules.
-func (t Decimal) Validate(v decimal.Decimal) error {
-	return t.validate(v)
-}
+func (t Decimal) Validate(v decimal.Decimal) error { _ = "STUB: not implemented"; return nil }
 
-func (t Decimal) validate(v decimal.Decimal) error {
-	if t.MinSet {
-		cmp := v.Cmp(t.Min)
-		if cmp < 0 || (t.MinExclusive && cmp == 0) {
-			return errors.Errorf("value %s less than %s", v.String(), t.Min.String())
-		}
-	}
-	if t.MaxSet {
-		cmp := v.Cmp(t.Max)
-		if cmp > 0 || (t.MaxExclusive && cmp == 0) {
-			return errors.Errorf("value %s greater than %s", v.String(), t.Max.String())
-		}
-	}
-	if t.MultipleOfSet {
-		if !v.Mod(t.MultipleOf).IsZero() {
-			return errors.Errorf("value %s is not multiple of %s", v.String(), t.MultipleOf.String())
-		}
-	}
-
-	return nil
-}
+func (t Decimal) validate(v decimal.Decimal) error { _ = "STUB: not implemented"; return nil }

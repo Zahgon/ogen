@@ -20,21 +20,25 @@ const (
 )
 
 // Query whether parameter location is query.
-func (l ParameterLocation) Query() bool { return l == LocationQuery }
+func (l ParameterLocation) Query() bool { _ = "STUB: not implemented"; return false }
 
 // Header whether parameter location is header.
-func (l ParameterLocation) Header() bool { return l == LocationHeader }
+func (l ParameterLocation) Header() bool { _ = "STUB: not implemented"; return false }
 
 // Path whether parameter location is path.
-func (l ParameterLocation) Path() bool { return l == LocationPath }
+func (l ParameterLocation) Path() bool { _ = "STUB: not implemented"; return false }
 
 // Cookie whether parameter location is cookie.
-func (l ParameterLocation) Cookie() bool { return l == LocationCookie }
+func (l ParameterLocation) Cookie() bool { _ = "STUB: not implemented"; return false }
 
 // String implements fmt.Stringer.
-func (l ParameterLocation) String() string { return string(l) }
+func (l ParameterLocation) String() string {
+	_ = "STUB: not implemented"
 
-// Parameter is an OpenAPI Operation Parameter.
+	// Parameter is an OpenAPI Operation Parameter.
+	return ""
+}
+
 type Parameter struct {
 	Ref Ref
 
@@ -67,9 +71,13 @@ type ParameterContent struct {
 type ParameterStyle string
 
 // String implements fmt.Stringer.
-func (s ParameterStyle) String() string { return string(s) }
+func (s ParameterStyle) String() string {
+	_ = "STUB: not implemented"
 
-// https://swagger.io/docs/specification/serialization/
+	// https://swagger.io/docs/specification/serialization/
+	return ""
+}
+
 const (
 	PathStyleSimple ParameterStyle = "simple"
 	PathStyleLabel  ParameterStyle = "label"

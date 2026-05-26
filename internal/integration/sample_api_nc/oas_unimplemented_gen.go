@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,14 +17,16 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /name/{id}/{foo}1234{bar}-{baz}!{kek}
 func (UnimplementedHandler) DataGetFormat(ctx context.Context, params DataGetFormatParams) (r string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 // DefaultTest implements defaultTest operation.
 //
 // POST /defaultTest
 func (UnimplementedHandler) DefaultTest(ctx context.Context, req *DefaultTest, params DefaultTestParams) (r int32, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // ErrorGet implements errorGet operation.
@@ -35,16 +35,19 @@ func (UnimplementedHandler) DefaultTest(ctx context.Context, req *DefaultTest, p
 //
 // GET /error
 func (UnimplementedHandler) ErrorGet(ctx context.Context) (r *ErrorStatusCode, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// FoobarGet implements foobarGet operation.
+	//
+	// Dumb endpoint for testing things.
+	//
+	// GET /foobar
 }
 
-// FoobarGet implements foobarGet operation.
-//
-// Dumb endpoint for testing things.
-//
-// GET /foobar
 func (UnimplementedHandler) FoobarGet(ctx context.Context, params FoobarGetParams) (r FoobarGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(FoobarGetRes), nil
 }
 
 // FoobarPost implements foobarPost operation.
@@ -53,42 +56,51 @@ func (UnimplementedHandler) FoobarGet(ctx context.Context, params FoobarGetParam
 //
 // POST /foobar
 func (UnimplementedHandler) FoobarPost(ctx context.Context, req OptPet) (r FoobarPostRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(FoobarPostRes), nil
 }
 
 // FoobarPut implements PUT /foobar operation.
 //
 // PUT /foobar
 func (UnimplementedHandler) FoobarPut(ctx context.Context) (r *FoobarPutDef, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// NoAdditionalPropertiesTest implements noAdditionalPropertiesTest operation.
+	//
+	// GET /noAdditionalPropertiesTest
 }
 
-// NoAdditionalPropertiesTest implements noAdditionalPropertiesTest operation.
-//
-// GET /noAdditionalPropertiesTest
 func (UnimplementedHandler) NoAdditionalPropertiesTest(ctx context.Context) (r *NoAdditionalPropertiesTest, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// NullableDefaultResponse implements nullableDefaultResponse operation.
+	//
+	// GET /nullableDefaultResponse
 }
 
-// NullableDefaultResponse implements nullableDefaultResponse operation.
-//
-// GET /nullableDefaultResponse
 func (UnimplementedHandler) NullableDefaultResponse(ctx context.Context) (r *NilIntStatusCode, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// OneofBug implements oneofBug operation.
+	//
+	// POST /oneofBug
 }
 
-// OneofBug implements oneofBug operation.
-//
-// POST /oneofBug
 func (UnimplementedHandler) OneofBug(ctx context.Context, req *OneOfBugs) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // PatternRecursiveMapGet implements GET /patternRecursiveMap operation.
 //
 // GET /patternRecursiveMap
 func (UnimplementedHandler) PatternRecursiveMapGet(ctx context.Context) (r PatternRecursiveMap, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatternRecursiveMap), nil
 }
 
 // PetCreate implements petCreate operation.
@@ -97,25 +109,30 @@ func (UnimplementedHandler) PatternRecursiveMapGet(ctx context.Context) (r Patte
 //
 // POST /pet
 func (UnimplementedHandler) PetCreate(ctx context.Context, req OptPet) (r *Pet, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PetFriendsNamesByID implements petFriendsNamesByID operation.
+	//
+	// Returns names of all friends of pet.
+	//
+	// GET /pet/friendNames/{id}
 }
 
-// PetFriendsNamesByID implements petFriendsNamesByID operation.
-//
-// Returns names of all friends of pet.
-//
-// GET /pet/friendNames/{id}
 func (UnimplementedHandler) PetFriendsNamesByID(ctx context.Context, params PetFriendsNamesByIDParams) (r []string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PetGet implements petGet operation.
+	//
+	// Returns pet from the system that the user has access to.
+	//
+	// GET /pet
 }
 
-// PetGet implements petGet operation.
-//
-// Returns pet from the system that the user has access to.
-//
-// GET /pet
 func (UnimplementedHandler) PetGet(ctx context.Context, params PetGetParams) (r PetGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PetGetRes), nil
 }
 
 // PetGetAvatarByID implements petGetAvatarByID operation.
@@ -124,7 +141,8 @@ func (UnimplementedHandler) PetGet(ctx context.Context, params PetGetParams) (r 
 //
 // GET /pet/avatar
 func (UnimplementedHandler) PetGetAvatarByID(ctx context.Context, params PetGetAvatarByIDParams) (r PetGetAvatarByIDRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PetGetAvatarByIDRes), nil
 }
 
 // PetGetAvatarByName implements petGetAvatarByName operation.
@@ -133,7 +151,8 @@ func (UnimplementedHandler) PetGetAvatarByID(ctx context.Context, params PetGetA
 //
 // GET /pet/{name}/avatar
 func (UnimplementedHandler) PetGetAvatarByName(ctx context.Context, params PetGetAvatarByNameParams) (r PetGetAvatarByNameRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PetGetAvatarByNameRes), nil
 }
 
 // PetGetByName implements petGetByName operation.
@@ -142,128 +161,156 @@ func (UnimplementedHandler) PetGetAvatarByName(ctx context.Context, params PetGe
 //
 // GET /pet/{name}
 func (UnimplementedHandler) PetGetByName(ctx context.Context, params PetGetByNameParams) (r *Pet, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PetNameByID implements petNameByID operation.
+	//
+	// Returns pet name by pet id.
+	//
+	// GET /pet/name/{id}
 }
 
-// PetNameByID implements petNameByID operation.
-//
-// Returns pet name by pet id.
-//
-// GET /pet/name/{id}
 func (UnimplementedHandler) PetNameByID(ctx context.Context, params PetNameByIDParams) (r string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 // PetUpdateNameAliasPost implements POST /pet/updateNameAlias operation.
 //
 // POST /pet/updateNameAlias
 func (UnimplementedHandler) PetUpdateNameAliasPost(ctx context.Context, req OptPetName) (r *PetUpdateNameAliasPostDef, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PetUpdateNamePost implements POST /pet/updateName operation.
+	//
+	// POST /pet/updateName
 }
 
-// PetUpdateNamePost implements POST /pet/updateName operation.
-//
-// POST /pet/updateName
 func (UnimplementedHandler) PetUpdateNamePost(ctx context.Context, req OptString) (r *PetUpdateNamePostDef, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PetUploadAvatarByID implements petUploadAvatarByID operation.
+	//
+	// Uploads pet avatar by id.
+	//
+	// POST /pet/avatar
 }
 
-// PetUploadAvatarByID implements petUploadAvatarByID operation.
-//
-// Uploads pet avatar by id.
-//
-// POST /pet/avatar
 func (UnimplementedHandler) PetUploadAvatarByID(ctx context.Context, req PetUploadAvatarByIDReq, params PetUploadAvatarByIDParams) (r PetUploadAvatarByIDRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PetUploadAvatarByIDRes), nil
 }
 
 // RecursiveArrayGet implements GET /recursiveArray operation.
 //
 // GET /recursiveArray
 func (UnimplementedHandler) RecursiveArrayGet(ctx context.Context) (r RecursiveArray, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(RecursiveArray), nil
 }
 
 // RecursiveMapGet implements GET /recursiveMap operation.
 //
 // GET /recursiveMap
 func (UnimplementedHandler) RecursiveMapGet(ctx context.Context) (r *RecursiveMap, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SecurityTest implements securityTest operation.
+	//
+	// GET /securityTest
 }
 
-// SecurityTest implements securityTest operation.
-//
-// GET /securityTest
 func (UnimplementedHandler) SecurityTest(ctx context.Context) (r string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 // StringIntMapGet implements GET /stringIntMap operation.
 //
 // GET /stringIntMap
 func (UnimplementedHandler) StringIntMapGet(ctx context.Context) (r *StringIntMap, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestDecimalValidation implements testDecimalValidation operation.
+	//
+	// POST /testDecimalValidation
 }
 
-// TestDecimalValidation implements testDecimalValidation operation.
-//
-// POST /testDecimalValidation
 func (UnimplementedHandler) TestDecimalValidation(ctx context.Context, req *TestDecimalValidation) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TestFloatValidation implements testFloatValidation operation.
 //
 // POST /testFloatValidation
 func (UnimplementedHandler) TestFloatValidation(ctx context.Context, req *TestFloatValidation) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TestInlineOneof implements testInlineOneof operation.
 //
 // GET /testInlineOneof
 func (UnimplementedHandler) TestInlineOneof(ctx context.Context) (r *TestInlineOneOf, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestIssue1310 implements testIssue1310 operation.
+	//
+	// GET /testIssue1310
 }
 
-// TestIssue1310 implements testIssue1310 operation.
-//
-// GET /testIssue1310
 func (UnimplementedHandler) TestIssue1310(ctx context.Context) (r *Issue1310, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestIssue1461 implements testIssue1461 operation.
+	//
+	// GET /testIssue1461
 }
 
-// TestIssue1461 implements testIssue1461 operation.
-//
-// GET /testIssue1461
 func (UnimplementedHandler) TestIssue1461(ctx context.Context) (r *Issue1461, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestNullableOneofs implements testNullableOneofs operation.
+	//
+	// GET /testNullableOneofs
 }
 
-// TestNullableOneofs implements testNullableOneofs operation.
-//
-// GET /testNullableOneofs
 func (UnimplementedHandler) TestNullableOneofs(ctx context.Context) (r TestNullableOneofsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TestNullableOneofsRes), nil
 }
 
 // TestTuple implements testTuple operation.
 //
 // GET /testTuple
 func (UnimplementedHandler) TestTuple(ctx context.Context) (r *TupleTest, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestTupleNamed implements testTupleNamed operation.
+	//
+	// GET /testTupleNamed
 }
 
-// TestTupleNamed implements testTupleNamed operation.
-//
-// GET /testTupleNamed
 func (UnimplementedHandler) TestTupleNamed(ctx context.Context) (r *TupleNamedTest, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestUniqueItems implements testUniqueItems operation.
+	//
+	// GET /testUniqueItems
 }
 
-// TestUniqueItems implements testUniqueItems operation.
-//
-// GET /testUniqueItems
 func (UnimplementedHandler) TestUniqueItems(ctx context.Context) (r *UniqueItemsTest, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
 }

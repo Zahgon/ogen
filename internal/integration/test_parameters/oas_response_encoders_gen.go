@@ -5,129 +5,60 @@ package api
 import (
 	"net/http"
 
-	"github.com/go-faster/errors"
-	"github.com/go-faster/jx"
 	"go.opentelemetry.io/otel/trace"
 )
 
 func encodeComplicatedParameterNameGetResponse(response *ComplicatedParameterNameGetOK, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(200)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeContentParametersResponse(response *ContentParameters, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeCookieParameterResponse(response *Value, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeHeaderParameterResponse(response *Value, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeObjectCookieParameterResponse(response *OneLevelObject, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeObjectQueryParameterResponse(response *ObjectQueryParameterOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeOptionalArrayParameterResponse(response string, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.Str(response)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeOptionalParametersResponse(response *OptionalQueryParametersResponse, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodePathParameterResponse(response *Value, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeSameNameResponse(response *SameNameOK, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(200)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeSimilarNamesResponse(response *SimilarNamesOK, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(200)
-
+	_ = "STUB: not implemented"
 	return nil
 }

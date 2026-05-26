@@ -2,23 +2,19 @@
 
 package api
 
-import (
-	"github.com/go-faster/errors"
-)
-
 type CreateWorkflowStatusesOK struct {
 	Created OptInt `json:"created"`
 }
 
 // GetCreated returns the value of Created.
 func (s *CreateWorkflowStatusesOK) GetCreated() OptInt {
-	return s.Created
+	_ = "STUB: not implemented"
+
+	// SetCreated sets the value of Created.
+	return *new(OptInt)
 }
 
-// SetCreated sets the value of Created.
-func (s *CreateWorkflowStatusesOK) SetCreated(val OptInt) {
-	s.Created = val
-}
+func (s *CreateWorkflowStatusesOK) SetCreated(val OptInt) { _ = "STUB: not implemented"; return }
 
 type CreateWorkflowStatusesReq struct {
 	Statuses []WorkflowStatus `json:"statuses"`
@@ -26,21 +22,20 @@ type CreateWorkflowStatusesReq struct {
 
 // GetStatuses returns the value of Statuses.
 func (s *CreateWorkflowStatusesReq) GetStatuses() []WorkflowStatus {
-	return s.Statuses
+	_ = "STUB: not implemented"
+
+	// SetStatuses sets the value of Statuses.
+	return nil
 }
 
-// SetStatuses sets the value of Statuses.
 func (s *CreateWorkflowStatusesReq) SetStatuses(val []WorkflowStatus) {
-	s.Statuses = val
+	_ = "STUB: not implemented"
+
+	// NewOptBool returns new OptBool with value set to v.
+	return
 }
 
-// NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -49,44 +44,26 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -95,43 +72,28 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptStatusProperties returns new OptStatusProperties with value set to v.
 func NewOptStatusProperties(v StatusProperties) OptStatusProperties {
-	return OptStatusProperties{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStatusProperties)
 }
 
 // OptStatusProperties is optional StatusProperties.
@@ -141,43 +103,34 @@ type OptStatusProperties struct {
 }
 
 // IsSet returns true if OptStatusProperties was set.
-func (o OptStatusProperties) IsSet() bool { return o.Set }
+func (o OptStatusProperties) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStatusProperties) Reset() {
-	var v StatusProperties
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStatusProperties) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStatusProperties) SetTo(v StatusProperties) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStatusProperties) SetTo(v StatusProperties) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStatusProperties) Get() (v StatusProperties, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(StatusProperties), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptStatusProperties) Or(d StatusProperties) StatusProperties {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(StatusProperties)
 }
 
 // NewOptStatusPropertiesCategory returns new OptStatusPropertiesCategory with value set to v.
 func NewOptStatusPropertiesCategory(v StatusPropertiesCategory) OptStatusPropertiesCategory {
-	return OptStatusPropertiesCategory{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStatusPropertiesCategory)
 }
 
 // OptStatusPropertiesCategory is optional StatusPropertiesCategory.
@@ -187,44 +140,35 @@ type OptStatusPropertiesCategory struct {
 }
 
 // IsSet returns true if OptStatusPropertiesCategory was set.
-func (o OptStatusPropertiesCategory) IsSet() bool { return o.Set }
+func (o OptStatusPropertiesCategory) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStatusPropertiesCategory) Reset() {
-	var v StatusPropertiesCategory
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStatusPropertiesCategory) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptStatusPropertiesCategory) SetTo(v StatusPropertiesCategory) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStatusPropertiesCategory) Get() (v StatusPropertiesCategory, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(StatusPropertiesCategory), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptStatusPropertiesCategory) Or(d StatusPropertiesCategory) StatusPropertiesCategory {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(StatusPropertiesCategory)
 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -233,36 +177,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Nested properties object (level 2).
 // Ref: #/components/schemas/StatusProperties
@@ -274,33 +205,41 @@ type StatusProperties struct {
 
 // GetCategory returns the value of Category.
 func (s *StatusProperties) GetCategory() OptStatusPropertiesCategory {
-	return s.Category
+	_ = "STUB: not implemented"
+
+	// GetColor returns the value of Color.
+	return *new(OptStatusPropertiesCategory)
 }
 
-// GetColor returns the value of Color.
 func (s *StatusProperties) GetColor() OptString {
-	return s.Color
+	_ = "STUB: not implemented"
+
+	// GetIsDefault returns the value of IsDefault.
+	return *new(OptString)
 }
 
-// GetIsDefault returns the value of IsDefault.
 func (s *StatusProperties) GetIsDefault() OptBool {
-	return s.IsDefault
+	_ = "STUB: not implemented"
+
+	// SetCategory sets the value of Category.
+	return *new(OptBool)
 }
 
-// SetCategory sets the value of Category.
 func (s *StatusProperties) SetCategory(val OptStatusPropertiesCategory) {
-	s.Category = val
+	_ = "STUB: not implemented"
+
+	// SetColor sets the value of Color.
+	return
 }
 
-// SetColor sets the value of Color.
 func (s *StatusProperties) SetColor(val OptString) {
-	s.Color = val
+	_ = "STUB: not implemented"
+
+	// SetIsDefault sets the value of IsDefault.
+	return
 }
 
-// SetIsDefault sets the value of IsDefault.
-func (s *StatusProperties) SetIsDefault(val OptBool) {
-	s.IsDefault = val
-}
+func (s *StatusProperties) SetIsDefault(val OptBool) { _ = "STUB: not implemented"; return }
 
 type StatusPropertiesCategory string
 
@@ -312,42 +251,20 @@ const (
 
 // AllValues returns all StatusPropertiesCategory values.
 func (StatusPropertiesCategory) AllValues() []StatusPropertiesCategory {
-	return []StatusPropertiesCategory{
-		StatusPropertiesCategoryTODO,
-		StatusPropertiesCategoryINPROGRESS,
-		StatusPropertiesCategoryDONE,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s StatusPropertiesCategory) MarshalText() ([]byte, error) {
-	switch s {
-	case StatusPropertiesCategoryTODO:
-		return []byte(s), nil
-	case StatusPropertiesCategoryINPROGRESS:
-		return []byte(s), nil
-	case StatusPropertiesCategoryDONE:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *StatusPropertiesCategory) UnmarshalText(data []byte) error {
-	switch StatusPropertiesCategory(data) {
-	case StatusPropertiesCategoryTODO:
-		*s = StatusPropertiesCategoryTODO
-		return nil
-	case StatusPropertiesCategoryINPROGRESS:
-		*s = StatusPropertiesCategoryINPROGRESS
-		return nil
-	case StatusPropertiesCategoryDONE:
-		*s = StatusPropertiesCategoryDONE
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/WorkflowStatus
@@ -363,40 +280,50 @@ type WorkflowStatus struct {
 
 // GetID returns the value of ID.
 func (s *WorkflowStatus) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *WorkflowStatus) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
 func (s *WorkflowStatus) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetProperties returns the value of Properties.
+	new(OptString)
 }
 
-// GetProperties returns the value of Properties.
 func (s *WorkflowStatus) GetProperties() OptStatusProperties {
-	return s.Properties
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptStatusProperties)
 }
 
-// SetID sets the value of ID.
 func (s *WorkflowStatus) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *WorkflowStatus) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *WorkflowStatus) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *WorkflowStatus) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetProperties sets the value of Properties.
-func (s *WorkflowStatus) SetProperties(val OptStatusProperties) {
-	s.Properties = val
-}
+func (s *WorkflowStatus) SetProperties(val OptStatusProperties) { _ = "STUB: not implemented"; return }

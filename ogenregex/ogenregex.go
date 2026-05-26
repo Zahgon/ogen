@@ -10,10 +10,8 @@ package ogenregex
 
 import (
 	"regexp"
-	"time"
 
 	"github.com/dlclark/regexp2"
-	"github.com/go-faster/errors"
 )
 
 var _ = []Regexp{
@@ -26,33 +24,24 @@ type goRegexp struct {
 	exp  *regexp.Regexp
 }
 
-func (r goRegexp) Match(s []byte) (bool, error) {
-	return r.exp.Match(s), nil
-}
+func (r goRegexp) Match(s []byte) (bool, error) { _ = "STUB: not implemented"; return false, nil }
 
-func (r goRegexp) MatchString(s string) (bool, error) {
-	return r.exp.MatchString(s), nil
-}
+func (r goRegexp) MatchString(s string) (bool, error) { _ = "STUB: not implemented"; return false, nil }
 
-func (r goRegexp) String() string {
-	return r.orig
-}
+func (r goRegexp) String() string { _ = "STUB: not implemented"; return "" }
 
 type regexp2Regexp struct {
 	exp *regexp2.Regexp
 }
 
-func (r regexp2Regexp) Match(s []byte) (bool, error) {
-	return r.exp.MatchRunes([]rune(string(s)))
-}
+func (r regexp2Regexp) Match(s []byte) (bool, error) { _ = "STUB: not implemented"; return false, nil }
 
 func (r regexp2Regexp) MatchString(s string) (bool, error) {
-	return r.exp.MatchString(s)
+	_ = "STUB: not implemented"
+	return false, nil
 }
 
-func (r regexp2Regexp) String() string {
-	return r.exp.String()
-}
+func (r regexp2Regexp) String() string { _ = "STUB: not implemented"; return "" }
 
 // Regexp is a regular expression interface.
 type Regexp interface {
@@ -65,26 +54,13 @@ type Regexp interface {
 //
 // NOTE: this function may compile the same expression multiple times and can
 // be slow. Compile the expression once and reuse it.
-func Compile(exp string) (Regexp, error) {
-	if converted, ok := Convert(exp); ok {
-		if re, err := regexp.Compile(converted); err == nil {
-			return goRegexp{orig: exp, exp: re}, nil
-		}
-	}
-	re, err := regexp2.Compile(exp, regexp2.ECMAScript|regexp2.Unicode)
-	if err != nil {
-		return nil, errors.Wrap(err, "regexp2")
-	}
-	// FIXME(tdakkota): Default timeout is "forever", which may lead to DoS.
-	// 	Probably, we should make this configurable.
-	re.MatchTimeout = 15 * time.Second
-	return regexp2Regexp{re}, nil
-}
+func Compile(exp string) (Regexp, error) { _ = "STUB: not implemented"; return *new(Regexp), nil }
+
+// FIXME(tdakkota): Default timeout is "forever", which may lead to DoS.
+// 	Probably, we should make this configurable.
 
 // MustCompile compiles a regular expression and panics on error.
 //
 // NOTE: this function may compile the same expression multiple times and can
 // be slow. Compile the expression once and reuse it.
-func MustCompile(exp string) Regexp {
-	return errors.Must(Compile(exp))
-}
+func MustCompile(exp string) Regexp { _ = "STUB: not implemented"; return *new(Regexp) }

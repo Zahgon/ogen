@@ -4,14 +4,10 @@ package api
 
 import (
 	"net/http"
-	"strings"
 
 	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/middleware"
 	"github.com/ogen-go/ogen/ogenerrors"
 	"github.com/ogen-go/ogen/ogenregex"
-	"github.com/ogen-go/ogen/otelogen"
-	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 	"go.opentelemetry.io/otel/trace"
@@ -44,20 +40,7 @@ type otelConfig struct {
 	Attributes     []attribute.KeyValue
 }
 
-func (cfg *otelConfig) initOTEL() {
-	if cfg.TracerProvider == nil {
-		cfg.TracerProvider = otel.GetTracerProvider()
-	}
-	if cfg.MeterProvider == nil {
-		cfg.MeterProvider = otel.GetMeterProvider()
-	}
-	cfg.Tracer = cfg.TracerProvider.Tracer(otelogen.Name,
-		trace.WithInstrumentationVersion(otelogen.SemVersion()),
-	)
-	cfg.Meter = cfg.MeterProvider.Meter(otelogen.Name,
-		metric.WithInstrumentationVersion(otelogen.SemVersion()),
-	)
-}
+func (cfg *otelConfig) initOTEL() { _ = "STUB: not implemented"; return }
 
 // ErrorHandler is error handler.
 type ErrorHandler = ogenerrors.ErrorHandler
@@ -79,30 +62,18 @@ type ServerOption interface {
 
 var _ ServerOption = (optionFunc[serverConfig])(nil)
 
-func (o optionFunc[C]) applyServer(c *C) {
-	o(c)
-}
+func (o optionFunc[C]) applyServer(c *C) { _ = "STUB: not implemented"; return }
 
 var _ ServerOption = (otelOptionFunc)(nil)
 
-func (o otelOptionFunc) applyServer(c *serverConfig) {
-	o(&c.otelConfig)
-}
+func (o otelOptionFunc) applyServer(c *serverConfig) { _ = "STUB: not implemented"; return }
 
 func newServerConfig(opts ...ServerOption) serverConfig {
-	cfg := serverConfig{
-		NotFound:           http.NotFound,
-		MethodNotAllowed:   nil,
-		ErrorHandler:       ogenerrors.DefaultErrorHandler,
-		Middleware:         nil,
-		MaxMultipartMemory: 32 << 20, // 32 MB
-	}
-	for _, opt := range opts {
-		opt.applyServer(&cfg)
-	}
-	cfg.initOTEL()
-	return cfg
+	_ = "STUB: not implemented"
+	return *new(serverConfig)
 }
+
+// 32 MB
 
 type baseServer struct {
 	cfg      serverConfig
@@ -112,7 +83,8 @@ type baseServer struct {
 }
 
 func (s baseServer) notFound(w http.ResponseWriter, r *http.Request) {
-	s.cfg.NotFound(w, r)
+	_ = "STUB: not implemented"
+	return
 }
 
 type notAllowedParams struct {
@@ -123,50 +95,13 @@ type notAllowedParams struct {
 }
 
 func (s baseServer) notAllowed(w http.ResponseWriter, r *http.Request, params notAllowedParams) {
-	h := w.Header()
-	isOptions := r.Method == "OPTIONS"
-	if isOptions {
-		h.Set("Access-Control-Allow-Methods", params.allowedMethods)
-		if params.allowedHeaders != nil {
-			m := r.Header.Get("Access-Control-Request-Method")
-			if m != "" {
-				allowedHeaders, ok := params.allowedHeaders[strings.ToUpper(m)]
-				if ok {
-					h.Set("Access-Control-Allow-Headers", allowedHeaders)
-				}
-			}
-		}
-		if params.acceptPost != "" {
-			h.Set("Accept-Post", params.acceptPost)
-		}
-		if params.acceptPatch != "" {
-			h.Set("Accept-Patch", params.acceptPatch)
-		}
-	}
-	if s.cfg.MethodNotAllowed != nil {
-		s.cfg.MethodNotAllowed(w, r, params.allowedMethods)
-		return
-	}
-	status := http.StatusNoContent
-	if !isOptions {
-		h.Set("Allow", params.allowedMethods)
-		status = http.StatusMethodNotAllowed
-	}
-	w.WriteHeader(status)
+	_ = "STUB: not implemented"
+	return
 }
 
 func (cfg serverConfig) baseServer() (s baseServer, err error) {
-	s = baseServer{cfg: cfg}
-	if s.requests, err = otelogen.ServerRequestCountCounter(s.cfg.Meter); err != nil {
-		return s, err
-	}
-	if s.errors, err = otelogen.ServerErrorsCountCounter(s.cfg.Meter); err != nil {
-		return s, err
-	}
-	if s.duration, err = otelogen.ServerDurationHistogram(s.cfg.Meter); err != nil {
-		return s, err
-	}
-	return s, nil
+	_ = "STUB: not implemented"
+	return *new(baseServer), nil
 }
 
 type clientConfig struct {
@@ -181,25 +116,15 @@ type ClientOption interface {
 
 var _ ClientOption = (optionFunc[clientConfig])(nil)
 
-func (o optionFunc[C]) applyClient(c *C) {
-	o(c)
-}
+func (o optionFunc[C]) applyClient(c *C) { _ = "STUB: not implemented"; return }
 
 var _ ClientOption = (otelOptionFunc)(nil)
 
-func (o otelOptionFunc) applyClient(c *clientConfig) {
-	o(&c.otelConfig)
-}
+func (o otelOptionFunc) applyClient(c *clientConfig) { _ = "STUB: not implemented"; return }
 
 func newClientConfig(opts ...ClientOption) clientConfig {
-	cfg := clientConfig{
-		Client: http.DefaultClient,
-	}
-	for _, opt := range opts {
-		opt.applyClient(&cfg)
-	}
-	cfg.initOTEL()
-	return cfg
+	_ = "STUB: not implemented"
+	return *new(clientConfig)
 }
 
 type baseClient struct {
@@ -210,17 +135,8 @@ type baseClient struct {
 }
 
 func (cfg clientConfig) baseClient() (c baseClient, err error) {
-	c = baseClient{cfg: cfg}
-	if c.requests, err = otelogen.ClientRequestCountCounter(c.cfg.Meter); err != nil {
-		return c, err
-	}
-	if c.errors, err = otelogen.ClientErrorsCountCounter(c.cfg.Meter); err != nil {
-		return c, err
-	}
-	if c.duration, err = otelogen.ClientDurationHistogram(c.cfg.Meter); err != nil {
-		return c, err
-	}
-	return c, nil
+	_ = "STUB: not implemented"
+	return *new(baseClient), nil
 }
 
 // Option is config option.
@@ -233,94 +149,63 @@ type Option interface {
 //
 // If none is specified, the global provider is used.
 func WithTracerProvider(provider trace.TracerProvider) Option {
-	return otelOptionFunc(func(cfg *otelConfig) {
-		if provider != nil {
-			cfg.TracerProvider = provider
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(Option)
 }
 
 // WithMeterProvider specifies a meter provider to use for creating a meter.
 //
 // If none is specified, the otel.GetMeterProvider() is used.
 func WithMeterProvider(provider metric.MeterProvider) Option {
-	return otelOptionFunc(func(cfg *otelConfig) {
-		if provider != nil {
-			cfg.MeterProvider = provider
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(Option)
 }
 
 // WithAttributes specifies default otel attributes.
 func WithAttributes(attributes ...attribute.KeyValue) Option {
-	return otelOptionFunc(func(cfg *otelConfig) {
-		cfg.Attributes = attributes
-	})
+	_ = "STUB: not implemented"
+	return *new(Option)
 }
 
 // WithClient specifies http client to use.
 func WithClient(client ht.Client) ClientOption {
-	return optionFunc[clientConfig](func(cfg *clientConfig) {
-		if client != nil {
-			cfg.Client = client
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(ClientOption)
 }
 
 // WithNotFound specifies Not Found handler to use.
 func WithNotFound(notFound http.HandlerFunc) ServerOption {
-	return optionFunc[serverConfig](func(cfg *serverConfig) {
-		if notFound != nil {
-			cfg.NotFound = notFound
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(ServerOption)
 }
 
 // WithMethodNotAllowed specifies Method Not Allowed handler to use.
 func WithMethodNotAllowed(methodNotAllowed func(w http.ResponseWriter, r *http.Request, allowed string)) ServerOption {
-	return optionFunc[serverConfig](func(cfg *serverConfig) {
-		if methodNotAllowed != nil {
-			cfg.MethodNotAllowed = methodNotAllowed
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(ServerOption)
 }
 
 // WithErrorHandler specifies error handler to use.
 func WithErrorHandler(h ErrorHandler) ServerOption {
-	return optionFunc[serverConfig](func(cfg *serverConfig) {
-		if h != nil {
-			cfg.ErrorHandler = h
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(ServerOption)
 }
 
 // WithPathPrefix specifies server path prefix.
 func WithPathPrefix(prefix string) ServerOption {
-	return optionFunc[serverConfig](func(cfg *serverConfig) {
-		cfg.Prefix = prefix
-	})
+	_ = "STUB: not implemented"
+	return *new(ServerOption)
 }
 
 // WithMiddleware specifies middlewares to use.
 func WithMiddleware(m ...Middleware) ServerOption {
-	return optionFunc[serverConfig](func(cfg *serverConfig) {
-		switch len(m) {
-		case 0:
-			cfg.Middleware = nil
-		case 1:
-			cfg.Middleware = m[0]
-		default:
-			cfg.Middleware = middleware.ChainMiddlewares(m...)
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(ServerOption)
 }
 
 // WithMaxMultipartMemory specifies limit of memory for storing file parts.
 // File parts which can't be stored in memory will be stored on disk in temporary files.
 func WithMaxMultipartMemory(max int64) ServerOption {
-	return optionFunc[serverConfig](func(cfg *serverConfig) {
-		if max > 0 {
-			cfg.MaxMultipartMemory = max
-		}
-	})
+	_ = "STUB: not implemented"
+	return *new(ServerOption)
 }

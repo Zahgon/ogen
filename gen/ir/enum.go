@@ -5,6 +5,4 @@ type EnumVariant struct {
 	Value any
 }
 
-func (v *EnumVariant) ValueGo() string {
-	return PrintGoValue(v.Value)
-}
+func (v *EnumVariant) ValueGo() string { _ = "STUB: not implemented"; return "" }

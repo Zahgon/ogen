@@ -3,59 +3,13 @@
 package api
 
 // SetFake set fake values.
-func (s *Error) SetFake() {
-	{
-		{
-			s.Code = int32(0)
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *Error) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptString) SetFake() {
-	var elem string
-	{
-		elem = "string"
-	}
-	s.SetTo(elem)
-}
+func (s *OptString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Pet) SetFake() {
-	{
-		{
-			s.ID = int64(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Tag.SetFake()
-		}
-	}
-}
+func (s *Pet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Pets) SetFake() {
-	var unwrapped []Pet
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Pet
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = Pets(unwrapped)
-}
+func (s *Pets) SetFake() { _ = "STUB: not implemented"; return }

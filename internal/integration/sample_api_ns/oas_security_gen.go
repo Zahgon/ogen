@@ -5,8 +5,6 @@ package api
 import (
 	"context"
 	"net/http"
-
-	"github.com/go-faster/errors"
 )
 
 // SecuritySource is provider of security values (tokens, passwords, etc.).
@@ -30,22 +28,11 @@ var operationRolesAPIKey = map[string][]string{
 //	requiredRoles := GetRolesForAPIKey(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForAPIKey(operation string) []string {
-	roles, ok := operationRolesAPIKey[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForAPIKey(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 func (s *Client) securityAPIKey(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.APIKey(ctx, operationName)
-	if err != nil {
-		return errors.Wrap(err, "security source \"APIKey\"")
-	}
-	req.Header.Set("Api_key", t.APIKey)
+	_ = "STUB: not implemented"
 	return nil
 }

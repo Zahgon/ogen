@@ -1,11 +1,7 @@
 package validate
 
 import (
-	"bytes"
-	"fmt"
-	"io"
 	"net/http"
-	"strings"
 
 	"github.com/ogen-go/ogen/ogenregex"
 
@@ -21,22 +17,7 @@ type Error struct {
 }
 
 // Error implements error.
-func (e *Error) Error() string {
-	var b strings.Builder
-	b.WriteString("invalid:")
-	for i, f := range e.Fields {
-		if i != 0 {
-			b.WriteRune(',')
-		}
-		b.WriteRune(' ')
-		b.WriteString(f.Name)
-		b.WriteString(" (")
-		b.WriteString(f.Error.Error())
-		b.WriteString(")")
-	}
-
-	return b.String()
-}
+func (e *Error) Error() string { _ = "STUB: not implemented"; return "" }
 
 // FieldError is failed validation on field.
 type FieldError struct {
@@ -53,16 +34,10 @@ type InvalidContentTypeError struct {
 }
 
 // InvalidContentTypeError implements error.
-func (e *InvalidContentTypeError) Error() string {
-	return fmt.Sprintf("unexpected Content-Type: %s", e.ContentType)
-}
+func (e *InvalidContentTypeError) Error() string { _ = "STUB: not implemented"; return "" }
 
 // InvalidContentType creates new InvalidContentTypeError.
-func InvalidContentType(contentType string) error {
-	return &InvalidContentTypeError{
-		ContentType: contentType,
-	}
-}
+func InvalidContentType(contentType string) error { _ = "STUB: not implemented"; return nil }
 
 // UnexpectedStatusCodeError reports that client got unexpected status code.
 type UnexpectedStatusCodeError struct {
@@ -72,32 +47,21 @@ type UnexpectedStatusCodeError struct {
 
 // UnexpectedStatusCodeWithResponse creates new UnexpectedStatusCode.
 func UnexpectedStatusCodeWithResponse(response *http.Response) error {
-	ret := &UnexpectedStatusCodeError{
-		StatusCode: response.StatusCode,
-		Payload:    response,
-	}
-
-	// response.Body is defer-closed by caller.
-	// we want to retain it in Payload.
-	buf, err := io.ReadAll(response.Body)
-	response.Body = io.NopCloser(bytes.NewBuffer(buf))
-	return errors.Join(ret, err)
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// response.Body is defer-closed by caller.
+// we want to retain it in Payload.
 
 // UnexpectedStatusCode creates new UnexpectedStatusCode.
 //
 // Deprecated: client codes generated a while ago used this function.
 // Kept here solely for backward compatibility to them.
-func UnexpectedStatusCode(statusCode int) error {
-	return &UnexpectedStatusCodeError{
-		StatusCode: statusCode,
-	}
-}
+func UnexpectedStatusCode(statusCode int) error { _ = "STUB: not implemented"; return nil }
 
 // UnexpectedStatusCodeError implements error.
-func (e *UnexpectedStatusCodeError) Error() string {
-	return fmt.Sprintf("unexpected status code: %d", e.StatusCode)
-}
+func (e *UnexpectedStatusCodeError) Error() string { _ = "STUB: not implemented"; return "" }
 
 // ErrNilPointer reports that use Validate, but receiver pointer is nil.
 var ErrNilPointer = errors.New("nil pointer")
@@ -109,9 +73,7 @@ type MinLengthError struct {
 }
 
 // MinLengthError implements error.
-func (e *MinLengthError) Error() string {
-	return fmt.Sprintf("len %d less than minimum %d", e.Len, e.MinLength)
-}
+func (e *MinLengthError) Error() string { _ = "STUB: not implemented"; return "" }
 
 // MaxLengthError reports that len greater than maximum.
 type MaxLengthError struct {
@@ -120,9 +82,7 @@ type MaxLengthError struct {
 }
 
 // MaxLengthError implements error.
-func (e *MaxLengthError) Error() string {
-	return fmt.Sprintf("len %d greater than maximum %d", e.Len, e.MaxLength)
-}
+func (e *MaxLengthError) Error() string { _ = "STUB: not implemented"; return "" }
 
 // NoRegexMatchError reports that value have no regexp match.
 type NoRegexMatchError struct {
@@ -130,9 +90,7 @@ type NoRegexMatchError struct {
 }
 
 // MaxLengthError implements error.
-func (e *NoRegexMatchError) Error() string {
-	return fmt.Sprintf("no regex match: %s", e.Pattern.String())
-}
+func (e *NoRegexMatchError) Error() string { _ = "STUB: not implemented"; return "" }
 
 // DuplicateItemsError indicates duplicate items in a uniqueItems array.
 type DuplicateItemsError struct {
@@ -142,13 +100,7 @@ type DuplicateItemsError struct {
 }
 
 // Error implements error.
-func (e *DuplicateItemsError) Error() string {
-	if len(e.Indices) < 2 {
-		return "duplicate items found"
-	}
-	return fmt.Sprintf("duplicate item found at indices %d and %d",
-		e.Indices[0], e.Indices[1])
-}
+func (e *DuplicateItemsError) Error() string { _ = "STUB: not implemented"; return "" }
 
 // DepthLimitError indicates nesting depth limit was exceeded.
 type DepthLimitError struct {
@@ -160,7 +112,4 @@ type DepthLimitError struct {
 }
 
 // Error implements error.
-func (e *DepthLimitError) Error() string {
-	return fmt.Sprintf("equality check depth limit exceeded for type %s (max: %d)",
-		e.TypeName, e.MaxDepth)
-}
+func (e *DepthLimitError) Error() string { _ = "STUB: not implemented"; return "" }

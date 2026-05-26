@@ -8,56 +8,36 @@ import (
 
 // DecodeStringUnixSeconds decodes unix-seconds from json string.
 func DecodeStringUnixSeconds(d *jx.Decoder) (time.Time, error) {
-	val, err := DecodeStringInt64(d)
-	if err != nil {
-		return time.Time{}, err
-	}
-	return time.Unix(val, 0), nil
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // EncodeStringUnixSeconds encodes unix-seconds to json string.
-func EncodeStringUnixSeconds(e *jx.Encoder, v time.Time) {
-	EncodeStringInt64(e, v.Unix())
-}
+func EncodeStringUnixSeconds(e *jx.Encoder, v time.Time) { _ = "STUB: not implemented"; return }
 
 // DecodeStringUnixNano decodes unix-nano from json string.
 func DecodeStringUnixNano(d *jx.Decoder) (time.Time, error) {
-	val, err := DecodeStringInt64(d)
-	if err != nil {
-		return time.Time{}, err
-	}
-	return time.Unix(0, val), nil
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // EncodeStringUnixNano encodes unix-nano to json string.
-func EncodeStringUnixNano(e *jx.Encoder, v time.Time) {
-	EncodeStringInt64(e, v.UnixNano())
-}
+func EncodeStringUnixNano(e *jx.Encoder, v time.Time) { _ = "STUB: not implemented"; return }
 
 // DecodeStringUnixMicro decodes unix-micro from json string.
 func DecodeStringUnixMicro(d *jx.Decoder) (time.Time, error) {
-	val, err := DecodeStringInt64(d)
-	if err != nil {
-		return time.Time{}, err
-	}
-	return time.UnixMicro(val), nil
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // EncodeStringUnixMicro encodes unix-micro to json string.
-func EncodeStringUnixMicro(e *jx.Encoder, v time.Time) {
-	EncodeStringInt64(e, v.UnixMicro())
-}
+func EncodeStringUnixMicro(e *jx.Encoder, v time.Time) { _ = "STUB: not implemented"; return }
 
 // DecodeStringUnixMilli decodes unix-milli from json string.
 func DecodeStringUnixMilli(d *jx.Decoder) (time.Time, error) {
-	val, err := DecodeStringInt64(d)
-	if err != nil {
-		return time.Time{}, err
-	}
-	return time.UnixMilli(val), nil
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // EncodeStringUnixMilli encodes unix-milli to json string.
-func EncodeStringUnixMilli(e *jx.Encoder, v time.Time) {
-	EncodeStringInt64(e, v.UnixMilli())
-}
+func EncodeStringUnixMilli(e *jx.Encoder, v time.Time) { _ = "STUB: not implemented"; return }

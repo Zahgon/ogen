@@ -4,8 +4,6 @@ package api
 
 import (
 	"time"
-
-	"github.com/go-faster/errors"
 )
 
 // Ref: #/components/schemas/BrokerAccountType
@@ -17,38 +15,16 @@ const (
 )
 
 // AllValues returns all BrokerAccountType values.
-func (BrokerAccountType) AllValues() []BrokerAccountType {
-	return []BrokerAccountType{
-		BrokerAccountTypeTinkoff,
-		BrokerAccountTypeTinkoffIis,
-	}
-}
+func (BrokerAccountType) AllValues() []BrokerAccountType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s BrokerAccountType) MarshalText() ([]byte, error) {
-	switch s {
-	case BrokerAccountTypeTinkoff:
-		return []byte(s), nil
-	case BrokerAccountTypeTinkoffIis:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *BrokerAccountType) UnmarshalText(data []byte) error {
-	switch BrokerAccountType(data) {
-	case BrokerAccountTypeTinkoff:
-		*s = BrokerAccountTypeTinkoff
-		return nil
-	case BrokerAccountTypeTinkoffIis:
-		*s = BrokerAccountTypeTinkoffIis
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *BrokerAccountType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/Candle
 type Candle struct {
@@ -65,97 +41,129 @@ type Candle struct {
 
 // GetFigi returns the value of Figi.
 func (s *Candle) GetFigi() string {
-	return s.Figi
+	_ = "STUB: not implemented"
+
+	// GetInterval returns the value of Interval.
+	return ""
 }
 
-// GetInterval returns the value of Interval.
 func (s *Candle) GetInterval() CandleResolution {
-	return s.Interval
+	_ = "STUB: not implemented"
+
+	// GetO returns the value of O.
+	return *new(CandleResolution)
 }
 
-// GetO returns the value of O.
 func (s *Candle) GetO() float64 {
-	return s.O
+	_ = "STUB: not implemented"
+
+	// GetC returns the value of C.
+	return 0
 }
 
-// GetC returns the value of C.
 func (s *Candle) GetC() float64 {
-	return s.C
+	_ = "STUB: not implemented"
+
+	// GetH returns the value of H.
+	return 0
 }
 
-// GetH returns the value of H.
 func (s *Candle) GetH() float64 {
-	return s.H
+	_ = "STUB: not implemented"
+
+	// GetL returns the value of L.
+	return 0
 }
 
-// GetL returns the value of L.
 func (s *Candle) GetL() float64 {
-	return s.L
+	_ = "STUB: not implemented"
+
+	// GetV returns the value of V.
+	return 0
 }
 
-// GetV returns the value of V.
 func (s *Candle) GetV() int32 {
-	return s.V
+	_ = "STUB: not implemented"
+
+	// GetTime returns the value of Time.
+	return 0
 }
 
-// GetTime returns the value of Time.
 func (s *Candle) GetTime() time.Time {
-	return s.Time
+	_ = "STUB: not implemented"
+
+	// SetFigi sets the value of Figi.
+	return *new(time.Time)
 }
 
-// SetFigi sets the value of Figi.
 func (s *Candle) SetFigi(val string) {
-	s.Figi = val
+	_ = "STUB: not implemented"
+
+	// SetInterval sets the value of Interval.
+	return
 }
 
-// SetInterval sets the value of Interval.
 func (s *Candle) SetInterval(val CandleResolution) {
-	s.Interval = val
+	_ = "STUB: not implemented"
+
+	// SetO sets the value of O.
+	return
 }
 
-// SetO sets the value of O.
 func (s *Candle) SetO(val float64) {
-	s.O = val
+	_ = "STUB: not implemented"
+
+	// SetC sets the value of C.
+	return
 }
 
-// SetC sets the value of C.
 func (s *Candle) SetC(val float64) {
-	s.C = val
+	_ = "STUB: not implemented"
+
+	// SetH sets the value of H.
+	return
 }
 
-// SetH sets the value of H.
 func (s *Candle) SetH(val float64) {
-	s.H = val
+	_ = "STUB: not implemented"
+
+	// SetL sets the value of L.
+	return
 }
 
-// SetL sets the value of L.
 func (s *Candle) SetL(val float64) {
-	s.L = val
+	_ = "STUB: not implemented"
+
+	// SetV sets the value of V.
+	return
 }
 
-// SetV sets the value of V.
 func (s *Candle) SetV(val int32) {
-	s.V = val
+	_ = "STUB: not implemented"
+
+	// SetTime sets the value of Time.
+	return
 }
 
-// SetTime sets the value of Time.
 func (s *Candle) SetTime(val time.Time) {
-	s.Time = val
+	_ = "STUB: not implemented"
+
+	// Интервал свечи и допустимый промежуток запроса:
+	// - 1min [1 minute, 1 day]
+	// - 2min [2 minutes, 1 day]
+	// - 3min [3 minutes, 1 day]
+	// - 5min [5 minutes, 1 day]
+	// - 10min [10 minutes, 1 day]
+	// - 15min [15 minutes, 1 day]
+	// - 30min [30 minutes, 1 day]
+	// - hour [1 hour, 7 days]
+	// - day [1 day, 1 year]
+	// - week [7 days, 2 years]
+	// - month [1 month, 10 years].
+	// Ref: #/components/schemas/CandleResolution
+	return
 }
 
-// Интервал свечи и допустимый промежуток запроса:
-// - 1min [1 minute, 1 day]
-// - 2min [2 minutes, 1 day]
-// - 3min [3 minutes, 1 day]
-// - 5min [5 minutes, 1 day]
-// - 10min [10 minutes, 1 day]
-// - 15min [15 minutes, 1 day]
-// - 30min [30 minutes, 1 day]
-// - hour [1 hour, 7 days]
-// - day [1 day, 1 year]
-// - week [7 days, 2 years]
-// - month [1 month, 10 years].
-// Ref: #/components/schemas/CandleResolution
 type CandleResolution string
 
 const (
@@ -173,92 +181,13 @@ const (
 )
 
 // AllValues returns all CandleResolution values.
-func (CandleResolution) AllValues() []CandleResolution {
-	return []CandleResolution{
-		CandleResolution1min,
-		CandleResolution2min,
-		CandleResolution3min,
-		CandleResolution5min,
-		CandleResolution10min,
-		CandleResolution15min,
-		CandleResolution30min,
-		CandleResolutionHour,
-		CandleResolutionDay,
-		CandleResolutionWeek,
-		CandleResolutionMonth,
-	}
-}
+func (CandleResolution) AllValues() []CandleResolution { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s CandleResolution) MarshalText() ([]byte, error) {
-	switch s {
-	case CandleResolution1min:
-		return []byte(s), nil
-	case CandleResolution2min:
-		return []byte(s), nil
-	case CandleResolution3min:
-		return []byte(s), nil
-	case CandleResolution5min:
-		return []byte(s), nil
-	case CandleResolution10min:
-		return []byte(s), nil
-	case CandleResolution15min:
-		return []byte(s), nil
-	case CandleResolution30min:
-		return []byte(s), nil
-	case CandleResolutionHour:
-		return []byte(s), nil
-	case CandleResolutionDay:
-		return []byte(s), nil
-	case CandleResolutionWeek:
-		return []byte(s), nil
-	case CandleResolutionMonth:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s CandleResolution) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *CandleResolution) UnmarshalText(data []byte) error {
-	switch CandleResolution(data) {
-	case CandleResolution1min:
-		*s = CandleResolution1min
-		return nil
-	case CandleResolution2min:
-		*s = CandleResolution2min
-		return nil
-	case CandleResolution3min:
-		*s = CandleResolution3min
-		return nil
-	case CandleResolution5min:
-		*s = CandleResolution5min
-		return nil
-	case CandleResolution10min:
-		*s = CandleResolution10min
-		return nil
-	case CandleResolution15min:
-		*s = CandleResolution15min
-		return nil
-	case CandleResolution30min:
-		*s = CandleResolution30min
-		return nil
-	case CandleResolutionHour:
-		*s = CandleResolutionHour
-		return nil
-	case CandleResolutionDay:
-		*s = CandleResolutionDay
-		return nil
-	case CandleResolutionWeek:
-		*s = CandleResolutionWeek
-		return nil
-	case CandleResolutionMonth:
-		*s = CandleResolutionMonth
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *CandleResolution) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/Candles
 type Candles struct {
@@ -269,35 +198,47 @@ type Candles struct {
 
 // GetFigi returns the value of Figi.
 func (s *Candles) GetFigi() string {
-	return s.Figi
+	_ = "STUB: not implemented"
+
+	// GetInterval returns the value of Interval.
+	return ""
 }
 
-// GetInterval returns the value of Interval.
 func (s *Candles) GetInterval() CandleResolution {
-	return s.Interval
+	_ = "STUB: not implemented"
+
+	// GetCandles returns the value of Candles.
+	return *new(CandleResolution)
 }
 
-// GetCandles returns the value of Candles.
 func (s *Candles) GetCandles() []Candle {
-	return s.Candles
+	_ = "STUB: not implemented"
+
+	// SetFigi sets the value of Figi.
+	return nil
 }
 
-// SetFigi sets the value of Figi.
 func (s *Candles) SetFigi(val string) {
-	s.Figi = val
+	_ = "STUB: not implemented"
+
+	// SetInterval sets the value of Interval.
+	return
 }
 
-// SetInterval sets the value of Interval.
 func (s *Candles) SetInterval(val CandleResolution) {
-	s.Interval = val
+	_ = "STUB: not implemented"
+
+	// SetCandles sets the value of Candles.
+	return
 }
 
-// SetCandles sets the value of Candles.
 func (s *Candles) SetCandles(val []Candle) {
-	s.Candles = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/CandlesResponse
+	return
 }
 
-// Ref: #/components/schemas/CandlesResponse
 type CandlesResponse struct {
 	TrackingId string  `json:"trackingId"`
 	Status     string  `json:"status"`
@@ -305,53 +246,61 @@ type CandlesResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *CandlesResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *CandlesResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *CandlesResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *CandlesResponse) GetPayload() Candles {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(Candles)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *CandlesResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *CandlesResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *CandlesResponse) SetPayload(val Candles) {
-	s.Payload = val
+func (s *CandlesResponse) SetPayload(val Candles) { _ = "STUB: not implemented"; return }
+
+func (*CandlesResponse) marketCandlesGetRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Currencies
+	return
 }
 
-func (*CandlesResponse) marketCandlesGetRes() {}
-
-// Ref: #/components/schemas/Currencies
 type Currencies struct {
 	Currencies []CurrencyPosition `json:"currencies"`
 }
 
 // GetCurrencies returns the value of Currencies.
-func (s *Currencies) GetCurrencies() []CurrencyPosition {
-	return s.Currencies
-}
+func (s *Currencies) GetCurrencies() []CurrencyPosition { _ = "STUB: not implemented"; return nil }
 
 // SetCurrencies sets the value of Currencies.
 func (s *Currencies) SetCurrencies(val []CurrencyPosition) {
-	s.Currencies = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Currency
+	return
 }
 
-// Ref: #/components/schemas/Currency
 type Currency string
 
 const (
@@ -367,80 +316,13 @@ const (
 )
 
 // AllValues returns all Currency values.
-func (Currency) AllValues() []Currency {
-	return []Currency{
-		CurrencyRUB,
-		CurrencyUSD,
-		CurrencyEUR,
-		CurrencyGBP,
-		CurrencyHKD,
-		CurrencyCHF,
-		CurrencyJPY,
-		CurrencyCNY,
-		CurrencyTRY,
-	}
-}
+func (Currency) AllValues() []Currency { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s Currency) MarshalText() ([]byte, error) {
-	switch s {
-	case CurrencyRUB:
-		return []byte(s), nil
-	case CurrencyUSD:
-		return []byte(s), nil
-	case CurrencyEUR:
-		return []byte(s), nil
-	case CurrencyGBP:
-		return []byte(s), nil
-	case CurrencyHKD:
-		return []byte(s), nil
-	case CurrencyCHF:
-		return []byte(s), nil
-	case CurrencyJPY:
-		return []byte(s), nil
-	case CurrencyCNY:
-		return []byte(s), nil
-	case CurrencyTRY:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s Currency) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *Currency) UnmarshalText(data []byte) error {
-	switch Currency(data) {
-	case CurrencyRUB:
-		*s = CurrencyRUB
-		return nil
-	case CurrencyUSD:
-		*s = CurrencyUSD
-		return nil
-	case CurrencyEUR:
-		*s = CurrencyEUR
-		return nil
-	case CurrencyGBP:
-		*s = CurrencyGBP
-		return nil
-	case CurrencyHKD:
-		*s = CurrencyHKD
-		return nil
-	case CurrencyCHF:
-		*s = CurrencyCHF
-		return nil
-	case CurrencyJPY:
-		*s = CurrencyJPY
-		return nil
-	case CurrencyCNY:
-		*s = CurrencyCNY
-		return nil
-	case CurrencyTRY:
-		*s = CurrencyTRY
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *Currency) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/CurrencyPosition
 type CurrencyPosition struct {
@@ -451,35 +333,47 @@ type CurrencyPosition struct {
 
 // GetCurrency returns the value of Currency.
 func (s *CurrencyPosition) GetCurrency() Currency {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetBalance returns the value of Balance.
+	return *new(Currency)
 }
 
-// GetBalance returns the value of Balance.
 func (s *CurrencyPosition) GetBalance() float64 {
-	return s.Balance
+	_ = "STUB: not implemented"
+
+	// GetBlocked returns the value of Blocked.
+	return 0
 }
 
-// GetBlocked returns the value of Blocked.
 func (s *CurrencyPosition) GetBlocked() OptFloat64 {
-	return s.Blocked
+	_ = "STUB: not implemented"
+
+	// SetCurrency sets the value of Currency.
+	return *new(OptFloat64)
 }
 
-// SetCurrency sets the value of Currency.
 func (s *CurrencyPosition) SetCurrency(val Currency) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetBalance sets the value of Balance.
+	return
 }
 
-// SetBalance sets the value of Balance.
 func (s *CurrencyPosition) SetBalance(val float64) {
-	s.Balance = val
+	_ = "STUB: not implemented"
+
+	// SetBlocked sets the value of Blocked.
+	return
 }
 
-// SetBlocked sets the value of Blocked.
 func (s *CurrencyPosition) SetBlocked(val OptFloat64) {
-	s.Blocked = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Empty
+	return
 }
 
-// Ref: #/components/schemas/Empty
 type Empty struct {
 	TrackingId string       `json:"trackingId"`
 	Payload    EmptyPayload `json:"payload"`
@@ -487,40 +381,44 @@ type Empty struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *Empty) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *Empty) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetPayload returns the value of Payload.
 func (s *Empty) GetPayload() EmptyPayload {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// GetStatus returns the value of Status.
+	return *new(EmptyPayload)
 }
 
-// GetStatus returns the value of Status.
 func (s *Empty) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return ""
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *Empty) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
 func (s *Empty) SetPayload(val EmptyPayload) {
-	s.Payload = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
-func (s *Empty) SetStatus(val string) {
-	s.Status = val
-}
+func (s *Empty) SetStatus(val string) { _ = "STUB: not implemented"; return }
 
-func (*Empty) ordersCancelPostRes()             {}
-func (*Empty) sandboxClearPostRes()             {}
-func (*Empty) sandboxCurrenciesBalancePostRes() {}
-func (*Empty) sandboxPositionsBalancePostRes()  {}
-func (*Empty) sandboxRemovePostRes()            {}
+func (*Empty) ordersCancelPostRes()             { _ = "STUB: not implemented"; return }
+func (*Empty) sandboxClearPostRes()             { _ = "STUB: not implemented"; return }
+func (*Empty) sandboxCurrenciesBalancePostRes() { _ = "STUB: not implemented"; return }
+func (*Empty) sandboxPositionsBalancePostRes()  { _ = "STUB: not implemented"; return }
+func (*Empty) sandboxRemovePostRes()            { _ = "STUB: not implemented"; return }
 
 type EmptyPayload struct{}
 
@@ -532,56 +430,60 @@ type Error struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *Error) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *Error) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *Error) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *Error) GetPayload() ErrorPayload {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(ErrorPayload)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *Error) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *Error) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *Error) SetPayload(val ErrorPayload) {
-	s.Payload = val
-}
+func (s *Error) SetPayload(val ErrorPayload) { _ = "STUB: not implemented"; return }
 
-func (*Error) marketBondsGetRes()               {}
-func (*Error) marketCandlesGetRes()             {}
-func (*Error) marketCurrenciesGetRes()          {}
-func (*Error) marketEtfsGetRes()                {}
-func (*Error) marketOrderbookGetRes()           {}
-func (*Error) marketSearchByFigiGetRes()        {}
-func (*Error) marketSearchByTickerGetRes()      {}
-func (*Error) marketStocksGetRes()              {}
-func (*Error) operationsGetRes()                {}
-func (*Error) ordersCancelPostRes()             {}
-func (*Error) ordersGetRes()                    {}
-func (*Error) ordersLimitOrderPostRes()         {}
-func (*Error) ordersMarketOrderPostRes()        {}
-func (*Error) portfolioCurrenciesGetRes()       {}
-func (*Error) portfolioGetRes()                 {}
-func (*Error) sandboxClearPostRes()             {}
-func (*Error) sandboxCurrenciesBalancePostRes() {}
-func (*Error) sandboxPositionsBalancePostRes()  {}
-func (*Error) sandboxRegisterPostRes()          {}
-func (*Error) sandboxRemovePostRes()            {}
-func (*Error) userAccountsGetRes()              {}
+func (*Error) marketBondsGetRes()               { _ = "STUB: not implemented"; return }
+func (*Error) marketCandlesGetRes()             { _ = "STUB: not implemented"; return }
+func (*Error) marketCurrenciesGetRes()          { _ = "STUB: not implemented"; return }
+func (*Error) marketEtfsGetRes()                { _ = "STUB: not implemented"; return }
+func (*Error) marketOrderbookGetRes()           { _ = "STUB: not implemented"; return }
+func (*Error) marketSearchByFigiGetRes()        { _ = "STUB: not implemented"; return }
+func (*Error) marketSearchByTickerGetRes()      { _ = "STUB: not implemented"; return }
+func (*Error) marketStocksGetRes()              { _ = "STUB: not implemented"; return }
+func (*Error) operationsGetRes()                { _ = "STUB: not implemented"; return }
+func (*Error) ordersCancelPostRes()             { _ = "STUB: not implemented"; return }
+func (*Error) ordersGetRes()                    { _ = "STUB: not implemented"; return }
+func (*Error) ordersLimitOrderPostRes()         { _ = "STUB: not implemented"; return }
+func (*Error) ordersMarketOrderPostRes()        { _ = "STUB: not implemented"; return }
+func (*Error) portfolioCurrenciesGetRes()       { _ = "STUB: not implemented"; return }
+func (*Error) portfolioGetRes()                 { _ = "STUB: not implemented"; return }
+func (*Error) sandboxClearPostRes()             { _ = "STUB: not implemented"; return }
+func (*Error) sandboxCurrenciesBalancePostRes() { _ = "STUB: not implemented"; return }
+func (*Error) sandboxPositionsBalancePostRes()  { _ = "STUB: not implemented"; return }
+func (*Error) sandboxRegisterPostRes()          { _ = "STUB: not implemented"; return }
+func (*Error) sandboxRemovePostRes()            { _ = "STUB: not implemented"; return }
+func (*Error) userAccountsGetRes()              { _ = "STUB: not implemented"; return }
 
 type ErrorPayload struct {
 	Message OptString `json:"message"`
@@ -590,25 +492,33 @@ type ErrorPayload struct {
 
 // GetMessage returns the value of Message.
 func (s *ErrorPayload) GetMessage() OptString {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// GetCode returns the value of Code.
+	return *new(OptString)
 }
 
-// GetCode returns the value of Code.
 func (s *ErrorPayload) GetCode() OptString {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return *new(OptString)
 }
 
-// SetMessage sets the value of Message.
 func (s *ErrorPayload) SetMessage(val OptString) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return
 }
 
-// SetCode sets the value of Code.
 func (s *ErrorPayload) SetCode(val OptString) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/InstrumentType
+	return
 }
 
-// Ref: #/components/schemas/InstrumentType
 type InstrumentType string
 
 const (
@@ -619,50 +529,13 @@ const (
 )
 
 // AllValues returns all InstrumentType values.
-func (InstrumentType) AllValues() []InstrumentType {
-	return []InstrumentType{
-		InstrumentTypeStock,
-		InstrumentTypeCurrency,
-		InstrumentTypeBond,
-		InstrumentTypeEtf,
-	}
-}
+func (InstrumentType) AllValues() []InstrumentType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s InstrumentType) MarshalText() ([]byte, error) {
-	switch s {
-	case InstrumentTypeStock:
-		return []byte(s), nil
-	case InstrumentTypeCurrency:
-		return []byte(s), nil
-	case InstrumentTypeBond:
-		return []byte(s), nil
-	case InstrumentTypeEtf:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s InstrumentType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *InstrumentType) UnmarshalText(data []byte) error {
-	switch InstrumentType(data) {
-	case InstrumentTypeStock:
-		*s = InstrumentTypeStock
-		return nil
-	case InstrumentTypeCurrency:
-		*s = InstrumentTypeCurrency
-		return nil
-	case InstrumentTypeBond:
-		*s = InstrumentTypeBond
-		return nil
-	case InstrumentTypeEtf:
-		*s = InstrumentTypeEtf
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *InstrumentType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/LimitOrderRequest
 type LimitOrderRequest struct {
@@ -673,35 +546,48 @@ type LimitOrderRequest struct {
 
 // GetLots returns the value of Lots.
 func (s *LimitOrderRequest) GetLots() int32 {
-	return s.Lots
+	_ = "STUB: not implemented"
+
+	// GetOperation returns the value of Operation.
+	return 0
 }
 
-// GetOperation returns the value of Operation.
 func (s *LimitOrderRequest) GetOperation() OperationType {
-	return s.Operation
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPrice returns the value of Price.
+	new(OperationType)
 }
 
-// GetPrice returns the value of Price.
 func (s *LimitOrderRequest) GetPrice() float64 {
-	return s.Price
+	_ = "STUB: not implemented"
+
+	// SetLots sets the value of Lots.
+	return 0
 }
 
-// SetLots sets the value of Lots.
 func (s *LimitOrderRequest) SetLots(val int32) {
-	s.Lots = val
+	_ = "STUB: not implemented"
+
+	// SetOperation sets the value of Operation.
+	return
 }
 
-// SetOperation sets the value of Operation.
 func (s *LimitOrderRequest) SetOperation(val OperationType) {
-	s.Operation = val
+	_ = "STUB: not implemented"
+
+	// SetPrice sets the value of Price.
+	return
 }
 
-// SetPrice sets the value of Price.
 func (s *LimitOrderRequest) SetPrice(val float64) {
-	s.Price = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/LimitOrderResponse
+	return
 }
 
-// Ref: #/components/schemas/LimitOrderResponse
 type LimitOrderResponse struct {
 	TrackingId string           `json:"trackingId"`
 	Status     string           `json:"status"`
@@ -709,38 +595,46 @@ type LimitOrderResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *LimitOrderResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *LimitOrderResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *LimitOrderResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *LimitOrderResponse) GetPayload() PlacedLimitOrder {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(PlacedLimitOrder)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *LimitOrderResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *LimitOrderResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *LimitOrderResponse) SetPayload(val PlacedLimitOrder) {
-	s.Payload = val
+func (s *LimitOrderResponse) SetPayload(val PlacedLimitOrder) { _ = "STUB: not implemented"; return }
+
+func (*LimitOrderResponse) ordersLimitOrderPostRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/MarketInstrument
+	return
 }
 
-func (*LimitOrderResponse) ordersLimitOrderPostRes() {}
-
-// Ref: #/components/schemas/MarketInstrument
 type MarketInstrument struct {
 	Figi   string    `json:"figi"`
 	Ticker string    `json:"ticker"`
@@ -758,95 +652,123 @@ type MarketInstrument struct {
 
 // GetFigi returns the value of Figi.
 func (s *MarketInstrument) GetFigi() string {
-	return s.Figi
+	_ = "STUB: not implemented"
+
+	// GetTicker returns the value of Ticker.
+	return ""
 }
 
-// GetTicker returns the value of Ticker.
 func (s *MarketInstrument) GetTicker() string {
-	return s.Ticker
+	_ = "STUB: not implemented"
+
+	// GetIsin returns the value of Isin.
+	return ""
 }
 
-// GetIsin returns the value of Isin.
 func (s *MarketInstrument) GetIsin() OptString {
-	return s.Isin
+	_ = "STUB: not implemented"
+
+	// GetMinPriceIncrement returns the value of MinPriceIncrement.
+	return *new(OptString)
 }
 
-// GetMinPriceIncrement returns the value of MinPriceIncrement.
 func (s *MarketInstrument) GetMinPriceIncrement() OptFloat64 {
-	return s.MinPriceIncrement
+	_ = "STUB: not implemented"
+	return *new(OptFloat64)
 }
 
 // GetLot returns the value of Lot.
 func (s *MarketInstrument) GetLot() int32 {
-	return s.Lot
+	_ = "STUB: not implemented"
+
+	// GetMinQuantity returns the value of MinQuantity.
+	return 0
 }
 
-// GetMinQuantity returns the value of MinQuantity.
 func (s *MarketInstrument) GetMinQuantity() OptInt32 {
-	return s.MinQuantity
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCurrency returns the value of Currency.
+	new(OptInt32)
 }
 
-// GetCurrency returns the value of Currency.
 func (s *MarketInstrument) GetCurrency() OptCurrency {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(OptCurrency)
 }
 
-// GetName returns the value of Name.
 func (s *MarketInstrument) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *MarketInstrument) GetType() InstrumentType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// SetFigi sets the value of Figi.
+	return *new(InstrumentType)
 }
 
-// SetFigi sets the value of Figi.
 func (s *MarketInstrument) SetFigi(val string) {
-	s.Figi = val
+	_ = "STUB: not implemented"
+
+	// SetTicker sets the value of Ticker.
+	return
 }
 
-// SetTicker sets the value of Ticker.
 func (s *MarketInstrument) SetTicker(val string) {
-	s.Ticker = val
+	_ = "STUB: not implemented"
+
+	// SetIsin sets the value of Isin.
+	return
 }
 
-// SetIsin sets the value of Isin.
 func (s *MarketInstrument) SetIsin(val OptString) {
-	s.Isin = val
+	_ = "STUB: not implemented"
+
+	// SetMinPriceIncrement sets the value of MinPriceIncrement.
+	return
 }
 
-// SetMinPriceIncrement sets the value of MinPriceIncrement.
-func (s *MarketInstrument) SetMinPriceIncrement(val OptFloat64) {
-	s.MinPriceIncrement = val
-}
+func (s *MarketInstrument) SetMinPriceIncrement(val OptFloat64) { _ = "STUB: not implemented"; return }
 
 // SetLot sets the value of Lot.
 func (s *MarketInstrument) SetLot(val int32) {
-	s.Lot = val
+	_ = "STUB: not implemented"
+
+	// SetMinQuantity sets the value of MinQuantity.
+	return
 }
 
-// SetMinQuantity sets the value of MinQuantity.
-func (s *MarketInstrument) SetMinQuantity(val OptInt32) {
-	s.MinQuantity = val
-}
+func (s *MarketInstrument) SetMinQuantity(val OptInt32) { _ = "STUB: not implemented"; return }
 
 // SetCurrency sets the value of Currency.
 func (s *MarketInstrument) SetCurrency(val OptCurrency) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *MarketInstrument) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *MarketInstrument) SetType(val InstrumentType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/MarketInstrumentList
+	return
 }
 
-// Ref: #/components/schemas/MarketInstrumentList
 type MarketInstrumentList struct {
 	Total       int32              `json:"total"`
 	Instruments []MarketInstrument `json:"instruments"`
@@ -854,25 +776,33 @@ type MarketInstrumentList struct {
 
 // GetTotal returns the value of Total.
 func (s *MarketInstrumentList) GetTotal() int32 {
-	return s.Total
+	_ = "STUB: not implemented"
+
+	// GetInstruments returns the value of Instruments.
+	return 0
 }
 
-// GetInstruments returns the value of Instruments.
 func (s *MarketInstrumentList) GetInstruments() []MarketInstrument {
-	return s.Instruments
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetTotal sets the value of Total.
 }
 
-// SetTotal sets the value of Total.
 func (s *MarketInstrumentList) SetTotal(val int32) {
-	s.Total = val
+	_ = "STUB: not implemented"
+
+	// SetInstruments sets the value of Instruments.
+	return
 }
 
-// SetInstruments sets the value of Instruments.
 func (s *MarketInstrumentList) SetInstruments(val []MarketInstrument) {
-	s.Instruments = val
+	_ = "STUB: not implemented"
+	return
+
+	// Ref: #/components/schemas/MarketInstrumentListResponse
 }
 
-// Ref: #/components/schemas/MarketInstrumentListResponse
 type MarketInstrumentListResponse struct {
 	TrackingId string               `json:"trackingId"`
 	Status     string               `json:"status"`
@@ -880,42 +810,56 @@ type MarketInstrumentListResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *MarketInstrumentListResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *MarketInstrumentListResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *MarketInstrumentListResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *MarketInstrumentListResponse) GetPayload() MarketInstrumentList {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(MarketInstrumentList)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *MarketInstrumentListResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *MarketInstrumentListResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
 func (s *MarketInstrumentListResponse) SetPayload(val MarketInstrumentList) {
-	s.Payload = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*MarketInstrumentListResponse) marketBondsGetRes()          {}
-func (*MarketInstrumentListResponse) marketCurrenciesGetRes()     {}
-func (*MarketInstrumentListResponse) marketEtfsGetRes()           {}
-func (*MarketInstrumentListResponse) marketSearchByTickerGetRes() {}
-func (*MarketInstrumentListResponse) marketStocksGetRes()         {}
+func (*MarketInstrumentListResponse) marketBondsGetRes()      { _ = "STUB: not implemented"; return }
+func (*MarketInstrumentListResponse) marketCurrenciesGetRes() { _ = "STUB: not implemented"; return }
+func (*MarketInstrumentListResponse) marketEtfsGetRes()       { _ = "STUB: not implemented"; return }
+func (*MarketInstrumentListResponse) marketSearchByTickerGetRes() {
+	_ = "STUB: not implemented"
+	return
+}
+func (*MarketInstrumentListResponse) marketStocksGetRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/MarketOrderRequest
+	// Ref: #/components/schemas/MarketOrderRequest
+	return
+}
+
 type MarketOrderRequest struct {
 	Lots      int32         `json:"lots"`
 	Operation OperationType `json:"operation"`
@@ -923,25 +867,34 @@ type MarketOrderRequest struct {
 
 // GetLots returns the value of Lots.
 func (s *MarketOrderRequest) GetLots() int32 {
-	return s.Lots
+	_ = "STUB: not implemented"
+
+	// GetOperation returns the value of Operation.
+	return 0
 }
 
-// GetOperation returns the value of Operation.
 func (s *MarketOrderRequest) GetOperation() OperationType {
-	return s.Operation
+	_ = "STUB: not implemented"
+	return *
+
+	// SetLots sets the value of Lots.
+	new(OperationType)
 }
 
-// SetLots sets the value of Lots.
 func (s *MarketOrderRequest) SetLots(val int32) {
-	s.Lots = val
+	_ = "STUB: not implemented"
+
+	// SetOperation sets the value of Operation.
+	return
 }
 
-// SetOperation sets the value of Operation.
 func (s *MarketOrderRequest) SetOperation(val OperationType) {
-	s.Operation = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/MarketOrderResponse
+	return
 }
 
-// Ref: #/components/schemas/MarketOrderResponse
 type MarketOrderResponse struct {
 	TrackingId string            `json:"trackingId"`
 	Status     string            `json:"status"`
@@ -949,38 +902,46 @@ type MarketOrderResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *MarketOrderResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *MarketOrderResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *MarketOrderResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *MarketOrderResponse) GetPayload() PlacedMarketOrder {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(PlacedMarketOrder)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *MarketOrderResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *MarketOrderResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *MarketOrderResponse) SetPayload(val PlacedMarketOrder) {
-	s.Payload = val
+func (s *MarketOrderResponse) SetPayload(val PlacedMarketOrder) { _ = "STUB: not implemented"; return }
+
+func (*MarketOrderResponse) ordersMarketOrderPostRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/MoneyAmount
+	return
 }
 
-func (*MarketOrderResponse) ordersMarketOrderPostRes() {}
-
-// Ref: #/components/schemas/MoneyAmount
 type MoneyAmount struct {
 	Currency Currency `json:"currency"`
 	Value    float64  `json:"value"`
@@ -988,25 +949,33 @@ type MoneyAmount struct {
 
 // GetCurrency returns the value of Currency.
 func (s *MoneyAmount) GetCurrency() Currency {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetValue returns the value of Value.
+	return *new(Currency)
 }
 
-// GetValue returns the value of Value.
 func (s *MoneyAmount) GetValue() float64 {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetCurrency sets the value of Currency.
+	return 0
 }
 
-// SetCurrency sets the value of Currency.
 func (s *MoneyAmount) SetCurrency(val Currency) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return
 }
 
-// SetValue sets the value of Value.
 func (s *MoneyAmount) SetValue(val float64) {
-	s.Value = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Operation
+	return
 }
 
-// Ref: #/components/schemas/Operation
 type Operation struct {
 	ID         string           `json:"id"`
 	Status     OperationStatus  `json:"status"`
@@ -1029,146 +998,188 @@ type Operation struct {
 
 // GetID returns the value of ID.
 func (s *Operation) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetStatus returns the value of Status.
+	return ""
 }
 
-// GetStatus returns the value of Status.
 func (s *Operation) GetStatus() OperationStatus {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetTrades returns the value of Trades.
+	return *new(OperationStatus)
 }
 
-// GetTrades returns the value of Trades.
 func (s *Operation) GetTrades() []OperationTrade {
-	return s.Trades
+	_ = "STUB: not implemented"
+
+	// GetCommission returns the value of Commission.
+	return nil
 }
 
-// GetCommission returns the value of Commission.
 func (s *Operation) GetCommission() OptMoneyAmount {
-	return s.Commission
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCurrency returns the value of Currency.
+	new(OptMoneyAmount)
 }
 
-// GetCurrency returns the value of Currency.
 func (s *Operation) GetCurrency() Currency {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetPayment returns the value of Payment.
+	return *new(Currency)
 }
 
-// GetPayment returns the value of Payment.
 func (s *Operation) GetPayment() float64 {
-	return s.Payment
+	_ = "STUB: not implemented"
+
+	// GetPrice returns the value of Price.
+	return 0
 }
 
-// GetPrice returns the value of Price.
 func (s *Operation) GetPrice() OptFloat64 {
-	return s.Price
+	_ = "STUB: not implemented"
+
+	// GetQuantity returns the value of Quantity.
+	return *new(OptFloat64)
 }
 
-// GetQuantity returns the value of Quantity.
 func (s *Operation) GetQuantity() OptInt32 {
-	return s.Quantity
+	_ = "STUB: not implemented"
+
+	// GetQuantityExecuted returns the value of QuantityExecuted.
+	return *new(OptInt32)
 }
 
-// GetQuantityExecuted returns the value of QuantityExecuted.
 func (s *Operation) GetQuantityExecuted() OptInt32 {
-	return s.QuantityExecuted
+	_ = "STUB: not implemented"
+	return *new(OptInt32)
 }
 
 // GetFigi returns the value of Figi.
 func (s *Operation) GetFigi() OptString {
-	return s.Figi
+	_ = "STUB: not implemented"
+
+	// GetInstrumentType returns the value of InstrumentType.
+	return *new(OptString)
 }
 
-// GetInstrumentType returns the value of InstrumentType.
 func (s *Operation) GetInstrumentType() OptInstrumentType {
-	return s.InstrumentType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetIsMarginCall returns the value of IsMarginCall.
+	new(OptInstrumentType)
 }
 
-// GetIsMarginCall returns the value of IsMarginCall.
-func (s *Operation) GetIsMarginCall() bool {
-	return s.IsMarginCall
-}
+func (s *Operation) GetIsMarginCall() bool { _ = "STUB: not implemented"; return false }
 
 // GetDate returns the value of Date.
 func (s *Operation) GetDate() time.Time {
-	return s.Date
+	_ = "STUB: not implemented"
+
+	// GetOperationType returns the value of OperationType.
+	return *new(time.Time)
 }
 
-// GetOperationType returns the value of OperationType.
 func (s *Operation) GetOperationType() OptOperationTypeWithCommission {
-	return s.OperationType
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptOperationTypeWithCommission)
 }
 
-// SetID sets the value of ID.
 func (s *Operation) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *Operation) SetStatus(val OperationStatus) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetTrades sets the value of Trades.
+	return
 }
 
-// SetTrades sets the value of Trades.
 func (s *Operation) SetTrades(val []OperationTrade) {
-	s.Trades = val
+	_ = "STUB: not implemented"
+
+	// SetCommission sets the value of Commission.
+	return
 }
 
-// SetCommission sets the value of Commission.
 func (s *Operation) SetCommission(val OptMoneyAmount) {
-	s.Commission = val
+	_ = "STUB: not implemented"
+
+	// SetCurrency sets the value of Currency.
+	return
 }
 
-// SetCurrency sets the value of Currency.
 func (s *Operation) SetCurrency(val Currency) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetPayment sets the value of Payment.
+	return
 }
 
-// SetPayment sets the value of Payment.
 func (s *Operation) SetPayment(val float64) {
-	s.Payment = val
+	_ = "STUB: not implemented"
+
+	// SetPrice sets the value of Price.
+	return
 }
 
-// SetPrice sets the value of Price.
 func (s *Operation) SetPrice(val OptFloat64) {
-	s.Price = val
+	_ = "STUB: not implemented"
+
+	// SetQuantity sets the value of Quantity.
+	return
 }
 
-// SetQuantity sets the value of Quantity.
 func (s *Operation) SetQuantity(val OptInt32) {
-	s.Quantity = val
+	_ = "STUB: not implemented"
+
+	// SetQuantityExecuted sets the value of QuantityExecuted.
+	return
 }
 
-// SetQuantityExecuted sets the value of QuantityExecuted.
-func (s *Operation) SetQuantityExecuted(val OptInt32) {
-	s.QuantityExecuted = val
-}
+func (s *Operation) SetQuantityExecuted(val OptInt32) { _ = "STUB: not implemented"; return }
 
 // SetFigi sets the value of Figi.
 func (s *Operation) SetFigi(val OptString) {
-	s.Figi = val
+	_ = "STUB: not implemented"
+
+	// SetInstrumentType sets the value of InstrumentType.
+	return
 }
 
-// SetInstrumentType sets the value of InstrumentType.
-func (s *Operation) SetInstrumentType(val OptInstrumentType) {
-	s.InstrumentType = val
-}
+func (s *Operation) SetInstrumentType(val OptInstrumentType) { _ = "STUB: not implemented"; return }
 
 // SetIsMarginCall sets the value of IsMarginCall.
-func (s *Operation) SetIsMarginCall(val bool) {
-	s.IsMarginCall = val
-}
+func (s *Operation) SetIsMarginCall(val bool) { _ = "STUB: not implemented"; return }
 
 // SetDate sets the value of Date.
 func (s *Operation) SetDate(val time.Time) {
-	s.Date = val
+	_ = "STUB: not implemented"
+
+	// SetOperationType sets the value of OperationType.
+	return
 }
 
-// SetOperationType sets the value of OperationType.
 func (s *Operation) SetOperationType(val OptOperationTypeWithCommission) {
-	s.OperationType = val
+	_ = "STUB: not implemented"
+	return
+
+	// Статус заявки.
+	// Ref: #/components/schemas/OperationStatus
 }
 
-// Статус заявки.
-// Ref: #/components/schemas/OperationStatus
 type OperationStatus string
 
 const (
@@ -1178,44 +1189,13 @@ const (
 )
 
 // AllValues returns all OperationStatus values.
-func (OperationStatus) AllValues() []OperationStatus {
-	return []OperationStatus{
-		OperationStatusDone,
-		OperationStatusDecline,
-		OperationStatusProgress,
-	}
-}
+func (OperationStatus) AllValues() []OperationStatus { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s OperationStatus) MarshalText() ([]byte, error) {
-	switch s {
-	case OperationStatusDone:
-		return []byte(s), nil
-	case OperationStatusDecline:
-		return []byte(s), nil
-	case OperationStatusProgress:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s OperationStatus) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *OperationStatus) UnmarshalText(data []byte) error {
-	switch OperationStatus(data) {
-	case OperationStatusDone:
-		*s = OperationStatusDone
-		return nil
-	case OperationStatusDecline:
-		*s = OperationStatusDecline
-		return nil
-	case OperationStatusProgress:
-		*s = OperationStatusProgress
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *OperationStatus) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/OperationTrade
 type OperationTrade struct {
@@ -1228,45 +1208,61 @@ type OperationTrade struct {
 
 // GetTradeId returns the value of TradeId.
 func (s *OperationTrade) GetTradeId() string {
-	return s.TradeId
+	_ = "STUB: not implemented"
+
+	// GetDate returns the value of Date.
+	return ""
 }
 
-// GetDate returns the value of Date.
 func (s *OperationTrade) GetDate() time.Time {
-	return s.Date
+	_ = "STUB: not implemented"
+
+	// GetPrice returns the value of Price.
+	return *new(time.Time)
 }
 
-// GetPrice returns the value of Price.
 func (s *OperationTrade) GetPrice() float64 {
-	return s.Price
+	_ = "STUB: not implemented"
+
+	// GetQuantity returns the value of Quantity.
+	return 0
 }
 
-// GetQuantity returns the value of Quantity.
 func (s *OperationTrade) GetQuantity() int32 {
-	return s.Quantity
+	_ = "STUB: not implemented"
+
+	// SetTradeId sets the value of TradeId.
+	return 0
 }
 
-// SetTradeId sets the value of TradeId.
 func (s *OperationTrade) SetTradeId(val string) {
-	s.TradeId = val
+	_ = "STUB: not implemented"
+
+	// SetDate sets the value of Date.
+	return
 }
 
-// SetDate sets the value of Date.
 func (s *OperationTrade) SetDate(val time.Time) {
-	s.Date = val
+	_ = "STUB: not implemented"
+
+	// SetPrice sets the value of Price.
+	return
 }
 
-// SetPrice sets the value of Price.
 func (s *OperationTrade) SetPrice(val float64) {
-	s.Price = val
+	_ = "STUB: not implemented"
+
+	// SetQuantity sets the value of Quantity.
+	return
 }
 
-// SetQuantity sets the value of Quantity.
 func (s *OperationTrade) SetQuantity(val int32) {
-	s.Quantity = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/OperationType
+	return
 }
 
-// Ref: #/components/schemas/OperationType
 type OperationType string
 
 const (
@@ -1275,38 +1271,13 @@ const (
 )
 
 // AllValues returns all OperationType values.
-func (OperationType) AllValues() []OperationType {
-	return []OperationType{
-		OperationTypeBuy,
-		OperationTypeSell,
-	}
-}
+func (OperationType) AllValues() []OperationType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s OperationType) MarshalText() ([]byte, error) {
-	switch s {
-	case OperationTypeBuy:
-		return []byte(s), nil
-	case OperationTypeSell:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s OperationType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *OperationType) UnmarshalText(data []byte) error {
-	switch OperationType(data) {
-	case OperationTypeBuy:
-		*s = OperationTypeBuy
-		return nil
-	case OperationTypeSell:
-		*s = OperationTypeSell
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *OperationType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/OperationTypeWithCommission
 type OperationTypeWithCommission string
@@ -1337,150 +1308,20 @@ const (
 
 // AllValues returns all OperationTypeWithCommission values.
 func (OperationTypeWithCommission) AllValues() []OperationTypeWithCommission {
-	return []OperationTypeWithCommission{
-		OperationTypeWithCommissionBuy,
-		OperationTypeWithCommissionBuyCard,
-		OperationTypeWithCommissionSell,
-		OperationTypeWithCommissionBrokerCommission,
-		OperationTypeWithCommissionExchangeCommission,
-		OperationTypeWithCommissionServiceCommission,
-		OperationTypeWithCommissionMarginCommission,
-		OperationTypeWithCommissionOtherCommission,
-		OperationTypeWithCommissionPayIn,
-		OperationTypeWithCommissionPayOut,
-		OperationTypeWithCommissionTax,
-		OperationTypeWithCommissionTaxLucre,
-		OperationTypeWithCommissionTaxDividend,
-		OperationTypeWithCommissionTaxCoupon,
-		OperationTypeWithCommissionTaxBack,
-		OperationTypeWithCommissionRepayment,
-		OperationTypeWithCommissionPartRepayment,
-		OperationTypeWithCommissionCoupon,
-		OperationTypeWithCommissionDividend,
-		OperationTypeWithCommissionSecurityIn,
-		OperationTypeWithCommissionSecurityOut,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s OperationTypeWithCommission) MarshalText() ([]byte, error) {
-	switch s {
-	case OperationTypeWithCommissionBuy:
-		return []byte(s), nil
-	case OperationTypeWithCommissionBuyCard:
-		return []byte(s), nil
-	case OperationTypeWithCommissionSell:
-		return []byte(s), nil
-	case OperationTypeWithCommissionBrokerCommission:
-		return []byte(s), nil
-	case OperationTypeWithCommissionExchangeCommission:
-		return []byte(s), nil
-	case OperationTypeWithCommissionServiceCommission:
-		return []byte(s), nil
-	case OperationTypeWithCommissionMarginCommission:
-		return []byte(s), nil
-	case OperationTypeWithCommissionOtherCommission:
-		return []byte(s), nil
-	case OperationTypeWithCommissionPayIn:
-		return []byte(s), nil
-	case OperationTypeWithCommissionPayOut:
-		return []byte(s), nil
-	case OperationTypeWithCommissionTax:
-		return []byte(s), nil
-	case OperationTypeWithCommissionTaxLucre:
-		return []byte(s), nil
-	case OperationTypeWithCommissionTaxDividend:
-		return []byte(s), nil
-	case OperationTypeWithCommissionTaxCoupon:
-		return []byte(s), nil
-	case OperationTypeWithCommissionTaxBack:
-		return []byte(s), nil
-	case OperationTypeWithCommissionRepayment:
-		return []byte(s), nil
-	case OperationTypeWithCommissionPartRepayment:
-		return []byte(s), nil
-	case OperationTypeWithCommissionCoupon:
-		return []byte(s), nil
-	case OperationTypeWithCommissionDividend:
-		return []byte(s), nil
-	case OperationTypeWithCommissionSecurityIn:
-		return []byte(s), nil
-	case OperationTypeWithCommissionSecurityOut:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *OperationTypeWithCommission) UnmarshalText(data []byte) error {
-	switch OperationTypeWithCommission(data) {
-	case OperationTypeWithCommissionBuy:
-		*s = OperationTypeWithCommissionBuy
-		return nil
-	case OperationTypeWithCommissionBuyCard:
-		*s = OperationTypeWithCommissionBuyCard
-		return nil
-	case OperationTypeWithCommissionSell:
-		*s = OperationTypeWithCommissionSell
-		return nil
-	case OperationTypeWithCommissionBrokerCommission:
-		*s = OperationTypeWithCommissionBrokerCommission
-		return nil
-	case OperationTypeWithCommissionExchangeCommission:
-		*s = OperationTypeWithCommissionExchangeCommission
-		return nil
-	case OperationTypeWithCommissionServiceCommission:
-		*s = OperationTypeWithCommissionServiceCommission
-		return nil
-	case OperationTypeWithCommissionMarginCommission:
-		*s = OperationTypeWithCommissionMarginCommission
-		return nil
-	case OperationTypeWithCommissionOtherCommission:
-		*s = OperationTypeWithCommissionOtherCommission
-		return nil
-	case OperationTypeWithCommissionPayIn:
-		*s = OperationTypeWithCommissionPayIn
-		return nil
-	case OperationTypeWithCommissionPayOut:
-		*s = OperationTypeWithCommissionPayOut
-		return nil
-	case OperationTypeWithCommissionTax:
-		*s = OperationTypeWithCommissionTax
-		return nil
-	case OperationTypeWithCommissionTaxLucre:
-		*s = OperationTypeWithCommissionTaxLucre
-		return nil
-	case OperationTypeWithCommissionTaxDividend:
-		*s = OperationTypeWithCommissionTaxDividend
-		return nil
-	case OperationTypeWithCommissionTaxCoupon:
-		*s = OperationTypeWithCommissionTaxCoupon
-		return nil
-	case OperationTypeWithCommissionTaxBack:
-		*s = OperationTypeWithCommissionTaxBack
-		return nil
-	case OperationTypeWithCommissionRepayment:
-		*s = OperationTypeWithCommissionRepayment
-		return nil
-	case OperationTypeWithCommissionPartRepayment:
-		*s = OperationTypeWithCommissionPartRepayment
-		return nil
-	case OperationTypeWithCommissionCoupon:
-		*s = OperationTypeWithCommissionCoupon
-		return nil
-	case OperationTypeWithCommissionDividend:
-		*s = OperationTypeWithCommissionDividend
-		return nil
-	case OperationTypeWithCommissionSecurityIn:
-		*s = OperationTypeWithCommissionSecurityIn
-		return nil
-	case OperationTypeWithCommissionSecurityOut:
-		*s = OperationTypeWithCommissionSecurityOut
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/Operations
@@ -1489,16 +1330,16 @@ type Operations struct {
 }
 
 // GetOperations returns the value of Operations.
-func (s *Operations) GetOperations() []Operation {
-	return s.Operations
-}
+func (s *Operations) GetOperations() []Operation { _ = "STUB: not implemented"; return nil }
 
 // SetOperations sets the value of Operations.
 func (s *Operations) SetOperations(val []Operation) {
-	s.Operations = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/OperationsResponse
+	return
 }
 
-// Ref: #/components/schemas/OperationsResponse
 type OperationsResponse struct {
 	TrackingId string     `json:"trackingId"`
 	Status     string     `json:"status"`
@@ -1506,43 +1347,49 @@ type OperationsResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *OperationsResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *OperationsResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *OperationsResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *OperationsResponse) GetPayload() Operations {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(Operations)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *OperationsResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *OperationsResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *OperationsResponse) SetPayload(val Operations) {
-	s.Payload = val
+func (s *OperationsResponse) SetPayload(val Operations) { _ = "STUB: not implemented"; return }
+
+func (*OperationsResponse) operationsGetRes() {
+	_ = "STUB: not implemented"
+
+	// NewOptBrokerAccountType returns new OptBrokerAccountType with value set to v.
+	return
 }
 
-func (*OperationsResponse) operationsGetRes() {}
-
-// NewOptBrokerAccountType returns new OptBrokerAccountType with value set to v.
 func NewOptBrokerAccountType(v BrokerAccountType) OptBrokerAccountType {
-	return OptBrokerAccountType{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptBrokerAccountType)
 }
 
 // OptBrokerAccountType is optional BrokerAccountType.
@@ -1552,44 +1399,32 @@ type OptBrokerAccountType struct {
 }
 
 // IsSet returns true if OptBrokerAccountType was set.
-func (o OptBrokerAccountType) IsSet() bool { return o.Set }
+func (o OptBrokerAccountType) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBrokerAccountType) Reset() {
-	var v BrokerAccountType
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBrokerAccountType) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBrokerAccountType) SetTo(v BrokerAccountType) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBrokerAccountType) SetTo(v BrokerAccountType) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptBrokerAccountType) Get() (v BrokerAccountType, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(BrokerAccountType), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptBrokerAccountType) Or(d BrokerAccountType) BrokerAccountType {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(BrokerAccountType)
 }
 
 // NewOptCurrency returns new OptCurrency with value set to v.
-func NewOptCurrency(v Currency) OptCurrency {
-	return OptCurrency{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptCurrency(v Currency) OptCurrency { _ = "STUB: not implemented"; return *new(OptCurrency) }
 
 // OptCurrency is optional Currency.
 type OptCurrency struct {
@@ -1598,44 +1433,29 @@ type OptCurrency struct {
 }
 
 // IsSet returns true if OptCurrency was set.
-func (o OptCurrency) IsSet() bool { return o.Set }
+func (o OptCurrency) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCurrency) Reset() {
-	var v Currency
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCurrency) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptCurrency) SetTo(v Currency) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptCurrency) SetTo(v Currency) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCurrency) Get() (v Currency, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Currency), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptCurrency) Or(d Currency) Currency {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptCurrency) Or(d Currency) Currency { _ = "STUB: not implemented"; return *new(Currency) }
 
 // NewOptFloat64 returns new OptFloat64 with value set to v.
-func NewOptFloat64(v float64) OptFloat64 {
-	return OptFloat64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptFloat64(v float64) OptFloat64 { _ = "STUB: not implemented"; return *new(OptFloat64) }
 
 // OptFloat64 is optional float64.
 type OptFloat64 struct {
@@ -1644,43 +1464,28 @@ type OptFloat64 struct {
 }
 
 // IsSet returns true if OptFloat64 was set.
-func (o OptFloat64) IsSet() bool { return o.Set }
+func (o OptFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptFloat64) Get() (v float64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInstrumentType returns new OptInstrumentType with value set to v.
 func NewOptInstrumentType(v InstrumentType) OptInstrumentType {
-	return OptInstrumentType{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptInstrumentType)
 }
 
 // OptInstrumentType is optional InstrumentType.
@@ -1690,44 +1495,32 @@ type OptInstrumentType struct {
 }
 
 // IsSet returns true if OptInstrumentType was set.
-func (o OptInstrumentType) IsSet() bool { return o.Set }
+func (o OptInstrumentType) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInstrumentType) Reset() {
-	var v InstrumentType
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInstrumentType) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInstrumentType) SetTo(v InstrumentType) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInstrumentType) SetTo(v InstrumentType) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptInstrumentType) Get() (v InstrumentType, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(InstrumentType), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptInstrumentType) Or(d InstrumentType) InstrumentType {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(InstrumentType)
 }
 
 // NewOptInt32 returns new OptInt32 with value set to v.
-func NewOptInt32(v int32) OptInt32 {
-	return OptInt32{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt32(v int32) OptInt32 { _ = "STUB: not implemented"; return *new(OptInt32) }
 
 // OptInt32 is optional int32.
 type OptInt32 struct {
@@ -1736,43 +1529,28 @@ type OptInt32 struct {
 }
 
 // IsSet returns true if OptInt32 was set.
-func (o OptInt32) IsSet() bool { return o.Set }
+func (o OptInt32) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt32) Reset() {
-	var v int32
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt32) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt32) SetTo(v int32) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt32) SetTo(v int32) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt32) Get() (v int32, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt32) Get() (v int32, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt32) Or(d int32) int32 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt32) Or(d int32) int32 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptMoneyAmount returns new OptMoneyAmount with value set to v.
 func NewOptMoneyAmount(v MoneyAmount) OptMoneyAmount {
-	return OptMoneyAmount{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMoneyAmount)
 }
 
 // OptMoneyAmount is optional MoneyAmount.
@@ -1782,43 +1560,34 @@ type OptMoneyAmount struct {
 }
 
 // IsSet returns true if OptMoneyAmount was set.
-func (o OptMoneyAmount) IsSet() bool { return o.Set }
+func (o OptMoneyAmount) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMoneyAmount) Reset() {
-	var v MoneyAmount
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMoneyAmount) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMoneyAmount) SetTo(v MoneyAmount) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMoneyAmount) SetTo(v MoneyAmount) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMoneyAmount) Get() (v MoneyAmount, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MoneyAmount), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMoneyAmount) Or(d MoneyAmount) MoneyAmount {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MoneyAmount)
 }
 
 // NewOptOperationTypeWithCommission returns new OptOperationTypeWithCommission with value set to v.
 func NewOptOperationTypeWithCommission(v OperationTypeWithCommission) OptOperationTypeWithCommission {
-	return OptOperationTypeWithCommission{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOperationTypeWithCommission)
 }
 
 // OptOperationTypeWithCommission is optional OperationTypeWithCommission.
@@ -1828,43 +1597,37 @@ type OptOperationTypeWithCommission struct {
 }
 
 // IsSet returns true if OptOperationTypeWithCommission was set.
-func (o OptOperationTypeWithCommission) IsSet() bool { return o.Set }
+func (o OptOperationTypeWithCommission) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOperationTypeWithCommission) Reset() {
-	var v OperationTypeWithCommission
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOperationTypeWithCommission) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptOperationTypeWithCommission) SetTo(v OperationTypeWithCommission) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOperationTypeWithCommission) Get() (v OperationTypeWithCommission, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OperationTypeWithCommission), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOperationTypeWithCommission) Or(d OperationTypeWithCommission) OperationTypeWithCommission {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OperationTypeWithCommission)
 }
 
 // NewOptSandboxRegisterRequest returns new OptSandboxRegisterRequest with value set to v.
 func NewOptSandboxRegisterRequest(v SandboxRegisterRequest) OptSandboxRegisterRequest {
-	return OptSandboxRegisterRequest{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSandboxRegisterRequest)
 }
 
 // OptSandboxRegisterRequest is optional SandboxRegisterRequest.
@@ -1874,44 +1637,35 @@ type OptSandboxRegisterRequest struct {
 }
 
 // IsSet returns true if OptSandboxRegisterRequest was set.
-func (o OptSandboxRegisterRequest) IsSet() bool { return o.Set }
+func (o OptSandboxRegisterRequest) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSandboxRegisterRequest) Reset() {
-	var v SandboxRegisterRequest
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSandboxRegisterRequest) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSandboxRegisterRequest) SetTo(v SandboxRegisterRequest) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSandboxRegisterRequest) Get() (v SandboxRegisterRequest, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SandboxRegisterRequest), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSandboxRegisterRequest) Or(d SandboxRegisterRequest) SandboxRegisterRequest {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SandboxRegisterRequest)
 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -1920,36 +1674,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/Order
 type Order struct {
@@ -1965,85 +1706,101 @@ type Order struct {
 
 // GetOrderId returns the value of OrderId.
 func (s *Order) GetOrderId() string {
-	return s.OrderId
+	_ = "STUB: not implemented"
+
+	// GetFigi returns the value of Figi.
+	return ""
 }
 
-// GetFigi returns the value of Figi.
 func (s *Order) GetFigi() string {
-	return s.Figi
+	_ = "STUB: not implemented"
+
+	// GetOperation returns the value of Operation.
+	return ""
 }
 
-// GetOperation returns the value of Operation.
 func (s *Order) GetOperation() OperationType {
-	return s.Operation
+	_ = "STUB: not implemented"
+
+	// GetStatus returns the value of Status.
+	return *new(OperationType)
 }
 
-// GetStatus returns the value of Status.
 func (s *Order) GetStatus() OrderStatus {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetRequestedLots returns the value of RequestedLots.
+	return *new(OrderStatus)
 }
 
-// GetRequestedLots returns the value of RequestedLots.
-func (s *Order) GetRequestedLots() int32 {
-	return s.RequestedLots
-}
+func (s *Order) GetRequestedLots() int32 { _ = "STUB: not implemented"; return 0 }
 
 // GetExecutedLots returns the value of ExecutedLots.
-func (s *Order) GetExecutedLots() int32 {
-	return s.ExecutedLots
-}
+func (s *Order) GetExecutedLots() int32 { _ = "STUB: not implemented"; return 0 }
 
 // GetType returns the value of Type.
 func (s *Order) GetType() OrderType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetPrice returns the value of Price.
+	return *new(OrderType)
 }
 
-// GetPrice returns the value of Price.
 func (s *Order) GetPrice() float64 {
-	return s.Price
+	_ = "STUB: not implemented"
+
+	// SetOrderId sets the value of OrderId.
+	return 0
 }
 
-// SetOrderId sets the value of OrderId.
 func (s *Order) SetOrderId(val string) {
-	s.OrderId = val
+	_ = "STUB: not implemented"
+
+	// SetFigi sets the value of Figi.
+	return
 }
 
-// SetFigi sets the value of Figi.
 func (s *Order) SetFigi(val string) {
-	s.Figi = val
+	_ = "STUB: not implemented"
+
+	// SetOperation sets the value of Operation.
+	return
 }
 
-// SetOperation sets the value of Operation.
 func (s *Order) SetOperation(val OperationType) {
-	s.Operation = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *Order) SetStatus(val OrderStatus) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetRequestedLots sets the value of RequestedLots.
+	return
 }
 
-// SetRequestedLots sets the value of RequestedLots.
-func (s *Order) SetRequestedLots(val int32) {
-	s.RequestedLots = val
-}
+func (s *Order) SetRequestedLots(val int32) { _ = "STUB: not implemented"; return }
 
 // SetExecutedLots sets the value of ExecutedLots.
-func (s *Order) SetExecutedLots(val int32) {
-	s.ExecutedLots = val
-}
+func (s *Order) SetExecutedLots(val int32) { _ = "STUB: not implemented"; return }
 
 // SetType sets the value of Type.
 func (s *Order) SetType(val OrderType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetPrice sets the value of Price.
+	return
 }
 
-// SetPrice sets the value of Price.
 func (s *Order) SetPrice(val float64) {
-	s.Price = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/OrderResponse
+	return
 }
 
-// Ref: #/components/schemas/OrderResponse
 type OrderResponse struct {
 	Price    float64 `json:"price"`
 	Quantity int32   `json:"quantity"`
@@ -2051,26 +1808,34 @@ type OrderResponse struct {
 
 // GetPrice returns the value of Price.
 func (s *OrderResponse) GetPrice() float64 {
-	return s.Price
+	_ = "STUB: not implemented"
+
+	// GetQuantity returns the value of Quantity.
+	return 0
 }
 
-// GetQuantity returns the value of Quantity.
 func (s *OrderResponse) GetQuantity() int32 {
-	return s.Quantity
+	_ = "STUB: not implemented"
+
+	// SetPrice sets the value of Price.
+	return 0
 }
 
-// SetPrice sets the value of Price.
 func (s *OrderResponse) SetPrice(val float64) {
-	s.Price = val
+	_ = "STUB: not implemented"
+
+	// SetQuantity sets the value of Quantity.
+	return
 }
 
-// SetQuantity sets the value of Quantity.
 func (s *OrderResponse) SetQuantity(val int32) {
-	s.Quantity = val
+	_ = "STUB: not implemented"
+
+	// Статус заявки.
+	// Ref: #/components/schemas/OrderStatus
+	return
 }
 
-// Статус заявки.
-// Ref: #/components/schemas/OrderStatus
 type OrderStatus string
 
 const (
@@ -2086,80 +1851,13 @@ const (
 )
 
 // AllValues returns all OrderStatus values.
-func (OrderStatus) AllValues() []OrderStatus {
-	return []OrderStatus{
-		OrderStatusNew,
-		OrderStatusPartiallyFill,
-		OrderStatusFill,
-		OrderStatusCancelled,
-		OrderStatusReplaced,
-		OrderStatusPendingCancel,
-		OrderStatusRejected,
-		OrderStatusPendingReplace,
-		OrderStatusPendingNew,
-	}
-}
+func (OrderStatus) AllValues() []OrderStatus { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s OrderStatus) MarshalText() ([]byte, error) {
-	switch s {
-	case OrderStatusNew:
-		return []byte(s), nil
-	case OrderStatusPartiallyFill:
-		return []byte(s), nil
-	case OrderStatusFill:
-		return []byte(s), nil
-	case OrderStatusCancelled:
-		return []byte(s), nil
-	case OrderStatusReplaced:
-		return []byte(s), nil
-	case OrderStatusPendingCancel:
-		return []byte(s), nil
-	case OrderStatusRejected:
-		return []byte(s), nil
-	case OrderStatusPendingReplace:
-		return []byte(s), nil
-	case OrderStatusPendingNew:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s OrderStatus) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *OrderStatus) UnmarshalText(data []byte) error {
-	switch OrderStatus(data) {
-	case OrderStatusNew:
-		*s = OrderStatusNew
-		return nil
-	case OrderStatusPartiallyFill:
-		*s = OrderStatusPartiallyFill
-		return nil
-	case OrderStatusFill:
-		*s = OrderStatusFill
-		return nil
-	case OrderStatusCancelled:
-		*s = OrderStatusCancelled
-		return nil
-	case OrderStatusReplaced:
-		*s = OrderStatusReplaced
-		return nil
-	case OrderStatusPendingCancel:
-		*s = OrderStatusPendingCancel
-		return nil
-	case OrderStatusRejected:
-		*s = OrderStatusRejected
-		return nil
-	case OrderStatusPendingReplace:
-		*s = OrderStatusPendingReplace
-		return nil
-	case OrderStatusPendingNew:
-		*s = OrderStatusPendingNew
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *OrderStatus) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Тип заявки.
 // Ref: #/components/schemas/OrderType
@@ -2171,38 +1869,13 @@ const (
 )
 
 // AllValues returns all OrderType values.
-func (OrderType) AllValues() []OrderType {
-	return []OrderType{
-		OrderTypeLimit,
-		OrderTypeMarket,
-	}
-}
+func (OrderType) AllValues() []OrderType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s OrderType) MarshalText() ([]byte, error) {
-	switch s {
-	case OrderTypeLimit:
-		return []byte(s), nil
-	case OrderTypeMarket:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s OrderType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *OrderType) UnmarshalText(data []byte) error {
-	switch OrderType(data) {
-	case OrderTypeLimit:
-		*s = OrderTypeLimit
-		return nil
-	case OrderTypeMarket:
-		*s = OrderTypeMarket
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *OrderType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/Orderbook
 type Orderbook struct {
@@ -2225,115 +1898,149 @@ type Orderbook struct {
 
 // GetFigi returns the value of Figi.
 func (s *Orderbook) GetFigi() string {
-	return s.Figi
+	_ = "STUB: not implemented"
+
+	// GetDepth returns the value of Depth.
+	return ""
 }
 
-// GetDepth returns the value of Depth.
 func (s *Orderbook) GetDepth() int32 {
-	return s.Depth
+	_ = "STUB: not implemented"
+
+	// GetBids returns the value of Bids.
+	return 0
 }
 
-// GetBids returns the value of Bids.
 func (s *Orderbook) GetBids() []OrderResponse {
-	return s.Bids
+	_ = "STUB: not implemented"
+
+	// GetAsks returns the value of Asks.
+	return nil
 }
 
-// GetAsks returns the value of Asks.
 func (s *Orderbook) GetAsks() []OrderResponse {
-	return s.Asks
+	_ = "STUB: not implemented"
+
+	// GetTradeStatus returns the value of TradeStatus.
+	return nil
 }
 
-// GetTradeStatus returns the value of TradeStatus.
 func (s *Orderbook) GetTradeStatus() TradeStatus {
-	return s.TradeStatus
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMinPriceIncrement returns the value of MinPriceIncrement.
+	new(TradeStatus)
 }
 
-// GetMinPriceIncrement returns the value of MinPriceIncrement.
-func (s *Orderbook) GetMinPriceIncrement() float64 {
-	return s.MinPriceIncrement
-}
+func (s *Orderbook) GetMinPriceIncrement() float64 { _ = "STUB: not implemented"; return 0 }
 
 // GetFaceValue returns the value of FaceValue.
 func (s *Orderbook) GetFaceValue() OptFloat64 {
-	return s.FaceValue
+	_ = "STUB: not implemented"
+
+	// GetLastPrice returns the value of LastPrice.
+	return *new(OptFloat64)
 }
 
-// GetLastPrice returns the value of LastPrice.
 func (s *Orderbook) GetLastPrice() OptFloat64 {
-	return s.LastPrice
+	_ = "STUB: not implemented"
+
+	// GetClosePrice returns the value of ClosePrice.
+	return *new(OptFloat64)
 }
 
-// GetClosePrice returns the value of ClosePrice.
 func (s *Orderbook) GetClosePrice() OptFloat64 {
-	return s.ClosePrice
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLimitUp returns the value of LimitUp.
+	new(OptFloat64)
 }
 
-// GetLimitUp returns the value of LimitUp.
 func (s *Orderbook) GetLimitUp() OptFloat64 {
-	return s.LimitUp
+	_ = "STUB: not implemented"
+
+	// GetLimitDown returns the value of LimitDown.
+	return *new(OptFloat64)
 }
 
-// GetLimitDown returns the value of LimitDown.
 func (s *Orderbook) GetLimitDown() OptFloat64 {
-	return s.LimitDown
+	_ = "STUB: not implemented"
+
+	// SetFigi sets the value of Figi.
+	return *new(OptFloat64)
 }
 
-// SetFigi sets the value of Figi.
 func (s *Orderbook) SetFigi(val string) {
-	s.Figi = val
+	_ = "STUB: not implemented"
+
+	// SetDepth sets the value of Depth.
+	return
 }
 
-// SetDepth sets the value of Depth.
 func (s *Orderbook) SetDepth(val int32) {
-	s.Depth = val
+	_ = "STUB: not implemented"
+
+	// SetBids sets the value of Bids.
+	return
 }
 
-// SetBids sets the value of Bids.
 func (s *Orderbook) SetBids(val []OrderResponse) {
-	s.Bids = val
+	_ = "STUB: not implemented"
+
+	// SetAsks sets the value of Asks.
+	return
 }
 
-// SetAsks sets the value of Asks.
 func (s *Orderbook) SetAsks(val []OrderResponse) {
-	s.Asks = val
+	_ = "STUB: not implemented"
+
+	// SetTradeStatus sets the value of TradeStatus.
+	return
 }
 
-// SetTradeStatus sets the value of TradeStatus.
-func (s *Orderbook) SetTradeStatus(val TradeStatus) {
-	s.TradeStatus = val
-}
+func (s *Orderbook) SetTradeStatus(val TradeStatus) { _ = "STUB: not implemented"; return }
 
 // SetMinPriceIncrement sets the value of MinPriceIncrement.
-func (s *Orderbook) SetMinPriceIncrement(val float64) {
-	s.MinPriceIncrement = val
-}
+func (s *Orderbook) SetMinPriceIncrement(val float64) { _ = "STUB: not implemented"; return }
 
 // SetFaceValue sets the value of FaceValue.
 func (s *Orderbook) SetFaceValue(val OptFloat64) {
-	s.FaceValue = val
+	_ = "STUB: not implemented"
+
+	// SetLastPrice sets the value of LastPrice.
+	return
 }
 
-// SetLastPrice sets the value of LastPrice.
 func (s *Orderbook) SetLastPrice(val OptFloat64) {
-	s.LastPrice = val
+	_ = "STUB: not implemented"
+
+	// SetClosePrice sets the value of ClosePrice.
+	return
 }
 
-// SetClosePrice sets the value of ClosePrice.
 func (s *Orderbook) SetClosePrice(val OptFloat64) {
-	s.ClosePrice = val
+	_ = "STUB: not implemented"
+
+	// SetLimitUp sets the value of LimitUp.
+	return
 }
 
-// SetLimitUp sets the value of LimitUp.
 func (s *Orderbook) SetLimitUp(val OptFloat64) {
-	s.LimitUp = val
+	_ = "STUB: not implemented"
+
+	// SetLimitDown sets the value of LimitDown.
+	return
 }
 
-// SetLimitDown sets the value of LimitDown.
 func (s *Orderbook) SetLimitDown(val OptFloat64) {
-	s.LimitDown = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/OrderbookResponse
+	return
 }
 
-// Ref: #/components/schemas/OrderbookResponse
 type OrderbookResponse struct {
 	TrackingId string    `json:"trackingId"`
 	Status     string    `json:"status"`
@@ -2341,38 +2048,46 @@ type OrderbookResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *OrderbookResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *OrderbookResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *OrderbookResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *OrderbookResponse) GetPayload() Orderbook {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(Orderbook)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *OrderbookResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *OrderbookResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *OrderbookResponse) SetPayload(val Orderbook) {
-	s.Payload = val
+func (s *OrderbookResponse) SetPayload(val Orderbook) { _ = "STUB: not implemented"; return }
+
+func (*OrderbookResponse) marketOrderbookGetRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/OrdersResponse
+	return
 }
 
-func (*OrderbookResponse) marketOrderbookGetRes() {}
-
-// Ref: #/components/schemas/OrdersResponse
 type OrdersResponse struct {
 	TrackingId string  `json:"trackingId"`
 	Status     string  `json:"status"`
@@ -2380,38 +2095,46 @@ type OrdersResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *OrdersResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *OrdersResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *OrdersResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *OrdersResponse) GetPayload() []Order {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return nil
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *OrdersResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *OrdersResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *OrdersResponse) SetPayload(val []Order) {
-	s.Payload = val
+func (s *OrdersResponse) SetPayload(val []Order) { _ = "STUB: not implemented"; return }
+
+func (*OrdersResponse) ordersGetRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PlacedLimitOrder
+	return
 }
 
-func (*OrdersResponse) ordersGetRes() {}
-
-// Ref: #/components/schemas/PlacedLimitOrder
 type PlacedLimitOrder struct {
 	OrderId      string        `json:"orderId"`
 	Operation    OperationType `json:"operation"`
@@ -2426,85 +2149,100 @@ type PlacedLimitOrder struct {
 
 // GetOrderId returns the value of OrderId.
 func (s *PlacedLimitOrder) GetOrderId() string {
-	return s.OrderId
+	_ = "STUB: not implemented"
+
+	// GetOperation returns the value of Operation.
+	return ""
 }
 
-// GetOperation returns the value of Operation.
 func (s *PlacedLimitOrder) GetOperation() OperationType {
-	return s.Operation
+	_ = "STUB: not implemented"
+	return *
+
+	// GetStatus returns the value of Status.
+	new(OperationType)
 }
 
-// GetStatus returns the value of Status.
 func (s *PlacedLimitOrder) GetStatus() OrderStatus {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetRejectReason returns the value of RejectReason.
+	return *new(OrderStatus)
 }
 
-// GetRejectReason returns the value of RejectReason.
 func (s *PlacedLimitOrder) GetRejectReason() OptString {
-	return s.RejectReason
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMessage returns the value of Message.
+	new(OptString)
 }
 
-// GetMessage returns the value of Message.
 func (s *PlacedLimitOrder) GetMessage() OptString {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// GetRequestedLots returns the value of RequestedLots.
+	return *new(OptString)
 }
 
-// GetRequestedLots returns the value of RequestedLots.
-func (s *PlacedLimitOrder) GetRequestedLots() int {
-	return s.RequestedLots
-}
+func (s *PlacedLimitOrder) GetRequestedLots() int { _ = "STUB: not implemented"; return 0 }
 
 // GetExecutedLots returns the value of ExecutedLots.
-func (s *PlacedLimitOrder) GetExecutedLots() int {
-	return s.ExecutedLots
-}
+func (s *PlacedLimitOrder) GetExecutedLots() int { _ = "STUB: not implemented"; return 0 }
 
 // GetCommission returns the value of Commission.
 func (s *PlacedLimitOrder) GetCommission() OptMoneyAmount {
-	return s.Commission
+	_ = "STUB: not implemented"
+	return *
+
+	// SetOrderId sets the value of OrderId.
+	new(OptMoneyAmount)
 }
 
-// SetOrderId sets the value of OrderId.
 func (s *PlacedLimitOrder) SetOrderId(val string) {
-	s.OrderId = val
+	_ = "STUB: not implemented"
+
+	// SetOperation sets the value of Operation.
+	return
 }
 
-// SetOperation sets the value of Operation.
 func (s *PlacedLimitOrder) SetOperation(val OperationType) {
-	s.Operation = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *PlacedLimitOrder) SetStatus(val OrderStatus) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetRejectReason sets the value of RejectReason.
+	return
 }
 
-// SetRejectReason sets the value of RejectReason.
-func (s *PlacedLimitOrder) SetRejectReason(val OptString) {
-	s.RejectReason = val
-}
+func (s *PlacedLimitOrder) SetRejectReason(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetMessage sets the value of Message.
 func (s *PlacedLimitOrder) SetMessage(val OptString) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// SetRequestedLots sets the value of RequestedLots.
+	return
 }
 
-// SetRequestedLots sets the value of RequestedLots.
-func (s *PlacedLimitOrder) SetRequestedLots(val int) {
-	s.RequestedLots = val
-}
+func (s *PlacedLimitOrder) SetRequestedLots(val int) { _ = "STUB: not implemented"; return }
 
 // SetExecutedLots sets the value of ExecutedLots.
-func (s *PlacedLimitOrder) SetExecutedLots(val int) {
-	s.ExecutedLots = val
-}
+func (s *PlacedLimitOrder) SetExecutedLots(val int) { _ = "STUB: not implemented"; return }
 
 // SetCommission sets the value of Commission.
 func (s *PlacedLimitOrder) SetCommission(val OptMoneyAmount) {
-	s.Commission = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PlacedMarketOrder
+	return
 }
 
-// Ref: #/components/schemas/PlacedMarketOrder
 type PlacedMarketOrder struct {
 	OrderId      string        `json:"orderId"`
 	Operation    OperationType `json:"operation"`
@@ -2519,100 +2257,119 @@ type PlacedMarketOrder struct {
 
 // GetOrderId returns the value of OrderId.
 func (s *PlacedMarketOrder) GetOrderId() string {
-	return s.OrderId
+	_ = "STUB: not implemented"
+
+	// GetOperation returns the value of Operation.
+	return ""
 }
 
-// GetOperation returns the value of Operation.
 func (s *PlacedMarketOrder) GetOperation() OperationType {
-	return s.Operation
+	_ = "STUB: not implemented"
+	return *
+
+	// GetStatus returns the value of Status.
+	new(OperationType)
 }
 
-// GetStatus returns the value of Status.
 func (s *PlacedMarketOrder) GetStatus() OrderStatus {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetRejectReason returns the value of RejectReason.
+	return *new(OrderStatus)
 }
 
-// GetRejectReason returns the value of RejectReason.
 func (s *PlacedMarketOrder) GetRejectReason() OptString {
-	return s.RejectReason
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMessage returns the value of Message.
+	new(OptString)
 }
 
-// GetMessage returns the value of Message.
 func (s *PlacedMarketOrder) GetMessage() OptString {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// GetRequestedLots returns the value of RequestedLots.
+	return *new(OptString)
 }
 
-// GetRequestedLots returns the value of RequestedLots.
-func (s *PlacedMarketOrder) GetRequestedLots() int {
-	return s.RequestedLots
-}
+func (s *PlacedMarketOrder) GetRequestedLots() int { _ = "STUB: not implemented"; return 0 }
 
 // GetExecutedLots returns the value of ExecutedLots.
-func (s *PlacedMarketOrder) GetExecutedLots() int {
-	return s.ExecutedLots
-}
+func (s *PlacedMarketOrder) GetExecutedLots() int { _ = "STUB: not implemented"; return 0 }
 
 // GetCommission returns the value of Commission.
 func (s *PlacedMarketOrder) GetCommission() OptMoneyAmount {
-	return s.Commission
+	_ = "STUB: not implemented"
+	return *
+
+	// SetOrderId sets the value of OrderId.
+	new(OptMoneyAmount)
 }
 
-// SetOrderId sets the value of OrderId.
 func (s *PlacedMarketOrder) SetOrderId(val string) {
-	s.OrderId = val
+	_ = "STUB: not implemented"
+
+	// SetOperation sets the value of Operation.
+	return
 }
 
-// SetOperation sets the value of Operation.
 func (s *PlacedMarketOrder) SetOperation(val OperationType) {
-	s.Operation = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *PlacedMarketOrder) SetStatus(val OrderStatus) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetRejectReason sets the value of RejectReason.
+	return
 }
 
-// SetRejectReason sets the value of RejectReason.
-func (s *PlacedMarketOrder) SetRejectReason(val OptString) {
-	s.RejectReason = val
-}
+func (s *PlacedMarketOrder) SetRejectReason(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetMessage sets the value of Message.
 func (s *PlacedMarketOrder) SetMessage(val OptString) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// SetRequestedLots sets the value of RequestedLots.
+	return
 }
 
-// SetRequestedLots sets the value of RequestedLots.
-func (s *PlacedMarketOrder) SetRequestedLots(val int) {
-	s.RequestedLots = val
-}
+func (s *PlacedMarketOrder) SetRequestedLots(val int) { _ = "STUB: not implemented"; return }
 
 // SetExecutedLots sets the value of ExecutedLots.
-func (s *PlacedMarketOrder) SetExecutedLots(val int) {
-	s.ExecutedLots = val
-}
+func (s *PlacedMarketOrder) SetExecutedLots(val int) { _ = "STUB: not implemented"; return }
 
 // SetCommission sets the value of Commission.
 func (s *PlacedMarketOrder) SetCommission(val OptMoneyAmount) {
-	s.Commission = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Portfolio
+	return
 }
 
-// Ref: #/components/schemas/Portfolio
 type Portfolio struct {
 	Positions []PortfolioPosition `json:"positions"`
 }
 
 // GetPositions returns the value of Positions.
 func (s *Portfolio) GetPositions() []PortfolioPosition {
-	return s.Positions
+	_ = "STUB: not implemented"
+
+	// SetPositions sets the value of Positions.
+	return nil
 }
 
-// SetPositions sets the value of Positions.
 func (s *Portfolio) SetPositions(val []PortfolioPosition) {
-	s.Positions = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PortfolioCurrenciesResponse
+	return
 }
 
-// Ref: #/components/schemas/PortfolioCurrenciesResponse
 type PortfolioCurrenciesResponse struct {
 	TrackingId string     `json:"trackingId"`
 	Status     string     `json:"status"`
@@ -2620,38 +2377,46 @@ type PortfolioCurrenciesResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *PortfolioCurrenciesResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *PortfolioCurrenciesResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *PortfolioCurrenciesResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *PortfolioCurrenciesResponse) GetPayload() Currencies {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(Currencies)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *PortfolioCurrenciesResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *PortfolioCurrenciesResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *PortfolioCurrenciesResponse) SetPayload(val Currencies) {
-	s.Payload = val
+func (s *PortfolioCurrenciesResponse) SetPayload(val Currencies) { _ = "STUB: not implemented"; return }
+
+func (*PortfolioCurrenciesResponse) portfolioCurrenciesGetRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PortfolioPosition
+	return
 }
 
-func (*PortfolioCurrenciesResponse) portfolioCurrenciesGetRes() {}
-
-// Ref: #/components/schemas/PortfolioPosition
 type PortfolioPosition struct {
 	Figi                      string         `json:"figi"`
 	Ticker                    OptString      `json:"ticker"`
@@ -2668,115 +2433,153 @@ type PortfolioPosition struct {
 
 // GetFigi returns the value of Figi.
 func (s *PortfolioPosition) GetFigi() string {
-	return s.Figi
+	_ = "STUB: not implemented"
+
+	// GetTicker returns the value of Ticker.
+	return ""
 }
 
-// GetTicker returns the value of Ticker.
 func (s *PortfolioPosition) GetTicker() OptString {
-	return s.Ticker
+	_ = "STUB: not implemented"
+
+	// GetIsin returns the value of Isin.
+	return *new(OptString)
 }
 
-// GetIsin returns the value of Isin.
 func (s *PortfolioPosition) GetIsin() OptString {
-	return s.Isin
+	_ = "STUB: not implemented"
+
+	// GetInstrumentType returns the value of InstrumentType.
+	return *new(OptString)
 }
 
-// GetInstrumentType returns the value of InstrumentType.
 func (s *PortfolioPosition) GetInstrumentType() InstrumentType {
-	return s.InstrumentType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBalance returns the value of Balance.
+	new(InstrumentType)
 }
 
-// GetBalance returns the value of Balance.
 func (s *PortfolioPosition) GetBalance() float64 {
-	return s.Balance
+	_ = "STUB: not implemented"
+
+	// GetBlocked returns the value of Blocked.
+	return 0
 }
 
-// GetBlocked returns the value of Blocked.
 func (s *PortfolioPosition) GetBlocked() OptFloat64 {
-	return s.Blocked
+	_ = "STUB: not implemented"
+
+	// GetExpectedYield returns the value of ExpectedYield.
+	return *new(OptFloat64)
 }
 
-// GetExpectedYield returns the value of ExpectedYield.
 func (s *PortfolioPosition) GetExpectedYield() OptMoneyAmount {
-	return s.ExpectedYield
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLots returns the value of Lots.
+	new(OptMoneyAmount)
 }
 
-// GetLots returns the value of Lots.
 func (s *PortfolioPosition) GetLots() int32 {
-	return s.Lots
+	_ = "STUB: not implemented"
+
+	// GetAveragePositionPrice returns the value of AveragePositionPrice.
+	return 0
 }
 
-// GetAveragePositionPrice returns the value of AveragePositionPrice.
 func (s *PortfolioPosition) GetAveragePositionPrice() OptMoneyAmount {
-	return s.AveragePositionPrice
+	_ = "STUB: not implemented"
+	return *new(OptMoneyAmount)
 }
 
 // GetAveragePositionPriceNoNkd returns the value of AveragePositionPriceNoNkd.
 func (s *PortfolioPosition) GetAveragePositionPriceNoNkd() OptMoneyAmount {
-	return s.AveragePositionPriceNoNkd
+	_ = "STUB: not implemented"
+	return *new(OptMoneyAmount)
 }
 
 // GetName returns the value of Name.
 func (s *PortfolioPosition) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// SetFigi sets the value of Figi.
+	return ""
 }
 
-// SetFigi sets the value of Figi.
 func (s *PortfolioPosition) SetFigi(val string) {
-	s.Figi = val
+	_ = "STUB: not implemented"
+
+	// SetTicker sets the value of Ticker.
+	return
 }
 
-// SetTicker sets the value of Ticker.
 func (s *PortfolioPosition) SetTicker(val OptString) {
-	s.Ticker = val
+	_ = "STUB: not implemented"
+
+	// SetIsin sets the value of Isin.
+	return
 }
 
-// SetIsin sets the value of Isin.
 func (s *PortfolioPosition) SetIsin(val OptString) {
-	s.Isin = val
+	_ = "STUB: not implemented"
+
+	// SetInstrumentType sets the value of InstrumentType.
+	return
 }
 
-// SetInstrumentType sets the value of InstrumentType.
 func (s *PortfolioPosition) SetInstrumentType(val InstrumentType) {
-	s.InstrumentType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetBalance sets the value of Balance.
 }
 
-// SetBalance sets the value of Balance.
 func (s *PortfolioPosition) SetBalance(val float64) {
-	s.Balance = val
+	_ = "STUB: not implemented"
+
+	// SetBlocked sets the value of Blocked.
+	return
 }
 
-// SetBlocked sets the value of Blocked.
 func (s *PortfolioPosition) SetBlocked(val OptFloat64) {
-	s.Blocked = val
+	_ = "STUB: not implemented"
+
+	// SetExpectedYield sets the value of ExpectedYield.
+	return
 }
 
-// SetExpectedYield sets the value of ExpectedYield.
-func (s *PortfolioPosition) SetExpectedYield(val OptMoneyAmount) {
-	s.ExpectedYield = val
-}
+func (s *PortfolioPosition) SetExpectedYield(val OptMoneyAmount) { _ = "STUB: not implemented"; return }
 
 // SetLots sets the value of Lots.
 func (s *PortfolioPosition) SetLots(val int32) {
-	s.Lots = val
+	_ = "STUB: not implemented"
+
+	// SetAveragePositionPrice sets the value of AveragePositionPrice.
+	return
 }
 
-// SetAveragePositionPrice sets the value of AveragePositionPrice.
 func (s *PortfolioPosition) SetAveragePositionPrice(val OptMoneyAmount) {
-	s.AveragePositionPrice = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetAveragePositionPriceNoNkd sets the value of AveragePositionPriceNoNkd.
 func (s *PortfolioPosition) SetAveragePositionPriceNoNkd(val OptMoneyAmount) {
-	s.AveragePositionPriceNoNkd = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetName sets the value of Name.
 func (s *PortfolioPosition) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PortfolioResponse
+	return
 }
 
-// Ref: #/components/schemas/PortfolioResponse
 type PortfolioResponse struct {
 	TrackingId string    `json:"trackingId"`
 	Status     string    `json:"status"`
@@ -2784,36 +2587,40 @@ type PortfolioResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *PortfolioResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *PortfolioResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *PortfolioResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *PortfolioResponse) GetPayload() Portfolio {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(Portfolio)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *PortfolioResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *PortfolioResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *PortfolioResponse) SetPayload(val Portfolio) {
-	s.Payload = val
-}
+func (s *PortfolioResponse) SetPayload(val Portfolio) { _ = "STUB: not implemented"; return }
 
-func (*PortfolioResponse) portfolioGetRes() {}
+func (*PortfolioResponse) portfolioGetRes() { _ = "STUB: not implemented"; return }
 
 type SSOAuth struct {
 	Token string
@@ -2822,25 +2629,33 @@ type SSOAuth struct {
 
 // GetToken returns the value of Token.
 func (s *SSOAuth) GetToken() string {
-	return s.Token
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *SSOAuth) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetToken sets the value of Token.
+	return nil
 }
 
-// SetToken sets the value of Token.
 func (s *SSOAuth) SetToken(val string) {
-	s.Token = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
 func (s *SSOAuth) SetRoles(val []string) {
-	s.Roles = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/SandboxAccount
+	return
 }
 
-// Ref: #/components/schemas/SandboxAccount
 type SandboxAccount struct {
 	BrokerAccountType BrokerAccountType `json:"brokerAccountType"`
 	BrokerAccountId   string            `json:"brokerAccountId"`
@@ -2848,23 +2663,21 @@ type SandboxAccount struct {
 
 // GetBrokerAccountType returns the value of BrokerAccountType.
 func (s *SandboxAccount) GetBrokerAccountType() BrokerAccountType {
-	return s.BrokerAccountType
+	_ = "STUB: not implemented"
+	return *new(BrokerAccountType)
 }
 
 // GetBrokerAccountId returns the value of BrokerAccountId.
-func (s *SandboxAccount) GetBrokerAccountId() string {
-	return s.BrokerAccountId
-}
+func (s *SandboxAccount) GetBrokerAccountId() string { _ = "STUB: not implemented"; return "" }
 
 // SetBrokerAccountType sets the value of BrokerAccountType.
 func (s *SandboxAccount) SetBrokerAccountType(val BrokerAccountType) {
-	s.BrokerAccountType = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetBrokerAccountId sets the value of BrokerAccountId.
-func (s *SandboxAccount) SetBrokerAccountId(val string) {
-	s.BrokerAccountId = val
-}
+func (s *SandboxAccount) SetBrokerAccountId(val string) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/SandboxCurrency
 type SandboxCurrency string
@@ -2882,80 +2695,13 @@ const (
 )
 
 // AllValues returns all SandboxCurrency values.
-func (SandboxCurrency) AllValues() []SandboxCurrency {
-	return []SandboxCurrency{
-		SandboxCurrencyRUB,
-		SandboxCurrencyUSD,
-		SandboxCurrencyEUR,
-		SandboxCurrencyGBP,
-		SandboxCurrencyHKD,
-		SandboxCurrencyCHF,
-		SandboxCurrencyJPY,
-		SandboxCurrencyCNY,
-		SandboxCurrencyTRY,
-	}
-}
+func (SandboxCurrency) AllValues() []SandboxCurrency { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s SandboxCurrency) MarshalText() ([]byte, error) {
-	switch s {
-	case SandboxCurrencyRUB:
-		return []byte(s), nil
-	case SandboxCurrencyUSD:
-		return []byte(s), nil
-	case SandboxCurrencyEUR:
-		return []byte(s), nil
-	case SandboxCurrencyGBP:
-		return []byte(s), nil
-	case SandboxCurrencyHKD:
-		return []byte(s), nil
-	case SandboxCurrencyCHF:
-		return []byte(s), nil
-	case SandboxCurrencyJPY:
-		return []byte(s), nil
-	case SandboxCurrencyCNY:
-		return []byte(s), nil
-	case SandboxCurrencyTRY:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s SandboxCurrency) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *SandboxCurrency) UnmarshalText(data []byte) error {
-	switch SandboxCurrency(data) {
-	case SandboxCurrencyRUB:
-		*s = SandboxCurrencyRUB
-		return nil
-	case SandboxCurrencyUSD:
-		*s = SandboxCurrencyUSD
-		return nil
-	case SandboxCurrencyEUR:
-		*s = SandboxCurrencyEUR
-		return nil
-	case SandboxCurrencyGBP:
-		*s = SandboxCurrencyGBP
-		return nil
-	case SandboxCurrencyHKD:
-		*s = SandboxCurrencyHKD
-		return nil
-	case SandboxCurrencyCHF:
-		*s = SandboxCurrencyCHF
-		return nil
-	case SandboxCurrencyJPY:
-		*s = SandboxCurrencyJPY
-		return nil
-	case SandboxCurrencyCNY:
-		*s = SandboxCurrencyCNY
-		return nil
-	case SandboxCurrencyTRY:
-		*s = SandboxCurrencyTRY
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *SandboxCurrency) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/SandboxRegisterRequest
 type SandboxRegisterRequest struct {
@@ -2964,12 +2710,14 @@ type SandboxRegisterRequest struct {
 
 // GetBrokerAccountType returns the value of BrokerAccountType.
 func (s *SandboxRegisterRequest) GetBrokerAccountType() OptBrokerAccountType {
-	return s.BrokerAccountType
+	_ = "STUB: not implemented"
+	return *new(OptBrokerAccountType)
 }
 
 // SetBrokerAccountType sets the value of BrokerAccountType.
 func (s *SandboxRegisterRequest) SetBrokerAccountType(val OptBrokerAccountType) {
-	s.BrokerAccountType = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Ref: #/components/schemas/SandboxRegisterResponse
@@ -2980,38 +2728,46 @@ type SandboxRegisterResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *SandboxRegisterResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *SandboxRegisterResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *SandboxRegisterResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *SandboxRegisterResponse) GetPayload() SandboxAccount {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(SandboxAccount)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *SandboxRegisterResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *SandboxRegisterResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *SandboxRegisterResponse) SetPayload(val SandboxAccount) {
-	s.Payload = val
+func (s *SandboxRegisterResponse) SetPayload(val SandboxAccount) { _ = "STUB: not implemented"; return }
+
+func (*SandboxRegisterResponse) sandboxRegisterPostRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/SandboxSetCurrencyBalanceRequest
+	return
 }
 
-func (*SandboxRegisterResponse) sandboxRegisterPostRes() {}
-
-// Ref: #/components/schemas/SandboxSetCurrencyBalanceRequest
 type SandboxSetCurrencyBalanceRequest struct {
 	Currency SandboxCurrency `json:"currency"`
 	Balance  float64         `json:"balance"`
@@ -3019,25 +2775,33 @@ type SandboxSetCurrencyBalanceRequest struct {
 
 // GetCurrency returns the value of Currency.
 func (s *SandboxSetCurrencyBalanceRequest) GetCurrency() SandboxCurrency {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetBalance returns the value of Balance.
+	return *new(SandboxCurrency)
 }
 
-// GetBalance returns the value of Balance.
 func (s *SandboxSetCurrencyBalanceRequest) GetBalance() float64 {
-	return s.Balance
+	_ = "STUB: not implemented"
+
+	// SetCurrency sets the value of Currency.
+	return 0
 }
 
-// SetCurrency sets the value of Currency.
 func (s *SandboxSetCurrencyBalanceRequest) SetCurrency(val SandboxCurrency) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetBalance sets the value of Balance.
+	return
 }
 
-// SetBalance sets the value of Balance.
 func (s *SandboxSetCurrencyBalanceRequest) SetBalance(val float64) {
-	s.Balance = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/SandboxSetPositionBalanceRequest
+	return
 }
 
-// Ref: #/components/schemas/SandboxSetPositionBalanceRequest
 type SandboxSetPositionBalanceRequest struct {
 	Figi    OptString `json:"figi"`
 	Balance float64   `json:"balance"`
@@ -3045,25 +2809,33 @@ type SandboxSetPositionBalanceRequest struct {
 
 // GetFigi returns the value of Figi.
 func (s *SandboxSetPositionBalanceRequest) GetFigi() OptString {
-	return s.Figi
+	_ = "STUB: not implemented"
+
+	// GetBalance returns the value of Balance.
+	return *new(OptString)
 }
 
-// GetBalance returns the value of Balance.
 func (s *SandboxSetPositionBalanceRequest) GetBalance() float64 {
-	return s.Balance
+	_ = "STUB: not implemented"
+
+	// SetFigi sets the value of Figi.
+	return 0
 }
 
-// SetFigi sets the value of Figi.
 func (s *SandboxSetPositionBalanceRequest) SetFigi(val OptString) {
-	s.Figi = val
+	_ = "STUB: not implemented"
+
+	// SetBalance sets the value of Balance.
+	return
 }
 
-// SetBalance sets the value of Balance.
 func (s *SandboxSetPositionBalanceRequest) SetBalance(val float64) {
-	s.Balance = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/SearchMarketInstrument
+	return
 }
 
-// Ref: #/components/schemas/SearchMarketInstrument
 type SearchMarketInstrument struct {
 	Figi   string    `json:"figi"`
 	Ticker string    `json:"ticker"`
@@ -3078,85 +2850,115 @@ type SearchMarketInstrument struct {
 
 // GetFigi returns the value of Figi.
 func (s *SearchMarketInstrument) GetFigi() string {
-	return s.Figi
+	_ = "STUB: not implemented"
+
+	// GetTicker returns the value of Ticker.
+	return ""
 }
 
-// GetTicker returns the value of Ticker.
 func (s *SearchMarketInstrument) GetTicker() string {
-	return s.Ticker
+	_ = "STUB: not implemented"
+
+	// GetIsin returns the value of Isin.
+	return ""
 }
 
-// GetIsin returns the value of Isin.
 func (s *SearchMarketInstrument) GetIsin() OptString {
-	return s.Isin
+	_ = "STUB: not implemented"
+
+	// GetMinPriceIncrement returns the value of MinPriceIncrement.
+	return *new(OptString)
 }
 
-// GetMinPriceIncrement returns the value of MinPriceIncrement.
 func (s *SearchMarketInstrument) GetMinPriceIncrement() OptFloat64 {
-	return s.MinPriceIncrement
+	_ = "STUB: not implemented"
+	return *new(OptFloat64)
 }
 
 // GetLot returns the value of Lot.
 func (s *SearchMarketInstrument) GetLot() int32 {
-	return s.Lot
+	_ = "STUB: not implemented"
+
+	// GetCurrency returns the value of Currency.
+	return 0
 }
 
-// GetCurrency returns the value of Currency.
 func (s *SearchMarketInstrument) GetCurrency() OptCurrency {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(OptCurrency)
 }
 
-// GetName returns the value of Name.
 func (s *SearchMarketInstrument) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *SearchMarketInstrument) GetType() InstrumentType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// SetFigi sets the value of Figi.
+	return *new(InstrumentType)
 }
 
-// SetFigi sets the value of Figi.
 func (s *SearchMarketInstrument) SetFigi(val string) {
-	s.Figi = val
+	_ = "STUB: not implemented"
+
+	// SetTicker sets the value of Ticker.
+	return
 }
 
-// SetTicker sets the value of Ticker.
 func (s *SearchMarketInstrument) SetTicker(val string) {
-	s.Ticker = val
+	_ = "STUB: not implemented"
+
+	// SetIsin sets the value of Isin.
+	return
 }
 
-// SetIsin sets the value of Isin.
 func (s *SearchMarketInstrument) SetIsin(val OptString) {
-	s.Isin = val
+	_ = "STUB: not implemented"
+
+	// SetMinPriceIncrement sets the value of MinPriceIncrement.
+	return
 }
 
-// SetMinPriceIncrement sets the value of MinPriceIncrement.
 func (s *SearchMarketInstrument) SetMinPriceIncrement(val OptFloat64) {
-	s.MinPriceIncrement = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetLot sets the value of Lot.
 func (s *SearchMarketInstrument) SetLot(val int32) {
-	s.Lot = val
+	_ = "STUB: not implemented"
+
+	// SetCurrency sets the value of Currency.
+	return
 }
 
-// SetCurrency sets the value of Currency.
 func (s *SearchMarketInstrument) SetCurrency(val OptCurrency) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *SearchMarketInstrument) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *SearchMarketInstrument) SetType(val InstrumentType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/SearchMarketInstrumentResponse
+	return
 }
 
-// Ref: #/components/schemas/SearchMarketInstrumentResponse
 type SearchMarketInstrumentResponse struct {
 	TrackingId string                 `json:"trackingId"`
 	Status     string                 `json:"status"`
@@ -3165,37 +2967,52 @@ type SearchMarketInstrumentResponse struct {
 
 // GetTrackingId returns the value of TrackingId.
 func (s *SearchMarketInstrumentResponse) GetTrackingId() string {
-	return s.TrackingId
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetStatus returns the value of Status.
 }
 
-// GetStatus returns the value of Status.
 func (s *SearchMarketInstrumentResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *SearchMarketInstrumentResponse) GetPayload() SearchMarketInstrument {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(SearchMarketInstrument)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *SearchMarketInstrumentResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetStatus sets the value of Status.
 }
 
-// SetStatus sets the value of Status.
 func (s *SearchMarketInstrumentResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
 func (s *SearchMarketInstrumentResponse) SetPayload(val SearchMarketInstrument) {
-	s.Payload = val
+	_ = "STUB: not implemented"
+	return
 }
 
-func (*SearchMarketInstrumentResponse) marketSearchByFigiGetRes() {}
+func (*SearchMarketInstrumentResponse) marketSearchByFigiGetRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/TradeStatus
+	// Ref: #/components/schemas/TradeStatus
+	return
+}
+
 type TradeStatus string
 
 const (
@@ -3204,38 +3021,13 @@ const (
 )
 
 // AllValues returns all TradeStatus values.
-func (TradeStatus) AllValues() []TradeStatus {
-	return []TradeStatus{
-		TradeStatusNormalTrading,
-		TradeStatusNotAvailableForTrading,
-	}
-}
+func (TradeStatus) AllValues() []TradeStatus { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s TradeStatus) MarshalText() ([]byte, error) {
-	switch s {
-	case TradeStatusNormalTrading:
-		return []byte(s), nil
-	case TradeStatusNotAvailableForTrading:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s TradeStatus) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *TradeStatus) UnmarshalText(data []byte) error {
-	switch TradeStatus(data) {
-	case TradeStatusNormalTrading:
-		*s = TradeStatusNormalTrading
-		return nil
-	case TradeStatusNotAvailableForTrading:
-		*s = TradeStatusNotAvailableForTrading
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *TradeStatus) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/UserAccount
 type UserAccount struct {
@@ -3245,23 +3037,21 @@ type UserAccount struct {
 
 // GetBrokerAccountType returns the value of BrokerAccountType.
 func (s *UserAccount) GetBrokerAccountType() BrokerAccountType {
-	return s.BrokerAccountType
+	_ = "STUB: not implemented"
+	return *new(BrokerAccountType)
 }
 
 // GetBrokerAccountId returns the value of BrokerAccountId.
-func (s *UserAccount) GetBrokerAccountId() string {
-	return s.BrokerAccountId
-}
+func (s *UserAccount) GetBrokerAccountId() string { _ = "STUB: not implemented"; return "" }
 
 // SetBrokerAccountType sets the value of BrokerAccountType.
 func (s *UserAccount) SetBrokerAccountType(val BrokerAccountType) {
-	s.BrokerAccountType = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetBrokerAccountId sets the value of BrokerAccountId.
-func (s *UserAccount) SetBrokerAccountId(val string) {
-	s.BrokerAccountId = val
-}
+func (s *UserAccount) SetBrokerAccountId(val string) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/UserAccounts
 type UserAccounts struct {
@@ -3270,15 +3060,19 @@ type UserAccounts struct {
 
 // GetAccounts returns the value of Accounts.
 func (s *UserAccounts) GetAccounts() []UserAccount {
-	return s.Accounts
+	_ = "STUB: not implemented"
+
+	// SetAccounts sets the value of Accounts.
+	return nil
 }
 
-// SetAccounts sets the value of Accounts.
 func (s *UserAccounts) SetAccounts(val []UserAccount) {
-	s.Accounts = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/UserAccountsResponse
+	return
 }
 
-// Ref: #/components/schemas/UserAccountsResponse
 type UserAccountsResponse struct {
 	TrackingId string       `json:"trackingId"`
 	Status     string       `json:"status"`
@@ -3286,33 +3080,37 @@ type UserAccountsResponse struct {
 }
 
 // GetTrackingId returns the value of TrackingId.
-func (s *UserAccountsResponse) GetTrackingId() string {
-	return s.TrackingId
-}
+func (s *UserAccountsResponse) GetTrackingId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStatus returns the value of Status.
 func (s *UserAccountsResponse) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetPayload returns the value of Payload.
+	return ""
 }
 
-// GetPayload returns the value of Payload.
 func (s *UserAccountsResponse) GetPayload() UserAccounts {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// SetTrackingId sets the value of TrackingId.
+	return *new(UserAccounts)
 }
 
-// SetTrackingId sets the value of TrackingId.
 func (s *UserAccountsResponse) SetTrackingId(val string) {
-	s.TrackingId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *UserAccountsResponse) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetPayload sets the value of Payload.
+	return
 }
 
-// SetPayload sets the value of Payload.
-func (s *UserAccountsResponse) SetPayload(val UserAccounts) {
-	s.Payload = val
-}
+func (s *UserAccountsResponse) SetPayload(val UserAccounts) { _ = "STUB: not implemented"; return }
 
-func (*UserAccountsResponse) userAccountsGetRes() {}
+func (*UserAccountsResponse) userAccountsGetRes() { _ = "STUB: not implemented"; return }

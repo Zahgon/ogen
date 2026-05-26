@@ -4,15 +4,11 @@ package api
 
 import (
 	"net/http"
-
-	"github.com/ogen-go/ogen/validate"
 )
 
 func decodeLogEventResponse(resp *http.Response) (res *LogEventOK, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &LogEventOK{}, nil
-	}
-	return res, validate.UnexpectedStatusCodeWithResponse(resp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Code 200.

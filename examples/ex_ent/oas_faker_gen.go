@@ -2,579 +2,80 @@
 
 package api
 
-import (
-	"time"
-)
+// SetFake set fake values.
+func (s *CreatePetCategoriesReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CreatePetCategoriesReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Pets = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Pets = append(s.Pets, elem)
-			}
-		}
-	}
-}
+func (s *CreatePetFriendsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CreatePetFriendsReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Weight.SetFake()
-		}
-	}
-	{
-		{
-			s.Birthday.SetFake()
-		}
-	}
-	{
-		{
-			s.Categories = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Categories = append(s.Categories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Owner = int(0)
-		}
-	}
-	{
-		{
-			s.Friends = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Friends = append(s.Friends, elem)
-			}
-		}
-	}
-}
+func (s *CreatePetOwnerReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CreatePetOwnerReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Age = int(0)
-		}
-	}
-	{
-		{
-			s.Pets = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Pets = append(s.Pets, elem)
-			}
-		}
-	}
-}
+func (s *CreatePetReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CreatePetReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Weight.SetFake()
-		}
-	}
-	{
-		{
-			s.Birthday.SetFake()
-		}
-	}
-	{
-		{
-			s.Categories = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Categories = append(s.Categories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Owner = int(0)
-		}
-	}
-	{
-		{
-			s.Friends = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Friends = append(s.Friends, elem)
-			}
-		}
-	}
-}
+func (s *ListPetCategoriesOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ListPetCategoriesOKApplicationJSON) SetFake() {
-	var unwrapped []PetCategoriesList
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem PetCategoriesList
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ListPetCategoriesOKApplicationJSON(unwrapped)
-}
+func (s *ListPetFriendsOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ListPetFriendsOKApplicationJSON) SetFake() {
-	var unwrapped []PetFriendsList
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem PetFriendsList
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ListPetFriendsOKApplicationJSON(unwrapped)
-}
+func (s *ListPetOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ListPetOKApplicationJSON) SetFake() {
-	var unwrapped []PetList
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem PetList
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ListPetOKApplicationJSON(unwrapped)
-}
+func (s *OptDateTime) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDateTime) SetFake() {
-	var elem time.Time
-	{
-		elem = time.Now()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt) SetFake() {
-	var elem int
-	{
-		elem = int(0)
-	}
-	s.SetTo(elem)
-}
+func (s *PetCategoriesCreate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetCategoriesCreate) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *PetCategoriesList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetCategoriesList) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *PetCreate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetCreate) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Weight.SetFake()
-		}
-	}
-	{
-		{
-			s.Birthday.SetFake()
-		}
-	}
-	{
-		{
-			s.Categories = nil
-			for i := 0; i < 0; i++ {
-				var elem PetCreateCategories
-				{
-					elem.SetFake()
-				}
-				s.Categories = append(s.Categories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-}
+func (s *PetCreateCategories) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetCreateCategories) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *PetCreateOwner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetCreateOwner) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Age = int(0)
-		}
-	}
-}
+func (s *PetFriendsCreate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetFriendsCreate) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Weight.SetFake()
-		}
-	}
-	{
-		{
-			s.Birthday.SetFake()
-		}
-	}
-}
+func (s *PetFriendsList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetFriendsList) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Weight.SetFake()
-		}
-	}
-	{
-		{
-			s.Birthday.SetFake()
-		}
-	}
-}
+func (s *PetList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetList) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Weight.SetFake()
-		}
-	}
-	{
-		{
-			s.Birthday.SetFake()
-		}
-	}
-}
+func (s *PetOwnerCreate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetOwnerCreate) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Age = int(0)
-		}
-	}
-}
+func (s *PetOwnerRead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetOwnerRead) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Age = int(0)
-		}
-	}
-}
+func (s *PetRead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetRead) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Weight.SetFake()
-		}
-	}
-	{
-		{
-			s.Birthday.SetFake()
-		}
-	}
-}
+func (s *PetUpdate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PetUpdate) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Weight.SetFake()
-		}
-	}
-	{
-		{
-			s.Birthday.SetFake()
-		}
-	}
-}
+func (s *R400) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *R400) SetFake() {
-	{
-		{
-			s.Code = int(0)
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-}
+func (s *R404) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *R404) SetFake() {
-	{
-		{
-			s.Code = int(0)
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-}
+func (s *R409) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *R409) SetFake() {
-	{
-		{
-			s.Code = int(0)
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-}
+func (s *R500) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *R500) SetFake() {
-	{
-		{
-			s.Code = int(0)
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-}
-
-// SetFake set fake values.
-func (s *UpdatePetReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Weight.SetFake()
-		}
-	}
-	{
-		{
-			s.Birthday.SetFake()
-		}
-	}
-	{
-		{
-			s.Categories = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Categories = append(s.Categories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Owner = int(0)
-		}
-	}
-	{
-		{
-			s.Friends = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Friends = append(s.Friends, elem)
-			}
-		}
-	}
-}
+func (s *UpdatePetReq) SetFake() { _ = "STUB: not implemented"; return }

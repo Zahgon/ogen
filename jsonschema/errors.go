@@ -1,8 +1,6 @@
 package jsonschema
 
 import (
-	"github.com/go-faster/errors"
-
 	"github.com/ogen-go/ogen/jsonpointer"
 	"github.com/ogen-go/ogen/location"
 )
@@ -11,37 +9,18 @@ import (
 type LocationError = location.Error
 
 func (p *Parser) file(ctx *jsonpointer.ResolveCtx) location.File {
-	file := ctx.File()
-	if file.IsZero() {
-		return p.rootFile
-	}
-	return file
+	_ = "STUB: not implemented"
+	return *new(location.File)
 }
 
 func (p *Parser) wrapField(field string, file location.File, l location.Locator, err error) error {
-	if err == nil || p == nil {
-		return err
-	}
-	return p.wrapLocation(file, l.Field(field), err)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (p *Parser) wrapLocation(file location.File, l location.Locator, err error) error {
-	var locErr *LocationError
-	// Do not wrap error if it is nil or is already a LocationError.
-	if err == nil || p == nil || errors.As(err, &locErr) {
-		return err
-	}
+	_ = "STUB: not implemented"
+	return nil
 
-	pos, ok := l.Position()
-	if !ok {
-		return err
-	}
-	if file.IsZero() {
-		file = p.rootFile
-	}
-	return &LocationError{
-		File: file,
-		Pos:  pos,
-		Err:  err,
-	}
+	// Do not wrap error if it is nil or is already a LocationError.
 }

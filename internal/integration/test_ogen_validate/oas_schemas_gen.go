@@ -3,14 +3,10 @@
 package api
 
 import (
-	"fmt"
-
 	"github.com/go-faster/jx"
 )
 
-func (s *ErrorStatusCode) Error() string {
-	return fmt.Sprintf("code %d: %+v", s.StatusCode, s.Response)
-}
+func (s *ErrorStatusCode) Error() string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/Error
 type Error struct {
@@ -19,46 +15,52 @@ type Error struct {
 
 // GetMessage returns the value of Message.
 func (s *Error) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return ""
 }
 
-// SetMessage sets the value of Message.
 func (s *Error) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// ErrorStatusCode wraps Error with StatusCode.
+	return
 }
 
-// ErrorStatusCode wraps Error with StatusCode.
 type ErrorStatusCode struct {
 	StatusCode int
 	Response   Error
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorStatusCode) GetResponse() Error {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(Error)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
 func (s *ErrorStatusCode) SetResponse(val Error) {
-	s.Response = val
+	_ = "STUB: not implemented"
+
+	// NewOptUserOther returns new OptUserOther with value set to v.
+	return
 }
 
-// NewOptUserOther returns new OptUserOther with value set to v.
 func NewOptUserOther(v UserOther) OptUserOther {
-	return OptUserOther{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptUserOther)
 }
 
 // OptUserOther is optional UserOther.
@@ -68,36 +70,26 @@ type OptUserOther struct {
 }
 
 // IsSet returns true if OptUserOther was set.
-func (o OptUserOther) IsSet() bool { return o.Set }
+func (o OptUserOther) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUserOther) Reset() {
-	var v UserOther
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUserOther) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUserOther) SetTo(v UserOther) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUserOther) SetTo(v UserOther) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUserOther) Get() (v UserOther, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(UserOther), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUserOther) Or(d UserOther) UserOther {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUserOther) Or(d UserOther) UserOther { _ = "STUB: not implemented"; return *new(UserOther) }
 
 // Ref: #/components/schemas/User
 type User struct {
@@ -109,43 +101,55 @@ type User struct {
 
 // GetName returns the value of Name.
 func (s *User) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetAge returns the value of Age.
+	return ""
 }
 
-// GetAge returns the value of Age.
 func (s *User) GetAge() int {
-	return s.Age
+	_ = "STUB: not implemented"
+
+	// GetEmail returns the value of Email.
+	return 0
 }
 
-// GetEmail returns the value of Email.
 func (s *User) GetEmail() string {
-	return s.Email
+	_ = "STUB: not implemented"
+
+	// GetOther returns the value of Other.
+	return ""
 }
 
-// GetOther returns the value of Other.
 func (s *User) GetOther() OptUserOther {
-	return s.Other
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return *new(OptUserOther)
 }
 
-// SetName sets the value of Name.
 func (s *User) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetAge sets the value of Age.
+	return
 }
 
-// SetAge sets the value of Age.
 func (s *User) SetAge(val int) {
-	s.Age = val
+	_ = "STUB: not implemented"
+
+	// SetEmail sets the value of Email.
+	return
 }
 
-// SetEmail sets the value of Email.
 func (s *User) SetEmail(val string) {
-	s.Email = val
+	_ = "STUB: not implemented"
+
+	// SetOther sets the value of Other.
+	return
 }
 
-// SetOther sets the value of Other.
-func (s *User) SetOther(val OptUserOther) {
-	s.Other = val
-}
+func (s *User) SetOther(val OptUserOther) { _ = "STUB: not implemented"; return }
 
 type UserOther map[string]jx.Raw
 

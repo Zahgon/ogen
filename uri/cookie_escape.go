@@ -1,9 +1,5 @@
 package uri
 
-import (
-	"strings"
-)
-
 const cookieEscaper = '%'
 
 var cookieEscapeChars = [128]byte{
@@ -52,70 +48,14 @@ var cookieEscapeChars = [128]byte{
 
 const hex = "0123456789ABCDEF"
 
-func escapeCookie(s string) string {
-	const length = byte(len(cookieEscapeChars))
+func escapeCookie(s string) string { _ = "STUB: not implemented"; return "" }
 
-	n := 0
-	for _, c := range []byte(s) {
-		if c >= length || cookieEscapeChars[c] == 1 {
-			n++
-		}
-	}
+// No need to escape.
 
-	// No need to escape.
-	if n == 0 {
-		return s
-	}
+// Every escaped char is 2 bytes longer: percent sign and 2 hex digits minus existing byte.
 
-	var sb strings.Builder
-	// Every escaped char is 2 bytes longer: percent sign and 2 hex digits minus existing byte.
-	sb.Grow(len(s) + 2*n)
+func unescapeCookie(s string) (string, bool) { _ = "STUB: not implemented"; return "", false }
 
-	for _, c := range []byte(s) {
-		if c >= length || cookieEscapeChars[c] == 1 {
-			sb.WriteByte(cookieEscaper)
-			sb.WriteByte(hex[c>>4])
-			sb.WriteByte(hex[c&15])
-		} else {
-			sb.WriteByte(c)
-		}
-	}
+// No need to unescape.
 
-	return sb.String()
-}
-
-func unescapeCookie(s string) (string, bool) {
-	n := 0
-	for i := 0; i < len(s); {
-		if c := s[i]; c == cookieEscaper {
-			if i+2 >= len(s) || !ishex(s[i+1]) || !ishex(s[i+2]) {
-				return "", false
-			}
-			n++
-			i += 3
-		} else {
-			i++
-		}
-	}
-
-	// No need to unescape.
-	if n == 0 {
-		return s, true
-	}
-
-	var sb strings.Builder
-	// Every escaped char is 2 bytes longer: percent sign and 2 hex digits minus existing byte.
-	sb.Grow(len(s) - 2*n)
-
-	for i := 0; i < len(s); {
-		if c := s[i]; c == cookieEscaper {
-			sb.WriteByte(unhex(s[i+1])<<4 | unhex(s[i+2]))
-			i += 3
-		} else {
-			sb.WriteByte(c)
-			i++
-		}
-	}
-
-	return sb.String(), true
-}
+// Every escaped char is 2 bytes longer: percent sign and 2 hex digits minus existing byte.

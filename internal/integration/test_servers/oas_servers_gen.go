@@ -2,13 +2,6 @@
 
 package api
 
-import (
-	"fmt"
-	"net/url"
-
-	"github.com/go-faster/errors"
-)
-
 // ProductionServer is a server URL template.
 //
 // Production server.
@@ -18,27 +11,13 @@ type ProductionServer struct {
 }
 
 // MustPath returns the computed path. It panics if any error occurs.
-func (s ProductionServer) MustPath() string {
-	return errors.Must(s.Path())
-}
+func (s ProductionServer) MustPath() string { _ = "STUB: not implemented"; return "" }
 
 // Path returns the computed path.
-func (s ProductionServer) Path() (string, error) {
-	raw, err := s.Build()
-	if err != nil {
-		return "", err
-	}
-	u, err := url.Parse(raw)
-	if err != nil {
-		return "", err
-	}
-	return u.Path, nil
-}
+func (s ProductionServer) Path() (string, error) { _ = "STUB: not implemented"; return "", nil }
 
 // MustBuild returns the computed server URL. It panics if any error occurs.
-func (s ProductionServer) MustBuild() string {
-	return errors.Must(s.Build())
-}
+func (s ProductionServer) MustBuild() string { _ = "STUB: not implemented"; return "" }
 
 // Build returns the computed server URL.
 //
@@ -46,34 +25,11 @@ func (s ProductionServer) MustBuild() string {
 // If spec defines an enum and given value is not in the enum, it returns an error.
 //
 // Notice that given values will not be escaped and may cause invalid URL.
-func (s ProductionServer) Build() (string, error) {
-	zeroOr := func(s string, def string) string {
-		if s == "" {
-			return def
-		}
-		return s
-	}
-	s.Region = zeroOr(s.Region, "us")
-	// Validate "region"
-	switch s.Region {
-	case "us":
-	case "eu":
-	default:
-		return "", errors.Errorf("param %q: unexpected value %q", "region", s.Region)
-	}
-	s.Val = zeroOr(s.Val, "prod")
-	// Validate "val"
-	switch s.Val {
-	case "prod":
-	case "test":
-	default:
-		return "", errors.Errorf("param %q: unexpected value %q", "val", s.Val)
-	}
-	return fmt.Sprintf("https://%s.example.com/%s/v1",
-		s.Region,
-		s.Val,
-	), nil
-}
+func (s ProductionServer) Build() (string, error) { _ = "STUB: not implemented"; return "", nil }
+
+// Validate "region"
+
+// Validate "val"
 
 // PrefixServer is a server URL template.
 type PrefixServer struct {
@@ -81,27 +37,13 @@ type PrefixServer struct {
 }
 
 // MustPath returns the computed path. It panics if any error occurs.
-func (s PrefixServer) MustPath() string {
-	return errors.Must(s.Path())
-}
+func (s PrefixServer) MustPath() string { _ = "STUB: not implemented"; return "" }
 
 // Path returns the computed path.
-func (s PrefixServer) Path() (string, error) {
-	raw, err := s.Build()
-	if err != nil {
-		return "", err
-	}
-	u, err := url.Parse(raw)
-	if err != nil {
-		return "", err
-	}
-	return u.Path, nil
-}
+func (s PrefixServer) Path() (string, error) { _ = "STUB: not implemented"; return "", nil }
 
 // MustBuild returns the computed server URL. It panics if any error occurs.
-func (s PrefixServer) MustBuild() string {
-	return errors.Must(s.Build())
-}
+func (s PrefixServer) MustBuild() string { _ = "STUB: not implemented"; return "" }
 
 // Build returns the computed server URL.
 //
@@ -109,25 +51,9 @@ func (s PrefixServer) MustBuild() string {
 // If spec defines an enum and given value is not in the enum, it returns an error.
 //
 // Notice that given values will not be escaped and may cause invalid URL.
-func (s PrefixServer) Build() (string, error) {
-	zeroOr := func(s string, def string) string {
-		if s == "" {
-			return def
-		}
-		return s
-	}
-	s.Val = zeroOr(s.Val, "prod")
-	// Validate "val"
-	switch s.Val {
-	case "prod":
-	case "test":
-	default:
-		return "", errors.Errorf("param %q: unexpected value %q", "val", s.Val)
-	}
-	return fmt.Sprintf("/%s/v1",
-		s.Val,
-	), nil
-}
+func (s PrefixServer) Build() (string, error) { _ = "STUB: not implemented"; return "", nil }
+
+// Validate "val"
 
 // OptionalVarsServer is a server URL template.
 type OptionalVarsServer struct {
@@ -135,27 +61,13 @@ type OptionalVarsServer struct {
 }
 
 // MustPath returns the computed path. It panics if any error occurs.
-func (s OptionalVarsServer) MustPath() string {
-	return errors.Must(s.Path())
-}
+func (s OptionalVarsServer) MustPath() string { _ = "STUB: not implemented"; return "" }
 
 // Path returns the computed path.
-func (s OptionalVarsServer) Path() (string, error) {
-	raw, err := s.Build()
-	if err != nil {
-		return "", err
-	}
-	u, err := url.Parse(raw)
-	if err != nil {
-		return "", err
-	}
-	return u.Path, nil
-}
+func (s OptionalVarsServer) Path() (string, error) { _ = "STUB: not implemented"; return "", nil }
 
 // MustBuild returns the computed server URL. It panics if any error occurs.
-func (s OptionalVarsServer) MustBuild() string {
-	return errors.Must(s.Build())
-}
+func (s OptionalVarsServer) MustBuild() string { _ = "STUB: not implemented"; return "" }
 
 // Build returns the computed server URL.
 //
@@ -163,56 +75,29 @@ func (s OptionalVarsServer) MustBuild() string {
 // If spec defines an enum and given value is not in the enum, it returns an error.
 //
 // Notice that given values will not be escaped and may cause invalid URL.
-func (s OptionalVarsServer) Build() (string, error) {
-	zeroOr := func(s string, def string) string {
-		if s == "" {
-			return def
-		}
-		return s
-	}
-	s.Version = zeroOr(s.Version, "v1")
-	return fmt.Sprintf("https://cdn.example.com/%s",
-		s.Version,
-	), nil
-}
+func (s OptionalVarsServer) Build() (string, error) { _ = "STUB: not implemented"; return "", nil }
 
 type serverConst string
 
 // MustPath returns the computed path. It panics if any error occurs.
 //
 // Kept for common interface with server URL templates.
-func (s serverConst) MustPath() string {
-	return errors.Must(s.Path())
-}
+func (s serverConst) MustPath() string { _ = "STUB: not implemented"; return "" }
 
 // Path returns the computed path.
 //
 // Kept for common interface with server URL templates.
-func (s serverConst) Path() (string, error) {
-	raw, err := s.Build()
-	if err != nil {
-		return "", err
-	}
-	u, err := url.Parse(raw)
-	if err != nil {
-		return "", err
-	}
-	return u.Path, nil
-}
+func (s serverConst) Path() (string, error) { _ = "STUB: not implemented"; return "", nil }
 
 // MustBuild returns the server URL.
 //
 // Kept for common interface with server URL templates.
-func (s serverConst) MustBuild() string {
-	return errors.Must(s.Build())
-}
+func (s serverConst) MustBuild() string { _ = "STUB: not implemented"; return "" }
 
 // Build returns the server URL.
 //
 // Kept for common interface with server URL templates.
-func (s serverConst) Build() (string, error) {
-	return string(s), nil
-}
+func (s serverConst) Build() (string, error) { _ = "STUB: not implemented"; return "", nil }
 
 const (
 	// ConstServer is a server URL.

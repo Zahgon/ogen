@@ -2,1195 +2,196 @@
 
 package api
 
-import (
-	"time"
-)
+// SetFake set fake values.
+func (s *BrokerAccountType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BrokerAccountType) SetFake() {
-	*s = BrokerAccountTypeTinkoff
-}
+func (s *Candle) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Candle) SetFake() {
-	{
-		{
-			s.Figi = "string"
-		}
-	}
-	{
-		{
-			s.Interval.SetFake()
-		}
-	}
-	{
-		{
-			s.O = float64(0)
-		}
-	}
-	{
-		{
-			s.C = float64(0)
-		}
-	}
-	{
-		{
-			s.H = float64(0)
-		}
-	}
-	{
-		{
-			s.L = float64(0)
-		}
-	}
-	{
-		{
-			s.V = int32(0)
-		}
-	}
-	{
-		{
-			s.Time = time.Now()
-		}
-	}
-}
+func (s *CandleResolution) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CandleResolution) SetFake() {
-	*s = CandleResolution1min
-}
+func (s *Candles) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Candles) SetFake() {
-	{
-		{
-			s.Figi = "string"
-		}
-	}
-	{
-		{
-			s.Interval.SetFake()
-		}
-	}
-	{
-		{
-			s.Candles = nil
-			for i := 0; i < 0; i++ {
-				var elem Candle
-				{
-					elem.SetFake()
-				}
-				s.Candles = append(s.Candles, elem)
-			}
-		}
-	}
-}
+func (s *CandlesResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CandlesResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
-
-// SetFake set fake values.
-func (s *Currencies) SetFake() {
-	{
-		{
-			s.Currencies = nil
-			for i := 0; i < 0; i++ {
-				var elem CurrencyPosition
-				{
-					elem.SetFake()
-				}
-				s.Currencies = append(s.Currencies, elem)
-			}
-		}
-	}
-}
+func (s *Currencies) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *Currency) SetFake() {
-	*s = CurrencyRUB
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *CurrencyPosition) SetFake() {
-	{
-		{
-			s.Currency.SetFake()
-		}
-	}
-	{
-		{
-			s.Balance = float64(0)
-		}
-	}
-	{
-		{
-			s.Blocked.SetFake()
-		}
-	}
-}
+func (s *CurrencyPosition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Empty) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-}
+func (s *Empty) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *EmptyPayload) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *Error) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *Error) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ErrorPayload) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Code.SetFake()
-		}
-	}
-}
+func (s *ErrorPayload) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InstrumentType) SetFake() {
-	*s = InstrumentTypeStock
-}
+func (s *InstrumentType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LimitOrderRequest) SetFake() {
-	{
-		{
-			s.Lots = int32(0)
-		}
-	}
-	{
-		{
-			s.Operation.SetFake()
-		}
-	}
-	{
-		{
-			s.Price = float64(0)
-		}
-	}
-}
+func (s *LimitOrderRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LimitOrderResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *LimitOrderResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarketInstrument) SetFake() {
-	{
-		{
-			s.Figi = "string"
-		}
-	}
-	{
-		{
-			s.Ticker = "string"
-		}
-	}
-	{
-		{
-			s.Isin.SetFake()
-		}
-	}
-	{
-		{
-			s.MinPriceIncrement.SetFake()
-		}
-	}
-	{
-		{
-			s.Lot = int32(0)
-		}
-	}
-	{
-		{
-			s.MinQuantity.SetFake()
-		}
-	}
-	{
-		{
-			s.Currency.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *MarketInstrument) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarketInstrumentList) SetFake() {
-	{
-		{
-			s.Total = int32(0)
-		}
-	}
-	{
-		{
-			s.Instruments = nil
-			for i := 0; i < 0; i++ {
-				var elem MarketInstrument
-				{
-					elem.SetFake()
-				}
-				s.Instruments = append(s.Instruments, elem)
-			}
-		}
-	}
-}
+func (s *MarketInstrumentList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarketInstrumentListResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *MarketInstrumentListResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarketOrderRequest) SetFake() {
-	{
-		{
-			s.Lots = int32(0)
-		}
-	}
-	{
-		{
-			s.Operation.SetFake()
-		}
-	}
-}
+func (s *MarketOrderRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarketOrderResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *MarketOrderResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MoneyAmount) SetFake() {
-	{
-		{
-			s.Currency.SetFake()
-		}
-	}
-	{
-		{
-			s.Value = float64(0)
-		}
-	}
-}
+func (s *MoneyAmount) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Operation) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Trades = nil
-			for i := 0; i < 0; i++ {
-				var elem OperationTrade
-				{
-					elem.SetFake()
-				}
-				s.Trades = append(s.Trades, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Commission.SetFake()
-		}
-	}
-	{
-		{
-			s.Currency.SetFake()
-		}
-	}
-	{
-		{
-			s.Payment = float64(0)
-		}
-	}
-	{
-		{
-			s.Price.SetFake()
-		}
-	}
-	{
-		{
-			s.Quantity.SetFake()
-		}
-	}
-	{
-		{
-			s.QuantityExecuted.SetFake()
-		}
-	}
-	{
-		{
-			s.Figi.SetFake()
-		}
-	}
-	{
-		{
-			s.InstrumentType.SetFake()
-		}
-	}
-	{
-		{
-			s.IsMarginCall = true
-		}
-	}
-	{
-		{
-			s.Date = time.Now()
-		}
-	}
-	{
-		{
-			s.OperationType.SetFake()
-		}
-	}
-}
+func (s *Operation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OperationStatus) SetFake() {
-	*s = OperationStatusDone
-}
+func (s *OperationStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OperationTrade) SetFake() {
-	{
-		{
-			s.TradeId = "string"
-		}
-	}
-	{
-		{
-			s.Date = time.Now()
-		}
-	}
-	{
-		{
-			s.Price = float64(0)
-		}
-	}
-	{
-		{
-			s.Quantity = int32(0)
-		}
-	}
-}
+func (s *OperationTrade) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OperationType) SetFake() {
-	*s = OperationTypeBuy
-}
+func (s *OperationType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OperationTypeWithCommission) SetFake() {
-	*s = OperationTypeWithCommissionBuy
-}
+func (s *OperationTypeWithCommission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Operations) SetFake() {
-	{
-		{
-			s.Operations = nil
-			for i := 0; i < 0; i++ {
-				var elem Operation
-				{
-					elem.SetFake()
-				}
-				s.Operations = append(s.Operations, elem)
-			}
-		}
-	}
-}
+func (s *Operations) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OperationsResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *OperationsResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBrokerAccountType) SetFake() {
-	var elem BrokerAccountType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBrokerAccountType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCurrency) SetFake() {
-	var elem Currency
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCurrency) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFloat64) SetFake() {
-	var elem float64
-	{
-		elem = float64(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptFloat64) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInstrumentType) SetFake() {
-	var elem InstrumentType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInstrumentType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt32) SetFake() {
-	var elem int32
-	{
-		elem = int32(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt32) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMoneyAmount) SetFake() {
-	var elem MoneyAmount
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMoneyAmount) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOperationTypeWithCommission) SetFake() {
-	var elem OperationTypeWithCommission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOperationTypeWithCommission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSandboxRegisterRequest) SetFake() {
-	var elem SandboxRegisterRequest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptSandboxRegisterRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptString) SetFake() {
-	var elem string
-	{
-		elem = "string"
-	}
-	s.SetTo(elem)
-}
+func (s *OptString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Order) SetFake() {
-	{
-		{
-			s.OrderId = "string"
-		}
-	}
-	{
-		{
-			s.Figi = "string"
-		}
-	}
-	{
-		{
-			s.Operation.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestedLots = int32(0)
-		}
-	}
-	{
-		{
-			s.ExecutedLots = int32(0)
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Price = float64(0)
-		}
-	}
-}
+func (s *Order) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrderResponse) SetFake() {
-	{
-		{
-			s.Price = float64(0)
-		}
-	}
-	{
-		{
-			s.Quantity = int32(0)
-		}
-	}
-}
+func (s *OrderResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrderStatus) SetFake() {
-	*s = OrderStatusNew
-}
+func (s *OrderStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrderType) SetFake() {
-	*s = OrderTypeLimit
-}
+func (s *OrderType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Orderbook) SetFake() {
-	{
-		{
-			s.Figi = "string"
-		}
-	}
-	{
-		{
-			s.Depth = int32(0)
-		}
-	}
-	{
-		{
-			s.Bids = nil
-			for i := 0; i < 0; i++ {
-				var elem OrderResponse
-				{
-					elem.SetFake()
-				}
-				s.Bids = append(s.Bids, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Asks = nil
-			for i := 0; i < 0; i++ {
-				var elem OrderResponse
-				{
-					elem.SetFake()
-				}
-				s.Asks = append(s.Asks, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TradeStatus.SetFake()
-		}
-	}
-	{
-		{
-			s.MinPriceIncrement = float64(0)
-		}
-	}
-	{
-		{
-			s.FaceValue.SetFake()
-		}
-	}
-	{
-		{
-			s.LastPrice.SetFake()
-		}
-	}
-	{
-		{
-			s.ClosePrice.SetFake()
-		}
-	}
-	{
-		{
-			s.LimitUp.SetFake()
-		}
-	}
-	{
-		{
-			s.LimitDown.SetFake()
-		}
-	}
-}
+func (s *Orderbook) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrderbookResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *OrderbookResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrdersResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload = nil
-			for i := 0; i < 0; i++ {
-				var elem Order
-				{
-					elem.SetFake()
-				}
-				s.Payload = append(s.Payload, elem)
-			}
-		}
-	}
-}
+func (s *OrdersResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PlacedLimitOrder) SetFake() {
-	{
-		{
-			s.OrderId = "string"
-		}
-	}
-	{
-		{
-			s.Operation.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.RejectReason.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestedLots = int(0)
-		}
-	}
-	{
-		{
-			s.ExecutedLots = int(0)
-		}
-	}
-	{
-		{
-			s.Commission.SetFake()
-		}
-	}
-}
+func (s *PlacedLimitOrder) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PlacedMarketOrder) SetFake() {
-	{
-		{
-			s.OrderId = "string"
-		}
-	}
-	{
-		{
-			s.Operation.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.RejectReason.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestedLots = int(0)
-		}
-	}
-	{
-		{
-			s.ExecutedLots = int(0)
-		}
-	}
-	{
-		{
-			s.Commission.SetFake()
-		}
-	}
-}
+func (s *PlacedMarketOrder) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Portfolio) SetFake() {
-	{
-		{
-			s.Positions = nil
-			for i := 0; i < 0; i++ {
-				var elem PortfolioPosition
-				{
-					elem.SetFake()
-				}
-				s.Positions = append(s.Positions, elem)
-			}
-		}
-	}
-}
+func (s *Portfolio) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PortfolioCurrenciesResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *PortfolioCurrenciesResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PortfolioPosition) SetFake() {
-	{
-		{
-			s.Figi = "string"
-		}
-	}
-	{
-		{
-			s.Ticker.SetFake()
-		}
-	}
-	{
-		{
-			s.Isin.SetFake()
-		}
-	}
-	{
-		{
-			s.InstrumentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Balance = float64(0)
-		}
-	}
-	{
-		{
-			s.Blocked.SetFake()
-		}
-	}
-	{
-		{
-			s.ExpectedYield.SetFake()
-		}
-	}
-	{
-		{
-			s.Lots = int32(0)
-		}
-	}
-	{
-		{
-			s.AveragePositionPrice.SetFake()
-		}
-	}
-	{
-		{
-			s.AveragePositionPriceNoNkd.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *PortfolioPosition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PortfolioResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *PortfolioResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SandboxAccount) SetFake() {
-	{
-		{
-			s.BrokerAccountType.SetFake()
-		}
-	}
-	{
-		{
-			s.BrokerAccountId = "string"
-		}
-	}
-}
+func (s *SandboxAccount) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SandboxCurrency) SetFake() {
-	*s = SandboxCurrencyRUB
-}
+func (s *SandboxCurrency) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SandboxRegisterRequest) SetFake() {
-	{
-		{
-			s.BrokerAccountType.SetFake()
-		}
-	}
-}
+func (s *SandboxRegisterRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SandboxRegisterResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *SandboxRegisterResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SandboxSetCurrencyBalanceRequest) SetFake() {
-	{
-		{
-			s.Currency.SetFake()
-		}
-	}
-	{
-		{
-			s.Balance = float64(0)
-		}
-	}
-}
+func (s *SandboxSetCurrencyBalanceRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SandboxSetPositionBalanceRequest) SetFake() {
-	{
-		{
-			s.Figi.SetFake()
-		}
-	}
-	{
-		{
-			s.Balance = float64(0)
-		}
-	}
-}
+func (s *SandboxSetPositionBalanceRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchMarketInstrument) SetFake() {
-	{
-		{
-			s.Figi = "string"
-		}
-	}
-	{
-		{
-			s.Ticker = "string"
-		}
-	}
-	{
-		{
-			s.Isin.SetFake()
-		}
-	}
-	{
-		{
-			s.MinPriceIncrement.SetFake()
-		}
-	}
-	{
-		{
-			s.Lot = int32(0)
-		}
-	}
-	{
-		{
-			s.Currency.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *SearchMarketInstrument) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchMarketInstrumentResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *SearchMarketInstrumentResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TradeStatus) SetFake() {
-	*s = TradeStatusNormalTrading
-}
+func (s *TradeStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UserAccount) SetFake() {
-	{
-		{
-			s.BrokerAccountType.SetFake()
-		}
-	}
-	{
-		{
-			s.BrokerAccountId = "string"
-		}
-	}
-}
+func (s *UserAccount) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UserAccounts) SetFake() {
-	{
-		{
-			s.Accounts = nil
-			for i := 0; i < 0; i++ {
-				var elem UserAccount
-				{
-					elem.SetFake()
-				}
-				s.Accounts = append(s.Accounts, elem)
-			}
-		}
-	}
-}
+func (s *UserAccounts) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UserAccountsResponse) SetFake() {
-	{
-		{
-			s.TrackingId = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *UserAccountsResponse) SetFake() { _ = "STUB: not implemented"; return }

@@ -11,12 +11,7 @@ type Alias testtypes.StringOgen
 type AliasPointer testtypes.StringOgen
 
 // NewOptAlias returns new OptAlias with value set to v.
-func NewOptAlias(v Alias) OptAlias {
-	return OptAlias{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptAlias(v Alias) OptAlias { _ = "STUB: not implemented"; return *new(OptAlias) }
 
 // OptAlias is optional Alias.
 type OptAlias struct {
@@ -25,43 +20,28 @@ type OptAlias struct {
 }
 
 // IsSet returns true if OptAlias was set.
-func (o OptAlias) IsSet() bool { return o.Set }
+func (o OptAlias) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptAlias) Reset() {
-	var v Alias
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptAlias) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptAlias) SetTo(v Alias) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptAlias) SetTo(v Alias) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptAlias) Get() (v Alias, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptAlias) Get() (v Alias, ok bool) { _ = "STUB: not implemented"; return *new(Alias), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptAlias) Or(d Alias) Alias {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptAlias) Or(d Alias) Alias { _ = "STUB: not implemented"; return *new(Alias) }
 
 // NewOptAliasPointer returns new OptAliasPointer with value set to v.
 func NewOptAliasPointer(v AliasPointer) OptAliasPointer {
-	return OptAliasPointer{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptAliasPointer)
 }
 
 // OptAliasPointer is optional AliasPointer.
@@ -71,44 +51,32 @@ type OptAliasPointer struct {
 }
 
 // IsSet returns true if OptAliasPointer was set.
-func (o OptAliasPointer) IsSet() bool { return o.Set }
+func (o OptAliasPointer) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptAliasPointer) Reset() {
-	var v AliasPointer
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptAliasPointer) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptAliasPointer) SetTo(v AliasPointer) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptAliasPointer) SetTo(v AliasPointer) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptAliasPointer) Get() (v AliasPointer, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(AliasPointer), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptAliasPointer) Or(d AliasPointer) AliasPointer {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(AliasPointer)
 }
 
 // NewOptAny returns new OptAny with value set to v.
-func NewOptAny(v any) OptAny {
-	return OptAny{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptAny(v any) OptAny { _ = "STUB: not implemented"; return *new(OptAny) }
 
 // OptAny is optional any.
 type OptAny struct {
@@ -117,44 +85,26 @@ type OptAny struct {
 }
 
 // IsSet returns true if OptAny was set.
-func (o OptAny) IsSet() bool { return o.Set }
+func (o OptAny) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptAny) Reset() {
-	var v any
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptAny) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptAny) SetTo(v any) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptAny) SetTo(v any) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptAny) Get() (v any, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptAny) Get() (v any, ok bool) { _ = "STUB: not implemented"; return *new(any), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptAny) Or(d any) any {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptAny) Or(d any) any { _ = "STUB: not implemented"; return *new(any) }
 
 // NewOptBinary returns new OptBinary with value set to v.
-func NewOptBinary(v testtypes.Binary) OptBinary {
-	return OptBinary{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBinary(v testtypes.Binary) OptBinary { _ = "STUB: not implemented"; return *new(OptBinary) }
 
 // OptBinary is optional testtypes.Binary.
 type OptBinary struct {
@@ -163,44 +113,32 @@ type OptBinary struct {
 }
 
 // IsSet returns true if OptBinary was set.
-func (o OptBinary) IsSet() bool { return o.Set }
+func (o OptBinary) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBinary) Reset() {
-	var v testtypes.Binary
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBinary) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBinary) SetTo(v testtypes.Binary) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBinary) SetTo(v testtypes.Binary) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptBinary) Get() (v testtypes.Binary, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(testtypes.Binary), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptBinary) Or(d testtypes.Binary) testtypes.Binary {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(testtypes.Binary)
 }
 
 // NewOptNumber returns new OptNumber with value set to v.
-func NewOptNumber(v testtypes.Number) OptNumber {
-	return OptNumber{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNumber(v testtypes.Number) OptNumber { _ = "STUB: not implemented"; return *new(OptNumber) }
 
 // OptNumber is optional testtypes.Number.
 type OptNumber struct {
@@ -209,43 +147,34 @@ type OptNumber struct {
 }
 
 // IsSet returns true if OptNumber was set.
-func (o OptNumber) IsSet() bool { return o.Set }
+func (o OptNumber) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNumber) Reset() {
-	var v testtypes.Number
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNumber) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNumber) SetTo(v testtypes.Number) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptNumber) SetTo(v testtypes.Number) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNumber) Get() (v testtypes.Number, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(testtypes.Number), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNumber) Or(d testtypes.Number) testtypes.Number {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(testtypes.Number)
 }
 
 // NewOptNumberJSON returns new OptNumberJSON with value set to v.
 func NewOptNumberJSON(v testtypes.NumberJSON) OptNumberJSON {
-	return OptNumberJSON{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNumberJSON)
 }
 
 // OptNumberJSON is optional testtypes.NumberJSON.
@@ -255,43 +184,34 @@ type OptNumberJSON struct {
 }
 
 // IsSet returns true if OptNumberJSON was set.
-func (o OptNumberJSON) IsSet() bool { return o.Set }
+func (o OptNumberJSON) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNumberJSON) Reset() {
-	var v testtypes.NumberJSON
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNumberJSON) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNumberJSON) SetTo(v testtypes.NumberJSON) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptNumberJSON) SetTo(v testtypes.NumberJSON) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNumberJSON) Get() (v testtypes.NumberJSON, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(testtypes.NumberJSON), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNumberJSON) Or(d testtypes.NumberJSON) testtypes.NumberJSON {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(testtypes.NumberJSON)
 }
 
 // NewOptNumberOgen returns new OptNumberOgen with value set to v.
 func NewOptNumberOgen(v testtypes.NumberOgen) OptNumberOgen {
-	return OptNumberOgen{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNumberOgen)
 }
 
 // OptNumberOgen is optional testtypes.NumberOgen.
@@ -301,43 +221,34 @@ type OptNumberOgen struct {
 }
 
 // IsSet returns true if OptNumberOgen was set.
-func (o OptNumberOgen) IsSet() bool { return o.Set }
+func (o OptNumberOgen) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNumberOgen) Reset() {
-	var v testtypes.NumberOgen
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNumberOgen) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNumberOgen) SetTo(v testtypes.NumberOgen) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptNumberOgen) SetTo(v testtypes.NumberOgen) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNumberOgen) Get() (v testtypes.NumberOgen, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(testtypes.NumberOgen), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNumberOgen) Or(d testtypes.NumberOgen) testtypes.NumberOgen {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(testtypes.NumberOgen)
 }
 
 // NewOptOptionalOKMap returns new OptOptionalOKMap with value set to v.
 func NewOptOptionalOKMap(v OptionalOKMap) OptOptionalOKMap {
-	return OptOptionalOKMap{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOptionalOKMap)
 }
 
 // OptOptionalOKMap is optional OptionalOKMap.
@@ -347,43 +258,34 @@ type OptOptionalOKMap struct {
 }
 
 // IsSet returns true if OptOptionalOKMap was set.
-func (o OptOptionalOKMap) IsSet() bool { return o.Set }
+func (o OptOptionalOKMap) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOptionalOKMap) Reset() {
-	var v OptionalOKMap
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOptionalOKMap) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptOptionalOKMap) SetTo(v OptionalOKMap) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptOptionalOKMap) SetTo(v OptionalOKMap) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOptionalOKMap) Get() (v OptionalOKMap, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OptionalOKMap), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOptionalOKMap) Or(d OptionalOKMap) OptionalOKMap {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OptionalOKMap)
 }
 
 // NewOptPointer returns new OptPointer with value set to v.
 func NewOptPointer(v testtypes.NumberOgen) OptPointer {
-	return OptPointer{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptPointer)
 }
 
 // OptPointer is optional testtypes.NumberOgen.
@@ -393,44 +295,32 @@ type OptPointer struct {
 }
 
 // IsSet returns true if OptPointer was set.
-func (o OptPointer) IsSet() bool { return o.Set }
+func (o OptPointer) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPointer) Reset() {
-	var v testtypes.NumberOgen
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPointer) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPointer) SetTo(v testtypes.NumberOgen) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPointer) SetTo(v testtypes.NumberOgen) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPointer) Get() (v testtypes.NumberOgen, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(testtypes.NumberOgen), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptPointer) Or(d testtypes.NumberOgen) testtypes.NumberOgen {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(testtypes.NumberOgen)
 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v testtypes.String) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v testtypes.String) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional testtypes.String.
 type OptString struct {
@@ -439,43 +329,34 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v testtypes.String
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v testtypes.String) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v testtypes.String) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptString) Get() (v testtypes.String, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(testtypes.String), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptString) Or(d testtypes.String) testtypes.String {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(testtypes.String)
 }
 
 // NewOptStringJSON returns new OptStringJSON with value set to v.
 func NewOptStringJSON(v testtypes.StringJSON) OptStringJSON {
-	return OptStringJSON{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringJSON)
 }
 
 // OptStringJSON is optional testtypes.StringJSON.
@@ -485,43 +366,34 @@ type OptStringJSON struct {
 }
 
 // IsSet returns true if OptStringJSON was set.
-func (o OptStringJSON) IsSet() bool { return o.Set }
+func (o OptStringJSON) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringJSON) Reset() {
-	var v testtypes.StringJSON
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringJSON) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringJSON) SetTo(v testtypes.StringJSON) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringJSON) SetTo(v testtypes.StringJSON) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStringJSON) Get() (v testtypes.StringJSON, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(testtypes.StringJSON), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptStringJSON) Or(d testtypes.StringJSON) testtypes.StringJSON {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(testtypes.StringJSON)
 }
 
 // NewOptStringOgen returns new OptStringOgen with value set to v.
 func NewOptStringOgen(v testtypes.StringOgen) OptStringOgen {
-	return OptStringOgen{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptStringOgen)
 }
 
 // OptStringOgen is optional testtypes.StringOgen.
@@ -531,44 +403,32 @@ type OptStringOgen struct {
 }
 
 // IsSet returns true if OptStringOgen was set.
-func (o OptStringOgen) IsSet() bool { return o.Set }
+func (o OptStringOgen) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStringOgen) Reset() {
-	var v testtypes.StringOgen
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStringOgen) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStringOgen) SetTo(v testtypes.StringOgen) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStringOgen) SetTo(v testtypes.StringOgen) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStringOgen) Get() (v testtypes.StringOgen, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(testtypes.StringOgen), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptStringOgen) Or(d testtypes.StringOgen) testtypes.StringOgen {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(testtypes.StringOgen)
 }
 
 // NewOptText returns new OptText with value set to v.
-func NewOptText(v testtypes.Text) OptText {
-	return OptText{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptText(v testtypes.Text) OptText { _ = "STUB: not implemented"; return *new(OptText) }
 
 // OptText is optional testtypes.Text.
 type OptText struct {
@@ -577,35 +437,28 @@ type OptText struct {
 }
 
 // IsSet returns true if OptText was set.
-func (o OptText) IsSet() bool { return o.Set }
+func (o OptText) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptText) Reset() {
-	var v testtypes.Text
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptText) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptText) SetTo(v testtypes.Text) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptText) SetTo(v testtypes.Text) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptText) Get() (v testtypes.Text, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(testtypes.Text), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptText) Or(d testtypes.Text) testtypes.Text {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(testtypes.Text)
 }
 
 type OptionalOK struct {
@@ -629,163 +482,224 @@ type OptionalOK struct {
 
 // GetOgenString returns the value of OgenString.
 func (s *OptionalOK) GetOgenString() OptStringOgen {
-	return s.OgenString
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOgenNumber returns the value of OgenNumber.
+	new(OptStringOgen)
 }
 
-// GetOgenNumber returns the value of OgenNumber.
 func (s *OptionalOK) GetOgenNumber() OptNumberOgen {
-	return s.OgenNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetJsonString returns the value of JsonString.
+	new(OptNumberOgen)
 }
 
-// GetJsonString returns the value of JsonString.
 func (s *OptionalOK) GetJsonString() OptStringJSON {
-	return s.JsonString
+	_ = "STUB: not implemented"
+	return *
+
+	// GetJsonNumber returns the value of JsonNumber.
+	new(OptStringJSON)
 }
 
-// GetJsonNumber returns the value of JsonNumber.
 func (s *OptionalOK) GetJsonNumber() OptNumberJSON {
-	return s.JsonNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTextString returns the value of TextString.
+	new(OptNumberJSON)
 }
 
-// GetTextString returns the value of TextString.
 func (s *OptionalOK) GetTextString() OptText {
-	return s.TextString
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTextNumber returns the value of TextNumber.
+	new(OptText)
 }
 
-// GetTextNumber returns the value of TextNumber.
 func (s *OptionalOK) GetTextNumber() OptText {
-	return s.TextNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBinaryByte returns the value of BinaryByte.
+	new(OptText)
 }
 
-// GetBinaryByte returns the value of BinaryByte.
 func (s *OptionalOK) GetBinaryByte() OptBinary {
-	return s.BinaryByte
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBinaryBase64 returns the value of BinaryBase64.
+	new(OptBinary)
 }
 
-// GetBinaryBase64 returns the value of BinaryBase64.
 func (s *OptionalOK) GetBinaryBase64() OptBinary {
-	return s.BinaryBase64
+	_ = "STUB: not implemented"
+	return *
+
+	// GetString returns the value of String.
+	new(OptBinary)
 }
 
-// GetString returns the value of String.
 func (s *OptionalOK) GetString() OptString {
-	return s.String
+	_ = "STUB: not implemented"
+
+	// GetNumber returns the value of Number.
+	return *new(OptString)
 }
 
-// GetNumber returns the value of Number.
 func (s *OptionalOK) GetNumber() OptNumber {
-	return s.Number
+	_ = "STUB: not implemented"
+
+	// GetAlias returns the value of Alias.
+	return *new(OptNumber)
 }
 
-// GetAlias returns the value of Alias.
 func (s *OptionalOK) GetAlias() OptAlias {
-	return s.Alias
+	_ = "STUB: not implemented"
+
+	// GetPointer returns the value of Pointer.
+	return *new(OptAlias)
 }
 
-// GetPointer returns the value of Pointer.
 func (s *OptionalOK) GetPointer() OptPointer {
-	return s.Pointer
+	_ = "STUB: not implemented"
+
+	// GetAliasPointer returns the value of AliasPointer.
+	return *new(OptPointer)
 }
 
-// GetAliasPointer returns the value of AliasPointer.
 func (s *OptionalOK) GetAliasPointer() OptAliasPointer {
-	return s.AliasPointer
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBuiltin returns the value of Builtin.
+	new(OptAliasPointer)
 }
 
-// GetBuiltin returns the value of Builtin.
 func (s *OptionalOK) GetBuiltin() OptAny {
-	return s.Builtin
+	_ = "STUB: not implemented"
+
+	// GetArray returns the value of Array.
+	return *new(OptAny)
 }
 
-// GetArray returns the value of Array.
 func (s *OptionalOK) GetArray() []testtypes.StringJSON {
-	return s.Array
+	_ = "STUB: not implemented"
+
+	// GetMap returns the value of Map.
+	return nil
 }
 
-// GetMap returns the value of Map.
 func (s *OptionalOK) GetMap() OptOptionalOKMap {
-	return s.Map
+	_ = "STUB: not implemented"
+
+	// SetOgenString sets the value of OgenString.
+	return *new(OptOptionalOKMap)
 }
 
-// SetOgenString sets the value of OgenString.
 func (s *OptionalOK) SetOgenString(val OptStringOgen) {
-	s.OgenString = val
+	_ = "STUB: not implemented"
+
+	// SetOgenNumber sets the value of OgenNumber.
+	return
 }
 
-// SetOgenNumber sets the value of OgenNumber.
 func (s *OptionalOK) SetOgenNumber(val OptNumberOgen) {
-	s.OgenNumber = val
+	_ = "STUB: not implemented"
+
+	// SetJsonString sets the value of JsonString.
+	return
 }
 
-// SetJsonString sets the value of JsonString.
 func (s *OptionalOK) SetJsonString(val OptStringJSON) {
-	s.JsonString = val
+	_ = "STUB: not implemented"
+
+	// SetJsonNumber sets the value of JsonNumber.
+	return
 }
 
-// SetJsonNumber sets the value of JsonNumber.
 func (s *OptionalOK) SetJsonNumber(val OptNumberJSON) {
-	s.JsonNumber = val
+	_ = "STUB: not implemented"
+
+	// SetTextString sets the value of TextString.
+	return
 }
 
-// SetTextString sets the value of TextString.
 func (s *OptionalOK) SetTextString(val OptText) {
-	s.TextString = val
+	_ = "STUB: not implemented"
+
+	// SetTextNumber sets the value of TextNumber.
+	return
 }
 
-// SetTextNumber sets the value of TextNumber.
 func (s *OptionalOK) SetTextNumber(val OptText) {
-	s.TextNumber = val
+	_ = "STUB: not implemented"
+
+	// SetBinaryByte sets the value of BinaryByte.
+	return
 }
 
-// SetBinaryByte sets the value of BinaryByte.
 func (s *OptionalOK) SetBinaryByte(val OptBinary) {
-	s.BinaryByte = val
+	_ = "STUB: not implemented"
+
+	// SetBinaryBase64 sets the value of BinaryBase64.
+	return
 }
 
-// SetBinaryBase64 sets the value of BinaryBase64.
-func (s *OptionalOK) SetBinaryBase64(val OptBinary) {
-	s.BinaryBase64 = val
-}
+func (s *OptionalOK) SetBinaryBase64(val OptBinary) { _ = "STUB: not implemented"; return }
 
 // SetString sets the value of String.
 func (s *OptionalOK) SetString(val OptString) {
-	s.String = val
+	_ = "STUB: not implemented"
+
+	// SetNumber sets the value of Number.
+	return
 }
 
-// SetNumber sets the value of Number.
 func (s *OptionalOK) SetNumber(val OptNumber) {
-	s.Number = val
+	_ = "STUB: not implemented"
+
+	// SetAlias sets the value of Alias.
+	return
 }
 
-// SetAlias sets the value of Alias.
 func (s *OptionalOK) SetAlias(val OptAlias) {
-	s.Alias = val
+	_ = "STUB: not implemented"
+
+	// SetPointer sets the value of Pointer.
+	return
 }
 
-// SetPointer sets the value of Pointer.
 func (s *OptionalOK) SetPointer(val OptPointer) {
-	s.Pointer = val
+	_ = "STUB: not implemented"
+
+	// SetAliasPointer sets the value of AliasPointer.
+	return
 }
 
-// SetAliasPointer sets the value of AliasPointer.
-func (s *OptionalOK) SetAliasPointer(val OptAliasPointer) {
-	s.AliasPointer = val
-}
+func (s *OptionalOK) SetAliasPointer(val OptAliasPointer) { _ = "STUB: not implemented"; return }
 
 // SetBuiltin sets the value of Builtin.
 func (s *OptionalOK) SetBuiltin(val OptAny) {
-	s.Builtin = val
+	_ = "STUB: not implemented"
+
+	// SetArray sets the value of Array.
+	return
 }
 
-// SetArray sets the value of Array.
 func (s *OptionalOK) SetArray(val []testtypes.StringJSON) {
-	s.Array = val
+	_ = "STUB: not implemented"
+
+	// SetMap sets the value of Map.
+	return
 }
 
-// SetMap sets the value of Map.
-func (s *OptionalOK) SetMap(val OptOptionalOKMap) {
-	s.Map = val
-}
+func (s *OptionalOK) SetMap(val OptOptionalOKMap) { _ = "STUB: not implemented"; return }
 
 type OptionalOKMap map[string]testtypes.StringJSON
 
@@ -819,163 +733,224 @@ type RequiredOK struct {
 
 // GetOgenString returns the value of OgenString.
 func (s *RequiredOK) GetOgenString() testtypes.StringOgen {
-	return s.OgenString
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOgenNumber returns the value of OgenNumber.
+	new(testtypes.StringOgen)
 }
 
-// GetOgenNumber returns the value of OgenNumber.
 func (s *RequiredOK) GetOgenNumber() testtypes.NumberOgen {
-	return s.OgenNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetJsonString returns the value of JsonString.
+	new(testtypes.NumberOgen)
 }
 
-// GetJsonString returns the value of JsonString.
 func (s *RequiredOK) GetJsonString() testtypes.StringJSON {
-	return s.JsonString
+	_ = "STUB: not implemented"
+	return *
+
+	// GetJsonNumber returns the value of JsonNumber.
+	new(testtypes.StringJSON)
 }
 
-// GetJsonNumber returns the value of JsonNumber.
 func (s *RequiredOK) GetJsonNumber() testtypes.NumberJSON {
-	return s.JsonNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTextString returns the value of TextString.
+	new(testtypes.NumberJSON)
 }
 
-// GetTextString returns the value of TextString.
 func (s *RequiredOK) GetTextString() testtypes.Text {
-	return s.TextString
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTextNumber returns the value of TextNumber.
+	new(testtypes.Text)
 }
 
-// GetTextNumber returns the value of TextNumber.
 func (s *RequiredOK) GetTextNumber() testtypes.Text {
-	return s.TextNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBinaryByte returns the value of BinaryByte.
+	new(testtypes.Text)
 }
 
-// GetBinaryByte returns the value of BinaryByte.
 func (s *RequiredOK) GetBinaryByte() testtypes.Binary {
-	return s.BinaryByte
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBinaryBase64 returns the value of BinaryBase64.
+	new(testtypes.Binary)
 }
 
-// GetBinaryBase64 returns the value of BinaryBase64.
 func (s *RequiredOK) GetBinaryBase64() testtypes.Binary {
-	return s.BinaryBase64
+	_ = "STUB: not implemented"
+	return *
+
+	// GetString returns the value of String.
+	new(testtypes.Binary)
 }
 
-// GetString returns the value of String.
 func (s *RequiredOK) GetString() testtypes.String {
-	return s.String
+	_ = "STUB: not implemented"
+
+	// GetNumber returns the value of Number.
+	return *new(testtypes.String)
 }
 
-// GetNumber returns the value of Number.
 func (s *RequiredOK) GetNumber() testtypes.Number {
-	return s.Number
+	_ = "STUB: not implemented"
+
+	// GetAlias returns the value of Alias.
+	return *new(testtypes.Number)
 }
 
-// GetAlias returns the value of Alias.
 func (s *RequiredOK) GetAlias() Alias {
-	return s.Alias
+	_ = "STUB: not implemented"
+
+	// GetPointer returns the value of Pointer.
+	return *new(Alias)
 }
 
-// GetPointer returns the value of Pointer.
 func (s *RequiredOK) GetPointer() testtypes.NumberOgen {
-	return s.Pointer
+	_ = "STUB: not implemented"
+
+	// GetAliasPointer returns the value of AliasPointer.
+	return *new(testtypes.NumberOgen)
 }
 
-// GetAliasPointer returns the value of AliasPointer.
 func (s *RequiredOK) GetAliasPointer() AliasPointer {
-	return s.AliasPointer
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBuiltin returns the value of Builtin.
+	new(AliasPointer)
 }
 
-// GetBuiltin returns the value of Builtin.
 func (s *RequiredOK) GetBuiltin() any {
-	return s.Builtin
+	_ = "STUB: not implemented"
+
+	// GetArray returns the value of Array.
+	return *new(any)
 }
 
-// GetArray returns the value of Array.
 func (s *RequiredOK) GetArray() []testtypes.StringJSON {
-	return s.Array
+	_ = "STUB: not implemented"
+
+	// GetMap returns the value of Map.
+	return nil
 }
 
-// GetMap returns the value of Map.
 func (s *RequiredOK) GetMap() RequiredOKMap {
-	return s.Map
+	_ = "STUB: not implemented"
+
+	// SetOgenString sets the value of OgenString.
+	return *new(RequiredOKMap)
 }
 
-// SetOgenString sets the value of OgenString.
 func (s *RequiredOK) SetOgenString(val testtypes.StringOgen) {
-	s.OgenString = val
+	_ = "STUB: not implemented"
+
+	// SetOgenNumber sets the value of OgenNumber.
+	return
 }
 
-// SetOgenNumber sets the value of OgenNumber.
 func (s *RequiredOK) SetOgenNumber(val testtypes.NumberOgen) {
-	s.OgenNumber = val
+	_ = "STUB: not implemented"
+
+	// SetJsonString sets the value of JsonString.
+	return
 }
 
-// SetJsonString sets the value of JsonString.
 func (s *RequiredOK) SetJsonString(val testtypes.StringJSON) {
-	s.JsonString = val
+	_ = "STUB: not implemented"
+
+	// SetJsonNumber sets the value of JsonNumber.
+	return
 }
 
-// SetJsonNumber sets the value of JsonNumber.
 func (s *RequiredOK) SetJsonNumber(val testtypes.NumberJSON) {
-	s.JsonNumber = val
+	_ = "STUB: not implemented"
+
+	// SetTextString sets the value of TextString.
+	return
 }
 
-// SetTextString sets the value of TextString.
 func (s *RequiredOK) SetTextString(val testtypes.Text) {
-	s.TextString = val
+	_ = "STUB: not implemented"
+
+	// SetTextNumber sets the value of TextNumber.
+	return
 }
 
-// SetTextNumber sets the value of TextNumber.
 func (s *RequiredOK) SetTextNumber(val testtypes.Text) {
-	s.TextNumber = val
+	_ = "STUB: not implemented"
+
+	// SetBinaryByte sets the value of BinaryByte.
+	return
 }
 
-// SetBinaryByte sets the value of BinaryByte.
 func (s *RequiredOK) SetBinaryByte(val testtypes.Binary) {
-	s.BinaryByte = val
+	_ = "STUB: not implemented"
+
+	// SetBinaryBase64 sets the value of BinaryBase64.
+	return
 }
 
-// SetBinaryBase64 sets the value of BinaryBase64.
-func (s *RequiredOK) SetBinaryBase64(val testtypes.Binary) {
-	s.BinaryBase64 = val
-}
+func (s *RequiredOK) SetBinaryBase64(val testtypes.Binary) { _ = "STUB: not implemented"; return }
 
 // SetString sets the value of String.
 func (s *RequiredOK) SetString(val testtypes.String) {
-	s.String = val
+	_ = "STUB: not implemented"
+
+	// SetNumber sets the value of Number.
+	return
 }
 
-// SetNumber sets the value of Number.
 func (s *RequiredOK) SetNumber(val testtypes.Number) {
-	s.Number = val
+	_ = "STUB: not implemented"
+
+	// SetAlias sets the value of Alias.
+	return
 }
 
-// SetAlias sets the value of Alias.
 func (s *RequiredOK) SetAlias(val Alias) {
-	s.Alias = val
+	_ = "STUB: not implemented"
+
+	// SetPointer sets the value of Pointer.
+	return
 }
 
-// SetPointer sets the value of Pointer.
 func (s *RequiredOK) SetPointer(val testtypes.NumberOgen) {
-	s.Pointer = val
+	_ = "STUB: not implemented"
+
+	// SetAliasPointer sets the value of AliasPointer.
+	return
 }
 
-// SetAliasPointer sets the value of AliasPointer.
-func (s *RequiredOK) SetAliasPointer(val AliasPointer) {
-	s.AliasPointer = val
-}
+func (s *RequiredOK) SetAliasPointer(val AliasPointer) { _ = "STUB: not implemented"; return }
 
 // SetBuiltin sets the value of Builtin.
 func (s *RequiredOK) SetBuiltin(val any) {
-	s.Builtin = val
+	_ = "STUB: not implemented"
+
+	// SetArray sets the value of Array.
+	return
 }
 
-// SetArray sets the value of Array.
 func (s *RequiredOK) SetArray(val []testtypes.StringJSON) {
-	s.Array = val
+	_ = "STUB: not implemented"
+
+	// SetMap sets the value of Map.
+	return
 }
 
-// SetMap sets the value of Map.
-func (s *RequiredOK) SetMap(val RequiredOKMap) {
-	s.Map = val
-}
+func (s *RequiredOK) SetMap(val RequiredOKMap) { _ = "STUB: not implemented"; return }
 
 type RequiredOKMap map[string]testtypes.StringJSON
 

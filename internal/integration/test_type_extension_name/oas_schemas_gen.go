@@ -9,10 +9,8 @@ import (
 
 // NewOptDecimal returns new OptDecimal with value set to v.
 func NewOptDecimal(v decimal2.Decimal) OptDecimal {
-	return OptDecimal{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptDecimal)
 }
 
 // OptDecimal is optional decimal2.Decimal.
@@ -22,43 +20,34 @@ type OptDecimal struct {
 }
 
 // IsSet returns true if OptDecimal was set.
-func (o OptDecimal) IsSet() bool { return o.Set }
+func (o OptDecimal) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDecimal) Reset() {
-	var v decimal2.Decimal
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDecimal) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDecimal) SetTo(v decimal2.Decimal) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDecimal) SetTo(v decimal2.Decimal) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDecimal) Get() (v decimal2.Decimal, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(decimal2.Decimal), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptDecimal) Or(d decimal2.Decimal) decimal2.Decimal {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(decimal2.Decimal)
 }
 
 // NewOptDecimal2 returns new OptDecimal2 with value set to v.
 func NewOptDecimal2(v decimal3.Decimal) OptDecimal2 {
-	return OptDecimal2{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptDecimal2)
 }
 
 // OptDecimal2 is optional decimal3.Decimal.
@@ -68,35 +57,28 @@ type OptDecimal2 struct {
 }
 
 // IsSet returns true if OptDecimal2 was set.
-func (o OptDecimal2) IsSet() bool { return o.Set }
+func (o OptDecimal2) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDecimal2) Reset() {
-	var v decimal3.Decimal
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDecimal2) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDecimal2) SetTo(v decimal3.Decimal) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDecimal2) SetTo(v decimal3.Decimal) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDecimal2) Get() (v decimal3.Decimal, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(decimal3.Decimal), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptDecimal2) Or(d decimal3.Decimal) decimal3.Decimal {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(decimal3.Decimal)
 }
 
 type OptionalOK struct {
@@ -106,23 +88,27 @@ type OptionalOK struct {
 
 // GetFoo returns the value of Foo.
 func (s *OptionalOK) GetFoo() OptDecimal {
-	return s.Foo
+	_ = "STUB: not implemented"
+
+	// GetBar returns the value of Bar.
+	return *new(OptDecimal)
 }
 
-// GetBar returns the value of Bar.
 func (s *OptionalOK) GetBar() OptDecimal2 {
-	return s.Bar
+	_ = "STUB: not implemented"
+
+	// SetFoo sets the value of Foo.
+	return *new(OptDecimal2)
 }
 
-// SetFoo sets the value of Foo.
 func (s *OptionalOK) SetFoo(val OptDecimal) {
-	s.Foo = val
+	_ = "STUB: not implemented"
+
+	// SetBar sets the value of Bar.
+	return
 }
 
-// SetBar sets the value of Bar.
-func (s *OptionalOK) SetBar(val OptDecimal2) {
-	s.Bar = val
-}
+func (s *OptionalOK) SetBar(val OptDecimal2) { _ = "STUB: not implemented"; return }
 
 type RequiredOK struct {
 	Foo decimal2.Decimal `json:"foo"`
@@ -131,20 +117,24 @@ type RequiredOK struct {
 
 // GetFoo returns the value of Foo.
 func (s *RequiredOK) GetFoo() decimal2.Decimal {
-	return s.Foo
+	_ = "STUB: not implemented"
+
+	// GetBar returns the value of Bar.
+	return *new(decimal2.Decimal)
 }
 
-// GetBar returns the value of Bar.
 func (s *RequiredOK) GetBar() decimal3.Decimal {
-	return s.Bar
+	_ = "STUB: not implemented"
+
+	// SetFoo sets the value of Foo.
+	return *new(decimal3.Decimal)
 }
 
-// SetFoo sets the value of Foo.
 func (s *RequiredOK) SetFoo(val decimal2.Decimal) {
-	s.Foo = val
+	_ = "STUB: not implemented"
+
+	// SetBar sets the value of Bar.
+	return
 }
 
-// SetBar sets the value of Bar.
-func (s *RequiredOK) SetBar(val decimal3.Decimal) {
-	s.Bar = val
-}
+func (s *RequiredOK) SetBar(val decimal3.Decimal) { _ = "STUB: not implemented"; return }

@@ -11,27 +11,18 @@ const (
 )
 
 func ClientRequestCountCounter(meter metric.Meter) (metric.Int64Counter, error) {
-	return meter.Int64Counter(
-		ClientRequestCount,
-		metric.WithDescription("Outgoing request count total"),
-		metric.WithUnit("{count}"),
-	)
+	_ = "STUB: not implemented"
+	return *new(metric.Int64Counter), nil
 }
 
 func ClientErrorsCountCounter(meter metric.Meter) (metric.Int64Counter, error) {
-	return meter.Int64Counter(
-		ClientErrorsCount,
-		metric.WithDescription("Outgoing errors total"),
-		metric.WithUnit("{count}"),
-	)
+	_ = "STUB: not implemented"
+	return *new(metric.Int64Counter), nil
 }
 
 func ClientDurationHistogram(meter metric.Meter) (metric.Float64Histogram, error) {
-	return meter.Float64Histogram(
-		ClientDuration,
-		metric.WithDescription("Outgoing end to end duration"),
-		metric.WithUnit("ms"),
-	)
+	_ = "STUB: not implemented"
+	return *new(metric.Float64Histogram), nil
 }
 
 const (
@@ -41,25 +32,16 @@ const (
 )
 
 func ServerRequestCountCounter(meter metric.Meter) (metric.Int64Counter, error) {
-	return meter.Int64Counter(
-		ServerRequestCount,
-		metric.WithDescription("Incoming request count total"),
-		metric.WithUnit("{count}"),
-	)
+	_ = "STUB: not implemented"
+	return *new(metric.Int64Counter), nil
 }
 
 func ServerErrorsCountCounter(meter metric.Meter) (metric.Int64Counter, error) {
-	return meter.Int64Counter(
-		ServerErrorsCount,
-		metric.WithDescription("Incoming errors total"),
-		metric.WithUnit("{count}"),
-	)
+	_ = "STUB: not implemented"
+	return *new(metric.Int64Counter), nil
 }
 
 func ServerDurationHistogram(meter metric.Meter) (metric.Float64Histogram, error) {
-	return meter.Float64Histogram(
-		ServerDuration,
-		metric.WithDescription("Incoming end to end duration"),
-		metric.WithUnit("ms"),
-	)
+	_ = "STUB: not implemented"
+	return *new(metric.Float64Histogram), nil
 }

@@ -11,26 +11,34 @@ type CollectionResource struct {
 
 // GetName returns the value of Name.
 func (s *CollectionResource) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetItems returns the value of Items.
+	return ""
 }
 
-// GetItems returns the value of Items.
 func (s *CollectionResource) GetItems() []string {
-	return s.Items
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return nil
 }
 
-// SetName sets the value of Name.
 func (s *CollectionResource) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetItems sets the value of Items.
+	return
 }
 
-// SetItems sets the value of Items.
 func (s *CollectionResource) SetItems(val []string) {
-	s.Items = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Resource
+	// Resource represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/Resource
-// Resource represents sum type.
 type Resource struct {
 	Type               ResourceType // switch on this field
 	CollectionResource CollectionResource
@@ -47,51 +55,39 @@ const (
 )
 
 // IsCollectionResource reports whether Resource is CollectionResource.
-func (s Resource) IsCollectionResource() bool { return s.Type == CollectionResourceResource }
+func (s Resource) IsCollectionResource() bool { _ = "STUB: not implemented"; return false }
 
 // IsSingleResource reports whether Resource is SingleResource.
-func (s Resource) IsSingleResource() bool { return s.Type == SingleResourceResource }
+func (s Resource) IsSingleResource() bool { _ = "STUB: not implemented"; return false }
 
 // SetCollectionResource sets Resource to CollectionResource.
-func (s *Resource) SetCollectionResource(v CollectionResource) {
-	s.Type = CollectionResourceResource
-	s.CollectionResource = v
-}
+func (s *Resource) SetCollectionResource(v CollectionResource) { _ = "STUB: not implemented"; return }
 
 // GetCollectionResource returns CollectionResource and true boolean if Resource is CollectionResource.
 func (s Resource) GetCollectionResource() (v CollectionResource, ok bool) {
-	if !s.IsCollectionResource() {
-		return v, false
-	}
-	return s.CollectionResource, true
+	_ = "STUB: not implemented"
+	return *new(CollectionResource), false
 }
 
 // NewCollectionResourceResource returns new Resource from CollectionResource.
 func NewCollectionResourceResource(v CollectionResource) Resource {
-	var s Resource
-	s.SetCollectionResource(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Resource)
 }
 
 // SetSingleResource sets Resource to SingleResource.
-func (s *Resource) SetSingleResource(v SingleResource) {
-	s.Type = SingleResourceResource
-	s.SingleResource = v
-}
+func (s *Resource) SetSingleResource(v SingleResource) { _ = "STUB: not implemented"; return }
 
 // GetSingleResource returns SingleResource and true boolean if Resource is SingleResource.
 func (s Resource) GetSingleResource() (v SingleResource, ok bool) {
-	if !s.IsSingleResource() {
-		return v, false
-	}
-	return s.SingleResource, true
+	_ = "STUB: not implemented"
+	return *new(SingleResource), false
 }
 
 // NewSingleResourceResource returns new Resource from SingleResource.
 func NewSingleResourceResource(v SingleResource) Resource {
-	var s Resource
-	s.SetSingleResource(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(Resource)
 }
 
 // Ref: #/components/schemas/SingleResource
@@ -103,25 +99,33 @@ type SingleResource struct {
 
 // GetName returns the value of Name.
 func (s *SingleResource) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetItems returns the value of Items.
+	return ""
 }
 
-// GetItems returns the value of Items.
 func (s *SingleResource) GetItems() SingleResourceItems {
-	return s.Items
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return *new(SingleResourceItems)
 }
 
-// SetName sets the value of Name.
 func (s *SingleResource) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetItems sets the value of Items.
+	return
 }
 
-// SetItems sets the value of Items.
 func (s *SingleResource) SetItems(val SingleResourceItems) {
-	s.Items = val
+	_ = "STUB: not implemented"
+
+	// Single item details.
+	return
 }
 
-// Single item details.
 type SingleResourceItems struct {
 	ID    string `json:"id"`
 	Count int    `json:"count"`
@@ -129,20 +133,24 @@ type SingleResourceItems struct {
 
 // GetID returns the value of ID.
 func (s *SingleResourceItems) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetCount returns the value of Count.
+	return ""
 }
 
-// GetCount returns the value of Count.
 func (s *SingleResourceItems) GetCount() int {
-	return s.Count
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return 0
 }
 
-// SetID sets the value of ID.
 func (s *SingleResourceItems) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetCount sets the value of Count.
+	return
 }
 
-// SetCount sets the value of Count.
-func (s *SingleResourceItems) SetCount(val int) {
-	s.Count = val
-}
+func (s *SingleResourceItems) SetCount(val int) { _ = "STUB: not implemented"; return }

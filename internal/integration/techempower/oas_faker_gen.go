@@ -3,40 +3,10 @@
 package techempower
 
 // SetFake set fake values.
-func (s *HelloWorld) SetFake() {
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *HelloWorld) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorldObject) SetFake() {
-	{
-		{
-			s.ID = int64(0)
-		}
-	}
-	{
-		{
-			s.RandomNumber = int64(0)
-		}
-	}
-}
+func (s *WorldObject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorldObjects) SetFake() {
-	var unwrapped []WorldObject
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem WorldObject
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = WorldObjects(unwrapped)
-}
+func (s *WorldObjects) SetFake() { _ = "STUB: not implemented"; return }

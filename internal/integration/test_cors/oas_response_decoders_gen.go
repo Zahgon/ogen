@@ -4,70 +4,27 @@ package api
 
 import (
 	"net/http"
-
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
 )
 
 func decodeFooGetResponse(resp *http.Response) (res *FooGetOK, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &FooGetOK{}, nil
-	}
-	return res, validate.UnexpectedStatusCodeWithResponse(resp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Code 200.
 
 func decodeFooPatchResponse(resp *http.Response) (res *FooPatchOK, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		return &FooPatchOK{}, nil
-	}
-	return res, validate.UnexpectedStatusCodeWithResponse(resp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Code 200.
 
 func decodeFooPostResponse(resp *http.Response) (res *FooPostOK, _ error) {
-	switch resp.StatusCode {
-	case 200:
-		// Code 200.
-		var wrapper FooPostOK
-		h := uri.NewHeaderDecoder(resp.Header)
-		// Parse "Location" header.
-		{
-			cfg := uri.HeaderParameterDecodingConfig{
-				Name:    "Location",
-				Explode: false,
-			}
-			if err := func() error {
-				if err := h.HasParam(cfg); err == nil {
-					if err := h.DecodeParam(cfg, func(d uri.Decoder) error {
-						val, err := d.DecodeValue()
-						if err != nil {
-							return err
-						}
-
-						c, err := conv.ToString(val)
-						if err != nil {
-							return err
-						}
-
-						wrapper.Location = c
-						return nil
-					}); err != nil {
-						return err
-					}
-				} else {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return res, errors.Wrap(err, "parse Location header")
-			}
-		}
-		return &wrapper, nil
-	}
-	return res, validate.UnexpectedStatusCodeWithResponse(resp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Code 200.
+
+// Parse "Location" header.

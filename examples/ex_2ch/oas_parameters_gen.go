@@ -4,14 +4,8 @@ package api
 
 import (
 	"net/http"
-	"net/url"
 
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
 	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
 )
 
 // APICaptcha2chcaptchaIDGetParams is parameters of GET /api/captcha/2chcaptcha/id operation.
@@ -23,138 +17,18 @@ type APICaptcha2chcaptchaIDGetParams struct {
 }
 
 func unpackAPICaptcha2chcaptchaIDGetParams(packed middleware.Parameters) (params APICaptcha2chcaptchaIDGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "board",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Board = v.(OptString)
-		}
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "thread",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Thread = v.(OptInt)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(APICaptcha2chcaptchaIDGetParams)
 }
 
 func decodeAPICaptcha2chcaptchaIDGetParams(args [0]string, argsEscaped bool, r *http.Request) (params APICaptcha2chcaptchaIDGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: board.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "board",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBoardVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBoardVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.Board.SetTo(paramsDotBoardVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "board",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: thread.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "thread",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotThreadVal int
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToInt(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotThreadVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.Thread.SetTo(paramsDotThreadVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-			if err := func() error {
-				if value, ok := params.Thread.Get(); ok {
-					if err := func() error {
-						if err := (validate.Int{
-							MinSet:        true,
-							Min:           1,
-							MaxSet:        false,
-							Max:           0,
-							MinExclusive:  false,
-							MaxExclusive:  false,
-							MultipleOfSet: false,
-							MultipleOf:    0,
-							Pattern:       nil,
-						}).Validate(int64(value)); err != nil {
-							return errors.Wrap(err, "int")
-						}
-						return nil
-					}(); err != nil {
-						return err
-					}
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "thread",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(APICaptcha2chcaptchaIDGetParams), nil
 }
+
+// Decode query: board.
+
+// Decode query: thread.
 
 // APICaptcha2chcaptchaShowGetParams is parameters of GET /api/captcha/2chcaptcha/show operation.
 type APICaptcha2chcaptchaShowGetParams struct {
@@ -163,56 +37,16 @@ type APICaptcha2chcaptchaShowGetParams struct {
 }
 
 func unpackAPICaptcha2chcaptchaShowGetParams(packed middleware.Parameters) (params APICaptcha2chcaptchaShowGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "id",
-			In:   "query",
-		}
-		params.ID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(APICaptcha2chcaptchaShowGetParams)
 }
 
 func decodeAPICaptcha2chcaptchaShowGetParams(args [0]string, argsEscaped bool, r *http.Request) (params APICaptcha2chcaptchaShowGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: id.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "id",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.ID = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "id",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(APICaptcha2chcaptchaShowGetParams), nil
 }
+
+// Decode query: id.
 
 // APICaptchaAppIDPublicKeyGetParams is parameters of GET /api/captcha/app/id/{public_key} operation.
 type APICaptchaAppIDPublicKeyGetParams struct {
@@ -227,190 +61,20 @@ type APICaptchaAppIDPublicKeyGetParams struct {
 }
 
 func unpackAPICaptchaAppIDPublicKeyGetParams(packed middleware.Parameters) (params APICaptchaAppIDPublicKeyGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "public_key",
-			In:   "path",
-		}
-		params.PublicKey = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "board",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Board = v.(OptString)
-		}
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "thread",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Thread = v.(OptInt)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(APICaptchaAppIDPublicKeyGetParams)
 }
 
 func decodeAPICaptchaAppIDPublicKeyGetParams(args [1]string, argsEscaped bool, r *http.Request) (params APICaptchaAppIDPublicKeyGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode path: public_key.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "public_key",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.PublicKey = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "public_key",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	// Decode query: board.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "board",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBoardVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBoardVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.Board.SetTo(paramsDotBoardVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "board",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: thread.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "thread",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotThreadVal int
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToInt(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotThreadVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.Thread.SetTo(paramsDotThreadVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-			if err := func() error {
-				if value, ok := params.Thread.Get(); ok {
-					if err := func() error {
-						if err := (validate.Int{
-							MinSet:        true,
-							Min:           1,
-							MaxSet:        false,
-							Max:           0,
-							MinExclusive:  false,
-							MaxExclusive:  false,
-							MultipleOfSet: false,
-							MultipleOf:    0,
-							Pattern:       nil,
-						}).Validate(int64(value)); err != nil {
-							return errors.Wrap(err, "int")
-						}
-						return nil
-					}(); err != nil {
-						return err
-					}
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "thread",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(APICaptchaAppIDPublicKeyGetParams), nil
 }
+
+// Decode path: public_key.
+
+// Decode query: board.
+
+// Decode query: thread.
 
 // APICaptchaInvisibleRecaptchaIDGetParams is parameters of GET /api/captcha/invisible_recaptcha/id operation.
 type APICaptchaInvisibleRecaptchaIDGetParams struct {
@@ -421,138 +85,18 @@ type APICaptchaInvisibleRecaptchaIDGetParams struct {
 }
 
 func unpackAPICaptchaInvisibleRecaptchaIDGetParams(packed middleware.Parameters) (params APICaptchaInvisibleRecaptchaIDGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "board",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Board = v.(OptString)
-		}
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "thread",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Thread = v.(OptInt)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(APICaptchaInvisibleRecaptchaIDGetParams)
 }
 
 func decodeAPICaptchaInvisibleRecaptchaIDGetParams(args [0]string, argsEscaped bool, r *http.Request) (params APICaptchaInvisibleRecaptchaIDGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: board.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "board",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBoardVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBoardVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.Board.SetTo(paramsDotBoardVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "board",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: thread.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "thread",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotThreadVal int
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToInt(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotThreadVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.Thread.SetTo(paramsDotThreadVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-			if err := func() error {
-				if value, ok := params.Thread.Get(); ok {
-					if err := func() error {
-						if err := (validate.Int{
-							MinSet:        true,
-							Min:           1,
-							MaxSet:        false,
-							Max:           0,
-							MinExclusive:  false,
-							MaxExclusive:  false,
-							MultipleOfSet: false,
-							MultipleOf:    0,
-							Pattern:       nil,
-						}).Validate(int64(value)); err != nil {
-							return errors.Wrap(err, "int")
-						}
-						return nil
-					}(); err != nil {
-						return err
-					}
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "thread",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(APICaptchaInvisibleRecaptchaIDGetParams), nil
 }
+
+// Decode query: board.
+
+// Decode query: thread.
 
 // APICaptchaRecaptchaIDGetParams is parameters of GET /api/captcha/recaptcha/id operation.
 type APICaptchaRecaptchaIDGetParams struct {
@@ -563,138 +107,18 @@ type APICaptchaRecaptchaIDGetParams struct {
 }
 
 func unpackAPICaptchaRecaptchaIDGetParams(packed middleware.Parameters) (params APICaptchaRecaptchaIDGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "board",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Board = v.(OptString)
-		}
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "thread",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Thread = v.(OptInt)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(APICaptchaRecaptchaIDGetParams)
 }
 
 func decodeAPICaptchaRecaptchaIDGetParams(args [0]string, argsEscaped bool, r *http.Request) (params APICaptchaRecaptchaIDGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: board.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "board",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBoardVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBoardVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.Board.SetTo(paramsDotBoardVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "board",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: thread.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "thread",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotThreadVal int
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToInt(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotThreadVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.Thread.SetTo(paramsDotThreadVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-			if err := func() error {
-				if value, ok := params.Thread.Get(); ok {
-					if err := func() error {
-						if err := (validate.Int{
-							MinSet:        true,
-							Min:           1,
-							MaxSet:        false,
-							Max:           0,
-							MinExclusive:  false,
-							MaxExclusive:  false,
-							MultipleOfSet: false,
-							MultipleOf:    0,
-							Pattern:       nil,
-						}).Validate(int64(value)); err != nil {
-							return errors.Wrap(err, "int")
-						}
-						return nil
-					}(); err != nil {
-						return err
-					}
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "thread",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(APICaptchaRecaptchaIDGetParams), nil
 }
+
+// Decode query: board.
+
+// Decode query: thread.
 
 // APIDislikeGetParams is parameters of GET /api/dislike operation.
 type APIDislikeGetParams struct {
@@ -705,117 +129,18 @@ type APIDislikeGetParams struct {
 }
 
 func unpackAPIDislikeGetParams(packed middleware.Parameters) (params APIDislikeGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "board",
-			In:   "query",
-		}
-		params.Board = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "num",
-			In:   "query",
-		}
-		params.Num = packed[key].(int)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(APIDislikeGetParams)
 }
 
 func decodeAPIDislikeGetParams(args [0]string, argsEscaped bool, r *http.Request) (params APIDislikeGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: board.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "board",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Board = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "board",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: num.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "num",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt(val)
-				if err != nil {
-					return err
-				}
-
-				params.Num = c
-				return nil
-			}); err != nil {
-				return err
-			}
-			if err := func() error {
-				if err := (validate.Int{
-					MinSet:        true,
-					Min:           1,
-					MaxSet:        false,
-					Max:           0,
-					MinExclusive:  false,
-					MaxExclusive:  false,
-					MultipleOfSet: false,
-					MultipleOf:    0,
-					Pattern:       nil,
-				}).Validate(int64(params.Num)); err != nil {
-					return errors.Wrap(err, "int")
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "num",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(APIDislikeGetParams), nil
 }
+
+// Decode query: board.
+
+// Decode query: num.
 
 // APILikeGetParams is parameters of GET /api/like operation.
 type APILikeGetParams struct {
@@ -826,117 +151,18 @@ type APILikeGetParams struct {
 }
 
 func unpackAPILikeGetParams(packed middleware.Parameters) (params APILikeGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "board",
-			In:   "query",
-		}
-		params.Board = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "num",
-			In:   "query",
-		}
-		params.Num = packed[key].(int)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(APILikeGetParams)
 }
 
 func decodeAPILikeGetParams(args [0]string, argsEscaped bool, r *http.Request) (params APILikeGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: board.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "board",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Board = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "board",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: num.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "num",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt(val)
-				if err != nil {
-					return err
-				}
-
-				params.Num = c
-				return nil
-			}); err != nil {
-				return err
-			}
-			if err := func() error {
-				if err := (validate.Int{
-					MinSet:        true,
-					Min:           1,
-					MaxSet:        false,
-					Max:           0,
-					MinExclusive:  false,
-					MaxExclusive:  false,
-					MultipleOfSet: false,
-					MultipleOf:    0,
-					Pattern:       nil,
-				}).Validate(int64(params.Num)); err != nil {
-					return errors.Wrap(err, "int")
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "num",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(APILikeGetParams), nil
 }
+
+// Decode query: board.
+
+// Decode query: num.
 
 // APIMobileV2AfterBoardThreadNumGetParams is parameters of GET /api/mobile/v2/after/{board}/{thread}/{num} operation.
 type APIMobileV2AfterBoardThreadNumGetParams struct {
@@ -949,204 +175,19 @@ type APIMobileV2AfterBoardThreadNumGetParams struct {
 }
 
 func unpackAPIMobileV2AfterBoardThreadNumGetParams(packed middleware.Parameters) (params APIMobileV2AfterBoardThreadNumGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "board",
-			In:   "path",
-		}
-		params.Board = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "thread",
-			In:   "path",
-		}
-		params.Thread = packed[key].(int)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "num",
-			In:   "path",
-		}
-		params.Num = packed[key].(int)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(APIMobileV2AfterBoardThreadNumGetParams)
 }
 
 func decodeAPIMobileV2AfterBoardThreadNumGetParams(args [3]string, argsEscaped bool, r *http.Request) (params APIMobileV2AfterBoardThreadNumGetParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: board.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "board",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Board = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "board",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	// Decode path: thread.
-	if err := func() error {
-		param := args[1]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[1])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "thread",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt(val)
-				if err != nil {
-					return err
-				}
-
-				params.Thread = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-			if err := func() error {
-				if err := (validate.Int{
-					MinSet:        true,
-					Min:           1,
-					MaxSet:        false,
-					Max:           0,
-					MinExclusive:  false,
-					MaxExclusive:  false,
-					MultipleOfSet: false,
-					MultipleOf:    0,
-					Pattern:       nil,
-				}).Validate(int64(params.Thread)); err != nil {
-					return errors.Wrap(err, "int")
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "thread",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	// Decode path: num.
-	if err := func() error {
-		param := args[2]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[2])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "num",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt(val)
-				if err != nil {
-					return err
-				}
-
-				params.Num = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-			if err := func() error {
-				if err := (validate.Int{
-					MinSet:        true,
-					Min:           1,
-					MaxSet:        false,
-					Max:           0,
-					MinExclusive:  false,
-					MaxExclusive:  false,
-					MultipleOfSet: false,
-					MultipleOf:    0,
-					Pattern:       nil,
-				}).Validate(int64(params.Num)); err != nil {
-					return errors.Wrap(err, "int")
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "num",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(APIMobileV2AfterBoardThreadNumGetParams), nil
 }
+
+// Decode path: thread.
+
+// Decode path: num.
 
 // APIMobileV2InfoBoardThreadGetParams is parameters of GET /api/mobile/v2/info/{board}/{thread} operation.
 type APIMobileV2InfoBoardThreadGetParams struct {
@@ -1157,134 +198,17 @@ type APIMobileV2InfoBoardThreadGetParams struct {
 }
 
 func unpackAPIMobileV2InfoBoardThreadGetParams(packed middleware.Parameters) (params APIMobileV2InfoBoardThreadGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "board",
-			In:   "path",
-		}
-		params.Board = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "thread",
-			In:   "path",
-		}
-		params.Thread = packed[key].(int)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(APIMobileV2InfoBoardThreadGetParams)
 }
 
 func decodeAPIMobileV2InfoBoardThreadGetParams(args [2]string, argsEscaped bool, r *http.Request) (params APIMobileV2InfoBoardThreadGetParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: board.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "board",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Board = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "board",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	// Decode path: thread.
-	if err := func() error {
-		param := args[1]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[1])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "thread",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt(val)
-				if err != nil {
-					return err
-				}
-
-				params.Thread = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-			if err := func() error {
-				if err := (validate.Int{
-					MinSet:        true,
-					Min:           1,
-					MaxSet:        false,
-					Max:           0,
-					MinExclusive:  false,
-					MaxExclusive:  false,
-					MultipleOfSet: false,
-					MultipleOf:    0,
-					Pattern:       nil,
-				}).Validate(int64(params.Thread)); err != nil {
-					return errors.Wrap(err, "int")
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "thread",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(APIMobileV2InfoBoardThreadGetParams), nil
 }
+
+// Decode path: thread.
 
 // APIMobileV2PostBoardNumGetParams is parameters of GET /api/mobile/v2/post/{board}/{num} operation.
 type APIMobileV2PostBoardNumGetParams struct {
@@ -1295,134 +219,17 @@ type APIMobileV2PostBoardNumGetParams struct {
 }
 
 func unpackAPIMobileV2PostBoardNumGetParams(packed middleware.Parameters) (params APIMobileV2PostBoardNumGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "board",
-			In:   "path",
-		}
-		params.Board = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "num",
-			In:   "path",
-		}
-		params.Num = packed[key].(int)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(APIMobileV2PostBoardNumGetParams)
 }
 
 func decodeAPIMobileV2PostBoardNumGetParams(args [2]string, argsEscaped bool, r *http.Request) (params APIMobileV2PostBoardNumGetParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: board.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "board",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Board = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "board",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	// Decode path: num.
-	if err := func() error {
-		param := args[1]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[1])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "num",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt(val)
-				if err != nil {
-					return err
-				}
-
-				params.Num = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-			if err := func() error {
-				if err := (validate.Int{
-					MinSet:        true,
-					Min:           1,
-					MaxSet:        false,
-					Max:           0,
-					MinExclusive:  false,
-					MaxExclusive:  false,
-					MultipleOfSet: false,
-					MultipleOf:    0,
-					Pattern:       nil,
-				}).Validate(int64(params.Num)); err != nil {
-					return errors.Wrap(err, "int")
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "num",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(APIMobileV2PostBoardNumGetParams), nil
 }
+
+// Decode path: num.
 
 // UserPassloginPostParams is parameters of POST /user/passlogin operation.
 type UserPassloginPostParams struct {
@@ -1432,58 +239,15 @@ type UserPassloginPostParams struct {
 }
 
 func unpackUserPassloginPostParams(packed middleware.Parameters) (params UserPassloginPostParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "json",
-			In:   "query",
-		}
-		params.JSON = packed[key].(int)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(UserPassloginPostParams)
 }
 
 func decodeUserPassloginPostParams(args [0]string, argsEscaped bool, r *http.Request) (params UserPassloginPostParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Set default value for query: json.
-	{
-		val := int(1)
-		params.JSON = val
-	}
-	// Decode query: json.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "json",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt(val)
-				if err != nil {
-					return err
-				}
-
-				params.JSON = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "json",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(UserPassloginPostParams), nil
 }
+
+// Set default value for query: json.
+
+// Decode query: json.

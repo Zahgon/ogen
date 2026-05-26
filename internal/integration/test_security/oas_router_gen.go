@@ -5,9 +5,6 @@ package api
 import (
 	"net/http"
 	"net/url"
-	"strings"
-
-	"github.com/ogen-go/ogen/uri"
 )
 
 var (
@@ -22,162 +19,38 @@ var (
 	}
 )
 
-func (s *Server) cutPrefix(path string) (string, bool) {
-	prefix := s.cfg.Prefix
-	if prefix == "" {
-		return path, true
-	}
-	if !strings.HasPrefix(path, prefix) {
-		// Prefix doesn't match.
-		return "", false
-	}
-	// Cut prefix from the path.
-	return strings.TrimPrefix(path, prefix), true
-}
+func (s *Server) cutPrefix(path string) (string, bool) { _ = "STUB: not implemented"; return "", false }
+
+// Prefix doesn't match.
+
+// Cut prefix from the path.
 
 // ServeHTTP serves http request as defined by OpenAPI v3 specification,
 // calling handler that matches the path or returning not found error.
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	elem := r.URL.Path
-	elemIsEscaped := false
-	if rawPath := r.URL.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-			elemIsEscaped = strings.ContainsRune(elem, '%')
-		}
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok || len(elem) == 0 {
-		s.notFound(w, r)
-		return
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'c': // Prefix: "customSecurity"
-
-				if l := len("customSecurity"); len(elem) >= l && elem[0:l] == "customSecurity" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleCustomSecurityRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: rn1AllowedHeaders,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'd': // Prefix: "disjointSecurity"
-
-				if l := len("disjointSecurity"); len(elem) >= l && elem[0:l] == "disjointSecurity" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleDisjointSecurityRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: rn3AllowedHeaders,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'i': // Prefix: "intersectSecurity"
-
-				if l := len("intersectSecurity"); len(elem) >= l && elem[0:l] == "intersectSecurity" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleIntersectSecurityRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: rn4AllowedHeaders,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'o': // Prefix: "optionalSecurity"
-
-				if l := len("optionalSecurity"); len(elem) >= l && elem[0:l] == "optionalSecurity" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleOptionalSecurityRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			}
-
-		}
-	}
-	s.notFound(w, r)
+	_ = "STUB: not implemented"
+	return
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "customSecurity"
+
+// Leaf node.
+
+// Prefix: "disjointSecurity"
+
+// Leaf node.
+
+// Prefix: "intersectSecurity"
+
+// Leaf node.
+
+// Prefix: "optionalSecurity"
+
+// Leaf node.
 
 // Route is route object.
 type Route struct {
@@ -194,187 +67,60 @@ type Route struct {
 //
 // It is guaranteed to be unique and not empty.
 func (r Route) Name() string {
-	return r.name
+	_ = "STUB: not implemented"
+
+	// Summary returns OpenAPI summary.
+	return ""
 }
 
-// Summary returns OpenAPI summary.
 func (r Route) Summary() string {
-	return r.summary
+	_ = "STUB: not implemented"
+
+	// OperationID returns OpenAPI operationId.
+	return ""
 }
 
-// OperationID returns OpenAPI operationId.
-func (r Route) OperationID() string {
-	return r.operationID
-}
+func (r Route) OperationID() string { _ = "STUB: not implemented"; return "" }
 
 // OperationGroup returns the x-ogen-operation-group value.
-func (r Route) OperationGroup() string {
-	return r.operationGroup
-}
+func (r Route) OperationGroup() string { _ = "STUB: not implemented"; return "" }
 
 // PathPattern returns OpenAPI path.
-func (r Route) PathPattern() string {
-	return r.pathPattern
-}
+func (r Route) PathPattern() string { _ = "STUB: not implemented"; return "" }
 
 // Args returns parsed arguments.
-func (r Route) Args() []string {
-	return r.args[:r.count]
-}
+func (r Route) Args() []string { _ = "STUB: not implemented"; return nil }
 
 // FindRoute finds Route for given method and path.
 //
 // Note: this method does not unescape path or handle reserved characters in path properly. Use FindPath instead.
 func (s *Server) FindRoute(method, path string) (Route, bool) {
-	return s.FindPath(method, &url.URL{Path: path})
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
 
 // FindPath finds Route for given method and URL.
 func (s *Server) FindPath(method string, u *url.URL) (r Route, _ bool) {
-	var (
-		elem = u.Path
-		args = r.args
-	)
-	if rawPath := u.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-		}
-		defer func() {
-			for i, arg := range r.args[:r.count] {
-				if unescaped, err := url.PathUnescape(arg); err == nil {
-					r.args[i] = unescaped
-				}
-			}
-		}()
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok {
-		return r, false
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'c': // Prefix: "customSecurity"
-
-				if l := len("customSecurity"); len(elem) >= l && elem[0:l] == "customSecurity" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = CustomSecurityOperation
-						r.summary = ""
-						r.operationID = "customSecurity"
-						r.operationGroup = ""
-						r.pathPattern = "/customSecurity"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'd': // Prefix: "disjointSecurity"
-
-				if l := len("disjointSecurity"); len(elem) >= l && elem[0:l] == "disjointSecurity" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = DisjointSecurityOperation
-						r.summary = ""
-						r.operationID = "disjointSecurity"
-						r.operationGroup = ""
-						r.pathPattern = "/disjointSecurity"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'i': // Prefix: "intersectSecurity"
-
-				if l := len("intersectSecurity"); len(elem) >= l && elem[0:l] == "intersectSecurity" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = IntersectSecurityOperation
-						r.summary = ""
-						r.operationID = "intersectSecurity"
-						r.operationGroup = ""
-						r.pathPattern = "/intersectSecurity"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'o': // Prefix: "optionalSecurity"
-
-				if l := len("optionalSecurity"); len(elem) >= l && elem[0:l] == "optionalSecurity" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = OptionalSecurityOperation
-						r.summary = ""
-						r.operationID = "optionalSecurity"
-						r.operationGroup = ""
-						r.pathPattern = "/optionalSecurity"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			}
-
-		}
-	}
-	return r, false
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "customSecurity"
+
+// Leaf node.
+
+// Prefix: "disjointSecurity"
+
+// Leaf node.
+
+// Prefix: "intersectSecurity"
+
+// Leaf node.
+
+// Prefix: "optionalSecurity"
+
+// Leaf node.

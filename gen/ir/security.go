@@ -19,24 +19,16 @@ const (
 )
 
 // IsQuery whether s is QuerySecurity.
-func (s SecurityKind) IsQuery() bool {
-	return s == QuerySecurity
-}
+func (s SecurityKind) IsQuery() bool { _ = "STUB: not implemented"; return false }
 
 // IsHeader whether s is HeaderSecurity.
-func (s SecurityKind) IsHeader() bool {
-	return s == HeaderSecurity
-}
+func (s SecurityKind) IsHeader() bool { _ = "STUB: not implemented"; return false }
 
 // IsCookie whether s is CookieSecurity.
-func (s SecurityKind) IsCookie() bool {
-	return s == CookieSecurity
-}
+func (s SecurityKind) IsCookie() bool { _ = "STUB: not implemented"; return false }
 
 // IsOAuth2 whether s is OAuth2Security.
-func (s SecurityKind) IsOAuth2() bool {
-	return s == OAuth2Security
-}
+func (s SecurityKind) IsOAuth2() bool { _ = "STUB: not implemented"; return false }
 
 // SecurityFormat defines security parameter format.
 type SecurityFormat string
@@ -63,34 +55,22 @@ const (
 )
 
 // IsAPIKeySecurity whether s is APIKeySecurityFormat.
-func (s SecurityFormat) IsAPIKeySecurity() bool {
-	return s == APIKeySecurityFormat
-}
+func (s SecurityFormat) IsAPIKeySecurity() bool { _ = "STUB: not implemented"; return false }
 
 // IsBearerSecurity whether s is BearerSecurityFormat.
-func (s SecurityFormat) IsBearerSecurity() bool {
-	return s == BearerSecurityFormat
-}
+func (s SecurityFormat) IsBearerSecurity() bool { _ = "STUB: not implemented"; return false }
 
 // IsBasicHTTPSecurity whether s is BasicHTTPSecurityFormat.
-func (s SecurityFormat) IsBasicHTTPSecurity() bool {
-	return s == BasicHTTPSecurityFormat
-}
+func (s SecurityFormat) IsBasicHTTPSecurity() bool { _ = "STUB: not implemented"; return false }
 
 // IsDigestHTTPSecurity whether s is DigestHTTPSecurityFormat.
-func (s SecurityFormat) IsDigestHTTPSecurity() bool {
-	return s == DigestHTTPSecurityFormat
-}
+func (s SecurityFormat) IsDigestHTTPSecurity() bool { _ = "STUB: not implemented"; return false }
 
 // IsOAuth2Security whether s is Oauth2SecurityFormat.
-func (s SecurityFormat) IsOAuth2Security() bool {
-	return s == Oauth2SecurityFormat
-}
+func (s SecurityFormat) IsOAuth2Security() bool { _ = "STUB: not implemented"; return false }
 
 // IsCustomSecurity whether s is CustomSecurityFormat.
-func (s SecurityFormat) IsCustomSecurity() bool {
-	return s == CustomSecurityFormat
-}
+func (s SecurityFormat) IsCustomSecurity() bool { _ = "STUB: not implemented"; return false }
 
 type Security struct {
 	Kind          SecurityKind
@@ -101,9 +81,7 @@ type Security struct {
 	Scopes        map[string][]string
 }
 
-func (s *Security) GoDoc() []string {
-	return prettyDoc(s.Description, "")
-}
+func (s *Security) GoDoc() []string { _ = "STUB: not implemented"; return nil }
 
 type SecurityRequirements struct {
 	Securities   []*Security
@@ -111,11 +89,4 @@ type SecurityRequirements struct {
 }
 
 // BitArrayLen returns the length for bitset's underlying array.
-func (s SecurityRequirements) BitArrayLen() (r int) {
-	for _, req := range s.Requirements {
-		if len(req) > r {
-			r = len(req)
-		}
-	}
-	return r
-}
+func (s SecurityRequirements) BitArrayLen() (r int) { _ = "STUB: not implemented"; return 0 }

@@ -3,7 +3,6 @@
 package api
 
 import (
-	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
 	ht "github.com/ogen-go/ogen/http"
 )
@@ -20,35 +19,47 @@ type ChatCompletionRequestMessage struct {
 
 // GetRole returns the value of Role.
 func (s *ChatCompletionRequestMessage) GetRole() ChatCompletionRequestMessageRole {
-	return s.Role
+	_ = "STUB: not implemented"
+
+	// GetContent returns the value of Content.
+	return *new(ChatCompletionRequestMessageRole)
 }
 
-// GetContent returns the value of Content.
 func (s *ChatCompletionRequestMessage) GetContent() string {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *ChatCompletionRequestMessage) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// SetRole sets the value of Role.
+	return *new(OptString)
 }
 
-// SetRole sets the value of Role.
 func (s *ChatCompletionRequestMessage) SetRole(val ChatCompletionRequestMessageRole) {
-	s.Role = val
+	_ = "STUB: not implemented"
+
+	// SetContent sets the value of Content.
+	return
 }
 
-// SetContent sets the value of Content.
 func (s *ChatCompletionRequestMessage) SetContent(val string) {
-	s.Content = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *ChatCompletionRequestMessage) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// The role of the author of this message.
+	return
 }
 
-// The role of the author of this message.
 type ChatCompletionRequestMessageRole string
 
 const (
@@ -59,42 +70,20 @@ const (
 
 // AllValues returns all ChatCompletionRequestMessageRole values.
 func (ChatCompletionRequestMessageRole) AllValues() []ChatCompletionRequestMessageRole {
-	return []ChatCompletionRequestMessageRole{
-		ChatCompletionRequestMessageRoleSystem,
-		ChatCompletionRequestMessageRoleUser,
-		ChatCompletionRequestMessageRoleAssistant,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s ChatCompletionRequestMessageRole) MarshalText() ([]byte, error) {
-	switch s {
-	case ChatCompletionRequestMessageRoleSystem:
-		return []byte(s), nil
-	case ChatCompletionRequestMessageRoleUser:
-		return []byte(s), nil
-	case ChatCompletionRequestMessageRoleAssistant:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *ChatCompletionRequestMessageRole) UnmarshalText(data []byte) error {
-	switch ChatCompletionRequestMessageRole(data) {
-	case ChatCompletionRequestMessageRoleSystem:
-		*s = ChatCompletionRequestMessageRoleSystem
-		return nil
-	case ChatCompletionRequestMessageRoleUser:
-		*s = ChatCompletionRequestMessageRoleUser
-		return nil
-	case ChatCompletionRequestMessageRoleAssistant:
-		*s = ChatCompletionRequestMessageRoleAssistant
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/ChatCompletionResponseMessage
@@ -107,25 +96,33 @@ type ChatCompletionResponseMessage struct {
 
 // GetRole returns the value of Role.
 func (s *ChatCompletionResponseMessage) GetRole() ChatCompletionResponseMessageRole {
-	return s.Role
+	_ = "STUB: not implemented"
+
+	// GetContent returns the value of Content.
+	return *new(ChatCompletionResponseMessageRole)
 }
 
-// GetContent returns the value of Content.
 func (s *ChatCompletionResponseMessage) GetContent() string {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// SetRole sets the value of Role.
+	return ""
 }
 
-// SetRole sets the value of Role.
 func (s *ChatCompletionResponseMessage) SetRole(val ChatCompletionResponseMessageRole) {
-	s.Role = val
+	_ = "STUB: not implemented"
+
+	// SetContent sets the value of Content.
+	return
 }
 
-// SetContent sets the value of Content.
 func (s *ChatCompletionResponseMessage) SetContent(val string) {
-	s.Content = val
+	_ = "STUB: not implemented"
+
+	// The role of the author of this message.
+	return
 }
 
-// The role of the author of this message.
 type ChatCompletionResponseMessageRole string
 
 const (
@@ -136,42 +133,20 @@ const (
 
 // AllValues returns all ChatCompletionResponseMessageRole values.
 func (ChatCompletionResponseMessageRole) AllValues() []ChatCompletionResponseMessageRole {
-	return []ChatCompletionResponseMessageRole{
-		ChatCompletionResponseMessageRoleSystem,
-		ChatCompletionResponseMessageRoleUser,
-		ChatCompletionResponseMessageRoleAssistant,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s ChatCompletionResponseMessageRole) MarshalText() ([]byte, error) {
-	switch s {
-	case ChatCompletionResponseMessageRoleSystem:
-		return []byte(s), nil
-	case ChatCompletionResponseMessageRoleUser:
-		return []byte(s), nil
-	case ChatCompletionResponseMessageRoleAssistant:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *ChatCompletionResponseMessageRole) UnmarshalText(data []byte) error {
-	switch ChatCompletionResponseMessageRole(data) {
-	case ChatCompletionResponseMessageRoleSystem:
-		*s = ChatCompletionResponseMessageRoleSystem
-		return nil
-	case ChatCompletionResponseMessageRoleUser:
-		*s = ChatCompletionResponseMessageRoleUser
-		return nil
-	case ChatCompletionResponseMessageRoleAssistant:
-		*s = ChatCompletionResponseMessageRoleAssistant
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/CreateAnswerRequest
@@ -247,195 +222,251 @@ type CreateAnswerRequest struct {
 
 // GetModel returns the value of Model.
 func (s *CreateAnswerRequest) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetQuestion returns the value of Question.
+	return ""
 }
 
-// GetQuestion returns the value of Question.
 func (s *CreateAnswerRequest) GetQuestion() string {
-	return s.Question
+	_ = "STUB: not implemented"
+
+	// GetExamples returns the value of Examples.
+	return ""
 }
 
-// GetExamples returns the value of Examples.
 func (s *CreateAnswerRequest) GetExamples() [][]string {
-	return s.Examples
+	_ = "STUB: not implemented"
+
+	// GetExamplesContext returns the value of ExamplesContext.
+	return nil
 }
 
-// GetExamplesContext returns the value of ExamplesContext.
-func (s *CreateAnswerRequest) GetExamplesContext() string {
-	return s.ExamplesContext
-}
+func (s *CreateAnswerRequest) GetExamplesContext() string { _ = "STUB: not implemented"; return "" }
 
 // GetDocuments returns the value of Documents.
 func (s *CreateAnswerRequest) GetDocuments() OptNilStringArray {
-	return s.Documents
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFile returns the value of File.
+	new(OptNilStringArray)
 }
 
-// GetFile returns the value of File.
 func (s *CreateAnswerRequest) GetFile() OptNilString {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// GetSearchModel returns the value of SearchModel.
+	return *new(OptNilString)
 }
 
-// GetSearchModel returns the value of SearchModel.
 func (s *CreateAnswerRequest) GetSearchModel() OptNilString {
-	return s.SearchModel
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMaxRerank returns the value of MaxRerank.
+	new(OptNilString)
 }
 
-// GetMaxRerank returns the value of MaxRerank.
 func (s *CreateAnswerRequest) GetMaxRerank() OptNilInt {
-	return s.MaxRerank
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTemperature returns the value of Temperature.
+	new(OptNilInt)
 }
 
-// GetTemperature returns the value of Temperature.
 func (s *CreateAnswerRequest) GetTemperature() OptNilFloat64 {
-	return s.Temperature
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLogprobs returns the value of Logprobs.
+	new(OptNilFloat64)
 }
 
-// GetLogprobs returns the value of Logprobs.
 func (s *CreateAnswerRequest) GetLogprobs() OptNilInt {
-	return s.Logprobs
+	_ = "STUB: not implemented"
+
+	// GetMaxTokens returns the value of MaxTokens.
+	return *new(OptNilInt)
 }
 
-// GetMaxTokens returns the value of MaxTokens.
 func (s *CreateAnswerRequest) GetMaxTokens() OptNilInt {
-	return s.MaxTokens
+	_ = "STUB: not implemented"
+	return *
+
+	// GetStop returns the value of Stop.
+	new(OptNilInt)
 }
 
-// GetStop returns the value of Stop.
 func (s *CreateAnswerRequest) GetStop() OptNilCreateAnswerRequestStop {
-	return s.Stop
+	_ = "STUB: not implemented"
+
+	// GetN returns the value of N.
+	return *new(OptNilCreateAnswerRequestStop)
 }
 
-// GetN returns the value of N.
 func (s *CreateAnswerRequest) GetN() OptNilInt {
-	return s.N
+	_ = "STUB: not implemented"
+
+	// GetLogitBias returns the value of LogitBias.
+	return *new(OptNilInt)
 }
 
-// GetLogitBias returns the value of LogitBias.
 func (s *CreateAnswerRequest) GetLogitBias() OptCreateAnswerRequestLogitBias {
-	return s.LogitBias
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReturnMetadata returns the value of ReturnMetadata.
+	new(OptCreateAnswerRequestLogitBias)
 }
 
-// GetReturnMetadata returns the value of ReturnMetadata.
 func (s *CreateAnswerRequest) GetReturnMetadata() OptNilBool {
-	return s.ReturnMetadata
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReturnPrompt returns the value of ReturnPrompt.
+	new(OptNilBool)
 }
 
-// GetReturnPrompt returns the value of ReturnPrompt.
 func (s *CreateAnswerRequest) GetReturnPrompt() OptNilBool {
-	return s.ReturnPrompt
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExpand returns the value of Expand.
+	new(OptNilBool)
 }
 
-// GetExpand returns the value of Expand.
 func (s *CreateAnswerRequest) GetExpand() OptNilAnyArray {
-	return s.Expand
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return *new(OptNilAnyArray)
 }
 
-// GetUser returns the value of User.
 func (s *CreateAnswerRequest) GetUser() OptString {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return *new(OptString)
 }
 
-// SetModel sets the value of Model.
 func (s *CreateAnswerRequest) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetQuestion sets the value of Question.
+	return
 }
 
-// SetQuestion sets the value of Question.
 func (s *CreateAnswerRequest) SetQuestion(val string) {
-	s.Question = val
+	_ = "STUB: not implemented"
+
+	// SetExamples sets the value of Examples.
+	return
 }
 
-// SetExamples sets the value of Examples.
 func (s *CreateAnswerRequest) SetExamples(val [][]string) {
-	s.Examples = val
+	_ = "STUB: not implemented"
+
+	// SetExamplesContext sets the value of ExamplesContext.
+	return
 }
 
-// SetExamplesContext sets the value of ExamplesContext.
-func (s *CreateAnswerRequest) SetExamplesContext(val string) {
-	s.ExamplesContext = val
-}
+func (s *CreateAnswerRequest) SetExamplesContext(val string) { _ = "STUB: not implemented"; return }
 
 // SetDocuments sets the value of Documents.
 func (s *CreateAnswerRequest) SetDocuments(val OptNilStringArray) {
-	s.Documents = val
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return
 }
 
-// SetFile sets the value of File.
 func (s *CreateAnswerRequest) SetFile(val OptNilString) {
-	s.File = val
+	_ = "STUB: not implemented"
+
+	// SetSearchModel sets the value of SearchModel.
+	return
 }
 
-// SetSearchModel sets the value of SearchModel.
-func (s *CreateAnswerRequest) SetSearchModel(val OptNilString) {
-	s.SearchModel = val
-}
+func (s *CreateAnswerRequest) SetSearchModel(val OptNilString) { _ = "STUB: not implemented"; return }
 
 // SetMaxRerank sets the value of MaxRerank.
 func (s *CreateAnswerRequest) SetMaxRerank(val OptNilInt) {
-	s.MaxRerank = val
+	_ = "STUB: not implemented"
+
+	// SetTemperature sets the value of Temperature.
+	return
 }
 
-// SetTemperature sets the value of Temperature.
-func (s *CreateAnswerRequest) SetTemperature(val OptNilFloat64) {
-	s.Temperature = val
-}
+func (s *CreateAnswerRequest) SetTemperature(val OptNilFloat64) { _ = "STUB: not implemented"; return }
 
 // SetLogprobs sets the value of Logprobs.
 func (s *CreateAnswerRequest) SetLogprobs(val OptNilInt) {
-	s.Logprobs = val
+	_ = "STUB: not implemented"
+
+	// SetMaxTokens sets the value of MaxTokens.
+	return
 }
 
-// SetMaxTokens sets the value of MaxTokens.
 func (s *CreateAnswerRequest) SetMaxTokens(val OptNilInt) {
-	s.MaxTokens = val
+	_ = "STUB: not implemented"
+
+	// SetStop sets the value of Stop.
+	return
 }
 
-// SetStop sets the value of Stop.
 func (s *CreateAnswerRequest) SetStop(val OptNilCreateAnswerRequestStop) {
-	s.Stop = val
+	_ = "STUB: not implemented"
+
+	// SetN sets the value of N.
+	return
 }
 
-// SetN sets the value of N.
 func (s *CreateAnswerRequest) SetN(val OptNilInt) {
-	s.N = val
+	_ = "STUB: not implemented"
+
+	// SetLogitBias sets the value of LogitBias.
+	return
 }
 
-// SetLogitBias sets the value of LogitBias.
 func (s *CreateAnswerRequest) SetLogitBias(val OptCreateAnswerRequestLogitBias) {
-	s.LogitBias = val
+	_ = "STUB: not implemented"
+
+	// SetReturnMetadata sets the value of ReturnMetadata.
+	return
 }
 
-// SetReturnMetadata sets the value of ReturnMetadata.
-func (s *CreateAnswerRequest) SetReturnMetadata(val OptNilBool) {
-	s.ReturnMetadata = val
-}
+func (s *CreateAnswerRequest) SetReturnMetadata(val OptNilBool) { _ = "STUB: not implemented"; return }
 
 // SetReturnPrompt sets the value of ReturnPrompt.
-func (s *CreateAnswerRequest) SetReturnPrompt(val OptNilBool) {
-	s.ReturnPrompt = val
-}
+func (s *CreateAnswerRequest) SetReturnPrompt(val OptNilBool) { _ = "STUB: not implemented"; return }
 
 // SetExpand sets the value of Expand.
 func (s *CreateAnswerRequest) SetExpand(val OptNilAnyArray) {
-	s.Expand = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *CreateAnswerRequest) SetUser(val OptString) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// Modify the likelihood of specified tokens appearing in the completion.
+	// Accepts a json object that maps tokens (specified by their token ID in the GPT tokenizer) to an
+	// associated bias value from -100 to 100. You can use this [tokenizer tool](/tokenizer?view=bpe)
+	// (which works for both GPT-2 and GPT-3) to convert text to token IDs. Mathematically, the bias is
+	// added to the logits generated by the model prior to sampling. The exact effect will vary per model,
+	//
+	//	but values between -1 and 1 should decrease or increase likelihood of selection; values like -100
+	//
+	// or 100 should result in a ban or exclusive selection of the relevant token.
+	// As an example, you can pass `{"50256": -100}` to prevent the <|endoftext|> token from being
+	// generated.
+	return
 }
 
-// Modify the likelihood of specified tokens appearing in the completion.
-// Accepts a json object that maps tokens (specified by their token ID in the GPT tokenizer) to an
-// associated bias value from -100 to 100. You can use this [tokenizer tool](/tokenizer?view=bpe)
-// (which works for both GPT-2 and GPT-3) to convert text to token IDs. Mathematically, the bias is
-// added to the logits generated by the model prior to sampling. The exact effect will vary per model,
-//
-//	but values between -1 and 1 should decrease or increase likelihood of selection; values like -100
-//
-// or 100 should result in a ban or exclusive selection of the relevant token.
-// As an example, you can pass `{"50256": -100}` to prevent the <|endoftext|> token from being
-// generated.
 type CreateAnswerRequestLogitBias struct{}
 
 // Up to 4 sequences where the API will stop generating further tokens. The returned text will not
@@ -457,53 +488,39 @@ const (
 )
 
 // IsString reports whether CreateAnswerRequestStop is string.
-func (s CreateAnswerRequestStop) IsString() bool { return s.Type == StringCreateAnswerRequestStop }
+func (s CreateAnswerRequestStop) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsStringArray reports whether CreateAnswerRequestStop is []string.
-func (s CreateAnswerRequestStop) IsStringArray() bool {
-	return s.Type == StringArrayCreateAnswerRequestStop
-}
+func (s CreateAnswerRequestStop) IsStringArray() bool { _ = "STUB: not implemented"; return false }
 
 // SetString sets CreateAnswerRequestStop to string.
-func (s *CreateAnswerRequestStop) SetString(v string) {
-	s.Type = StringCreateAnswerRequestStop
-	s.String = v
-}
+func (s *CreateAnswerRequestStop) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if CreateAnswerRequestStop is string.
 func (s CreateAnswerRequestStop) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringCreateAnswerRequestStop returns new CreateAnswerRequestStop from string.
 func NewStringCreateAnswerRequestStop(v string) CreateAnswerRequestStop {
-	var s CreateAnswerRequestStop
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateAnswerRequestStop)
 }
 
 // SetStringArray sets CreateAnswerRequestStop to []string.
-func (s *CreateAnswerRequestStop) SetStringArray(v []string) {
-	s.Type = StringArrayCreateAnswerRequestStop
-	s.StringArray = v
-}
+func (s *CreateAnswerRequestStop) SetStringArray(v []string) { _ = "STUB: not implemented"; return }
 
 // GetStringArray returns []string and true boolean if CreateAnswerRequestStop is []string.
 func (s CreateAnswerRequestStop) GetStringArray() (v []string, ok bool) {
-	if !s.IsStringArray() {
-		return v, false
-	}
-	return s.StringArray, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewStringArrayCreateAnswerRequestStop returns new CreateAnswerRequestStop from []string.
 func NewStringArrayCreateAnswerRequestStop(v []string) CreateAnswerRequestStop {
-	var s CreateAnswerRequestStop
-	s.SetStringArray(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateAnswerRequestStop)
 }
 
 // Ref: #/components/schemas/CreateAnswerResponse
@@ -518,62 +535,83 @@ type CreateAnswerResponse struct {
 
 // GetObject returns the value of Object.
 func (s *CreateAnswerResponse) GetObject() OptString {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return *new(OptString)
 }
 
-// GetModel returns the value of Model.
 func (s *CreateAnswerResponse) GetModel() OptString {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetSearchModel returns the value of SearchModel.
+	return *new(OptString)
 }
 
-// GetSearchModel returns the value of SearchModel.
 func (s *CreateAnswerResponse) GetSearchModel() OptString {
-	return s.SearchModel
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCompletion returns the value of Completion.
+	new(OptString)
 }
 
-// GetCompletion returns the value of Completion.
 func (s *CreateAnswerResponse) GetCompletion() OptString {
-	return s.Completion
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAnswers returns the value of Answers.
+	new(OptString)
 }
 
-// GetAnswers returns the value of Answers.
 func (s *CreateAnswerResponse) GetAnswers() []string {
-	return s.Answers
+	_ = "STUB: not implemented"
+
+	// GetSelectedDocuments returns the value of SelectedDocuments.
+	return nil
 }
 
-// GetSelectedDocuments returns the value of SelectedDocuments.
 func (s *CreateAnswerResponse) GetSelectedDocuments() []CreateAnswerResponseSelectedDocumentsItem {
-	return s.SelectedDocuments
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetObject sets the value of Object.
 }
 
-// SetObject sets the value of Object.
 func (s *CreateAnswerResponse) SetObject(val OptString) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *CreateAnswerResponse) SetModel(val OptString) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetSearchModel sets the value of SearchModel.
+	return
 }
 
-// SetSearchModel sets the value of SearchModel.
-func (s *CreateAnswerResponse) SetSearchModel(val OptString) {
-	s.SearchModel = val
-}
+func (s *CreateAnswerResponse) SetSearchModel(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetCompletion sets the value of Completion.
 func (s *CreateAnswerResponse) SetCompletion(val OptString) {
-	s.Completion = val
+	_ = "STUB: not implemented"
+
+	// SetAnswers sets the value of Answers.
+	return
 }
 
-// SetAnswers sets the value of Answers.
 func (s *CreateAnswerResponse) SetAnswers(val []string) {
-	s.Answers = val
+	_ = "STUB: not implemented"
+
+	// SetSelectedDocuments sets the value of SelectedDocuments.
+	return
 }
 
-// SetSelectedDocuments sets the value of SelectedDocuments.
 func (s *CreateAnswerResponse) SetSelectedDocuments(val []CreateAnswerResponseSelectedDocumentsItem) {
-	s.SelectedDocuments = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateAnswerResponseSelectedDocumentsItem struct {
@@ -583,25 +621,33 @@ type CreateAnswerResponseSelectedDocumentsItem struct {
 
 // GetDocument returns the value of Document.
 func (s *CreateAnswerResponseSelectedDocumentsItem) GetDocument() OptInt {
-	return s.Document
+	_ = "STUB: not implemented"
+
+	// GetText returns the value of Text.
+	return *new(OptInt)
 }
 
-// GetText returns the value of Text.
 func (s *CreateAnswerResponseSelectedDocumentsItem) GetText() OptString {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// SetDocument sets the value of Document.
+	return *new(OptString)
 }
 
-// SetDocument sets the value of Document.
 func (s *CreateAnswerResponseSelectedDocumentsItem) SetDocument(val OptInt) {
-	s.Document = val
+	_ = "STUB: not implemented"
+
+	// SetText sets the value of Text.
+	return
 }
 
-// SetText sets the value of Text.
 func (s *CreateAnswerResponseSelectedDocumentsItem) SetText(val OptString) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/CreateChatCompletionRequest
+	return
 }
 
-// Ref: #/components/schemas/CreateChatCompletionRequest
 type CreateChatCompletionRequest struct {
 	// ID of the model to use. Currently, only `gpt-3.5-turbo` and `gpt-3.5-turbo-0301` are supported.
 	Model string `json:"model"`
@@ -653,130 +699,180 @@ type CreateChatCompletionRequest struct {
 
 // GetModel returns the value of Model.
 func (s *CreateChatCompletionRequest) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetMessages returns the value of Messages.
+	return ""
 }
 
-// GetMessages returns the value of Messages.
 func (s *CreateChatCompletionRequest) GetMessages() []ChatCompletionRequestMessage {
-	return s.Messages
+	_ = "STUB: not implemented"
+
+	// GetTemperature returns the value of Temperature.
+	return nil
 }
 
-// GetTemperature returns the value of Temperature.
 func (s *CreateChatCompletionRequest) GetTemperature() OptNilFloat64 {
-	return s.Temperature
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTopP returns the value of TopP.
+	new(OptNilFloat64)
 }
 
-// GetTopP returns the value of TopP.
 func (s *CreateChatCompletionRequest) GetTopP() OptNilFloat64 {
-	return s.TopP
+	_ = "STUB: not implemented"
+
+	// GetN returns the value of N.
+	return *new(OptNilFloat64)
 }
 
-// GetN returns the value of N.
 func (s *CreateChatCompletionRequest) GetN() OptNilInt {
-	return s.N
+	_ = "STUB: not implemented"
+
+	// GetStream returns the value of Stream.
+	return *new(OptNilInt)
 }
 
-// GetStream returns the value of Stream.
 func (s *CreateChatCompletionRequest) GetStream() OptNilBool {
-	return s.Stream
+	_ = "STUB: not implemented"
+
+	// GetStop returns the value of Stop.
+	return *new(OptNilBool)
 }
 
-// GetStop returns the value of Stop.
 func (s *CreateChatCompletionRequest) GetStop() OptNilCreateChatCompletionRequestStop {
-	return s.Stop
+	_ = "STUB: not implemented"
+
+	// GetMaxTokens returns the value of MaxTokens.
+	return *new(OptNilCreateChatCompletionRequestStop)
 }
 
-// GetMaxTokens returns the value of MaxTokens.
 func (s *CreateChatCompletionRequest) GetMaxTokens() OptInt {
-	return s.MaxTokens
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPresencePenalty returns the value of PresencePenalty.
+	new(OptInt)
 }
 
-// GetPresencePenalty returns the value of PresencePenalty.
 func (s *CreateChatCompletionRequest) GetPresencePenalty() OptNilFloat64 {
-	return s.PresencePenalty
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFrequencyPenalty returns the value of FrequencyPenalty.
+	new(OptNilFloat64)
 }
 
-// GetFrequencyPenalty returns the value of FrequencyPenalty.
 func (s *CreateChatCompletionRequest) GetFrequencyPenalty() OptNilFloat64 {
-	return s.FrequencyPenalty
+	_ = "STUB: not implemented"
+	return *new(OptNilFloat64)
 }
 
 // GetLogitBias returns the value of LogitBias.
 func (s *CreateChatCompletionRequest) GetLogitBias() OptCreateChatCompletionRequestLogitBias {
-	return s.LogitBias
+	_ = "STUB: not implemented"
+	return *
+
+	// GetUser returns the value of User.
+	new(OptCreateChatCompletionRequestLogitBias)
 }
 
-// GetUser returns the value of User.
 func (s *CreateChatCompletionRequest) GetUser() OptString {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return *new(OptString)
 }
 
-// SetModel sets the value of Model.
 func (s *CreateChatCompletionRequest) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetMessages sets the value of Messages.
+	return
 }
 
-// SetMessages sets the value of Messages.
 func (s *CreateChatCompletionRequest) SetMessages(val []ChatCompletionRequestMessage) {
-	s.Messages = val
+	_ = "STUB: not implemented"
+
+	// SetTemperature sets the value of Temperature.
+	return
 }
 
-// SetTemperature sets the value of Temperature.
 func (s *CreateChatCompletionRequest) SetTemperature(val OptNilFloat64) {
-	s.Temperature = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTopP sets the value of TopP.
 }
 
-// SetTopP sets the value of TopP.
 func (s *CreateChatCompletionRequest) SetTopP(val OptNilFloat64) {
-	s.TopP = val
+	_ = "STUB: not implemented"
+
+	// SetN sets the value of N.
+	return
 }
 
-// SetN sets the value of N.
 func (s *CreateChatCompletionRequest) SetN(val OptNilInt) {
-	s.N = val
+	_ = "STUB: not implemented"
+
+	// SetStream sets the value of Stream.
+	return
 }
 
-// SetStream sets the value of Stream.
 func (s *CreateChatCompletionRequest) SetStream(val OptNilBool) {
-	s.Stream = val
+	_ = "STUB: not implemented"
+
+	// SetStop sets the value of Stop.
+	return
 }
 
-// SetStop sets the value of Stop.
 func (s *CreateChatCompletionRequest) SetStop(val OptNilCreateChatCompletionRequestStop) {
-	s.Stop = val
+	_ = "STUB: not implemented"
+
+	// SetMaxTokens sets the value of MaxTokens.
+	return
 }
 
-// SetMaxTokens sets the value of MaxTokens.
 func (s *CreateChatCompletionRequest) SetMaxTokens(val OptInt) {
-	s.MaxTokens = val
+	_ = "STUB: not implemented"
+
+	// SetPresencePenalty sets the value of PresencePenalty.
+	return
 }
 
-// SetPresencePenalty sets the value of PresencePenalty.
 func (s *CreateChatCompletionRequest) SetPresencePenalty(val OptNilFloat64) {
-	s.PresencePenalty = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetFrequencyPenalty sets the value of FrequencyPenalty.
 }
 
-// SetFrequencyPenalty sets the value of FrequencyPenalty.
 func (s *CreateChatCompletionRequest) SetFrequencyPenalty(val OptNilFloat64) {
-	s.FrequencyPenalty = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetLogitBias sets the value of LogitBias.
 func (s *CreateChatCompletionRequest) SetLogitBias(val OptCreateChatCompletionRequestLogitBias) {
-	s.LogitBias = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *CreateChatCompletionRequest) SetUser(val OptString) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// Modify the likelihood of specified tokens appearing in the completion.
+	// Accepts a json object that maps tokens (specified by their token ID in the tokenizer) to an
+	// associated bias value from -100 to 100. Mathematically, the bias is added to the logits generated
+	// by the model prior to sampling. The exact effect will vary per model, but values between -1 and 1
+	// should decrease or increase likelihood of selection; values like -100 or 100 should result in a
+	// ban or exclusive selection of the relevant token.
+	return
 }
 
-// Modify the likelihood of specified tokens appearing in the completion.
-// Accepts a json object that maps tokens (specified by their token ID in the tokenizer) to an
-// associated bias value from -100 to 100. Mathematically, the bias is added to the logits generated
-// by the model prior to sampling. The exact effect will vary per model, but values between -1 and 1
-// should decrease or increase likelihood of selection; values like -100 or 100 should result in a
-// ban or exclusive selection of the relevant token.
 type CreateChatCompletionRequestLogitBias struct{}
 
 // Up to 4 sequences where the API will stop generating further tokens.
@@ -797,55 +893,45 @@ const (
 )
 
 // IsString reports whether CreateChatCompletionRequestStop is string.
-func (s CreateChatCompletionRequestStop) IsString() bool {
-	return s.Type == StringCreateChatCompletionRequestStop
-}
+func (s CreateChatCompletionRequestStop) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsStringArray reports whether CreateChatCompletionRequestStop is []string.
 func (s CreateChatCompletionRequestStop) IsStringArray() bool {
-	return s.Type == StringArrayCreateChatCompletionRequestStop
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetString sets CreateChatCompletionRequestStop to string.
-func (s *CreateChatCompletionRequestStop) SetString(v string) {
-	s.Type = StringCreateChatCompletionRequestStop
-	s.String = v
-}
+func (s *CreateChatCompletionRequestStop) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if CreateChatCompletionRequestStop is string.
 func (s CreateChatCompletionRequestStop) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringCreateChatCompletionRequestStop returns new CreateChatCompletionRequestStop from string.
 func NewStringCreateChatCompletionRequestStop(v string) CreateChatCompletionRequestStop {
-	var s CreateChatCompletionRequestStop
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateChatCompletionRequestStop)
 }
 
 // SetStringArray sets CreateChatCompletionRequestStop to []string.
 func (s *CreateChatCompletionRequestStop) SetStringArray(v []string) {
-	s.Type = StringArrayCreateChatCompletionRequestStop
-	s.StringArray = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetStringArray returns []string and true boolean if CreateChatCompletionRequestStop is []string.
 func (s CreateChatCompletionRequestStop) GetStringArray() (v []string, ok bool) {
-	if !s.IsStringArray() {
-		return v, false
-	}
-	return s.StringArray, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewStringArrayCreateChatCompletionRequestStop returns new CreateChatCompletionRequestStop from []string.
 func NewStringArrayCreateChatCompletionRequestStop(v []string) CreateChatCompletionRequestStop {
-	var s CreateChatCompletionRequestStop
-	s.SetStringArray(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateChatCompletionRequestStop)
 }
 
 // Ref: #/components/schemas/CreateChatCompletionResponse
@@ -860,62 +946,85 @@ type CreateChatCompletionResponse struct {
 
 // GetID returns the value of ID.
 func (s *CreateChatCompletionResponse) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetObject returns the value of Object.
+	return ""
 }
 
-// GetObject returns the value of Object.
 func (s *CreateChatCompletionResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetCreated returns the value of Created.
+	return ""
 }
 
-// GetCreated returns the value of Created.
 func (s *CreateChatCompletionResponse) GetCreated() int {
-	return s.Created
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return 0
 }
 
-// GetModel returns the value of Model.
 func (s *CreateChatCompletionResponse) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetChoices returns the value of Choices.
+	return ""
 }
 
-// GetChoices returns the value of Choices.
 func (s *CreateChatCompletionResponse) GetChoices() []CreateChatCompletionResponseChoicesItem {
-	return s.Choices
+	_ = "STUB: not implemented"
+
+	// GetUsage returns the value of Usage.
+	return nil
 }
 
-// GetUsage returns the value of Usage.
 func (s *CreateChatCompletionResponse) GetUsage() OptCreateChatCompletionResponseUsage {
-	return s.Usage
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptCreateChatCompletionResponseUsage)
 }
 
-// SetID sets the value of ID.
 func (s *CreateChatCompletionResponse) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return
 }
 
-// SetObject sets the value of Object.
 func (s *CreateChatCompletionResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetCreated sets the value of Created.
+	return
 }
 
-// SetCreated sets the value of Created.
 func (s *CreateChatCompletionResponse) SetCreated(val int) {
-	s.Created = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *CreateChatCompletionResponse) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetChoices sets the value of Choices.
+	return
 }
 
-// SetChoices sets the value of Choices.
 func (s *CreateChatCompletionResponse) SetChoices(val []CreateChatCompletionResponseChoicesItem) {
-	s.Choices = val
+	_ = "STUB: not implemented"
+
+	// SetUsage sets the value of Usage.
+	return
 }
 
-// SetUsage sets the value of Usage.
 func (s *CreateChatCompletionResponse) SetUsage(val OptCreateChatCompletionResponseUsage) {
-	s.Usage = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateChatCompletionResponseChoicesItem struct {
@@ -926,32 +1035,44 @@ type CreateChatCompletionResponseChoicesItem struct {
 
 // GetIndex returns the value of Index.
 func (s *CreateChatCompletionResponseChoicesItem) GetIndex() OptInt {
-	return s.Index
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return *new(OptInt)
 }
 
-// GetMessage returns the value of Message.
 func (s *CreateChatCompletionResponseChoicesItem) GetMessage() OptChatCompletionResponseMessage {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// GetFinishReason returns the value of FinishReason.
+	return *new(OptChatCompletionResponseMessage)
 }
 
-// GetFinishReason returns the value of FinishReason.
 func (s *CreateChatCompletionResponseChoicesItem) GetFinishReason() OptString {
-	return s.FinishReason
+	_ = "STUB: not implemented"
+	return *
+
+	// SetIndex sets the value of Index.
+	new(OptString)
 }
 
-// SetIndex sets the value of Index.
 func (s *CreateChatCompletionResponseChoicesItem) SetIndex(val OptInt) {
-	s.Index = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *CreateChatCompletionResponseChoicesItem) SetMessage(val OptChatCompletionResponseMessage) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// SetFinishReason sets the value of FinishReason.
+	return
 }
 
-// SetFinishReason sets the value of FinishReason.
 func (s *CreateChatCompletionResponseChoicesItem) SetFinishReason(val OptString) {
-	s.FinishReason = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateChatCompletionResponseUsage struct {
@@ -962,35 +1083,45 @@ type CreateChatCompletionResponseUsage struct {
 
 // GetPromptTokens returns the value of PromptTokens.
 func (s *CreateChatCompletionResponseUsage) GetPromptTokens() int {
-	return s.PromptTokens
+	_ = "STUB: not implemented"
+	return 0
+
+	// GetCompletionTokens returns the value of CompletionTokens.
 }
 
-// GetCompletionTokens returns the value of CompletionTokens.
 func (s *CreateChatCompletionResponseUsage) GetCompletionTokens() int {
-	return s.CompletionTokens
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetTotalTokens returns the value of TotalTokens.
 func (s *CreateChatCompletionResponseUsage) GetTotalTokens() int {
-	return s.TotalTokens
+	_ = "STUB: not implemented"
+	return 0
+
+	// SetPromptTokens sets the value of PromptTokens.
 }
 
-// SetPromptTokens sets the value of PromptTokens.
 func (s *CreateChatCompletionResponseUsage) SetPromptTokens(val int) {
-	s.PromptTokens = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetCompletionTokens sets the value of CompletionTokens.
 }
 
-// SetCompletionTokens sets the value of CompletionTokens.
 func (s *CreateChatCompletionResponseUsage) SetCompletionTokens(val int) {
-	s.CompletionTokens = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetTotalTokens sets the value of TotalTokens.
 func (s *CreateChatCompletionResponseUsage) SetTotalTokens(val int) {
-	s.TotalTokens = val
+	_ = "STUB: not implemented"
+	return
+
+	// Ref: #/components/schemas/CreateClassificationRequest
 }
 
-// Ref: #/components/schemas/CreateClassificationRequest
 type CreateClassificationRequest struct {
 	// ID of the model to use. You can use the [List models](/docs/api-reference/models/list) API to see
 	// all of your available models, or see our [Model overview](/docs/models/overview) for descriptions
@@ -1056,155 +1187,217 @@ type CreateClassificationRequest struct {
 
 // GetModel returns the value of Model.
 func (s *CreateClassificationRequest) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetQuery returns the value of Query.
+	return ""
 }
 
-// GetQuery returns the value of Query.
 func (s *CreateClassificationRequest) GetQuery() string {
-	return s.Query
+	_ = "STUB: not implemented"
+
+	// GetExamples returns the value of Examples.
+	return ""
 }
 
-// GetExamples returns the value of Examples.
 func (s *CreateClassificationRequest) GetExamples() OptNilStringArrayArray {
-	return s.Examples
+	_ = "STUB: not implemented"
+
+	// GetFile returns the value of File.
+	return *new(OptNilStringArrayArray)
 }
 
-// GetFile returns the value of File.
 func (s *CreateClassificationRequest) GetFile() OptNilString {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// GetLabels returns the value of Labels.
+	return *new(OptNilString)
 }
 
-// GetLabels returns the value of Labels.
 func (s *CreateClassificationRequest) GetLabels() OptNilStringArray {
-	return s.Labels
+	_ = "STUB: not implemented"
+
+	// GetSearchModel returns the value of SearchModel.
+	return *new(OptNilStringArray)
 }
 
-// GetSearchModel returns the value of SearchModel.
 func (s *CreateClassificationRequest) GetSearchModel() OptNilString {
-	return s.SearchModel
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTemperature returns the value of Temperature.
+	new(OptNilString)
 }
 
-// GetTemperature returns the value of Temperature.
 func (s *CreateClassificationRequest) GetTemperature() OptNilFloat64 {
-	return s.Temperature
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLogprobs returns the value of Logprobs.
+	new(OptNilFloat64)
 }
 
-// GetLogprobs returns the value of Logprobs.
 func (s *CreateClassificationRequest) GetLogprobs() OptNilInt {
-	return s.Logprobs
+	_ = "STUB: not implemented"
+
+	// GetMaxExamples returns the value of MaxExamples.
+	return *new(OptNilInt)
 }
 
-// GetMaxExamples returns the value of MaxExamples.
 func (s *CreateClassificationRequest) GetMaxExamples() OptNilInt {
-	return s.MaxExamples
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLogitBias returns the value of LogitBias.
+	new(OptNilInt)
 }
 
-// GetLogitBias returns the value of LogitBias.
 func (s *CreateClassificationRequest) GetLogitBias() OptCreateClassificationRequestLogitBias {
-	return s.LogitBias
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReturnPrompt returns the value of ReturnPrompt.
+	new(OptCreateClassificationRequestLogitBias)
 }
 
-// GetReturnPrompt returns the value of ReturnPrompt.
 func (s *CreateClassificationRequest) GetReturnPrompt() OptNilBool {
-	return s.ReturnPrompt
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReturnMetadata returns the value of ReturnMetadata.
+	new(OptNilBool)
 }
 
-// GetReturnMetadata returns the value of ReturnMetadata.
 func (s *CreateClassificationRequest) GetReturnMetadata() OptNilBool {
-	return s.ReturnMetadata
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExpand returns the value of Expand.
+	new(OptNilBool)
 }
 
-// GetExpand returns the value of Expand.
 func (s *CreateClassificationRequest) GetExpand() OptNilAnyArray {
-	return s.Expand
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return *new(OptNilAnyArray)
 }
 
-// GetUser returns the value of User.
 func (s *CreateClassificationRequest) GetUser() OptString {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return *new(OptString)
 }
 
-// SetModel sets the value of Model.
 func (s *CreateClassificationRequest) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetQuery sets the value of Query.
+	return
 }
 
-// SetQuery sets the value of Query.
 func (s *CreateClassificationRequest) SetQuery(val string) {
-	s.Query = val
+	_ = "STUB: not implemented"
+
+	// SetExamples sets the value of Examples.
+	return
 }
 
-// SetExamples sets the value of Examples.
 func (s *CreateClassificationRequest) SetExamples(val OptNilStringArrayArray) {
-	s.Examples = val
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return
 }
 
-// SetFile sets the value of File.
 func (s *CreateClassificationRequest) SetFile(val OptNilString) {
-	s.File = val
+	_ = "STUB: not implemented"
+
+	// SetLabels sets the value of Labels.
+	return
 }
 
-// SetLabels sets the value of Labels.
 func (s *CreateClassificationRequest) SetLabels(val OptNilStringArray) {
-	s.Labels = val
+	_ = "STUB: not implemented"
+
+	// SetSearchModel sets the value of SearchModel.
+	return
 }
 
-// SetSearchModel sets the value of SearchModel.
 func (s *CreateClassificationRequest) SetSearchModel(val OptNilString) {
-	s.SearchModel = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTemperature sets the value of Temperature.
 }
 
-// SetTemperature sets the value of Temperature.
 func (s *CreateClassificationRequest) SetTemperature(val OptNilFloat64) {
-	s.Temperature = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetLogprobs sets the value of Logprobs.
 }
 
-// SetLogprobs sets the value of Logprobs.
 func (s *CreateClassificationRequest) SetLogprobs(val OptNilInt) {
-	s.Logprobs = val
+	_ = "STUB: not implemented"
+
+	// SetMaxExamples sets the value of MaxExamples.
+	return
 }
 
-// SetMaxExamples sets the value of MaxExamples.
 func (s *CreateClassificationRequest) SetMaxExamples(val OptNilInt) {
-	s.MaxExamples = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetLogitBias sets the value of LogitBias.
 }
 
-// SetLogitBias sets the value of LogitBias.
 func (s *CreateClassificationRequest) SetLogitBias(val OptCreateClassificationRequestLogitBias) {
-	s.LogitBias = val
+	_ = "STUB: not implemented"
+
+	// SetReturnPrompt sets the value of ReturnPrompt.
+	return
 }
 
-// SetReturnPrompt sets the value of ReturnPrompt.
 func (s *CreateClassificationRequest) SetReturnPrompt(val OptNilBool) {
-	s.ReturnPrompt = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReturnMetadata sets the value of ReturnMetadata.
 }
 
-// SetReturnMetadata sets the value of ReturnMetadata.
 func (s *CreateClassificationRequest) SetReturnMetadata(val OptNilBool) {
-	s.ReturnMetadata = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetExpand sets the value of Expand.
 }
 
-// SetExpand sets the value of Expand.
 func (s *CreateClassificationRequest) SetExpand(val OptNilAnyArray) {
-	s.Expand = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *CreateClassificationRequest) SetUser(val OptString) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// Modify the likelihood of specified tokens appearing in the completion.
+	// Accepts a json object that maps tokens (specified by their token ID in the GPT tokenizer) to an
+	// associated bias value from -100 to 100. You can use this [tokenizer tool](/tokenizer?view=bpe)
+	// (which works for both GPT-2 and GPT-3) to convert text to token IDs. Mathematically, the bias is
+	// added to the logits generated by the model prior to sampling. The exact effect will vary per model,
+	//
+	//	but values between -1 and 1 should decrease or increase likelihood of selection; values like -100
+	//
+	// or 100 should result in a ban or exclusive selection of the relevant token.
+	// As an example, you can pass `{"50256": -100}` to prevent the <|endoftext|> token from being
+	// generated.
+	return
 }
 
-// Modify the likelihood of specified tokens appearing in the completion.
-// Accepts a json object that maps tokens (specified by their token ID in the GPT tokenizer) to an
-// associated bias value from -100 to 100. You can use this [tokenizer tool](/tokenizer?view=bpe)
-// (which works for both GPT-2 and GPT-3) to convert text to token IDs. Mathematically, the bias is
-// added to the logits generated by the model prior to sampling. The exact effect will vary per model,
-//
-//	but values between -1 and 1 should decrease or increase likelihood of selection; values like -100
-//
-// or 100 should result in a ban or exclusive selection of the relevant token.
-// As an example, you can pass `{"50256": -100}` to prevent the <|endoftext|> token from being
-// generated.
 type CreateClassificationRequestLogitBias struct{}
 
 // Ref: #/components/schemas/CreateClassificationResponse
@@ -1219,62 +1412,87 @@ type CreateClassificationResponse struct {
 
 // GetObject returns the value of Object.
 func (s *CreateClassificationResponse) GetObject() OptString {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return *new(OptString)
 }
 
-// GetModel returns the value of Model.
 func (s *CreateClassificationResponse) GetModel() OptString {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetSearchModel returns the value of SearchModel.
+	return *new(OptString)
 }
 
-// GetSearchModel returns the value of SearchModel.
 func (s *CreateClassificationResponse) GetSearchModel() OptString {
-	return s.SearchModel
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCompletion returns the value of Completion.
+	new(OptString)
 }
 
-// GetCompletion returns the value of Completion.
 func (s *CreateClassificationResponse) GetCompletion() OptString {
-	return s.Completion
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLabel returns the value of Label.
+	new(OptString)
 }
 
-// GetLabel returns the value of Label.
 func (s *CreateClassificationResponse) GetLabel() OptString {
-	return s.Label
+	_ = "STUB: not implemented"
+
+	// GetSelectedExamples returns the value of SelectedExamples.
+	return *new(OptString)
 }
 
-// GetSelectedExamples returns the value of SelectedExamples.
 func (s *CreateClassificationResponse) GetSelectedExamples() []CreateClassificationResponseSelectedExamplesItem {
-	return s.SelectedExamples
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetObject sets the value of Object.
 }
 
-// SetObject sets the value of Object.
 func (s *CreateClassificationResponse) SetObject(val OptString) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *CreateClassificationResponse) SetModel(val OptString) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetSearchModel sets the value of SearchModel.
+	return
 }
 
-// SetSearchModel sets the value of SearchModel.
 func (s *CreateClassificationResponse) SetSearchModel(val OptString) {
-	s.SearchModel = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetCompletion sets the value of Completion.
 }
 
-// SetCompletion sets the value of Completion.
 func (s *CreateClassificationResponse) SetCompletion(val OptString) {
-	s.Completion = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetLabel sets the value of Label.
 }
 
-// SetLabel sets the value of Label.
 func (s *CreateClassificationResponse) SetLabel(val OptString) {
-	s.Label = val
+	_ = "STUB: not implemented"
+
+	// SetSelectedExamples sets the value of SelectedExamples.
+	return
 }
 
-// SetSelectedExamples sets the value of SelectedExamples.
 func (s *CreateClassificationResponse) SetSelectedExamples(val []CreateClassificationResponseSelectedExamplesItem) {
-	s.SelectedExamples = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateClassificationResponseSelectedExamplesItem struct {
@@ -1285,35 +1503,47 @@ type CreateClassificationResponseSelectedExamplesItem struct {
 
 // GetDocument returns the value of Document.
 func (s *CreateClassificationResponseSelectedExamplesItem) GetDocument() OptInt {
-	return s.Document
+	_ = "STUB: not implemented"
+
+	// GetText returns the value of Text.
+	return *new(OptInt)
 }
 
-// GetText returns the value of Text.
 func (s *CreateClassificationResponseSelectedExamplesItem) GetText() OptString {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetLabel returns the value of Label.
+	return *new(OptString)
 }
 
-// GetLabel returns the value of Label.
 func (s *CreateClassificationResponseSelectedExamplesItem) GetLabel() OptString {
-	return s.Label
+	_ = "STUB: not implemented"
+
+	// SetDocument sets the value of Document.
+	return *new(OptString)
 }
 
-// SetDocument sets the value of Document.
 func (s *CreateClassificationResponseSelectedExamplesItem) SetDocument(val OptInt) {
-	s.Document = val
+	_ = "STUB: not implemented"
+
+	// SetText sets the value of Text.
+	return
 }
 
-// SetText sets the value of Text.
 func (s *CreateClassificationResponseSelectedExamplesItem) SetText(val OptString) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetLabel sets the value of Label.
+	return
 }
 
-// SetLabel sets the value of Label.
 func (s *CreateClassificationResponseSelectedExamplesItem) SetLabel(val OptString) {
-	s.Label = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/CreateCompletionRequest
+	return
 }
 
-// Ref: #/components/schemas/CreateCompletionRequest
 type CreateCompletionRequest struct {
 	// ID of the model to use. You can use the [List models](/docs/api-reference/models/list) API to see
 	// all of your available models, or see our [Model overview](/docs/models/overview) for descriptions
@@ -1394,175 +1624,241 @@ type CreateCompletionRequest struct {
 
 // GetModel returns the value of Model.
 func (s *CreateCompletionRequest) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetPrompt returns the value of Prompt.
+	return ""
 }
 
-// GetPrompt returns the value of Prompt.
 func (s *CreateCompletionRequest) GetPrompt() OptNilCreateCompletionRequestPrompt {
-	return s.Prompt
+	_ = "STUB: not implemented"
+
+	// GetSuffix returns the value of Suffix.
+	return *new(OptNilCreateCompletionRequestPrompt)
 }
 
-// GetSuffix returns the value of Suffix.
 func (s *CreateCompletionRequest) GetSuffix() OptNilString {
-	return s.Suffix
+	_ = "STUB: not implemented"
+
+	// GetMaxTokens returns the value of MaxTokens.
+	return *new(OptNilString)
 }
 
-// GetMaxTokens returns the value of MaxTokens.
 func (s *CreateCompletionRequest) GetMaxTokens() OptNilInt {
-	return s.MaxTokens
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTemperature returns the value of Temperature.
+	new(OptNilInt)
 }
 
-// GetTemperature returns the value of Temperature.
 func (s *CreateCompletionRequest) GetTemperature() OptNilFloat64 {
-	return s.Temperature
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTopP returns the value of TopP.
+	new(OptNilFloat64)
 }
 
-// GetTopP returns the value of TopP.
 func (s *CreateCompletionRequest) GetTopP() OptNilFloat64 {
-	return s.TopP
+	_ = "STUB: not implemented"
+
+	// GetN returns the value of N.
+	return *new(OptNilFloat64)
 }
 
-// GetN returns the value of N.
 func (s *CreateCompletionRequest) GetN() OptNilInt {
-	return s.N
+	_ = "STUB: not implemented"
+
+	// GetStream returns the value of Stream.
+	return *new(OptNilInt)
 }
 
-// GetStream returns the value of Stream.
 func (s *CreateCompletionRequest) GetStream() OptNilBool {
-	return s.Stream
+	_ = "STUB: not implemented"
+
+	// GetLogprobs returns the value of Logprobs.
+	return *new(OptNilBool)
 }
 
-// GetLogprobs returns the value of Logprobs.
 func (s *CreateCompletionRequest) GetLogprobs() OptNilInt {
-	return s.Logprobs
+	_ = "STUB: not implemented"
+
+	// GetEcho returns the value of Echo.
+	return *new(OptNilInt)
 }
 
-// GetEcho returns the value of Echo.
 func (s *CreateCompletionRequest) GetEcho() OptNilBool {
-	return s.Echo
+	_ = "STUB: not implemented"
+
+	// GetStop returns the value of Stop.
+	return *new(OptNilBool)
 }
 
-// GetStop returns the value of Stop.
 func (s *CreateCompletionRequest) GetStop() OptNilCreateCompletionRequestStop {
-	return s.Stop
+	_ = "STUB: not implemented"
+
+	// GetPresencePenalty returns the value of PresencePenalty.
+	return *new(OptNilCreateCompletionRequestStop)
 }
 
-// GetPresencePenalty returns the value of PresencePenalty.
 func (s *CreateCompletionRequest) GetPresencePenalty() OptNilFloat64 {
-	return s.PresencePenalty
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFrequencyPenalty returns the value of FrequencyPenalty.
+	new(OptNilFloat64)
 }
 
-// GetFrequencyPenalty returns the value of FrequencyPenalty.
 func (s *CreateCompletionRequest) GetFrequencyPenalty() OptNilFloat64 {
-	return s.FrequencyPenalty
+	_ = "STUB: not implemented"
+	return *new(OptNilFloat64)
 }
 
 // GetBestOf returns the value of BestOf.
 func (s *CreateCompletionRequest) GetBestOf() OptNilInt {
-	return s.BestOf
+	_ = "STUB: not implemented"
+
+	// GetLogitBias returns the value of LogitBias.
+	return *new(OptNilInt)
 }
 
-// GetLogitBias returns the value of LogitBias.
 func (s *CreateCompletionRequest) GetLogitBias() OptCreateCompletionRequestLogitBias {
-	return s.LogitBias
+	_ = "STUB: not implemented"
+	return *
+
+	// GetUser returns the value of User.
+	new(OptCreateCompletionRequestLogitBias)
 }
 
-// GetUser returns the value of User.
 func (s *CreateCompletionRequest) GetUser() OptString {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return *new(OptString)
 }
 
-// SetModel sets the value of Model.
 func (s *CreateCompletionRequest) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetPrompt sets the value of Prompt.
+	return
 }
 
-// SetPrompt sets the value of Prompt.
 func (s *CreateCompletionRequest) SetPrompt(val OptNilCreateCompletionRequestPrompt) {
-	s.Prompt = val
+	_ = "STUB: not implemented"
+
+	// SetSuffix sets the value of Suffix.
+	return
 }
 
-// SetSuffix sets the value of Suffix.
 func (s *CreateCompletionRequest) SetSuffix(val OptNilString) {
-	s.Suffix = val
+	_ = "STUB: not implemented"
+
+	// SetMaxTokens sets the value of MaxTokens.
+	return
 }
 
-// SetMaxTokens sets the value of MaxTokens.
 func (s *CreateCompletionRequest) SetMaxTokens(val OptNilInt) {
-	s.MaxTokens = val
+	_ = "STUB: not implemented"
+
+	// SetTemperature sets the value of Temperature.
+	return
 }
 
-// SetTemperature sets the value of Temperature.
 func (s *CreateCompletionRequest) SetTemperature(val OptNilFloat64) {
-	s.Temperature = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTopP sets the value of TopP.
 }
 
-// SetTopP sets the value of TopP.
 func (s *CreateCompletionRequest) SetTopP(val OptNilFloat64) {
-	s.TopP = val
+	_ = "STUB: not implemented"
+
+	// SetN sets the value of N.
+	return
 }
 
-// SetN sets the value of N.
 func (s *CreateCompletionRequest) SetN(val OptNilInt) {
-	s.N = val
+	_ = "STUB: not implemented"
+
+	// SetStream sets the value of Stream.
+	return
 }
 
-// SetStream sets the value of Stream.
 func (s *CreateCompletionRequest) SetStream(val OptNilBool) {
-	s.Stream = val
+	_ = "STUB: not implemented"
+
+	// SetLogprobs sets the value of Logprobs.
+	return
 }
 
-// SetLogprobs sets the value of Logprobs.
 func (s *CreateCompletionRequest) SetLogprobs(val OptNilInt) {
-	s.Logprobs = val
+	_ = "STUB: not implemented"
+
+	// SetEcho sets the value of Echo.
+	return
 }
 
-// SetEcho sets the value of Echo.
 func (s *CreateCompletionRequest) SetEcho(val OptNilBool) {
-	s.Echo = val
+	_ = "STUB: not implemented"
+
+	// SetStop sets the value of Stop.
+	return
 }
 
-// SetStop sets the value of Stop.
 func (s *CreateCompletionRequest) SetStop(val OptNilCreateCompletionRequestStop) {
-	s.Stop = val
+	_ = "STUB: not implemented"
+
+	// SetPresencePenalty sets the value of PresencePenalty.
+	return
 }
 
-// SetPresencePenalty sets the value of PresencePenalty.
 func (s *CreateCompletionRequest) SetPresencePenalty(val OptNilFloat64) {
-	s.PresencePenalty = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetFrequencyPenalty sets the value of FrequencyPenalty.
 }
 
-// SetFrequencyPenalty sets the value of FrequencyPenalty.
 func (s *CreateCompletionRequest) SetFrequencyPenalty(val OptNilFloat64) {
-	s.FrequencyPenalty = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetBestOf sets the value of BestOf.
 func (s *CreateCompletionRequest) SetBestOf(val OptNilInt) {
-	s.BestOf = val
+	_ = "STUB: not implemented"
+
+	// SetLogitBias sets the value of LogitBias.
+	return
 }
 
-// SetLogitBias sets the value of LogitBias.
 func (s *CreateCompletionRequest) SetLogitBias(val OptCreateCompletionRequestLogitBias) {
-	s.LogitBias = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *CreateCompletionRequest) SetUser(val OptString) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// Modify the likelihood of specified tokens appearing in the completion.
+	// Accepts a json object that maps tokens (specified by their token ID in the GPT tokenizer) to an
+	// associated bias value from -100 to 100. You can use this [tokenizer tool](/tokenizer?view=bpe)
+	// (which works for both GPT-2 and GPT-3) to convert text to token IDs. Mathematically, the bias is
+	// added to the logits generated by the model prior to sampling. The exact effect will vary per model,
+	//
+	//	but values between -1 and 1 should decrease or increase likelihood of selection; values like -100
+	//
+	// or 100 should result in a ban or exclusive selection of the relevant token.
+	// As an example, you can pass `{"50256": -100}` to prevent the <|endoftext|> token from being
+	// generated.
+	return
 }
 
-// Modify the likelihood of specified tokens appearing in the completion.
-// Accepts a json object that maps tokens (specified by their token ID in the GPT tokenizer) to an
-// associated bias value from -100 to 100. You can use this [tokenizer tool](/tokenizer?view=bpe)
-// (which works for both GPT-2 and GPT-3) to convert text to token IDs. Mathematically, the bias is
-// added to the logits generated by the model prior to sampling. The exact effect will vary per model,
-//
-//	but values between -1 and 1 should decrease or increase likelihood of selection; values like -100
-//
-// or 100 should result in a ban or exclusive selection of the relevant token.
-// As an example, you can pass `{"50256": -100}` to prevent the <|endoftext|> token from being
-// generated.
 type CreateCompletionRequestLogitBias struct{}
 
 // The prompt(s) to generate completions for, encoded as a string, array of strings, array of tokens,
@@ -1586,55 +1882,45 @@ const (
 )
 
 // IsString reports whether CreateCompletionRequestPrompt is string.
-func (s CreateCompletionRequestPrompt) IsString() bool {
-	return s.Type == StringCreateCompletionRequestPrompt
-}
+func (s CreateCompletionRequestPrompt) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsStringArray reports whether CreateCompletionRequestPrompt is []string.
 func (s CreateCompletionRequestPrompt) IsStringArray() bool {
-	return s.Type == StringArrayCreateCompletionRequestPrompt
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetString sets CreateCompletionRequestPrompt to string.
-func (s *CreateCompletionRequestPrompt) SetString(v string) {
-	s.Type = StringCreateCompletionRequestPrompt
-	s.String = v
-}
+func (s *CreateCompletionRequestPrompt) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if CreateCompletionRequestPrompt is string.
 func (s CreateCompletionRequestPrompt) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringCreateCompletionRequestPrompt returns new CreateCompletionRequestPrompt from string.
 func NewStringCreateCompletionRequestPrompt(v string) CreateCompletionRequestPrompt {
-	var s CreateCompletionRequestPrompt
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionRequestPrompt)
 }
 
 // SetStringArray sets CreateCompletionRequestPrompt to []string.
 func (s *CreateCompletionRequestPrompt) SetStringArray(v []string) {
-	s.Type = StringArrayCreateCompletionRequestPrompt
-	s.StringArray = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetStringArray returns []string and true boolean if CreateCompletionRequestPrompt is []string.
 func (s CreateCompletionRequestPrompt) GetStringArray() (v []string, ok bool) {
-	if !s.IsStringArray() {
-		return v, false
-	}
-	return s.StringArray, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewStringArrayCreateCompletionRequestPrompt returns new CreateCompletionRequestPrompt from []string.
 func NewStringArrayCreateCompletionRequestPrompt(v []string) CreateCompletionRequestPrompt {
-	var s CreateCompletionRequestPrompt
-	s.SetStringArray(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionRequestPrompt)
 }
 
 // Up to 4 sequences where the API will stop generating further tokens. The returned text will not
@@ -1658,79 +1944,57 @@ const (
 )
 
 // IsNull reports whether CreateCompletionRequestStop is struct{}.
-func (s CreateCompletionRequestStop) IsNull() bool { return s.Type == NullCreateCompletionRequestStop }
+func (s CreateCompletionRequestStop) IsNull() bool { _ = "STUB: not implemented"; return false }
 
 // IsString reports whether CreateCompletionRequestStop is string.
-func (s CreateCompletionRequestStop) IsString() bool {
-	return s.Type == StringCreateCompletionRequestStop
-}
+func (s CreateCompletionRequestStop) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsStringArray reports whether CreateCompletionRequestStop is []string.
-func (s CreateCompletionRequestStop) IsStringArray() bool {
-	return s.Type == StringArrayCreateCompletionRequestStop
-}
+func (s CreateCompletionRequestStop) IsStringArray() bool { _ = "STUB: not implemented"; return false }
 
 // SetNull sets CreateCompletionRequestStop to struct{}.
-func (s *CreateCompletionRequestStop) SetNull(v struct{}) {
-	s.Type = NullCreateCompletionRequestStop
-	s.Null = v
-}
+func (s *CreateCompletionRequestStop) SetNull(v struct{}) { _ = "STUB: not implemented"; return }
 
 // GetNull returns struct{} and true boolean if CreateCompletionRequestStop is struct{}.
 func (s CreateCompletionRequestStop) GetNull() (v struct{}, ok bool) {
-	if !s.IsNull() {
-		return v, false
-	}
-	return s.Null, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewNullCreateCompletionRequestStop returns new CreateCompletionRequestStop from struct{}.
 func NewNullCreateCompletionRequestStop(v struct{}) CreateCompletionRequestStop {
-	var s CreateCompletionRequestStop
-	s.SetNull(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionRequestStop)
 }
 
 // SetString sets CreateCompletionRequestStop to string.
-func (s *CreateCompletionRequestStop) SetString(v string) {
-	s.Type = StringCreateCompletionRequestStop
-	s.String = v
-}
+func (s *CreateCompletionRequestStop) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if CreateCompletionRequestStop is string.
 func (s CreateCompletionRequestStop) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringCreateCompletionRequestStop returns new CreateCompletionRequestStop from string.
 func NewStringCreateCompletionRequestStop(v string) CreateCompletionRequestStop {
-	var s CreateCompletionRequestStop
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionRequestStop)
 }
 
 // SetStringArray sets CreateCompletionRequestStop to []string.
-func (s *CreateCompletionRequestStop) SetStringArray(v []string) {
-	s.Type = StringArrayCreateCompletionRequestStop
-	s.StringArray = v
-}
+func (s *CreateCompletionRequestStop) SetStringArray(v []string) { _ = "STUB: not implemented"; return }
 
 // GetStringArray returns []string and true boolean if CreateCompletionRequestStop is []string.
 func (s CreateCompletionRequestStop) GetStringArray() (v []string, ok bool) {
-	if !s.IsStringArray() {
-		return v, false
-	}
-	return s.StringArray, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewStringArrayCreateCompletionRequestStop returns new CreateCompletionRequestStop from []string.
 func NewStringArrayCreateCompletionRequestStop(v []string) CreateCompletionRequestStop {
-	var s CreateCompletionRequestStop
-	s.SetStringArray(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionRequestStop)
 }
 
 // Ref: #/components/schemas/CreateCompletionResponse
@@ -1745,62 +2009,85 @@ type CreateCompletionResponse struct {
 
 // GetID returns the value of ID.
 func (s *CreateCompletionResponse) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetObject returns the value of Object.
+	return ""
 }
 
-// GetObject returns the value of Object.
 func (s *CreateCompletionResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetCreated returns the value of Created.
+	return ""
 }
 
-// GetCreated returns the value of Created.
 func (s *CreateCompletionResponse) GetCreated() int {
-	return s.Created
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return 0
 }
 
-// GetModel returns the value of Model.
 func (s *CreateCompletionResponse) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetChoices returns the value of Choices.
+	return ""
 }
 
-// GetChoices returns the value of Choices.
 func (s *CreateCompletionResponse) GetChoices() []CreateCompletionResponseChoicesItem {
-	return s.Choices
+	_ = "STUB: not implemented"
+
+	// GetUsage returns the value of Usage.
+	return nil
 }
 
-// GetUsage returns the value of Usage.
 func (s *CreateCompletionResponse) GetUsage() OptCreateCompletionResponseUsage {
-	return s.Usage
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptCreateCompletionResponseUsage)
 }
 
-// SetID sets the value of ID.
 func (s *CreateCompletionResponse) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return
 }
 
-// SetObject sets the value of Object.
 func (s *CreateCompletionResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetCreated sets the value of Created.
+	return
 }
 
-// SetCreated sets the value of Created.
 func (s *CreateCompletionResponse) SetCreated(val int) {
-	s.Created = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *CreateCompletionResponse) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetChoices sets the value of Choices.
+	return
 }
 
-// SetChoices sets the value of Choices.
 func (s *CreateCompletionResponse) SetChoices(val []CreateCompletionResponseChoicesItem) {
-	s.Choices = val
+	_ = "STUB: not implemented"
+
+	// SetUsage sets the value of Usage.
+	return
 }
 
-// SetUsage sets the value of Usage.
 func (s *CreateCompletionResponse) SetUsage(val OptCreateCompletionResponseUsage) {
-	s.Usage = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateCompletionResponseChoicesItem struct {
@@ -1812,42 +2099,58 @@ type CreateCompletionResponseChoicesItem struct {
 
 // GetText returns the value of Text.
 func (s *CreateCompletionResponseChoicesItem) GetText() OptString {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetIndex returns the value of Index.
+	return *new(OptString)
 }
 
-// GetIndex returns the value of Index.
 func (s *CreateCompletionResponseChoicesItem) GetIndex() OptInt {
-	return s.Index
+	_ = "STUB: not implemented"
+
+	// GetLogprobs returns the value of Logprobs.
+	return *new(OptInt)
 }
 
-// GetLogprobs returns the value of Logprobs.
 func (s *CreateCompletionResponseChoicesItem) GetLogprobs() OptNilCreateCompletionResponseChoicesItemLogprobs {
-	return s.Logprobs
+	_ = "STUB: not implemented"
+
+	// GetFinishReason returns the value of FinishReason.
+	return *new(OptNilCreateCompletionResponseChoicesItemLogprobs)
 }
 
-// GetFinishReason returns the value of FinishReason.
 func (s *CreateCompletionResponseChoicesItem) GetFinishReason() OptString {
-	return s.FinishReason
+	_ = "STUB: not implemented"
+	return *
+
+	// SetText sets the value of Text.
+	new(OptString)
 }
 
-// SetText sets the value of Text.
 func (s *CreateCompletionResponseChoicesItem) SetText(val OptString) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetIndex sets the value of Index.
+	return
 }
 
-// SetIndex sets the value of Index.
 func (s *CreateCompletionResponseChoicesItem) SetIndex(val OptInt) {
-	s.Index = val
+	_ = "STUB: not implemented"
+
+	// SetLogprobs sets the value of Logprobs.
+	return
 }
 
-// SetLogprobs sets the value of Logprobs.
 func (s *CreateCompletionResponseChoicesItem) SetLogprobs(val OptNilCreateCompletionResponseChoicesItemLogprobs) {
-	s.Logprobs = val
+	_ = "STUB: not implemented"
+
+	// SetFinishReason sets the value of FinishReason.
+	return
 }
 
-// SetFinishReason sets the value of FinishReason.
 func (s *CreateCompletionResponseChoicesItem) SetFinishReason(val OptString) {
-	s.FinishReason = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateCompletionResponseChoicesItemLogprobs struct {
@@ -1859,42 +2162,57 @@ type CreateCompletionResponseChoicesItemLogprobs struct {
 
 // GetTokens returns the value of Tokens.
 func (s *CreateCompletionResponseChoicesItemLogprobs) GetTokens() []string {
-	return s.Tokens
+	_ = "STUB: not implemented"
+
+	// GetTokenLogprobs returns the value of TokenLogprobs.
+	return nil
 }
 
-// GetTokenLogprobs returns the value of TokenLogprobs.
 func (s *CreateCompletionResponseChoicesItemLogprobs) GetTokenLogprobs() []float64 {
-	return s.TokenLogprobs
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetTopLogprobs returns the value of TopLogprobs.
 }
 
-// GetTopLogprobs returns the value of TopLogprobs.
 func (s *CreateCompletionResponseChoicesItemLogprobs) GetTopLogprobs() []CreateCompletionResponseChoicesItemLogprobsTopLogprobsItem {
-	return s.TopLogprobs
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetTextOffset returns the value of TextOffset.
 }
 
-// GetTextOffset returns the value of TextOffset.
 func (s *CreateCompletionResponseChoicesItemLogprobs) GetTextOffset() []int {
-	return s.TextOffset
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetTokens sets the value of Tokens.
 }
 
-// SetTokens sets the value of Tokens.
 func (s *CreateCompletionResponseChoicesItemLogprobs) SetTokens(val []string) {
-	s.Tokens = val
+	_ = "STUB: not implemented"
+
+	// SetTokenLogprobs sets the value of TokenLogprobs.
+	return
 }
 
-// SetTokenLogprobs sets the value of TokenLogprobs.
 func (s *CreateCompletionResponseChoicesItemLogprobs) SetTokenLogprobs(val []float64) {
-	s.TokenLogprobs = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTopLogprobs sets the value of TopLogprobs.
 }
 
-// SetTopLogprobs sets the value of TopLogprobs.
 func (s *CreateCompletionResponseChoicesItemLogprobs) SetTopLogprobs(val []CreateCompletionResponseChoicesItemLogprobsTopLogprobsItem) {
-	s.TopLogprobs = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTextOffset sets the value of TextOffset.
 }
 
-// SetTextOffset sets the value of TextOffset.
 func (s *CreateCompletionResponseChoicesItemLogprobs) SetTextOffset(val []int) {
-	s.TextOffset = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateCompletionResponseChoicesItemLogprobsTopLogprobsItem struct{}
@@ -1906,34 +2224,28 @@ type CreateCompletionResponseUsage struct {
 }
 
 // GetPromptTokens returns the value of PromptTokens.
-func (s *CreateCompletionResponseUsage) GetPromptTokens() int {
-	return s.PromptTokens
-}
+func (s *CreateCompletionResponseUsage) GetPromptTokens() int { _ = "STUB: not implemented"; return 0 }
 
 // GetCompletionTokens returns the value of CompletionTokens.
 func (s *CreateCompletionResponseUsage) GetCompletionTokens() int {
-	return s.CompletionTokens
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetTotalTokens returns the value of TotalTokens.
-func (s *CreateCompletionResponseUsage) GetTotalTokens() int {
-	return s.TotalTokens
-}
+func (s *CreateCompletionResponseUsage) GetTotalTokens() int { _ = "STUB: not implemented"; return 0 }
 
 // SetPromptTokens sets the value of PromptTokens.
-func (s *CreateCompletionResponseUsage) SetPromptTokens(val int) {
-	s.PromptTokens = val
-}
+func (s *CreateCompletionResponseUsage) SetPromptTokens(val int) { _ = "STUB: not implemented"; return }
 
 // SetCompletionTokens sets the value of CompletionTokens.
 func (s *CreateCompletionResponseUsage) SetCompletionTokens(val int) {
-	s.CompletionTokens = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetTotalTokens sets the value of TotalTokens.
-func (s *CreateCompletionResponseUsage) SetTotalTokens(val int) {
-	s.TotalTokens = val
-}
+func (s *CreateCompletionResponseUsage) SetTotalTokens(val int) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/CreateEditRequest
 type CreateEditRequest struct {
@@ -1959,65 +2271,78 @@ type CreateEditRequest struct {
 
 // GetModel returns the value of Model.
 func (s *CreateEditRequest) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetInput returns the value of Input.
+	return ""
 }
 
-// GetInput returns the value of Input.
 func (s *CreateEditRequest) GetInput() OptNilString {
-	return s.Input
+	_ = "STUB: not implemented"
+
+	// GetInstruction returns the value of Instruction.
+	return *new(OptNilString)
 }
 
-// GetInstruction returns the value of Instruction.
-func (s *CreateEditRequest) GetInstruction() string {
-	return s.Instruction
-}
+func (s *CreateEditRequest) GetInstruction() string { _ = "STUB: not implemented"; return "" }
 
 // GetN returns the value of N.
 func (s *CreateEditRequest) GetN() OptNilInt {
-	return s.N
+	_ = "STUB: not implemented"
+
+	// GetTemperature returns the value of Temperature.
+	return *new(OptNilInt)
 }
 
-// GetTemperature returns the value of Temperature.
 func (s *CreateEditRequest) GetTemperature() OptNilFloat64 {
-	return s.Temperature
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTopP returns the value of TopP.
+	new(OptNilFloat64)
 }
 
-// GetTopP returns the value of TopP.
 func (s *CreateEditRequest) GetTopP() OptNilFloat64 {
-	return s.TopP
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return *new(OptNilFloat64)
 }
 
-// SetModel sets the value of Model.
 func (s *CreateEditRequest) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetInput sets the value of Input.
+	return
 }
 
-// SetInput sets the value of Input.
 func (s *CreateEditRequest) SetInput(val OptNilString) {
-	s.Input = val
+	_ = "STUB: not implemented"
+
+	// SetInstruction sets the value of Instruction.
+	return
 }
 
-// SetInstruction sets the value of Instruction.
-func (s *CreateEditRequest) SetInstruction(val string) {
-	s.Instruction = val
-}
+func (s *CreateEditRequest) SetInstruction(val string) { _ = "STUB: not implemented"; return }
 
 // SetN sets the value of N.
 func (s *CreateEditRequest) SetN(val OptNilInt) {
-	s.N = val
+	_ = "STUB: not implemented"
+
+	// SetTemperature sets the value of Temperature.
+	return
 }
 
-// SetTemperature sets the value of Temperature.
-func (s *CreateEditRequest) SetTemperature(val OptNilFloat64) {
-	s.Temperature = val
-}
+func (s *CreateEditRequest) SetTemperature(val OptNilFloat64) { _ = "STUB: not implemented"; return }
 
 // SetTopP sets the value of TopP.
 func (s *CreateEditRequest) SetTopP(val OptNilFloat64) {
-	s.TopP = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/CreateEditResponse
+	return
 }
 
-// Ref: #/components/schemas/CreateEditResponse
 type CreateEditResponse struct {
 	Object  string                          `json:"object"`
 	Created int                             `json:"created"`
@@ -2027,42 +2352,57 @@ type CreateEditResponse struct {
 
 // GetObject returns the value of Object.
 func (s *CreateEditResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetCreated returns the value of Created.
+	return ""
 }
 
-// GetCreated returns the value of Created.
 func (s *CreateEditResponse) GetCreated() int {
-	return s.Created
+	_ = "STUB: not implemented"
+
+	// GetChoices returns the value of Choices.
+	return 0
 }
 
-// GetChoices returns the value of Choices.
 func (s *CreateEditResponse) GetChoices() []CreateEditResponseChoicesItem {
-	return s.Choices
+	_ = "STUB: not implemented"
+
+	// GetUsage returns the value of Usage.
+	return nil
 }
 
-// GetUsage returns the value of Usage.
 func (s *CreateEditResponse) GetUsage() CreateEditResponseUsage {
-	return s.Usage
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return *new(CreateEditResponseUsage)
 }
 
-// SetObject sets the value of Object.
 func (s *CreateEditResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetCreated sets the value of Created.
+	return
 }
 
-// SetCreated sets the value of Created.
 func (s *CreateEditResponse) SetCreated(val int) {
-	s.Created = val
+	_ = "STUB: not implemented"
+
+	// SetChoices sets the value of Choices.
+	return
 }
 
-// SetChoices sets the value of Choices.
 func (s *CreateEditResponse) SetChoices(val []CreateEditResponseChoicesItem) {
-	s.Choices = val
+	_ = "STUB: not implemented"
+
+	// SetUsage sets the value of Usage.
+	return
 }
 
-// SetUsage sets the value of Usage.
 func (s *CreateEditResponse) SetUsage(val CreateEditResponseUsage) {
-	s.Usage = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateEditResponseChoicesItem struct {
@@ -2074,42 +2414,58 @@ type CreateEditResponseChoicesItem struct {
 
 // GetText returns the value of Text.
 func (s *CreateEditResponseChoicesItem) GetText() OptString {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetIndex returns the value of Index.
+	return *new(OptString)
 }
 
-// GetIndex returns the value of Index.
 func (s *CreateEditResponseChoicesItem) GetIndex() OptInt {
-	return s.Index
+	_ = "STUB: not implemented"
+
+	// GetLogprobs returns the value of Logprobs.
+	return *new(OptInt)
 }
 
-// GetLogprobs returns the value of Logprobs.
 func (s *CreateEditResponseChoicesItem) GetLogprobs() OptNilCreateEditResponseChoicesItemLogprobs {
-	return s.Logprobs
+	_ = "STUB: not implemented"
+
+	// GetFinishReason returns the value of FinishReason.
+	return *new(OptNilCreateEditResponseChoicesItemLogprobs)
 }
 
-// GetFinishReason returns the value of FinishReason.
 func (s *CreateEditResponseChoicesItem) GetFinishReason() OptString {
-	return s.FinishReason
+	_ = "STUB: not implemented"
+	return *
+
+	// SetText sets the value of Text.
+	new(OptString)
 }
 
-// SetText sets the value of Text.
 func (s *CreateEditResponseChoicesItem) SetText(val OptString) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetIndex sets the value of Index.
+	return
 }
 
-// SetIndex sets the value of Index.
 func (s *CreateEditResponseChoicesItem) SetIndex(val OptInt) {
-	s.Index = val
+	_ = "STUB: not implemented"
+
+	// SetLogprobs sets the value of Logprobs.
+	return
 }
 
-// SetLogprobs sets the value of Logprobs.
 func (s *CreateEditResponseChoicesItem) SetLogprobs(val OptNilCreateEditResponseChoicesItemLogprobs) {
-	s.Logprobs = val
+	_ = "STUB: not implemented"
+
+	// SetFinishReason sets the value of FinishReason.
+	return
 }
 
-// SetFinishReason sets the value of FinishReason.
 func (s *CreateEditResponseChoicesItem) SetFinishReason(val OptString) {
-	s.FinishReason = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateEditResponseChoicesItemLogprobs struct {
@@ -2121,42 +2477,57 @@ type CreateEditResponseChoicesItemLogprobs struct {
 
 // GetTokens returns the value of Tokens.
 func (s *CreateEditResponseChoicesItemLogprobs) GetTokens() []string {
-	return s.Tokens
+	_ = "STUB: not implemented"
+
+	// GetTokenLogprobs returns the value of TokenLogprobs.
+	return nil
 }
 
-// GetTokenLogprobs returns the value of TokenLogprobs.
 func (s *CreateEditResponseChoicesItemLogprobs) GetTokenLogprobs() []float64 {
-	return s.TokenLogprobs
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetTopLogprobs returns the value of TopLogprobs.
 }
 
-// GetTopLogprobs returns the value of TopLogprobs.
 func (s *CreateEditResponseChoicesItemLogprobs) GetTopLogprobs() []CreateEditResponseChoicesItemLogprobsTopLogprobsItem {
-	return s.TopLogprobs
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetTextOffset returns the value of TextOffset.
 }
 
-// GetTextOffset returns the value of TextOffset.
 func (s *CreateEditResponseChoicesItemLogprobs) GetTextOffset() []int {
-	return s.TextOffset
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetTokens sets the value of Tokens.
 }
 
-// SetTokens sets the value of Tokens.
 func (s *CreateEditResponseChoicesItemLogprobs) SetTokens(val []string) {
-	s.Tokens = val
+	_ = "STUB: not implemented"
+
+	// SetTokenLogprobs sets the value of TokenLogprobs.
+	return
 }
 
-// SetTokenLogprobs sets the value of TokenLogprobs.
 func (s *CreateEditResponseChoicesItemLogprobs) SetTokenLogprobs(val []float64) {
-	s.TokenLogprobs = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTopLogprobs sets the value of TopLogprobs.
 }
 
-// SetTopLogprobs sets the value of TopLogprobs.
 func (s *CreateEditResponseChoicesItemLogprobs) SetTopLogprobs(val []CreateEditResponseChoicesItemLogprobsTopLogprobsItem) {
-	s.TopLogprobs = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTextOffset sets the value of TextOffset.
 }
 
-// SetTextOffset sets the value of TextOffset.
 func (s *CreateEditResponseChoicesItemLogprobs) SetTextOffset(val []int) {
-	s.TextOffset = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateEditResponseChoicesItemLogprobsTopLogprobsItem struct{}
@@ -2168,34 +2539,22 @@ type CreateEditResponseUsage struct {
 }
 
 // GetPromptTokens returns the value of PromptTokens.
-func (s *CreateEditResponseUsage) GetPromptTokens() int {
-	return s.PromptTokens
-}
+func (s *CreateEditResponseUsage) GetPromptTokens() int { _ = "STUB: not implemented"; return 0 }
 
 // GetCompletionTokens returns the value of CompletionTokens.
-func (s *CreateEditResponseUsage) GetCompletionTokens() int {
-	return s.CompletionTokens
-}
+func (s *CreateEditResponseUsage) GetCompletionTokens() int { _ = "STUB: not implemented"; return 0 }
 
 // GetTotalTokens returns the value of TotalTokens.
-func (s *CreateEditResponseUsage) GetTotalTokens() int {
-	return s.TotalTokens
-}
+func (s *CreateEditResponseUsage) GetTotalTokens() int { _ = "STUB: not implemented"; return 0 }
 
 // SetPromptTokens sets the value of PromptTokens.
-func (s *CreateEditResponseUsage) SetPromptTokens(val int) {
-	s.PromptTokens = val
-}
+func (s *CreateEditResponseUsage) SetPromptTokens(val int) { _ = "STUB: not implemented"; return }
 
 // SetCompletionTokens sets the value of CompletionTokens.
-func (s *CreateEditResponseUsage) SetCompletionTokens(val int) {
-	s.CompletionTokens = val
-}
+func (s *CreateEditResponseUsage) SetCompletionTokens(val int) { _ = "STUB: not implemented"; return }
 
 // SetTotalTokens sets the value of TotalTokens.
-func (s *CreateEditResponseUsage) SetTotalTokens(val int) {
-	s.TotalTokens = val
-}
+func (s *CreateEditResponseUsage) SetTotalTokens(val int) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/CreateEmbeddingRequest
 type CreateEmbeddingRequest struct {
@@ -2214,38 +2573,50 @@ type CreateEmbeddingRequest struct {
 
 // GetModel returns the value of Model.
 func (s *CreateEmbeddingRequest) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetInput returns the value of Input.
+	return ""
 }
 
-// GetInput returns the value of Input.
 func (s *CreateEmbeddingRequest) GetInput() CreateEmbeddingRequestInput {
-	return s.Input
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return *new(CreateEmbeddingRequestInput)
 }
 
-// GetUser returns the value of User.
 func (s *CreateEmbeddingRequest) GetUser() OptString {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return *new(OptString)
 }
 
-// SetModel sets the value of Model.
 func (s *CreateEmbeddingRequest) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetInput sets the value of Input.
+	return
 }
 
-// SetInput sets the value of Input.
 func (s *CreateEmbeddingRequest) SetInput(val CreateEmbeddingRequestInput) {
-	s.Input = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *CreateEmbeddingRequest) SetUser(val OptString) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// Input text to get embeddings for, encoded as a string or array of tokens. To get embeddings for
+	// multiple inputs in a single request, pass an array of strings or array of token arrays. Each input
+	// must not exceed 8192 tokens in length.
+	// CreateEmbeddingRequestInput represents sum type.
+	return
 }
 
-// Input text to get embeddings for, encoded as a string or array of tokens. To get embeddings for
-// multiple inputs in a single request, pass an array of strings or array of token arrays. Each input
-// must not exceed 8192 tokens in length.
-// CreateEmbeddingRequestInput represents sum type.
 type CreateEmbeddingRequestInput struct {
 	Type        CreateEmbeddingRequestInputType // switch on this field
 	String      string
@@ -2262,55 +2633,39 @@ const (
 )
 
 // IsString reports whether CreateEmbeddingRequestInput is string.
-func (s CreateEmbeddingRequestInput) IsString() bool {
-	return s.Type == StringCreateEmbeddingRequestInput
-}
+func (s CreateEmbeddingRequestInput) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsStringArray reports whether CreateEmbeddingRequestInput is []string.
-func (s CreateEmbeddingRequestInput) IsStringArray() bool {
-	return s.Type == StringArrayCreateEmbeddingRequestInput
-}
+func (s CreateEmbeddingRequestInput) IsStringArray() bool { _ = "STUB: not implemented"; return false }
 
 // SetString sets CreateEmbeddingRequestInput to string.
-func (s *CreateEmbeddingRequestInput) SetString(v string) {
-	s.Type = StringCreateEmbeddingRequestInput
-	s.String = v
-}
+func (s *CreateEmbeddingRequestInput) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if CreateEmbeddingRequestInput is string.
 func (s CreateEmbeddingRequestInput) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringCreateEmbeddingRequestInput returns new CreateEmbeddingRequestInput from string.
 func NewStringCreateEmbeddingRequestInput(v string) CreateEmbeddingRequestInput {
-	var s CreateEmbeddingRequestInput
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateEmbeddingRequestInput)
 }
 
 // SetStringArray sets CreateEmbeddingRequestInput to []string.
-func (s *CreateEmbeddingRequestInput) SetStringArray(v []string) {
-	s.Type = StringArrayCreateEmbeddingRequestInput
-	s.StringArray = v
-}
+func (s *CreateEmbeddingRequestInput) SetStringArray(v []string) { _ = "STUB: not implemented"; return }
 
 // GetStringArray returns []string and true boolean if CreateEmbeddingRequestInput is []string.
 func (s CreateEmbeddingRequestInput) GetStringArray() (v []string, ok bool) {
-	if !s.IsStringArray() {
-		return v, false
-	}
-	return s.StringArray, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewStringArrayCreateEmbeddingRequestInput returns new CreateEmbeddingRequestInput from []string.
 func NewStringArrayCreateEmbeddingRequestInput(v []string) CreateEmbeddingRequestInput {
-	var s CreateEmbeddingRequestInput
-	s.SetStringArray(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateEmbeddingRequestInput)
 }
 
 // Ref: #/components/schemas/CreateEmbeddingResponse
@@ -2323,42 +2678,57 @@ type CreateEmbeddingResponse struct {
 
 // GetObject returns the value of Object.
 func (s *CreateEmbeddingResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return ""
 }
 
-// GetModel returns the value of Model.
 func (s *CreateEmbeddingResponse) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetData returns the value of Data.
+	return ""
 }
 
-// GetData returns the value of Data.
 func (s *CreateEmbeddingResponse) GetData() []CreateEmbeddingResponseDataItem {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// GetUsage returns the value of Usage.
+	return nil
 }
 
-// GetUsage returns the value of Usage.
 func (s *CreateEmbeddingResponse) GetUsage() CreateEmbeddingResponseUsage {
-	return s.Usage
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return *new(CreateEmbeddingResponseUsage)
 }
 
-// SetObject sets the value of Object.
 func (s *CreateEmbeddingResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *CreateEmbeddingResponse) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return
 }
 
-// SetData sets the value of Data.
 func (s *CreateEmbeddingResponse) SetData(val []CreateEmbeddingResponseDataItem) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// SetUsage sets the value of Usage.
+	return
 }
 
-// SetUsage sets the value of Usage.
 func (s *CreateEmbeddingResponse) SetUsage(val CreateEmbeddingResponseUsage) {
-	s.Usage = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateEmbeddingResponseDataItem struct {
@@ -2369,32 +2739,43 @@ type CreateEmbeddingResponseDataItem struct {
 
 // GetIndex returns the value of Index.
 func (s *CreateEmbeddingResponseDataItem) GetIndex() int {
-	return s.Index
+	_ = "STUB: not implemented"
+
+	// GetObject returns the value of Object.
+	return 0
 }
 
-// GetObject returns the value of Object.
 func (s *CreateEmbeddingResponseDataItem) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetEmbedding returns the value of Embedding.
+	return ""
 }
 
-// GetEmbedding returns the value of Embedding.
 func (s *CreateEmbeddingResponseDataItem) GetEmbedding() []float64 {
-	return s.Embedding
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetIndex sets the value of Index.
 }
 
-// SetIndex sets the value of Index.
 func (s *CreateEmbeddingResponseDataItem) SetIndex(val int) {
-	s.Index = val
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return
 }
 
-// SetObject sets the value of Object.
 func (s *CreateEmbeddingResponseDataItem) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetEmbedding sets the value of Embedding.
+	return
 }
 
-// SetEmbedding sets the value of Embedding.
 func (s *CreateEmbeddingResponseDataItem) SetEmbedding(val []float64) {
-	s.Embedding = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateEmbeddingResponseUsage struct {
@@ -2403,24 +2784,16 @@ type CreateEmbeddingResponseUsage struct {
 }
 
 // GetPromptTokens returns the value of PromptTokens.
-func (s *CreateEmbeddingResponseUsage) GetPromptTokens() int {
-	return s.PromptTokens
-}
+func (s *CreateEmbeddingResponseUsage) GetPromptTokens() int { _ = "STUB: not implemented"; return 0 }
 
 // GetTotalTokens returns the value of TotalTokens.
-func (s *CreateEmbeddingResponseUsage) GetTotalTokens() int {
-	return s.TotalTokens
-}
+func (s *CreateEmbeddingResponseUsage) GetTotalTokens() int { _ = "STUB: not implemented"; return 0 }
 
 // SetPromptTokens sets the value of PromptTokens.
-func (s *CreateEmbeddingResponseUsage) SetPromptTokens(val int) {
-	s.PromptTokens = val
-}
+func (s *CreateEmbeddingResponseUsage) SetPromptTokens(val int) { _ = "STUB: not implemented"; return }
 
 // SetTotalTokens sets the value of TotalTokens.
-func (s *CreateEmbeddingResponseUsage) SetTotalTokens(val int) {
-	s.TotalTokens = val
-}
+func (s *CreateEmbeddingResponseUsage) SetTotalTokens(val int) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/CreateFileRequest
 type CreateFileRequestMultipart struct {
@@ -2436,25 +2809,33 @@ type CreateFileRequestMultipart struct {
 
 // GetFile returns the value of File.
 func (s *CreateFileRequestMultipart) GetFile() ht.MultipartFile {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// GetPurpose returns the value of Purpose.
+	return *new(ht.MultipartFile)
 }
 
-// GetPurpose returns the value of Purpose.
 func (s *CreateFileRequestMultipart) GetPurpose() string {
-	return s.Purpose
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return ""
 }
 
-// SetFile sets the value of File.
 func (s *CreateFileRequestMultipart) SetFile(val ht.MultipartFile) {
-	s.File = val
+	_ = "STUB: not implemented"
+
+	// SetPurpose sets the value of Purpose.
+	return
 }
 
-// SetPurpose sets the value of Purpose.
 func (s *CreateFileRequestMultipart) SetPurpose(val string) {
-	s.Purpose = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/CreateFineTuneRequest
+	return
 }
 
-// Ref: #/components/schemas/CreateFineTuneRequest
 type CreateFineTuneRequest struct {
 	// The ID of an uploaded file that contains training data.
 	// See [upload file](/docs/api-reference/files/upload) for how to upload a file.
@@ -2536,126 +2917,156 @@ type CreateFineTuneRequest struct {
 }
 
 // GetTrainingFile returns the value of TrainingFile.
-func (s *CreateFineTuneRequest) GetTrainingFile() string {
-	return s.TrainingFile
-}
+func (s *CreateFineTuneRequest) GetTrainingFile() string { _ = "STUB: not implemented"; return "" }
 
 // GetValidationFile returns the value of ValidationFile.
 func (s *CreateFineTuneRequest) GetValidationFile() OptNilString {
-	return s.ValidationFile
+	_ = "STUB: not implemented"
+	return *
+
+	// GetModel returns the value of Model.
+	new(OptNilString)
 }
 
-// GetModel returns the value of Model.
 func (s *CreateFineTuneRequest) GetModel() OptNilString {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetNEpochs returns the value of NEpochs.
+	return *new(OptNilString)
 }
 
-// GetNEpochs returns the value of NEpochs.
 func (s *CreateFineTuneRequest) GetNEpochs() OptNilInt {
-	return s.NEpochs
+	_ = "STUB: not implemented"
+
+	// GetBatchSize returns the value of BatchSize.
+	return *new(OptNilInt)
 }
 
-// GetBatchSize returns the value of BatchSize.
 func (s *CreateFineTuneRequest) GetBatchSize() OptNilInt {
-	return s.BatchSize
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLearningRateMultiplier returns the value of LearningRateMultiplier.
+	new(OptNilInt)
 }
 
-// GetLearningRateMultiplier returns the value of LearningRateMultiplier.
 func (s *CreateFineTuneRequest) GetLearningRateMultiplier() OptNilFloat64 {
-	return s.LearningRateMultiplier
+	_ = "STUB: not implemented"
+	return *new(OptNilFloat64)
 }
 
 // GetPromptLossWeight returns the value of PromptLossWeight.
 func (s *CreateFineTuneRequest) GetPromptLossWeight() OptNilFloat64 {
-	return s.PromptLossWeight
+	_ = "STUB: not implemented"
+	return *new(OptNilFloat64)
 }
 
 // GetComputeClassificationMetrics returns the value of ComputeClassificationMetrics.
 func (s *CreateFineTuneRequest) GetComputeClassificationMetrics() OptNilBool {
-	return s.ComputeClassificationMetrics
+	_ = "STUB: not implemented"
+	return *new(OptNilBool)
 }
 
 // GetClassificationNClasses returns the value of ClassificationNClasses.
 func (s *CreateFineTuneRequest) GetClassificationNClasses() OptNilInt {
-	return s.ClassificationNClasses
+	_ = "STUB: not implemented"
+	return *new(OptNilInt)
 }
 
 // GetClassificationPositiveClass returns the value of ClassificationPositiveClass.
 func (s *CreateFineTuneRequest) GetClassificationPositiveClass() OptNilString {
-	return s.ClassificationPositiveClass
+	_ = "STUB: not implemented"
+	return *new(OptNilString)
 }
 
 // GetClassificationBetas returns the value of ClassificationBetas.
 func (s *CreateFineTuneRequest) GetClassificationBetas() OptNilFloat64Array {
-	return s.ClassificationBetas
+	_ = "STUB: not implemented"
+	return *new(OptNilFloat64Array)
 }
 
 // GetSuffix returns the value of Suffix.
 func (s *CreateFineTuneRequest) GetSuffix() OptNilString {
-	return s.Suffix
+	_ = "STUB: not implemented"
+
+	// SetTrainingFile sets the value of TrainingFile.
+	return *new(OptNilString)
 }
 
-// SetTrainingFile sets the value of TrainingFile.
-func (s *CreateFineTuneRequest) SetTrainingFile(val string) {
-	s.TrainingFile = val
-}
+func (s *CreateFineTuneRequest) SetTrainingFile(val string) { _ = "STUB: not implemented"; return }
 
 // SetValidationFile sets the value of ValidationFile.
 func (s *CreateFineTuneRequest) SetValidationFile(val OptNilString) {
-	s.ValidationFile = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetModel sets the value of Model.
 }
 
-// SetModel sets the value of Model.
 func (s *CreateFineTuneRequest) SetModel(val OptNilString) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetNEpochs sets the value of NEpochs.
+	return
 }
 
-// SetNEpochs sets the value of NEpochs.
 func (s *CreateFineTuneRequest) SetNEpochs(val OptNilInt) {
-	s.NEpochs = val
+	_ = "STUB: not implemented"
+
+	// SetBatchSize sets the value of BatchSize.
+	return
 }
 
-// SetBatchSize sets the value of BatchSize.
 func (s *CreateFineTuneRequest) SetBatchSize(val OptNilInt) {
-	s.BatchSize = val
+	_ = "STUB: not implemented"
+
+	// SetLearningRateMultiplier sets the value of LearningRateMultiplier.
+	return
 }
 
-// SetLearningRateMultiplier sets the value of LearningRateMultiplier.
 func (s *CreateFineTuneRequest) SetLearningRateMultiplier(val OptNilFloat64) {
-	s.LearningRateMultiplier = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetPromptLossWeight sets the value of PromptLossWeight.
 func (s *CreateFineTuneRequest) SetPromptLossWeight(val OptNilFloat64) {
-	s.PromptLossWeight = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetComputeClassificationMetrics sets the value of ComputeClassificationMetrics.
 func (s *CreateFineTuneRequest) SetComputeClassificationMetrics(val OptNilBool) {
-	s.ComputeClassificationMetrics = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetClassificationNClasses sets the value of ClassificationNClasses.
 func (s *CreateFineTuneRequest) SetClassificationNClasses(val OptNilInt) {
-	s.ClassificationNClasses = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetClassificationPositiveClass sets the value of ClassificationPositiveClass.
 func (s *CreateFineTuneRequest) SetClassificationPositiveClass(val OptNilString) {
-	s.ClassificationPositiveClass = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetClassificationBetas sets the value of ClassificationBetas.
 func (s *CreateFineTuneRequest) SetClassificationBetas(val OptNilFloat64Array) {
-	s.ClassificationBetas = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetSuffix sets the value of Suffix.
 func (s *CreateFineTuneRequest) SetSuffix(val OptNilString) {
-	s.Suffix = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/CreateImageEditRequest
+	return
 }
 
-// Ref: #/components/schemas/CreateImageEditRequest
 type CreateImageEditRequestMultipart struct {
 	// The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided,
 	// image must have transparency, which will be used as the mask.
@@ -2679,75 +3090,104 @@ type CreateImageEditRequestMultipart struct {
 
 // GetImage returns the value of Image.
 func (s *CreateImageEditRequestMultipart) GetImage() ht.MultipartFile {
-	return s.Image
+	_ = "STUB: not implemented"
+
+	// GetMask returns the value of Mask.
+	return *new(ht.MultipartFile)
 }
 
-// GetMask returns the value of Mask.
 func (s *CreateImageEditRequestMultipart) GetMask() OptMultipartFile {
-	return s.Mask
+	_ = "STUB: not implemented"
+
+	// GetPrompt returns the value of Prompt.
+	return *new(OptMultipartFile)
 }
 
-// GetPrompt returns the value of Prompt.
 func (s *CreateImageEditRequestMultipart) GetPrompt() string {
-	return s.Prompt
+	_ = "STUB: not implemented"
+
+	// GetN returns the value of N.
+	return ""
 }
 
-// GetN returns the value of N.
 func (s *CreateImageEditRequestMultipart) GetN() OptNilInt {
-	return s.N
+	_ = "STUB: not implemented"
+
+	// GetSize returns the value of Size.
+	return *new(OptNilInt)
 }
 
-// GetSize returns the value of Size.
 func (s *CreateImageEditRequestMultipart) GetSize() OptNilCreateImageEditRequestMultipartSize {
-	return s.Size
+	_ = "STUB: not implemented"
+
+	// GetResponseFormat returns the value of ResponseFormat.
+	return *new(OptNilCreateImageEditRequestMultipartSize)
 }
 
-// GetResponseFormat returns the value of ResponseFormat.
 func (s *CreateImageEditRequestMultipart) GetResponseFormat() OptNilCreateImageEditRequestMultipartResponseFormat {
-	return s.ResponseFormat
+	_ = "STUB: not implemented"
+	return *
+
+	// GetUser returns the value of User.
+	new(OptNilCreateImageEditRequestMultipartResponseFormat)
 }
 
-// GetUser returns the value of User.
 func (s *CreateImageEditRequestMultipart) GetUser() OptString {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetImage sets the value of Image.
+	return *new(OptString)
 }
 
-// SetImage sets the value of Image.
 func (s *CreateImageEditRequestMultipart) SetImage(val ht.MultipartFile) {
-	s.Image = val
+	_ = "STUB: not implemented"
+
+	// SetMask sets the value of Mask.
+	return
 }
 
-// SetMask sets the value of Mask.
 func (s *CreateImageEditRequestMultipart) SetMask(val OptMultipartFile) {
-	s.Mask = val
+	_ = "STUB: not implemented"
+
+	// SetPrompt sets the value of Prompt.
+	return
 }
 
-// SetPrompt sets the value of Prompt.
 func (s *CreateImageEditRequestMultipart) SetPrompt(val string) {
-	s.Prompt = val
+	_ = "STUB: not implemented"
+
+	// SetN sets the value of N.
+	return
 }
 
-// SetN sets the value of N.
 func (s *CreateImageEditRequestMultipart) SetN(val OptNilInt) {
-	s.N = val
+	_ = "STUB: not implemented"
+
+	// SetSize sets the value of Size.
+	return
 }
 
-// SetSize sets the value of Size.
 func (s *CreateImageEditRequestMultipart) SetSize(val OptNilCreateImageEditRequestMultipartSize) {
-	s.Size = val
+	_ = "STUB: not implemented"
+
+	// SetResponseFormat sets the value of ResponseFormat.
+	return
 }
 
-// SetResponseFormat sets the value of ResponseFormat.
 func (s *CreateImageEditRequestMultipart) SetResponseFormat(val OptNilCreateImageEditRequestMultipartResponseFormat) {
-	s.ResponseFormat = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetUser sets the value of User.
 }
 
-// SetUser sets the value of User.
 func (s *CreateImageEditRequestMultipart) SetUser(val OptString) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// The format in which the generated images are returned. Must be one of `url` or `b64_json`.
+	return
 }
 
-// The format in which the generated images are returned. Must be one of `url` or `b64_json`.
 type CreateImageEditRequestMultipartResponseFormat string
 
 const (
@@ -2757,36 +3197,20 @@ const (
 
 // AllValues returns all CreateImageEditRequestMultipartResponseFormat values.
 func (CreateImageEditRequestMultipartResponseFormat) AllValues() []CreateImageEditRequestMultipartResponseFormat {
-	return []CreateImageEditRequestMultipartResponseFormat{
-		CreateImageEditRequestMultipartResponseFormatURL,
-		CreateImageEditRequestMultipartResponseFormatB64JSON,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s CreateImageEditRequestMultipartResponseFormat) MarshalText() ([]byte, error) {
-	switch s {
-	case CreateImageEditRequestMultipartResponseFormatURL:
-		return []byte(s), nil
-	case CreateImageEditRequestMultipartResponseFormatB64JSON:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *CreateImageEditRequestMultipartResponseFormat) UnmarshalText(data []byte) error {
-	switch CreateImageEditRequestMultipartResponseFormat(data) {
-	case CreateImageEditRequestMultipartResponseFormatURL:
-		*s = CreateImageEditRequestMultipartResponseFormatURL
-		return nil
-	case CreateImageEditRequestMultipartResponseFormatB64JSON:
-		*s = CreateImageEditRequestMultipartResponseFormatB64JSON
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
@@ -2800,42 +3224,20 @@ const (
 
 // AllValues returns all CreateImageEditRequestMultipartSize values.
 func (CreateImageEditRequestMultipartSize) AllValues() []CreateImageEditRequestMultipartSize {
-	return []CreateImageEditRequestMultipartSize{
-		CreateImageEditRequestMultipartSize256x256,
-		CreateImageEditRequestMultipartSize512x512,
-		CreateImageEditRequestMultipartSize1024x1024,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s CreateImageEditRequestMultipartSize) MarshalText() ([]byte, error) {
-	switch s {
-	case CreateImageEditRequestMultipartSize256x256:
-		return []byte(s), nil
-	case CreateImageEditRequestMultipartSize512x512:
-		return []byte(s), nil
-	case CreateImageEditRequestMultipartSize1024x1024:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *CreateImageEditRequestMultipartSize) UnmarshalText(data []byte) error {
-	switch CreateImageEditRequestMultipartSize(data) {
-	case CreateImageEditRequestMultipartSize256x256:
-		*s = CreateImageEditRequestMultipartSize256x256
-		return nil
-	case CreateImageEditRequestMultipartSize512x512:
-		*s = CreateImageEditRequestMultipartSize512x512
-		return nil
-	case CreateImageEditRequestMultipartSize1024x1024:
-		*s = CreateImageEditRequestMultipartSize1024x1024
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/CreateImageRequest
@@ -2855,55 +3257,76 @@ type CreateImageRequest struct {
 
 // GetPrompt returns the value of Prompt.
 func (s *CreateImageRequest) GetPrompt() string {
-	return s.Prompt
+	_ = "STUB: not implemented"
+
+	// GetN returns the value of N.
+	return ""
 }
 
-// GetN returns the value of N.
 func (s *CreateImageRequest) GetN() OptNilInt {
-	return s.N
+	_ = "STUB: not implemented"
+
+	// GetSize returns the value of Size.
+	return *new(OptNilInt)
 }
 
-// GetSize returns the value of Size.
 func (s *CreateImageRequest) GetSize() OptNilCreateImageRequestSize {
-	return s.Size
+	_ = "STUB: not implemented"
+
+	// GetResponseFormat returns the value of ResponseFormat.
+	return *new(OptNilCreateImageRequestSize)
 }
 
-// GetResponseFormat returns the value of ResponseFormat.
 func (s *CreateImageRequest) GetResponseFormat() OptNilCreateImageRequestResponseFormat {
-	return s.ResponseFormat
+	_ = "STUB: not implemented"
+	return *
+
+	// GetUser returns the value of User.
+	new(OptNilCreateImageRequestResponseFormat)
 }
 
-// GetUser returns the value of User.
 func (s *CreateImageRequest) GetUser() OptString {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetPrompt sets the value of Prompt.
+	return *new(OptString)
 }
 
-// SetPrompt sets the value of Prompt.
 func (s *CreateImageRequest) SetPrompt(val string) {
-	s.Prompt = val
+	_ = "STUB: not implemented"
+
+	// SetN sets the value of N.
+	return
 }
 
-// SetN sets the value of N.
 func (s *CreateImageRequest) SetN(val OptNilInt) {
-	s.N = val
+	_ = "STUB: not implemented"
+
+	// SetSize sets the value of Size.
+	return
 }
 
-// SetSize sets the value of Size.
 func (s *CreateImageRequest) SetSize(val OptNilCreateImageRequestSize) {
-	s.Size = val
+	_ = "STUB: not implemented"
+
+	// SetResponseFormat sets the value of ResponseFormat.
+	return
 }
 
-// SetResponseFormat sets the value of ResponseFormat.
 func (s *CreateImageRequest) SetResponseFormat(val OptNilCreateImageRequestResponseFormat) {
-	s.ResponseFormat = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetUser sets the value of User.
 }
 
-// SetUser sets the value of User.
 func (s *CreateImageRequest) SetUser(val OptString) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// The format in which the generated images are returned. Must be one of `url` or `b64_json`.
+	return
 }
 
-// The format in which the generated images are returned. Must be one of `url` or `b64_json`.
 type CreateImageRequestResponseFormat string
 
 const (
@@ -2913,36 +3336,20 @@ const (
 
 // AllValues returns all CreateImageRequestResponseFormat values.
 func (CreateImageRequestResponseFormat) AllValues() []CreateImageRequestResponseFormat {
-	return []CreateImageRequestResponseFormat{
-		CreateImageRequestResponseFormatURL,
-		CreateImageRequestResponseFormatB64JSON,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s CreateImageRequestResponseFormat) MarshalText() ([]byte, error) {
-	switch s {
-	case CreateImageRequestResponseFormatURL:
-		return []byte(s), nil
-	case CreateImageRequestResponseFormatB64JSON:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *CreateImageRequestResponseFormat) UnmarshalText(data []byte) error {
-	switch CreateImageRequestResponseFormat(data) {
-	case CreateImageRequestResponseFormatURL:
-		*s = CreateImageRequestResponseFormatURL
-		return nil
-	case CreateImageRequestResponseFormatB64JSON:
-		*s = CreateImageRequestResponseFormatB64JSON
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
@@ -2956,42 +3363,20 @@ const (
 
 // AllValues returns all CreateImageRequestSize values.
 func (CreateImageRequestSize) AllValues() []CreateImageRequestSize {
-	return []CreateImageRequestSize{
-		CreateImageRequestSize256x256,
-		CreateImageRequestSize512x512,
-		CreateImageRequestSize1024x1024,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s CreateImageRequestSize) MarshalText() ([]byte, error) {
-	switch s {
-	case CreateImageRequestSize256x256:
-		return []byte(s), nil
-	case CreateImageRequestSize512x512:
-		return []byte(s), nil
-	case CreateImageRequestSize1024x1024:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *CreateImageRequestSize) UnmarshalText(data []byte) error {
-	switch CreateImageRequestSize(data) {
-	case CreateImageRequestSize256x256:
-		*s = CreateImageRequestSize256x256
-		return nil
-	case CreateImageRequestSize512x512:
-		*s = CreateImageRequestSize512x512
-		return nil
-	case CreateImageRequestSize1024x1024:
-		*s = CreateImageRequestSize1024x1024
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/CreateImageVariationRequest
@@ -3012,55 +3397,76 @@ type CreateImageVariationRequestMultipart struct {
 
 // GetImage returns the value of Image.
 func (s *CreateImageVariationRequestMultipart) GetImage() ht.MultipartFile {
-	return s.Image
+	_ = "STUB: not implemented"
+
+	// GetN returns the value of N.
+	return *new(ht.MultipartFile)
 }
 
-// GetN returns the value of N.
 func (s *CreateImageVariationRequestMultipart) GetN() OptNilInt {
-	return s.N
+	_ = "STUB: not implemented"
+
+	// GetSize returns the value of Size.
+	return *new(OptNilInt)
 }
 
-// GetSize returns the value of Size.
 func (s *CreateImageVariationRequestMultipart) GetSize() OptNilCreateImageVariationRequestMultipartSize {
-	return s.Size
+	_ = "STUB: not implemented"
+
+	// GetResponseFormat returns the value of ResponseFormat.
+	return *new(OptNilCreateImageVariationRequestMultipartSize)
 }
 
-// GetResponseFormat returns the value of ResponseFormat.
 func (s *CreateImageVariationRequestMultipart) GetResponseFormat() OptNilCreateImageVariationRequestMultipartResponseFormat {
-	return s.ResponseFormat
+	_ = "STUB: not implemented"
+	return *
+
+	// GetUser returns the value of User.
+	new(OptNilCreateImageVariationRequestMultipartResponseFormat)
 }
 
-// GetUser returns the value of User.
 func (s *CreateImageVariationRequestMultipart) GetUser() OptString {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetImage sets the value of Image.
+	return *new(OptString)
 }
 
-// SetImage sets the value of Image.
 func (s *CreateImageVariationRequestMultipart) SetImage(val ht.MultipartFile) {
-	s.Image = val
+	_ = "STUB: not implemented"
+
+	// SetN sets the value of N.
+	return
 }
 
-// SetN sets the value of N.
 func (s *CreateImageVariationRequestMultipart) SetN(val OptNilInt) {
-	s.N = val
+	_ = "STUB: not implemented"
+
+	// SetSize sets the value of Size.
+	return
 }
 
-// SetSize sets the value of Size.
 func (s *CreateImageVariationRequestMultipart) SetSize(val OptNilCreateImageVariationRequestMultipartSize) {
-	s.Size = val
+	_ = "STUB: not implemented"
+
+	// SetResponseFormat sets the value of ResponseFormat.
+	return
 }
 
-// SetResponseFormat sets the value of ResponseFormat.
 func (s *CreateImageVariationRequestMultipart) SetResponseFormat(val OptNilCreateImageVariationRequestMultipartResponseFormat) {
-	s.ResponseFormat = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetUser sets the value of User.
 }
 
-// SetUser sets the value of User.
 func (s *CreateImageVariationRequestMultipart) SetUser(val OptString) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// The format in which the generated images are returned. Must be one of `url` or `b64_json`.
+	return
 }
 
-// The format in which the generated images are returned. Must be one of `url` or `b64_json`.
 type CreateImageVariationRequestMultipartResponseFormat string
 
 const (
@@ -3070,36 +3476,20 @@ const (
 
 // AllValues returns all CreateImageVariationRequestMultipartResponseFormat values.
 func (CreateImageVariationRequestMultipartResponseFormat) AllValues() []CreateImageVariationRequestMultipartResponseFormat {
-	return []CreateImageVariationRequestMultipartResponseFormat{
-		CreateImageVariationRequestMultipartResponseFormatURL,
-		CreateImageVariationRequestMultipartResponseFormatB64JSON,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s CreateImageVariationRequestMultipartResponseFormat) MarshalText() ([]byte, error) {
-	switch s {
-	case CreateImageVariationRequestMultipartResponseFormatURL:
-		return []byte(s), nil
-	case CreateImageVariationRequestMultipartResponseFormatB64JSON:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *CreateImageVariationRequestMultipartResponseFormat) UnmarshalText(data []byte) error {
-	switch CreateImageVariationRequestMultipartResponseFormat(data) {
-	case CreateImageVariationRequestMultipartResponseFormatURL:
-		*s = CreateImageVariationRequestMultipartResponseFormatURL
-		return nil
-	case CreateImageVariationRequestMultipartResponseFormatB64JSON:
-		*s = CreateImageVariationRequestMultipartResponseFormatB64JSON
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // The size of the generated images. Must be one of `256x256`, `512x512`, or `1024x1024`.
@@ -3113,42 +3503,20 @@ const (
 
 // AllValues returns all CreateImageVariationRequestMultipartSize values.
 func (CreateImageVariationRequestMultipartSize) AllValues() []CreateImageVariationRequestMultipartSize {
-	return []CreateImageVariationRequestMultipartSize{
-		CreateImageVariationRequestMultipartSize256x256,
-		CreateImageVariationRequestMultipartSize512x512,
-		CreateImageVariationRequestMultipartSize1024x1024,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s CreateImageVariationRequestMultipartSize) MarshalText() ([]byte, error) {
-	switch s {
-	case CreateImageVariationRequestMultipartSize256x256:
-		return []byte(s), nil
-	case CreateImageVariationRequestMultipartSize512x512:
-		return []byte(s), nil
-	case CreateImageVariationRequestMultipartSize1024x1024:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *CreateImageVariationRequestMultipartSize) UnmarshalText(data []byte) error {
-	switch CreateImageVariationRequestMultipartSize(data) {
-	case CreateImageVariationRequestMultipartSize256x256:
-		*s = CreateImageVariationRequestMultipartSize256x256
-		return nil
-	case CreateImageVariationRequestMultipartSize512x512:
-		*s = CreateImageVariationRequestMultipartSize512x512
-		return nil
-	case CreateImageVariationRequestMultipartSize1024x1024:
-		*s = CreateImageVariationRequestMultipartSize1024x1024
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/CreateModerationRequest
@@ -3166,26 +3534,34 @@ type CreateModerationRequest struct {
 
 // GetInput returns the value of Input.
 func (s *CreateModerationRequest) GetInput() CreateModerationRequestInput {
-	return s.Input
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return *new(CreateModerationRequestInput)
 }
 
-// GetModel returns the value of Model.
 func (s *CreateModerationRequest) GetModel() OptString {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// SetInput sets the value of Input.
+	return *new(OptString)
 }
 
-// SetInput sets the value of Input.
 func (s *CreateModerationRequest) SetInput(val CreateModerationRequestInput) {
-	s.Input = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *CreateModerationRequest) SetModel(val OptString) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// The input text to classify.
+	// CreateModerationRequestInput represents sum type.
+	return
 }
 
-// The input text to classify.
-// CreateModerationRequestInput represents sum type.
 type CreateModerationRequestInput struct {
 	Type        CreateModerationRequestInputType // switch on this field
 	String      string
@@ -3202,55 +3578,42 @@ const (
 )
 
 // IsString reports whether CreateModerationRequestInput is string.
-func (s CreateModerationRequestInput) IsString() bool {
-	return s.Type == StringCreateModerationRequestInput
-}
+func (s CreateModerationRequestInput) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsStringArray reports whether CreateModerationRequestInput is []string.
-func (s CreateModerationRequestInput) IsStringArray() bool {
-	return s.Type == StringArrayCreateModerationRequestInput
-}
+func (s CreateModerationRequestInput) IsStringArray() bool { _ = "STUB: not implemented"; return false }
 
 // SetString sets CreateModerationRequestInput to string.
-func (s *CreateModerationRequestInput) SetString(v string) {
-	s.Type = StringCreateModerationRequestInput
-	s.String = v
-}
+func (s *CreateModerationRequestInput) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if CreateModerationRequestInput is string.
 func (s CreateModerationRequestInput) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringCreateModerationRequestInput returns new CreateModerationRequestInput from string.
 func NewStringCreateModerationRequestInput(v string) CreateModerationRequestInput {
-	var s CreateModerationRequestInput
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateModerationRequestInput)
 }
 
 // SetStringArray sets CreateModerationRequestInput to []string.
 func (s *CreateModerationRequestInput) SetStringArray(v []string) {
-	s.Type = StringArrayCreateModerationRequestInput
-	s.StringArray = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetStringArray returns []string and true boolean if CreateModerationRequestInput is []string.
 func (s CreateModerationRequestInput) GetStringArray() (v []string, ok bool) {
-	if !s.IsStringArray() {
-		return v, false
-	}
-	return s.StringArray, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // NewStringArrayCreateModerationRequestInput returns new CreateModerationRequestInput from []string.
 func NewStringArrayCreateModerationRequestInput(v []string) CreateModerationRequestInput {
-	var s CreateModerationRequestInput
-	s.SetStringArray(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CreateModerationRequestInput)
 }
 
 // Ref: #/components/schemas/CreateModerationResponse
@@ -3262,32 +3625,43 @@ type CreateModerationResponse struct {
 
 // GetID returns the value of ID.
 func (s *CreateModerationResponse) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return ""
 }
 
-// GetModel returns the value of Model.
 func (s *CreateModerationResponse) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetResults returns the value of Results.
+	return ""
 }
 
-// GetResults returns the value of Results.
 func (s *CreateModerationResponse) GetResults() []CreateModerationResponseResultsItem {
-	return s.Results
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return nil
 }
 
-// SetID sets the value of ID.
 func (s *CreateModerationResponse) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *CreateModerationResponse) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetResults sets the value of Results.
+	return
 }
 
-// SetResults sets the value of Results.
 func (s *CreateModerationResponse) SetResults(val []CreateModerationResponseResultsItem) {
-	s.Results = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateModerationResponseResultsItem struct {
@@ -3298,32 +3672,45 @@ type CreateModerationResponseResultsItem struct {
 
 // GetFlagged returns the value of Flagged.
 func (s *CreateModerationResponseResultsItem) GetFlagged() bool {
-	return s.Flagged
+	_ = "STUB: not implemented"
+
+	// GetCategories returns the value of Categories.
+	return false
 }
 
-// GetCategories returns the value of Categories.
 func (s *CreateModerationResponseResultsItem) GetCategories() CreateModerationResponseResultsItemCategories {
-	return s.Categories
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCategoryScores returns the value of CategoryScores.
+	new(CreateModerationResponseResultsItemCategories)
 }
 
-// GetCategoryScores returns the value of CategoryScores.
 func (s *CreateModerationResponseResultsItem) GetCategoryScores() CreateModerationResponseResultsItemCategoryScores {
-	return s.CategoryScores
+	_ = "STUB: not implemented"
+	return *
+
+	// SetFlagged sets the value of Flagged.
+	new(CreateModerationResponseResultsItemCategoryScores)
 }
 
-// SetFlagged sets the value of Flagged.
 func (s *CreateModerationResponseResultsItem) SetFlagged(val bool) {
-	s.Flagged = val
+	_ = "STUB: not implemented"
+
+	// SetCategories sets the value of Categories.
+	return
 }
 
-// SetCategories sets the value of Categories.
 func (s *CreateModerationResponseResultsItem) SetCategories(val CreateModerationResponseResultsItemCategories) {
-	s.Categories = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetCategoryScores sets the value of CategoryScores.
 }
 
-// SetCategoryScores sets the value of CategoryScores.
 func (s *CreateModerationResponseResultsItem) SetCategoryScores(val CreateModerationResponseResultsItemCategoryScores) {
-	s.CategoryScores = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateModerationResponseResultsItemCategories struct {
@@ -3338,72 +3725,95 @@ type CreateModerationResponseResultsItemCategories struct {
 
 // GetHate returns the value of Hate.
 func (s *CreateModerationResponseResultsItemCategories) GetHate() bool {
-	return s.Hate
+	_ = "STUB: not implemented"
+
+	// GetHateSlashThreatening returns the value of HateSlashThreatening.
+	return false
 }
 
-// GetHateSlashThreatening returns the value of HateSlashThreatening.
 func (s *CreateModerationResponseResultsItemCategories) GetHateSlashThreatening() bool {
-	return s.HateSlashThreatening
+	_ = "STUB: not implemented"
+	return false
 }
 
 // GetSelfMinusHarm returns the value of SelfMinusHarm.
 func (s *CreateModerationResponseResultsItemCategories) GetSelfMinusHarm() bool {
-	return s.SelfMinusHarm
+	_ = "STUB: not implemented"
+	return false
+
+	// GetSexual returns the value of Sexual.
 }
 
-// GetSexual returns the value of Sexual.
 func (s *CreateModerationResponseResultsItemCategories) GetSexual() bool {
-	return s.Sexual
+	_ = "STUB: not implemented"
+
+	// GetSexualSlashMinors returns the value of SexualSlashMinors.
+	return false
 }
 
-// GetSexualSlashMinors returns the value of SexualSlashMinors.
 func (s *CreateModerationResponseResultsItemCategories) GetSexualSlashMinors() bool {
-	return s.SexualSlashMinors
+	_ = "STUB: not implemented"
+	return false
+
+	// GetViolence returns the value of Violence.
 }
 
-// GetViolence returns the value of Violence.
 func (s *CreateModerationResponseResultsItemCategories) GetViolence() bool {
-	return s.Violence
+	_ = "STUB: not implemented"
+
+	// GetViolenceSlashGraphic returns the value of ViolenceSlashGraphic.
+	return false
 }
 
-// GetViolenceSlashGraphic returns the value of ViolenceSlashGraphic.
 func (s *CreateModerationResponseResultsItemCategories) GetViolenceSlashGraphic() bool {
-	return s.ViolenceSlashGraphic
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetHate sets the value of Hate.
 func (s *CreateModerationResponseResultsItemCategories) SetHate(val bool) {
-	s.Hate = val
+	_ = "STUB: not implemented"
+
+	// SetHateSlashThreatening sets the value of HateSlashThreatening.
+	return
 }
 
-// SetHateSlashThreatening sets the value of HateSlashThreatening.
 func (s *CreateModerationResponseResultsItemCategories) SetHateSlashThreatening(val bool) {
-	s.HateSlashThreatening = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetSelfMinusHarm sets the value of SelfMinusHarm.
 func (s *CreateModerationResponseResultsItemCategories) SetSelfMinusHarm(val bool) {
-	s.SelfMinusHarm = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetSexual sets the value of Sexual.
 }
 
-// SetSexual sets the value of Sexual.
 func (s *CreateModerationResponseResultsItemCategories) SetSexual(val bool) {
-	s.Sexual = val
+	_ = "STUB: not implemented"
+
+	// SetSexualSlashMinors sets the value of SexualSlashMinors.
+	return
 }
 
-// SetSexualSlashMinors sets the value of SexualSlashMinors.
 func (s *CreateModerationResponseResultsItemCategories) SetSexualSlashMinors(val bool) {
-	s.SexualSlashMinors = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetViolence sets the value of Violence.
 func (s *CreateModerationResponseResultsItemCategories) SetViolence(val bool) {
-	s.Violence = val
+	_ = "STUB: not implemented"
+
+	// SetViolenceSlashGraphic sets the value of ViolenceSlashGraphic.
+	return
 }
 
-// SetViolenceSlashGraphic sets the value of ViolenceSlashGraphic.
 func (s *CreateModerationResponseResultsItemCategories) SetViolenceSlashGraphic(val bool) {
-	s.ViolenceSlashGraphic = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateModerationResponseResultsItemCategoryScores struct {
@@ -3418,72 +3828,94 @@ type CreateModerationResponseResultsItemCategoryScores struct {
 
 // GetHate returns the value of Hate.
 func (s *CreateModerationResponseResultsItemCategoryScores) GetHate() float64 {
-	return s.Hate
+	_ = "STUB: not implemented"
+
+	// GetHateSlashThreatening returns the value of HateSlashThreatening.
+	return 0
 }
 
-// GetHateSlashThreatening returns the value of HateSlashThreatening.
 func (s *CreateModerationResponseResultsItemCategoryScores) GetHateSlashThreatening() float64 {
-	return s.HateSlashThreatening
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetSelfMinusHarm returns the value of SelfMinusHarm.
 func (s *CreateModerationResponseResultsItemCategoryScores) GetSelfMinusHarm() float64 {
-	return s.SelfMinusHarm
+	_ = "STUB: not implemented"
+	return 0
+
+	// GetSexual returns the value of Sexual.
 }
 
-// GetSexual returns the value of Sexual.
 func (s *CreateModerationResponseResultsItemCategoryScores) GetSexual() float64 {
-	return s.Sexual
+	_ = "STUB: not implemented"
+
+	// GetSexualSlashMinors returns the value of SexualSlashMinors.
+	return 0
 }
 
-// GetSexualSlashMinors returns the value of SexualSlashMinors.
 func (s *CreateModerationResponseResultsItemCategoryScores) GetSexualSlashMinors() float64 {
-	return s.SexualSlashMinors
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetViolence returns the value of Violence.
 func (s *CreateModerationResponseResultsItemCategoryScores) GetViolence() float64 {
-	return s.Violence
+	_ = "STUB: not implemented"
+
+	// GetViolenceSlashGraphic returns the value of ViolenceSlashGraphic.
+	return 0
 }
 
-// GetViolenceSlashGraphic returns the value of ViolenceSlashGraphic.
 func (s *CreateModerationResponseResultsItemCategoryScores) GetViolenceSlashGraphic() float64 {
-	return s.ViolenceSlashGraphic
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // SetHate sets the value of Hate.
 func (s *CreateModerationResponseResultsItemCategoryScores) SetHate(val float64) {
-	s.Hate = val
+	_ = "STUB: not implemented"
+
+	// SetHateSlashThreatening sets the value of HateSlashThreatening.
+	return
 }
 
-// SetHateSlashThreatening sets the value of HateSlashThreatening.
 func (s *CreateModerationResponseResultsItemCategoryScores) SetHateSlashThreatening(val float64) {
-	s.HateSlashThreatening = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetSelfMinusHarm sets the value of SelfMinusHarm.
 func (s *CreateModerationResponseResultsItemCategoryScores) SetSelfMinusHarm(val float64) {
-	s.SelfMinusHarm = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetSexual sets the value of Sexual.
 }
 
-// SetSexual sets the value of Sexual.
 func (s *CreateModerationResponseResultsItemCategoryScores) SetSexual(val float64) {
-	s.Sexual = val
+	_ = "STUB: not implemented"
+
+	// SetSexualSlashMinors sets the value of SexualSlashMinors.
+	return
 }
 
-// SetSexualSlashMinors sets the value of SexualSlashMinors.
 func (s *CreateModerationResponseResultsItemCategoryScores) SetSexualSlashMinors(val float64) {
-	s.SexualSlashMinors = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetViolence sets the value of Violence.
 func (s *CreateModerationResponseResultsItemCategoryScores) SetViolence(val float64) {
-	s.Violence = val
+	_ = "STUB: not implemented"
+
+	// SetViolenceSlashGraphic sets the value of ViolenceSlashGraphic.
+	return
 }
 
-// SetViolenceSlashGraphic sets the value of ViolenceSlashGraphic.
 func (s *CreateModerationResponseResultsItemCategoryScores) SetViolenceSlashGraphic(val float64) {
-	s.ViolenceSlashGraphic = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Ref: #/components/schemas/CreateSearchRequest
@@ -3511,65 +3943,88 @@ type CreateSearchRequest struct {
 
 // GetQuery returns the value of Query.
 func (s *CreateSearchRequest) GetQuery() string {
-	return s.Query
+	_ = "STUB: not implemented"
+
+	// GetDocuments returns the value of Documents.
+	return ""
 }
 
-// GetDocuments returns the value of Documents.
 func (s *CreateSearchRequest) GetDocuments() OptNilStringArray {
-	return s.Documents
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFile returns the value of File.
+	new(OptNilStringArray)
 }
 
-// GetFile returns the value of File.
 func (s *CreateSearchRequest) GetFile() OptNilString {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// GetMaxRerank returns the value of MaxRerank.
+	return *new(OptNilString)
 }
 
-// GetMaxRerank returns the value of MaxRerank.
 func (s *CreateSearchRequest) GetMaxRerank() OptNilInt {
-	return s.MaxRerank
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReturnMetadata returns the value of ReturnMetadata.
+	new(OptNilInt)
 }
 
-// GetReturnMetadata returns the value of ReturnMetadata.
 func (s *CreateSearchRequest) GetReturnMetadata() OptNilBool {
-	return s.ReturnMetadata
+	_ = "STUB: not implemented"
+	return *
+
+	// GetUser returns the value of User.
+	new(OptNilBool)
 }
 
-// GetUser returns the value of User.
 func (s *CreateSearchRequest) GetUser() OptString {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetQuery sets the value of Query.
+	return *new(OptString)
 }
 
-// SetQuery sets the value of Query.
 func (s *CreateSearchRequest) SetQuery(val string) {
-	s.Query = val
+	_ = "STUB: not implemented"
+
+	// SetDocuments sets the value of Documents.
+	return
 }
 
-// SetDocuments sets the value of Documents.
 func (s *CreateSearchRequest) SetDocuments(val OptNilStringArray) {
-	s.Documents = val
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return
 }
 
-// SetFile sets the value of File.
 func (s *CreateSearchRequest) SetFile(val OptNilString) {
-	s.File = val
+	_ = "STUB: not implemented"
+
+	// SetMaxRerank sets the value of MaxRerank.
+	return
 }
 
-// SetMaxRerank sets the value of MaxRerank.
 func (s *CreateSearchRequest) SetMaxRerank(val OptNilInt) {
-	s.MaxRerank = val
+	_ = "STUB: not implemented"
+
+	// SetReturnMetadata sets the value of ReturnMetadata.
+	return
 }
 
-// SetReturnMetadata sets the value of ReturnMetadata.
-func (s *CreateSearchRequest) SetReturnMetadata(val OptNilBool) {
-	s.ReturnMetadata = val
-}
+func (s *CreateSearchRequest) SetReturnMetadata(val OptNilBool) { _ = "STUB: not implemented"; return }
 
 // SetUser sets the value of User.
 func (s *CreateSearchRequest) SetUser(val OptString) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/CreateSearchResponse
+	return
 }
 
-// Ref: #/components/schemas/CreateSearchResponse
 type CreateSearchResponse struct {
 	Object OptString                      `json:"object"`
 	Model  OptString                      `json:"model"`
@@ -3578,32 +4033,43 @@ type CreateSearchResponse struct {
 
 // GetObject returns the value of Object.
 func (s *CreateSearchResponse) GetObject() OptString {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return *new(OptString)
 }
 
-// GetModel returns the value of Model.
 func (s *CreateSearchResponse) GetModel() OptString {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetData returns the value of Data.
+	return *new(OptString)
 }
 
-// GetData returns the value of Data.
 func (s *CreateSearchResponse) GetData() []CreateSearchResponseDataItem {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return nil
 }
 
-// SetObject sets the value of Object.
 func (s *CreateSearchResponse) SetObject(val OptString) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *CreateSearchResponse) SetModel(val OptString) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return
 }
 
-// SetData sets the value of Data.
 func (s *CreateSearchResponse) SetData(val []CreateSearchResponseDataItem) {
-	s.Data = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type CreateSearchResponseDataItem struct {
@@ -3614,35 +4080,47 @@ type CreateSearchResponseDataItem struct {
 
 // GetObject returns the value of Object.
 func (s *CreateSearchResponseDataItem) GetObject() OptString {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetDocument returns the value of Document.
+	return *new(OptString)
 }
 
-// GetDocument returns the value of Document.
 func (s *CreateSearchResponseDataItem) GetDocument() OptInt {
-	return s.Document
+	_ = "STUB: not implemented"
+
+	// GetScore returns the value of Score.
+	return *new(OptInt)
 }
 
-// GetScore returns the value of Score.
 func (s *CreateSearchResponseDataItem) GetScore() OptFloat64 {
-	return s.Score
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return *new(OptFloat64)
 }
 
-// SetObject sets the value of Object.
 func (s *CreateSearchResponseDataItem) SetObject(val OptString) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetDocument sets the value of Document.
+	return
 }
 
-// SetDocument sets the value of Document.
 func (s *CreateSearchResponseDataItem) SetDocument(val OptInt) {
-	s.Document = val
+	_ = "STUB: not implemented"
+
+	// SetScore sets the value of Score.
+	return
 }
 
-// SetScore sets the value of Score.
 func (s *CreateSearchResponseDataItem) SetScore(val OptFloat64) {
-	s.Score = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/CreateTranscriptionRequest
+	return
 }
 
-// Ref: #/components/schemas/CreateTranscriptionRequest
 type CreateTranscriptionRequestMultipart struct {
 	// The audio file to transcribe, in one of these formats: mp3, mp4, mpeg, mpga, m4a, wav, or webm.
 	File ht.MultipartFile `json:"file"`
@@ -3666,80 +4144,110 @@ type CreateTranscriptionRequestMultipart struct {
 
 // GetFile returns the value of File.
 func (s *CreateTranscriptionRequestMultipart) GetFile() ht.MultipartFile {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return *new(ht.MultipartFile)
 }
 
-// GetModel returns the value of Model.
 func (s *CreateTranscriptionRequestMultipart) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetPrompt returns the value of Prompt.
+	return ""
 }
 
-// GetPrompt returns the value of Prompt.
 func (s *CreateTranscriptionRequestMultipart) GetPrompt() OptString {
-	return s.Prompt
+	_ = "STUB: not implemented"
+
+	// GetResponseFormat returns the value of ResponseFormat.
+	return *new(OptString)
 }
 
-// GetResponseFormat returns the value of ResponseFormat.
 func (s *CreateTranscriptionRequestMultipart) GetResponseFormat() OptString {
-	return s.ResponseFormat
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTemperature returns the value of Temperature.
+	new(OptString)
 }
 
-// GetTemperature returns the value of Temperature.
 func (s *CreateTranscriptionRequestMultipart) GetTemperature() OptFloat64 {
-	return s.Temperature
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLanguage returns the value of Language.
+	new(OptFloat64)
 }
 
-// GetLanguage returns the value of Language.
 func (s *CreateTranscriptionRequestMultipart) GetLanguage() OptString {
-	return s.Language
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return *new(OptString)
 }
 
-// SetFile sets the value of File.
 func (s *CreateTranscriptionRequestMultipart) SetFile(val ht.MultipartFile) {
-	s.File = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *CreateTranscriptionRequestMultipart) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetPrompt sets the value of Prompt.
+	return
 }
 
-// SetPrompt sets the value of Prompt.
 func (s *CreateTranscriptionRequestMultipart) SetPrompt(val OptString) {
-	s.Prompt = val
+	_ = "STUB: not implemented"
+
+	// SetResponseFormat sets the value of ResponseFormat.
+	return
 }
 
-// SetResponseFormat sets the value of ResponseFormat.
 func (s *CreateTranscriptionRequestMultipart) SetResponseFormat(val OptString) {
-	s.ResponseFormat = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTemperature sets the value of Temperature.
 }
 
-// SetTemperature sets the value of Temperature.
 func (s *CreateTranscriptionRequestMultipart) SetTemperature(val OptFloat64) {
-	s.Temperature = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetLanguage sets the value of Language.
 }
 
-// SetLanguage sets the value of Language.
 func (s *CreateTranscriptionRequestMultipart) SetLanguage(val OptString) {
-	s.Language = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/CreateTranscriptionResponse
+	return
 }
 
-// Ref: #/components/schemas/CreateTranscriptionResponse
 type CreateTranscriptionResponse struct {
 	Text string `json:"text"`
 }
 
 // GetText returns the value of Text.
 func (s *CreateTranscriptionResponse) GetText() string {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// SetText sets the value of Text.
+	return ""
 }
 
-// SetText sets the value of Text.
 func (s *CreateTranscriptionResponse) SetText(val string) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/CreateTranslationRequest
+	return
 }
 
-// Ref: #/components/schemas/CreateTranslationRequest
 type CreateTranslationRequestMultipart struct {
 	// The audio file to translate, in one of these formats: mp3, mp4, mpeg, mpga, m4a, wav, or webm.
 	File ht.MultipartFile `json:"file"`
@@ -3760,70 +4268,96 @@ type CreateTranslationRequestMultipart struct {
 
 // GetFile returns the value of File.
 func (s *CreateTranslationRequestMultipart) GetFile() ht.MultipartFile {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// GetModel returns the value of Model.
+	return *new(ht.MultipartFile)
 }
 
-// GetModel returns the value of Model.
 func (s *CreateTranslationRequestMultipart) GetModel() string {
-	return s.Model
+	_ = "STUB: not implemented"
+
+	// GetPrompt returns the value of Prompt.
+	return ""
 }
 
-// GetPrompt returns the value of Prompt.
 func (s *CreateTranslationRequestMultipart) GetPrompt() OptString {
-	return s.Prompt
+	_ = "STUB: not implemented"
+
+	// GetResponseFormat returns the value of ResponseFormat.
+	return *new(OptString)
 }
 
-// GetResponseFormat returns the value of ResponseFormat.
 func (s *CreateTranslationRequestMultipart) GetResponseFormat() OptString {
-	return s.ResponseFormat
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTemperature returns the value of Temperature.
+	new(OptString)
 }
 
-// GetTemperature returns the value of Temperature.
 func (s *CreateTranslationRequestMultipart) GetTemperature() OptFloat64 {
-	return s.Temperature
+	_ = "STUB: not implemented"
+	return *
+
+	// SetFile sets the value of File.
+	new(OptFloat64)
 }
 
-// SetFile sets the value of File.
 func (s *CreateTranslationRequestMultipart) SetFile(val ht.MultipartFile) {
-	s.File = val
+	_ = "STUB: not implemented"
+
+	// SetModel sets the value of Model.
+	return
 }
 
-// SetModel sets the value of Model.
 func (s *CreateTranslationRequestMultipart) SetModel(val string) {
-	s.Model = val
+	_ = "STUB: not implemented"
+
+	// SetPrompt sets the value of Prompt.
+	return
 }
 
-// SetPrompt sets the value of Prompt.
 func (s *CreateTranslationRequestMultipart) SetPrompt(val OptString) {
-	s.Prompt = val
+	_ = "STUB: not implemented"
+
+	// SetResponseFormat sets the value of ResponseFormat.
+	return
 }
 
-// SetResponseFormat sets the value of ResponseFormat.
 func (s *CreateTranslationRequestMultipart) SetResponseFormat(val OptString) {
-	s.ResponseFormat = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTemperature sets the value of Temperature.
 }
 
-// SetTemperature sets the value of Temperature.
 func (s *CreateTranslationRequestMultipart) SetTemperature(val OptFloat64) {
-	s.Temperature = val
+	_ = "STUB: not implemented"
+	return
+
+	// Ref: #/components/schemas/CreateTranslationResponse
 }
 
-// Ref: #/components/schemas/CreateTranslationResponse
 type CreateTranslationResponse struct {
 	Text string `json:"text"`
 }
 
 // GetText returns the value of Text.
 func (s *CreateTranslationResponse) GetText() string {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// SetText sets the value of Text.
+	return ""
 }
 
-// SetText sets the value of Text.
 func (s *CreateTranslationResponse) SetText(val string) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/DeleteFileResponse
+	return
 }
 
-// Ref: #/components/schemas/DeleteFileResponse
 type DeleteFileResponse struct {
 	ID      string `json:"id"`
 	Object  string `json:"object"`
@@ -3832,35 +4366,47 @@ type DeleteFileResponse struct {
 
 // GetID returns the value of ID.
 func (s *DeleteFileResponse) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetObject returns the value of Object.
+	return ""
 }
 
-// GetObject returns the value of Object.
 func (s *DeleteFileResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetDeleted returns the value of Deleted.
+	return ""
 }
 
-// GetDeleted returns the value of Deleted.
 func (s *DeleteFileResponse) GetDeleted() bool {
-	return s.Deleted
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return false
 }
 
-// SetID sets the value of ID.
 func (s *DeleteFileResponse) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return
 }
 
-// SetObject sets the value of Object.
 func (s *DeleteFileResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetDeleted sets the value of Deleted.
+	return
 }
 
-// SetDeleted sets the value of Deleted.
 func (s *DeleteFileResponse) SetDeleted(val bool) {
-	s.Deleted = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/DeleteModelResponse
+	return
 }
 
-// Ref: #/components/schemas/DeleteModelResponse
 type DeleteModelResponse struct {
 	ID      string `json:"id"`
 	Object  string `json:"object"`
@@ -3869,33 +4415,41 @@ type DeleteModelResponse struct {
 
 // GetID returns the value of ID.
 func (s *DeleteModelResponse) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetObject returns the value of Object.
+	return ""
 }
 
-// GetObject returns the value of Object.
 func (s *DeleteModelResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetDeleted returns the value of Deleted.
+	return ""
 }
 
-// GetDeleted returns the value of Deleted.
 func (s *DeleteModelResponse) GetDeleted() bool {
-	return s.Deleted
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return false
 }
 
-// SetID sets the value of ID.
 func (s *DeleteModelResponse) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return
 }
 
-// SetObject sets the value of Object.
 func (s *DeleteModelResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetDeleted sets the value of Deleted.
+	return
 }
 
-// SetDeleted sets the value of Deleted.
-func (s *DeleteModelResponse) SetDeleted(val bool) {
-	s.Deleted = val
-}
+func (s *DeleteModelResponse) SetDeleted(val bool) { _ = "STUB: not implemented"; return }
 
 type Engine jx.Raw
 
@@ -3913,25 +4467,33 @@ type ListEnginesResponse struct {
 
 // GetObject returns the value of Object.
 func (s *ListEnginesResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetData returns the value of Data.
+	return ""
 }
 
-// GetData returns the value of Data.
 func (s *ListEnginesResponse) GetData() []Engine {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return nil
 }
 
-// SetObject sets the value of Object.
 func (s *ListEnginesResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return
 }
 
-// SetData sets the value of Data.
 func (s *ListEnginesResponse) SetData(val []Engine) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ListFilesResponse
+	return
 }
 
-// Ref: #/components/schemas/ListFilesResponse
 type ListFilesResponse struct {
 	Object string       `json:"object"`
 	Data   []OpenAIFile `json:"data"`
@@ -3939,25 +4501,33 @@ type ListFilesResponse struct {
 
 // GetObject returns the value of Object.
 func (s *ListFilesResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetData returns the value of Data.
+	return ""
 }
 
-// GetData returns the value of Data.
 func (s *ListFilesResponse) GetData() []OpenAIFile {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return nil
 }
 
-// SetObject sets the value of Object.
 func (s *ListFilesResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return
 }
 
-// SetData sets the value of Data.
 func (s *ListFilesResponse) SetData(val []OpenAIFile) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ListFineTuneEventsResponse
+	return
 }
 
-// Ref: #/components/schemas/ListFineTuneEventsResponse
 type ListFineTuneEventsResponse struct {
 	Object string          `json:"object"`
 	Data   []FineTuneEvent `json:"data"`
@@ -3965,25 +4535,33 @@ type ListFineTuneEventsResponse struct {
 
 // GetObject returns the value of Object.
 func (s *ListFineTuneEventsResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetData returns the value of Data.
+	return ""
 }
 
-// GetData returns the value of Data.
 func (s *ListFineTuneEventsResponse) GetData() []FineTuneEvent {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return nil
 }
 
-// SetObject sets the value of Object.
 func (s *ListFineTuneEventsResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return
 }
 
-// SetData sets the value of Data.
 func (s *ListFineTuneEventsResponse) SetData(val []FineTuneEvent) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ListFineTunesResponse
+	return
 }
 
-// Ref: #/components/schemas/ListFineTunesResponse
 type ListFineTunesResponse struct {
 	Object string     `json:"object"`
 	Data   []FineTune `json:"data"`
@@ -3991,25 +4569,33 @@ type ListFineTunesResponse struct {
 
 // GetObject returns the value of Object.
 func (s *ListFineTunesResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetData returns the value of Data.
+	return ""
 }
 
-// GetData returns the value of Data.
 func (s *ListFineTunesResponse) GetData() []FineTune {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return nil
 }
 
-// SetObject sets the value of Object.
 func (s *ListFineTunesResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return
 }
 
-// SetData sets the value of Data.
 func (s *ListFineTunesResponse) SetData(val []FineTune) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ListModelsResponse
+	return
 }
 
-// Ref: #/components/schemas/ListModelsResponse
 type ListModelsResponse struct {
 	Object string  `json:"object"`
 	Data   []Model `json:"data"`
@@ -4017,35 +4603,34 @@ type ListModelsResponse struct {
 
 // GetObject returns the value of Object.
 func (s *ListModelsResponse) GetObject() string {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetData returns the value of Data.
+	return ""
 }
 
-// GetData returns the value of Data.
 func (s *ListModelsResponse) GetData() []Model {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return nil
 }
 
-// SetObject sets the value of Object.
 func (s *ListModelsResponse) SetObject(val string) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return
 }
 
-// SetData sets the value of Data.
-func (s *ListModelsResponse) SetData(val []Model) {
-	s.Data = val
-}
+func (s *ListModelsResponse) SetData(val []Model) { _ = "STUB: not implemented"; return }
 
 type Model jx.Raw
 
 type OpenAIFile jx.Raw
 
 // NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -4054,43 +4639,28 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptChatCompletionResponseMessage returns new OptChatCompletionResponseMessage with value set to v.
 func NewOptChatCompletionResponseMessage(v ChatCompletionResponseMessage) OptChatCompletionResponseMessage {
-	return OptChatCompletionResponseMessage{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptChatCompletionResponseMessage)
 }
 
 // OptChatCompletionResponseMessage is optional ChatCompletionResponseMessage.
@@ -4100,43 +4670,37 @@ type OptChatCompletionResponseMessage struct {
 }
 
 // IsSet returns true if OptChatCompletionResponseMessage was set.
-func (o OptChatCompletionResponseMessage) IsSet() bool { return o.Set }
+func (o OptChatCompletionResponseMessage) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptChatCompletionResponseMessage) Reset() {
-	var v ChatCompletionResponseMessage
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptChatCompletionResponseMessage) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptChatCompletionResponseMessage) SetTo(v ChatCompletionResponseMessage) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptChatCompletionResponseMessage) Get() (v ChatCompletionResponseMessage, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ChatCompletionResponseMessage), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptChatCompletionResponseMessage) Or(d ChatCompletionResponseMessage) ChatCompletionResponseMessage {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ChatCompletionResponseMessage)
 }
 
 // NewOptCreateAnswerRequestLogitBias returns new OptCreateAnswerRequestLogitBias with value set to v.
 func NewOptCreateAnswerRequestLogitBias(v *CreateAnswerRequestLogitBias) OptCreateAnswerRequestLogitBias {
-	return OptCreateAnswerRequestLogitBias{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCreateAnswerRequestLogitBias)
 }
 
 // OptCreateAnswerRequestLogitBias is optional *CreateAnswerRequestLogitBias.
@@ -4146,43 +4710,37 @@ type OptCreateAnswerRequestLogitBias struct {
 }
 
 // IsSet returns true if OptCreateAnswerRequestLogitBias was set.
-func (o OptCreateAnswerRequestLogitBias) IsSet() bool { return o.Set }
+func (o OptCreateAnswerRequestLogitBias) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCreateAnswerRequestLogitBias) Reset() {
-	var v *CreateAnswerRequestLogitBias
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCreateAnswerRequestLogitBias) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptCreateAnswerRequestLogitBias) SetTo(v *CreateAnswerRequestLogitBias) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCreateAnswerRequestLogitBias) Get() (v *CreateAnswerRequestLogitBias, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptCreateAnswerRequestLogitBias) Or(d *CreateAnswerRequestLogitBias) *CreateAnswerRequestLogitBias {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewOptCreateChatCompletionRequestLogitBias returns new OptCreateChatCompletionRequestLogitBias with value set to v.
 func NewOptCreateChatCompletionRequestLogitBias(v *CreateChatCompletionRequestLogitBias) OptCreateChatCompletionRequestLogitBias {
-	return OptCreateChatCompletionRequestLogitBias{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCreateChatCompletionRequestLogitBias)
 }
 
 // OptCreateChatCompletionRequestLogitBias is optional *CreateChatCompletionRequestLogitBias.
@@ -4192,43 +4750,37 @@ type OptCreateChatCompletionRequestLogitBias struct {
 }
 
 // IsSet returns true if OptCreateChatCompletionRequestLogitBias was set.
-func (o OptCreateChatCompletionRequestLogitBias) IsSet() bool { return o.Set }
+func (o OptCreateChatCompletionRequestLogitBias) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCreateChatCompletionRequestLogitBias) Reset() {
-	var v *CreateChatCompletionRequestLogitBias
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCreateChatCompletionRequestLogitBias) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptCreateChatCompletionRequestLogitBias) SetTo(v *CreateChatCompletionRequestLogitBias) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCreateChatCompletionRequestLogitBias) Get() (v *CreateChatCompletionRequestLogitBias, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptCreateChatCompletionRequestLogitBias) Or(d *CreateChatCompletionRequestLogitBias) *CreateChatCompletionRequestLogitBias {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewOptCreateChatCompletionResponseUsage returns new OptCreateChatCompletionResponseUsage with value set to v.
 func NewOptCreateChatCompletionResponseUsage(v CreateChatCompletionResponseUsage) OptCreateChatCompletionResponseUsage {
-	return OptCreateChatCompletionResponseUsage{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCreateChatCompletionResponseUsage)
 }
 
 // OptCreateChatCompletionResponseUsage is optional CreateChatCompletionResponseUsage.
@@ -4238,43 +4790,37 @@ type OptCreateChatCompletionResponseUsage struct {
 }
 
 // IsSet returns true if OptCreateChatCompletionResponseUsage was set.
-func (o OptCreateChatCompletionResponseUsage) IsSet() bool { return o.Set }
+func (o OptCreateChatCompletionResponseUsage) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCreateChatCompletionResponseUsage) Reset() {
-	var v CreateChatCompletionResponseUsage
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCreateChatCompletionResponseUsage) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptCreateChatCompletionResponseUsage) SetTo(v CreateChatCompletionResponseUsage) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCreateChatCompletionResponseUsage) Get() (v CreateChatCompletionResponseUsage, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateChatCompletionResponseUsage), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptCreateChatCompletionResponseUsage) Or(d CreateChatCompletionResponseUsage) CreateChatCompletionResponseUsage {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateChatCompletionResponseUsage)
 }
 
 // NewOptCreateClassificationRequestLogitBias returns new OptCreateClassificationRequestLogitBias with value set to v.
 func NewOptCreateClassificationRequestLogitBias(v *CreateClassificationRequestLogitBias) OptCreateClassificationRequestLogitBias {
-	return OptCreateClassificationRequestLogitBias{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCreateClassificationRequestLogitBias)
 }
 
 // OptCreateClassificationRequestLogitBias is optional *CreateClassificationRequestLogitBias.
@@ -4284,43 +4830,37 @@ type OptCreateClassificationRequestLogitBias struct {
 }
 
 // IsSet returns true if OptCreateClassificationRequestLogitBias was set.
-func (o OptCreateClassificationRequestLogitBias) IsSet() bool { return o.Set }
+func (o OptCreateClassificationRequestLogitBias) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCreateClassificationRequestLogitBias) Reset() {
-	var v *CreateClassificationRequestLogitBias
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCreateClassificationRequestLogitBias) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptCreateClassificationRequestLogitBias) SetTo(v *CreateClassificationRequestLogitBias) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCreateClassificationRequestLogitBias) Get() (v *CreateClassificationRequestLogitBias, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptCreateClassificationRequestLogitBias) Or(d *CreateClassificationRequestLogitBias) *CreateClassificationRequestLogitBias {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewOptCreateCompletionRequestLogitBias returns new OptCreateCompletionRequestLogitBias with value set to v.
 func NewOptCreateCompletionRequestLogitBias(v *CreateCompletionRequestLogitBias) OptCreateCompletionRequestLogitBias {
-	return OptCreateCompletionRequestLogitBias{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCreateCompletionRequestLogitBias)
 }
 
 // OptCreateCompletionRequestLogitBias is optional *CreateCompletionRequestLogitBias.
@@ -4330,43 +4870,37 @@ type OptCreateCompletionRequestLogitBias struct {
 }
 
 // IsSet returns true if OptCreateCompletionRequestLogitBias was set.
-func (o OptCreateCompletionRequestLogitBias) IsSet() bool { return o.Set }
+func (o OptCreateCompletionRequestLogitBias) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCreateCompletionRequestLogitBias) Reset() {
-	var v *CreateCompletionRequestLogitBias
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCreateCompletionRequestLogitBias) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptCreateCompletionRequestLogitBias) SetTo(v *CreateCompletionRequestLogitBias) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCreateCompletionRequestLogitBias) Get() (v *CreateCompletionRequestLogitBias, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptCreateCompletionRequestLogitBias) Or(d *CreateCompletionRequestLogitBias) *CreateCompletionRequestLogitBias {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewOptCreateCompletionResponseUsage returns new OptCreateCompletionResponseUsage with value set to v.
 func NewOptCreateCompletionResponseUsage(v CreateCompletionResponseUsage) OptCreateCompletionResponseUsage {
-	return OptCreateCompletionResponseUsage{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCreateCompletionResponseUsage)
 }
 
 // OptCreateCompletionResponseUsage is optional CreateCompletionResponseUsage.
@@ -4376,44 +4910,35 @@ type OptCreateCompletionResponseUsage struct {
 }
 
 // IsSet returns true if OptCreateCompletionResponseUsage was set.
-func (o OptCreateCompletionResponseUsage) IsSet() bool { return o.Set }
+func (o OptCreateCompletionResponseUsage) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCreateCompletionResponseUsage) Reset() {
-	var v CreateCompletionResponseUsage
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCreateCompletionResponseUsage) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptCreateCompletionResponseUsage) SetTo(v CreateCompletionResponseUsage) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCreateCompletionResponseUsage) Get() (v CreateCompletionResponseUsage, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionResponseUsage), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptCreateCompletionResponseUsage) Or(d CreateCompletionResponseUsage) CreateCompletionResponseUsage {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionResponseUsage)
 }
 
 // NewOptFloat64 returns new OptFloat64 with value set to v.
-func NewOptFloat64(v float64) OptFloat64 {
-	return OptFloat64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptFloat64(v float64) OptFloat64 { _ = "STUB: not implemented"; return *new(OptFloat64) }
 
 // OptFloat64 is optional float64.
 type OptFloat64 struct {
@@ -4422,44 +4947,26 @@ type OptFloat64 struct {
 }
 
 // IsSet returns true if OptFloat64 was set.
-func (o OptFloat64) IsSet() bool { return o.Set }
+func (o OptFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptFloat64) Get() (v float64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -4468,43 +4975,28 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptMultipartFile returns new OptMultipartFile with value set to v.
 func NewOptMultipartFile(v ht.MultipartFile) OptMultipartFile {
-	return OptMultipartFile{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMultipartFile)
 }
 
 // OptMultipartFile is optional ht.MultipartFile.
@@ -4514,43 +5006,34 @@ type OptMultipartFile struct {
 }
 
 // IsSet returns true if OptMultipartFile was set.
-func (o OptMultipartFile) IsSet() bool { return o.Set }
+func (o OptMultipartFile) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMultipartFile) Reset() {
-	var v ht.MultipartFile
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMultipartFile) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMultipartFile) SetTo(v ht.MultipartFile) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMultipartFile) SetTo(v ht.MultipartFile) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMultipartFile) Get() (v ht.MultipartFile, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ht.MultipartFile), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMultipartFile) Or(d ht.MultipartFile) ht.MultipartFile {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ht.MultipartFile)
 }
 
 // NewOptNilAnyArray returns new OptNilAnyArray with value set to v.
 func NewOptNilAnyArray(v []jx.Raw) OptNilAnyArray {
-	return OptNilAnyArray{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilAnyArray)
 }
 
 // OptNilAnyArray is optional nullable []jx.Raw.
@@ -4561,65 +5044,39 @@ type OptNilAnyArray struct {
 }
 
 // IsSet returns true if OptNilAnyArray was set.
-func (o OptNilAnyArray) IsSet() bool { return o.Set }
+func (o OptNilAnyArray) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilAnyArray) Reset() {
-	var v []jx.Raw
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilAnyArray) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilAnyArray) SetTo(v []jx.Raw) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilAnyArray) SetTo(v []jx.Raw) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilAnyArray) IsNull() bool { return o.Null }
+func (o OptNilAnyArray) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilAnyArray) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v []jx.Raw
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilAnyArray) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilAnyArray) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilAnyArray) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilAnyArray) Get() (v []jx.Raw, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilAnyArray) Get() (v []jx.Raw, ok bool) { _ = "STUB: not implemented"; return nil, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilAnyArray) Or(d []jx.Raw) []jx.Raw {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilAnyArray) Or(d []jx.Raw) []jx.Raw { _ = "STUB: not implemented"; return nil }
 
 // NewOptNilBool returns new OptNilBool with value set to v.
-func NewOptNilBool(v bool) OptNilBool {
-	return OptNilBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilBool(v bool) OptNilBool { _ = "STUB: not implemented"; return *new(OptNilBool) }
 
 // OptNilBool is optional nullable bool.
 type OptNilBool struct {
@@ -4629,64 +5086,41 @@ type OptNilBool struct {
 }
 
 // IsSet returns true if OptNilBool was set.
-func (o OptNilBool) IsSet() bool { return o.Set }
+func (o OptNilBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilBool) SetTo(v bool) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilBool) IsNull() bool { return o.Null }
+func (o OptNilBool) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilBool) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v bool
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilBool) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilBool) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilBool) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilBool) Get() (v bool, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptNilCreateAnswerRequestStop returns new OptNilCreateAnswerRequestStop with value set to v.
 func NewOptNilCreateAnswerRequestStop(v CreateAnswerRequestStop) OptNilCreateAnswerRequestStop {
-	return OptNilCreateAnswerRequestStop{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateAnswerRequestStop)
 }
 
 // OptNilCreateAnswerRequestStop is optional nullable CreateAnswerRequestStop.
@@ -4697,64 +5131,50 @@ type OptNilCreateAnswerRequestStop struct {
 }
 
 // IsSet returns true if OptNilCreateAnswerRequestStop was set.
-func (o OptNilCreateAnswerRequestStop) IsSet() bool { return o.Set }
+func (o OptNilCreateAnswerRequestStop) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilCreateAnswerRequestStop) Reset() {
-	var v CreateAnswerRequestStop
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilCreateAnswerRequestStop) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptNilCreateAnswerRequestStop) SetTo(v CreateAnswerRequestStop) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateAnswerRequestStop) IsNull() bool { return o.Null }
+func (o OptNilCreateAnswerRequestStop) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilCreateAnswerRequestStop) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateAnswerRequestStop
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilCreateAnswerRequestStop) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilCreateAnswerRequestStop) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilCreateAnswerRequestStop) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateAnswerRequestStop) Get() (v CreateAnswerRequestStop, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateAnswerRequestStop), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateAnswerRequestStop) Or(d CreateAnswerRequestStop) CreateAnswerRequestStop {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateAnswerRequestStop)
 }
 
 // NewOptNilCreateChatCompletionRequestStop returns new OptNilCreateChatCompletionRequestStop with value set to v.
 func NewOptNilCreateChatCompletionRequestStop(v CreateChatCompletionRequestStop) OptNilCreateChatCompletionRequestStop {
-	return OptNilCreateChatCompletionRequestStop{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateChatCompletionRequestStop)
 }
 
 // OptNilCreateChatCompletionRequestStop is optional nullable CreateChatCompletionRequestStop.
@@ -4765,64 +5185,54 @@ type OptNilCreateChatCompletionRequestStop struct {
 }
 
 // IsSet returns true if OptNilCreateChatCompletionRequestStop was set.
-func (o OptNilCreateChatCompletionRequestStop) IsSet() bool { return o.Set }
+func (o OptNilCreateChatCompletionRequestStop) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilCreateChatCompletionRequestStop) Reset() {
-	var v CreateChatCompletionRequestStop
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilCreateChatCompletionRequestStop) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptNilCreateChatCompletionRequestStop) SetTo(v CreateChatCompletionRequestStop) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateChatCompletionRequestStop) IsNull() bool { return o.Null }
+func (o OptNilCreateChatCompletionRequestStop) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilCreateChatCompletionRequestStop) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateChatCompletionRequestStop
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilCreateChatCompletionRequestStop) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
 func (o OptNilCreateChatCompletionRequestStop) IsEmpty() bool {
-	return !o.Set && !o.Null
+	_ = "STUB: not implemented"
+	return false
+
+	// Get returns value and boolean that denotes whether value was set.
 }
 
-// Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateChatCompletionRequestStop) Get() (v CreateChatCompletionRequestStop, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateChatCompletionRequestStop), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateChatCompletionRequestStop) Or(d CreateChatCompletionRequestStop) CreateChatCompletionRequestStop {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateChatCompletionRequestStop)
 }
 
 // NewOptNilCreateCompletionRequestPrompt returns new OptNilCreateCompletionRequestPrompt with value set to v.
 func NewOptNilCreateCompletionRequestPrompt(v CreateCompletionRequestPrompt) OptNilCreateCompletionRequestPrompt {
-	return OptNilCreateCompletionRequestPrompt{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateCompletionRequestPrompt)
 }
 
 // OptNilCreateCompletionRequestPrompt is optional nullable CreateCompletionRequestPrompt.
@@ -4833,64 +5243,54 @@ type OptNilCreateCompletionRequestPrompt struct {
 }
 
 // IsSet returns true if OptNilCreateCompletionRequestPrompt was set.
-func (o OptNilCreateCompletionRequestPrompt) IsSet() bool { return o.Set }
+func (o OptNilCreateCompletionRequestPrompt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilCreateCompletionRequestPrompt) Reset() {
-	var v CreateCompletionRequestPrompt
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilCreateCompletionRequestPrompt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptNilCreateCompletionRequestPrompt) SetTo(v CreateCompletionRequestPrompt) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateCompletionRequestPrompt) IsNull() bool { return o.Null }
+func (o OptNilCreateCompletionRequestPrompt) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilCreateCompletionRequestPrompt) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateCompletionRequestPrompt
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilCreateCompletionRequestPrompt) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
 func (o OptNilCreateCompletionRequestPrompt) IsEmpty() bool {
-	return !o.Set && !o.Null
+	_ = "STUB: not implemented"
+	return false
+
+	// Get returns value and boolean that denotes whether value was set.
 }
 
-// Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateCompletionRequestPrompt) Get() (v CreateCompletionRequestPrompt, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionRequestPrompt), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateCompletionRequestPrompt) Or(d CreateCompletionRequestPrompt) CreateCompletionRequestPrompt {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionRequestPrompt)
 }
 
 // NewOptNilCreateCompletionRequestStop returns new OptNilCreateCompletionRequestStop with value set to v.
 func NewOptNilCreateCompletionRequestStop(v CreateCompletionRequestStop) OptNilCreateCompletionRequestStop {
-	return OptNilCreateCompletionRequestStop{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateCompletionRequestStop)
 }
 
 // OptNilCreateCompletionRequestStop is optional nullable CreateCompletionRequestStop.
@@ -4901,64 +5301,50 @@ type OptNilCreateCompletionRequestStop struct {
 }
 
 // IsSet returns true if OptNilCreateCompletionRequestStop was set.
-func (o OptNilCreateCompletionRequestStop) IsSet() bool { return o.Set }
+func (o OptNilCreateCompletionRequestStop) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilCreateCompletionRequestStop) Reset() {
-	var v CreateCompletionRequestStop
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilCreateCompletionRequestStop) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptNilCreateCompletionRequestStop) SetTo(v CreateCompletionRequestStop) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateCompletionRequestStop) IsNull() bool { return o.Null }
+func (o OptNilCreateCompletionRequestStop) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilCreateCompletionRequestStop) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateCompletionRequestStop
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilCreateCompletionRequestStop) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilCreateCompletionRequestStop) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilCreateCompletionRequestStop) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateCompletionRequestStop) Get() (v CreateCompletionRequestStop, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionRequestStop), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateCompletionRequestStop) Or(d CreateCompletionRequestStop) CreateCompletionRequestStop {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionRequestStop)
 }
 
 // NewOptNilCreateCompletionResponseChoicesItemLogprobs returns new OptNilCreateCompletionResponseChoicesItemLogprobs with value set to v.
 func NewOptNilCreateCompletionResponseChoicesItemLogprobs(v CreateCompletionResponseChoicesItemLogprobs) OptNilCreateCompletionResponseChoicesItemLogprobs {
-	return OptNilCreateCompletionResponseChoicesItemLogprobs{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateCompletionResponseChoicesItemLogprobs)
 }
 
 // OptNilCreateCompletionResponseChoicesItemLogprobs is optional nullable CreateCompletionResponseChoicesItemLogprobs.
@@ -4969,64 +5355,60 @@ type OptNilCreateCompletionResponseChoicesItemLogprobs struct {
 }
 
 // IsSet returns true if OptNilCreateCompletionResponseChoicesItemLogprobs was set.
-func (o OptNilCreateCompletionResponseChoicesItemLogprobs) IsSet() bool { return o.Set }
+func (o OptNilCreateCompletionResponseChoicesItemLogprobs) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
+	// Reset unsets value.
+	return false
+}
+
 func (o *OptNilCreateCompletionResponseChoicesItemLogprobs) Reset() {
-	var v CreateCompletionResponseChoicesItemLogprobs
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetTo sets value to v.
 func (o *OptNilCreateCompletionResponseChoicesItemLogprobs) SetTo(v CreateCompletionResponseChoicesItemLogprobs) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateCompletionResponseChoicesItemLogprobs) IsNull() bool { return o.Null }
+func (o OptNilCreateCompletionResponseChoicesItemLogprobs) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
+	// SetToNull sets value to null.
+	return false
+}
+
 func (o *OptNilCreateCompletionResponseChoicesItemLogprobs) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateCompletionResponseChoicesItemLogprobs
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
 func (o OptNilCreateCompletionResponseChoicesItemLogprobs) IsEmpty() bool {
-	return !o.Set && !o.Null
+	_ = "STUB: not implemented"
+	return false
+
+	// Get returns value and boolean that denotes whether value was set.
 }
 
-// Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateCompletionResponseChoicesItemLogprobs) Get() (v CreateCompletionResponseChoicesItemLogprobs, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionResponseChoicesItemLogprobs), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateCompletionResponseChoicesItemLogprobs) Or(d CreateCompletionResponseChoicesItemLogprobs) CreateCompletionResponseChoicesItemLogprobs {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateCompletionResponseChoicesItemLogprobs)
 }
 
 // NewOptNilCreateEditResponseChoicesItemLogprobs returns new OptNilCreateEditResponseChoicesItemLogprobs with value set to v.
 func NewOptNilCreateEditResponseChoicesItemLogprobs(v CreateEditResponseChoicesItemLogprobs) OptNilCreateEditResponseChoicesItemLogprobs {
-	return OptNilCreateEditResponseChoicesItemLogprobs{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateEditResponseChoicesItemLogprobs)
 }
 
 // OptNilCreateEditResponseChoicesItemLogprobs is optional nullable CreateEditResponseChoicesItemLogprobs.
@@ -5037,64 +5419,57 @@ type OptNilCreateEditResponseChoicesItemLogprobs struct {
 }
 
 // IsSet returns true if OptNilCreateEditResponseChoicesItemLogprobs was set.
-func (o OptNilCreateEditResponseChoicesItemLogprobs) IsSet() bool { return o.Set }
+func (o OptNilCreateEditResponseChoicesItemLogprobs) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilCreateEditResponseChoicesItemLogprobs) Reset() {
-	var v CreateEditResponseChoicesItemLogprobs
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilCreateEditResponseChoicesItemLogprobs) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptNilCreateEditResponseChoicesItemLogprobs) SetTo(v CreateEditResponseChoicesItemLogprobs) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateEditResponseChoicesItemLogprobs) IsNull() bool { return o.Null }
+func (o OptNilCreateEditResponseChoicesItemLogprobs) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
+	// SetToNull sets value to null.
+	return false
+}
+
 func (o *OptNilCreateEditResponseChoicesItemLogprobs) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateEditResponseChoicesItemLogprobs
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
 func (o OptNilCreateEditResponseChoicesItemLogprobs) IsEmpty() bool {
-	return !o.Set && !o.Null
+	_ = "STUB: not implemented"
+	return false
+
+	// Get returns value and boolean that denotes whether value was set.
 }
 
-// Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateEditResponseChoicesItemLogprobs) Get() (v CreateEditResponseChoicesItemLogprobs, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateEditResponseChoicesItemLogprobs), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateEditResponseChoicesItemLogprobs) Or(d CreateEditResponseChoicesItemLogprobs) CreateEditResponseChoicesItemLogprobs {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateEditResponseChoicesItemLogprobs)
 }
 
 // NewOptNilCreateImageEditRequestMultipartResponseFormat returns new OptNilCreateImageEditRequestMultipartResponseFormat with value set to v.
 func NewOptNilCreateImageEditRequestMultipartResponseFormat(v CreateImageEditRequestMultipartResponseFormat) OptNilCreateImageEditRequestMultipartResponseFormat {
-	return OptNilCreateImageEditRequestMultipartResponseFormat{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateImageEditRequestMultipartResponseFormat)
 }
 
 // OptNilCreateImageEditRequestMultipartResponseFormat is optional nullable CreateImageEditRequestMultipartResponseFormat.
@@ -5105,64 +5480,60 @@ type OptNilCreateImageEditRequestMultipartResponseFormat struct {
 }
 
 // IsSet returns true if OptNilCreateImageEditRequestMultipartResponseFormat was set.
-func (o OptNilCreateImageEditRequestMultipartResponseFormat) IsSet() bool { return o.Set }
+func (o OptNilCreateImageEditRequestMultipartResponseFormat) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
+	// Reset unsets value.
+	return false
+}
+
 func (o *OptNilCreateImageEditRequestMultipartResponseFormat) Reset() {
-	var v CreateImageEditRequestMultipartResponseFormat
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetTo sets value to v.
 func (o *OptNilCreateImageEditRequestMultipartResponseFormat) SetTo(v CreateImageEditRequestMultipartResponseFormat) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateImageEditRequestMultipartResponseFormat) IsNull() bool { return o.Null }
+func (o OptNilCreateImageEditRequestMultipartResponseFormat) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
+	// SetToNull sets value to null.
+	return false
+}
+
 func (o *OptNilCreateImageEditRequestMultipartResponseFormat) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateImageEditRequestMultipartResponseFormat
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
 func (o OptNilCreateImageEditRequestMultipartResponseFormat) IsEmpty() bool {
-	return !o.Set && !o.Null
+	_ = "STUB: not implemented"
+	return false
+
+	// Get returns value and boolean that denotes whether value was set.
 }
 
-// Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateImageEditRequestMultipartResponseFormat) Get() (v CreateImageEditRequestMultipartResponseFormat, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateImageEditRequestMultipartResponseFormat), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateImageEditRequestMultipartResponseFormat) Or(d CreateImageEditRequestMultipartResponseFormat) CreateImageEditRequestMultipartResponseFormat {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateImageEditRequestMultipartResponseFormat)
 }
 
 // NewOptNilCreateImageEditRequestMultipartSize returns new OptNilCreateImageEditRequestMultipartSize with value set to v.
 func NewOptNilCreateImageEditRequestMultipartSize(v CreateImageEditRequestMultipartSize) OptNilCreateImageEditRequestMultipartSize {
-	return OptNilCreateImageEditRequestMultipartSize{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateImageEditRequestMultipartSize)
 }
 
 // OptNilCreateImageEditRequestMultipartSize is optional nullable CreateImageEditRequestMultipartSize.
@@ -5173,64 +5544,54 @@ type OptNilCreateImageEditRequestMultipartSize struct {
 }
 
 // IsSet returns true if OptNilCreateImageEditRequestMultipartSize was set.
-func (o OptNilCreateImageEditRequestMultipartSize) IsSet() bool { return o.Set }
+func (o OptNilCreateImageEditRequestMultipartSize) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilCreateImageEditRequestMultipartSize) Reset() {
-	var v CreateImageEditRequestMultipartSize
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilCreateImageEditRequestMultipartSize) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptNilCreateImageEditRequestMultipartSize) SetTo(v CreateImageEditRequestMultipartSize) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateImageEditRequestMultipartSize) IsNull() bool { return o.Null }
+func (o OptNilCreateImageEditRequestMultipartSize) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilCreateImageEditRequestMultipartSize) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateImageEditRequestMultipartSize
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilCreateImageEditRequestMultipartSize) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
 func (o OptNilCreateImageEditRequestMultipartSize) IsEmpty() bool {
-	return !o.Set && !o.Null
+	_ = "STUB: not implemented"
+	return false
+
+	// Get returns value and boolean that denotes whether value was set.
 }
 
-// Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateImageEditRequestMultipartSize) Get() (v CreateImageEditRequestMultipartSize, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateImageEditRequestMultipartSize), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateImageEditRequestMultipartSize) Or(d CreateImageEditRequestMultipartSize) CreateImageEditRequestMultipartSize {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateImageEditRequestMultipartSize)
 }
 
 // NewOptNilCreateImageRequestResponseFormat returns new OptNilCreateImageRequestResponseFormat with value set to v.
 func NewOptNilCreateImageRequestResponseFormat(v CreateImageRequestResponseFormat) OptNilCreateImageRequestResponseFormat {
-	return OptNilCreateImageRequestResponseFormat{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateImageRequestResponseFormat)
 }
 
 // OptNilCreateImageRequestResponseFormat is optional nullable CreateImageRequestResponseFormat.
@@ -5241,64 +5602,54 @@ type OptNilCreateImageRequestResponseFormat struct {
 }
 
 // IsSet returns true if OptNilCreateImageRequestResponseFormat was set.
-func (o OptNilCreateImageRequestResponseFormat) IsSet() bool { return o.Set }
+func (o OptNilCreateImageRequestResponseFormat) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilCreateImageRequestResponseFormat) Reset() {
-	var v CreateImageRequestResponseFormat
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilCreateImageRequestResponseFormat) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptNilCreateImageRequestResponseFormat) SetTo(v CreateImageRequestResponseFormat) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateImageRequestResponseFormat) IsNull() bool { return o.Null }
+func (o OptNilCreateImageRequestResponseFormat) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilCreateImageRequestResponseFormat) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateImageRequestResponseFormat
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilCreateImageRequestResponseFormat) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
 func (o OptNilCreateImageRequestResponseFormat) IsEmpty() bool {
-	return !o.Set && !o.Null
+	_ = "STUB: not implemented"
+	return false
+
+	// Get returns value and boolean that denotes whether value was set.
 }
 
-// Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateImageRequestResponseFormat) Get() (v CreateImageRequestResponseFormat, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateImageRequestResponseFormat), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateImageRequestResponseFormat) Or(d CreateImageRequestResponseFormat) CreateImageRequestResponseFormat {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateImageRequestResponseFormat)
 }
 
 // NewOptNilCreateImageRequestSize returns new OptNilCreateImageRequestSize with value set to v.
 func NewOptNilCreateImageRequestSize(v CreateImageRequestSize) OptNilCreateImageRequestSize {
-	return OptNilCreateImageRequestSize{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateImageRequestSize)
 }
 
 // OptNilCreateImageRequestSize is optional nullable CreateImageRequestSize.
@@ -5309,64 +5660,50 @@ type OptNilCreateImageRequestSize struct {
 }
 
 // IsSet returns true if OptNilCreateImageRequestSize was set.
-func (o OptNilCreateImageRequestSize) IsSet() bool { return o.Set }
+func (o OptNilCreateImageRequestSize) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilCreateImageRequestSize) Reset() {
-	var v CreateImageRequestSize
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilCreateImageRequestSize) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptNilCreateImageRequestSize) SetTo(v CreateImageRequestSize) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateImageRequestSize) IsNull() bool { return o.Null }
+func (o OptNilCreateImageRequestSize) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilCreateImageRequestSize) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateImageRequestSize
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilCreateImageRequestSize) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilCreateImageRequestSize) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilCreateImageRequestSize) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateImageRequestSize) Get() (v CreateImageRequestSize, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateImageRequestSize), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateImageRequestSize) Or(d CreateImageRequestSize) CreateImageRequestSize {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateImageRequestSize)
 }
 
 // NewOptNilCreateImageVariationRequestMultipartResponseFormat returns new OptNilCreateImageVariationRequestMultipartResponseFormat with value set to v.
 func NewOptNilCreateImageVariationRequestMultipartResponseFormat(v CreateImageVariationRequestMultipartResponseFormat) OptNilCreateImageVariationRequestMultipartResponseFormat {
-	return OptNilCreateImageVariationRequestMultipartResponseFormat{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateImageVariationRequestMultipartResponseFormat)
 }
 
 // OptNilCreateImageVariationRequestMultipartResponseFormat is optional nullable CreateImageVariationRequestMultipartResponseFormat.
@@ -5377,64 +5714,60 @@ type OptNilCreateImageVariationRequestMultipartResponseFormat struct {
 }
 
 // IsSet returns true if OptNilCreateImageVariationRequestMultipartResponseFormat was set.
-func (o OptNilCreateImageVariationRequestMultipartResponseFormat) IsSet() bool { return o.Set }
+func (o OptNilCreateImageVariationRequestMultipartResponseFormat) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
+	// Reset unsets value.
+	return false
+}
+
 func (o *OptNilCreateImageVariationRequestMultipartResponseFormat) Reset() {
-	var v CreateImageVariationRequestMultipartResponseFormat
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetTo sets value to v.
 func (o *OptNilCreateImageVariationRequestMultipartResponseFormat) SetTo(v CreateImageVariationRequestMultipartResponseFormat) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateImageVariationRequestMultipartResponseFormat) IsNull() bool { return o.Null }
+func (o OptNilCreateImageVariationRequestMultipartResponseFormat) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
+	// SetToNull sets value to null.
+	return false
+}
+
 func (o *OptNilCreateImageVariationRequestMultipartResponseFormat) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateImageVariationRequestMultipartResponseFormat
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
 func (o OptNilCreateImageVariationRequestMultipartResponseFormat) IsEmpty() bool {
-	return !o.Set && !o.Null
+	_ = "STUB: not implemented"
+	return false
+
+	// Get returns value and boolean that denotes whether value was set.
 }
 
-// Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateImageVariationRequestMultipartResponseFormat) Get() (v CreateImageVariationRequestMultipartResponseFormat, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateImageVariationRequestMultipartResponseFormat), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateImageVariationRequestMultipartResponseFormat) Or(d CreateImageVariationRequestMultipartResponseFormat) CreateImageVariationRequestMultipartResponseFormat {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateImageVariationRequestMultipartResponseFormat)
 }
 
 // NewOptNilCreateImageVariationRequestMultipartSize returns new OptNilCreateImageVariationRequestMultipartSize with value set to v.
 func NewOptNilCreateImageVariationRequestMultipartSize(v CreateImageVariationRequestMultipartSize) OptNilCreateImageVariationRequestMultipartSize {
-	return OptNilCreateImageVariationRequestMultipartSize{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilCreateImageVariationRequestMultipartSize)
 }
 
 // OptNilCreateImageVariationRequestMultipartSize is optional nullable CreateImageVariationRequestMultipartSize.
@@ -5445,64 +5778,57 @@ type OptNilCreateImageVariationRequestMultipartSize struct {
 }
 
 // IsSet returns true if OptNilCreateImageVariationRequestMultipartSize was set.
-func (o OptNilCreateImageVariationRequestMultipartSize) IsSet() bool { return o.Set }
+func (o OptNilCreateImageVariationRequestMultipartSize) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilCreateImageVariationRequestMultipartSize) Reset() {
-	var v CreateImageVariationRequestMultipartSize
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilCreateImageVariationRequestMultipartSize) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptNilCreateImageVariationRequestMultipartSize) SetTo(v CreateImageVariationRequestMultipartSize) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsNull returns true if value is Null.
-func (o OptNilCreateImageVariationRequestMultipartSize) IsNull() bool { return o.Null }
+func (o OptNilCreateImageVariationRequestMultipartSize) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
+	// SetToNull sets value to null.
+	return false
+}
+
 func (o *OptNilCreateImageVariationRequestMultipartSize) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v CreateImageVariationRequestMultipartSize
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
 func (o OptNilCreateImageVariationRequestMultipartSize) IsEmpty() bool {
-	return !o.Set && !o.Null
+	_ = "STUB: not implemented"
+	return false
+
+	// Get returns value and boolean that denotes whether value was set.
 }
 
-// Get returns value and boolean that denotes whether value was set.
 func (o OptNilCreateImageVariationRequestMultipartSize) Get() (v CreateImageVariationRequestMultipartSize, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CreateImageVariationRequestMultipartSize), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptNilCreateImageVariationRequestMultipartSize) Or(d CreateImageVariationRequestMultipartSize) CreateImageVariationRequestMultipartSize {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CreateImageVariationRequestMultipartSize)
 }
 
 // NewOptNilFloat64 returns new OptNilFloat64 with value set to v.
 func NewOptNilFloat64(v float64) OptNilFloat64 {
-	return OptNilFloat64{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilFloat64)
 }
 
 // OptNilFloat64 is optional nullable float64.
@@ -5513,64 +5839,41 @@ type OptNilFloat64 struct {
 }
 
 // IsSet returns true if OptNilFloat64 was set.
-func (o OptNilFloat64) IsSet() bool { return o.Set }
+func (o OptNilFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilFloat64) IsNull() bool { return o.Null }
+func (o OptNilFloat64) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilFloat64) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v float64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilFloat64) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilFloat64) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilFloat64) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilFloat64) Get() (v float64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilFloat64Array returns new OptNilFloat64Array with value set to v.
 func NewOptNilFloat64Array(v []float64) OptNilFloat64Array {
-	return OptNilFloat64Array{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilFloat64Array)
 }
 
 // OptNilFloat64Array is optional nullable []float64.
@@ -5581,65 +5884,42 @@ type OptNilFloat64Array struct {
 }
 
 // IsSet returns true if OptNilFloat64Array was set.
-func (o OptNilFloat64Array) IsSet() bool { return o.Set }
+func (o OptNilFloat64Array) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilFloat64Array) Reset() {
-	var v []float64
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilFloat64Array) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilFloat64Array) SetTo(v []float64) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilFloat64Array) SetTo(v []float64) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilFloat64Array) IsNull() bool { return o.Null }
+func (o OptNilFloat64Array) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilFloat64Array) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v []float64
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilFloat64Array) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilFloat64Array) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilFloat64Array) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilFloat64Array) Get() (v []float64, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilFloat64Array) Or(d []float64) []float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilFloat64Array) Or(d []float64) []float64 { _ = "STUB: not implemented"; return nil }
 
 // NewOptNilInt returns new OptNilInt with value set to v.
-func NewOptNilInt(v int) OptNilInt {
-	return OptNilInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilInt(v int) OptNilInt { _ = "STUB: not implemented"; return *new(OptNilInt) }
 
 // OptNilInt is optional nullable int.
 type OptNilInt struct {
@@ -5649,65 +5929,39 @@ type OptNilInt struct {
 }
 
 // IsSet returns true if OptNilInt was set.
-func (o OptNilInt) IsSet() bool { return o.Set }
+func (o OptNilInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilInt) SetTo(v int) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilInt) IsNull() bool { return o.Null }
+func (o OptNilInt) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilInt) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v int
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilInt) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilInt) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilInt) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilInt) Get() (v int, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilString returns new OptNilString with value set to v.
-func NewOptNilString(v string) OptNilString {
-	return OptNilString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilString(v string) OptNilString { _ = "STUB: not implemented"; return *new(OptNilString) }
 
 // OptNilString is optional nullable string.
 type OptNilString struct {
@@ -5717,64 +5971,41 @@ type OptNilString struct {
 }
 
 // IsSet returns true if OptNilString was set.
-func (o OptNilString) IsSet() bool { return o.Set }
+func (o OptNilString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilString) SetTo(v string) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilString) IsNull() bool { return o.Null }
+func (o OptNilString) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilString) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilString) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilString) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilString) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilString) Get() (v string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptNilStringArray returns new OptNilStringArray with value set to v.
 func NewOptNilStringArray(v []string) OptNilStringArray {
-	return OptNilStringArray{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringArray)
 }
 
 // OptNilStringArray is optional nullable []string.
@@ -5785,64 +6016,44 @@ type OptNilStringArray struct {
 }
 
 // IsSet returns true if OptNilStringArray was set.
-func (o OptNilStringArray) IsSet() bool { return o.Set }
+func (o OptNilStringArray) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringArray) Reset() {
-	var v []string
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringArray) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringArray) SetTo(v []string) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringArray) SetTo(v []string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringArray) IsNull() bool { return o.Null }
+func (o OptNilStringArray) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringArray) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v []string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringArray) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringArray) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringArray) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilStringArray) Get() (v []string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringArray) Or(d []string) []string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringArray) Or(d []string) []string { _ = "STUB: not implemented"; return nil }
 
 // NewOptNilStringArrayArray returns new OptNilStringArrayArray with value set to v.
 func NewOptNilStringArrayArray(v [][]string) OptNilStringArrayArray {
-	return OptNilStringArrayArray{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptNilStringArrayArray)
 }
 
 // OptNilStringArrayArray is optional nullable [][]string.
@@ -5853,65 +6064,42 @@ type OptNilStringArrayArray struct {
 }
 
 // IsSet returns true if OptNilStringArrayArray was set.
-func (o OptNilStringArrayArray) IsSet() bool { return o.Set }
+func (o OptNilStringArrayArray) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilStringArrayArray) Reset() {
-	var v [][]string
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilStringArrayArray) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilStringArrayArray) SetTo(v [][]string) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilStringArrayArray) SetTo(v [][]string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilStringArrayArray) IsNull() bool { return o.Null }
+func (o OptNilStringArrayArray) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilStringArrayArray) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v [][]string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilStringArrayArray) SetToNull() { _ = "STUB: not implemented"; return }
 
 // IsEmpty returns true if the field was omitted from the payload (not Set and not Null).
-func (o OptNilStringArrayArray) IsEmpty() bool {
-	return !o.Set && !o.Null
-}
+func (o OptNilStringArrayArray) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptNilStringArrayArray) Get() (v [][]string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilStringArrayArray) Or(d [][]string) [][]string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilStringArrayArray) Or(d [][]string) [][]string { _ = "STUB: not implemented"; return nil }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -5920,33 +6108,20 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }

@@ -29,9 +29,13 @@ const (
 )
 
 // String implements fmt.Stringer.
-func (t SchemaType) String() string { return string(t) }
+func (t SchemaType) String() string {
+	_ = "STUB: not implemented"
 
-// Ref is a JSON Schema reference.
+	// Ref is a JSON Schema reference.
+	return ""
+}
+
 type Ref = jsonpointer.RefKey
 
 // XProperty defines per-property extensions fields.
@@ -115,11 +119,7 @@ type Schema struct {
 }
 
 // AddExample adds example for this Schema.
-func (s *Schema) AddExample(r Example) {
-	if s != nil && len(r) > 0 {
-		s.Examples = append(s.Examples, r)
-	}
-}
+func (s *Schema) AddExample(r Example) { _ = "STUB: not implemented"; return }
 
 // Property is a JSON Schema Object property.
 type Property struct {

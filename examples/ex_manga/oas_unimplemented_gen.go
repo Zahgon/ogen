@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,7 +17,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /api/gallery/{book_id}
 func (UnimplementedHandler) GetBook(ctx context.Context, params GetBookParams) (r GetBookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetBookRes), nil
 }
 
 // GetPageCoverImage implements getPageCoverImage operation.
@@ -28,7 +27,8 @@ func (UnimplementedHandler) GetBook(ctx context.Context, params GetBookParams) (
 //
 // GET /galleries/{media_id}/cover.{format}
 func (UnimplementedHandler) GetPageCoverImage(ctx context.Context, params GetPageCoverImageParams) (r GetPageCoverImageRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetPageCoverImageRes), nil
 }
 
 // GetPageImage implements getPageImage operation.
@@ -37,7 +37,8 @@ func (UnimplementedHandler) GetPageCoverImage(ctx context.Context, params GetPag
 //
 // GET /galleries/{media_id}/{page}.{format}
 func (UnimplementedHandler) GetPageImage(ctx context.Context, params GetPageImageParams) (r GetPageImageRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetPageImageRes), nil
 }
 
 // GetPageThumbnailImage implements getPageThumbnailImage operation.
@@ -46,7 +47,8 @@ func (UnimplementedHandler) GetPageImage(ctx context.Context, params GetPageImag
 //
 // GET /galleries/{media_id}/{page}t.{format}
 func (UnimplementedHandler) GetPageThumbnailImage(ctx context.Context, params GetPageThumbnailImageParams) (r GetPageThumbnailImageRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetPageThumbnailImageRes), nil
 }
 
 // Search implements search operation.
@@ -55,7 +57,8 @@ func (UnimplementedHandler) GetPageThumbnailImage(ctx context.Context, params Ge
 //
 // GET /api/galleries/search
 func (UnimplementedHandler) Search(ctx context.Context, params SearchParams) (r SearchRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SearchRes), nil
 }
 
 // SearchByTagID implements searchByTagID operation.
@@ -64,5 +67,6 @@ func (UnimplementedHandler) Search(ctx context.Context, params SearchParams) (r 
 //
 // GET /api/galleries/tagged
 func (UnimplementedHandler) SearchByTagID(ctx context.Context, params SearchByTagIDParams) (r SearchByTagIDRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SearchByTagIDRes), nil
 }

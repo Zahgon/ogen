@@ -5,9 +5,6 @@ package api
 import (
 	"net/http"
 	"net/url"
-	"strings"
-
-	"github.com/ogen-go/ogen/uri"
 )
 
 var (
@@ -40,394 +37,72 @@ var (
 	}
 )
 
-func (s *Server) cutPrefix(path string) (string, bool) {
-	prefix := s.cfg.Prefix
-	if prefix == "" {
-		return path, true
-	}
-	if !strings.HasPrefix(path, prefix) {
-		// Prefix doesn't match.
-		return "", false
-	}
-	// Cut prefix from the path.
-	return strings.TrimPrefix(path, prefix), true
-}
+func (s *Server) cutPrefix(path string) (string, bool) { _ = "STUB: not implemented"; return "", false }
+
+// Prefix doesn't match.
+
+// Cut prefix from the path.
 
 // ServeHTTP serves http request as defined by OpenAPI v3 specification,
 // calling handler that matches the path or returning not found error.
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	elem := r.URL.Path
-	elemIsEscaped := false
-	if rawPath := r.URL.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-			elemIsEscaped = strings.ContainsRune(elem, '%')
-		}
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok || len(elem) == 0 {
-		s.notFound(w, r)
-		return
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'a': // Prefix: "admin/foo"
-
-				if l := len("admin/foo"); len(elem) >= l && elem[0:l] == "admin/foo" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleGetAdminFooRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'f': // Prefix: "foo"
-
-				if l := len("foo"); len(elem) >= l && elem[0:l] == "foo" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleGetFooRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'n': // Prefix: "nullableStrings"
-
-				if l := len("nullableStrings"); len(elem) >= l && elem[0:l] == "nullableStrings" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "POST":
-						s.handleNullableStringsRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "POST",
-							allowedHeaders: rn4AllowedHeaders,
-							acceptPost:     "application/json",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'o': // Prefix: "objectsWithConflicting"
-
-				if l := len("objectsWithConflicting"); len(elem) >= l && elem[0:l] == "objectsWithConflicting" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'A': // Prefix: "ArrayProperty"
-
-					if l := len("ArrayProperty"); len(elem) >= l && elem[0:l] == "ArrayProperty" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "POST":
-							s.handleObjectsWithConflictingArrayPropertyRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "POST",
-								allowedHeaders: rn5AllowedHeaders,
-								acceptPost:     "application/json",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				case 'P': // Prefix: "Properties"
-
-					if l := len("Properties"); len(elem) >= l && elem[0:l] == "Properties" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "POST":
-							s.handleObjectsWithConflictingPropertiesRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "POST",
-								allowedHeaders: rn7AllowedHeaders,
-								acceptPost:     "application/json",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				}
-
-			case 'r': // Prefix: "referencedAll"
-
-				if l := len("referencedAll"); len(elem) >= l && elem[0:l] == "referencedAll" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'O': // Prefix: "OfNullable"
-
-					if l := len("OfNullable"); len(elem) >= l && elem[0:l] == "OfNullable" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "POST":
-							s.handleReferencedAllOfNullableRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "POST",
-								allowedHeaders: rn8AllowedHeaders,
-								acceptPost:     "application/json,multipart/form-data",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				case 'o': // Prefix: "of"
-
-					if l := len("of"); len(elem) >= l && elem[0:l] == "of" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						switch r.Method {
-						case "POST":
-							s.handleReferencedAllofRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "POST",
-								allowedHeaders: rn10AllowedHeaders,
-								acceptPost:     "application/json,multipart/form-data",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-					switch elem[0] {
-					case 'O': // Prefix: "Optional"
-
-						if l := len("Optional"); len(elem) >= l && elem[0:l] == "Optional" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "POST":
-								s.handleReferencedAllofOptionalRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "POST",
-									allowedHeaders: rn11AllowedHeaders,
-									acceptPost:     "application/json,multipart/form-data",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					}
-
-				}
-
-			case 's': // Prefix: "s"
-
-				if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'i': // Prefix: "imple"
-
-					if l := len("imple"); len(elem) >= l && elem[0:l] == "imple" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'I': // Prefix: "Integer"
-
-						if l := len("Integer"); len(elem) >= l && elem[0:l] == "Integer" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "POST":
-								s.handleSimpleIntegerRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "POST",
-									allowedHeaders: rn12AllowedHeaders,
-									acceptPost:     "application/json",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					case 'O': // Prefix: "Objects"
-
-						if l := len("Objects"); len(elem) >= l && elem[0:l] == "Objects" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "POST":
-								s.handleSimpleObjectsRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "POST",
-									allowedHeaders: rn14AllowedHeaders,
-									acceptPost:     "application/json",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					}
-
-				case 't': // Prefix: "tringsNotype"
-
-					if l := len("tringsNotype"); len(elem) >= l && elem[0:l] == "tringsNotype" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "POST":
-							s.handleStringsNotypeRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "POST",
-								allowedHeaders: rn16AllowedHeaders,
-								acceptPost:     "application/json",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				}
-
-			}
-
-		}
-	}
-	s.notFound(w, r)
+	_ = "STUB: not implemented"
+	return
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "admin/foo"
+
+// Leaf node.
+
+// Prefix: "foo"
+
+// Leaf node.
+
+// Prefix: "nullableStrings"
+
+// Leaf node.
+
+// Prefix: "objectsWithConflicting"
+
+// Prefix: "ArrayProperty"
+
+// Leaf node.
+
+// Prefix: "Properties"
+
+// Leaf node.
+
+// Prefix: "referencedAll"
+
+// Prefix: "OfNullable"
+
+// Leaf node.
+
+// Prefix: "of"
+
+// Prefix: "Optional"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "imple"
+
+// Prefix: "Integer"
+
+// Leaf node.
+
+// Prefix: "Objects"
+
+// Leaf node.
+
+// Prefix: "tringsNotype"
+
+// Leaf node.
 
 // Route is route object.
 type Route struct {
@@ -444,419 +119,94 @@ type Route struct {
 //
 // It is guaranteed to be unique and not empty.
 func (r Route) Name() string {
-	return r.name
+	_ = "STUB: not implemented"
+
+	// Summary returns OpenAPI summary.
+	return ""
 }
 
-// Summary returns OpenAPI summary.
 func (r Route) Summary() string {
-	return r.summary
+	_ = "STUB: not implemented"
+
+	// OperationID returns OpenAPI operationId.
+	return ""
 }
 
-// OperationID returns OpenAPI operationId.
-func (r Route) OperationID() string {
-	return r.operationID
-}
+func (r Route) OperationID() string { _ = "STUB: not implemented"; return "" }
 
 // OperationGroup returns the x-ogen-operation-group value.
-func (r Route) OperationGroup() string {
-	return r.operationGroup
-}
+func (r Route) OperationGroup() string { _ = "STUB: not implemented"; return "" }
 
 // PathPattern returns OpenAPI path.
-func (r Route) PathPattern() string {
-	return r.pathPattern
-}
+func (r Route) PathPattern() string { _ = "STUB: not implemented"; return "" }
 
 // Args returns parsed arguments.
-func (r Route) Args() []string {
-	return r.args[:r.count]
-}
+func (r Route) Args() []string { _ = "STUB: not implemented"; return nil }
 
 // FindRoute finds Route for given method and path.
 //
 // Note: this method does not unescape path or handle reserved characters in path properly. Use FindPath instead.
 func (s *Server) FindRoute(method, path string) (Route, bool) {
-	return s.FindPath(method, &url.URL{Path: path})
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
 
 // FindPath finds Route for given method and URL.
 func (s *Server) FindPath(method string, u *url.URL) (r Route, _ bool) {
-	var (
-		elem = u.Path
-		args = r.args
-	)
-	if rawPath := u.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-		}
-		defer func() {
-			for i, arg := range r.args[:r.count] {
-				if unescaped, err := url.PathUnescape(arg); err == nil {
-					r.args[i] = unescaped
-				}
-			}
-		}()
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok {
-		return r, false
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'a': // Prefix: "admin/foo"
-
-				if l := len("admin/foo"); len(elem) >= l && elem[0:l] == "admin/foo" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = GetAdminFooOperation
-						r.summary = ""
-						r.operationID = "getAdminFoo"
-						r.operationGroup = ""
-						r.pathPattern = "/admin/foo"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'f': // Prefix: "foo"
-
-				if l := len("foo"); len(elem) >= l && elem[0:l] == "foo" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = GetFooOperation
-						r.summary = ""
-						r.operationID = "getFoo"
-						r.operationGroup = ""
-						r.pathPattern = "/foo"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'n': // Prefix: "nullableStrings"
-
-				if l := len("nullableStrings"); len(elem) >= l && elem[0:l] == "nullableStrings" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "POST":
-						r.name = NullableStringsOperation
-						r.summary = ""
-						r.operationID = "nullableStrings"
-						r.operationGroup = ""
-						r.pathPattern = "/nullableStrings"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'o': // Prefix: "objectsWithConflicting"
-
-				if l := len("objectsWithConflicting"); len(elem) >= l && elem[0:l] == "objectsWithConflicting" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'A': // Prefix: "ArrayProperty"
-
-					if l := len("ArrayProperty"); len(elem) >= l && elem[0:l] == "ArrayProperty" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "POST":
-							r.name = ObjectsWithConflictingArrayPropertyOperation
-							r.summary = ""
-							r.operationID = "objectsWithConflictingArrayProperty"
-							r.operationGroup = ""
-							r.pathPattern = "/objectsWithConflictingArrayProperty"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				case 'P': // Prefix: "Properties"
-
-					if l := len("Properties"); len(elem) >= l && elem[0:l] == "Properties" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "POST":
-							r.name = ObjectsWithConflictingPropertiesOperation
-							r.summary = ""
-							r.operationID = "objectsWithConflictingProperties"
-							r.operationGroup = ""
-							r.pathPattern = "/objectsWithConflictingProperties"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				}
-
-			case 'r': // Prefix: "referencedAll"
-
-				if l := len("referencedAll"); len(elem) >= l && elem[0:l] == "referencedAll" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'O': // Prefix: "OfNullable"
-
-					if l := len("OfNullable"); len(elem) >= l && elem[0:l] == "OfNullable" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "POST":
-							r.name = ReferencedAllOfNullableOperation
-							r.summary = ""
-							r.operationID = "referencedAllOfNullable"
-							r.operationGroup = ""
-							r.pathPattern = "/referencedAllOfNullable"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				case 'o': // Prefix: "of"
-
-					if l := len("of"); len(elem) >= l && elem[0:l] == "of" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						switch method {
-						case "POST":
-							r.name = ReferencedAllofOperation
-							r.summary = ""
-							r.operationID = "referencedAllof"
-							r.operationGroup = ""
-							r.pathPattern = "/referencedAllof"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-					switch elem[0] {
-					case 'O': // Prefix: "Optional"
-
-						if l := len("Optional"); len(elem) >= l && elem[0:l] == "Optional" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "POST":
-								r.name = ReferencedAllofOptionalOperation
-								r.summary = ""
-								r.operationID = "referencedAllofOptional"
-								r.operationGroup = ""
-								r.pathPattern = "/referencedAllofOptional"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-
-					}
-
-				}
-
-			case 's': // Prefix: "s"
-
-				if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'i': // Prefix: "imple"
-
-					if l := len("imple"); len(elem) >= l && elem[0:l] == "imple" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'I': // Prefix: "Integer"
-
-						if l := len("Integer"); len(elem) >= l && elem[0:l] == "Integer" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "POST":
-								r.name = SimpleIntegerOperation
-								r.summary = ""
-								r.operationID = "simpleInteger"
-								r.operationGroup = ""
-								r.pathPattern = "/simpleInteger"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-
-					case 'O': // Prefix: "Objects"
-
-						if l := len("Objects"); len(elem) >= l && elem[0:l] == "Objects" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "POST":
-								r.name = SimpleObjectsOperation
-								r.summary = ""
-								r.operationID = "simpleObjects"
-								r.operationGroup = ""
-								r.pathPattern = "/simpleObjects"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-
-					}
-
-				case 't': // Prefix: "tringsNotype"
-
-					if l := len("tringsNotype"); len(elem) >= l && elem[0:l] == "tringsNotype" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "POST":
-							r.name = StringsNotypeOperation
-							r.summary = ""
-							r.operationID = "stringsNotype"
-							r.operationGroup = ""
-							r.pathPattern = "/stringsNotype"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				}
-
-			}
-
-		}
-	}
-	return r, false
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "admin/foo"
+
+// Leaf node.
+
+// Prefix: "foo"
+
+// Leaf node.
+
+// Prefix: "nullableStrings"
+
+// Leaf node.
+
+// Prefix: "objectsWithConflicting"
+
+// Prefix: "ArrayProperty"
+
+// Leaf node.
+
+// Prefix: "Properties"
+
+// Leaf node.
+
+// Prefix: "referencedAll"
+
+// Prefix: "OfNullable"
+
+// Leaf node.
+
+// Prefix: "of"
+
+// Prefix: "Optional"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "imple"
+
+// Prefix: "Integer"
+
+// Leaf node.
+
+// Prefix: "Objects"
+
+// Leaf node.
+
+// Prefix: "tringsNotype"
+
+// Leaf node.

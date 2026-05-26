@@ -3,24 +3,14 @@
 package api
 
 import (
-	"bytes"
 	"net/http"
-
-	"github.com/go-faster/jx"
-	ht "github.com/ogen-go/ogen/http"
 )
 
 func encodeCreateSnapshotRequest(
 	req *SnapshotCreateParams,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -28,13 +18,7 @@ func encodeCreateSyncActionRequest(
 	req *InstanceActionInfo,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -42,13 +26,7 @@ func encodeLoadSnapshotRequest(
 	req *SnapshotLoadParams,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -56,13 +34,7 @@ func encodeMmdsConfigPutRequest(
 	req *MmdsConfig,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -70,15 +42,7 @@ func encodeMmdsPatchRequest(
 	req *MmdsPatchReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -86,15 +50,7 @@ func encodeMmdsPutRequest(
 	req *MmdsPutReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -102,13 +58,7 @@ func encodePatchBalloonRequest(
 	req *BalloonUpdate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -116,13 +66,7 @@ func encodePatchBalloonStatsIntervalRequest(
 	req *BalloonStatsUpdate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -130,13 +74,7 @@ func encodePatchGuestDriveByIDRequest(
 	req *PartialDrive,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -144,13 +82,7 @@ func encodePatchGuestNetworkInterfaceByIDRequest(
 	req *PartialNetworkInterface,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -158,33 +90,17 @@ func encodePatchMachineConfigurationRequest(
 	req OptMachineConfiguration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodePatchVmRequest(
 	req *VM,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -192,13 +108,7 @@ func encodePutBalloonRequest(
 	req *Balloon,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -206,13 +116,7 @@ func encodePutGuestBootSourceRequest(
 	req *BootSource,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -220,13 +124,7 @@ func encodePutGuestDriveByIDRequest(
 	req *Drive,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -234,13 +132,7 @@ func encodePutGuestNetworkInterfaceByIDRequest(
 	req *NetworkInterface,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -248,13 +140,7 @@ func encodePutGuestVsockRequest(
 	req *Vsock,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -262,13 +148,7 @@ func encodePutLoggerRequest(
 	req *Logger,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -276,32 +156,16 @@ func encodePutMachineConfigurationRequest(
 	req OptMachineConfiguration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodePutMetricsRequest(
 	req *Metrics,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }

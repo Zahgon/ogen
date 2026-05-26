@@ -2,47 +2,12 @@
 
 package api
 
-import "github.com/ogen-go/ogen/validate"
-
 // Equal compares two User instances for equality.
 // The depth parameter prevents infinite recursion on nested objects.
-func (a User) Equal(b User, depth int) bool {
-	if depth > 10 {
-		panic(&validate.DepthLimitError{
-			MaxDepth: 10,
-			TypeName: "User",
-		})
-	}
+func (a User) Equal(b User, depth int) bool { _ = "STUB: not implemented"; return false }
 
-	if a.Username != b.Username {
-		return false
-	}
-	// Compare optional field: Email
-	if a.Email.Set != b.Email.Set {
-		return false
-	}
-	if a.Email.Set {
-		if a.Email.Value != b.Email.Value {
-			return false
-		}
-	}
-	// Compare optional field: FullName
-	if a.FullName.Set != b.FullName.Set {
-		return false
-	}
-	if a.FullName.Set {
-		if a.FullName.Value != b.FullName.Value {
-			return false
-		}
-	}
-	// Compare optional field: Verified
-	if a.Verified.Set != b.Verified.Set {
-		return false
-	}
-	if a.Verified.Set {
-		if a.Verified.Value != b.Verified.Value {
-			return false
-		}
-	}
-	return true
-}
+// Compare optional field: Email
+
+// Compare optional field: FullName
+
+// Compare optional field: Verified

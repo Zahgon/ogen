@@ -1,423 +1,126 @@
 package ir
 
-import (
-	"slices"
-	"strconv"
-	"strings"
-
-	"github.com/ogen-go/ogen/internal/bitset"
-	"github.com/ogen-go/ogen/internal/naming"
-	"github.com/ogen-go/ogen/internal/xslices"
-	"github.com/ogen-go/ogen/jsonschema"
-)
-
 // JSON returns json encoding/decoding rules for t.
 func (t *Type) JSON() JSON {
-	return JSON{
-		t: t,
-	}
+	_ = "STUB: not implemented"
+	return *
+
+	// JSON specifies json encoding and decoding for Type.
+	new(JSON)
 }
 
-// JSON specifies json encoding and decoding for Type.
 type JSON struct {
 	t      *Type
 	except []string
 }
 
 // AnyFields whether if type has any fields to encode.
-func (j JSON) AnyFields() bool {
-	for _, f := range j.t.Fields {
-		if f.Inline != InlineNone {
-			return true
-		}
-
-		t := f.Tag.JSON
-		if t != "" && !slices.Contains(j.except, t) {
-			return true
-		}
-	}
-	return false
-}
+func (j JSON) AnyFields() bool { _ = "STUB: not implemented"; return false }
 
 // NeedsReceiver reports whether encoding the fields would reference the
 // receiver variable "s".  This is false when every non-excluded, non-inline
 // field carries a const value (encoded as a literal) and there are no
 // additional-properties, pattern-properties or inline-sum fields.
-func (j JSON) NeedsReceiver() bool {
-	for _, f := range j.t.Fields {
-		// Inline fields (additional / pattern / sum props) always reference s.
-		if f.Inline != InlineNone {
-			return true
-		}
+func (j JSON) NeedsReceiver() bool { _ = "STUB: not implemented"; return false }
 
-		t := f.Tag.JSON
-		if t == "" || slices.Contains(j.except, t) {
-			continue
-		}
+// Inline fields (additional / pattern / sum props) always reference s.
 
-		// A non-const regular field will be encoded via field_elem → s.Name.
-		if !f.Const().Set {
-			return true
-		}
-	}
-	return false
-}
+// A non-const regular field will be encoded via field_elem → s.Name.
 
 // Except return JSON with filter by given properties.
-func (j JSON) Except(set ...string) JSON {
-	return JSON{
-		t:      j.t,
-		except: set,
-	}
-}
+func (j JSON) Except(set ...string) JSON { _ = "STUB: not implemented"; return *new(JSON) }
 
 type JSONFields []*Field
 
 // FirstRequiredIndex returns first required field index.
 //
 // Or -1 if there is no required fields.
-func (j JSONFields) FirstRequiredIndex() int {
-	for idx, f := range j {
-		if typ := f.Type; typ.IsGeneric() && typ.GenericVariant.Optional ||
-			typ.Is(
-				KindStruct,
-				KindMap,
-				KindEnum,
-				KindPointer,
-				KindSum,
-				KindAlias,
-			) && (typ.NilSemantic.Optional() || typ.NilSemantic.Invalid()) ||
-			typ.IsArray() && typ.NilSemantic.Optional() ||
-			typ.IsAny() {
-			continue
-		}
-		return idx
-	}
-	return -1
-}
+func (j JSONFields) FirstRequiredIndex() int { _ = "STUB: not implemented"; return 0 }
 
 // HasRequired whether object has required fields
-func (j JSONFields) HasRequired() bool {
-	return slices.ContainsFunc(j, func(f *Field) bool {
-		return f.Spec != nil && f.Spec.Required
-	})
-}
+func (j JSONFields) HasRequired() bool { _ = "STUB: not implemented"; return false }
 
 // RequiredMask returns array of 64-bit bitmasks for required fields.
-func (j JSONFields) RequiredMask() []uint8 {
-	return bitset.Build(j, func(_ int, f *Field) bool {
-		return f.Spec != nil && f.Spec.Required
-	})
-}
+func (j JSONFields) RequiredMask() []uint8 { _ = "STUB: not implemented"; return nil }
 
 // Fields return all fields of Type that should be encoded via json.
-func (j JSON) Fields() (fields JSONFields) {
-	for _, f := range j.t.Fields {
-		if t := f.Tag.JSON; t == "" || slices.Contains(j.except, t) {
-			continue
-		}
-		fields = append(fields, f)
-	}
-	return fields
-}
+func (j JSON) Fields() (fields JSONFields) { _ = "STUB: not implemented"; return *new(JSONFields) }
 
 // AdditionalProps return field of Type that should be encoded as inlined map.
-func (j JSON) AdditionalProps() *Field {
-	f, _ := xslices.FindFunc(j.t.Fields, func(f *Field) bool {
-		return f.Inline == InlineAdditional
-	})
-	return f
-}
+func (j JSON) AdditionalProps() *Field { _ = "STUB: not implemented"; return nil }
 
 // PatternProps return field of Type that should be encoded as inlined map with pattern.
-func (j JSON) PatternProps() (fields []*Field) {
-	for _, f := range j.t.Fields {
-		if f.Inline == InlinePattern {
-			fields = append(fields, f)
-		}
-	}
-	return fields
-}
+func (j JSON) PatternProps() (fields []*Field) { _ = "STUB: not implemented"; return nil }
 
 // SumProps return field of Type that should be encoded as inlined sum.
-func (j JSON) SumProps() (fields []*Field) {
-	for _, f := range j.t.Fields {
-		if f.Inline == InlineSum {
-			fields = append(fields, f)
-		}
-	}
-	return fields
-}
+func (j JSON) SumProps() (fields []*Field) { _ = "STUB: not implemented"; return nil }
 
 // Format returns format name for handling json encoding or decoding.
 //
 // Mostly used for encoding or decoding of string formats, like `json.EncodeUUID`,
 // where UUID is Format.
-func (j JSON) Format() string {
-	s := j.t.Schema
-	if s == nil {
-		return ""
-	}
-	typePrefix := func(f string) string {
-		switch s.Type {
-		case jsonschema.String:
-			return "String" + naming.Capitalize(f)
-		default:
-			return f
-		}
-	}
-	switch f := s.Format; f {
-	case "uuid":
-		return "UUID"
-	case "date":
-		return "Date"
-	case "time":
-		return "Time"
-	case "date-time":
-		return "DateTime"
-	case "http-date":
-		return "HTTPDate"
-	case "duration":
-		return "Duration"
-	case "ip":
-		return "IP"
-	case "ipv4":
-		return "IPv4"
-	case "ipv6":
-		return "IPv6"
-	case "mac":
-		return "MAC"
-	case "uri":
-		return "URI"
-	case "int", "int8", "int16", "int32", "int64",
-		"uint", "uint8", "uint16", "uint32", "uint64",
-		"float32", "float64":
-		if s.Type != jsonschema.String {
-			return ""
-		}
-		return "String" + naming.Capitalize(f)
-	case "unix", "unix-seconds":
-		return typePrefix("UnixSeconds")
-	case "unix-nano":
-		return typePrefix("UnixNano")
-	case "unix-micro":
-		return typePrefix("UnixMicro")
-	case "unix-milli":
-		return typePrefix("UnixMilli")
-	case "decimal":
-		return typePrefix("Decimal")
-	default:
-		return ""
-	}
-}
+func (j JSON) Format() string { _ = "STUB: not implemented"; return "" }
 
 // Type returns json value type that can represent Type.
 //
 // E.g. string primitive can be represented by StringValue which is commonly
 // returned from `i.WhatIsNext()` method.
 // Blank string is returned if there is no appropriate json type.
-func (j JSON) Type() string {
-	return jsonType(j.t)
-}
+func (j JSON) Type() string { _ = "STUB: not implemented"; return "" }
 
-func collectTypes(t *Type, types map[string]struct{}) {
-	if !t.IsSum() {
-		panic(unreachable(t))
-	}
-	for _, variant := range t.SumOf {
-		typ := variant.JSON().Type()
-		if typ == "" {
-			collectTypes(variant, types)
-			continue
-		}
-		types[typ] = struct{}{}
-	}
-}
+func collectTypes(t *Type, types map[string]struct{}) { _ = "STUB: not implemented"; return }
 
 // SumTypes returns jx.Type list for this sum type.
-func (j JSON) SumTypes() string {
-	types := map[string]struct{}{}
-	collectTypes(j.t, types)
-
-	sortedTypes := make([]string, 0, len(types))
-	for k := range types {
-		sortedTypes = append(sortedTypes, "jx."+k)
-	}
-	slices.Sort(sortedTypes)
-
-	return strings.Join(sortedTypes, ",")
-}
+func (j JSON) SumTypes() string { _ = "STUB: not implemented"; return "" }
 
 const arraySuffix = "Array"
 
-func jsonType(t *Type) string {
-	if t.IsNumeric() {
-		if s := t.Schema; s != nil && s.Type == "string" {
-			return "String"
-		}
-		return "Number"
-	}
-	if t.Is(KindArray) {
-		return arraySuffix
-	}
-	if t.Is(KindStruct, KindMap) {
-		return "Object"
-	}
-	if t.Is(KindGeneric) {
-		return jsonType(t.GenericOf)
-	}
-	if t.Is(KindAlias) {
-		return jsonType(t.AliasTo)
-	}
-	switch t.Primitive {
-	case Bool:
-		return "Bool"
-	case Time:
-		if s := t.Schema; s != nil && s.Type == "integer" {
-			return "Number"
-		}
-		return "String"
-	case String, Duration, UUID, MAC, IP, URL, ByteSlice:
-		return "String"
-	case Null:
-		return "Null"
-	default:
-		return ""
-	}
-}
+func jsonType(t *Type) string { _ = "STUB: not implemented"; return "" }
 
 // raw denotes whether Type can be encoded or decoded using simple
 // json method, e.g. j.WriteString.
 //
 // Mostly true for primitives or enums.
-func (j JSON) raw() bool {
-	if !j.t.Is(KindPrimitive, KindEnum, KindAny) {
-		return false
-	}
-
-	if j.t.IsNumeric() {
-		return true
-	}
-	switch j.t.Primitive {
-	case Bool, String, ByteSlice:
-		return true
-	default:
-		return j.t.Kind == KindAny
-	}
-}
+func (j JSON) raw() bool { _ = "STUB: not implemented"; return false }
 
 func (j JSON) Decode() string {
-	if j.t.IsAny() {
-		// Copy to prevent referencing internal buffer.
-		return "RawAppend(nil)"
-	}
-	// No arguments.
-	return j.Fn() + "()"
+	_ = "STUB: not implemented"
+
+	// Copy to prevent referencing internal buffer.
+	return ""
 }
+
+// No arguments.
 
 // Fn returns jx.Encoder or jx.Decoder method name.
 //
 // If blank, value cannot be encoded with single method call.
-func (j JSON) Fn() string {
-	if !j.raw() {
-		return ""
-	}
-	if j.t.IsAny() {
-		return "Raw"
-	}
-	switch j.t.Primitive {
-	case String:
-		return "Str"
-	case ByteSlice:
-		return "Base64"
-	case Uint,
-		Uint8,
-		Uint16,
-		Uint32,
-		Uint64:
-		s := j.t.Primitive.String()
-		return strings.ToUpper(s[:2]) + s[2:]
-	default:
-		return naming.Capitalize(j.t.Primitive.String())
-	}
-}
+func (j JSON) Fn() string { _ = "STUB: not implemented"; return "" }
 
 // IsBase64 whether field has base64 encoding.
-func (j JSON) IsBase64() bool {
-	return j.t.Primitive == ByteSlice
-}
+func (j JSON) IsBase64() bool { _ = "STUB: not implemented"; return false }
 
 // TimeFormat returns time format for json encoding and decoding.
-func (j JSON) TimeFormat() string {
-	s := j.t.Schema
-	if s == nil || s.XOgenTimeFormat == "" {
-		return ""
-	}
-	return strconv.Quote(s.XOgenTimeFormat)
-}
+func (j JSON) TimeFormat() string { _ = "STUB: not implemented"; return "" }
 
 // Encoder returns format name for handling json encoding.
 //
 // Mostly used for encoding of string formats, like `json.EncodeUUID`, where
 // UUID is Encoder.
-func (j JSON) Encoder() string {
-	if j.t.IsExternal() {
-		external := j.t.externalType(j.t.External.Encode, ExternalJSON)
-		var prefix string
-		if j.t.Schema.Type == jsonschema.String && external == ExternalText {
-			prefix = "String"
-		}
-		return prefix + external.String()
-	}
-	return j.Format()
-}
+func (j JSON) Encoder() string { _ = "STUB: not implemented"; return "" }
 
 // Decoder returns format name for handling json decoding.
 //
 // Mostly used for decoding of string formats, like `json.DecodeUUID`, where
 // UUID is Decoder.
-func (j JSON) Decoder() string {
-	if j.t.IsExternal() {
-		external := j.t.externalType(j.t.External.Decode, ExternalJSON)
-		var prefix string
-		if j.t.Schema.Type == jsonschema.String && external == ExternalText {
-			prefix = "String"
-		}
-		return prefix + external.String() + "[" + j.t.Primitive.String() + "]"
-	}
-	return j.Format()
-}
+func (j JSON) Decoder() string { _ = "STUB: not implemented"; return "" }
 
 // Sum returns specification for parsing value as sum type.
-func (j JSON) Sum() SumJSON {
-	if j.t.SumSpec.Discriminator != "" {
-		return SumJSON{
-			Type: SumJSONDiscriminator,
-		}
-	}
-	if j.t.SumSpec.TypeDiscriminator {
-		return SumJSON{
-			Type: SumJSONTypeDiscriminator,
-		}
-	}
-	// Check for field-based discrimination (UniqueFields or ValueDiscriminators on sum type)
-	if len(j.t.SumSpec.UniqueFields) > 0 || len(j.t.SumSpec.ValueDiscriminators) > 0 {
-		return SumJSON{
-			Type: SumJSONFields,
-		}
-	}
-	// Check for unique fields on variants (legacy approach)
-	for _, s := range j.t.SumOf {
-		if len(s.SumSpec.Unique) > 0 {
-			return SumJSON{
-				Type: SumJSONFields,
-			}
-		}
-	}
-	return SumJSON{
-		Type: SumJSONPrimitive,
-	}
-}
+func (j JSON) Sum() SumJSON { _ = "STUB: not implemented"; return *new(SumJSON) }
+
+// Check for field-based discrimination (UniqueFields or ValueDiscriminators on sum type)
+
+// Check for unique fields on variants (legacy approach)
 
 type SumJSONType byte
 
@@ -433,22 +136,9 @@ type SumJSON struct {
 	Type SumJSONType
 }
 
-func (s SumJSON) String() string {
-	switch s.Type {
-	case SumJSONFields:
-		return "fields"
-	case SumJSONPrimitive:
-		return "primitive"
-	case SumJSONDiscriminator:
-		return "discriminator"
-	case SumJSONTypeDiscriminator:
-		return "type_discriminator"
-	default:
-		return "unknown"
-	}
-}
+func (s SumJSON) String() string { _ = "STUB: not implemented"; return "" }
 
-func (s SumJSON) Primitive() bool         { return s.Type == SumJSONPrimitive }
-func (s SumJSON) Discriminator() bool     { return s.Type == SumJSONDiscriminator }
-func (s SumJSON) TypeDiscriminator() bool { return s.Type == SumJSONTypeDiscriminator }
-func (s SumJSON) Fields() bool            { return s.Type == SumJSONFields }
+func (s SumJSON) Primitive() bool         { _ = "STUB: not implemented"; return false }
+func (s SumJSON) Discriminator() bool     { _ = "STUB: not implemented"; return false }
+func (s SumJSON) TypeDiscriminator() bool { _ = "STUB: not implemented"; return false }
+func (s SumJSON) Fields() bool            { _ = "STUB: not implemented"; return false }

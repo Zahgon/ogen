@@ -3,27129 +3,4457 @@
 package api
 
 import (
-	"io"
 	"net/http"
 
-	"github.com/go-faster/errors"
-	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/uri"
-	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
 )
 
 func encodeActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse(response *ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsAddSelectedRepoToOrgSecretResponse(response ActionsAddSelectedRepoToOrgSecretRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActionsAddSelectedRepoToOrgSecretNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ActionsAddSelectedRepoToOrgSecretConflict:
-		w.WriteHeader(409)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActionsAddSelfHostedRunnerToGroupForOrgResponse(response *ActionsAddSelfHostedRunnerToGroupForOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsApproveWorkflowRunResponse(response ActionsApproveWorkflowRunRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *EmptyObject:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActionsApproveWorkflowRunForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActionsApproveWorkflowRunNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActionsCancelWorkflowRunResponse(response *ActionsCancelWorkflowRunAccepted, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(202)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsCreateOrUpdateEnvironmentSecretResponse(response ActionsCreateOrUpdateEnvironmentSecretRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *EmptyObject:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActionsCreateOrUpdateEnvironmentSecretNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActionsCreateOrUpdateOrgSecretResponse(response ActionsCreateOrUpdateOrgSecretRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *EmptyObject:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActionsCreateOrUpdateOrgSecretNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActionsCreateOrUpdateRepoSecretResponse(response ActionsCreateOrUpdateRepoSecretRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActionsCreateOrUpdateRepoSecretCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActionsCreateOrUpdateRepoSecretNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActionsCreateRegistrationTokenForOrgResponse(response *AuthenticationToken, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsCreateRegistrationTokenForRepoResponse(response *AuthenticationToken, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsCreateRemoveTokenForOrgResponse(response *AuthenticationToken, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsCreateRemoveTokenForRepoResponse(response *AuthenticationToken, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsCreateSelfHostedRunnerGroupForOrgResponse(response *RunnerGroupsOrg, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsCreateWorkflowDispatchResponse(response *ActionsCreateWorkflowDispatchNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDeleteArtifactResponse(response *ActionsDeleteArtifactNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDeleteEnvironmentSecretResponse(response *ActionsDeleteEnvironmentSecretNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDeleteOrgSecretResponse(response *ActionsDeleteOrgSecretNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDeleteRepoSecretResponse(response *ActionsDeleteRepoSecretNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDeleteSelfHostedRunnerFromOrgResponse(response *ActionsDeleteSelfHostedRunnerFromOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDeleteSelfHostedRunnerFromRepoResponse(response *ActionsDeleteSelfHostedRunnerFromRepoNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDeleteSelfHostedRunnerGroupFromOrgResponse(response *ActionsDeleteSelfHostedRunnerGroupFromOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDeleteWorkflowRunResponse(response *ActionsDeleteWorkflowRunNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDeleteWorkflowRunLogsResponse(response *ActionsDeleteWorkflowRunLogsNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDisableSelectedRepositoryGithubActionsOrganizationResponse(response *ActionsDisableSelectedRepositoryGithubActionsOrganizationNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDisableWorkflowResponse(response *ActionsDisableWorkflowNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsDownloadArtifactResponse(response *ActionsDownloadArtifactFound, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Access-Control-Expose-Headers", "Location")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Location" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Location",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Location.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Location header")
-			}
-		}
-	}
-	w.WriteHeader(302)
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodeActionsDownloadJobLogsForWorkflowRunResponse(response *ActionsDownloadJobLogsForWorkflowRunFound, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Access-Control-Expose-Headers", "Location")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Location" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Location",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Location.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Location header")
-			}
-		}
-	}
-	w.WriteHeader(302)
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodeActionsDownloadWorkflowRunLogsResponse(response *ActionsDownloadWorkflowRunLogsFound, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Access-Control-Expose-Headers", "Location")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Location" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Location",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Location.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Location header")
-			}
-		}
-	}
-	w.WriteHeader(302)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func encodeActionsEnableSelectedRepositoryGithubActionsOrganizationResponse(response *ActionsEnableSelectedRepositoryGithubActionsOrganizationNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
+// Encoding response headers.
 
+// Encode "Location" header.
+
+func encodeActionsEnableSelectedRepositoryGithubActionsOrganizationResponse(response *ActionsEnableSelectedRepositoryGithubActionsOrganizationNoContent, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsEnableWorkflowResponse(response *ActionsEnableWorkflowNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetAllowedActionsOrganizationResponse(response *SelectedActions, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetAllowedActionsRepositoryResponse(response *SelectedActions, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetArtifactResponse(response *Artifact, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetEnvironmentPublicKeyResponse(response *ActionsPublicKey, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetEnvironmentSecretResponse(response *ActionsSecret, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetGithubActionsPermissionsOrganizationResponse(response *ActionsOrganizationPermissions, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetGithubActionsPermissionsRepositoryResponse(response *ActionsRepositoryPermissions, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetJobForWorkflowRunResponse(response *Job, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetOrgPublicKeyResponse(response *ActionsPublicKey, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetOrgSecretResponse(response *OrganizationActionsSecret, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetRepoPublicKeyResponse(response *ActionsPublicKey, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetRepoSecretResponse(response *ActionsSecret, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetReviewsForRunResponse(response []EnvironmentApprovals, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetSelfHostedRunnerForOrgResponse(response *Runner, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetSelfHostedRunnerForRepoResponse(response *Runner, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetSelfHostedRunnerGroupForOrgResponse(response *RunnerGroupsOrg, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetWorkflowResponse(response *Workflow, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetWorkflowRunResponse(response *WorkflowRun, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetWorkflowRunUsageResponse(response *WorkflowRunUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsGetWorkflowUsageResponse(response *WorkflowUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsListArtifactsForRepoResponse(response *ActionsListArtifactsForRepoOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActionsListEnvironmentSecretsResponse(response *ActionsListEnvironmentSecretsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActionsListJobsForWorkflowRunResponse(response *ActionsListJobsForWorkflowRunOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActionsListOrgSecretsResponse(response *ActionsListOrgSecretsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse(response *ActionsListRepoAccessToSelfHostedRunnerGroupInOrgOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsListRepoSecretsResponse(response *ActionsListRepoSecretsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActionsListRepoWorkflowsResponse(response *ActionsListRepoWorkflowsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeActionsListRunnerApplicationsForOrgResponse(response []RunnerApplication, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsListRunnerApplicationsForRepoResponse(response []RunnerApplication, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsListSelectedReposForOrgSecretResponse(response *ActionsListSelectedReposForOrgSecretOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse(response *ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsListSelfHostedRunnerGroupsForOrgResponse(response *ActionsListSelfHostedRunnerGroupsForOrgOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsListSelfHostedRunnersForOrgResponse(response *ActionsListSelfHostedRunnersForOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActionsListSelfHostedRunnersForRepoResponse(response *ActionsListSelfHostedRunnersForRepoOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActionsListSelfHostedRunnersInGroupForOrgResponse(response *ActionsListSelfHostedRunnersInGroupForOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActionsListWorkflowRunArtifactsResponse(response *ActionsListWorkflowRunArtifactsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActionsListWorkflowRunsResponse(response *ActionsListWorkflowRunsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActionsListWorkflowRunsForRepoResponse(response *ActionsListWorkflowRunsForRepoOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeActionsReRunWorkflowResponse(response *ActionsReRunWorkflowCreated, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse(response *ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsRemoveSelectedRepoFromOrgSecretResponse(response ActionsRemoveSelectedRepoFromOrgSecretRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActionsRemoveSelectedRepoFromOrgSecretNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ActionsRemoveSelectedRepoFromOrgSecretConflict:
-		w.WriteHeader(409)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActionsRemoveSelfHostedRunnerFromGroupForOrgResponse(response *ActionsRemoveSelfHostedRunnerFromGroupForOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsRetryWorkflowResponse(response *ActionsRetryWorkflowCreated, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsReviewPendingDeploymentsForRunResponse(response []Deployment, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsSetAllowedActionsOrganizationResponse(response *ActionsSetAllowedActionsOrganizationNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsSetAllowedActionsRepositoryResponse(response *ActionsSetAllowedActionsRepositoryNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsSetGithubActionsPermissionsOrganizationResponse(response *ActionsSetGithubActionsPermissionsOrganizationNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsSetGithubActionsPermissionsRepositoryResponse(response *ActionsSetGithubActionsPermissionsRepositoryNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsSetRepoAccessToSelfHostedRunnerGroupInOrgResponse(response *ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsSetSelectedReposForOrgSecretResponse(response *ActionsSetSelectedReposForOrgSecretNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse(response *ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsSetSelfHostedRunnersInGroupForOrgResponse(response *ActionsSetSelfHostedRunnersInGroupForOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActionsUpdateSelfHostedRunnerGroupForOrgResponse(response *RunnerGroupsOrg, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivityCheckRepoIsStarredByAuthenticatedUserResponse(response ActivityCheckRepoIsStarredByAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityCheckRepoIsStarredByAuthenticatedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityCheckRepoIsStarredByAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityCheckRepoIsStarredByAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityCheckRepoIsStarredByAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityDeleteRepoSubscriptionResponse(response *ActivityDeleteRepoSubscriptionNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivityDeleteThreadSubscriptionResponse(response ActivityDeleteThreadSubscriptionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityDeleteThreadSubscriptionNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityDeleteThreadSubscriptionUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityDeleteThreadSubscriptionForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityGetFeedsResponse(response *Feed, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivityGetRepoSubscriptionResponse(response ActivityGetRepoSubscriptionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *RepositorySubscription:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityGetRepoSubscriptionNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityGetThreadResponse(response ActivityGetThreadRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Thread:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityGetThreadUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityGetThreadForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityGetThreadSubscriptionForAuthenticatedUserResponse(response ActivityGetThreadSubscriptionForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ThreadSubscription:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityGetThreadSubscriptionForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityGetThreadSubscriptionForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityListEventsForAuthenticatedUserResponse(response []Event, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivityListNotificationsForAuthenticatedUserResponse(response ActivityListNotificationsForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityListNotificationsForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityListNotificationsForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityListNotificationsForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeActivityListOrgEventsForAuthenticatedUserResponse(response []Event, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivityListPublicEventsResponse(response ActivityListPublicEventsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityListPublicEventsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityListPublicEventsForRepoNetworkResponse(response ActivityListPublicEventsForRepoNetworkRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityListPublicEventsForRepoNetworkOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityListPublicEventsForRepoNetworkMovedPermanently:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(301)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityListPublicEventsForRepoNetworkForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityListPublicEventsForRepoNetworkNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityListPublicEventsForUserResponse(response []Event, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivityListPublicOrgEventsResponse(response []Event, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivityListReceivedEventsForUserResponse(response []Event, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivityListReceivedPublicEventsForUserResponse(response []Event, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivityListRepoEventsResponse(response []Event, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivityListRepoNotificationsForAuthenticatedUserResponse(response *ActivityListRepoNotificationsForAuthenticatedUserOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActivityListReposStarredByAuthenticatedUserResponse(response ActivityListReposStarredByAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityListReposStarredByAuthenticatedUserOKApplicationJSONHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityListReposStarredByAuthenticatedUserOKApplicationVndGithubV3StarJSONHeaders:
-		w.Header().Set("Content-Type", "application/vnd.github.v3.star+json")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityListReposStarredByAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityListReposStarredByAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActivityListReposWatchedByUserResponse(response *ActivityListReposWatchedByUserOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeActivityListWatchedReposForAuthenticatedUserResponse(response ActivityListWatchedReposForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityListWatchedReposForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityListWatchedReposForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityListWatchedReposForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeActivityListWatchersForRepoResponse(response *ActivityListWatchersForRepoOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeActivityListWatchersForRepoResponse(response *ActivityListWatchersForRepoOKHeaders, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeActivityMarkNotificationsAsReadResponse(response ActivityMarkNotificationsAsReadRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityMarkNotificationsAsReadAccepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityMarkNotificationsAsReadResetContent:
-		w.WriteHeader(205)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityMarkNotificationsAsReadUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityMarkNotificationsAsReadForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityMarkRepoNotificationsAsReadResponse(response ActivityMarkRepoNotificationsAsReadRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityMarkRepoNotificationsAsReadAccepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityMarkRepoNotificationsAsReadResetContent:
-		w.WriteHeader(205)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityMarkThreadAsReadResponse(response ActivityMarkThreadAsReadRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityMarkThreadAsReadResetContent:
-		w.WriteHeader(205)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivitySetRepoSubscriptionResponse(response *RepositorySubscription, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeActivitySetThreadSubscriptionResponse(response ActivitySetThreadSubscriptionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ThreadSubscription:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivitySetThreadSubscriptionUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivitySetThreadSubscriptionForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityStarRepoForAuthenticatedUserResponse(response ActivityStarRepoForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityStarRepoForAuthenticatedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityStarRepoForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityStarRepoForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityStarRepoForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeActivityUnstarRepoForAuthenticatedUserResponse(response ActivityUnstarRepoForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ActivityUnstarRepoForAuthenticatedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ActivityUnstarRepoForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityUnstarRepoForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ActivityUnstarRepoForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsAddRepoToInstallationResponse(response AppsAddRepoToInstallationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsAddRepoToInstallationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *AppsAddRepoToInstallationForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsAddRepoToInstallationNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsCheckTokenResponse(response AppsCheckTokenRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Authorization:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsCreateContentAttachmentResponse(response AppsCreateContentAttachmentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ContentReferenceAttachment:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *AppsCreateContentAttachmentForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsCreateContentAttachmentNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsCreateContentAttachmentGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsCreateFromManifestResponse(response AppsCreateFromManifestRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsCreateFromManifestCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsCreateInstallationAccessTokenResponse(response AppsCreateInstallationAccessTokenRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *InstallationToken:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsCreateInstallationAccessTokenUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsCreateInstallationAccessTokenForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsCreateInstallationAccessTokenNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsDeleteAuthorizationResponse(response AppsDeleteAuthorizationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsDeleteAuthorizationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsDeleteInstallationResponse(response AppsDeleteInstallationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsDeleteInstallationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsDeleteTokenResponse(response AppsDeleteTokenRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsDeleteTokenNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsGetAuthenticatedResponse(response *Integration, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeAppsGetBySlugResponse(response AppsGetBySlugRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Integration:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsGetBySlugForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsGetBySlugNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsGetSubscriptionPlanForAccountResponse(response AppsGetSubscriptionPlanForAccountRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MarketplacePurchase:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsGetSubscriptionPlanForAccountUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsGetSubscriptionPlanForAccountNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsGetSubscriptionPlanForAccountStubbedResponse(response AppsGetSubscriptionPlanForAccountStubbedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MarketplacePurchase:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsGetSubscriptionPlanForAccountStubbedNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsGetWebhookConfigForAppResponse(response *WebhookConfig, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeAppsGetWebhookDeliveryResponse(response AppsGetWebhookDeliveryRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *HookDelivery:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsListAccountsForPlanResponse(response AppsListAccountsForPlanRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsListAccountsForPlanOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsListAccountsForPlanUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsListAccountsForPlanNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeAppsListAccountsForPlanStubbedResponse(response AppsListAccountsForPlanStubbedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsListAccountsForPlanStubbedOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeAppsListInstallationReposForAuthenticatedUserResponse(response AppsListInstallationReposForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsListInstallationReposForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *AppsListInstallationReposForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsListInstallationReposForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeAppsListPlansResponse(response AppsListPlansRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsListPlansOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsListPlansUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsListPlansNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeAppsListPlansStubbedResponse(response AppsListPlansStubbedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsListPlansStubbedOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeAppsListReposAccessibleToInstallationResponse(response AppsListReposAccessibleToInstallationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsListReposAccessibleToInstallationOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *AppsListReposAccessibleToInstallationUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsListReposAccessibleToInstallationForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeAppsListSubscriptionsForAuthenticatedUserResponse(response AppsListSubscriptionsForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsListSubscriptionsForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *AppsListSubscriptionsForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsListSubscriptionsForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeAppsListSubscriptionsForAuthenticatedUserStubbedResponse(response AppsListSubscriptionsForAuthenticatedUserStubbedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsListSubscriptionsForAuthenticatedUserStubbedOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeAppsListWebhookDeliveriesResponse(response AppsListWebhookDeliveriesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsListWebhookDeliveriesOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsRedeliverWebhookDeliveryResponse(response AppsRedeliverWebhookDeliveryRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Accepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsRemoveRepoFromInstallationResponse(response AppsRemoveRepoFromInstallationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsRemoveRepoFromInstallationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *AppsRemoveRepoFromInstallationForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsRemoveRepoFromInstallationNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsResetTokenResponse(response AppsResetTokenRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Authorization:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsRevokeInstallationAccessTokenResponse(response *AppsRevokeInstallationAccessTokenNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeAppsScopeTokenResponse(response AppsScopeTokenRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Authorization:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsScopeTokenUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsScopeTokenForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *AppsScopeTokenNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsSuspendInstallationResponse(response AppsSuspendInstallationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsSuspendInstallationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsUnsuspendInstallationResponse(response AppsUnsuspendInstallationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AppsUnsuspendInstallationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeAppsUpdateWebhookConfigForAppResponse(response *WebhookConfig, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeBillingGetGithubActionsBillingGheResponse(response *ActionsBillingUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeBillingGetGithubActionsBillingOrgResponse(response *ActionsBillingUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeBillingGetGithubActionsBillingUserResponse(response *ActionsBillingUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeBillingGetGithubPackagesBillingGheResponse(response *PackagesBillingUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeBillingGetGithubPackagesBillingOrgResponse(response *PackagesBillingUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeBillingGetGithubPackagesBillingUserResponse(response *PackagesBillingUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeBillingGetSharedStorageBillingGheResponse(response *CombinedBillingUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeBillingGetSharedStorageBillingOrgResponse(response *CombinedBillingUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeBillingGetSharedStorageBillingUserResponse(response *CombinedBillingUsage, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeChecksCreateResponse(response *CheckRun, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeChecksCreateSuiteResponse(response ChecksCreateSuiteRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ChecksCreateSuiteOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ChecksCreateSuiteCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeChecksGetResponse(response *CheckRun, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeChecksGetSuiteResponse(response *CheckSuite, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeChecksListAnnotationsResponse(response *ChecksListAnnotationsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeChecksListForRefResponse(response *ChecksListForRefOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeChecksListForSuiteResponse(response *ChecksListForSuiteOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeChecksListSuitesForRefResponse(response *ChecksListSuitesForRefOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeChecksRerequestSuiteResponse(response *ChecksRerequestSuiteCreated, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeChecksSetSuitesPreferencesResponse(response *CheckSuitePreference, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeCodeScanningDeleteAnalysisResponse(response CodeScanningDeleteAnalysisRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodeScanningAnalysisDeletion:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningDeleteAnalysisApplicationJSONBadRequest:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningDeleteAnalysisForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningDeleteAnalysisNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeCodeScanningGetAlertResponse(response CodeScanningGetAlertRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodeScanningAlert:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningGetAlertForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningGetAlertNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeCodeScanningGetAnalysisResponse(response CodeScanningGetAnalysisRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodeScanningAnalysis:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningGetAnalysisOKApplicationJSONSarif:
-		w.Header().Set("Content-Type", "application/json+sarif")
-		w.WriteHeader(200)
-
-		writer := w
-		if closer, ok := response.Data.(io.Closer); ok {
-			defer closer.Close()
-		}
-		if _, err := io.Copy(writer, response); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningGetAnalysisForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningGetAnalysisNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeCodeScanningGetSarifResponse(response CodeScanningGetSarifRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodeScanningSarifsStatus:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningGetSarifNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeCodeScanningListAlertInstancesResponse(response CodeScanningListAlertInstancesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodeScanningListAlertInstancesOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningListAlertInstancesForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningListAlertInstancesNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeCodeScanningListAlertsForRepoResponse(response CodeScanningListAlertsForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodeScanningListAlertsForRepoOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningListAlertsForRepoForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningListAlertsForRepoNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeCodeScanningListRecentAnalysesResponse(response CodeScanningListRecentAnalysesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodeScanningListRecentAnalysesOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningListRecentAnalysesForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningListRecentAnalysesNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeCodeScanningUpdateAlertResponse(response CodeScanningUpdateAlertRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodeScanningAlert:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningUpdateAlertForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningUpdateAlertNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeCodeScanningUploadSarifResponse(response CodeScanningUploadSarifRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodeScanningSarifsReceipt:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningUploadSarifBadRequest:
-		w.WriteHeader(400)
-
-		return nil
-
-	case *CodeScanningUploadSarifForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningUploadSarifNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *CodeScanningUploadSarifRequestEntityTooLarge:
-		w.WriteHeader(413)
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeCodesOfConductGetAllCodesOfConductResponse(response CodesOfConductGetAllCodesOfConductRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodesOfConductGetAllCodesOfConductOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeCodesOfConductGetConductCodeResponse(response CodesOfConductGetConductCodeRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CodeOfConduct:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeEmojisGetResponse(response EmojisGetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *EmojisGetOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeEnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse(response *EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminAddSelfHostedRunnerToGroupForEnterpriseResponse(response *EnterpriseAdminAddSelfHostedRunnerToGroupForEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminCreateRegistrationTokenForEnterpriseResponse(response *AuthenticationToken, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminCreateRemoveTokenForEnterpriseResponse(response *AuthenticationToken, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseResponse(response *RunnerGroupsEnterprise, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminDeleteScimGroupFromEnterpriseResponse(response *EnterpriseAdminDeleteScimGroupFromEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseResponse(response *EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse(response *EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminDeleteUserFromEnterpriseResponse(response *EnterpriseAdminDeleteUserFromEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseResponse(response *EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse(response *EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminGetAllowedActionsEnterpriseResponse(response *SelectedActions, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminGetAuditLogResponse(response []AuditLogEvent, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse(response *ActionsEnterprisePermissions, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminGetProvisioningInformationForEnterpriseGroupResponse(response *ScimEnterpriseGroup, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse(response *ScimEnterpriseUser, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminGetSelfHostedRunnerForEnterpriseResponse(response *Runner, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseResponse(response *RunnerGroupsEnterprise, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse(response *EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminListProvisionedGroupsEnterpriseResponse(response *ScimGroupListEnterprise, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminListProvisionedIdentitiesEnterpriseResponse(response *ScimUserListEnterprise, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminListRunnerApplicationsForEnterpriseResponse(response []RunnerApplication, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse(response *EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse(response *EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminListSelfHostedRunnersForEnterpriseResponse(response *EnterpriseAdminListSelfHostedRunnersForEnterpriseOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeEnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseResponse(response *EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeEnterpriseAdminProvisionAndInviteEnterpriseGroupResponse(response *ScimEnterpriseGroup, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminProvisionAndInviteEnterpriseUserResponse(response *ScimEnterpriseUser, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse(response *EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse(response *EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminSetAllowedActionsEnterpriseResponse(response *EnterpriseAdminSetAllowedActionsEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminSetGithubActionsPermissionsEnterpriseResponse(response *EnterpriseAdminSetGithubActionsPermissionsEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminSetInformationForProvisionedEnterpriseGroupResponse(response *ScimEnterpriseGroup, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminSetInformationForProvisionedEnterpriseUserResponse(response *ScimEnterpriseUser, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse(response *EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse(response *EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse(response *EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminUpdateAttributeForEnterpriseGroupResponse(response *ScimEnterpriseGroup, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminUpdateAttributeForEnterpriseUserResponse(response *ScimEnterpriseUser, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeEnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseResponse(response *RunnerGroupsEnterprise, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeGistsCheckIsStarredResponse(response GistsCheckIsStarredRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsCheckIsStarredNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsCheckIsStarredNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsCreateResponse(response GistsCreateRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistSimpleHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsCreateForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsCreateNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsCreateCommentResponse(response GistsCreateCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistCommentHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsCreateCommentForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsCreateCommentNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsDeleteResponse(response GistsDeleteRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsDeleteNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsDeleteForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsDeleteNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsDeleteCommentResponse(response GistsDeleteCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsDeleteCommentNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsDeleteCommentForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsDeleteCommentNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsForkResponse(response GistsForkRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *BaseGistHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsForkForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsForkNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsGetResponse(response GistsGetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ForbiddenGist:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsGetCommentResponse(response GistsGetCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistComment:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ForbiddenGist:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsGetRevisionResponse(response GistsGetRevisionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsGetRevisionForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsGetRevisionNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsListResponse(response GistsListRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsListOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsListCommentsResponse(response GistsListCommentsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsListCommentsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsListCommentsForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsListCommentsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsListCommitsResponse(response GistsListCommitsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsListCommitsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsListCommitsForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsListCommitsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsListForUserResponse(response GistsListForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsListForUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsListForksResponse(response GistsListForksRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsListForksOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsListForksForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsListForksNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsListPublicResponse(response GistsListPublicRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsListPublicOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsListStarredResponse(response GistsListStarredRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsListStarredOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsListStarredUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsListStarredForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsStarResponse(response GistsStarRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsStarNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsStarForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsStarNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsUnstarResponse(response GistsUnstarRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistsUnstarNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *GistsUnstarForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GistsUnstarNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGistsUpdateCommentResponse(response GistsUpdateCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GistComment:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitCreateBlobResponse(response GitCreateBlobRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ShortBlobHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GitCreateBlobForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GitCreateBlobNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GitCreateBlobConflict:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(409)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitCreateCommitResponse(response GitCreateCommitRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitCommitHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitCreateRefResponse(response GitCreateRefRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitRefHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitCreateTagResponse(response GitCreateTagRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitTagHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitCreateTreeResponse(response GitCreateTreeRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitTreeHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GitCreateTreeForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GitCreateTreeNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitDeleteRefResponse(response GitDeleteRefRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitDeleteRefNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitGetBlobResponse(response GitGetBlobRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Blob:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GitGetBlobForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GitGetBlobNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitGetCommitResponse(response GitGetCommitRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitCommit:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitGetRefResponse(response GitGetRefRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitRef:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitGetTagResponse(response GitGetTagRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitTag:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitGetTreeResponse(response GitGetTreeRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitTree:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeGitListMatchingRefsResponse(response *GitListMatchingRefsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+func encodeGistsCreateResponse(response GistsCreateRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeGistsCreateCommentResponse(response GistsCreateCommentRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeGistsDeleteResponse(response GistsDeleteRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGistsDeleteCommentResponse(response GistsDeleteCommentRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGistsForkResponse(response GistsForkRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeGistsGetResponse(response GistsGetRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGistsGetCommentResponse(response GistsGetCommentRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGistsGetRevisionResponse(response GistsGetRevisionRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGistsListResponse(response GistsListRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeGistsListCommentsResponse(response GistsListCommentsRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeGistsListCommitsResponse(response GistsListCommitsRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeGistsListForUserResponse(response GistsListForUserRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeGistsListForksResponse(response GistsListForksRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeGistsListPublicResponse(response GistsListPublicRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeGistsListStarredResponse(response GistsListStarredRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeGistsStarResponse(response GistsStarRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGistsUnstarResponse(response GistsUnstarRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGistsUpdateCommentResponse(response GistsUpdateCommentRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGitCreateBlobResponse(response GitCreateBlobRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeGitCreateCommitResponse(response GitCreateCommitRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeGitCreateRefResponse(response GitCreateRefRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeGitCreateTagResponse(response GitCreateTagRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeGitCreateTreeResponse(response GitCreateTreeRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeGitDeleteRefResponse(response GitDeleteRefRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGitGetBlobResponse(response GitGetBlobRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGitGetCommitResponse(response GitGetCommitRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGitGetRefResponse(response GitGetRefRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGitGetTagResponse(response GitGetTagRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGitGetTreeResponse(response GitGetTreeRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeGitListMatchingRefsResponse(response *GitListMatchingRefsOKHeaders, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeGitUpdateRefResponse(response GitUpdateRefRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitRef:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeGitignoreGetAllTemplatesResponse(response GitignoreGetAllTemplatesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitignoreGetAllTemplatesOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeGitignoreGetTemplateResponse(response GitignoreGetTemplateRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GitignoreTemplate:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeInteractionsRemoveRestrictionsForAuthenticatedUserResponse(response *InteractionsRemoveRestrictionsForAuthenticatedUserNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeInteractionsRemoveRestrictionsForOrgResponse(response *InteractionsRemoveRestrictionsForOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeInteractionsRemoveRestrictionsForRepoResponse(response InteractionsRemoveRestrictionsForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *InteractionsRemoveRestrictionsForRepoNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *InteractionsRemoveRestrictionsForRepoConflict:
-		w.WriteHeader(409)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeInteractionsSetRestrictionsForAuthenticatedUserResponse(response InteractionsSetRestrictionsForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *InteractionLimitResponse:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeInteractionsSetRestrictionsForOrgResponse(response InteractionsSetRestrictionsForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *InteractionLimitResponse:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeInteractionsSetRestrictionsForRepoResponse(response InteractionsSetRestrictionsForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *InteractionLimitResponse:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *InteractionsSetRestrictionsForRepoConflict:
-		w.WriteHeader(409)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeIssuesAddAssigneesResponse(response *IssueSimple, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeIssuesCheckUserCanBeAssignedResponse(response IssuesCheckUserCanBeAssignedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesCheckUserCanBeAssignedNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeIssuesCreateResponse(response IssuesCreateRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssueHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesCreateForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesCreateNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesCreateGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodeIssuesCreateCommentResponse(response IssuesCreateCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssueCommentHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesCreateCommentForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesCreateCommentNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesCreateCommentGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodeIssuesCreateLabelResponse(response IssuesCreateLabelRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *LabelHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodeIssuesCreateMilestoneResponse(response IssuesCreateMilestoneRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MilestoneHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func encodeIssuesDeleteCommentResponse(response *IssuesDeleteCommentNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
+// Encoding response headers.
 
+// Encode "Location" header.
+
+func encodeIssuesDeleteCommentResponse(response *IssuesDeleteCommentNoContent, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeIssuesDeleteLabelResponse(response *IssuesDeleteLabelNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeIssuesDeleteMilestoneResponse(response IssuesDeleteMilestoneRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesDeleteMilestoneNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesGetResponse(response IssuesGetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Issue:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesGetMovedPermanently:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(301)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *IssuesGetNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesGetGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesGetCommentResponse(response IssuesGetCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssueComment:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesGetEventResponse(response IssuesGetEventRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssueEvent:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesGetEventForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesGetEventNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesGetEventGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesGetLabelResponse(response IssuesGetLabelRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Label:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesGetMilestoneResponse(response IssuesGetMilestoneRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Milestone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesListResponse(response IssuesListRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesListAssigneesResponse(response IssuesListAssigneesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListAssigneesOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesListCommentsResponse(response IssuesListCommentsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListCommentsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesListCommentsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesListCommentsGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesListCommentsForRepoResponse(response IssuesListCommentsForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListCommentsForRepoOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesListEventsForRepoResponse(response IssuesListEventsForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListEventsForRepoOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesListForAuthenticatedUserResponse(response IssuesListForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesListForOrgResponse(response IssuesListForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListForOrgOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesListForRepoResponse(response IssuesListForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListForRepoOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesListForRepoMovedPermanently:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(301)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesListForRepoNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeIssuesListLabelsForMilestoneResponse(response *IssuesListLabelsForMilestoneOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func encodeIssuesListLabelsForRepoResponse(response IssuesListLabelsForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListLabelsForRepoOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+func encodeIssuesGetResponse(response IssuesGetRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
 }
+
+func encodeIssuesGetCommentResponse(response IssuesGetCommentRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeIssuesGetEventResponse(response IssuesGetEventRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeIssuesGetLabelResponse(response IssuesGetLabelRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeIssuesGetMilestoneResponse(response IssuesGetMilestoneRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeIssuesListResponse(response IssuesListRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeIssuesListAssigneesResponse(response IssuesListAssigneesRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeIssuesListCommentsResponse(response IssuesListCommentsRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeIssuesListCommentsForRepoResponse(response IssuesListCommentsForRepoRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeIssuesListEventsForRepoResponse(response IssuesListEventsForRepoRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeIssuesListForAuthenticatedUserResponse(response IssuesListForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeIssuesListForOrgResponse(response IssuesListForOrgRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeIssuesListForRepoResponse(response IssuesListForRepoRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeIssuesListLabelsForMilestoneResponse(response *IssuesListLabelsForMilestoneOKHeaders, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeIssuesListLabelsForRepoResponse(response IssuesListLabelsForRepoRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeIssuesListLabelsOnIssueResponse(response IssuesListLabelsOnIssueRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListLabelsOnIssueOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeIssuesListMilestonesResponse(response IssuesListMilestonesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesListMilestonesOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeIssuesLockResponse(response IssuesLockRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesLockNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *IssuesLockForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesLockNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesLockGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeIssuesRemoveAllLabelsResponse(response IssuesRemoveAllLabelsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesRemoveAllLabelsNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeIssuesRemoveAssigneesResponse(response *IssueSimple, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeIssuesRemoveLabelResponse(response IssuesRemoveLabelRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesRemoveLabelOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesRemoveLabelNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesRemoveLabelGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeIssuesUnlockResponse(response IssuesUnlockRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssuesUnlockNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *IssuesUnlockForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesUnlockNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeIssuesUpdateResponse(response IssuesUpdateRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Issue:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesUpdateMovedPermanently:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(301)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesUpdateForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesUpdateNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *IssuesUpdateGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeIssuesUpdateCommentResponse(response IssuesUpdateCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *IssueComment:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeIssuesUpdateLabelResponse(response *Label, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeIssuesUpdateMilestoneResponse(response *Milestone, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeLicensesGetResponse(response LicensesGetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *License:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *LicensesGetForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *LicensesGetNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeLicensesGetAllCommonlyUsedResponse(response LicensesGetAllCommonlyUsedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *LicensesGetAllCommonlyUsedOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeLicensesGetForRepoResponse(response *LicenseContent, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeMarkdownRenderResponse(response MarkdownRenderRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MarkdownRenderOKHeaders:
-		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "X-Commonmarker-Version")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Content-Length" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Content-Length",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.ContentLength.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Content-Length header")
-				}
-			}
-			// Encode "X-CommonMarker-Version" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "X-CommonMarker-Version",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.XCommonMarkerVersion.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode X-CommonMarker-Version header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		writer := w
-		if closer, ok := response.Response.Data.(io.Closer); ok {
-			defer closer.Close()
-		}
-		if _, err := io.Copy(writer, response.Response); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Content-Length" header.
+
+// Encode "X-CommonMarker-Version" header.
 
 func encodeMarkdownRenderRawResponse(response MarkdownRenderRawRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MarkdownRenderRawOKHeaders:
-		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "X-Commonmarker-Version")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "X-CommonMarker-Version" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "X-CommonMarker-Version",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.XCommonMarkerVersion.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode X-CommonMarker-Version header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		writer := w
-		if closer, ok := response.Response.Data.(io.Closer); ok {
-			defer closer.Close()
-		}
-		if _, err := io.Copy(writer, response.Response); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "X-CommonMarker-Version" header.
+
 func encodeMetaGetResponse(response MetaGetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *APIOverview:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMetaGetOctocatResponse(response MetaGetOctocatOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/octocat-stream")
-	w.WriteHeader(200)
-
-	writer := w
-	if closer, ok := response.Data.(io.Closer); ok {
-		defer closer.Close()
-	}
-	if _, err := io.Copy(writer, response); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeMetaGetZenResponse(response MetaGetZenOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
-	w.WriteHeader(200)
-
-	writer := w
-	if closer, ok := response.Data.(io.Closer); ok {
-		defer closer.Close()
-	}
-	if _, err := io.Copy(writer, response); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeMetaRootResponse(response *MetaRootOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeMigrationsCancelImportResponse(response *MigrationsCancelImportNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeMigrationsDeleteArchiveForAuthenticatedUserResponse(response MigrationsDeleteArchiveForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MigrationsDeleteArchiveForAuthenticatedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *MigrationsDeleteArchiveForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *MigrationsDeleteArchiveForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *MigrationsDeleteArchiveForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsDeleteArchiveForOrgResponse(response MigrationsDeleteArchiveForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MigrationsDeleteArchiveForOrgNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsDownloadArchiveForOrgResponse(response MigrationsDownloadArchiveForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MigrationsDownloadArchiveForOrgFound:
-		w.WriteHeader(302)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsGetArchiveForAuthenticatedUserResponse(response MigrationsGetArchiveForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MigrationsGetArchiveForAuthenticatedUserFound:
-		w.WriteHeader(302)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *MigrationsGetArchiveForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *MigrationsGetArchiveForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsGetCommitAuthorsResponse(response MigrationsGetCommitAuthorsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MigrationsGetCommitAuthorsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsGetImportStatusResponse(response MigrationsGetImportStatusRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Import:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsGetLargeFilesResponse(response []PorterLargeFile, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeMigrationsGetStatusForAuthenticatedUserResponse(response MigrationsGetStatusForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Migration:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *MigrationsGetStatusForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *MigrationsGetStatusForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *MigrationsGetStatusForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeMigrationsGetStatusForOrgResponse(response MigrationsGetStatusForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Migration:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeMigrationsListForAuthenticatedUserResponse(response MigrationsListForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MigrationsListForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *MigrationsListForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *MigrationsListForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeMigrationsListForOrgResponse(response *MigrationsListForOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func encodeMigrationsListReposForOrgResponse(response MigrationsListReposForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MigrationsListReposForOrgOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+func encodeMigrationsGetStatusForOrgResponse(response MigrationsGetStatusForOrgRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
 }
+
+func encodeMigrationsListForAuthenticatedUserResponse(response MigrationsListForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeMigrationsListForOrgResponse(response *MigrationsListForOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeMigrationsListReposForOrgResponse(response MigrationsListReposForOrgRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeMigrationsListReposForUserResponse(response MigrationsListReposForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MigrationsListReposForUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeMigrationsMapCommitAuthorResponse(response MigrationsMapCommitAuthorRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PorterAuthor:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsSetLfsPreferenceResponse(response MigrationsSetLfsPreferenceRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Import:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsStartForAuthenticatedUserResponse(response MigrationsStartForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Migration:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *MigrationsStartForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *MigrationsStartForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsStartForOrgResponse(response MigrationsStartForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Migration:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsStartImportResponse(response MigrationsStartImportRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ImportHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Location" header.
+
 func encodeMigrationsUnlockRepoForAuthenticatedUserResponse(response MigrationsUnlockRepoForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MigrationsUnlockRepoForAuthenticatedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *MigrationsUnlockRepoForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *MigrationsUnlockRepoForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *MigrationsUnlockRepoForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsUnlockRepoForOrgResponse(response MigrationsUnlockRepoForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MigrationsUnlockRepoForOrgNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeMigrationsUpdateImportResponse(response *Import, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeOAuthAuthorizationsCreateAuthorizationResponse(response OAuthAuthorizationsCreateAuthorizationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AuthorizationHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *OAuthAuthorizationsCreateAuthorizationUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsCreateAuthorizationForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsCreateAuthorizationGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Location" header.
+
 func encodeOAuthAuthorizationsDeleteAuthorizationResponse(response OAuthAuthorizationsDeleteAuthorizationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OAuthAuthorizationsDeleteAuthorizationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *OAuthAuthorizationsDeleteAuthorizationUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsDeleteAuthorizationForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOAuthAuthorizationsDeleteGrantResponse(response OAuthAuthorizationsDeleteGrantRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OAuthAuthorizationsDeleteGrantNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *OAuthAuthorizationsDeleteGrantUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsDeleteGrantForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOAuthAuthorizationsGetAuthorizationResponse(response OAuthAuthorizationsGetAuthorizationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Authorization:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *OAuthAuthorizationsGetAuthorizationUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsGetAuthorizationForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOAuthAuthorizationsGetGrantResponse(response OAuthAuthorizationsGetGrantRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ApplicationGrant:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *OAuthAuthorizationsGetGrantUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsGetGrantForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOAuthAuthorizationsGetOrCreateAuthorizationForAppResponse(response OAuthAuthorizationsGetOrCreateAuthorizationForAppRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OAuthAuthorizationsGetOrCreateAuthorizationForAppOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsGetOrCreateAuthorizationForAppCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *OAuthAuthorizationsGetOrCreateAuthorizationForAppUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsGetOrCreateAuthorizationForAppForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodeOAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse(response OAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodeOAuthAuthorizationsListAuthorizationsResponse(response OAuthAuthorizationsListAuthorizationsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OAuthAuthorizationsListAuthorizationsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *OAuthAuthorizationsListAuthorizationsUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsListAuthorizationsForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsListAuthorizationsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeOAuthAuthorizationsListGrantsResponse(response OAuthAuthorizationsListGrantsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OAuthAuthorizationsListGrantsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *OAuthAuthorizationsListGrantsUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsListGrantsForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OAuthAuthorizationsListGrantsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeOAuthAuthorizationsUpdateAuthorizationResponse(response OAuthAuthorizationsUpdateAuthorizationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Authorization:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsBlockUserResponse(response OrgsBlockUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsBlockUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsCancelInvitationResponse(response OrgsCancelInvitationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsCancelInvitationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsCheckBlockedUserResponse(response OrgsCheckBlockedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsCheckBlockedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsCheckMembershipForUserResponse(response OrgsCheckMembershipForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsCheckMembershipForUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *OrgsCheckMembershipForUserFound:
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(302)
-
-		return nil
-
-	case *OrgsCheckMembershipForUserNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Location" header.
+
 func encodeOrgsCheckPublicMembershipForUserResponse(response OrgsCheckPublicMembershipForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsCheckPublicMembershipForUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *OrgsCheckPublicMembershipForUserNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsConvertMemberToOutsideCollaboratorResponse(response OrgsConvertMemberToOutsideCollaboratorRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsConvertMemberToOutsideCollaboratorAccepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsConvertMemberToOutsideCollaboratorNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *OrgsConvertMemberToOutsideCollaboratorForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsCreateInvitationResponse(response OrgsCreateInvitationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrganizationInvitation:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsCreateWebhookResponse(response OrgsCreateWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgHookHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Location" header.
+
 func encodeOrgsDeleteWebhookResponse(response OrgsDeleteWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsDeleteWebhookNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsGetResponse(response OrgsGetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrganizationFull:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsGetAuditLogResponse(response []AuditLogEvent, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeOrgsGetMembershipForAuthenticatedUserResponse(response OrgsGetMembershipForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgMembership:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsGetMembershipForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsGetMembershipForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsGetMembershipForUserResponse(response OrgsGetMembershipForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgMembership:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsGetMembershipForUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsGetMembershipForUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsGetWebhookResponse(response OrgsGetWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgHook:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsGetWebhookConfigForOrgResponse(response *WebhookConfig, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeOrgsGetWebhookDeliveryResponse(response OrgsGetWebhookDeliveryRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *HookDelivery:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsListResponse(response OrgsListRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsListOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeOrgsListBlockedUsersResponse(response OrgsListBlockedUsersRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsListBlockedUsersOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsListFailedInvitationsResponse(response OrgsListFailedInvitationsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsListFailedInvitationsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeOrgsListForAuthenticatedUserResponse(response OrgsListForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsListForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *OrgsListForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsListForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeOrgsListForUserResponse(response *OrgsListForUserOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeOrgsListInvitationTeamsResponse(response OrgsListInvitationTeamsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsListInvitationTeamsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeOrgsListMembersResponse(response OrgsListMembersRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsListMembersOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsListMembersFound:
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(302)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodeOrgsListMembershipsForAuthenticatedUserResponse(response OrgsListMembershipsForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsListMembershipsForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *OrgsListMembershipsForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsListMembershipsForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeOrgsListOutsideCollaboratorsResponse(response *OrgsListOutsideCollaboratorsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeOrgsListPendingInvitationsResponse(response OrgsListPendingInvitationsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsListPendingInvitationsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeOrgsListPublicMembersResponse(response *OrgsListPublicMembersOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeOrgsListPublicMembersResponse(response *OrgsListPublicMembersOKHeaders, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeOrgsListSamlSSOAuthorizationsResponse(response []CredentialAuthorization, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeOrgsListWebhookDeliveriesResponse(response OrgsListWebhookDeliveriesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsListWebhookDeliveriesOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsListWebhooksResponse(response OrgsListWebhooksRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsListWebhooksOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeOrgsPingWebhookResponse(response OrgsPingWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsPingWebhookNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsRedeliverWebhookDeliveryResponse(response OrgsRedeliverWebhookDeliveryRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Accepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsRemoveMemberResponse(response OrgsRemoveMemberRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsRemoveMemberNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsRemoveMembershipForUserResponse(response OrgsRemoveMembershipForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsRemoveMembershipForUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *OrgsRemoveMembershipForUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsRemoveMembershipForUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsRemoveOutsideCollaboratorResponse(response OrgsRemoveOutsideCollaboratorRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsRemoveOutsideCollaboratorNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *OrgsRemoveOutsideCollaboratorUnprocessableEntity:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsRemovePublicMembershipForAuthenticatedUserResponse(response *OrgsRemovePublicMembershipForAuthenticatedUserNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeOrgsRemoveSamlSSOAuthorizationResponse(response OrgsRemoveSamlSSOAuthorizationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsRemoveSamlSSOAuthorizationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsSetMembershipForUserResponse(response OrgsSetMembershipForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgMembership:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsSetPublicMembershipForAuthenticatedUserResponse(response OrgsSetPublicMembershipForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgsSetPublicMembershipForAuthenticatedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsUnblockUserResponse(response *OrgsUnblockUserNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeOrgsUpdateMembershipForAuthenticatedUserResponse(response OrgsUpdateMembershipForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgMembership:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsUpdateMembershipForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *OrgsUpdateMembershipForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsUpdateWebhookResponse(response OrgsUpdateWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *OrgHook:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeOrgsUpdateWebhookConfigForOrgResponse(response *WebhookConfig, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodePackagesDeletePackageForAuthenticatedUserResponse(response PackagesDeletePackageForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesDeletePackageForAuthenticatedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesDeletePackageForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesDeletePackageForOrgResponse(response PackagesDeletePackageForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesDeletePackageForOrgNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesDeletePackageForOrgUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageForOrgForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageForOrgNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesDeletePackageForUserResponse(response PackagesDeletePackageForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesDeletePackageForUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesDeletePackageForUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageForUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageForUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesDeletePackageVersionForAuthenticatedUserResponse(response PackagesDeletePackageVersionForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesDeletePackageVersionForAuthenticatedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesDeletePackageVersionForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageVersionForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageVersionForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesDeletePackageVersionForOrgResponse(response PackagesDeletePackageVersionForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesDeletePackageVersionForOrgNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesDeletePackageVersionForOrgUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageVersionForOrgForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageVersionForOrgNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesDeletePackageVersionForUserResponse(response PackagesDeletePackageVersionForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesDeletePackageVersionForUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesDeletePackageVersionForUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageVersionForUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesDeletePackageVersionForUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserResponse(response PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesGetAllPackageVersionsForPackageOwnedByOrgResponse(response PackagesGetAllPackageVersionsForPackageOwnedByOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesGetAllPackageVersionsForPackageOwnedByOrgOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesGetAllPackageVersionsForPackageOwnedByOrgUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesGetAllPackageVersionsForPackageOwnedByOrgForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesGetAllPackageVersionsForPackageOwnedByOrgNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesGetAllPackageVersionsForPackageOwnedByUserResponse(response PackagesGetAllPackageVersionsForPackageOwnedByUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesGetAllPackageVersionsForPackageOwnedByUserOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesGetAllPackageVersionsForPackageOwnedByUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesGetAllPackageVersionsForPackageOwnedByUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesGetAllPackageVersionsForPackageOwnedByUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesGetPackageForAuthenticatedUserResponse(response *Package, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodePackagesGetPackageForOrganizationResponse(response *Package, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodePackagesGetPackageForUserResponse(response *Package, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodePackagesGetPackageVersionForAuthenticatedUserResponse(response *PackageVersion, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodePackagesGetPackageVersionForOrganizationResponse(response *PackageVersion, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodePackagesGetPackageVersionForUserResponse(response *PackageVersion, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodePackagesListPackagesForAuthenticatedUserResponse(response []Package, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodePackagesListPackagesForOrganizationResponse(response PackagesListPackagesForOrganizationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesListPackagesForOrganizationOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesListPackagesForOrganizationUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesListPackagesForOrganizationForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesListPackagesForUserResponse(response PackagesListPackagesForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesListPackagesForUserOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesListPackagesForUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesListPackagesForUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesRestorePackageForAuthenticatedUserResponse(response PackagesRestorePackageForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesRestorePackageForAuthenticatedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesRestorePackageForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesRestorePackageForOrgResponse(response PackagesRestorePackageForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesRestorePackageForOrgNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesRestorePackageForOrgUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageForOrgForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageForOrgNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesRestorePackageForUserResponse(response PackagesRestorePackageForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesRestorePackageForUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesRestorePackageForUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageForUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageForUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesRestorePackageVersionForAuthenticatedUserResponse(response PackagesRestorePackageVersionForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesRestorePackageVersionForAuthenticatedUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesRestorePackageVersionForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageVersionForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageVersionForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesRestorePackageVersionForOrgResponse(response PackagesRestorePackageVersionForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesRestorePackageVersionForOrgNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesRestorePackageVersionForOrgUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageVersionForOrgForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageVersionForOrgNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePackagesRestorePackageVersionForUserResponse(response PackagesRestorePackageVersionForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PackagesRestorePackageVersionForUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PackagesRestorePackageVersionForUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageVersionForUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PackagesRestorePackageVersionForUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsAddCollaboratorResponse(response ProjectsAddCollaboratorRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsAddCollaboratorNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsAddCollaboratorUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsAddCollaboratorForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsAddCollaboratorNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsCreateColumnResponse(response ProjectsCreateColumnRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectColumn:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsCreateColumnUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsCreateColumnForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsCreateForAuthenticatedUserResponse(response ProjectsCreateForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Project:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsCreateForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsCreateForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsCreateForOrgResponse(response ProjectsCreateForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Project:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsCreateForOrgUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsCreateForOrgForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsCreateForOrgNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsCreateForOrgGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsCreateForRepoResponse(response ProjectsCreateForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Project:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsCreateForRepoUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsCreateForRepoForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsCreateForRepoNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsCreateForRepoGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsDeleteResponse(response ProjectsDeleteRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsDeleteNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsDeleteUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsDeleteForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsDeleteNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsDeleteGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsDeleteCardResponse(response ProjectsDeleteCardRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsDeleteCardNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsDeleteCardUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsDeleteCardForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsDeleteCardNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsDeleteColumnResponse(response ProjectsDeleteColumnRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsDeleteColumnNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsDeleteColumnUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsDeleteColumnForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsGetResponse(response ProjectsGetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Project:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsGetUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsGetForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsGetCardResponse(response ProjectsGetCardRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectCard:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsGetCardUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsGetCardForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsGetCardNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsGetColumnResponse(response ProjectsGetColumnRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectColumn:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsGetColumnUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsGetColumnForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsGetColumnNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsGetPermissionForUserResponse(response ProjectsGetPermissionForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *RepositoryCollaboratorPermission:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsGetPermissionForUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsGetPermissionForUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsGetPermissionForUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsListCardsResponse(response ProjectsListCardsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsListCardsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsListCardsUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsListCardsForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeProjectsListCollaboratorsResponse(response ProjectsListCollaboratorsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsListCollaboratorsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsListCollaboratorsUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsListCollaboratorsForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsListCollaboratorsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeProjectsListColumnsResponse(response ProjectsListColumnsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsListColumnsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsListColumnsUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsListColumnsForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeProjectsListForOrgResponse(response ProjectsListForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsListForOrgOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeProjectsListForRepoResponse(response ProjectsListForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsListForRepoOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsListForRepoUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsListForRepoForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsListForRepoNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsListForRepoGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeProjectsListForUserResponse(response ProjectsListForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsListForUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeProjectsMoveCardResponse(response ProjectsMoveCardRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsMoveCardCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsMoveCardForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsMoveCardServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsMoveColumnResponse(response ProjectsMoveColumnRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsMoveColumnCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsMoveColumnUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsMoveColumnForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsRemoveCollaboratorResponse(response ProjectsRemoveCollaboratorRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectsRemoveCollaboratorNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsRemoveCollaboratorUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsRemoveCollaboratorForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsRemoveCollaboratorNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsUpdateResponse(response ProjectsUpdateRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Project:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsUpdateUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsUpdateForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsUpdateNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	case *ProjectsUpdateGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsUpdateCardResponse(response ProjectsUpdateCardRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectCard:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsUpdateCardUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsUpdateCardForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsUpdateCardNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeProjectsUpdateColumnResponse(response ProjectsUpdateColumnRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProjectColumn:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ProjectsUpdateColumnUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ProjectsUpdateColumnForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsCheckIfMergedResponse(response PullsCheckIfMergedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullsCheckIfMergedNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *PullsCheckIfMergedNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsCreateResponse(response PullsCreateRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodePullsCreateReplyForReviewCommentResponse(response PullsCreateReplyForReviewCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestReviewCommentHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Location" header.
+
 func encodePullsCreateReviewResponse(response PullsCreateReviewRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestReview:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsCreateReviewCommentResponse(response PullsCreateReviewCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestReviewCommentHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Location" header.
+
 func encodePullsDeletePendingReviewResponse(response PullsDeletePendingReviewRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestReview:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsDeleteReviewCommentResponse(response PullsDeleteReviewCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullsDeleteReviewCommentNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsDismissReviewResponse(response PullsDismissReviewRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestReview:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsGetResponse(response PullsGetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequest:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *PullsGetNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PullsGetInternalServerError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(500)
-		span.SetStatus(codes.Error, http.StatusText(500))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsGetReviewResponse(response PullsGetReviewRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestReview:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsGetReviewCommentResponse(response PullsGetReviewCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestReviewComment:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsListResponse(response PullsListRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullsListOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodePullsListCommentsForReviewResponse(response PullsListCommentsForReviewRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullsListCommentsForReviewOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodePullsListCommitsResponse(response *PullsListCommitsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodePullsListFilesResponse(response PullsListFilesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullsListFilesOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(500)
-		span.SetStatus(codes.Error, http.StatusText(500))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodePullsListRequestedReviewersResponse(response *PullRequestReviewRequestHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodePullsListReviewCommentsResponse(response *PullsListReviewCommentsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodePullsListReviewCommentsForRepoResponse(response *PullsListReviewCommentsForRepoOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodePullsListReviewsResponse(response *PullsListReviewsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodePullsMergeResponse(response PullsMergeRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestMergeResult:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PullsMergeForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PullsMergeNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PullsMergeMethodNotAllowed:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(405)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PullsMergeConflict:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(409)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsRemoveRequestedReviewersResponse(response PullsRemoveRequestedReviewersRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsSubmitReviewResponse(response PullsSubmitReviewRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestReview:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PullsSubmitReviewForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PullsSubmitReviewNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsUpdateResponse(response PullsUpdateRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequest:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsUpdateBranchResponse(response PullsUpdateBranchRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullsUpdateBranchAccepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsUpdateReviewResponse(response PullsUpdateReviewRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PullRequestReview:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodePullsUpdateReviewCommentResponse(response *PullRequestReviewComment, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeRateLimitGetResponse(response RateLimitGetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *RateLimitOverviewHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "X-Ratelimit-Limit,X-Ratelimit-Remaining,X-Ratelimit-Reset")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "X-RateLimit-Limit" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "X-RateLimit-Limit",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.XRateLimitLimit.Get(); ok {
-						return e.EncodeValue(conv.IntToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode X-RateLimit-Limit header")
-				}
-			}
-			// Encode "X-RateLimit-Remaining" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "X-RateLimit-Remaining",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.XRateLimitRemaining.Get(); ok {
-						return e.EncodeValue(conv.IntToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode X-RateLimit-Remaining header")
-				}
-			}
-			// Encode "X-RateLimit-Reset" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "X-RateLimit-Reset",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.XRateLimitReset.Get(); ok {
-						return e.EncodeValue(conv.IntToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode X-RateLimit-Reset header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "X-RateLimit-Limit" header.
+
+// Encode "X-RateLimit-Remaining" header.
+
+// Encode "X-RateLimit-Reset" header.
+
 func encodeReactionsCreateForCommitCommentResponse(response ReactionsCreateForCommitCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsCreateForCommitCommentOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsCreateForCommitCommentCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReactionsCreateForIssueResponse(response ReactionsCreateForIssueRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsCreateForIssueOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsCreateForIssueCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReactionsCreateForIssueCommentResponse(response ReactionsCreateForIssueCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsCreateForIssueCommentOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsCreateForIssueCommentCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReactionsCreateForPullRequestReviewCommentResponse(response ReactionsCreateForPullRequestReviewCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsCreateForPullRequestReviewCommentOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsCreateForPullRequestReviewCommentCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReactionsCreateForReleaseResponse(response ReactionsCreateForReleaseRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsCreateForReleaseOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsCreateForReleaseCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReactionsCreateForTeamDiscussionCommentInOrgResponse(response ReactionsCreateForTeamDiscussionCommentInOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsCreateForTeamDiscussionCommentInOrgOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsCreateForTeamDiscussionCommentInOrgCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReactionsCreateForTeamDiscussionCommentLegacyResponse(response *Reaction, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReactionsCreateForTeamDiscussionInOrgResponse(response ReactionsCreateForTeamDiscussionInOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsCreateForTeamDiscussionInOrgOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsCreateForTeamDiscussionInOrgCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReactionsCreateForTeamDiscussionLegacyResponse(response *Reaction, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReactionsDeleteForCommitCommentResponse(response *ReactionsDeleteForCommitCommentNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReactionsDeleteForIssueResponse(response *ReactionsDeleteForIssueNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReactionsDeleteForIssueCommentResponse(response *ReactionsDeleteForIssueCommentNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReactionsDeleteForPullRequestCommentResponse(response *ReactionsDeleteForPullRequestCommentNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReactionsDeleteForTeamDiscussionResponse(response *ReactionsDeleteForTeamDiscussionNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReactionsDeleteForTeamDiscussionCommentResponse(response *ReactionsDeleteForTeamDiscussionCommentNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReactionsDeleteLegacyResponse(response ReactionsDeleteLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsDeleteLegacyNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ReactionsDeleteLegacyUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsDeleteLegacyForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsDeleteLegacyGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReactionsListForCommitCommentResponse(response ReactionsListForCommitCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsListForCommitCommentOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReactionsListForIssueResponse(response ReactionsListForIssueRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsListForIssueOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsListForIssueNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReactionsListForIssueGone:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(410)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReactionsListForIssueCommentResponse(response ReactionsListForIssueCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsListForIssueCommentOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReactionsListForPullRequestReviewCommentResponse(response ReactionsListForPullRequestReviewCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReactionsListForPullRequestReviewCommentOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReactionsListForTeamDiscussionCommentInOrgResponse(response *ReactionsListForTeamDiscussionCommentInOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReactionsListForTeamDiscussionCommentLegacyResponse(response *ReactionsListForTeamDiscussionCommentLegacyOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReactionsListForTeamDiscussionInOrgResponse(response *ReactionsListForTeamDiscussionInOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReactionsListForTeamDiscussionLegacyResponse(response *ReactionsListForTeamDiscussionLegacyOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeReposAcceptInvitationResponse(response ReposAcceptInvitationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposAcceptInvitationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ReposAcceptInvitationForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposAcceptInvitationNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposAcceptInvitationConflict:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(409)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposAddAppAccessRestrictionsResponse(response ReposAddAppAccessRestrictionsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposAddAppAccessRestrictionsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposAddCollaboratorResponse(response ReposAddCollaboratorRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *RepositoryInvitation:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposAddCollaboratorNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposAddStatusCheckContextsResponse(response ReposAddStatusCheckContextsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposAddStatusCheckContextsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposAddStatusCheckContextsForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposAddStatusCheckContextsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposAddTeamAccessRestrictionsResponse(response ReposAddTeamAccessRestrictionsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposAddTeamAccessRestrictionsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposAddUserAccessRestrictionsResponse(response ReposAddUserAccessRestrictionsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposAddUserAccessRestrictionsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposCheckCollaboratorResponse(response ReposCheckCollaboratorRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposCheckCollaboratorNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ReposCheckCollaboratorNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposCheckVulnerabilityAlertsResponse(response ReposCheckVulnerabilityAlertsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposCheckVulnerabilityAlertsNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ReposCheckVulnerabilityAlertsNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposCompareCommitsResponse(response ReposCompareCommitsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CommitComparison:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCompareCommitsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCompareCommitsInternalServerError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(500)
-		span.SetStatus(codes.Error, http.StatusText(500))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposCreateAutolinkResponse(response ReposCreateAutolinkRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *AutolinkHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodeReposCreateCommitCommentResponse(response ReposCreateCommitCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CommitCommentHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Location" header.
+
 func encodeReposCreateCommitSignatureProtectionResponse(response ReposCreateCommitSignatureProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProtectedBranchAdminEnforced:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposCreateCommitStatusResponse(response *StatusHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Location")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Location" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Location",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Location.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Location header")
-			}
-		}
-	}
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Location" header.
+
 func encodeReposCreateDeployKeyResponse(response ReposCreateDeployKeyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *DeployKeyHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Location" header.
+
 func encodeReposCreateDeploymentResponse(response ReposCreateDeploymentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Deployment:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateDeploymentAccepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateDeploymentConflict:
-		w.WriteHeader(409)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposCreateDeploymentStatusResponse(response ReposCreateDeploymentStatusRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *DeploymentStatusHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeReposCreateDispatchEventResponse(response ReposCreateDispatchEventRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposCreateDispatchEventNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeReposCreateForAuthenticatedUserResponse(response ReposCreateForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *RepositoryHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ReposCreateForAuthenticatedUserApplicationJSONBadRequest:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeReposCreateForkResponse(response ReposCreateForkRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *FullRepository:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateForkApplicationJSONBadRequest:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateForkForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateForkNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeReposCreateInOrgResponse(response ReposCreateInOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *RepositoryHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeReposCreateOrUpdateFileContentsResponse(response ReposCreateOrUpdateFileContentsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposCreateOrUpdateFileContentsOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateOrUpdateFileContentsCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateOrUpdateFileContentsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateOrUpdateFileContentsConflict:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(409)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeReposCreatePagesSiteResponse(response ReposCreatePagesSiteRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Page:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(409)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeReposCreateReleaseResponse(response ReposCreateReleaseRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReleaseHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeReposCreateUsingTemplateResponse(response *RepositoryHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Location")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Location" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Location",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Location.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Location header")
-			}
-		}
-	}
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func encodeReposCreateWebhookResponse(response ReposCreateWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *HookHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Location")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Location" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Location",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Location.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Location header")
-				}
-			}
-		}
-		w.WriteHeader(201)
+// Encoding response headers.
 
-		e := new(jx.Encoder)
-		response.Response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
+// Encode "Location" header.
 
-		return nil
-
-	case *ReposCreateWebhookForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposCreateWebhookNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+func encodeReposCreateDispatchEventResponse(response ReposCreateDispatchEventRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
 }
 
+func encodeReposCreateForAuthenticatedUserResponse(response ReposCreateForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeReposCreateForkResponse(response ReposCreateForkRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeReposCreateInOrgResponse(response ReposCreateInOrgRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeReposCreateOrUpdateFileContentsResponse(response ReposCreateOrUpdateFileContentsRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeReposCreatePagesSiteResponse(response ReposCreatePagesSiteRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+func encodeReposCreateReleaseResponse(response ReposCreateReleaseRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeReposCreateUsingTemplateResponse(response *RepositoryHeaders, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
+func encodeReposCreateWebhookResponse(response ReposCreateWebhookRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Location" header.
+
 func encodeReposDeclineInvitationResponse(response ReposDeclineInvitationRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeclineInvitationNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ReposDeclineInvitationForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposDeclineInvitationNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposDeclineInvitationConflict:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(409)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeleteResponse(response ReposDeleteRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeleteNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ReposDeleteTemporaryRedirect:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(307)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposDeleteForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposDeleteNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeleteAccessRestrictionsResponse(response *ReposDeleteAccessRestrictionsNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposDeleteAdminBranchProtectionResponse(response ReposDeleteAdminBranchProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeleteAdminBranchProtectionNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeleteAnEnvironmentResponse(response *ReposDeleteAnEnvironmentNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposDeleteAutolinkResponse(response ReposDeleteAutolinkRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeleteAutolinkNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeleteBranchProtectionResponse(response ReposDeleteBranchProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeleteBranchProtectionNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeleteCommitCommentResponse(response ReposDeleteCommitCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeleteCommitCommentNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeleteCommitSignatureProtectionResponse(response ReposDeleteCommitSignatureProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeleteCommitSignatureProtectionNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeleteDeployKeyResponse(response *ReposDeleteDeployKeyNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposDeleteDeploymentResponse(response ReposDeleteDeploymentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeleteDeploymentNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeleteFileResponse(response ReposDeleteFileRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *FileCommit:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposDeleteFileNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposDeleteFileConflict:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(409)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeleteInvitationResponse(response *ReposDeleteInvitationNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposDeletePagesSiteResponse(response ReposDeletePagesSiteRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeletePagesSiteNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeletePullRequestReviewProtectionResponse(response ReposDeletePullRequestReviewProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeletePullRequestReviewProtectionNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDeleteReleaseResponse(response *ReposDeleteReleaseNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposDeleteReleaseAssetResponse(response *ReposDeleteReleaseAssetNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposDeleteWebhookResponse(response ReposDeleteWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposDeleteWebhookNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposDisableAutomatedSecurityFixesResponse(response *ReposDisableAutomatedSecurityFixesNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposDisableLfsForRepoResponse(response *ReposDisableLfsForRepoNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposDisableVulnerabilityAlertsResponse(response *ReposDisableVulnerabilityAlertsNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposDownloadTarballArchiveResponse(response *ReposDownloadTarballArchiveFound, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Access-Control-Expose-Headers", "Location")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Location" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Location",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Location.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Location header")
-			}
-		}
-	}
-	w.WriteHeader(302)
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Location" header.
 
 func encodeReposDownloadZipballArchiveResponse(response *ReposDownloadZipballArchiveFound, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Access-Control-Expose-Headers", "Location")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Location" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Location",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Location.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Location header")
-			}
-		}
-	}
-	w.WriteHeader(302)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func encodeReposEnableAutomatedSecurityFixesResponse(response *ReposEnableAutomatedSecurityFixesNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
+// Encoding response headers.
 
+// Encode "Location" header.
+
+func encodeReposEnableAutomatedSecurityFixesResponse(response *ReposEnableAutomatedSecurityFixesNoContent, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposEnableLfsForRepoResponse(response ReposEnableLfsForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Accepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposEnableLfsForRepoForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposEnableVulnerabilityAlertsResponse(response *ReposEnableVulnerabilityAlertsNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposGetResponse(response ReposGetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *FullRepository:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposGetMovedPermanently:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(301)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposGetForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposGetNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetAccessRestrictionsResponse(response ReposGetAccessRestrictionsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *BranchRestrictionPolicy:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetAdminBranchProtectionResponse(response *ProtectedBranchAdminEnforced, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposGetAllStatusCheckContextsResponse(response ReposGetAllStatusCheckContextsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposGetAllStatusCheckContextsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetAllTopicsResponse(response ReposGetAllTopicsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Topic:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetAppsWithAccessToProtectedBranchResponse(response ReposGetAppsWithAccessToProtectedBranchRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposGetAppsWithAccessToProtectedBranchOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetAutolinkResponse(response ReposGetAutolinkRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Autolink:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetBranchResponse(response ReposGetBranchRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *BranchWithProtection:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposGetBranchMovedPermanently:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(301)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposGetBranchNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetBranchProtectionResponse(response ReposGetBranchProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *BranchProtection:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetClonesResponse(response ReposGetClonesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CloneTraffic:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetCodeFrequencyStatsResponse(response ReposGetCodeFrequencyStatsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposGetCodeFrequencyStatsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *Accepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetCollaboratorPermissionLevelResponse(response ReposGetCollaboratorPermissionLevelRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *RepositoryCollaboratorPermission:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetCombinedStatusForRefResponse(response ReposGetCombinedStatusForRefRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CombinedCommitStatus:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetCommitResponse(response ReposGetCommitRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Commit:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposGetCommitNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposGetCommitInternalServerError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(500)
-		span.SetStatus(codes.Error, http.StatusText(500))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetCommitActivityStatsResponse(response ReposGetCommitActivityStatsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposGetCommitActivityStatsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *Accepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetCommitCommentResponse(response ReposGetCommitCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CommitComment:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetCommitSignatureProtectionResponse(response ReposGetCommitSignatureProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProtectedBranchAdminEnforced:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetCommunityProfileMetricsResponse(response *CommunityProfile, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposGetContributorsStatsResponse(response ReposGetContributorsStatsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposGetContributorsStatsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *Accepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetDeployKeyResponse(response ReposGetDeployKeyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *DeployKey:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetDeploymentResponse(response ReposGetDeploymentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Deployment:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetDeploymentStatusResponse(response ReposGetDeploymentStatusRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *DeploymentStatus:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetLatestPagesBuildResponse(response *PageBuild, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposGetLatestReleaseResponse(response *Release, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposGetPagesResponse(response ReposGetPagesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Page:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetPagesBuildResponse(response *PageBuild, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposGetPagesHealthCheckResponse(response ReposGetPagesHealthCheckRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PagesHealthCheck:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *EmptyObject:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposGetPagesHealthCheckBadRequest:
-		w.WriteHeader(400)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposGetPagesHealthCheckUnprocessableEntity:
-		w.WriteHeader(422)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetParticipationStatsResponse(response ReposGetParticipationStatsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ParticipationStats:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetPullRequestReviewProtectionResponse(response *ProtectedBranchPullRequestReview, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposGetPunchCardStatsResponse(response ReposGetPunchCardStatsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposGetPunchCardStatsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetReadmeResponse(response ReposGetReadmeRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ContentFile:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetReadmeInDirectoryResponse(response ReposGetReadmeInDirectoryRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ContentFile:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetReleaseResponse(response ReposGetReleaseRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Release:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetReleaseAssetResponse(response ReposGetReleaseAssetRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReleaseAsset:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *Found:
-		w.WriteHeader(302)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetReleaseByTagResponse(response ReposGetReleaseByTagRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Release:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetStatusChecksProtectionResponse(response ReposGetStatusChecksProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *StatusCheckPolicy:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetTeamsWithAccessToProtectedBranchResponse(response ReposGetTeamsWithAccessToProtectedBranchRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposGetTeamsWithAccessToProtectedBranchOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetTopPathsResponse(response ReposGetTopPathsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposGetTopPathsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetTopReferrersResponse(response ReposGetTopReferrersRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposGetTopReferrersOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetUsersWithAccessToProtectedBranchResponse(response ReposGetUsersWithAccessToProtectedBranchRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposGetUsersWithAccessToProtectedBranchOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetViewsResponse(response ReposGetViewsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ViewTraffic:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetWebhookResponse(response ReposGetWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Hook:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposGetWebhookConfigForRepoResponse(response *WebhookConfig, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposGetWebhookDeliveryResponse(response ReposGetWebhookDeliveryRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *HookDelivery:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposListAutolinksResponse(response []Autolink, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposListBranchesResponse(response ReposListBranchesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListBranchesOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeReposListBranchesForHeadCommitResponse(response ReposListBranchesForHeadCommitRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListBranchesForHeadCommitOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposListCollaboratorsResponse(response ReposListCollaboratorsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListCollaboratorsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListCommentsForCommitResponse(response *ReposListCommentsForCommitOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListCommitCommentsForRepoResponse(response *ReposListCommitCommentsForRepoOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListCommitStatusesForRefResponse(response ReposListCommitStatusesForRefRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListCommitStatusesForRefOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(301)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListCommitsResponse(response ReposListCommitsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListCommitsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposListCommitsApplicationJSONBadRequest:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposListCommitsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposListCommitsConflict:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(409)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposListCommitsInternalServerError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(500)
-		span.SetStatus(codes.Error, http.StatusText(500))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListContributorsResponse(response ReposListContributorsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListContributorsOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposListContributorsNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *ReposListContributorsForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposListContributorsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListDeployKeysResponse(response *ReposListDeployKeysOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListDeploymentStatusesResponse(response ReposListDeploymentStatusesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListDeploymentStatusesOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeReposListDeploymentsResponse(response *ReposListDeploymentsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeReposListDeploymentsResponse(response *ReposListDeploymentsOKHeaders, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeReposListForAuthenticatedUserResponse(response ReposListForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListForAuthenticatedUserOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ReposListForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposListForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposListForOrgResponse(response *ReposListForOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListForUserResponse(response *ReposListForUserOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListForksResponse(response ReposListForksRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListForksOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeReposListInvitationsResponse(response *ReposListInvitationsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func encodeReposListInvitationsForAuthenticatedUserResponse(response ReposListInvitationsForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListInvitationsForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
+// Encoding response headers.
 
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
+// Encode "Link" header.
 
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ReposListInvitationsForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposListInvitationsForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposListInvitationsForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+func encodeReposListInvitationsResponse(response *ReposListInvitationsOKHeaders, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeReposListInvitationsForAuthenticatedUserResponse(response ReposListInvitationsForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeReposListLanguagesResponse(response Language, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposListPagesBuildsResponse(response *ReposListPagesBuildsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListPublicResponse(response ReposListPublicRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListPublicOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListPullRequestsAssociatedWithCommitResponse(response *ReposListPullRequestsAssociatedWithCommitOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListReleaseAssetsResponse(response *ReposListReleaseAssetsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListReleasesResponse(response ReposListReleasesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListReleasesOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListTagsResponse(response *ReposListTagsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeReposListTeamsResponse(response *ReposListTeamsOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeReposListWebhookDeliveriesResponse(response ReposListWebhookDeliveriesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListWebhookDeliveriesOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposListWebhooksResponse(response ReposListWebhooksRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposListWebhooksOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeReposMergeResponse(response ReposMergeRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Commit:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposMergeNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposMergeNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	case *ReposMergeConflict:
-		w.WriteHeader(409)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposMergeUpstreamResponse(response ReposMergeUpstreamRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *MergedUpstream:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposMergeUpstreamConflict:
-		w.WriteHeader(409)
-
-		return nil
-
-	case *ReposMergeUpstreamUnprocessableEntity:
-		w.WriteHeader(422)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposPingWebhookResponse(response ReposPingWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposPingWebhookNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposRedeliverWebhookDeliveryResponse(response ReposRedeliverWebhookDeliveryRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Accepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposRemoveAppAccessRestrictionsResponse(response ReposRemoveAppAccessRestrictionsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposRemoveAppAccessRestrictionsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposRemoveCollaboratorResponse(response *ReposRemoveCollaboratorNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposRemoveStatusCheckContextsResponse(response ReposRemoveStatusCheckContextsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposRemoveStatusCheckContextsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposRemoveStatusCheckProtectionResponse(response *ReposRemoveStatusCheckProtectionNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposRemoveTeamAccessRestrictionsResponse(response ReposRemoveTeamAccessRestrictionsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposRemoveTeamAccessRestrictionsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposRemoveUserAccessRestrictionsResponse(response ReposRemoveUserAccessRestrictionsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposRemoveUserAccessRestrictionsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposRenameBranchResponse(response ReposRenameBranchRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *BranchWithProtection:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposRenameBranchForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposRenameBranchNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposReplaceAllTopicsResponse(response ReposReplaceAllTopicsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Topic:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposRequestPagesBuildResponse(response *PageBuildStatus, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposSetAdminBranchProtectionResponse(response *ProtectedBranchAdminEnforced, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposSetAppAccessRestrictionsResponse(response ReposSetAppAccessRestrictionsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposSetAppAccessRestrictionsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposSetStatusCheckContextsResponse(response ReposSetStatusCheckContextsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposSetStatusCheckContextsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposSetTeamAccessRestrictionsResponse(response ReposSetTeamAccessRestrictionsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposSetTeamAccessRestrictionsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposSetUserAccessRestrictionsResponse(response ReposSetUserAccessRestrictionsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposSetUserAccessRestrictionsOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposTestPushWebhookResponse(response ReposTestPushWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ReposTestPushWebhookNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposTransferResponse(response *MinimalRepository, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(202)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposUpdateResponse(response ReposUpdateRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *FullRepository:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposUpdateTemporaryRedirect:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(307)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposUpdateForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposUpdateNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposUpdateBranchProtectionResponse(response ReposUpdateBranchProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProtectedBranch:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposUpdateBranchProtectionForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ReposUpdateBranchProtectionNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationErrorSimple:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposUpdateCommitCommentResponse(response ReposUpdateCommitCommentRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *CommitComment:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposUpdateInvitationResponse(response *RepositoryInvitation, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposUpdatePullRequestReviewProtectionResponse(response ReposUpdatePullRequestReviewProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ProtectedBranchPullRequestReview:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposUpdateReleaseResponse(response ReposUpdateReleaseRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Release:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposUpdateReleaseAssetResponse(response *ReleaseAsset, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposUpdateStatusCheckProtectionResponse(response ReposUpdateStatusCheckProtectionRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *StatusCheckPolicy:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposUpdateWebhookResponse(response ReposUpdateWebhookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Hook:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeReposUpdateWebhookConfigForRepoResponse(response *WebhookConfig, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeReposUploadReleaseAssetResponse(response *ReleaseAsset, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeScimDeleteUserFromOrgResponse(response ScimDeleteUserFromOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ScimDeleteUserFromOrgNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ScimDeleteUserFromOrgApplicationJSONForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimDeleteUserFromOrgApplicationScimJSONForbidden:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimDeleteUserFromOrgApplicationJSONNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimDeleteUserFromOrgApplicationScimJSONNotFound:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeScimGetProvisioningInformationForUserResponse(response ScimGetProvisioningInformationForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ScimUser:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ScimGetProvisioningInformationForUserApplicationJSONForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimGetProvisioningInformationForUserApplicationScimJSONForbidden:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimGetProvisioningInformationForUserApplicationJSONNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimGetProvisioningInformationForUserApplicationScimJSONNotFound:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeScimListProvisionedIdentitiesResponse(response ScimListProvisionedIdentitiesRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ScimUserList:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ScimListProvisionedIdentitiesApplicationJSONBadRequest:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimListProvisionedIdentitiesApplicationScimJSONBadRequest:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimListProvisionedIdentitiesApplicationJSONForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimListProvisionedIdentitiesApplicationScimJSONForbidden:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimListProvisionedIdentitiesApplicationJSONNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimListProvisionedIdentitiesApplicationScimJSONNotFound:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeScimProvisionAndInviteUserResponse(response ScimProvisionAndInviteUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ScimUser:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ScimProvisionAndInviteUserApplicationJSONBadRequest:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimProvisionAndInviteUserApplicationScimJSONBadRequest:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimProvisionAndInviteUserApplicationJSONForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimProvisionAndInviteUserApplicationScimJSONForbidden:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimProvisionAndInviteUserApplicationJSONNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimProvisionAndInviteUserApplicationScimJSONNotFound:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimProvisionAndInviteUserApplicationJSONConflict:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(409)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimProvisionAndInviteUserApplicationScimJSONConflict:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(409)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimProvisionAndInviteUserApplicationJSONInternalServerError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(500)
-		span.SetStatus(codes.Error, http.StatusText(500))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimProvisionAndInviteUserApplicationScimJSONInternalServerError:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(500)
-		span.SetStatus(codes.Error, http.StatusText(500))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeScimSetInformationForProvisionedUserResponse(response ScimSetInformationForProvisionedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ScimUser:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ScimSetInformationForProvisionedUserApplicationJSONForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimSetInformationForProvisionedUserApplicationScimJSONForbidden:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimSetInformationForProvisionedUserApplicationJSONNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimSetInformationForProvisionedUserApplicationScimJSONNotFound:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeScimUpdateAttributeForUserResponse(response ScimUpdateAttributeForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *ScimUser:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ScimUpdateAttributeForUserApplicationJSONBadRequest:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimUpdateAttributeForUserApplicationScimJSONBadRequest:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(400)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimUpdateAttributeForUserApplicationJSONForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimUpdateAttributeForUserApplicationScimJSONForbidden:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimUpdateAttributeForUserApplicationJSONNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ScimUpdateAttributeForUserApplicationScimJSONNotFound:
-		w.Header().Set("Content-Type", "application/scim+json")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(429)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSearchCodeResponse(response SearchCodeRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SearchCodeOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSearchCommitsResponse(response SearchCommitsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SearchCommitsOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSearchIssuesAndPullRequestsResponse(response SearchIssuesAndPullRequestsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SearchIssuesAndPullRequestsOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSearchLabelsResponse(response SearchLabelsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SearchLabelsOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *SearchLabelsForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *SearchLabelsNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSearchReposResponse(response SearchReposRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SearchReposOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSearchTopicsResponse(response SearchTopicsRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SearchTopicsOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSearchUsersResponse(response SearchUsersRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SearchUsersOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSecretScanningGetAlertResponse(response SecretScanningGetAlertRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SecretScanningAlert:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *SecretScanningGetAlertNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSecretScanningListAlertsForOrgResponse(response SecretScanningListAlertsForOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SecretScanningListAlertsForOrgOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeSecretScanningListAlertsForRepoResponse(response SecretScanningListAlertsForRepoRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SecretScanningListAlertsForRepoOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *SecretScanningListAlertsForRepoNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSecretScanningUpdateAlertResponse(response SecretScanningUpdateAlertRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SecretScanningAlert:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *SecretScanningUpdateAlertNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	case *SecretScanningUpdateAlertUnprocessableEntity:
-		w.WriteHeader(422)
-
-		return nil
-
-	case *ServiceUnavailable:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(503)
-		span.SetStatus(codes.Error, http.StatusText(503))
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsAddMemberLegacyResponse(response TeamsAddMemberLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsAddMemberLegacyNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsAddMemberLegacyNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	case *TeamsAddMemberLegacyUnprocessableEntity:
-		w.WriteHeader(422)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsAddOrUpdateMembershipForUserInOrgResponse(response TeamsAddOrUpdateMembershipForUserInOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamMembership:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsAddOrUpdateMembershipForUserInOrgForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	case *TeamsAddOrUpdateMembershipForUserInOrgUnprocessableEntity:
-		w.WriteHeader(422)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsAddOrUpdateMembershipForUserLegacyResponse(response TeamsAddOrUpdateMembershipForUserLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamMembership:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsAddOrUpdateMembershipForUserLegacyForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsAddOrUpdateMembershipForUserLegacyUnprocessableEntity:
-		w.WriteHeader(422)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsAddOrUpdateProjectPermissionsInOrgResponse(response TeamsAddOrUpdateProjectPermissionsInOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsAddOrUpdateProjectPermissionsInOrgNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *TeamsAddOrUpdateProjectPermissionsInOrgForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsAddOrUpdateProjectPermissionsLegacyResponse(response TeamsAddOrUpdateProjectPermissionsLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsAddOrUpdateProjectPermissionsLegacyNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *TeamsAddOrUpdateProjectPermissionsLegacyForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsAddOrUpdateRepoPermissionsInOrgResponse(response *TeamsAddOrUpdateRepoPermissionsInOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsAddOrUpdateRepoPermissionsLegacyResponse(response TeamsAddOrUpdateRepoPermissionsLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsAddOrUpdateRepoPermissionsLegacyNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsCheckPermissionsForProjectInOrgResponse(response TeamsCheckPermissionsForProjectInOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamProject:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsCheckPermissionsForProjectInOrgNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsCheckPermissionsForProjectLegacyResponse(response TeamsCheckPermissionsForProjectLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamProject:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsCheckPermissionsForProjectLegacyNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsCheckPermissionsForRepoInOrgResponse(response TeamsCheckPermissionsForRepoInOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamRepository:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsCheckPermissionsForRepoInOrgNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *TeamsCheckPermissionsForRepoInOrgNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsCheckPermissionsForRepoLegacyResponse(response TeamsCheckPermissionsForRepoLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamRepository:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsCheckPermissionsForRepoLegacyNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *TeamsCheckPermissionsForRepoLegacyNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsCreateResponse(response TeamsCreateRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamFull:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsCreateDiscussionCommentInOrgResponse(response *TeamDiscussionComment, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsCreateDiscussionCommentLegacyResponse(response *TeamDiscussionComment, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsCreateDiscussionInOrgResponse(response *TeamDiscussion, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsCreateDiscussionLegacyResponse(response *TeamDiscussion, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsCreateOrUpdateIdpGroupConnectionsInOrgResponse(response *GroupMapping, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse(response TeamsCreateOrUpdateIdpGroupConnectionsLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GroupMapping:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsDeleteDiscussionCommentInOrgResponse(response *TeamsDeleteDiscussionCommentInOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsDeleteDiscussionCommentLegacyResponse(response *TeamsDeleteDiscussionCommentLegacyNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsDeleteDiscussionInOrgResponse(response *TeamsDeleteDiscussionInOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsDeleteDiscussionLegacyResponse(response *TeamsDeleteDiscussionLegacyNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsDeleteInOrgResponse(response *TeamsDeleteInOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsDeleteLegacyResponse(response TeamsDeleteLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsDeleteLegacyNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsGetByNameResponse(response TeamsGetByNameRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamFull:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsGetDiscussionCommentInOrgResponse(response *TeamDiscussionComment, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsGetDiscussionCommentLegacyResponse(response *TeamDiscussionComment, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsGetDiscussionInOrgResponse(response *TeamDiscussion, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsGetDiscussionLegacyResponse(response *TeamDiscussion, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsGetLegacyResponse(response TeamsGetLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamFull:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsGetMemberLegacyResponse(response TeamsGetMemberLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsGetMemberLegacyNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *TeamsGetMemberLegacyNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsGetMembershipForUserInOrgResponse(response TeamsGetMembershipForUserInOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamMembership:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsGetMembershipForUserInOrgNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsGetMembershipForUserLegacyResponse(response TeamsGetMembershipForUserLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamMembership:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsListResponse(response TeamsListRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsListOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListChildInOrgResponse(response *TeamsListChildInOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListChildLegacyResponse(response TeamsListChildLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsListChildLegacyOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsListChildLegacyForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsListChildLegacyNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListDiscussionCommentsInOrgResponse(response *TeamsListDiscussionCommentsInOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListDiscussionCommentsLegacyResponse(response *TeamsListDiscussionCommentsLegacyOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListDiscussionsInOrgResponse(response *TeamsListDiscussionsInOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListDiscussionsLegacyResponse(response *TeamsListDiscussionsLegacyOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeTeamsListForAuthenticatedUserResponse(response TeamsListForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsListForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *TeamsListForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsListForAuthenticatedUserNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeTeamsListIdpGroupsForLegacyResponse(response TeamsListIdpGroupsForLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GroupMapping:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsListIdpGroupsForLegacyForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsListIdpGroupsForLegacyNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsListIdpGroupsForOrgResponse(response *GroupMappingHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeTeamsListIdpGroupsInOrgResponse(response *GroupMapping, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsListMembersInOrgResponse(response *TeamsListMembersInOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListMembersLegacyResponse(response TeamsListMembersLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsListMembersLegacyOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListPendingInvitationsInOrgResponse(response *TeamsListPendingInvitationsInOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListPendingInvitationsLegacyResponse(response *TeamsListPendingInvitationsLegacyOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListProjectsInOrgResponse(response *TeamsListProjectsInOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeTeamsListProjectsLegacyResponse(response TeamsListProjectsLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsListProjectsLegacyOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeTeamsListReposInOrgResponse(response *TeamsListReposInOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func encodeTeamsListReposLegacyResponse(response TeamsListReposLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsListReposLegacyOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
+// Encoding response headers.
 
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
+// Encode "Link" header.
 
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+func encodeTeamsListReposInOrgResponse(response *TeamsListReposInOrgOKHeaders, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeTeamsListReposLegacyResponse(response TeamsListReposLegacyRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeTeamsRemoveMemberLegacyResponse(response TeamsRemoveMemberLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsRemoveMemberLegacyNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *TeamsRemoveMemberLegacyNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsRemoveMembershipForUserInOrgResponse(response TeamsRemoveMembershipForUserInOrgRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsRemoveMembershipForUserInOrgNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *TeamsRemoveMembershipForUserInOrgForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsRemoveMembershipForUserLegacyResponse(response TeamsRemoveMembershipForUserLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsRemoveMembershipForUserLegacyNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *TeamsRemoveMembershipForUserLegacyForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsRemoveProjectInOrgResponse(response *TeamsRemoveProjectInOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsRemoveProjectLegacyResponse(response TeamsRemoveProjectLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsRemoveProjectLegacyNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeTeamsRemoveRepoInOrgResponse(response *TeamsRemoveRepoInOrgNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsRemoveRepoLegacyResponse(response *TeamsRemoveRepoLegacyNoContent, w http.ResponseWriter, span trace.Span) error {
-	w.WriteHeader(204)
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsUpdateDiscussionCommentInOrgResponse(response *TeamDiscussionComment, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsUpdateDiscussionCommentLegacyResponse(response *TeamDiscussionComment, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsUpdateDiscussionInOrgResponse(response *TeamDiscussion, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsUpdateDiscussionLegacyResponse(response *TeamDiscussion, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsUpdateInOrgResponse(response *TeamFull, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(201)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeTeamsUpdateLegacyResponse(response TeamsUpdateLegacyRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *TeamsUpdateLegacyOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsUpdateLegacyCreated:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsUpdateLegacyForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *TeamsUpdateLegacyNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersAddEmailForAuthenticatedResponse(response UsersAddEmailForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersAddEmailForAuthenticatedCreatedApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersAddEmailForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersAddEmailForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersAddEmailForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersBlockResponse(response UsersBlockRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersBlockNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersBlockUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersBlockForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersBlockNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersCheckBlockedResponse(response UsersCheckBlockedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersCheckBlockedNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersCheckBlockedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersCheckBlockedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersCheckBlockedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersCheckFollowingForUserResponse(response UsersCheckFollowingForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersCheckFollowingForUserNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *UsersCheckFollowingForUserNotFound:
-		w.WriteHeader(404)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersCheckPersonIsFollowedByAuthenticatedResponse(response UsersCheckPersonIsFollowedByAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersCheckPersonIsFollowedByAuthenticatedNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersCheckPersonIsFollowedByAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersCheckPersonIsFollowedByAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersCheckPersonIsFollowedByAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersCreateGpgKeyForAuthenticatedResponse(response UsersCreateGpgKeyForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GpgKey:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersCreateGpgKeyForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersCreateGpgKeyForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersCreateGpgKeyForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersCreatePublicSSHKeyForAuthenticatedResponse(response UsersCreatePublicSSHKeyForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Key:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(201)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersCreatePublicSSHKeyForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersCreatePublicSSHKeyForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersCreatePublicSSHKeyForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersDeleteEmailForAuthenticatedResponse(response UsersDeleteEmailForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersDeleteEmailForAuthenticatedNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersDeleteEmailForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersDeleteEmailForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersDeleteEmailForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersDeleteGpgKeyForAuthenticatedResponse(response UsersDeleteGpgKeyForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersDeleteGpgKeyForAuthenticatedNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersDeleteGpgKeyForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersDeleteGpgKeyForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersDeleteGpgKeyForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersDeletePublicSSHKeyForAuthenticatedResponse(response UsersDeletePublicSSHKeyForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersDeletePublicSSHKeyForAuthenticatedNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersDeletePublicSSHKeyForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersDeletePublicSSHKeyForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersDeletePublicSSHKeyForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersFollowResponse(response UsersFollowRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersFollowNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersFollowUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersFollowForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersFollowNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersGetAuthenticatedResponse(response UsersGetAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersGetAuthenticatedOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersGetAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersGetAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersGetByUsernameResponse(response UsersGetByUsernameRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersGetByUsernameOK:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *Accepted:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(202)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersGetContextForUserResponse(response UsersGetContextForUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Hovercard:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *BasicError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersGetGpgKeyForAuthenticatedResponse(response UsersGetGpgKeyForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GpgKey:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersGetGpgKeyForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersGetGpgKeyForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersGetGpgKeyForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersGetPublicSSHKeyForAuthenticatedResponse(response UsersGetPublicSSHKeyForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Key:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersGetPublicSSHKeyForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersGetPublicSSHKeyForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersGetPublicSSHKeyForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersListResponse(response UsersListRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersListOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeUsersListBlockedByAuthenticatedResponse(response UsersListBlockedByAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersListBlockedByAuthenticatedOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersListBlockedByAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListBlockedByAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListBlockedByAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *PreviewHeaderMissing:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(415)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersListEmailsForAuthenticatedResponse(response UsersListEmailsForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersListEmailsForAuthenticatedOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersListEmailsForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListEmailsForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListEmailsForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeUsersListFollowedByAuthenticatedResponse(response UsersListFollowedByAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersListFollowedByAuthenticatedOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersListFollowedByAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListFollowedByAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeUsersListFollowersForAuthenticatedUserResponse(response UsersListFollowersForAuthenticatedUserRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersListFollowersForAuthenticatedUserOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersListFollowersForAuthenticatedUserUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListFollowersForAuthenticatedUserForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeUsersListFollowersForUserResponse(response *UsersListFollowersForUserOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeUsersListFollowingForUserResponse(response *UsersListFollowingForUserOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeUsersListGpgKeysForAuthenticatedResponse(response UsersListGpgKeysForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersListGpgKeysForAuthenticatedOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersListGpgKeysForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListGpgKeysForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListGpgKeysForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeUsersListGpgKeysForUserResponse(response *UsersListGpgKeysForUserOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Link" header.
 
 func encodeUsersListPublicEmailsForAuthenticatedResponse(response UsersListPublicEmailsForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersListPublicEmailsForAuthenticatedOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersListPublicEmailsForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListPublicEmailsForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListPublicEmailsForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
-}
-
-func encodeUsersListPublicKeysForUserResponse(response *UsersListPublicKeysForUserOKHeaders, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("Access-Control-Expose-Headers", "Link")
-	// Encoding response headers.
-	{
-		h := uri.NewHeaderEncoder(w.Header())
-		// Encode "Link" header.
-		{
-			cfg := uri.HeaderParameterEncodingConfig{
-				Name:    "Link",
-				Explode: false,
-			}
-			if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-				if val, ok := response.Link.Get(); ok {
-					return e.EncodeValue(conv.StringToString(val))
-				}
-				return nil
-			}); err != nil {
-				return errors.Wrap(err, "encode Link header")
-			}
-		}
-	}
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	e.ArrStart()
-	for _, elem := range response.Response {
-		elem.Encode(e)
-	}
-	e.ArrEnd()
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func encodeUsersListPublicSSHKeysForAuthenticatedResponse(response UsersListPublicSSHKeysForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersListPublicSSHKeysForAuthenticatedOKHeaders:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.Header().Set("Access-Control-Expose-Headers", "Link")
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Link" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Link",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					if val, ok := response.Link.Get(); ok {
-						return e.EncodeValue(conv.StringToString(val))
-					}
-					return nil
-				}); err != nil {
-					return errors.Wrap(err, "encode Link header")
-				}
-			}
-		}
-		w.WriteHeader(200)
+// Encoding response headers.
 
-		e := new(jx.Encoder)
-		e.ArrStart()
-		for _, elem := range response.Response {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
+// Encode "Link" header.
 
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersListPublicSSHKeysForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListPublicSSHKeysForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersListPublicSSHKeysForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+func encodeUsersListPublicKeysForUserResponse(response *UsersListPublicKeysForUserOKHeaders, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Link" header.
+
+func encodeUsersListPublicSSHKeysForAuthenticatedResponse(response UsersListPublicSSHKeysForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
+	_ = "STUB: not implemented"
+	return nil
+}
+
+// Encoding response headers.
+
+// Encode "Link" header.
+
 func encodeUsersSetPrimaryEmailVisibilityForAuthenticatedResponse(response UsersSetPrimaryEmailVisibilityForAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersSetPrimaryEmailVisibilityForAuthenticatedOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersSetPrimaryEmailVisibilityForAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersSetPrimaryEmailVisibilityForAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersSetPrimaryEmailVisibilityForAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersUnblockResponse(response UsersUnblockRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersUnblockNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersUnblockUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersUnblockForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersUnblockNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersUnfollowResponse(response UsersUnfollowRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *UsersUnfollowNoContent:
-		w.WriteHeader(204)
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersUnfollowUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersUnfollowForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersUnfollowNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeUsersUpdateAuthenticatedResponse(response UsersUpdateAuthenticatedRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *PrivateUser:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *NotModified:
-		w.WriteHeader(304)
-
-		return nil
-
-	case *UsersUpdateAuthenticatedUnauthorized:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(401)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersUpdateAuthenticatedForbidden:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(403)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *UsersUpdateAuthenticatedNotFound:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(404)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *ValidationError:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(422)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }

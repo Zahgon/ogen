@@ -3,14 +3,8 @@
 package examples
 
 import (
-	"fmt"
-	"math/bits"
-	"strconv"
-
-	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
 	"github.com/ogen-go/ogen/ogenregex"
-	"github.com/ogen-go/ogen/validate"
 )
 
 var regexMap = map[string]ogenregex.Regexp{
@@ -49,23 +43,25 @@ type Callback struct {
 
 // GetPattern0Props returns the value of Pattern0Props.
 func (s *Callback) GetPattern0Props() CallbackPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern1Props returns the value of Pattern1Props.
+	new(CallbackPattern0)
 }
 
-// GetPattern1Props returns the value of Pattern1Props.
 func (s *Callback) GetPattern1Props() CallbackPattern1 {
-	return s.Pattern1Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	new(CallbackPattern1)
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Callback) SetPattern0Props(val CallbackPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Callback) SetPattern0Props(val CallbackPattern0) { _ = "STUB: not implemented"; return }
 
 // SetPattern1Props sets the value of Pattern1Props.
-func (s *Callback) SetPattern1Props(val CallbackPattern1) {
-	s.Pattern1Props = val
-}
+func (s *Callback) SetPattern1Props(val CallbackPattern1) { _ = "STUB: not implemented"; return }
 
 // Ref: #/definitions/callbackOrReference
 // CallbackOrReference represents sum type.
@@ -85,51 +81,39 @@ const (
 )
 
 // IsCallback reports whether CallbackOrReference is Callback.
-func (s CallbackOrReference) IsCallback() bool { return s.Type == CallbackCallbackOrReference }
+func (s CallbackOrReference) IsCallback() bool { _ = "STUB: not implemented"; return false }
 
 // IsReference reports whether CallbackOrReference is Reference.
-func (s CallbackOrReference) IsReference() bool { return s.Type == ReferenceCallbackOrReference }
+func (s CallbackOrReference) IsReference() bool { _ = "STUB: not implemented"; return false }
 
 // SetCallback sets CallbackOrReference to Callback.
-func (s *CallbackOrReference) SetCallback(v Callback) {
-	s.Type = CallbackCallbackOrReference
-	s.Callback = v
-}
+func (s *CallbackOrReference) SetCallback(v Callback) { _ = "STUB: not implemented"; return }
 
 // GetCallback returns Callback and true boolean if CallbackOrReference is Callback.
 func (s CallbackOrReference) GetCallback() (v Callback, ok bool) {
-	if !s.IsCallback() {
-		return v, false
-	}
-	return s.Callback, true
+	_ = "STUB: not implemented"
+	return *new(Callback), false
 }
 
 // NewCallbackCallbackOrReference returns new CallbackOrReference from Callback.
 func NewCallbackCallbackOrReference(v Callback) CallbackOrReference {
-	var s CallbackOrReference
-	s.SetCallback(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CallbackOrReference)
 }
 
 // SetReference sets CallbackOrReference to Reference.
-func (s *CallbackOrReference) SetReference(v Reference) {
-	s.Type = ReferenceCallbackOrReference
-	s.Reference = v
-}
+func (s *CallbackOrReference) SetReference(v Reference) { _ = "STUB: not implemented"; return }
 
 // GetReference returns Reference and true boolean if CallbackOrReference is Reference.
 func (s CallbackOrReference) GetReference() (v Reference, ok bool) {
-	if !s.IsReference() {
-		return v, false
-	}
-	return s.Reference, true
+	_ = "STUB: not implemented"
+	return *new(Reference), false
 }
 
 // NewReferenceCallbackOrReference returns new CallbackOrReference from Reference.
 func NewReferenceCallbackOrReference(v Reference) CallbackOrReference {
-	var s CallbackOrReference
-	s.SetReference(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CallbackOrReference)
 }
 
 type CallbackPattern0 map[string]PathItem
@@ -186,103 +170,145 @@ type Components struct {
 
 // GetSchemas returns the value of Schemas.
 func (s *Components) GetSchemas() OptSchemasOrReferences {
-	return s.Schemas
+	_ = "STUB: not implemented"
+
+	// GetResponses returns the value of Responses.
+	return *new(OptSchemasOrReferences)
 }
 
-// GetResponses returns the value of Responses.
 func (s *Components) GetResponses() OptResponsesOrReferences {
-	return s.Responses
+	_ = "STUB: not implemented"
+	return *
+
+	// GetParameters returns the value of Parameters.
+	new(OptResponsesOrReferences)
 }
 
-// GetParameters returns the value of Parameters.
 func (s *Components) GetParameters() OptParametersOrReferences {
-	return s.Parameters
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExamples returns the value of Examples.
+	new(OptParametersOrReferences)
 }
 
-// GetExamples returns the value of Examples.
 func (s *Components) GetExamples() OptExamplesOrReferences {
-	return s.Examples
+	_ = "STUB: not implemented"
+
+	// GetRequestBodies returns the value of RequestBodies.
+	return *new(OptExamplesOrReferences)
 }
 
-// GetRequestBodies returns the value of RequestBodies.
 func (s *Components) GetRequestBodies() OptRequestBodiesOrReferences {
-	return s.RequestBodies
+	_ = "STUB: not implemented"
+	return *
+
+	// GetHeaders returns the value of Headers.
+	new(OptRequestBodiesOrReferences)
 }
 
-// GetHeaders returns the value of Headers.
 func (s *Components) GetHeaders() OptHeadersOrReferences {
-	return s.Headers
+	_ = "STUB: not implemented"
+
+	// GetSecuritySchemes returns the value of SecuritySchemes.
+	return *new(OptHeadersOrReferences)
 }
 
-// GetSecuritySchemes returns the value of SecuritySchemes.
 func (s *Components) GetSecuritySchemes() OptSecuritySchemesOrReferences {
-	return s.SecuritySchemes
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLinks returns the value of Links.
+	new(OptSecuritySchemesOrReferences)
 }
 
-// GetLinks returns the value of Links.
 func (s *Components) GetLinks() OptLinksOrReferences {
-	return s.Links
+	_ = "STUB: not implemented"
+
+	// GetCallbacks returns the value of Callbacks.
+	return *new(OptLinksOrReferences)
 }
 
-// GetCallbacks returns the value of Callbacks.
 func (s *Components) GetCallbacks() OptCallbacksOrReferences {
-	return s.Callbacks
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	new(OptCallbacksOrReferences)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Components) GetPattern0Props() ComponentsPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetSchemas sets the value of Schemas.
+	new(ComponentsPattern0)
 }
 
-// SetSchemas sets the value of Schemas.
 func (s *Components) SetSchemas(val OptSchemasOrReferences) {
-	s.Schemas = val
+	_ = "STUB: not implemented"
+
+	// SetResponses sets the value of Responses.
+	return
 }
 
-// SetResponses sets the value of Responses.
 func (s *Components) SetResponses(val OptResponsesOrReferences) {
-	s.Responses = val
+	_ = "STUB: not implemented"
+
+	// SetParameters sets the value of Parameters.
+	return
 }
 
-// SetParameters sets the value of Parameters.
 func (s *Components) SetParameters(val OptParametersOrReferences) {
-	s.Parameters = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetExamples sets the value of Examples.
 }
 
-// SetExamples sets the value of Examples.
 func (s *Components) SetExamples(val OptExamplesOrReferences) {
-	s.Examples = val
+	_ = "STUB: not implemented"
+
+	// SetRequestBodies sets the value of RequestBodies.
+	return
 }
 
-// SetRequestBodies sets the value of RequestBodies.
 func (s *Components) SetRequestBodies(val OptRequestBodiesOrReferences) {
-	s.RequestBodies = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetHeaders sets the value of Headers.
 }
 
-// SetHeaders sets the value of Headers.
 func (s *Components) SetHeaders(val OptHeadersOrReferences) {
-	s.Headers = val
+	_ = "STUB: not implemented"
+
+	// SetSecuritySchemes sets the value of SecuritySchemes.
+	return
 }
 
-// SetSecuritySchemes sets the value of SecuritySchemes.
 func (s *Components) SetSecuritySchemes(val OptSecuritySchemesOrReferences) {
-	s.SecuritySchemes = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetLinks sets the value of Links.
 }
 
-// SetLinks sets the value of Links.
 func (s *Components) SetLinks(val OptLinksOrReferences) {
-	s.Links = val
+	_ = "STUB: not implemented"
+
+	// SetCallbacks sets the value of Callbacks.
+	return
 }
 
-// SetCallbacks sets the value of Callbacks.
 func (s *Components) SetCallbacks(val OptCallbacksOrReferences) {
-	s.Callbacks = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Components) SetPattern0Props(val ComponentsPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Components) SetPattern0Props(val ComponentsPattern0) { _ = "STUB: not implemented"; return }
 
 type ComponentsPattern0 map[string]SpecificationExtension
 
@@ -307,43 +333,56 @@ type Contact struct {
 
 // GetName returns the value of Name.
 func (s *Contact) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetURL returns the value of URL.
+	return *new(OptString)
 }
 
-// GetURL returns the value of URL.
 func (s *Contact) GetURL() OptString {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetEmail returns the value of Email.
+	return *new(OptString)
 }
 
-// GetEmail returns the value of Email.
 func (s *Contact) GetEmail() OptString {
-	return s.Email
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptString)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Contact) GetPattern0Props() ContactPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetName sets the value of Name.
+	new(ContactPattern0)
 }
 
-// SetName sets the value of Name.
 func (s *Contact) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetURL sets the value of URL.
+	return
 }
 
-// SetURL sets the value of URL.
 func (s *Contact) SetURL(val OptString) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetEmail sets the value of Email.
+	return
 }
 
-// SetEmail sets the value of Email.
 func (s *Contact) SetEmail(val OptString) {
-	s.Email = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Contact) SetPattern0Props(val ContactPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Contact) SetPattern0Props(val ContactPattern0) { _ = "STUB: not implemented"; return }
 
 type ContactPattern0 map[string]SpecificationExtension
 
@@ -370,27 +409,27 @@ type Discriminator struct {
 }
 
 // GetPropertyName returns the value of PropertyName.
-func (s *Discriminator) GetPropertyName() string {
-	return s.PropertyName
-}
+func (s *Discriminator) GetPropertyName() string { _ = "STUB: not implemented"; return "" }
 
 // GetMapping returns the value of Mapping.
 func (s *Discriminator) GetMapping() OptStrings {
-	return s.Mapping
+	_ = "STUB: not implemented"
+
+	// SetPropertyName sets the value of PropertyName.
+	return *new(OptStrings)
 }
 
-// SetPropertyName sets the value of PropertyName.
-func (s *Discriminator) SetPropertyName(val string) {
-	s.PropertyName = val
-}
+func (s *Discriminator) SetPropertyName(val string) { _ = "STUB: not implemented"; return }
 
 // SetMapping sets the value of Mapping.
 func (s *Discriminator) SetMapping(val OptStrings) {
-	s.Mapping = val
+	_ = "STUB: not implemented"
+
+	// A single encoding definition applied to a single schema property.
+	// Ref: #/definitions/encoding
+	return
 }
 
-// A single encoding definition applied to a single schema property.
-// Ref: #/definitions/encoding
 type Encoding struct {
 	ContentType   OptString              `json:"contentType"`
 	Headers       OptHeadersOrReferences `json:"headers"`
@@ -403,63 +442,78 @@ type Encoding struct {
 
 // GetContentType returns the value of ContentType.
 func (s *Encoding) GetContentType() OptString {
-	return s.ContentType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetHeaders returns the value of Headers.
+	new(OptString)
 }
 
-// GetHeaders returns the value of Headers.
 func (s *Encoding) GetHeaders() OptHeadersOrReferences {
-	return s.Headers
+	_ = "STUB: not implemented"
+
+	// GetStyle returns the value of Style.
+	return *new(OptHeadersOrReferences)
 }
 
-// GetStyle returns the value of Style.
 func (s *Encoding) GetStyle() OptString {
-	return s.Style
+	_ = "STUB: not implemented"
+
+	// GetExplode returns the value of Explode.
+	return *new(OptString)
 }
 
-// GetExplode returns the value of Explode.
 func (s *Encoding) GetExplode() OptBool {
-	return s.Explode
+	_ = "STUB: not implemented"
+
+	// GetAllowReserved returns the value of AllowReserved.
+	return *new(OptBool)
 }
 
-// GetAllowReserved returns the value of AllowReserved.
 func (s *Encoding) GetAllowReserved() OptBool {
-	return s.AllowReserved
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	new(OptBool)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Encoding) GetPattern0Props() EncodingPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetContentType sets the value of ContentType.
+	new(EncodingPattern0)
 }
 
-// SetContentType sets the value of ContentType.
-func (s *Encoding) SetContentType(val OptString) {
-	s.ContentType = val
-}
+func (s *Encoding) SetContentType(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetHeaders sets the value of Headers.
 func (s *Encoding) SetHeaders(val OptHeadersOrReferences) {
-	s.Headers = val
+	_ = "STUB: not implemented"
+
+	// SetStyle sets the value of Style.
+	return
 }
 
-// SetStyle sets the value of Style.
 func (s *Encoding) SetStyle(val OptString) {
-	s.Style = val
+	_ = "STUB: not implemented"
+
+	// SetExplode sets the value of Explode.
+	return
 }
 
-// SetExplode sets the value of Explode.
 func (s *Encoding) SetExplode(val OptBool) {
-	s.Explode = val
+	_ = "STUB: not implemented"
+
+	// SetAllowReserved sets the value of AllowReserved.
+	return
 }
 
-// SetAllowReserved sets the value of AllowReserved.
-func (s *Encoding) SetAllowReserved(val OptBool) {
-	s.AllowReserved = val
-}
+func (s *Encoding) SetAllowReserved(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetPattern0Props sets the value of Pattern0Props.
-func (s *Encoding) SetPattern0Props(val EncodingPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Encoding) SetPattern0Props(val EncodingPattern0) { _ = "STUB: not implemented"; return }
 
 type EncodingPattern0 map[string]SpecificationExtension
 
@@ -498,53 +552,64 @@ type Example struct {
 
 // GetSummary returns the value of Summary.
 func (s *Example) GetSummary() OptString {
-	return s.Summary
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(OptString)
 }
 
-// GetDescription returns the value of Description.
 func (s *Example) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetValue returns the value of Value.
+	new(OptString)
 }
 
-// GetValue returns the value of Value.
 func (s *Example) GetValue() Any {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// GetExternalValue returns the value of ExternalValue.
+	return *new(Any)
 }
 
-// GetExternalValue returns the value of ExternalValue.
 func (s *Example) GetExternalValue() OptString {
-	return s.ExternalValue
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	new(OptString)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Example) GetPattern0Props() ExamplePattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetSummary sets the value of Summary.
+	new(ExamplePattern0)
 }
 
-// SetSummary sets the value of Summary.
 func (s *Example) SetSummary(val OptString) {
-	s.Summary = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Example) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *Example) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetValue sets the value of Value.
 func (s *Example) SetValue(val Any) {
-	s.Value = val
+	_ = "STUB: not implemented"
+
+	// SetExternalValue sets the value of ExternalValue.
+	return
 }
 
-// SetExternalValue sets the value of ExternalValue.
-func (s *Example) SetExternalValue(val OptString) {
-	s.ExternalValue = val
-}
+func (s *Example) SetExternalValue(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetPattern0Props sets the value of Pattern0Props.
-func (s *Example) SetPattern0Props(val ExamplePattern0) {
-	s.Pattern0Props = val
-}
+func (s *Example) SetPattern0Props(val ExamplePattern0) { _ = "STUB: not implemented"; return }
 
 // Ref: #/definitions/exampleOrReference
 // ExampleOrReference represents sum type.
@@ -564,51 +629,39 @@ const (
 )
 
 // IsExample reports whether ExampleOrReference is Example.
-func (s ExampleOrReference) IsExample() bool { return s.Type == ExampleExampleOrReference }
+func (s ExampleOrReference) IsExample() bool { _ = "STUB: not implemented"; return false }
 
 // IsReference reports whether ExampleOrReference is Reference.
-func (s ExampleOrReference) IsReference() bool { return s.Type == ReferenceExampleOrReference }
+func (s ExampleOrReference) IsReference() bool { _ = "STUB: not implemented"; return false }
 
 // SetExample sets ExampleOrReference to Example.
-func (s *ExampleOrReference) SetExample(v Example) {
-	s.Type = ExampleExampleOrReference
-	s.Example = v
-}
+func (s *ExampleOrReference) SetExample(v Example) { _ = "STUB: not implemented"; return }
 
 // GetExample returns Example and true boolean if ExampleOrReference is Example.
 func (s ExampleOrReference) GetExample() (v Example, ok bool) {
-	if !s.IsExample() {
-		return v, false
-	}
-	return s.Example, true
+	_ = "STUB: not implemented"
+	return *new(Example), false
 }
 
 // NewExampleExampleOrReference returns new ExampleOrReference from Example.
 func NewExampleExampleOrReference(v Example) ExampleOrReference {
-	var s ExampleOrReference
-	s.SetExample(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ExampleOrReference)
 }
 
 // SetReference sets ExampleOrReference to Reference.
-func (s *ExampleOrReference) SetReference(v Reference) {
-	s.Type = ReferenceExampleOrReference
-	s.Reference = v
-}
+func (s *ExampleOrReference) SetReference(v Reference) { _ = "STUB: not implemented"; return }
 
 // GetReference returns Reference and true boolean if ExampleOrReference is Reference.
 func (s ExampleOrReference) GetReference() (v Reference, ok bool) {
-	if !s.IsReference() {
-		return v, false
-	}
-	return s.Reference, true
+	_ = "STUB: not implemented"
+	return *new(Reference), false
 }
 
 // NewReferenceExampleOrReference returns new ExampleOrReference from Reference.
 func NewReferenceExampleOrReference(v Reference) ExampleOrReference {
-	var s ExampleOrReference
-	s.SetReference(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ExampleOrReference)
 }
 
 type ExamplePattern0 map[string]SpecificationExtension
@@ -649,32 +702,41 @@ type ExternalDocs struct {
 
 // GetDescription returns the value of Description.
 func (s *ExternalDocs) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetURL returns the value of URL.
+	new(OptString)
 }
 
-// GetURL returns the value of URL.
 func (s *ExternalDocs) GetURL() string {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return ""
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *ExternalDocs) GetPattern0Props() ExternalDocsPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetDescription sets the value of Description.
+	new(ExternalDocsPattern0)
 }
 
-// SetDescription sets the value of Description.
-func (s *ExternalDocs) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *ExternalDocs) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetURL sets the value of URL.
 func (s *ExternalDocs) SetURL(val string) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
 func (s *ExternalDocs) SetPattern0Props(val ExternalDocsPattern0) {
-	s.Pattern0Props = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type ExternalDocsPattern0 map[string]SpecificationExtension
@@ -711,123 +773,160 @@ type Header struct {
 
 // GetDescription returns the value of Description.
 func (s *Header) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRequired returns the value of Required.
+	new(OptString)
 }
 
-// GetRequired returns the value of Required.
 func (s *Header) GetRequired() OptBool {
-	return s.Required
+	_ = "STUB: not implemented"
+
+	// GetDeprecated returns the value of Deprecated.
+	return *new(OptBool)
 }
 
-// GetDeprecated returns the value of Deprecated.
 func (s *Header) GetDeprecated() OptBool {
-	return s.Deprecated
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowEmptyValue returns the value of AllowEmptyValue.
+	new(OptBool)
 }
 
-// GetAllowEmptyValue returns the value of AllowEmptyValue.
 func (s *Header) GetAllowEmptyValue() OptBool {
-	return s.AllowEmptyValue
+	_ = "STUB: not implemented"
+	return *
+
+	// GetStyle returns the value of Style.
+	new(OptBool)
 }
 
-// GetStyle returns the value of Style.
 func (s *Header) GetStyle() OptString {
-	return s.Style
+	_ = "STUB: not implemented"
+
+	// GetExplode returns the value of Explode.
+	return *new(OptString)
 }
 
-// GetExplode returns the value of Explode.
 func (s *Header) GetExplode() OptBool {
-	return s.Explode
+	_ = "STUB: not implemented"
+
+	// GetAllowReserved returns the value of AllowReserved.
+	return *new(OptBool)
 }
 
-// GetAllowReserved returns the value of AllowReserved.
 func (s *Header) GetAllowReserved() OptBool {
-	return s.AllowReserved
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSchema returns the value of Schema.
+	new(OptBool)
 }
 
-// GetSchema returns the value of Schema.
 func (s *Header) GetSchema() *SchemaOrReference {
-	return s.Schema
+	_ = "STUB: not implemented"
+
+	// GetExample returns the value of Example.
+	return nil
 }
 
-// GetExample returns the value of Example.
 func (s *Header) GetExample() Any {
-	return s.Example
+	_ = "STUB: not implemented"
+
+	// GetExamples returns the value of Examples.
+	return *new(Any)
 }
 
-// GetExamples returns the value of Examples.
 func (s *Header) GetExamples() OptExamplesOrReferences {
-	return s.Examples
+	_ = "STUB: not implemented"
+
+	// GetContent returns the value of Content.
+	return *new(OptExamplesOrReferences)
 }
 
-// GetContent returns the value of Content.
 func (s *Header) GetContent() OptMediaTypes {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptMediaTypes)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Header) GetPattern0Props() HeaderPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetDescription sets the value of Description.
+	new(HeaderPattern0)
 }
 
-// SetDescription sets the value of Description.
-func (s *Header) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *Header) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetRequired sets the value of Required.
 func (s *Header) SetRequired(val OptBool) {
-	s.Required = val
+	_ = "STUB: not implemented"
+
+	// SetDeprecated sets the value of Deprecated.
+	return
 }
 
-// SetDeprecated sets the value of Deprecated.
 func (s *Header) SetDeprecated(val OptBool) {
-	s.Deprecated = val
+	_ = "STUB: not implemented"
+
+	// SetAllowEmptyValue sets the value of AllowEmptyValue.
+	return
 }
 
-// SetAllowEmptyValue sets the value of AllowEmptyValue.
-func (s *Header) SetAllowEmptyValue(val OptBool) {
-	s.AllowEmptyValue = val
-}
+func (s *Header) SetAllowEmptyValue(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetStyle sets the value of Style.
 func (s *Header) SetStyle(val OptString) {
-	s.Style = val
+	_ = "STUB: not implemented"
+
+	// SetExplode sets the value of Explode.
+	return
 }
 
-// SetExplode sets the value of Explode.
 func (s *Header) SetExplode(val OptBool) {
-	s.Explode = val
+	_ = "STUB: not implemented"
+
+	// SetAllowReserved sets the value of AllowReserved.
+	return
 }
 
-// SetAllowReserved sets the value of AllowReserved.
-func (s *Header) SetAllowReserved(val OptBool) {
-	s.AllowReserved = val
-}
+func (s *Header) SetAllowReserved(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetSchema sets the value of Schema.
 func (s *Header) SetSchema(val *SchemaOrReference) {
-	s.Schema = val
+	_ = "STUB: not implemented"
+
+	// SetExample sets the value of Example.
+	return
 }
 
-// SetExample sets the value of Example.
 func (s *Header) SetExample(val Any) {
-	s.Example = val
+	_ = "STUB: not implemented"
+
+	// SetExamples sets the value of Examples.
+	return
 }
 
-// SetExamples sets the value of Examples.
 func (s *Header) SetExamples(val OptExamplesOrReferences) {
-	s.Examples = val
+	_ = "STUB: not implemented"
+
+	// SetContent sets the value of Content.
+	return
 }
 
-// SetContent sets the value of Content.
 func (s *Header) SetContent(val OptMediaTypes) {
-	s.Content = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Header) SetPattern0Props(val HeaderPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Header) SetPattern0Props(val HeaderPattern0) { _ = "STUB: not implemented"; return }
 
 // Ref: #/definitions/headerOrReference
 // HeaderOrReference represents sum type.
@@ -847,51 +946,39 @@ const (
 )
 
 // IsHeader reports whether HeaderOrReference is Header.
-func (s HeaderOrReference) IsHeader() bool { return s.Type == HeaderHeaderOrReference }
+func (s HeaderOrReference) IsHeader() bool { _ = "STUB: not implemented"; return false }
 
 // IsReference reports whether HeaderOrReference is Reference.
-func (s HeaderOrReference) IsReference() bool { return s.Type == ReferenceHeaderOrReference }
+func (s HeaderOrReference) IsReference() bool { _ = "STUB: not implemented"; return false }
 
 // SetHeader sets HeaderOrReference to Header.
-func (s *HeaderOrReference) SetHeader(v Header) {
-	s.Type = HeaderHeaderOrReference
-	s.Header = v
-}
+func (s *HeaderOrReference) SetHeader(v Header) { _ = "STUB: not implemented"; return }
 
 // GetHeader returns Header and true boolean if HeaderOrReference is Header.
 func (s HeaderOrReference) GetHeader() (v Header, ok bool) {
-	if !s.IsHeader() {
-		return v, false
-	}
-	return s.Header, true
+	_ = "STUB: not implemented"
+	return *new(Header), false
 }
 
 // NewHeaderHeaderOrReference returns new HeaderOrReference from Header.
 func NewHeaderHeaderOrReference(v Header) HeaderOrReference {
-	var s HeaderOrReference
-	s.SetHeader(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(HeaderOrReference)
 }
 
 // SetReference sets HeaderOrReference to Reference.
-func (s *HeaderOrReference) SetReference(v Reference) {
-	s.Type = ReferenceHeaderOrReference
-	s.Reference = v
-}
+func (s *HeaderOrReference) SetReference(v Reference) { _ = "STUB: not implemented"; return }
 
 // GetReference returns Reference and true boolean if HeaderOrReference is Reference.
 func (s HeaderOrReference) GetReference() (v Reference, ok bool) {
-	if !s.IsReference() {
-		return v, false
-	}
-	return s.Reference, true
+	_ = "STUB: not implemented"
+	return *new(Reference), false
 }
 
 // NewReferenceHeaderOrReference returns new HeaderOrReference from Reference.
 func NewReferenceHeaderOrReference(v Reference) HeaderOrReference {
-	var s HeaderOrReference
-	s.SetReference(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(HeaderOrReference)
 }
 
 type HeaderPattern0 map[string]SpecificationExtension
@@ -933,73 +1020,92 @@ type Info struct {
 
 // GetTitle returns the value of Title.
 func (s *Info) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
 func (s *Info) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTermsOfService returns the value of TermsOfService.
+	new(OptString)
 }
 
-// GetTermsOfService returns the value of TermsOfService.
 func (s *Info) GetTermsOfService() OptString {
-	return s.TermsOfService
+	_ = "STUB: not implemented"
+	return *
+
+	// GetContact returns the value of Contact.
+	new(OptString)
 }
 
-// GetContact returns the value of Contact.
 func (s *Info) GetContact() OptContact {
-	return s.Contact
+	_ = "STUB: not implemented"
+
+	// GetLicense returns the value of License.
+	return *new(OptContact)
 }
 
-// GetLicense returns the value of License.
 func (s *Info) GetLicense() OptLicense {
-	return s.License
+	_ = "STUB: not implemented"
+
+	// GetVersion returns the value of Version.
+	return *new(OptLicense)
 }
 
-// GetVersion returns the value of Version.
 func (s *Info) GetVersion() string {
-	return s.Version
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return ""
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Info) GetPattern0Props() InfoPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetTitle sets the value of Title.
+	new(InfoPattern0)
 }
 
-// SetTitle sets the value of Title.
 func (s *Info) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Info) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *Info) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetTermsOfService sets the value of TermsOfService.
-func (s *Info) SetTermsOfService(val OptString) {
-	s.TermsOfService = val
-}
+func (s *Info) SetTermsOfService(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetContact sets the value of Contact.
 func (s *Info) SetContact(val OptContact) {
-	s.Contact = val
+	_ = "STUB: not implemented"
+
+	// SetLicense sets the value of License.
+	return
 }
 
-// SetLicense sets the value of License.
 func (s *Info) SetLicense(val OptLicense) {
-	s.License = val
+	_ = "STUB: not implemented"
+
+	// SetVersion sets the value of Version.
+	return
 }
 
-// SetVersion sets the value of Version.
 func (s *Info) SetVersion(val string) {
-	s.Version = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Info) SetPattern0Props(val InfoPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Info) SetPattern0Props(val InfoPattern0) { _ = "STUB: not implemented"; return }
 
 type InfoPattern0 map[string]SpecificationExtension
 
@@ -1023,33 +1129,42 @@ type License struct {
 
 // GetName returns the value of Name.
 func (s *License) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetURL returns the value of URL.
+	return ""
 }
 
-// GetURL returns the value of URL.
 func (s *License) GetURL() OptString {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptString)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *License) GetPattern0Props() LicensePattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetName sets the value of Name.
+	new(LicensePattern0)
 }
 
-// SetName sets the value of Name.
 func (s *License) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetURL sets the value of URL.
+	return
 }
 
-// SetURL sets the value of URL.
 func (s *License) SetURL(val OptString) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *License) SetPattern0Props(val LicensePattern0) {
-	s.Pattern0Props = val
-}
+func (s *License) SetPattern0Props(val LicensePattern0) { _ = "STUB: not implemented"; return }
 
 type LicensePattern0 map[string]SpecificationExtension
 
@@ -1083,73 +1198,87 @@ type Link struct {
 
 // GetOperationRef returns the value of OperationRef.
 func (s *Link) GetOperationRef() OptString {
-	return s.OperationRef
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOperationId returns the value of OperationId.
+	new(OptString)
 }
 
-// GetOperationId returns the value of OperationId.
 func (s *Link) GetOperationId() OptString {
-	return s.OperationId
+	_ = "STUB: not implemented"
+	return *
+
+	// GetParameters returns the value of Parameters.
+	new(OptString)
 }
 
-// GetParameters returns the value of Parameters.
 func (s *Link) GetParameters() OptAnysOrExpressions {
-	return s.Parameters
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRequestBody returns the value of RequestBody.
+	new(OptAnysOrExpressions)
 }
 
-// GetRequestBody returns the value of RequestBody.
 func (s *Link) GetRequestBody() Any {
-	return s.RequestBody
+	_ = "STUB: not implemented"
+	return *
+
+	// GetDescription returns the value of Description.
+	new(Any)
 }
 
-// GetDescription returns the value of Description.
 func (s *Link) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetServer returns the value of Server.
+	new(OptString)
 }
 
-// GetServer returns the value of Server.
 func (s *Link) GetServer() OptServer {
-	return s.Server
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptServer)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Link) GetPattern0Props() LinkPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetOperationRef sets the value of OperationRef.
+	new(LinkPattern0)
 }
 
-// SetOperationRef sets the value of OperationRef.
-func (s *Link) SetOperationRef(val OptString) {
-	s.OperationRef = val
-}
+func (s *Link) SetOperationRef(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetOperationId sets the value of OperationId.
-func (s *Link) SetOperationId(val OptString) {
-	s.OperationId = val
-}
+func (s *Link) SetOperationId(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetParameters sets the value of Parameters.
 func (s *Link) SetParameters(val OptAnysOrExpressions) {
-	s.Parameters = val
+	_ = "STUB: not implemented"
+
+	// SetRequestBody sets the value of RequestBody.
+	return
 }
 
-// SetRequestBody sets the value of RequestBody.
-func (s *Link) SetRequestBody(val Any) {
-	s.RequestBody = val
-}
+func (s *Link) SetRequestBody(val Any) { _ = "STUB: not implemented"; return }
 
 // SetDescription sets the value of Description.
-func (s *Link) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *Link) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetServer sets the value of Server.
 func (s *Link) SetServer(val OptServer) {
-	s.Server = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Link) SetPattern0Props(val LinkPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Link) SetPattern0Props(val LinkPattern0) { _ = "STUB: not implemented"; return }
 
 // Ref: #/definitions/linkOrReference
 // LinkOrReference represents sum type.
@@ -1169,51 +1298,39 @@ const (
 )
 
 // IsLink reports whether LinkOrReference is Link.
-func (s LinkOrReference) IsLink() bool { return s.Type == LinkLinkOrReference }
+func (s LinkOrReference) IsLink() bool { _ = "STUB: not implemented"; return false }
 
 // IsReference reports whether LinkOrReference is Reference.
-func (s LinkOrReference) IsReference() bool { return s.Type == ReferenceLinkOrReference }
+func (s LinkOrReference) IsReference() bool { _ = "STUB: not implemented"; return false }
 
 // SetLink sets LinkOrReference to Link.
-func (s *LinkOrReference) SetLink(v Link) {
-	s.Type = LinkLinkOrReference
-	s.Link = v
-}
+func (s *LinkOrReference) SetLink(v Link) { _ = "STUB: not implemented"; return }
 
 // GetLink returns Link and true boolean if LinkOrReference is Link.
 func (s LinkOrReference) GetLink() (v Link, ok bool) {
-	if !s.IsLink() {
-		return v, false
-	}
-	return s.Link, true
+	_ = "STUB: not implemented"
+	return *new(Link), false
 }
 
 // NewLinkLinkOrReference returns new LinkOrReference from Link.
 func NewLinkLinkOrReference(v Link) LinkOrReference {
-	var s LinkOrReference
-	s.SetLink(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(LinkOrReference)
 }
 
 // SetReference sets LinkOrReference to Reference.
-func (s *LinkOrReference) SetReference(v Reference) {
-	s.Type = ReferenceLinkOrReference
-	s.Reference = v
-}
+func (s *LinkOrReference) SetReference(v Reference) { _ = "STUB: not implemented"; return }
 
 // GetReference returns Reference and true boolean if LinkOrReference is Reference.
 func (s LinkOrReference) GetReference() (v Reference, ok bool) {
-	if !s.IsReference() {
-		return v, false
-	}
-	return s.Reference, true
+	_ = "STUB: not implemented"
+	return *new(Reference), false
 }
 
 // NewReferenceLinkOrReference returns new LinkOrReference from Reference.
 func NewReferenceLinkOrReference(v Reference) LinkOrReference {
-	var s LinkOrReference
-	s.SetReference(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(LinkOrReference)
 }
 
 type LinkPattern0 map[string]SpecificationExtension
@@ -1254,53 +1371,70 @@ type MediaType struct {
 
 // GetSchema returns the value of Schema.
 func (s *MediaType) GetSchema() *SchemaOrReference {
-	return s.Schema
+	_ = "STUB: not implemented"
+
+	// GetExample returns the value of Example.
+	return nil
 }
 
-// GetExample returns the value of Example.
 func (s *MediaType) GetExample() Any {
-	return s.Example
+	_ = "STUB: not implemented"
+
+	// GetExamples returns the value of Examples.
+	return *new(Any)
 }
 
-// GetExamples returns the value of Examples.
 func (s *MediaType) GetExamples() OptExamplesOrReferences {
-	return s.Examples
+	_ = "STUB: not implemented"
+
+	// GetEncoding returns the value of Encoding.
+	return *new(OptExamplesOrReferences)
 }
 
-// GetEncoding returns the value of Encoding.
 func (s *MediaType) GetEncoding() OptEncodings {
-	return s.Encoding
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptEncodings)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *MediaType) GetPattern0Props() MediaTypePattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetSchema sets the value of Schema.
+	new(MediaTypePattern0)
 }
 
-// SetSchema sets the value of Schema.
 func (s *MediaType) SetSchema(val *SchemaOrReference) {
-	s.Schema = val
+	_ = "STUB: not implemented"
+
+	// SetExample sets the value of Example.
+	return
 }
 
-// SetExample sets the value of Example.
 func (s *MediaType) SetExample(val Any) {
-	s.Example = val
+	_ = "STUB: not implemented"
+
+	// SetExamples sets the value of Examples.
+	return
 }
 
-// SetExamples sets the value of Examples.
 func (s *MediaType) SetExamples(val OptExamplesOrReferences) {
-	s.Examples = val
+	_ = "STUB: not implemented"
+
+	// SetEncoding sets the value of Encoding.
+	return
 }
 
-// SetEncoding sets the value of Encoding.
 func (s *MediaType) SetEncoding(val OptEncodings) {
-	s.Encoding = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *MediaType) SetPattern0Props(val MediaTypePattern0) {
-	s.Pattern0Props = val
-}
+func (s *MediaType) SetPattern0Props(val MediaTypePattern0) { _ = "STUB: not implemented"; return }
 
 type MediaTypePattern0 map[string]SpecificationExtension
 
@@ -1342,53 +1476,66 @@ type OauthFlow struct {
 
 // GetAuthorizationUrl returns the value of AuthorizationUrl.
 func (s *OauthFlow) GetAuthorizationUrl() OptString {
-	return s.AuthorizationUrl
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetTokenUrl returns the value of TokenUrl.
 func (s *OauthFlow) GetTokenUrl() OptString {
-	return s.TokenUrl
+	_ = "STUB: not implemented"
+
+	// GetRefreshUrl returns the value of RefreshUrl.
+	return *new(OptString)
 }
 
-// GetRefreshUrl returns the value of RefreshUrl.
 func (s *OauthFlow) GetRefreshUrl() OptString {
-	return s.RefreshUrl
+	_ = "STUB: not implemented"
+	return *
+
+	// GetScopes returns the value of Scopes.
+	new(OptString)
 }
 
-// GetScopes returns the value of Scopes.
 func (s *OauthFlow) GetScopes() OptStrings {
-	return s.Scopes
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptStrings)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *OauthFlow) GetPattern0Props() OauthFlowPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetAuthorizationUrl sets the value of AuthorizationUrl.
+	new(OauthFlowPattern0)
 }
 
-// SetAuthorizationUrl sets the value of AuthorizationUrl.
-func (s *OauthFlow) SetAuthorizationUrl(val OptString) {
-	s.AuthorizationUrl = val
-}
+func (s *OauthFlow) SetAuthorizationUrl(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetTokenUrl sets the value of TokenUrl.
 func (s *OauthFlow) SetTokenUrl(val OptString) {
-	s.TokenUrl = val
+	_ = "STUB: not implemented"
+
+	// SetRefreshUrl sets the value of RefreshUrl.
+	return
 }
 
-// SetRefreshUrl sets the value of RefreshUrl.
 func (s *OauthFlow) SetRefreshUrl(val OptString) {
-	s.RefreshUrl = val
+	_ = "STUB: not implemented"
+
+	// SetScopes sets the value of Scopes.
+	return
 }
 
-// SetScopes sets the value of Scopes.
 func (s *OauthFlow) SetScopes(val OptStrings) {
-	s.Scopes = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *OauthFlow) SetPattern0Props(val OauthFlowPattern0) {
-	s.Pattern0Props = val
-}
+func (s *OauthFlow) SetPattern0Props(val OauthFlowPattern0) { _ = "STUB: not implemented"; return }
 
 type OauthFlowPattern0 map[string]SpecificationExtension
 
@@ -1414,53 +1561,60 @@ type OauthFlows struct {
 
 // GetImplicit returns the value of Implicit.
 func (s *OauthFlows) GetImplicit() OptOauthFlow {
-	return s.Implicit
+	_ = "STUB: not implemented"
+
+	// GetPassword returns the value of Password.
+	return *new(OptOauthFlow)
 }
 
-// GetPassword returns the value of Password.
 func (s *OauthFlows) GetPassword() OptOauthFlow {
-	return s.Password
+	_ = "STUB: not implemented"
+
+	// GetClientCredentials returns the value of ClientCredentials.
+	return *new(OptOauthFlow)
 }
 
-// GetClientCredentials returns the value of ClientCredentials.
 func (s *OauthFlows) GetClientCredentials() OptOauthFlow {
-	return s.ClientCredentials
+	_ = "STUB: not implemented"
+	return *new(OptOauthFlow)
 }
 
 // GetAuthorizationCode returns the value of AuthorizationCode.
 func (s *OauthFlows) GetAuthorizationCode() OptOauthFlow {
-	return s.AuthorizationCode
+	_ = "STUB: not implemented"
+	return *new(OptOauthFlow)
 }
 
 // GetPattern0Props returns the value of Pattern0Props.
 func (s *OauthFlows) GetPattern0Props() OauthFlowsPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetImplicit sets the value of Implicit.
+	new(OauthFlowsPattern0)
 }
 
-// SetImplicit sets the value of Implicit.
 func (s *OauthFlows) SetImplicit(val OptOauthFlow) {
-	s.Implicit = val
+	_ = "STUB: not implemented"
+
+	// SetPassword sets the value of Password.
+	return
 }
 
-// SetPassword sets the value of Password.
 func (s *OauthFlows) SetPassword(val OptOauthFlow) {
-	s.Password = val
+	_ = "STUB: not implemented"
+
+	// SetClientCredentials sets the value of ClientCredentials.
+	return
 }
 
-// SetClientCredentials sets the value of ClientCredentials.
-func (s *OauthFlows) SetClientCredentials(val OptOauthFlow) {
-	s.ClientCredentials = val
-}
+func (s *OauthFlows) SetClientCredentials(val OptOauthFlow) { _ = "STUB: not implemented"; return }
 
 // SetAuthorizationCode sets the value of AuthorizationCode.
-func (s *OauthFlows) SetAuthorizationCode(val OptOauthFlow) {
-	s.AuthorizationCode = val
-}
+func (s *OauthFlows) SetAuthorizationCode(val OptOauthFlow) { _ = "STUB: not implemented"; return }
 
 // SetPattern0Props sets the value of Pattern0Props.
-func (s *OauthFlows) SetPattern0Props(val OauthFlowsPattern0) {
-	s.Pattern0Props = val
-}
+func (s *OauthFlows) SetPattern0Props(val OauthFlowsPattern0) { _ = "STUB: not implemented"; return }
 
 type OauthFlowsPattern0 map[string]SpecificationExtension
 
@@ -1494,133 +1648,172 @@ type Operation struct {
 
 // GetTags returns the value of Tags.
 func (s *Operation) GetTags() []string {
-	return s.Tags
+	_ = "STUB: not implemented"
+
+	// GetSummary returns the value of Summary.
+	return nil
 }
 
-// GetSummary returns the value of Summary.
 func (s *Operation) GetSummary() OptString {
-	return s.Summary
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(OptString)
 }
 
-// GetDescription returns the value of Description.
 func (s *Operation) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExternalDocs returns the value of ExternalDocs.
+	new(OptString)
 }
 
-// GetExternalDocs returns the value of ExternalDocs.
 func (s *Operation) GetExternalDocs() OptExternalDocs {
-	return s.ExternalDocs
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOperationId returns the value of OperationId.
+	new(OptExternalDocs)
 }
 
-// GetOperationId returns the value of OperationId.
 func (s *Operation) GetOperationId() OptString {
-	return s.OperationId
+	_ = "STUB: not implemented"
+	return *
+
+	// GetParameters returns the value of Parameters.
+	new(OptString)
 }
 
-// GetParameters returns the value of Parameters.
-func (s *Operation) GetParameters() []ParameterOrReference {
-	return s.Parameters
-}
+func (s *Operation) GetParameters() []ParameterOrReference { _ = "STUB: not implemented"; return nil }
 
 // GetRequestBody returns the value of RequestBody.
 func (s *Operation) GetRequestBody() OptRequestBodyOrReference {
-	return s.RequestBody
+	_ = "STUB: not implemented"
+	return *
+
+	// GetResponses returns the value of Responses.
+	new(OptRequestBodyOrReference)
 }
 
-// GetResponses returns the value of Responses.
 func (s *Operation) GetResponses() Responses {
-	return s.Responses
+	_ = "STUB: not implemented"
+
+	// GetCallbacks returns the value of Callbacks.
+	return *new(Responses)
 }
 
-// GetCallbacks returns the value of Callbacks.
 func (s *Operation) GetCallbacks() OptCallbacksOrReferences {
-	return s.Callbacks
+	_ = "STUB: not implemented"
+	return *
+
+	// GetDeprecated returns the value of Deprecated.
+	new(OptCallbacksOrReferences)
 }
 
-// GetDeprecated returns the value of Deprecated.
 func (s *Operation) GetDeprecated() OptBool {
-	return s.Deprecated
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSecurity returns the value of Security.
+	new(OptBool)
 }
 
-// GetSecurity returns the value of Security.
 func (s *Operation) GetSecurity() []SecurityRequirement {
-	return s.Security
+	_ = "STUB: not implemented"
+
+	// GetServers returns the value of Servers.
+	return nil
 }
 
-// GetServers returns the value of Servers.
 func (s *Operation) GetServers() []Server {
-	return s.Servers
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return nil
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Operation) GetPattern0Props() OperationPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetTags sets the value of Tags.
+	new(OperationPattern0)
 }
 
-// SetTags sets the value of Tags.
 func (s *Operation) SetTags(val []string) {
-	s.Tags = val
+	_ = "STUB: not implemented"
+
+	// SetSummary sets the value of Summary.
+	return
 }
 
-// SetSummary sets the value of Summary.
 func (s *Operation) SetSummary(val OptString) {
-	s.Summary = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Operation) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *Operation) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetExternalDocs sets the value of ExternalDocs.
-func (s *Operation) SetExternalDocs(val OptExternalDocs) {
-	s.ExternalDocs = val
-}
+func (s *Operation) SetExternalDocs(val OptExternalDocs) { _ = "STUB: not implemented"; return }
 
 // SetOperationId sets the value of OperationId.
-func (s *Operation) SetOperationId(val OptString) {
-	s.OperationId = val
-}
+func (s *Operation) SetOperationId(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetParameters sets the value of Parameters.
 func (s *Operation) SetParameters(val []ParameterOrReference) {
-	s.Parameters = val
+	_ = "STUB: not implemented"
+
+	// SetRequestBody sets the value of RequestBody.
+	return
 }
 
-// SetRequestBody sets the value of RequestBody.
 func (s *Operation) SetRequestBody(val OptRequestBodyOrReference) {
-	s.RequestBody = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetResponses sets the value of Responses.
 }
 
-// SetResponses sets the value of Responses.
 func (s *Operation) SetResponses(val Responses) {
-	s.Responses = val
+	_ = "STUB: not implemented"
+
+	// SetCallbacks sets the value of Callbacks.
+	return
 }
 
-// SetCallbacks sets the value of Callbacks.
 func (s *Operation) SetCallbacks(val OptCallbacksOrReferences) {
-	s.Callbacks = val
+	_ = "STUB: not implemented"
+
+	// SetDeprecated sets the value of Deprecated.
+	return
 }
 
-// SetDeprecated sets the value of Deprecated.
 func (s *Operation) SetDeprecated(val OptBool) {
-	s.Deprecated = val
+	_ = "STUB: not implemented"
+
+	// SetSecurity sets the value of Security.
+	return
 }
 
-// SetSecurity sets the value of Security.
 func (s *Operation) SetSecurity(val []SecurityRequirement) {
-	s.Security = val
+	_ = "STUB: not implemented"
+
+	// SetServers sets the value of Servers.
+	return
 }
 
-// SetServers sets the value of Servers.
 func (s *Operation) SetServers(val []Server) {
-	s.Servers = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Operation) SetPattern0Props(val OperationPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Operation) SetPattern0Props(val OperationPattern0) { _ = "STUB: not implemented"; return }
 
 type OperationPattern0 map[string]SpecificationExtension
 
@@ -1635,10 +1828,8 @@ func (s *OperationPattern0) init() OperationPattern0 {
 
 // NewOptAnysOrExpressions returns new OptAnysOrExpressions with value set to v.
 func NewOptAnysOrExpressions(v AnysOrExpressions) OptAnysOrExpressions {
-	return OptAnysOrExpressions{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptAnysOrExpressions)
 }
 
 // OptAnysOrExpressions is optional AnysOrExpressions.
@@ -1648,44 +1839,32 @@ type OptAnysOrExpressions struct {
 }
 
 // IsSet returns true if OptAnysOrExpressions was set.
-func (o OptAnysOrExpressions) IsSet() bool { return o.Set }
+func (o OptAnysOrExpressions) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptAnysOrExpressions) Reset() {
-	var v AnysOrExpressions
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptAnysOrExpressions) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptAnysOrExpressions) SetTo(v AnysOrExpressions) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptAnysOrExpressions) SetTo(v AnysOrExpressions) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptAnysOrExpressions) Get() (v AnysOrExpressions, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(AnysOrExpressions), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptAnysOrExpressions) Or(d AnysOrExpressions) AnysOrExpressions {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(AnysOrExpressions)
 }
 
 // NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -1694,43 +1873,28 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptCallbacksOrReferences returns new OptCallbacksOrReferences with value set to v.
 func NewOptCallbacksOrReferences(v CallbacksOrReferences) OptCallbacksOrReferences {
-	return OptCallbacksOrReferences{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCallbacksOrReferences)
 }
 
 // OptCallbacksOrReferences is optional CallbacksOrReferences.
@@ -1740,43 +1904,37 @@ type OptCallbacksOrReferences struct {
 }
 
 // IsSet returns true if OptCallbacksOrReferences was set.
-func (o OptCallbacksOrReferences) IsSet() bool { return o.Set }
+func (o OptCallbacksOrReferences) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCallbacksOrReferences) Reset() {
-	var v CallbacksOrReferences
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCallbacksOrReferences) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptCallbacksOrReferences) SetTo(v CallbacksOrReferences) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCallbacksOrReferences) Get() (v CallbacksOrReferences, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CallbacksOrReferences), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptCallbacksOrReferences) Or(d CallbacksOrReferences) CallbacksOrReferences {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CallbacksOrReferences)
 }
 
 // NewOptComponents returns new OptComponents with value set to v.
 func NewOptComponents(v Components) OptComponents {
-	return OptComponents{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptComponents)
 }
 
 // OptComponents is optional Components.
@@ -1786,44 +1944,32 @@ type OptComponents struct {
 }
 
 // IsSet returns true if OptComponents was set.
-func (o OptComponents) IsSet() bool { return o.Set }
+func (o OptComponents) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptComponents) Reset() {
-	var v Components
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptComponents) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptComponents) SetTo(v Components) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptComponents) SetTo(v Components) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptComponents) Get() (v Components, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Components), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptComponents) Or(d Components) Components {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(Components)
 }
 
 // NewOptContact returns new OptContact with value set to v.
-func NewOptContact(v Contact) OptContact {
-	return OptContact{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptContact(v Contact) OptContact { _ = "STUB: not implemented"; return *new(OptContact) }
 
 // OptContact is optional Contact.
 type OptContact struct {
@@ -1832,43 +1978,31 @@ type OptContact struct {
 }
 
 // IsSet returns true if OptContact was set.
-func (o OptContact) IsSet() bool { return o.Set }
+func (o OptContact) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptContact) Reset() {
-	var v Contact
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptContact) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptContact) SetTo(v Contact) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptContact) SetTo(v Contact) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptContact) Get() (v Contact, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Contact), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptContact) Or(d Contact) Contact {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptContact) Or(d Contact) Contact { _ = "STUB: not implemented"; return *new(Contact) }
 
 // NewOptDiscriminator returns new OptDiscriminator with value set to v.
 func NewOptDiscriminator(v Discriminator) OptDiscriminator {
-	return OptDiscriminator{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptDiscriminator)
 }
 
 // OptDiscriminator is optional Discriminator.
@@ -1878,43 +2012,34 @@ type OptDiscriminator struct {
 }
 
 // IsSet returns true if OptDiscriminator was set.
-func (o OptDiscriminator) IsSet() bool { return o.Set }
+func (o OptDiscriminator) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDiscriminator) Reset() {
-	var v Discriminator
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDiscriminator) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDiscriminator) SetTo(v Discriminator) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDiscriminator) SetTo(v Discriminator) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDiscriminator) Get() (v Discriminator, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Discriminator), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptDiscriminator) Or(d Discriminator) Discriminator {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(Discriminator)
 }
 
 // NewOptEncodings returns new OptEncodings with value set to v.
 func NewOptEncodings(v Encodings) OptEncodings {
-	return OptEncodings{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptEncodings)
 }
 
 // OptEncodings is optional Encodings.
@@ -1924,43 +2049,31 @@ type OptEncodings struct {
 }
 
 // IsSet returns true if OptEncodings was set.
-func (o OptEncodings) IsSet() bool { return o.Set }
+func (o OptEncodings) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptEncodings) Reset() {
-	var v Encodings
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptEncodings) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptEncodings) SetTo(v Encodings) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptEncodings) SetTo(v Encodings) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptEncodings) Get() (v Encodings, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Encodings), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptEncodings) Or(d Encodings) Encodings {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptEncodings) Or(d Encodings) Encodings { _ = "STUB: not implemented"; return *new(Encodings) }
 
 // NewOptExamplesOrReferences returns new OptExamplesOrReferences with value set to v.
 func NewOptExamplesOrReferences(v ExamplesOrReferences) OptExamplesOrReferences {
-	return OptExamplesOrReferences{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptExamplesOrReferences)
 }
 
 // OptExamplesOrReferences is optional ExamplesOrReferences.
@@ -1970,43 +2083,34 @@ type OptExamplesOrReferences struct {
 }
 
 // IsSet returns true if OptExamplesOrReferences was set.
-func (o OptExamplesOrReferences) IsSet() bool { return o.Set }
+func (o OptExamplesOrReferences) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptExamplesOrReferences) Reset() {
-	var v ExamplesOrReferences
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptExamplesOrReferences) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptExamplesOrReferences) SetTo(v ExamplesOrReferences) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptExamplesOrReferences) SetTo(v ExamplesOrReferences) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptExamplesOrReferences) Get() (v ExamplesOrReferences, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ExamplesOrReferences), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptExamplesOrReferences) Or(d ExamplesOrReferences) ExamplesOrReferences {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ExamplesOrReferences)
 }
 
 // NewOptExclusiveMaximum returns new OptExclusiveMaximum with value set to v.
 func NewOptExclusiveMaximum(v ExclusiveMaximum) OptExclusiveMaximum {
-	return OptExclusiveMaximum{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptExclusiveMaximum)
 }
 
 // OptExclusiveMaximum is optional ExclusiveMaximum.
@@ -2016,43 +2120,34 @@ type OptExclusiveMaximum struct {
 }
 
 // IsSet returns true if OptExclusiveMaximum was set.
-func (o OptExclusiveMaximum) IsSet() bool { return o.Set }
+func (o OptExclusiveMaximum) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptExclusiveMaximum) Reset() {
-	var v ExclusiveMaximum
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptExclusiveMaximum) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptExclusiveMaximum) SetTo(v ExclusiveMaximum) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptExclusiveMaximum) SetTo(v ExclusiveMaximum) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptExclusiveMaximum) Get() (v ExclusiveMaximum, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ExclusiveMaximum), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptExclusiveMaximum) Or(d ExclusiveMaximum) ExclusiveMaximum {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ExclusiveMaximum)
 }
 
 // NewOptExclusiveMinimum returns new OptExclusiveMinimum with value set to v.
 func NewOptExclusiveMinimum(v ExclusiveMinimum) OptExclusiveMinimum {
-	return OptExclusiveMinimum{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptExclusiveMinimum)
 }
 
 // OptExclusiveMinimum is optional ExclusiveMinimum.
@@ -2062,43 +2157,34 @@ type OptExclusiveMinimum struct {
 }
 
 // IsSet returns true if OptExclusiveMinimum was set.
-func (o OptExclusiveMinimum) IsSet() bool { return o.Set }
+func (o OptExclusiveMinimum) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptExclusiveMinimum) Reset() {
-	var v ExclusiveMinimum
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptExclusiveMinimum) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptExclusiveMinimum) SetTo(v ExclusiveMinimum) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptExclusiveMinimum) SetTo(v ExclusiveMinimum) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptExclusiveMinimum) Get() (v ExclusiveMinimum, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ExclusiveMinimum), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptExclusiveMinimum) Or(d ExclusiveMinimum) ExclusiveMinimum {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ExclusiveMinimum)
 }
 
 // NewOptExternalDocs returns new OptExternalDocs with value set to v.
 func NewOptExternalDocs(v ExternalDocs) OptExternalDocs {
-	return OptExternalDocs{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptExternalDocs)
 }
 
 // OptExternalDocs is optional ExternalDocs.
@@ -2108,43 +2194,34 @@ type OptExternalDocs struct {
 }
 
 // IsSet returns true if OptExternalDocs was set.
-func (o OptExternalDocs) IsSet() bool { return o.Set }
+func (o OptExternalDocs) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptExternalDocs) Reset() {
-	var v ExternalDocs
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptExternalDocs) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptExternalDocs) SetTo(v ExternalDocs) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptExternalDocs) SetTo(v ExternalDocs) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptExternalDocs) Get() (v ExternalDocs, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ExternalDocs), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptExternalDocs) Or(d ExternalDocs) ExternalDocs {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ExternalDocs)
 }
 
 // NewOptHeadersOrReferences returns new OptHeadersOrReferences with value set to v.
 func NewOptHeadersOrReferences(v HeadersOrReferences) OptHeadersOrReferences {
-	return OptHeadersOrReferences{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptHeadersOrReferences)
 }
 
 // OptHeadersOrReferences is optional HeadersOrReferences.
@@ -2154,44 +2231,32 @@ type OptHeadersOrReferences struct {
 }
 
 // IsSet returns true if OptHeadersOrReferences was set.
-func (o OptHeadersOrReferences) IsSet() bool { return o.Set }
+func (o OptHeadersOrReferences) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptHeadersOrReferences) Reset() {
-	var v HeadersOrReferences
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptHeadersOrReferences) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptHeadersOrReferences) SetTo(v HeadersOrReferences) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptHeadersOrReferences) SetTo(v HeadersOrReferences) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptHeadersOrReferences) Get() (v HeadersOrReferences, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(HeadersOrReferences), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptHeadersOrReferences) Or(d HeadersOrReferences) HeadersOrReferences {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(HeadersOrReferences)
 }
 
 // NewOptLicense returns new OptLicense with value set to v.
-func NewOptLicense(v License) OptLicense {
-	return OptLicense{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLicense(v License) OptLicense { _ = "STUB: not implemented"; return *new(OptLicense) }
 
 // OptLicense is optional License.
 type OptLicense struct {
@@ -2200,43 +2265,31 @@ type OptLicense struct {
 }
 
 // IsSet returns true if OptLicense was set.
-func (o OptLicense) IsSet() bool { return o.Set }
+func (o OptLicense) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLicense) Reset() {
-	var v License
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLicense) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLicense) SetTo(v License) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLicense) SetTo(v License) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptLicense) Get() (v License, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(License), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLicense) Or(d License) License {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLicense) Or(d License) License { _ = "STUB: not implemented"; return *new(License) }
 
 // NewOptLinksOrReferences returns new OptLinksOrReferences with value set to v.
 func NewOptLinksOrReferences(v LinksOrReferences) OptLinksOrReferences {
-	return OptLinksOrReferences{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptLinksOrReferences)
 }
 
 // OptLinksOrReferences is optional LinksOrReferences.
@@ -2246,44 +2299,32 @@ type OptLinksOrReferences struct {
 }
 
 // IsSet returns true if OptLinksOrReferences was set.
-func (o OptLinksOrReferences) IsSet() bool { return o.Set }
+func (o OptLinksOrReferences) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLinksOrReferences) Reset() {
-	var v LinksOrReferences
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLinksOrReferences) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLinksOrReferences) SetTo(v LinksOrReferences) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLinksOrReferences) SetTo(v LinksOrReferences) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptLinksOrReferences) Get() (v LinksOrReferences, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(LinksOrReferences), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptLinksOrReferences) Or(d LinksOrReferences) LinksOrReferences {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(LinksOrReferences)
 }
 
 // NewOptMaximum returns new OptMaximum with value set to v.
-func NewOptMaximum(v Maximum) OptMaximum {
-	return OptMaximum{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptMaximum(v Maximum) OptMaximum { _ = "STUB: not implemented"; return *new(OptMaximum) }
 
 // OptMaximum is optional Maximum.
 type OptMaximum struct {
@@ -2292,43 +2333,31 @@ type OptMaximum struct {
 }
 
 // IsSet returns true if OptMaximum was set.
-func (o OptMaximum) IsSet() bool { return o.Set }
+func (o OptMaximum) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMaximum) Reset() {
-	var v Maximum
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMaximum) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMaximum) SetTo(v Maximum) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMaximum) SetTo(v Maximum) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMaximum) Get() (v Maximum, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Maximum), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptMaximum) Or(d Maximum) Maximum {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptMaximum) Or(d Maximum) Maximum { _ = "STUB: not implemented"; return *new(Maximum) }
 
 // NewOptMediaTypes returns new OptMediaTypes with value set to v.
 func NewOptMediaTypes(v MediaTypes) OptMediaTypes {
-	return OptMediaTypes{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMediaTypes)
 }
 
 // OptMediaTypes is optional MediaTypes.
@@ -2338,44 +2367,32 @@ type OptMediaTypes struct {
 }
 
 // IsSet returns true if OptMediaTypes was set.
-func (o OptMediaTypes) IsSet() bool { return o.Set }
+func (o OptMediaTypes) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMediaTypes) Reset() {
-	var v MediaTypes
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMediaTypes) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMediaTypes) SetTo(v MediaTypes) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMediaTypes) SetTo(v MediaTypes) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMediaTypes) Get() (v MediaTypes, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MediaTypes), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMediaTypes) Or(d MediaTypes) MediaTypes {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MediaTypes)
 }
 
 // NewOptMinimum returns new OptMinimum with value set to v.
-func NewOptMinimum(v Minimum) OptMinimum {
-	return OptMinimum{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptMinimum(v Minimum) OptMinimum { _ = "STUB: not implemented"; return *new(OptMinimum) }
 
 // OptMinimum is optional Minimum.
 type OptMinimum struct {
@@ -2384,43 +2401,31 @@ type OptMinimum struct {
 }
 
 // IsSet returns true if OptMinimum was set.
-func (o OptMinimum) IsSet() bool { return o.Set }
+func (o OptMinimum) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMinimum) Reset() {
-	var v Minimum
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMinimum) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMinimum) SetTo(v Minimum) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMinimum) SetTo(v Minimum) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMinimum) Get() (v Minimum, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Minimum), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptMinimum) Or(d Minimum) Minimum {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptMinimum) Or(d Minimum) Minimum { _ = "STUB: not implemented"; return *new(Minimum) }
 
 // NewOptMultipleOf returns new OptMultipleOf with value set to v.
 func NewOptMultipleOf(v MultipleOf) OptMultipleOf {
-	return OptMultipleOf{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMultipleOf)
 }
 
 // OptMultipleOf is optional MultipleOf.
@@ -2430,43 +2435,34 @@ type OptMultipleOf struct {
 }
 
 // IsSet returns true if OptMultipleOf was set.
-func (o OptMultipleOf) IsSet() bool { return o.Set }
+func (o OptMultipleOf) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMultipleOf) Reset() {
-	var v MultipleOf
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMultipleOf) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMultipleOf) SetTo(v MultipleOf) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMultipleOf) SetTo(v MultipleOf) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMultipleOf) Get() (v MultipleOf, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MultipleOf), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMultipleOf) Or(d MultipleOf) MultipleOf {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MultipleOf)
 }
 
 // NewOptOauthFlow returns new OptOauthFlow with value set to v.
 func NewOptOauthFlow(v OauthFlow) OptOauthFlow {
-	return OptOauthFlow{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOauthFlow)
 }
 
 // OptOauthFlow is optional OauthFlow.
@@ -2476,43 +2472,31 @@ type OptOauthFlow struct {
 }
 
 // IsSet returns true if OptOauthFlow was set.
-func (o OptOauthFlow) IsSet() bool { return o.Set }
+func (o OptOauthFlow) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOauthFlow) Reset() {
-	var v OauthFlow
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOauthFlow) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptOauthFlow) SetTo(v OauthFlow) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptOauthFlow) SetTo(v OauthFlow) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOauthFlow) Get() (v OauthFlow, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OauthFlow), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptOauthFlow) Or(d OauthFlow) OauthFlow {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptOauthFlow) Or(d OauthFlow) OauthFlow { _ = "STUB: not implemented"; return *new(OauthFlow) }
 
 // NewOptOauthFlows returns new OptOauthFlows with value set to v.
 func NewOptOauthFlows(v OauthFlows) OptOauthFlows {
-	return OptOauthFlows{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOauthFlows)
 }
 
 // OptOauthFlows is optional OauthFlows.
@@ -2522,43 +2506,34 @@ type OptOauthFlows struct {
 }
 
 // IsSet returns true if OptOauthFlows was set.
-func (o OptOauthFlows) IsSet() bool { return o.Set }
+func (o OptOauthFlows) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOauthFlows) Reset() {
-	var v OauthFlows
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOauthFlows) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptOauthFlows) SetTo(v OauthFlows) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptOauthFlows) SetTo(v OauthFlows) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOauthFlows) Get() (v OauthFlows, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OauthFlows), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOauthFlows) Or(d OauthFlows) OauthFlows {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OauthFlows)
 }
 
 // NewOptOperation returns new OptOperation with value set to v.
 func NewOptOperation(v Operation) OptOperation {
-	return OptOperation{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOperation)
 }
 
 // OptOperation is optional Operation.
@@ -2568,43 +2543,31 @@ type OptOperation struct {
 }
 
 // IsSet returns true if OptOperation was set.
-func (o OptOperation) IsSet() bool { return o.Set }
+func (o OptOperation) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOperation) Reset() {
-	var v Operation
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOperation) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptOperation) SetTo(v Operation) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptOperation) SetTo(v Operation) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOperation) Get() (v Operation, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Operation), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptOperation) Or(d Operation) Operation {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptOperation) Or(d Operation) Operation { _ = "STUB: not implemented"; return *new(Operation) }
 
 // NewOptParameterStyle returns new OptParameterStyle with value set to v.
 func NewOptParameterStyle(v ParameterStyle) OptParameterStyle {
-	return OptParameterStyle{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptParameterStyle)
 }
 
 // OptParameterStyle is optional ParameterStyle.
@@ -2614,43 +2577,34 @@ type OptParameterStyle struct {
 }
 
 // IsSet returns true if OptParameterStyle was set.
-func (o OptParameterStyle) IsSet() bool { return o.Set }
+func (o OptParameterStyle) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptParameterStyle) Reset() {
-	var v ParameterStyle
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptParameterStyle) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptParameterStyle) SetTo(v ParameterStyle) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptParameterStyle) SetTo(v ParameterStyle) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptParameterStyle) Get() (v ParameterStyle, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ParameterStyle), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptParameterStyle) Or(d ParameterStyle) ParameterStyle {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ParameterStyle)
 }
 
 // NewOptParametersOrReferences returns new OptParametersOrReferences with value set to v.
 func NewOptParametersOrReferences(v ParametersOrReferences) OptParametersOrReferences {
-	return OptParametersOrReferences{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptParametersOrReferences)
 }
 
 // OptParametersOrReferences is optional ParametersOrReferences.
@@ -2660,44 +2614,35 @@ type OptParametersOrReferences struct {
 }
 
 // IsSet returns true if OptParametersOrReferences was set.
-func (o OptParametersOrReferences) IsSet() bool { return o.Set }
+func (o OptParametersOrReferences) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptParametersOrReferences) Reset() {
-	var v ParametersOrReferences
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptParametersOrReferences) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptParametersOrReferences) SetTo(v ParametersOrReferences) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptParametersOrReferences) Get() (v ParametersOrReferences, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ParametersOrReferences), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptParametersOrReferences) Or(d ParametersOrReferences) ParametersOrReferences {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ParametersOrReferences)
 }
 
 // NewOptPattern returns new OptPattern with value set to v.
-func NewOptPattern(v Pattern) OptPattern {
-	return OptPattern{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptPattern(v Pattern) OptPattern { _ = "STUB: not implemented"; return *new(OptPattern) }
 
 // OptPattern is optional Pattern.
 type OptPattern struct {
@@ -2706,43 +2651,31 @@ type OptPattern struct {
 }
 
 // IsSet returns true if OptPattern was set.
-func (o OptPattern) IsSet() bool { return o.Set }
+func (o OptPattern) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPattern) Reset() {
-	var v Pattern
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPattern) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPattern) SetTo(v Pattern) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPattern) SetTo(v Pattern) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPattern) Get() (v Pattern, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Pattern), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptPattern) Or(d Pattern) Pattern {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptPattern) Or(d Pattern) Pattern { _ = "STUB: not implemented"; return *new(Pattern) }
 
 // NewOptPositiveInteger returns new OptPositiveInteger with value set to v.
 func NewOptPositiveInteger(v PositiveInteger) OptPositiveInteger {
-	return OptPositiveInteger{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptPositiveInteger)
 }
 
 // OptPositiveInteger is optional PositiveInteger.
@@ -2752,43 +2685,34 @@ type OptPositiveInteger struct {
 }
 
 // IsSet returns true if OptPositiveInteger was set.
-func (o OptPositiveInteger) IsSet() bool { return o.Set }
+func (o OptPositiveInteger) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPositiveInteger) Reset() {
-	var v PositiveInteger
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPositiveInteger) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPositiveInteger) SetTo(v PositiveInteger) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPositiveInteger) SetTo(v PositiveInteger) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPositiveInteger) Get() (v PositiveInteger, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(PositiveInteger), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptPositiveInteger) Or(d PositiveInteger) PositiveInteger {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(PositiveInteger)
 }
 
 // NewOptRequestBodiesOrReferences returns new OptRequestBodiesOrReferences with value set to v.
 func NewOptRequestBodiesOrReferences(v RequestBodiesOrReferences) OptRequestBodiesOrReferences {
-	return OptRequestBodiesOrReferences{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptRequestBodiesOrReferences)
 }
 
 // OptRequestBodiesOrReferences is optional RequestBodiesOrReferences.
@@ -2798,43 +2722,37 @@ type OptRequestBodiesOrReferences struct {
 }
 
 // IsSet returns true if OptRequestBodiesOrReferences was set.
-func (o OptRequestBodiesOrReferences) IsSet() bool { return o.Set }
+func (o OptRequestBodiesOrReferences) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptRequestBodiesOrReferences) Reset() {
-	var v RequestBodiesOrReferences
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptRequestBodiesOrReferences) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptRequestBodiesOrReferences) SetTo(v RequestBodiesOrReferences) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptRequestBodiesOrReferences) Get() (v RequestBodiesOrReferences, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(RequestBodiesOrReferences), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptRequestBodiesOrReferences) Or(d RequestBodiesOrReferences) RequestBodiesOrReferences {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(RequestBodiesOrReferences)
 }
 
 // NewOptRequestBodyOrReference returns new OptRequestBodyOrReference with value set to v.
 func NewOptRequestBodyOrReference(v RequestBodyOrReference) OptRequestBodyOrReference {
-	return OptRequestBodyOrReference{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptRequestBodyOrReference)
 }
 
 // OptRequestBodyOrReference is optional RequestBodyOrReference.
@@ -2844,43 +2762,37 @@ type OptRequestBodyOrReference struct {
 }
 
 // IsSet returns true if OptRequestBodyOrReference was set.
-func (o OptRequestBodyOrReference) IsSet() bool { return o.Set }
+func (o OptRequestBodyOrReference) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptRequestBodyOrReference) Reset() {
-	var v RequestBodyOrReference
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptRequestBodyOrReference) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptRequestBodyOrReference) SetTo(v RequestBodyOrReference) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptRequestBodyOrReference) Get() (v RequestBodyOrReference, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(RequestBodyOrReference), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptRequestBodyOrReference) Or(d RequestBodyOrReference) RequestBodyOrReference {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(RequestBodyOrReference)
 }
 
 // NewOptResponseOrReference returns new OptResponseOrReference with value set to v.
 func NewOptResponseOrReference(v ResponseOrReference) OptResponseOrReference {
-	return OptResponseOrReference{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptResponseOrReference)
 }
 
 // OptResponseOrReference is optional ResponseOrReference.
@@ -2890,43 +2802,34 @@ type OptResponseOrReference struct {
 }
 
 // IsSet returns true if OptResponseOrReference was set.
-func (o OptResponseOrReference) IsSet() bool { return o.Set }
+func (o OptResponseOrReference) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptResponseOrReference) Reset() {
-	var v ResponseOrReference
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptResponseOrReference) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptResponseOrReference) SetTo(v ResponseOrReference) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptResponseOrReference) SetTo(v ResponseOrReference) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptResponseOrReference) Get() (v ResponseOrReference, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ResponseOrReference), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptResponseOrReference) Or(d ResponseOrReference) ResponseOrReference {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ResponseOrReference)
 }
 
 // NewOptResponsesOrReferences returns new OptResponsesOrReferences with value set to v.
 func NewOptResponsesOrReferences(v ResponsesOrReferences) OptResponsesOrReferences {
-	return OptResponsesOrReferences{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptResponsesOrReferences)
 }
 
 // OptResponsesOrReferences is optional ResponsesOrReferences.
@@ -2936,44 +2839,35 @@ type OptResponsesOrReferences struct {
 }
 
 // IsSet returns true if OptResponsesOrReferences was set.
-func (o OptResponsesOrReferences) IsSet() bool { return o.Set }
+func (o OptResponsesOrReferences) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptResponsesOrReferences) Reset() {
-	var v ResponsesOrReferences
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptResponsesOrReferences) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptResponsesOrReferences) SetTo(v ResponsesOrReferences) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptResponsesOrReferences) Get() (v ResponsesOrReferences, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ResponsesOrReferences), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptResponsesOrReferences) Or(d ResponsesOrReferences) ResponsesOrReferences {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ResponsesOrReferences)
 }
 
 // NewOptSchema returns new OptSchema with value set to v.
-func NewOptSchema(v Schema) OptSchema {
-	return OptSchema{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptSchema(v Schema) OptSchema { _ = "STUB: not implemented"; return *new(OptSchema) }
 
 // OptSchema is optional Schema.
 type OptSchema struct {
@@ -2982,43 +2876,28 @@ type OptSchema struct {
 }
 
 // IsSet returns true if OptSchema was set.
-func (o OptSchema) IsSet() bool { return o.Set }
+func (o OptSchema) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSchema) Reset() {
-	var v Schema
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSchema) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSchema) SetTo(v Schema) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSchema) SetTo(v Schema) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptSchema) Get() (v Schema, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptSchema) Get() (v Schema, ok bool) { _ = "STUB: not implemented"; return *new(Schema), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptSchema) Or(d Schema) Schema {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptSchema) Or(d Schema) Schema { _ = "STUB: not implemented"; return *new(Schema) }
 
 // NewOptSchemaAdditionalProperties returns new OptSchemaAdditionalProperties with value set to v.
 func NewOptSchemaAdditionalProperties(v SchemaAdditionalProperties) OptSchemaAdditionalProperties {
-	return OptSchemaAdditionalProperties{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSchemaAdditionalProperties)
 }
 
 // OptSchemaAdditionalProperties is optional SchemaAdditionalProperties.
@@ -3028,43 +2907,37 @@ type OptSchemaAdditionalProperties struct {
 }
 
 // IsSet returns true if OptSchemaAdditionalProperties was set.
-func (o OptSchemaAdditionalProperties) IsSet() bool { return o.Set }
+func (o OptSchemaAdditionalProperties) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSchemaAdditionalProperties) Reset() {
-	var v SchemaAdditionalProperties
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSchemaAdditionalProperties) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSchemaAdditionalProperties) SetTo(v SchemaAdditionalProperties) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSchemaAdditionalProperties) Get() (v SchemaAdditionalProperties, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SchemaAdditionalProperties), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSchemaAdditionalProperties) Or(d SchemaAdditionalProperties) SchemaAdditionalProperties {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SchemaAdditionalProperties)
 }
 
 // NewOptSchemaOrReference returns new OptSchemaOrReference with value set to v.
 func NewOptSchemaOrReference(v SchemaOrReference) OptSchemaOrReference {
-	return OptSchemaOrReference{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSchemaOrReference)
 }
 
 // OptSchemaOrReference is optional SchemaOrReference.
@@ -3074,43 +2947,34 @@ type OptSchemaOrReference struct {
 }
 
 // IsSet returns true if OptSchemaOrReference was set.
-func (o OptSchemaOrReference) IsSet() bool { return o.Set }
+func (o OptSchemaOrReference) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSchemaOrReference) Reset() {
-	var v SchemaOrReference
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSchemaOrReference) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSchemaOrReference) SetTo(v SchemaOrReference) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSchemaOrReference) SetTo(v SchemaOrReference) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSchemaOrReference) Get() (v SchemaOrReference, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SchemaOrReference), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSchemaOrReference) Or(d SchemaOrReference) SchemaOrReference {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SchemaOrReference)
 }
 
 // NewOptSchemaProperties returns new OptSchemaProperties with value set to v.
 func NewOptSchemaProperties(v SchemaProperties) OptSchemaProperties {
-	return OptSchemaProperties{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSchemaProperties)
 }
 
 // OptSchemaProperties is optional SchemaProperties.
@@ -3120,43 +2984,34 @@ type OptSchemaProperties struct {
 }
 
 // IsSet returns true if OptSchemaProperties was set.
-func (o OptSchemaProperties) IsSet() bool { return o.Set }
+func (o OptSchemaProperties) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSchemaProperties) Reset() {
-	var v SchemaProperties
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSchemaProperties) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSchemaProperties) SetTo(v SchemaProperties) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSchemaProperties) SetTo(v SchemaProperties) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSchemaProperties) Get() (v SchemaProperties, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SchemaProperties), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSchemaProperties) Or(d SchemaProperties) SchemaProperties {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SchemaProperties)
 }
 
 // NewOptSchemaType returns new OptSchemaType with value set to v.
 func NewOptSchemaType(v SchemaType) OptSchemaType {
-	return OptSchemaType{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSchemaType)
 }
 
 // OptSchemaType is optional SchemaType.
@@ -3166,43 +3021,34 @@ type OptSchemaType struct {
 }
 
 // IsSet returns true if OptSchemaType was set.
-func (o OptSchemaType) IsSet() bool { return o.Set }
+func (o OptSchemaType) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSchemaType) Reset() {
-	var v SchemaType
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSchemaType) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSchemaType) SetTo(v SchemaType) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSchemaType) SetTo(v SchemaType) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSchemaType) Get() (v SchemaType, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SchemaType), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSchemaType) Or(d SchemaType) SchemaType {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SchemaType)
 }
 
 // NewOptSchemasOrReferences returns new OptSchemasOrReferences with value set to v.
 func NewOptSchemasOrReferences(v SchemasOrReferences) OptSchemasOrReferences {
-	return OptSchemasOrReferences{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSchemasOrReferences)
 }
 
 // OptSchemasOrReferences is optional SchemasOrReferences.
@@ -3212,43 +3058,34 @@ type OptSchemasOrReferences struct {
 }
 
 // IsSet returns true if OptSchemasOrReferences was set.
-func (o OptSchemasOrReferences) IsSet() bool { return o.Set }
+func (o OptSchemasOrReferences) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSchemasOrReferences) Reset() {
-	var v SchemasOrReferences
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSchemasOrReferences) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSchemasOrReferences) SetTo(v SchemasOrReferences) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSchemasOrReferences) SetTo(v SchemasOrReferences) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSchemasOrReferences) Get() (v SchemasOrReferences, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SchemasOrReferences), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSchemasOrReferences) Or(d SchemasOrReferences) SchemasOrReferences {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SchemasOrReferences)
 }
 
 // NewOptSecuritySchemesOrReferences returns new OptSecuritySchemesOrReferences with value set to v.
 func NewOptSecuritySchemesOrReferences(v SecuritySchemesOrReferences) OptSecuritySchemesOrReferences {
-	return OptSecuritySchemesOrReferences{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSecuritySchemesOrReferences)
 }
 
 // OptSecuritySchemesOrReferences is optional SecuritySchemesOrReferences.
@@ -3258,44 +3095,35 @@ type OptSecuritySchemesOrReferences struct {
 }
 
 // IsSet returns true if OptSecuritySchemesOrReferences was set.
-func (o OptSecuritySchemesOrReferences) IsSet() bool { return o.Set }
+func (o OptSecuritySchemesOrReferences) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSecuritySchemesOrReferences) Reset() {
-	var v SecuritySchemesOrReferences
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSecuritySchemesOrReferences) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSecuritySchemesOrReferences) SetTo(v SecuritySchemesOrReferences) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSecuritySchemesOrReferences) Get() (v SecuritySchemesOrReferences, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SecuritySchemesOrReferences), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSecuritySchemesOrReferences) Or(d SecuritySchemesOrReferences) SecuritySchemesOrReferences {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SecuritySchemesOrReferences)
 }
 
 // NewOptServer returns new OptServer with value set to v.
-func NewOptServer(v Server) OptServer {
-	return OptServer{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptServer(v Server) OptServer { _ = "STUB: not implemented"; return *new(OptServer) }
 
 // OptServer is optional Server.
 type OptServer struct {
@@ -3304,43 +3132,28 @@ type OptServer struct {
 }
 
 // IsSet returns true if OptServer was set.
-func (o OptServer) IsSet() bool { return o.Set }
+func (o OptServer) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptServer) Reset() {
-	var v Server
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptServer) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptServer) SetTo(v Server) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptServer) SetTo(v Server) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptServer) Get() (v Server, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptServer) Get() (v Server, ok bool) { _ = "STUB: not implemented"; return *new(Server), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptServer) Or(d Server) Server {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptServer) Or(d Server) Server { _ = "STUB: not implemented"; return *new(Server) }
 
 // NewOptServerVariables returns new OptServerVariables with value set to v.
 func NewOptServerVariables(v ServerVariables) OptServerVariables {
-	return OptServerVariables{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptServerVariables)
 }
 
 // OptServerVariables is optional ServerVariables.
@@ -3350,44 +3163,32 @@ type OptServerVariables struct {
 }
 
 // IsSet returns true if OptServerVariables was set.
-func (o OptServerVariables) IsSet() bool { return o.Set }
+func (o OptServerVariables) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptServerVariables) Reset() {
-	var v ServerVariables
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptServerVariables) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptServerVariables) SetTo(v ServerVariables) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptServerVariables) SetTo(v ServerVariables) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptServerVariables) Get() (v ServerVariables, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ServerVariables), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptServerVariables) Or(d ServerVariables) ServerVariables {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ServerVariables)
 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -3396,44 +3197,26 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptStrings returns new OptStrings with value set to v.
-func NewOptStrings(v Strings) OptStrings {
-	return OptStrings{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptStrings(v Strings) OptStrings { _ = "STUB: not implemented"; return *new(OptStrings) }
 
 // OptStrings is optional Strings.
 type OptStrings struct {
@@ -3442,44 +3225,29 @@ type OptStrings struct {
 }
 
 // IsSet returns true if OptStrings was set.
-func (o OptStrings) IsSet() bool { return o.Set }
+func (o OptStrings) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptStrings) Reset() {
-	var v Strings
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptStrings) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptStrings) SetTo(v Strings) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptStrings) SetTo(v Strings) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptStrings) Get() (v Strings, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Strings), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptStrings) Or(d Strings) Strings {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptStrings) Or(d Strings) Strings { _ = "STUB: not implemented"; return *new(Strings) }
 
 // NewOptTitle returns new OptTitle with value set to v.
-func NewOptTitle(v Title) OptTitle {
-	return OptTitle{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptTitle(v Title) OptTitle { _ = "STUB: not implemented"; return *new(OptTitle) }
 
 // OptTitle is optional Title.
 type OptTitle struct {
@@ -3488,43 +3256,28 @@ type OptTitle struct {
 }
 
 // IsSet returns true if OptTitle was set.
-func (o OptTitle) IsSet() bool { return o.Set }
+func (o OptTitle) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTitle) Reset() {
-	var v Title
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTitle) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTitle) SetTo(v Title) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTitle) SetTo(v Title) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptTitle) Get() (v Title, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptTitle) Get() (v Title, ok bool) { _ = "STUB: not implemented"; return *new(Title), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptTitle) Or(d Title) Title {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptTitle) Or(d Title) Title { _ = "STUB: not implemented"; return *new(Title) }
 
 // NewOptUniqueItems returns new OptUniqueItems with value set to v.
 func NewOptUniqueItems(v UniqueItems) OptUniqueItems {
-	return OptUniqueItems{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptUniqueItems)
 }
 
 // OptUniqueItems is optional UniqueItems.
@@ -3534,44 +3287,32 @@ type OptUniqueItems struct {
 }
 
 // IsSet returns true if OptUniqueItems was set.
-func (o OptUniqueItems) IsSet() bool { return o.Set }
+func (o OptUniqueItems) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUniqueItems) Reset() {
-	var v UniqueItems
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUniqueItems) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUniqueItems) SetTo(v UniqueItems) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUniqueItems) SetTo(v UniqueItems) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUniqueItems) Get() (v UniqueItems, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(UniqueItems), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptUniqueItems) Or(d UniqueItems) UniqueItems {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(UniqueItems)
 }
 
 // NewOptXML returns new OptXML with value set to v.
-func NewOptXML(v XML) OptXML {
-	return OptXML{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptXML(v XML) OptXML { _ = "STUB: not implemented"; return *new(OptXML) }
 
 // OptXML is optional XML.
 type OptXML struct {
@@ -3580,36 +3321,23 @@ type OptXML struct {
 }
 
 // IsSet returns true if OptXML was set.
-func (o OptXML) IsSet() bool { return o.Set }
+func (o OptXML) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptXML) Reset() {
-	var v XML
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptXML) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptXML) SetTo(v XML) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptXML) SetTo(v XML) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptXML) Get() (v XML, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptXML) Get() (v XML, ok bool) { _ = "STUB: not implemented"; return *new(XML), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptXML) Or(d XML) XML {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptXML) Or(d XML) XML { _ = "STUB: not implemented"; return *new(XML) }
 
 // Describes a single operation parameter.  A unique parameter is defined by a combination of a name
 // and location.
@@ -3634,143 +3362,188 @@ type Parameter struct {
 
 // GetName returns the value of Name.
 func (s *Parameter) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetIn returns the value of In.
+	return ""
 }
 
-// GetIn returns the value of In.
 func (s *Parameter) GetIn() ParameterIn {
-	return s.In
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(ParameterIn)
 }
 
-// GetDescription returns the value of Description.
 func (s *Parameter) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRequired returns the value of Required.
+	new(OptString)
 }
 
-// GetRequired returns the value of Required.
 func (s *Parameter) GetRequired() OptBool {
-	return s.Required
+	_ = "STUB: not implemented"
+
+	// GetDeprecated returns the value of Deprecated.
+	return *new(OptBool)
 }
 
-// GetDeprecated returns the value of Deprecated.
 func (s *Parameter) GetDeprecated() OptBool {
-	return s.Deprecated
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowEmptyValue returns the value of AllowEmptyValue.
+	new(OptBool)
 }
 
-// GetAllowEmptyValue returns the value of AllowEmptyValue.
 func (s *Parameter) GetAllowEmptyValue() OptBool {
-	return s.AllowEmptyValue
+	_ = "STUB: not implemented"
+	return *
+
+	// GetStyle returns the value of Style.
+	new(OptBool)
 }
 
-// GetStyle returns the value of Style.
 func (s *Parameter) GetStyle() OptParameterStyle {
-	return s.Style
+	_ = "STUB: not implemented"
+
+	// GetExplode returns the value of Explode.
+	return *new(OptParameterStyle)
 }
 
-// GetExplode returns the value of Explode.
 func (s *Parameter) GetExplode() OptBool {
-	return s.Explode
+	_ = "STUB: not implemented"
+
+	// GetAllowReserved returns the value of AllowReserved.
+	return *new(OptBool)
 }
 
-// GetAllowReserved returns the value of AllowReserved.
 func (s *Parameter) GetAllowReserved() OptBool {
-	return s.AllowReserved
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSchema returns the value of Schema.
+	new(OptBool)
 }
 
-// GetSchema returns the value of Schema.
 func (s *Parameter) GetSchema() *SchemaOrReference {
-	return s.Schema
+	_ = "STUB: not implemented"
+
+	// GetExample returns the value of Example.
+	return nil
 }
 
-// GetExample returns the value of Example.
 func (s *Parameter) GetExample() Any {
-	return s.Example
+	_ = "STUB: not implemented"
+
+	// GetExamples returns the value of Examples.
+	return *new(Any)
 }
 
-// GetExamples returns the value of Examples.
 func (s *Parameter) GetExamples() OptExamplesOrReferences {
-	return s.Examples
+	_ = "STUB: not implemented"
+
+	// GetContent returns the value of Content.
+	return *new(OptExamplesOrReferences)
 }
 
-// GetContent returns the value of Content.
 func (s *Parameter) GetContent() OptMediaTypes {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptMediaTypes)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Parameter) GetPattern0Props() ParameterPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetName sets the value of Name.
+	new(ParameterPattern0)
 }
 
-// SetName sets the value of Name.
 func (s *Parameter) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetIn sets the value of In.
+	return
 }
 
-// SetIn sets the value of In.
 func (s *Parameter) SetIn(val ParameterIn) {
-	s.In = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Parameter) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *Parameter) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetRequired sets the value of Required.
 func (s *Parameter) SetRequired(val OptBool) {
-	s.Required = val
+	_ = "STUB: not implemented"
+
+	// SetDeprecated sets the value of Deprecated.
+	return
 }
 
-// SetDeprecated sets the value of Deprecated.
 func (s *Parameter) SetDeprecated(val OptBool) {
-	s.Deprecated = val
+	_ = "STUB: not implemented"
+
+	// SetAllowEmptyValue sets the value of AllowEmptyValue.
+	return
 }
 
-// SetAllowEmptyValue sets the value of AllowEmptyValue.
-func (s *Parameter) SetAllowEmptyValue(val OptBool) {
-	s.AllowEmptyValue = val
-}
+func (s *Parameter) SetAllowEmptyValue(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetStyle sets the value of Style.
 func (s *Parameter) SetStyle(val OptParameterStyle) {
-	s.Style = val
+	_ = "STUB: not implemented"
+
+	// SetExplode sets the value of Explode.
+	return
 }
 
-// SetExplode sets the value of Explode.
 func (s *Parameter) SetExplode(val OptBool) {
-	s.Explode = val
+	_ = "STUB: not implemented"
+
+	// SetAllowReserved sets the value of AllowReserved.
+	return
 }
 
-// SetAllowReserved sets the value of AllowReserved.
-func (s *Parameter) SetAllowReserved(val OptBool) {
-	s.AllowReserved = val
-}
+func (s *Parameter) SetAllowReserved(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetSchema sets the value of Schema.
 func (s *Parameter) SetSchema(val *SchemaOrReference) {
-	s.Schema = val
+	_ = "STUB: not implemented"
+
+	// SetExample sets the value of Example.
+	return
 }
 
-// SetExample sets the value of Example.
 func (s *Parameter) SetExample(val Any) {
-	s.Example = val
+	_ = "STUB: not implemented"
+
+	// SetExamples sets the value of Examples.
+	return
 }
 
-// SetExamples sets the value of Examples.
 func (s *Parameter) SetExamples(val OptExamplesOrReferences) {
-	s.Examples = val
+	_ = "STUB: not implemented"
+
+	// SetContent sets the value of Content.
+	return
 }
 
-// SetContent sets the value of Content.
 func (s *Parameter) SetContent(val OptMediaTypes) {
-	s.Content = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Parameter) SetPattern0Props(val ParameterPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Parameter) SetPattern0Props(val ParameterPattern0) { _ = "STUB: not implemented"; return }
 
 type ParameterIn string
 
@@ -3782,50 +3555,13 @@ const (
 )
 
 // AllValues returns all ParameterIn values.
-func (ParameterIn) AllValues() []ParameterIn {
-	return []ParameterIn{
-		ParameterInPath,
-		ParameterInQuery,
-		ParameterInCookie,
-		ParameterInHeader,
-	}
-}
+func (ParameterIn) AllValues() []ParameterIn { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s ParameterIn) MarshalText() ([]byte, error) {
-	switch s {
-	case ParameterInPath:
-		return []byte(s), nil
-	case ParameterInQuery:
-		return []byte(s), nil
-	case ParameterInCookie:
-		return []byte(s), nil
-	case ParameterInHeader:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s ParameterIn) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *ParameterIn) UnmarshalText(data []byte) error {
-	switch ParameterIn(data) {
-	case ParameterInPath:
-		*s = ParameterInPath
-		return nil
-	case ParameterInQuery:
-		*s = ParameterInQuery
-		return nil
-	case ParameterInCookie:
-		*s = ParameterInCookie
-		return nil
-	case ParameterInHeader:
-		*s = ParameterInHeader
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *ParameterIn) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/definitions/parameterOrReference
 // ParameterOrReference represents sum type.
@@ -3845,51 +3581,39 @@ const (
 )
 
 // IsParameter reports whether ParameterOrReference is Parameter.
-func (s ParameterOrReference) IsParameter() bool { return s.Type == ParameterParameterOrReference }
+func (s ParameterOrReference) IsParameter() bool { _ = "STUB: not implemented"; return false }
 
 // IsReference reports whether ParameterOrReference is Reference.
-func (s ParameterOrReference) IsReference() bool { return s.Type == ReferenceParameterOrReference }
+func (s ParameterOrReference) IsReference() bool { _ = "STUB: not implemented"; return false }
 
 // SetParameter sets ParameterOrReference to Parameter.
-func (s *ParameterOrReference) SetParameter(v Parameter) {
-	s.Type = ParameterParameterOrReference
-	s.Parameter = v
-}
+func (s *ParameterOrReference) SetParameter(v Parameter) { _ = "STUB: not implemented"; return }
 
 // GetParameter returns Parameter and true boolean if ParameterOrReference is Parameter.
 func (s ParameterOrReference) GetParameter() (v Parameter, ok bool) {
-	if !s.IsParameter() {
-		return v, false
-	}
-	return s.Parameter, true
+	_ = "STUB: not implemented"
+	return *new(Parameter), false
 }
 
 // NewParameterParameterOrReference returns new ParameterOrReference from Parameter.
 func NewParameterParameterOrReference(v Parameter) ParameterOrReference {
-	var s ParameterOrReference
-	s.SetParameter(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ParameterOrReference)
 }
 
 // SetReference sets ParameterOrReference to Reference.
-func (s *ParameterOrReference) SetReference(v Reference) {
-	s.Type = ReferenceParameterOrReference
-	s.Reference = v
-}
+func (s *ParameterOrReference) SetReference(v Reference) { _ = "STUB: not implemented"; return }
 
 // GetReference returns Reference and true boolean if ParameterOrReference is Reference.
 func (s ParameterOrReference) GetReference() (v Reference, ok bool) {
-	if !s.IsReference() {
-		return v, false
-	}
-	return s.Reference, true
+	_ = "STUB: not implemented"
+	return *new(Reference), false
 }
 
 // NewReferenceParameterOrReference returns new ParameterOrReference from Reference.
 func NewReferenceParameterOrReference(v Reference) ParameterOrReference {
-	var s ParameterOrReference
-	s.SetReference(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ParameterOrReference)
 }
 
 type ParameterPattern0 map[string]SpecificationExtension
@@ -3916,68 +3640,13 @@ const (
 )
 
 // AllValues returns all ParameterStyle values.
-func (ParameterStyle) AllValues() []ParameterStyle {
-	return []ParameterStyle{
-		ParameterStyleMatrix,
-		ParameterStyleLabel,
-		ParameterStyleForm,
-		ParameterStyleSimple,
-		ParameterStyleSpaceDelimited,
-		ParameterStylePipeDelimited,
-		ParameterStyleDeepObject,
-	}
-}
+func (ParameterStyle) AllValues() []ParameterStyle { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s ParameterStyle) MarshalText() ([]byte, error) {
-	switch s {
-	case ParameterStyleMatrix:
-		return []byte(s), nil
-	case ParameterStyleLabel:
-		return []byte(s), nil
-	case ParameterStyleForm:
-		return []byte(s), nil
-	case ParameterStyleSimple:
-		return []byte(s), nil
-	case ParameterStyleSpaceDelimited:
-		return []byte(s), nil
-	case ParameterStylePipeDelimited:
-		return []byte(s), nil
-	case ParameterStyleDeepObject:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s ParameterStyle) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *ParameterStyle) UnmarshalText(data []byte) error {
-	switch ParameterStyle(data) {
-	case ParameterStyleMatrix:
-		*s = ParameterStyleMatrix
-		return nil
-	case ParameterStyleLabel:
-		*s = ParameterStyleLabel
-		return nil
-	case ParameterStyleForm:
-		*s = ParameterStyleForm
-		return nil
-	case ParameterStyleSimple:
-		*s = ParameterStyleSimple
-		return nil
-	case ParameterStyleSpaceDelimited:
-		*s = ParameterStyleSpaceDelimited
-		return nil
-	case ParameterStylePipeDelimited:
-		*s = ParameterStylePipeDelimited
-		return nil
-	case ParameterStyleDeepObject:
-		*s = ParameterStyleDeepObject
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *ParameterStyle) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/definitions/parametersOrReferences
 type ParametersOrReferences map[string]ParameterOrReference
@@ -4015,143 +3684,189 @@ type PathItem struct {
 
 // GetRef returns the value of Ref.
 func (s *PathItem) GetRef() OptString {
-	return s.Ref
+	_ = "STUB: not implemented"
+
+	// GetSummary returns the value of Summary.
+	return *new(OptString)
 }
 
-// GetSummary returns the value of Summary.
 func (s *PathItem) GetSummary() OptString {
-	return s.Summary
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(OptString)
 }
 
-// GetDescription returns the value of Description.
 func (s *PathItem) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGet returns the value of Get.
+	new(OptString)
 }
 
-// GetGet returns the value of Get.
 func (s *PathItem) GetGet() OptOperation {
-	return s.Get
+	_ = "STUB: not implemented"
+
+	// GetPut returns the value of Put.
+	return *new(OptOperation)
 }
 
-// GetPut returns the value of Put.
 func (s *PathItem) GetPut() OptOperation {
-	return s.Put
+	_ = "STUB: not implemented"
+
+	// GetPost returns the value of Post.
+	return *new(OptOperation)
 }
 
-// GetPost returns the value of Post.
 func (s *PathItem) GetPost() OptOperation {
-	return s.Post
+	_ = "STUB: not implemented"
+
+	// GetDelete returns the value of Delete.
+	return *new(OptOperation)
 }
 
-// GetDelete returns the value of Delete.
 func (s *PathItem) GetDelete() OptOperation {
-	return s.Delete
+	_ = "STUB: not implemented"
+
+	// GetOptions returns the value of Options.
+	return *new(OptOperation)
 }
 
-// GetOptions returns the value of Options.
 func (s *PathItem) GetOptions() OptOperation {
-	return s.Options
+	_ = "STUB: not implemented"
+
+	// GetHead returns the value of Head.
+	return *new(OptOperation)
 }
 
-// GetHead returns the value of Head.
 func (s *PathItem) GetHead() OptOperation {
-	return s.Head
+	_ = "STUB: not implemented"
+
+	// GetPatch returns the value of Patch.
+	return *new(OptOperation)
 }
 
-// GetPatch returns the value of Patch.
 func (s *PathItem) GetPatch() OptOperation {
-	return s.Patch
+	_ = "STUB: not implemented"
+
+	// GetTrace returns the value of Trace.
+	return *new(OptOperation)
 }
 
-// GetTrace returns the value of Trace.
 func (s *PathItem) GetTrace() OptOperation {
-	return s.Trace
+	_ = "STUB: not implemented"
+
+	// GetServers returns the value of Servers.
+	return *new(OptOperation)
 }
 
-// GetServers returns the value of Servers.
 func (s *PathItem) GetServers() []Server {
-	return s.Servers
+	_ = "STUB: not implemented"
+
+	// GetParameters returns the value of Parameters.
+	return nil
 }
 
-// GetParameters returns the value of Parameters.
-func (s *PathItem) GetParameters() []ParameterOrReference {
-	return s.Parameters
-}
+func (s *PathItem) GetParameters() []ParameterOrReference { _ = "STUB: not implemented"; return nil }
 
 // GetPattern0Props returns the value of Pattern0Props.
 func (s *PathItem) GetPattern0Props() PathItemPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetRef sets the value of Ref.
+	new(PathItemPattern0)
 }
 
-// SetRef sets the value of Ref.
 func (s *PathItem) SetRef(val OptString) {
-	s.Ref = val
+	_ = "STUB: not implemented"
+
+	// SetSummary sets the value of Summary.
+	return
 }
 
-// SetSummary sets the value of Summary.
 func (s *PathItem) SetSummary(val OptString) {
-	s.Summary = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *PathItem) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *PathItem) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetGet sets the value of Get.
 func (s *PathItem) SetGet(val OptOperation) {
-	s.Get = val
+	_ = "STUB: not implemented"
+
+	// SetPut sets the value of Put.
+	return
 }
 
-// SetPut sets the value of Put.
 func (s *PathItem) SetPut(val OptOperation) {
-	s.Put = val
+	_ = "STUB: not implemented"
+
+	// SetPost sets the value of Post.
+	return
 }
 
-// SetPost sets the value of Post.
 func (s *PathItem) SetPost(val OptOperation) {
-	s.Post = val
+	_ = "STUB: not implemented"
+
+	// SetDelete sets the value of Delete.
+	return
 }
 
-// SetDelete sets the value of Delete.
 func (s *PathItem) SetDelete(val OptOperation) {
-	s.Delete = val
+	_ = "STUB: not implemented"
+
+	// SetOptions sets the value of Options.
+	return
 }
 
-// SetOptions sets the value of Options.
 func (s *PathItem) SetOptions(val OptOperation) {
-	s.Options = val
+	_ = "STUB: not implemented"
+
+	// SetHead sets the value of Head.
+	return
 }
 
-// SetHead sets the value of Head.
 func (s *PathItem) SetHead(val OptOperation) {
-	s.Head = val
+	_ = "STUB: not implemented"
+
+	// SetPatch sets the value of Patch.
+	return
 }
 
-// SetPatch sets the value of Patch.
 func (s *PathItem) SetPatch(val OptOperation) {
-	s.Patch = val
+	_ = "STUB: not implemented"
+
+	// SetTrace sets the value of Trace.
+	return
 }
 
-// SetTrace sets the value of Trace.
 func (s *PathItem) SetTrace(val OptOperation) {
-	s.Trace = val
+	_ = "STUB: not implemented"
+
+	// SetServers sets the value of Servers.
+	return
 }
 
-// SetServers sets the value of Servers.
 func (s *PathItem) SetServers(val []Server) {
-	s.Servers = val
+	_ = "STUB: not implemented"
+
+	// SetParameters sets the value of Parameters.
+	return
 }
 
-// SetParameters sets the value of Parameters.
 func (s *PathItem) SetParameters(val []ParameterOrReference) {
-	s.Parameters = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *PathItem) SetPattern0Props(val PathItemPattern0) {
-	s.Pattern0Props = val
-}
+func (s *PathItem) SetPattern0Props(val PathItemPattern0) { _ = "STUB: not implemented"; return }
 
 type PathItemPattern0 map[string]SpecificationExtension
 
@@ -4177,23 +3892,25 @@ type Paths struct {
 
 // GetPattern0Props returns the value of Pattern0Props.
 func (s *Paths) GetPattern0Props() PathsPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern1Props returns the value of Pattern1Props.
+	new(PathsPattern0)
 }
 
-// GetPattern1Props returns the value of Pattern1Props.
 func (s *Paths) GetPattern1Props() PathsPattern1 {
-	return s.Pattern1Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	new(PathsPattern1)
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Paths) SetPattern0Props(val PathsPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Paths) SetPattern0Props(val PathsPattern0) { _ = "STUB: not implemented"; return }
 
 // SetPattern1Props sets the value of Pattern1Props.
-func (s *Paths) SetPattern1Props(val PathsPattern1) {
-	s.Pattern1Props = val
-}
+func (s *Paths) SetPattern1Props(val PathsPattern1) { _ = "STUB: not implemented"; return }
 
 type PathsPattern0 map[string]PathItem
 
@@ -4232,15 +3949,19 @@ type Reference struct {
 
 // GetRef returns the value of Ref.
 func (s *Reference) GetRef() string {
-	return s.Ref
+	_ = "STUB: not implemented"
+
+	// SetRef sets the value of Ref.
+	return ""
 }
 
-// SetRef sets the value of Ref.
 func (s *Reference) SetRef(val string) {
-	s.Ref = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/definitions/requestBodiesOrReferences
+	return
 }
 
-// Ref: #/definitions/requestBodiesOrReferences
 type RequestBodiesOrReferences map[string]RequestBodyOrReference
 
 func (s *RequestBodiesOrReferences) init() RequestBodiesOrReferences {
@@ -4264,43 +3985,53 @@ type RequestBody struct {
 
 // GetDescription returns the value of Description.
 func (s *RequestBody) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetContent returns the value of Content.
+	new(OptString)
 }
 
-// GetContent returns the value of Content.
 func (s *RequestBody) GetContent() MediaTypes {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// GetRequired returns the value of Required.
+	return *new(MediaTypes)
 }
 
-// GetRequired returns the value of Required.
 func (s *RequestBody) GetRequired() OptBool {
-	return s.Required
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptBool)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *RequestBody) GetPattern0Props() RequestBodyPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetDescription sets the value of Description.
+	new(RequestBodyPattern0)
 }
 
-// SetDescription sets the value of Description.
-func (s *RequestBody) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *RequestBody) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetContent sets the value of Content.
 func (s *RequestBody) SetContent(val MediaTypes) {
-	s.Content = val
+	_ = "STUB: not implemented"
+
+	// SetRequired sets the value of Required.
+	return
 }
 
-// SetRequired sets the value of Required.
 func (s *RequestBody) SetRequired(val OptBool) {
-	s.Required = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *RequestBody) SetPattern0Props(val RequestBodyPattern0) {
-	s.Pattern0Props = val
-}
+func (s *RequestBody) SetPattern0Props(val RequestBodyPattern0) { _ = "STUB: not implemented"; return }
 
 // Ref: #/definitions/requestBodyOrReference
 // RequestBodyOrReference represents sum type.
@@ -4320,53 +4051,39 @@ const (
 )
 
 // IsRequestBody reports whether RequestBodyOrReference is RequestBody.
-func (s RequestBodyOrReference) IsRequestBody() bool {
-	return s.Type == RequestBodyRequestBodyOrReference
-}
+func (s RequestBodyOrReference) IsRequestBody() bool { _ = "STUB: not implemented"; return false }
 
 // IsReference reports whether RequestBodyOrReference is Reference.
-func (s RequestBodyOrReference) IsReference() bool { return s.Type == ReferenceRequestBodyOrReference }
+func (s RequestBodyOrReference) IsReference() bool { _ = "STUB: not implemented"; return false }
 
 // SetRequestBody sets RequestBodyOrReference to RequestBody.
-func (s *RequestBodyOrReference) SetRequestBody(v RequestBody) {
-	s.Type = RequestBodyRequestBodyOrReference
-	s.RequestBody = v
-}
+func (s *RequestBodyOrReference) SetRequestBody(v RequestBody) { _ = "STUB: not implemented"; return }
 
 // GetRequestBody returns RequestBody and true boolean if RequestBodyOrReference is RequestBody.
 func (s RequestBodyOrReference) GetRequestBody() (v RequestBody, ok bool) {
-	if !s.IsRequestBody() {
-		return v, false
-	}
-	return s.RequestBody, true
+	_ = "STUB: not implemented"
+	return *new(RequestBody), false
 }
 
 // NewRequestBodyRequestBodyOrReference returns new RequestBodyOrReference from RequestBody.
 func NewRequestBodyRequestBodyOrReference(v RequestBody) RequestBodyOrReference {
-	var s RequestBodyOrReference
-	s.SetRequestBody(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(RequestBodyOrReference)
 }
 
 // SetReference sets RequestBodyOrReference to Reference.
-func (s *RequestBodyOrReference) SetReference(v Reference) {
-	s.Type = ReferenceRequestBodyOrReference
-	s.Reference = v
-}
+func (s *RequestBodyOrReference) SetReference(v Reference) { _ = "STUB: not implemented"; return }
 
 // GetReference returns Reference and true boolean if RequestBodyOrReference is Reference.
 func (s RequestBodyOrReference) GetReference() (v Reference, ok bool) {
-	if !s.IsReference() {
-		return v, false
-	}
-	return s.Reference, true
+	_ = "STUB: not implemented"
+	return *new(Reference), false
 }
 
 // NewReferenceRequestBodyOrReference returns new RequestBodyOrReference from Reference.
 func NewReferenceRequestBodyOrReference(v Reference) RequestBodyOrReference {
-	var s RequestBodyOrReference
-	s.SetReference(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(RequestBodyOrReference)
 }
 
 type RequestBodyPattern0 map[string]SpecificationExtension
@@ -4393,54 +4110,63 @@ type Response struct {
 }
 
 // GetDescription returns the value of Description.
-func (s *Response) GetDescription() string {
-	return s.Description
-}
+func (s *Response) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 // GetHeaders returns the value of Headers.
 func (s *Response) GetHeaders() OptHeadersOrReferences {
-	return s.Headers
+	_ = "STUB: not implemented"
+
+	// GetContent returns the value of Content.
+	return *new(OptHeadersOrReferences)
 }
 
-// GetContent returns the value of Content.
 func (s *Response) GetContent() OptMediaTypes {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// GetLinks returns the value of Links.
+	return *new(OptMediaTypes)
 }
 
-// GetLinks returns the value of Links.
 func (s *Response) GetLinks() OptLinksOrReferences {
-	return s.Links
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptLinksOrReferences)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Response) GetPattern0Props() ResponsePattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetDescription sets the value of Description.
+	new(ResponsePattern0)
 }
 
-// SetDescription sets the value of Description.
-func (s *Response) SetDescription(val string) {
-	s.Description = val
-}
+func (s *Response) SetDescription(val string) { _ = "STUB: not implemented"; return }
 
 // SetHeaders sets the value of Headers.
 func (s *Response) SetHeaders(val OptHeadersOrReferences) {
-	s.Headers = val
+	_ = "STUB: not implemented"
+
+	// SetContent sets the value of Content.
+	return
 }
 
-// SetContent sets the value of Content.
 func (s *Response) SetContent(val OptMediaTypes) {
-	s.Content = val
+	_ = "STUB: not implemented"
+
+	// SetLinks sets the value of Links.
+	return
 }
 
-// SetLinks sets the value of Links.
 func (s *Response) SetLinks(val OptLinksOrReferences) {
-	s.Links = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Response) SetPattern0Props(val ResponsePattern0) {
-	s.Pattern0Props = val
-}
+func (s *Response) SetPattern0Props(val ResponsePattern0) { _ = "STUB: not implemented"; return }
 
 // Ref: #/definitions/responseOrReference
 // ResponseOrReference represents sum type.
@@ -4460,51 +4186,39 @@ const (
 )
 
 // IsResponse reports whether ResponseOrReference is Response.
-func (s ResponseOrReference) IsResponse() bool { return s.Type == ResponseResponseOrReference }
+func (s ResponseOrReference) IsResponse() bool { _ = "STUB: not implemented"; return false }
 
 // IsReference reports whether ResponseOrReference is Reference.
-func (s ResponseOrReference) IsReference() bool { return s.Type == ReferenceResponseOrReference }
+func (s ResponseOrReference) IsReference() bool { _ = "STUB: not implemented"; return false }
 
 // SetResponse sets ResponseOrReference to Response.
-func (s *ResponseOrReference) SetResponse(v Response) {
-	s.Type = ResponseResponseOrReference
-	s.Response = v
-}
+func (s *ResponseOrReference) SetResponse(v Response) { _ = "STUB: not implemented"; return }
 
 // GetResponse returns Response and true boolean if ResponseOrReference is Response.
 func (s ResponseOrReference) GetResponse() (v Response, ok bool) {
-	if !s.IsResponse() {
-		return v, false
-	}
-	return s.Response, true
+	_ = "STUB: not implemented"
+	return *new(Response), false
 }
 
 // NewResponseResponseOrReference returns new ResponseOrReference from Response.
 func NewResponseResponseOrReference(v Response) ResponseOrReference {
-	var s ResponseOrReference
-	s.SetResponse(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ResponseOrReference)
 }
 
 // SetReference sets ResponseOrReference to Reference.
-func (s *ResponseOrReference) SetReference(v Reference) {
-	s.Type = ReferenceResponseOrReference
-	s.Reference = v
-}
+func (s *ResponseOrReference) SetReference(v Reference) { _ = "STUB: not implemented"; return }
 
 // GetReference returns Reference and true boolean if ResponseOrReference is Reference.
 func (s ResponseOrReference) GetReference() (v Reference, ok bool) {
-	if !s.IsReference() {
-		return v, false
-	}
-	return s.Reference, true
+	_ = "STUB: not implemented"
+	return *new(Reference), false
 }
 
 // NewReferenceResponseOrReference returns new ResponseOrReference from Reference.
 func NewReferenceResponseOrReference(v Reference) ResponseOrReference {
-	var s ResponseOrReference
-	s.SetReference(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ResponseOrReference)
 }
 
 type ResponsePattern0 map[string]SpecificationExtension
@@ -4538,33 +4252,39 @@ type Responses struct {
 
 // GetDefault returns the value of Default.
 func (s *Responses) GetDefault() OptResponseOrReference {
-	return s.Default
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptResponseOrReference)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Responses) GetPattern0Props() ResponsesPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern1Props returns the value of Pattern1Props.
+	new(ResponsesPattern0)
 }
 
-// GetPattern1Props returns the value of Pattern1Props.
 func (s *Responses) GetPattern1Props() ResponsesPattern1 {
-	return s.Pattern1Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetDefault sets the value of Default.
+	new(ResponsesPattern1)
 }
 
-// SetDefault sets the value of Default.
 func (s *Responses) SetDefault(val OptResponseOrReference) {
-	s.Default = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Responses) SetPattern0Props(val ResponsesPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Responses) SetPattern0Props(val ResponsesPattern0) { _ = "STUB: not implemented"; return }
 
 // SetPattern1Props sets the value of Pattern1Props.
-func (s *Responses) SetPattern1Props(val ResponsesPattern1) {
-	s.Pattern1Props = val
-}
+func (s *Responses) SetPattern1Props(val ResponsesPattern1) { _ = "STUB: not implemented"; return }
 
 // Ref: #/definitions/responsesOrReferences
 type ResponsesOrReferences map[string]ResponseOrReference
@@ -4650,363 +4370,479 @@ type Schema struct {
 
 // GetNullable returns the value of Nullable.
 func (s *Schema) GetNullable() OptBool {
-	return s.Nullable
+	_ = "STUB: not implemented"
+
+	// GetDiscriminator returns the value of Discriminator.
+	return *new(OptBool)
 }
 
-// GetDiscriminator returns the value of Discriminator.
 func (s *Schema) GetDiscriminator() OptDiscriminator {
-	return s.Discriminator
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReadOnly returns the value of ReadOnly.
+	new(OptDiscriminator)
 }
 
-// GetReadOnly returns the value of ReadOnly.
 func (s *Schema) GetReadOnly() OptBool {
-	return s.ReadOnly
+	_ = "STUB: not implemented"
+
+	// GetWriteOnly returns the value of WriteOnly.
+	return *new(OptBool)
 }
 
-// GetWriteOnly returns the value of WriteOnly.
 func (s *Schema) GetWriteOnly() OptBool {
-	return s.WriteOnly
+	_ = "STUB: not implemented"
+
+	// GetXML returns the value of XML.
+	return *new(OptBool)
 }
 
-// GetXML returns the value of XML.
 func (s *Schema) GetXML() OptXML {
-	return s.XML
+	_ = "STUB: not implemented"
+
+	// GetExternalDocs returns the value of ExternalDocs.
+	return *new(OptXML)
 }
 
-// GetExternalDocs returns the value of ExternalDocs.
 func (s *Schema) GetExternalDocs() OptExternalDocs {
-	return s.ExternalDocs
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExample returns the value of Example.
+	new(OptExternalDocs)
 }
 
-// GetExample returns the value of Example.
 func (s *Schema) GetExample() Any {
-	return s.Example
+	_ = "STUB: not implemented"
+
+	// GetDeprecated returns the value of Deprecated.
+	return *new(Any)
 }
 
-// GetDeprecated returns the value of Deprecated.
 func (s *Schema) GetDeprecated() OptBool {
-	return s.Deprecated
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTitle returns the value of Title.
+	new(OptBool)
 }
 
-// GetTitle returns the value of Title.
 func (s *Schema) GetTitle() OptTitle {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetMultipleOf returns the value of MultipleOf.
+	return *new(OptTitle)
 }
 
-// GetMultipleOf returns the value of MultipleOf.
 func (s *Schema) GetMultipleOf() OptMultipleOf {
-	return s.MultipleOf
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMaximum returns the value of Maximum.
+	new(OptMultipleOf)
 }
 
-// GetMaximum returns the value of Maximum.
 func (s *Schema) GetMaximum() OptMaximum {
-	return s.Maximum
+	_ = "STUB: not implemented"
+
+	// GetExclusiveMaximum returns the value of ExclusiveMaximum.
+	return *new(OptMaximum)
 }
 
-// GetExclusiveMaximum returns the value of ExclusiveMaximum.
 func (s *Schema) GetExclusiveMaximum() OptExclusiveMaximum {
-	return s.ExclusiveMaximum
+	_ = "STUB: not implemented"
+	return *new(OptExclusiveMaximum)
 }
 
 // GetMinimum returns the value of Minimum.
 func (s *Schema) GetMinimum() OptMinimum {
-	return s.Minimum
+	_ = "STUB: not implemented"
+
+	// GetExclusiveMinimum returns the value of ExclusiveMinimum.
+	return *new(OptMinimum)
 }
 
-// GetExclusiveMinimum returns the value of ExclusiveMinimum.
 func (s *Schema) GetExclusiveMinimum() OptExclusiveMinimum {
-	return s.ExclusiveMinimum
+	_ = "STUB: not implemented"
+	return *new(OptExclusiveMinimum)
 }
 
 // GetMaxLength returns the value of MaxLength.
 func (s *Schema) GetMaxLength() OptPositiveInteger {
-	return s.MaxLength
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMinLength returns the value of MinLength.
+	new(OptPositiveInteger)
 }
 
-// GetMinLength returns the value of MinLength.
 func (s *Schema) GetMinLength() OptPositiveInteger {
-	return s.MinLength
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern returns the value of Pattern.
+	new(OptPositiveInteger)
 }
 
-// GetPattern returns the value of Pattern.
 func (s *Schema) GetPattern() OptPattern {
-	return s.Pattern
+	_ = "STUB: not implemented"
+
+	// GetMaxItems returns the value of MaxItems.
+	return *new(OptPattern)
 }
 
-// GetMaxItems returns the value of MaxItems.
 func (s *Schema) GetMaxItems() OptPositiveInteger {
-	return s.MaxItems
+	_ = "STUB: not implemented"
+
+	// GetMinItems returns the value of MinItems.
+	return *new(OptPositiveInteger)
 }
 
-// GetMinItems returns the value of MinItems.
 func (s *Schema) GetMinItems() OptPositiveInteger {
-	return s.MinItems
+	_ = "STUB: not implemented"
+
+	// GetUniqueItems returns the value of UniqueItems.
+	return *new(OptPositiveInteger)
 }
 
-// GetUniqueItems returns the value of UniqueItems.
 func (s *Schema) GetUniqueItems() OptUniqueItems {
-	return s.UniqueItems
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMaxProperties returns the value of MaxProperties.
+	new(OptUniqueItems)
 }
 
-// GetMaxProperties returns the value of MaxProperties.
 func (s *Schema) GetMaxProperties() OptPositiveInteger {
-	return s.MaxProperties
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMinProperties returns the value of MinProperties.
+	new(OptPositiveInteger)
 }
 
-// GetMinProperties returns the value of MinProperties.
 func (s *Schema) GetMinProperties() OptPositiveInteger {
-	return s.MinProperties
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRequired returns the value of Required.
+	new(OptPositiveInteger)
 }
 
-// GetRequired returns the value of Required.
 func (s *Schema) GetRequired() StringArray {
-	return s.Required
+	_ = "STUB: not implemented"
+
+	// GetEnum returns the value of Enum.
+	return *new(StringArray)
 }
 
-// GetEnum returns the value of Enum.
 func (s *Schema) GetEnum() Enum {
-	return s.Enum
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return *new(Enum)
 }
 
-// GetType returns the value of Type.
 func (s *Schema) GetType() OptSchemaType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetAllOf returns the value of AllOf.
+	return *new(OptSchemaType)
 }
 
-// GetAllOf returns the value of AllOf.
 func (s *Schema) GetAllOf() []SchemaOrReference {
-	return s.AllOf
+	_ = "STUB: not implemented"
+
+	// GetOneOf returns the value of OneOf.
+	return nil
 }
 
-// GetOneOf returns the value of OneOf.
 func (s *Schema) GetOneOf() []SchemaOrReference {
-	return s.OneOf
+	_ = "STUB: not implemented"
+
+	// GetAnyOf returns the value of AnyOf.
+	return nil
 }
 
-// GetAnyOf returns the value of AnyOf.
 func (s *Schema) GetAnyOf() []SchemaOrReference {
-	return s.AnyOf
+	_ = "STUB: not implemented"
+
+	// GetNot returns the value of Not.
+	return nil
 }
 
-// GetNot returns the value of Not.
 func (s *Schema) GetNot() *Schema {
-	return s.Not
+	_ = "STUB: not implemented"
+
+	// GetItems returns the value of Items.
+	return nil
 }
 
-// GetItems returns the value of Items.
 func (s *Schema) GetItems() *SchemaOrReference {
-	return s.Items
+	_ = "STUB: not implemented"
+
+	// GetProperties returns the value of Properties.
+	return nil
 }
 
-// GetProperties returns the value of Properties.
 func (s *Schema) GetProperties() OptSchemaProperties {
-	return s.Properties
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAdditionalProperties returns the value of AdditionalProperties.
+	new(OptSchemaProperties)
 }
 
-// GetAdditionalProperties returns the value of AdditionalProperties.
 func (s *Schema) GetAdditionalProperties() *SchemaAdditionalProperties {
-	return s.AdditionalProperties
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetDefault returns the value of Default.
 func (s *Schema) GetDefault() DefaultType {
-	return s.Default
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(DefaultType)
 }
 
-// GetDescription returns the value of Description.
 func (s *Schema) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFormat returns the value of Format.
+	new(OptString)
 }
 
-// GetFormat returns the value of Format.
 func (s *Schema) GetFormat() OptString {
-	return s.Format
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptString)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Schema) GetPattern0Props() SchemaPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetNullable sets the value of Nullable.
+	new(SchemaPattern0)
 }
 
-// SetNullable sets the value of Nullable.
 func (s *Schema) SetNullable(val OptBool) {
-	s.Nullable = val
+	_ = "STUB: not implemented"
+
+	// SetDiscriminator sets the value of Discriminator.
+	return
 }
 
-// SetDiscriminator sets the value of Discriminator.
-func (s *Schema) SetDiscriminator(val OptDiscriminator) {
-	s.Discriminator = val
-}
+func (s *Schema) SetDiscriminator(val OptDiscriminator) { _ = "STUB: not implemented"; return }
 
 // SetReadOnly sets the value of ReadOnly.
 func (s *Schema) SetReadOnly(val OptBool) {
-	s.ReadOnly = val
+	_ = "STUB: not implemented"
+
+	// SetWriteOnly sets the value of WriteOnly.
+	return
 }
 
-// SetWriteOnly sets the value of WriteOnly.
 func (s *Schema) SetWriteOnly(val OptBool) {
-	s.WriteOnly = val
+	_ = "STUB: not implemented"
+
+	// SetXML sets the value of XML.
+	return
 }
 
-// SetXML sets the value of XML.
 func (s *Schema) SetXML(val OptXML) {
-	s.XML = val
+	_ = "STUB: not implemented"
+
+	// SetExternalDocs sets the value of ExternalDocs.
+	return
 }
 
-// SetExternalDocs sets the value of ExternalDocs.
-func (s *Schema) SetExternalDocs(val OptExternalDocs) {
-	s.ExternalDocs = val
-}
+func (s *Schema) SetExternalDocs(val OptExternalDocs) { _ = "STUB: not implemented"; return }
 
 // SetExample sets the value of Example.
 func (s *Schema) SetExample(val Any) {
-	s.Example = val
+	_ = "STUB: not implemented"
+
+	// SetDeprecated sets the value of Deprecated.
+	return
 }
 
-// SetDeprecated sets the value of Deprecated.
 func (s *Schema) SetDeprecated(val OptBool) {
-	s.Deprecated = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *Schema) SetTitle(val OptTitle) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetMultipleOf sets the value of MultipleOf.
+	return
 }
 
-// SetMultipleOf sets the value of MultipleOf.
 func (s *Schema) SetMultipleOf(val OptMultipleOf) {
-	s.MultipleOf = val
+	_ = "STUB: not implemented"
+
+	// SetMaximum sets the value of Maximum.
+	return
 }
 
-// SetMaximum sets the value of Maximum.
 func (s *Schema) SetMaximum(val OptMaximum) {
-	s.Maximum = val
+	_ = "STUB: not implemented"
+
+	// SetExclusiveMaximum sets the value of ExclusiveMaximum.
+	return
 }
 
-// SetExclusiveMaximum sets the value of ExclusiveMaximum.
-func (s *Schema) SetExclusiveMaximum(val OptExclusiveMaximum) {
-	s.ExclusiveMaximum = val
-}
+func (s *Schema) SetExclusiveMaximum(val OptExclusiveMaximum) { _ = "STUB: not implemented"; return }
 
 // SetMinimum sets the value of Minimum.
 func (s *Schema) SetMinimum(val OptMinimum) {
-	s.Minimum = val
+	_ = "STUB: not implemented"
+
+	// SetExclusiveMinimum sets the value of ExclusiveMinimum.
+	return
 }
 
-// SetExclusiveMinimum sets the value of ExclusiveMinimum.
-func (s *Schema) SetExclusiveMinimum(val OptExclusiveMinimum) {
-	s.ExclusiveMinimum = val
-}
+func (s *Schema) SetExclusiveMinimum(val OptExclusiveMinimum) { _ = "STUB: not implemented"; return }
 
 // SetMaxLength sets the value of MaxLength.
 func (s *Schema) SetMaxLength(val OptPositiveInteger) {
-	s.MaxLength = val
+	_ = "STUB: not implemented"
+
+	// SetMinLength sets the value of MinLength.
+	return
 }
 
-// SetMinLength sets the value of MinLength.
 func (s *Schema) SetMinLength(val OptPositiveInteger) {
-	s.MinLength = val
+	_ = "STUB: not implemented"
+
+	// SetPattern sets the value of Pattern.
+	return
 }
 
-// SetPattern sets the value of Pattern.
 func (s *Schema) SetPattern(val OptPattern) {
-	s.Pattern = val
+	_ = "STUB: not implemented"
+
+	// SetMaxItems sets the value of MaxItems.
+	return
 }
 
-// SetMaxItems sets the value of MaxItems.
 func (s *Schema) SetMaxItems(val OptPositiveInteger) {
-	s.MaxItems = val
+	_ = "STUB: not implemented"
+
+	// SetMinItems sets the value of MinItems.
+	return
 }
 
-// SetMinItems sets the value of MinItems.
 func (s *Schema) SetMinItems(val OptPositiveInteger) {
-	s.MinItems = val
+	_ = "STUB: not implemented"
+
+	// SetUniqueItems sets the value of UniqueItems.
+	return
 }
 
-// SetUniqueItems sets the value of UniqueItems.
-func (s *Schema) SetUniqueItems(val OptUniqueItems) {
-	s.UniqueItems = val
-}
+func (s *Schema) SetUniqueItems(val OptUniqueItems) { _ = "STUB: not implemented"; return }
 
 // SetMaxProperties sets the value of MaxProperties.
-func (s *Schema) SetMaxProperties(val OptPositiveInteger) {
-	s.MaxProperties = val
-}
+func (s *Schema) SetMaxProperties(val OptPositiveInteger) { _ = "STUB: not implemented"; return }
 
 // SetMinProperties sets the value of MinProperties.
-func (s *Schema) SetMinProperties(val OptPositiveInteger) {
-	s.MinProperties = val
-}
+func (s *Schema) SetMinProperties(val OptPositiveInteger) { _ = "STUB: not implemented"; return }
 
 // SetRequired sets the value of Required.
 func (s *Schema) SetRequired(val StringArray) {
-	s.Required = val
+	_ = "STUB: not implemented"
+
+	// SetEnum sets the value of Enum.
+	return
 }
 
-// SetEnum sets the value of Enum.
 func (s *Schema) SetEnum(val Enum) {
-	s.Enum = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *Schema) SetType(val OptSchemaType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetAllOf sets the value of AllOf.
+	return
 }
 
-// SetAllOf sets the value of AllOf.
 func (s *Schema) SetAllOf(val []SchemaOrReference) {
-	s.AllOf = val
+	_ = "STUB: not implemented"
+
+	// SetOneOf sets the value of OneOf.
+	return
 }
 
-// SetOneOf sets the value of OneOf.
 func (s *Schema) SetOneOf(val []SchemaOrReference) {
-	s.OneOf = val
+	_ = "STUB: not implemented"
+
+	// SetAnyOf sets the value of AnyOf.
+	return
 }
 
-// SetAnyOf sets the value of AnyOf.
 func (s *Schema) SetAnyOf(val []SchemaOrReference) {
-	s.AnyOf = val
+	_ = "STUB: not implemented"
+
+	// SetNot sets the value of Not.
+	return
 }
 
-// SetNot sets the value of Not.
 func (s *Schema) SetNot(val *Schema) {
-	s.Not = val
+	_ = "STUB: not implemented"
+
+	// SetItems sets the value of Items.
+	return
 }
 
-// SetItems sets the value of Items.
 func (s *Schema) SetItems(val *SchemaOrReference) {
-	s.Items = val
+	_ = "STUB: not implemented"
+
+	// SetProperties sets the value of Properties.
+	return
 }
 
-// SetProperties sets the value of Properties.
 func (s *Schema) SetProperties(val OptSchemaProperties) {
-	s.Properties = val
+	_ = "STUB: not implemented"
+
+	// SetAdditionalProperties sets the value of AdditionalProperties.
+	return
 }
 
-// SetAdditionalProperties sets the value of AdditionalProperties.
 func (s *Schema) SetAdditionalProperties(val *SchemaAdditionalProperties) {
-	s.AdditionalProperties = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetDefault sets the value of Default.
 func (s *Schema) SetDefault(val DefaultType) {
-	s.Default = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Schema) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *Schema) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetFormat sets the value of Format.
 func (s *Schema) SetFormat(val OptString) {
-	s.Format = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Schema) SetPattern0Props(val SchemaPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Schema) SetPattern0Props(val SchemaPattern0) { _ = "STUB: not implemented"; return }
 
 // SchemaAdditionalProperties represents sum type.
 type SchemaAdditionalProperties struct {
@@ -5026,52 +4862,44 @@ const (
 
 // IsSchemaOrReference reports whether SchemaAdditionalProperties is SchemaOrReference.
 func (s SchemaAdditionalProperties) IsSchemaOrReference() bool {
-	return s.Type == SchemaOrReferenceSchemaAdditionalProperties
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsBool reports whether SchemaAdditionalProperties is bool.
-func (s SchemaAdditionalProperties) IsBool() bool { return s.Type == BoolSchemaAdditionalProperties }
+func (s SchemaAdditionalProperties) IsBool() bool { _ = "STUB: not implemented"; return false }
 
 // SetSchemaOrReference sets SchemaAdditionalProperties to SchemaOrReference.
 func (s *SchemaAdditionalProperties) SetSchemaOrReference(v SchemaOrReference) {
-	s.Type = SchemaOrReferenceSchemaAdditionalProperties
-	s.SchemaOrReference = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetSchemaOrReference returns SchemaOrReference and true boolean if SchemaAdditionalProperties is SchemaOrReference.
 func (s SchemaAdditionalProperties) GetSchemaOrReference() (v SchemaOrReference, ok bool) {
-	if !s.IsSchemaOrReference() {
-		return v, false
-	}
-	return s.SchemaOrReference, true
+	_ = "STUB: not implemented"
+	return *new(SchemaOrReference), false
 }
 
 // NewSchemaOrReferenceSchemaAdditionalProperties returns new SchemaAdditionalProperties from SchemaOrReference.
 func NewSchemaOrReferenceSchemaAdditionalProperties(v SchemaOrReference) SchemaAdditionalProperties {
-	var s SchemaAdditionalProperties
-	s.SetSchemaOrReference(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SchemaAdditionalProperties)
 }
 
 // SetBool sets SchemaAdditionalProperties to bool.
-func (s *SchemaAdditionalProperties) SetBool(v bool) {
-	s.Type = BoolSchemaAdditionalProperties
-	s.Bool = v
-}
+func (s *SchemaAdditionalProperties) SetBool(v bool) { _ = "STUB: not implemented"; return }
 
 // GetBool returns bool and true boolean if SchemaAdditionalProperties is bool.
 func (s SchemaAdditionalProperties) GetBool() (v bool, ok bool) {
-	if !s.IsBool() {
-		return v, false
-	}
-	return s.Bool, true
+	_ = "STUB: not implemented"
+	return false, false
 }
 
 // NewBoolSchemaAdditionalProperties returns new SchemaAdditionalProperties from bool.
 func NewBoolSchemaAdditionalProperties(v bool) SchemaAdditionalProperties {
-	var s SchemaAdditionalProperties
-	s.SetBool(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SchemaAdditionalProperties)
 }
 
 // Ref: #/definitions/schemaOrReference
@@ -5092,51 +4920,39 @@ const (
 )
 
 // IsSchema reports whether SchemaOrReference is Schema.
-func (s SchemaOrReference) IsSchema() bool { return s.Type == SchemaSchemaOrReference }
+func (s SchemaOrReference) IsSchema() bool { _ = "STUB: not implemented"; return false }
 
 // IsReference reports whether SchemaOrReference is Reference.
-func (s SchemaOrReference) IsReference() bool { return s.Type == ReferenceSchemaOrReference }
+func (s SchemaOrReference) IsReference() bool { _ = "STUB: not implemented"; return false }
 
 // SetSchema sets SchemaOrReference to Schema.
-func (s *SchemaOrReference) SetSchema(v Schema) {
-	s.Type = SchemaSchemaOrReference
-	s.Schema = v
-}
+func (s *SchemaOrReference) SetSchema(v Schema) { _ = "STUB: not implemented"; return }
 
 // GetSchema returns Schema and true boolean if SchemaOrReference is Schema.
 func (s SchemaOrReference) GetSchema() (v Schema, ok bool) {
-	if !s.IsSchema() {
-		return v, false
-	}
-	return s.Schema, true
+	_ = "STUB: not implemented"
+	return *new(Schema), false
 }
 
 // NewSchemaSchemaOrReference returns new SchemaOrReference from Schema.
 func NewSchemaSchemaOrReference(v Schema) SchemaOrReference {
-	var s SchemaOrReference
-	s.SetSchema(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SchemaOrReference)
 }
 
 // SetReference sets SchemaOrReference to Reference.
-func (s *SchemaOrReference) SetReference(v Reference) {
-	s.Type = ReferenceSchemaOrReference
-	s.Reference = v
-}
+func (s *SchemaOrReference) SetReference(v Reference) { _ = "STUB: not implemented"; return }
 
 // GetReference returns Reference and true boolean if SchemaOrReference is Reference.
 func (s SchemaOrReference) GetReference() (v Reference, ok bool) {
-	if !s.IsReference() {
-		return v, false
-	}
-	return s.Reference, true
+	_ = "STUB: not implemented"
+	return *new(Reference), false
 }
 
 // NewReferenceSchemaOrReference returns new SchemaOrReference from Reference.
 func NewReferenceSchemaOrReference(v Reference) SchemaOrReference {
-	var s SchemaOrReference
-	s.SetReference(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SchemaOrReference)
 }
 
 type SchemaPattern0 map[string]SpecificationExtension
@@ -5174,68 +4990,13 @@ const (
 )
 
 // AllValues returns all SchemaType values.
-func (SchemaType) AllValues() []SchemaType {
-	return []SchemaType{
-		SchemaTypeArray,
-		SchemaTypeBoolean,
-		SchemaTypeInteger,
-		SchemaTypeNull,
-		SchemaTypeNumber,
-		SchemaTypeObject,
-		SchemaTypeString,
-	}
-}
+func (SchemaType) AllValues() []SchemaType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s SchemaType) MarshalText() ([]byte, error) {
-	switch s {
-	case SchemaTypeArray:
-		return []byte(s), nil
-	case SchemaTypeBoolean:
-		return []byte(s), nil
-	case SchemaTypeInteger:
-		return []byte(s), nil
-	case SchemaTypeNull:
-		return []byte(s), nil
-	case SchemaTypeNumber:
-		return []byte(s), nil
-	case SchemaTypeObject:
-		return []byte(s), nil
-	case SchemaTypeString:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s SchemaType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *SchemaType) UnmarshalText(data []byte) error {
-	switch SchemaType(data) {
-	case SchemaTypeArray:
-		*s = SchemaTypeArray
-		return nil
-	case SchemaTypeBoolean:
-		*s = SchemaTypeBoolean
-		return nil
-	case SchemaTypeInteger:
-		*s = SchemaTypeInteger
-		return nil
-	case SchemaTypeNull:
-		*s = SchemaTypeNull
-		return nil
-	case SchemaTypeNumber:
-		*s = SchemaTypeNumber
-		return nil
-	case SchemaTypeObject:
-		*s = SchemaTypeObject
-		return nil
-	case SchemaTypeString:
-		*s = SchemaTypeString
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *SchemaType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/definitions/schemasOrReferences
 type SchemasOrReferences map[string]SchemaOrReference
@@ -5290,96 +5051,122 @@ type SecurityScheme struct {
 
 // GetType returns the value of Type.
 func (s *SecurityScheme) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
 func (s *SecurityScheme) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetName returns the value of Name.
+	new(OptString)
 }
 
-// GetName returns the value of Name.
 func (s *SecurityScheme) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetIn returns the value of In.
+	return *new(OptString)
 }
 
-// GetIn returns the value of In.
 func (s *SecurityScheme) GetIn() OptString {
-	return s.In
+	_ = "STUB: not implemented"
+
+	// GetScheme returns the value of Scheme.
+	return *new(OptString)
 }
 
-// GetScheme returns the value of Scheme.
 func (s *SecurityScheme) GetScheme() OptString {
-	return s.Scheme
+	_ = "STUB: not implemented"
+
+	// GetBearerFormat returns the value of BearerFormat.
+	return *new(OptString)
 }
 
-// GetBearerFormat returns the value of BearerFormat.
 func (s *SecurityScheme) GetBearerFormat() OptString {
-	return s.BearerFormat
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFlows returns the value of Flows.
+	new(OptString)
 }
 
-// GetFlows returns the value of Flows.
 func (s *SecurityScheme) GetFlows() OptOauthFlows {
-	return s.Flows
+	_ = "STUB: not implemented"
+
+	// GetOpenIdConnectUrl returns the value of OpenIdConnectUrl.
+	return *new(OptOauthFlows)
 }
 
-// GetOpenIdConnectUrl returns the value of OpenIdConnectUrl.
 func (s *SecurityScheme) GetOpenIdConnectUrl() OptString {
-	return s.OpenIdConnectUrl
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetPattern0Props returns the value of Pattern0Props.
 func (s *SecurityScheme) GetPattern0Props() SecuritySchemePattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetType sets the value of Type.
+	new(SecuritySchemePattern0)
 }
 
-// SetType sets the value of Type.
 func (s *SecurityScheme) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *SecurityScheme) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *SecurityScheme) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetName sets the value of Name.
 func (s *SecurityScheme) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetIn sets the value of In.
+	return
 }
 
-// SetIn sets the value of In.
 func (s *SecurityScheme) SetIn(val OptString) {
-	s.In = val
+	_ = "STUB: not implemented"
+
+	// SetScheme sets the value of Scheme.
+	return
 }
 
-// SetScheme sets the value of Scheme.
 func (s *SecurityScheme) SetScheme(val OptString) {
-	s.Scheme = val
+	_ = "STUB: not implemented"
+
+	// SetBearerFormat sets the value of BearerFormat.
+	return
 }
 
-// SetBearerFormat sets the value of BearerFormat.
-func (s *SecurityScheme) SetBearerFormat(val OptString) {
-	s.BearerFormat = val
-}
+func (s *SecurityScheme) SetBearerFormat(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetFlows sets the value of Flows.
 func (s *SecurityScheme) SetFlows(val OptOauthFlows) {
-	s.Flows = val
+	_ = "STUB: not implemented"
+
+	// SetOpenIdConnectUrl sets the value of OpenIdConnectUrl.
+	return
 }
 
-// SetOpenIdConnectUrl sets the value of OpenIdConnectUrl.
-func (s *SecurityScheme) SetOpenIdConnectUrl(val OptString) {
-	s.OpenIdConnectUrl = val
-}
+func (s *SecurityScheme) SetOpenIdConnectUrl(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetPattern0Props sets the value of Pattern0Props.
 func (s *SecurityScheme) SetPattern0Props(val SecuritySchemePattern0) {
-	s.Pattern0Props = val
+	_ = "STUB: not implemented"
+	return
+
+	// Ref: #/definitions/securitySchemeOrReference
+	// SecuritySchemeOrReference represents sum type.
 }
 
-// Ref: #/definitions/securitySchemeOrReference
-// SecuritySchemeOrReference represents sum type.
 type SecuritySchemeOrReference struct {
 	Type           SecuritySchemeOrReferenceType // switch on this field
 	SecurityScheme SecurityScheme
@@ -5396,55 +5183,42 @@ const (
 )
 
 // IsSecurityScheme reports whether SecuritySchemeOrReference is SecurityScheme.
-func (s SecuritySchemeOrReference) IsSecurityScheme() bool {
-	return s.Type == SecuritySchemeSecuritySchemeOrReference
-}
+func (s SecuritySchemeOrReference) IsSecurityScheme() bool { _ = "STUB: not implemented"; return false }
 
 // IsReference reports whether SecuritySchemeOrReference is Reference.
-func (s SecuritySchemeOrReference) IsReference() bool {
-	return s.Type == ReferenceSecuritySchemeOrReference
-}
+func (s SecuritySchemeOrReference) IsReference() bool { _ = "STUB: not implemented"; return false }
 
 // SetSecurityScheme sets SecuritySchemeOrReference to SecurityScheme.
 func (s *SecuritySchemeOrReference) SetSecurityScheme(v SecurityScheme) {
-	s.Type = SecuritySchemeSecuritySchemeOrReference
-	s.SecurityScheme = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetSecurityScheme returns SecurityScheme and true boolean if SecuritySchemeOrReference is SecurityScheme.
 func (s SecuritySchemeOrReference) GetSecurityScheme() (v SecurityScheme, ok bool) {
-	if !s.IsSecurityScheme() {
-		return v, false
-	}
-	return s.SecurityScheme, true
+	_ = "STUB: not implemented"
+	return *new(SecurityScheme), false
 }
 
 // NewSecuritySchemeSecuritySchemeOrReference returns new SecuritySchemeOrReference from SecurityScheme.
 func NewSecuritySchemeSecuritySchemeOrReference(v SecurityScheme) SecuritySchemeOrReference {
-	var s SecuritySchemeOrReference
-	s.SetSecurityScheme(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SecuritySchemeOrReference)
 }
 
 // SetReference sets SecuritySchemeOrReference to Reference.
-func (s *SecuritySchemeOrReference) SetReference(v Reference) {
-	s.Type = ReferenceSecuritySchemeOrReference
-	s.Reference = v
-}
+func (s *SecuritySchemeOrReference) SetReference(v Reference) { _ = "STUB: not implemented"; return }
 
 // GetReference returns Reference and true boolean if SecuritySchemeOrReference is Reference.
 func (s SecuritySchemeOrReference) GetReference() (v Reference, ok bool) {
-	if !s.IsReference() {
-		return v, false
-	}
-	return s.Reference, true
+	_ = "STUB: not implemented"
+	return *new(Reference), false
 }
 
 // NewReferenceSecuritySchemeOrReference returns new SecuritySchemeOrReference from Reference.
 func NewReferenceSecuritySchemeOrReference(v Reference) SecuritySchemeOrReference {
-	var s SecuritySchemeOrReference
-	s.SetReference(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SecuritySchemeOrReference)
 }
 
 type SecuritySchemePattern0 map[string]SpecificationExtension
@@ -5482,43 +5256,54 @@ type Server struct {
 
 // GetURL returns the value of URL.
 func (s *Server) GetURL() string {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
 func (s *Server) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetVariables returns the value of Variables.
+	new(OptString)
 }
 
-// GetVariables returns the value of Variables.
 func (s *Server) GetVariables() OptServerVariables {
-	return s.Variables
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	new(OptServerVariables)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Server) GetPattern0Props() ServerPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetURL sets the value of URL.
+	new(ServerPattern0)
 }
 
-// SetURL sets the value of URL.
 func (s *Server) SetURL(val string) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Server) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *Server) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetVariables sets the value of Variables.
 func (s *Server) SetVariables(val OptServerVariables) {
-	s.Variables = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *Server) SetPattern0Props(val ServerPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Server) SetPattern0Props(val ServerPattern0) { _ = "STUB: not implemented"; return }
 
 type ServerPattern0 map[string]SpecificationExtension
 
@@ -5543,42 +5328,55 @@ type ServerVariable struct {
 
 // GetEnum returns the value of Enum.
 func (s *ServerVariable) GetEnum() []string {
-	return s.Enum
+	_ = "STUB: not implemented"
+
+	// GetDefault returns the value of Default.
+	return nil
 }
 
-// GetDefault returns the value of Default.
 func (s *ServerVariable) GetDefault() string {
-	return s.Default
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
 func (s *ServerVariable) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	new(OptString)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *ServerVariable) GetPattern0Props() ServerVariablePattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetEnum sets the value of Enum.
+	new(ServerVariablePattern0)
 }
 
-// SetEnum sets the value of Enum.
 func (s *ServerVariable) SetEnum(val []string) {
-	s.Enum = val
+	_ = "STUB: not implemented"
+
+	// SetDefault sets the value of Default.
+	return
 }
 
-// SetDefault sets the value of Default.
 func (s *ServerVariable) SetDefault(val string) {
-	s.Default = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *ServerVariable) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *ServerVariable) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetPattern0Props sets the value of Pattern0Props.
 func (s *ServerVariable) SetPattern0Props(val ServerVariablePattern0) {
-	s.Pattern0Props = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type ServerVariablePattern0 map[string]SpecificationExtension
@@ -5620,93 +5418,124 @@ type Spec struct {
 
 // GetOpenapi returns the value of Openapi.
 func (s *Spec) GetOpenapi() string {
-	return s.Openapi
+	_ = "STUB: not implemented"
+
+	// GetInfo returns the value of Info.
+	return ""
 }
 
-// GetInfo returns the value of Info.
 func (s *Spec) GetInfo() Info {
-	return s.Info
+	_ = "STUB: not implemented"
+
+	// GetServers returns the value of Servers.
+	return *new(Info)
 }
 
-// GetServers returns the value of Servers.
 func (s *Spec) GetServers() []Server {
-	return s.Servers
+	_ = "STUB: not implemented"
+
+	// GetPaths returns the value of Paths.
+	return nil
 }
 
-// GetPaths returns the value of Paths.
 func (s *Spec) GetPaths() Paths {
-	return s.Paths
+	_ = "STUB: not implemented"
+
+	// GetComponents returns the value of Components.
+	return *new(Paths)
 }
 
-// GetComponents returns the value of Components.
 func (s *Spec) GetComponents() OptComponents {
-	return s.Components
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSecurity returns the value of Security.
+	new(OptComponents)
 }
 
-// GetSecurity returns the value of Security.
 func (s *Spec) GetSecurity() []SecurityRequirement {
-	return s.Security
+	_ = "STUB: not implemented"
+
+	// GetTags returns the value of Tags.
+	return nil
 }
 
-// GetTags returns the value of Tags.
 func (s *Spec) GetTags() []Tag {
-	return s.Tags
+	_ = "STUB: not implemented"
+
+	// GetExternalDocs returns the value of ExternalDocs.
+	return nil
 }
 
-// GetExternalDocs returns the value of ExternalDocs.
 func (s *Spec) GetExternalDocs() OptExternalDocs {
-	return s.ExternalDocs
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	new(OptExternalDocs)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Spec) GetPattern0Props() SpecPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetOpenapi sets the value of Openapi.
+	new(SpecPattern0)
 }
 
-// SetOpenapi sets the value of Openapi.
 func (s *Spec) SetOpenapi(val string) {
-	s.Openapi = val
+	_ = "STUB: not implemented"
+
+	// SetInfo sets the value of Info.
+	return
 }
 
-// SetInfo sets the value of Info.
 func (s *Spec) SetInfo(val Info) {
-	s.Info = val
+	_ = "STUB: not implemented"
+
+	// SetServers sets the value of Servers.
+	return
 }
 
-// SetServers sets the value of Servers.
 func (s *Spec) SetServers(val []Server) {
-	s.Servers = val
+	_ = "STUB: not implemented"
+
+	// SetPaths sets the value of Paths.
+	return
 }
 
-// SetPaths sets the value of Paths.
 func (s *Spec) SetPaths(val Paths) {
-	s.Paths = val
+	_ = "STUB: not implemented"
+
+	// SetComponents sets the value of Components.
+	return
 }
 
-// SetComponents sets the value of Components.
 func (s *Spec) SetComponents(val OptComponents) {
-	s.Components = val
+	_ = "STUB: not implemented"
+
+	// SetSecurity sets the value of Security.
+	return
 }
 
-// SetSecurity sets the value of Security.
 func (s *Spec) SetSecurity(val []SecurityRequirement) {
-	s.Security = val
+	_ = "STUB: not implemented"
+
+	// SetTags sets the value of Tags.
+	return
 }
 
-// SetTags sets the value of Tags.
 func (s *Spec) SetTags(val []Tag) {
-	s.Tags = val
+	_ = "STUB: not implemented"
+
+	// SetExternalDocs sets the value of ExternalDocs.
+	return
 }
 
-// SetExternalDocs sets the value of ExternalDocs.
-func (s *Spec) SetExternalDocs(val OptExternalDocs) {
-	s.ExternalDocs = val
-}
+func (s *Spec) SetExternalDocs(val OptExternalDocs) { _ = "STUB: not implemented"; return }
 
 // SetPattern0Props sets the value of Pattern0Props.
-func (s *Spec) SetPattern0Props(val SpecPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Spec) SetPattern0Props(val SpecPattern0) { _ = "STUB: not implemented"; return }
 
 type SpecPattern0 map[string]SpecificationExtension
 
@@ -5748,43 +5577,50 @@ type Tag struct {
 
 // GetName returns the value of Name.
 func (s *Tag) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
 func (s *Tag) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExternalDocs returns the value of ExternalDocs.
+	new(OptString)
 }
 
-// GetExternalDocs returns the value of ExternalDocs.
 func (s *Tag) GetExternalDocs() OptExternalDocs {
-	return s.ExternalDocs
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	new(OptExternalDocs)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *Tag) GetPattern0Props() TagPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetName sets the value of Name.
+	new(TagPattern0)
 }
 
-// SetName sets the value of Name.
 func (s *Tag) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Tag) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *Tag) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetExternalDocs sets the value of ExternalDocs.
-func (s *Tag) SetExternalDocs(val OptExternalDocs) {
-	s.ExternalDocs = val
-}
+func (s *Tag) SetExternalDocs(val OptExternalDocs) { _ = "STUB: not implemented"; return }
 
 // SetPattern0Props sets the value of Pattern0Props.
-func (s *Tag) SetPattern0Props(val TagPattern0) {
-	s.Pattern0Props = val
-}
+func (s *Tag) SetPattern0Props(val TagPattern0) { _ = "STUB: not implemented"; return }
 
 type TagPattern0 map[string]SpecificationExtension
 
@@ -5817,63 +5653,84 @@ type XML struct {
 
 // GetName returns the value of Name.
 func (s *XML) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetNamespace returns the value of Namespace.
+	return *new(OptString)
 }
 
-// GetNamespace returns the value of Namespace.
 func (s *XML) GetNamespace() OptString {
-	return s.Namespace
+	_ = "STUB: not implemented"
+
+	// GetPrefix returns the value of Prefix.
+	return *new(OptString)
 }
 
-// GetPrefix returns the value of Prefix.
 func (s *XML) GetPrefix() OptString {
-	return s.Prefix
+	_ = "STUB: not implemented"
+
+	// GetAttribute returns the value of Attribute.
+	return *new(OptString)
 }
 
-// GetAttribute returns the value of Attribute.
 func (s *XML) GetAttribute() OptBool {
-	return s.Attribute
+	_ = "STUB: not implemented"
+
+	// GetWrapped returns the value of Wrapped.
+	return *new(OptBool)
 }
 
-// GetWrapped returns the value of Wrapped.
 func (s *XML) GetWrapped() OptBool {
-	return s.Wrapped
+	_ = "STUB: not implemented"
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	return *new(OptBool)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *XML) GetPattern0Props() XMLPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetName sets the value of Name.
+	new(XMLPattern0)
 }
 
-// SetName sets the value of Name.
 func (s *XML) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetNamespace sets the value of Namespace.
+	return
 }
 
-// SetNamespace sets the value of Namespace.
 func (s *XML) SetNamespace(val OptString) {
-	s.Namespace = val
+	_ = "STUB: not implemented"
+
+	// SetPrefix sets the value of Prefix.
+	return
 }
 
-// SetPrefix sets the value of Prefix.
 func (s *XML) SetPrefix(val OptString) {
-	s.Prefix = val
+	_ = "STUB: not implemented"
+
+	// SetAttribute sets the value of Attribute.
+	return
 }
 
-// SetAttribute sets the value of Attribute.
 func (s *XML) SetAttribute(val OptBool) {
-	s.Attribute = val
+	_ = "STUB: not implemented"
+
+	// SetWrapped sets the value of Wrapped.
+	return
 }
 
-// SetWrapped sets the value of Wrapped.
 func (s *XML) SetWrapped(val OptBool) {
-	s.Wrapped = val
+	_ = "STUB: not implemented"
+
+	// SetPattern0Props sets the value of Pattern0Props.
+	return
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
-func (s *XML) SetPattern0Props(val XMLPattern0) {
-	s.Pattern0Props = val
-}
+func (s *XML) SetPattern0Props(val XMLPattern0) { _ = "STUB: not implemented"; return }
 
 type XMLPattern0 map[string]SpecificationExtension
 
@@ -5887,537 +5744,137 @@ func (s *XMLPattern0) init() XMLPattern0 {
 }
 
 // setDefaults set default value of fields.
-func (s *Schema) setDefaults() {
-	{
-		val := bool(false)
-		s.ExclusiveMaximum.SetTo(ExclusiveMaximum(val))
-	}
-	{
-		val := bool(false)
-		s.ExclusiveMinimum.SetTo(ExclusiveMinimum(val))
-	}
-	{
-		val := bool(false)
-		s.UniqueItems.SetTo(UniqueItems(val))
-	}
-}
+func (s *Schema) setDefaults() { _ = "STUB: not implemented"; return }
 
 // Encode encodes Any as json.
-func (s Any) Encode(e *jx.Encoder) {
-	unwrapped := jx.Raw(s)
-
-	if len(unwrapped) != 0 {
-		e.Raw(unwrapped)
-	}
-}
+func (s Any) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Any from json.
-func (s *Any) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Any to nil")
-	}
-	var unwrapped jx.Raw
-	if err := func() error {
-		v, err := d.RawAppend(nil)
-		unwrapped = jx.Raw(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = Any(unwrapped)
-	return nil
-}
+func (s *Any) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s Any) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s Any) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Any) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Any) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s AnysOrExpressions) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s AnysOrExpressions) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s AnysOrExpressions) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s AnysOrExpressions) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes AnysOrExpressions from json.
-func (s *AnysOrExpressions) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode AnysOrExpressions to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem Any
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode AnysOrExpressions")
-	}
-
-	return nil
-}
+func (s *AnysOrExpressions) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s AnysOrExpressions) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *AnysOrExpressions) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *AnysOrExpressions) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Callback) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Callback) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Callback) encodeFields(e *jx.Encoder) {
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-	for k, elem := range s.Pattern1Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Callback) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfCallback = [0]string{}
 
 // Decode decodes Callback from json.
-func (s *Callback) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Callback to nil")
-	}
-	s.Pattern0Props = map[string]PathItem{}
-	s.Pattern1Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		default:
-			var handled bool
-			switch match, err := regexMap["^"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem PathItem
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern1Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-	}); err != nil {
-		return errors.Wrap(err, "decode Callback")
-	}
-
-	return nil
-}
+func (s *Callback) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Callback) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Callback) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Callback) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Callback) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes CallbackOrReference as json.
-func (s CallbackOrReference) Encode(e *jx.Encoder) {
-	switch s.Type {
-	case CallbackCallbackOrReference:
-		s.Callback.Encode(e)
-	case ReferenceCallbackOrReference:
-		s.Reference.Encode(e)
-	}
-}
+func (s CallbackOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
-func (s CallbackOrReference) encodeFields(e *jx.Encoder) {
-	switch s.Type {
-	case CallbackCallbackOrReference:
-		s.Callback.encodeFields(e)
-	case ReferenceCallbackOrReference:
-		s.Reference.encodeFields(e)
-	}
-}
+func (s CallbackOrReference) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes CallbackOrReference from json.
-func (s *CallbackOrReference) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode CallbackOrReference to nil")
-	}
-	// Sum type fields.
-	if typ := d.Next(); typ != jx.Object {
-		return errors.Errorf("unexpected json type %q", typ)
-	}
+func (s *CallbackOrReference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	var found bool
-	if err := d.Capture(func(d *jx.Decoder) error {
-		return d.ObjBytes(func(d *jx.Decoder, key []byte) error {
-			switch string(key) {
-			case "$ref":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ReferenceCallbackOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			}
-			return d.Skip()
-		})
-	}); err != nil {
-		return errors.Wrap(err, "capture")
-	}
-	if !found {
-		s.Type = CallbackCallbackOrReference
-	}
-	switch s.Type {
-	case CallbackCallbackOrReference:
-		if err := s.Callback.Decode(d); err != nil {
-			return err
-		}
-	case ReferenceCallbackOrReference:
-		if err := s.Reference.Decode(d); err != nil {
-			return err
-		}
-	default:
-		return errors.Errorf("inferred invalid type: %s", s.Type)
-	}
-	return nil
-}
+// Sum type fields.
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s CallbackOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *CallbackOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s CallbackPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s CallbackPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s CallbackPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s CallbackPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes CallbackPattern0 from json.
-func (s *CallbackPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode CallbackPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem PathItem
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode CallbackPattern0")
-	}
-
-	return nil
-}
+func (s *CallbackPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s CallbackPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s CallbackPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *CallbackPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *CallbackPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s CallbackPattern1) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s CallbackPattern1) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s CallbackPattern1) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s CallbackPattern1) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes CallbackPattern1 from json.
-func (s *CallbackPattern1) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode CallbackPattern1 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode CallbackPattern1")
-	}
-
-	return nil
-}
+func (s *CallbackPattern1) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s CallbackPattern1) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s CallbackPattern1) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *CallbackPattern1) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *CallbackPattern1) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s CallbacksOrReferences) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s CallbacksOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s CallbacksOrReferences) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s CallbacksOrReferences) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes CallbacksOrReferences from json.
-func (s *CallbacksOrReferences) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode CallbacksOrReferences to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem CallbackOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode CallbacksOrReferences")
-	}
-
-	return nil
-}
+func (s *CallbacksOrReferences) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s CallbacksOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *CallbacksOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *Components) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Components) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Components) encodeFields(e *jx.Encoder) {
-	{
-		if s.Schemas.Set {
-			e.FieldStart("schemas")
-			s.Schemas.Encode(e)
-		}
-	}
-	{
-		if s.Responses.Set {
-			e.FieldStart("responses")
-			s.Responses.Encode(e)
-		}
-	}
-	{
-		if s.Parameters.Set {
-			e.FieldStart("parameters")
-			s.Parameters.Encode(e)
-		}
-	}
-	{
-		if s.Examples.Set {
-			e.FieldStart("examples")
-			s.Examples.Encode(e)
-		}
-	}
-	{
-		if s.RequestBodies.Set {
-			e.FieldStart("requestBodies")
-			s.RequestBodies.Encode(e)
-		}
-	}
-	{
-		if s.Headers.Set {
-			e.FieldStart("headers")
-			s.Headers.Encode(e)
-		}
-	}
-	{
-		if s.SecuritySchemes.Set {
-			e.FieldStart("securitySchemes")
-			s.SecuritySchemes.Encode(e)
-		}
-	}
-	{
-		if s.Links.Set {
-			e.FieldStart("links")
-			s.Links.Encode(e)
-		}
-	}
-	{
-		if s.Callbacks.Set {
-			e.FieldStart("callbacks")
-			s.Callbacks.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Components) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfComponents = [9]string{
 	0: "schemas",
@@ -6432,242 +5889,40 @@ var jsonFieldsNameOfComponents = [9]string{
 }
 
 // Decode decodes Components from json.
-func (s *Components) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Components to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "schemas":
-			if err := func() error {
-				s.Schemas.Reset()
-				if err := s.Schemas.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"schemas\"")
-			}
-		case "responses":
-			if err := func() error {
-				s.Responses.Reset()
-				if err := s.Responses.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"responses\"")
-			}
-		case "parameters":
-			if err := func() error {
-				s.Parameters.Reset()
-				if err := s.Parameters.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"parameters\"")
-			}
-		case "examples":
-			if err := func() error {
-				s.Examples.Reset()
-				if err := s.Examples.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"examples\"")
-			}
-		case "requestBodies":
-			if err := func() error {
-				s.RequestBodies.Reset()
-				if err := s.RequestBodies.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"requestBodies\"")
-			}
-		case "headers":
-			if err := func() error {
-				s.Headers.Reset()
-				if err := s.Headers.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"headers\"")
-			}
-		case "securitySchemes":
-			if err := func() error {
-				s.SecuritySchemes.Reset()
-				if err := s.SecuritySchemes.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"securitySchemes\"")
-			}
-		case "links":
-			if err := func() error {
-				s.Links.Reset()
-				if err := s.Links.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"links\"")
-			}
-		case "callbacks":
-			if err := func() error {
-				s.Callbacks.Reset()
-				if err := s.Callbacks.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"callbacks\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Components")
-	}
-
-	return nil
-}
+func (s *Components) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Components) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Components) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Components) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Components) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s ComponentsPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ComponentsPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ComponentsPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ComponentsPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ComponentsPattern0 from json.
-func (s *ComponentsPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ComponentsPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ComponentsPattern0")
-	}
-
-	return nil
-}
+func (s *ComponentsPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ComponentsPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ComponentsPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *Contact) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Contact) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Contact) encodeFields(e *jx.Encoder) {
-	{
-		if s.Name.Set {
-			e.FieldStart("name")
-			s.Name.Encode(e)
-		}
-	}
-	{
-		if s.URL.Set {
-			e.FieldStart("url")
-			s.URL.Encode(e)
-		}
-	}
-	{
-		if s.Email.Set {
-			e.FieldStart("email")
-			s.Email.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Contact) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfContact = [3]string{
 	0: "name",
@@ -6676,211 +5931,46 @@ var jsonFieldsNameOfContact = [3]string{
 }
 
 // Decode decodes Contact from json.
-func (s *Contact) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Contact to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "name":
-			if err := func() error {
-				s.Name.Reset()
-				if err := s.Name.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"name\"")
-			}
-		case "url":
-			if err := func() error {
-				s.URL.Reset()
-				if err := s.URL.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"url\"")
-			}
-		case "email":
-			if err := func() error {
-				s.Email.Reset()
-				if err := s.Email.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"email\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Contact")
-	}
-
-	return nil
-}
+func (s *Contact) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Contact) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Contact) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Contact) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Contact) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s ContactPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ContactPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ContactPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ContactPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ContactPattern0 from json.
-func (s *ContactPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ContactPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ContactPattern0")
-	}
-
-	return nil
-}
+func (s *ContactPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s ContactPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s ContactPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ContactPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ContactPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes DefaultType as json.
-func (s DefaultType) Encode(e *jx.Encoder) {
-	unwrapped := jx.Raw(s)
-
-	if len(unwrapped) != 0 {
-		e.Raw(unwrapped)
-	}
-}
+func (s DefaultType) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes DefaultType from json.
-func (s *DefaultType) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode DefaultType to nil")
-	}
-	var unwrapped jx.Raw
-	if err := func() error {
-		v, err := d.RawAppend(nil)
-		unwrapped = jx.Raw(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = DefaultType(unwrapped)
-	return nil
-}
+func (s *DefaultType) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s DefaultType) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s DefaultType) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *DefaultType) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *DefaultType) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Discriminator) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Discriminator) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Discriminator) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("propertyName")
-		e.Str(s.PropertyName)
-	}
-	{
-		if s.Mapping.Set {
-			e.FieldStart("mapping")
-			s.Mapping.Encode(e)
-		}
-	}
-}
+func (s *Discriminator) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfDiscriminator = [2]string{
 	0: "propertyName",
@@ -6888,137 +5978,28 @@ var jsonFieldsNameOfDiscriminator = [2]string{
 }
 
 // Decode decodes Discriminator from json.
-func (s *Discriminator) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Discriminator to nil")
-	}
-	var requiredBitSet [1]uint8
+func (s *Discriminator) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "propertyName":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.PropertyName = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"propertyName\"")
-			}
-		case "mapping":
-			if err := func() error {
-				s.Mapping.Reset()
-				if err := s.Mapping.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"mapping\"")
-			}
-		default:
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Discriminator")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfDiscriminator) {
-					name = jsonFieldsNameOfDiscriminator[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Discriminator) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Discriminator) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Discriminator) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Discriminator) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Encoding) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Encoding) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Encoding) encodeFields(e *jx.Encoder) {
-	{
-		if s.ContentType.Set {
-			e.FieldStart("contentType")
-			s.ContentType.Encode(e)
-		}
-	}
-	{
-		if s.Headers.Set {
-			e.FieldStart("headers")
-			s.Headers.Encode(e)
-		}
-	}
-	{
-		if s.Style.Set {
-			e.FieldStart("style")
-			s.Style.Encode(e)
-		}
-	}
-	{
-		if s.Explode.Set {
-			e.FieldStart("explode")
-			s.Explode.Encode(e)
-		}
-	}
-	{
-		if s.AllowReserved.Set {
-			e.FieldStart("allowReserved")
-			s.AllowReserved.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Encoding) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfEncoding = [5]string{
 	0: "contentType",
@@ -7029,319 +6010,61 @@ var jsonFieldsNameOfEncoding = [5]string{
 }
 
 // Decode decodes Encoding from json.
-func (s *Encoding) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Encoding to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "contentType":
-			if err := func() error {
-				s.ContentType.Reset()
-				if err := s.ContentType.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"contentType\"")
-			}
-		case "headers":
-			if err := func() error {
-				s.Headers.Reset()
-				if err := s.Headers.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"headers\"")
-			}
-		case "style":
-			if err := func() error {
-				s.Style.Reset()
-				if err := s.Style.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"style\"")
-			}
-		case "explode":
-			if err := func() error {
-				s.Explode.Reset()
-				if err := s.Explode.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"explode\"")
-			}
-		case "allowReserved":
-			if err := func() error {
-				s.AllowReserved.Reset()
-				if err := s.AllowReserved.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"allowReserved\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Encoding")
-	}
-
-	return nil
-}
+func (s *Encoding) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Encoding) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Encoding) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Encoding) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Encoding) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s EncodingPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s EncodingPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s EncodingPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s EncodingPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes EncodingPattern0 from json.
-func (s *EncodingPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode EncodingPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode EncodingPattern0")
-	}
-
-	return nil
-}
+func (s *EncodingPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s EncodingPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s EncodingPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *EncodingPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *EncodingPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s Encodings) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s Encodings) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s Encodings) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s Encodings) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Encodings from json.
-func (s *Encodings) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Encodings to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem Encoding
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Encodings")
-	}
-
-	return nil
-}
+func (s *Encodings) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s Encodings) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s Encodings) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Encodings) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Encodings) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Enum as json.
-func (s Enum) Encode(e *jx.Encoder) {
-	unwrapped := []jx.Raw(s)
-	if unwrapped == nil {
-		e.ArrEmpty()
-		return
-	}
-	if unwrapped != nil {
-		e.ArrStart()
-		for _, elem := range unwrapped {
-			if len(elem) != 0 {
-				e.Raw(elem)
-			}
-		}
-		e.ArrEnd()
-	}
-}
+func (s Enum) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Enum from json.
-func (s *Enum) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Enum to nil")
-	}
-	var unwrapped []jx.Raw
-	if err := func() error {
-		unwrapped = make([]jx.Raw, 0)
-		if err := d.Arr(func(d *jx.Decoder) error {
-			var elem jx.Raw
-			v, err := d.RawAppend(nil)
-			elem = jx.Raw(v)
-			if err != nil {
-				return err
-			}
-			unwrapped = append(unwrapped, elem)
-			return nil
-		}); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = Enum(unwrapped)
-	return nil
-}
+func (s *Enum) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s Enum) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s Enum) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Enum) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Enum) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Example) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Example) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Example) encodeFields(e *jx.Encoder) {
-	{
-		if s.Summary.Set {
-			e.FieldStart("summary")
-			s.Summary.Encode(e)
-		}
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("value")
-		s.Value.Encode(e)
-	}
-	{
-		if s.ExternalValue.Set {
-			e.FieldStart("externalValue")
-			s.ExternalValue.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Example) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfExample = [4]string{
 	0: "summary",
@@ -7351,447 +6074,117 @@ var jsonFieldsNameOfExample = [4]string{
 }
 
 // Decode decodes Example from json.
-func (s *Example) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Example to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "summary":
-			if err := func() error {
-				s.Summary.Reset()
-				if err := s.Summary.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"summary\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "value":
-			if err := func() error {
-				if err := s.Value.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"value\"")
-			}
-		case "externalValue":
-			if err := func() error {
-				s.ExternalValue.Reset()
-				if err := s.ExternalValue.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"externalValue\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Example")
-	}
-
-	return nil
-}
+func (s *Example) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Example) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Example) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Example) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Example) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ExampleOrReference as json.
-func (s ExampleOrReference) Encode(e *jx.Encoder) {
-	switch s.Type {
-	case ExampleExampleOrReference:
-		s.Example.Encode(e)
-	case ReferenceExampleOrReference:
-		s.Reference.Encode(e)
-	}
-}
+func (s ExampleOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
-func (s ExampleOrReference) encodeFields(e *jx.Encoder) {
-	switch s.Type {
-	case ExampleExampleOrReference:
-		s.Example.encodeFields(e)
-	case ReferenceExampleOrReference:
-		s.Reference.encodeFields(e)
-	}
-}
+func (s ExampleOrReference) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ExampleOrReference from json.
-func (s *ExampleOrReference) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ExampleOrReference to nil")
-	}
-	// Sum type fields.
-	if typ := d.Next(); typ != jx.Object {
-		return errors.Errorf("unexpected json type %q", typ)
-	}
+func (s *ExampleOrReference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	var found bool
-	if err := d.Capture(func(d *jx.Decoder) error {
-		return d.ObjBytes(func(d *jx.Decoder, key []byte) error {
-			switch string(key) {
-			case "$ref":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ReferenceExampleOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "description":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ExampleExampleOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "externalValue":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ExampleExampleOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "summary":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ExampleExampleOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "value":
-				match := ExampleExampleOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			}
-			return d.Skip()
-		})
-	}); err != nil {
-		return errors.Wrap(err, "capture")
-	}
-	if !found {
-		return errors.New("unable to detect sum type variant")
-	}
-	switch s.Type {
-	case ExampleExampleOrReference:
-		if err := s.Example.Decode(d); err != nil {
-			return err
-		}
-	case ReferenceExampleOrReference:
-		if err := s.Reference.Decode(d); err != nil {
-			return err
-		}
-	default:
-		return errors.Errorf("inferred invalid type: %s", s.Type)
-	}
-	return nil
-}
+// Sum type fields.
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ExampleOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ExampleOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s ExamplePattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ExamplePattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ExamplePattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ExamplePattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ExamplePattern0 from json.
-func (s *ExamplePattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ExamplePattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ExamplePattern0")
-	}
-
-	return nil
-}
+func (s *ExamplePattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s ExamplePattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s ExamplePattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ExamplePattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ExamplePattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s ExamplesOrReferences) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ExamplesOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ExamplesOrReferences) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ExamplesOrReferences) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ExamplesOrReferences from json.
-func (s *ExamplesOrReferences) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ExamplesOrReferences to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem ExampleOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ExamplesOrReferences")
-	}
-
-	return nil
-}
+func (s *ExamplesOrReferences) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ExamplesOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ExamplesOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes ExclusiveMaximum as json.
-func (s ExclusiveMaximum) Encode(e *jx.Encoder) {
-	unwrapped := bool(s)
-
-	e.Bool(unwrapped)
-}
+func (s ExclusiveMaximum) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ExclusiveMaximum from json.
-func (s *ExclusiveMaximum) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ExclusiveMaximum to nil")
-	}
-	var unwrapped bool
-	if err := func() error {
-		v, err := d.Bool()
-		unwrapped = bool(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = ExclusiveMaximum(unwrapped)
-	return nil
-}
+func (s *ExclusiveMaximum) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s ExclusiveMaximum) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s ExclusiveMaximum) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ExclusiveMaximum) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ExclusiveMaximum) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ExclusiveMinimum as json.
-func (s ExclusiveMinimum) Encode(e *jx.Encoder) {
-	unwrapped := bool(s)
-
-	e.Bool(unwrapped)
-}
+func (s ExclusiveMinimum) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ExclusiveMinimum from json.
-func (s *ExclusiveMinimum) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ExclusiveMinimum to nil")
-	}
-	var unwrapped bool
-	if err := func() error {
-		v, err := d.Bool()
-		unwrapped = bool(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = ExclusiveMinimum(unwrapped)
-	return nil
-}
+func (s *ExclusiveMinimum) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s ExclusiveMinimum) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s ExclusiveMinimum) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ExclusiveMinimum) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ExclusiveMinimum) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *ExternalDocs) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *ExternalDocs) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *ExternalDocs) encodeFields(e *jx.Encoder) {
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("url")
-		e.Str(s.URL)
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *ExternalDocs) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfExternalDocs = [2]string{
 	0: "description",
@@ -7799,253 +6192,49 @@ var jsonFieldsNameOfExternalDocs = [2]string{
 }
 
 // Decode decodes ExternalDocs from json.
-func (s *ExternalDocs) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ExternalDocs to nil")
-	}
-	var requiredBitSet [1]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *ExternalDocs) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "url":
-			requiredBitSet[0] |= 1 << 1
-			if err := func() error {
-				v, err := d.Str()
-				s.URL = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"url\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ExternalDocs")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000010,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfExternalDocs) {
-					name = jsonFieldsNameOfExternalDocs[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *ExternalDocs) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *ExternalDocs) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ExternalDocs) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ExternalDocs) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s ExternalDocsPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ExternalDocsPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ExternalDocsPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ExternalDocsPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ExternalDocsPattern0 from json.
-func (s *ExternalDocsPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ExternalDocsPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ExternalDocsPattern0")
-	}
-
-	return nil
-}
+func (s *ExternalDocsPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ExternalDocsPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ExternalDocsPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *Header) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Header) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Header) encodeFields(e *jx.Encoder) {
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.Required.Set {
-			e.FieldStart("required")
-			s.Required.Encode(e)
-		}
-	}
-	{
-		if s.Deprecated.Set {
-			e.FieldStart("deprecated")
-			s.Deprecated.Encode(e)
-		}
-	}
-	{
-		if s.AllowEmptyValue.Set {
-			e.FieldStart("allowEmptyValue")
-			s.AllowEmptyValue.Encode(e)
-		}
-	}
-	{
-		if s.Style.Set {
-			e.FieldStart("style")
-			s.Style.Encode(e)
-		}
-	}
-	{
-		if s.Explode.Set {
-			e.FieldStart("explode")
-			s.Explode.Encode(e)
-		}
-	}
-	{
-		if s.AllowReserved.Set {
-			e.FieldStart("allowReserved")
-			s.AllowReserved.Encode(e)
-		}
-	}
-	{
-		if s.Schema != nil {
-			e.FieldStart("schema")
-			s.Schema.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("example")
-		s.Example.Encode(e)
-	}
-	{
-		if s.Examples.Set {
-			e.FieldStart("examples")
-			s.Examples.Encode(e)
-		}
-	}
-	{
-		if s.Content.Set {
-			e.FieldStart("content")
-			s.Content.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Header) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfHeader = [11]string{
 	0:  "description",
@@ -8062,547 +6251,114 @@ var jsonFieldsNameOfHeader = [11]string{
 }
 
 // Decode decodes Header from json.
-func (s *Header) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Header to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "required":
-			if err := func() error {
-				s.Required.Reset()
-				if err := s.Required.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"required\"")
-			}
-		case "deprecated":
-			if err := func() error {
-				s.Deprecated.Reset()
-				if err := s.Deprecated.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"deprecated\"")
-			}
-		case "allowEmptyValue":
-			if err := func() error {
-				s.AllowEmptyValue.Reset()
-				if err := s.AllowEmptyValue.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"allowEmptyValue\"")
-			}
-		case "style":
-			if err := func() error {
-				s.Style.Reset()
-				if err := s.Style.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"style\"")
-			}
-		case "explode":
-			if err := func() error {
-				s.Explode.Reset()
-				if err := s.Explode.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"explode\"")
-			}
-		case "allowReserved":
-			if err := func() error {
-				s.AllowReserved.Reset()
-				if err := s.AllowReserved.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"allowReserved\"")
-			}
-		case "schema":
-			if err := func() error {
-				s.Schema = nil
-				var elem SchemaOrReference
-				if err := elem.Decode(d); err != nil {
-					return err
-				}
-				s.Schema = &elem
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"schema\"")
-			}
-		case "example":
-			if err := func() error {
-				if err := s.Example.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"example\"")
-			}
-		case "examples":
-			if err := func() error {
-				s.Examples.Reset()
-				if err := s.Examples.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"examples\"")
-			}
-		case "content":
-			if err := func() error {
-				s.Content.Reset()
-				if err := s.Content.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"content\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Header")
-	}
-
-	return nil
-}
+func (s *Header) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Header) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Header) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Header) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Header) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes HeaderOrReference as json.
-func (s HeaderOrReference) Encode(e *jx.Encoder) {
-	switch s.Type {
-	case HeaderHeaderOrReference:
-		s.Header.Encode(e)
-	case ReferenceHeaderOrReference:
-		s.Reference.Encode(e)
-	}
-}
+func (s HeaderOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
-func (s HeaderOrReference) encodeFields(e *jx.Encoder) {
-	switch s.Type {
-	case HeaderHeaderOrReference:
-		s.Header.encodeFields(e)
-	case ReferenceHeaderOrReference:
-		s.Reference.encodeFields(e)
-	}
-}
+func (s HeaderOrReference) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes HeaderOrReference from json.
-func (s *HeaderOrReference) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode HeaderOrReference to nil")
-	}
-	// Sum type fields.
-	if typ := d.Next(); typ != jx.Object {
-		return errors.Errorf("unexpected json type %q", typ)
-	}
+func (s *HeaderOrReference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	var found bool
-	if err := d.Capture(func(d *jx.Decoder) error {
-		return d.ObjBytes(func(d *jx.Decoder, key []byte) error {
-			switch string(key) {
-			case "$ref":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ReferenceHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "allowEmptyValue":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "allowReserved":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "content":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "deprecated":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "description":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "example":
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "examples":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "explode":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "required":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "schema":
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "style":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := HeaderHeaderOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			}
-			return d.Skip()
-		})
-	}); err != nil {
-		return errors.Wrap(err, "capture")
-	}
-	if !found {
-		return errors.New("unable to detect sum type variant")
-	}
-	switch s.Type {
-	case HeaderHeaderOrReference:
-		if err := s.Header.Decode(d); err != nil {
-			return err
-		}
-	case ReferenceHeaderOrReference:
-		if err := s.Reference.Decode(d); err != nil {
-			return err
-		}
-	default:
-		return errors.Errorf("inferred invalid type: %s", s.Type)
-	}
-	return nil
-}
+// Sum type fields.
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s HeaderOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *HeaderOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *HeaderOrReference) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s HeaderPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s HeaderPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s HeaderPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s HeaderPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes HeaderPattern0 from json.
-func (s *HeaderPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode HeaderPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode HeaderPattern0")
-	}
-
-	return nil
-}
+func (s *HeaderPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s HeaderPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s HeaderPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *HeaderPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *HeaderPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s HeadersOrReferences) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s HeadersOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s HeadersOrReferences) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s HeadersOrReferences) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes HeadersOrReferences from json.
-func (s *HeadersOrReferences) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode HeadersOrReferences to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem HeaderOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode HeadersOrReferences")
-	}
-
-	return nil
-}
+func (s *HeadersOrReferences) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s HeadersOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *HeadersOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *Info) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Info) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Info) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("title")
-		e.Str(s.Title)
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.TermsOfService.Set {
-			e.FieldStart("termsOfService")
-			s.TermsOfService.Encode(e)
-		}
-	}
-	{
-		if s.Contact.Set {
-			e.FieldStart("contact")
-			s.Contact.Encode(e)
-		}
-	}
-	{
-		if s.License.Set {
-			e.FieldStart("license")
-			s.License.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("version")
-		e.Str(s.Version)
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Info) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfInfo = [6]string{
 	0: "title",
@@ -8614,241 +6370,43 @@ var jsonFieldsNameOfInfo = [6]string{
 }
 
 // Decode decodes Info from json.
-func (s *Info) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Info to nil")
-	}
-	var requiredBitSet [1]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *Info) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "title":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.Title = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"title\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "termsOfService":
-			if err := func() error {
-				s.TermsOfService.Reset()
-				if err := s.TermsOfService.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"termsOfService\"")
-			}
-		case "contact":
-			if err := func() error {
-				s.Contact.Reset()
-				if err := s.Contact.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"contact\"")
-			}
-		case "license":
-			if err := func() error {
-				s.License.Reset()
-				if err := s.License.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"license\"")
-			}
-		case "version":
-			requiredBitSet[0] |= 1 << 5
-			if err := func() error {
-				v, err := d.Str()
-				s.Version = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"version\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Info")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00100001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfInfo) {
-					name = jsonFieldsNameOfInfo[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Info) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Info) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Info) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Info) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s InfoPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s InfoPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s InfoPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s InfoPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes InfoPattern0 from json.
-func (s *InfoPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode InfoPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode InfoPattern0")
-	}
-
-	return nil
-}
+func (s *InfoPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s InfoPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s InfoPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *InfoPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *InfoPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *License) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *License) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *License) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("name")
-		e.Str(s.Name)
-	}
-	{
-		if s.URL.Set {
-			e.FieldStart("url")
-			s.URL.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *License) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfLicense = [2]string{
 	0: "name",
@@ -8856,223 +6414,43 @@ var jsonFieldsNameOfLicense = [2]string{
 }
 
 // Decode decodes License from json.
-func (s *License) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode License to nil")
-	}
-	var requiredBitSet [1]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *License) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "name":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.Name = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"name\"")
-			}
-		case "url":
-			if err := func() error {
-				s.URL.Reset()
-				if err := s.URL.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"url\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode License")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfLicense) {
-					name = jsonFieldsNameOfLicense[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *License) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *License) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *License) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *License) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s LicensePattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s LicensePattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s LicensePattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s LicensePattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes LicensePattern0 from json.
-func (s *LicensePattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode LicensePattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode LicensePattern0")
-	}
-
-	return nil
-}
+func (s *LicensePattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s LicensePattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s LicensePattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *LicensePattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *LicensePattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Link) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Link) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Link) encodeFields(e *jx.Encoder) {
-	{
-		if s.OperationRef.Set {
-			e.FieldStart("operationRef")
-			s.OperationRef.Encode(e)
-		}
-	}
-	{
-		if s.OperationId.Set {
-			e.FieldStart("operationId")
-			s.OperationId.Encode(e)
-		}
-	}
-	{
-		if s.Parameters.Set {
-			e.FieldStart("parameters")
-			s.Parameters.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("requestBody")
-		s.RequestBody.Encode(e)
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.Server.Set {
-			e.FieldStart("server")
-			s.Server.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Link) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfLink = [6]string{
 	0: "operationRef",
@@ -9084,465 +6462,104 @@ var jsonFieldsNameOfLink = [6]string{
 }
 
 // Decode decodes Link from json.
-func (s *Link) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Link to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "operationRef":
-			if err := func() error {
-				s.OperationRef.Reset()
-				if err := s.OperationRef.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"operationRef\"")
-			}
-		case "operationId":
-			if err := func() error {
-				s.OperationId.Reset()
-				if err := s.OperationId.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"operationId\"")
-			}
-		case "parameters":
-			if err := func() error {
-				s.Parameters.Reset()
-				if err := s.Parameters.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"parameters\"")
-			}
-		case "requestBody":
-			if err := func() error {
-				if err := s.RequestBody.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"requestBody\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "server":
-			if err := func() error {
-				s.Server.Reset()
-				if err := s.Server.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"server\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Link")
-	}
-
-	return nil
-}
+func (s *Link) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Link) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Link) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Link) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Link) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes LinkOrReference as json.
-func (s LinkOrReference) Encode(e *jx.Encoder) {
-	switch s.Type {
-	case LinkLinkOrReference:
-		s.Link.Encode(e)
-	case ReferenceLinkOrReference:
-		s.Reference.Encode(e)
-	}
-}
+func (s LinkOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
-func (s LinkOrReference) encodeFields(e *jx.Encoder) {
-	switch s.Type {
-	case LinkLinkOrReference:
-		s.Link.encodeFields(e)
-	case ReferenceLinkOrReference:
-		s.Reference.encodeFields(e)
-	}
-}
+func (s LinkOrReference) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes LinkOrReference from json.
-func (s *LinkOrReference) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode LinkOrReference to nil")
-	}
-	// Sum type fields.
-	if typ := d.Next(); typ != jx.Object {
-		return errors.Errorf("unexpected json type %q", typ)
-	}
+func (s *LinkOrReference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	var found bool
-	if err := d.Capture(func(d *jx.Decoder) error {
-		return d.ObjBytes(func(d *jx.Decoder, key []byte) error {
-			switch string(key) {
-			case "$ref":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ReferenceLinkOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "description":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := LinkLinkOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "operationId":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := LinkLinkOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "operationRef":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := LinkLinkOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "parameters":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := LinkLinkOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "requestBody":
-				match := LinkLinkOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "server":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := LinkLinkOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			}
-			return d.Skip()
-		})
-	}); err != nil {
-		return errors.Wrap(err, "capture")
-	}
-	if !found {
-		return errors.New("unable to detect sum type variant")
-	}
-	switch s.Type {
-	case LinkLinkOrReference:
-		if err := s.Link.Decode(d); err != nil {
-			return err
-		}
-	case ReferenceLinkOrReference:
-		if err := s.Reference.Decode(d); err != nil {
-			return err
-		}
-	default:
-		return errors.Errorf("inferred invalid type: %s", s.Type)
-	}
-	return nil
-}
+// Sum type fields.
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s LinkOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s LinkOrReference) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *LinkOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *LinkOrReference) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s LinkPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s LinkPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s LinkPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s LinkPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes LinkPattern0 from json.
-func (s *LinkPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode LinkPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode LinkPattern0")
-	}
-
-	return nil
-}
+func (s *LinkPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s LinkPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s LinkPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *LinkPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *LinkPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s LinksOrReferences) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s LinksOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s LinksOrReferences) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s LinksOrReferences) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes LinksOrReferences from json.
-func (s *LinksOrReferences) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode LinksOrReferences to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem LinkOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode LinksOrReferences")
-	}
-
-	return nil
-}
+func (s *LinksOrReferences) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s LinksOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *LinksOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *LinksOrReferences) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Maximum as json.
-func (s Maximum) Encode(e *jx.Encoder) {
-	unwrapped := float64(s)
-
-	e.Float64(unwrapped)
-}
+func (s Maximum) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Maximum from json.
-func (s *Maximum) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Maximum to nil")
-	}
-	var unwrapped float64
-	if err := func() error {
-		v, err := d.Float64()
-		unwrapped = float64(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = Maximum(unwrapped)
-	return nil
-}
+func (s *Maximum) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s Maximum) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s Maximum) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Maximum) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Maximum) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *MediaType) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *MediaType) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *MediaType) encodeFields(e *jx.Encoder) {
-	{
-		if s.Schema != nil {
-			e.FieldStart("schema")
-			s.Schema.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("example")
-		s.Example.Encode(e)
-	}
-	{
-		if s.Examples.Set {
-			e.FieldStart("examples")
-			s.Examples.Encode(e)
-		}
-	}
-	{
-		if s.Encoding.Set {
-			e.FieldStart("encoding")
-			s.Encoding.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *MediaType) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfMediaType = [4]string{
 	0: "schema",
@@ -9552,333 +6569,76 @@ var jsonFieldsNameOfMediaType = [4]string{
 }
 
 // Decode decodes MediaType from json.
-func (s *MediaType) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode MediaType to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "schema":
-			if err := func() error {
-				s.Schema = nil
-				var elem SchemaOrReference
-				if err := elem.Decode(d); err != nil {
-					return err
-				}
-				s.Schema = &elem
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"schema\"")
-			}
-		case "example":
-			if err := func() error {
-				if err := s.Example.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"example\"")
-			}
-		case "examples":
-			if err := func() error {
-				s.Examples.Reset()
-				if err := s.Examples.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"examples\"")
-			}
-		case "encoding":
-			if err := func() error {
-				s.Encoding.Reset()
-				if err := s.Encoding.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"encoding\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode MediaType")
-	}
-
-	return nil
-}
+func (s *MediaType) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *MediaType) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *MediaType) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *MediaType) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *MediaType) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s MediaTypePattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s MediaTypePattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s MediaTypePattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s MediaTypePattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes MediaTypePattern0 from json.
-func (s *MediaTypePattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode MediaTypePattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode MediaTypePattern0")
-	}
-
-	return nil
-}
+func (s *MediaTypePattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s MediaTypePattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *MediaTypePattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *MediaTypePattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s MediaTypes) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s MediaTypes) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s MediaTypes) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s MediaTypes) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes MediaTypes from json.
-func (s *MediaTypes) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode MediaTypes to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem MediaType
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode MediaTypes")
-	}
-
-	return nil
-}
+func (s *MediaTypes) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s MediaTypes) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s MediaTypes) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *MediaTypes) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *MediaTypes) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Minimum as json.
-func (s Minimum) Encode(e *jx.Encoder) {
-	unwrapped := float64(s)
-
-	e.Float64(unwrapped)
-}
+func (s Minimum) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Minimum from json.
-func (s *Minimum) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Minimum to nil")
-	}
-	var unwrapped float64
-	if err := func() error {
-		v, err := d.Float64()
-		unwrapped = float64(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = Minimum(unwrapped)
-	return nil
-}
+func (s *Minimum) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s Minimum) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s Minimum) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Minimum) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Minimum) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes MultipleOf as json.
-func (s MultipleOf) Encode(e *jx.Encoder) {
-	unwrapped := float64(s)
-
-	e.Float64(unwrapped)
-}
+func (s MultipleOf) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes MultipleOf from json.
-func (s *MultipleOf) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode MultipleOf to nil")
-	}
-	var unwrapped float64
-	if err := func() error {
-		v, err := d.Float64()
-		unwrapped = float64(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = MultipleOf(unwrapped)
-	return nil
-}
+func (s *MultipleOf) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s MultipleOf) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s MultipleOf) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *MultipleOf) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *MultipleOf) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *OauthFlow) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *OauthFlow) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *OauthFlow) encodeFields(e *jx.Encoder) {
-	{
-		if s.AuthorizationUrl.Set {
-			e.FieldStart("authorizationUrl")
-			s.AuthorizationUrl.Encode(e)
-		}
-	}
-	{
-		if s.TokenUrl.Set {
-			e.FieldStart("tokenUrl")
-			s.TokenUrl.Encode(e)
-		}
-	}
-	{
-		if s.RefreshUrl.Set {
-			e.FieldStart("refreshUrl")
-			s.RefreshUrl.Encode(e)
-		}
-	}
-	{
-		if s.Scopes.Set {
-			e.FieldStart("scopes")
-			s.Scopes.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *OauthFlow) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfOauthFlow = [4]string{
 	0: "authorizationUrl",
@@ -9888,198 +6648,37 @@ var jsonFieldsNameOfOauthFlow = [4]string{
 }
 
 // Decode decodes OauthFlow from json.
-func (s *OauthFlow) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode OauthFlow to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "authorizationUrl":
-			if err := func() error {
-				s.AuthorizationUrl.Reset()
-				if err := s.AuthorizationUrl.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"authorizationUrl\"")
-			}
-		case "tokenUrl":
-			if err := func() error {
-				s.TokenUrl.Reset()
-				if err := s.TokenUrl.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"tokenUrl\"")
-			}
-		case "refreshUrl":
-			if err := func() error {
-				s.RefreshUrl.Reset()
-				if err := s.RefreshUrl.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"refreshUrl\"")
-			}
-		case "scopes":
-			if err := func() error {
-				s.Scopes.Reset()
-				if err := s.Scopes.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"scopes\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode OauthFlow")
-	}
-
-	return nil
-}
+func (s *OauthFlow) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *OauthFlow) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *OauthFlow) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OauthFlow) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OauthFlow) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s OauthFlowPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s OauthFlowPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s OauthFlowPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s OauthFlowPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes OauthFlowPattern0 from json.
-func (s *OauthFlowPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode OauthFlowPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode OauthFlowPattern0")
-	}
-
-	return nil
-}
+func (s *OauthFlowPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OauthFlowPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OauthFlowPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OauthFlowPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *OauthFlows) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *OauthFlows) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *OauthFlows) encodeFields(e *jx.Encoder) {
-	{
-		if s.Implicit.Set {
-			e.FieldStart("implicit")
-			s.Implicit.Encode(e)
-		}
-	}
-	{
-		if s.Password.Set {
-			e.FieldStart("password")
-			s.Password.Encode(e)
-		}
-	}
-	{
-		if s.ClientCredentials.Set {
-			e.FieldStart("clientCredentials")
-			s.ClientCredentials.Encode(e)
-		}
-	}
-	{
-		if s.AuthorizationCode.Set {
-			e.FieldStart("authorizationCode")
-			s.AuthorizationCode.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *OauthFlows) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfOauthFlows = [4]string{
 	0: "implicit",
@@ -10089,260 +6688,40 @@ var jsonFieldsNameOfOauthFlows = [4]string{
 }
 
 // Decode decodes OauthFlows from json.
-func (s *OauthFlows) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode OauthFlows to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "implicit":
-			if err := func() error {
-				s.Implicit.Reset()
-				if err := s.Implicit.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"implicit\"")
-			}
-		case "password":
-			if err := func() error {
-				s.Password.Reset()
-				if err := s.Password.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"password\"")
-			}
-		case "clientCredentials":
-			if err := func() error {
-				s.ClientCredentials.Reset()
-				if err := s.ClientCredentials.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"clientCredentials\"")
-			}
-		case "authorizationCode":
-			if err := func() error {
-				s.AuthorizationCode.Reset()
-				if err := s.AuthorizationCode.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"authorizationCode\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode OauthFlows")
-	}
-
-	return nil
-}
+func (s *OauthFlows) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *OauthFlows) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *OauthFlows) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OauthFlows) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OauthFlows) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s OauthFlowsPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s OauthFlowsPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s OauthFlowsPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s OauthFlowsPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes OauthFlowsPattern0 from json.
-func (s *OauthFlowsPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode OauthFlowsPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode OauthFlowsPattern0")
-	}
-
-	return nil
-}
+func (s *OauthFlowsPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OauthFlowsPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OauthFlowsPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *Operation) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Operation) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Operation) encodeFields(e *jx.Encoder) {
-	{
-		if s.Tags != nil {
-			e.FieldStart("tags")
-			e.ArrStart()
-			for _, elem := range s.Tags {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.Summary.Set {
-			e.FieldStart("summary")
-			s.Summary.Encode(e)
-		}
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.ExternalDocs.Set {
-			e.FieldStart("externalDocs")
-			s.ExternalDocs.Encode(e)
-		}
-	}
-	{
-		if s.OperationId.Set {
-			e.FieldStart("operationId")
-			s.OperationId.Encode(e)
-		}
-	}
-	{
-		if s.Parameters != nil {
-			e.FieldStart("parameters")
-			e.ArrStart()
-			for _, elem := range s.Parameters {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.RequestBody.Set {
-			e.FieldStart("requestBody")
-			s.RequestBody.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("responses")
-		s.Responses.Encode(e)
-	}
-	{
-		if s.Callbacks.Set {
-			e.FieldStart("callbacks")
-			s.Callbacks.Encode(e)
-		}
-	}
-	{
-		if s.Deprecated.Set {
-			e.FieldStart("deprecated")
-			s.Deprecated.Encode(e)
-		}
-	}
-	{
-		if s.Security != nil {
-			e.FieldStart("security")
-			e.ArrStart()
-			for _, elem := range s.Security {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.Servers != nil {
-			e.FieldStart("servers")
-			e.ArrStart()
-			for _, elem := range s.Servers {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Operation) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfOperation = [12]string{
 	0:  "tags",
@@ -10360,1828 +6739,703 @@ var jsonFieldsNameOfOperation = [12]string{
 }
 
 // Decode decodes Operation from json.
-func (s *Operation) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Operation to nil")
-	}
-	var requiredBitSet [2]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *Operation) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "tags":
-			if err := func() error {
-				s.Tags = make([]string, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem string
-					v, err := d.Str()
-					elem = string(v)
-					if err != nil {
-						return err
-					}
-					s.Tags = append(s.Tags, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"tags\"")
-			}
-		case "summary":
-			if err := func() error {
-				s.Summary.Reset()
-				if err := s.Summary.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"summary\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "externalDocs":
-			if err := func() error {
-				s.ExternalDocs.Reset()
-				if err := s.ExternalDocs.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"externalDocs\"")
-			}
-		case "operationId":
-			if err := func() error {
-				s.OperationId.Reset()
-				if err := s.OperationId.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"operationId\"")
-			}
-		case "parameters":
-			if err := func() error {
-				s.Parameters = make([]ParameterOrReference, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem ParameterOrReference
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Parameters = append(s.Parameters, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"parameters\"")
-			}
-		case "requestBody":
-			if err := func() error {
-				s.RequestBody.Reset()
-				if err := s.RequestBody.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"requestBody\"")
-			}
-		case "responses":
-			requiredBitSet[0] |= 1 << 7
-			if err := func() error {
-				if err := s.Responses.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"responses\"")
-			}
-		case "callbacks":
-			if err := func() error {
-				s.Callbacks.Reset()
-				if err := s.Callbacks.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"callbacks\"")
-			}
-		case "deprecated":
-			if err := func() error {
-				s.Deprecated.Reset()
-				if err := s.Deprecated.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"deprecated\"")
-			}
-		case "security":
-			if err := func() error {
-				s.Security = make([]SecurityRequirement, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem SecurityRequirement
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Security = append(s.Security, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"security\"")
-			}
-		case "servers":
-			if err := func() error {
-				s.Servers = make([]Server, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem Server
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Servers = append(s.Servers, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"servers\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Operation")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [2]uint8{
-		0b10000000,
-		0b00000000,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfOperation) {
-					name = jsonFieldsNameOfOperation[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Operation) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Operation) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Operation) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Operation) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s OperationPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s OperationPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s OperationPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s OperationPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes OperationPattern0 from json.
-func (s *OperationPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode OperationPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode OperationPattern0")
-	}
-
-	return nil
-}
+func (s *OperationPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OperationPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OperationPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OperationPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes AnysOrExpressions as json.
-func (o OptAnysOrExpressions) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptAnysOrExpressions) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes AnysOrExpressions from json.
-func (o *OptAnysOrExpressions) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptAnysOrExpressions to nil")
-	}
-	o.Set = true
-	o.Value = make(AnysOrExpressions)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptAnysOrExpressions) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptAnysOrExpressions) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptAnysOrExpressions) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode encodes bool as json.
-func (o OptBool) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Bool(bool(o.Value))
-}
-
-// Decode decodes bool from json.
-func (o *OptBool) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptBool to nil")
-	}
-	o.Set = true
-	v, err := d.Bool()
-	if err != nil {
-		return err
-	}
-	o.Value = bool(v)
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode encodes bool as json.
+func (o OptBool) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes bool from json.
+func (o *OptBool) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptBool) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptBool) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptBool) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptBool) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes CallbacksOrReferences as json.
-func (o OptCallbacksOrReferences) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptCallbacksOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes CallbacksOrReferences from json.
 func (o *OptCallbacksOrReferences) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptCallbacksOrReferences to nil")
-	}
-	o.Set = true
-	o.Value = make(CallbacksOrReferences)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptCallbacksOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptCallbacksOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes Components as json.
-func (o OptComponents) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptComponents) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Components from json.
-func (o *OptComponents) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptComponents to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptComponents) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptComponents) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptComponents) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptComponents) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptComponents) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Contact as json.
-func (o OptContact) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptContact) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Contact from json.
-func (o *OptContact) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptContact to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptContact) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptContact) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptContact) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptContact) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptContact) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Discriminator as json.
-func (o OptDiscriminator) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptDiscriminator) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Discriminator from json.
-func (o *OptDiscriminator) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptDiscriminator to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptDiscriminator) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptDiscriminator) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptDiscriminator) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptDiscriminator) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptDiscriminator) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Encodings as json.
-func (o OptEncodings) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptEncodings) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Encodings from json.
-func (o *OptEncodings) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptEncodings to nil")
-	}
-	o.Set = true
-	o.Value = make(Encodings)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptEncodings) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptEncodings) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptEncodings) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptEncodings) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptEncodings) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ExamplesOrReferences as json.
-func (o OptExamplesOrReferences) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptExamplesOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ExamplesOrReferences from json.
 func (o *OptExamplesOrReferences) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptExamplesOrReferences to nil")
-	}
-	o.Set = true
-	o.Value = make(ExamplesOrReferences)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptExamplesOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptExamplesOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode encodes ExclusiveMaximum as json.
-func (o OptExclusiveMaximum) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
-
-// Decode decodes ExclusiveMaximum from json.
-func (o *OptExclusiveMaximum) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptExclusiveMaximum to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode encodes ExclusiveMaximum as json.
+func (o OptExclusiveMaximum) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes ExclusiveMaximum from json.
+func (o *OptExclusiveMaximum) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptExclusiveMaximum) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptExclusiveMaximum) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode encodes ExclusiveMinimum as json.
-func (o OptExclusiveMinimum) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
-
-// Decode decodes ExclusiveMinimum from json.
-func (o *OptExclusiveMinimum) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptExclusiveMinimum to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode encodes ExclusiveMinimum as json.
+func (o OptExclusiveMinimum) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes ExclusiveMinimum from json.
+func (o *OptExclusiveMinimum) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptExclusiveMinimum) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptExclusiveMinimum) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes ExternalDocs as json.
-func (o OptExternalDocs) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptExternalDocs) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ExternalDocs from json.
-func (o *OptExternalDocs) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptExternalDocs to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptExternalDocs) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptExternalDocs) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptExternalDocs) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptExternalDocs) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptExternalDocs) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes HeadersOrReferences as json.
-func (o OptHeadersOrReferences) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptHeadersOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes HeadersOrReferences from json.
-func (o *OptHeadersOrReferences) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptHeadersOrReferences to nil")
-	}
-	o.Set = true
-	o.Value = make(HeadersOrReferences)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptHeadersOrReferences) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptHeadersOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptHeadersOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes License as json.
-func (o OptLicense) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptLicense) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes License from json.
-func (o *OptLicense) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptLicense to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptLicense) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptLicense) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptLicense) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptLicense) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptLicense) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes LinksOrReferences as json.
-func (o OptLinksOrReferences) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptLinksOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes LinksOrReferences from json.
-func (o *OptLinksOrReferences) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptLinksOrReferences to nil")
-	}
-	o.Set = true
-	o.Value = make(LinksOrReferences)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptLinksOrReferences) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptLinksOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptLinksOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes Maximum as json.
-func (o OptMaximum) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptMaximum) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Maximum from json.
-func (o *OptMaximum) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptMaximum to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptMaximum) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptMaximum) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptMaximum) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptMaximum) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptMaximum) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes MediaTypes as json.
-func (o OptMediaTypes) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptMediaTypes) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes MediaTypes from json.
-func (o *OptMediaTypes) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptMediaTypes to nil")
-	}
-	o.Set = true
-	o.Value = make(MediaTypes)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptMediaTypes) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptMediaTypes) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptMediaTypes) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptMediaTypes) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptMediaTypes) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Minimum as json.
-func (o OptMinimum) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptMinimum) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Minimum from json.
-func (o *OptMinimum) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptMinimum to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptMinimum) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptMinimum) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptMinimum) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptMinimum) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptMinimum) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes MultipleOf as json.
-func (o OptMultipleOf) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptMultipleOf) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes MultipleOf from json.
-func (o *OptMultipleOf) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptMultipleOf to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptMultipleOf) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptMultipleOf) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptMultipleOf) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptMultipleOf) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptMultipleOf) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes OauthFlow as json.
-func (o OptOauthFlow) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptOauthFlow) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes OauthFlow from json.
-func (o *OptOauthFlow) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptOauthFlow to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptOauthFlow) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptOauthFlow) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptOauthFlow) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptOauthFlow) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptOauthFlow) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes OauthFlows as json.
-func (o OptOauthFlows) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptOauthFlows) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes OauthFlows from json.
-func (o *OptOauthFlows) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptOauthFlows to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptOauthFlows) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptOauthFlows) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptOauthFlows) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptOauthFlows) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptOauthFlows) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Operation as json.
-func (o OptOperation) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptOperation) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Operation from json.
-func (o *OptOperation) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptOperation to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptOperation) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptOperation) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptOperation) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptOperation) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptOperation) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ParameterStyle as json.
-func (o OptParameterStyle) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Str(string(o.Value))
-}
+func (o OptParameterStyle) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ParameterStyle from json.
-func (o *OptParameterStyle) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptParameterStyle to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptParameterStyle) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptParameterStyle) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptParameterStyle) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptParameterStyle) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ParametersOrReferences as json.
-func (o OptParametersOrReferences) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptParametersOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ParametersOrReferences from json.
 func (o *OptParametersOrReferences) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptParametersOrReferences to nil")
-	}
-	o.Set = true
-	o.Value = make(ParametersOrReferences)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptParametersOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptParametersOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes Pattern as json.
-func (o OptPattern) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptPattern) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Pattern from json.
-func (o *OptPattern) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptPattern to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptPattern) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptPattern) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptPattern) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptPattern) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptPattern) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes PositiveInteger as json.
-func (o OptPositiveInteger) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptPositiveInteger) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes PositiveInteger from json.
-func (o *OptPositiveInteger) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptPositiveInteger to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptPositiveInteger) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptPositiveInteger) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptPositiveInteger) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes RequestBodiesOrReferences as json.
-func (o OptRequestBodiesOrReferences) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptRequestBodiesOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes RequestBodiesOrReferences from json.
 func (o *OptRequestBodiesOrReferences) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptRequestBodiesOrReferences to nil")
-	}
-	o.Set = true
-	o.Value = make(RequestBodiesOrReferences)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptRequestBodiesOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptRequestBodiesOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes RequestBodyOrReference as json.
-func (o OptRequestBodyOrReference) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptRequestBodyOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes RequestBodyOrReference from json.
 func (o *OptRequestBodyOrReference) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptRequestBodyOrReference to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptRequestBodyOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptRequestBodyOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode encodes ResponseOrReference as json.
-func (o OptResponseOrReference) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
-
-// Decode decodes ResponseOrReference from json.
-func (o *OptResponseOrReference) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptResponseOrReference to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode encodes ResponseOrReference as json.
+func (o OptResponseOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes ResponseOrReference from json.
+func (o *OptResponseOrReference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptResponseOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptResponseOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes ResponsesOrReferences as json.
-func (o OptResponsesOrReferences) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptResponsesOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ResponsesOrReferences from json.
 func (o *OptResponsesOrReferences) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptResponsesOrReferences to nil")
-	}
-	o.Set = true
-	o.Value = make(ResponsesOrReferences)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptResponsesOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptResponsesOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode encodes Schema as json.
-func (o OptSchema) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
-
-// Decode decodes Schema from json.
-func (o *OptSchema) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptSchema to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode encodes Schema as json.
+func (o OptSchema) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes Schema from json.
+func (o *OptSchema) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptSchema) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptSchema) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptSchema) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptSchema) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes SchemaAdditionalProperties as json.
-func (o OptSchemaAdditionalProperties) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptSchemaAdditionalProperties) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SchemaAdditionalProperties from json.
 func (o *OptSchemaAdditionalProperties) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptSchemaAdditionalProperties to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptSchemaAdditionalProperties) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptSchemaAdditionalProperties) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode encodes SchemaOrReference as json.
-func (o OptSchemaOrReference) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
-
-// Decode decodes SchemaOrReference from json.
-func (o *OptSchemaOrReference) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptSchemaOrReference to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode encodes SchemaOrReference as json.
+func (o OptSchemaOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes SchemaOrReference from json.
+func (o *OptSchemaOrReference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptSchemaOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptSchemaOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode encodes SchemaProperties as json.
-func (o OptSchemaProperties) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
-
-// Decode decodes SchemaProperties from json.
-func (o *OptSchemaProperties) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptSchemaProperties to nil")
-	}
-	o.Set = true
-	o.Value = make(SchemaProperties)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode encodes SchemaProperties as json.
+func (o OptSchemaProperties) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes SchemaProperties from json.
+func (o *OptSchemaProperties) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptSchemaProperties) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptSchemaProperties) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes SchemaType as json.
-func (o OptSchemaType) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Str(string(o.Value))
-}
+func (o OptSchemaType) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SchemaType from json.
-func (o *OptSchemaType) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptSchemaType to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptSchemaType) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptSchemaType) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptSchemaType) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptSchemaType) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptSchemaType) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes SchemasOrReferences as json.
-func (o OptSchemasOrReferences) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptSchemasOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SchemasOrReferences from json.
-func (o *OptSchemasOrReferences) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptSchemasOrReferences to nil")
-	}
-	o.Set = true
-	o.Value = make(SchemasOrReferences)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptSchemasOrReferences) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptSchemasOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptSchemasOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes SecuritySchemesOrReferences as json.
-func (o OptSecuritySchemesOrReferences) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptSecuritySchemesOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SecuritySchemesOrReferences from json.
 func (o *OptSecuritySchemesOrReferences) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptSecuritySchemesOrReferences to nil")
-	}
-	o.Set = true
-	o.Value = make(SecuritySchemesOrReferences)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptSecuritySchemesOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptSecuritySchemesOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes Server as json.
-func (o OptServer) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptServer) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Server from json.
-func (o *OptServer) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptServer to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptServer) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptServer) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptServer) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptServer) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptServer) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ServerVariables as json.
-func (o OptServerVariables) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptServerVariables) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ServerVariables from json.
-func (o *OptServerVariables) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptServerVariables to nil")
-	}
-	o.Set = true
-	o.Value = make(ServerVariables)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptServerVariables) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptServerVariables) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptServerVariables) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes string as json.
-func (o OptString) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Str(string(o.Value))
-}
+func (o OptString) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes string from json.
-func (o *OptString) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptString to nil")
-	}
-	o.Set = true
-	v, err := d.Str()
-	if err != nil {
-		return err
-	}
-	o.Value = string(v)
-	return nil
-}
+func (o *OptString) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptString) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptString) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptString) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptString) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Strings as json.
-func (o OptStrings) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptStrings) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Strings from json.
-func (o *OptStrings) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptStrings to nil")
-	}
-	o.Set = true
-	o.Value = make(Strings)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptStrings) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptStrings) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptStrings) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptStrings) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptStrings) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Title as json.
-func (o OptTitle) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptTitle) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Title from json.
-func (o *OptTitle) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptTitle to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptTitle) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptTitle) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptTitle) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptTitle) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptTitle) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes UniqueItems as json.
-func (o OptUniqueItems) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptUniqueItems) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes UniqueItems from json.
-func (o *OptUniqueItems) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptUniqueItems to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptUniqueItems) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptUniqueItems) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptUniqueItems) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptUniqueItems) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptUniqueItems) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes XML as json.
-func (o OptXML) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptXML) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes XML from json.
-func (o *OptXML) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptXML to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptXML) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptXML) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptXML) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptXML) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptXML) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Parameter) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Parameter) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Parameter) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("name")
-		e.Str(s.Name)
-	}
-	{
-		e.FieldStart("in")
-		s.In.Encode(e)
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.Required.Set {
-			e.FieldStart("required")
-			s.Required.Encode(e)
-		}
-	}
-	{
-		if s.Deprecated.Set {
-			e.FieldStart("deprecated")
-			s.Deprecated.Encode(e)
-		}
-	}
-	{
-		if s.AllowEmptyValue.Set {
-			e.FieldStart("allowEmptyValue")
-			s.AllowEmptyValue.Encode(e)
-		}
-	}
-	{
-		if s.Style.Set {
-			e.FieldStart("style")
-			s.Style.Encode(e)
-		}
-	}
-	{
-		if s.Explode.Set {
-			e.FieldStart("explode")
-			s.Explode.Encode(e)
-		}
-	}
-	{
-		if s.AllowReserved.Set {
-			e.FieldStart("allowReserved")
-			s.AllowReserved.Encode(e)
-		}
-	}
-	{
-		if s.Schema != nil {
-			e.FieldStart("schema")
-			s.Schema.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("example")
-		s.Example.Encode(e)
-	}
-	{
-		if s.Examples.Set {
-			e.FieldStart("examples")
-			s.Examples.Encode(e)
-		}
-	}
-	{
-		if s.Content.Set {
-			e.FieldStart("content")
-			s.Content.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Parameter) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfParameter = [13]string{
 	0:  "name",
@@ -12200,777 +7454,173 @@ var jsonFieldsNameOfParameter = [13]string{
 }
 
 // Decode decodes Parameter from json.
-func (s *Parameter) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Parameter to nil")
-	}
-	var requiredBitSet [2]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *Parameter) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "name":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.Name = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"name\"")
-			}
-		case "in":
-			requiredBitSet[0] |= 1 << 1
-			if err := func() error {
-				if err := s.In.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"in\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "required":
-			if err := func() error {
-				s.Required.Reset()
-				if err := s.Required.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"required\"")
-			}
-		case "deprecated":
-			if err := func() error {
-				s.Deprecated.Reset()
-				if err := s.Deprecated.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"deprecated\"")
-			}
-		case "allowEmptyValue":
-			if err := func() error {
-				s.AllowEmptyValue.Reset()
-				if err := s.AllowEmptyValue.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"allowEmptyValue\"")
-			}
-		case "style":
-			if err := func() error {
-				s.Style.Reset()
-				if err := s.Style.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"style\"")
-			}
-		case "explode":
-			if err := func() error {
-				s.Explode.Reset()
-				if err := s.Explode.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"explode\"")
-			}
-		case "allowReserved":
-			if err := func() error {
-				s.AllowReserved.Reset()
-				if err := s.AllowReserved.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"allowReserved\"")
-			}
-		case "schema":
-			if err := func() error {
-				s.Schema = nil
-				var elem SchemaOrReference
-				if err := elem.Decode(d); err != nil {
-					return err
-				}
-				s.Schema = &elem
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"schema\"")
-			}
-		case "example":
-			if err := func() error {
-				if err := s.Example.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"example\"")
-			}
-		case "examples":
-			if err := func() error {
-				s.Examples.Reset()
-				if err := s.Examples.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"examples\"")
-			}
-		case "content":
-			if err := func() error {
-				s.Content.Reset()
-				if err := s.Content.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"content\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Parameter")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [2]uint8{
-		0b00000011,
-		0b00000000,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfParameter) {
-					name = jsonFieldsNameOfParameter[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Parameter) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Parameter) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Parameter) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Parameter) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ParameterIn as json.
 func (s ParameterIn) Encode(e *jx.Encoder) {
-	e.Str(string(s))
+	_ = "STUB: not implemented"
+
+	// Decode decodes ParameterIn from json.
+	return
 }
 
-// Decode decodes ParameterIn from json.
-func (s *ParameterIn) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ParameterIn to nil")
-	}
-	v, err := d.StrBytes()
-	if err != nil {
-		return err
-	}
-	// Try to use constant string.
-	switch ParameterIn(v) {
-	case ParameterInPath:
-		*s = ParameterInPath
-	case ParameterInQuery:
-		*s = ParameterInQuery
-	case ParameterInCookie:
-		*s = ParameterInCookie
-	case ParameterInHeader:
-		*s = ParameterInHeader
-	default:
-		*s = ParameterIn(v)
-	}
+func (s *ParameterIn) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	return nil
-}
+// Try to use constant string.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s ParameterIn) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s ParameterIn) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ParameterIn) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ParameterIn) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ParameterOrReference as json.
-func (s ParameterOrReference) Encode(e *jx.Encoder) {
-	switch s.Type {
-	case ParameterParameterOrReference:
-		s.Parameter.Encode(e)
-	case ReferenceParameterOrReference:
-		s.Reference.Encode(e)
-	}
-}
+func (s ParameterOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
-func (s ParameterOrReference) encodeFields(e *jx.Encoder) {
-	switch s.Type {
-	case ParameterParameterOrReference:
-		s.Parameter.encodeFields(e)
-	case ReferenceParameterOrReference:
-		s.Reference.encodeFields(e)
-	}
-}
+func (s ParameterOrReference) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ParameterOrReference from json.
-func (s *ParameterOrReference) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ParameterOrReference to nil")
-	}
-	// Sum type fields.
-	if typ := d.Next(); typ != jx.Object {
-		return errors.Errorf("unexpected json type %q", typ)
-	}
+func (s *ParameterOrReference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	var found bool
-	if err := d.Capture(func(d *jx.Decoder) error {
-		return d.ObjBytes(func(d *jx.Decoder, key []byte) error {
-			switch string(key) {
-			case "$ref":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ReferenceParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "allowEmptyValue":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "allowReserved":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "content":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "deprecated":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "description":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "example":
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "examples":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "explode":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "in":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "name":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "required":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "schema":
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "style":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ParameterParameterOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			}
-			return d.Skip()
-		})
-	}); err != nil {
-		return errors.Wrap(err, "capture")
-	}
-	if !found {
-		return errors.New("unable to detect sum type variant")
-	}
-	switch s.Type {
-	case ParameterParameterOrReference:
-		if err := s.Parameter.Decode(d); err != nil {
-			return err
-		}
-	case ReferenceParameterOrReference:
-		if err := s.Reference.Decode(d); err != nil {
-			return err
-		}
-	default:
-		return errors.Errorf("inferred invalid type: %s", s.Type)
-	}
-	return nil
-}
+// Sum type fields.
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ParameterOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ParameterOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s ParameterPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ParameterPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ParameterPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ParameterPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ParameterPattern0 from json.
-func (s *ParameterPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ParameterPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ParameterPattern0")
-	}
-
-	return nil
-}
+func (s *ParameterPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ParameterPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ParameterPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ParameterPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ParameterStyle as json.
 func (s ParameterStyle) Encode(e *jx.Encoder) {
-	e.Str(string(s))
+	_ = "STUB: not implemented"
+
+	// Decode decodes ParameterStyle from json.
+	return
 }
 
-// Decode decodes ParameterStyle from json.
-func (s *ParameterStyle) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ParameterStyle to nil")
-	}
-	v, err := d.StrBytes()
-	if err != nil {
-		return err
-	}
-	// Try to use constant string.
-	switch ParameterStyle(v) {
-	case ParameterStyleMatrix:
-		*s = ParameterStyleMatrix
-	case ParameterStyleLabel:
-		*s = ParameterStyleLabel
-	case ParameterStyleForm:
-		*s = ParameterStyleForm
-	case ParameterStyleSimple:
-		*s = ParameterStyleSimple
-	case ParameterStyleSpaceDelimited:
-		*s = ParameterStyleSpaceDelimited
-	case ParameterStylePipeDelimited:
-		*s = ParameterStylePipeDelimited
-	case ParameterStyleDeepObject:
-		*s = ParameterStyleDeepObject
-	default:
-		*s = ParameterStyle(v)
-	}
+func (s *ParameterStyle) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	return nil
-}
+// Try to use constant string.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s ParameterStyle) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s ParameterStyle) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ParameterStyle) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ParameterStyle) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s ParametersOrReferences) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ParametersOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ParametersOrReferences) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ParametersOrReferences) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ParametersOrReferences from json.
-func (s *ParametersOrReferences) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ParametersOrReferences to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem ParameterOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ParametersOrReferences")
-	}
-
-	return nil
-}
+func (s *ParametersOrReferences) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ParametersOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ParametersOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *PathItem) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *PathItem) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *PathItem) encodeFields(e *jx.Encoder) {
-	{
-		if s.Ref.Set {
-			e.FieldStart("$ref")
-			s.Ref.Encode(e)
-		}
-	}
-	{
-		if s.Summary.Set {
-			e.FieldStart("summary")
-			s.Summary.Encode(e)
-		}
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.Get.Set {
-			e.FieldStart("get")
-			s.Get.Encode(e)
-		}
-	}
-	{
-		if s.Put.Set {
-			e.FieldStart("put")
-			s.Put.Encode(e)
-		}
-	}
-	{
-		if s.Post.Set {
-			e.FieldStart("post")
-			s.Post.Encode(e)
-		}
-	}
-	{
-		if s.Delete.Set {
-			e.FieldStart("delete")
-			s.Delete.Encode(e)
-		}
-	}
-	{
-		if s.Options.Set {
-			e.FieldStart("options")
-			s.Options.Encode(e)
-		}
-	}
-	{
-		if s.Head.Set {
-			e.FieldStart("head")
-			s.Head.Encode(e)
-		}
-	}
-	{
-		if s.Patch.Set {
-			e.FieldStart("patch")
-			s.Patch.Encode(e)
-		}
-	}
-	{
-		if s.Trace.Set {
-			e.FieldStart("trace")
-			s.Trace.Encode(e)
-		}
-	}
-	{
-		if s.Servers != nil {
-			e.FieldStart("servers")
-			e.ArrStart()
-			for _, elem := range s.Servers {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.Parameters != nil {
-			e.FieldStart("parameters")
-			e.ArrStart()
-			for _, elem := range s.Parameters {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *PathItem) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfPathItem = [13]string{
 	0:  "$ref",
@@ -12989,738 +7639,157 @@ var jsonFieldsNameOfPathItem = [13]string{
 }
 
 // Decode decodes PathItem from json.
-func (s *PathItem) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode PathItem to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "$ref":
-			if err := func() error {
-				s.Ref.Reset()
-				if err := s.Ref.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"$ref\"")
-			}
-		case "summary":
-			if err := func() error {
-				s.Summary.Reset()
-				if err := s.Summary.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"summary\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "get":
-			if err := func() error {
-				s.Get.Reset()
-				if err := s.Get.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"get\"")
-			}
-		case "put":
-			if err := func() error {
-				s.Put.Reset()
-				if err := s.Put.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"put\"")
-			}
-		case "post":
-			if err := func() error {
-				s.Post.Reset()
-				if err := s.Post.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"post\"")
-			}
-		case "delete":
-			if err := func() error {
-				s.Delete.Reset()
-				if err := s.Delete.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"delete\"")
-			}
-		case "options":
-			if err := func() error {
-				s.Options.Reset()
-				if err := s.Options.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"options\"")
-			}
-		case "head":
-			if err := func() error {
-				s.Head.Reset()
-				if err := s.Head.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"head\"")
-			}
-		case "patch":
-			if err := func() error {
-				s.Patch.Reset()
-				if err := s.Patch.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"patch\"")
-			}
-		case "trace":
-			if err := func() error {
-				s.Trace.Reset()
-				if err := s.Trace.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"trace\"")
-			}
-		case "servers":
-			if err := func() error {
-				s.Servers = make([]Server, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem Server
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Servers = append(s.Servers, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"servers\"")
-			}
-		case "parameters":
-			if err := func() error {
-				s.Parameters = make([]ParameterOrReference, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem ParameterOrReference
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Parameters = append(s.Parameters, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"parameters\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode PathItem")
-	}
-
-	return nil
-}
+func (s *PathItem) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *PathItem) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *PathItem) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *PathItem) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *PathItem) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s PathItemPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s PathItemPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s PathItemPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s PathItemPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes PathItemPattern0 from json.
-func (s *PathItemPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode PathItemPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode PathItemPattern0")
-	}
-
-	return nil
-}
+func (s *PathItemPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s PathItemPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s PathItemPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *PathItemPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *PathItemPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Paths) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Paths) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Paths) encodeFields(e *jx.Encoder) {
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-	for k, elem := range s.Pattern1Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Paths) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfPaths = [0]string{}
 
 // Decode decodes Paths from json.
-func (s *Paths) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Paths to nil")
-	}
-	s.Pattern0Props = map[string]PathItem{}
-	s.Pattern1Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		default:
-			var handled bool
-			switch match, err := regexMap["^/"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem PathItem
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern1Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-	}); err != nil {
-		return errors.Wrap(err, "decode Paths")
-	}
-
-	return nil
-}
+func (s *Paths) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Paths) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Paths) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Paths) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Paths) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s PathsPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s PathsPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s PathsPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s PathsPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes PathsPattern0 from json.
-func (s *PathsPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode PathsPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^/"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem PathItem
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode PathsPattern0")
-	}
-
-	return nil
-}
+func (s *PathsPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s PathsPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s PathsPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *PathsPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *PathsPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s PathsPattern1) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s PathsPattern1) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s PathsPattern1) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s PathsPattern1) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes PathsPattern1 from json.
-func (s *PathsPattern1) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode PathsPattern1 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode PathsPattern1")
-	}
-
-	return nil
-}
+func (s *PathsPattern1) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s PathsPattern1) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s PathsPattern1) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *PathsPattern1) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *PathsPattern1) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Pattern as json.
-func (s Pattern) Encode(e *jx.Encoder) {
-	unwrapped := string(s)
-
-	e.Str(unwrapped)
-}
+func (s Pattern) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Pattern from json.
-func (s *Pattern) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Pattern to nil")
-	}
-	var unwrapped string
-	if err := func() error {
-		v, err := d.Str()
-		unwrapped = string(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = Pattern(unwrapped)
-	return nil
-}
+func (s *Pattern) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s Pattern) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s Pattern) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Pattern) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Pattern) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes PositiveInteger as json.
-func (s PositiveInteger) Encode(e *jx.Encoder) {
-	unwrapped := int(s)
-
-	e.Int(unwrapped)
-}
+func (s PositiveInteger) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes PositiveInteger from json.
-func (s *PositiveInteger) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode PositiveInteger to nil")
-	}
-	var unwrapped int
-	if err := func() error {
-		v, err := d.Int()
-		unwrapped = int(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = PositiveInteger(unwrapped)
-	return nil
-}
+func (s *PositiveInteger) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s PositiveInteger) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s PositiveInteger) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *PositiveInteger) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *PositiveInteger) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Reference) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Reference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Reference) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("$ref")
-		e.Str(s.Ref)
-	}
-}
+func (s *Reference) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfReference = [1]string{
 	0: "$ref",
 }
 
 // Decode decodes Reference from json.
-func (s *Reference) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Reference to nil")
-	}
-	var requiredBitSet [1]uint8
+func (s *Reference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "$ref":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.Ref = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"$ref\"")
-			}
-		default:
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Reference")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfReference) {
-					name = jsonFieldsNameOfReference[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Reference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Reference) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Reference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Reference) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s RequestBodiesOrReferences) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s RequestBodiesOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s RequestBodiesOrReferences) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s RequestBodiesOrReferences) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes RequestBodiesOrReferences from json.
 func (s *RequestBodiesOrReferences) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode RequestBodiesOrReferences to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem RequestBodyOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode RequestBodiesOrReferences")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s RequestBodiesOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *RequestBodiesOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *RequestBody) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *RequestBody) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *RequestBody) encodeFields(e *jx.Encoder) {
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("content")
-		s.Content.Encode(e)
-	}
-	{
-		if s.Required.Set {
-			e.FieldStart("required")
-			s.Required.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *RequestBody) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfRequestBody = [3]string{
 	0: "description",
@@ -13729,341 +7798,87 @@ var jsonFieldsNameOfRequestBody = [3]string{
 }
 
 // Decode decodes RequestBody from json.
-func (s *RequestBody) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode RequestBody to nil")
-	}
-	var requiredBitSet [1]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *RequestBody) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "content":
-			requiredBitSet[0] |= 1 << 1
-			if err := func() error {
-				if err := s.Content.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"content\"")
-			}
-		case "required":
-			if err := func() error {
-				s.Required.Reset()
-				if err := s.Required.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"required\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode RequestBody")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000010,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfRequestBody) {
-					name = jsonFieldsNameOfRequestBody[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *RequestBody) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *RequestBody) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *RequestBody) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *RequestBody) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes RequestBodyOrReference as json.
-func (s RequestBodyOrReference) Encode(e *jx.Encoder) {
-	switch s.Type {
-	case RequestBodyRequestBodyOrReference:
-		s.RequestBody.Encode(e)
-	case ReferenceRequestBodyOrReference:
-		s.Reference.Encode(e)
-	}
-}
+func (s RequestBodyOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
-func (s RequestBodyOrReference) encodeFields(e *jx.Encoder) {
-	switch s.Type {
-	case RequestBodyRequestBodyOrReference:
-		s.RequestBody.encodeFields(e)
-	case ReferenceRequestBodyOrReference:
-		s.Reference.encodeFields(e)
-	}
-}
+func (s RequestBodyOrReference) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes RequestBodyOrReference from json.
-func (s *RequestBodyOrReference) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode RequestBodyOrReference to nil")
-	}
-	// Sum type fields.
-	if typ := d.Next(); typ != jx.Object {
-		return errors.Errorf("unexpected json type %q", typ)
-	}
+func (s *RequestBodyOrReference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	var found bool
-	if err := d.Capture(func(d *jx.Decoder) error {
-		return d.ObjBytes(func(d *jx.Decoder, key []byte) error {
-			switch string(key) {
-			case "$ref":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ReferenceRequestBodyOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "content":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := RequestBodyRequestBodyOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "description":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := RequestBodyRequestBodyOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "required":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := RequestBodyRequestBodyOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			}
-			return d.Skip()
-		})
-	}); err != nil {
-		return errors.Wrap(err, "capture")
-	}
-	if !found {
-		return errors.New("unable to detect sum type variant")
-	}
-	switch s.Type {
-	case RequestBodyRequestBodyOrReference:
-		if err := s.RequestBody.Decode(d); err != nil {
-			return err
-		}
-	case ReferenceRequestBodyOrReference:
-		if err := s.Reference.Decode(d); err != nil {
-			return err
-		}
-	default:
-		return errors.Errorf("inferred invalid type: %s", s.Type)
-	}
-	return nil
-}
+// Sum type fields.
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s RequestBodyOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *RequestBodyOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode implements json.Marshaler.
-func (s RequestBodyPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
-
-// encodeFields implements json.Marshaler.
-func (s RequestBodyPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
-
-// Decode decodes RequestBodyPattern0 from json.
-func (s *RequestBodyPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode RequestBodyPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode RequestBodyPattern0")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode implements json.Marshaler.
+func (s RequestBodyPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// encodeFields implements json.Marshaler.
+func (s RequestBodyPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes RequestBodyPattern0 from json.
+func (s *RequestBodyPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s RequestBodyPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *RequestBodyPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *Response) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Response) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Response) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("description")
-		e.Str(s.Description)
-	}
-	{
-		if s.Headers.Set {
-			e.FieldStart("headers")
-			s.Headers.Encode(e)
-		}
-	}
-	{
-		if s.Content.Set {
-			e.FieldStart("content")
-			s.Content.Encode(e)
-		}
-	}
-	{
-		if s.Links.Set {
-			e.FieldStart("links")
-			s.Links.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Response) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfResponse = [4]string{
 	0: "description",
@@ -14073,849 +7888,161 @@ var jsonFieldsNameOfResponse = [4]string{
 }
 
 // Decode decodes Response from json.
-func (s *Response) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Response to nil")
-	}
-	var requiredBitSet [1]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *Response) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "description":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.Description = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "headers":
-			if err := func() error {
-				s.Headers.Reset()
-				if err := s.Headers.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"headers\"")
-			}
-		case "content":
-			if err := func() error {
-				s.Content.Reset()
-				if err := s.Content.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"content\"")
-			}
-		case "links":
-			if err := func() error {
-				s.Links.Reset()
-				if err := s.Links.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"links\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Response")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfResponse) {
-					name = jsonFieldsNameOfResponse[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Response) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Response) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Response) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Response) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes ResponseOrReference as json.
-func (s ResponseOrReference) Encode(e *jx.Encoder) {
-	switch s.Type {
-	case ResponseResponseOrReference:
-		s.Response.Encode(e)
-	case ReferenceResponseOrReference:
-		s.Reference.Encode(e)
-	}
-}
+func (s ResponseOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
-func (s ResponseOrReference) encodeFields(e *jx.Encoder) {
-	switch s.Type {
-	case ResponseResponseOrReference:
-		s.Response.encodeFields(e)
-	case ReferenceResponseOrReference:
-		s.Reference.encodeFields(e)
-	}
-}
+func (s ResponseOrReference) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ResponseOrReference from json.
-func (s *ResponseOrReference) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ResponseOrReference to nil")
-	}
-	// Sum type fields.
-	if typ := d.Next(); typ != jx.Object {
-		return errors.Errorf("unexpected json type %q", typ)
-	}
+func (s *ResponseOrReference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	var found bool
-	if err := d.Capture(func(d *jx.Decoder) error {
-		return d.ObjBytes(func(d *jx.Decoder, key []byte) error {
-			switch string(key) {
-			case "$ref":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ReferenceResponseOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "content":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ResponseResponseOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "description":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ResponseResponseOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "headers":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ResponseResponseOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "links":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ResponseResponseOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			}
-			return d.Skip()
-		})
-	}); err != nil {
-		return errors.Wrap(err, "capture")
-	}
-	if !found {
-		return errors.New("unable to detect sum type variant")
-	}
-	switch s.Type {
-	case ResponseResponseOrReference:
-		if err := s.Response.Decode(d); err != nil {
-			return err
-		}
-	case ReferenceResponseOrReference:
-		if err := s.Reference.Decode(d); err != nil {
-			return err
-		}
-	default:
-		return errors.Errorf("inferred invalid type: %s", s.Type)
-	}
-	return nil
-}
+// Sum type fields.
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ResponseOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ResponseOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode implements json.Marshaler.
-func (s ResponsePattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
-
-// encodeFields implements json.Marshaler.
-func (s ResponsePattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
-
-// Decode decodes ResponsePattern0 from json.
-func (s *ResponsePattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ResponsePattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ResponsePattern0")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode implements json.Marshaler.
+func (s ResponsePattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// encodeFields implements json.Marshaler.
+func (s ResponsePattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes ResponsePattern0 from json.
+func (s *ResponsePattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
-func (s ResponsePattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s ResponsePattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ResponsePattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ResponsePattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Responses) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Responses) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Responses) encodeFields(e *jx.Encoder) {
-	{
-		if s.Default.Set {
-			e.FieldStart("default")
-			s.Default.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-	for k, elem := range s.Pattern1Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Responses) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfResponses = [1]string{
 	0: "default",
 }
 
 // Decode decodes Responses from json.
-func (s *Responses) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Responses to nil")
-	}
-	s.Pattern0Props = map[string]ResponseOrReference{}
-	s.Pattern1Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "default":
-			if err := func() error {
-				s.Default.Reset()
-				if err := s.Default.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"default\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^([0-9X]{3})$"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem ResponseOrReference
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern1Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Responses")
-	}
-
-	return nil
-}
+func (s *Responses) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Responses) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Responses) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Responses) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Responses) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s ResponsesOrReferences) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ResponsesOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ResponsesOrReferences) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ResponsesOrReferences) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ResponsesOrReferences from json.
-func (s *ResponsesOrReferences) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ResponsesOrReferences to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem ResponseOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ResponsesOrReferences")
-	}
-
-	return nil
-}
+func (s *ResponsesOrReferences) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ResponsesOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ResponsesOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s ResponsesPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ResponsesPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ResponsesPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ResponsesPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ResponsesPattern0 from json.
-func (s *ResponsesPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ResponsesPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^([0-9X]{3})$"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem ResponseOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ResponsesPattern0")
-	}
-
-	return nil
-}
+func (s *ResponsesPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ResponsesPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ResponsesPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ResponsesPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s ResponsesPattern1) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ResponsesPattern1) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ResponsesPattern1) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ResponsesPattern1) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ResponsesPattern1 from json.
-func (s *ResponsesPattern1) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ResponsesPattern1 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ResponsesPattern1")
-	}
-
-	return nil
-}
+func (s *ResponsesPattern1) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ResponsesPattern1) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ResponsesPattern1) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ResponsesPattern1) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Schema) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Schema) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Schema) encodeFields(e *jx.Encoder) {
-	{
-		if s.Nullable.Set {
-			e.FieldStart("nullable")
-			s.Nullable.Encode(e)
-		}
-	}
-	{
-		if s.Discriminator.Set {
-			e.FieldStart("discriminator")
-			s.Discriminator.Encode(e)
-		}
-	}
-	{
-		if s.ReadOnly.Set {
-			e.FieldStart("readOnly")
-			s.ReadOnly.Encode(e)
-		}
-	}
-	{
-		if s.WriteOnly.Set {
-			e.FieldStart("writeOnly")
-			s.WriteOnly.Encode(e)
-		}
-	}
-	{
-		if s.XML.Set {
-			e.FieldStart("xml")
-			s.XML.Encode(e)
-		}
-	}
-	{
-		if s.ExternalDocs.Set {
-			e.FieldStart("externalDocs")
-			s.ExternalDocs.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("example")
-		s.Example.Encode(e)
-	}
-	{
-		if s.Deprecated.Set {
-			e.FieldStart("deprecated")
-			s.Deprecated.Encode(e)
-		}
-	}
-	{
-		if s.Title.Set {
-			e.FieldStart("title")
-			s.Title.Encode(e)
-		}
-	}
-	{
-		if s.MultipleOf.Set {
-			e.FieldStart("multipleOf")
-			s.MultipleOf.Encode(e)
-		}
-	}
-	{
-		if s.Maximum.Set {
-			e.FieldStart("maximum")
-			s.Maximum.Encode(e)
-		}
-	}
-	{
-		if s.ExclusiveMaximum.Set {
-			e.FieldStart("exclusiveMaximum")
-			s.ExclusiveMaximum.Encode(e)
-		}
-	}
-	{
-		if s.Minimum.Set {
-			e.FieldStart("minimum")
-			s.Minimum.Encode(e)
-		}
-	}
-	{
-		if s.ExclusiveMinimum.Set {
-			e.FieldStart("exclusiveMinimum")
-			s.ExclusiveMinimum.Encode(e)
-		}
-	}
-	{
-		if s.MaxLength.Set {
-			e.FieldStart("maxLength")
-			s.MaxLength.Encode(e)
-		}
-	}
-	{
-		if s.MinLength.Set {
-			e.FieldStart("minLength")
-			s.MinLength.Encode(e)
-		}
-	}
-	{
-		if s.Pattern.Set {
-			e.FieldStart("pattern")
-			s.Pattern.Encode(e)
-		}
-	}
-	{
-		if s.MaxItems.Set {
-			e.FieldStart("maxItems")
-			s.MaxItems.Encode(e)
-		}
-	}
-	{
-		if s.MinItems.Set {
-			e.FieldStart("minItems")
-			s.MinItems.Encode(e)
-		}
-	}
-	{
-		if s.UniqueItems.Set {
-			e.FieldStart("uniqueItems")
-			s.UniqueItems.Encode(e)
-		}
-	}
-	{
-		if s.MaxProperties.Set {
-			e.FieldStart("maxProperties")
-			s.MaxProperties.Encode(e)
-		}
-	}
-	{
-		if s.MinProperties.Set {
-			e.FieldStart("minProperties")
-			s.MinProperties.Encode(e)
-		}
-	}
-	{
-		if s.Required != nil {
-			e.FieldStart("required")
-			s.Required.Encode(e)
-		}
-	}
-	{
-		if s.Enum != nil {
-			e.FieldStart("enum")
-			s.Enum.Encode(e)
-		}
-	}
-	{
-		if s.Type.Set {
-			e.FieldStart("type")
-			s.Type.Encode(e)
-		}
-	}
-	{
-		if s.AllOf != nil {
-			e.FieldStart("allOf")
-			e.ArrStart()
-			for _, elem := range s.AllOf {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.OneOf != nil {
-			e.FieldStart("oneOf")
-			e.ArrStart()
-			for _, elem := range s.OneOf {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.AnyOf != nil {
-			e.FieldStart("anyOf")
-			e.ArrStart()
-			for _, elem := range s.AnyOf {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.Not != nil {
-			e.FieldStart("not")
-			s.Not.Encode(e)
-		}
-	}
-	{
-		if s.Items != nil {
-			e.FieldStart("items")
-			s.Items.Encode(e)
-		}
-	}
-	{
-		if s.Properties.Set {
-			e.FieldStart("properties")
-			s.Properties.Encode(e)
-		}
-	}
-	{
-		if s.AdditionalProperties != nil {
-			e.FieldStart("additionalProperties")
-			s.AdditionalProperties.Encode(e)
-		}
-	}
-	{
-		e.FieldStart("default")
-		s.Default.Encode(e)
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.Format.Set {
-			e.FieldStart("format")
-			s.Format.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Schema) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfSchema = [35]string{
 	0:  "nullable",
@@ -14956,1356 +8083,279 @@ var jsonFieldsNameOfSchema = [35]string{
 }
 
 // Decode decodes Schema from json.
-func (s *Schema) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Schema to nil")
-	}
-	s.setDefaults()
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "nullable":
-			if err := func() error {
-				s.Nullable.Reset()
-				if err := s.Nullable.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"nullable\"")
-			}
-		case "discriminator":
-			if err := func() error {
-				s.Discriminator.Reset()
-				if err := s.Discriminator.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"discriminator\"")
-			}
-		case "readOnly":
-			if err := func() error {
-				s.ReadOnly.Reset()
-				if err := s.ReadOnly.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"readOnly\"")
-			}
-		case "writeOnly":
-			if err := func() error {
-				s.WriteOnly.Reset()
-				if err := s.WriteOnly.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"writeOnly\"")
-			}
-		case "xml":
-			if err := func() error {
-				s.XML.Reset()
-				if err := s.XML.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"xml\"")
-			}
-		case "externalDocs":
-			if err := func() error {
-				s.ExternalDocs.Reset()
-				if err := s.ExternalDocs.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"externalDocs\"")
-			}
-		case "example":
-			if err := func() error {
-				if err := s.Example.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"example\"")
-			}
-		case "deprecated":
-			if err := func() error {
-				s.Deprecated.Reset()
-				if err := s.Deprecated.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"deprecated\"")
-			}
-		case "title":
-			if err := func() error {
-				s.Title.Reset()
-				if err := s.Title.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"title\"")
-			}
-		case "multipleOf":
-			if err := func() error {
-				s.MultipleOf.Reset()
-				if err := s.MultipleOf.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"multipleOf\"")
-			}
-		case "maximum":
-			if err := func() error {
-				s.Maximum.Reset()
-				if err := s.Maximum.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"maximum\"")
-			}
-		case "exclusiveMaximum":
-			if err := func() error {
-				s.ExclusiveMaximum.Reset()
-				if err := s.ExclusiveMaximum.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"exclusiveMaximum\"")
-			}
-		case "minimum":
-			if err := func() error {
-				s.Minimum.Reset()
-				if err := s.Minimum.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"minimum\"")
-			}
-		case "exclusiveMinimum":
-			if err := func() error {
-				s.ExclusiveMinimum.Reset()
-				if err := s.ExclusiveMinimum.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"exclusiveMinimum\"")
-			}
-		case "maxLength":
-			if err := func() error {
-				s.MaxLength.Reset()
-				if err := s.MaxLength.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"maxLength\"")
-			}
-		case "minLength":
-			if err := func() error {
-				s.MinLength.Reset()
-				if err := s.MinLength.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"minLength\"")
-			}
-		case "pattern":
-			if err := func() error {
-				s.Pattern.Reset()
-				if err := s.Pattern.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"pattern\"")
-			}
-		case "maxItems":
-			if err := func() error {
-				s.MaxItems.Reset()
-				if err := s.MaxItems.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"maxItems\"")
-			}
-		case "minItems":
-			if err := func() error {
-				s.MinItems.Reset()
-				if err := s.MinItems.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"minItems\"")
-			}
-		case "uniqueItems":
-			if err := func() error {
-				s.UniqueItems.Reset()
-				if err := s.UniqueItems.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"uniqueItems\"")
-			}
-		case "maxProperties":
-			if err := func() error {
-				s.MaxProperties.Reset()
-				if err := s.MaxProperties.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"maxProperties\"")
-			}
-		case "minProperties":
-			if err := func() error {
-				s.MinProperties.Reset()
-				if err := s.MinProperties.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"minProperties\"")
-			}
-		case "required":
-			if err := func() error {
-				if err := s.Required.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"required\"")
-			}
-		case "enum":
-			if err := func() error {
-				if err := s.Enum.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"enum\"")
-			}
-		case "type":
-			if err := func() error {
-				s.Type.Reset()
-				if err := s.Type.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"type\"")
-			}
-		case "allOf":
-			if err := func() error {
-				s.AllOf = make([]SchemaOrReference, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem SchemaOrReference
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.AllOf = append(s.AllOf, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"allOf\"")
-			}
-		case "oneOf":
-			if err := func() error {
-				s.OneOf = make([]SchemaOrReference, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem SchemaOrReference
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.OneOf = append(s.OneOf, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"oneOf\"")
-			}
-		case "anyOf":
-			if err := func() error {
-				s.AnyOf = make([]SchemaOrReference, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem SchemaOrReference
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.AnyOf = append(s.AnyOf, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"anyOf\"")
-			}
-		case "not":
-			if err := func() error {
-				s.Not = nil
-				var elem Schema
-				if err := elem.Decode(d); err != nil {
-					return err
-				}
-				s.Not = &elem
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"not\"")
-			}
-		case "items":
-			if err := func() error {
-				s.Items = nil
-				var elem SchemaOrReference
-				if err := elem.Decode(d); err != nil {
-					return err
-				}
-				s.Items = &elem
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"items\"")
-			}
-		case "properties":
-			if err := func() error {
-				s.Properties.Reset()
-				if err := s.Properties.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"properties\"")
-			}
-		case "additionalProperties":
-			if err := func() error {
-				s.AdditionalProperties = nil
-				var elem SchemaAdditionalProperties
-				if err := elem.Decode(d); err != nil {
-					return err
-				}
-				s.AdditionalProperties = &elem
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"additionalProperties\"")
-			}
-		case "default":
-			if err := func() error {
-				if err := s.Default.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"default\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "format":
-			if err := func() error {
-				s.Format.Reset()
-				if err := s.Format.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"format\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Schema")
-	}
-
-	return nil
-}
+func (s *Schema) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Schema) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Schema) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Schema) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Schema) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes SchemaAdditionalProperties as json.
-func (s SchemaAdditionalProperties) Encode(e *jx.Encoder) {
-	switch s.Type {
-	case SchemaOrReferenceSchemaAdditionalProperties:
-		s.SchemaOrReference.Encode(e)
-	case BoolSchemaAdditionalProperties:
-		e.Bool(s.Bool)
-	}
-}
+func (s SchemaAdditionalProperties) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SchemaAdditionalProperties from json.
 func (s *SchemaAdditionalProperties) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SchemaAdditionalProperties to nil")
-	}
-	// Sum type type_discriminator.
-	switch t := d.Next(); t {
-	case jx.Bool:
-		v, err := d.Bool()
-		s.Bool = bool(v)
-		if err != nil {
-			return err
-		}
-		s.Type = BoolSchemaAdditionalProperties
-	case jx.Object:
-		if err := s.SchemaOrReference.Decode(d); err != nil {
-			return err
-		}
-		s.Type = SchemaOrReferenceSchemaAdditionalProperties
-	default:
-		return errors.Errorf("unexpected json type %q", t)
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Sum type type_discriminator.
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s SchemaAdditionalProperties) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *SchemaAdditionalProperties) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes SchemaOrReference as json.
-func (s SchemaOrReference) Encode(e *jx.Encoder) {
-	switch s.Type {
-	case SchemaSchemaOrReference:
-		s.Schema.Encode(e)
-	case ReferenceSchemaOrReference:
-		s.Reference.Encode(e)
-	}
-}
+func (s SchemaOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
-func (s SchemaOrReference) encodeFields(e *jx.Encoder) {
-	switch s.Type {
-	case SchemaSchemaOrReference:
-		s.Schema.encodeFields(e)
-	case ReferenceSchemaOrReference:
-		s.Reference.encodeFields(e)
-	}
-}
+func (s SchemaOrReference) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SchemaOrReference from json.
-func (s *SchemaOrReference) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SchemaOrReference to nil")
-	}
-	// Sum type fields.
-	if typ := d.Next(); typ != jx.Object {
-		return errors.Errorf("unexpected json type %q", typ)
-	}
+func (s *SchemaOrReference) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	var found bool
-	if err := d.Capture(func(d *jx.Decoder) error {
-		return d.ObjBytes(func(d *jx.Decoder, key []byte) error {
-			switch string(key) {
-			case "$ref":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ReferenceSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "additionalProperties":
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "allOf":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Array {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "anyOf":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Array {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "default":
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "deprecated":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "description":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "discriminator":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "enum":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Array {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "example":
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "exclusiveMaximum":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "exclusiveMinimum":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "externalDocs":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "format":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "items":
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "maxItems":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Number {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "maxLength":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Number {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "maxProperties":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Number {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "maximum":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Number {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "minItems":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Number {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "minLength":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Number {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "minProperties":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Number {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "minimum":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Number {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "multipleOf":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Number {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "not":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "nullable":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "oneOf":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Array {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "pattern":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "properties":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "readOnly":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "required":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Array {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "title":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "type":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "uniqueItems":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "writeOnly":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Bool {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "xml":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SchemaSchemaOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			}
-			return d.Skip()
-		})
-	}); err != nil {
-		return errors.Wrap(err, "capture")
-	}
-	if !found {
-		return errors.New("unable to detect sum type variant")
-	}
-	switch s.Type {
-	case SchemaSchemaOrReference:
-		if err := s.Schema.Decode(d); err != nil {
-			return err
-		}
-	case ReferenceSchemaOrReference:
-		if err := s.Reference.Decode(d); err != nil {
-			return err
-		}
-	default:
-		return errors.Errorf("inferred invalid type: %s", s.Type)
-	}
-	return nil
-}
+// Sum type fields.
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s SchemaOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *SchemaOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *SchemaOrReference) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s SchemaPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s SchemaPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s SchemaPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s SchemaPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SchemaPattern0 from json.
-func (s *SchemaPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SchemaPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode SchemaPattern0")
-	}
-
-	return nil
-}
+func (s *SchemaPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s SchemaPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s SchemaPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *SchemaPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *SchemaPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s SchemaProperties) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s SchemaProperties) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s SchemaProperties) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s SchemaProperties) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SchemaProperties from json.
-func (s *SchemaProperties) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SchemaProperties to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem SchemaOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode SchemaProperties")
-	}
-
-	return nil
-}
+func (s *SchemaProperties) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s SchemaProperties) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s SchemaProperties) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *SchemaProperties) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *SchemaProperties) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes SchemaType as json.
 func (s SchemaType) Encode(e *jx.Encoder) {
-	e.Str(string(s))
+	_ = "STUB: not implemented"
+
+	// Decode decodes SchemaType from json.
+	return
 }
 
-// Decode decodes SchemaType from json.
-func (s *SchemaType) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SchemaType to nil")
-	}
-	v, err := d.StrBytes()
-	if err != nil {
-		return err
-	}
-	// Try to use constant string.
-	switch SchemaType(v) {
-	case SchemaTypeArray:
-		*s = SchemaTypeArray
-	case SchemaTypeBoolean:
-		*s = SchemaTypeBoolean
-	case SchemaTypeInteger:
-		*s = SchemaTypeInteger
-	case SchemaTypeNull:
-		*s = SchemaTypeNull
-	case SchemaTypeNumber:
-		*s = SchemaTypeNumber
-	case SchemaTypeObject:
-		*s = SchemaTypeObject
-	case SchemaTypeString:
-		*s = SchemaTypeString
-	default:
-		*s = SchemaType(v)
-	}
+func (s *SchemaType) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	return nil
-}
+// Try to use constant string.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s SchemaType) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s SchemaType) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *SchemaType) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *SchemaType) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s SchemasOrReferences) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s SchemasOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s SchemasOrReferences) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s SchemasOrReferences) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SchemasOrReferences from json.
-func (s *SchemasOrReferences) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SchemasOrReferences to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem SchemaOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode SchemasOrReferences")
-	}
-
-	return nil
-}
+func (s *SchemasOrReferences) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s SchemasOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *SchemasOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode implements json.Marshaler.
-func (s SecurityRequirement) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
-
-// encodeFields implements json.Marshaler.
-func (s SecurityRequirement) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		e.ArrStart()
-		for _, elem := range elem {
-			e.Str(elem)
-		}
-		e.ArrEnd()
-	}
-}
-
-// Decode decodes SecurityRequirement from json.
-func (s *SecurityRequirement) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SecurityRequirement to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^[a-zA-Z0-9\\.\\-_]+$"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			switch string(k) {
-			default:
-				return errors.Errorf("unexpected field %q", k)
-			}
-		}
-		var elem []string
-		if err := func() error {
-			elem = make([]string, 0)
-			if err := d.Arr(func(d *jx.Decoder) error {
-				var elemElem string
-				v, err := d.Str()
-				elemElem = string(v)
-				if err != nil {
-					return err
-				}
-				elem = append(elem, elemElem)
-				return nil
-			}); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode SecurityRequirement")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode implements json.Marshaler.
+func (s SecurityRequirement) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// encodeFields implements json.Marshaler.
+func (s SecurityRequirement) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes SecurityRequirement from json.
+func (s *SecurityRequirement) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s SecurityRequirement) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *SecurityRequirement) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *SecurityScheme) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *SecurityScheme) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *SecurityScheme) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("type")
-		e.Str(s.Type)
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.Name.Set {
-			e.FieldStart("name")
-			s.Name.Encode(e)
-		}
-	}
-	{
-		if s.In.Set {
-			e.FieldStart("in")
-			s.In.Encode(e)
-		}
-	}
-	{
-		if s.Scheme.Set {
-			e.FieldStart("scheme")
-			s.Scheme.Encode(e)
-		}
-	}
-	{
-		if s.BearerFormat.Set {
-			e.FieldStart("bearerFormat")
-			s.BearerFormat.Encode(e)
-		}
-	}
-	{
-		if s.Flows.Set {
-			e.FieldStart("flows")
-			s.Flows.Encode(e)
-		}
-	}
-	{
-		if s.OpenIdConnectUrl.Set {
-			e.FieldStart("openIdConnectUrl")
-			s.OpenIdConnectUrl.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *SecurityScheme) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfSecurityScheme = [8]string{
 	0: "type",
@@ -16319,506 +8369,134 @@ var jsonFieldsNameOfSecurityScheme = [8]string{
 }
 
 // Decode decodes SecurityScheme from json.
-func (s *SecurityScheme) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SecurityScheme to nil")
-	}
-	var requiredBitSet [1]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *SecurityScheme) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "type":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.Type = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"type\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "name":
-			if err := func() error {
-				s.Name.Reset()
-				if err := s.Name.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"name\"")
-			}
-		case "in":
-			if err := func() error {
-				s.In.Reset()
-				if err := s.In.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"in\"")
-			}
-		case "scheme":
-			if err := func() error {
-				s.Scheme.Reset()
-				if err := s.Scheme.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"scheme\"")
-			}
-		case "bearerFormat":
-			if err := func() error {
-				s.BearerFormat.Reset()
-				if err := s.BearerFormat.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"bearerFormat\"")
-			}
-		case "flows":
-			if err := func() error {
-				s.Flows.Reset()
-				if err := s.Flows.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"flows\"")
-			}
-		case "openIdConnectUrl":
-			if err := func() error {
-				s.OpenIdConnectUrl.Reset()
-				if err := s.OpenIdConnectUrl.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"openIdConnectUrl\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode SecurityScheme")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfSecurityScheme) {
-					name = jsonFieldsNameOfSecurityScheme[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *SecurityScheme) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *SecurityScheme) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *SecurityScheme) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *SecurityScheme) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes SecuritySchemeOrReference as json.
-func (s SecuritySchemeOrReference) Encode(e *jx.Encoder) {
-	switch s.Type {
-	case SecuritySchemeSecuritySchemeOrReference:
-		s.SecurityScheme.Encode(e)
-	case ReferenceSecuritySchemeOrReference:
-		s.Reference.Encode(e)
-	}
-}
+func (s SecuritySchemeOrReference) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
-func (s SecuritySchemeOrReference) encodeFields(e *jx.Encoder) {
-	switch s.Type {
-	case SecuritySchemeSecuritySchemeOrReference:
-		s.SecurityScheme.encodeFields(e)
-	case ReferenceSecuritySchemeOrReference:
-		s.Reference.encodeFields(e)
-	}
-}
+func (s SecuritySchemeOrReference) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SecuritySchemeOrReference from json.
 func (s *SecuritySchemeOrReference) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SecuritySchemeOrReference to nil")
-	}
-	// Sum type fields.
-	if typ := d.Next(); typ != jx.Object {
-		return errors.Errorf("unexpected json type %q", typ)
-	}
-
-	var found bool
-	if err := d.Capture(func(d *jx.Decoder) error {
-		return d.ObjBytes(func(d *jx.Decoder, key []byte) error {
-			switch string(key) {
-			case "$ref":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := ReferenceSecuritySchemeOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "bearerFormat":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SecuritySchemeSecuritySchemeOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "description":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SecuritySchemeSecuritySchemeOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "flows":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.Object {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SecuritySchemeSecuritySchemeOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "in":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SecuritySchemeSecuritySchemeOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "name":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SecuritySchemeSecuritySchemeOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "openIdConnectUrl":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SecuritySchemeSecuritySchemeOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "scheme":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SecuritySchemeSecuritySchemeOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			case "type":
-				// Type-based discrimination: check if field has expected JSON type
-				if typ := d.Next(); typ != jx.String {
-					// Field exists but has wrong type, not a match for this variant
-					return d.Skip()
-				}
-				match := SecuritySchemeSecuritySchemeOrReference
-				if found && s.Type != match {
-					s.Type = ""
-					return errors.Errorf("multiple oneOf matches: (%v, %v)", s.Type, match)
-				}
-				found = true
-				s.Type = match
-			}
-			return d.Skip()
-		})
-	}); err != nil {
-		return errors.Wrap(err, "capture")
-	}
-	if !found {
-		return errors.New("unable to detect sum type variant")
-	}
-	switch s.Type {
-	case SecuritySchemeSecuritySchemeOrReference:
-		if err := s.SecurityScheme.Decode(d); err != nil {
-			return err
-		}
-	case ReferenceSecuritySchemeOrReference:
-		if err := s.Reference.Decode(d); err != nil {
-			return err
-		}
-	default:
-		return errors.Errorf("inferred invalid type: %s", s.Type)
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Sum type fields.
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
+// Type-based discrimination: check if field has expected JSON type
+
+// Field exists but has wrong type, not a match for this variant
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s SecuritySchemeOrReference) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *SecuritySchemeOrReference) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode implements json.Marshaler.
-func (s SecuritySchemePattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
-
-// encodeFields implements json.Marshaler.
-func (s SecuritySchemePattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
-
-// Decode decodes SecuritySchemePattern0 from json.
-func (s *SecuritySchemePattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SecuritySchemePattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode SecuritySchemePattern0")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode implements json.Marshaler.
+func (s SecuritySchemePattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// encodeFields implements json.Marshaler.
+func (s SecuritySchemePattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes SecuritySchemePattern0 from json.
+func (s *SecuritySchemePattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s SecuritySchemePattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *SecuritySchemePattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s SecuritySchemesOrReferences) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s SecuritySchemesOrReferences) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s SecuritySchemesOrReferences) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s SecuritySchemesOrReferences) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SecuritySchemesOrReferences from json.
 func (s *SecuritySchemesOrReferences) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SecuritySchemesOrReferences to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem SecuritySchemeOrReference
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode SecuritySchemesOrReferences")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s SecuritySchemesOrReferences) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *SecuritySchemesOrReferences) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *Server) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Server) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Server) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("url")
-		e.Str(s.URL)
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.Variables.Set {
-			e.FieldStart("variables")
-			s.Variables.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Server) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfServer = [3]string{
 	0: "url",
@@ -16827,219 +8505,43 @@ var jsonFieldsNameOfServer = [3]string{
 }
 
 // Decode decodes Server from json.
-func (s *Server) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Server to nil")
-	}
-	var requiredBitSet [1]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *Server) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "url":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.URL = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"url\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "variables":
-			if err := func() error {
-				s.Variables.Reset()
-				if err := s.Variables.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"variables\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Server")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfServer) {
-					name = jsonFieldsNameOfServer[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Server) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Server) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Server) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Server) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s ServerPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ServerPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ServerPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ServerPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ServerPattern0 from json.
-func (s *ServerPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ServerPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ServerPattern0")
-	}
-
-	return nil
-}
+func (s *ServerPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s ServerPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s ServerPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ServerPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ServerPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *ServerVariable) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *ServerVariable) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *ServerVariable) encodeFields(e *jx.Encoder) {
-	{
-		if s.Enum != nil {
-			e.FieldStart("enum")
-			e.ArrStart()
-			for _, elem := range s.Enum {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		e.FieldStart("default")
-		e.Str(s.Default)
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *ServerVariable) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfServerVariable = [3]string{
 	0: "enum",
@@ -17048,316 +8550,64 @@ var jsonFieldsNameOfServerVariable = [3]string{
 }
 
 // Decode decodes ServerVariable from json.
-func (s *ServerVariable) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ServerVariable to nil")
-	}
-	var requiredBitSet [1]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *ServerVariable) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "enum":
-			if err := func() error {
-				s.Enum = make([]string, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem string
-					v, err := d.Str()
-					elem = string(v)
-					if err != nil {
-						return err
-					}
-					s.Enum = append(s.Enum, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"enum\"")
-			}
-		case "default":
-			requiredBitSet[0] |= 1 << 1
-			if err := func() error {
-				v, err := d.Str()
-				s.Default = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"default\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ServerVariable")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000010,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfServerVariable) {
-					name = jsonFieldsNameOfServerVariable[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *ServerVariable) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *ServerVariable) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ServerVariable) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ServerVariable) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s ServerVariablePattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s ServerVariablePattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s ServerVariablePattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s ServerVariablePattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes ServerVariablePattern0 from json.
-func (s *ServerVariablePattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ServerVariablePattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ServerVariablePattern0")
-	}
-
-	return nil
-}
+func (s *ServerVariablePattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s ServerVariablePattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *ServerVariablePattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-// Encode implements json.Marshaler.
-func (s ServerVariables) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
-
-// encodeFields implements json.Marshaler.
-func (s ServerVariables) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
-
-// Decode decodes ServerVariables from json.
-func (s *ServerVariables) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode ServerVariables to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem ServerVariable
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode ServerVariables")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Encode implements json.Marshaler.
+func (s ServerVariables) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// encodeFields implements json.Marshaler.
+func (s ServerVariables) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
+
+// Decode decodes ServerVariables from json.
+func (s *ServerVariables) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
+
 // MarshalJSON implements stdjson.Marshaler.
-func (s ServerVariables) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s ServerVariables) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *ServerVariables) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *ServerVariables) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Spec) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Spec) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Spec) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("openapi")
-		e.Str(s.Openapi)
-	}
-	{
-		e.FieldStart("info")
-		s.Info.Encode(e)
-	}
-	{
-		if s.Servers != nil {
-			e.FieldStart("servers")
-			e.ArrStart()
-			for _, elem := range s.Servers {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		e.FieldStart("paths")
-		s.Paths.Encode(e)
-	}
-	{
-		if s.Components.Set {
-			e.FieldStart("components")
-			s.Components.Encode(e)
-		}
-	}
-	{
-		if s.Security != nil {
-			e.FieldStart("security")
-			e.ArrStart()
-			for _, elem := range s.Security {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.Tags != nil {
-			e.FieldStart("tags")
-			e.ArrStart()
-			for _, elem := range s.Tags {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.ExternalDocs.Set {
-			e.FieldStart("externalDocs")
-			s.ExternalDocs.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Spec) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfSpec = [8]string{
 	0: "openapi",
@@ -17371,441 +8621,88 @@ var jsonFieldsNameOfSpec = [8]string{
 }
 
 // Decode decodes Spec from json.
-func (s *Spec) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Spec to nil")
-	}
-	var requiredBitSet [1]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *Spec) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "openapi":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.Openapi = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"openapi\"")
-			}
-		case "info":
-			requiredBitSet[0] |= 1 << 1
-			if err := func() error {
-				if err := s.Info.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"info\"")
-			}
-		case "servers":
-			if err := func() error {
-				s.Servers = make([]Server, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem Server
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Servers = append(s.Servers, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"servers\"")
-			}
-		case "paths":
-			requiredBitSet[0] |= 1 << 3
-			if err := func() error {
-				if err := s.Paths.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"paths\"")
-			}
-		case "components":
-			if err := func() error {
-				s.Components.Reset()
-				if err := s.Components.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"components\"")
-			}
-		case "security":
-			if err := func() error {
-				s.Security = make([]SecurityRequirement, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem SecurityRequirement
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Security = append(s.Security, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"security\"")
-			}
-		case "tags":
-			if err := func() error {
-				s.Tags = make([]Tag, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem Tag
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Tags = append(s.Tags, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"tags\"")
-			}
-		case "externalDocs":
-			if err := func() error {
-				s.ExternalDocs.Reset()
-				if err := s.ExternalDocs.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"externalDocs\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Spec")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00001011,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfSpec) {
-					name = jsonFieldsNameOfSpec[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Spec) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Spec) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Spec) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Spec) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s SpecPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s SpecPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s SpecPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s SpecPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SpecPattern0 from json.
-func (s *SpecPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SpecPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode SpecPattern0")
-	}
-
-	return nil
-}
+func (s *SpecPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s SpecPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s SpecPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *SpecPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *SpecPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes SpecificationExtension as json.
-func (s SpecificationExtension) Encode(e *jx.Encoder) {
-	unwrapped := jx.Raw(s)
-
-	if len(unwrapped) != 0 {
-		e.Raw(unwrapped)
-	}
-}
+func (s SpecificationExtension) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes SpecificationExtension from json.
-func (s *SpecificationExtension) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode SpecificationExtension to nil")
-	}
-	var unwrapped jx.Raw
-	if err := func() error {
-		v, err := d.RawAppend(nil)
-		unwrapped = jx.Raw(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = SpecificationExtension(unwrapped)
-	return nil
-}
+func (s *SpecificationExtension) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s SpecificationExtension) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *SpecificationExtension) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes StringArray as json.
-func (s StringArray) Encode(e *jx.Encoder) {
-	unwrapped := []string(s)
-	if unwrapped == nil {
-		e.ArrEmpty()
-		return
-	}
-	if unwrapped != nil {
-		e.ArrStart()
-		for _, elem := range unwrapped {
-			e.Str(elem)
-		}
-		e.ArrEnd()
-	}
-}
+func (s StringArray) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes StringArray from json.
-func (s *StringArray) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode StringArray to nil")
-	}
-	var unwrapped []string
-	if err := func() error {
-		unwrapped = make([]string, 0)
-		if err := d.Arr(func(d *jx.Decoder) error {
-			var elem string
-			v, err := d.Str()
-			elem = string(v)
-			if err != nil {
-				return err
-			}
-			unwrapped = append(unwrapped, elem)
-			return nil
-		}); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = StringArray(unwrapped)
-	return nil
-}
+func (s *StringArray) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s StringArray) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s StringArray) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *StringArray) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *StringArray) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s Strings) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s Strings) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s Strings) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		e.Str(elem)
-	}
-}
+func (s Strings) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Strings from json.
-func (s *Strings) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Strings to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem string
-		if err := func() error {
-			v, err := d.Str()
-			elem = string(v)
-			if err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Strings")
-	}
-
-	return nil
-}
+func (s *Strings) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s Strings) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s Strings) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Strings) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Strings) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *Tag) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *Tag) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *Tag) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("name")
-		e.Str(s.Name)
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.ExternalDocs.Set {
-			e.FieldStart("externalDocs")
-			s.ExternalDocs.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *Tag) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfTag = [3]string{
 	0: "name",
@@ -17814,309 +8711,67 @@ var jsonFieldsNameOfTag = [3]string{
 }
 
 // Decode decodes Tag from json.
-func (s *Tag) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Tag to nil")
-	}
-	var requiredBitSet [1]uint8
-	s.Pattern0Props = map[string]SpecificationExtension{}
+func (s *Tag) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "name":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.Name = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"name\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "externalDocs":
-			if err := func() error {
-				s.ExternalDocs.Reset()
-				if err := s.ExternalDocs.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"externalDocs\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode Tag")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfTag) {
-					name = jsonFieldsNameOfTag[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *Tag) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *Tag) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Tag) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Tag) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s TagPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s TagPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s TagPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s TagPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes TagPattern0 from json.
-func (s *TagPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode TagPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode TagPattern0")
-	}
-
-	return nil
-}
+func (s *TagPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s TagPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s TagPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *TagPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *TagPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Title as json.
-func (s Title) Encode(e *jx.Encoder) {
-	unwrapped := string(s)
-
-	e.Str(unwrapped)
-}
+func (s Title) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Title from json.
-func (s *Title) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Title to nil")
-	}
-	var unwrapped string
-	if err := func() error {
-		v, err := d.Str()
-		unwrapped = string(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = Title(unwrapped)
-	return nil
-}
+func (s *Title) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s Title) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s Title) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Title) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Title) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes UniqueItems as json.
-func (s UniqueItems) Encode(e *jx.Encoder) {
-	unwrapped := bool(s)
-
-	e.Bool(unwrapped)
-}
+func (s UniqueItems) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes UniqueItems from json.
-func (s *UniqueItems) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode UniqueItems to nil")
-	}
-	var unwrapped bool
-	if err := func() error {
-		v, err := d.Bool()
-		unwrapped = bool(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = UniqueItems(unwrapped)
-	return nil
-}
+func (s *UniqueItems) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s UniqueItems) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s UniqueItems) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *UniqueItems) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *UniqueItems) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *XML) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *XML) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *XML) encodeFields(e *jx.Encoder) {
-	{
-		if s.Name.Set {
-			e.FieldStart("name")
-			s.Name.Encode(e)
-		}
-	}
-	{
-		if s.Namespace.Set {
-			e.FieldStart("namespace")
-			s.Namespace.Encode(e)
-		}
-	}
-	{
-		if s.Prefix.Set {
-			e.FieldStart("prefix")
-			s.Prefix.Encode(e)
-		}
-	}
-	{
-		if s.Attribute.Set {
-			e.FieldStart("attribute")
-			s.Attribute.Encode(e)
-		}
-	}
-	{
-		if s.Wrapped.Set {
-			e.FieldStart("wrapped")
-			s.Wrapped.Encode(e)
-		}
-	}
-	for k, elem := range s.Pattern0Props {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s *XML) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfXML = [5]string{
 	0: "name",
@@ -18127,1927 +8782,147 @@ var jsonFieldsNameOfXML = [5]string{
 }
 
 // Decode decodes XML from json.
-func (s *XML) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode XML to nil")
-	}
-	s.Pattern0Props = map[string]SpecificationExtension{}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "name":
-			if err := func() error {
-				s.Name.Reset()
-				if err := s.Name.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"name\"")
-			}
-		case "namespace":
-			if err := func() error {
-				s.Namespace.Reset()
-				if err := s.Namespace.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"namespace\"")
-			}
-		case "prefix":
-			if err := func() error {
-				s.Prefix.Reset()
-				if err := s.Prefix.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"prefix\"")
-			}
-		case "attribute":
-			if err := func() error {
-				s.Attribute.Reset()
-				if err := s.Attribute.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"attribute\"")
-			}
-		case "wrapped":
-			if err := func() error {
-				s.Wrapped.Reset()
-				if err := s.Wrapped.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"wrapped\"")
-			}
-		default:
-			var handled bool
-			switch match, err := regexMap["^x-"].Match(k); {
-			case err != nil:
-				return errors.Wrap(err, "execute regex")
-			case match:
-				handled = true
-				var elem SpecificationExtension
-				if err := func() error {
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					return nil
-				}(); err != nil {
-					return errors.Wrapf(err, "decode field %q", k)
-				}
-				s.Pattern0Props[string(k)] = elem
-			}
-			if handled {
-				return nil
-			}
-			return errors.Errorf("unexpected field %q", k)
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode XML")
-	}
-
-	return nil
-}
+func (s *XML) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *XML) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *XML) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *XML) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *XML) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s XMLPattern0) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s XMLPattern0) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s XMLPattern0) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		elem.Encode(e)
-	}
-}
+func (s XMLPattern0) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes XMLPattern0 from json.
-func (s *XMLPattern0) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode XMLPattern0 to nil")
-	}
-	m := s.init()
-	pattern := regexMap["^x-"]
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch match, err := pattern.Match(k); {
-		case err != nil:
-			return errors.Wrap(err, "execute regex")
-		case !match:
-			return d.Skip()
-		}
-		var elem SpecificationExtension
-		if err := func() error {
-			if err := elem.Decode(d); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode XMLPattern0")
-	}
-
-	return nil
-}
+func (s *XMLPattern0) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s XMLPattern0) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s XMLPattern0) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *XMLPattern0) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
-
-func (s *Callback) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if err := s.Pattern0Props.Validate(); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "Pattern0Props",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s CallbackOrReference) Validate() error {
-	switch s.Type {
-	case CallbackCallbackOrReference:
-		if err := s.Callback.Validate(); err != nil {
-			return err
-		}
-		return nil
-	case ReferenceCallbackOrReference:
-		return nil // no validation needed
-	default:
-		return errors.Errorf("invalid type %q", s.Type)
-	}
-}
-
-func (s CallbackPattern0) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s CallbacksOrReferences) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s *Components) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if value, ok := s.Schemas.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "schemas",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Responses.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "responses",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Parameters.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "parameters",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.RequestBodies.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "requestBodies",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Headers.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "headers",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Callbacks.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "callbacks",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s *Encoding) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if value, ok := s.Headers.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "headers",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s Encodings) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s Enum) Validate() error {
-	alias := ([]jx.Raw)(s)
-	if alias == nil {
-		return nil // optional
-	}
-	if err := (validate.Array{
-		MinLength:    1,
-		MinLengthSet: true,
-		MaxLength:    0,
-		MaxLengthSet: false,
-	}).ValidateLength(len(alias)); err != nil {
-		return errors.Wrap(err, "array")
-	}
-	return nil
-}
-
-func (s *Header) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if s.Schema == nil {
-			return nil // optional
-		}
-		if err := func() error {
-			if err := s.Schema.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrap(err, "pointer")
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "schema",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Content.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "content",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s HeaderOrReference) Validate() error {
-	switch s.Type {
-	case HeaderHeaderOrReference:
-		if err := s.Header.Validate(); err != nil {
-			return err
-		}
-		return nil
-	case ReferenceHeaderOrReference:
-		return nil // no validation needed
-	default:
-		return errors.Errorf("invalid type %q", s.Type)
-	}
-}
-
-func (s HeadersOrReferences) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s Maximum) Validate() error {
-	alias := (float64)(s)
-	if err := (validate.Float{}).Validate(float64(alias)); err != nil {
-		return errors.Wrap(err, "float")
-	}
-	return nil
-}
-
-func (s *MediaType) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if s.Schema == nil {
-			return nil // optional
-		}
-		if err := func() error {
-			if err := s.Schema.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrap(err, "pointer")
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "schema",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Encoding.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "encoding",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s MediaTypes) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s Minimum) Validate() error {
-	alias := (float64)(s)
-	if err := (validate.Float{}).Validate(float64(alias)); err != nil {
-		return errors.Wrap(err, "float")
-	}
-	return nil
-}
-
-func (s MultipleOf) Validate() error {
-	alias := (float64)(s)
-	if err := (validate.Float{
-		MinSet:        true,
-		Min:           0,
-		MaxSet:        false,
-		Max:           0,
-		MinExclusive:  true,
-		MaxExclusive:  false,
-		MultipleOfSet: false,
-		MultipleOf:    nil,
-		Pattern:       nil,
-	}).Validate(float64(alias)); err != nil {
-		return errors.Wrap(err, "float")
-	}
-	return nil
-}
-
-func (s *Operation) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		var failures []validate.FieldError
-		for i, elem := range s.Parameters {
-			if err := func() error {
-				if err := elem.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				failures = append(failures, validate.FieldError{
-					Name:  fmt.Sprintf("[%d]", i),
-					Error: err,
-				})
-			}
-		}
-		if len(failures) > 0 {
-			return &validate.Error{Fields: failures}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "parameters",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.RequestBody.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "requestBody",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if err := s.Responses.Validate(); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "responses",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Callbacks.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "callbacks",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		var failures []validate.FieldError
-		for i, elem := range s.Security {
-			if err := func() error {
-				if err := elem.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				failures = append(failures, validate.FieldError{
-					Name:  fmt.Sprintf("[%d]", i),
-					Error: err,
-				})
-			}
-		}
-		if len(failures) > 0 {
-			return &validate.Error{Fields: failures}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "security",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s *Parameter) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if err := s.In.Validate(); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "in",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Style.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "style",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if s.Schema == nil {
-			return nil // optional
-		}
-		if err := func() error {
-			if err := s.Schema.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrap(err, "pointer")
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "schema",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Content.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "content",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s ParameterIn) Validate() error {
-	switch s {
-	case "path":
-		return nil
-	case "query":
-		return nil
-	case "cookie":
-		return nil
-	case "header":
-		return nil
-	default:
-		return errors.Errorf("invalid value: %v", s)
-	}
-}
-
-func (s ParameterOrReference) Validate() error {
-	switch s.Type {
-	case ParameterParameterOrReference:
-		if err := s.Parameter.Validate(); err != nil {
-			return err
-		}
-		return nil
-	case ReferenceParameterOrReference:
-		return nil // no validation needed
-	default:
-		return errors.Errorf("invalid type %q", s.Type)
-	}
-}
-
-func (s ParameterStyle) Validate() error {
-	switch s {
-	case "matrix":
-		return nil
-	case "label":
-		return nil
-	case "form":
-		return nil
-	case "simple":
-		return nil
-	case "spaceDelimited":
-		return nil
-	case "pipeDelimited":
-		return nil
-	case "deepObject":
-		return nil
-	default:
-		return errors.Errorf("invalid value: %v", s)
-	}
-}
-
-func (s ParametersOrReferences) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s *PathItem) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if value, ok := s.Get.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "get",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Put.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "put",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Post.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "post",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Delete.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "delete",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Options.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "options",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Head.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "head",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Patch.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "patch",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Trace.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "trace",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		var failures []validate.FieldError
-		for i, elem := range s.Parameters {
-			if err := func() error {
-				if err := elem.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				failures = append(failures, validate.FieldError{
-					Name:  fmt.Sprintf("[%d]", i),
-					Error: err,
-				})
-			}
-		}
-		if len(failures) > 0 {
-			return &validate.Error{Fields: failures}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "parameters",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s *Paths) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if err := s.Pattern0Props.Validate(); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "Pattern0Props",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s PathsPattern0) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s PositiveInteger) Validate() error {
-	alias := (int)(s)
-	if err := (validate.Int{
-		MinSet:        true,
-		Min:           0,
-		MaxSet:        false,
-		Max:           0,
-		MinExclusive:  false,
-		MaxExclusive:  false,
-		MultipleOfSet: false,
-		MultipleOf:    0,
-		Pattern:       nil,
-	}).Validate(int64(alias)); err != nil {
-		return errors.Wrap(err, "int")
-	}
-	return nil
-}
-
-func (s RequestBodiesOrReferences) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s *RequestBody) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if err := s.Content.Validate(); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "content",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s RequestBodyOrReference) Validate() error {
-	switch s.Type {
-	case RequestBodyRequestBodyOrReference:
-		if err := s.RequestBody.Validate(); err != nil {
-			return err
-		}
-		return nil
-	case ReferenceRequestBodyOrReference:
-		return nil // no validation needed
-	default:
-		return errors.Errorf("invalid type %q", s.Type)
-	}
-}
-
-func (s *Response) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if value, ok := s.Headers.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "headers",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Content.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "content",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s ResponseOrReference) Validate() error {
-	switch s.Type {
-	case ResponseResponseOrReference:
-		if err := s.Response.Validate(); err != nil {
-			return err
-		}
-		return nil
-	case ReferenceResponseOrReference:
-		return nil // no validation needed
-	default:
-		return errors.Errorf("invalid type %q", s.Type)
-	}
-}
-
-func (s *Responses) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if value, ok := s.Default.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "default",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if err := s.Pattern0Props.Validate(); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "Pattern0Props",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s ResponsesOrReferences) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s ResponsesPattern0) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s *Schema) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if value, ok := s.MultipleOf.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "multipleOf",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Maximum.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "maximum",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Minimum.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "minimum",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.MaxLength.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "maxLength",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.MinLength.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "minLength",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.MaxItems.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "maxItems",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.MinItems.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "minItems",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.MaxProperties.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "maxProperties",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.MinProperties.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "minProperties",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if err := s.Required.Validate(); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "required",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if err := s.Enum.Validate(); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "enum",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Type.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "type",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if s.AllOf == nil {
-			return nil // optional
-		}
-		if err := (validate.Array{
-			MinLength:    1,
-			MinLengthSet: true,
-			MaxLength:    0,
-			MaxLengthSet: false,
-		}).ValidateLength(len(s.AllOf)); err != nil {
-			return errors.Wrap(err, "array")
-		}
-		var failures []validate.FieldError
-		for i, elem := range s.AllOf {
-			if err := func() error {
-				if err := elem.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				failures = append(failures, validate.FieldError{
-					Name:  fmt.Sprintf("[%d]", i),
-					Error: err,
-				})
-			}
-		}
-		if len(failures) > 0 {
-			return &validate.Error{Fields: failures}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "allOf",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if s.OneOf == nil {
-			return nil // optional
-		}
-		if err := (validate.Array{
-			MinLength:    1,
-			MinLengthSet: true,
-			MaxLength:    0,
-			MaxLengthSet: false,
-		}).ValidateLength(len(s.OneOf)); err != nil {
-			return errors.Wrap(err, "array")
-		}
-		var failures []validate.FieldError
-		for i, elem := range s.OneOf {
-			if err := func() error {
-				if err := elem.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				failures = append(failures, validate.FieldError{
-					Name:  fmt.Sprintf("[%d]", i),
-					Error: err,
-				})
-			}
-		}
-		if len(failures) > 0 {
-			return &validate.Error{Fields: failures}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "oneOf",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if s.AnyOf == nil {
-			return nil // optional
-		}
-		if err := (validate.Array{
-			MinLength:    1,
-			MinLengthSet: true,
-			MaxLength:    0,
-			MaxLengthSet: false,
-		}).ValidateLength(len(s.AnyOf)); err != nil {
-			return errors.Wrap(err, "array")
-		}
-		var failures []validate.FieldError
-		for i, elem := range s.AnyOf {
-			if err := func() error {
-				if err := elem.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				failures = append(failures, validate.FieldError{
-					Name:  fmt.Sprintf("[%d]", i),
-					Error: err,
-				})
-			}
-		}
-		if len(failures) > 0 {
-			return &validate.Error{Fields: failures}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "anyOf",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if s.Not == nil {
-			return nil // optional
-		}
-		if err := func() error {
-			if err := s.Not.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrap(err, "pointer")
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "not",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if s.Items == nil {
-			return nil // optional
-		}
-		if err := func() error {
-			if err := s.Items.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrap(err, "pointer")
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "items",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Properties.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "properties",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if s.AdditionalProperties == nil {
-			return nil // optional
-		}
-		if err := func() error {
-			if err := s.AdditionalProperties.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrap(err, "pointer")
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "additionalProperties",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s SchemaAdditionalProperties) Validate() error {
-	switch s.Type {
-	case SchemaOrReferenceSchemaAdditionalProperties:
-		if err := s.SchemaOrReference.Validate(); err != nil {
-			return err
-		}
-		return nil
-	case BoolSchemaAdditionalProperties:
-		return nil // no validation needed
-	default:
-		return errors.Errorf("invalid type %q", s.Type)
-	}
-}
-
-func (s SchemaOrReference) Validate() error {
-	switch s.Type {
-	case SchemaSchemaOrReference:
-		if err := s.Schema.Validate(); err != nil {
-			return err
-		}
-		return nil
-	case ReferenceSchemaOrReference:
-		return nil // no validation needed
-	default:
-		return errors.Errorf("invalid type %q", s.Type)
-	}
-}
-
-func (s SchemaProperties) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s SchemaType) Validate() error {
-	switch s {
-	case "array":
-		return nil
-	case "boolean":
-		return nil
-	case "integer":
-		return nil
-	case "null":
-		return nil
-	case "number":
-		return nil
-	case "object":
-		return nil
-	case "string":
-		return nil
-	default:
-		return errors.Errorf("invalid value: %v", s)
-	}
-}
-
-func (s SchemasOrReferences) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if err := elem.Validate(); err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s SecurityRequirement) Validate() error {
-	var failures []validate.FieldError
-	for key, elem := range s {
-		if err := func() error {
-			if elem == nil {
-				return errors.New("nil is invalid value")
-			}
-			return nil
-		}(); err != nil {
-			failures = append(failures, validate.FieldError{
-				Name:  key,
-				Error: err,
-			})
-		}
-	}
-
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s *Spec) Validate() error {
-	if s == nil {
-		return validate.ErrNilPointer
-	}
-
-	var failures []validate.FieldError
-	if err := func() error {
-		if err := s.Paths.Validate(); err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "paths",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		if value, ok := s.Components.Get(); ok {
-			if err := func() error {
-				if err := value.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "components",
-			Error: err,
-		})
-	}
-	if err := func() error {
-		var failures []validate.FieldError
-		for i, elem := range s.Security {
-			if err := func() error {
-				if err := elem.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				failures = append(failures, validate.FieldError{
-					Name:  fmt.Sprintf("[%d]", i),
-					Error: err,
-				})
-			}
-		}
-		if len(failures) > 0 {
-			return &validate.Error{Fields: failures}
-		}
-		return nil
-	}(); err != nil {
-		failures = append(failures, validate.FieldError{
-			Name:  "security",
-			Error: err,
-		})
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-	return nil
-}
-
-func (s StringArray) Validate() error {
-	alias := ([]string)(s)
-	if alias == nil {
-		return nil // optional
-	}
-	if err := (validate.Array{
-		MinLength:    1,
-		MinLengthSet: true,
-		MaxLength:    0,
-		MaxLengthSet: false,
-	}).ValidateLength(len(alias)); err != nil {
-		return errors.Wrap(err, "array")
-	}
-	return nil
-}
+func (s *XMLPattern0) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
+
+func (s *Callback) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s CallbackOrReference) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// no validation needed
+
+func (s CallbackPattern0) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s CallbacksOrReferences) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s *Components) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s *Encoding) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s Encodings) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s Enum) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// optional
+
+func (s *Header) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// optional
+
+func (s HeaderOrReference) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// no validation needed
+
+func (s HeadersOrReferences) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s Maximum) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s *MediaType) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// optional
+
+func (s MediaTypes) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s Minimum) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s MultipleOf) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s *Operation) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s *Parameter) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// optional
+
+func (s ParameterIn) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s ParameterOrReference) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// no validation needed
+
+func (s ParameterStyle) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s ParametersOrReferences) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s *PathItem) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s *Paths) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s PathsPattern0) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s PositiveInteger) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s RequestBodiesOrReferences) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s *RequestBody) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s RequestBodyOrReference) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// no validation needed
+
+func (s *Response) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s ResponseOrReference) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// no validation needed
+
+func (s *Responses) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s ResponsesOrReferences) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s ResponsesPattern0) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s *Schema) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// optional
+
+// optional
+
+// optional
+
+// optional
+
+// optional
+
+// optional
+
+func (s SchemaAdditionalProperties) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// no validation needed
+
+func (s SchemaOrReference) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// no validation needed
+
+func (s SchemaProperties) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s SchemaType) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s SchemasOrReferences) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s SecurityRequirement) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s *Spec) Validate() error { _ = "STUB: not implemented"; return nil }
+
+func (s StringArray) Validate() error { _ = "STUB: not implemented"; return nil }
+
+// optional

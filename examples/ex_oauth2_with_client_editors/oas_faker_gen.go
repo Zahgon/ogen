@@ -3,24 +3,7 @@
 package api
 
 // SetFake set fake values.
-func (s *Error) SetFake() {
-	{
-		{
-			s.Code = int32(0)
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *Error) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TesttestReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *TesttestReq) SetFake() { _ = "STUB: not implemented"; return }

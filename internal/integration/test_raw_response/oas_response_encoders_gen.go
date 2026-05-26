@@ -5,53 +5,25 @@ package api
 import (
 	"net/http"
 
-	"github.com/go-faster/errors"
-	"github.com/go-faster/jx"
 	"go.opentelemetry.io/otel/trace"
 )
 
 func encodeGetMixedDataResponse(response GetMixedDataRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GetMixedDataOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeGetNormalDataResponse(response *GetNormalDataOK, w http.ResponseWriter, span trace.Span) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(200)
-
-	e := new(jx.Encoder)
-	response.Encode(e)
-	if _, err := e.WriteTo(w); err != nil {
-		return errors.Wrap(err, "write")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func encodeGetRawDataResponse(response GetRawDataRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeGetRawDataInsideOperationGroupResponse(response GetRawDataInsideOperationGroupRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }

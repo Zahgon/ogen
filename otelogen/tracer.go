@@ -13,16 +13,12 @@ const (
 
 // OperationID attribute.
 func OperationID(v string) attribute.KeyValue {
-	return attribute.KeyValue{
-		Key:   OperationIDKey,
-		Value: attribute.StringValue(v),
-	}
+	_ = "STUB: not implemented"
+	return *new(attribute.KeyValue)
 }
 
 // WebhookName attribute.
 func WebhookName(v string) attribute.KeyValue {
-	return attribute.KeyValue{
-		Key:   WebhookNameKey,
-		Value: attribute.StringValue(v),
-	}
+	_ = "STUB: not implemented"
+	return *new(attribute.KeyValue)
 }

@@ -1,7 +1,5 @@
 package validate
 
-import "github.com/go-faster/errors"
-
 // Object validates map length.
 type Object struct {
 	MinProperties    int
@@ -16,42 +14,19 @@ type Object struct {
 }
 
 // SetMinProperties sets MinProperties validation.
-func (o *Object) SetMinProperties(v int) {
-	o.MinPropertiesSet = true
-	o.MinProperties = v
-}
+func (o *Object) SetMinProperties(v int) { _ = "STUB: not implemented"; return }
 
 // SetMaxProperties sets MaxProperties validation.
-func (o *Object) SetMaxProperties(v int) {
-	o.MaxPropertiesSet = true
-	o.MaxProperties = v
-}
+func (o *Object) SetMaxProperties(v int) { _ = "STUB: not implemented"; return }
 
 // SetMinLength sets MinLength validation.
-func (o *Object) SetMinLength(v int) {
-	o.MinLengthSet = true
-	o.MinLength = v
-}
+func (o *Object) SetMinLength(v int) { _ = "STUB: not implemented"; return }
 
 // SetMaxLength sets MaxLength validation.
-func (o *Object) SetMaxLength(v int) {
-	o.MaxLengthSet = true
-	o.MaxLength = v
-}
+func (o *Object) SetMaxLength(v int) { _ = "STUB: not implemented"; return }
 
 // Set reports whether any validations are seo.
-func (o Object) Set() bool {
-	return o.MaxPropertiesSet || o.MinPropertiesSet
-}
+func (o Object) Set() bool { _ = "STUB: not implemented"; return false }
 
 // ValidateProperties returns error if object length (properties number) v is invalid.
-func (o Object) ValidateProperties(v int) error {
-	if o.MaxPropertiesSet && v > o.MaxProperties {
-		return errors.Errorf("object properties number %d greater than maximum %d", v, o.MaxProperties)
-	}
-	if o.MinPropertiesSet && v < o.MinProperties {
-		return errors.Errorf("object properties number %d less than minimum %d", v, o.MinProperties)
-	}
-
-	return nil
-}
+func (o Object) ValidateProperties(v int) error { _ = "STUB: not implemented"; return nil }

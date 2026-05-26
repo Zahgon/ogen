@@ -14,13 +14,12 @@ type Labeler struct {
 }
 
 // Add attributes to the Labeler.
-func (l *Labeler) Add(attrs ...attribute.KeyValue) {
-	l.attrs = append(l.attrs, attrs...)
-}
+func (l *Labeler) Add(attrs ...attribute.KeyValue) { _ = "STUB: not implemented"; return }
 
 // AttributeSet returns the attributes added to the Labeler as an attribute.Set.
 func (l *Labeler) AttributeSet() attribute.Set {
-	return attribute.NewSet(l.attrs...)
+	_ = "STUB: not implemented"
+	return *new(attribute.Set)
 }
 
 type labelerContextKey struct{}
@@ -31,12 +30,11 @@ type labelerContextKey struct{}
 // return value is false. In this case it is safe to use the Labeler but any attributes added to
 // it will not be used.
 func LabelerFromContext(ctx context.Context) (*Labeler, bool) {
-	if l, ok := ctx.Value(labelerContextKey{}).(*Labeler); ok {
-		return l, true
-	}
-	return &Labeler{}, false
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 func contextWithLabeler(ctx context.Context, l *Labeler) context.Context {
-	return context.WithValue(ctx, labelerContextKey{}, l)
+	_ = "STUB: not implemented"
+	return *new(context.Context)
 }

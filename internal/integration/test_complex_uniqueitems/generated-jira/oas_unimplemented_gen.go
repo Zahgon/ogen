@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -20,7 +18,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // PUT /workflowscheme/{id}/workflow
 func (UnimplementedHandler) UpdateWorkflowMapping(ctx context.Context, req *WorkflowSchemeAssociations, params UpdateWorkflowMappingParams) (r UpdateWorkflowMappingRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UpdateWorkflowMappingRes), nil
 }
 
 // UpdateWorkflowTransitionRules implements updateWorkflowTransitionRules operation.
@@ -30,5 +29,6 @@ func (UnimplementedHandler) UpdateWorkflowMapping(ctx context.Context, req *Work
 //
 // PUT /workflow/transitions/rules
 func (UnimplementedHandler) UpdateWorkflowTransitionRules(ctx context.Context, req *WorkflowTransitionRules) (r UpdateWorkflowTransitionRulesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UpdateWorkflowTransitionRulesRes), nil
 }

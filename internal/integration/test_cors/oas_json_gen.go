@@ -3,46 +3,26 @@
 package api
 
 import (
-	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
 )
 
 // Encode encodes FooPostReqApplicationJSON as json.
-func (s FooPostReqApplicationJSON) Encode(e *jx.Encoder) {
-	unwrapped := string(s)
-
-	e.Str(unwrapped)
-}
+func (s FooPostReqApplicationJSON) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes FooPostReqApplicationJSON from json.
 func (s *FooPostReqApplicationJSON) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode FooPostReqApplicationJSON to nil")
-	}
-	var unwrapped string
-	if err := func() error {
-		v, err := d.Str()
-		unwrapped = string(v)
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = FooPostReqApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s FooPostReqApplicationJSON) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *FooPostReqApplicationJSON) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }

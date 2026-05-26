@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -17,30 +15,36 @@ var _ Handler = UnimplementedHandler{}
 //
 // POST /event
 func (UnimplementedHandler) PublishEvent(ctx context.Context, req OptEvent) (r *Event, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// NewError creates *ErrorStatusCode from error returned by handler.
+	//
+	// Used for common default response.
 }
 
-// NewError creates *ErrorStatusCode from error returned by handler.
-//
-// Used for common default response.
 func (UnimplementedHandler) NewError(ctx context.Context, err error) (r *ErrorStatusCode) {
-	r = new(ErrorStatusCode)
-	return r
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var _ WebhookHandler = UnimplementedHandler{}
 
 // StatusWebhook implements statusWebhook operation.
 func (UnimplementedHandler) StatusWebhook(ctx context.Context) (r *StatusWebhookOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UpdateDelete implements DELETE update operation.
 }
 
-// UpdateDelete implements DELETE update operation.
 func (UnimplementedHandler) UpdateDelete(ctx context.Context) (r UpdateDeleteRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UpdateDeleteRes), nil
 }
 
 // UpdateWebhook implements updateWebhook operation.
 func (UnimplementedHandler) UpdateWebhook(ctx context.Context, req OptEvent, params UpdateWebhookParams) (r UpdateWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UpdateWebhookRes), nil
 }

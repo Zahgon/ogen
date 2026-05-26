@@ -4,14 +4,8 @@ package api
 
 import (
 	"net/http"
-	"net/url"
 
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
 	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
 )
 
 // CancelFineTuneParams is parameters of cancelFineTune operation.
@@ -21,63 +15,14 @@ type CancelFineTuneParams struct {
 }
 
 func unpackCancelFineTuneParams(packed middleware.Parameters) (params CancelFineTuneParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "fine_tune_id",
-			In:   "path",
-		}
-		params.FineTuneID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(CancelFineTuneParams)
 }
 
 func decodeCancelFineTuneParams(args [1]string, argsEscaped bool, r *http.Request) (params CancelFineTuneParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: fine_tune_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "fine_tune_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.FineTuneID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "fine_tune_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(CancelFineTuneParams), nil
 }
 
 // CreateSearchParams is parameters of createSearch operation.
@@ -88,63 +33,14 @@ type CreateSearchParams struct {
 }
 
 func unpackCreateSearchParams(packed middleware.Parameters) (params CreateSearchParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "engine_id",
-			In:   "path",
-		}
-		params.EngineID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(CreateSearchParams)
 }
 
 func decodeCreateSearchParams(args [1]string, argsEscaped bool, r *http.Request) (params CreateSearchParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: engine_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "engine_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.EngineID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "engine_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(CreateSearchParams), nil
 }
 
 // DeleteFileParams is parameters of deleteFile operation.
@@ -154,63 +50,14 @@ type DeleteFileParams struct {
 }
 
 func unpackDeleteFileParams(packed middleware.Parameters) (params DeleteFileParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "file_id",
-			In:   "path",
-		}
-		params.FileID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(DeleteFileParams)
 }
 
 func decodeDeleteFileParams(args [1]string, argsEscaped bool, r *http.Request) (params DeleteFileParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: file_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "file_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.FileID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "file_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(DeleteFileParams), nil
 }
 
 // DeleteModelParams is parameters of deleteModel operation.
@@ -220,63 +67,14 @@ type DeleteModelParams struct {
 }
 
 func unpackDeleteModelParams(packed middleware.Parameters) (params DeleteModelParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "model",
-			In:   "path",
-		}
-		params.Model = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(DeleteModelParams)
 }
 
 func decodeDeleteModelParams(args [1]string, argsEscaped bool, r *http.Request) (params DeleteModelParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: model.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "model",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Model = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "model",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(DeleteModelParams), nil
 }
 
 // DownloadFileParams is parameters of downloadFile operation.
@@ -286,63 +84,14 @@ type DownloadFileParams struct {
 }
 
 func unpackDownloadFileParams(packed middleware.Parameters) (params DownloadFileParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "file_id",
-			In:   "path",
-		}
-		params.FileID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(DownloadFileParams)
 }
 
 func decodeDownloadFileParams(args [1]string, argsEscaped bool, r *http.Request) (params DownloadFileParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: file_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "file_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.FileID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "file_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(DownloadFileParams), nil
 }
 
 // ListFineTuneEventsParams is parameters of listFineTuneEvents operation.
@@ -361,120 +110,20 @@ type ListFineTuneEventsParams struct {
 }
 
 func unpackListFineTuneEventsParams(packed middleware.Parameters) (params ListFineTuneEventsParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "fine_tune_id",
-			In:   "path",
-		}
-		params.FineTuneID = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "stream",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Stream = v.(OptBool)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(ListFineTuneEventsParams)
 }
 
 func decodeListFineTuneEventsParams(args [1]string, argsEscaped bool, r *http.Request) (params ListFineTuneEventsParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode path: fine_tune_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "fine_tune_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.FineTuneID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "fine_tune_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	// Set default value for query: stream.
-	{
-		val := bool(false)
-		params.Stream.SetTo(val)
-	}
-	// Decode query: stream.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "stream",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotStreamVal bool
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToBool(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotStreamVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.Stream.SetTo(paramsDotStreamVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "stream",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(ListFineTuneEventsParams), nil
 }
+
+// Decode path: fine_tune_id.
+
+// Set default value for query: stream.
+
+// Decode query: stream.
 
 // RetrieveEngineParams is parameters of retrieveEngine operation.
 type RetrieveEngineParams struct {
@@ -483,63 +132,14 @@ type RetrieveEngineParams struct {
 }
 
 func unpackRetrieveEngineParams(packed middleware.Parameters) (params RetrieveEngineParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "engine_id",
-			In:   "path",
-		}
-		params.EngineID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(RetrieveEngineParams)
 }
 
 func decodeRetrieveEngineParams(args [1]string, argsEscaped bool, r *http.Request) (params RetrieveEngineParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: engine_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "engine_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.EngineID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "engine_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(RetrieveEngineParams), nil
 }
 
 // RetrieveFileParams is parameters of retrieveFile operation.
@@ -549,63 +149,14 @@ type RetrieveFileParams struct {
 }
 
 func unpackRetrieveFileParams(packed middleware.Parameters) (params RetrieveFileParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "file_id",
-			In:   "path",
-		}
-		params.FileID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(RetrieveFileParams)
 }
 
 func decodeRetrieveFileParams(args [1]string, argsEscaped bool, r *http.Request) (params RetrieveFileParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: file_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "file_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.FileID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "file_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(RetrieveFileParams), nil
 }
 
 // RetrieveFineTuneParams is parameters of retrieveFineTune operation.
@@ -615,63 +166,14 @@ type RetrieveFineTuneParams struct {
 }
 
 func unpackRetrieveFineTuneParams(packed middleware.Parameters) (params RetrieveFineTuneParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "fine_tune_id",
-			In:   "path",
-		}
-		params.FineTuneID = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(RetrieveFineTuneParams)
 }
 
 func decodeRetrieveFineTuneParams(args [1]string, argsEscaped bool, r *http.Request) (params RetrieveFineTuneParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: fine_tune_id.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "fine_tune_id",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.FineTuneID = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "fine_tune_id",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(RetrieveFineTuneParams), nil
 }
 
 // RetrieveModelParams is parameters of retrieveModel operation.
@@ -681,61 +183,12 @@ type RetrieveModelParams struct {
 }
 
 func unpackRetrieveModelParams(packed middleware.Parameters) (params RetrieveModelParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "model",
-			In:   "path",
-		}
-		params.Model = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(RetrieveModelParams)
 }
 
 func decodeRetrieveModelParams(args [1]string, argsEscaped bool, r *http.Request) (params RetrieveModelParams, _ error) {
+	_ = "STUB: not implemented"
 	// Decode path: model.
-	if err := func() error {
-		param := args[0]
-		if argsEscaped {
-			unescaped, err := url.PathUnescape(args[0])
-			if err != nil {
-				return errors.Wrap(err, "unescape path")
-			}
-			param = unescaped
-		}
-		if len(param) > 0 {
-			d := uri.NewPathDecoder(uri.PathDecoderConfig{
-				Param:   "model",
-				Value:   param,
-				Style:   uri.PathStyleSimple,
-				Explode: false,
-			})
-
-			if err := func() error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Model = c
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return validate.ErrFieldRequired
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "model",
-			In:   "path",
-			Err:  err,
-		}
-	}
-	return params, nil
+	return *new(RetrieveModelParams), nil
 }

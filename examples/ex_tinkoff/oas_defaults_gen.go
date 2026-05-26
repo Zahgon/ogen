@@ -3,113 +3,43 @@
 package api
 
 // setDefaults set default value of fields.
-func (s *CandlesResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *CandlesResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *Empty) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *Empty) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *Error) setDefaults() {
-	{
-		val := string("Error")
-		s.Status = val
-	}
-}
+func (s *Error) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *LimitOrderResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *LimitOrderResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *MarketInstrumentListResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *MarketInstrumentListResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *MarketOrderResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *MarketOrderResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *OperationsResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *OperationsResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *OrderbookResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *OrderbookResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *OrdersResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *OrdersResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PortfolioCurrenciesResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *PortfolioCurrenciesResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PortfolioResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *PortfolioResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *SandboxRegisterResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *SandboxRegisterResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *SearchMarketInstrumentResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *SearchMarketInstrumentResponse) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *UserAccountsResponse) setDefaults() {
-	{
-		val := string("Ok")
-		s.Status = val
-	}
-}
+func (s *UserAccountsResponse) setDefaults() { _ = "STUB: not implemented"; return }

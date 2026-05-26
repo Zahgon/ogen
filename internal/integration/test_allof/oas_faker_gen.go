@@ -2,245 +2,71 @@
 
 package api
 
-import (
-	"github.com/google/uuid"
-)
+// SetFake set fake values.
+func (s *Bar) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Bar) SetFake() {
-	{
-		{
-			s.UUID = uuid.New()
-		}
-	}
-	{
-		{
-			s.Value = float64(0)
-		}
-	}
-}
+func (s *BazStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BazStatus) SetFake() {
-	*s = BazStatusActive
-}
+func (s *Foo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Foo) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Config.SetFake()
-		}
-	}
-	{
-		{
-			s.Bar.SetFake()
-		}
-	}
-}
+func (s *FooConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FooConfig) SetFake() {
-	{
-		{
-			s.Interval.SetFake()
-		}
-	}
-}
+func (s *GetAdminFooOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetAdminFooOK) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Config.SetFake()
-		}
-	}
-	{
-		{
-			s.Bar.SetFake()
-		}
-	}
-	{
-		{
-			s.BazStatus.SetFake()
-		}
-	}
-}
-
-// SetFake set fake values.
-func (s *Location) SetFake() {
-	{
-		{
-			s.Lat = float64(0)
-		}
-	}
-	{
-		{
-			s.Lon = float64(0)
-		}
-	}
-}
+func (s *Location) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *NilBar) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilString) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *ObjectsWithConflictingArrayPropertyReq) SetFake() {
-	{
-		{
-			s.Foo = nil
-			for i := 0; i < 1; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Foo = append(s.Foo, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Bar = int(0)
-		}
-	}
-}
+func (s *ObjectsWithConflictingArrayPropertyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ObjectsWithConflictingPropertiesReq) SetFake() {
-	{
-		{
-			s.Foo = "string"
-		}
-	}
-	{
-		{
-			s.Bar.SetFake()
-		}
-	}
-}
+func (s *ObjectsWithConflictingPropertiesReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBool) SetFake() {
-	var elem bool
-	{
-		elem = true
-	}
-	s.SetTo(elem)
-}
+func (s *OptBool) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt) SetFake() {
-	var elem int
-	{
-		elem = int(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptLocation) SetFake() {
-	var elem Location
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilLocation) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptString) SetFake() {
-	var elem string
-	{
-		elem = "string"
-	}
-	s.SetTo(elem)
-}
+func (s *OptString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReferencedAllOfNullable) SetFake() {
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.AllOfLocation.SetFake()
-		}
-	}
-	{
-		{
-			s.NullableAllOfLocation.SetFake()
-		}
-	}
-}
+func (s *ReferencedAllOfNullable) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Robot) SetFake() {
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.ID = uuid.New()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-}
+func (s *Robot) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *RobotState) SetFake() {
-	*s = RobotStateOn
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *SimpleObjectsReq) SetFake() {
-	{
-		{
-			s.Foo.SetFake()
-		}
-	}
-	{
-		{
-			s.Bar.SetFake()
-		}
-	}
-}
+func (s *SimpleObjectsReq) SetFake() { _ = "STUB: not implemented"; return }

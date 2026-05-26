@@ -3,656 +3,255 @@
 package api
 
 import (
-	"math/bits"
-	"strconv"
-
-	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
 	"github.com/ogen-go/ogen/_testdata/testtypes"
-	"github.com/ogen-go/ogen/json"
-	"github.com/ogen-go/ogen/validate"
 )
 
 // Encode encodes Alias as json.
-func (s Alias) Encode(e *jx.Encoder) {
-	unwrapped := testtypes.StringOgen(s)
-
-	json.EncodeNative(e, unwrapped)
-}
+func (s Alias) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Alias from json.
-func (s *Alias) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode Alias to nil")
-	}
-	var unwrapped testtypes.StringOgen
-	if err := func() error {
-		v, err := json.DecodeNative[testtypes.StringOgen](d)
-		unwrapped = v
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = Alias(unwrapped)
-	return nil
-}
+func (s *Alias) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s Alias) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s Alias) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *Alias) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *Alias) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes AliasPointer as json.
-func (s AliasPointer) Encode(e *jx.Encoder) {
-	unwrapped := testtypes.StringOgen(s)
-
-	json.EncodeNative(e, unwrapped)
-}
+func (s AliasPointer) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes AliasPointer from json.
-func (s *AliasPointer) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode AliasPointer to nil")
-	}
-	var unwrapped testtypes.StringOgen
-	if err := func() error {
-		v, err := json.DecodeNative[testtypes.StringOgen](d)
-		unwrapped = v
-		if err != nil {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return errors.Wrap(err, "alias")
-	}
-	*s = AliasPointer(unwrapped)
-	return nil
-}
+func (s *AliasPointer) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s AliasPointer) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s AliasPointer) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *AliasPointer) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *AliasPointer) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes Alias as json.
-func (o OptAlias) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptAlias) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes Alias from json.
-func (o *OptAlias) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptAlias to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptAlias) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptAlias) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptAlias) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptAlias) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptAlias) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes AliasPointer as json.
-func (o OptAliasPointer) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptAliasPointer) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes AliasPointer from json.
-func (o *OptAliasPointer) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptAliasPointer to nil")
-	}
-	o.Set = true
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptAliasPointer) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptAliasPointer) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptAliasPointer) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptAliasPointer) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptAliasPointer) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes any as json.
 func (o OptAny) Encode(e *jx.Encoder, format func(*jx.Encoder, any)) {
-	if !o.Set {
-		return
-	}
-	format(e, o.Value)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes any from json.
 func (o *OptAny) Decode(d *jx.Decoder, format func(*jx.Decoder) (any, error)) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptAny to nil")
-	}
-	o.Set = true
-	v, err := format(d)
-	if err != nil {
-		return err
-	}
-	o.Value = v
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptAny) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e, json.EncodeExternal)
-	return e.Bytes(), nil
-}
+func (s OptAny) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptAny) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d, json.DecodeExternal[any])
-}
+func (s *OptAny) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes testtypes.Binary as json.
 func (o OptBinary) Encode(e *jx.Encoder, format func(*jx.Encoder, testtypes.Binary)) {
-	if !o.Set {
-		return
-	}
-	format(e, o.Value)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes testtypes.Binary from json.
 func (o *OptBinary) Decode(d *jx.Decoder, format func(*jx.Decoder) (testtypes.Binary, error)) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptBinary to nil")
-	}
-	o.Set = true
-	v, err := format(d)
-	if err != nil {
-		return err
-	}
-	o.Value = v
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptBinary) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e, json.EncodeBinary)
-	return e.Bytes(), nil
-}
+func (s OptBinary) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptBinary) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d, json.DecodeBinary[testtypes.Binary])
-}
+func (s *OptBinary) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes testtypes.Number as json.
 func (o OptNumber) Encode(e *jx.Encoder, format func(*jx.Encoder, testtypes.Number)) {
-	if !o.Set {
-		return
-	}
-	format(e, o.Value)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes testtypes.Number from json.
 func (o *OptNumber) Decode(d *jx.Decoder, format func(*jx.Decoder) (testtypes.Number, error)) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptNumber to nil")
-	}
-	o.Set = true
-	v, err := format(d)
-	if err != nil {
-		return err
-	}
-	o.Value = v
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptNumber) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e, json.EncodeExternal)
-	return e.Bytes(), nil
-}
+func (s OptNumber) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptNumber) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d, json.DecodeExternal[testtypes.Number])
-}
+func (s *OptNumber) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes testtypes.NumberJSON as json.
 func (o OptNumberJSON) Encode(e *jx.Encoder, format func(*jx.Encoder, testtypes.NumberJSON)) {
-	if !o.Set {
-		return
-	}
-	format(e, o.Value)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes testtypes.NumberJSON from json.
 func (o *OptNumberJSON) Decode(d *jx.Decoder, format func(*jx.Decoder) (testtypes.NumberJSON, error)) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptNumberJSON to nil")
-	}
-	o.Set = true
-	v, err := format(d)
-	if err != nil {
-		return err
-	}
-	o.Value = v
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptNumberJSON) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e, json.EncodeJSON)
-	return e.Bytes(), nil
-}
+func (s OptNumberJSON) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptNumberJSON) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d, json.DecodeJSON[testtypes.NumberJSON])
-}
+func (s *OptNumberJSON) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes testtypes.NumberOgen as json.
 func (o OptNumberOgen) Encode(e *jx.Encoder, format func(*jx.Encoder, testtypes.NumberOgen)) {
-	if !o.Set {
-		return
-	}
-	format(e, o.Value)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes testtypes.NumberOgen from json.
 func (o *OptNumberOgen) Decode(d *jx.Decoder, format func(*jx.Decoder) (testtypes.NumberOgen, error)) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptNumberOgen to nil")
-	}
-	o.Set = true
-	v, err := format(d)
-	if err != nil {
-		return err
-	}
-	o.Value = v
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptNumberOgen) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e, json.EncodeNative)
-	return e.Bytes(), nil
-}
+func (s OptNumberOgen) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptNumberOgen) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d, json.DecodeNative[testtypes.NumberOgen])
-}
+func (s *OptNumberOgen) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes OptionalOKMap as json.
-func (o OptOptionalOKMap) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
-}
+func (o OptOptionalOKMap) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes OptionalOKMap from json.
-func (o *OptOptionalOKMap) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptOptionalOKMap to nil")
-	}
-	o.Set = true
-	o.Value = make(OptionalOKMap)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
-	return nil
-}
+func (o *OptOptionalOKMap) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptOptionalOKMap) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptOptionalOKMap) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptOptionalOKMap) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptOptionalOKMap) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes testtypes.NumberOgen as json.
 func (o OptPointer) Encode(e *jx.Encoder, format func(*jx.Encoder, testtypes.NumberOgen)) {
-	if !o.Set {
-		return
-	}
-	format(e, o.Value)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes testtypes.NumberOgen from json.
 func (o *OptPointer) Decode(d *jx.Decoder, format func(*jx.Decoder) (testtypes.NumberOgen, error)) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptPointer to nil")
-	}
-	o.Set = true
-	v, err := format(d)
-	if err != nil {
-		return err
-	}
-	o.Value = v
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptPointer) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e, json.EncodeNative)
-	return e.Bytes(), nil
-}
+func (s OptPointer) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptPointer) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d, json.DecodeNative[testtypes.NumberOgen])
-}
+func (s *OptPointer) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes testtypes.String as json.
 func (o OptString) Encode(e *jx.Encoder, format func(*jx.Encoder, testtypes.String)) {
-	if !o.Set {
-		return
-	}
-	format(e, o.Value)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes testtypes.String from json.
 func (o *OptString) Decode(d *jx.Decoder, format func(*jx.Decoder) (testtypes.String, error)) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptString to nil")
-	}
-	o.Set = true
-	v, err := format(d)
-	if err != nil {
-		return err
-	}
-	o.Value = v
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptString) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e, json.EncodeExternal)
-	return e.Bytes(), nil
-}
+func (s OptString) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptString) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d, json.DecodeExternal[testtypes.String])
-}
+func (s *OptString) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes testtypes.StringJSON as json.
 func (o OptStringJSON) Encode(e *jx.Encoder, format func(*jx.Encoder, testtypes.StringJSON)) {
-	if !o.Set {
-		return
-	}
-	format(e, o.Value)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes testtypes.StringJSON from json.
 func (o *OptStringJSON) Decode(d *jx.Decoder, format func(*jx.Decoder) (testtypes.StringJSON, error)) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptStringJSON to nil")
-	}
-	o.Set = true
-	v, err := format(d)
-	if err != nil {
-		return err
-	}
-	o.Value = v
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptStringJSON) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e, json.EncodeJSON)
-	return e.Bytes(), nil
-}
+func (s OptStringJSON) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptStringJSON) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d, json.DecodeJSON[testtypes.StringJSON])
-}
+func (s *OptStringJSON) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes testtypes.StringOgen as json.
 func (o OptStringOgen) Encode(e *jx.Encoder, format func(*jx.Encoder, testtypes.StringOgen)) {
-	if !o.Set {
-		return
-	}
-	format(e, o.Value)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes testtypes.StringOgen from json.
 func (o *OptStringOgen) Decode(d *jx.Decoder, format func(*jx.Decoder) (testtypes.StringOgen, error)) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptStringOgen to nil")
-	}
-	o.Set = true
-	v, err := format(d)
-	if err != nil {
-		return err
-	}
-	o.Value = v
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptStringOgen) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e, json.EncodeNative)
-	return e.Bytes(), nil
-}
+func (s OptStringOgen) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptStringOgen) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d, json.DecodeNative[testtypes.StringOgen])
-}
+func (s *OptStringOgen) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes testtypes.Text as json.
 func (o OptText) Encode(e *jx.Encoder, format func(*jx.Encoder, testtypes.Text)) {
-	if !o.Set {
-		return
-	}
-	format(e, o.Value)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes testtypes.Text from json.
 func (o *OptText) Decode(d *jx.Decoder, format func(*jx.Decoder) (testtypes.Text, error)) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptText to nil")
-	}
-	o.Set = true
-	v, err := format(d)
-	if err != nil {
-		return err
-	}
-	o.Value = v
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptText) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e, json.EncodeText)
-	return e.Bytes(), nil
-}
+func (s OptText) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptText) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d, json.DecodeText[testtypes.Text])
-}
+func (s *OptText) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *OptionalOK) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *OptionalOK) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *OptionalOK) encodeFields(e *jx.Encoder) {
-	{
-		if s.OgenString.Set {
-			e.FieldStart("ogenString")
-			s.OgenString.Encode(e, json.EncodeNative)
-		}
-	}
-	{
-		if s.OgenNumber.Set {
-			e.FieldStart("ogenNumber")
-			s.OgenNumber.Encode(e, json.EncodeNative)
-		}
-	}
-	{
-		if s.JsonString.Set {
-			e.FieldStart("jsonString")
-			s.JsonString.Encode(e, json.EncodeJSON)
-		}
-	}
-	{
-		if s.JsonNumber.Set {
-			e.FieldStart("jsonNumber")
-			s.JsonNumber.Encode(e, json.EncodeJSON)
-		}
-	}
-	{
-		if s.TextString.Set {
-			e.FieldStart("textString")
-			s.TextString.Encode(e, json.EncodeStringText)
-		}
-	}
-	{
-		if s.TextNumber.Set {
-			e.FieldStart("textNumber")
-			s.TextNumber.Encode(e, json.EncodeText)
-		}
-	}
-	{
-		if s.BinaryByte.Set {
-			e.FieldStart("binaryByte")
-			s.BinaryByte.Encode(e, json.EncodeBinary)
-		}
-	}
-	{
-		if s.BinaryBase64.Set {
-			e.FieldStart("binaryBase64")
-			s.BinaryBase64.Encode(e, json.EncodeBinary)
-		}
-	}
-	{
-		if s.String.Set {
-			e.FieldStart("string")
-			s.String.Encode(e, json.EncodeExternal)
-		}
-	}
-	{
-		if s.Number.Set {
-			e.FieldStart("number")
-			s.Number.Encode(e, json.EncodeExternal)
-		}
-	}
-	{
-		if s.Alias.Set {
-			e.FieldStart("alias")
-			s.Alias.Encode(e)
-		}
-	}
-	{
-		if s.Pointer.Set {
-			e.FieldStart("pointer")
-			s.Pointer.Encode(e, json.EncodeNative)
-		}
-	}
-	{
-		if s.AliasPointer.Set {
-			e.FieldStart("aliasPointer")
-			s.AliasPointer.Encode(e)
-		}
-	}
-	{
-		if s.Builtin.Set {
-			e.FieldStart("builtin")
-			s.Builtin.Encode(e, json.EncodeExternal)
-		}
-	}
-	{
-		if s.Array != nil {
-			e.FieldStart("array")
-			e.ArrStart()
-			for _, elem := range s.Array {
-				json.EncodeJSON(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.Map.Set {
-			e.FieldStart("map")
-			s.Map.Encode(e)
-		}
-	}
-}
+func (s *OptionalOK) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfOptionalOK = [16]string{
 	0:  "ogenString",
@@ -674,341 +273,34 @@ var jsonFieldsNameOfOptionalOK = [16]string{
 }
 
 // Decode decodes OptionalOK from json.
-func (s *OptionalOK) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode OptionalOK to nil")
-	}
-	s.setDefaults()
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "ogenString":
-			if err := func() error {
-				s.OgenString.Reset()
-				if err := s.OgenString.Decode(d, json.DecodeNative[testtypes.StringOgen]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"ogenString\"")
-			}
-		case "ogenNumber":
-			if err := func() error {
-				s.OgenNumber.Reset()
-				if err := s.OgenNumber.Decode(d, json.DecodeNative[testtypes.NumberOgen]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"ogenNumber\"")
-			}
-		case "jsonString":
-			if err := func() error {
-				s.JsonString.Reset()
-				if err := s.JsonString.Decode(d, json.DecodeJSON[testtypes.StringJSON]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"jsonString\"")
-			}
-		case "jsonNumber":
-			if err := func() error {
-				s.JsonNumber.Reset()
-				if err := s.JsonNumber.Decode(d, json.DecodeJSON[testtypes.NumberJSON]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"jsonNumber\"")
-			}
-		case "textString":
-			if err := func() error {
-				s.TextString.Reset()
-				if err := s.TextString.Decode(d, json.DecodeStringText[testtypes.Text]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"textString\"")
-			}
-		case "textNumber":
-			if err := func() error {
-				s.TextNumber.Reset()
-				if err := s.TextNumber.Decode(d, json.DecodeText[testtypes.Text]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"textNumber\"")
-			}
-		case "binaryByte":
-			if err := func() error {
-				s.BinaryByte.Reset()
-				if err := s.BinaryByte.Decode(d, json.DecodeBinary[testtypes.Binary]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"binaryByte\"")
-			}
-		case "binaryBase64":
-			if err := func() error {
-				s.BinaryBase64.Reset()
-				if err := s.BinaryBase64.Decode(d, json.DecodeBinary[testtypes.Binary]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"binaryBase64\"")
-			}
-		case "string":
-			if err := func() error {
-				s.String.Reset()
-				if err := s.String.Decode(d, json.DecodeExternal[testtypes.String]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"string\"")
-			}
-		case "number":
-			if err := func() error {
-				s.Number.Reset()
-				if err := s.Number.Decode(d, json.DecodeExternal[testtypes.Number]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"number\"")
-			}
-		case "alias":
-			if err := func() error {
-				s.Alias.Reset()
-				if err := s.Alias.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"alias\"")
-			}
-		case "pointer":
-			if err := func() error {
-				s.Pointer.Reset()
-				if err := s.Pointer.Decode(d, json.DecodeNative[testtypes.NumberOgen]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"pointer\"")
-			}
-		case "aliasPointer":
-			if err := func() error {
-				s.AliasPointer.Reset()
-				if err := s.AliasPointer.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"aliasPointer\"")
-			}
-		case "builtin":
-			if err := func() error {
-				s.Builtin.Reset()
-				if err := s.Builtin.Decode(d, json.DecodeExternal[any]); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"builtin\"")
-			}
-		case "array":
-			if err := func() error {
-				s.Array = make([]testtypes.StringJSON, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem testtypes.StringJSON
-					v, err := json.DecodeJSON[testtypes.StringJSON](d)
-					elem = v
-					if err != nil {
-						return err
-					}
-					s.Array = append(s.Array, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"array\"")
-			}
-		case "map":
-			if err := func() error {
-				s.Map.Reset()
-				if err := s.Map.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"map\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode OptionalOK")
-	}
-
-	return nil
-}
+func (s *OptionalOK) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *OptionalOK) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *OptionalOK) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptionalOK) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptionalOK) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s OptionalOKMap) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s OptionalOKMap) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s OptionalOKMap) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		json.EncodeJSON(e, elem)
-	}
-}
+func (s OptionalOKMap) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes OptionalOKMap from json.
-func (s *OptionalOKMap) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode OptionalOKMap to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem testtypes.StringJSON
-		if err := func() error {
-			v, err := json.DecodeJSON[testtypes.StringJSON](d)
-			elem = v
-			if err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode OptionalOKMap")
-	}
-
-	return nil
-}
+func (s *OptionalOKMap) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptionalOKMap) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptionalOKMap) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptionalOKMap) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptionalOKMap) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *RequiredOK) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *RequiredOK) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *RequiredOK) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("ogenString")
-		json.EncodeNative(e, s.OgenString)
-	}
-	{
-		e.FieldStart("ogenNumber")
-		json.EncodeNative(e, s.OgenNumber)
-	}
-	{
-		e.FieldStart("jsonString")
-		json.EncodeJSON(e, s.JsonString)
-	}
-	{
-		e.FieldStart("jsonNumber")
-		json.EncodeJSON(e, s.JsonNumber)
-	}
-	{
-		e.FieldStart("textString")
-		json.EncodeStringText(e, s.TextString)
-	}
-	{
-		e.FieldStart("textNumber")
-		json.EncodeText(e, s.TextNumber)
-	}
-	{
-		e.FieldStart("binaryByte")
-		json.EncodeBinary(e, s.BinaryByte)
-	}
-	{
-		e.FieldStart("binaryBase64")
-		json.EncodeBinary(e, s.BinaryBase64)
-	}
-	{
-		e.FieldStart("string")
-		json.EncodeExternal(e, s.String)
-	}
-	{
-		e.FieldStart("number")
-		json.EncodeExternal(e, s.Number)
-	}
-	{
-		e.FieldStart("alias")
-		s.Alias.Encode(e)
-	}
-	{
-		e.FieldStart("pointer")
-		json.EncodeNative(e, s.Pointer)
-	}
-	{
-		e.FieldStart("aliasPointer")
-		s.AliasPointer.Encode(e)
-	}
-	{
-		e.FieldStart("builtin")
-		json.EncodeExternal(e, s.Builtin)
-	}
-	{
-		e.FieldStart("array")
-		e.ArrStart()
-		for _, elem := range s.Array {
-			json.EncodeJSON(e, elem)
-		}
-		e.ArrEnd()
-	}
-	{
-		e.FieldStart("map")
-		s.Map.Encode(e)
-	}
-}
+func (s *RequiredOK) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfRequiredOK = [16]string{
 	0:  "ogenString",
@@ -1030,318 +322,34 @@ var jsonFieldsNameOfRequiredOK = [16]string{
 }
 
 // Decode decodes RequiredOK from json.
-func (s *RequiredOK) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode RequiredOK to nil")
-	}
-	var requiredBitSet [2]uint8
-	s.setDefaults()
+func (s *RequiredOK) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "ogenString":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := json.DecodeNative[testtypes.StringOgen](d)
-				s.OgenString = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"ogenString\"")
-			}
-		case "ogenNumber":
-			requiredBitSet[0] |= 1 << 1
-			if err := func() error {
-				v, err := json.DecodeNative[testtypes.NumberOgen](d)
-				s.OgenNumber = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"ogenNumber\"")
-			}
-		case "jsonString":
-			requiredBitSet[0] |= 1 << 2
-			if err := func() error {
-				v, err := json.DecodeJSON[testtypes.StringJSON](d)
-				s.JsonString = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"jsonString\"")
-			}
-		case "jsonNumber":
-			requiredBitSet[0] |= 1 << 3
-			if err := func() error {
-				v, err := json.DecodeJSON[testtypes.NumberJSON](d)
-				s.JsonNumber = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"jsonNumber\"")
-			}
-		case "textString":
-			requiredBitSet[0] |= 1 << 4
-			if err := func() error {
-				v, err := json.DecodeStringText[testtypes.Text](d)
-				s.TextString = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"textString\"")
-			}
-		case "textNumber":
-			requiredBitSet[0] |= 1 << 5
-			if err := func() error {
-				v, err := json.DecodeText[testtypes.Text](d)
-				s.TextNumber = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"textNumber\"")
-			}
-		case "binaryByte":
-			requiredBitSet[0] |= 1 << 6
-			if err := func() error {
-				v, err := json.DecodeBinary[testtypes.Binary](d)
-				s.BinaryByte = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"binaryByte\"")
-			}
-		case "binaryBase64":
-			requiredBitSet[0] |= 1 << 7
-			if err := func() error {
-				v, err := json.DecodeBinary[testtypes.Binary](d)
-				s.BinaryBase64 = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"binaryBase64\"")
-			}
-		case "string":
-			requiredBitSet[1] |= 1 << 0
-			if err := func() error {
-				v, err := json.DecodeExternal[testtypes.String](d)
-				s.String = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"string\"")
-			}
-		case "number":
-			requiredBitSet[1] |= 1 << 1
-			if err := func() error {
-				v, err := json.DecodeExternal[testtypes.Number](d)
-				s.Number = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"number\"")
-			}
-		case "alias":
-			requiredBitSet[1] |= 1 << 2
-			if err := func() error {
-				if err := s.Alias.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"alias\"")
-			}
-		case "pointer":
-			requiredBitSet[1] |= 1 << 3
-			if err := func() error {
-				v, err := json.DecodeNative[testtypes.NumberOgen](d)
-				s.Pointer = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"pointer\"")
-			}
-		case "aliasPointer":
-			requiredBitSet[1] |= 1 << 4
-			if err := func() error {
-				if err := s.AliasPointer.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"aliasPointer\"")
-			}
-		case "builtin":
-			requiredBitSet[1] |= 1 << 5
-			if err := func() error {
-				v, err := json.DecodeExternal[any](d)
-				s.Builtin = v
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"builtin\"")
-			}
-		case "array":
-			requiredBitSet[1] |= 1 << 6
-			if err := func() error {
-				s.Array = make([]testtypes.StringJSON, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem testtypes.StringJSON
-					v, err := json.DecodeJSON[testtypes.StringJSON](d)
-					elem = v
-					if err != nil {
-						return err
-					}
-					s.Array = append(s.Array, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"array\"")
-			}
-		case "map":
-			requiredBitSet[1] |= 1 << 7
-			if err := func() error {
-				if err := s.Map.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"map\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode RequiredOK")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [2]uint8{
-		0b11111111,
-		0b11111111,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfRequiredOK) {
-					name = jsonFieldsNameOfRequiredOK[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *RequiredOK) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *RequiredOK) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *RequiredOK) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *RequiredOK) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s RequiredOKMap) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s RequiredOKMap) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
-func (s RequiredOKMap) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		json.EncodeJSON(e, elem)
-	}
-}
+func (s RequiredOKMap) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes RequiredOKMap from json.
-func (s *RequiredOKMap) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode RequiredOKMap to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem testtypes.StringJSON
-		if err := func() error {
-			v, err := json.DecodeJSON[testtypes.StringJSON](d)
-			elem = v
-			if err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode RequiredOKMap")
-	}
-
-	return nil
-}
+func (s *RequiredOKMap) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s RequiredOKMap) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s RequiredOKMap) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *RequiredOKMap) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *RequiredOKMap) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }

@@ -11,32 +11,46 @@ type AliveFlexData struct {
 
 // GetHelloWorld returns the value of HelloWorld.
 func (s *AliveFlexData) GetHelloWorld() OptString {
-	return s.HelloWorld
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAdditionalProps returns the value of AdditionalProps.
+	new(OptString)
 }
 
-// GetAdditionalProps returns the value of AdditionalProps.
 func (s *AliveFlexData) GetAdditionalProps() AliveFlexDataAdditional {
-	return s.AdditionalProps
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPattern0Props returns the value of Pattern0Props.
+	new(AliveFlexDataAdditional)
 }
 
-// GetPattern0Props returns the value of Pattern0Props.
 func (s *AliveFlexData) GetPattern0Props() AliveFlexDataPattern0 {
-	return s.Pattern0Props
+	_ = "STUB: not implemented"
+	return *
+
+	// SetHelloWorld sets the value of HelloWorld.
+	new(AliveFlexDataPattern0)
 }
 
-// SetHelloWorld sets the value of HelloWorld.
 func (s *AliveFlexData) SetHelloWorld(val OptString) {
-	s.HelloWorld = val
+	_ = "STUB: not implemented"
+
+	// SetAdditionalProps sets the value of AdditionalProps.
+	return
 }
 
-// SetAdditionalProps sets the value of AdditionalProps.
 func (s *AliveFlexData) SetAdditionalProps(val AliveFlexDataAdditional) {
-	s.AdditionalProps = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetPattern0Props sets the value of Pattern0Props.
 }
 
-// SetPattern0Props sets the value of Pattern0Props.
 func (s *AliveFlexData) SetPattern0Props(val AliveFlexDataPattern0) {
-	s.Pattern0Props = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type AliveFlexDataAdditional map[string]string
@@ -66,10 +80,8 @@ type AliveOK struct{}
 
 // NewOptAliveFlexData returns new OptAliveFlexData with value set to v.
 func NewOptAliveFlexData(v AliveFlexData) OptAliveFlexData {
-	return OptAliveFlexData{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptAliveFlexData)
 }
 
 // OptAliveFlexData is optional AliveFlexData.
@@ -79,44 +91,32 @@ type OptAliveFlexData struct {
 }
 
 // IsSet returns true if OptAliveFlexData was set.
-func (o OptAliveFlexData) IsSet() bool { return o.Set }
+func (o OptAliveFlexData) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptAliveFlexData) Reset() {
-	var v AliveFlexData
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptAliveFlexData) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptAliveFlexData) SetTo(v AliveFlexData) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptAliveFlexData) SetTo(v AliveFlexData) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptAliveFlexData) Get() (v AliveFlexData, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(AliveFlexData), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptAliveFlexData) Or(d AliveFlexData) AliveFlexData {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(AliveFlexData)
 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -125,33 +125,20 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }

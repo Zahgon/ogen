@@ -3,11 +3,7 @@ package ogenzap
 
 import (
 	"flag"
-	"os"
-	"time"
 
-	"github.com/go-faster/errors"
-	"github.com/mattn/go-isatty"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
@@ -15,19 +11,9 @@ import (
 // DefaultColorFlag returns default color flag value.
 //
 // See https://no-color.org.
-func DefaultColorFlag() bool {
-	if _, ok := os.LookupEnv("NO_COLOR"); ok {
-		return false
-	}
+func DefaultColorFlag() bool { _ = "STUB: not implemented"; return false }
 
-	if os.Getenv("TERM") == "dumb" {
-		return false
-	}
-
-	// By default, NewDevelopmentConfig uses stderr.
-	fd := os.Stderr.Fd()
-	return isatty.IsTerminal(fd) || isatty.IsCygwinTerminal(fd)
-}
+// By default, NewDevelopmentConfig uses stderr.
 
 // Options is options for Create.
 type Options struct {
@@ -38,36 +24,11 @@ type Options struct {
 }
 
 // RegisterFlags registers fields of Options as flags.
-func (o *Options) RegisterFlags(set *flag.FlagSet) {
-	set.Var(&o.Level, "loglevel", "Zap logging level")
-	set.BoolVar(&o.Verbose, "v", false, "Enable verbose logging")
-	set.BoolVar(&o.Color, "color", DefaultColorFlag(), "Enable color logging")
-}
+func (o *Options) RegisterFlags(set *flag.FlagSet) { _ = "STUB: not implemented"; return }
 
 // Create creates new logger for ogen.
-func Create(opts Options) (*zap.Logger, error) {
-	level := opts.Level
-	if opts.Verbose {
-		level = zap.DebugLevel
-	}
+func Create(opts Options) (*zap.Logger, error) { _ = "STUB: not implemented"; return nil, nil }
 
-	cfg := zap.NewDevelopmentConfig()
-	cfg.Level = zap.NewAtomicLevelAt(level)
-	if !opts.Verbose {
-		cfg.EncoderConfig.EncodeTime = func(time.Time, zapcore.PrimitiveArrayEncoder) {
-			// Set to noop if logging is not verbose.
-		}
-		// Disable stacktrace and caller.
-		cfg.DisableCaller = true
-		cfg.DisableStacktrace = true
-	}
-	if opts.Color {
-		cfg.EncoderConfig.EncodeLevel = zapcore.CapitalColorLevelEncoder
-	}
+// Set to noop if logging is not verbose.
 
-	logger, err := cfg.Build(opts.FnOptions...)
-	if err != nil {
-		return nil, errors.Wrap(err, "create logger")
-	}
-	return logger, nil
-}
+// Disable stacktrace and caller.

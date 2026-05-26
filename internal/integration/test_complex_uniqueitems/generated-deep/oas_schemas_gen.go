@@ -2,10 +2,6 @@
 
 package api
 
-import (
-	"github.com/go-faster/errors"
-)
-
 // Level 3 - Individual condition.
 // Ref: #/components/schemas/Condition
 type Condition struct {
@@ -16,33 +12,42 @@ type Condition struct {
 
 // GetType returns the value of Type.
 func (s *Condition) GetType() OptString {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetNegated returns the value of Negated.
+	return *new(OptString)
 }
 
-// GetNegated returns the value of Negated.
 func (s *Condition) GetNegated() OptBool {
-	return s.Negated
+	_ = "STUB: not implemented"
+
+	// GetConfiguration returns the value of Configuration.
+	return *new(OptBool)
 }
 
-// GetConfiguration returns the value of Configuration.
 func (s *Condition) GetConfiguration() OptRuleConfiguration {
-	return s.Configuration
+	_ = "STUB: not implemented"
+	return *
+
+	// SetType sets the value of Type.
+	new(OptRuleConfiguration)
 }
 
-// SetType sets the value of Type.
 func (s *Condition) SetType(val OptString) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetNegated sets the value of Negated.
+	return
 }
 
-// SetNegated sets the value of Negated.
 func (s *Condition) SetNegated(val OptBool) {
-	s.Negated = val
+	_ = "STUB: not implemented"
+
+	// SetConfiguration sets the value of Configuration.
+	return
 }
 
-// SetConfiguration sets the value of Configuration.
-func (s *Condition) SetConfiguration(val OptRuleConfiguration) {
-	s.Configuration = val
-}
+func (s *Condition) SetConfiguration(val OptRuleConfiguration) { _ = "STUB: not implemented"; return }
 
 // Level 2 - Group of conditions.
 // Ref: #/components/schemas/ConditionGroup
@@ -53,23 +58,28 @@ type ConditionGroup struct {
 
 // GetOperator returns the value of Operator.
 func (s *ConditionGroup) GetOperator() OptConditionGroupOperator {
-	return s.Operator
+	_ = "STUB: not implemented"
+
+	// GetCondition returns the value of Condition.
+	return *new(OptConditionGroupOperator)
 }
 
-// GetCondition returns the value of Condition.
 func (s *ConditionGroup) GetCondition() OptCondition {
-	return s.Condition
+	_ = "STUB: not implemented"
+	return *
+
+	// SetOperator sets the value of Operator.
+	new(OptCondition)
 }
 
-// SetOperator sets the value of Operator.
 func (s *ConditionGroup) SetOperator(val OptConditionGroupOperator) {
-	s.Operator = val
+	_ = "STUB: not implemented"
+
+	// SetCondition sets the value of Condition.
+	return
 }
 
-// SetCondition sets the value of Condition.
-func (s *ConditionGroup) SetCondition(val OptCondition) {
-	s.Condition = val
-}
+func (s *ConditionGroup) SetCondition(val OptCondition) { _ = "STUB: not implemented"; return }
 
 type ConditionGroupOperator string
 
@@ -80,36 +90,20 @@ const (
 
 // AllValues returns all ConditionGroupOperator values.
 func (ConditionGroupOperator) AllValues() []ConditionGroupOperator {
-	return []ConditionGroupOperator{
-		ConditionGroupOperatorAND,
-		ConditionGroupOperatorOR,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s ConditionGroupOperator) MarshalText() ([]byte, error) {
-	switch s {
-	case ConditionGroupOperatorAND:
-		return []byte(s), nil
-	case ConditionGroupOperatorOR:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *ConditionGroupOperator) UnmarshalText(data []byte) error {
-	switch ConditionGroupOperator(data) {
-	case ConditionGroupOperatorAND:
-		*s = ConditionGroupOperatorAND
-		return nil
-	case ConditionGroupOperatorOR:
-		*s = ConditionGroupOperatorOR
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type CreateWorkflowTransitionsOK struct {
@@ -118,13 +112,13 @@ type CreateWorkflowTransitionsOK struct {
 
 // GetCreated returns the value of Created.
 func (s *CreateWorkflowTransitionsOK) GetCreated() OptInt {
-	return s.Created
+	_ = "STUB: not implemented"
+
+	// SetCreated sets the value of Created.
+	return *new(OptInt)
 }
 
-// SetCreated sets the value of Created.
-func (s *CreateWorkflowTransitionsOK) SetCreated(val OptInt) {
-	s.Created = val
-}
+func (s *CreateWorkflowTransitionsOK) SetCreated(val OptInt) { _ = "STUB: not implemented"; return }
 
 type CreateWorkflowTransitionsReq struct {
 	Transitions []WorkflowTransition `json:"transitions"`
@@ -132,21 +126,20 @@ type CreateWorkflowTransitionsReq struct {
 
 // GetTransitions returns the value of Transitions.
 func (s *CreateWorkflowTransitionsReq) GetTransitions() []WorkflowTransition {
-	return s.Transitions
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetTransitions sets the value of Transitions.
 }
 
-// SetTransitions sets the value of Transitions.
 func (s *CreateWorkflowTransitionsReq) SetTransitions(val []WorkflowTransition) {
-	s.Transitions = val
+	_ = "STUB: not implemented"
+	return
+
+	// NewOptBool returns new OptBool with value set to v.
 }
 
-// NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -155,43 +148,28 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptCondition returns new OptCondition with value set to v.
 func NewOptCondition(v Condition) OptCondition {
-	return OptCondition{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCondition)
 }
 
 // OptCondition is optional Condition.
@@ -201,43 +179,31 @@ type OptCondition struct {
 }
 
 // IsSet returns true if OptCondition was set.
-func (o OptCondition) IsSet() bool { return o.Set }
+func (o OptCondition) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCondition) Reset() {
-	var v Condition
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCondition) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptCondition) SetTo(v Condition) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptCondition) SetTo(v Condition) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCondition) Get() (v Condition, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Condition), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptCondition) Or(d Condition) Condition {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptCondition) Or(d Condition) Condition { _ = "STUB: not implemented"; return *new(Condition) }
 
 // NewOptConditionGroup returns new OptConditionGroup with value set to v.
 func NewOptConditionGroup(v ConditionGroup) OptConditionGroup {
-	return OptConditionGroup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptConditionGroup)
 }
 
 // OptConditionGroup is optional ConditionGroup.
@@ -247,43 +213,34 @@ type OptConditionGroup struct {
 }
 
 // IsSet returns true if OptConditionGroup was set.
-func (o OptConditionGroup) IsSet() bool { return o.Set }
+func (o OptConditionGroup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptConditionGroup) Reset() {
-	var v ConditionGroup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptConditionGroup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptConditionGroup) SetTo(v ConditionGroup) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptConditionGroup) SetTo(v ConditionGroup) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptConditionGroup) Get() (v ConditionGroup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ConditionGroup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptConditionGroup) Or(d ConditionGroup) ConditionGroup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ConditionGroup)
 }
 
 // NewOptConditionGroupOperator returns new OptConditionGroupOperator with value set to v.
 func NewOptConditionGroupOperator(v ConditionGroupOperator) OptConditionGroupOperator {
-	return OptConditionGroupOperator{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptConditionGroupOperator)
 }
 
 // OptConditionGroupOperator is optional ConditionGroupOperator.
@@ -293,44 +250,35 @@ type OptConditionGroupOperator struct {
 }
 
 // IsSet returns true if OptConditionGroupOperator was set.
-func (o OptConditionGroupOperator) IsSet() bool { return o.Set }
+func (o OptConditionGroupOperator) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptConditionGroupOperator) Reset() {
-	var v ConditionGroupOperator
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptConditionGroupOperator) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptConditionGroupOperator) SetTo(v ConditionGroupOperator) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptConditionGroupOperator) Get() (v ConditionGroupOperator, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ConditionGroupOperator), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptConditionGroupOperator) Or(d ConditionGroupOperator) ConditionGroupOperator {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ConditionGroupOperator)
 }
 
 // NewOptFloat64 returns new OptFloat64 with value set to v.
-func NewOptFloat64(v float64) OptFloat64 {
-	return OptFloat64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptFloat64(v float64) OptFloat64 { _ = "STUB: not implemented"; return *new(OptFloat64) }
 
 // OptFloat64 is optional float64.
 type OptFloat64 struct {
@@ -339,44 +287,26 @@ type OptFloat64 struct {
 }
 
 // IsSet returns true if OptFloat64 was set.
-func (o OptFloat64) IsSet() bool { return o.Set }
+func (o OptFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptFloat64) Get() (v float64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -385,43 +315,28 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptParameter returns new OptParameter with value set to v.
 func NewOptParameter(v Parameter) OptParameter {
-	return OptParameter{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptParameter)
 }
 
 // OptParameter is optional Parameter.
@@ -431,43 +346,31 @@ type OptParameter struct {
 }
 
 // IsSet returns true if OptParameter was set.
-func (o OptParameter) IsSet() bool { return o.Set }
+func (o OptParameter) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptParameter) Reset() {
-	var v Parameter
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptParameter) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptParameter) SetTo(v Parameter) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptParameter) SetTo(v Parameter) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptParameter) Get() (v Parameter, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Parameter), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptParameter) Or(d Parameter) Parameter {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptParameter) Or(d Parameter) Parameter { _ = "STUB: not implemented"; return *new(Parameter) }
 
 // NewOptParameterGroup returns new OptParameterGroup with value set to v.
 func NewOptParameterGroup(v ParameterGroup) OptParameterGroup {
-	return OptParameterGroup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptParameterGroup)
 }
 
 // OptParameterGroup is optional ParameterGroup.
@@ -477,43 +380,34 @@ type OptParameterGroup struct {
 }
 
 // IsSet returns true if OptParameterGroup was set.
-func (o OptParameterGroup) IsSet() bool { return o.Set }
+func (o OptParameterGroup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptParameterGroup) Reset() {
-	var v ParameterGroup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptParameterGroup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptParameterGroup) SetTo(v ParameterGroup) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptParameterGroup) SetTo(v ParameterGroup) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptParameterGroup) Get() (v ParameterGroup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ParameterGroup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptParameterGroup) Or(d ParameterGroup) ParameterGroup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ParameterGroup)
 }
 
 // NewOptParameterValue returns new OptParameterValue with value set to v.
 func NewOptParameterValue(v ParameterValue) OptParameterValue {
-	return OptParameterValue{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptParameterValue)
 }
 
 // OptParameterValue is optional ParameterValue.
@@ -523,43 +417,34 @@ type OptParameterValue struct {
 }
 
 // IsSet returns true if OptParameterValue was set.
-func (o OptParameterValue) IsSet() bool { return o.Set }
+func (o OptParameterValue) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptParameterValue) Reset() {
-	var v ParameterValue
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptParameterValue) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptParameterValue) SetTo(v ParameterValue) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptParameterValue) SetTo(v ParameterValue) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptParameterValue) Get() (v ParameterValue, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ParameterValue), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptParameterValue) Or(d ParameterValue) ParameterValue {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ParameterValue)
 }
 
 // NewOptParameterValueMetadata returns new OptParameterValueMetadata with value set to v.
 func NewOptParameterValueMetadata(v ParameterValueMetadata) OptParameterValueMetadata {
-	return OptParameterValueMetadata{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptParameterValueMetadata)
 }
 
 // OptParameterValueMetadata is optional ParameterValueMetadata.
@@ -569,43 +454,37 @@ type OptParameterValueMetadata struct {
 }
 
 // IsSet returns true if OptParameterValueMetadata was set.
-func (o OptParameterValueMetadata) IsSet() bool { return o.Set }
+func (o OptParameterValueMetadata) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptParameterValueMetadata) Reset() {
-	var v ParameterValueMetadata
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptParameterValueMetadata) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptParameterValueMetadata) SetTo(v ParameterValueMetadata) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptParameterValueMetadata) Get() (v ParameterValueMetadata, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ParameterValueMetadata), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptParameterValueMetadata) Or(d ParameterValueMetadata) ParameterValueMetadata {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ParameterValueMetadata)
 }
 
 // NewOptRuleConfiguration returns new OptRuleConfiguration with value set to v.
 func NewOptRuleConfiguration(v RuleConfiguration) OptRuleConfiguration {
-	return OptRuleConfiguration{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptRuleConfiguration)
 }
 
 // OptRuleConfiguration is optional RuleConfiguration.
@@ -615,44 +494,32 @@ type OptRuleConfiguration struct {
 }
 
 // IsSet returns true if OptRuleConfiguration was set.
-func (o OptRuleConfiguration) IsSet() bool { return o.Set }
+func (o OptRuleConfiguration) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptRuleConfiguration) Reset() {
-	var v RuleConfiguration
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptRuleConfiguration) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptRuleConfiguration) SetTo(v RuleConfiguration) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptRuleConfiguration) SetTo(v RuleConfiguration) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptRuleConfiguration) Get() (v RuleConfiguration, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(RuleConfiguration), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptRuleConfiguration) Or(d RuleConfiguration) RuleConfiguration {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(RuleConfiguration)
 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -661,36 +528,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Level 6 - Individual parameter.
 // Ref: #/components/schemas/Parameter
@@ -701,26 +555,34 @@ type Parameter struct {
 
 // GetKey returns the value of Key.
 func (s *Parameter) GetKey() OptString {
-	return s.Key
+	_ = "STUB: not implemented"
+
+	// GetValue returns the value of Value.
+	return *new(OptString)
 }
 
-// GetValue returns the value of Value.
 func (s *Parameter) GetValue() OptParameterValue {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetKey sets the value of Key.
+	return *new(OptParameterValue)
 }
 
-// SetKey sets the value of Key.
 func (s *Parameter) SetKey(val OptString) {
-	s.Key = val
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return
 }
 
-// SetValue sets the value of Value.
 func (s *Parameter) SetValue(val OptParameterValue) {
-	s.Value = val
+	_ = "STUB: not implemented"
+
+	// Level 5 - Group of parameters.
+	// Ref: #/components/schemas/ParameterGroup
+	return
 }
 
-// Level 5 - Group of parameters.
-// Ref: #/components/schemas/ParameterGroup
 type ParameterGroup struct {
 	GroupName OptString    `json:"groupName"`
 	Parameter OptParameter `json:"parameter"`
@@ -728,26 +590,36 @@ type ParameterGroup struct {
 
 // GetGroupName returns the value of GroupName.
 func (s *ParameterGroup) GetGroupName() OptString {
-	return s.GroupName
+	_ = "STUB: not implemented"
+	return *
+
+	// GetParameter returns the value of Parameter.
+	new(OptString)
 }
 
-// GetParameter returns the value of Parameter.
 func (s *ParameterGroup) GetParameter() OptParameter {
-	return s.Parameter
+	_ = "STUB: not implemented"
+	return *
+
+	// SetGroupName sets the value of GroupName.
+	new(OptParameter)
 }
 
-// SetGroupName sets the value of GroupName.
 func (s *ParameterGroup) SetGroupName(val OptString) {
-	s.GroupName = val
+	_ = "STUB: not implemented"
+
+	// SetParameter sets the value of Parameter.
+	return
 }
 
-// SetParameter sets the value of Parameter.
 func (s *ParameterGroup) SetParameter(val OptParameter) {
-	s.Parameter = val
+	_ = "STUB: not implemented"
+
+	// Level 7 - Parameter value (deepest level).
+	// Ref: #/components/schemas/ParameterValue
+	return
 }
 
-// Level 7 - Parameter value (deepest level).
-// Ref: #/components/schemas/ParameterValue
 type ParameterValue struct {
 	StringValue  OptString                 `json:"stringValue"`
 	NumberValue  OptFloat64                `json:"numberValue"`
@@ -757,42 +629,48 @@ type ParameterValue struct {
 
 // GetStringValue returns the value of StringValue.
 func (s *ParameterValue) GetStringValue() OptString {
-	return s.StringValue
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNumberValue returns the value of NumberValue.
+	new(OptString)
 }
 
-// GetNumberValue returns the value of NumberValue.
 func (s *ParameterValue) GetNumberValue() OptFloat64 {
-	return s.NumberValue
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBooleanValue returns the value of BooleanValue.
+	new(OptFloat64)
 }
 
-// GetBooleanValue returns the value of BooleanValue.
 func (s *ParameterValue) GetBooleanValue() OptBool {
-	return s.BooleanValue
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMetadata returns the value of Metadata.
+	new(OptBool)
 }
 
-// GetMetadata returns the value of Metadata.
 func (s *ParameterValue) GetMetadata() OptParameterValueMetadata {
-	return s.Metadata
+	_ = "STUB: not implemented"
+
+	// SetStringValue sets the value of StringValue.
+	return *new(OptParameterValueMetadata)
 }
 
-// SetStringValue sets the value of StringValue.
-func (s *ParameterValue) SetStringValue(val OptString) {
-	s.StringValue = val
-}
+func (s *ParameterValue) SetStringValue(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetNumberValue sets the value of NumberValue.
-func (s *ParameterValue) SetNumberValue(val OptFloat64) {
-	s.NumberValue = val
-}
+func (s *ParameterValue) SetNumberValue(val OptFloat64) { _ = "STUB: not implemented"; return }
 
 // SetBooleanValue sets the value of BooleanValue.
-func (s *ParameterValue) SetBooleanValue(val OptBool) {
-	s.BooleanValue = val
-}
+func (s *ParameterValue) SetBooleanValue(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetMetadata sets the value of Metadata.
 func (s *ParameterValue) SetMetadata(val OptParameterValueMetadata) {
-	s.Metadata = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type ParameterValueMetadata map[string]string
@@ -815,26 +693,35 @@ type RuleConfiguration struct {
 
 // GetRuleKey returns the value of RuleKey.
 func (s *RuleConfiguration) GetRuleKey() OptString {
-	return s.RuleKey
+	_ = "STUB: not implemented"
+
+	// GetParameterGroup returns the value of ParameterGroup.
+	return *new(OptString)
 }
 
-// GetParameterGroup returns the value of ParameterGroup.
 func (s *RuleConfiguration) GetParameterGroup() OptParameterGroup {
-	return s.ParameterGroup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetRuleKey sets the value of RuleKey.
+	new(OptParameterGroup)
 }
 
-// SetRuleKey sets the value of RuleKey.
 func (s *RuleConfiguration) SetRuleKey(val OptString) {
-	s.RuleKey = val
+	_ = "STUB: not implemented"
+
+	// SetParameterGroup sets the value of ParameterGroup.
+	return
 }
 
-// SetParameterGroup sets the value of ParameterGroup.
 func (s *RuleConfiguration) SetParameterGroup(val OptParameterGroup) {
-	s.ParameterGroup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Level 1 - Workflow transition definition.
+	// Ref: #/components/schemas/WorkflowTransition
 }
 
-// Level 1 - Workflow transition definition.
-// Ref: #/components/schemas/WorkflowTransition
 type WorkflowTransition struct {
 	ID           string            `json:"id"`
 	Name         string            `json:"name"`
@@ -845,50 +732,68 @@ type WorkflowTransition struct {
 
 // GetID returns the value of ID.
 func (s *WorkflowTransition) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *WorkflowTransition) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetFromStatusId returns the value of FromStatusId.
+	return ""
 }
 
-// GetFromStatusId returns the value of FromStatusId.
 func (s *WorkflowTransition) GetFromStatusId() OptString {
-	return s.FromStatusId
+	_ = "STUB: not implemented"
+	return *
+
+	// GetToStatusId returns the value of ToStatusId.
+	new(OptString)
 }
 
-// GetToStatusId returns the value of ToStatusId.
 func (s *WorkflowTransition) GetToStatusId() OptString {
-	return s.ToStatusId
+	_ = "STUB: not implemented"
+	return *
+
+	// GetConditions returns the value of Conditions.
+	new(OptString)
 }
 
-// GetConditions returns the value of Conditions.
 func (s *WorkflowTransition) GetConditions() OptConditionGroup {
-	return s.Conditions
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptConditionGroup)
 }
 
-// SetID sets the value of ID.
 func (s *WorkflowTransition) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *WorkflowTransition) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetFromStatusId sets the value of FromStatusId.
+	return
 }
 
-// SetFromStatusId sets the value of FromStatusId.
-func (s *WorkflowTransition) SetFromStatusId(val OptString) {
-	s.FromStatusId = val
-}
+func (s *WorkflowTransition) SetFromStatusId(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetToStatusId sets the value of ToStatusId.
 func (s *WorkflowTransition) SetToStatusId(val OptString) {
-	s.ToStatusId = val
+	_ = "STUB: not implemented"
+
+	// SetConditions sets the value of Conditions.
+	return
 }
 
-// SetConditions sets the value of Conditions.
 func (s *WorkflowTransition) SetConditions(val OptConditionGroup) {
-	s.Conditions = val
+	_ = "STUB: not implemented"
+	return
 }

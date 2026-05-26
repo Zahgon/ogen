@@ -2,186 +2,68 @@
 
 package api
 
-import (
-	"github.com/ogen-go/ogen/validate"
-)
-
 // validateUniqueComprehensiveItem checks for duplicate items in a slice using hash-based detection.
 func validateUniqueComprehensiveItem(items []ComprehensiveItem) (err error) {
-	if len(items) <= 1 {
-		return nil
-	}
-
-	// Recover from depth limit panics during Equal() calls
-	defer func() {
-		if r := recover(); r != nil {
-			if e, ok := r.(*validate.DepthLimitError); ok {
-				err = e
-			} else {
-				panic(r) // Re-panic if not a depth limit error
-			}
-		}
-	}()
-
-	// Hash bucket structure for O(n) duplicate detection
-	type entry struct {
-		item  ComprehensiveItem
-		index int
-	}
-	buckets := make(map[uint64][]entry, len(items))
-
-	// Check each item for duplicates
-	for i, item := range items {
-		hash := item.Hash()
-		bucket := buckets[hash]
-
-		// Check for duplicates in this hash bucket
-		for _, existing := range bucket {
-			if item.Equal(existing.item, 0) {
-				return &validate.DuplicateItemsError{
-					Indices: []int{existing.index, i},
-				}
-			}
-		}
-
-		// No duplicate found, add to bucket
-		buckets[hash] = append(bucket, entry{item: item, index: i})
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Recover from depth limit panics during Equal() calls
+
+// Re-panic if not a depth limit error
+
+// Hash bucket structure for O(n) duplicate detection
+
+// Check each item for duplicates
+
+// Check for duplicates in this hash bucket
+
+// No duplicate found, add to bucket
 
 // validateUniqueUser checks for duplicate items in a slice using hash-based detection.
-func validateUniqueUser(items []User) (err error) {
-	if len(items) <= 1 {
-		return nil
-	}
+func validateUniqueUser(items []User) (err error) { _ = "STUB: not implemented"; return nil }
 
-	// Recover from depth limit panics during Equal() calls
-	defer func() {
-		if r := recover(); r != nil {
-			if e, ok := r.(*validate.DepthLimitError); ok {
-				err = e
-			} else {
-				panic(r) // Re-panic if not a depth limit error
-			}
-		}
-	}()
+// Recover from depth limit panics during Equal() calls
 
-	// Hash bucket structure for O(n) duplicate detection
-	type entry struct {
-		item  User
-		index int
-	}
-	buckets := make(map[uint64][]entry, len(items))
+// Re-panic if not a depth limit error
 
-	// Check each item for duplicates
-	for i, item := range items {
-		hash := item.Hash()
-		bucket := buckets[hash]
+// Hash bucket structure for O(n) duplicate detection
 
-		// Check for duplicates in this hash bucket
-		for _, existing := range bucket {
-			if item.Equal(existing.item, 0) {
-				return &validate.DuplicateItemsError{
-					Indices: []int{existing.index, i},
-				}
-			}
-		}
+// Check each item for duplicates
 
-		// No duplicate found, add to bucket
-		buckets[hash] = append(bucket, entry{item: item, index: i})
-	}
+// Check for duplicates in this hash bucket
 
-	return nil
-}
+// No duplicate found, add to bucket
 
 // validateUniqueConfiguration checks for duplicate items in a slice using hash-based detection.
 func validateUniqueConfiguration(items []Configuration) (err error) {
-	if len(items) <= 1 {
-		return nil
-	}
-
-	// Recover from depth limit panics during Equal() calls
-	defer func() {
-		if r := recover(); r != nil {
-			if e, ok := r.(*validate.DepthLimitError); ok {
-				err = e
-			} else {
-				panic(r) // Re-panic if not a depth limit error
-			}
-		}
-	}()
-
-	// Hash bucket structure for O(n) duplicate detection
-	type entry struct {
-		item  Configuration
-		index int
-	}
-	buckets := make(map[uint64][]entry, len(items))
-
-	// Check each item for duplicates
-	for i, item := range items {
-		hash := item.Hash()
-		bucket := buckets[hash]
-
-		// Check for duplicates in this hash bucket
-		for _, existing := range bucket {
-			if item.Equal(existing.item, 0) {
-				return &validate.DuplicateItemsError{
-					Indices: []int{existing.index, i},
-				}
-			}
-		}
-
-		// No duplicate found, add to bucket
-		buckets[hash] = append(bucket, entry{item: item, index: i})
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Recover from depth limit panics during Equal() calls
+
+// Re-panic if not a depth limit error
+
+// Hash bucket structure for O(n) duplicate detection
+
+// Check each item for duplicates
+
+// Check for duplicates in this hash bucket
+
+// No duplicate found, add to bucket
 
 // validateUniqueFeature checks for duplicate items in a slice using hash-based detection.
-func validateUniqueFeature(items []Feature) (err error) {
-	if len(items) <= 1 {
-		return nil
-	}
+func validateUniqueFeature(items []Feature) (err error) { _ = "STUB: not implemented"; return nil }
 
-	// Recover from depth limit panics during Equal() calls
-	defer func() {
-		if r := recover(); r != nil {
-			if e, ok := r.(*validate.DepthLimitError); ok {
-				err = e
-			} else {
-				panic(r) // Re-panic if not a depth limit error
-			}
-		}
-	}()
+// Recover from depth limit panics during Equal() calls
 
-	// Hash bucket structure for O(n) duplicate detection
-	type entry struct {
-		item  Feature
-		index int
-	}
-	buckets := make(map[uint64][]entry, len(items))
+// Re-panic if not a depth limit error
 
-	// Check each item for duplicates
-	for i, item := range items {
-		hash := item.Hash()
-		bucket := buckets[hash]
+// Hash bucket structure for O(n) duplicate detection
 
-		// Check for duplicates in this hash bucket
-		for _, existing := range bucket {
-			if item.Equal(existing.item, 0) {
-				return &validate.DuplicateItemsError{
-					Indices: []int{existing.index, i},
-				}
-			}
-		}
+// Check each item for duplicates
 
-		// No duplicate found, add to bucket
-		buckets[hash] = append(bucket, entry{item: item, index: i})
-	}
+// Check for duplicates in this hash bucket
 
-	return nil
-}
+// No duplicate found, add to bucket

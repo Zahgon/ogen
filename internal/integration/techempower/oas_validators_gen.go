@@ -2,14 +2,4 @@
 
 package techempower
 
-import (
-	"github.com/go-faster/errors"
-)
-
-func (s WorldObjects) Validate() error {
-	alias := ([]WorldObject)(s)
-	if alias == nil {
-		return errors.New("nil is invalid value")
-	}
-	return nil
-}
+func (s WorldObjects) Validate() error { _ = "STUB: not implemented"; return nil }

@@ -2,26 +2,8 @@
 
 package api
 
-import "github.com/ogen-go/ogen/validate"
-
 // Equal compares two Level9 instances for equality.
 // The depth parameter prevents infinite recursion on nested objects.
-func (a Level9) Equal(b Level9, depth int) bool {
-	if depth > 10 {
-		panic(&validate.DepthLimitError{
-			MaxDepth: 10,
-			TypeName: "Level9",
-		})
-	}
+func (a Level9) Equal(b Level9, depth int) bool { _ = "STUB: not implemented"; return false }
 
-	// Compare optional field: Nested
-	if a.Nested.Set != b.Nested.Set {
-		return false
-	}
-	if a.Nested.Set {
-		if !a.Nested.Value.Equal(b.Nested.Value, depth+1) {
-			return false
-		}
-	}
-	return true
-}
+// Compare optional field: Nested

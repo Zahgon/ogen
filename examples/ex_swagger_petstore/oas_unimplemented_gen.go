@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,7 +17,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // POST /pet
 func (UnimplementedHandler) AddPet(ctx context.Context, req *Pet) (r AddPetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AddPetRes), nil
 }
 
 // CreateUser implements createUser operation.
@@ -28,7 +27,8 @@ func (UnimplementedHandler) AddPet(ctx context.Context, req *Pet) (r AddPetRes, 
 //
 // POST /user
 func (UnimplementedHandler) CreateUser(ctx context.Context, req CreateUserReq) (r CreateUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CreateUserRes), nil
 }
 
 // CreateUsersWithListInput implements createUsersWithListInput operation.
@@ -37,7 +37,8 @@ func (UnimplementedHandler) CreateUser(ctx context.Context, req CreateUserReq) (
 //
 // POST /user/createWithList
 func (UnimplementedHandler) CreateUsersWithListInput(ctx context.Context, req []User) (r CreateUsersWithListInputRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CreateUsersWithListInputRes), nil
 }
 
 // DeleteOrder implements deleteOrder operation.
@@ -47,7 +48,8 @@ func (UnimplementedHandler) CreateUsersWithListInput(ctx context.Context, req []
 //
 // DELETE /store/order/{orderId}
 func (UnimplementedHandler) DeleteOrder(ctx context.Context, params DeleteOrderParams) (r DeleteOrderRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(DeleteOrderRes), nil
 }
 
 // DeletePet implements deletePet operation.
@@ -56,7 +58,8 @@ func (UnimplementedHandler) DeleteOrder(ctx context.Context, params DeleteOrderP
 //
 // DELETE /pet/{petId}
 func (UnimplementedHandler) DeletePet(ctx context.Context, params DeletePetParams) (r DeletePetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(DeletePetRes), nil
 }
 
 // DeleteUser implements deleteUser operation.
@@ -65,7 +68,8 @@ func (UnimplementedHandler) DeletePet(ctx context.Context, params DeletePetParam
 //
 // DELETE /user/{username}
 func (UnimplementedHandler) DeleteUser(ctx context.Context, params DeleteUserParams) (r DeleteUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(DeleteUserRes), nil
 }
 
 // FindPetsByStatus implements findPetsByStatus operation.
@@ -74,7 +78,8 @@ func (UnimplementedHandler) DeleteUser(ctx context.Context, params DeleteUserPar
 //
 // GET /pet/findByStatus
 func (UnimplementedHandler) FindPetsByStatus(ctx context.Context, params FindPetsByStatusParams) (r FindPetsByStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(FindPetsByStatusRes), nil
 }
 
 // FindPetsByTags implements findPetsByTags operation.
@@ -83,7 +88,8 @@ func (UnimplementedHandler) FindPetsByStatus(ctx context.Context, params FindPet
 //
 // GET /pet/findByTags
 func (UnimplementedHandler) FindPetsByTags(ctx context.Context, params FindPetsByTagsParams) (r FindPetsByTagsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(FindPetsByTagsRes), nil
 }
 
 // GetInventory implements getInventory operation.
@@ -92,7 +98,8 @@ func (UnimplementedHandler) FindPetsByTags(ctx context.Context, params FindPetsB
 //
 // GET /store/inventory
 func (UnimplementedHandler) GetInventory(ctx context.Context) (r GetInventoryRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetInventoryRes), nil
 }
 
 // GetOrderById implements getOrderById operation.
@@ -101,7 +108,8 @@ func (UnimplementedHandler) GetInventory(ctx context.Context) (r GetInventoryRes
 //
 // GET /store/order/{orderId}
 func (UnimplementedHandler) GetOrderById(ctx context.Context, params GetOrderByIdParams) (r GetOrderByIdRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetOrderByIdRes), nil
 }
 
 // GetPetById implements getPetById operation.
@@ -110,7 +118,8 @@ func (UnimplementedHandler) GetOrderById(ctx context.Context, params GetOrderByI
 //
 // GET /pet/{petId}
 func (UnimplementedHandler) GetPetById(ctx context.Context, params GetPetByIdParams) (r GetPetByIdRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetPetByIdRes), nil
 }
 
 // GetUserByName implements getUserByName operation.
@@ -119,7 +128,8 @@ func (UnimplementedHandler) GetPetById(ctx context.Context, params GetPetByIdPar
 //
 // GET /user/{username}
 func (UnimplementedHandler) GetUserByName(ctx context.Context, params GetUserByNameParams) (r GetUserByNameRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GetUserByNameRes), nil
 }
 
 // LoginUser implements loginUser operation.
@@ -128,7 +138,8 @@ func (UnimplementedHandler) GetUserByName(ctx context.Context, params GetUserByN
 //
 // GET /user/login
 func (UnimplementedHandler) LoginUser(ctx context.Context, params LoginUserParams) (r LoginUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(LoginUserRes), nil
 }
 
 // LogoutUser implements logoutUser operation.
@@ -137,7 +148,8 @@ func (UnimplementedHandler) LoginUser(ctx context.Context, params LoginUserParam
 //
 // GET /user/logout
 func (UnimplementedHandler) LogoutUser(ctx context.Context) (r LogoutUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(LogoutUserRes), nil
 }
 
 // PlaceOrder implements placeOrder operation.
@@ -146,7 +158,8 @@ func (UnimplementedHandler) LogoutUser(ctx context.Context) (r LogoutUserRes, _ 
 //
 // POST /store/order
 func (UnimplementedHandler) PlaceOrder(ctx context.Context, req PlaceOrderReq) (r PlaceOrderRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PlaceOrderRes), nil
 }
 
 // UpdatePet implements updatePet operation.
@@ -155,7 +168,8 @@ func (UnimplementedHandler) PlaceOrder(ctx context.Context, req PlaceOrderReq) (
 //
 // PUT /pet
 func (UnimplementedHandler) UpdatePet(ctx context.Context, req *Pet) (r UpdatePetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UpdatePetRes), nil
 }
 
 // UpdatePetWithForm implements updatePetWithForm operation.
@@ -164,7 +178,8 @@ func (UnimplementedHandler) UpdatePet(ctx context.Context, req *Pet) (r UpdatePe
 //
 // POST /pet/{petId}
 func (UnimplementedHandler) UpdatePetWithForm(ctx context.Context, params UpdatePetWithFormParams) (r UpdatePetWithFormRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UpdatePetWithFormRes), nil
 }
 
 // UpdateUser implements updateUser operation.
@@ -173,7 +188,8 @@ func (UnimplementedHandler) UpdatePetWithForm(ctx context.Context, params Update
 //
 // PUT /user/{username}
 func (UnimplementedHandler) UpdateUser(ctx context.Context, req UpdateUserReq, params UpdateUserParams) (r UpdateUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UpdateUserRes), nil
 }
 
 // UploadFile implements uploadFile operation.
@@ -182,5 +198,6 @@ func (UnimplementedHandler) UpdateUser(ctx context.Context, req UpdateUserReq, p
 //
 // POST /pet/{petId}/uploadImage
 func (UnimplementedHandler) UploadFile(ctx context.Context, req UploadFileReq, params UploadFileParams) (r UploadFileRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UploadFileRes), nil
 }

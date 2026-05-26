@@ -5,10 +5,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/ogen-go/ogen/conv"
 	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
 )
 
 // FooParams is parameters of Foo operation.
@@ -17,53 +14,13 @@ type FooParams struct {
 }
 
 func unpackFooParams(packed middleware.Parameters) (params FooParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "body",
-			In:   "query",
-		}
-		params.Body = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(FooParams)
 }
 
 func decodeFooParams(args [0]string, argsEscaped bool, r *http.Request) (params FooParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: body.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "body",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Body = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "body",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(FooParams), nil
 }
+
+// Decode query: body.

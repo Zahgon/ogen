@@ -31,7 +31,4 @@ var (
 
 // Rule returns the rule for the given part, if any.
 // Otherwise, it returns ("", false).
-func Rule(part string) (string, bool) {
-	v, ok := rulesMap[strings.ToLower(part)]
-	return v, ok
-}
+func Rule(part string) (string, bool) { _ = "STUB: not implemented"; return "", false }

@@ -5,10 +5,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/ogen-go/ogen/conv"
 	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
 )
 
 // CombinedParams is parameters of combined operation.
@@ -17,64 +14,16 @@ type CombinedParams struct {
 }
 
 func unpackCombinedParams(packed middleware.Parameters) (params CombinedParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "type",
-			In:   "query",
-		}
-		params.Type = packed[key].(CombinedType)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(CombinedParams)
 }
 
 func decodeCombinedParams(args [0]string, argsEscaped bool, r *http.Request) (params CombinedParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: type.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "type",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Type = CombinedType(c)
-				return nil
-			}); err != nil {
-				return err
-			}
-			if err := func() error {
-				if err := params.Type.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "type",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(CombinedParams), nil
 }
+
+// Decode query: type.
 
 // HeadersCombinedParams is parameters of headersCombined operation.
 type HeadersCombinedParams struct {
@@ -82,64 +31,16 @@ type HeadersCombinedParams struct {
 }
 
 func unpackHeadersCombinedParams(packed middleware.Parameters) (params HeadersCombinedParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "type",
-			In:   "query",
-		}
-		params.Type = packed[key].(HeadersCombinedType)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(HeadersCombinedParams)
 }
 
 func decodeHeadersCombinedParams(args [0]string, argsEscaped bool, r *http.Request) (params HeadersCombinedParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: type.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "type",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Type = HeadersCombinedType(c)
-				return nil
-			}); err != nil {
-				return err
-			}
-			if err := func() error {
-				if err := params.Type.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "type",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(HeadersCombinedParams), nil
 }
+
+// Decode query: type.
 
 // IntersectPatternCodeParams is parameters of intersectPatternCode operation.
 type IntersectPatternCodeParams struct {
@@ -147,56 +48,16 @@ type IntersectPatternCodeParams struct {
 }
 
 func unpackIntersectPatternCodeParams(packed middleware.Parameters) (params IntersectPatternCodeParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "code",
-			In:   "query",
-		}
-		params.Code = packed[key].(int)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(IntersectPatternCodeParams)
 }
 
 func decodeIntersectPatternCodeParams(args [0]string, argsEscaped bool, r *http.Request) (params IntersectPatternCodeParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: code.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "code",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt(val)
-				if err != nil {
-					return err
-				}
-
-				params.Code = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "code",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(IntersectPatternCodeParams), nil
 }
+
+// Decode query: code.
 
 // StreamJSONParams is parameters of streamJSON operation.
 type StreamJSONParams struct {
@@ -204,53 +65,13 @@ type StreamJSONParams struct {
 }
 
 func unpackStreamJSONParams(packed middleware.Parameters) (params StreamJSONParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "count",
-			In:   "query",
-		}
-		params.Count = packed[key].(int)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(StreamJSONParams)
 }
 
 func decodeStreamJSONParams(args [0]string, argsEscaped bool, r *http.Request) (params StreamJSONParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: count.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "count",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt(val)
-				if err != nil {
-					return err
-				}
-
-				params.Count = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "count",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(StreamJSONParams), nil
 }
+
+// Decode query: count.

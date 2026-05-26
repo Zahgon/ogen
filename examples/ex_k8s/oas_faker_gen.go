@@ -2,22589 +2,5898 @@
 
 package api
 
-import (
-	"fmt"
-	"time"
-)
-
 // SetFake set fake values.
 func (s *GetServiceAccountIssuerOpenIDConfigurationOKApplicationJSON) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = GetServiceAccountIssuerOpenIDConfigurationOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *GetServiceAccountIssuerOpenIDKeysetOKApplicationJwkSetJSON) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = GetServiceAccountIssuerOpenIDKeysetOKApplicationJwkSetJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAdmissionregistrationV1MutatingWebhook) SetFake() {
-	{
-		{
-			s.AdmissionReviewVersions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AdmissionReviewVersions = append(s.AdmissionReviewVersions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ClientConfig.SetFake()
-		}
-	}
-	{
-		{
-			s.FailurePolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.MatchPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.NamespaceSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.ObjectSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.ReinvocationPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.Rules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAdmissionregistrationV1RuleWithOperations
-				{
-					elem.SetFake()
-				}
-				s.Rules = append(s.Rules, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SideEffects = "string"
-		}
-	}
-	{
-		{
-			s.TimeoutSeconds.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAdmissionregistrationV1MutatingWebhookConfiguration) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Webhooks = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAdmissionregistrationV1MutatingWebhook
-				{
-					elem.SetFake()
-				}
-				s.Webhooks = append(s.Webhooks, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAdmissionregistrationV1MutatingWebhookConfigurationList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAdmissionregistrationV1MutatingWebhookConfiguration
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAdmissionregistrationV1RuleWithOperations) SetFake() {
-	{
-		{
-			s.ApiGroups = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ApiGroups = append(s.ApiGroups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ApiVersions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ApiVersions = append(s.ApiVersions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Operations = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Operations = append(s.Operations, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Resources = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Resources = append(s.Resources, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Scope.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAdmissionregistrationV1ServiceReference) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Namespace = "string"
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Port.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAdmissionregistrationV1ValidatingWebhook) SetFake() {
-	{
-		{
-			s.AdmissionReviewVersions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AdmissionReviewVersions = append(s.AdmissionReviewVersions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ClientConfig.SetFake()
-		}
-	}
-	{
-		{
-			s.FailurePolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.MatchPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.NamespaceSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.ObjectSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.Rules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAdmissionregistrationV1RuleWithOperations
-				{
-					elem.SetFake()
-				}
-				s.Rules = append(s.Rules, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SideEffects = "string"
-		}
-	}
-	{
-		{
-			s.TimeoutSeconds.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAdmissionregistrationV1ValidatingWebhookConfiguration) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Webhooks = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAdmissionregistrationV1ValidatingWebhook
-				{
-					elem.SetFake()
-				}
-				s.Webhooks = append(s.Webhooks, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAdmissionregistrationV1ValidatingWebhookConfigurationList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAdmissionregistrationV1ValidatingWebhookConfiguration
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAdmissionregistrationV1WebhookClientConfig) SetFake() {
-	{
-		{
-			s.CaBundle = []byte("[]byte")
-		}
-	}
-	{
-		{
-			s.Service.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIApiserverinternalV1alpha1ServerStorageVersion) SetFake() {
-	{
-		{
-			s.ApiServerID.SetFake()
-		}
-	}
-	{
-		{
-			s.DecodableVersions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.DecodableVersions = append(s.DecodableVersions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.EncodingVersion.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIApiserverinternalV1alpha1StorageVersion) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIApiserverinternalV1alpha1StorageVersionCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIApiserverinternalV1alpha1StorageVersionList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIApiserverinternalV1alpha1StorageVersion
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIApiserverinternalV1alpha1StorageVersionSpec) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *IoK8sAPIApiserverinternalV1alpha1StorageVersionStatus) SetFake() {
-	{
-		{
-			s.CommonEncodingVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIApiserverinternalV1alpha1StorageVersionCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.StorageVersions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIApiserverinternalV1alpha1ServerStorageVersion
-				{
-					elem.SetFake()
-				}
-				s.StorageVersions = append(s.StorageVersions, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1ControllerRevision) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Data = nil
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Revision = int64(0)
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1ControllerRevision) SetFake() { _ = "STUB: not implemented"; return }
+
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1ControllerRevisionList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAppsV1ControllerRevision
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1ControllerRevisionList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DaemonSet) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DaemonSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DaemonSetCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DaemonSetCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DaemonSetList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAppsV1DaemonSet
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DaemonSetList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DaemonSetSpec) SetFake() {
-	{
-		{
-			s.MinReadySeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.RevisionHistoryLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.Template.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdateStrategy.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DaemonSetSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DaemonSetStatus) SetFake() {
-	{
-		{
-			s.CollisionCount.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAppsV1DaemonSetCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CurrentNumberScheduled = int32(0)
-		}
-	}
-	{
-		{
-			s.DesiredNumberScheduled = int32(0)
-		}
-	}
-	{
-		{
-			s.NumberAvailable.SetFake()
-		}
-	}
-	{
-		{
-			s.NumberMisscheduled = int32(0)
-		}
-	}
-	{
-		{
-			s.NumberReady = int32(0)
-		}
-	}
-	{
-		{
-			s.NumberUnavailable.SetFake()
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedNumberScheduled.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DaemonSetStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DaemonSetUpdateStrategy) SetFake() {
-	{
-		{
-			s.RollingUpdate.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DaemonSetUpdateStrategy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1Deployment) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1Deployment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DeploymentCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.LastUpdateTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DeploymentCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DeploymentList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAppsV1Deployment
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DeploymentList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DeploymentSpec) SetFake() {
-	{
-		{
-			s.MinReadySeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.Paused.SetFake()
-		}
-	}
-	{
-		{
-			s.ProgressDeadlineSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.Replicas.SetFake()
-		}
-	}
-	{
-		{
-			s.RevisionHistoryLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.Strategy.SetFake()
-		}
-	}
-	{
-		{
-			s.Template.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DeploymentSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DeploymentStatus) SetFake() {
-	{
-		{
-			s.AvailableReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.CollisionCount.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAppsV1DeploymentCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadyReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.Replicas.SetFake()
-		}
-	}
-	{
-		{
-			s.UnavailableReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedReplicas.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DeploymentStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1DeploymentStrategy) SetFake() {
-	{
-		{
-			s.RollingUpdate.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1DeploymentStrategy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1ReplicaSet) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1ReplicaSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1ReplicaSetCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1ReplicaSetCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1ReplicaSetList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAppsV1ReplicaSet
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1ReplicaSetList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1ReplicaSetSpec) SetFake() {
-	{
-		{
-			s.MinReadySeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.Replicas.SetFake()
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.Template.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1ReplicaSetSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1ReplicaSetStatus) SetFake() {
-	{
-		{
-			s.AvailableReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAppsV1ReplicaSetCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.FullyLabeledReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadyReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.Replicas = int32(0)
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1ReplicaSetStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1RollingUpdateDaemonSet) SetFake() {
-	{
-		{
-			s.MaxSurge.SetFake()
-		}
-	}
-	{
-		{
-			s.MaxUnavailable.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1RollingUpdateDaemonSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1RollingUpdateDeployment) SetFake() {
-	{
-		{
-			s.MaxSurge.SetFake()
-		}
-	}
-	{
-		{
-			s.MaxUnavailable.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1RollingUpdateDeployment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAppsV1RollingUpdateStatefulSetStrategy) SetFake() {
-	{
-		{
-			s.Partition.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1StatefulSet) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1StatefulSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1StatefulSetCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1StatefulSetCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1StatefulSetList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAppsV1StatefulSet
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1StatefulSetList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1StatefulSetSpec) SetFake() {
-	{
-		{
-			s.MinReadySeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.PodManagementPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.Replicas.SetFake()
-		}
-	}
-	{
-		{
-			s.RevisionHistoryLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.ServiceName = "string"
-		}
-	}
-	{
-		{
-			s.Template.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdateStrategy.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeClaimTemplates = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PersistentVolumeClaim
-				{
-					elem.SetFake()
-				}
-				s.VolumeClaimTemplates = append(s.VolumeClaimTemplates, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1StatefulSetSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1StatefulSetStatus) SetFake() {
-	{
-		{
-			s.AvailableReplicas = int32(0)
-		}
-	}
-	{
-		{
-			s.CollisionCount.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAppsV1StatefulSetCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CurrentReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentRevision.SetFake()
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadyReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.Replicas = int32(0)
-		}
-	}
-	{
-		{
-			s.UpdateRevision.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedReplicas.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1StatefulSetStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAppsV1StatefulSetUpdateStrategy) SetFake() {
-	{
-		{
-			s.RollingUpdate.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAppsV1StatefulSetUpdateStrategy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV1CrossVersionObjectReference) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV1HorizontalPodAutoscaler) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV1HorizontalPodAutoscaler) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV1HorizontalPodAutoscalerList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAutoscalingV1HorizontalPodAutoscaler
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV1HorizontalPodAutoscalerSpec) SetFake() {
-	{
-		{
-			s.MaxReplicas = int32(0)
-		}
-	}
-	{
-		{
-			s.MinReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.ScaleTargetRef.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetCPUUtilizationPercentage.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV1HorizontalPodAutoscalerStatus) SetFake() {
-	{
-		{
-			s.CurrentCPUUtilizationPercentage.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentReplicas = int32(0)
-		}
-	}
-	{
-		{
-			s.DesiredReplicas = int32(0)
-		}
-	}
-	{
-		{
-			s.LastScaleTime.SetFake()
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV1Scale) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV1Scale) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV1ScaleSpec) SetFake() {
-	{
-		{
-			s.Replicas.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV1ScaleSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV1ScaleStatus) SetFake() {
-	{
-		{
-			s.Replicas = int32(0)
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV1ScaleStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1ContainerResourceMetricSource) SetFake() {
-	{
-		{
-			s.Container = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.TargetAverageUtilization.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetAverageValue.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1ContainerResourceMetricStatus) SetFake() {
-	{
-		{
-			s.Container = "string"
-		}
-	}
-	{
-		{
-			s.CurrentAverageUtilization.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentAverageValue.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1CrossVersionObjectReference) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1ExternalMetricSource) SetFake() {
-	{
-		{
-			s.MetricName = "string"
-		}
-	}
-	{
-		{
-			s.MetricSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetAverageValue.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetValue.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1ExternalMetricStatus) SetFake() {
-	{
-		{
-			s.CurrentAverageValue.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentValue.SetFake()
-		}
-	}
-	{
-		{
-			s.MetricName = "string"
-		}
-	}
-	{
-		{
-			s.MetricSelector.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscaler) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscalerCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscalerList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscaler
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscalerSpec) SetFake() {
-	{
-		{
-			s.MaxReplicas = int32(0)
-		}
-	}
-	{
-		{
-			s.Metrics = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAutoscalingV2beta1MetricSpec
-				{
-					elem.SetFake()
-				}
-				s.Metrics = append(s.Metrics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.MinReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.ScaleTargetRef.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscalerStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscalerCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CurrentMetrics = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAutoscalingV2beta1MetricStatus
-				{
-					elem.SetFake()
-				}
-				s.CurrentMetrics = append(s.CurrentMetrics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CurrentReplicas = int32(0)
-		}
-	}
-	{
-		{
-			s.DesiredReplicas = int32(0)
-		}
-	}
-	{
-		{
-			s.LastScaleTime.SetFake()
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta1MetricSpec) SetFake() {
-	{
-		{
-			s.ContainerResource.SetFake()
-		}
-	}
-	{
-		{
-			s.External.SetFake()
-		}
-	}
-	{
-		{
-			s.Object.SetFake()
-		}
-	}
-	{
-		{
-			s.Pods.SetFake()
-		}
-	}
-	{
-		{
-			s.Resource.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta1MetricSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta1MetricStatus) SetFake() {
-	{
-		{
-			s.ContainerResource.SetFake()
-		}
-	}
-	{
-		{
-			s.External.SetFake()
-		}
-	}
-	{
-		{
-			s.Object.SetFake()
-		}
-	}
-	{
-		{
-			s.Pods.SetFake()
-		}
-	}
-	{
-		{
-			s.Resource.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta1MetricStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta1ObjectMetricSource) SetFake() {
-	{
-		{
-			s.AverageValue.SetFake()
-		}
-	}
-	{
-		{
-			s.MetricName = "string"
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.Target.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetValue.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta1ObjectMetricSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta1ObjectMetricStatus) SetFake() {
-	{
-		{
-			s.AverageValue.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentValue.SetFake()
-		}
-	}
-	{
-		{
-			s.MetricName = "string"
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.Target.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta1ObjectMetricStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta1PodsMetricSource) SetFake() {
-	{
-		{
-			s.MetricName = "string"
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetAverageValue.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta1PodsMetricSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta1PodsMetricStatus) SetFake() {
-	{
-		{
-			s.CurrentAverageValue.SetFake()
-		}
-	}
-	{
-		{
-			s.MetricName = "string"
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta1PodsMetricStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1ResourceMetricSource) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.TargetAverageUtilization.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetAverageValue.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta1ResourceMetricStatus) SetFake() {
-	{
-		{
-			s.CurrentAverageUtilization.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentAverageValue.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2ContainerResourceMetricSource) SetFake() {
-	{
-		{
-			s.Container = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Target.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2ContainerResourceMetricStatus) SetFake() {
-	{
-		{
-			s.Container = "string"
-		}
-	}
-	{
-		{
-			s.Current.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2CrossVersionObjectReference) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2ExternalMetricSource) SetFake() {
-	{
-		{
-			s.Metric.SetFake()
-		}
-	}
-	{
-		{
-			s.Target.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2ExternalMetricStatus) SetFake() {
-	{
-		{
-			s.Current.SetFake()
-		}
-	}
-	{
-		{
-			s.Metric.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2HPAScalingPolicy) SetFake() {
-	{
-		{
-			s.PeriodSeconds = int32(0)
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Value = int32(0)
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2HPAScalingPolicy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2HPAScalingRules) SetFake() {
-	{
-		{
-			s.Policies = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAutoscalingV2beta2HPAScalingPolicy
-				{
-					elem.SetFake()
-				}
-				s.Policies = append(s.Policies, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SelectPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.StabilizationWindowSeconds.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2HPAScalingRules) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscaler) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerBehavior) SetFake() {
-	{
-		{
-			s.ScaleDown.SetFake()
-		}
-	}
-	{
-		{
-			s.ScaleUp.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscaler
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerSpec) SetFake() {
-	{
-		{
-			s.Behavior.SetFake()
-		}
-	}
-	{
-		{
-			s.MaxReplicas = int32(0)
-		}
-	}
-	{
-		{
-			s.Metrics = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAutoscalingV2beta2MetricSpec
-				{
-					elem.SetFake()
-				}
-				s.Metrics = append(s.Metrics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.MinReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.ScaleTargetRef.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CurrentMetrics = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIAutoscalingV2beta2MetricStatus
-				{
-					elem.SetFake()
-				}
-				s.CurrentMetrics = append(s.CurrentMetrics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CurrentReplicas = int32(0)
-		}
-	}
-	{
-		{
-			s.DesiredReplicas = int32(0)
-		}
-	}
-	{
-		{
-			s.LastScaleTime.SetFake()
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2MetricIdentifier) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2MetricIdentifier) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2MetricSpec) SetFake() {
-	{
-		{
-			s.ContainerResource.SetFake()
-		}
-	}
-	{
-		{
-			s.External.SetFake()
-		}
-	}
-	{
-		{
-			s.Object.SetFake()
-		}
-	}
-	{
-		{
-			s.Pods.SetFake()
-		}
-	}
-	{
-		{
-			s.Resource.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2MetricSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2MetricStatus) SetFake() {
-	{
-		{
-			s.ContainerResource.SetFake()
-		}
-	}
-	{
-		{
-			s.External.SetFake()
-		}
-	}
-	{
-		{
-			s.Object.SetFake()
-		}
-	}
-	{
-		{
-			s.Pods.SetFake()
-		}
-	}
-	{
-		{
-			s.Resource.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2MetricStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2MetricTarget) SetFake() {
-	{
-		{
-			s.AverageUtilization.SetFake()
-		}
-	}
-	{
-		{
-			s.AverageValue.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2MetricTarget) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2MetricValueStatus) SetFake() {
-	{
-		{
-			s.AverageUtilization.SetFake()
-		}
-	}
-	{
-		{
-			s.AverageValue.SetFake()
-		}
-	}
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2MetricValueStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2ObjectMetricSource) SetFake() {
-	{
-		{
-			s.DescribedObject.SetFake()
-		}
-	}
-	{
-		{
-			s.Metric.SetFake()
-		}
-	}
-	{
-		{
-			s.Target.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2ObjectMetricSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2ObjectMetricStatus) SetFake() {
-	{
-		{
-			s.Current.SetFake()
-		}
-	}
-	{
-		{
-			s.DescribedObject.SetFake()
-		}
-	}
-	{
-		{
-			s.Metric.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2ObjectMetricStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2PodsMetricSource) SetFake() {
-	{
-		{
-			s.Metric.SetFake()
-		}
-	}
-	{
-		{
-			s.Target.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2PodsMetricSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIAutoscalingV2beta2PodsMetricStatus) SetFake() {
-	{
-		{
-			s.Current.SetFake()
-		}
-	}
-	{
-		{
-			s.Metric.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIAutoscalingV2beta2PodsMetricStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2ResourceMetricSource) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Target.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIAutoscalingV2beta2ResourceMetricStatus) SetFake() {
-	{
-		{
-			s.Current.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1CronJob) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1CronJob) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1CronJobList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIBatchV1CronJob
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1CronJobList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1CronJobSpec) SetFake() {
-	{
-		{
-			s.ConcurrencyPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.FailedJobsHistoryLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.JobTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.Schedule = "string"
-		}
-	}
-	{
-		{
-			s.StartingDeadlineSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.SuccessfulJobsHistoryLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.Suspend.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1CronJobSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1CronJobStatus) SetFake() {
-	{
-		{
-			s.Active = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ObjectReference
-				{
-					elem.SetFake()
-				}
-				s.Active = append(s.Active, elem)
-			}
-		}
-	}
-	{
-		{
-			s.LastScheduleTime.SetFake()
-		}
-	}
-	{
-		{
-			s.LastSuccessfulTime.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1CronJobStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1Job) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1Job) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1JobCondition) SetFake() {
-	{
-		{
-			s.LastProbeTime.SetFake()
-		}
-	}
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1JobCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1JobList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIBatchV1Job
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1JobList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1JobSpec) SetFake() {
-	{
-		{
-			s.ActiveDeadlineSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.BackoffLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.CompletionMode.SetFake()
-		}
-	}
-	{
-		{
-			s.Completions.SetFake()
-		}
-	}
-	{
-		{
-			s.ManualSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.Parallelism.SetFake()
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.Suspend.SetFake()
-		}
-	}
-	{
-		{
-			s.Template.SetFake()
-		}
-	}
-	{
-		{
-			s.TtlSecondsAfterFinished.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1JobSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1JobStatus) SetFake() {
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-	{
-		{
-			s.CompletedIndexes.SetFake()
-		}
-	}
-	{
-		{
-			s.CompletionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIBatchV1JobCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Failed.SetFake()
-		}
-	}
-	{
-		{
-			s.StartTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Succeeded.SetFake()
-		}
-	}
-	{
-		{
-			s.UncountedTerminatedPods.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1JobStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1JobTemplateSpec) SetFake() {
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1JobTemplateSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1UncountedTerminatedPods) SetFake() {
-	{
-		{
-			s.Failed = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Failed = append(s.Failed, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Succeeded = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Succeeded = append(s.Succeeded, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1UncountedTerminatedPods) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1beta1CronJob) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1beta1CronJob) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1beta1CronJobList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIBatchV1beta1CronJob
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1beta1CronJobList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1beta1CronJobSpec) SetFake() {
-	{
-		{
-			s.ConcurrencyPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.FailedJobsHistoryLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.JobTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.Schedule = "string"
-		}
-	}
-	{
-		{
-			s.StartingDeadlineSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.SuccessfulJobsHistoryLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.Suspend.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1beta1CronJobSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1beta1CronJobStatus) SetFake() {
-	{
-		{
-			s.Active = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ObjectReference
-				{
-					elem.SetFake()
-				}
-				s.Active = append(s.Active, elem)
-			}
-		}
-	}
-	{
-		{
-			s.LastScheduleTime.SetFake()
-		}
-	}
-	{
-		{
-			s.LastSuccessfulTime.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1beta1CronJobStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIBatchV1beta1JobTemplateSpec) SetFake() {
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIBatchV1beta1JobTemplateSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICertificatesV1CertificateSigningRequest) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPICertificatesV1CertificateSigningRequestCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.LastUpdateTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPICertificatesV1CertificateSigningRequestList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICertificatesV1CertificateSigningRequest
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPICertificatesV1CertificateSigningRequestSpec) SetFake() {
-	{
-		{
-			s.ExpirationSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.Extra.SetFake()
-		}
-	}
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Request = []byte("[]byte")
-		}
-	}
-	{
-		{
-			s.SignerName = "string"
-		}
-	}
-	{
-		{
-			s.UID.SetFake()
-		}
-	}
-	{
-		{
-			s.Usages = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Usages = append(s.Usages, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Username.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPICertificatesV1CertificateSigningRequestSpecExtra) SetFake() {
-	var (
-		elem []string
-		m    map[string][]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPICertificatesV1CertificateSigningRequestStatus) SetFake() {
-	{
-		{
-			s.Certificate = []byte("[]byte")
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICertificatesV1CertificateSigningRequestCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoordinationV1Lease) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoordinationV1Lease) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoordinationV1LeaseList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoordinationV1Lease
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoordinationV1LeaseList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoordinationV1LeaseSpec) SetFake() {
-	{
-		{
-			s.AcquireTime.SetFake()
-		}
-	}
-	{
-		{
-			s.HolderIdentity.SetFake()
-		}
-	}
-	{
-		{
-			s.LeaseDurationSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.LeaseTransitions.SetFake()
-		}
-	}
-	{
-		{
-			s.RenewTime.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoordinationV1LeaseSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1AWSElasticBlockStoreVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Partition.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeID = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Affinity) SetFake() {
-	{
-		{
-			s.NodeAffinity.SetFake()
-		}
-	}
-	{
-		{
-			s.PodAffinity.SetFake()
-		}
-	}
-	{
-		{
-			s.PodAntiAffinity.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Affinity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1AttachedVolume) SetFake() {
-	{
-		{
-			s.DevicePath = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1AttachedVolume) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1AzureDiskVolumeSource) SetFake() {
-	{
-		{
-			s.CachingMode.SetFake()
-		}
-	}
-	{
-		{
-			s.DiskName = "string"
-		}
-	}
-	{
-		{
-			s.DiskURI = "string"
-		}
-	}
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1AzureDiskVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1AzureFilePersistentVolumeSource) SetFake() {
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretName = "string"
-		}
-	}
-	{
-		{
-			s.SecretNamespace.SetFake()
-		}
-	}
-	{
-		{
-			s.ShareName = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1AzureFileVolumeSource) SetFake() {
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretName = "string"
-		}
-	}
-	{
-		{
-			s.ShareName = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1AzureFileVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1CSIPersistentVolumeSource) SetFake() {
-	{
-		{
-			s.ControllerExpandSecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.ControllerPublishSecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.Driver = "string"
-		}
-	}
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.NodePublishSecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeStageSecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeAttributes.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeHandle = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1CSIPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1CSIPersistentVolumeSourceVolumeAttributes) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1CSIVolumeSource) SetFake() {
-	{
-		{
-			s.Driver = "string"
-		}
-	}
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.NodePublishSecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeAttributes.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1CSIVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1CSIVolumeSourceVolumeAttributes) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Capabilities) SetFake() {
-	{
-		{
-			s.Add = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Add = append(s.Add, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Drop = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Drop = append(s.Drop, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Capabilities) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1CephFSPersistentVolumeSource) SetFake() {
-	{
-		{
-			s.Monitors = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Monitors = append(s.Monitors, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretFile.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1CephFSPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1CephFSVolumeSource) SetFake() {
-	{
-		{
-			s.Monitors = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Monitors = append(s.Monitors, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretFile.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1CephFSVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1CinderPersistentVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeID = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1CinderPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1CinderVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeID = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1CinderVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ClientIPConfig) SetFake() {
-	{
-		{
-			s.TimeoutSeconds.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ClientIPConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ComponentCondition) SetFake() {
-	{
-		{
-			s.Error.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ComponentCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ComponentStatus) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ComponentCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ComponentStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ComponentStatusList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ComponentStatus
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ComponentStatusList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ConfigMap) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.BinaryData.SetFake()
-		}
-	}
-	{
-		{
-			s.Data.SetFake()
-		}
-	}
-	{
-		{
-			s.Immutable.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ConfigMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ConfigMapBinaryData) SetFake() {
-	var (
-		elem []byte
-		m    map[string][]byte = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1ConfigMapBinaryData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ConfigMapData) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1ConfigMapData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ConfigMapEnvSource) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Optional.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ConfigMapEnvSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ConfigMapKeySelector) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Optional.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ConfigMapKeySelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ConfigMapList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ConfigMap
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ConfigMapList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ConfigMapNodeConfigSource) SetFake() {
-	{
-		{
-			s.KubeletConfigKey = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Namespace = "string"
-		}
-	}
-	{
-		{
-			s.ResourceVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.UID.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ConfigMapNodeConfigSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ConfigMapProjection) SetFake() {
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1KeyToPath
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Optional.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ConfigMapProjection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ConfigMapVolumeSource) SetFake() {
-	{
-		{
-			s.DefaultMode.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1KeyToPath
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Optional.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ConfigMapVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Container) SetFake() {
-	{
-		{
-			s.Args = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Args = append(s.Args, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Command = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Command = append(s.Command, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Env = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1EnvVar
-				{
-					elem.SetFake()
-				}
-				s.Env = append(s.Env, elem)
-			}
-		}
-	}
-	{
-		{
-			s.EnvFrom = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1EnvFromSource
-				{
-					elem.SetFake()
-				}
-				s.EnvFrom = append(s.EnvFrom, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Image.SetFake()
-		}
-	}
-	{
-		{
-			s.ImagePullPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.Lifecycle.SetFake()
-		}
-	}
-	{
-		{
-			s.LivenessProbe.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Ports = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ContainerPort
-				{
-					elem.SetFake()
-				}
-				s.Ports = append(s.Ports, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReadinessProbe.SetFake()
-		}
-	}
-	{
-		{
-			s.Resources.SetFake()
-		}
-	}
-	{
-		{
-			s.SecurityContext.SetFake()
-		}
-	}
-	{
-		{
-			s.StartupProbe.SetFake()
-		}
-	}
-	{
-		{
-			s.Stdin.SetFake()
-		}
-	}
-	{
-		{
-			s.StdinOnce.SetFake()
-		}
-	}
-	{
-		{
-			s.TerminationMessagePath.SetFake()
-		}
-	}
-	{
-		{
-			s.TerminationMessagePolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.Tty.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeDevices = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1VolumeDevice
-				{
-					elem.SetFake()
-				}
-				s.VolumeDevices = append(s.VolumeDevices, elem)
-			}
-		}
-	}
-	{
-		{
-			s.VolumeMounts = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1VolumeMount
-				{
-					elem.SetFake()
-				}
-				s.VolumeMounts = append(s.VolumeMounts, elem)
-			}
-		}
-	}
-	{
-		{
-			s.WorkingDir.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Container) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ContainerImage) SetFake() {
-	{
-		{
-			s.Names = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Names = append(s.Names, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SizeBytes.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ContainerImage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ContainerPort) SetFake() {
-	{
-		{
-			s.ContainerPort = int32(0)
-		}
-	}
-	{
-		{
-			s.HostIP.SetFake()
-		}
-	}
-	{
-		{
-			s.HostPort.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Protocol.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ContainerPort) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ContainerState) SetFake() {
-	{
-		{
-			s.Running.SetFake()
-		}
-	}
-	{
-		{
-			s.Terminated.SetFake()
-		}
-	}
-	{
-		{
-			s.Waiting.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ContainerState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ContainerStateRunning) SetFake() {
-	{
-		{
-			s.StartedAt.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ContainerStateRunning) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ContainerStateTerminated) SetFake() {
-	{
-		{
-			s.ContainerID.SetFake()
-		}
-	}
-	{
-		{
-			s.ExitCode = int32(0)
-		}
-	}
-	{
-		{
-			s.FinishedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Signal.SetFake()
-		}
-	}
-	{
-		{
-			s.StartedAt.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ContainerStateTerminated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ContainerStateWaiting) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ContainerStateWaiting) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ContainerStatus) SetFake() {
-	{
-		{
-			s.ContainerID.SetFake()
-		}
-	}
-	{
-		{
-			s.Image = "string"
-		}
-	}
-	{
-		{
-			s.ImageID = "string"
-		}
-	}
-	{
-		{
-			s.LastState.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Ready = true
-		}
-	}
-	{
-		{
-			s.RestartCount = int32(0)
-		}
-	}
-	{
-		{
-			s.Started.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ContainerStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1DaemonEndpoint) SetFake() {
-	{
-		{
-			s.Port = int32(0)
-		}
-	}
-}
+func (s *IoK8sAPICoreV1DaemonEndpoint) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1DownwardAPIProjection) SetFake() {
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1DownwardAPIVolumeFile
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1DownwardAPIProjection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1DownwardAPIVolumeFile) SetFake() {
-	{
-		{
-			s.FieldRef.SetFake()
-		}
-	}
-	{
-		{
-			s.Mode.SetFake()
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.ResourceFieldRef.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1DownwardAPIVolumeFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1DownwardAPIVolumeSource) SetFake() {
-	{
-		{
-			s.DefaultMode.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1DownwardAPIVolumeFile
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1DownwardAPIVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EmptyDirVolumeSource) SetFake() {
-	{
-		{
-			s.Medium.SetFake()
-		}
-	}
-	{
-		{
-			s.SizeLimit.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EmptyDirVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EndpointAddress) SetFake() {
-	{
-		{
-			s.Hostname.SetFake()
-		}
-	}
-	{
-		{
-			s.IP = "string"
-		}
-	}
-	{
-		{
-			s.NodeName.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetRef.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EndpointAddress) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EndpointPort) SetFake() {
-	{
-		{
-			s.AppProtocol.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Port = int32(0)
-		}
-	}
-	{
-		{
-			s.Protocol.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EndpointPort) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EndpointSubset) SetFake() {
-	{
-		{
-			s.Addresses = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1EndpointAddress
-				{
-					elem.SetFake()
-				}
-				s.Addresses = append(s.Addresses, elem)
-			}
-		}
-	}
-	{
-		{
-			s.NotReadyAddresses = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1EndpointAddress
-				{
-					elem.SetFake()
-				}
-				s.NotReadyAddresses = append(s.NotReadyAddresses, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Ports = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1EndpointPort
-				{
-					elem.SetFake()
-				}
-				s.Ports = append(s.Ports, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EndpointSubset) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Endpoints) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Subsets = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1EndpointSubset
-				{
-					elem.SetFake()
-				}
-				s.Subsets = append(s.Subsets, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Endpoints) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EndpointsList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Endpoints
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EndpointsList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EnvFromSource) SetFake() {
-	{
-		{
-			s.ConfigMapRef.SetFake()
-		}
-	}
-	{
-		{
-			s.Prefix.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EnvFromSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EnvVar) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-	{
-		{
-			s.ValueFrom.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EnvVar) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EnvVarSource) SetFake() {
-	{
-		{
-			s.ConfigMapKeyRef.SetFake()
-		}
-	}
-	{
-		{
-			s.FieldRef.SetFake()
-		}
-	}
-	{
-		{
-			s.ResourceFieldRef.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretKeyRef.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EnvVarSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EphemeralContainer) SetFake() {
-	{
-		{
-			s.Args = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Args = append(s.Args, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Command = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Command = append(s.Command, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Env = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1EnvVar
-				{
-					elem.SetFake()
-				}
-				s.Env = append(s.Env, elem)
-			}
-		}
-	}
-	{
-		{
-			s.EnvFrom = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1EnvFromSource
-				{
-					elem.SetFake()
-				}
-				s.EnvFrom = append(s.EnvFrom, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Image.SetFake()
-		}
-	}
-	{
-		{
-			s.ImagePullPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.Lifecycle.SetFake()
-		}
-	}
-	{
-		{
-			s.LivenessProbe.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Ports = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ContainerPort
-				{
-					elem.SetFake()
-				}
-				s.Ports = append(s.Ports, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReadinessProbe.SetFake()
-		}
-	}
-	{
-		{
-			s.Resources.SetFake()
-		}
-	}
-	{
-		{
-			s.SecurityContext.SetFake()
-		}
-	}
-	{
-		{
-			s.StartupProbe.SetFake()
-		}
-	}
-	{
-		{
-			s.Stdin.SetFake()
-		}
-	}
-	{
-		{
-			s.StdinOnce.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetContainerName.SetFake()
-		}
-	}
-	{
-		{
-			s.TerminationMessagePath.SetFake()
-		}
-	}
-	{
-		{
-			s.TerminationMessagePolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.Tty.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeDevices = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1VolumeDevice
-				{
-					elem.SetFake()
-				}
-				s.VolumeDevices = append(s.VolumeDevices, elem)
-			}
-		}
-	}
-	{
-		{
-			s.VolumeMounts = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1VolumeMount
-				{
-					elem.SetFake()
-				}
-				s.VolumeMounts = append(s.VolumeMounts, elem)
-			}
-		}
-	}
-	{
-		{
-			s.WorkingDir.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EphemeralContainer) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EphemeralVolumeSource) SetFake() {
-	{
-		{
-			s.VolumeClaimTemplate.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EphemeralVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Event) SetFake() {
-	{
-		{
-			s.Action.SetFake()
-		}
-	}
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Count.SetFake()
-		}
-	}
-	{
-		{
-			s.EventTime.SetFake()
-		}
-	}
-	{
-		{
-			s.FirstTimestamp.SetFake()
-		}
-	}
-	{
-		{
-			s.InvolvedObject.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.LastTimestamp.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Related.SetFake()
-		}
-	}
-	{
-		{
-			s.ReportingComponent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReportingInstance.SetFake()
-		}
-	}
-	{
-		{
-			s.Series.SetFake()
-		}
-	}
-	{
-		{
-			s.Source.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Event) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EventList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Event
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EventList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EventSeries) SetFake() {
-	{
-		{
-			s.Count.SetFake()
-		}
-	}
-	{
-		{
-			s.LastObservedTime.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EventSeries) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1EventSource) SetFake() {
-	{
-		{
-			s.Component.SetFake()
-		}
-	}
-	{
-		{
-			s.Host.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1EventSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ExecAction) SetFake() {
-	{
-		{
-			s.Command = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Command = append(s.Command, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ExecAction) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1FCVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Lun.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetWWNs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.TargetWWNs = append(s.TargetWWNs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Wwids = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Wwids = append(s.Wwids, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1FCVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1FlexPersistentVolumeSource) SetFake() {
-	{
-		{
-			s.Driver = "string"
-		}
-	}
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Options.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1FlexPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1FlexPersistentVolumeSourceOptions) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1FlexVolumeSource) SetFake() {
-	{
-		{
-			s.Driver = "string"
-		}
-	}
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Options.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1FlexVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1FlexVolumeSourceOptions) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1FlexVolumeSourceOptions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1FlockerVolumeSource) SetFake() {
-	{
-		{
-			s.DatasetName.SetFake()
-		}
-	}
-	{
-		{
-			s.DatasetUUID.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1FlockerVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1GCEPersistentDiskVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Partition.SetFake()
-		}
-	}
-	{
-		{
-			s.PdName = "string"
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1GCEPersistentDiskVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1GitRepoVolumeSource) SetFake() {
-	{
-		{
-			s.Directory.SetFake()
-		}
-	}
-	{
-		{
-			s.Repository = "string"
-		}
-	}
-	{
-		{
-			s.Revision.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1GitRepoVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1GlusterfsPersistentVolumeSource) SetFake() {
-	{
-		{
-			s.Endpoints = "string"
-		}
-	}
-	{
-		{
-			s.EndpointsNamespace.SetFake()
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1GlusterfsVolumeSource) SetFake() {
-	{
-		{
-			s.Endpoints = "string"
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1GlusterfsVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1HTTPGetAction) SetFake() {
-	{
-		{
-			s.Host.SetFake()
-		}
-	}
-	{
-		{
-			s.HttpHeaders = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1HTTPHeader
-				{
-					elem.SetFake()
-				}
-				s.HttpHeaders = append(s.HttpHeaders, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Port.SetFake()
-		}
-	}
-	{
-		{
-			s.Scheme.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1HTTPGetAction) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1HTTPHeader) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Value = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1HTTPHeader) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Handler) SetFake() {
-	{
-		{
-			s.Exec.SetFake()
-		}
-	}
-	{
-		{
-			s.HttpGet.SetFake()
-		}
-	}
-	{
-		{
-			s.TcpSocket.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Handler) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1HostAlias) SetFake() {
-	{
-		{
-			s.Hostnames = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Hostnames = append(s.Hostnames, elem)
-			}
-		}
-	}
-	{
-		{
-			s.IP.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1HostAlias) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1HostPathVolumeSource) SetFake() {
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1HostPathVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ISCSIPersistentVolumeSource) SetFake() {
-	{
-		{
-			s.ChapAuthDiscovery.SetFake()
-		}
-	}
-	{
-		{
-			s.ChapAuthSession.SetFake()
-		}
-	}
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.InitiatorName.SetFake()
-		}
-	}
-	{
-		{
-			s.Iqn = "string"
-		}
-	}
-	{
-		{
-			s.IscsiInterface.SetFake()
-		}
-	}
-	{
-		{
-			s.Lun = int32(0)
-		}
-	}
-	{
-		{
-			s.Portals = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Portals = append(s.Portals, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetPortal = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ISCSIPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ISCSIVolumeSource) SetFake() {
-	{
-		{
-			s.ChapAuthDiscovery.SetFake()
-		}
-	}
-	{
-		{
-			s.ChapAuthSession.SetFake()
-		}
-	}
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.InitiatorName.SetFake()
-		}
-	}
-	{
-		{
-			s.Iqn = "string"
-		}
-	}
-	{
-		{
-			s.IscsiInterface.SetFake()
-		}
-	}
-	{
-		{
-			s.Lun = int32(0)
-		}
-	}
-	{
-		{
-			s.Portals = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Portals = append(s.Portals, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetPortal = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ISCSIVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1KeyToPath) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Mode.SetFake()
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1KeyToPath) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Lifecycle) SetFake() {
-	{
-		{
-			s.PostStart.SetFake()
-		}
-	}
-	{
-		{
-			s.PreStop.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Lifecycle) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LimitRange) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1LimitRange) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LimitRangeItem) SetFake() {
-	{
-		{
-			s.Default.SetFake()
-		}
-	}
-	{
-		{
-			s.DefaultRequest.SetFake()
-		}
-	}
-	{
-		{
-			s.Max.SetFake()
-		}
-	}
-	{
-		{
-			s.MaxLimitRequestRatio.SetFake()
-		}
-	}
-	{
-		{
-			s.Min.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1LimitRangeItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LimitRangeItemDefault) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1LimitRangeItemDefault) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LimitRangeItemDefaultRequest) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1LimitRangeItemDefaultRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LimitRangeItemMax) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1LimitRangeItemMax) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1LimitRangeItemMaxLimitRequestRatio) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LimitRangeItemMin) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1LimitRangeItemMin) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LimitRangeList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1LimitRange
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1LimitRangeList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LimitRangeSpec) SetFake() {
-	{
-		{
-			s.Limits = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1LimitRangeItem
-				{
-					elem.SetFake()
-				}
-				s.Limits = append(s.Limits, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1LimitRangeSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LoadBalancerIngress) SetFake() {
-	{
-		{
-			s.Hostname.SetFake()
-		}
-	}
-	{
-		{
-			s.IP.SetFake()
-		}
-	}
-	{
-		{
-			s.Ports = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PortStatus
-				{
-					elem.SetFake()
-				}
-				s.Ports = append(s.Ports, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1LoadBalancerIngress) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LoadBalancerStatus) SetFake() {
-	{
-		{
-			s.Ingress = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1LoadBalancerIngress
-				{
-					elem.SetFake()
-				}
-				s.Ingress = append(s.Ingress, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1LoadBalancerStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LocalObjectReference) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1LocalObjectReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1LocalVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1LocalVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NFSVolumeSource) SetFake() {
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.Server = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NFSVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Namespace) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Namespace) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NamespaceCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NamespaceCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NamespaceList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Namespace
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NamespaceList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NamespaceSpec) SetFake() {
-	{
-		{
-			s.Finalizers = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Finalizers = append(s.Finalizers, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NamespaceSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NamespaceStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1NamespaceCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Phase.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NamespaceStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Node) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Node) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeAddress) SetFake() {
-	{
-		{
-			s.Address = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeAddress) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeAffinity) SetFake() {
-	{
-		{
-			s.PreferredDuringSchedulingIgnoredDuringExecution = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PreferredSchedulingTerm
-				{
-					elem.SetFake()
-				}
-				s.PreferredDuringSchedulingIgnoredDuringExecution = append(s.PreferredDuringSchedulingIgnoredDuringExecution, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RequiredDuringSchedulingIgnoredDuringExecution.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeAffinity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeCondition) SetFake() {
-	{
-		{
-			s.LastHeartbeatTime.SetFake()
-		}
-	}
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeConfigSource) SetFake() {
-	{
-		{
-			s.ConfigMap.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeConfigSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeConfigStatus) SetFake() {
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-	{
-		{
-			s.Assigned.SetFake()
-		}
-	}
-	{
-		{
-			s.Error.SetFake()
-		}
-	}
-	{
-		{
-			s.LastKnownGood.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeConfigStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeDaemonEndpoints) SetFake() {
-	{
-		{
-			s.KubeletEndpoint.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeDaemonEndpoints) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Node
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeSelector) SetFake() {
-	{
-		{
-			s.NodeSelectorTerms = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1NodeSelectorTerm
-				{
-					elem.SetFake()
-				}
-				s.NodeSelectorTerms = append(s.NodeSelectorTerms, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeSelectorRequirement) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Operator = "string"
-		}
-	}
-	{
-		{
-			s.Values = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Values = append(s.Values, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeSelectorRequirement) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeSelectorTerm) SetFake() {
-	{
-		{
-			s.MatchExpressions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1NodeSelectorRequirement
-				{
-					elem.SetFake()
-				}
-				s.MatchExpressions = append(s.MatchExpressions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.MatchFields = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1NodeSelectorRequirement
-				{
-					elem.SetFake()
-				}
-				s.MatchFields = append(s.MatchFields, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeSelectorTerm) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeSpec) SetFake() {
-	{
-		{
-			s.ConfigSource.SetFake()
-		}
-	}
-	{
-		{
-			s.ExternalID.SetFake()
-		}
-	}
-	{
-		{
-			s.PodCIDR.SetFake()
-		}
-	}
-	{
-		{
-			s.PodCIDRs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.PodCIDRs = append(s.PodCIDRs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ProviderID.SetFake()
-		}
-	}
-	{
-		{
-			s.Taints = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Taint
-				{
-					elem.SetFake()
-				}
-				s.Taints = append(s.Taints, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Unschedulable.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeStatus) SetFake() {
-	{
-		{
-			s.Addresses = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1NodeAddress
-				{
-					elem.SetFake()
-				}
-				s.Addresses = append(s.Addresses, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Allocatable.SetFake()
-		}
-	}
-	{
-		{
-			s.Capacity.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1NodeCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Config.SetFake()
-		}
-	}
-	{
-		{
-			s.DaemonEndpoints.SetFake()
-		}
-	}
-	{
-		{
-			s.Images = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ContainerImage
-				{
-					elem.SetFake()
-				}
-				s.Images = append(s.Images, elem)
-			}
-		}
-	}
-	{
-		{
-			s.NodeInfo.SetFake()
-		}
-	}
-	{
-		{
-			s.Phase.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumesAttached = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1AttachedVolume
-				{
-					elem.SetFake()
-				}
-				s.VolumesAttached = append(s.VolumesAttached, elem)
-			}
-		}
-	}
-	{
-		{
-			s.VolumesInUse = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.VolumesInUse = append(s.VolumesInUse, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeStatusAllocatable) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1NodeStatusAllocatable) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeStatusCapacity) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1NodeStatusCapacity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1NodeSystemInfo) SetFake() {
-	{
-		{
-			s.Architecture = "string"
-		}
-	}
-	{
-		{
-			s.BootID = "string"
-		}
-	}
-	{
-		{
-			s.ContainerRuntimeVersion = "string"
-		}
-	}
-	{
-		{
-			s.KernelVersion = "string"
-		}
-	}
-	{
-		{
-			s.KubeProxyVersion = "string"
-		}
-	}
-	{
-		{
-			s.KubeletVersion = "string"
-		}
-	}
-	{
-		{
-			s.MachineID = "string"
-		}
-	}
-	{
-		{
-			s.OperatingSystem = "string"
-		}
-	}
-	{
-		{
-			s.OsImage = "string"
-		}
-	}
-	{
-		{
-			s.SystemUUID = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1NodeSystemInfo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ObjectFieldSelector) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.FieldPath = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ObjectFieldSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ObjectReference) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.FieldPath.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Namespace.SetFake()
-		}
-	}
-	{
-		{
-			s.ResourceVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.UID.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ObjectReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolume) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolume) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolumeClaim) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolumeClaim) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolumeClaimCondition) SetFake() {
-	{
-		{
-			s.LastProbeTime.SetFake()
-		}
-	}
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolumeClaimCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolumeClaimList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PersistentVolumeClaim
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolumeClaimList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolumeClaimSpec) SetFake() {
-	{
-		{
-			s.AccessModes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AccessModes = append(s.AccessModes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DataSource.SetFake()
-		}
-	}
-	{
-		{
-			s.DataSourceRef.SetFake()
-		}
-	}
-	{
-		{
-			s.Resources.SetFake()
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.StorageClassName.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeMode.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeName.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolumeClaimSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolumeClaimStatus) SetFake() {
-	{
-		{
-			s.AccessModes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AccessModes = append(s.AccessModes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Capacity.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PersistentVolumeClaimCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Phase.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolumeClaimStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1PersistentVolumeClaimStatusCapacity) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolumeClaimTemplate) SetFake() {
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolumeClaimTemplate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1PersistentVolumeClaimVolumeSource) SetFake() {
-	{
-		{
-			s.ClaimName = "string"
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolumeList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PersistentVolume
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolumeList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolumeSpec) SetFake() {
-	{
-		{
-			s.AccessModes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AccessModes = append(s.AccessModes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.AwsElasticBlockStore.SetFake()
-		}
-	}
-	{
-		{
-			s.AzureDisk.SetFake()
-		}
-	}
-	{
-		{
-			s.AzureFile.SetFake()
-		}
-	}
-	{
-		{
-			s.Capacity.SetFake()
-		}
-	}
-	{
-		{
-			s.Cephfs.SetFake()
-		}
-	}
-	{
-		{
-			s.Cinder.SetFake()
-		}
-	}
-	{
-		{
-			s.ClaimRef.SetFake()
-		}
-	}
-	{
-		{
-			s.Csi.SetFake()
-		}
-	}
-	{
-		{
-			s.Fc.SetFake()
-		}
-	}
-	{
-		{
-			s.FlexVolume.SetFake()
-		}
-	}
-	{
-		{
-			s.Flocker.SetFake()
-		}
-	}
-	{
-		{
-			s.GcePersistentDisk.SetFake()
-		}
-	}
-	{
-		{
-			s.Glusterfs.SetFake()
-		}
-	}
-	{
-		{
-			s.HostPath.SetFake()
-		}
-	}
-	{
-		{
-			s.Iscsi.SetFake()
-		}
-	}
-	{
-		{
-			s.Local.SetFake()
-		}
-	}
-	{
-		{
-			s.MountOptions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.MountOptions = append(s.MountOptions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Nfs.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeAffinity.SetFake()
-		}
-	}
-	{
-		{
-			s.PersistentVolumeReclaimPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotonPersistentDisk.SetFake()
-		}
-	}
-	{
-		{
-			s.PortworxVolume.SetFake()
-		}
-	}
-	{
-		{
-			s.Quobyte.SetFake()
-		}
-	}
-	{
-		{
-			s.Rbd.SetFake()
-		}
-	}
-	{
-		{
-			s.ScaleIO.SetFake()
-		}
-	}
-	{
-		{
-			s.StorageClassName.SetFake()
-		}
-	}
-	{
-		{
-			s.Storageos.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeMode.SetFake()
-		}
-	}
-	{
-		{
-			s.VsphereVolume.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolumeSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolumeSpecCapacity) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolumeSpecCapacity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PersistentVolumeStatus) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Phase.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PersistentVolumeStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1PhotonPersistentDiskVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.PdID = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Pod) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Pod) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodAffinity) SetFake() {
-	{
-		{
-			s.PreferredDuringSchedulingIgnoredDuringExecution = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1WeightedPodAffinityTerm
-				{
-					elem.SetFake()
-				}
-				s.PreferredDuringSchedulingIgnoredDuringExecution = append(s.PreferredDuringSchedulingIgnoredDuringExecution, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RequiredDuringSchedulingIgnoredDuringExecution = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PodAffinityTerm
-				{
-					elem.SetFake()
-				}
-				s.RequiredDuringSchedulingIgnoredDuringExecution = append(s.RequiredDuringSchedulingIgnoredDuringExecution, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodAffinity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodAffinityTerm) SetFake() {
-	{
-		{
-			s.LabelSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.NamespaceSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.Namespaces = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Namespaces = append(s.Namespaces, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TopologyKey = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodAffinityTerm) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodAntiAffinity) SetFake() {
-	{
-		{
-			s.PreferredDuringSchedulingIgnoredDuringExecution = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1WeightedPodAffinityTerm
-				{
-					elem.SetFake()
-				}
-				s.PreferredDuringSchedulingIgnoredDuringExecution = append(s.PreferredDuringSchedulingIgnoredDuringExecution, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RequiredDuringSchedulingIgnoredDuringExecution = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PodAffinityTerm
-				{
-					elem.SetFake()
-				}
-				s.RequiredDuringSchedulingIgnoredDuringExecution = append(s.RequiredDuringSchedulingIgnoredDuringExecution, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodAntiAffinity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodCondition) SetFake() {
-	{
-		{
-			s.LastProbeTime.SetFake()
-		}
-	}
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodDNSConfig) SetFake() {
-	{
-		{
-			s.Nameservers = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Nameservers = append(s.Nameservers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Options = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PodDNSConfigOption
-				{
-					elem.SetFake()
-				}
-				s.Options = append(s.Options, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Searches = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Searches = append(s.Searches, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodDNSConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodDNSConfigOption) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodDNSConfigOption) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodIP) SetFake() {
-	{
-		{
-			s.IP.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodIP) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Pod
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodReadinessGate) SetFake() {
-	{
-		{
-			s.ConditionType = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodReadinessGate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodSecurityContext) SetFake() {
-	{
-		{
-			s.FsGroup.SetFake()
-		}
-	}
-	{
-		{
-			s.FsGroupChangePolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.RunAsGroup.SetFake()
-		}
-	}
-	{
-		{
-			s.RunAsNonRoot.SetFake()
-		}
-	}
-	{
-		{
-			s.RunAsUser.SetFake()
-		}
-	}
-	{
-		{
-			s.SeLinuxOptions.SetFake()
-		}
-	}
-	{
-		{
-			s.SeccompProfile.SetFake()
-		}
-	}
-	{
-		{
-			s.SupplementalGroups = nil
-			for i := 0; i < 0; i++ {
-				var elem int64
-				{
-					elem = int64(0)
-				}
-				s.SupplementalGroups = append(s.SupplementalGroups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Sysctls = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Sysctl
-				{
-					elem.SetFake()
-				}
-				s.Sysctls = append(s.Sysctls, elem)
-			}
-		}
-	}
-	{
-		{
-			s.WindowsOptions.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodSecurityContext) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodSpec) SetFake() {
-	{
-		{
-			s.ActiveDeadlineSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.Affinity.SetFake()
-		}
-	}
-	{
-		{
-			s.AutomountServiceAccountToken.SetFake()
-		}
-	}
-	{
-		{
-			s.Containers = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Container
-				{
-					elem.SetFake()
-				}
-				s.Containers = append(s.Containers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DnsConfig.SetFake()
-		}
-	}
-	{
-		{
-			s.DnsPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.EnableServiceLinks.SetFake()
-		}
-	}
-	{
-		{
-			s.EphemeralContainers = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1EphemeralContainer
-				{
-					elem.SetFake()
-				}
-				s.EphemeralContainers = append(s.EphemeralContainers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HostAliases = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1HostAlias
-				{
-					elem.SetFake()
-				}
-				s.HostAliases = append(s.HostAliases, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HostIPC.SetFake()
-		}
-	}
-	{
-		{
-			s.HostNetwork.SetFake()
-		}
-	}
-	{
-		{
-			s.HostPID.SetFake()
-		}
-	}
-	{
-		{
-			s.Hostname.SetFake()
-		}
-	}
-	{
-		{
-			s.ImagePullSecrets = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1LocalObjectReference
-				{
-					elem.SetFake()
-				}
-				s.ImagePullSecrets = append(s.ImagePullSecrets, elem)
-			}
-		}
-	}
-	{
-		{
-			s.InitContainers = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Container
-				{
-					elem.SetFake()
-				}
-				s.InitContainers = append(s.InitContainers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.NodeName.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.Overhead.SetFake()
-		}
-	}
-	{
-		{
-			s.PreemptionPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.Priority.SetFake()
-		}
-	}
-	{
-		{
-			s.PriorityClassName.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadinessGates = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PodReadinessGate
-				{
-					elem.SetFake()
-				}
-				s.ReadinessGates = append(s.ReadinessGates, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RestartPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.RuntimeClassName.SetFake()
-		}
-	}
-	{
-		{
-			s.SchedulerName.SetFake()
-		}
-	}
-	{
-		{
-			s.SecurityContext.SetFake()
-		}
-	}
-	{
-		{
-			s.ServiceAccount.SetFake()
-		}
-	}
-	{
-		{
-			s.ServiceAccountName.SetFake()
-		}
-	}
-	{
-		{
-			s.SetHostnameAsFQDN.SetFake()
-		}
-	}
-	{
-		{
-			s.ShareProcessNamespace.SetFake()
-		}
-	}
-	{
-		{
-			s.Subdomain.SetFake()
-		}
-	}
-	{
-		{
-			s.TerminationGracePeriodSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.Tolerations = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Toleration
-				{
-					elem.SetFake()
-				}
-				s.Tolerations = append(s.Tolerations, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TopologySpreadConstraints = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1TopologySpreadConstraint
-				{
-					elem.SetFake()
-				}
-				s.TopologySpreadConstraints = append(s.TopologySpreadConstraints, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Volumes = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Volume
-				{
-					elem.SetFake()
-				}
-				s.Volumes = append(s.Volumes, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodSpecNodeSelector) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1PodSpecNodeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodSpecOverhead) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1PodSpecOverhead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PodCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ContainerStatuses = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ContainerStatus
-				{
-					elem.SetFake()
-				}
-				s.ContainerStatuses = append(s.ContainerStatuses, elem)
-			}
-		}
-	}
-	{
-		{
-			s.EphemeralContainerStatuses = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ContainerStatus
-				{
-					elem.SetFake()
-				}
-				s.EphemeralContainerStatuses = append(s.EphemeralContainerStatuses, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HostIP.SetFake()
-		}
-	}
-	{
-		{
-			s.InitContainerStatuses = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ContainerStatus
-				{
-					elem.SetFake()
-				}
-				s.InitContainerStatuses = append(s.InitContainerStatuses, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.NominatedNodeName.SetFake()
-		}
-	}
-	{
-		{
-			s.Phase.SetFake()
-		}
-	}
-	{
-		{
-			s.PodIP.SetFake()
-		}
-	}
-	{
-		{
-			s.PodIPs = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PodIP
-				{
-					elem.SetFake()
-				}
-				s.PodIPs = append(s.PodIPs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.QosClass.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.StartTime.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodTemplate) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Template.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodTemplate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodTemplateList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1PodTemplate
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodTemplateList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PodTemplateSpec) SetFake() {
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PodTemplateSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PortStatus) SetFake() {
-	{
-		{
-			s.Error.SetFake()
-		}
-	}
-	{
-		{
-			s.Port = int32(0)
-		}
-	}
-	{
-		{
-			s.Protocol = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PortStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PortworxVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeID = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PortworxVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1PreferredSchedulingTerm) SetFake() {
-	{
-		{
-			s.Preference.SetFake()
-		}
-	}
-	{
-		{
-			s.Weight = int32(0)
-		}
-	}
-}
+func (s *IoK8sAPICoreV1PreferredSchedulingTerm) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Probe) SetFake() {
-	{
-		{
-			s.Exec.SetFake()
-		}
-	}
-	{
-		{
-			s.FailureThreshold.SetFake()
-		}
-	}
-	{
-		{
-			s.HttpGet.SetFake()
-		}
-	}
-	{
-		{
-			s.InitialDelaySeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.PeriodSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.SuccessThreshold.SetFake()
-		}
-	}
-	{
-		{
-			s.TcpSocket.SetFake()
-		}
-	}
-	{
-		{
-			s.TerminationGracePeriodSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.TimeoutSeconds.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Probe) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ProjectedVolumeSource) SetFake() {
-	{
-		{
-			s.DefaultMode.SetFake()
-		}
-	}
-	{
-		{
-			s.Sources = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1VolumeProjection
-				{
-					elem.SetFake()
-				}
-				s.Sources = append(s.Sources, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ProjectedVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1QuobyteVolumeSource) SetFake() {
-	{
-		{
-			s.Group.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.Registry = "string"
-		}
-	}
-	{
-		{
-			s.Tenant.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Volume = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1QuobyteVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1RBDPersistentVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Image = "string"
-		}
-	}
-	{
-		{
-			s.Keyring.SetFake()
-		}
-	}
-	{
-		{
-			s.Monitors = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Monitors = append(s.Monitors, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Pool.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1RBDPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1RBDVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Image = "string"
-		}
-	}
-	{
-		{
-			s.Keyring.SetFake()
-		}
-	}
-	{
-		{
-			s.Monitors = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Monitors = append(s.Monitors, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Pool.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1RBDVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ReplicationController) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ReplicationController) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ReplicationControllerCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ReplicationControllerCondition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ReplicationControllerList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ReplicationController
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ReplicationControllerList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ReplicationControllerSpec) SetFake() {
-	{
-		{
-			s.MinReadySeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.Replicas.SetFake()
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.Template.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ReplicationControllerSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1ReplicationControllerSpecSelector) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ReplicationControllerStatus) SetFake() {
-	{
-		{
-			s.AvailableReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ReplicationControllerCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.FullyLabeledReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadyReplicas.SetFake()
-		}
-	}
-	{
-		{
-			s.Replicas = int32(0)
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ReplicationControllerStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceFieldSelector) SetFake() {
-	{
-		{
-			s.ContainerName.SetFake()
-		}
-	}
-	{
-		{
-			s.Divisor.SetFake()
-		}
-	}
-	{
-		{
-			s.Resource = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ResourceFieldSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceQuota) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ResourceQuota) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceQuotaList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ResourceQuota
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ResourceQuotaList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceQuotaSpec) SetFake() {
-	{
-		{
-			s.Hard.SetFake()
-		}
-	}
-	{
-		{
-			s.ScopeSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.Scopes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Scopes = append(s.Scopes, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ResourceQuotaSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceQuotaSpecHard) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1ResourceQuotaSpecHard) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceQuotaStatus) SetFake() {
-	{
-		{
-			s.Hard.SetFake()
-		}
-	}
-	{
-		{
-			s.Used.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ResourceQuotaStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceQuotaStatusHard) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1ResourceQuotaStatusHard) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceQuotaStatusUsed) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1ResourceQuotaStatusUsed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceRequirements) SetFake() {
-	{
-		{
-			s.Limits.SetFake()
-		}
-	}
-	{
-		{
-			s.Requests.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ResourceRequirements) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceRequirementsLimits) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1ResourceRequirementsLimits) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ResourceRequirementsRequests) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1ResourceRequirementsRequests) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SELinuxOptions) SetFake() {
-	{
-		{
-			s.Level.SetFake()
-		}
-	}
-	{
-		{
-			s.Role.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1SELinuxOptions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ScaleIOPersistentVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Gateway = "string"
-		}
-	}
-	{
-		{
-			s.ProtectionDomain.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.SslEnabled.SetFake()
-		}
-	}
-	{
-		{
-			s.StorageMode.SetFake()
-		}
-	}
-	{
-		{
-			s.StoragePool.SetFake()
-		}
-	}
-	{
-		{
-			s.System = "string"
-		}
-	}
-	{
-		{
-			s.VolumeName.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ScaleIOPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ScaleIOVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.Gateway = "string"
-		}
-	}
-	{
-		{
-			s.ProtectionDomain.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.SslEnabled.SetFake()
-		}
-	}
-	{
-		{
-			s.StorageMode.SetFake()
-		}
-	}
-	{
-		{
-			s.StoragePool.SetFake()
-		}
-	}
-	{
-		{
-			s.System = "string"
-		}
-	}
-	{
-		{
-			s.VolumeName.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ScaleIOVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ScopeSelector) SetFake() {
-	{
-		{
-			s.MatchExpressions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ScopedResourceSelectorRequirement
-				{
-					elem.SetFake()
-				}
-				s.MatchExpressions = append(s.MatchExpressions, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ScopeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1ScopedResourceSelectorRequirement) SetFake() {
-	{
-		{
-			s.Operator = "string"
-		}
-	}
-	{
-		{
-			s.ScopeName = "string"
-		}
-	}
-	{
-		{
-			s.Values = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Values = append(s.Values, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SeccompProfile) SetFake() {
-	{
-		{
-			s.LocalhostProfile.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1SeccompProfile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Secret) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Data.SetFake()
-		}
-	}
-	{
-		{
-			s.Immutable.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.StringData.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Secret) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SecretData) SetFake() {
-	var (
-		elem []byte
-		m    map[string][]byte = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1SecretData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SecretEnvSource) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Optional.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1SecretEnvSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SecretKeySelector) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Optional.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1SecretKeySelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SecretList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Secret
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1SecretList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SecretProjection) SetFake() {
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1KeyToPath
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Optional.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1SecretProjection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SecretReference) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Namespace.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1SecretReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SecretStringData) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1SecretStringData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SecretVolumeSource) SetFake() {
-	{
-		{
-			s.DefaultMode.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1KeyToPath
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Optional.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretName.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1SecretVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SecurityContext) SetFake() {
-	{
-		{
-			s.AllowPrivilegeEscalation.SetFake()
-		}
-	}
-	{
-		{
-			s.Capabilities.SetFake()
-		}
-	}
-	{
-		{
-			s.Privileged.SetFake()
-		}
-	}
-	{
-		{
-			s.ProcMount.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnlyRootFilesystem.SetFake()
-		}
-	}
-	{
-		{
-			s.RunAsGroup.SetFake()
-		}
-	}
-	{
-		{
-			s.RunAsNonRoot.SetFake()
-		}
-	}
-	{
-		{
-			s.RunAsUser.SetFake()
-		}
-	}
-	{
-		{
-			s.SeLinuxOptions.SetFake()
-		}
-	}
-	{
-		{
-			s.SeccompProfile.SetFake()
-		}
-	}
-	{
-		{
-			s.WindowsOptions.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1SecurityContext) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Service) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Service) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ServiceAccount) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.AutomountServiceAccountToken.SetFake()
-		}
-	}
-	{
-		{
-			s.ImagePullSecrets = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1LocalObjectReference
-				{
-					elem.SetFake()
-				}
-				s.ImagePullSecrets = append(s.ImagePullSecrets, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Secrets = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ObjectReference
-				{
-					elem.SetFake()
-				}
-				s.Secrets = append(s.Secrets, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ServiceAccount) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ServiceAccountList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ServiceAccount
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ServiceAccountList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ServiceAccountTokenProjection) SetFake() {
-	{
-		{
-			s.Audience.SetFake()
-		}
-	}
-	{
-		{
-			s.ExpirationSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ServiceAccountTokenProjection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ServiceList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Service
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ServiceList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ServicePort) SetFake() {
-	{
-		{
-			s.AppProtocol.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.NodePort.SetFake()
-		}
-	}
-	{
-		{
-			s.Port = int32(0)
-		}
-	}
-	{
-		{
-			s.Protocol.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetPort.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ServicePort) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ServiceSpec) SetFake() {
-	{
-		{
-			s.AllocateLoadBalancerNodePorts.SetFake()
-		}
-	}
-	{
-		{
-			s.ClusterIP.SetFake()
-		}
-	}
-	{
-		{
-			s.ClusterIPs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ClusterIPs = append(s.ClusterIPs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ExternalIPs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ExternalIPs = append(s.ExternalIPs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ExternalName.SetFake()
-		}
-	}
-	{
-		{
-			s.ExternalTrafficPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.HealthCheckNodePort.SetFake()
-		}
-	}
-	{
-		{
-			s.InternalTrafficPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.IpFamilies = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.IpFamilies = append(s.IpFamilies, elem)
-			}
-		}
-	}
-	{
-		{
-			s.IpFamilyPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.LoadBalancerClass.SetFake()
-		}
-	}
-	{
-		{
-			s.LoadBalancerIP.SetFake()
-		}
-	}
-	{
-		{
-			s.LoadBalancerSourceRanges = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.LoadBalancerSourceRanges = append(s.LoadBalancerSourceRanges, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Ports = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1ServicePort
-				{
-					elem.SetFake()
-				}
-				s.Ports = append(s.Ports, elem)
-			}
-		}
-	}
-	{
-		{
-			s.PublishNotReadyAddresses.SetFake()
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-	{
-		{
-			s.SessionAffinity.SetFake()
-		}
-	}
-	{
-		{
-			s.SessionAffinityConfig.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ServiceSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ServiceSpecSelector) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPICoreV1ServiceSpecSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1ServiceStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1Condition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.LoadBalancer.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1ServiceStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1SessionAffinityConfig) SetFake() {
-	{
-		{
-			s.ClientIP.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1SessionAffinityConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1StorageOSPersistentVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeName.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeNamespace.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1StorageOSVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretRef.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeName.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeNamespace.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1StorageOSVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Sysctl) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Value = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Sysctl) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1TCPSocketAction) SetFake() {
-	{
-		{
-			s.Host.SetFake()
-		}
-	}
-	{
-		{
-			s.Port.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1TCPSocketAction) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Taint) SetFake() {
-	{
-		{
-			s.Effect = "string"
-		}
-	}
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.TimeAdded.SetFake()
-		}
-	}
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Taint) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Toleration) SetFake() {
-	{
-		{
-			s.Effect.SetFake()
-		}
-	}
-	{
-		{
-			s.Key.SetFake()
-		}
-	}
-	{
-		{
-			s.Operator.SetFake()
-		}
-	}
-	{
-		{
-			s.TolerationSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Toleration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPICoreV1TopologySelectorLabelRequirement) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Values = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Values = append(s.Values, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1TopologySelectorTerm) SetFake() {
-	{
-		{
-			s.MatchLabelExpressions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1TopologySelectorLabelRequirement
-				{
-					elem.SetFake()
-				}
-				s.MatchLabelExpressions = append(s.MatchLabelExpressions, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPICoreV1TopologySelectorTerm) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1TopologySpreadConstraint) SetFake() {
-	{
-		{
-			s.LabelSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.MaxSkew = int32(0)
-		}
-	}
-	{
-		{
-			s.TopologyKey = "string"
-		}
-	}
-	{
-		{
-			s.WhenUnsatisfiable = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1TopologySpreadConstraint) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1TypedLocalObjectReference) SetFake() {
-	{
-		{
-			s.ApiGroup.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1TypedLocalObjectReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1Volume) SetFake() {
-	{
-		{
-			s.AwsElasticBlockStore.SetFake()
-		}
-	}
-	{
-		{
-			s.AzureDisk.SetFake()
-		}
-	}
-	{
-		{
-			s.AzureFile.SetFake()
-		}
-	}
-	{
-		{
-			s.Cephfs.SetFake()
-		}
-	}
-	{
-		{
-			s.Cinder.SetFake()
-		}
-	}
-	{
-		{
-			s.ConfigMap.SetFake()
-		}
-	}
-	{
-		{
-			s.Csi.SetFake()
-		}
-	}
-	{
-		{
-			s.DownwardAPI.SetFake()
-		}
-	}
-	{
-		{
-			s.EmptyDir.SetFake()
-		}
-	}
-	{
-		{
-			s.Ephemeral.SetFake()
-		}
-	}
-	{
-		{
-			s.Fc.SetFake()
-		}
-	}
-	{
-		{
-			s.FlexVolume.SetFake()
-		}
-	}
-	{
-		{
-			s.Flocker.SetFake()
-		}
-	}
-	{
-		{
-			s.GcePersistentDisk.SetFake()
-		}
-	}
-	{
-		{
-			s.GitRepo.SetFake()
-		}
-	}
-	{
-		{
-			s.Glusterfs.SetFake()
-		}
-	}
-	{
-		{
-			s.HostPath.SetFake()
-		}
-	}
-	{
-		{
-			s.Iscsi.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Nfs.SetFake()
-		}
-	}
-	{
-		{
-			s.PersistentVolumeClaim.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotonPersistentDisk.SetFake()
-		}
-	}
-	{
-		{
-			s.PortworxVolume.SetFake()
-		}
-	}
-	{
-		{
-			s.Projected.SetFake()
-		}
-	}
-	{
-		{
-			s.Quobyte.SetFake()
-		}
-	}
-	{
-		{
-			s.Rbd.SetFake()
-		}
-	}
-	{
-		{
-			s.ScaleIO.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.Storageos.SetFake()
-		}
-	}
-	{
-		{
-			s.VsphereVolume.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1Volume) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1VolumeDevice) SetFake() {
-	{
-		{
-			s.DevicePath = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1VolumeDevice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1VolumeMount) SetFake() {
-	{
-		{
-			s.MountPath = "string"
-		}
-	}
-	{
-		{
-			s.MountPropagation.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.SubPath.SetFake()
-		}
-	}
-	{
-		{
-			s.SubPathExpr.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1VolumeMount) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1VolumeNodeAffinity) SetFake() {
-	{
-		{
-			s.Required.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1VolumeNodeAffinity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1VolumeProjection) SetFake() {
-	{
-		{
-			s.ConfigMap.SetFake()
-		}
-	}
-	{
-		{
-			s.DownwardAPI.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.ServiceAccountToken.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1VolumeProjection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1VsphereVirtualDiskVolumeSource) SetFake() {
-	{
-		{
-			s.FsType.SetFake()
-		}
-	}
-	{
-		{
-			s.StoragePolicyID.SetFake()
-		}
-	}
-	{
-		{
-			s.StoragePolicyName.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumePath = "string"
-		}
-	}
-}
+func (s *IoK8sAPICoreV1VsphereVirtualDiskVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1WeightedPodAffinityTerm) SetFake() {
-	{
-		{
-			s.PodAffinityTerm.SetFake()
-		}
-	}
-	{
-		{
-			s.Weight = int32(0)
-		}
-	}
-}
+func (s *IoK8sAPICoreV1WeightedPodAffinityTerm) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPICoreV1WindowsSecurityContextOptions) SetFake() {
-	{
-		{
-			s.GmsaCredentialSpec.SetFake()
-		}
-	}
-	{
-		{
-			s.GmsaCredentialSpecName.SetFake()
-		}
-	}
-	{
-		{
-			s.HostProcess.SetFake()
-		}
-	}
-	{
-		{
-			s.RunAsUserName.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPICoreV1WindowsSecurityContextOptions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1Endpoint) SetFake() {
-	{
-		{
-			s.Addresses = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Addresses = append(s.Addresses, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Conditions.SetFake()
-		}
-	}
-	{
-		{
-			s.DeprecatedTopology.SetFake()
-		}
-	}
-	{
-		{
-			s.Hints.SetFake()
-		}
-	}
-	{
-		{
-			s.Hostname.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeName.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetRef.SetFake()
-		}
-	}
-	{
-		{
-			s.Zone.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1Endpoint) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1EndpointConditions) SetFake() {
-	{
-		{
-			s.Ready.SetFake()
-		}
-	}
-	{
-		{
-			s.Serving.SetFake()
-		}
-	}
-	{
-		{
-			s.Terminating.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1EndpointConditions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIDiscoveryV1EndpointDeprecatedTopology) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1EndpointHints) SetFake() {
-	{
-		{
-			s.ForZones = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIDiscoveryV1ForZone
-				{
-					elem.SetFake()
-				}
-				s.ForZones = append(s.ForZones, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1EndpointHints) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1EndpointPort) SetFake() {
-	{
-		{
-			s.AppProtocol.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Port.SetFake()
-		}
-	}
-	{
-		{
-			s.Protocol.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1EndpointPort) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1EndpointSlice) SetFake() {
-	{
-		{
-			s.AddressType = "string"
-		}
-	}
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Endpoints = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIDiscoveryV1Endpoint
-				{
-					elem.SetFake()
-				}
-				s.Endpoints = append(s.Endpoints, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Ports = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIDiscoveryV1EndpointPort
-				{
-					elem.SetFake()
-				}
-				s.Ports = append(s.Ports, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1EndpointSlice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1EndpointSliceList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIDiscoveryV1EndpointSlice
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1EndpointSliceList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1ForZone) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1ForZone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1beta1Endpoint) SetFake() {
-	{
-		{
-			s.Addresses = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Addresses = append(s.Addresses, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Conditions.SetFake()
-		}
-	}
-	{
-		{
-			s.Hints.SetFake()
-		}
-	}
-	{
-		{
-			s.Hostname.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeName.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetRef.SetFake()
-		}
-	}
-	{
-		{
-			s.Topology.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1beta1Endpoint) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1beta1EndpointConditions) SetFake() {
-	{
-		{
-			s.Ready.SetFake()
-		}
-	}
-	{
-		{
-			s.Serving.SetFake()
-		}
-	}
-	{
-		{
-			s.Terminating.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1beta1EndpointConditions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1beta1EndpointHints) SetFake() {
-	{
-		{
-			s.ForZones = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIDiscoveryV1beta1ForZone
-				{
-					elem.SetFake()
-				}
-				s.ForZones = append(s.ForZones, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1beta1EndpointHints) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1beta1EndpointPort) SetFake() {
-	{
-		{
-			s.AppProtocol.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Port.SetFake()
-		}
-	}
-	{
-		{
-			s.Protocol.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1beta1EndpointPort) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1beta1EndpointSlice) SetFake() {
-	{
-		{
-			s.AddressType = "string"
-		}
-	}
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Endpoints = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIDiscoveryV1beta1Endpoint
-				{
-					elem.SetFake()
-				}
-				s.Endpoints = append(s.Endpoints, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Ports = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIDiscoveryV1beta1EndpointPort
-				{
-					elem.SetFake()
-				}
-				s.Ports = append(s.Ports, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1beta1EndpointSlice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1beta1EndpointSliceList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIDiscoveryV1beta1EndpointSlice
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1beta1EndpointSliceList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1beta1EndpointTopology) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPIDiscoveryV1beta1EndpointTopology) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIDiscoveryV1beta1ForZone) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPIDiscoveryV1beta1ForZone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIEventsV1Event) SetFake() {
-	{
-		{
-			s.Action.SetFake()
-		}
-	}
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.DeprecatedCount.SetFake()
-		}
-	}
-	{
-		{
-			s.DeprecatedFirstTimestamp.SetFake()
-		}
-	}
-	{
-		{
-			s.DeprecatedLastTimestamp.SetFake()
-		}
-	}
-	{
-		{
-			s.DeprecatedSource.SetFake()
-		}
-	}
-	{
-		{
-			s.EventTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Note.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Regarding.SetFake()
-		}
-	}
-	{
-		{
-			s.Related.SetFake()
-		}
-	}
-	{
-		{
-			s.ReportingController.SetFake()
-		}
-	}
-	{
-		{
-			s.ReportingInstance.SetFake()
-		}
-	}
-	{
-		{
-			s.Series.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIEventsV1Event) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIEventsV1EventList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIEventsV1Event
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIEventsV1EventList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIEventsV1EventSeries) SetFake() {
-	{
-		{
-			s.Count = int32(0)
-		}
-	}
-	{
-		{
-			s.LastObservedTime.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIEventsV1EventSeries) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIEventsV1beta1Event) SetFake() {
-	{
-		{
-			s.Action.SetFake()
-		}
-	}
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.DeprecatedCount.SetFake()
-		}
-	}
-	{
-		{
-			s.DeprecatedFirstTimestamp.SetFake()
-		}
-	}
-	{
-		{
-			s.DeprecatedLastTimestamp.SetFake()
-		}
-	}
-	{
-		{
-			s.DeprecatedSource.SetFake()
-		}
-	}
-	{
-		{
-			s.EventTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Note.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Regarding.SetFake()
-		}
-	}
-	{
-		{
-			s.Related.SetFake()
-		}
-	}
-	{
-		{
-			s.ReportingController.SetFake()
-		}
-	}
-	{
-		{
-			s.ReportingInstance.SetFake()
-		}
-	}
-	{
-		{
-			s.Series.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIEventsV1beta1Event) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIEventsV1beta1EventList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIEventsV1beta1Event
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIEventsV1beta1EventList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIEventsV1beta1EventSeries) SetFake() {
-	{
-		{
-			s.Count = int32(0)
-		}
-	}
-	{
-		{
-			s.LastObservedTime.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIEventsV1beta1EventSeries) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1FlowDistinguisherMethod) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta1FlowSchema) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta1FlowSchema) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1FlowSchemaCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta1FlowSchemaList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta1FlowSchema
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta1FlowSchemaList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta1FlowSchemaSpec) SetFake() {
-	{
-		{
-			s.DistinguisherMethod.SetFake()
-		}
-	}
-	{
-		{
-			s.MatchingPrecedence.SetFake()
-		}
-	}
-	{
-		{
-			s.PriorityLevelConfiguration.SetFake()
-		}
-	}
-	{
-		{
-			s.Rules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta1PolicyRulesWithSubjects
-				{
-					elem.SetFake()
-				}
-				s.Rules = append(s.Rules, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta1FlowSchemaSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta1FlowSchemaStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta1FlowSchemaCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta1FlowSchemaStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta1GroupSubject) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta1GroupSubject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta1LimitResponse) SetFake() {
-	{
-		{
-			s.Queuing.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta1LimitResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1LimitedPriorityLevelConfiguration) SetFake() {
-	{
-		{
-			s.AssuredConcurrencyShares.SetFake()
-		}
-	}
-	{
-		{
-			s.LimitResponse.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1NonResourcePolicyRule) SetFake() {
-	{
-		{
-			s.NonResourceURLs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.NonResourceURLs = append(s.NonResourceURLs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Verbs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Verbs = append(s.Verbs, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1PolicyRulesWithSubjects) SetFake() {
-	{
-		{
-			s.NonResourceRules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta1NonResourcePolicyRule
-				{
-					elem.SetFake()
-				}
-				s.NonResourceRules = append(s.NonResourceRules, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ResourceRules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta1ResourcePolicyRule
-				{
-					elem.SetFake()
-				}
-				s.ResourceRules = append(s.ResourceRules, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Subjects = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta1Subject
-				{
-					elem.SetFake()
-				}
-				s.Subjects = append(s.Subjects, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1PriorityLevelConfiguration) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1PriorityLevelConfigurationCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1PriorityLevelConfigurationList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta1PriorityLevelConfiguration
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1PriorityLevelConfigurationReference) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1PriorityLevelConfigurationSpec) SetFake() {
-	{
-		{
-			s.Limited.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1PriorityLevelConfigurationStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta1PriorityLevelConfigurationCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1QueuingConfiguration) SetFake() {
-	{
-		{
-			s.HandSize.SetFake()
-		}
-	}
-	{
-		{
-			s.QueueLengthLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.Queues.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta1ResourcePolicyRule) SetFake() {
-	{
-		{
-			s.ApiGroups = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ApiGroups = append(s.ApiGroups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ClusterScope.SetFake()
-		}
-	}
-	{
-		{
-			s.Namespaces = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Namespaces = append(s.Namespaces, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Resources = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Resources = append(s.Resources, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Verbs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Verbs = append(s.Verbs, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta1ResourcePolicyRule) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta1ServiceAccountSubject) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Namespace = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta1Subject) SetFake() {
-	{
-		{
-			s.Group.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.ServiceAccount.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta1Subject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta1UserSubject) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta1UserSubject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2FlowDistinguisherMethod) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta2FlowSchema) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta2FlowSchema) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2FlowSchemaCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta2FlowSchemaList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta2FlowSchema
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta2FlowSchemaList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta2FlowSchemaSpec) SetFake() {
-	{
-		{
-			s.DistinguisherMethod.SetFake()
-		}
-	}
-	{
-		{
-			s.MatchingPrecedence.SetFake()
-		}
-	}
-	{
-		{
-			s.PriorityLevelConfiguration.SetFake()
-		}
-	}
-	{
-		{
-			s.Rules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta2PolicyRulesWithSubjects
-				{
-					elem.SetFake()
-				}
-				s.Rules = append(s.Rules, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta2FlowSchemaSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta2FlowSchemaStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta2FlowSchemaCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta2FlowSchemaStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta2GroupSubject) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta2GroupSubject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta2LimitResponse) SetFake() {
-	{
-		{
-			s.Queuing.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta2LimitResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2LimitedPriorityLevelConfiguration) SetFake() {
-	{
-		{
-			s.AssuredConcurrencyShares.SetFake()
-		}
-	}
-	{
-		{
-			s.LimitResponse.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2NonResourcePolicyRule) SetFake() {
-	{
-		{
-			s.NonResourceURLs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.NonResourceURLs = append(s.NonResourceURLs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Verbs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Verbs = append(s.Verbs, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2PolicyRulesWithSubjects) SetFake() {
-	{
-		{
-			s.NonResourceRules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta2NonResourcePolicyRule
-				{
-					elem.SetFake()
-				}
-				s.NonResourceRules = append(s.NonResourceRules, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ResourceRules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta2ResourcePolicyRule
-				{
-					elem.SetFake()
-				}
-				s.ResourceRules = append(s.ResourceRules, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Subjects = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta2Subject
-				{
-					elem.SetFake()
-				}
-				s.Subjects = append(s.Subjects, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2PriorityLevelConfiguration) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2PriorityLevelConfigurationCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2PriorityLevelConfigurationList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta2PriorityLevelConfiguration
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2PriorityLevelConfigurationReference) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2PriorityLevelConfigurationSpec) SetFake() {
-	{
-		{
-			s.Limited.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2PriorityLevelConfigurationStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIFlowcontrolV1beta2PriorityLevelConfigurationCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2QueuingConfiguration) SetFake() {
-	{
-		{
-			s.HandSize.SetFake()
-		}
-	}
-	{
-		{
-			s.QueueLengthLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.Queues.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta2ResourcePolicyRule) SetFake() {
-	{
-		{
-			s.ApiGroups = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ApiGroups = append(s.ApiGroups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ClusterScope.SetFake()
-		}
-	}
-	{
-		{
-			s.Namespaces = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Namespaces = append(s.Namespaces, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Resources = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Resources = append(s.Resources, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Verbs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Verbs = append(s.Verbs, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta2ResourcePolicyRule) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIFlowcontrolV1beta2ServiceAccountSubject) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Namespace = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta2Subject) SetFake() {
-	{
-		{
-			s.Group.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.ServiceAccount.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta2Subject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIFlowcontrolV1beta2UserSubject) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPIFlowcontrolV1beta2UserSubject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1HTTPIngressPath) SetFake() {
-	{
-		{
-			s.Backend.SetFake()
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.PathType = "string"
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1HTTPIngressPath) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1HTTPIngressRuleValue) SetFake() {
-	{
-		{
-			s.Paths = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1HTTPIngressPath
-				{
-					elem.SetFake()
-				}
-				s.Paths = append(s.Paths, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1HTTPIngressRuleValue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IPBlock) SetFake() {
-	{
-		{
-			s.Cidr = "string"
-		}
-	}
-	{
-		{
-			s.Except = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Except = append(s.Except, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IPBlock) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1Ingress) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1Ingress) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IngressBackend) SetFake() {
-	{
-		{
-			s.Resource.SetFake()
-		}
-	}
-	{
-		{
-			s.Service.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IngressBackend) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IngressClass) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IngressClass) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IngressClassList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1IngressClass
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IngressClassList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPINetworkingV1IngressClassParametersReference) SetFake() {
-	{
-		{
-			s.ApiGroup.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Namespace.SetFake()
-		}
-	}
-	{
-		{
-			s.Scope.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IngressClassSpec) SetFake() {
-	{
-		{
-			s.Controller.SetFake()
-		}
-	}
-	{
-		{
-			s.Parameters.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IngressClassSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IngressList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1Ingress
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IngressList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IngressRule) SetFake() {
-	{
-		{
-			s.Host.SetFake()
-		}
-	}
-	{
-		{
-			s.HTTP.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IngressRule) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IngressServiceBackend) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Port.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IngressServiceBackend) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IngressSpec) SetFake() {
-	{
-		{
-			s.DefaultBackend.SetFake()
-		}
-	}
-	{
-		{
-			s.IngressClassName.SetFake()
-		}
-	}
-	{
-		{
-			s.Rules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1IngressRule
-				{
-					elem.SetFake()
-				}
-				s.Rules = append(s.Rules, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TLS = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1IngressTLS
-				{
-					elem.SetFake()
-				}
-				s.TLS = append(s.TLS, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IngressSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IngressStatus) SetFake() {
-	{
-		{
-			s.LoadBalancer.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IngressStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1IngressTLS) SetFake() {
-	{
-		{
-			s.Hosts = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Hosts = append(s.Hosts, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SecretName.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1IngressTLS) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1NetworkPolicy) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1NetworkPolicy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1NetworkPolicyEgressRule) SetFake() {
-	{
-		{
-			s.Ports = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1NetworkPolicyPort
-				{
-					elem.SetFake()
-				}
-				s.Ports = append(s.Ports, elem)
-			}
-		}
-	}
-	{
-		{
-			s.To = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1NetworkPolicyPeer
-				{
-					elem.SetFake()
-				}
-				s.To = append(s.To, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1NetworkPolicyEgressRule) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1NetworkPolicyIngressRule) SetFake() {
-	{
-		{
-			s.From = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1NetworkPolicyPeer
-				{
-					elem.SetFake()
-				}
-				s.From = append(s.From, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Ports = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1NetworkPolicyPort
-				{
-					elem.SetFake()
-				}
-				s.Ports = append(s.Ports, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1NetworkPolicyIngressRule) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1NetworkPolicyList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1NetworkPolicy
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1NetworkPolicyList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1NetworkPolicyPeer) SetFake() {
-	{
-		{
-			s.IpBlock.SetFake()
-		}
-	}
-	{
-		{
-			s.NamespaceSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.PodSelector.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1NetworkPolicyPeer) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1NetworkPolicyPort) SetFake() {
-	{
-		{
-			s.EndPort.SetFake()
-		}
-	}
-	{
-		{
-			s.Port.SetFake()
-		}
-	}
-	{
-		{
-			s.Protocol.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1NetworkPolicyPort) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1NetworkPolicySpec) SetFake() {
-	{
-		{
-			s.Egress = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1NetworkPolicyEgressRule
-				{
-					elem.SetFake()
-				}
-				s.Egress = append(s.Egress, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Ingress = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINetworkingV1NetworkPolicyIngressRule
-				{
-					elem.SetFake()
-				}
-				s.Ingress = append(s.Ingress, elem)
-			}
-		}
-	}
-	{
-		{
-			s.PodSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.PolicyTypes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.PolicyTypes = append(s.PolicyTypes, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1NetworkPolicySpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINetworkingV1ServiceBackendPort) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Number.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINetworkingV1ServiceBackendPort) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1Overhead) SetFake() {
-	{
-		{
-			s.PodFixed.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINodeV1Overhead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1OverheadPodFixed) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPINodeV1OverheadPodFixed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1RuntimeClass) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Handler = "string"
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Overhead.SetFake()
-		}
-	}
-	{
-		{
-			s.Scheduling.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINodeV1RuntimeClass) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1RuntimeClassList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINodeV1RuntimeClass
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINodeV1RuntimeClassList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1Scheduling) SetFake() {
-	{
-		{
-			s.NodeSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.Tolerations = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Toleration
-				{
-					elem.SetFake()
-				}
-				s.Tolerations = append(s.Tolerations, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPINodeV1Scheduling) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1SchedulingNodeSelector) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPINodeV1SchedulingNodeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1alpha1Overhead) SetFake() {
-	{
-		{
-			s.PodFixed.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINodeV1alpha1Overhead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1alpha1OverheadPodFixed) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPINodeV1alpha1OverheadPodFixed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1alpha1RuntimeClass) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINodeV1alpha1RuntimeClass) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1alpha1RuntimeClassList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINodeV1alpha1RuntimeClass
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINodeV1alpha1RuntimeClassList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1alpha1RuntimeClassSpec) SetFake() {
-	{
-		{
-			s.Overhead.SetFake()
-		}
-	}
-	{
-		{
-			s.RuntimeHandler = "string"
-		}
-	}
-	{
-		{
-			s.Scheduling.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINodeV1alpha1RuntimeClassSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1alpha1Scheduling) SetFake() {
-	{
-		{
-			s.NodeSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.Tolerations = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Toleration
-				{
-					elem.SetFake()
-				}
-				s.Tolerations = append(s.Tolerations, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPINodeV1alpha1Scheduling) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1alpha1SchedulingNodeSelector) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPINodeV1alpha1SchedulingNodeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1beta1Overhead) SetFake() {
-	{
-		{
-			s.PodFixed.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINodeV1beta1Overhead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1beta1OverheadPodFixed) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgAPIResourceQuantity
-		m    map[string]IoK8sApimachineryPkgAPIResourceQuantity = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPINodeV1beta1OverheadPodFixed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1beta1RuntimeClass) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Handler = "string"
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Overhead.SetFake()
-		}
-	}
-	{
-		{
-			s.Scheduling.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINodeV1beta1RuntimeClass) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1beta1RuntimeClassList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPINodeV1beta1RuntimeClass
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPINodeV1beta1RuntimeClassList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1beta1Scheduling) SetFake() {
-	{
-		{
-			s.NodeSelector.SetFake()
-		}
-	}
-	{
-		{
-			s.Tolerations = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1Toleration
-				{
-					elem.SetFake()
-				}
-				s.Tolerations = append(s.Tolerations, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPINodeV1beta1Scheduling) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPINodeV1beta1SchedulingNodeSelector) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPINodeV1beta1SchedulingNodeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1PodDisruptionBudget) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1PodDisruptionBudget) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1PodDisruptionBudgetList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1PodDisruptionBudget
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1PodDisruptionBudgetList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1PodDisruptionBudgetSpec) SetFake() {
-	{
-		{
-			s.MaxUnavailable.SetFake()
-		}
-	}
-	{
-		{
-			s.MinAvailable.SetFake()
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1PodDisruptionBudgetSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1PodDisruptionBudgetStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1Condition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CurrentHealthy = int32(0)
-		}
-	}
-	{
-		{
-			s.DesiredHealthy = int32(0)
-		}
-	}
-	{
-		{
-			s.DisruptedPods.SetFake()
-		}
-	}
-	{
-		{
-			s.DisruptionsAllowed = int32(0)
-		}
-	}
-	{
-		{
-			s.ExpectedPods = int32(0)
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1PodDisruptionBudgetStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIPolicyV1PodDisruptionBudgetStatusDisruptedPods) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgApisMetaV1Time
-		m    map[string]IoK8sApimachineryPkgApisMetaV1Time = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1AllowedCSIDriver) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1AllowedCSIDriver) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1AllowedFlexVolume) SetFake() {
-	{
-		{
-			s.Driver = "string"
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1AllowedFlexVolume) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1AllowedHostPath) SetFake() {
-	{
-		{
-			s.PathPrefix.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1AllowedHostPath) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1FSGroupStrategyOptions) SetFake() {
-	{
-		{
-			s.Ranges = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1beta1IDRange
-				{
-					elem.SetFake()
-				}
-				s.Ranges = append(s.Ranges, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Rule.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1FSGroupStrategyOptions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1HostPortRange) SetFake() {
-	{
-		{
-			s.Max = int32(0)
-		}
-	}
-	{
-		{
-			s.Min = int32(0)
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1HostPortRange) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1IDRange) SetFake() {
-	{
-		{
-			s.Max = int64(0)
-		}
-	}
-	{
-		{
-			s.Min = int64(0)
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1IDRange) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1PodDisruptionBudget) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1PodDisruptionBudget) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1PodDisruptionBudgetList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1beta1PodDisruptionBudget
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1PodDisruptionBudgetList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1PodDisruptionBudgetSpec) SetFake() {
-	{
-		{
-			s.MaxUnavailable.SetFake()
-		}
-	}
-	{
-		{
-			s.MinAvailable.SetFake()
-		}
-	}
-	{
-		{
-			s.Selector.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1PodDisruptionBudgetSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIPolicyV1beta1PodDisruptionBudgetStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1Condition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CurrentHealthy = int32(0)
-		}
-	}
-	{
-		{
-			s.DesiredHealthy = int32(0)
-		}
-	}
-	{
-		{
-			s.DisruptedPods.SetFake()
-		}
-	}
-	{
-		{
-			s.DisruptionsAllowed = int32(0)
-		}
-	}
-	{
-		{
-			s.ExpectedPods = int32(0)
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIPolicyV1beta1PodDisruptionBudgetStatusDisruptedPods) SetFake() {
-	var (
-		elem IoK8sApimachineryPkgApisMetaV1Time
-		m    map[string]IoK8sApimachineryPkgApisMetaV1Time = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1PodSecurityPolicy) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1PodSecurityPolicy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1PodSecurityPolicyList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1beta1PodSecurityPolicy
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1PodSecurityPolicyList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1PodSecurityPolicySpec) SetFake() {
-	{
-		{
-			s.AllowPrivilegeEscalation.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedCSIDrivers = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1beta1AllowedCSIDriver
-				{
-					elem.SetFake()
-				}
-				s.AllowedCSIDrivers = append(s.AllowedCSIDrivers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.AllowedCapabilities = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AllowedCapabilities = append(s.AllowedCapabilities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.AllowedFlexVolumes = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1beta1AllowedFlexVolume
-				{
-					elem.SetFake()
-				}
-				s.AllowedFlexVolumes = append(s.AllowedFlexVolumes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.AllowedHostPaths = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1beta1AllowedHostPath
-				{
-					elem.SetFake()
-				}
-				s.AllowedHostPaths = append(s.AllowedHostPaths, elem)
-			}
-		}
-	}
-	{
-		{
-			s.AllowedProcMountTypes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AllowedProcMountTypes = append(s.AllowedProcMountTypes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.AllowedUnsafeSysctls = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AllowedUnsafeSysctls = append(s.AllowedUnsafeSysctls, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DefaultAddCapabilities = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.DefaultAddCapabilities = append(s.DefaultAddCapabilities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DefaultAllowPrivilegeEscalation.SetFake()
-		}
-	}
-	{
-		{
-			s.ForbiddenSysctls = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ForbiddenSysctls = append(s.ForbiddenSysctls, elem)
-			}
-		}
-	}
-	{
-		{
-			s.FsGroup.SetFake()
-		}
-	}
-	{
-		{
-			s.HostIPC.SetFake()
-		}
-	}
-	{
-		{
-			s.HostNetwork.SetFake()
-		}
-	}
-	{
-		{
-			s.HostPID.SetFake()
-		}
-	}
-	{
-		{
-			s.HostPorts = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1beta1HostPortRange
-				{
-					elem.SetFake()
-				}
-				s.HostPorts = append(s.HostPorts, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Privileged.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnlyRootFilesystem.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredDropCapabilities = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.RequiredDropCapabilities = append(s.RequiredDropCapabilities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RunAsGroup.SetFake()
-		}
-	}
-	{
-		{
-			s.RunAsUser.SetFake()
-		}
-	}
-	{
-		{
-			s.RuntimeClass.SetFake()
-		}
-	}
-	{
-		{
-			s.SeLinux.SetFake()
-		}
-	}
-	{
-		{
-			s.SupplementalGroups.SetFake()
-		}
-	}
-	{
-		{
-			s.Volumes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Volumes = append(s.Volumes, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1PodSecurityPolicySpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIPolicyV1beta1RunAsGroupStrategyOptions) SetFake() {
-	{
-		{
-			s.Ranges = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1beta1IDRange
-				{
-					elem.SetFake()
-				}
-				s.Ranges = append(s.Ranges, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Rule = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIPolicyV1beta1RunAsUserStrategyOptions) SetFake() {
-	{
-		{
-			s.Ranges = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1beta1IDRange
-				{
-					elem.SetFake()
-				}
-				s.Ranges = append(s.Ranges, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Rule = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sAPIPolicyV1beta1RuntimeClassStrategyOptions) SetFake() {
-	{
-		{
-			s.AllowedRuntimeClassNames = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AllowedRuntimeClassNames = append(s.AllowedRuntimeClassNames, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DefaultRuntimeClassName.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIPolicyV1beta1SELinuxStrategyOptions) SetFake() {
-	{
-		{
-			s.Rule = "string"
-		}
-	}
-	{
-		{
-			s.SeLinuxOptions.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIPolicyV1beta1SELinuxStrategyOptions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIPolicyV1beta1SupplementalGroupsStrategyOptions) SetFake() {
-	{
-		{
-			s.Ranges = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIPolicyV1beta1IDRange
-				{
-					elem.SetFake()
-				}
-				s.Ranges = append(s.Ranges, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Rule.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1AggregationRule) SetFake() {
-	{
-		{
-			s.ClusterRoleSelectors = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1LabelSelector
-				{
-					elem.SetFake()
-				}
-				s.ClusterRoleSelectors = append(s.ClusterRoleSelectors, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1AggregationRule) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1ClusterRole) SetFake() {
-	{
-		{
-			s.AggregationRule.SetFake()
-		}
-	}
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Rules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIRbacV1PolicyRule
-				{
-					elem.SetFake()
-				}
-				s.Rules = append(s.Rules, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1ClusterRole) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1ClusterRoleBinding) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.RoleRef.SetFake()
-		}
-	}
-	{
-		{
-			s.Subjects = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIRbacV1Subject
-				{
-					elem.SetFake()
-				}
-				s.Subjects = append(s.Subjects, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1ClusterRoleBinding) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1ClusterRoleBindingList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIRbacV1ClusterRoleBinding
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1ClusterRoleBindingList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1ClusterRoleList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIRbacV1ClusterRole
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1ClusterRoleList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1PolicyRule) SetFake() {
-	{
-		{
-			s.ApiGroups = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ApiGroups = append(s.ApiGroups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.NonResourceURLs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.NonResourceURLs = append(s.NonResourceURLs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ResourceNames = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ResourceNames = append(s.ResourceNames, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Resources = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Resources = append(s.Resources, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Verbs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Verbs = append(s.Verbs, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1PolicyRule) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1Role) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Rules = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIRbacV1PolicyRule
-				{
-					elem.SetFake()
-				}
-				s.Rules = append(s.Rules, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1Role) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1RoleBinding) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.RoleRef.SetFake()
-		}
-	}
-	{
-		{
-			s.Subjects = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIRbacV1Subject
-				{
-					elem.SetFake()
-				}
-				s.Subjects = append(s.Subjects, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1RoleBinding) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1RoleBindingList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIRbacV1RoleBinding
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1RoleBindingList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1RoleList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIRbacV1Role
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1RoleList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1RoleRef) SetFake() {
-	{
-		{
-			s.ApiGroup = "string"
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1RoleRef) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIRbacV1Subject) SetFake() {
-	{
-		{
-			s.ApiGroup.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Namespace.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIRbacV1Subject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPISchedulingV1PriorityClass) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.GlobalDefault.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.PreemptionPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.Value = int32(0)
-		}
-	}
-}
+func (s *IoK8sAPISchedulingV1PriorityClass) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPISchedulingV1PriorityClassList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPISchedulingV1PriorityClass
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPISchedulingV1PriorityClassList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1CSIDriver) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1CSIDriver) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1CSIDriverList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIStorageV1CSIDriver
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1CSIDriverList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1CSIDriverSpec) SetFake() {
-	{
-		{
-			s.AttachRequired.SetFake()
-		}
-	}
-	{
-		{
-			s.FsGroupPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.PodInfoOnMount.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiresRepublish.SetFake()
-		}
-	}
-	{
-		{
-			s.StorageCapacity.SetFake()
-		}
-	}
-	{
-		{
-			s.TokenRequests = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIStorageV1TokenRequest
-				{
-					elem.SetFake()
-				}
-				s.TokenRequests = append(s.TokenRequests, elem)
-			}
-		}
-	}
-	{
-		{
-			s.VolumeLifecycleModes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.VolumeLifecycleModes = append(s.VolumeLifecycleModes, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1CSIDriverSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1CSINode) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1CSINode) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1CSINodeDriver) SetFake() {
-	{
-		{
-			s.Allocatable.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.TopologyKeys = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.TopologyKeys = append(s.TopologyKeys, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1CSINodeDriver) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1CSINodeList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIStorageV1CSINode
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1CSINodeList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1CSINodeSpec) SetFake() {
-	{
-		{
-			s.Drivers = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIStorageV1CSINodeDriver
-				{
-					elem.SetFake()
-				}
-				s.Drivers = append(s.Drivers, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1CSINodeSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1StorageClass) SetFake() {
-	{
-		{
-			s.AllowVolumeExpansion.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedTopologies = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPICoreV1TopologySelectorTerm
-				{
-					elem.SetFake()
-				}
-				s.AllowedTopologies = append(s.AllowedTopologies, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.MountOptions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.MountOptions = append(s.MountOptions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Parameters.SetFake()
-		}
-	}
-	{
-		{
-			s.Provisioner = "string"
-		}
-	}
-	{
-		{
-			s.ReclaimPolicy.SetFake()
-		}
-	}
-	{
-		{
-			s.VolumeBindingMode.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1StorageClass) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1StorageClassList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIStorageV1StorageClass
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1StorageClassList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1StorageClassParameters) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IoK8sAPIStorageV1StorageClassParameters) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1TokenRequest) SetFake() {
-	{
-		{
-			s.Audience = "string"
-		}
-	}
-	{
-		{
-			s.ExpirationSeconds.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1TokenRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1VolumeAttachment) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1VolumeAttachment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1VolumeAttachmentList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIStorageV1VolumeAttachment
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1VolumeAttachmentList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1VolumeAttachmentSource) SetFake() {
-	{
-		{
-			s.InlineVolumeSpec.SetFake()
-		}
-	}
-	{
-		{
-			s.PersistentVolumeName.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1VolumeAttachmentSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1VolumeAttachmentSpec) SetFake() {
-	{
-		{
-			s.Attacher = "string"
-		}
-	}
-	{
-		{
-			s.NodeName = "string"
-		}
-	}
-	{
-		{
-			s.Source.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1VolumeAttachmentSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1VolumeAttachmentStatus) SetFake() {
-	{
-		{
-			s.AttachError.SetFake()
-		}
-	}
-	{
-		{
-			s.Attached = true
-		}
-	}
-	{
-		{
-			s.AttachmentMetadata.SetFake()
-		}
-	}
-	{
-		{
-			s.DetachError.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1VolumeAttachmentStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIStorageV1VolumeAttachmentStatusAttachmentMetadata) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1VolumeError) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Time.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1VolumeError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1VolumeNodeResources) SetFake() {
-	{
-		{
-			s.Count.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1VolumeNodeResources) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1alpha1CSIStorageCapacity) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Capacity.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.MaximumVolumeSize.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeTopology.SetFake()
-		}
-	}
-	{
-		{
-			s.StorageClassName = "string"
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1alpha1CSIStorageCapacity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sAPIStorageV1alpha1CSIStorageCapacityList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIStorageV1alpha1CSIStorageCapacity
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1beta1CSIStorageCapacity) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Capacity.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.MaximumVolumeSize.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeTopology.SetFake()
-		}
-	}
-	{
-		{
-			s.StorageClassName = "string"
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1beta1CSIStorageCapacity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sAPIStorageV1beta1CSIStorageCapacityList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sAPIStorageV1beta1CSIStorageCapacity
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *IoK8sAPIStorageV1beta1CSIStorageCapacityList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceColumnDefinition) SetFake() {
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Format.SetFake()
-		}
-	}
-	{
-		{
-			s.JsonPath = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Priority.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceConversion) SetFake() {
-	{
-		{
-			s.Strategy = "string"
-		}
-	}
-	{
-		{
-			s.Webhook.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinition) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinition
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionNames) SetFake() {
-	{
-		{
-			s.Categories = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Categories = append(s.Categories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.ListKind.SetFake()
-		}
-	}
-	{
-		{
-			s.Plural = "string"
-		}
-	}
-	{
-		{
-			s.ShortNames = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ShortNames = append(s.ShortNames, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Singular.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionSpec) SetFake() {
-	{
-		{
-			s.Conversion.SetFake()
-		}
-	}
-	{
-		{
-			s.Group = "string"
-		}
-	}
-	{
-		{
-			s.Names.SetFake()
-		}
-	}
-	{
-		{
-			s.PreserveUnknownFields.SetFake()
-		}
-	}
-	{
-		{
-			s.Scope = "string"
-		}
-	}
-	{
-		{
-			s.Versions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionVersion
-				{
-					elem.SetFake()
-				}
-				s.Versions = append(s.Versions, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionStatus) SetFake() {
-	{
-		{
-			s.AcceptedNames.SetFake()
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.StoredVersions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.StoredVersions = append(s.StoredVersions, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionVersion) SetFake() {
-	{
-		{
-			s.AdditionalPrinterColumns = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceColumnDefinition
-				{
-					elem.SetFake()
-				}
-				s.AdditionalPrinterColumns = append(s.AdditionalPrinterColumns, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Deprecated.SetFake()
-		}
-	}
-	{
-		{
-			s.DeprecationWarning.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Schema = nil
-		}
-	}
-	{
-		{
-			s.Served = true
-		}
-	}
-	{
-		{
-			s.Storage = true
-		}
-	}
-	{
-		{
-			s.Subresources.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
+
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresourceScale) SetFake() {
-	{
-		{
-			s.LabelSelectorPath.SetFake()
-		}
-	}
-	{
-		{
-			s.SpecReplicasPath = "string"
-		}
-	}
-	{
-		{
-			s.StatusReplicasPath = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresourceStatus) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresources) SetFake() {
-	{
-		{
-			s.Scale.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Status = nil
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
+
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceValidation) SetFake() {
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.OpenAPIV3Schema = nil
-		}
-	}
+	_ = "STUB: not implemented"
+
+	// Keep pointer nil to prevent infinite recursion.
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1ExternalDocumentation) SetFake() {
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSON) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps) SetFake() {
-	{
-		{
-			s.Ref.SetFake()
-		}
-	}
-	{
-		{
-			s.Schema.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.AdditionalItems = nil
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.AdditionalProperties = nil
-		}
-	}
-	{
-		{
-			s.AllOf = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps
-				{
-					elem.SetFake()
-				}
-				s.AllOf = append(s.AllOf, elem)
-			}
-		}
-	}
-	{
-		{
-			s.AnyOf = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps
-				{
-					elem.SetFake()
-				}
-				s.AnyOf = append(s.AnyOf, elem)
-			}
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Default = nil
-		}
-	}
-	{
-		{
-			s.Definitions.SetFake()
-		}
-	}
-	{
-		{
-			s.Dependencies.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Enum = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSON
-				{
-					elem.SetFake()
-				}
-				s.Enum = append(s.Enum, elem)
-			}
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Example = nil
-		}
-	}
-	{
-		{
-			s.ExclusiveMaximum.SetFake()
-		}
-	}
-	{
-		{
-			s.ExclusiveMinimum.SetFake()
-		}
-	}
-	{
-		{
-			s.ExternalDocs.SetFake()
-		}
-	}
-	{
-		{
-			s.Format.SetFake()
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Items = nil
-		}
-	}
-	{
-		{
-			s.MaxItems.SetFake()
-		}
-	}
-	{
-		{
-			s.MaxLength.SetFake()
-		}
-	}
-	{
-		{
-			s.MaxProperties.SetFake()
-		}
-	}
-	{
-		{
-			s.Maximum.SetFake()
-		}
-	}
-	{
-		{
-			s.MinItems.SetFake()
-		}
-	}
-	{
-		{
-			s.MinLength.SetFake()
-		}
-	}
-	{
-		{
-			s.MinProperties.SetFake()
-		}
-	}
-	{
-		{
-			s.Minimum.SetFake()
-		}
-	}
-	{
-		{
-			s.MultipleOf.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Not = nil
-		}
-	}
-	{
-		{
-			s.Nullable.SetFake()
-		}
-	}
-	{
-		{
-			s.OneOf = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps
-				{
-					elem.SetFake()
-				}
-				s.OneOf = append(s.OneOf, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Pattern.SetFake()
-		}
-	}
-	{
-		{
-			s.PatternProperties.SetFake()
-		}
-	}
-	{
-		{
-			s.Properties.SetFake()
-		}
-	}
-	{
-		{
-			s.Required = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Required = append(s.Required, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.UniqueItems.SetFake()
-		}
-	}
-	{
-		{
-			s.XMinusKubernetesMinusEmbeddedMinusResource.SetFake()
-		}
-	}
-	{
-		{
-			s.XMinusKubernetesMinusIntMinusOrMinusString.SetFake()
-		}
-	}
-	{
-		{
-			s.XMinusKubernetesMinusListMinusMapMinusKeys = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.XMinusKubernetesMinusListMinusMapMinusKeys = append(s.XMinusKubernetesMinusListMinusMapMinusKeys, elem)
-			}
-		}
-	}
-	{
-		{
-			s.XMinusKubernetesMinusListMinusType.SetFake()
-		}
-	}
-	{
-		{
-			s.XMinusKubernetesMinusMapMinusType.SetFake()
-		}
-	}
-	{
-		{
-			s.XMinusKubernetesMinusPreserveMinusUnknownMinusFields.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
+
+// Keep pointer nil to prevent infinite recursion.
+
+// Keep pointer nil to prevent infinite recursion.
+
+// Keep pointer nil to prevent infinite recursion.
+
+// Keep pointer nil to prevent infinite recursion.
+
+// Keep pointer nil to prevent infinite recursion.
+
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsDefinitions) SetFake() {
-	var (
-		elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps
-		m    map[string]IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsDependencies) SetFake() {
-	var (
-		elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsOrStringArray
-		m    map[string]IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsOrStringArray = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsOrArray) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsOrBool) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsOrStringArray) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsPatternProperties) SetFake() {
-	var (
-		elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps
-		m    map[string]IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsProperties) SetFake() {
-	var (
-		elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps
-		m    map[string]IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1ServiceReference) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Namespace = "string"
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Port.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookClientConfig) SetFake() {
-	{
-		{
-			s.CaBundle = []byte("[]byte")
-		}
-	}
-	{
-		{
-			s.Service.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookConversion) SetFake() {
-	{
-		{
-			s.ClientConfig.SetFake()
-		}
-	}
-	{
-		{
-			s.ConversionReviewVersions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ConversionReviewVersions = append(s.ConversionReviewVersions, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgAPIResourceQuantity) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = IoK8sApimachineryPkgAPIResourceQuantity(unwrapped)
-}
+func (s *IoK8sApimachineryPkgAPIResourceQuantity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1APIGroup) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.PreferredVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.ServerAddressByClientCIDRs = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1ServerAddressByClientCIDR
-				{
-					elem.SetFake()
-				}
-				s.ServerAddressByClientCIDRs = append(s.ServerAddressByClientCIDRs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Versions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1GroupVersionForDiscovery
-				{
-					elem.SetFake()
-				}
-				s.Versions = append(s.Versions, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgApisMetaV1APIGroup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1APIGroupList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1APIGroup
-				{
-					elem.SetFake()
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgApisMetaV1APIGroupList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1APIResource) SetFake() {
-	{
-		{
-			s.Categories = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Categories = append(s.Categories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Group.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Namespaced = true
-		}
-	}
-	{
-		{
-			s.ShortNames = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.ShortNames = append(s.ShortNames, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SingularName = "string"
-		}
-	}
-	{
-		{
-			s.StorageVersionHash.SetFake()
-		}
-	}
-	{
-		{
-			s.Verbs = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Verbs = append(s.Verbs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Version.SetFake()
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgApisMetaV1APIResource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sApimachineryPkgApisMetaV1APIResourceList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.GroupVersion = "string"
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Resources = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1APIResource
-				{
-					elem.SetFake()
-				}
-				s.Resources = append(s.Resources, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1APIVersions) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.ServerAddressByClientCIDRs = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1ServerAddressByClientCIDR
-				{
-					elem.SetFake()
-				}
-				s.ServerAddressByClientCIDRs = append(s.ServerAddressByClientCIDRs, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Versions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Versions = append(s.Versions, elem)
-			}
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgApisMetaV1APIVersions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1Condition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.ObservedGeneration.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgApisMetaV1Condition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sApimachineryPkgApisMetaV1FieldsV1) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *IoK8sApimachineryPkgApisMetaV1GroupVersionForDiscovery) SetFake() {
-	{
-		{
-			s.GroupVersion = "string"
-		}
-	}
-	{
-		{
-			s.Version = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1LabelSelector) SetFake() {
-	{
-		{
-			s.MatchExpressions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1LabelSelectorRequirement
-				{
-					elem.SetFake()
-				}
-				s.MatchExpressions = append(s.MatchExpressions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.MatchLabels.SetFake()
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgApisMetaV1LabelSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sApimachineryPkgApisMetaV1LabelSelectorMatchLabels) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApimachineryPkgApisMetaV1LabelSelectorRequirement) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Operator = "string"
-		}
-	}
-	{
-		{
-			s.Values = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Values = append(s.Values, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1ListMeta) SetFake() {
-	{
-		{
-			s.Continue.SetFake()
-		}
-	}
-	{
-		{
-			s.RemainingItemCount.SetFake()
-		}
-	}
-	{
-		{
-			s.ResourceVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.SelfLink.SetFake()
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgApisMetaV1ListMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sApimachineryPkgApisMetaV1ManagedFieldsEntry) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.FieldsType.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.FieldsV1 = nil
-		}
-	}
-	{
-		{
-			s.Manager.SetFake()
-		}
-	}
-	{
-		{
-			s.Operation.SetFake()
-		}
-	}
-	{
-		{
-			s.Subresource.SetFake()
-		}
-	}
-	{
-		{
-			s.Time.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
-// SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1MicroTime) SetFake() {
-	var unwrapped time.Time
-	{
-		unwrapped = time.Now()
-	}
-	*s = IoK8sApimachineryPkgApisMetaV1MicroTime(unwrapped)
-}
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1ObjectMeta) SetFake() {
-	{
-		{
-			s.Annotations.SetFake()
-		}
-	}
-	{
-		{
-			s.ClusterName.SetFake()
-		}
-	}
-	{
-		{
-			s.CreationTimestamp.SetFake()
-		}
-	}
-	{
-		{
-			s.DeletionGracePeriodSeconds.SetFake()
-		}
-	}
-	{
-		{
-			s.DeletionTimestamp.SetFake()
-		}
-	}
-	{
-		{
-			s.Finalizers = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Finalizers = append(s.Finalizers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.GenerateName.SetFake()
-		}
-	}
-	{
-		{
-			s.Generation.SetFake()
-		}
-	}
-	{
-		{
-			s.Labels.SetFake()
-		}
-	}
-	{
-		{
-			s.ManagedFields = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1ManagedFieldsEntry
-				{
-					elem.SetFake()
-				}
-				s.ManagedFields = append(s.ManagedFields, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Namespace.SetFake()
-		}
-	}
-	{
-		{
-			s.OwnerReferences = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sApimachineryPkgApisMetaV1OwnerReference
-				{
-					elem.SetFake()
-				}
-				s.OwnerReferences = append(s.OwnerReferences, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ResourceVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.SelfLink.SetFake()
-		}
-	}
-	{
-		{
-			s.UID.SetFake()
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgApisMetaV1MicroTime) SetFake() { _ = "STUB: not implemented"; return }
+
+// SetFake set fake values.
+func (s *IoK8sApimachineryPkgApisMetaV1ObjectMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sApimachineryPkgApisMetaV1ObjectMetaAnnotations) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sApimachineryPkgApisMetaV1ObjectMetaLabels) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1OwnerReference) SetFake() {
-	{
-		{
-			s.ApiVersion = "string"
-		}
-	}
-	{
-		{
-			s.BlockOwnerDeletion.SetFake()
-		}
-	}
-	{
-		{
-			s.Controller.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.UID = "string"
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgApisMetaV1OwnerReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sApimachineryPkgApisMetaV1Patch) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *IoK8sApimachineryPkgApisMetaV1ServerAddressByClientCIDR) SetFake() {
-	{
-		{
-			s.ClientCIDR = "string"
-		}
-	}
-	{
-		{
-			s.ServerAddress = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1Time) SetFake() {
-	var unwrapped time.Time
-	{
-		unwrapped = time.Now()
-	}
-	*s = IoK8sApimachineryPkgApisMetaV1Time(unwrapped)
-}
+func (s *IoK8sApimachineryPkgApisMetaV1Time) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgApisMetaV1WatchEvent) SetFake() {
-	{
-		{
-			s.Object.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgApisMetaV1WatchEvent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sApimachineryPkgRuntimeRawExtension) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *IoK8sApimachineryPkgUtilIntstrIntOrString) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = IoK8sApimachineryPkgUtilIntstrIntOrString(unwrapped)
-}
+func (s *IoK8sApimachineryPkgUtilIntstrIntOrString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IoK8sApimachineryPkgVersionInfo) SetFake() {
-	{
-		{
-			s.BuildDate = "string"
-		}
-	}
-	{
-		{
-			s.Compiler = "string"
-		}
-	}
-	{
-		{
-			s.GitCommit = "string"
-		}
-	}
-	{
-		{
-			s.GitTreeState = "string"
-		}
-	}
-	{
-		{
-			s.GitVersion = "string"
-		}
-	}
-	{
-		{
-			s.GoVersion = "string"
-		}
-	}
-	{
-		{
-			s.Major = "string"
-		}
-	}
-	{
-		{
-			s.Minor = "string"
-		}
-	}
-	{
-		{
-			s.Platform = "string"
-		}
-	}
-}
+func (s *IoK8sApimachineryPkgVersionInfo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *IoK8sKubeAggregatorPkgApisApiregistrationV1APIService) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Spec.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceCondition) SetFake() {
-	{
-		{
-			s.LastTransitionTime.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceList) SetFake() {
-	{
-		{
-			s.ApiVersion.SetFake()
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sKubeAggregatorPkgApisApiregistrationV1APIService
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceSpec) SetFake() {
-	{
-		{
-			s.CaBundle = []byte("[]byte")
-		}
-	}
-	{
-		{
-			s.Group.SetFake()
-		}
-	}
-	{
-		{
-			s.GroupPriorityMinimum = int32(0)
-		}
-	}
-	{
-		{
-			s.InsecureSkipTLSVerify.SetFake()
-		}
-	}
-	{
-		{
-			s.Service.SetFake()
-		}
-	}
-	{
-		{
-			s.Version.SetFake()
-		}
-	}
-	{
-		{
-			s.VersionPriority = int32(0)
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceStatus) SetFake() {
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceCondition
-				{
-					elem.SetFake()
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *IoK8sKubeAggregatorPkgApisApiregistrationV1ServiceReference) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Namespace.SetFake()
-		}
-	}
-	{
-		{
-			s.Port.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptBool) SetFake() {
-	var elem bool
-	{
-		elem = true
-	}
-	s.SetTo(elem)
-}
+func (s *OptBool) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFloat64) SetFake() {
-	var elem float64
-	{
-		elem = float64(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptFloat64) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt32) SetFake() {
-	var elem int32
-	{
-		elem = int32(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt32) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt64) SetFake() {
-	var elem int64
-	{
-		elem = int64(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt64) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAdmissionregistrationV1ServiceReference) SetFake() {
-	var elem IoK8sAPIAdmissionregistrationV1ServiceReference
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1DaemonSetSpec) SetFake() {
-	var elem IoK8sAPIAppsV1DaemonSetSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1DaemonSetSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1DaemonSetStatus) SetFake() {
-	var elem IoK8sAPIAppsV1DaemonSetStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1DaemonSetStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1DaemonSetUpdateStrategy) SetFake() {
-	var elem IoK8sAPIAppsV1DaemonSetUpdateStrategy
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1DaemonSetUpdateStrategy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1DeploymentSpec) SetFake() {
-	var elem IoK8sAPIAppsV1DeploymentSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1DeploymentSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1DeploymentStatus) SetFake() {
-	var elem IoK8sAPIAppsV1DeploymentStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1DeploymentStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1DeploymentStrategy) SetFake() {
-	var elem IoK8sAPIAppsV1DeploymentStrategy
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1DeploymentStrategy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1ReplicaSetSpec) SetFake() {
-	var elem IoK8sAPIAppsV1ReplicaSetSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1ReplicaSetSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1ReplicaSetStatus) SetFake() {
-	var elem IoK8sAPIAppsV1ReplicaSetStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1ReplicaSetStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1RollingUpdateDaemonSet) SetFake() {
-	var elem IoK8sAPIAppsV1RollingUpdateDaemonSet
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1RollingUpdateDaemonSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1RollingUpdateDeployment) SetFake() {
-	var elem IoK8sAPIAppsV1RollingUpdateDeployment
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1RollingUpdateDeployment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAppsV1RollingUpdateStatefulSetStrategy) SetFake() {
-	var elem IoK8sAPIAppsV1RollingUpdateStatefulSetStrategy
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1StatefulSetSpec) SetFake() {
-	var elem IoK8sAPIAppsV1StatefulSetSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1StatefulSetSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1StatefulSetStatus) SetFake() {
-	var elem IoK8sAPIAppsV1StatefulSetStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1StatefulSetStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAppsV1StatefulSetUpdateStrategy) SetFake() {
-	var elem IoK8sAPIAppsV1StatefulSetUpdateStrategy
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAppsV1StatefulSetUpdateStrategy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV1HorizontalPodAutoscalerSpec) SetFake() {
-	var elem IoK8sAPIAutoscalingV1HorizontalPodAutoscalerSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV1HorizontalPodAutoscalerStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV1HorizontalPodAutoscalerStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAutoscalingV1ScaleSpec) SetFake() {
-	var elem IoK8sAPIAutoscalingV1ScaleSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAutoscalingV1ScaleSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAutoscalingV1ScaleStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV1ScaleStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAutoscalingV1ScaleStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1ContainerResourceMetricSource) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1ContainerResourceMetricSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1ContainerResourceMetricStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1ContainerResourceMetricStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1ExternalMetricSource) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1ExternalMetricSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1ExternalMetricStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1ExternalMetricStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1HorizontalPodAutoscalerSpec) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscalerSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1HorizontalPodAutoscalerStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscalerStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1ObjectMetricSource) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1ObjectMetricSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1ObjectMetricStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1ObjectMetricStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1PodsMetricSource) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1PodsMetricSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1PodsMetricStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1PodsMetricStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1ResourceMetricSource) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1ResourceMetricSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta1ResourceMetricStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta1ResourceMetricStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2ContainerResourceMetricSource) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2ContainerResourceMetricSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2ContainerResourceMetricStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2ContainerResourceMetricStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2ExternalMetricSource) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2ExternalMetricSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2ExternalMetricStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2ExternalMetricStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIAutoscalingV2beta2HPAScalingRules) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2HPAScalingRules
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIAutoscalingV2beta2HPAScalingRules) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerBehavior) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerBehavior
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerSpec) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscalerStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2ObjectMetricSource) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2ObjectMetricSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2ObjectMetricStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2ObjectMetricStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2PodsMetricSource) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2PodsMetricSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2PodsMetricStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2PodsMetricStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2ResourceMetricSource) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2ResourceMetricSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIAutoscalingV2beta2ResourceMetricStatus) SetFake() {
-	var elem IoK8sAPIAutoscalingV2beta2ResourceMetricStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIBatchV1CronJobSpec) SetFake() {
-	var elem IoK8sAPIBatchV1CronJobSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIBatchV1CronJobSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIBatchV1CronJobStatus) SetFake() {
-	var elem IoK8sAPIBatchV1CronJobStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIBatchV1CronJobStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIBatchV1JobSpec) SetFake() {
-	var elem IoK8sAPIBatchV1JobSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIBatchV1JobSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIBatchV1JobStatus) SetFake() {
-	var elem IoK8sAPIBatchV1JobStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIBatchV1JobStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIBatchV1UncountedTerminatedPods) SetFake() {
-	var elem IoK8sAPIBatchV1UncountedTerminatedPods
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIBatchV1UncountedTerminatedPods) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIBatchV1beta1CronJobSpec) SetFake() {
-	var elem IoK8sAPIBatchV1beta1CronJobSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIBatchV1beta1CronJobSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIBatchV1beta1CronJobStatus) SetFake() {
-	var elem IoK8sAPIBatchV1beta1CronJobStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIBatchV1beta1CronJobStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICertificatesV1CertificateSigningRequestSpecExtra) SetFake() {
-	var elem IoK8sAPICertificatesV1CertificateSigningRequestSpecExtra
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICertificatesV1CertificateSigningRequestStatus) SetFake() {
-	var elem IoK8sAPICertificatesV1CertificateSigningRequestStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoordinationV1LeaseSpec) SetFake() {
-	var elem IoK8sAPICoordinationV1LeaseSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoordinationV1LeaseSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1AWSElasticBlockStoreVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1AWSElasticBlockStoreVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1Affinity) SetFake() {
-	var elem IoK8sAPICoreV1Affinity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1Affinity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1AzureDiskVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1AzureDiskVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1AzureDiskVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1AzureFilePersistentVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1AzureFilePersistentVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1AzureFileVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1AzureFileVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1AzureFileVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1CSIPersistentVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1CSIPersistentVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1CSIPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1CSIPersistentVolumeSourceVolumeAttributes) SetFake() {
-	var elem IoK8sAPICoreV1CSIPersistentVolumeSourceVolumeAttributes
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1CSIVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1CSIVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1CSIVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1CSIVolumeSourceVolumeAttributes) SetFake() {
-	var elem IoK8sAPICoreV1CSIVolumeSourceVolumeAttributes
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1Capabilities) SetFake() {
-	var elem IoK8sAPICoreV1Capabilities
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1Capabilities) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1CephFSPersistentVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1CephFSPersistentVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1CephFSVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1CephFSVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1CephFSVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1CinderPersistentVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1CinderPersistentVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1CinderVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1CinderVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1CinderVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ClientIPConfig) SetFake() {
-	var elem IoK8sAPICoreV1ClientIPConfig
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ClientIPConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ConfigMapBinaryData) SetFake() {
-	var elem IoK8sAPICoreV1ConfigMapBinaryData
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ConfigMapBinaryData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ConfigMapData) SetFake() {
-	var elem IoK8sAPICoreV1ConfigMapData
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ConfigMapData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ConfigMapEnvSource) SetFake() {
-	var elem IoK8sAPICoreV1ConfigMapEnvSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ConfigMapEnvSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ConfigMapKeySelector) SetFake() {
-	var elem IoK8sAPICoreV1ConfigMapKeySelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ConfigMapKeySelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ConfigMapNodeConfigSource) SetFake() {
-	var elem IoK8sAPICoreV1ConfigMapNodeConfigSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ConfigMapNodeConfigSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ConfigMapProjection) SetFake() {
-	var elem IoK8sAPICoreV1ConfigMapProjection
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ConfigMapProjection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ConfigMapVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1ConfigMapVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ConfigMapVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ContainerState) SetFake() {
-	var elem IoK8sAPICoreV1ContainerState
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ContainerState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ContainerStateRunning) SetFake() {
-	var elem IoK8sAPICoreV1ContainerStateRunning
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ContainerStateRunning) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ContainerStateTerminated) SetFake() {
-	var elem IoK8sAPICoreV1ContainerStateTerminated
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ContainerStateTerminated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ContainerStateWaiting) SetFake() {
-	var elem IoK8sAPICoreV1ContainerStateWaiting
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ContainerStateWaiting) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1DaemonEndpoint) SetFake() {
-	var elem IoK8sAPICoreV1DaemonEndpoint
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1DaemonEndpoint) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1DownwardAPIProjection) SetFake() {
-	var elem IoK8sAPICoreV1DownwardAPIProjection
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1DownwardAPIProjection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1DownwardAPIVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1DownwardAPIVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1DownwardAPIVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1EmptyDirVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1EmptyDirVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1EmptyDirVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1EnvVarSource) SetFake() {
-	var elem IoK8sAPICoreV1EnvVarSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1EnvVarSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1EphemeralVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1EphemeralVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1EphemeralVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1EventSeries) SetFake() {
-	var elem IoK8sAPICoreV1EventSeries
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1EventSeries) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1EventSource) SetFake() {
-	var elem IoK8sAPICoreV1EventSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1EventSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ExecAction) SetFake() {
-	var elem IoK8sAPICoreV1ExecAction
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ExecAction) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1FCVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1FCVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1FCVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1FlexPersistentVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1FlexPersistentVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1FlexPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1FlexPersistentVolumeSourceOptions) SetFake() {
-	var elem IoK8sAPICoreV1FlexPersistentVolumeSourceOptions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1FlexVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1FlexVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1FlexVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1FlexVolumeSourceOptions) SetFake() {
-	var elem IoK8sAPICoreV1FlexVolumeSourceOptions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1FlexVolumeSourceOptions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1FlockerVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1FlockerVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1FlockerVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1GCEPersistentDiskVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1GCEPersistentDiskVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1GitRepoVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1GitRepoVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1GitRepoVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1GlusterfsPersistentVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1GlusterfsPersistentVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1GlusterfsVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1GlusterfsVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1GlusterfsVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1HTTPGetAction) SetFake() {
-	var elem IoK8sAPICoreV1HTTPGetAction
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1HTTPGetAction) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1Handler) SetFake() {
-	var elem IoK8sAPICoreV1Handler
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1Handler) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1HostPathVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1HostPathVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1HostPathVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ISCSIPersistentVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1ISCSIPersistentVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ISCSIPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ISCSIVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1ISCSIVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ISCSIVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1Lifecycle) SetFake() {
-	var elem IoK8sAPICoreV1Lifecycle
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1Lifecycle) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1LimitRangeItemDefault) SetFake() {
-	var elem IoK8sAPICoreV1LimitRangeItemDefault
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1LimitRangeItemDefault) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1LimitRangeItemDefaultRequest) SetFake() {
-	var elem IoK8sAPICoreV1LimitRangeItemDefaultRequest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1LimitRangeItemMax) SetFake() {
-	var elem IoK8sAPICoreV1LimitRangeItemMax
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1LimitRangeItemMax) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1LimitRangeItemMaxLimitRequestRatio) SetFake() {
-	var elem IoK8sAPICoreV1LimitRangeItemMaxLimitRequestRatio
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1LimitRangeItemMin) SetFake() {
-	var elem IoK8sAPICoreV1LimitRangeItemMin
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1LimitRangeItemMin) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1LimitRangeSpec) SetFake() {
-	var elem IoK8sAPICoreV1LimitRangeSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1LimitRangeSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1LoadBalancerStatus) SetFake() {
-	var elem IoK8sAPICoreV1LoadBalancerStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1LoadBalancerStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1LocalObjectReference) SetFake() {
-	var elem IoK8sAPICoreV1LocalObjectReference
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1LocalObjectReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1LocalVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1LocalVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1LocalVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NFSVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1NFSVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NFSVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NamespaceSpec) SetFake() {
-	var elem IoK8sAPICoreV1NamespaceSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NamespaceSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NamespaceStatus) SetFake() {
-	var elem IoK8sAPICoreV1NamespaceStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NamespaceStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NodeAffinity) SetFake() {
-	var elem IoK8sAPICoreV1NodeAffinity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NodeAffinity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NodeConfigSource) SetFake() {
-	var elem IoK8sAPICoreV1NodeConfigSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NodeConfigSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NodeConfigStatus) SetFake() {
-	var elem IoK8sAPICoreV1NodeConfigStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NodeConfigStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NodeDaemonEndpoints) SetFake() {
-	var elem IoK8sAPICoreV1NodeDaemonEndpoints
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NodeDaemonEndpoints) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NodeSelector) SetFake() {
-	var elem IoK8sAPICoreV1NodeSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NodeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NodeSpec) SetFake() {
-	var elem IoK8sAPICoreV1NodeSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NodeSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NodeStatus) SetFake() {
-	var elem IoK8sAPICoreV1NodeStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NodeStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NodeStatusAllocatable) SetFake() {
-	var elem IoK8sAPICoreV1NodeStatusAllocatable
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NodeStatusAllocatable) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NodeStatusCapacity) SetFake() {
-	var elem IoK8sAPICoreV1NodeStatusCapacity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NodeStatusCapacity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1NodeSystemInfo) SetFake() {
-	var elem IoK8sAPICoreV1NodeSystemInfo
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1NodeSystemInfo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ObjectFieldSelector) SetFake() {
-	var elem IoK8sAPICoreV1ObjectFieldSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ObjectFieldSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ObjectReference) SetFake() {
-	var elem IoK8sAPICoreV1ObjectReference
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ObjectReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PersistentVolumeClaimSpec) SetFake() {
-	var elem IoK8sAPICoreV1PersistentVolumeClaimSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PersistentVolumeClaimSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PersistentVolumeClaimStatus) SetFake() {
-	var elem IoK8sAPICoreV1PersistentVolumeClaimStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PersistentVolumeClaimStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1PersistentVolumeClaimStatusCapacity) SetFake() {
-	var elem IoK8sAPICoreV1PersistentVolumeClaimStatusCapacity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1PersistentVolumeClaimTemplate) SetFake() {
-	var elem IoK8sAPICoreV1PersistentVolumeClaimTemplate
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1PersistentVolumeClaimVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1PersistentVolumeClaimVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PersistentVolumeSpec) SetFake() {
-	var elem IoK8sAPICoreV1PersistentVolumeSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PersistentVolumeSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1PersistentVolumeSpecCapacity) SetFake() {
-	var elem IoK8sAPICoreV1PersistentVolumeSpecCapacity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PersistentVolumeStatus) SetFake() {
-	var elem IoK8sAPICoreV1PersistentVolumeStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PersistentVolumeStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1PhotonPersistentDiskVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1PhotonPersistentDiskVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PodAffinity) SetFake() {
-	var elem IoK8sAPICoreV1PodAffinity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PodAffinity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PodAntiAffinity) SetFake() {
-	var elem IoK8sAPICoreV1PodAntiAffinity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PodAntiAffinity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PodDNSConfig) SetFake() {
-	var elem IoK8sAPICoreV1PodDNSConfig
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PodDNSConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PodSecurityContext) SetFake() {
-	var elem IoK8sAPICoreV1PodSecurityContext
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PodSecurityContext) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PodSpec) SetFake() {
-	var elem IoK8sAPICoreV1PodSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PodSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PodSpecNodeSelector) SetFake() {
-	var elem IoK8sAPICoreV1PodSpecNodeSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PodSpecNodeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PodSpecOverhead) SetFake() {
-	var elem IoK8sAPICoreV1PodSpecOverhead
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PodSpecOverhead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PodStatus) SetFake() {
-	var elem IoK8sAPICoreV1PodStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PodStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PodTemplateSpec) SetFake() {
-	var elem IoK8sAPICoreV1PodTemplateSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PodTemplateSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1PortworxVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1PortworxVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1PortworxVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1Probe) SetFake() {
-	var elem IoK8sAPICoreV1Probe
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1Probe) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ProjectedVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1ProjectedVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ProjectedVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1QuobyteVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1QuobyteVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1QuobyteVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1RBDPersistentVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1RBDPersistentVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1RBDPersistentVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1RBDVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1RBDVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1RBDVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ReplicationControllerSpec) SetFake() {
-	var elem IoK8sAPICoreV1ReplicationControllerSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ReplicationControllerSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1ReplicationControllerSpecSelector) SetFake() {
-	var elem IoK8sAPICoreV1ReplicationControllerSpecSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ReplicationControllerStatus) SetFake() {
-	var elem IoK8sAPICoreV1ReplicationControllerStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ReplicationControllerStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ResourceFieldSelector) SetFake() {
-	var elem IoK8sAPICoreV1ResourceFieldSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ResourceFieldSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ResourceQuotaSpec) SetFake() {
-	var elem IoK8sAPICoreV1ResourceQuotaSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ResourceQuotaSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ResourceQuotaSpecHard) SetFake() {
-	var elem IoK8sAPICoreV1ResourceQuotaSpecHard
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ResourceQuotaSpecHard) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ResourceQuotaStatus) SetFake() {
-	var elem IoK8sAPICoreV1ResourceQuotaStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ResourceQuotaStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ResourceQuotaStatusHard) SetFake() {
-	var elem IoK8sAPICoreV1ResourceQuotaStatusHard
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ResourceQuotaStatusHard) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ResourceQuotaStatusUsed) SetFake() {
-	var elem IoK8sAPICoreV1ResourceQuotaStatusUsed
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ResourceQuotaStatusUsed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ResourceRequirements) SetFake() {
-	var elem IoK8sAPICoreV1ResourceRequirements
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ResourceRequirements) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ResourceRequirementsLimits) SetFake() {
-	var elem IoK8sAPICoreV1ResourceRequirementsLimits
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ResourceRequirementsLimits) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1ResourceRequirementsRequests) SetFake() {
-	var elem IoK8sAPICoreV1ResourceRequirementsRequests
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SELinuxOptions) SetFake() {
-	var elem IoK8sAPICoreV1SELinuxOptions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SELinuxOptions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1ScaleIOPersistentVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1ScaleIOPersistentVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ScaleIOVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1ScaleIOVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ScaleIOVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ScopeSelector) SetFake() {
-	var elem IoK8sAPICoreV1ScopeSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ScopeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SeccompProfile) SetFake() {
-	var elem IoK8sAPICoreV1SeccompProfile
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SeccompProfile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SecretData) SetFake() {
-	var elem IoK8sAPICoreV1SecretData
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SecretData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SecretEnvSource) SetFake() {
-	var elem IoK8sAPICoreV1SecretEnvSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SecretEnvSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SecretKeySelector) SetFake() {
-	var elem IoK8sAPICoreV1SecretKeySelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SecretKeySelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SecretProjection) SetFake() {
-	var elem IoK8sAPICoreV1SecretProjection
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SecretProjection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SecretReference) SetFake() {
-	var elem IoK8sAPICoreV1SecretReference
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SecretReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SecretStringData) SetFake() {
-	var elem IoK8sAPICoreV1SecretStringData
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SecretStringData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SecretVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1SecretVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SecretVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SecurityContext) SetFake() {
-	var elem IoK8sAPICoreV1SecurityContext
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SecurityContext) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1ServiceAccountTokenProjection) SetFake() {
-	var elem IoK8sAPICoreV1ServiceAccountTokenProjection
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ServiceSpec) SetFake() {
-	var elem IoK8sAPICoreV1ServiceSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ServiceSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ServiceSpecSelector) SetFake() {
-	var elem IoK8sAPICoreV1ServiceSpecSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ServiceSpecSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1ServiceStatus) SetFake() {
-	var elem IoK8sAPICoreV1ServiceStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1ServiceStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1SessionAffinityConfig) SetFake() {
-	var elem IoK8sAPICoreV1SessionAffinityConfig
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1SessionAffinityConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1StorageOSPersistentVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1StorageOSPersistentVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1StorageOSVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1StorageOSVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1StorageOSVolumeSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1TCPSocketAction) SetFake() {
-	var elem IoK8sAPICoreV1TCPSocketAction
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1TCPSocketAction) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1TypedLocalObjectReference) SetFake() {
-	var elem IoK8sAPICoreV1TypedLocalObjectReference
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1TypedLocalObjectReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPICoreV1VolumeNodeAffinity) SetFake() {
-	var elem IoK8sAPICoreV1VolumeNodeAffinity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPICoreV1VolumeNodeAffinity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1VsphereVirtualDiskVolumeSource) SetFake() {
-	var elem IoK8sAPICoreV1VsphereVirtualDiskVolumeSource
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPICoreV1WindowsSecurityContextOptions) SetFake() {
-	var elem IoK8sAPICoreV1WindowsSecurityContextOptions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIDiscoveryV1EndpointConditions) SetFake() {
-	var elem IoK8sAPIDiscoveryV1EndpointConditions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIDiscoveryV1EndpointConditions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIDiscoveryV1EndpointDeprecatedTopology) SetFake() {
-	var elem IoK8sAPIDiscoveryV1EndpointDeprecatedTopology
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIDiscoveryV1EndpointHints) SetFake() {
-	var elem IoK8sAPIDiscoveryV1EndpointHints
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIDiscoveryV1EndpointHints) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIDiscoveryV1beta1EndpointConditions) SetFake() {
-	var elem IoK8sAPIDiscoveryV1beta1EndpointConditions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIDiscoveryV1beta1EndpointHints) SetFake() {
-	var elem IoK8sAPIDiscoveryV1beta1EndpointHints
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIDiscoveryV1beta1EndpointHints) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIDiscoveryV1beta1EndpointTopology) SetFake() {
-	var elem IoK8sAPIDiscoveryV1beta1EndpointTopology
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIDiscoveryV1beta1EndpointTopology) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIEventsV1EventSeries) SetFake() {
-	var elem IoK8sAPIEventsV1EventSeries
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIEventsV1EventSeries) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIEventsV1beta1EventSeries) SetFake() {
-	var elem IoK8sAPIEventsV1beta1EventSeries
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIEventsV1beta1EventSeries) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta1FlowDistinguisherMethod) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1FlowDistinguisherMethod
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIFlowcontrolV1beta1FlowSchemaSpec) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1FlowSchemaSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIFlowcontrolV1beta1FlowSchemaSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta1FlowSchemaStatus) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1FlowSchemaStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIFlowcontrolV1beta1GroupSubject) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1GroupSubject
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIFlowcontrolV1beta1GroupSubject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIFlowcontrolV1beta1LimitResponse) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1LimitResponse
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIFlowcontrolV1beta1LimitResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta1LimitedPriorityLevelConfiguration) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1LimitedPriorityLevelConfiguration
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta1PriorityLevelConfigurationSpec) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1PriorityLevelConfigurationSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta1PriorityLevelConfigurationStatus) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1PriorityLevelConfigurationStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta1QueuingConfiguration) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1QueuingConfiguration
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta1ServiceAccountSubject) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1ServiceAccountSubject
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIFlowcontrolV1beta1UserSubject) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta1UserSubject
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIFlowcontrolV1beta1UserSubject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta2FlowDistinguisherMethod) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2FlowDistinguisherMethod
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIFlowcontrolV1beta2FlowSchemaSpec) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2FlowSchemaSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIFlowcontrolV1beta2FlowSchemaSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta2FlowSchemaStatus) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2FlowSchemaStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIFlowcontrolV1beta2GroupSubject) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2GroupSubject
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIFlowcontrolV1beta2GroupSubject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIFlowcontrolV1beta2LimitResponse) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2LimitResponse
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIFlowcontrolV1beta2LimitResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta2LimitedPriorityLevelConfiguration) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2LimitedPriorityLevelConfiguration
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta2PriorityLevelConfigurationSpec) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2PriorityLevelConfigurationSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta2PriorityLevelConfigurationStatus) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2PriorityLevelConfigurationStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta2QueuingConfiguration) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2QueuingConfiguration
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIFlowcontrolV1beta2ServiceAccountSubject) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2ServiceAccountSubject
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIFlowcontrolV1beta2UserSubject) SetFake() {
-	var elem IoK8sAPIFlowcontrolV1beta2UserSubject
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIFlowcontrolV1beta2UserSubject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINetworkingV1HTTPIngressRuleValue) SetFake() {
-	var elem IoK8sAPINetworkingV1HTTPIngressRuleValue
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINetworkingV1HTTPIngressRuleValue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINetworkingV1IPBlock) SetFake() {
-	var elem IoK8sAPINetworkingV1IPBlock
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINetworkingV1IPBlock) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINetworkingV1IngressBackend) SetFake() {
-	var elem IoK8sAPINetworkingV1IngressBackend
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINetworkingV1IngressBackend) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPINetworkingV1IngressClassParametersReference) SetFake() {
-	var elem IoK8sAPINetworkingV1IngressClassParametersReference
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINetworkingV1IngressClassSpec) SetFake() {
-	var elem IoK8sAPINetworkingV1IngressClassSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINetworkingV1IngressClassSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINetworkingV1IngressServiceBackend) SetFake() {
-	var elem IoK8sAPINetworkingV1IngressServiceBackend
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINetworkingV1IngressServiceBackend) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINetworkingV1IngressSpec) SetFake() {
-	var elem IoK8sAPINetworkingV1IngressSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINetworkingV1IngressSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINetworkingV1IngressStatus) SetFake() {
-	var elem IoK8sAPINetworkingV1IngressStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINetworkingV1IngressStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINetworkingV1NetworkPolicySpec) SetFake() {
-	var elem IoK8sAPINetworkingV1NetworkPolicySpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINetworkingV1NetworkPolicySpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINetworkingV1ServiceBackendPort) SetFake() {
-	var elem IoK8sAPINetworkingV1ServiceBackendPort
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINetworkingV1ServiceBackendPort) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1Overhead) SetFake() {
-	var elem IoK8sAPINodeV1Overhead
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1Overhead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1OverheadPodFixed) SetFake() {
-	var elem IoK8sAPINodeV1OverheadPodFixed
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1OverheadPodFixed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1Scheduling) SetFake() {
-	var elem IoK8sAPINodeV1Scheduling
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1Scheduling) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1SchedulingNodeSelector) SetFake() {
-	var elem IoK8sAPINodeV1SchedulingNodeSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1SchedulingNodeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1alpha1Overhead) SetFake() {
-	var elem IoK8sAPINodeV1alpha1Overhead
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1alpha1Overhead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1alpha1OverheadPodFixed) SetFake() {
-	var elem IoK8sAPINodeV1alpha1OverheadPodFixed
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1alpha1OverheadPodFixed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1alpha1Scheduling) SetFake() {
-	var elem IoK8sAPINodeV1alpha1Scheduling
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1alpha1Scheduling) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPINodeV1alpha1SchedulingNodeSelector) SetFake() {
-	var elem IoK8sAPINodeV1alpha1SchedulingNodeSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1beta1Overhead) SetFake() {
-	var elem IoK8sAPINodeV1beta1Overhead
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1beta1Overhead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1beta1OverheadPodFixed) SetFake() {
-	var elem IoK8sAPINodeV1beta1OverheadPodFixed
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1beta1OverheadPodFixed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1beta1Scheduling) SetFake() {
-	var elem IoK8sAPINodeV1beta1Scheduling
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1beta1Scheduling) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPINodeV1beta1SchedulingNodeSelector) SetFake() {
-	var elem IoK8sAPINodeV1beta1SchedulingNodeSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPINodeV1beta1SchedulingNodeSelector) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIPolicyV1PodDisruptionBudgetSpec) SetFake() {
-	var elem IoK8sAPIPolicyV1PodDisruptionBudgetSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIPolicyV1PodDisruptionBudgetSpec) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIPolicyV1PodDisruptionBudgetStatus) SetFake() {
-	var elem IoK8sAPIPolicyV1PodDisruptionBudgetStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIPolicyV1PodDisruptionBudgetStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIPolicyV1PodDisruptionBudgetStatusDisruptedPods) SetFake() {
-	var elem IoK8sAPIPolicyV1PodDisruptionBudgetStatusDisruptedPods
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIPolicyV1beta1PodDisruptionBudgetSpec) SetFake() {
-	var elem IoK8sAPIPolicyV1beta1PodDisruptionBudgetSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIPolicyV1beta1PodDisruptionBudgetStatus) SetFake() {
-	var elem IoK8sAPIPolicyV1beta1PodDisruptionBudgetStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIPolicyV1beta1PodDisruptionBudgetStatusDisruptedPods) SetFake() {
-	var elem IoK8sAPIPolicyV1beta1PodDisruptionBudgetStatusDisruptedPods
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIPolicyV1beta1PodSecurityPolicySpec) SetFake() {
-	var elem IoK8sAPIPolicyV1beta1PodSecurityPolicySpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIPolicyV1beta1RunAsGroupStrategyOptions) SetFake() {
-	var elem IoK8sAPIPolicyV1beta1RunAsGroupStrategyOptions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIPolicyV1beta1RuntimeClassStrategyOptions) SetFake() {
-	var elem IoK8sAPIPolicyV1beta1RuntimeClassStrategyOptions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIRbacV1AggregationRule) SetFake() {
-	var elem IoK8sAPIRbacV1AggregationRule
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIRbacV1AggregationRule) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIStorageV1StorageClassParameters) SetFake() {
-	var elem IoK8sAPIStorageV1StorageClassParameters
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIStorageV1StorageClassParameters) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIStorageV1VolumeAttachmentStatus) SetFake() {
-	var elem IoK8sAPIStorageV1VolumeAttachmentStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIStorageV1VolumeAttachmentStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sAPIStorageV1VolumeAttachmentStatusAttachmentMetadata) SetFake() {
-	var elem IoK8sAPIStorageV1VolumeAttachmentStatusAttachmentMetadata
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIStorageV1VolumeError) SetFake() {
-	var elem IoK8sAPIStorageV1VolumeError
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIStorageV1VolumeError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sAPIStorageV1VolumeNodeResources) SetFake() {
-	var elem IoK8sAPIStorageV1VolumeNodeResources
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sAPIStorageV1VolumeNodeResources) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceConversion) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceConversion
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionNames) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionNames
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionStatus) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinitionStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresourceScale) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresourceScale
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresources) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceSubresources
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceValidation) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceValidation
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1ExternalDocumentation) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1ExternalDocumentation
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaProps
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsDefinitions) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsDefinitions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsDependencies) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsDependencies
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsPatternProperties) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsPatternProperties
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsProperties) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1JSONSchemaPropsProperties
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1ServiceReference) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1ServiceReference
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookClientConfig) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookClientConfig
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookConversion) SetFake() {
-	var elem IoK8sApiextensionsApiserverPkgApisApiextensionsV1WebhookConversion
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sApimachineryPkgAPIResourceQuantity) SetFake() {
-	var elem IoK8sApimachineryPkgAPIResourceQuantity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sApimachineryPkgAPIResourceQuantity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sApimachineryPkgApisMetaV1GroupVersionForDiscovery) SetFake() {
-	var elem IoK8sApimachineryPkgApisMetaV1GroupVersionForDiscovery
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApimachineryPkgApisMetaV1LabelSelector) SetFake() {
-	var elem IoK8sApimachineryPkgApisMetaV1LabelSelector
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApimachineryPkgApisMetaV1LabelSelectorMatchLabels) SetFake() {
-	var elem IoK8sApimachineryPkgApisMetaV1LabelSelectorMatchLabels
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sApimachineryPkgApisMetaV1ListMeta) SetFake() {
-	var elem IoK8sApimachineryPkgApisMetaV1ListMeta
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sApimachineryPkgApisMetaV1ListMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sApimachineryPkgApisMetaV1MicroTime) SetFake() {
-	var elem IoK8sApimachineryPkgApisMetaV1MicroTime
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sApimachineryPkgApisMetaV1MicroTime) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sApimachineryPkgApisMetaV1ObjectMeta) SetFake() {
-	var elem IoK8sApimachineryPkgApisMetaV1ObjectMeta
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sApimachineryPkgApisMetaV1ObjectMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sApimachineryPkgApisMetaV1ObjectMetaAnnotations) SetFake() {
-	var elem IoK8sApimachineryPkgApisMetaV1ObjectMetaAnnotations
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sApimachineryPkgApisMetaV1ObjectMetaLabels) SetFake() {
-	var elem IoK8sApimachineryPkgApisMetaV1ObjectMetaLabels
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptIoK8sApimachineryPkgApisMetaV1Time) SetFake() {
-	var elem IoK8sApimachineryPkgApisMetaV1Time
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sApimachineryPkgApisMetaV1Time) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIoK8sApimachineryPkgUtilIntstrIntOrString) SetFake() {
-	var elem IoK8sApimachineryPkgUtilIntstrIntOrString
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIoK8sApimachineryPkgUtilIntstrIntOrString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptIoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceSpec) SetFake() {
-	var elem IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceSpec
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceStatus) SetFake() {
-	var elem IoK8sKubeAggregatorPkgApisApiregistrationV1APIServiceStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptIoK8sKubeAggregatorPkgApisApiregistrationV1ServiceReference) SetFake() {
-	var elem IoK8sKubeAggregatorPkgApisApiregistrationV1ServiceReference
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptString) SetFake() {
-	var elem string
-	{
-		elem = "string"
-	}
-	s.SetTo(elem)
-}
+func (s *OptString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAdmissionregistrationV1MutatingWebhookConfigurationApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAdmissionregistrationV1MutatingWebhookConfigurationApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAdmissionregistrationV1MutatingWebhookConfigurationApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAdmissionregistrationV1MutatingWebhookConfigurationApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAdmissionregistrationV1MutatingWebhookConfigurationApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAdmissionregistrationV1MutatingWebhookConfigurationApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAdmissionregistrationV1MutatingWebhookConfigurationCreated) SetFake() {
-	var unwrapped IoK8sAPIAdmissionregistrationV1MutatingWebhookConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAdmissionregistrationV1MutatingWebhookConfigurationCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAdmissionregistrationV1MutatingWebhookConfigurationOK) SetFake() {
-	var unwrapped IoK8sAPIAdmissionregistrationV1MutatingWebhookConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAdmissionregistrationV1MutatingWebhookConfigurationOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAdmissionregistrationV1ValidatingWebhookConfigurationApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAdmissionregistrationV1ValidatingWebhookConfigurationApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAdmissionregistrationV1ValidatingWebhookConfigurationApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAdmissionregistrationV1ValidatingWebhookConfigurationApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAdmissionregistrationV1ValidatingWebhookConfigurationApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAdmissionregistrationV1ValidatingWebhookConfigurationApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAdmissionregistrationV1ValidatingWebhookConfigurationCreated) SetFake() {
-	var unwrapped IoK8sAPIAdmissionregistrationV1ValidatingWebhookConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAdmissionregistrationV1ValidatingWebhookConfigurationCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAdmissionregistrationV1ValidatingWebhookConfigurationOK) SetFake() {
-	var unwrapped IoK8sAPIAdmissionregistrationV1ValidatingWebhookConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAdmissionregistrationV1ValidatingWebhookConfigurationOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiextensionsV1CustomResourceDefinitionApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiextensionsV1CustomResourceDefinitionApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiextensionsV1CustomResourceDefinitionApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiextensionsV1CustomResourceDefinitionApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiextensionsV1CustomResourceDefinitionApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiextensionsV1CustomResourceDefinitionApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiextensionsV1CustomResourceDefinitionCreated) SetFake() {
-	var unwrapped IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinition
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiextensionsV1CustomResourceDefinitionCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiextensionsV1CustomResourceDefinitionOK) SetFake() {
-	var unwrapped IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinition
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiextensionsV1CustomResourceDefinitionOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiextensionsV1CustomResourceDefinitionStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiextensionsV1CustomResourceDefinitionStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiextensionsV1CustomResourceDefinitionStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiextensionsV1CustomResourceDefinitionStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiextensionsV1CustomResourceDefinitionStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiextensionsV1CustomResourceDefinitionStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiextensionsV1CustomResourceDefinitionStatusCreated) SetFake() {
-	var unwrapped IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinition
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiextensionsV1CustomResourceDefinitionStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiextensionsV1CustomResourceDefinitionStatusOK) SetFake() {
-	var unwrapped IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceDefinition
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiextensionsV1CustomResourceDefinitionStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiregistrationV1APIServiceApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiregistrationV1APIServiceApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiregistrationV1APIServiceApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiregistrationV1APIServiceApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiregistrationV1APIServiceApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiregistrationV1APIServiceApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchApiregistrationV1APIServiceCreated) SetFake() {
-	var unwrapped IoK8sKubeAggregatorPkgApisApiregistrationV1APIService
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiregistrationV1APIServiceCreated(unwrapped)
-}
+func (s *PatchApiregistrationV1APIServiceCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchApiregistrationV1APIServiceOK) SetFake() {
-	var unwrapped IoK8sKubeAggregatorPkgApisApiregistrationV1APIService
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiregistrationV1APIServiceOK(unwrapped)
-}
+func (s *PatchApiregistrationV1APIServiceOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchApiregistrationV1APIServiceStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiregistrationV1APIServiceStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiregistrationV1APIServiceStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiregistrationV1APIServiceStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiregistrationV1APIServiceStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiregistrationV1APIServiceStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchApiregistrationV1APIServiceStatusCreated) SetFake() {
-	var unwrapped IoK8sKubeAggregatorPkgApisApiregistrationV1APIService
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiregistrationV1APIServiceStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchApiregistrationV1APIServiceStatusOK) SetFake() {
-	var unwrapped IoK8sKubeAggregatorPkgApisApiregistrationV1APIService
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchApiregistrationV1APIServiceStatusOK(unwrapped)
-}
+func (s *PatchApiregistrationV1APIServiceStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedControllerRevisionApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedControllerRevisionApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedControllerRevisionApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedControllerRevisionApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedControllerRevisionApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedControllerRevisionApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedControllerRevisionCreated) SetFake() {
-	var unwrapped IoK8sAPIAppsV1ControllerRevision
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedControllerRevisionCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedControllerRevisionOK) SetFake() {
-	var unwrapped IoK8sAPIAppsV1ControllerRevision
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedControllerRevisionOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedControllerRevisionOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDaemonSetApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDaemonSetApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDaemonSetApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDaemonSetApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDaemonSetApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDaemonSetApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedDaemonSetCreated) SetFake() {
-	var unwrapped IoK8sAPIAppsV1DaemonSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDaemonSetCreated(unwrapped)
-}
+func (s *PatchAppsV1NamespacedDaemonSetCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedDaemonSetOK) SetFake() {
-	var unwrapped IoK8sAPIAppsV1DaemonSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDaemonSetOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedDaemonSetOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDaemonSetStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDaemonSetStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDaemonSetStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDaemonSetStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDaemonSetStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDaemonSetStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedDaemonSetStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIAppsV1DaemonSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDaemonSetStatusCreated(unwrapped)
-}
+func (s *PatchAppsV1NamespacedDaemonSetStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedDaemonSetStatusOK) SetFake() {
-	var unwrapped IoK8sAPIAppsV1DaemonSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDaemonSetStatusOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedDaemonSetStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDeploymentApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDeploymentApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDeploymentApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedDeploymentCreated) SetFake() {
-	var unwrapped IoK8sAPIAppsV1Deployment
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentCreated(unwrapped)
-}
+func (s *PatchAppsV1NamespacedDeploymentCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedDeploymentOK) SetFake() {
-	var unwrapped IoK8sAPIAppsV1Deployment
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedDeploymentOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDeploymentScaleApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentScaleApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDeploymentScaleApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentScaleApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDeploymentScaleApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentScaleApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedDeploymentScaleCreated) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1Scale
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentScaleCreated(unwrapped)
-}
+func (s *PatchAppsV1NamespacedDeploymentScaleCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedDeploymentScaleOK) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1Scale
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentScaleOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedDeploymentScaleOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDeploymentStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDeploymentStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedDeploymentStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedDeploymentStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIAppsV1Deployment
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentStatusCreated(unwrapped)
-}
+func (s *PatchAppsV1NamespacedDeploymentStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedDeploymentStatusOK) SetFake() {
-	var unwrapped IoK8sAPIAppsV1Deployment
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedDeploymentStatusOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedDeploymentStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedReplicaSetApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedReplicaSetApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedReplicaSetApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedReplicaSetCreated) SetFake() {
-	var unwrapped IoK8sAPIAppsV1ReplicaSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetCreated(unwrapped)
-}
+func (s *PatchAppsV1NamespacedReplicaSetCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedReplicaSetOK) SetFake() {
-	var unwrapped IoK8sAPIAppsV1ReplicaSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedReplicaSetOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedReplicaSetScaleApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetScaleApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedReplicaSetScaleApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetScaleApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedReplicaSetScaleApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetScaleApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedReplicaSetScaleCreated) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1Scale
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetScaleCreated(unwrapped)
-}
+func (s *PatchAppsV1NamespacedReplicaSetScaleCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedReplicaSetScaleOK) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1Scale
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetScaleOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedReplicaSetScaleOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedReplicaSetStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedReplicaSetStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedReplicaSetStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedReplicaSetStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIAppsV1ReplicaSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetStatusCreated(unwrapped)
-}
+func (s *PatchAppsV1NamespacedReplicaSetStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedReplicaSetStatusOK) SetFake() {
-	var unwrapped IoK8sAPIAppsV1ReplicaSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedReplicaSetStatusOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedReplicaSetStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedStatefulSetApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedStatefulSetApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedStatefulSetApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedStatefulSetCreated) SetFake() {
-	var unwrapped IoK8sAPIAppsV1StatefulSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetCreated(unwrapped)
-}
+func (s *PatchAppsV1NamespacedStatefulSetCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedStatefulSetOK) SetFake() {
-	var unwrapped IoK8sAPIAppsV1StatefulSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedStatefulSetOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedStatefulSetScaleApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetScaleApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedStatefulSetScaleApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetScaleApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedStatefulSetScaleApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetScaleApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedStatefulSetScaleCreated) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1Scale
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetScaleCreated(unwrapped)
-}
+func (s *PatchAppsV1NamespacedStatefulSetScaleCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedStatefulSetScaleOK) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1Scale
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetScaleOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedStatefulSetScaleOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedStatefulSetStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedStatefulSetStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedStatefulSetStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAppsV1NamespacedStatefulSetStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIAppsV1StatefulSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchAppsV1NamespacedStatefulSetStatusOK) SetFake() {
-	var unwrapped IoK8sAPIAppsV1StatefulSet
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAppsV1NamespacedStatefulSetStatusOK(unwrapped)
-}
+func (s *PatchAppsV1NamespacedStatefulSetStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV1NamespacedHorizontalPodAutoscalerApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV1NamespacedHorizontalPodAutoscalerApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV1NamespacedHorizontalPodAutoscalerApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV1NamespacedHorizontalPodAutoscalerCreated) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV1NamespacedHorizontalPodAutoscalerOK) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusOK) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerCreated) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerOK) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusOK) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV2beta1HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerCreated) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerOK) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusOK) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV2beta2HorizontalPodAutoscaler
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedCronJobApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedCronJobApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedCronJobApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedCronJobApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedCronJobApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedCronJobApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchBatchV1NamespacedCronJobCreated) SetFake() {
-	var unwrapped IoK8sAPIBatchV1CronJob
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedCronJobCreated(unwrapped)
-}
+func (s *PatchBatchV1NamespacedCronJobCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchBatchV1NamespacedCronJobOK) SetFake() {
-	var unwrapped IoK8sAPIBatchV1CronJob
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedCronJobOK(unwrapped)
-}
+func (s *PatchBatchV1NamespacedCronJobOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedCronJobStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedCronJobStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedCronJobStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedCronJobStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedCronJobStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedCronJobStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchBatchV1NamespacedCronJobStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIBatchV1CronJob
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedCronJobStatusCreated(unwrapped)
-}
+func (s *PatchBatchV1NamespacedCronJobStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchBatchV1NamespacedCronJobStatusOK) SetFake() {
-	var unwrapped IoK8sAPIBatchV1CronJob
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedCronJobStatusOK(unwrapped)
-}
+func (s *PatchBatchV1NamespacedCronJobStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedJobApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedJobApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedJobApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedJobApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedJobApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedJobApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchBatchV1NamespacedJobCreated) SetFake() {
-	var unwrapped IoK8sAPIBatchV1Job
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedJobCreated(unwrapped)
-}
+func (s *PatchBatchV1NamespacedJobCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchBatchV1NamespacedJobOK) SetFake() {
-	var unwrapped IoK8sAPIBatchV1Job
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedJobOK(unwrapped)
-}
+func (s *PatchBatchV1NamespacedJobOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedJobStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedJobStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedJobStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedJobStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1NamespacedJobStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedJobStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchBatchV1NamespacedJobStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIBatchV1Job
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedJobStatusCreated(unwrapped)
-}
+func (s *PatchBatchV1NamespacedJobStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchBatchV1NamespacedJobStatusOK) SetFake() {
-	var unwrapped IoK8sAPIBatchV1Job
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1NamespacedJobStatusOK(unwrapped)
-}
+func (s *PatchBatchV1NamespacedJobStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchBatchV1beta1NamespacedCronJobApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1beta1NamespacedCronJobApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1beta1NamespacedCronJobApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1beta1NamespacedCronJobApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1beta1NamespacedCronJobApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1beta1NamespacedCronJobApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchBatchV1beta1NamespacedCronJobCreated) SetFake() {
-	var unwrapped IoK8sAPIBatchV1beta1CronJob
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1beta1NamespacedCronJobCreated(unwrapped)
-}
+func (s *PatchBatchV1beta1NamespacedCronJobCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchBatchV1beta1NamespacedCronJobOK) SetFake() {
-	var unwrapped IoK8sAPIBatchV1beta1CronJob
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1beta1NamespacedCronJobOK(unwrapped)
-}
+func (s *PatchBatchV1beta1NamespacedCronJobOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchBatchV1beta1NamespacedCronJobStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1beta1NamespacedCronJobStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1beta1NamespacedCronJobStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1beta1NamespacedCronJobStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1beta1NamespacedCronJobStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1beta1NamespacedCronJobStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchBatchV1beta1NamespacedCronJobStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIBatchV1beta1CronJob
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1beta1NamespacedCronJobStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchBatchV1beta1NamespacedCronJobStatusOK) SetFake() {
-	var unwrapped IoK8sAPIBatchV1beta1CronJob
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchBatchV1beta1NamespacedCronJobStatusOK(unwrapped)
-}
+func (s *PatchBatchV1beta1NamespacedCronJobStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestApprovalApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestApprovalApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestApprovalApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestApprovalApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestApprovalApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestApprovalApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestApprovalCreated) SetFake() {
-	var unwrapped IoK8sAPICertificatesV1CertificateSigningRequest
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestApprovalCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestApprovalOK) SetFake() {
-	var unwrapped IoK8sAPICertificatesV1CertificateSigningRequest
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestApprovalOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestCreated) SetFake() {
-	var unwrapped IoK8sAPICertificatesV1CertificateSigningRequest
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestOK) SetFake() {
-	var unwrapped IoK8sAPICertificatesV1CertificateSigningRequest
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestStatusCreated) SetFake() {
-	var unwrapped IoK8sAPICertificatesV1CertificateSigningRequest
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCertificatesV1CertificateSigningRequestStatusOK) SetFake() {
-	var unwrapped IoK8sAPICertificatesV1CertificateSigningRequest
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCertificatesV1CertificateSigningRequestStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoordinationV1NamespacedLeaseApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoordinationV1NamespacedLeaseApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoordinationV1NamespacedLeaseApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoordinationV1NamespacedLeaseApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoordinationV1NamespacedLeaseApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoordinationV1NamespacedLeaseApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoordinationV1NamespacedLeaseCreated) SetFake() {
-	var unwrapped IoK8sAPICoordinationV1Lease
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoordinationV1NamespacedLeaseCreated(unwrapped)
-}
+func (s *PatchCoordinationV1NamespacedLeaseCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoordinationV1NamespacedLeaseOK) SetFake() {
-	var unwrapped IoK8sAPICoordinationV1Lease
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoordinationV1NamespacedLeaseOK(unwrapped)
-}
+func (s *PatchCoordinationV1NamespacedLeaseOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespaceApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespaceApplicationJSONPatchJSON(unwrapped)
-}
+func (s *PatchCoreV1NamespaceApplicationJSONPatchJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespaceApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespaceApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespaceApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespaceApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespaceCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Namespace
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespaceCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespaceCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespaceOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Namespace
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespaceOK(unwrapped)
-}
+func (s *PatchCoreV1NamespaceOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespaceStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespaceStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespaceStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespaceStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespaceStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespaceStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespaceStatusCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Namespace
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespaceStatusCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespaceStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespaceStatusOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Namespace
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespaceStatusOK(unwrapped)
-}
+func (s *PatchCoreV1NamespaceStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedConfigMapApplicationJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedConfigMapApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedConfigMapApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedConfigMapApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedConfigMapApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedConfigMapApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedConfigMapCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1ConfigMap
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedConfigMapCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedConfigMapCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedConfigMapOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1ConfigMap
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedConfigMapOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedConfigMapOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedEndpointsApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedEndpointsApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedEndpointsApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedEndpointsApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedEndpointsApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedEndpointsApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedEndpointsCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Endpoints
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedEndpointsCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedEndpointsCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedEndpointsOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Endpoints
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedEndpointsOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedEndpointsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedEventApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedEventApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedEventApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedEventApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedEventApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedEventApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedEventCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Event
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedEventCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedEventCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedEventOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Event
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedEventOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedEventOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedLimitRangeApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedLimitRangeApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedLimitRangeApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedLimitRangeApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedLimitRangeApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedLimitRangeApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedLimitRangeCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1LimitRange
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedLimitRangeCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedLimitRangeCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedLimitRangeOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1LimitRange
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedLimitRangeOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedLimitRangeOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPersistentVolumeClaimApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPersistentVolumeClaimApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPersistentVolumeClaimApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPersistentVolumeClaimApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPersistentVolumeClaimApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPersistentVolumeClaimApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPersistentVolumeClaimCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1PersistentVolumeClaim
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPersistentVolumeClaimCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedPersistentVolumeClaimOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1PersistentVolumeClaim
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPersistentVolumeClaimOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedPersistentVolumeClaimOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPersistentVolumeClaimStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPersistentVolumeClaimStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPersistentVolumeClaimStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPersistentVolumeClaimStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPersistentVolumeClaimStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPersistentVolumeClaimStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPersistentVolumeClaimStatusCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1PersistentVolumeClaim
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPersistentVolumeClaimStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPersistentVolumeClaimStatusOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1PersistentVolumeClaim
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPersistentVolumeClaimStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedPodCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Pod
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedPodCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodEphemeralcontainersApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodEphemeralcontainersApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodEphemeralcontainersApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodEphemeralcontainersApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodEphemeralcontainersApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodEphemeralcontainersApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodEphemeralcontainersCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Pod
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodEphemeralcontainersCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodEphemeralcontainersOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Pod
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodEphemeralcontainersOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedPodOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Pod
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedPodOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedPodStatusCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Pod
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodStatusCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedPodStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedPodStatusOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Pod
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodStatusOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedPodStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodTemplateApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodTemplateApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodTemplateApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodTemplateApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedPodTemplateApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodTemplateApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedPodTemplateCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1PodTemplate
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodTemplateCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedPodTemplateCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedPodTemplateOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1PodTemplate
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedPodTemplateOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedPodTemplateOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1ReplicationController
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedReplicationControllerOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1ReplicationController
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedReplicationControllerOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerScaleApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerScaleApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerScaleApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerScaleApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerScaleApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerScaleApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerScaleCreated) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1Scale
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerScaleCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerScaleOK) SetFake() {
-	var unwrapped IoK8sAPIAutoscalingV1Scale
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerScaleOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerStatusCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1ReplicationController
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedReplicationControllerStatusOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1ReplicationController
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedReplicationControllerStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedResourceQuotaApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedResourceQuotaApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedResourceQuotaApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedResourceQuotaApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedResourceQuotaApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedResourceQuotaApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedResourceQuotaCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1ResourceQuota
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedResourceQuotaCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedResourceQuotaCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedResourceQuotaOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1ResourceQuota
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedResourceQuotaOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedResourceQuotaOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedResourceQuotaStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedResourceQuotaStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedResourceQuotaStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedResourceQuotaStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedResourceQuotaStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedResourceQuotaStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedResourceQuotaStatusCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1ResourceQuota
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedResourceQuotaStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedResourceQuotaStatusOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1ResourceQuota
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedResourceQuotaStatusOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedResourceQuotaStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedSecretApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedSecretApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedSecretApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedSecretApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedSecretApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedSecretApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedSecretCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Secret
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedSecretCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedSecretCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedSecretOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Secret
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedSecretOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedSecretOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedServiceAccountApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceAccountApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedServiceAccountApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceAccountApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedServiceAccountApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceAccountApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedServiceAccountCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1ServiceAccount
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceAccountCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedServiceAccountCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedServiceAccountOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1ServiceAccount
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceAccountOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedServiceAccountOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedServiceApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedServiceApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedServiceApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedServiceCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Service
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedServiceCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedServiceOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Service
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedServiceOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedServiceStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedServiceStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NamespacedServiceStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedServiceStatusCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Service
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceStatusCreated(unwrapped)
-}
+func (s *PatchCoreV1NamespacedServiceStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NamespacedServiceStatusOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Service
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NamespacedServiceStatusOK(unwrapped)
-}
+func (s *PatchCoreV1NamespacedServiceStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NodeApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NodeApplicationJSONPatchJSON(unwrapped)
-}
+func (s *PatchCoreV1NodeApplicationJSONPatchJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NodeApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NodeApplicationMergePatchJSON(unwrapped)
-}
+func (s *PatchCoreV1NodeApplicationMergePatchJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NodeApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NodeApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NodeCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Node
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NodeCreated(unwrapped)
-}
+func (s *PatchCoreV1NodeCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NodeOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Node
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NodeOK(unwrapped)
-}
+func (s *PatchCoreV1NodeOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NodeStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NodeStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NodeStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NodeStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1NodeStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NodeStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NodeStatusCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1Node
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NodeStatusCreated(unwrapped)
-}
+func (s *PatchCoreV1NodeStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1NodeStatusOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1Node
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1NodeStatusOK(unwrapped)
-}
+func (s *PatchCoreV1NodeStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1PersistentVolumeApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1PersistentVolumeApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1PersistentVolumeApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1PersistentVolumeApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1PersistentVolumeApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1PersistentVolumeApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1PersistentVolumeCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1PersistentVolume
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1PersistentVolumeCreated(unwrapped)
-}
+func (s *PatchCoreV1PersistentVolumeCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1PersistentVolumeOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1PersistentVolume
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1PersistentVolumeOK(unwrapped)
-}
+func (s *PatchCoreV1PersistentVolumeOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchCoreV1PersistentVolumeStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1PersistentVolumeStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1PersistentVolumeStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1PersistentVolumeStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchCoreV1PersistentVolumeStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1PersistentVolumeStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchCoreV1PersistentVolumeStatusCreated) SetFake() {
-	var unwrapped IoK8sAPICoreV1PersistentVolume
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1PersistentVolumeStatusCreated(unwrapped)
-}
+func (s *PatchCoreV1PersistentVolumeStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchCoreV1PersistentVolumeStatusOK) SetFake() {
-	var unwrapped IoK8sAPICoreV1PersistentVolume
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchCoreV1PersistentVolumeStatusOK(unwrapped)
-}
+func (s *PatchCoreV1PersistentVolumeStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchDiscoveryV1NamespacedEndpointSliceApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchDiscoveryV1NamespacedEndpointSliceApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchDiscoveryV1NamespacedEndpointSliceApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchDiscoveryV1NamespacedEndpointSliceApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchDiscoveryV1NamespacedEndpointSliceApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchDiscoveryV1NamespacedEndpointSliceApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchDiscoveryV1NamespacedEndpointSliceCreated) SetFake() {
-	var unwrapped IoK8sAPIDiscoveryV1EndpointSlice
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchDiscoveryV1NamespacedEndpointSliceCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchDiscoveryV1NamespacedEndpointSliceOK) SetFake() {
-	var unwrapped IoK8sAPIDiscoveryV1EndpointSlice
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchDiscoveryV1NamespacedEndpointSliceOK(unwrapped)
-}
+func (s *PatchDiscoveryV1NamespacedEndpointSliceOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchDiscoveryV1beta1NamespacedEndpointSliceApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchDiscoveryV1beta1NamespacedEndpointSliceApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchDiscoveryV1beta1NamespacedEndpointSliceApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchDiscoveryV1beta1NamespacedEndpointSliceApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchDiscoveryV1beta1NamespacedEndpointSliceApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchDiscoveryV1beta1NamespacedEndpointSliceApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchDiscoveryV1beta1NamespacedEndpointSliceCreated) SetFake() {
-	var unwrapped IoK8sAPIDiscoveryV1beta1EndpointSlice
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchDiscoveryV1beta1NamespacedEndpointSliceCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchDiscoveryV1beta1NamespacedEndpointSliceOK) SetFake() {
-	var unwrapped IoK8sAPIDiscoveryV1beta1EndpointSlice
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchDiscoveryV1beta1NamespacedEndpointSliceOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchEventsV1NamespacedEventApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchEventsV1NamespacedEventApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchEventsV1NamespacedEventApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchEventsV1NamespacedEventApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchEventsV1NamespacedEventApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchEventsV1NamespacedEventApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchEventsV1NamespacedEventCreated) SetFake() {
-	var unwrapped IoK8sAPIEventsV1Event
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchEventsV1NamespacedEventCreated(unwrapped)
-}
+func (s *PatchEventsV1NamespacedEventCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchEventsV1NamespacedEventOK) SetFake() {
-	var unwrapped IoK8sAPIEventsV1Event
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchEventsV1NamespacedEventOK(unwrapped)
-}
+func (s *PatchEventsV1NamespacedEventOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchEventsV1beta1NamespacedEventApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchEventsV1beta1NamespacedEventApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchEventsV1beta1NamespacedEventApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchEventsV1beta1NamespacedEventApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchEventsV1beta1NamespacedEventApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchEventsV1beta1NamespacedEventApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchEventsV1beta1NamespacedEventCreated) SetFake() {
-	var unwrapped IoK8sAPIEventsV1beta1Event
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchEventsV1beta1NamespacedEventCreated(unwrapped)
-}
+func (s *PatchEventsV1beta1NamespacedEventCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchEventsV1beta1NamespacedEventOK) SetFake() {
-	var unwrapped IoK8sAPIEventsV1beta1Event
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchEventsV1beta1NamespacedEventOK(unwrapped)
-}
+func (s *PatchEventsV1beta1NamespacedEventOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1FlowSchemaApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1FlowSchemaApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1FlowSchemaApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaCreated) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta1FlowSchema
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1FlowSchemaCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaOK) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta1FlowSchema
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1FlowSchemaOK(unwrapped)
-}
+func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1FlowSchemaStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1FlowSchemaStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1FlowSchemaStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta1FlowSchema
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1FlowSchemaStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1FlowSchemaStatusOK) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta1FlowSchema
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1FlowSchemaStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationCreated) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta1PriorityLevelConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationOK) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta1PriorityLevelConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta1PriorityLevelConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusOK) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta1PriorityLevelConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2FlowSchemaApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2FlowSchemaApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2FlowSchemaApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaCreated) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta2FlowSchema
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2FlowSchemaCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaOK) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta2FlowSchema
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2FlowSchemaOK(unwrapped)
-}
+func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2FlowSchemaStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2FlowSchemaStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2FlowSchemaStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta2FlowSchema
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2FlowSchemaStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2FlowSchemaStatusOK) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta2FlowSchema
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2FlowSchemaStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationCreated) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta2PriorityLevelConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationOK) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta2PriorityLevelConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta2PriorityLevelConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusOK) SetFake() {
-	var unwrapped IoK8sAPIFlowcontrolV1beta2PriorityLevelConfiguration
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchInternalApiserverV1alpha1StorageVersionApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchInternalApiserverV1alpha1StorageVersionApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchInternalApiserverV1alpha1StorageVersionApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchInternalApiserverV1alpha1StorageVersionApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchInternalApiserverV1alpha1StorageVersionApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchInternalApiserverV1alpha1StorageVersionApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchInternalApiserverV1alpha1StorageVersionCreated) SetFake() {
-	var unwrapped IoK8sAPIApiserverinternalV1alpha1StorageVersion
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchInternalApiserverV1alpha1StorageVersionCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchInternalApiserverV1alpha1StorageVersionOK) SetFake() {
-	var unwrapped IoK8sAPIApiserverinternalV1alpha1StorageVersion
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchInternalApiserverV1alpha1StorageVersionOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchInternalApiserverV1alpha1StorageVersionStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchInternalApiserverV1alpha1StorageVersionStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchInternalApiserverV1alpha1StorageVersionStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchInternalApiserverV1alpha1StorageVersionStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchInternalApiserverV1alpha1StorageVersionStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchInternalApiserverV1alpha1StorageVersionStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchInternalApiserverV1alpha1StorageVersionStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIApiserverinternalV1alpha1StorageVersion
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchInternalApiserverV1alpha1StorageVersionStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchInternalApiserverV1alpha1StorageVersionStatusOK) SetFake() {
-	var unwrapped IoK8sAPIApiserverinternalV1alpha1StorageVersion
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchInternalApiserverV1alpha1StorageVersionStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1IngressClassApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1IngressClassApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1IngressClassApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1IngressClassApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1IngressClassApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1IngressClassApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchNetworkingV1IngressClassCreated) SetFake() {
-	var unwrapped IoK8sAPINetworkingV1IngressClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1IngressClassCreated(unwrapped)
-}
+func (s *PatchNetworkingV1IngressClassCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchNetworkingV1IngressClassOK) SetFake() {
-	var unwrapped IoK8sAPINetworkingV1IngressClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1IngressClassOK(unwrapped)
-}
+func (s *PatchNetworkingV1IngressClassOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedIngressApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedIngressApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedIngressApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedIngressApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedIngressApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedIngressApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchNetworkingV1NamespacedIngressCreated) SetFake() {
-	var unwrapped IoK8sAPINetworkingV1Ingress
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedIngressCreated(unwrapped)
-}
+func (s *PatchNetworkingV1NamespacedIngressCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchNetworkingV1NamespacedIngressOK) SetFake() {
-	var unwrapped IoK8sAPINetworkingV1Ingress
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedIngressOK(unwrapped)
-}
+func (s *PatchNetworkingV1NamespacedIngressOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedIngressStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedIngressStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedIngressStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedIngressStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedIngressStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedIngressStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedIngressStatusCreated) SetFake() {
-	var unwrapped IoK8sAPINetworkingV1Ingress
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedIngressStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchNetworkingV1NamespacedIngressStatusOK) SetFake() {
-	var unwrapped IoK8sAPINetworkingV1Ingress
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedIngressStatusOK(unwrapped)
-}
+func (s *PatchNetworkingV1NamespacedIngressStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedNetworkPolicyApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedNetworkPolicyApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedNetworkPolicyApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedNetworkPolicyApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedNetworkPolicyApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedNetworkPolicyApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNetworkingV1NamespacedNetworkPolicyCreated) SetFake() {
-	var unwrapped IoK8sAPINetworkingV1NetworkPolicy
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedNetworkPolicyCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchNetworkingV1NamespacedNetworkPolicyOK) SetFake() {
-	var unwrapped IoK8sAPINetworkingV1NetworkPolicy
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNetworkingV1NamespacedNetworkPolicyOK(unwrapped)
-}
+func (s *PatchNetworkingV1NamespacedNetworkPolicyOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchNodeV1RuntimeClassApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1RuntimeClassApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNodeV1RuntimeClassApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1RuntimeClassApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNodeV1RuntimeClassApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1RuntimeClassApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchNodeV1RuntimeClassCreated) SetFake() {
-	var unwrapped IoK8sAPINodeV1RuntimeClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1RuntimeClassCreated(unwrapped)
-}
+func (s *PatchNodeV1RuntimeClassCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchNodeV1RuntimeClassOK) SetFake() {
-	var unwrapped IoK8sAPINodeV1RuntimeClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1RuntimeClassOK(unwrapped)
-}
+func (s *PatchNodeV1RuntimeClassOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchNodeV1alpha1RuntimeClassApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1alpha1RuntimeClassApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNodeV1alpha1RuntimeClassApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1alpha1RuntimeClassApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNodeV1alpha1RuntimeClassApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1alpha1RuntimeClassApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchNodeV1alpha1RuntimeClassCreated) SetFake() {
-	var unwrapped IoK8sAPINodeV1alpha1RuntimeClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1alpha1RuntimeClassCreated(unwrapped)
-}
+func (s *PatchNodeV1alpha1RuntimeClassCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchNodeV1alpha1RuntimeClassOK) SetFake() {
-	var unwrapped IoK8sAPINodeV1alpha1RuntimeClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1alpha1RuntimeClassOK(unwrapped)
-}
+func (s *PatchNodeV1alpha1RuntimeClassOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchNodeV1beta1RuntimeClassApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1beta1RuntimeClassApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNodeV1beta1RuntimeClassApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1beta1RuntimeClassApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchNodeV1beta1RuntimeClassApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1beta1RuntimeClassApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchNodeV1beta1RuntimeClassCreated) SetFake() {
-	var unwrapped IoK8sAPINodeV1beta1RuntimeClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1beta1RuntimeClassCreated(unwrapped)
-}
+func (s *PatchNodeV1beta1RuntimeClassCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchNodeV1beta1RuntimeClassOK) SetFake() {
-	var unwrapped IoK8sAPINodeV1beta1RuntimeClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchNodeV1beta1RuntimeClassOK(unwrapped)
-}
+func (s *PatchNodeV1beta1RuntimeClassOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1NamespacedPodDisruptionBudgetApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1NamespacedPodDisruptionBudgetApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1NamespacedPodDisruptionBudgetApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1NamespacedPodDisruptionBudgetApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1NamespacedPodDisruptionBudgetApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1NamespacedPodDisruptionBudgetApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1NamespacedPodDisruptionBudgetCreated) SetFake() {
-	var unwrapped IoK8sAPIPolicyV1PodDisruptionBudget
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1NamespacedPodDisruptionBudgetCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchPolicyV1NamespacedPodDisruptionBudgetOK) SetFake() {
-	var unwrapped IoK8sAPIPolicyV1PodDisruptionBudget
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1NamespacedPodDisruptionBudgetOK(unwrapped)
-}
+func (s *PatchPolicyV1NamespacedPodDisruptionBudgetOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1NamespacedPodDisruptionBudgetStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1NamespacedPodDisruptionBudgetStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1NamespacedPodDisruptionBudgetStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1NamespacedPodDisruptionBudgetStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1NamespacedPodDisruptionBudgetStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1NamespacedPodDisruptionBudgetStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1NamespacedPodDisruptionBudgetStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIPolicyV1PodDisruptionBudget
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1NamespacedPodDisruptionBudgetStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1NamespacedPodDisruptionBudgetStatusOK) SetFake() {
-	var unwrapped IoK8sAPIPolicyV1PodDisruptionBudget
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1NamespacedPodDisruptionBudgetStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1NamespacedPodDisruptionBudgetApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1NamespacedPodDisruptionBudgetApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1NamespacedPodDisruptionBudgetApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1NamespacedPodDisruptionBudgetApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1NamespacedPodDisruptionBudgetApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1NamespacedPodDisruptionBudgetApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1NamespacedPodDisruptionBudgetCreated) SetFake() {
-	var unwrapped IoK8sAPIPolicyV1beta1PodDisruptionBudget
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1NamespacedPodDisruptionBudgetCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1NamespacedPodDisruptionBudgetOK) SetFake() {
-	var unwrapped IoK8sAPIPolicyV1beta1PodDisruptionBudget
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1NamespacedPodDisruptionBudgetOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIPolicyV1beta1PodDisruptionBudget
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusOK) SetFake() {
-	var unwrapped IoK8sAPIPolicyV1beta1PodDisruptionBudget
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1PodSecurityPolicyApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1PodSecurityPolicyApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1PodSecurityPolicyApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1PodSecurityPolicyApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchPolicyV1beta1PodSecurityPolicyApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1PodSecurityPolicyApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchPolicyV1beta1PodSecurityPolicyCreated) SetFake() {
-	var unwrapped IoK8sAPIPolicyV1beta1PodSecurityPolicy
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1PodSecurityPolicyCreated(unwrapped)
-}
+func (s *PatchPolicyV1beta1PodSecurityPolicyCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchPolicyV1beta1PodSecurityPolicyOK) SetFake() {
-	var unwrapped IoK8sAPIPolicyV1beta1PodSecurityPolicy
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchPolicyV1beta1PodSecurityPolicyOK(unwrapped)
-}
+func (s *PatchPolicyV1beta1PodSecurityPolicyOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1ClusterRoleApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1ClusterRoleApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1ClusterRoleApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1ClusterRoleApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1ClusterRoleApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1ClusterRoleApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1ClusterRoleBindingApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1ClusterRoleBindingApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1ClusterRoleBindingApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1ClusterRoleBindingApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1ClusterRoleBindingApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1ClusterRoleBindingApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1ClusterRoleBindingCreated) SetFake() {
-	var unwrapped IoK8sAPIRbacV1ClusterRoleBinding
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1ClusterRoleBindingCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchRbacAuthorizationV1ClusterRoleBindingOK) SetFake() {
-	var unwrapped IoK8sAPIRbacV1ClusterRoleBinding
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1ClusterRoleBindingOK(unwrapped)
-}
+func (s *PatchRbacAuthorizationV1ClusterRoleBindingOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchRbacAuthorizationV1ClusterRoleCreated) SetFake() {
-	var unwrapped IoK8sAPIRbacV1ClusterRole
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1ClusterRoleCreated(unwrapped)
-}
+func (s *PatchRbacAuthorizationV1ClusterRoleCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchRbacAuthorizationV1ClusterRoleOK) SetFake() {
-	var unwrapped IoK8sAPIRbacV1ClusterRole
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1ClusterRoleOK(unwrapped)
-}
+func (s *PatchRbacAuthorizationV1ClusterRoleOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1NamespacedRoleApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1NamespacedRoleApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1NamespacedRoleApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1NamespacedRoleApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1NamespacedRoleApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1NamespacedRoleApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1NamespacedRoleBindingApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1NamespacedRoleBindingApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1NamespacedRoleBindingApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1NamespacedRoleBindingApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1NamespacedRoleBindingApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1NamespacedRoleBindingApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1NamespacedRoleBindingCreated) SetFake() {
-	var unwrapped IoK8sAPIRbacV1RoleBinding
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1NamespacedRoleBindingCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1NamespacedRoleBindingOK) SetFake() {
-	var unwrapped IoK8sAPIRbacV1RoleBinding
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1NamespacedRoleBindingOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchRbacAuthorizationV1NamespacedRoleCreated) SetFake() {
-	var unwrapped IoK8sAPIRbacV1Role
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1NamespacedRoleCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchRbacAuthorizationV1NamespacedRoleOK) SetFake() {
-	var unwrapped IoK8sAPIRbacV1Role
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchRbacAuthorizationV1NamespacedRoleOK(unwrapped)
-}
+func (s *PatchRbacAuthorizationV1NamespacedRoleOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchSchedulingV1PriorityClassApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchSchedulingV1PriorityClassApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchSchedulingV1PriorityClassApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchSchedulingV1PriorityClassApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchSchedulingV1PriorityClassApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchSchedulingV1PriorityClassApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchSchedulingV1PriorityClassCreated) SetFake() {
-	var unwrapped IoK8sAPISchedulingV1PriorityClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchSchedulingV1PriorityClassCreated(unwrapped)
-}
+func (s *PatchSchedulingV1PriorityClassCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchSchedulingV1PriorityClassOK) SetFake() {
-	var unwrapped IoK8sAPISchedulingV1PriorityClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchSchedulingV1PriorityClassOK(unwrapped)
-}
+func (s *PatchSchedulingV1PriorityClassOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchStorageV1CSIDriverApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1CSIDriverApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1CSIDriverApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1CSIDriverApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1CSIDriverApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1CSIDriverApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchStorageV1CSIDriverCreated) SetFake() {
-	var unwrapped IoK8sAPIStorageV1CSIDriver
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1CSIDriverCreated(unwrapped)
-}
+func (s *PatchStorageV1CSIDriverCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchStorageV1CSIDriverOK) SetFake() {
-	var unwrapped IoK8sAPIStorageV1CSIDriver
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1CSIDriverOK(unwrapped)
-}
+func (s *PatchStorageV1CSIDriverOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchStorageV1CSINodeApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1CSINodeApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1CSINodeApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1CSINodeApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1CSINodeApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1CSINodeApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchStorageV1CSINodeCreated) SetFake() {
-	var unwrapped IoK8sAPIStorageV1CSINode
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1CSINodeCreated(unwrapped)
-}
+func (s *PatchStorageV1CSINodeCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchStorageV1CSINodeOK) SetFake() {
-	var unwrapped IoK8sAPIStorageV1CSINode
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1CSINodeOK(unwrapped)
-}
+func (s *PatchStorageV1CSINodeOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchStorageV1StorageClassApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1StorageClassApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1StorageClassApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1StorageClassApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1StorageClassApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1StorageClassApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchStorageV1StorageClassCreated) SetFake() {
-	var unwrapped IoK8sAPIStorageV1StorageClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1StorageClassCreated(unwrapped)
-}
+func (s *PatchStorageV1StorageClassCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchStorageV1StorageClassOK) SetFake() {
-	var unwrapped IoK8sAPIStorageV1StorageClass
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1StorageClassOK(unwrapped)
-}
+func (s *PatchStorageV1StorageClassOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchStorageV1VolumeAttachmentApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1VolumeAttachmentApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1VolumeAttachmentApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1VolumeAttachmentApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1VolumeAttachmentApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1VolumeAttachmentApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchStorageV1VolumeAttachmentCreated) SetFake() {
-	var unwrapped IoK8sAPIStorageV1VolumeAttachment
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1VolumeAttachmentCreated(unwrapped)
-}
+func (s *PatchStorageV1VolumeAttachmentCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchStorageV1VolumeAttachmentOK) SetFake() {
-	var unwrapped IoK8sAPIStorageV1VolumeAttachment
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1VolumeAttachmentOK(unwrapped)
-}
+func (s *PatchStorageV1VolumeAttachmentOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchStorageV1VolumeAttachmentStatusApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1VolumeAttachmentStatusApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1VolumeAttachmentStatusApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1VolumeAttachmentStatusApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1VolumeAttachmentStatusApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1VolumeAttachmentStatusApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PatchStorageV1VolumeAttachmentStatusCreated) SetFake() {
-	var unwrapped IoK8sAPIStorageV1VolumeAttachment
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1VolumeAttachmentStatusCreated(unwrapped)
-}
+func (s *PatchStorageV1VolumeAttachmentStatusCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatchStorageV1VolumeAttachmentStatusOK) SetFake() {
-	var unwrapped IoK8sAPIStorageV1VolumeAttachment
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1VolumeAttachmentStatusOK(unwrapped)
-}
+func (s *PatchStorageV1VolumeAttachmentStatusOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PatchStorageV1alpha1NamespacedCSIStorageCapacityApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1alpha1NamespacedCSIStorageCapacityApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1alpha1NamespacedCSIStorageCapacityApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1alpha1NamespacedCSIStorageCapacityApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1alpha1NamespacedCSIStorageCapacityApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1alpha1NamespacedCSIStorageCapacityApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1alpha1NamespacedCSIStorageCapacityCreated) SetFake() {
-	var unwrapped IoK8sAPIStorageV1alpha1CSIStorageCapacity
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1alpha1NamespacedCSIStorageCapacityCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1alpha1NamespacedCSIStorageCapacityOK) SetFake() {
-	var unwrapped IoK8sAPIStorageV1alpha1CSIStorageCapacity
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1alpha1NamespacedCSIStorageCapacityOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1beta1NamespacedCSIStorageCapacityApplicationJSONPatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1beta1NamespacedCSIStorageCapacityApplicationJSONPatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1beta1NamespacedCSIStorageCapacityApplicationMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1beta1NamespacedCSIStorageCapacityApplicationMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1beta1NamespacedCSIStorageCapacityApplicationStrategicMergePatchJSON) SetFake() {
-	var unwrapped IoK8sApimachineryPkgApisMetaV1Patch
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1beta1NamespacedCSIStorageCapacityApplicationStrategicMergePatchJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1beta1NamespacedCSIStorageCapacityCreated) SetFake() {
-	var unwrapped IoK8sAPIStorageV1beta1CSIStorageCapacity
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1beta1NamespacedCSIStorageCapacityCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PatchStorageV1beta1NamespacedCSIStorageCapacityOK) SetFake() {
-	var unwrapped IoK8sAPIStorageV1beta1CSIStorageCapacity
-	{
-		unwrapped.SetFake()
-	}
-	*s = PatchStorageV1beta1NamespacedCSIStorageCapacityOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReadCoreV1NamespacedPodLogOKApplicationJSON) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = ReadCoreV1NamespacedPodLogOKApplicationJSON(unwrapped)
-}
+func (s *ReadCoreV1NamespacedPodLogOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }

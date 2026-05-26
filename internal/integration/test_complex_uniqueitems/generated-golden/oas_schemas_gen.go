@@ -8,13 +8,13 @@ type CreateGoldenItemsOK struct {
 
 // GetCreated returns the value of Created.
 func (s *CreateGoldenItemsOK) GetCreated() OptInt {
-	return s.Created
+	_ = "STUB: not implemented"
+
+	// SetCreated sets the value of Created.
+	return *new(OptInt)
 }
 
-// SetCreated sets the value of Created.
-func (s *CreateGoldenItemsOK) SetCreated(val OptInt) {
-	s.Created = val
-}
+func (s *CreateGoldenItemsOK) SetCreated(val OptInt) { _ = "STUB: not implemented"; return }
 
 type CreateGoldenItemsReq struct {
 	Items []GoldenItem `json:"items"`
@@ -22,16 +22,20 @@ type CreateGoldenItemsReq struct {
 
 // GetItems returns the value of Items.
 func (s *CreateGoldenItemsReq) GetItems() []GoldenItem {
-	return s.Items
+	_ = "STUB: not implemented"
+
+	// SetItems sets the value of Items.
+	return nil
 }
 
-// SetItems sets the value of Items.
 func (s *CreateGoldenItemsReq) SetItems(val []GoldenItem) {
-	s.Items = val
+	_ = "STUB: not implemented"
+
+	// Reference item with diverse field types.
+	// Ref: #/components/schemas/GoldenItem
+	return
 }
 
-// Reference item with diverse field types.
-// Ref: #/components/schemas/GoldenItem
 type GoldenItem struct {
 	ID          string                  `json:"id"`
 	Name        string                  `json:"name"`
@@ -44,73 +48,92 @@ type GoldenItem struct {
 
 // GetID returns the value of ID.
 func (s *GoldenItem) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *GoldenItem) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
 func (s *GoldenItem) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExternalRef returns the value of ExternalRef.
+	new(OptString)
 }
 
-// GetExternalRef returns the value of ExternalRef.
 func (s *GoldenItem) GetExternalRef() OptNilString {
-	return s.ExternalRef
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTags returns the value of Tags.
+	new(OptNilString)
 }
 
-// GetTags returns the value of Tags.
 func (s *GoldenItem) GetTags() []string {
-	return s.Tags
+	_ = "STUB: not implemented"
+
+	// GetAttributes returns the value of Attributes.
+	return nil
 }
 
-// GetAttributes returns the value of Attributes.
 func (s *GoldenItem) GetAttributes() OptGoldenItemAttributes {
-	return s.Attributes
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMetadata returns the value of Metadata.
+	new(OptGoldenItemAttributes)
 }
 
-// GetMetadata returns the value of Metadata.
 func (s *GoldenItem) GetMetadata() OptMetadata {
-	return s.Metadata
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptMetadata)
 }
 
-// SetID sets the value of ID.
 func (s *GoldenItem) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *GoldenItem) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *GoldenItem) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *GoldenItem) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetExternalRef sets the value of ExternalRef.
-func (s *GoldenItem) SetExternalRef(val OptNilString) {
-	s.ExternalRef = val
-}
+func (s *GoldenItem) SetExternalRef(val OptNilString) { _ = "STUB: not implemented"; return }
 
 // SetTags sets the value of Tags.
 func (s *GoldenItem) SetTags(val []string) {
-	s.Tags = val
+	_ = "STUB: not implemented"
+
+	// SetAttributes sets the value of Attributes.
+	return
 }
 
-// SetAttributes sets the value of Attributes.
 func (s *GoldenItem) SetAttributes(val OptGoldenItemAttributes) {
-	s.Attributes = val
+	_ = "STUB: not implemented"
+
+	// SetMetadata sets the value of Metadata.
+	return
 }
 
-// SetMetadata sets the value of Metadata.
-func (s *GoldenItem) SetMetadata(val OptMetadata) {
-	s.Metadata = val
-}
+func (s *GoldenItem) SetMetadata(val OptMetadata) { _ = "STUB: not implemented"; return }
 
 type GoldenItemAttributes map[string]string
 
@@ -132,33 +155,41 @@ type Metadata struct {
 
 // GetVersion returns the value of Version.
 func (s *Metadata) GetVersion() OptString {
-	return s.Version
+	_ = "STUB: not implemented"
+
+	// GetTimestamp returns the value of Timestamp.
+	return *new(OptString)
 }
 
-// GetTimestamp returns the value of Timestamp.
 func (s *Metadata) GetTimestamp() OptInt {
-	return s.Timestamp
+	_ = "STUB: not implemented"
+
+	// GetLabels returns the value of Labels.
+	return *new(OptInt)
 }
 
-// GetLabels returns the value of Labels.
 func (s *Metadata) GetLabels() OptMetadataLabels {
-	return s.Labels
+	_ = "STUB: not implemented"
+
+	// SetVersion sets the value of Version.
+	return *new(OptMetadataLabels)
 }
 
-// SetVersion sets the value of Version.
 func (s *Metadata) SetVersion(val OptString) {
-	s.Version = val
+	_ = "STUB: not implemented"
+
+	// SetTimestamp sets the value of Timestamp.
+	return
 }
 
-// SetTimestamp sets the value of Timestamp.
 func (s *Metadata) SetTimestamp(val OptInt) {
-	s.Timestamp = val
+	_ = "STUB: not implemented"
+
+	// SetLabels sets the value of Labels.
+	return
 }
 
-// SetLabels sets the value of Labels.
-func (s *Metadata) SetLabels(val OptMetadataLabels) {
-	s.Labels = val
-}
+func (s *Metadata) SetLabels(val OptMetadataLabels) { _ = "STUB: not implemented"; return }
 
 type MetadataLabels map[string]string
 
@@ -173,10 +204,8 @@ func (s *MetadataLabels) init() MetadataLabels {
 
 // NewOptGoldenItemAttributes returns new OptGoldenItemAttributes with value set to v.
 func NewOptGoldenItemAttributes(v GoldenItemAttributes) OptGoldenItemAttributes {
-	return OptGoldenItemAttributes{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptGoldenItemAttributes)
 }
 
 // OptGoldenItemAttributes is optional GoldenItemAttributes.
@@ -186,44 +215,32 @@ type OptGoldenItemAttributes struct {
 }
 
 // IsSet returns true if OptGoldenItemAttributes was set.
-func (o OptGoldenItemAttributes) IsSet() bool { return o.Set }
+func (o OptGoldenItemAttributes) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptGoldenItemAttributes) Reset() {
-	var v GoldenItemAttributes
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptGoldenItemAttributes) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptGoldenItemAttributes) SetTo(v GoldenItemAttributes) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptGoldenItemAttributes) SetTo(v GoldenItemAttributes) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptGoldenItemAttributes) Get() (v GoldenItemAttributes, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(GoldenItemAttributes), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptGoldenItemAttributes) Or(d GoldenItemAttributes) GoldenItemAttributes {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(GoldenItemAttributes)
 }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -232,44 +249,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptMetadata returns new OptMetadata with value set to v.
-func NewOptMetadata(v Metadata) OptMetadata {
-	return OptMetadata{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptMetadata(v Metadata) OptMetadata { _ = "STUB: not implemented"; return *new(OptMetadata) }
 
 // OptMetadata is optional Metadata.
 type OptMetadata struct {
@@ -278,43 +277,31 @@ type OptMetadata struct {
 }
 
 // IsSet returns true if OptMetadata was set.
-func (o OptMetadata) IsSet() bool { return o.Set }
+func (o OptMetadata) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMetadata) Reset() {
-	var v Metadata
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMetadata) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMetadata) SetTo(v Metadata) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMetadata) SetTo(v Metadata) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMetadata) Get() (v Metadata, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Metadata), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptMetadata) Or(d Metadata) Metadata {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptMetadata) Or(d Metadata) Metadata { _ = "STUB: not implemented"; return *new(Metadata) }
 
 // NewOptMetadataLabels returns new OptMetadataLabels with value set to v.
 func NewOptMetadataLabels(v MetadataLabels) OptMetadataLabels {
-	return OptMetadataLabels{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMetadataLabels)
 }
 
 // OptMetadataLabels is optional MetadataLabels.
@@ -324,44 +311,32 @@ type OptMetadataLabels struct {
 }
 
 // IsSet returns true if OptMetadataLabels was set.
-func (o OptMetadataLabels) IsSet() bool { return o.Set }
+func (o OptMetadataLabels) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMetadataLabels) Reset() {
-	var v MetadataLabels
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMetadataLabels) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMetadataLabels) SetTo(v MetadataLabels) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMetadataLabels) SetTo(v MetadataLabels) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMetadataLabels) Get() (v MetadataLabels, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MetadataLabels), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMetadataLabels) Or(d MetadataLabels) MetadataLabels {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MetadataLabels)
 }
 
 // NewOptNilString returns new OptNilString with value set to v.
-func NewOptNilString(v string) OptNilString {
-	return OptNilString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilString(v string) OptNilString { _ = "STUB: not implemented"; return *new(OptNilString) }
 
 // OptNilString is optional nullable string.
 type OptNilString struct {
@@ -371,60 +346,36 @@ type OptNilString struct {
 }
 
 // IsSet returns true if OptNilString was set.
-func (o OptNilString) IsSet() bool { return o.Set }
+func (o OptNilString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilString) SetTo(v string) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilString) IsNull() bool { return o.Null }
+func (o OptNilString) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilString) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilString) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilString) Get() (v string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -433,33 +384,20 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }

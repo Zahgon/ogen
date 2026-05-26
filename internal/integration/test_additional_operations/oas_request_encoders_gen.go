@@ -4,16 +4,12 @@ package api
 
 import (
 	"net/http"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 func encodeEchoRequest(
 	req EchoReq,
 	r *http.Request,
 ) error {
-	const contentType = "text/plain"
-	body := req
-	ht.SetBody(r, body, contentType)
+	_ = "STUB: not implemented"
 	return nil
 }

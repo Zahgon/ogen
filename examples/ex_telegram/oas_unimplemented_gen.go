@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -17,580 +15,744 @@ var _ Handler = UnimplementedHandler{}
 //
 // POST /addStickerToSet
 func (UnimplementedHandler) AddStickerToSet(ctx context.Context, req *AddStickerToSet) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// AnswerCallbackQuery implements answerCallbackQuery operation.
+	//
+	// POST /answerCallbackQuery
 }
 
-// AnswerCallbackQuery implements answerCallbackQuery operation.
-//
-// POST /answerCallbackQuery
 func (UnimplementedHandler) AnswerCallbackQuery(ctx context.Context, req *AnswerCallbackQuery) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// AnswerInlineQuery implements answerInlineQuery operation.
+	//
+	// POST /answerInlineQuery
 }
 
-// AnswerInlineQuery implements answerInlineQuery operation.
-//
-// POST /answerInlineQuery
 func (UnimplementedHandler) AnswerInlineQuery(ctx context.Context, req *AnswerInlineQuery) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// AnswerPreCheckoutQuery implements answerPreCheckoutQuery operation.
+	//
+	// POST /answerPreCheckoutQuery
 }
 
-// AnswerPreCheckoutQuery implements answerPreCheckoutQuery operation.
-//
-// POST /answerPreCheckoutQuery
 func (UnimplementedHandler) AnswerPreCheckoutQuery(ctx context.Context, req *AnswerPreCheckoutQuery) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// AnswerShippingQuery implements answerShippingQuery operation.
+	//
+	// POST /answerShippingQuery
 }
 
-// AnswerShippingQuery implements answerShippingQuery operation.
-//
-// POST /answerShippingQuery
 func (UnimplementedHandler) AnswerShippingQuery(ctx context.Context, req *AnswerShippingQuery) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ApproveChatJoinRequest implements approveChatJoinRequest operation.
+	//
+	// POST /approveChatJoinRequest
 }
 
-// ApproveChatJoinRequest implements approveChatJoinRequest operation.
-//
-// POST /approveChatJoinRequest
 func (UnimplementedHandler) ApproveChatJoinRequest(ctx context.Context, req *ApproveChatJoinRequest) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BanChatMember implements banChatMember operation.
+	//
+	// POST /banChatMember
 }
 
-// BanChatMember implements banChatMember operation.
-//
-// POST /banChatMember
 func (UnimplementedHandler) BanChatMember(ctx context.Context, req *BanChatMember) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BanChatSenderChat implements banChatSenderChat operation.
+	//
+	// POST /banChatSenderChat
 }
 
-// BanChatSenderChat implements banChatSenderChat operation.
-//
-// POST /banChatSenderChat
 func (UnimplementedHandler) BanChatSenderChat(ctx context.Context, req *BanChatSenderChat) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// Close implements close operation.
+	//
+	// POST /close
 }
 
-// Close implements close operation.
-//
-// POST /close
 func (UnimplementedHandler) Close(ctx context.Context) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// CopyMessage implements copyMessage operation.
+	//
+	// POST /copyMessage
 }
 
-// CopyMessage implements copyMessage operation.
-//
-// POST /copyMessage
 func (UnimplementedHandler) CopyMessage(ctx context.Context, req *CopyMessage) (r *ResultMessageId, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// CreateChatInviteLink implements createChatInviteLink operation.
+	//
+	// POST /createChatInviteLink
 }
 
-// CreateChatInviteLink implements createChatInviteLink operation.
-//
-// POST /createChatInviteLink
 func (UnimplementedHandler) CreateChatInviteLink(ctx context.Context, req *CreateChatInviteLink) (r *ResultChatInviteLink, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// CreateNewStickerSet implements createNewStickerSet operation.
+	//
+	// POST /createNewStickerSet
 }
 
-// CreateNewStickerSet implements createNewStickerSet operation.
-//
-// POST /createNewStickerSet
 func (UnimplementedHandler) CreateNewStickerSet(ctx context.Context, req *CreateNewStickerSet) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// DeclineChatJoinRequest implements declineChatJoinRequest operation.
+	//
+	// POST /declineChatJoinRequest
 }
 
-// DeclineChatJoinRequest implements declineChatJoinRequest operation.
-//
-// POST /declineChatJoinRequest
 func (UnimplementedHandler) DeclineChatJoinRequest(ctx context.Context, req *DeclineChatJoinRequest) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// DeleteChatPhoto implements deleteChatPhoto operation.
+	//
+	// POST /deleteChatPhoto
 }
 
-// DeleteChatPhoto implements deleteChatPhoto operation.
-//
-// POST /deleteChatPhoto
 func (UnimplementedHandler) DeleteChatPhoto(ctx context.Context, req *DeleteChatPhoto) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// DeleteChatStickerSet implements deleteChatStickerSet operation.
+	//
+	// POST /deleteChatStickerSet
 }
 
-// DeleteChatStickerSet implements deleteChatStickerSet operation.
-//
-// POST /deleteChatStickerSet
 func (UnimplementedHandler) DeleteChatStickerSet(ctx context.Context, req *DeleteChatStickerSet) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// DeleteMessage implements deleteMessage operation.
+	//
+	// POST /deleteMessage
 }
 
-// DeleteMessage implements deleteMessage operation.
-//
-// POST /deleteMessage
 func (UnimplementedHandler) DeleteMessage(ctx context.Context, req *DeleteMessage) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// DeleteMyCommands implements deleteMyCommands operation.
+	//
+	// POST /deleteMyCommands
 }
 
-// DeleteMyCommands implements deleteMyCommands operation.
-//
-// POST /deleteMyCommands
 func (UnimplementedHandler) DeleteMyCommands(ctx context.Context, req OptDeleteMyCommands) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// DeleteStickerFromSet implements deleteStickerFromSet operation.
+	//
+	// POST /deleteStickerFromSet
 }
 
-// DeleteStickerFromSet implements deleteStickerFromSet operation.
-//
-// POST /deleteStickerFromSet
 func (UnimplementedHandler) DeleteStickerFromSet(ctx context.Context, req *DeleteStickerFromSet) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// DeleteWebhook implements deleteWebhook operation.
+	//
+	// POST /deleteWebhook
 }
 
-// DeleteWebhook implements deleteWebhook operation.
-//
-// POST /deleteWebhook
 func (UnimplementedHandler) DeleteWebhook(ctx context.Context, req OptDeleteWebhook) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EditChatInviteLink implements editChatInviteLink operation.
+	//
+	// POST /editChatInviteLink
 }
 
-// EditChatInviteLink implements editChatInviteLink operation.
-//
-// POST /editChatInviteLink
 func (UnimplementedHandler) EditChatInviteLink(ctx context.Context, req *EditChatInviteLink) (r *ResultChatInviteLink, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EditMessageCaption implements editMessageCaption operation.
+	//
+	// POST /editMessageCaption
 }
 
-// EditMessageCaption implements editMessageCaption operation.
-//
-// POST /editMessageCaption
 func (UnimplementedHandler) EditMessageCaption(ctx context.Context, req *EditMessageCaption) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EditMessageLiveLocation implements editMessageLiveLocation operation.
+	//
+	// POST /editMessageLiveLocation
 }
 
-// EditMessageLiveLocation implements editMessageLiveLocation operation.
-//
-// POST /editMessageLiveLocation
 func (UnimplementedHandler) EditMessageLiveLocation(ctx context.Context, req *EditMessageLiveLocation) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EditMessageMedia implements editMessageMedia operation.
+	//
+	// POST /editMessageMedia
 }
 
-// EditMessageMedia implements editMessageMedia operation.
-//
-// POST /editMessageMedia
 func (UnimplementedHandler) EditMessageMedia(ctx context.Context, req *EditMessageMedia) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EditMessageReplyMarkup implements editMessageReplyMarkup operation.
+	//
+	// POST /editMessageReplyMarkup
 }
 
-// EditMessageReplyMarkup implements editMessageReplyMarkup operation.
-//
-// POST /editMessageReplyMarkup
 func (UnimplementedHandler) EditMessageReplyMarkup(ctx context.Context, req *EditMessageReplyMarkup) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EditMessageText implements editMessageText operation.
+	//
+	// POST /editMessageText
 }
 
-// EditMessageText implements editMessageText operation.
-//
-// POST /editMessageText
 func (UnimplementedHandler) EditMessageText(ctx context.Context, req *EditMessageText) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ExportChatInviteLink implements exportChatInviteLink operation.
+	//
+	// POST /exportChatInviteLink
 }
 
-// ExportChatInviteLink implements exportChatInviteLink operation.
-//
-// POST /exportChatInviteLink
 func (UnimplementedHandler) ExportChatInviteLink(ctx context.Context, req *ExportChatInviteLink) (r *ResultString, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ForwardMessage implements forwardMessage operation.
+	//
+	// POST /forwardMessage
 }
 
-// ForwardMessage implements forwardMessage operation.
-//
-// POST /forwardMessage
 func (UnimplementedHandler) ForwardMessage(ctx context.Context, req *ForwardMessage) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetChat implements getChat operation.
+	//
+	// POST /getChat
 }
 
-// GetChat implements getChat operation.
-//
-// POST /getChat
 func (UnimplementedHandler) GetChat(ctx context.Context, req *GetChat) (r *ResultChat, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetChatAdministrators implements getChatAdministrators operation.
+	//
+	// POST /getChatAdministrators
 }
 
-// GetChatAdministrators implements getChatAdministrators operation.
-//
-// POST /getChatAdministrators
 func (UnimplementedHandler) GetChatAdministrators(ctx context.Context, req *GetChatAdministrators) (r *ResultArrayOfChatMember, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetChatMember implements getChatMember operation.
+	//
+	// POST /getChatMember
 }
 
-// GetChatMember implements getChatMember operation.
-//
-// POST /getChatMember
 func (UnimplementedHandler) GetChatMember(ctx context.Context, req *GetChatMember) (r *ResultChatMember, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetChatMemberCount implements getChatMemberCount operation.
+	//
+	// POST /getChatMemberCount
 }
 
-// GetChatMemberCount implements getChatMemberCount operation.
-//
-// POST /getChatMemberCount
 func (UnimplementedHandler) GetChatMemberCount(ctx context.Context, req *GetChatMemberCount) (r *ResultInt, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetFile implements getFile operation.
+	//
+	// POST /getFile
 }
 
-// GetFile implements getFile operation.
-//
-// POST /getFile
 func (UnimplementedHandler) GetFile(ctx context.Context, req *GetFile) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetGameHighScores implements getGameHighScores operation.
+	//
+	// POST /getGameHighScores
 }
 
-// GetGameHighScores implements getGameHighScores operation.
-//
-// POST /getGameHighScores
 func (UnimplementedHandler) GetGameHighScores(ctx context.Context, req *GetGameHighScores) (r *ResultArrayOfGameHighScore, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetMe implements getMe operation.
+	//
+	// POST /getMe
 }
 
-// GetMe implements getMe operation.
-//
-// POST /getMe
 func (UnimplementedHandler) GetMe(ctx context.Context) (r *ResultUser, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetMyCommands implements getMyCommands operation.
+	//
+	// POST /getMyCommands
 }
 
-// GetMyCommands implements getMyCommands operation.
-//
-// POST /getMyCommands
 func (UnimplementedHandler) GetMyCommands(ctx context.Context, req OptGetMyCommands) (r *ResultArrayOfBotCommand, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetStickerSet implements getStickerSet operation.
+	//
+	// POST /getStickerSet
 }
 
-// GetStickerSet implements getStickerSet operation.
-//
-// POST /getStickerSet
 func (UnimplementedHandler) GetStickerSet(ctx context.Context, req *GetStickerSet) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetUpdates implements getUpdates operation.
+	//
+	// POST /getUpdates
 }
 
-// GetUpdates implements getUpdates operation.
-//
-// POST /getUpdates
 func (UnimplementedHandler) GetUpdates(ctx context.Context, req OptGetUpdates) (r *ResultArrayOfUpdate, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetUserProfilePhotos implements getUserProfilePhotos operation.
+	//
+	// POST /getUserProfilePhotos
 }
 
-// GetUserProfilePhotos implements getUserProfilePhotos operation.
-//
-// POST /getUserProfilePhotos
 func (UnimplementedHandler) GetUserProfilePhotos(ctx context.Context, req *GetUserProfilePhotos) (r *ResultUserProfilePhotos, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetWebhookInfo implements getWebhookInfo operation.
+	//
+	// POST /getWebhookInfo
 }
 
-// GetWebhookInfo implements getWebhookInfo operation.
-//
-// POST /getWebhookInfo
 func (UnimplementedHandler) GetWebhookInfo(ctx context.Context) (r *ResultWebhookInfo, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// LeaveChat implements leaveChat operation.
+	//
+	// POST /leaveChat
 }
 
-// LeaveChat implements leaveChat operation.
-//
-// POST /leaveChat
 func (UnimplementedHandler) LeaveChat(ctx context.Context, req *LeaveChat) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// LogOut implements logOut operation.
+	//
+	// POST /logOut
 }
 
-// LogOut implements logOut operation.
-//
-// POST /logOut
 func (UnimplementedHandler) LogOut(ctx context.Context) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PinChatMessage implements pinChatMessage operation.
+	//
+	// POST /pinChatMessage
 }
 
-// PinChatMessage implements pinChatMessage operation.
-//
-// POST /pinChatMessage
 func (UnimplementedHandler) PinChatMessage(ctx context.Context, req *PinChatMessage) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PromoteChatMember implements promoteChatMember operation.
+	//
+	// POST /promoteChatMember
 }
 
-// PromoteChatMember implements promoteChatMember operation.
-//
-// POST /promoteChatMember
 func (UnimplementedHandler) PromoteChatMember(ctx context.Context, req *PromoteChatMember) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// RestrictChatMember implements restrictChatMember operation.
+	//
+	// POST /restrictChatMember
 }
 
-// RestrictChatMember implements restrictChatMember operation.
-//
-// POST /restrictChatMember
 func (UnimplementedHandler) RestrictChatMember(ctx context.Context, req *RestrictChatMember) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// RevokeChatInviteLink implements revokeChatInviteLink operation.
+	//
+	// POST /revokeChatInviteLink
 }
 
-// RevokeChatInviteLink implements revokeChatInviteLink operation.
-//
-// POST /revokeChatInviteLink
 func (UnimplementedHandler) RevokeChatInviteLink(ctx context.Context, req *RevokeChatInviteLink) (r *ResultChatInviteLink, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendAnimation implements sendAnimation operation.
+	//
+	// POST /sendAnimation
 }
 
-// SendAnimation implements sendAnimation operation.
-//
-// POST /sendAnimation
 func (UnimplementedHandler) SendAnimation(ctx context.Context, req *SendAnimation) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendAudio implements sendAudio operation.
+	//
+	// POST /sendAudio
 }
 
-// SendAudio implements sendAudio operation.
-//
-// POST /sendAudio
 func (UnimplementedHandler) SendAudio(ctx context.Context, req *SendAudio) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendChatAction implements sendChatAction operation.
+	//
+	// POST /sendChatAction
 }
 
-// SendChatAction implements sendChatAction operation.
-//
-// POST /sendChatAction
 func (UnimplementedHandler) SendChatAction(ctx context.Context, req *SendChatAction) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendContact implements sendContact operation.
+	//
+	// POST /sendContact
 }
 
-// SendContact implements sendContact operation.
-//
-// POST /sendContact
 func (UnimplementedHandler) SendContact(ctx context.Context, req *SendContact) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendDice implements sendDice operation.
+	//
+	// POST /sendDice
 }
 
-// SendDice implements sendDice operation.
-//
-// POST /sendDice
 func (UnimplementedHandler) SendDice(ctx context.Context, req *SendDice) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendDocument implements sendDocument operation.
+	//
+	// POST /sendDocument
 }
 
-// SendDocument implements sendDocument operation.
-//
-// POST /sendDocument
 func (UnimplementedHandler) SendDocument(ctx context.Context, req *SendDocument) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendGame implements sendGame operation.
+	//
+	// POST /sendGame
 }
 
-// SendGame implements sendGame operation.
-//
-// POST /sendGame
 func (UnimplementedHandler) SendGame(ctx context.Context, req *SendGame) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendInvoice implements sendInvoice operation.
+	//
+	// POST /sendInvoice
 }
 
-// SendInvoice implements sendInvoice operation.
-//
-// POST /sendInvoice
 func (UnimplementedHandler) SendInvoice(ctx context.Context, req *SendInvoice) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendLocation implements sendLocation operation.
+	//
+	// POST /sendLocation
 }
 
-// SendLocation implements sendLocation operation.
-//
-// POST /sendLocation
 func (UnimplementedHandler) SendLocation(ctx context.Context, req *SendLocation) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendMediaGroup implements sendMediaGroup operation.
+	//
+	// POST /sendMediaGroup
 }
 
-// SendMediaGroup implements sendMediaGroup operation.
-//
-// POST /sendMediaGroup
 func (UnimplementedHandler) SendMediaGroup(ctx context.Context, req *SendMediaGroup) (r *ResultArrayOfMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendMessage implements sendMessage operation.
+	//
+	// POST /sendMessage
 }
 
-// SendMessage implements sendMessage operation.
-//
-// POST /sendMessage
 func (UnimplementedHandler) SendMessage(ctx context.Context, req *SendMessage) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendPhoto implements sendPhoto operation.
+	//
+	// POST /sendPhoto
 }
 
-// SendPhoto implements sendPhoto operation.
-//
-// POST /sendPhoto
 func (UnimplementedHandler) SendPhoto(ctx context.Context, req *SendPhoto) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendPoll implements sendPoll operation.
+	//
+	// POST /sendPoll
 }
 
-// SendPoll implements sendPoll operation.
-//
-// POST /sendPoll
 func (UnimplementedHandler) SendPoll(ctx context.Context, req *SendPoll) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendSticker implements sendSticker operation.
+	//
+	// POST /sendSticker
 }
 
-// SendSticker implements sendSticker operation.
-//
-// POST /sendSticker
 func (UnimplementedHandler) SendSticker(ctx context.Context, req *SendSticker) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendVenue implements sendVenue operation.
+	//
+	// POST /sendVenue
 }
 
-// SendVenue implements sendVenue operation.
-//
-// POST /sendVenue
 func (UnimplementedHandler) SendVenue(ctx context.Context, req *SendVenue) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendVideo implements sendVideo operation.
+	//
+	// POST /sendVideo
 }
 
-// SendVideo implements sendVideo operation.
-//
-// POST /sendVideo
 func (UnimplementedHandler) SendVideo(ctx context.Context, req *SendVideo) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendVideoNote implements sendVideoNote operation.
+	//
+	// POST /sendVideoNote
 }
 
-// SendVideoNote implements sendVideoNote operation.
-//
-// POST /sendVideoNote
 func (UnimplementedHandler) SendVideoNote(ctx context.Context, req *SendVideoNote) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SendVoice implements sendVoice operation.
+	//
+	// POST /sendVoice
 }
 
-// SendVoice implements sendVoice operation.
-//
-// POST /sendVoice
 func (UnimplementedHandler) SendVoice(ctx context.Context, req *SendVoice) (r *ResultMessage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetChatAdministratorCustomTitle implements setChatAdministratorCustomTitle operation.
+	//
+	// POST /setChatAdministratorCustomTitle
 }
 
-// SetChatAdministratorCustomTitle implements setChatAdministratorCustomTitle operation.
-//
-// POST /setChatAdministratorCustomTitle
 func (UnimplementedHandler) SetChatAdministratorCustomTitle(ctx context.Context, req *SetChatAdministratorCustomTitle) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetChatDescription implements setChatDescription operation.
+	//
+	// POST /setChatDescription
 }
 
-// SetChatDescription implements setChatDescription operation.
-//
-// POST /setChatDescription
 func (UnimplementedHandler) SetChatDescription(ctx context.Context, req *SetChatDescription) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetChatPermissions implements setChatPermissions operation.
+	//
+	// POST /setChatPermissions
 }
 
-// SetChatPermissions implements setChatPermissions operation.
-//
-// POST /setChatPermissions
 func (UnimplementedHandler) SetChatPermissions(ctx context.Context, req *SetChatPermissions) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetChatPhoto implements setChatPhoto operation.
+	//
+	// POST /setChatPhoto
 }
 
-// SetChatPhoto implements setChatPhoto operation.
-//
-// POST /setChatPhoto
 func (UnimplementedHandler) SetChatPhoto(ctx context.Context, req *SetChatPhoto) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetChatStickerSet implements setChatStickerSet operation.
+	//
+	// POST /setChatStickerSet
 }
 
-// SetChatStickerSet implements setChatStickerSet operation.
-//
-// POST /setChatStickerSet
 func (UnimplementedHandler) SetChatStickerSet(ctx context.Context, req *SetChatStickerSet) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetChatTitle implements setChatTitle operation.
+	//
+	// POST /setChatTitle
 }
 
-// SetChatTitle implements setChatTitle operation.
-//
-// POST /setChatTitle
 func (UnimplementedHandler) SetChatTitle(ctx context.Context, req *SetChatTitle) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetGameScore implements setGameScore operation.
+	//
+	// POST /setGameScore
 }
 
-// SetGameScore implements setGameScore operation.
-//
-// POST /setGameScore
 func (UnimplementedHandler) SetGameScore(ctx context.Context, req *SetGameScore) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetMyCommands implements setMyCommands operation.
+	//
+	// POST /setMyCommands
 }
 
-// SetMyCommands implements setMyCommands operation.
-//
-// POST /setMyCommands
 func (UnimplementedHandler) SetMyCommands(ctx context.Context, req *SetMyCommands) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetPassportDataErrors implements setPassportDataErrors operation.
+	//
+	// POST /setPassportDataErrors
 }
 
-// SetPassportDataErrors implements setPassportDataErrors operation.
-//
-// POST /setPassportDataErrors
 func (UnimplementedHandler) SetPassportDataErrors(ctx context.Context, req *SetPassportDataErrors) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetStickerPositionInSet implements setStickerPositionInSet operation.
+	//
+	// POST /setStickerPositionInSet
 }
 
-// SetStickerPositionInSet implements setStickerPositionInSet operation.
-//
-// POST /setStickerPositionInSet
 func (UnimplementedHandler) SetStickerPositionInSet(ctx context.Context, req *SetStickerPositionInSet) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetStickerSetThumb implements setStickerSetThumb operation.
+	//
+	// POST /setStickerSetThumb
 }
 
-// SetStickerSetThumb implements setStickerSetThumb operation.
-//
-// POST /setStickerSetThumb
 func (UnimplementedHandler) SetStickerSetThumb(ctx context.Context, req *SetStickerSetThumb) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SetWebhook implements setWebhook operation.
+	//
+	// POST /setWebhook
 }
 
-// SetWebhook implements setWebhook operation.
-//
-// POST /setWebhook
 func (UnimplementedHandler) SetWebhook(ctx context.Context, req *SetWebhook) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// StopMessageLiveLocation implements stopMessageLiveLocation operation.
+	//
+	// POST /stopMessageLiveLocation
 }
 
-// StopMessageLiveLocation implements stopMessageLiveLocation operation.
-//
-// POST /stopMessageLiveLocation
 func (UnimplementedHandler) StopMessageLiveLocation(ctx context.Context, req *StopMessageLiveLocation) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// StopPoll implements stopPoll operation.
+	//
+	// POST /stopPoll
 }
 
-// StopPoll implements stopPoll operation.
-//
-// POST /stopPoll
 func (UnimplementedHandler) StopPoll(ctx context.Context, req *StopPoll) (r *ResultPoll, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UnbanChatMember implements unbanChatMember operation.
+	//
+	// POST /unbanChatMember
 }
 
-// UnbanChatMember implements unbanChatMember operation.
-//
-// POST /unbanChatMember
 func (UnimplementedHandler) UnbanChatMember(ctx context.Context, req *UnbanChatMember) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UnbanChatSenderChat implements unbanChatSenderChat operation.
+	//
+	// POST /unbanChatSenderChat
 }
 
-// UnbanChatSenderChat implements unbanChatSenderChat operation.
-//
-// POST /unbanChatSenderChat
 func (UnimplementedHandler) UnbanChatSenderChat(ctx context.Context, req *UnbanChatSenderChat) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UnpinAllChatMessages implements unpinAllChatMessages operation.
+	//
+	// POST /unpinAllChatMessages
 }
 
-// UnpinAllChatMessages implements unpinAllChatMessages operation.
-//
-// POST /unpinAllChatMessages
 func (UnimplementedHandler) UnpinAllChatMessages(ctx context.Context, req *UnpinAllChatMessages) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UnpinChatMessage implements unpinChatMessage operation.
+	//
+	// POST /unpinChatMessage
 }
 
-// UnpinChatMessage implements unpinChatMessage operation.
-//
-// POST /unpinChatMessage
 func (UnimplementedHandler) UnpinChatMessage(ctx context.Context, req *UnpinChatMessage) (r *Result, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UploadStickerFile implements uploadStickerFile operation.
+	//
+	// POST /uploadStickerFile
 }
 
-// UploadStickerFile implements uploadStickerFile operation.
-//
-// POST /uploadStickerFile
 func (UnimplementedHandler) UploadStickerFile(ctx context.Context, req *UploadStickerFile) (r *ResultFile, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// NewError creates *ErrorStatusCode from error returned by handler.
+	//
+	// Used for common default response.
 }
 
-// NewError creates *ErrorStatusCode from error returned by handler.
-//
-// Used for common default response.
 func (UnimplementedHandler) NewError(ctx context.Context, err error) (r *ErrorStatusCode) {
-	r = new(ErrorStatusCode)
-	return r
+	_ = "STUB: not implemented"
+	return nil
 }

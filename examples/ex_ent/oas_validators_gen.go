@@ -2,30 +2,8 @@
 
 package api
 
-import (
-	"github.com/go-faster/errors"
-)
+func (s ListPetCategoriesOKApplicationJSON) Validate() error { _ = "STUB: not implemented"; return nil }
 
-func (s ListPetCategoriesOKApplicationJSON) Validate() error {
-	alias := ([]PetCategoriesList)(s)
-	if alias == nil {
-		return errors.New("nil is invalid value")
-	}
-	return nil
-}
+func (s ListPetFriendsOKApplicationJSON) Validate() error { _ = "STUB: not implemented"; return nil }
 
-func (s ListPetFriendsOKApplicationJSON) Validate() error {
-	alias := ([]PetFriendsList)(s)
-	if alias == nil {
-		return errors.New("nil is invalid value")
-	}
-	return nil
-}
-
-func (s ListPetOKApplicationJSON) Validate() error {
-	alias := ([]PetList)(s)
-	if alias == nil {
-		return errors.New("nil is invalid value")
-	}
-	return nil
-}
+func (s ListPetOKApplicationJSON) Validate() error { _ = "STUB: not implemented"; return nil }

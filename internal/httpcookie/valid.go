@@ -4,22 +4,9 @@
 
 package httpcookie
 
-import (
-	"strings"
-
-	"golang.org/x/net/http/httpguts"
-)
-
 // Copied from https://github.com/golang/go/blob/bb8f9a6ae66d742cb67b4ad444179905a537de00/src/net/http/cookie.go#L463
 
 // IsCookieNameValid returns true, if cookie name is invalid.
-func IsCookieNameValid(raw string) bool {
-	if raw == "" {
-		return false
-	}
-	return strings.IndexFunc(raw, isNotToken) < 0
-}
+func IsCookieNameValid(raw string) bool { _ = "STUB: not implemented"; return false }
 
-func isNotToken(r rune) bool {
-	return !httpguts.IsTokenRune(r)
-}
+func isNotToken(r rune) bool { _ = "STUB: not implemented"; return false }

@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -17,78 +15,95 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /complicatedParameterName
 func (UnimplementedHandler) ComplicatedParameterNameGet(ctx context.Context, params ComplicatedParameterNameGetParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ContentParameters implements contentParameters operation.
 //
 // GET /contentParameters/{path}
 func (UnimplementedHandler) ContentParameters(ctx context.Context, params ContentParametersParams) (r *ContentParameters, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// CookieParameter implements cookieParameter operation.
+	//
+	// Test for cookie param.
+	//
+	// GET /cookieParameter
 }
 
-// CookieParameter implements cookieParameter operation.
-//
-// Test for cookie param.
-//
-// GET /cookieParameter
 func (UnimplementedHandler) CookieParameter(ctx context.Context, params CookieParameterParams) (r *Value, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// HeaderParameter implements headerParameter operation.
+	//
+	// Test for header param.
+	//
+	// GET /headerParameter
 }
 
-// HeaderParameter implements headerParameter operation.
-//
-// Test for header param.
-//
-// GET /headerParameter
 func (UnimplementedHandler) HeaderParameter(ctx context.Context, params HeaderParameterParams) (r *Value, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ObjectCookieParameter implements objectCookieParameter operation.
+	//
+	// GET /objectCookieParameter
 }
 
-// ObjectCookieParameter implements objectCookieParameter operation.
-//
-// GET /objectCookieParameter
 func (UnimplementedHandler) ObjectCookieParameter(ctx context.Context, params ObjectCookieParameterParams) (r *OneLevelObject, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ObjectQueryParameter implements objectQueryParameter operation.
+	//
+	// GET /objectQueryParameter
 }
 
-// ObjectQueryParameter implements objectQueryParameter operation.
-//
-// GET /objectQueryParameter
 func (UnimplementedHandler) ObjectQueryParameter(ctx context.Context, params ObjectQueryParameterParams) (r *ObjectQueryParameterOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// OptionalArrayParameter implements optionalArrayParameter operation.
+	//
+	// GET /optionalArrayParameter
 }
 
-// OptionalArrayParameter implements optionalArrayParameter operation.
-//
-// GET /optionalArrayParameter
 func (UnimplementedHandler) OptionalArrayParameter(ctx context.Context, params OptionalArrayParameterParams) (r string, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 // OptionalParameters implements optionalParameters operation.
 //
 // GET /optionalParameters
 func (UnimplementedHandler) OptionalParameters(ctx context.Context, params OptionalParametersParams) (r *OptionalQueryParametersResponse, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PathParameter implements pathParameter operation.
+	//
+	// Test for path param.
+	//
+	// GET /pathParameter/{value}
 }
 
-// PathParameter implements pathParameter operation.
-//
-// Test for path param.
-//
-// GET /pathParameter/{value}
 func (UnimplementedHandler) PathParameter(ctx context.Context, params PathParameterParams) (r *Value, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// SameName implements sameName operation.
+	//
+	// Parameters with different location, but with the same name.
+	//
+	// GET /same_name/{param}
 }
 
-// SameName implements sameName operation.
-//
-// Parameters with different location, but with the same name.
-//
-// GET /same_name/{param}
 func (UnimplementedHandler) SameName(ctx context.Context, params SameNameParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SimilarNames implements similarNames operation.
@@ -97,5 +112,6 @@ func (UnimplementedHandler) SameName(ctx context.Context, params SameNameParams)
 //
 // GET /similarNames
 func (UnimplementedHandler) SimilarNames(ctx context.Context, params SimilarNamesParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }

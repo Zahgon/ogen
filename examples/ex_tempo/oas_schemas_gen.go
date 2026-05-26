@@ -3,16 +3,11 @@
 package api
 
 import (
-	"fmt"
 	"io"
 	"time"
-
-	"github.com/go-faster/errors"
 )
 
-func (s *ErrorStatusCode) Error() string {
-	return fmt.Sprintf("code %d: %+v", s.StatusCode, s.Response)
-}
+func (s *ErrorStatusCode) Error() string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/AnyValue
 // AnyValue represents sum type.
@@ -42,172 +37,118 @@ const (
 )
 
 // IsStringValue reports whether AnyValue is StringValue.
-func (s AnyValue) IsStringValue() bool { return s.Type == StringValueAnyValue }
+func (s AnyValue) IsStringValue() bool { _ = "STUB: not implemented"; return false }
 
 // IsBoolValue reports whether AnyValue is BoolValue.
-func (s AnyValue) IsBoolValue() bool { return s.Type == BoolValueAnyValue }
+func (s AnyValue) IsBoolValue() bool { _ = "STUB: not implemented"; return false }
 
 // IsIntValue reports whether AnyValue is IntValue.
-func (s AnyValue) IsIntValue() bool { return s.Type == IntValueAnyValue }
+func (s AnyValue) IsIntValue() bool { _ = "STUB: not implemented"; return false }
 
 // IsDoubleValue reports whether AnyValue is DoubleValue.
-func (s AnyValue) IsDoubleValue() bool { return s.Type == DoubleValueAnyValue }
+func (s AnyValue) IsDoubleValue() bool { _ = "STUB: not implemented"; return false }
 
 // IsArrayValue reports whether AnyValue is ArrayValue.
-func (s AnyValue) IsArrayValue() bool { return s.Type == ArrayValueAnyValue }
+func (s AnyValue) IsArrayValue() bool { _ = "STUB: not implemented"; return false }
 
 // IsKvlistValue reports whether AnyValue is KvlistValue.
-func (s AnyValue) IsKvlistValue() bool { return s.Type == KvlistValueAnyValue }
+func (s AnyValue) IsKvlistValue() bool { _ = "STUB: not implemented"; return false }
 
 // IsBytesValue reports whether AnyValue is BytesValue.
-func (s AnyValue) IsBytesValue() bool { return s.Type == BytesValueAnyValue }
+func (s AnyValue) IsBytesValue() bool { _ = "STUB: not implemented"; return false }
 
 // SetStringValue sets AnyValue to StringValue.
-func (s *AnyValue) SetStringValue(v StringValue) {
-	s.Type = StringValueAnyValue
-	s.StringValue = v
-}
+func (s *AnyValue) SetStringValue(v StringValue) { _ = "STUB: not implemented"; return }
 
 // GetStringValue returns StringValue and true boolean if AnyValue is StringValue.
 func (s AnyValue) GetStringValue() (v StringValue, ok bool) {
-	if !s.IsStringValue() {
-		return v, false
-	}
-	return s.StringValue, true
+	_ = "STUB: not implemented"
+	return *new(StringValue), false
 }
 
 // NewStringValueAnyValue returns new AnyValue from StringValue.
 func NewStringValueAnyValue(v StringValue) AnyValue {
-	var s AnyValue
-	s.SetStringValue(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(AnyValue)
 }
 
 // SetBoolValue sets AnyValue to BoolValue.
-func (s *AnyValue) SetBoolValue(v BoolValue) {
-	s.Type = BoolValueAnyValue
-	s.BoolValue = v
-}
+func (s *AnyValue) SetBoolValue(v BoolValue) { _ = "STUB: not implemented"; return }
 
 // GetBoolValue returns BoolValue and true boolean if AnyValue is BoolValue.
 func (s AnyValue) GetBoolValue() (v BoolValue, ok bool) {
-	if !s.IsBoolValue() {
-		return v, false
-	}
-	return s.BoolValue, true
+	_ = "STUB: not implemented"
+	return *new(BoolValue), false
 }
 
 // NewBoolValueAnyValue returns new AnyValue from BoolValue.
-func NewBoolValueAnyValue(v BoolValue) AnyValue {
-	var s AnyValue
-	s.SetBoolValue(v)
-	return s
-}
+func NewBoolValueAnyValue(v BoolValue) AnyValue { _ = "STUB: not implemented"; return *new(AnyValue) }
 
 // SetIntValue sets AnyValue to IntValue.
-func (s *AnyValue) SetIntValue(v IntValue) {
-	s.Type = IntValueAnyValue
-	s.IntValue = v
-}
+func (s *AnyValue) SetIntValue(v IntValue) { _ = "STUB: not implemented"; return }
 
 // GetIntValue returns IntValue and true boolean if AnyValue is IntValue.
 func (s AnyValue) GetIntValue() (v IntValue, ok bool) {
-	if !s.IsIntValue() {
-		return v, false
-	}
-	return s.IntValue, true
+	_ = "STUB: not implemented"
+	return *new(IntValue), false
 }
 
 // NewIntValueAnyValue returns new AnyValue from IntValue.
-func NewIntValueAnyValue(v IntValue) AnyValue {
-	var s AnyValue
-	s.SetIntValue(v)
-	return s
-}
+func NewIntValueAnyValue(v IntValue) AnyValue { _ = "STUB: not implemented"; return *new(AnyValue) }
 
 // SetDoubleValue sets AnyValue to DoubleValue.
-func (s *AnyValue) SetDoubleValue(v DoubleValue) {
-	s.Type = DoubleValueAnyValue
-	s.DoubleValue = v
-}
+func (s *AnyValue) SetDoubleValue(v DoubleValue) { _ = "STUB: not implemented"; return }
 
 // GetDoubleValue returns DoubleValue and true boolean if AnyValue is DoubleValue.
 func (s AnyValue) GetDoubleValue() (v DoubleValue, ok bool) {
-	if !s.IsDoubleValue() {
-		return v, false
-	}
-	return s.DoubleValue, true
+	_ = "STUB: not implemented"
+	return *new(DoubleValue), false
 }
 
 // NewDoubleValueAnyValue returns new AnyValue from DoubleValue.
 func NewDoubleValueAnyValue(v DoubleValue) AnyValue {
-	var s AnyValue
-	s.SetDoubleValue(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(AnyValue)
 }
 
 // SetArrayValue sets AnyValue to ArrayValue.
-func (s *AnyValue) SetArrayValue(v ArrayValue) {
-	s.Type = ArrayValueAnyValue
-	s.ArrayValue = v
-}
+func (s *AnyValue) SetArrayValue(v ArrayValue) { _ = "STUB: not implemented"; return }
 
 // GetArrayValue returns ArrayValue and true boolean if AnyValue is ArrayValue.
 func (s AnyValue) GetArrayValue() (v ArrayValue, ok bool) {
-	if !s.IsArrayValue() {
-		return v, false
-	}
-	return s.ArrayValue, true
+	_ = "STUB: not implemented"
+	return *new(ArrayValue), false
 }
 
 // NewArrayValueAnyValue returns new AnyValue from ArrayValue.
-func NewArrayValueAnyValue(v ArrayValue) AnyValue {
-	var s AnyValue
-	s.SetArrayValue(v)
-	return s
-}
+func NewArrayValueAnyValue(v ArrayValue) AnyValue { _ = "STUB: not implemented"; return *new(AnyValue) }
 
 // SetKvlistValue sets AnyValue to KvlistValue.
-func (s *AnyValue) SetKvlistValue(v KvlistValue) {
-	s.Type = KvlistValueAnyValue
-	s.KvlistValue = v
-}
+func (s *AnyValue) SetKvlistValue(v KvlistValue) { _ = "STUB: not implemented"; return }
 
 // GetKvlistValue returns KvlistValue and true boolean if AnyValue is KvlistValue.
 func (s AnyValue) GetKvlistValue() (v KvlistValue, ok bool) {
-	if !s.IsKvlistValue() {
-		return v, false
-	}
-	return s.KvlistValue, true
+	_ = "STUB: not implemented"
+	return *new(KvlistValue), false
 }
 
 // NewKvlistValueAnyValue returns new AnyValue from KvlistValue.
 func NewKvlistValueAnyValue(v KvlistValue) AnyValue {
-	var s AnyValue
-	s.SetKvlistValue(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(AnyValue)
 }
 
 // SetBytesValue sets AnyValue to BytesValue.
-func (s *AnyValue) SetBytesValue(v BytesValue) {
-	s.Type = BytesValueAnyValue
-	s.BytesValue = v
-}
+func (s *AnyValue) SetBytesValue(v BytesValue) { _ = "STUB: not implemented"; return }
 
 // GetBytesValue returns BytesValue and true boolean if AnyValue is BytesValue.
 func (s AnyValue) GetBytesValue() (v BytesValue, ok bool) {
-	if !s.IsBytesValue() {
-		return v, false
-	}
-	return s.BytesValue, true
+	_ = "STUB: not implemented"
+	return *new(BytesValue), false
 }
 
 // NewBytesValueAnyValue returns new AnyValue from BytesValue.
-func NewBytesValueAnyValue(v BytesValue) AnyValue {
-	var s AnyValue
-	s.SetBytesValue(v)
-	return s
-}
+func NewBytesValueAnyValue(v BytesValue) AnyValue { _ = "STUB: not implemented"; return *new(AnyValue) }
 
 // Ref: #/components/schemas/ArrayValue
 type ArrayValue struct {
@@ -215,14 +156,10 @@ type ArrayValue struct {
 }
 
 // GetArrayValue returns the value of ArrayValue.
-func (s *ArrayValue) GetArrayValue() []AnyValue {
-	return s.ArrayValue
-}
+func (s *ArrayValue) GetArrayValue() []AnyValue { _ = "STUB: not implemented"; return nil }
 
 // SetArrayValue sets the value of ArrayValue.
-func (s *ArrayValue) SetArrayValue(val []AnyValue) {
-	s.ArrayValue = val
-}
+func (s *ArrayValue) SetArrayValue(val []AnyValue) { _ = "STUB: not implemented"; return }
 
 type Attributes []KeyValue
 
@@ -233,43 +170,43 @@ type BoolValue struct {
 
 // GetBoolValue returns the value of BoolValue.
 func (s *BoolValue) GetBoolValue() bool {
-	return s.BoolValue
+	_ = "STUB: not implemented"
+
+	// SetBoolValue sets the value of BoolValue.
+	return false
 }
 
-// SetBoolValue sets the value of BoolValue.
 func (s *BoolValue) SetBoolValue(val bool) {
-	s.BoolValue = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/BytesValue
+	return
 }
 
-// Ref: #/components/schemas/BytesValue
 type BytesValue struct {
 	BytesValue []byte `json:"bytesValue"`
 }
 
 // GetBytesValue returns the value of BytesValue.
-func (s *BytesValue) GetBytesValue() []byte {
-	return s.BytesValue
-}
+func (s *BytesValue) GetBytesValue() []byte { _ = "STUB: not implemented"; return nil }
 
 // SetBytesValue sets the value of BytesValue.
 func (s *BytesValue) SetBytesValue(val []byte) {
-	s.BytesValue = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/DoubleValue
+	return
 }
 
-// Ref: #/components/schemas/DoubleValue
 type DoubleValue struct {
 	DoubleValue float64 `json:"doubleValue"`
 }
 
 // GetDoubleValue returns the value of DoubleValue.
-func (s *DoubleValue) GetDoubleValue() float64 {
-	return s.DoubleValue
-}
+func (s *DoubleValue) GetDoubleValue() float64 { _ = "STUB: not implemented"; return 0 }
 
 // SetDoubleValue sets the value of DoubleValue.
-func (s *DoubleValue) SetDoubleValue(val float64) {
-	s.DoubleValue = val
-}
+func (s *DoubleValue) SetDoubleValue(val float64) { _ = "STUB: not implemented"; return }
 
 type EchoOK struct {
 	Data io.Reader
@@ -278,12 +215,7 @@ type EchoOK struct {
 // Read reads data from the Data reader.
 //
 // Kept to satisfy the io.Reader interface.
-func (s EchoOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
-}
+func (s EchoOK) Read(p []byte) (n int, err error) { _ = "STUB: not implemented"; return 0, nil }
 
 type Error string
 
@@ -294,41 +226,49 @@ type ErrorStatusCode struct {
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorStatusCode) GetResponse() Error {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(Error)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
 func (s *ErrorStatusCode) SetResponse(val Error) {
-	s.Response = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/IntValue
+	return
 }
 
-// Ref: #/components/schemas/IntValue
 type IntValue struct {
 	IntValue int64 `json:"intValue"`
 }
 
 // GetIntValue returns the value of IntValue.
 func (s *IntValue) GetIntValue() int64 {
-	return s.IntValue
+	_ = "STUB: not implemented"
+
+	// SetIntValue sets the value of IntValue.
+	return 0
 }
 
-// SetIntValue sets the value of IntValue.
 func (s *IntValue) SetIntValue(val int64) {
-	s.IntValue = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/KeyValue
+	return
 }
 
-// Ref: #/components/schemas/KeyValue
 type KeyValue struct {
 	Key   string   `json:"key"`
 	Value AnyValue `json:"value"`
@@ -336,45 +276,47 @@ type KeyValue struct {
 
 // GetKey returns the value of Key.
 func (s *KeyValue) GetKey() string {
-	return s.Key
+	_ = "STUB: not implemented"
+
+	// GetValue returns the value of Value.
+	return ""
 }
 
-// GetValue returns the value of Value.
 func (s *KeyValue) GetValue() AnyValue {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetKey sets the value of Key.
+	return *new(AnyValue)
 }
 
-// SetKey sets the value of Key.
 func (s *KeyValue) SetKey(val string) {
-	s.Key = val
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return
 }
 
-// SetValue sets the value of Value.
 func (s *KeyValue) SetValue(val AnyValue) {
-	s.Value = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/KvlistValue
+	return
 }
 
-// Ref: #/components/schemas/KvlistValue
 type KvlistValue struct {
 	KvlistValue []KeyValue `json:"kvlistValue"`
 }
 
 // GetKvlistValue returns the value of KvlistValue.
-func (s *KvlistValue) GetKvlistValue() []KeyValue {
-	return s.KvlistValue
-}
+func (s *KvlistValue) GetKvlistValue() []KeyValue { _ = "STUB: not implemented"; return nil }
 
 // SetKvlistValue sets the value of KvlistValue.
-func (s *KvlistValue) SetKvlistValue(val []KeyValue) {
-	s.KvlistValue = val
-}
+func (s *KvlistValue) SetKvlistValue(val []KeyValue) { _ = "STUB: not implemented"; return }
 
 // NewOptDuration returns new OptDuration with value set to v.
 func NewOptDuration(v time.Duration) OptDuration {
-	return OptDuration{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptDuration)
 }
 
 // OptDuration is optional time.Duration.
@@ -384,44 +326,32 @@ type OptDuration struct {
 }
 
 // IsSet returns true if OptDuration was set.
-func (o OptDuration) IsSet() bool { return o.Set }
+func (o OptDuration) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDuration) Reset() {
-	var v time.Duration
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDuration) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDuration) SetTo(v time.Duration) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDuration) SetTo(v time.Duration) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDuration) Get() (v time.Duration, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Duration), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptDuration) Or(d time.Duration) time.Duration {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Duration)
 }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -430,44 +360,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -476,44 +388,26 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptTagScope returns new OptTagScope with value set to v.
-func NewOptTagScope(v TagScope) OptTagScope {
-	return OptTagScope{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptTagScope(v TagScope) OptTagScope { _ = "STUB: not implemented"; return *new(OptTagScope) }
 
 // OptTagScope is optional TagScope.
 type OptTagScope struct {
@@ -522,43 +416,31 @@ type OptTagScope struct {
 }
 
 // IsSet returns true if OptTagScope was set.
-func (o OptTagScope) IsSet() bool { return o.Set }
+func (o OptTagScope) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTagScope) Reset() {
-	var v TagScope
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTagScope) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTagScope) SetTo(v TagScope) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTagScope) SetTo(v TagScope) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTagScope) Get() (v TagScope, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(TagScope), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptTagScope) Or(d TagScope) TagScope {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptTagScope) Or(d TagScope) TagScope { _ = "STUB: not implemented"; return *new(TagScope) }
 
 // NewOptTempoSpanSet returns new OptTempoSpanSet with value set to v.
 func NewOptTempoSpanSet(v TempoSpanSet) OptTempoSpanSet {
-	return OptTempoSpanSet{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptTempoSpanSet)
 }
 
 // OptTempoSpanSet is optional TempoSpanSet.
@@ -568,43 +450,34 @@ type OptTempoSpanSet struct {
 }
 
 // IsSet returns true if OptTempoSpanSet was set.
-func (o OptTempoSpanSet) IsSet() bool { return o.Set }
+func (o OptTempoSpanSet) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTempoSpanSet) Reset() {
-	var v TempoSpanSet
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTempoSpanSet) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTempoSpanSet) SetTo(v TempoSpanSet) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTempoSpanSet) SetTo(v TempoSpanSet) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTempoSpanSet) Get() (v TempoSpanSet, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(TempoSpanSet), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptTempoSpanSet) Or(d TempoSpanSet) TempoSpanSet {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(TempoSpanSet)
 }
 
 // NewOptUnixSeconds returns new OptUnixSeconds with value set to v.
 func NewOptUnixSeconds(v time.Time) OptUnixSeconds {
-	return OptUnixSeconds{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptUnixSeconds)
 }
 
 // OptUnixSeconds is optional time.Time.
@@ -614,35 +487,28 @@ type OptUnixSeconds struct {
 }
 
 // IsSet returns true if OptUnixSeconds was set.
-func (o OptUnixSeconds) IsSet() bool { return o.Set }
+func (o OptUnixSeconds) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUnixSeconds) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUnixSeconds) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUnixSeconds) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUnixSeconds) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUnixSeconds) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptUnixSeconds) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // Ref: #/components/schemas/PrometheusVersion
@@ -657,65 +523,89 @@ type PrometheusVersion struct {
 
 // GetVersion returns the value of Version.
 func (s *PrometheusVersion) GetVersion() string {
-	return s.Version
+	_ = "STUB: not implemented"
+
+	// GetRevision returns the value of Revision.
+	return ""
 }
 
-// GetRevision returns the value of Revision.
 func (s *PrometheusVersion) GetRevision() string {
-	return s.Revision
+	_ = "STUB: not implemented"
+
+	// GetBranch returns the value of Branch.
+	return ""
 }
 
-// GetBranch returns the value of Branch.
 func (s *PrometheusVersion) GetBranch() string {
-	return s.Branch
+	_ = "STUB: not implemented"
+
+	// GetBuildUser returns the value of BuildUser.
+	return ""
 }
 
-// GetBuildUser returns the value of BuildUser.
 func (s *PrometheusVersion) GetBuildUser() string {
-	return s.BuildUser
+	_ = "STUB: not implemented"
+
+	// GetBuildDate returns the value of BuildDate.
+	return ""
 }
 
-// GetBuildDate returns the value of BuildDate.
 func (s *PrometheusVersion) GetBuildDate() string {
-	return s.BuildDate
+	_ = "STUB: not implemented"
+
+	// GetGoVersion returns the value of GoVersion.
+	return ""
 }
 
-// GetGoVersion returns the value of GoVersion.
 func (s *PrometheusVersion) GetGoVersion() string {
-	return s.GoVersion
+	_ = "STUB: not implemented"
+
+	// SetVersion sets the value of Version.
+	return ""
 }
 
-// SetVersion sets the value of Version.
 func (s *PrometheusVersion) SetVersion(val string) {
-	s.Version = val
+	_ = "STUB: not implemented"
+
+	// SetRevision sets the value of Revision.
+	return
 }
 
-// SetRevision sets the value of Revision.
 func (s *PrometheusVersion) SetRevision(val string) {
-	s.Revision = val
+	_ = "STUB: not implemented"
+
+	// SetBranch sets the value of Branch.
+	return
 }
 
-// SetBranch sets the value of Branch.
 func (s *PrometheusVersion) SetBranch(val string) {
-	s.Branch = val
+	_ = "STUB: not implemented"
+
+	// SetBuildUser sets the value of BuildUser.
+	return
 }
 
-// SetBuildUser sets the value of BuildUser.
 func (s *PrometheusVersion) SetBuildUser(val string) {
-	s.BuildUser = val
+	_ = "STUB: not implemented"
+
+	// SetBuildDate sets the value of BuildDate.
+	return
 }
 
-// SetBuildDate sets the value of BuildDate.
 func (s *PrometheusVersion) SetBuildDate(val string) {
-	s.BuildDate = val
+	_ = "STUB: not implemented"
+
+	// SetGoVersion sets the value of GoVersion.
+	return
 }
 
-// SetGoVersion sets the value of GoVersion.
 func (s *PrometheusVersion) SetGoVersion(val string) {
-	s.GoVersion = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ScopeTags
+	return
 }
 
-// Ref: #/components/schemas/ScopeTags
 type ScopeTags struct {
 	Name TagScope `json:"name"`
 	Tags []string `json:"tags"`
@@ -723,38 +613,42 @@ type ScopeTags struct {
 
 // GetName returns the value of Name.
 func (s *ScopeTags) GetName() TagScope {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetTags returns the value of Tags.
+	return *new(TagScope)
 }
 
-// GetTags returns the value of Tags.
 func (s *ScopeTags) GetTags() []string {
-	return s.Tags
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return nil
 }
 
-// SetName sets the value of Name.
 func (s *ScopeTags) SetName(val TagScope) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetTags sets the value of Tags.
+	return
 }
 
-// SetTags sets the value of Tags.
 func (s *ScopeTags) SetTags(val []string) {
-	s.Tags = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/StringValue
+	return
 }
 
-// Ref: #/components/schemas/StringValue
 type StringValue struct {
 	StringValue string `json:"stringValue"`
 }
 
 // GetStringValue returns the value of StringValue.
-func (s *StringValue) GetStringValue() string {
-	return s.StringValue
-}
+func (s *StringValue) GetStringValue() string { _ = "STUB: not implemented"; return "" }
 
 // SetStringValue sets the value of StringValue.
-func (s *StringValue) SetStringValue(val string) {
-	s.StringValue = val
-}
+func (s *StringValue) SetStringValue(val string) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/TagNames
 type TagNames struct {
@@ -763,30 +657,38 @@ type TagNames struct {
 
 // GetTagNames returns the value of TagNames.
 func (s *TagNames) GetTagNames() []string {
-	return s.TagNames
+	_ = "STUB: not implemented"
+
+	// SetTagNames sets the value of TagNames.
+	return nil
 }
 
-// SetTagNames sets the value of TagNames.
 func (s *TagNames) SetTagNames(val []string) {
-	s.TagNames = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/TagNamesV2
+	return
 }
 
-// Ref: #/components/schemas/TagNamesV2
 type TagNamesV2 struct {
 	Scopes []ScopeTags `json:"scopes"`
 }
 
 // GetScopes returns the value of Scopes.
 func (s *TagNamesV2) GetScopes() []ScopeTags {
-	return s.Scopes
+	_ = "STUB: not implemented"
+
+	// SetScopes sets the value of Scopes.
+	return nil
 }
 
-// SetScopes sets the value of Scopes.
 func (s *TagNamesV2) SetScopes(val []ScopeTags) {
-	s.Scopes = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/TagScope
+	return
 }
 
-// Ref: #/components/schemas/TagScope
 type TagScope string
 
 const (
@@ -797,50 +699,13 @@ const (
 )
 
 // AllValues returns all TagScope values.
-func (TagScope) AllValues() []TagScope {
-	return []TagScope{
-		TagScopeSpan,
-		TagScopeResource,
-		TagScopeIntrinsic,
-		TagScopeNone,
-	}
-}
+func (TagScope) AllValues() []TagScope { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s TagScope) MarshalText() ([]byte, error) {
-	switch s {
-	case TagScopeSpan:
-		return []byte(s), nil
-	case TagScopeResource:
-		return []byte(s), nil
-	case TagScopeIntrinsic:
-		return []byte(s), nil
-	case TagScopeNone:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s TagScope) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *TagScope) UnmarshalText(data []byte) error {
-	switch TagScope(data) {
-	case TagScopeSpan:
-		*s = TagScopeSpan
-		return nil
-	case TagScopeResource:
-		*s = TagScopeResource
-		return nil
-	case TagScopeIntrinsic:
-		*s = TagScopeIntrinsic
-		return nil
-	case TagScopeNone:
-		*s = TagScopeNone
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *TagScope) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/TagValue
 type TagValue struct {
@@ -850,55 +715,71 @@ type TagValue struct {
 
 // GetType returns the value of Type.
 func (s *TagValue) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetValue returns the value of Value.
+	return ""
 }
 
-// GetValue returns the value of Value.
 func (s *TagValue) GetValue() string {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return ""
 }
 
-// SetType sets the value of Type.
 func (s *TagValue) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return
 }
 
-// SetValue sets the value of Value.
 func (s *TagValue) SetValue(val string) {
-	s.Value = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/TagValues
+	return
 }
 
-// Ref: #/components/schemas/TagValues
 type TagValues struct {
 	TagValues []string `json:"tagValues"`
 }
 
 // GetTagValues returns the value of TagValues.
 func (s *TagValues) GetTagValues() []string {
-	return s.TagValues
+	_ = "STUB: not implemented"
+
+	// SetTagValues sets the value of TagValues.
+	return nil
 }
 
-// SetTagValues sets the value of TagValues.
 func (s *TagValues) SetTagValues(val []string) {
-	s.TagValues = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/TagValuesV2
+	return
 }
 
-// Ref: #/components/schemas/TagValuesV2
 type TagValuesV2 struct {
 	TagValues []TagValue `json:"tagValues"`
 }
 
 // GetTagValues returns the value of TagValues.
 func (s *TagValuesV2) GetTagValues() []TagValue {
-	return s.TagValues
+	_ = "STUB: not implemented"
+
+	// SetTagValues sets the value of TagValues.
+	return nil
 }
 
-// SetTagValues sets the value of TagValues.
 func (s *TagValuesV2) SetTagValues(val []TagValue) {
-	s.TagValues = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/TempoSpan
+	return
 }
 
-// Ref: #/components/schemas/TempoSpan
 type TempoSpan struct {
 	SpanID            string     `json:"spanID"`
 	Name              OptString  `json:"name"`
@@ -909,55 +790,63 @@ type TempoSpan struct {
 
 // GetSpanID returns the value of SpanID.
 func (s *TempoSpan) GetSpanID() string {
-	return s.SpanID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *TempoSpan) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetStartTimeUnixNano returns the value of StartTimeUnixNano.
+	return *new(OptString)
 }
 
-// GetStartTimeUnixNano returns the value of StartTimeUnixNano.
 func (s *TempoSpan) GetStartTimeUnixNano() time.Time {
-	return s.StartTimeUnixNano
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetDurationNanos returns the value of DurationNanos.
-func (s *TempoSpan) GetDurationNanos() int64 {
-	return s.DurationNanos
-}
+func (s *TempoSpan) GetDurationNanos() int64 { _ = "STUB: not implemented"; return 0 }
 
 // GetAttributes returns the value of Attributes.
 func (s *TempoSpan) GetAttributes() Attributes {
-	return s.Attributes
+	_ = "STUB: not implemented"
+	return *
+
+	// SetSpanID sets the value of SpanID.
+	new(Attributes)
 }
 
-// SetSpanID sets the value of SpanID.
 func (s *TempoSpan) SetSpanID(val string) {
-	s.SpanID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *TempoSpan) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetStartTimeUnixNano sets the value of StartTimeUnixNano.
+	return
 }
 
-// SetStartTimeUnixNano sets the value of StartTimeUnixNano.
-func (s *TempoSpan) SetStartTimeUnixNano(val time.Time) {
-	s.StartTimeUnixNano = val
-}
+func (s *TempoSpan) SetStartTimeUnixNano(val time.Time) { _ = "STUB: not implemented"; return }
 
 // SetDurationNanos sets the value of DurationNanos.
-func (s *TempoSpan) SetDurationNanos(val int64) {
-	s.DurationNanos = val
-}
+func (s *TempoSpan) SetDurationNanos(val int64) { _ = "STUB: not implemented"; return }
 
 // SetAttributes sets the value of Attributes.
 func (s *TempoSpan) SetAttributes(val Attributes) {
-	s.Attributes = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/TempoSpanSet
+	return
 }
 
-// Ref: #/components/schemas/TempoSpanSet
 type TempoSpanSet struct {
 	Spans      []TempoSpan `json:"spans"`
 	Matched    OptInt      `json:"matched"`
@@ -966,33 +855,42 @@ type TempoSpanSet struct {
 
 // GetSpans returns the value of Spans.
 func (s *TempoSpanSet) GetSpans() []TempoSpan {
-	return s.Spans
+	_ = "STUB: not implemented"
+
+	// GetMatched returns the value of Matched.
+	return nil
 }
 
-// GetMatched returns the value of Matched.
 func (s *TempoSpanSet) GetMatched() OptInt {
-	return s.Matched
+	_ = "STUB: not implemented"
+
+	// GetAttributes returns the value of Attributes.
+	return *new(OptInt)
 }
 
-// GetAttributes returns the value of Attributes.
 func (s *TempoSpanSet) GetAttributes() Attributes {
-	return s.Attributes
+	_ = "STUB: not implemented"
+	return *
+
+	// SetSpans sets the value of Spans.
+	new(Attributes)
 }
 
-// SetSpans sets the value of Spans.
 func (s *TempoSpanSet) SetSpans(val []TempoSpan) {
-	s.Spans = val
+	_ = "STUB: not implemented"
+
+	// SetMatched sets the value of Matched.
+	return
 }
 
-// SetMatched sets the value of Matched.
 func (s *TempoSpanSet) SetMatched(val OptInt) {
-	s.Matched = val
+	_ = "STUB: not implemented"
+
+	// SetAttributes sets the value of Attributes.
+	return
 }
 
-// SetAttributes sets the value of Attributes.
-func (s *TempoSpanSet) SetAttributes(val Attributes) {
-	s.Attributes = val
-}
+func (s *TempoSpanSet) SetAttributes(val Attributes) { _ = "STUB: not implemented"; return }
 
 type TraceByID struct {
 	Data io.Reader
@@ -1001,21 +899,24 @@ type TraceByID struct {
 // Read reads data from the Data reader.
 //
 // Kept to satisfy the io.Reader interface.
-func (s TraceByID) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+func (s TraceByID) Read(p []byte) (n int, err error) { _ = "STUB: not implemented"; return 0, nil }
+
+func (*TraceByID) traceByIDRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/responses/TraceByIDNotFound
+	return
 }
 
-func (*TraceByID) traceByIDRes() {}
-
-// Ref: #/components/responses/TraceByIDNotFound
 type TraceByIDNotFound struct{}
 
-func (*TraceByIDNotFound) traceByIDRes() {}
+func (*TraceByIDNotFound) traceByIDRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/TraceSearchMetadata
+	// Ref: #/components/schemas/TraceSearchMetadata
+	return
+}
+
 type TraceSearchMetadata struct {
 	TraceID           string          `json:"traceID"`
 	RootServiceName   OptString       `json:"rootServiceName"`
@@ -1027,75 +928,92 @@ type TraceSearchMetadata struct {
 
 // GetTraceID returns the value of TraceID.
 func (s *TraceSearchMetadata) GetTraceID() string {
-	return s.TraceID
+	_ = "STUB: not implemented"
+
+	// GetRootServiceName returns the value of RootServiceName.
+	return ""
 }
 
-// GetRootServiceName returns the value of RootServiceName.
 func (s *TraceSearchMetadata) GetRootServiceName() OptString {
-	return s.RootServiceName
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRootTraceName returns the value of RootTraceName.
+	new(OptString)
 }
 
-// GetRootTraceName returns the value of RootTraceName.
 func (s *TraceSearchMetadata) GetRootTraceName() OptString {
-	return s.RootTraceName
+	_ = "STUB: not implemented"
+	return *
+
+	// GetStartTimeUnixNano returns the value of StartTimeUnixNano.
+	new(OptString)
 }
 
-// GetStartTimeUnixNano returns the value of StartTimeUnixNano.
 func (s *TraceSearchMetadata) GetStartTimeUnixNano() time.Time {
-	return s.StartTimeUnixNano
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // GetDurationMs returns the value of DurationMs.
 func (s *TraceSearchMetadata) GetDurationMs() OptInt {
-	return s.DurationMs
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSpanSet returns the value of SpanSet.
+	new(OptInt)
 }
 
-// GetSpanSet returns the value of SpanSet.
 func (s *TraceSearchMetadata) GetSpanSet() OptTempoSpanSet {
-	return s.SpanSet
+	_ = "STUB: not implemented"
+
+	// SetTraceID sets the value of TraceID.
+	return *new(OptTempoSpanSet)
 }
 
-// SetTraceID sets the value of TraceID.
 func (s *TraceSearchMetadata) SetTraceID(val string) {
-	s.TraceID = val
+	_ = "STUB: not implemented"
+
+	// SetRootServiceName sets the value of RootServiceName.
+	return
 }
 
-// SetRootServiceName sets the value of RootServiceName.
-func (s *TraceSearchMetadata) SetRootServiceName(val OptString) {
-	s.RootServiceName = val
-}
+func (s *TraceSearchMetadata) SetRootServiceName(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetRootTraceName sets the value of RootTraceName.
-func (s *TraceSearchMetadata) SetRootTraceName(val OptString) {
-	s.RootTraceName = val
-}
+func (s *TraceSearchMetadata) SetRootTraceName(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetStartTimeUnixNano sets the value of StartTimeUnixNano.
 func (s *TraceSearchMetadata) SetStartTimeUnixNano(val time.Time) {
-	s.StartTimeUnixNano = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetDurationMs sets the value of DurationMs.
 func (s *TraceSearchMetadata) SetDurationMs(val OptInt) {
-	s.DurationMs = val
+	_ = "STUB: not implemented"
+
+	// SetSpanSet sets the value of SpanSet.
+	return
 }
 
-// SetSpanSet sets the value of SpanSet.
 func (s *TraceSearchMetadata) SetSpanSet(val OptTempoSpanSet) {
-	s.SpanSet = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Traces
+	return
 }
 
-// Ref: #/components/schemas/Traces
 type Traces struct {
 	Traces []TraceSearchMetadata `json:"traces"`
 }
 
 // GetTraces returns the value of Traces.
 func (s *Traces) GetTraces() []TraceSearchMetadata {
-	return s.Traces
+	_ = "STUB: not implemented"
+
+	// SetTraces sets the value of Traces.
+	return nil
 }
 
-// SetTraces sets the value of Traces.
-func (s *Traces) SetTraces(val []TraceSearchMetadata) {
-	s.Traces = val
-}
+func (s *Traces) SetTraces(val []TraceSearchMetadata) { _ = "STUB: not implemented"; return }

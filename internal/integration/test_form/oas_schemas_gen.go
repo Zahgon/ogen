@@ -16,15 +16,19 @@ type OnlyFormReq struct {
 
 // GetField returns the value of Field.
 func (s *OnlyFormReq) GetField() int {
-	return s.Field
+	_ = "STUB: not implemented"
+
+	// SetField sets the value of Field.
+	return 0
 }
 
-// SetField sets the value of Field.
 func (s *OnlyFormReq) SetField(val int) {
-	s.Field = val
+	_ = "STUB: not implemented"
+
+	// OnlyMultipartFileOK is response for OnlyMultipartFile operation.
+	return
 }
 
-// OnlyMultipartFileOK is response for OnlyMultipartFile operation.
 type OnlyMultipartFileOK struct{}
 
 type OnlyMultipartFileReq struct {
@@ -33,15 +37,19 @@ type OnlyMultipartFileReq struct {
 
 // GetFile returns the value of File.
 func (s *OnlyMultipartFileReq) GetFile() ht.MultipartFile {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return *new(ht.MultipartFile)
 }
 
-// SetFile sets the value of File.
 func (s *OnlyMultipartFileReq) SetFile(val ht.MultipartFile) {
-	s.File = val
+	_ = "STUB: not implemented"
+
+	// OnlyMultipartFormOK is response for OnlyMultipartForm operation.
+	return
 }
 
-// OnlyMultipartFormOK is response for OnlyMultipartForm operation.
 type OnlyMultipartFormOK struct{}
 
 type OnlyMultipartFormReq struct {
@@ -50,21 +58,20 @@ type OnlyMultipartFormReq struct {
 
 // GetField returns the value of Field.
 func (s *OnlyMultipartFormReq) GetField() int {
-	return s.Field
+	_ = "STUB: not implemented"
+
+	// SetField sets the value of Field.
+	return 0
 }
 
-// SetField sets the value of Field.
 func (s *OnlyMultipartFormReq) SetField(val int) {
-	s.Field = val
+	_ = "STUB: not implemented"
+
+	// NewOptInt returns new OptInt with value set to v.
+	return
 }
 
-// NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -73,43 +80,28 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptMultipartFile returns new OptMultipartFile with value set to v.
 func NewOptMultipartFile(v ht.MultipartFile) OptMultipartFile {
-	return OptMultipartFile{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMultipartFile)
 }
 
 // OptMultipartFile is optional ht.MultipartFile.
@@ -119,43 +111,34 @@ type OptMultipartFile struct {
 }
 
 // IsSet returns true if OptMultipartFile was set.
-func (o OptMultipartFile) IsSet() bool { return o.Set }
+func (o OptMultipartFile) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMultipartFile) Reset() {
-	var v ht.MultipartFile
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMultipartFile) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMultipartFile) SetTo(v ht.MultipartFile) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMultipartFile) SetTo(v ht.MultipartFile) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMultipartFile) Get() (v ht.MultipartFile, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ht.MultipartFile), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMultipartFile) Or(d ht.MultipartFile) ht.MultipartFile {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ht.MultipartFile)
 }
 
 // NewOptSharedRequestMultipart returns new OptSharedRequestMultipart with value set to v.
 func NewOptSharedRequestMultipart(v SharedRequestMultipart) OptSharedRequestMultipart {
-	return OptSharedRequestMultipart{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSharedRequestMultipart)
 }
 
 // OptSharedRequestMultipart is optional SharedRequestMultipart.
@@ -165,44 +148,35 @@ type OptSharedRequestMultipart struct {
 }
 
 // IsSet returns true if OptSharedRequestMultipart was set.
-func (o OptSharedRequestMultipart) IsSet() bool { return o.Set }
+func (o OptSharedRequestMultipart) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSharedRequestMultipart) Reset() {
-	var v SharedRequestMultipart
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSharedRequestMultipart) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSharedRequestMultipart) SetTo(v SharedRequestMultipart) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSharedRequestMultipart) Get() (v SharedRequestMultipart, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SharedRequestMultipart), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSharedRequestMultipart) Or(d SharedRequestMultipart) SharedRequestMultipart {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SharedRequestMultipart)
 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -211,43 +185,28 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptTestFormDeepObject returns new OptTestFormDeepObject with value set to v.
 func NewOptTestFormDeepObject(v TestFormDeepObject) OptTestFormDeepObject {
-	return OptTestFormDeepObject{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptTestFormDeepObject)
 }
 
 // OptTestFormDeepObject is optional TestFormDeepObject.
@@ -257,43 +216,34 @@ type OptTestFormDeepObject struct {
 }
 
 // IsSet returns true if OptTestFormDeepObject was set.
-func (o OptTestFormDeepObject) IsSet() bool { return o.Set }
+func (o OptTestFormDeepObject) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTestFormDeepObject) Reset() {
-	var v TestFormDeepObject
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTestFormDeepObject) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTestFormDeepObject) SetTo(v TestFormDeepObject) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTestFormDeepObject) SetTo(v TestFormDeepObject) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTestFormDeepObject) Get() (v TestFormDeepObject, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(TestFormDeepObject), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptTestFormDeepObject) Or(d TestFormDeepObject) TestFormDeepObject {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(TestFormDeepObject)
 }
 
 // NewOptTestFormMultipartDeepObject returns new OptTestFormMultipartDeepObject with value set to v.
 func NewOptTestFormMultipartDeepObject(v TestFormMultipartDeepObject) OptTestFormMultipartDeepObject {
-	return OptTestFormMultipartDeepObject{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptTestFormMultipartDeepObject)
 }
 
 // OptTestFormMultipartDeepObject is optional TestFormMultipartDeepObject.
@@ -303,43 +253,37 @@ type OptTestFormMultipartDeepObject struct {
 }
 
 // IsSet returns true if OptTestFormMultipartDeepObject was set.
-func (o OptTestFormMultipartDeepObject) IsSet() bool { return o.Set }
+func (o OptTestFormMultipartDeepObject) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTestFormMultipartDeepObject) Reset() {
-	var v TestFormMultipartDeepObject
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTestFormMultipartDeepObject) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptTestFormMultipartDeepObject) SetTo(v TestFormMultipartDeepObject) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTestFormMultipartDeepObject) Get() (v TestFormMultipartDeepObject, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(TestFormMultipartDeepObject), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptTestFormMultipartDeepObject) Or(d TestFormMultipartDeepObject) TestFormMultipartDeepObject {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(TestFormMultipartDeepObject)
 }
 
 // NewOptTestFormMultipartObject returns new OptTestFormMultipartObject with value set to v.
 func NewOptTestFormMultipartObject(v TestFormMultipartObject) OptTestFormMultipartObject {
-	return OptTestFormMultipartObject{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptTestFormMultipartObject)
 }
 
 // OptTestFormMultipartObject is optional TestFormMultipartObject.
@@ -349,43 +293,37 @@ type OptTestFormMultipartObject struct {
 }
 
 // IsSet returns true if OptTestFormMultipartObject was set.
-func (o OptTestFormMultipartObject) IsSet() bool { return o.Set }
+func (o OptTestFormMultipartObject) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTestFormMultipartObject) Reset() {
-	var v TestFormMultipartObject
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTestFormMultipartObject) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptTestFormMultipartObject) SetTo(v TestFormMultipartObject) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTestFormMultipartObject) Get() (v TestFormMultipartObject, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(TestFormMultipartObject), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptTestFormMultipartObject) Or(d TestFormMultipartObject) TestFormMultipartObject {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(TestFormMultipartObject)
 }
 
 // NewOptTestFormObject returns new OptTestFormObject with value set to v.
 func NewOptTestFormObject(v TestFormObject) OptTestFormObject {
-	return OptTestFormObject{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptTestFormObject)
 }
 
 // OptTestFormObject is optional TestFormObject.
@@ -395,44 +333,32 @@ type OptTestFormObject struct {
 }
 
 // IsSet returns true if OptTestFormObject was set.
-func (o OptTestFormObject) IsSet() bool { return o.Set }
+func (o OptTestFormObject) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTestFormObject) Reset() {
-	var v TestFormObject
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTestFormObject) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTestFormObject) SetTo(v TestFormObject) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTestFormObject) SetTo(v TestFormObject) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTestFormObject) Get() (v TestFormObject, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(TestFormObject), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptTestFormObject) Or(d TestFormObject) TestFormObject {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(TestFormObject)
 }
 
 // NewOptUUID returns new OptUUID with value set to v.
-func NewOptUUID(v uuid.UUID) OptUUID {
-	return OptUUID{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUUID(v uuid.UUID) OptUUID { _ = "STUB: not implemented"; return *new(OptUUID) }
 
 // OptUUID is optional uuid.UUID.
 type OptUUID struct {
@@ -441,36 +367,26 @@ type OptUUID struct {
 }
 
 // IsSet returns true if OptUUID was set.
-func (o OptUUID) IsSet() bool { return o.Set }
+func (o OptUUID) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUUID) Reset() {
-	var v uuid.UUID
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUUID) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUUID) SetTo(v uuid.UUID) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUUID) SetTo(v uuid.UUID) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUUID) Get() (v uuid.UUID, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(uuid.UUID), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUUID) Or(d uuid.UUID) uuid.UUID {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUUID) Or(d uuid.UUID) uuid.UUID { _ = "STUB: not implemented"; return *new(uuid.UUID) }
 
 // Ref: #/components/schemas/SharedRequest
 type SharedRequest struct {
@@ -480,27 +396,35 @@ type SharedRequest struct {
 
 // GetFilename returns the value of Filename.
 func (s *SharedRequest) GetFilename() OptString {
-	return s.Filename
+	_ = "STUB: not implemented"
+
+	// GetFile returns the value of File.
+	return *new(OptString)
 }
 
-// GetFile returns the value of File.
 func (s *SharedRequest) GetFile() OptString {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// SetFilename sets the value of Filename.
+	return *new(OptString)
 }
 
-// SetFilename sets the value of Filename.
 func (s *SharedRequest) SetFilename(val OptString) {
-	s.Filename = val
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return
 }
 
-// SetFile sets the value of File.
-func (s *SharedRequest) SetFile(val OptString) {
-	s.File = val
+func (s *SharedRequest) SetFile(val OptString) { _ = "STUB: not implemented"; return }
+
+func (*SharedRequest) testShareFormSchemaReq() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/SharedRequest
+	return
 }
 
-func (*SharedRequest) testShareFormSchemaReq() {}
-
-// Ref: #/components/schemas/SharedRequest
 type SharedRequestMultipart struct {
 	Filename OptString        `json:"filename"`
 	File     OptMultipartFile `json:"file"`
@@ -508,27 +432,35 @@ type SharedRequestMultipart struct {
 
 // GetFilename returns the value of Filename.
 func (s *SharedRequestMultipart) GetFilename() OptString {
-	return s.Filename
+	_ = "STUB: not implemented"
+
+	// GetFile returns the value of File.
+	return *new(OptString)
 }
 
-// GetFile returns the value of File.
 func (s *SharedRequestMultipart) GetFile() OptMultipartFile {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// SetFilename sets the value of Filename.
+	return *new(OptMultipartFile)
 }
 
-// SetFilename sets the value of Filename.
 func (s *SharedRequestMultipart) SetFilename(val OptString) {
-	s.Filename = val
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return
 }
 
-// SetFile sets the value of File.
-func (s *SharedRequestMultipart) SetFile(val OptMultipartFile) {
-	s.File = val
+func (s *SharedRequestMultipart) SetFile(val OptMultipartFile) { _ = "STUB: not implemented"; return }
+
+func (*SharedRequestMultipart) testShareFormSchemaReq() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/TestForm
+	return
 }
 
-func (*SharedRequestMultipart) testShareFormSchemaReq() {}
-
-// Ref: #/components/schemas/TestForm
 type TestForm struct {
 	ID          OptInt                `json:"id"`
 	UUID        OptUUID               `json:"uuid"`
@@ -540,63 +472,76 @@ type TestForm struct {
 
 // GetID returns the value of ID.
 func (s *TestForm) GetID() OptInt {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetUUID returns the value of UUID.
+	return *new(OptInt)
 }
 
-// GetUUID returns the value of UUID.
 func (s *TestForm) GetUUID() OptUUID {
-	return s.UUID
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(OptUUID)
 }
 
-// GetDescription returns the value of Description.
-func (s *TestForm) GetDescription() string {
-	return s.Description
-}
+func (s *TestForm) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 // GetArray returns the value of Array.
 func (s *TestForm) GetArray() []string {
-	return s.Array
+	_ = "STUB: not implemented"
+
+	// GetObject returns the value of Object.
+	return nil
 }
 
-// GetObject returns the value of Object.
 func (s *TestForm) GetObject() OptTestFormObject {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetDeepObject returns the value of DeepObject.
+	return *new(OptTestFormObject)
 }
 
-// GetDeepObject returns the value of DeepObject.
 func (s *TestForm) GetDeepObject() OptTestFormDeepObject {
-	return s.DeepObject
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptTestFormDeepObject)
 }
 
-// SetID sets the value of ID.
 func (s *TestForm) SetID(val OptInt) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetUUID sets the value of UUID.
+	return
 }
 
-// SetUUID sets the value of UUID.
 func (s *TestForm) SetUUID(val OptUUID) {
-	s.UUID = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *TestForm) SetDescription(val string) {
-	s.Description = val
-}
+func (s *TestForm) SetDescription(val string) { _ = "STUB: not implemented"; return }
 
 // SetArray sets the value of Array.
 func (s *TestForm) SetArray(val []string) {
-	s.Array = val
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return
 }
 
-// SetObject sets the value of Object.
 func (s *TestForm) SetObject(val OptTestFormObject) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetDeepObject sets the value of DeepObject.
+	return
 }
 
-// SetDeepObject sets the value of DeepObject.
-func (s *TestForm) SetDeepObject(val OptTestFormDeepObject) {
-	s.DeepObject = val
-}
+func (s *TestForm) SetDeepObject(val OptTestFormDeepObject) { _ = "STUB: not implemented"; return }
 
 type TestFormDeepObject struct {
 	Min OptInt `json:"min"`
@@ -605,25 +550,33 @@ type TestFormDeepObject struct {
 
 // GetMin returns the value of Min.
 func (s *TestFormDeepObject) GetMin() OptInt {
-	return s.Min
+	_ = "STUB: not implemented"
+
+	// GetMax returns the value of Max.
+	return *new(OptInt)
 }
 
-// GetMax returns the value of Max.
 func (s *TestFormDeepObject) GetMax() int {
-	return s.Max
+	_ = "STUB: not implemented"
+
+	// SetMin sets the value of Min.
+	return 0
 }
 
-// SetMin sets the value of Min.
 func (s *TestFormDeepObject) SetMin(val OptInt) {
-	s.Min = val
+	_ = "STUB: not implemented"
+
+	// SetMax sets the value of Max.
+	return
 }
 
-// SetMax sets the value of Max.
 func (s *TestFormDeepObject) SetMax(val int) {
-	s.Max = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/TestForm
+	return
 }
 
-// Ref: #/components/schemas/TestForm
 type TestFormMultipart struct {
 	ID          OptInt                         `json:"id"`
 	UUID        OptUUID                        `json:"uuid"`
@@ -635,62 +588,78 @@ type TestFormMultipart struct {
 
 // GetID returns the value of ID.
 func (s *TestFormMultipart) GetID() OptInt {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetUUID returns the value of UUID.
+	return *new(OptInt)
 }
 
-// GetUUID returns the value of UUID.
 func (s *TestFormMultipart) GetUUID() OptUUID {
-	return s.UUID
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(OptUUID)
 }
 
-// GetDescription returns the value of Description.
-func (s *TestFormMultipart) GetDescription() string {
-	return s.Description
-}
+func (s *TestFormMultipart) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 // GetArray returns the value of Array.
 func (s *TestFormMultipart) GetArray() []string {
-	return s.Array
+	_ = "STUB: not implemented"
+
+	// GetObject returns the value of Object.
+	return nil
 }
 
-// GetObject returns the value of Object.
 func (s *TestFormMultipart) GetObject() OptTestFormMultipartObject {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetDeepObject returns the value of DeepObject.
+	return *new(OptTestFormMultipartObject)
 }
 
-// GetDeepObject returns the value of DeepObject.
 func (s *TestFormMultipart) GetDeepObject() OptTestFormMultipartDeepObject {
-	return s.DeepObject
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptTestFormMultipartDeepObject)
 }
 
-// SetID sets the value of ID.
 func (s *TestFormMultipart) SetID(val OptInt) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetUUID sets the value of UUID.
+	return
 }
 
-// SetUUID sets the value of UUID.
 func (s *TestFormMultipart) SetUUID(val OptUUID) {
-	s.UUID = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *TestFormMultipart) SetDescription(val string) {
-	s.Description = val
-}
+func (s *TestFormMultipart) SetDescription(val string) { _ = "STUB: not implemented"; return }
 
 // SetArray sets the value of Array.
 func (s *TestFormMultipart) SetArray(val []string) {
-	s.Array = val
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return
 }
 
-// SetObject sets the value of Object.
 func (s *TestFormMultipart) SetObject(val OptTestFormMultipartObject) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetDeepObject sets the value of DeepObject.
+	return
 }
 
-// SetDeepObject sets the value of DeepObject.
 func (s *TestFormMultipart) SetDeepObject(val OptTestFormMultipartDeepObject) {
-	s.DeepObject = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type TestFormMultipartDeepObject struct {
@@ -700,23 +669,27 @@ type TestFormMultipartDeepObject struct {
 
 // GetMin returns the value of Min.
 func (s *TestFormMultipartDeepObject) GetMin() OptInt {
-	return s.Min
+	_ = "STUB: not implemented"
+
+	// GetMax returns the value of Max.
+	return *new(OptInt)
 }
 
-// GetMax returns the value of Max.
 func (s *TestFormMultipartDeepObject) GetMax() int {
-	return s.Max
+	_ = "STUB: not implemented"
+
+	// SetMin sets the value of Min.
+	return 0
 }
 
-// SetMin sets the value of Min.
 func (s *TestFormMultipartDeepObject) SetMin(val OptInt) {
-	s.Min = val
+	_ = "STUB: not implemented"
+
+	// SetMax sets the value of Max.
+	return
 }
 
-// SetMax sets the value of Max.
-func (s *TestFormMultipartDeepObject) SetMax(val int) {
-	s.Max = val
-}
+func (s *TestFormMultipartDeepObject) SetMax(val int) { _ = "STUB: not implemented"; return }
 
 type TestFormMultipartObject struct {
 	Min OptInt `json:"min"`
@@ -725,23 +698,27 @@ type TestFormMultipartObject struct {
 
 // GetMin returns the value of Min.
 func (s *TestFormMultipartObject) GetMin() OptInt {
-	return s.Min
+	_ = "STUB: not implemented"
+
+	// GetMax returns the value of Max.
+	return *new(OptInt)
 }
 
-// GetMax returns the value of Max.
 func (s *TestFormMultipartObject) GetMax() int {
-	return s.Max
+	_ = "STUB: not implemented"
+
+	// SetMin sets the value of Min.
+	return 0
 }
 
-// SetMin sets the value of Min.
 func (s *TestFormMultipartObject) SetMin(val OptInt) {
-	s.Min = val
+	_ = "STUB: not implemented"
+
+	// SetMax sets the value of Max.
+	return
 }
 
-// SetMax sets the value of Max.
-func (s *TestFormMultipartObject) SetMax(val int) {
-	s.Max = val
-}
+func (s *TestFormMultipartObject) SetMax(val int) { _ = "STUB: not implemented"; return }
 
 type TestFormObject struct {
 	Min OptInt `json:"min"`
@@ -750,25 +727,33 @@ type TestFormObject struct {
 
 // GetMin returns the value of Min.
 func (s *TestFormObject) GetMin() OptInt {
-	return s.Min
+	_ = "STUB: not implemented"
+
+	// GetMax returns the value of Max.
+	return *new(OptInt)
 }
 
-// GetMax returns the value of Max.
 func (s *TestFormObject) GetMax() int {
-	return s.Max
+	_ = "STUB: not implemented"
+
+	// SetMin sets the value of Min.
+	return 0
 }
 
-// SetMin sets the value of Min.
 func (s *TestFormObject) SetMin(val OptInt) {
-	s.Min = val
+	_ = "STUB: not implemented"
+
+	// SetMax sets the value of Max.
+	return
 }
 
-// SetMax sets the value of Max.
 func (s *TestFormObject) SetMax(val int) {
-	s.Max = val
+	_ = "STUB: not implemented"
+
+	// TestFormURLEncodedOK is response for TestFormURLEncoded operation.
+	return
 }
 
-// TestFormURLEncodedOK is response for TestFormURLEncoded operation.
 type TestFormURLEncodedOK struct{}
 
 // TestMultipartOK is response for TestMultipart operation.
@@ -782,33 +767,38 @@ type TestMultipartUploadOK struct {
 
 // GetFile returns the value of File.
 func (s *TestMultipartUploadOK) GetFile() string {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// GetOptionalFile returns the value of OptionalFile.
+	return ""
 }
 
-// GetOptionalFile returns the value of OptionalFile.
 func (s *TestMultipartUploadOK) GetOptionalFile() OptString {
-	return s.OptionalFile
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFiles returns the value of Files.
+	new(OptString)
 }
 
-// GetFiles returns the value of Files.
 func (s *TestMultipartUploadOK) GetFiles() []string {
-	return s.Files
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return nil
 }
 
-// SetFile sets the value of File.
 func (s *TestMultipartUploadOK) SetFile(val string) {
-	s.File = val
+	_ = "STUB: not implemented"
+
+	// SetOptionalFile sets the value of OptionalFile.
+	return
 }
 
-// SetOptionalFile sets the value of OptionalFile.
-func (s *TestMultipartUploadOK) SetOptionalFile(val OptString) {
-	s.OptionalFile = val
-}
+func (s *TestMultipartUploadOK) SetOptionalFile(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetFiles sets the value of Files.
-func (s *TestMultipartUploadOK) SetFiles(val []string) {
-	s.Files = val
-}
+func (s *TestMultipartUploadOK) SetFiles(val []string) { _ = "STUB: not implemented"; return }
 
 type TestMultipartUploadReq struct {
 	OrderId      OptInt             `json:"orderId"`
@@ -820,55 +810,76 @@ type TestMultipartUploadReq struct {
 
 // GetOrderId returns the value of OrderId.
 func (s *TestMultipartUploadReq) GetOrderId() OptInt {
-	return s.OrderId
+	_ = "STUB: not implemented"
+
+	// GetUserId returns the value of UserId.
+	return *new(OptInt)
 }
 
-// GetUserId returns the value of UserId.
 func (s *TestMultipartUploadReq) GetUserId() OptInt {
-	return s.UserId
+	_ = "STUB: not implemented"
+
+	// GetFile returns the value of File.
+	return *new(OptInt)
 }
 
-// GetFile returns the value of File.
 func (s *TestMultipartUploadReq) GetFile() ht.MultipartFile {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// GetOptionalFile returns the value of OptionalFile.
+	return *new(ht.MultipartFile)
 }
 
-// GetOptionalFile returns the value of OptionalFile.
 func (s *TestMultipartUploadReq) GetOptionalFile() OptMultipartFile {
-	return s.OptionalFile
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFiles returns the value of Files.
+	new(OptMultipartFile)
 }
 
-// GetFiles returns the value of Files.
 func (s *TestMultipartUploadReq) GetFiles() []ht.MultipartFile {
-	return s.Files
+	_ = "STUB: not implemented"
+
+	// SetOrderId sets the value of OrderId.
+	return nil
 }
 
-// SetOrderId sets the value of OrderId.
 func (s *TestMultipartUploadReq) SetOrderId(val OptInt) {
-	s.OrderId = val
+	_ = "STUB: not implemented"
+
+	// SetUserId sets the value of UserId.
+	return
 }
 
-// SetUserId sets the value of UserId.
 func (s *TestMultipartUploadReq) SetUserId(val OptInt) {
-	s.UserId = val
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return
 }
 
-// SetFile sets the value of File.
 func (s *TestMultipartUploadReq) SetFile(val ht.MultipartFile) {
-	s.File = val
+	_ = "STUB: not implemented"
+
+	// SetOptionalFile sets the value of OptionalFile.
+	return
 }
 
-// SetOptionalFile sets the value of OptionalFile.
 func (s *TestMultipartUploadReq) SetOptionalFile(val OptMultipartFile) {
-	s.OptionalFile = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetFiles sets the value of Files.
 }
 
-// SetFiles sets the value of Files.
 func (s *TestMultipartUploadReq) SetFiles(val []ht.MultipartFile) {
-	s.Files = val
+	_ = "STUB: not implemented"
+
+	// TestReuseFormOptionalSchemaOK is response for TestReuseFormOptionalSchema operation.
+	return
 }
 
-// TestReuseFormOptionalSchemaOK is response for TestReuseFormOptionalSchema operation.
 type TestReuseFormOptionalSchemaOK struct{}
 
 // TestReuseFormSchemaOK is response for TestReuseFormSchema operation.

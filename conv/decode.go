@@ -2,225 +2,130 @@ package conv
 
 import (
 	"encoding"
-	"encoding/base64"
 	stdjson "encoding/json"
 	"net"
 	"net/netip"
 	"net/url"
-	"slices"
-	"strconv"
 	"time"
-	"unsafe"
 
-	"github.com/go-faster/jx"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 
 	"github.com/ogen-go/ogen/json"
 )
 
-func ToInt(s string) (int, error) {
-	return strconv.Atoi(s)
-}
+func ToInt(s string) (int, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToInt8(s string) (int8, error) {
-	v, err := strconv.ParseInt(s, 10, 8)
-	return int8(v), err
-}
+func ToInt8(s string) (int8, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToInt16(s string) (int16, error) {
-	v, err := strconv.ParseInt(s, 10, 16)
-	return int16(v), err
-}
+func ToInt16(s string) (int16, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToInt32(s string) (int32, error) {
-	v, err := strconv.ParseInt(s, 10, 32)
-	return int32(v), err
-}
+func ToInt32(s string) (int32, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToInt64(s string) (int64, error) {
-	return strconv.ParseInt(s, 10, 64)
-}
+func ToInt64(s string) (int64, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToUint(s string) (uint, error) {
-	v, err := strconv.ParseUint(s, 10, 0)
-	return uint(v), err
-}
+func ToUint(s string) (uint, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToUint8(s string) (uint8, error) {
-	v, err := strconv.ParseUint(s, 10, 8)
-	return uint8(v), err
-}
+func ToUint8(s string) (uint8, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToUint16(s string) (uint16, error) {
-	v, err := strconv.ParseUint(s, 10, 16)
-	return uint16(v), err
-}
+func ToUint16(s string) (uint16, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToUint32(s string) (uint32, error) {
-	v, err := strconv.ParseUint(s, 10, 32)
-	return uint32(v), err
-}
+func ToUint32(s string) (uint32, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToUint64(s string) (uint64, error) {
-	return strconv.ParseUint(s, 10, 64)
-}
+func ToUint64(s string) (uint64, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToFloat32(s string) (float32, error) {
-	v, err := strconv.ParseFloat(s, 32)
-	return float32(v), err
-}
+func ToFloat32(s string) (float32, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToFloat64(s string) (float64, error) {
-	return strconv.ParseFloat(s, 64)
-}
+func ToFloat64(s string) (float64, error) { _ = "STUB: not implemented"; return 0, nil }
 
 func ToDecimal(s string) (decimal.Decimal, error) {
-	return decimal.NewFromString(s)
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal), nil
 }
 
-func ToString(s string) (string, error) {
-	return s, nil
-}
+func ToString(s string) (string, error) { _ = "STUB: not implemented"; return "", nil }
 
-func ToBytes(s string) ([]byte, error) {
-	return []byte(s), nil
-}
+func ToBytes(s string) ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func ToTime(s string) (time.Time, error) {
-	return time.Parse(timeLayout, s)
-}
+func ToTime(s string) (time.Time, error) { _ = "STUB: not implemented"; return *new(time.Time), nil }
 
-func ToDate(s string) (time.Time, error) {
-	return time.Parse(dateLayout, s)
-}
+func ToDate(s string) (time.Time, error) { _ = "STUB: not implemented"; return *new(time.Time), nil }
 
 func ToDateTime(s string) (time.Time, error) {
-	return time.Parse(time.RFC3339, s)
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 func ToHTTPDate(s string) (time.Time, error) {
-	return time.Parse(httpDateLayout, s)
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 func ToUnixSeconds(s string) (time.Time, error) {
-	val, err := ToInt64(s)
-	if err != nil {
-		return time.Time{}, err
-	}
-	return time.Unix(val, 0), nil
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 func ToUnixNano(s string) (time.Time, error) {
-	val, err := ToInt64(s)
-	if err != nil {
-		return time.Time{}, err
-	}
-	return time.Unix(0, val), nil
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 func ToUnixMicro(s string) (time.Time, error) {
-	val, err := ToInt64(s)
-	if err != nil {
-		return time.Time{}, err
-	}
-	return time.UnixMicro(val), nil
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 func ToUnixMilli(s string) (time.Time, error) {
-	val, err := ToInt64(s)
-	if err != nil {
-		return time.Time{}, err
-	}
-	return time.UnixMilli(val), nil
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
-func ToBool(s string) (bool, error) {
-	return strconv.ParseBool(s)
-}
+func ToBool(s string) (bool, error) { _ = "STUB: not implemented"; return false, nil }
 
-func ToUUID(s string) (uuid.UUID, error) {
-	return uuid.Parse(s)
-}
+func ToUUID(s string) (uuid.UUID, error) { _ = "STUB: not implemented"; return *new(uuid.UUID), nil }
 
 func ToMAC(s string) (net.HardwareAddr, error) {
-	return net.ParseMAC(s)
+	_ = "STUB: not implemented"
+	return *new(net.HardwareAddr), nil
 }
 
-func ToAddr(s string) (netip.Addr, error) {
-	return netip.ParseAddr(s)
-}
+func ToAddr(s string) (netip.Addr, error) { _ = "STUB: not implemented"; return *new(netip.Addr), nil }
 
-func ToURL(s string) (url.URL, error) {
-	u, err := url.Parse(s)
-	if err != nil {
-		return url.URL{}, err
-	}
-	return *u, nil
-}
+func ToURL(s string) (url.URL, error) { _ = "STUB: not implemented"; return *new(url.URL), nil }
 
 func ToDuration(s string) (time.Duration, error) {
-	return time.ParseDuration(s)
+	_ = "STUB: not implemented"
+	return *new(time.Duration), nil
 }
 
-func ToStringInt(s string) (int, error) {
-	return strconv.Atoi(s)
-}
+func ToStringInt(s string) (int, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringInt8(s string) (int8, error) {
-	v, err := strconv.ParseInt(s, 10, 8)
-	return int8(v), err
-}
+func ToStringInt8(s string) (int8, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringInt16(s string) (int16, error) {
-	v, err := strconv.ParseInt(s, 10, 16)
-	return int16(v), err
-}
+func ToStringInt16(s string) (int16, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringInt32(s string) (int32, error) {
-	v, err := strconv.ParseInt(s, 10, 32)
-	return int32(v), err
-}
+func ToStringInt32(s string) (int32, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringInt64(s string) (int64, error) {
-	return strconv.ParseInt(s, 10, 64)
-}
+func ToStringInt64(s string) (int64, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringUint(s string) (uint, error) {
-	v, err := strconv.ParseUint(s, 10, 0)
-	return uint(v), err
-}
+func ToStringUint(s string) (uint, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringUint8(s string) (uint8, error) {
-	v, err := strconv.ParseUint(s, 10, 8)
-	return uint8(v), err
-}
+func ToStringUint8(s string) (uint8, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringUint16(s string) (uint16, error) {
-	v, err := strconv.ParseUint(s, 10, 16)
-	return uint16(v), err
-}
+func ToStringUint16(s string) (uint16, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringUint32(s string) (uint32, error) {
-	v, err := strconv.ParseUint(s, 10, 32)
-	return uint32(v), err
-}
+func ToStringUint32(s string) (uint32, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringUint64(s string) (uint64, error) {
-	return strconv.ParseUint(s, 10, 64)
-}
+func ToStringUint64(s string) (uint64, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringFloat32(s string) (float32, error) {
-	v, err := strconv.ParseFloat(s, 32)
-	return float32(v), err
-}
+func ToStringFloat32(s string) (float32, error) { _ = "STUB: not implemented"; return 0, nil }
 
-func ToStringFloat64(s string) (float64, error) {
-	return strconv.ParseFloat(s, 64)
-}
+func ToStringFloat64(s string) (float64, error) { _ = "STUB: not implemented"; return 0, nil }
 
 func ToStringDecimal(s string) (decimal.Decimal, error) {
-	return decimal.NewFromString(s)
+	_ = "STUB: not implemented"
+	return *new(decimal.Decimal), nil
 }
 
 type (
@@ -243,104 +148,65 @@ type (
 )
 
 // toBytes converts a string to a byte slice with zero allocation.
-func toBytes(s string) []byte {
-	return unsafe.Slice(unsafe.StringData(s), len(s)) //nolint:gosec // Unsafe conversion is intended for performance.
-}
+func toBytes(s string) []byte { _ = "STUB: not implemented"; return nil }
+
+//nolint:gosec // Unsafe conversion is intended for performance.
 
 func ToNative[T any, P ogenUnmarshaler[T]](s string) (T, error) {
-	var v T
-	err := P(&v).Decode(jx.DecodeBytes(toBytes(s)))
-	return v, err
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
 func ToStringNative[T any, P ogenUnmarshaler[T]](s string) (T, error) {
-	return ToNative[T, P](strconv.Quote(s))
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
 func ToText[T any, P textUnmarshaler[T]](s string) (T, error) {
-	var v T
-	err := P(&v).UnmarshalText(toBytes(s))
-	return v, err
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
 func ToBinary[T any, P binaryUnmarshaler[T]](s string) (T, error) {
-	var v T
-	data, err := base64.URLEncoding.DecodeString(s)
-	if err != nil {
-		return v, err
-	}
-	err = P(&v).UnmarshalBinary(data)
-	return v, err
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
 func ToJSON[T any, P jsonUnmarshaler[T]](s string) (T, error) {
-	var v T
-	err := P(&v).UnmarshalJSON(toBytes(s))
-	return v, err
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
 func ToStringJSON[T any, P jsonUnmarshaler[T]](s string) (T, error) {
-	return ToJSON[T, P](strconv.Quote(s))
+	_ = "STUB: not implemented"
+	return *new(T), nil
 }
 
-func ToExternal[T any](s string) (T, error) {
-	var v T
-	err := stdjson.Unmarshal(toBytes(s), &v)
-	return v, err
-}
+func ToExternal[T any](s string) (T, error) { _ = "STUB: not implemented"; return *new(T), nil }
 
-func ToStringExternal[T any](s string) (T, error) {
-	return ToExternal[T](strconv.Quote(s))
-}
+func ToStringExternal[T any](s string) (T, error) { _ = "STUB: not implemented"; return *new(T), nil }
 
 func decodeArray[T any](a []string, decode func(string) (T, error)) ([]T, error) {
-	arr := make([]T, len(a))
-	for i := range a {
-		v, err := decode(a[i])
-		if err != nil {
-			return nil, err
-		}
-		arr[i] = v
-	}
-	return arr, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func ToInt32Array(a []string) ([]int32, error) {
-	return decodeArray(a, ToInt32)
-}
+func ToInt32Array(a []string) ([]int32, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func ToInt64Array(a []string) ([]int64, error) {
-	return decodeArray(a, ToInt64)
-}
+func ToInt64Array(a []string) ([]int64, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func ToFloat32Array(a []string) ([]float32, error) {
-	return decodeArray(a, ToFloat32)
-}
+func ToFloat32Array(a []string) ([]float32, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func ToFloat64Array(a []string) ([]float64, error) {
-	return decodeArray(a, ToFloat64)
-}
+func ToFloat64Array(a []string) ([]float64, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func ToStringArray(a []string) ([]string, error) {
-	return slices.Clone(a), nil
-}
+func ToStringArray(a []string) ([]string, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func ToBytesArray(a []string) ([][]byte, error) {
-	return decodeArray(a, ToBytes)
-}
+func ToBytesArray(a []string) ([][]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func ToTimeArray(a []string) ([]time.Time, error) {
-	return decodeArray(a, ToTime)
-}
+func ToTimeArray(a []string) ([]time.Time, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func ToBoolArray(a []string) ([]bool, error) {
-	return decodeArray(a, ToBool)
-}
+func ToBoolArray(a []string) ([]bool, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func ToUUIDArray(a []string) ([]uuid.UUID, error) {
-	return decodeArray(a, ToUUID)
-}
+func ToUUIDArray(a []string) ([]uuid.UUID, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func ToMACArray(a []string) ([]net.HardwareAddr, error) {
-	return decodeArray(a, ToMAC)
-}
+func ToMACArray(a []string) ([]net.HardwareAddr, error) { _ = "STUB: not implemented"; return nil, nil }

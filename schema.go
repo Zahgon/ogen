@@ -1,11 +1,6 @@
 package ogen
 
 import (
-	"encoding/json"
-	"reflect"
-
-	"github.com/go-faster/errors"
-	"github.com/go-faster/jx"
 	"github.com/go-faster/yaml"
 
 	"github.com/ogen-go/ogen/jsonschema"
@@ -259,89 +254,16 @@ type Property struct {
 type Properties []Property
 
 // MarshalYAML implements yaml.Marshaler.
-func (p Properties) MarshalYAML() (any, error) {
-	content := make([]*yaml.Node, 0, len(p)*2)
-	for _, prop := range p {
-		var val yaml.Node
-		if err := val.Encode(prop.Schema); err != nil {
-			return nil, err
-		}
-		content = append(content,
-			&yaml.Node{Kind: yaml.ScalarNode, Tag: "!!str", Value: prop.Name},
-			&val,
-		)
-	}
-
-	return &yaml.Node{
-		Kind:    yaml.MappingNode,
-		Content: content,
-	}, nil
-}
+func (p Properties) MarshalYAML() (any, error) { _ = "STUB: not implemented"; return *new(any), nil }
 
 // UnmarshalYAML implements yaml.Unmarshaler.
-func (p *Properties) UnmarshalYAML(node *yaml.Node) error {
-	if node.Kind != yaml.MappingNode {
-		return &yaml.UnmarshalError{
-			Node: node,
-			Type: reflect.TypeOf(p),
-			Err:  errors.Errorf("cannot unmarshal %s into %T", node.ShortTag(), p),
-		}
-	}
-	for i := 0; i < len(node.Content); i += 2 {
-		var (
-			key    = node.Content[i]
-			value  = node.Content[i+1]
-			schema *Schema
-		)
-		if err := value.Decode(&schema); err != nil {
-			return err
-		}
-		*p = append(*p, Property{
-			Name:   key.Value,
-			Schema: schema,
-		})
-	}
-	return nil
-}
+func (p *Properties) UnmarshalYAML(node *yaml.Node) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements json.Marshaler.
-func (p Properties) MarshalJSON() ([]byte, error) {
-	e := &jx.Encoder{}
-
-	e.ObjStart()
-	for _, prop := range p {
-		e.FieldStart(prop.Name)
-		b, err := json.Marshal(prop.Schema)
-		if err != nil {
-			return nil, errors.Wrap(err, "marshal")
-		}
-		e.Raw(b)
-	}
-	e.ObjEnd()
-	return e.Bytes(), nil
-}
+func (p Properties) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements json.Unmarshaler.
-func (p *Properties) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return d.Obj(func(d *jx.Decoder, key string) error {
-		s := new(Schema)
-		b, err := d.Raw()
-		if err != nil {
-			return err
-		}
-
-		if err := json.Unmarshal(b, s); err != nil {
-			return err
-		}
-
-		*p = append(*p, Property{
-			Name:   key,
-			Schema: s,
-		})
-		return nil
-	})
-}
+func (p *Properties) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // AdditionalProperties is JSON Schema additionalProperties validator description.
 type AdditionalProperties struct {
@@ -351,57 +273,25 @@ type AdditionalProperties struct {
 
 // MarshalYAML implements yaml.Marshaler.
 func (p AdditionalProperties) MarshalYAML() (any, error) {
-	if p.Bool != nil {
-		return *p.Bool, nil
-	}
-	return p.Schema, nil
+	_ = "STUB: not implemented"
+	return *new(any), nil
 }
 
 // UnmarshalYAML implements yaml.Unmarshaler.
 func (p *AdditionalProperties) UnmarshalYAML(node *yaml.Node) error {
-	switch node.Kind {
-	case yaml.ScalarNode:
-		return node.Decode(&p.Bool)
-	case yaml.MappingNode:
-		return node.Decode(&p.Schema)
-	default:
-		return errors.Errorf("unexpected YAML kind %v", node.Kind)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalJSON implements json.Marshaler.
 func (p AdditionalProperties) MarshalJSON() ([]byte, error) {
-	if p.Bool != nil {
-		return json.Marshal(p.Bool)
-	}
-	return json.Marshal(p.Schema)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements json.Unmarshaler.
 func (p *AdditionalProperties) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	switch tt := d.Next(); tt {
-	case jx.Object:
-	case jx.Bool:
-		val, err := d.Bool()
-		if err != nil {
-			return err
-		}
-		p.Bool = &val
-		return nil
-	default:
-		return errors.Errorf("unexpected type %s", tt.String())
-	}
-
-	s := Schema{}
-	b, err := d.Raw()
-	if err != nil {
-		return err
-	}
-	if err := json.Unmarshal(b, &s); err != nil {
-		return err
-	}
-	p.Schema = s
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -416,88 +306,24 @@ type PatternProperties []PatternProperty
 
 // MarshalYAML implements yaml.Marshaler.
 func (p PatternProperties) MarshalYAML() (any, error) {
-	content := make([]*yaml.Node, 0, len(p)*2)
-	for _, prop := range p {
-		var val yaml.Node
-		if err := val.Encode(prop.Schema); err != nil {
-			return nil, err
-		}
-		content = append(content,
-			&yaml.Node{Kind: yaml.ScalarNode, Tag: "!!str", Value: prop.Pattern},
-			&val,
-		)
-	}
-
-	return &yaml.Node{
-		Kind:    yaml.MappingNode,
-		Content: content,
-	}, nil
+	_ = "STUB: not implemented"
+	return *new(any), nil
 }
 
 // UnmarshalYAML implements yaml.Unmarshaler.
 func (p *PatternProperties) UnmarshalYAML(node *yaml.Node) error {
-	if node.Kind != yaml.MappingNode {
-		return &yaml.UnmarshalError{
-			Node: node,
-			Type: reflect.TypeOf(p),
-			Err:  errors.Errorf("cannot unmarshal %s into %T", node.ShortTag(), p),
-		}
-	}
-	for i := 0; i < len(node.Content); i += 2 {
-		var (
-			key    = node.Content[i]
-			value  = node.Content[i+1]
-			schema *Schema
-		)
-		if err := value.Decode(&schema); err != nil {
-			return err
-		}
-		*p = append(*p, PatternProperty{
-			Pattern: key.Value,
-			Schema:  schema,
-		})
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements json.Marshaler.
 func (p PatternProperties) MarshalJSON() ([]byte, error) {
-	e := &jx.Encoder{}
-
-	e.ObjStart()
-	for _, prop := range p {
-		e.FieldStart(prop.Pattern)
-		b, err := json.Marshal(prop.Schema)
-		if err != nil {
-			return nil, errors.Wrap(err, "marshal")
-		}
-		e.Raw(b)
-	}
-	e.ObjEnd()
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements json.Unmarshaler.
-func (p *PatternProperties) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return d.Obj(func(d *jx.Decoder, key string) error {
-		s := new(Schema)
-		b, err := d.Raw()
-		if err != nil {
-			return err
-		}
-
-		if err := json.Unmarshal(b, s); err != nil {
-			return err
-		}
-
-		*p = append(*p, PatternProperty{
-			Pattern: key,
-			Schema:  s,
-		})
-		return nil
-	})
-}
+func (p *PatternProperties) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Items is unparsed JSON Schema items validator description.
 type Items struct {
@@ -506,54 +332,16 @@ type Items struct {
 }
 
 // MarshalYAML implements yaml.Marshaler.
-func (p Items) MarshalYAML() (any, error) {
-	if p.Item != nil {
-		return p.Item, nil
-	}
-	return p.Items, nil
-}
+func (p Items) MarshalYAML() (any, error) { _ = "STUB: not implemented"; return *new(any), nil }
 
 // UnmarshalYAML implements yaml.Unmarshaler.
-func (p *Items) UnmarshalYAML(node *yaml.Node) error {
-	switch node.Kind {
-	case yaml.MappingNode:
-		return node.Decode(&p.Item)
-	case yaml.SequenceNode:
-		return node.Decode(&p.Items)
-	default:
-		return errors.Errorf("unexpected YAML kind %v", node.Kind)
-	}
-}
+func (p *Items) UnmarshalYAML(node *yaml.Node) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements json.Marshaler.
-func (p Items) MarshalJSON() ([]byte, error) {
-	if p.Item != nil {
-		return json.Marshal(p.Item)
-	}
-	return json.Marshal(p.Items)
-}
+func (p Items) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements json.Unmarshaler.
-func (p *Items) UnmarshalJSON(data []byte) error {
-	switch tt := jx.DecodeBytes(data).Next(); tt {
-	case jx.Object:
-		s := Schema{}
-		if err := json.Unmarshal(data, &s); err != nil {
-			return err
-		}
-		p.Item = &s
-		return nil
-	case jx.Array:
-		var s []*Schema
-		if err := json.Unmarshal(data, &s); err != nil {
-			return err
-		}
-		p.Items = s
-		return nil
-	default:
-		return errors.Errorf("unexpected type %s", tt.String())
-	}
-}
+func (p *Items) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Discriminator discriminates types for OneOf, AllOf, AnyOf.
 //

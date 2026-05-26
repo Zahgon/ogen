@@ -5,10 +5,6 @@ package api
 import (
 	"context"
 	"net/http"
-	"strings"
-
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/ogenerrors"
 )
 
 // SecurityHandler is handler for security parameters.
@@ -20,17 +16,7 @@ type SecurityHandler interface {
 }
 
 func findAuthorization(h http.Header, prefix string) (string, bool) {
-	v, ok := h["Authorization"]
-	if !ok {
-		return "", false
-	}
-	for _, vv := range v {
-		scheme, value, ok := strings.Cut(vv, " ")
-		if !ok || !strings.EqualFold(scheme, prefix) {
-			continue
-		}
-		return value, true
-	}
+	_ = "STUB: not implemented"
 	return "", false
 }
 
@@ -50,16 +36,9 @@ var operationRolesBearerToken = map[string][]string{
 //	requiredRoles := GetRolesForBearerToken(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForBearerToken(operation string) []string {
-	roles, ok := operationRolesBearerToken[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForBearerToken(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 // operationRolesHeaderKey is a private map storing roles per operation.
 var operationRolesHeaderKey = map[string][]string{
@@ -76,50 +55,18 @@ var operationRolesHeaderKey = map[string][]string{
 //	requiredRoles := GetRolesForHeaderKey(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForHeaderKey(operation string) []string {
-	roles, ok := operationRolesHeaderKey[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForHeaderKey(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 func (s *Server) securityBearerToken(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t BearerToken
-	token, ok := findAuthorization(req.Header, "Bearer")
-	if !ok {
-		return ctx, false, nil
-	}
-	t.Token = token
-	t.Roles = operationRolesBearerToken[operationName]
-	rctx, err := s.sec.HandleBearerToken(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
 func (s *Server) securityHeaderKey(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t HeaderKey
-	const parameterName = "X-Api-Key"
-	value := req.Header.Get(parameterName)
-	if value == "" {
-		return ctx, false, nil
-	}
-	t.APIKey = value
-	t.Roles = operationRolesHeaderKey[operationName]
-	rctx, err := s.sec.HandleHeaderKey(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
 // SecuritySource is provider of security values (tokens, passwords, etc.).
@@ -131,18 +78,11 @@ type SecuritySource interface {
 }
 
 func (s *Client) securityBearerToken(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.BearerToken(ctx, operationName)
-	if err != nil {
-		return errors.Wrap(err, "security source \"BearerToken\"")
-	}
-	req.Header.Set("Authorization", "Bearer "+t.Token)
+	_ = "STUB: not implemented"
 	return nil
 }
+
 func (s *Client) securityHeaderKey(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.HeaderKey(ctx, operationName)
-	if err != nil {
-		return errors.Wrap(err, "security source \"HeaderKey\"")
-	}
-	req.Header.Set("X-Api-Key", t.APIKey)
+	_ = "STUB: not implemented"
 	return nil
 }

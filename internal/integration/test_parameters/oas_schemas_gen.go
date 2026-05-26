@@ -4,8 +4,6 @@ package api
 
 import (
 	"time"
-
-	"github.com/go-faster/errors"
 )
 
 // ComplicatedParameterNameGetOK is response for ComplicatedParameterNameGet operation.
@@ -20,43 +18,55 @@ type ContentParameters struct {
 
 // GetQuery returns the value of Query.
 func (s *ContentParameters) GetQuery() User {
-	return s.Query
+	_ = "STUB: not implemented"
+
+	// GetPath returns the value of Path.
+	return *new(User)
 }
 
-// GetPath returns the value of Path.
 func (s *ContentParameters) GetPath() User {
-	return s.Path
+	_ = "STUB: not implemented"
+
+	// GetHeader returns the value of Header.
+	return *new(User)
 }
 
-// GetHeader returns the value of Header.
 func (s *ContentParameters) GetHeader() User {
-	return s.Header
+	_ = "STUB: not implemented"
+
+	// GetCookie returns the value of Cookie.
+	return *new(User)
 }
 
-// GetCookie returns the value of Cookie.
 func (s *ContentParameters) GetCookie() User {
-	return s.Cookie
+	_ = "STUB: not implemented"
+
+	// SetQuery sets the value of Query.
+	return *new(User)
 }
 
-// SetQuery sets the value of Query.
 func (s *ContentParameters) SetQuery(val User) {
-	s.Query = val
+	_ = "STUB: not implemented"
+
+	// SetPath sets the value of Path.
+	return
 }
 
-// SetPath sets the value of Path.
 func (s *ContentParameters) SetPath(val User) {
-	s.Path = val
+	_ = "STUB: not implemented"
+
+	// SetHeader sets the value of Header.
+	return
 }
 
-// SetHeader sets the value of Header.
 func (s *ContentParameters) SetHeader(val User) {
-	s.Header = val
+	_ = "STUB: not implemented"
+
+	// SetCookie sets the value of Cookie.
+	return
 }
 
-// SetCookie sets the value of Cookie.
-func (s *ContentParameters) SetCookie(val User) {
-	s.Cookie = val
-}
+func (s *ContentParameters) SetCookie(val User) { _ = "STUB: not implemented"; return }
 
 type ObjectQueryParameterOK struct {
 	Style string         `json:"style"`
@@ -65,25 +75,33 @@ type ObjectQueryParameterOK struct {
 
 // GetStyle returns the value of Style.
 func (s *ObjectQueryParameterOK) GetStyle() string {
-	return s.Style
+	_ = "STUB: not implemented"
+
+	// GetValue returns the value of Value.
+	return ""
 }
 
-// GetValue returns the value of Value.
 func (s *ObjectQueryParameterOK) GetValue() OneLevelObject {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetStyle sets the value of Style.
+	return *new(OneLevelObject)
 }
 
-// SetStyle sets the value of Style.
 func (s *ObjectQueryParameterOK) SetStyle(val string) {
-	s.Style = val
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return
 }
 
-// SetValue sets the value of Value.
 func (s *ObjectQueryParameterOK) SetValue(val OneLevelObject) {
-	s.Value = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/OneLevelObject
+	return
 }
 
-// Ref: #/components/schemas/OneLevelObject
 type OneLevelObject struct {
 	Min    int    `json:"min"`
 	Max    int    `json:"max"`
@@ -92,41 +110,48 @@ type OneLevelObject struct {
 
 // GetMin returns the value of Min.
 func (s *OneLevelObject) GetMin() int {
-	return s.Min
+	_ = "STUB: not implemented"
+
+	// GetMax returns the value of Max.
+	return 0
 }
 
-// GetMax returns the value of Max.
 func (s *OneLevelObject) GetMax() int {
-	return s.Max
+	_ = "STUB: not implemented"
+
+	// GetFilter returns the value of Filter.
+	return 0
 }
 
-// GetFilter returns the value of Filter.
 func (s *OneLevelObject) GetFilter() string {
-	return s.Filter
+	_ = "STUB: not implemented"
+
+	// SetMin sets the value of Min.
+	return ""
 }
 
-// SetMin sets the value of Min.
 func (s *OneLevelObject) SetMin(val int) {
-	s.Min = val
+	_ = "STUB: not implemented"
+
+	// SetMax sets the value of Max.
+	return
 }
 
-// SetMax sets the value of Max.
 func (s *OneLevelObject) SetMax(val int) {
-	s.Max = val
+	_ = "STUB: not implemented"
+
+	// SetFilter sets the value of Filter.
+	return
 }
 
-// SetFilter sets the value of Filter.
 func (s *OneLevelObject) SetFilter(val string) {
-	s.Filter = val
+	_ = "STUB: not implemented"
+
+	// NewOptBool returns new OptBool with value set to v.
+	return
 }
 
-// NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -135,44 +160,26 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptDateTime returns new OptDateTime with value set to v.
-func NewOptDateTime(v time.Time) OptDateTime {
-	return OptDateTime{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptDateTime(v time.Time) OptDateTime { _ = "STUB: not implemented"; return *new(OptDateTime) }
 
 // OptDateTime is optional time.Time.
 type OptDateTime struct {
@@ -181,44 +188,29 @@ type OptDateTime struct {
 }
 
 // IsSet returns true if OptDateTime was set.
-func (o OptDateTime) IsSet() bool { return o.Set }
+func (o OptDateTime) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDateTime) Reset() {
-	var v time.Time
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDateTime) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDateTime) SetTo(v time.Time) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDateTime) SetTo(v time.Time) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDateTime) Get() (v time.Time, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(time.Time), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDateTime) Or(d time.Time) time.Time {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDateTime) Or(d time.Time) time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -227,43 +219,28 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptOneLevelObject returns new OptOneLevelObject with value set to v.
 func NewOptOneLevelObject(v OneLevelObject) OptOneLevelObject {
-	return OptOneLevelObject{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOneLevelObject)
 }
 
 // OptOneLevelObject is optional OneLevelObject.
@@ -273,43 +250,34 @@ type OptOneLevelObject struct {
 }
 
 // IsSet returns true if OptOneLevelObject was set.
-func (o OptOneLevelObject) IsSet() bool { return o.Set }
+func (o OptOneLevelObject) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOneLevelObject) Reset() {
-	var v OneLevelObject
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOneLevelObject) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptOneLevelObject) SetTo(v OneLevelObject) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptOneLevelObject) SetTo(v OneLevelObject) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOneLevelObject) Get() (v OneLevelObject, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OneLevelObject), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOneLevelObject) Or(d OneLevelObject) OneLevelObject {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OneLevelObject)
 }
 
 // NewOptOptionalParametersObject returns new OptOptionalParametersObject with value set to v.
 func NewOptOptionalParametersObject(v OptionalParametersObject) OptOptionalParametersObject {
-	return OptOptionalParametersObject{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOptionalParametersObject)
 }
 
 // OptOptionalParametersObject is optional OptionalParametersObject.
@@ -319,43 +287,37 @@ type OptOptionalParametersObject struct {
 }
 
 // IsSet returns true if OptOptionalParametersObject was set.
-func (o OptOptionalParametersObject) IsSet() bool { return o.Set }
+func (o OptOptionalParametersObject) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOptionalParametersObject) Reset() {
-	var v OptionalParametersObject
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOptionalParametersObject) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptOptionalParametersObject) SetTo(v OptionalParametersObject) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOptionalParametersObject) Get() (v OptionalParametersObject, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OptionalParametersObject), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOptionalParametersObject) Or(d OptionalParametersObject) OptionalParametersObject {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OptionalParametersObject)
 }
 
 // NewOptOptionalQueryParametersResponseObject returns new OptOptionalQueryParametersResponseObject with value set to v.
 func NewOptOptionalQueryParametersResponseObject(v OptionalQueryParametersResponseObject) OptOptionalQueryParametersResponseObject {
-	return OptOptionalQueryParametersResponseObject{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOptionalQueryParametersResponseObject)
 }
 
 // OptOptionalQueryParametersResponseObject is optional OptionalQueryParametersResponseObject.
@@ -365,44 +327,35 @@ type OptOptionalQueryParametersResponseObject struct {
 }
 
 // IsSet returns true if OptOptionalQueryParametersResponseObject was set.
-func (o OptOptionalQueryParametersResponseObject) IsSet() bool { return o.Set }
+func (o OptOptionalQueryParametersResponseObject) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOptionalQueryParametersResponseObject) Reset() {
-	var v OptionalQueryParametersResponseObject
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOptionalQueryParametersResponseObject) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptOptionalQueryParametersResponseObject) SetTo(v OptionalQueryParametersResponseObject) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOptionalQueryParametersResponseObject) Get() (v OptionalQueryParametersResponseObject, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OptionalQueryParametersResponseObject), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptOptionalQueryParametersResponseObject) Or(d OptionalQueryParametersResponseObject) OptionalQueryParametersResponseObject {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(OptionalQueryParametersResponseObject)
 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -411,36 +364,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 type OptionalParametersObject struct {
 	Key OptString `json:"key"`
@@ -448,15 +388,19 @@ type OptionalParametersObject struct {
 
 // GetKey returns the value of Key.
 func (s *OptionalParametersObject) GetKey() OptString {
-	return s.Key
+	_ = "STUB: not implemented"
+
+	// SetKey sets the value of Key.
+	return *new(OptString)
 }
 
-// SetKey sets the value of Key.
 func (s *OptionalParametersObject) SetKey(val OptString) {
-	s.Key = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/OptionalQueryParametersResponse
+	return
 }
 
-// Ref: #/components/schemas/OptionalQueryParametersResponse
 type OptionalQueryParametersResponse struct {
 	Integer   OptInt                                   `json:"integer"`
 	String    OptString                                `json:"string"`
@@ -468,63 +412,84 @@ type OptionalQueryParametersResponse struct {
 
 // GetInteger returns the value of Integer.
 func (s *OptionalQueryParametersResponse) GetInteger() OptInt {
-	return s.Integer
+	_ = "STUB: not implemented"
+
+	// GetString returns the value of String.
+	return *new(OptInt)
 }
 
-// GetString returns the value of String.
 func (s *OptionalQueryParametersResponse) GetString() OptString {
-	return s.String
+	_ = "STUB: not implemented"
+
+	// GetBoolean returns the value of Boolean.
+	return *new(OptString)
 }
 
-// GetBoolean returns the value of Boolean.
 func (s *OptionalQueryParametersResponse) GetBoolean() OptBool {
-	return s.Boolean
+	_ = "STUB: not implemented"
+
+	// GetObject returns the value of Object.
+	return *new(OptBool)
 }
 
-// GetObject returns the value of Object.
 func (s *OptionalQueryParametersResponse) GetObject() OptOptionalQueryParametersResponseObject {
-	return s.Object
+	_ = "STUB: not implemented"
+
+	// GetTimestamp returns the value of Timestamp.
+	return *new(OptOptionalQueryParametersResponseObject)
 }
 
-// GetTimestamp returns the value of Timestamp.
 func (s *OptionalQueryParametersResponse) GetTimestamp() OptDateTime {
-	return s.Timestamp
+	_ = "STUB: not implemented"
+	return *
+
+	// GetArray returns the value of Array.
+	new(OptDateTime)
 }
 
-// GetArray returns the value of Array.
 func (s *OptionalQueryParametersResponse) GetArray() []string {
-	return s.Array
+	_ = "STUB: not implemented"
+
+	// SetInteger sets the value of Integer.
+	return nil
 }
 
-// SetInteger sets the value of Integer.
 func (s *OptionalQueryParametersResponse) SetInteger(val OptInt) {
-	s.Integer = val
+	_ = "STUB: not implemented"
+
+	// SetString sets the value of String.
+	return
 }
 
-// SetString sets the value of String.
 func (s *OptionalQueryParametersResponse) SetString(val OptString) {
-	s.String = val
+	_ = "STUB: not implemented"
+
+	// SetBoolean sets the value of Boolean.
+	return
 }
 
-// SetBoolean sets the value of Boolean.
 func (s *OptionalQueryParametersResponse) SetBoolean(val OptBool) {
-	s.Boolean = val
+	_ = "STUB: not implemented"
+
+	// SetObject sets the value of Object.
+	return
 }
 
-// SetObject sets the value of Object.
 func (s *OptionalQueryParametersResponse) SetObject(val OptOptionalQueryParametersResponseObject) {
-	s.Object = val
+	_ = "STUB: not implemented"
+
+	// SetTimestamp sets the value of Timestamp.
+	return
 }
 
-// SetTimestamp sets the value of Timestamp.
 func (s *OptionalQueryParametersResponse) SetTimestamp(val OptDateTime) {
-	s.Timestamp = val
+	_ = "STUB: not implemented"
+
+	// SetArray sets the value of Array.
+	return
 }
 
-// SetArray sets the value of Array.
-func (s *OptionalQueryParametersResponse) SetArray(val []string) {
-	s.Array = val
-}
+func (s *OptionalQueryParametersResponse) SetArray(val []string) { _ = "STUB: not implemented"; return }
 
 type OptionalQueryParametersResponseObject struct {
 	Key OptString `json:"key"`
@@ -532,15 +497,19 @@ type OptionalQueryParametersResponseObject struct {
 
 // GetKey returns the value of Key.
 func (s *OptionalQueryParametersResponseObject) GetKey() OptString {
-	return s.Key
+	_ = "STUB: not implemented"
+
+	// SetKey sets the value of Key.
+	return *new(OptString)
 }
 
-// SetKey sets the value of Key.
 func (s *OptionalQueryParametersResponseObject) SetKey(val OptString) {
-	s.Key = val
+	_ = "STUB: not implemented"
+
+	// SameNameOK is response for SameName operation.
+	return
 }
 
-// SameNameOK is response for SameName operation.
 type SameNameOK struct{}
 
 // SimilarNamesOK is response for SimilarNames operation.
@@ -556,43 +525,55 @@ type User struct {
 
 // GetID returns the value of ID.
 func (s *User) GetID() int {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetUsername returns the value of Username.
+	return 0
 }
 
-// GetUsername returns the value of Username.
 func (s *User) GetUsername() string {
-	return s.Username
+	_ = "STUB: not implemented"
+
+	// GetRole returns the value of Role.
+	return ""
 }
 
-// GetRole returns the value of Role.
 func (s *User) GetRole() UserRole {
-	return s.Role
+	_ = "STUB: not implemented"
+
+	// GetFriends returns the value of Friends.
+	return *new(UserRole)
 }
 
-// GetFriends returns the value of Friends.
 func (s *User) GetFriends() []User {
-	return s.Friends
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return nil
 }
 
-// SetID sets the value of ID.
 func (s *User) SetID(val int) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetUsername sets the value of Username.
+	return
 }
 
-// SetUsername sets the value of Username.
 func (s *User) SetUsername(val string) {
-	s.Username = val
+	_ = "STUB: not implemented"
+
+	// SetRole sets the value of Role.
+	return
 }
 
-// SetRole sets the value of Role.
 func (s *User) SetRole(val UserRole) {
-	s.Role = val
+	_ = "STUB: not implemented"
+
+	// SetFriends sets the value of Friends.
+	return
 }
 
-// SetFriends sets the value of Friends.
-func (s *User) SetFriends(val []User) {
-	s.Friends = val
-}
+func (s *User) SetFriends(val []User) { _ = "STUB: not implemented"; return }
 
 type UserRole string
 
@@ -603,44 +584,13 @@ const (
 )
 
 // AllValues returns all UserRole values.
-func (UserRole) AllValues() []UserRole {
-	return []UserRole{
-		UserRoleAdmin,
-		UserRoleUser,
-		UserRoleBot,
-	}
-}
+func (UserRole) AllValues() []UserRole { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s UserRole) MarshalText() ([]byte, error) {
-	switch s {
-	case UserRoleAdmin:
-		return []byte(s), nil
-	case UserRoleUser:
-		return []byte(s), nil
-	case UserRoleBot:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s UserRole) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *UserRole) UnmarshalText(data []byte) error {
-	switch UserRole(data) {
-	case UserRoleAdmin:
-		*s = UserRoleAdmin
-		return nil
-	case UserRoleUser:
-		*s = UserRoleUser
-		return nil
-	case UserRoleBot:
-		*s = UserRoleBot
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *UserRole) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/Value
 type Value struct {
@@ -649,10 +599,10 @@ type Value struct {
 
 // GetValue returns the value of Value.
 func (s *Value) GetValue() string {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return ""
 }
 
-// SetValue sets the value of Value.
-func (s *Value) SetValue(val string) {
-	s.Value = val
-}
+func (s *Value) SetValue(val string) { _ = "STUB: not implemented"; return }

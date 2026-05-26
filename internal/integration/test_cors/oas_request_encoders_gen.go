@@ -3,21 +3,14 @@
 package api
 
 import (
-	"bytes"
 	"net/http"
-
-	"github.com/go-faster/errors"
-	"github.com/go-faster/jx"
-	ht "github.com/ogen-go/ogen/http"
 )
 
 func encodeFooPatchRequest(
 	req FooPatchReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/sdp"
-	body := req
-	ht.SetBody(r, body, contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -25,22 +18,6 @@ func encodeFooPostRequest(
 	req FooPostReq,
 	r *http.Request,
 ) error {
-	switch req := req.(type) {
-	case *FooPostReqApplicationJSON:
-		const contentType = "application/json"
-		e := new(jx.Encoder)
-		{
-			req.Encode(e)
-		}
-		encoded := e.Bytes()
-		ht.SetBody(r, bytes.NewReader(encoded), contentType)
-		return nil
-	case *FooPostReqTextPlain:
-		const contentType = "text/plain"
-		body := req
-		ht.SetBody(r, body, contentType)
-		return nil
-	default:
-		return errors.Errorf("unexpected request type: %T", req)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }

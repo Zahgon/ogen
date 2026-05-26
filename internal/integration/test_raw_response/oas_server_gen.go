@@ -48,13 +48,6 @@ type Server struct {
 
 // NewServer creates new Server.
 func NewServer(h Handler, rh RawHandler, opts ...ServerOption) (*Server, error) {
-	s, err := newServerConfig(opts...).baseServer()
-	if err != nil {
-		return nil, err
-	}
-	return &Server{
-		h:          h,
-		rh:         rh,
-		baseServer: s,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }

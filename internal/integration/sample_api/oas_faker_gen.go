@@ -2,1954 +2,481 @@
 
 package api
 
-import (
-	"fmt"
-	"net/netip"
-	"net/url"
-	"time"
-
-	"github.com/go-faster/jx"
-	"github.com/google/uuid"
-	"github.com/shopspring/decimal"
-)
+// SetFake set fake values.
+func (s *AnyTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AnyTest) SetFake() {
-	{
-		{
-			s.Empty = []byte("null")
-		}
-	}
-	{
-		{
-			s.AnyMap.SetFake()
-		}
-	}
-	{
-		{
-			s.AnyArray = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.AnyArray = append(s.AnyArray, elem)
-			}
-		}
-	}
-}
+func (s *AnyTestAnyMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AnyTestAnyMap) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *ArrayTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ArrayTest) SetFake() {
-	{
-		{
-			s.Required = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Required = append(s.Required, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Optional = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Optional = append(s.Optional, elem)
-			}
-		}
-	}
-	{
-		{
-			s.NullableRequired = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.NullableRequired = append(s.NullableRequired, elem)
-			}
-		}
-	}
-	{
-		{
-			s.NullableOptional.SetFake()
-		}
-	}
-}
+func (s *Data) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Data) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Hostname = "string"
-		}
-	}
-	{
-		{
-			s.Format = "string"
-		}
-	}
-	{
-		{
-			s.Base64 = []byte("[]byte")
-		}
-	}
-	{
-		{
-			s.NullableEnum.SetFake()
-		}
-	}
-}
+func (s *DataDescription) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DataDescription) SetFake() {
-	var variant DescriptionDetailed
-
-	{
-		variant.SetFake()
-	}
-	s.SetDescriptionDetailed(variant)
-}
+func (s *DefaultTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DefaultTest) SetFake() {
-	{
-		{
-			s.Required = "string"
-		}
-	}
-	{
-		{
-			s.Str.SetFake()
-		}
-	}
-	{
-		{
-			s.NullStr.SetFake()
-		}
-	}
-	{
-		{
-			s.Enum.SetFake()
-		}
-	}
-	{
-		{
-			s.UUID.SetFake()
-		}
-	}
-	{
-		{
-			s.IP.SetFake()
-		}
-	}
-	{
-		{
-			s.IPV4.SetFake()
-		}
-	}
-	{
-		{
-			s.IPV6.SetFake()
-		}
-	}
-	{
-		{
-			s.URI.SetFake()
-		}
-	}
-	{
-		{
-			s.Birthday.SetFake()
-		}
-	}
-	{
-		{
-			s.Rate.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Hostname.SetFake()
-		}
-	}
-	{
-		{
-			s.Format.SetFake()
-		}
-	}
-	{
-		{
-			s.Base64 = []byte("[]byte")
-		}
-	}
-}
+func (s *DefaultTestEnum) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DefaultTestEnum) SetFake() {
-	*s = DefaultTestEnumBig
-}
+func (s *DescriptionDetailed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DescriptionDetailed) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Count = int(0)
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-}
+func (s *DescriptionSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DescriptionSimple) SetFake() {
-	{
-		{
-			s.Description = "string"
-		}
-	}
-}
+func (s *Error) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Error) SetFake() {
-	{
-		{
-			s.Code = int64(0)
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *ID) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ID) SetFake() {
-	var variant string
-
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+func (s *InlineDiscriminatorOneOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineDiscriminatorOneOf) SetFake() {
-	{
-		{
-			s.Common = "string"
-		}
-	}
-	{
-		{
-			s.OneOf.SetFake()
-		}
-	}
-}
+func (s *InlineDiscriminatorOneOfSum) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineDiscriminatorOneOfSum) SetFake() {
-	var variant InlineOneOfBar
-
-	{
-		variant.SetFake()
-	}
-	s.SetInlineOneOfBar(variant)
-}
+func (s *InlineOneOfBar) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineOneOfBar) SetFake() {
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Bar.SetFake()
-		}
-	}
-}
+func (s *InlineOneOfFoo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineOneOfFoo) SetFake() {
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Foo.SetFake()
-		}
-	}
-}
+func (s *InlineUniqueFieldsOneOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineUniqueFieldsOneOf) SetFake() {
-	{
-		{
-			s.Common = "string"
-		}
-	}
-	{
-		{
-			s.OneOf.SetFake()
-		}
-	}
-}
+func (s *InlineUniqueFieldsOneOfSum) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineUniqueFieldsOneOfSum) SetFake() {
-	var variant InlineOneOfFoo
-
-	{
-		variant.SetFake()
-	}
-	s.SetInlineOneOfFoo(variant)
-}
-
-// SetFake set fake values.
-func (s *Issue1310) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Details.SetFake()
-		}
-	}
-	{
-		{
-			s.Properties.SetFake()
-		}
-	}
-}
+func (s *Issue1310) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *Issue1310Properties) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
+
+func (s *Issue143) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue143) SetFake() {
-	var variant Issue1430
-
-	{
-		variant.SetFake()
-	}
-	s.SetIssue1430(variant)
-}
+func (s *Issue1430) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue1430) SetFake() {
-	{
-		{
-			s.CommonMinus1 = "string"
-		}
-	}
-	{
-		{
-			s.CommonMinus2 = int(0)
-		}
-	}
-	{
-		{
-			s.UniqueMinus1 = "string"
-		}
-	}
-}
+func (s *Issue1431) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue1431) SetFake() {
-	{
-		{
-			s.CommonMinus1 = "string"
-		}
-	}
-	{
-		{
-			s.CommonMinus2 = int(0)
-		}
-	}
-	{
-		{
-			s.UniqueMinus2 = "string"
-		}
-	}
-}
+func (s *Issue1432) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue1432) SetFake() {
-	{
-		{
-			s.CommonMinus1 = "string"
-		}
-	}
-	{
-		{
-			s.CommonMinus2 = int(0)
-		}
-	}
-	{
-		{
-			s.CommonMinus3.SetFake()
-		}
-	}
-	{
-		{
-			s.UniqueMinus3 = "string"
-		}
-	}
-}
+func (s *Issue1433) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue1433) SetFake() {
-	{
-		{
-			s.CommonMinus3.SetFake()
-		}
-	}
-	{
-		{
-			s.UniqueMinus4 = "string"
-		}
-	}
-}
+func (s *Issue1461) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue1461) SetFake() {
-	{
-		{
-			s.RequiredTest.SetFake()
-		}
-	}
-	{
-		{
-			s.OptionalTest.SetFake()
-		}
-	}
-	{
-		{
-			s.NullableTest.SetFake()
-		}
-	}
-	{
-		{
-			s.NullableOptionalTest.SetFake()
-		}
-	}
-}
+func (s *Issue1461NullableOptionalTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue1461NullableOptionalTest) SetFake() {
-	{
-		{
-			s.Banana.SetFake()
-		}
-	}
-}
+func (s *Issue1461NullableTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue1461NullableTest) SetFake() {
-	{
-		{
-			s.Banana = nil
-			for i := 0; i < 2; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Banana = append(s.Banana, elem)
-			}
-		}
-	}
-}
+func (s *Issue1461OptionalTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue1461OptionalTest) SetFake() {
-	{
-		{
-			s.Banana = nil
-			for i := 0; i < 2; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Banana = append(s.Banana, elem)
-			}
-		}
-	}
-}
+func (s *Issue1461RequiredTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue1461RequiredTest) SetFake() {
-	{
-		{
-			s.Banana = nil
-			for i := 0; i < 2; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Banana = append(s.Banana, elem)
-			}
-		}
-	}
-}
+func (s *Issue943) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue943) SetFake() {
-	var variant Issue943Variant1
-
-	{
-		variant.SetFake()
-	}
-	s.SetIssue943Variant1(variant)
-}
+func (s *Issue943Map) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue943Map) SetFake() {
-	{
-		{
-			s.Selector = "string"
-		}
-	}
-	{
-		{
-			s.Pattern0Props.SetFake()
-		}
-	}
-}
+func (s *Issue943MapPattern0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue943MapPattern0) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *Issue943Variant1) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue943Variant1) SetFake() {
-	{
-		{
-			s.Selector = "string"
-		}
-	}
-	{
-		{
-			s.Variant1Field = int(0)
-		}
-	}
-}
+func (s *Issue943Variant2) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue943Variant2) SetFake() {
-	{
-		{
-			s.Selector = "string"
-		}
-	}
-	{
-		{
-			s.Variant2Field = true
-		}
-	}
-}
+func (s *MapWithProperties) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MapWithProperties) SetFake() {
-	{
-		{
-			s.Required = int(0)
-		}
-	}
-	{
-		{
-			s.Optional.SetFake()
-		}
-	}
-	{
-		{
-			s.SubMap.SetFake()
-		}
-	}
-	{
-		{
-			s.InlinedSubMap.SetFake()
-		}
-	}
-	{
-		{
-			s.MapValidation.SetFake()
-		}
-	}
-}
+func (s *MapWithPropertiesAdditional) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MapWithPropertiesAdditional) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *MapWithPropertiesInlinedSubMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MapWithPropertiesInlinedSubMap) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *MaxPropertiesTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MaxPropertiesTest) SetFake() {
-	{
-		{
-			s.Required = int(0)
-		}
-	}
-	{
-		{
-			s.OptionalA.SetFake()
-		}
-	}
-}
+func (s *MergeDiscriminatorOneOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MergeDiscriminatorOneOf) SetFake() {
-	{
-		{
-			s.Common = "string"
-		}
-	}
-	{
-		{
-			s.OneOf.SetFake()
-		}
-	}
-}
+func (s *MergeDiscriminatorOneOfSum) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MergeDiscriminatorOneOfSum) SetFake() {
-	var variant InlineOneOfBar
-
-	{
-		variant.SetFake()
-	}
-	s.SetInlineOneOfBar(variant)
-}
+func (s *MergeUniqueFieldsOneOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MergeUniqueFieldsOneOf) SetFake() {
-	{
-		{
-			s.Common = "string"
-		}
-	}
-	{
-		{
-			s.OneOf.SetFake()
-		}
-	}
-}
-
-// SetFake set fake values.
-func (s *MergeUniqueFieldsOneOfSum) SetFake() {
-	var variant InlineOneOfFoo
-
-	{
-		variant.SetFake()
-	}
-	s.SetInlineOneOfFoo(variant)
-}
+func (s *MergeUniqueFieldsOneOfSum) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *NilInt) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableEnumsBoth) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableEnumsOnlyNullValue) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableEnumsOnlyNullable) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilString) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NoAdditionalPropertiesTest) SetFake() {
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Empty = nil
-		}
-	}
-	{
-		{
-			s.OneProperty.SetFake()
-		}
-	}
-	{
-		{
-			s.OnlyPatterned.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+
+	// Keep pointer nil to prevent infinite recursion.
+	return
 }
 
 // SetFake set fake values.
-func (s *NullValue) SetFake() {
-	var unwrapped struct{}
-	{
-		unwrapped = struct{}{}
-	}
-	*s = NullValue(unwrapped)
-}
+func (s *NullValue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableEnums) SetFake() {
-	{
-		{
-			s.OnlyNullable.SetFake()
-		}
-	}
-	{
-		{
-			s.OnlyNullValue.SetFake()
-		}
-	}
-	{
-		{
-			s.Both.SetFake()
-		}
-	}
-}
+func (s *NullableEnums) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableEnumsBoth) SetFake() {
-	*s = NullableEnumsBothAsc
-}
+func (s *NullableEnumsBoth) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableEnumsOnlyNullValue) SetFake() {
-	*s = NullableEnumsOnlyNullValueAsc
-}
+func (s *NullableEnumsOnlyNullValue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableEnumsOnlyNullable) SetFake() {
-	*s = NullableEnumsOnlyNullableAsc
-}
+func (s *NullableEnumsOnlyNullable) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneOfBooleanSumNullables) SetFake() {
-	var variant bool
-
-	{
-		variant = true
-	}
-	s.SetBool(variant)
-}
+func (s *OneOfBooleanSumNullables) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneOfBugs) SetFake() {
-	{
-		{
-			s.Issue143.SetFake()
-		}
-	}
-	{
-		{
-			s.AdditionalMinusFields.SetFake()
-		}
-	}
-	{
-		{
-			s.OneOfMinusUUIDMinusIntMinusEnum.SetFake()
-		}
-	}
-	{
-		{
-			s.OneOfMinusMappingMinusReference.SetFake()
-		}
-	}
-	{
-		{
-			s.Issue943.SetFake()
-		}
-	}
-}
+func (s *OneOfBugs) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneOfMappingReference) SetFake() {
-	var variant OneOfMappingReferenceB
-
-	{
-		variant.SetFake()
-	}
-	s.SetOneOfMappingReferenceB(variant)
-}
+func (s *OneOfMappingReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneOfMappingReferenceA) SetFake() {
-	{
-		{
-			s.InfoType.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-}
+func (s *OneOfMappingReferenceA) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneOfMappingReferenceB) SetFake() {
-	{
-		{
-			s.InfoType.SetFake()
-		}
-	}
-	{
-		{
-			s.Code.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Data = nil
-		}
-	}
-	{
-		{
-			s.Info.SetFake()
-		}
-	}
-}
+func (s *OneOfMappingReferenceB) SetFake() { _ = "STUB: not implemented"; return }
+
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
 func (s *OneOfMappingReferenceBData) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
+
+func (s *OneOfNullables) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneOfNullables) SetFake() {
-	var variant struct{}
-
-	{
-		variant = struct{}{}
-	}
-	s.SetNull(variant)
-}
+func (s *OneOfUUIDAndIntEnum) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneOfUUIDAndIntEnum) SetFake() {
-	var variant uuid.UUID
-
-	{
-		variant = uuid.New()
-	}
-	s.SetUUID(variant)
-}
+func (s *OneOfUUIDAndIntEnum1) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneOfUUIDAndIntEnum1) SetFake() {
-	*s = OneOfUUIDAndIntEnum10
-}
+func (s *OneOfWithNullable) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneOfWithNullable) SetFake() {
-	var variant struct{}
-
-	{
-		variant = struct{}{}
-	}
-	s.SetNull(variant)
-}
+func (s *OnePropertyObject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OnePropertyObject) SetFake() {
-	{
-		{
-			s.Foo = "string"
-		}
-	}
-}
+func (s *OneVariantHasNoUniqueFields) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneVariantHasNoUniqueFields) SetFake() {
-	var variant OneVariantHasNoUniqueFields0
-
-	{
-		variant.SetFake()
-	}
-	s.SetOneVariantHasNoUniqueFields0(variant)
-}
+func (s *OneVariantHasNoUniqueFields0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OneVariantHasNoUniqueFields0) SetFake() {
-	{
-		{
-			s.A = "string"
-		}
-	}
-	{
-		{
-			s.B.SetFake()
-		}
-	}
-	{
-		{
-			s.C = "string"
-		}
-	}
-}
-
-// SetFake set fake values.
-func (s *OneVariantHasNoUniqueFields1) SetFake() {
-	{
-		{
-			s.A = "string"
-		}
-	}
-	{
-		{
-			s.B.SetFake()
-		}
-	}
-	{
-		{
-			s.C = "string"
-		}
-	}
-	{
-		{
-			s.D.SetFake()
-		}
-	}
-}
+func (s *OneVariantHasNoUniqueFields1) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OnlyEmptyObject) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *OnlyPatternedPropsObject) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *OnlyPatternedPropsObject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAnyTest) SetFake() {
-	var elem AnyTest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAnyTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAnyTestAnyMap) SetFake() {
-	var elem AnyTestAnyMap
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAnyTestAnyMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptArrayTest) SetFake() {
-	var elem ArrayTest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptArrayTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptData) SetFake() {
-	var elem Data
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDate) SetFake() {
-	var elem time.Time
-	{
-		elem = time.Now()
-	}
-	s.SetTo(elem)
-}
+func (s *OptDate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDateTime) SetFake() {
-	var elem time.Time
-	{
-		elem = time.Now()
-	}
-	s.SetTo(elem)
-}
+func (s *OptDateTime) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDefaultTestEnum) SetFake() {
-	var elem DefaultTestEnum
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptDefaultTestEnum) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDuration) SetFake() {
-	var elem time.Duration
-	{
-		elem = time.Duration(5 * time.Second)
-	}
-	s.SetTo(elem)
-}
+func (s *OptDuration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFloat64) SetFake() {
-	var elem float64
-	{
-		elem = float64(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptFloat64) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptID) SetFake() {
-	var elem ID
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptID) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIP) SetFake() {
-	var elem netip.Addr
-	{
-		elem = netip.MustParseAddr("127.0.0.1")
-	}
-	s.SetTo(elem)
-}
+func (s *OptIP) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIPv4) SetFake() {
-	var elem netip.Addr
-	{
-		elem = netip.MustParseAddr("127.0.0.1")
-	}
-	s.SetTo(elem)
-}
+func (s *OptIPv4) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIPv6) SetFake() {
-	var elem netip.Addr
-	{
-		elem = netip.MustParseAddr("::1")
-	}
-	s.SetTo(elem)
-}
+func (s *OptIPv6) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInlineDiscriminatorOneOf) SetFake() {
-	var elem InlineDiscriminatorOneOf
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInlineDiscriminatorOneOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInlineUniqueFieldsOneOf) SetFake() {
-	var elem InlineUniqueFieldsOneOf
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInlineUniqueFieldsOneOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt) SetFake() {
-	var elem int
-	{
-		elem = int(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt32) SetFake() {
-	var elem int32
-	{
-		elem = int32(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt32) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssue1310Properties) SetFake() {
-	var elem *Issue1310Properties
-	{ // Keep pointer nil to prevent infinite recursion.
-		elem = nil
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssue1310Properties) SetFake() { _ = "STUB: not implemented"; return }
+
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
-func (s *OptIssue1461NullableOptionalTest) SetFake() {
-	var elem Issue1461NullableOptionalTest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssue1461NullableOptionalTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssue1461NullableTest) SetFake() {
-	var elem Issue1461NullableTest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssue1461NullableTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssue1461OptionalTest) SetFake() {
-	var elem Issue1461OptionalTest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssue1461OptionalTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssue1461RequiredTest) SetFake() {
-	var elem Issue1461RequiredTest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssue1461RequiredTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssue943) SetFake() {
-	var elem Issue943
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssue943) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMapWithProperties) SetFake() {
-	var elem MapWithProperties
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMapWithProperties) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMapWithPropertiesInlinedSubMap) SetFake() {
-	var elem MapWithPropertiesInlinedSubMap
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMapWithPropertiesInlinedSubMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMaxPropertiesTest) SetFake() {
-	var elem MaxPropertiesTest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMaxPropertiesTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMergeDiscriminatorOneOf) SetFake() {
-	var elem MergeDiscriminatorOneOf
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMergeDiscriminatorOneOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMergeUniqueFieldsOneOf) SetFake() {
-	var elem MergeUniqueFieldsOneOf
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMergeUniqueFieldsOneOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilString) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilStringArray) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilStringArray) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNullValue) SetFake() {
-	var elem NullValue
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptNullValue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNullableEnums) SetFake() {
-	var elem NullableEnums
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptNullableEnums) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOneOfMappingReference) SetFake() {
-	var elem OneOfMappingReference
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOneOfMappingReference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOneOfUUIDAndIntEnum) SetFake() {
-	var elem OneOfUUIDAndIntEnum
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOneOfUUIDAndIntEnum) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOnePropertyObject) SetFake() {
-	var elem OnePropertyObject
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOnePropertyObject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOnlyPatternedPropsObject) SetFake() {
-	var elem OnlyPatternedPropsObject
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOnlyPatternedPropsObject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPet) SetFake() {
-	var elem Pet
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPetName) SetFake() {
-	var elem PetName
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPetName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPetType) SetFake() {
-	var elem PetType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPetType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptString) SetFake() {
-	var elem string
-	{
-		elem = "string"
-	}
-	s.SetTo(elem)
-}
+func (s *OptString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptStringMap) SetFake() {
-	var elem StringMap
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptStringMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptStringStringMap) SetFake() {
-	var elem StringStringMap
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptStringStringMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTime) SetFake() {
-	var elem time.Time
-	{
-		elem = time.Now()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTime) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptURI) SetFake() {
-	var elem url.URL
-	{
-		elem = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-	}
-	s.SetTo(elem)
-}
+func (s *OptURI) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptUUID) SetFake() {
-	var elem uuid.UUID
-	{
-		elem = uuid.New()
-	}
-	s.SetTo(elem)
-}
+func (s *OptUUID) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptValidationStringMap) SetFake() {
-	var elem ValidationStringMap
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptValidationStringMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PatternRecursiveMap) SetFake() {
-	var (
-		elem PatternRecursiveMap
-		m    map[string]PatternRecursiveMap = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *PatternRecursiveMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *Pet) SetFake() {
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Primary = nil
-		}
-	}
-	{
-		{
-			s.ID = int64(0)
-		}
-	}
-	{
-		{
-			s.UniqueID = uuid.New()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Kind.SetFake()
-		}
-	}
-	{
-		{
-			s.Tag.SetFake()
-		}
-	}
-	{
-		{
-			s.IP = netip.MustParseAddr("127.0.0.1")
-		}
-	}
-	{
-		{
-			s.IPV4 = netip.MustParseAddr("127.0.0.1")
-		}
-	}
-	{
-		{
-			s.IPV6 = netip.MustParseAddr("::1")
-		}
-	}
-	{
-		{
-			s.URI = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Birthday = time.Now()
-		}
-	}
-	{
-		{
-			s.Rate = time.Duration(5 * time.Second)
-		}
-	}
-	{
-		{
-			s.Nickname.SetFake()
-		}
-	}
-	{
-		{
-			s.NullStr.SetFake()
-		}
-	}
-	{
-		{
-			s.Friends = nil
-			for i := 0; i < 0; i++ {
-				var elem Pet
-				{
-					elem.SetFake()
-				}
-				s.Friends = append(s.Friends, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Next.SetFake()
-		}
-	}
-	{
-		{
-			s.TestInteger1.SetFake()
-		}
-	}
-	{
-		{
-			s.TestFloat1.SetFake()
-		}
-	}
-	{
-		{
-			s.TestArray1 = nil
-			for i := 0; i < 0; i++ {
-				var elem []string
-				{
-					elem = nil
-					for i := 0; i < 0; i++ {
-						var elemElem string
-						{
-							elemElem = "string"
-						}
-						elem = append(elem, elemElem)
-					}
-				}
-				s.TestArray1 = append(s.TestArray1, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TestArray2.SetFake()
-		}
-	}
-	{
-		{
-			s.TestMap.SetFake()
-		}
-	}
-	{
-		{
-			s.TestMapWithProps.SetFake()
-		}
-	}
-	{
-		{
-			s.TestAny.SetFake()
-		}
-	}
-	{
-		{
-			s.TestMaxProperties.SetFake()
-		}
-	}
-	{
-		{
-			s.TestDate.SetFake()
-		}
-	}
-	{
-		{
-			s.TestDuration.SetFake()
-		}
-	}
-	{
-		{
-			s.TestTime.SetFake()
-		}
-	}
-	{
-		{
-			s.TestDateTime.SetFake()
-		}
-	}
-	{
-		{
-			s.NullValue.SetFake()
-		}
-	}
-	{
-		{
-			s.ExtraTags.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+
+	// Keep pointer nil to prevent infinite recursion.
+	return
 }
 
 // SetFake set fake values.
-func (s *PetGetDef) SetFake() {
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PetGetDef) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PetKind) SetFake() {
-	*s = PetKindBig
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *PetName) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = PetName(unwrapped)
-}
+func (s *PetName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PetType) SetFake() {
-	*s = PetTypeFifa
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *RecursiveArray) SetFake() {
-	var unwrapped []RecursiveArray
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem RecursiveArray
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = RecursiveArray(unwrapped)
-}
+func (s *RecursiveArray) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *RecursiveMap) SetFake() {
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.OptionalRecursiveField = nil
-		}
-	}
-	{
-		{
-			s.AdditionalProps.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+
+	// Keep pointer nil to prevent infinite recursion.
+	return
 }
 
 // SetFake set fake values.
-func (s *RecursiveMapAdditional) SetFake() {
-	var (
-		elem RecursiveMap
-		m    map[string]RecursiveMap = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *RecursiveMapAdditional) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *StringIntMap) SetFake() {
-	{
-		{
-			s.AdditionalProps.SetFake()
-		}
-	}
-	{
-		{
-			s.Pattern0Props.SetFake()
-		}
-	}
-}
+func (s *StringIntMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *StringIntMapAdditional) SetFake() {
-	var (
-		elem int
-		m    map[string]int = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *StringIntMapAdditional) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *StringIntMapPattern0) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *StringIntMapPattern0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *StringMap) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *StringMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *StringStringMap) SetFake() {
-	var (
-		elem StringMap
-		m    map[string]StringMap = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *StringStringMap) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TestDecimalValidation) SetFake() {
-	{
-		{
-			s.Minmax = decimal.Zero
-		}
-	}
-	{
-		{
-			s.MultipleOf = decimal.Zero
-		}
-	}
-}
+func (s *TestDecimalValidation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TestFloatValidation) SetFake() {
-	{
-		{
-			s.Minmax = float64(0)
-		}
-	}
-	{
-		{
-			s.MultipleOf = float64(0)
-		}
-	}
-}
+func (s *TestFloatValidation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TestInlineOneOf) SetFake() {
-	{
-		{
-			s.InlineDiscriminator.SetFake()
-		}
-	}
-	{
-		{
-			s.MergeDiscriminator.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineUniqueFields.SetFake()
-		}
-	}
-	{
-		{
-			s.MergeUniqueFields.SetFake()
-		}
-	}
-}
+func (s *TestInlineOneOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TestNullableOneofsCreated) SetFake() {
-	var unwrapped OneOfWithNullable
-	{
-		unwrapped.SetFake()
-	}
-	*s = TestNullableOneofsCreated(unwrapped)
-}
+func (s *TestNullableOneofsCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TestNullableOneofsOK) SetFake() {
-	var unwrapped OneOfWithNullable
-	{
-		unwrapped.SetFake()
-	}
-	*s = TestNullableOneofsOK(unwrapped)
-}
+func (s *TestNullableOneofsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TupleNamedTest) SetFake() {
-	{
-		{
-			s.Integer = int(0)
-		}
-	}
-	{
-		{
-			s.Boolean = true
-		}
-	}
-	{
-		{
-			s.V2 = "string"
-		}
-	}
-	{
-		{
-			s.V3 = nil
-			for i := 0; i < 0; i++ {
-				var elem []string
-				{
-					elem = nil
-					for i := 0; i < 0; i++ {
-						var elemElem string
-						{
-							elemElem = "string"
-						}
-						elem = append(elem, elemElem)
-					}
-				}
-				s.V3 = append(s.V3, elem)
-			}
-		}
-	}
-	{
-		{
-			s.V4.SetFake()
-		}
-	}
-}
+func (s *TupleNamedTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TupleNamedTestV4) SetFake() {
-	{
-		{
-			s.Foo = "string"
-		}
-	}
-	{
-		{
-			s.Bar.SetFake()
-		}
-	}
-}
+func (s *TupleNamedTestV4) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TupleTest) SetFake() {
-	{
-		{
-			s.V0 = int(0)
-		}
-	}
-	{
-		{
-			s.V1 = true
-		}
-	}
-	{
-		{
-			s.V2 = "string"
-		}
-	}
-	{
-		{
-			s.V3 = nil
-			for i := 0; i < 0; i++ {
-				var elem []string
-				{
-					elem = nil
-					for i := 0; i < 0; i++ {
-						var elemElem string
-						{
-							elemElem = "string"
-						}
-						elem = append(elem, elemElem)
-					}
-				}
-				s.V3 = append(s.V3, elem)
-			}
-		}
-	}
-	{
-		{
-			s.V4.SetFake()
-		}
-	}
-}
+func (s *TupleTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TupleTestV4) SetFake() {
-	{
-		{
-			s.Foo = "string"
-		}
-	}
-	{
-		{
-			s.Bar.SetFake()
-		}
-	}
-}
+func (s *TupleTestV4) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UniqueItemsTest) SetFake() {
-	{
-		{
-			s.RequiredUnique = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.RequiredUnique = append(s.RequiredUnique, elem)
-			}
-		}
-	}
-	{
-		{
-			s.NullableOptionalUnique.SetFake()
-		}
-	}
-}
+func (s *UniqueItemsTest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ValidationStringMap) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 1; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *ValidationStringMap) SetFake() { _ = "STUB: not implemented"; return }

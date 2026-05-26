@@ -2,36 +2,15 @@
 
 package api
 
-import (
-	"fmt"
-	"hash/fnv"
-)
-
 // Hash computes a hash value for StatusProperties using FNV-1a.
 // Equal objects must produce equal hashes.
 func (a StatusProperties) Hash() uint64 {
-	h := fnv.New64a()
+	_ = "STUB: not implemented"
 
 	// Hash optional field: Category
-	if a.Category.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Category.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Color
-	if a.Color.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Color.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: IsDefault
-	if a.IsDefault.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.IsDefault.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	return h.Sum64()
+	return 0
 }
+
+// Hash optional field: Color
+
+// Hash optional field: IsDefault

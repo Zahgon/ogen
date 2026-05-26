@@ -5,9 +5,6 @@ package api
 import (
 	"net/http"
 	"net/url"
-	"strings"
-
-	"github.com/ogen-go/ogen/uri"
 )
 
 var (
@@ -25,441 +22,85 @@ var (
 	}
 )
 
-func (s *Server) cutPrefix(path string) (string, bool) {
-	prefix := s.cfg.Prefix
-	if prefix == "" {
-		return path, true
-	}
-	if !strings.HasPrefix(path, prefix) {
-		// Prefix doesn't match.
-		return "", false
-	}
-	// Cut prefix from the path.
-	return strings.TrimPrefix(path, prefix), true
-}
+func (s *Server) cutPrefix(path string) (string, bool) { _ = "STUB: not implemented"; return "", false }
+
+// Prefix doesn't match.
+
+// Cut prefix from the path.
 
 // ServeHTTP serves http request as defined by OpenAPI v3 specification,
 // calling handler that matches the path or returning not found error.
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	elem := r.URL.Path
-	elemIsEscaped := false
-	if rawPath := r.URL.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-			elemIsEscaped = strings.ContainsRune(elem, '%')
-		}
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok || len(elem) == 0 {
-		s.notFound(w, r)
-		return
-	}
-	args := [1]string{}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'c': // Prefix: "co"
-
-				if l := len("co"); len(elem) >= l && elem[0:l] == "co" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'm': // Prefix: "mplicatedParameterName"
-
-					if l := len("mplicatedParameterName"); len(elem) >= l && elem[0:l] == "mplicatedParameterName" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleComplicatedParameterNameGetRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: nil,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				case 'n': // Prefix: "ntentParameters/"
-
-					if l := len("ntentParameters/"); len(elem) >= l && elem[0:l] == "ntentParameters/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					// Param: "path"
-					// Leaf parameter, slashes are prohibited
-					idx := strings.IndexByte(elem, '/')
-					if idx >= 0 {
-						break
-					}
-					args[0] = elem
-					elem = ""
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleContentParametersRequest([1]string{
-								args[0],
-							}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: rn4AllowedHeaders,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				case 'o': // Prefix: "okieParameter"
-
-					if l := len("okieParameter"); len(elem) >= l && elem[0:l] == "okieParameter" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleCookieParameterRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: nil,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				}
-
-			case 'h': // Prefix: "headerParameter"
-
-				if l := len("headerParameter"); len(elem) >= l && elem[0:l] == "headerParameter" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleHeaderParameterRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: rn7AllowedHeaders,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'o': // Prefix: "o"
-
-				if l := len("o"); len(elem) >= l && elem[0:l] == "o" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'b': // Prefix: "bject"
-
-					if l := len("bject"); len(elem) >= l && elem[0:l] == "bject" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'C': // Prefix: "CookieParameter"
-
-						if l := len("CookieParameter"); len(elem) >= l && elem[0:l] == "CookieParameter" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "GET":
-								s.handleObjectCookieParameterRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: nil,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					case 'Q': // Prefix: "QueryParameter"
-
-						if l := len("QueryParameter"); len(elem) >= l && elem[0:l] == "QueryParameter" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "GET":
-								s.handleObjectQueryParameterRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: nil,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					}
-
-				case 'p': // Prefix: "ptional"
-
-					if l := len("ptional"); len(elem) >= l && elem[0:l] == "ptional" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'A': // Prefix: "ArrayParameter"
-
-						if l := len("ArrayParameter"); len(elem) >= l && elem[0:l] == "ArrayParameter" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "GET":
-								s.handleOptionalArrayParameterRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: rn12AllowedHeaders,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					case 'P': // Prefix: "Parameters"
-
-						if l := len("Parameters"); len(elem) >= l && elem[0:l] == "Parameters" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "GET":
-								s.handleOptionalParametersRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: nil,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					}
-
-				}
-
-			case 'p': // Prefix: "pathParameter/"
-
-				if l := len("pathParameter/"); len(elem) >= l && elem[0:l] == "pathParameter/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				// Param: "value"
-				// Leaf parameter, slashes are prohibited
-				idx := strings.IndexByte(elem, '/')
-				if idx >= 0 {
-					break
-				}
-				args[0] = elem
-				elem = ""
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handlePathParameterRequest([1]string{
-							args[0],
-						}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 's': // Prefix: "s"
-
-				if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'a': // Prefix: "ame_name/"
-
-					if l := len("ame_name/"); len(elem) >= l && elem[0:l] == "ame_name/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					// Param: "param"
-					// Leaf parameter, slashes are prohibited
-					idx := strings.IndexByte(elem, '/')
-					if idx >= 0 {
-						break
-					}
-					args[0] = elem
-					elem = ""
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleSameNameRequest([1]string{
-								args[0],
-							}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: nil,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				case 'i': // Prefix: "imilarNames"
-
-					if l := len("imilarNames"); len(elem) >= l && elem[0:l] == "imilarNames" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleSimilarNamesRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: rn20AllowedHeaders,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				}
-
-			}
-
-		}
-	}
-	s.notFound(w, r)
+	_ = "STUB: not implemented"
+	return
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "co"
+
+// Prefix: "mplicatedParameterName"
+
+// Leaf node.
+
+// Prefix: "ntentParameters/"
+
+// Param: "path"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "okieParameter"
+
+// Leaf node.
+
+// Prefix: "headerParameter"
+
+// Leaf node.
+
+// Prefix: "o"
+
+// Prefix: "bject"
+
+// Prefix: "CookieParameter"
+
+// Leaf node.
+
+// Prefix: "QueryParameter"
+
+// Leaf node.
+
+// Prefix: "ptional"
+
+// Prefix: "ArrayParameter"
+
+// Leaf node.
+
+// Prefix: "Parameters"
+
+// Leaf node.
+
+// Prefix: "pathParameter/"
+
+// Param: "value"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "ame_name/"
+
+// Param: "param"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "imilarNames"
+
+// Leaf node.
 
 // Route is route object.
 type Route struct {
@@ -476,459 +117,107 @@ type Route struct {
 //
 // It is guaranteed to be unique and not empty.
 func (r Route) Name() string {
-	return r.name
+	_ = "STUB: not implemented"
+
+	// Summary returns OpenAPI summary.
+	return ""
 }
 
-// Summary returns OpenAPI summary.
 func (r Route) Summary() string {
-	return r.summary
+	_ = "STUB: not implemented"
+
+	// OperationID returns OpenAPI operationId.
+	return ""
 }
 
-// OperationID returns OpenAPI operationId.
-func (r Route) OperationID() string {
-	return r.operationID
-}
+func (r Route) OperationID() string { _ = "STUB: not implemented"; return "" }
 
 // OperationGroup returns the x-ogen-operation-group value.
-func (r Route) OperationGroup() string {
-	return r.operationGroup
-}
+func (r Route) OperationGroup() string { _ = "STUB: not implemented"; return "" }
 
 // PathPattern returns OpenAPI path.
-func (r Route) PathPattern() string {
-	return r.pathPattern
-}
+func (r Route) PathPattern() string { _ = "STUB: not implemented"; return "" }
 
 // Args returns parsed arguments.
-func (r Route) Args() []string {
-	return r.args[:r.count]
-}
+func (r Route) Args() []string { _ = "STUB: not implemented"; return nil }
 
 // FindRoute finds Route for given method and path.
 //
 // Note: this method does not unescape path or handle reserved characters in path properly. Use FindPath instead.
 func (s *Server) FindRoute(method, path string) (Route, bool) {
-	return s.FindPath(method, &url.URL{Path: path})
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
 
 // FindPath finds Route for given method and URL.
 func (s *Server) FindPath(method string, u *url.URL) (r Route, _ bool) {
-	var (
-		elem = u.Path
-		args = r.args
-	)
-	if rawPath := u.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-		}
-		defer func() {
-			for i, arg := range r.args[:r.count] {
-				if unescaped, err := url.PathUnescape(arg); err == nil {
-					r.args[i] = unescaped
-				}
-			}
-		}()
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok {
-		return r, false
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'c': // Prefix: "co"
-
-				if l := len("co"); len(elem) >= l && elem[0:l] == "co" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'm': // Prefix: "mplicatedParameterName"
-
-					if l := len("mplicatedParameterName"); len(elem) >= l && elem[0:l] == "mplicatedParameterName" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = ComplicatedParameterNameGetOperation
-							r.summary = ""
-							r.operationID = ""
-							r.operationGroup = ""
-							r.pathPattern = "/complicatedParameterName"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				case 'n': // Prefix: "ntentParameters/"
-
-					if l := len("ntentParameters/"); len(elem) >= l && elem[0:l] == "ntentParameters/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					// Param: "path"
-					// Leaf parameter, slashes are prohibited
-					idx := strings.IndexByte(elem, '/')
-					if idx >= 0 {
-						break
-					}
-					args[0] = elem
-					elem = ""
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = ContentParametersOperation
-							r.summary = ""
-							r.operationID = "contentParameters"
-							r.operationGroup = ""
-							r.pathPattern = "/contentParameters/{path}"
-							r.args = args
-							r.count = 1
-							return r, true
-						default:
-							return
-						}
-					}
-
-				case 'o': // Prefix: "okieParameter"
-
-					if l := len("okieParameter"); len(elem) >= l && elem[0:l] == "okieParameter" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = CookieParameterOperation
-							r.summary = ""
-							r.operationID = "cookieParameter"
-							r.operationGroup = ""
-							r.pathPattern = "/cookieParameter"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				}
-
-			case 'h': // Prefix: "headerParameter"
-
-				if l := len("headerParameter"); len(elem) >= l && elem[0:l] == "headerParameter" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = HeaderParameterOperation
-						r.summary = ""
-						r.operationID = "headerParameter"
-						r.operationGroup = ""
-						r.pathPattern = "/headerParameter"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'o': // Prefix: "o"
-
-				if l := len("o"); len(elem) >= l && elem[0:l] == "o" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'b': // Prefix: "bject"
-
-					if l := len("bject"); len(elem) >= l && elem[0:l] == "bject" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'C': // Prefix: "CookieParameter"
-
-						if l := len("CookieParameter"); len(elem) >= l && elem[0:l] == "CookieParameter" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "GET":
-								r.name = ObjectCookieParameterOperation
-								r.summary = ""
-								r.operationID = "objectCookieParameter"
-								r.operationGroup = ""
-								r.pathPattern = "/objectCookieParameter"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-
-					case 'Q': // Prefix: "QueryParameter"
-
-						if l := len("QueryParameter"); len(elem) >= l && elem[0:l] == "QueryParameter" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "GET":
-								r.name = ObjectQueryParameterOperation
-								r.summary = ""
-								r.operationID = "objectQueryParameter"
-								r.operationGroup = ""
-								r.pathPattern = "/objectQueryParameter"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-
-					}
-
-				case 'p': // Prefix: "ptional"
-
-					if l := len("ptional"); len(elem) >= l && elem[0:l] == "ptional" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'A': // Prefix: "ArrayParameter"
-
-						if l := len("ArrayParameter"); len(elem) >= l && elem[0:l] == "ArrayParameter" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "GET":
-								r.name = OptionalArrayParameterOperation
-								r.summary = ""
-								r.operationID = "optionalArrayParameter"
-								r.operationGroup = ""
-								r.pathPattern = "/optionalArrayParameter"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-
-					case 'P': // Prefix: "Parameters"
-
-						if l := len("Parameters"); len(elem) >= l && elem[0:l] == "Parameters" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "GET":
-								r.name = OptionalParametersOperation
-								r.summary = ""
-								r.operationID = "optionalParameters"
-								r.operationGroup = ""
-								r.pathPattern = "/optionalParameters"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-
-					}
-
-				}
-
-			case 'p': // Prefix: "pathParameter/"
-
-				if l := len("pathParameter/"); len(elem) >= l && elem[0:l] == "pathParameter/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				// Param: "value"
-				// Leaf parameter, slashes are prohibited
-				idx := strings.IndexByte(elem, '/')
-				if idx >= 0 {
-					break
-				}
-				args[0] = elem
-				elem = ""
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = PathParameterOperation
-						r.summary = ""
-						r.operationID = "pathParameter"
-						r.operationGroup = ""
-						r.pathPattern = "/pathParameter/{value}"
-						r.args = args
-						r.count = 1
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 's': // Prefix: "s"
-
-				if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'a': // Prefix: "ame_name/"
-
-					if l := len("ame_name/"); len(elem) >= l && elem[0:l] == "ame_name/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					// Param: "param"
-					// Leaf parameter, slashes are prohibited
-					idx := strings.IndexByte(elem, '/')
-					if idx >= 0 {
-						break
-					}
-					args[0] = elem
-					elem = ""
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = SameNameOperation
-							r.summary = "parameters with different location, but with the same name"
-							r.operationID = "sameName"
-							r.operationGroup = ""
-							r.pathPattern = "/same_name/{param}"
-							r.args = args
-							r.count = 1
-							return r, true
-						default:
-							return
-						}
-					}
-
-				case 'i': // Prefix: "imilarNames"
-
-					if l := len("imilarNames"); len(elem) >= l && elem[0:l] == "imilarNames" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = SimilarNamesOperation
-							r.summary = "parameters with different location, but with similar names"
-							r.operationID = "similarNames"
-							r.operationGroup = ""
-							r.pathPattern = "/similarNames"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				}
-
-			}
-
-		}
-	}
-	return r, false
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "co"
+
+// Prefix: "mplicatedParameterName"
+
+// Leaf node.
+
+// Prefix: "ntentParameters/"
+
+// Param: "path"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "okieParameter"
+
+// Leaf node.
+
+// Prefix: "headerParameter"
+
+// Leaf node.
+
+// Prefix: "o"
+
+// Prefix: "bject"
+
+// Prefix: "CookieParameter"
+
+// Leaf node.
+
+// Prefix: "QueryParameter"
+
+// Leaf node.
+
+// Prefix: "ptional"
+
+// Prefix: "ArrayParameter"
+
+// Leaf node.
+
+// Prefix: "Parameters"
+
+// Leaf node.
+
+// Prefix: "pathParameter/"
+
+// Param: "value"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "ame_name/"
+
+// Param: "param"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "imilarNames"
+
+// Leaf node.

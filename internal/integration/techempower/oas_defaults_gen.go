@@ -3,9 +3,4 @@
 package techempower
 
 // setDefaults set default value of fields.
-func (s *HelloWorld) setDefaults() {
-	{
-		val := string("Hello, World!")
-		s.Message = val
-	}
-}
+func (s *HelloWorld) setDefaults() { _ = "STUB: not implemented"; return }

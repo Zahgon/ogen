@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -17,5 +15,6 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /data
 func (UnimplementedHandler) GetData(ctx context.Context) (r Data, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(Data), nil
 }

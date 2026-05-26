@@ -14,22 +14,27 @@ import (
 type server struct{}
 
 func (server) JSON(ctx context.Context) (*techempower.HelloWorld, error) {
-	return &techempower.HelloWorld{
-		Message: "Hello, world",
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (server) DB(ctx context.Context) (*techempower.WorldObject, error) { panic("implement me") }
+func (server) DB(ctx context.Context) (*techempower.WorldObject, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
 func (server) Caching(ctx context.Context, params techempower.CachingParams) (techempower.WorldObjects, error) {
-	panic("implement me")
+	_ = "STUB: not implemented"
+	return *new(techempower.WorldObjects), nil
 }
 
 func (server) Queries(ctx context.Context, params techempower.QueriesParams) (techempower.WorldObjects, error) {
-	panic("implement me")
+	_ = "STUB: not implemented"
+	return *new(techempower.WorldObjects), nil
 }
 
 func (server) Updates(ctx context.Context, params techempower.UpdatesParams) (techempower.WorldObjects, error) {
-	panic("implement me")
+	_ = "STUB: not implemented"
+	return *new(techempower.WorldObjects), nil
 }
 
 func main() {

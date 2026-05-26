@@ -1,8 +1,6 @@
 package jsonschema
 
 import (
-	"errors"
-
 	"github.com/ogen-go/ogen/location"
 )
 
@@ -41,16 +39,11 @@ type Settings struct {
 type nopResolver struct{}
 
 func (nopResolver) ResolveReference(ref string) (*RawSchema, error) {
-	return nil, errors.New("reference resolver is not provided")
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (s *Settings) setDefaults() {
-	if s.External == nil {
-		s.External = NoExternal{}
-	}
-	if s.Resolver == nil {
-		s.Resolver = nopResolver{}
-	}
-	// Default: allow cross-type constraints (interpret them correctly)
-	// This can be overridden by explicitly setting to false
-}
+func (s *Settings) setDefaults() { _ = "STUB: not implemented"; return }
+
+// Default: allow cross-type constraints (interpret them correctly)
+// This can be overridden by explicitly setting to false

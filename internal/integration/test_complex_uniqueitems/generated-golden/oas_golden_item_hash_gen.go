@@ -2,53 +2,23 @@
 
 package api
 
-import (
-	"encoding/binary"
-	"fmt"
-	"hash/fnv"
-)
-
 // Hash computes a hash value for GoldenItem using FNV-1a.
 // Equal objects must produce equal hashes.
 func (a GoldenItem) Hash() uint64 {
-	h := fnv.New64a()
+	_ = "STUB: not implemented"
 
 	// Hash primitive field: ID
-	h.Write([]byte(fmt.Sprintf("%v", a.ID)))
-	// Hash primitive field: Name
-	h.Write([]byte(fmt.Sprintf("%v", a.Name)))
-	// Hash optional field: Description
-	if a.Description.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Description.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: ExternalRef
-	if a.ExternalRef.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.ExternalRef.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash array field: Tags
-	for _, item := range a.Tags {
-		h.Write([]byte(fmt.Sprintf("%v", item)))
-	}
-	// Hash optional field: Attributes
-	if a.Attributes.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Attributes.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Metadata
-	if a.Metadata.Set {
-		h.Write([]byte{1})
-		nestedHashMetadata := a.Metadata.Value.Hash()
-		binary.Write(h, binary.LittleEndian, nestedHashMetadata)
-	} else {
-		h.Write([]byte{0})
-	}
-	return h.Sum64()
+	return 0
 }
+
+// Hash primitive field: Name
+
+// Hash optional field: Description
+
+// Hash optional field: ExternalRef
+
+// Hash array field: Tags
+
+// Hash optional field: Attributes
+
+// Hash optional field: Metadata

@@ -2,33 +2,15 @@
 
 package api
 
-import (
-	"fmt"
-	"hash/fnv"
-)
-
 // Hash computes a hash value for Configuration using FNV-1a.
 // Equal objects must produce equal hashes.
 func (a Configuration) Hash() uint64 {
-	h := fnv.New64a()
+	_ = "STUB: not implemented"
 
 	// Hash optional field: Version
-	if a.Version.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Version.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Settings
-	if a.Settings.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Settings.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash array field: Features
-	for _, item := range a.Features {
-		h.Write([]byte(fmt.Sprintf("%v", item)))
-	}
-	return h.Sum64()
+	return 0
 }
+
+// Hash optional field: Settings
+
+// Hash array field: Features

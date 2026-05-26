@@ -3,15 +3,10 @@
 package api
 
 import (
-	"fmt"
 	"net/url"
-
-	"github.com/go-faster/errors"
 )
 
-func (s *ErrorStatusCode) Error() string {
-	return fmt.Sprintf("code %d: %+v", s.StatusCode, s.Response)
-}
+func (s *ErrorStatusCode) Error() string { _ = "STUB: not implemented"; return "" }
 
 // Input for addStickerToSet.
 // Ref: #/components/schemas/addStickerToSet
@@ -35,63 +30,86 @@ type AddStickerToSet struct {
 
 // GetUserID returns the value of UserID.
 func (s *AddStickerToSet) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *AddStickerToSet) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetPNGSticker returns the value of PNGSticker.
+	return ""
 }
 
-// GetPNGSticker returns the value of PNGSticker.
 func (s *AddStickerToSet) GetPNGSticker() OptString {
-	return s.PNGSticker
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTgsSticker returns the value of TgsSticker.
+	new(OptString)
 }
 
-// GetTgsSticker returns the value of TgsSticker.
 func (s *AddStickerToSet) GetTgsSticker() OptString {
-	return s.TgsSticker
+	_ = "STUB: not implemented"
+	return *
+
+	// GetEmojis returns the value of Emojis.
+	new(OptString)
 }
 
-// GetEmojis returns the value of Emojis.
 func (s *AddStickerToSet) GetEmojis() string {
-	return s.Emojis
+	_ = "STUB: not implemented"
+
+	// GetMaskPosition returns the value of MaskPosition.
+	return ""
 }
 
-// GetMaskPosition returns the value of MaskPosition.
 func (s *AddStickerToSet) GetMaskPosition() OptMaskPosition {
-	return s.MaskPosition
+	_ = "STUB: not implemented"
+	return *
+
+	// SetUserID sets the value of UserID.
+	new(OptMaskPosition)
 }
 
-// SetUserID sets the value of UserID.
 func (s *AddStickerToSet) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *AddStickerToSet) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetPNGSticker sets the value of PNGSticker.
+	return
 }
 
-// SetPNGSticker sets the value of PNGSticker.
 func (s *AddStickerToSet) SetPNGSticker(val OptString) {
-	s.PNGSticker = val
+	_ = "STUB: not implemented"
+
+	// SetTgsSticker sets the value of TgsSticker.
+	return
 }
 
-// SetTgsSticker sets the value of TgsSticker.
 func (s *AddStickerToSet) SetTgsSticker(val OptString) {
-	s.TgsSticker = val
+	_ = "STUB: not implemented"
+
+	// SetEmojis sets the value of Emojis.
+	return
 }
 
-// SetEmojis sets the value of Emojis.
 func (s *AddStickerToSet) SetEmojis(val string) {
-	s.Emojis = val
+	_ = "STUB: not implemented"
+
+	// SetMaskPosition sets the value of MaskPosition.
+	return
 }
 
-// SetMaskPosition sets the value of MaskPosition.
-func (s *AddStickerToSet) SetMaskPosition(val OptMaskPosition) {
-	s.MaskPosition = val
-}
+func (s *AddStickerToSet) SetMaskPosition(val OptMaskPosition) { _ = "STUB: not implemented"; return }
 
 // This object represents an animation file (GIF or H.264/MPEG-4 AVC video without sound).
 // Ref: #/components/schemas/Animation
@@ -118,96 +136,124 @@ type Animation struct {
 
 // GetFileID returns the value of FileID.
 func (s *Animation) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// GetFileUniqueID returns the value of FileUniqueID.
+	return ""
 }
 
-// GetFileUniqueID returns the value of FileUniqueID.
-func (s *Animation) GetFileUniqueID() string {
-	return s.FileUniqueID
-}
+func (s *Animation) GetFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetWidth returns the value of Width.
 func (s *Animation) GetWidth() int {
-	return s.Width
+	_ = "STUB: not implemented"
+
+	// GetHeight returns the value of Height.
+	return 0
 }
 
-// GetHeight returns the value of Height.
 func (s *Animation) GetHeight() int {
-	return s.Height
+	_ = "STUB: not implemented"
+
+	// GetDuration returns the value of Duration.
+	return 0
 }
 
-// GetDuration returns the value of Duration.
 func (s *Animation) GetDuration() int {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return 0
 }
 
-// GetThumb returns the value of Thumb.
 func (s *Animation) GetThumb() OptPhotoSize {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetFileName returns the value of FileName.
+	return *new(OptPhotoSize)
 }
 
-// GetFileName returns the value of FileName.
 func (s *Animation) GetFileName() OptString {
-	return s.FileName
+	_ = "STUB: not implemented"
+
+	// GetMimeType returns the value of MimeType.
+	return *new(OptString)
 }
 
-// GetMimeType returns the value of MimeType.
 func (s *Animation) GetMimeType() OptString {
-	return s.MimeType
+	_ = "STUB: not implemented"
+
+	// GetFileSize returns the value of FileSize.
+	return *new(OptString)
 }
 
-// GetFileSize returns the value of FileSize.
 func (s *Animation) GetFileSize() OptInt {
-	return s.FileSize
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return *new(OptInt)
 }
 
-// SetFileID sets the value of FileID.
 func (s *Animation) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// SetFileUniqueID sets the value of FileUniqueID.
+	return
 }
 
-// SetFileUniqueID sets the value of FileUniqueID.
-func (s *Animation) SetFileUniqueID(val string) {
-	s.FileUniqueID = val
-}
+func (s *Animation) SetFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetWidth sets the value of Width.
 func (s *Animation) SetWidth(val int) {
-	s.Width = val
+	_ = "STUB: not implemented"
+
+	// SetHeight sets the value of Height.
+	return
 }
 
-// SetHeight sets the value of Height.
 func (s *Animation) SetHeight(val int) {
-	s.Height = val
+	_ = "STUB: not implemented"
+
+	// SetDuration sets the value of Duration.
+	return
 }
 
-// SetDuration sets the value of Duration.
 func (s *Animation) SetDuration(val int) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *Animation) SetThumb(val OptPhotoSize) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetFileName sets the value of FileName.
+	return
 }
 
-// SetFileName sets the value of FileName.
 func (s *Animation) SetFileName(val OptString) {
-	s.FileName = val
+	_ = "STUB: not implemented"
+
+	// SetMimeType sets the value of MimeType.
+	return
 }
 
-// SetMimeType sets the value of MimeType.
 func (s *Animation) SetMimeType(val OptString) {
-	s.MimeType = val
+	_ = "STUB: not implemented"
+
+	// SetFileSize sets the value of FileSize.
+	return
 }
 
-// SetFileSize sets the value of FileSize.
 func (s *Animation) SetFileSize(val OptInt) {
-	s.FileSize = val
+	_ = "STUB: not implemented"
+
+	// Input for answerCallbackQuery.
+	// Ref: #/components/schemas/answerCallbackQuery
+	return
 }
 
-// Input for answerCallbackQuery.
-// Ref: #/components/schemas/answerCallbackQuery
 type AnswerCallbackQuery struct {
 	// Unique identifier for the query to be answered.
 	CallbackQueryID string `json:"callback_query_id"`
@@ -227,57 +273,70 @@ type AnswerCallbackQuery struct {
 }
 
 // GetCallbackQueryID returns the value of CallbackQueryID.
-func (s *AnswerCallbackQuery) GetCallbackQueryID() string {
-	return s.CallbackQueryID
-}
+func (s *AnswerCallbackQuery) GetCallbackQueryID() string { _ = "STUB: not implemented"; return "" }
 
 // GetText returns the value of Text.
 func (s *AnswerCallbackQuery) GetText() OptString {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetShowAlert returns the value of ShowAlert.
+	return *new(OptString)
 }
 
-// GetShowAlert returns the value of ShowAlert.
 func (s *AnswerCallbackQuery) GetShowAlert() OptBool {
-	return s.ShowAlert
+	_ = "STUB: not implemented"
+	return *
+
+	// GetURL returns the value of URL.
+	new(OptBool)
 }
 
-// GetURL returns the value of URL.
 func (s *AnswerCallbackQuery) GetURL() OptURI {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetCacheTime returns the value of CacheTime.
+	return *new(OptURI)
 }
 
-// GetCacheTime returns the value of CacheTime.
 func (s *AnswerCallbackQuery) GetCacheTime() OptInt {
-	return s.CacheTime
+	_ = "STUB: not implemented"
+
+	// SetCallbackQueryID sets the value of CallbackQueryID.
+	return *new(OptInt)
 }
 
-// SetCallbackQueryID sets the value of CallbackQueryID.
-func (s *AnswerCallbackQuery) SetCallbackQueryID(val string) {
-	s.CallbackQueryID = val
-}
+func (s *AnswerCallbackQuery) SetCallbackQueryID(val string) { _ = "STUB: not implemented"; return }
 
 // SetText sets the value of Text.
 func (s *AnswerCallbackQuery) SetText(val OptString) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetShowAlert sets the value of ShowAlert.
+	return
 }
 
-// SetShowAlert sets the value of ShowAlert.
 func (s *AnswerCallbackQuery) SetShowAlert(val OptBool) {
-	s.ShowAlert = val
+	_ = "STUB: not implemented"
+
+	// SetURL sets the value of URL.
+	return
 }
 
-// SetURL sets the value of URL.
 func (s *AnswerCallbackQuery) SetURL(val OptURI) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetCacheTime sets the value of CacheTime.
+	return
 }
 
-// SetCacheTime sets the value of CacheTime.
 func (s *AnswerCallbackQuery) SetCacheTime(val OptInt) {
-	s.CacheTime = val
+	_ = "STUB: not implemented"
+
+	// Input for answerInlineQuery.
+	// Ref: #/components/schemas/answerInlineQuery
+	return
 }
 
-// Input for answerInlineQuery.
-// Ref: #/components/schemas/answerInlineQuery
 type AnswerInlineQuery struct {
 	// Unique identifier for the answered query.
 	InlineQueryID string `json:"inline_query_id"`
@@ -308,74 +367,88 @@ type AnswerInlineQuery struct {
 }
 
 // GetInlineQueryID returns the value of InlineQueryID.
-func (s *AnswerInlineQuery) GetInlineQueryID() string {
-	return s.InlineQueryID
-}
+func (s *AnswerInlineQuery) GetInlineQueryID() string { _ = "STUB: not implemented"; return "" }
 
 // GetResults returns the value of Results.
 func (s *AnswerInlineQuery) GetResults() []InlineQueryResult {
-	return s.Results
+	_ = "STUB: not implemented"
+
+	// GetCacheTime returns the value of CacheTime.
+	return nil
 }
 
-// GetCacheTime returns the value of CacheTime.
 func (s *AnswerInlineQuery) GetCacheTime() OptInt {
-	return s.CacheTime
+	_ = "STUB: not implemented"
+
+	// GetIsPersonal returns the value of IsPersonal.
+	return *new(OptInt)
 }
 
-// GetIsPersonal returns the value of IsPersonal.
 func (s *AnswerInlineQuery) GetIsPersonal() OptBool {
-	return s.IsPersonal
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNextOffset returns the value of NextOffset.
+	new(OptBool)
 }
 
-// GetNextOffset returns the value of NextOffset.
 func (s *AnswerInlineQuery) GetNextOffset() OptString {
-	return s.NextOffset
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSwitchPmText returns the value of SwitchPmText.
+	new(OptString)
 }
 
-// GetSwitchPmText returns the value of SwitchPmText.
 func (s *AnswerInlineQuery) GetSwitchPmText() OptString {
-	return s.SwitchPmText
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSwitchPmParameter returns the value of SwitchPmParameter.
+	new(OptString)
 }
 
-// GetSwitchPmParameter returns the value of SwitchPmParameter.
 func (s *AnswerInlineQuery) GetSwitchPmParameter() OptString {
-	return s.SwitchPmParameter
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // SetInlineQueryID sets the value of InlineQueryID.
-func (s *AnswerInlineQuery) SetInlineQueryID(val string) {
-	s.InlineQueryID = val
-}
+func (s *AnswerInlineQuery) SetInlineQueryID(val string) { _ = "STUB: not implemented"; return }
 
 // SetResults sets the value of Results.
 func (s *AnswerInlineQuery) SetResults(val []InlineQueryResult) {
-	s.Results = val
+	_ = "STUB: not implemented"
+
+	// SetCacheTime sets the value of CacheTime.
+	return
 }
 
-// SetCacheTime sets the value of CacheTime.
 func (s *AnswerInlineQuery) SetCacheTime(val OptInt) {
-	s.CacheTime = val
+	_ = "STUB: not implemented"
+
+	// SetIsPersonal sets the value of IsPersonal.
+	return
 }
 
-// SetIsPersonal sets the value of IsPersonal.
 func (s *AnswerInlineQuery) SetIsPersonal(val OptBool) {
-	s.IsPersonal = val
+	_ = "STUB: not implemented"
+
+	// SetNextOffset sets the value of NextOffset.
+	return
 }
 
-// SetNextOffset sets the value of NextOffset.
 func (s *AnswerInlineQuery) SetNextOffset(val OptString) {
-	s.NextOffset = val
+	_ = "STUB: not implemented"
+
+	// SetSwitchPmText sets the value of SwitchPmText.
+	return
 }
 
-// SetSwitchPmText sets the value of SwitchPmText.
-func (s *AnswerInlineQuery) SetSwitchPmText(val OptString) {
-	s.SwitchPmText = val
-}
+func (s *AnswerInlineQuery) SetSwitchPmText(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetSwitchPmParameter sets the value of SwitchPmParameter.
-func (s *AnswerInlineQuery) SetSwitchPmParameter(val OptString) {
-	s.SwitchPmParameter = val
-}
+func (s *AnswerInlineQuery) SetSwitchPmParameter(val OptString) { _ = "STUB: not implemented"; return }
 
 // Input for answerPreCheckoutQuery.
 // Ref: #/components/schemas/answerPreCheckoutQuery
@@ -394,33 +467,40 @@ type AnswerPreCheckoutQuery struct {
 
 // GetPreCheckoutQueryID returns the value of PreCheckoutQueryID.
 func (s *AnswerPreCheckoutQuery) GetPreCheckoutQueryID() string {
-	return s.PreCheckoutQueryID
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetOk returns the value of Ok.
 func (s *AnswerPreCheckoutQuery) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// GetErrorMessage returns the value of ErrorMessage.
+	return false
 }
 
-// GetErrorMessage returns the value of ErrorMessage.
 func (s *AnswerPreCheckoutQuery) GetErrorMessage() OptString {
-	return s.ErrorMessage
+	_ = "STUB: not implemented"
+	return *
+
+	// SetPreCheckoutQueryID sets the value of PreCheckoutQueryID.
+	new(OptString)
 }
 
-// SetPreCheckoutQueryID sets the value of PreCheckoutQueryID.
 func (s *AnswerPreCheckoutQuery) SetPreCheckoutQueryID(val string) {
-	s.PreCheckoutQueryID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetOk sets the value of Ok.
 func (s *AnswerPreCheckoutQuery) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// SetErrorMessage sets the value of ErrorMessage.
+	return
 }
 
-// SetErrorMessage sets the value of ErrorMessage.
-func (s *AnswerPreCheckoutQuery) SetErrorMessage(val OptString) {
-	s.ErrorMessage = val
-}
+func (s *AnswerPreCheckoutQuery) SetErrorMessage(val OptString) { _ = "STUB: not implemented"; return }
 
 // Input for answerShippingQuery.
 // Ref: #/components/schemas/answerShippingQuery
@@ -439,44 +519,49 @@ type AnswerShippingQuery struct {
 }
 
 // GetShippingQueryID returns the value of ShippingQueryID.
-func (s *AnswerShippingQuery) GetShippingQueryID() string {
-	return s.ShippingQueryID
-}
+func (s *AnswerShippingQuery) GetShippingQueryID() string { _ = "STUB: not implemented"; return "" }
 
 // GetOk returns the value of Ok.
 func (s *AnswerShippingQuery) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// GetShippingOptions returns the value of ShippingOptions.
+	return false
 }
 
-// GetShippingOptions returns the value of ShippingOptions.
 func (s *AnswerShippingQuery) GetShippingOptions() []ShippingOption {
-	return s.ShippingOptions
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetErrorMessage returns the value of ErrorMessage.
 }
 
-// GetErrorMessage returns the value of ErrorMessage.
 func (s *AnswerShippingQuery) GetErrorMessage() OptString {
-	return s.ErrorMessage
+	_ = "STUB: not implemented"
+	return *
+
+	// SetShippingQueryID sets the value of ShippingQueryID.
+	new(OptString)
 }
 
-// SetShippingQueryID sets the value of ShippingQueryID.
-func (s *AnswerShippingQuery) SetShippingQueryID(val string) {
-	s.ShippingQueryID = val
-}
+func (s *AnswerShippingQuery) SetShippingQueryID(val string) { _ = "STUB: not implemented"; return }
 
 // SetOk sets the value of Ok.
 func (s *AnswerShippingQuery) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// SetShippingOptions sets the value of ShippingOptions.
+	return
 }
 
-// SetShippingOptions sets the value of ShippingOptions.
 func (s *AnswerShippingQuery) SetShippingOptions(val []ShippingOption) {
-	s.ShippingOptions = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetErrorMessage sets the value of ErrorMessage.
 }
 
-// SetErrorMessage sets the value of ErrorMessage.
-func (s *AnswerShippingQuery) SetErrorMessage(val OptString) {
-	s.ErrorMessage = val
-}
+func (s *AnswerShippingQuery) SetErrorMessage(val OptString) { _ = "STUB: not implemented"; return }
 
 // Input for approveChatJoinRequest.
 // Ref: #/components/schemas/approveChatJoinRequest
@@ -488,26 +573,34 @@ type ApproveChatJoinRequest struct {
 
 // GetChatID returns the value of ChatID.
 func (s *ApproveChatJoinRequest) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return *new(ID)
 }
 
-// GetUserID returns the value of UserID.
 func (s *ApproveChatJoinRequest) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return 0
 }
 
-// SetChatID sets the value of ChatID.
 func (s *ApproveChatJoinRequest) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *ApproveChatJoinRequest) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// This object represents an audio file to be treated as music by the Telegram clients.
+	// Ref: #/components/schemas/Audio
+	return
 }
 
-// This object represents an audio file to be treated as music by the Telegram clients.
-// Ref: #/components/schemas/Audio
 type Audio struct {
 	// Identifier for this file, which can be used to download or reuse the file.
 	FileID string `json:"file_id"`
@@ -531,96 +624,124 @@ type Audio struct {
 
 // GetFileID returns the value of FileID.
 func (s *Audio) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// GetFileUniqueID returns the value of FileUniqueID.
+	return ""
 }
 
-// GetFileUniqueID returns the value of FileUniqueID.
-func (s *Audio) GetFileUniqueID() string {
-	return s.FileUniqueID
-}
+func (s *Audio) GetFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetDuration returns the value of Duration.
 func (s *Audio) GetDuration() int {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetPerformer returns the value of Performer.
+	return 0
 }
 
-// GetPerformer returns the value of Performer.
 func (s *Audio) GetPerformer() OptString {
-	return s.Performer
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return *new(OptString)
 }
 
-// GetTitle returns the value of Title.
 func (s *Audio) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetFileName returns the value of FileName.
+	return *new(OptString)
 }
 
-// GetFileName returns the value of FileName.
 func (s *Audio) GetFileName() OptString {
-	return s.FileName
+	_ = "STUB: not implemented"
+
+	// GetMimeType returns the value of MimeType.
+	return *new(OptString)
 }
 
-// GetMimeType returns the value of MimeType.
 func (s *Audio) GetMimeType() OptString {
-	return s.MimeType
+	_ = "STUB: not implemented"
+
+	// GetFileSize returns the value of FileSize.
+	return *new(OptString)
 }
 
-// GetFileSize returns the value of FileSize.
 func (s *Audio) GetFileSize() OptInt {
-	return s.FileSize
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return *new(OptInt)
 }
 
-// GetThumb returns the value of Thumb.
 func (s *Audio) GetThumb() OptPhotoSize {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return *new(OptPhotoSize)
 }
 
-// SetFileID sets the value of FileID.
 func (s *Audio) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// SetFileUniqueID sets the value of FileUniqueID.
+	return
 }
 
-// SetFileUniqueID sets the value of FileUniqueID.
-func (s *Audio) SetFileUniqueID(val string) {
-	s.FileUniqueID = val
-}
+func (s *Audio) SetFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetDuration sets the value of Duration.
 func (s *Audio) SetDuration(val int) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetPerformer sets the value of Performer.
+	return
 }
 
-// SetPerformer sets the value of Performer.
 func (s *Audio) SetPerformer(val OptString) {
-	s.Performer = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *Audio) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetFileName sets the value of FileName.
+	return
 }
 
-// SetFileName sets the value of FileName.
 func (s *Audio) SetFileName(val OptString) {
-	s.FileName = val
+	_ = "STUB: not implemented"
+
+	// SetMimeType sets the value of MimeType.
+	return
 }
 
-// SetMimeType sets the value of MimeType.
 func (s *Audio) SetMimeType(val OptString) {
-	s.MimeType = val
+	_ = "STUB: not implemented"
+
+	// SetFileSize sets the value of FileSize.
+	return
 }
 
-// SetFileSize sets the value of FileSize.
 func (s *Audio) SetFileSize(val OptInt) {
-	s.FileSize = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *Audio) SetThumb(val OptPhotoSize) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// Input for banChatMember.
+	// Ref: #/components/schemas/banChatMember
+	return
 }
 
-// Input for banChatMember.
-// Ref: #/components/schemas/banChatMember
 type BanChatMember struct {
 	ChatID ID `json:"chat_id"`
 	// Unique identifier of the target user.
@@ -637,43 +758,56 @@ type BanChatMember struct {
 
 // GetChatID returns the value of ChatID.
 func (s *BanChatMember) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return *new(ID)
 }
 
-// GetUserID returns the value of UserID.
 func (s *BanChatMember) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetUntilDate returns the value of UntilDate.
+	return 0
 }
 
-// GetUntilDate returns the value of UntilDate.
 func (s *BanChatMember) GetUntilDate() OptInt {
-	return s.UntilDate
+	_ = "STUB: not implemented"
+
+	// GetRevokeMessages returns the value of RevokeMessages.
+	return *new(OptInt)
 }
 
-// GetRevokeMessages returns the value of RevokeMessages.
 func (s *BanChatMember) GetRevokeMessages() OptBool {
-	return s.RevokeMessages
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptBool)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *BanChatMember) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *BanChatMember) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetUntilDate sets the value of UntilDate.
+	return
 }
 
-// SetUntilDate sets the value of UntilDate.
 func (s *BanChatMember) SetUntilDate(val OptInt) {
-	s.UntilDate = val
+	_ = "STUB: not implemented"
+
+	// SetRevokeMessages sets the value of RevokeMessages.
+	return
 }
 
-// SetRevokeMessages sets the value of RevokeMessages.
-func (s *BanChatMember) SetRevokeMessages(val OptBool) {
-	s.RevokeMessages = val
-}
+func (s *BanChatMember) SetRevokeMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // Input for banChatSenderChat.
 // Ref: #/components/schemas/banChatSenderChat
@@ -685,23 +819,23 @@ type BanChatSenderChat struct {
 
 // GetChatID returns the value of ChatID.
 func (s *BanChatSenderChat) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetSenderChatID returns the value of SenderChatID.
+	return *new(ID)
 }
 
-// GetSenderChatID returns the value of SenderChatID.
-func (s *BanChatSenderChat) GetSenderChatID() int64 {
-	return s.SenderChatID
-}
+func (s *BanChatSenderChat) GetSenderChatID() int64 { _ = "STUB: not implemented"; return 0 }
 
 // SetChatID sets the value of ChatID.
 func (s *BanChatSenderChat) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetSenderChatID sets the value of SenderChatID.
+	return
 }
 
-// SetSenderChatID sets the value of SenderChatID.
-func (s *BanChatSenderChat) SetSenderChatID(val int64) {
-	s.SenderChatID = val
-}
+func (s *BanChatSenderChat) SetSenderChatID(val int64) { _ = "STUB: not implemented"; return }
 
 // This object represents a bot command.
 // Ref: #/components/schemas/BotCommand
@@ -715,23 +849,23 @@ type BotCommand struct {
 
 // GetCommand returns the value of Command.
 func (s *BotCommand) GetCommand() string {
-	return s.Command
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
-func (s *BotCommand) GetDescription() string {
-	return s.Description
-}
+func (s *BotCommand) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 // SetCommand sets the value of Command.
 func (s *BotCommand) SetCommand(val string) {
-	s.Command = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *BotCommand) SetDescription(val string) {
-	s.Description = val
-}
+func (s *BotCommand) SetDescription(val string) { _ = "STUB: not implemented"; return }
 
 // This object represents the scope to which bot commands are applied.  7 scopes are supported:.
 // Ref: #/components/schemas/BotCommandScope
@@ -762,185 +896,165 @@ const (
 )
 
 // IsBotCommandScopeDefault reports whether BotCommandScope is BotCommandScopeDefault.
-func (s BotCommandScope) IsBotCommandScopeDefault() bool {
-	return s.Type == BotCommandScopeDefaultBotCommandScope
-}
+func (s BotCommandScope) IsBotCommandScopeDefault() bool { _ = "STUB: not implemented"; return false }
 
 // IsBotCommandScopeAllPrivateChats reports whether BotCommandScope is BotCommandScopeAllPrivateChats.
 func (s BotCommandScope) IsBotCommandScopeAllPrivateChats() bool {
-	return s.Type == BotCommandScopeAllPrivateChatsBotCommandScope
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsBotCommandScopeAllGroupChats reports whether BotCommandScope is BotCommandScopeAllGroupChats.
 func (s BotCommandScope) IsBotCommandScopeAllGroupChats() bool {
-	return s.Type == BotCommandScopeAllGroupChatsBotCommandScope
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsBotCommandScopeAllChatAdministrators reports whether BotCommandScope is BotCommandScopeAllChatAdministrators.
 func (s BotCommandScope) IsBotCommandScopeAllChatAdministrators() bool {
-	return s.Type == BotCommandScopeAllChatAdministratorsBotCommandScope
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsBotCommandScopeChat reports whether BotCommandScope is BotCommandScopeChat.
-func (s BotCommandScope) IsBotCommandScopeChat() bool {
-	return s.Type == BotCommandScopeChatBotCommandScope
-}
+func (s BotCommandScope) IsBotCommandScopeChat() bool { _ = "STUB: not implemented"; return false }
 
 // IsBotCommandScopeChatAdministrators reports whether BotCommandScope is BotCommandScopeChatAdministrators.
 func (s BotCommandScope) IsBotCommandScopeChatAdministrators() bool {
-	return s.Type == BotCommandScopeChatAdministratorsBotCommandScope
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsBotCommandScopeChatMember reports whether BotCommandScope is BotCommandScopeChatMember.
 func (s BotCommandScope) IsBotCommandScopeChatMember() bool {
-	return s.Type == BotCommandScopeChatMemberBotCommandScope
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetBotCommandScopeDefault sets BotCommandScope to BotCommandScopeDefault.
 func (s *BotCommandScope) SetBotCommandScopeDefault(v BotCommandScopeDefault) {
-	s.Type = BotCommandScopeDefaultBotCommandScope
-	s.BotCommandScopeDefault = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetBotCommandScopeDefault returns BotCommandScopeDefault and true boolean if BotCommandScope is BotCommandScopeDefault.
 func (s BotCommandScope) GetBotCommandScopeDefault() (v BotCommandScopeDefault, ok bool) {
-	if !s.IsBotCommandScopeDefault() {
-		return v, false
-	}
-	return s.BotCommandScopeDefault, true
+	_ = "STUB: not implemented"
+	return *new(BotCommandScopeDefault), false
 }
 
 // NewBotCommandScopeDefaultBotCommandScope returns new BotCommandScope from BotCommandScopeDefault.
 func NewBotCommandScopeDefaultBotCommandScope(v BotCommandScopeDefault) BotCommandScope {
-	var s BotCommandScope
-	s.SetBotCommandScopeDefault(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(BotCommandScope)
 }
 
 // SetBotCommandScopeAllPrivateChats sets BotCommandScope to BotCommandScopeAllPrivateChats.
 func (s *BotCommandScope) SetBotCommandScopeAllPrivateChats(v BotCommandScopeAllPrivateChats) {
-	s.Type = BotCommandScopeAllPrivateChatsBotCommandScope
-	s.BotCommandScopeAllPrivateChats = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetBotCommandScopeAllPrivateChats returns BotCommandScopeAllPrivateChats and true boolean if BotCommandScope is BotCommandScopeAllPrivateChats.
 func (s BotCommandScope) GetBotCommandScopeAllPrivateChats() (v BotCommandScopeAllPrivateChats, ok bool) {
-	if !s.IsBotCommandScopeAllPrivateChats() {
-		return v, false
-	}
-	return s.BotCommandScopeAllPrivateChats, true
+	_ = "STUB: not implemented"
+	return *new(BotCommandScopeAllPrivateChats), false
 }
 
 // NewBotCommandScopeAllPrivateChatsBotCommandScope returns new BotCommandScope from BotCommandScopeAllPrivateChats.
 func NewBotCommandScopeAllPrivateChatsBotCommandScope(v BotCommandScopeAllPrivateChats) BotCommandScope {
-	var s BotCommandScope
-	s.SetBotCommandScopeAllPrivateChats(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(BotCommandScope)
 }
 
 // SetBotCommandScopeAllGroupChats sets BotCommandScope to BotCommandScopeAllGroupChats.
 func (s *BotCommandScope) SetBotCommandScopeAllGroupChats(v BotCommandScopeAllGroupChats) {
-	s.Type = BotCommandScopeAllGroupChatsBotCommandScope
-	s.BotCommandScopeAllGroupChats = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetBotCommandScopeAllGroupChats returns BotCommandScopeAllGroupChats and true boolean if BotCommandScope is BotCommandScopeAllGroupChats.
 func (s BotCommandScope) GetBotCommandScopeAllGroupChats() (v BotCommandScopeAllGroupChats, ok bool) {
-	if !s.IsBotCommandScopeAllGroupChats() {
-		return v, false
-	}
-	return s.BotCommandScopeAllGroupChats, true
+	_ = "STUB: not implemented"
+	return *new(BotCommandScopeAllGroupChats), false
 }
 
 // NewBotCommandScopeAllGroupChatsBotCommandScope returns new BotCommandScope from BotCommandScopeAllGroupChats.
 func NewBotCommandScopeAllGroupChatsBotCommandScope(v BotCommandScopeAllGroupChats) BotCommandScope {
-	var s BotCommandScope
-	s.SetBotCommandScopeAllGroupChats(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(BotCommandScope)
 }
 
 // SetBotCommandScopeAllChatAdministrators sets BotCommandScope to BotCommandScopeAllChatAdministrators.
 func (s *BotCommandScope) SetBotCommandScopeAllChatAdministrators(v BotCommandScopeAllChatAdministrators) {
-	s.Type = BotCommandScopeAllChatAdministratorsBotCommandScope
-	s.BotCommandScopeAllChatAdministrators = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetBotCommandScopeAllChatAdministrators returns BotCommandScopeAllChatAdministrators and true boolean if BotCommandScope is BotCommandScopeAllChatAdministrators.
 func (s BotCommandScope) GetBotCommandScopeAllChatAdministrators() (v BotCommandScopeAllChatAdministrators, ok bool) {
-	if !s.IsBotCommandScopeAllChatAdministrators() {
-		return v, false
-	}
-	return s.BotCommandScopeAllChatAdministrators, true
+	_ = "STUB: not implemented"
+	return *new(BotCommandScopeAllChatAdministrators), false
 }
 
 // NewBotCommandScopeAllChatAdministratorsBotCommandScope returns new BotCommandScope from BotCommandScopeAllChatAdministrators.
 func NewBotCommandScopeAllChatAdministratorsBotCommandScope(v BotCommandScopeAllChatAdministrators) BotCommandScope {
-	var s BotCommandScope
-	s.SetBotCommandScopeAllChatAdministrators(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(BotCommandScope)
 }
 
 // SetBotCommandScopeChat sets BotCommandScope to BotCommandScopeChat.
 func (s *BotCommandScope) SetBotCommandScopeChat(v BotCommandScopeChat) {
-	s.Type = BotCommandScopeChatBotCommandScope
-	s.BotCommandScopeChat = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetBotCommandScopeChat returns BotCommandScopeChat and true boolean if BotCommandScope is BotCommandScopeChat.
 func (s BotCommandScope) GetBotCommandScopeChat() (v BotCommandScopeChat, ok bool) {
-	if !s.IsBotCommandScopeChat() {
-		return v, false
-	}
-	return s.BotCommandScopeChat, true
+	_ = "STUB: not implemented"
+	return *new(BotCommandScopeChat), false
 }
 
 // NewBotCommandScopeChatBotCommandScope returns new BotCommandScope from BotCommandScopeChat.
 func NewBotCommandScopeChatBotCommandScope(v BotCommandScopeChat) BotCommandScope {
-	var s BotCommandScope
-	s.SetBotCommandScopeChat(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(BotCommandScope)
 }
 
 // SetBotCommandScopeChatAdministrators sets BotCommandScope to BotCommandScopeChatAdministrators.
 func (s *BotCommandScope) SetBotCommandScopeChatAdministrators(v BotCommandScopeChatAdministrators) {
-	s.Type = BotCommandScopeChatAdministratorsBotCommandScope
-	s.BotCommandScopeChatAdministrators = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetBotCommandScopeChatAdministrators returns BotCommandScopeChatAdministrators and true boolean if BotCommandScope is BotCommandScopeChatAdministrators.
 func (s BotCommandScope) GetBotCommandScopeChatAdministrators() (v BotCommandScopeChatAdministrators, ok bool) {
-	if !s.IsBotCommandScopeChatAdministrators() {
-		return v, false
-	}
-	return s.BotCommandScopeChatAdministrators, true
+	_ = "STUB: not implemented"
+	return *new(BotCommandScopeChatAdministrators), false
 }
 
 // NewBotCommandScopeChatAdministratorsBotCommandScope returns new BotCommandScope from BotCommandScopeChatAdministrators.
 func NewBotCommandScopeChatAdministratorsBotCommandScope(v BotCommandScopeChatAdministrators) BotCommandScope {
-	var s BotCommandScope
-	s.SetBotCommandScopeChatAdministrators(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(BotCommandScope)
 }
 
 // SetBotCommandScopeChatMember sets BotCommandScope to BotCommandScopeChatMember.
 func (s *BotCommandScope) SetBotCommandScopeChatMember(v BotCommandScopeChatMember) {
-	s.Type = BotCommandScopeChatMemberBotCommandScope
-	s.BotCommandScopeChatMember = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetBotCommandScopeChatMember returns BotCommandScopeChatMember and true boolean if BotCommandScope is BotCommandScopeChatMember.
 func (s BotCommandScope) GetBotCommandScopeChatMember() (v BotCommandScopeChatMember, ok bool) {
-	if !s.IsBotCommandScopeChatMember() {
-		return v, false
-	}
-	return s.BotCommandScopeChatMember, true
+	_ = "STUB: not implemented"
+	return *new(BotCommandScopeChatMember), false
 }
 
 // NewBotCommandScopeChatMemberBotCommandScope returns new BotCommandScope from BotCommandScopeChatMember.
 func NewBotCommandScopeChatMemberBotCommandScope(v BotCommandScopeChatMember) BotCommandScope {
-	var s BotCommandScope
-	s.SetBotCommandScopeChatMember(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(BotCommandScope)
 }
 
 // Represents the scope of bot commands, covering all group and supergroup chat administrators.
@@ -952,16 +1066,20 @@ type BotCommandScopeAllChatAdministrators struct {
 
 // GetType returns the value of Type.
 func (s *BotCommandScopeAllChatAdministrators) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return ""
 }
 
-// SetType sets the value of Type.
 func (s *BotCommandScopeAllChatAdministrators) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// Represents the scope of bot commands, covering all group and supergroup chats.
+	// Ref: #/components/schemas/BotCommandScopeAllGroupChats
+	return
 }
 
-// Represents the scope of bot commands, covering all group and supergroup chats.
-// Ref: #/components/schemas/BotCommandScopeAllGroupChats
 type BotCommandScopeAllGroupChats struct {
 	// Scope type, must be all_group_chats.
 	Type string `json:"type"`
@@ -969,16 +1087,20 @@ type BotCommandScopeAllGroupChats struct {
 
 // GetType returns the value of Type.
 func (s *BotCommandScopeAllGroupChats) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return ""
 }
 
-// SetType sets the value of Type.
 func (s *BotCommandScopeAllGroupChats) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// Represents the scope of bot commands, covering all private chats.
+	// Ref: #/components/schemas/BotCommandScopeAllPrivateChats
+	return
 }
 
-// Represents the scope of bot commands, covering all private chats.
-// Ref: #/components/schemas/BotCommandScopeAllPrivateChats
 type BotCommandScopeAllPrivateChats struct {
 	// Scope type, must be all_private_chats.
 	Type string `json:"type"`
@@ -986,16 +1108,20 @@ type BotCommandScopeAllPrivateChats struct {
 
 // GetType returns the value of Type.
 func (s *BotCommandScopeAllPrivateChats) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return ""
 }
 
-// SetType sets the value of Type.
 func (s *BotCommandScopeAllPrivateChats) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// Represents the scope of bot commands, covering a specific chat.
+	// Ref: #/components/schemas/BotCommandScopeChat
+	return
 }
 
-// Represents the scope of bot commands, covering a specific chat.
-// Ref: #/components/schemas/BotCommandScopeChat
 type BotCommandScopeChat struct {
 	// Scope type, must be chat.
 	Type   string `json:"type"`
@@ -1004,27 +1130,35 @@ type BotCommandScopeChat struct {
 
 // GetType returns the value of Type.
 func (s *BotCommandScopeChat) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetChatID returns the value of ChatID.
+	return ""
 }
 
-// GetChatID returns the value of ChatID.
 func (s *BotCommandScopeChat) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return *new(ID)
 }
 
-// SetType sets the value of Type.
 func (s *BotCommandScopeChat) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return
 }
 
-// SetChatID sets the value of ChatID.
 func (s *BotCommandScopeChat) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// Represents the scope of bot commands, covering all administrators of a specific group or
+	// supergroup chat.
+	// Ref: #/components/schemas/BotCommandScopeChatAdministrators
+	return
 }
 
-// Represents the scope of bot commands, covering all administrators of a specific group or
-// supergroup chat.
-// Ref: #/components/schemas/BotCommandScopeChatAdministrators
 type BotCommandScopeChatAdministrators struct {
 	// Scope type, must be chat_administrators.
 	Type   string `json:"type"`
@@ -1033,26 +1167,34 @@ type BotCommandScopeChatAdministrators struct {
 
 // GetType returns the value of Type.
 func (s *BotCommandScopeChatAdministrators) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetChatID returns the value of ChatID.
+	return ""
 }
 
-// GetChatID returns the value of ChatID.
 func (s *BotCommandScopeChatAdministrators) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return *new(ID)
 }
 
-// SetType sets the value of Type.
 func (s *BotCommandScopeChatAdministrators) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return
 }
 
-// SetChatID sets the value of ChatID.
 func (s *BotCommandScopeChatAdministrators) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// Represents the scope of bot commands, covering a specific member of a group or supergroup chat.
+	// Ref: #/components/schemas/BotCommandScopeChatMember
+	return
 }
 
-// Represents the scope of bot commands, covering a specific member of a group or supergroup chat.
-// Ref: #/components/schemas/BotCommandScopeChatMember
 type BotCommandScopeChatMember struct {
 	// Scope type, must be chat_member.
 	Type   string `json:"type"`
@@ -1063,37 +1205,49 @@ type BotCommandScopeChatMember struct {
 
 // GetType returns the value of Type.
 func (s *BotCommandScopeChatMember) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetChatID returns the value of ChatID.
+	return ""
 }
 
-// GetChatID returns the value of ChatID.
 func (s *BotCommandScopeChatMember) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return *new(ID)
 }
 
-// GetUserID returns the value of UserID.
 func (s *BotCommandScopeChatMember) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return 0
 }
 
-// SetType sets the value of Type.
 func (s *BotCommandScopeChatMember) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return
 }
 
-// SetChatID sets the value of ChatID.
 func (s *BotCommandScopeChatMember) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *BotCommandScopeChatMember) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// Represents the default scope of bot commands. Default commands are used if no commands with a
+	// narrower scope are specified for the user.
+	// Ref: #/components/schemas/BotCommandScopeDefault
+	return
 }
 
-// Represents the default scope of bot commands. Default commands are used if no commands with a
-// narrower scope are specified for the user.
-// Ref: #/components/schemas/BotCommandScopeDefault
 type BotCommandScopeDefault struct {
 	// Scope type, must be default.
 	Type string `json:"type"`
@@ -1101,16 +1255,20 @@ type BotCommandScopeDefault struct {
 
 // GetType returns the value of Type.
 func (s *BotCommandScopeDefault) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return ""
 }
 
-// SetType sets the value of Type.
 func (s *BotCommandScopeDefault) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// A placeholder, currently holds no information. Use BotFather to set up your game.
+	// Ref: #/components/schemas/CallbackGame
+	return
 }
 
-// A placeholder, currently holds no information. Use BotFather to set up your game.
-// Ref: #/components/schemas/CallbackGame
 type CallbackGame struct{}
 
 // This object represents an incoming callback query from a callback button in an inline keyboard. If
@@ -1138,73 +1296,87 @@ type CallbackQuery struct {
 
 // GetID returns the value of ID.
 func (s *CallbackQuery) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetFrom returns the value of From.
+	return ""
 }
 
-// GetFrom returns the value of From.
 func (s *CallbackQuery) GetFrom() User {
-	return s.From
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return *new(User)
 }
 
-// GetMessage returns the value of Message.
 func (s *CallbackQuery) GetMessage() *Message {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// GetInlineMessageID returns the value of InlineMessageID.
+	return nil
 }
 
-// GetInlineMessageID returns the value of InlineMessageID.
 func (s *CallbackQuery) GetInlineMessageID() OptString {
-	return s.InlineMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetChatInstance returns the value of ChatInstance.
+	new(OptString)
 }
 
-// GetChatInstance returns the value of ChatInstance.
-func (s *CallbackQuery) GetChatInstance() string {
-	return s.ChatInstance
-}
+func (s *CallbackQuery) GetChatInstance() string { _ = "STUB: not implemented"; return "" }
 
 // GetData returns the value of Data.
 func (s *CallbackQuery) GetData() OptString {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// GetGameShortName returns the value of GameShortName.
+	return *new(OptString)
 }
 
-// GetGameShortName returns the value of GameShortName.
 func (s *CallbackQuery) GetGameShortName() OptString {
-	return s.GameShortName
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptString)
 }
 
-// SetID sets the value of ID.
 func (s *CallbackQuery) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetFrom sets the value of From.
+	return
 }
 
-// SetFrom sets the value of From.
 func (s *CallbackQuery) SetFrom(val User) {
-	s.From = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *CallbackQuery) SetMessage(val *Message) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// SetInlineMessageID sets the value of InlineMessageID.
+	return
 }
 
-// SetInlineMessageID sets the value of InlineMessageID.
-func (s *CallbackQuery) SetInlineMessageID(val OptString) {
-	s.InlineMessageID = val
-}
+func (s *CallbackQuery) SetInlineMessageID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetChatInstance sets the value of ChatInstance.
-func (s *CallbackQuery) SetChatInstance(val string) {
-	s.ChatInstance = val
-}
+func (s *CallbackQuery) SetChatInstance(val string) { _ = "STUB: not implemented"; return }
 
 // SetData sets the value of Data.
 func (s *CallbackQuery) SetData(val OptString) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// SetGameShortName sets the value of GameShortName.
+	return
 }
 
-// SetGameShortName sets the value of GameShortName.
-func (s *CallbackQuery) SetGameShortName(val OptString) {
-	s.GameShortName = val
-}
+func (s *CallbackQuery) SetGameShortName(val OptString) { _ = "STUB: not implemented"; return }
 
 // This object represents a chat.
 // Ref: #/components/schemas/Chat
@@ -1259,206 +1431,237 @@ type Chat struct {
 
 // GetID returns the value of ID.
 func (s *Chat) GetID() int64 {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return 0
 }
 
-// GetType returns the value of Type.
 func (s *Chat) GetType() ChatType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return *new(ChatType)
 }
 
-// GetTitle returns the value of Title.
 func (s *Chat) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetUsername returns the value of Username.
+	return *new(OptString)
 }
 
-// GetUsername returns the value of Username.
 func (s *Chat) GetUsername() OptString {
-	return s.Username
+	_ = "STUB: not implemented"
+
+	// GetFirstName returns the value of FirstName.
+	return *new(OptString)
 }
 
-// GetFirstName returns the value of FirstName.
 func (s *Chat) GetFirstName() OptString {
-	return s.FirstName
+	_ = "STUB: not implemented"
+
+	// GetLastName returns the value of LastName.
+	return *new(OptString)
 }
 
-// GetLastName returns the value of LastName.
 func (s *Chat) GetLastName() OptString {
-	return s.LastName
+	_ = "STUB: not implemented"
+
+	// GetPhoto returns the value of Photo.
+	return *new(OptString)
 }
 
-// GetPhoto returns the value of Photo.
 func (s *Chat) GetPhoto() OptChatPhoto {
-	return s.Photo
+	_ = "STUB: not implemented"
+
+	// GetBio returns the value of Bio.
+	return *new(OptChatPhoto)
 }
 
-// GetBio returns the value of Bio.
 func (s *Chat) GetBio() OptString {
-	return s.Bio
+	_ = "STUB: not implemented"
+
+	// GetHasPrivateForwards returns the value of HasPrivateForwards.
+	return *new(OptString)
 }
 
-// GetHasPrivateForwards returns the value of HasPrivateForwards.
-func (s *Chat) GetHasPrivateForwards() OptBool {
-	return s.HasPrivateForwards
-}
+func (s *Chat) GetHasPrivateForwards() OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // GetDescription returns the value of Description.
 func (s *Chat) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInviteLink returns the value of InviteLink.
+	new(OptString)
 }
 
-// GetInviteLink returns the value of InviteLink.
 func (s *Chat) GetInviteLink() OptString {
-	return s.InviteLink
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPinnedMessage returns the value of PinnedMessage.
+	new(OptString)
 }
 
-// GetPinnedMessage returns the value of PinnedMessage.
-func (s *Chat) GetPinnedMessage() *Message {
-	return s.PinnedMessage
-}
+func (s *Chat) GetPinnedMessage() *Message { _ = "STUB: not implemented"; return nil }
 
 // GetPermissions returns the value of Permissions.
 func (s *Chat) GetPermissions() OptChatPermissions {
-	return s.Permissions
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSlowModeDelay returns the value of SlowModeDelay.
+	new(OptChatPermissions)
 }
 
-// GetSlowModeDelay returns the value of SlowModeDelay.
 func (s *Chat) GetSlowModeDelay() OptInt {
-	return s.SlowModeDelay
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMessageAutoDeleteTime returns the value of MessageAutoDeleteTime.
+	new(OptInt)
 }
 
-// GetMessageAutoDeleteTime returns the value of MessageAutoDeleteTime.
-func (s *Chat) GetMessageAutoDeleteTime() OptInt {
-	return s.MessageAutoDeleteTime
-}
+func (s *Chat) GetMessageAutoDeleteTime() OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // GetHasProtectedContent returns the value of HasProtectedContent.
-func (s *Chat) GetHasProtectedContent() OptBool {
-	return s.HasProtectedContent
-}
+func (s *Chat) GetHasProtectedContent() OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // GetStickerSetName returns the value of StickerSetName.
 func (s *Chat) GetStickerSetName() OptString {
-	return s.StickerSetName
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanSetStickerSet returns the value of CanSetStickerSet.
+	new(OptString)
 }
 
-// GetCanSetStickerSet returns the value of CanSetStickerSet.
 func (s *Chat) GetCanSetStickerSet() OptBool {
-	return s.CanSetStickerSet
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLinkedChatID returns the value of LinkedChatID.
+	new(OptBool)
 }
 
-// GetLinkedChatID returns the value of LinkedChatID.
 func (s *Chat) GetLinkedChatID() OptInt64 {
-	return s.LinkedChatID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLocation returns the value of Location.
+	new(OptInt64)
 }
 
-// GetLocation returns the value of Location.
 func (s *Chat) GetLocation() OptChatLocation {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptChatLocation)
 }
 
-// SetID sets the value of ID.
 func (s *Chat) SetID(val int64) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *Chat) SetType(val ChatType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *Chat) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetUsername sets the value of Username.
+	return
 }
 
-// SetUsername sets the value of Username.
 func (s *Chat) SetUsername(val OptString) {
-	s.Username = val
+	_ = "STUB: not implemented"
+
+	// SetFirstName sets the value of FirstName.
+	return
 }
 
-// SetFirstName sets the value of FirstName.
 func (s *Chat) SetFirstName(val OptString) {
-	s.FirstName = val
+	_ = "STUB: not implemented"
+
+	// SetLastName sets the value of LastName.
+	return
 }
 
-// SetLastName sets the value of LastName.
 func (s *Chat) SetLastName(val OptString) {
-	s.LastName = val
+	_ = "STUB: not implemented"
+
+	// SetPhoto sets the value of Photo.
+	return
 }
 
-// SetPhoto sets the value of Photo.
 func (s *Chat) SetPhoto(val OptChatPhoto) {
-	s.Photo = val
+	_ = "STUB: not implemented"
+
+	// SetBio sets the value of Bio.
+	return
 }
 
-// SetBio sets the value of Bio.
 func (s *Chat) SetBio(val OptString) {
-	s.Bio = val
+	_ = "STUB: not implemented"
+
+	// SetHasPrivateForwards sets the value of HasPrivateForwards.
+	return
 }
 
-// SetHasPrivateForwards sets the value of HasPrivateForwards.
-func (s *Chat) SetHasPrivateForwards(val OptBool) {
-	s.HasPrivateForwards = val
-}
+func (s *Chat) SetHasPrivateForwards(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetDescription sets the value of Description.
-func (s *Chat) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *Chat) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetInviteLink sets the value of InviteLink.
 func (s *Chat) SetInviteLink(val OptString) {
-	s.InviteLink = val
+	_ = "STUB: not implemented"
+
+	// SetPinnedMessage sets the value of PinnedMessage.
+	return
 }
 
-// SetPinnedMessage sets the value of PinnedMessage.
-func (s *Chat) SetPinnedMessage(val *Message) {
-	s.PinnedMessage = val
-}
+func (s *Chat) SetPinnedMessage(val *Message) { _ = "STUB: not implemented"; return }
 
 // SetPermissions sets the value of Permissions.
-func (s *Chat) SetPermissions(val OptChatPermissions) {
-	s.Permissions = val
-}
+func (s *Chat) SetPermissions(val OptChatPermissions) { _ = "STUB: not implemented"; return }
 
 // SetSlowModeDelay sets the value of SlowModeDelay.
-func (s *Chat) SetSlowModeDelay(val OptInt) {
-	s.SlowModeDelay = val
-}
+func (s *Chat) SetSlowModeDelay(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetMessageAutoDeleteTime sets the value of MessageAutoDeleteTime.
-func (s *Chat) SetMessageAutoDeleteTime(val OptInt) {
-	s.MessageAutoDeleteTime = val
-}
+func (s *Chat) SetMessageAutoDeleteTime(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetHasProtectedContent sets the value of HasProtectedContent.
-func (s *Chat) SetHasProtectedContent(val OptBool) {
-	s.HasProtectedContent = val
-}
+func (s *Chat) SetHasProtectedContent(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetStickerSetName sets the value of StickerSetName.
-func (s *Chat) SetStickerSetName(val OptString) {
-	s.StickerSetName = val
-}
+func (s *Chat) SetStickerSetName(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetCanSetStickerSet sets the value of CanSetStickerSet.
-func (s *Chat) SetCanSetStickerSet(val OptBool) {
-	s.CanSetStickerSet = val
-}
+func (s *Chat) SetCanSetStickerSet(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetLinkedChatID sets the value of LinkedChatID.
-func (s *Chat) SetLinkedChatID(val OptInt64) {
-	s.LinkedChatID = val
-}
+func (s *Chat) SetLinkedChatID(val OptInt64) { _ = "STUB: not implemented"; return }
 
 // SetLocation sets the value of Location.
 func (s *Chat) SetLocation(val OptChatLocation) {
-	s.Location = val
+	_ = "STUB: not implemented"
+
+	// Represents an invite link for a chat.
+	// Ref: #/components/schemas/ChatInviteLink
+	return
 }
 
-// Represents an invite link for a chat.
-// Ref: #/components/schemas/ChatInviteLink
 type ChatInviteLink struct {
 	// The invite link. If the link was created by another chat administrator, then the second part of
 	// the link will be replaced with “…”.
@@ -1482,94 +1685,111 @@ type ChatInviteLink struct {
 }
 
 // GetInviteLink returns the value of InviteLink.
-func (s *ChatInviteLink) GetInviteLink() string {
-	return s.InviteLink
-}
+func (s *ChatInviteLink) GetInviteLink() string { _ = "STUB: not implemented"; return "" }
 
 // GetCreator returns the value of Creator.
 func (s *ChatInviteLink) GetCreator() User {
-	return s.Creator
+	_ = "STUB: not implemented"
+
+	// GetCreatesJoinRequest returns the value of CreatesJoinRequest.
+	return *new(User)
 }
 
-// GetCreatesJoinRequest returns the value of CreatesJoinRequest.
-func (s *ChatInviteLink) GetCreatesJoinRequest() bool {
-	return s.CreatesJoinRequest
-}
+func (s *ChatInviteLink) GetCreatesJoinRequest() bool { _ = "STUB: not implemented"; return false }
 
 // GetIsPrimary returns the value of IsPrimary.
 func (s *ChatInviteLink) GetIsPrimary() bool {
-	return s.IsPrimary
+	_ = "STUB: not implemented"
+
+	// GetIsRevoked returns the value of IsRevoked.
+	return false
 }
 
-// GetIsRevoked returns the value of IsRevoked.
 func (s *ChatInviteLink) GetIsRevoked() bool {
-	return s.IsRevoked
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return false
 }
 
-// GetName returns the value of Name.
 func (s *ChatInviteLink) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetExpireDate returns the value of ExpireDate.
+	return *new(OptString)
 }
 
-// GetExpireDate returns the value of ExpireDate.
 func (s *ChatInviteLink) GetExpireDate() OptInt {
-	return s.ExpireDate
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMemberLimit returns the value of MemberLimit.
+	new(OptInt)
 }
 
-// GetMemberLimit returns the value of MemberLimit.
 func (s *ChatInviteLink) GetMemberLimit() OptInt {
-	return s.MemberLimit
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPendingJoinRequestCount returns the value of PendingJoinRequestCount.
+	new(OptInt)
 }
 
-// GetPendingJoinRequestCount returns the value of PendingJoinRequestCount.
 func (s *ChatInviteLink) GetPendingJoinRequestCount() OptInt {
-	return s.PendingJoinRequestCount
+	_ = "STUB: not implemented"
+	return *new(OptInt)
 }
 
 // SetInviteLink sets the value of InviteLink.
 func (s *ChatInviteLink) SetInviteLink(val string) {
-	s.InviteLink = val
+	_ = "STUB: not implemented"
+
+	// SetCreator sets the value of Creator.
+	return
 }
 
-// SetCreator sets the value of Creator.
 func (s *ChatInviteLink) SetCreator(val User) {
-	s.Creator = val
+	_ = "STUB: not implemented"
+
+	// SetCreatesJoinRequest sets the value of CreatesJoinRequest.
+	return
 }
 
-// SetCreatesJoinRequest sets the value of CreatesJoinRequest.
-func (s *ChatInviteLink) SetCreatesJoinRequest(val bool) {
-	s.CreatesJoinRequest = val
-}
+func (s *ChatInviteLink) SetCreatesJoinRequest(val bool) { _ = "STUB: not implemented"; return }
 
 // SetIsPrimary sets the value of IsPrimary.
 func (s *ChatInviteLink) SetIsPrimary(val bool) {
-	s.IsPrimary = val
+	_ = "STUB: not implemented"
+
+	// SetIsRevoked sets the value of IsRevoked.
+	return
 }
 
-// SetIsRevoked sets the value of IsRevoked.
 func (s *ChatInviteLink) SetIsRevoked(val bool) {
-	s.IsRevoked = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *ChatInviteLink) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetExpireDate sets the value of ExpireDate.
+	return
 }
 
-// SetExpireDate sets the value of ExpireDate.
 func (s *ChatInviteLink) SetExpireDate(val OptInt) {
-	s.ExpireDate = val
+	_ = "STUB: not implemented"
+
+	// SetMemberLimit sets the value of MemberLimit.
+	return
 }
 
-// SetMemberLimit sets the value of MemberLimit.
-func (s *ChatInviteLink) SetMemberLimit(val OptInt) {
-	s.MemberLimit = val
-}
+func (s *ChatInviteLink) SetMemberLimit(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetPendingJoinRequestCount sets the value of PendingJoinRequestCount.
-func (s *ChatInviteLink) SetPendingJoinRequestCount(val OptInt) {
-	s.PendingJoinRequestCount = val
-}
+func (s *ChatInviteLink) SetPendingJoinRequestCount(val OptInt) { _ = "STUB: not implemented"; return }
 
 // Represents a join request sent to a chat.
 // Ref: #/components/schemas/ChatJoinRequest
@@ -1585,56 +1805,77 @@ type ChatJoinRequest struct {
 
 // GetChat returns the value of Chat.
 func (s *ChatJoinRequest) GetChat() Chat {
-	return s.Chat
+	_ = "STUB: not implemented"
+
+	// GetFrom returns the value of From.
+	return *new(Chat)
 }
 
-// GetFrom returns the value of From.
 func (s *ChatJoinRequest) GetFrom() User {
-	return s.From
+	_ = "STUB: not implemented"
+
+	// GetDate returns the value of Date.
+	return *new(User)
 }
 
-// GetDate returns the value of Date.
 func (s *ChatJoinRequest) GetDate() int {
-	return s.Date
+	_ = "STUB: not implemented"
+
+	// GetBio returns the value of Bio.
+	return 0
 }
 
-// GetBio returns the value of Bio.
 func (s *ChatJoinRequest) GetBio() OptString {
-	return s.Bio
+	_ = "STUB: not implemented"
+
+	// GetInviteLink returns the value of InviteLink.
+	return *new(OptString)
 }
 
-// GetInviteLink returns the value of InviteLink.
 func (s *ChatJoinRequest) GetInviteLink() OptChatInviteLink {
-	return s.InviteLink
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChat sets the value of Chat.
+	new(OptChatInviteLink)
 }
 
-// SetChat sets the value of Chat.
 func (s *ChatJoinRequest) SetChat(val Chat) {
-	s.Chat = val
+	_ = "STUB: not implemented"
+
+	// SetFrom sets the value of From.
+	return
 }
 
-// SetFrom sets the value of From.
 func (s *ChatJoinRequest) SetFrom(val User) {
-	s.From = val
+	_ = "STUB: not implemented"
+
+	// SetDate sets the value of Date.
+	return
 }
 
-// SetDate sets the value of Date.
 func (s *ChatJoinRequest) SetDate(val int) {
-	s.Date = val
+	_ = "STUB: not implemented"
+
+	// SetBio sets the value of Bio.
+	return
 }
 
-// SetBio sets the value of Bio.
 func (s *ChatJoinRequest) SetBio(val OptString) {
-	s.Bio = val
+	_ = "STUB: not implemented"
+
+	// SetInviteLink sets the value of InviteLink.
+	return
 }
 
-// SetInviteLink sets the value of InviteLink.
 func (s *ChatJoinRequest) SetInviteLink(val OptChatInviteLink) {
-	s.InviteLink = val
+	_ = "STUB: not implemented"
+
+	// Represents a location to which a chat is connected.
+	// Ref: #/components/schemas/ChatLocation
+	return
 }
 
-// Represents a location to which a chat is connected.
-// Ref: #/components/schemas/ChatLocation
 type ChatLocation struct {
 	Location Location `json:"location"`
 	// Location address; 1-64 characters, as defined by the chat owner.
@@ -1643,28 +1884,36 @@ type ChatLocation struct {
 
 // GetLocation returns the value of Location.
 func (s *ChatLocation) GetLocation() Location {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// GetAddress returns the value of Address.
+	return *new(Location)
 }
 
-// GetAddress returns the value of Address.
 func (s *ChatLocation) GetAddress() string {
-	return s.Address
+	_ = "STUB: not implemented"
+
+	// SetLocation sets the value of Location.
+	return ""
 }
 
-// SetLocation sets the value of Location.
 func (s *ChatLocation) SetLocation(val Location) {
-	s.Location = val
+	_ = "STUB: not implemented"
+
+	// SetAddress sets the value of Address.
+	return
 }
 
-// SetAddress sets the value of Address.
 func (s *ChatLocation) SetAddress(val string) {
-	s.Address = val
+	_ = "STUB: not implemented"
+
+	// This object contains information about one member of a chat.  6 types of chat members are
+	// supported:.
+	// Ref: #/components/schemas/ChatMember
+	// ChatMember represents sum type.
+	return
 }
 
-// This object contains information about one member of a chat.  6 types of chat members are
-// supported:.
-// Ref: #/components/schemas/ChatMember
-// ChatMember represents sum type.
 type ChatMember struct {
 	Type                    ChatMemberType // switch on this field
 	ChatMemberOwner         ChatMemberOwner
@@ -1689,149 +1938,117 @@ const (
 )
 
 // IsChatMemberOwner reports whether ChatMember is ChatMemberOwner.
-func (s ChatMember) IsChatMemberOwner() bool { return s.Type == ChatMemberOwnerChatMember }
+func (s ChatMember) IsChatMemberOwner() bool { _ = "STUB: not implemented"; return false }
 
 // IsChatMemberAdministrator reports whether ChatMember is ChatMemberAdministrator.
-func (s ChatMember) IsChatMemberAdministrator() bool {
-	return s.Type == ChatMemberAdministratorChatMember
-}
+func (s ChatMember) IsChatMemberAdministrator() bool { _ = "STUB: not implemented"; return false }
 
 // IsChatMemberMember reports whether ChatMember is ChatMemberMember.
-func (s ChatMember) IsChatMemberMember() bool { return s.Type == ChatMemberMemberChatMember }
+func (s ChatMember) IsChatMemberMember() bool { _ = "STUB: not implemented"; return false }
 
 // IsChatMemberRestricted reports whether ChatMember is ChatMemberRestricted.
-func (s ChatMember) IsChatMemberRestricted() bool { return s.Type == ChatMemberRestrictedChatMember }
+func (s ChatMember) IsChatMemberRestricted() bool { _ = "STUB: not implemented"; return false }
 
 // IsChatMemberLeft reports whether ChatMember is ChatMemberLeft.
-func (s ChatMember) IsChatMemberLeft() bool { return s.Type == ChatMemberLeftChatMember }
+func (s ChatMember) IsChatMemberLeft() bool { _ = "STUB: not implemented"; return false }
 
 // IsChatMemberBanned reports whether ChatMember is ChatMemberBanned.
-func (s ChatMember) IsChatMemberBanned() bool { return s.Type == ChatMemberBannedChatMember }
+func (s ChatMember) IsChatMemberBanned() bool { _ = "STUB: not implemented"; return false }
 
 // SetChatMemberOwner sets ChatMember to ChatMemberOwner.
-func (s *ChatMember) SetChatMemberOwner(v ChatMemberOwner) {
-	s.Type = ChatMemberOwnerChatMember
-	s.ChatMemberOwner = v
-}
+func (s *ChatMember) SetChatMemberOwner(v ChatMemberOwner) { _ = "STUB: not implemented"; return }
 
 // GetChatMemberOwner returns ChatMemberOwner and true boolean if ChatMember is ChatMemberOwner.
 func (s ChatMember) GetChatMemberOwner() (v ChatMemberOwner, ok bool) {
-	if !s.IsChatMemberOwner() {
-		return v, false
-	}
-	return s.ChatMemberOwner, true
+	_ = "STUB: not implemented"
+	return *new(ChatMemberOwner), false
 }
 
 // NewChatMemberOwnerChatMember returns new ChatMember from ChatMemberOwner.
 func NewChatMemberOwnerChatMember(v ChatMemberOwner) ChatMember {
-	var s ChatMember
-	s.SetChatMemberOwner(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ChatMember)
 }
 
 // SetChatMemberAdministrator sets ChatMember to ChatMemberAdministrator.
 func (s *ChatMember) SetChatMemberAdministrator(v ChatMemberAdministrator) {
-	s.Type = ChatMemberAdministratorChatMember
-	s.ChatMemberAdministrator = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetChatMemberAdministrator returns ChatMemberAdministrator and true boolean if ChatMember is ChatMemberAdministrator.
 func (s ChatMember) GetChatMemberAdministrator() (v ChatMemberAdministrator, ok bool) {
-	if !s.IsChatMemberAdministrator() {
-		return v, false
-	}
-	return s.ChatMemberAdministrator, true
+	_ = "STUB: not implemented"
+	return *new(ChatMemberAdministrator), false
 }
 
 // NewChatMemberAdministratorChatMember returns new ChatMember from ChatMemberAdministrator.
 func NewChatMemberAdministratorChatMember(v ChatMemberAdministrator) ChatMember {
-	var s ChatMember
-	s.SetChatMemberAdministrator(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ChatMember)
 }
 
 // SetChatMemberMember sets ChatMember to ChatMemberMember.
-func (s *ChatMember) SetChatMemberMember(v ChatMemberMember) {
-	s.Type = ChatMemberMemberChatMember
-	s.ChatMemberMember = v
-}
+func (s *ChatMember) SetChatMemberMember(v ChatMemberMember) { _ = "STUB: not implemented"; return }
 
 // GetChatMemberMember returns ChatMemberMember and true boolean if ChatMember is ChatMemberMember.
 func (s ChatMember) GetChatMemberMember() (v ChatMemberMember, ok bool) {
-	if !s.IsChatMemberMember() {
-		return v, false
-	}
-	return s.ChatMemberMember, true
+	_ = "STUB: not implemented"
+	return *new(ChatMemberMember), false
 }
 
 // NewChatMemberMemberChatMember returns new ChatMember from ChatMemberMember.
 func NewChatMemberMemberChatMember(v ChatMemberMember) ChatMember {
-	var s ChatMember
-	s.SetChatMemberMember(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ChatMember)
 }
 
 // SetChatMemberRestricted sets ChatMember to ChatMemberRestricted.
 func (s *ChatMember) SetChatMemberRestricted(v ChatMemberRestricted) {
-	s.Type = ChatMemberRestrictedChatMember
-	s.ChatMemberRestricted = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetChatMemberRestricted returns ChatMemberRestricted and true boolean if ChatMember is ChatMemberRestricted.
 func (s ChatMember) GetChatMemberRestricted() (v ChatMemberRestricted, ok bool) {
-	if !s.IsChatMemberRestricted() {
-		return v, false
-	}
-	return s.ChatMemberRestricted, true
+	_ = "STUB: not implemented"
+	return *new(ChatMemberRestricted), false
 }
 
 // NewChatMemberRestrictedChatMember returns new ChatMember from ChatMemberRestricted.
 func NewChatMemberRestrictedChatMember(v ChatMemberRestricted) ChatMember {
-	var s ChatMember
-	s.SetChatMemberRestricted(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ChatMember)
 }
 
 // SetChatMemberLeft sets ChatMember to ChatMemberLeft.
-func (s *ChatMember) SetChatMemberLeft(v ChatMemberLeft) {
-	s.Type = ChatMemberLeftChatMember
-	s.ChatMemberLeft = v
-}
+func (s *ChatMember) SetChatMemberLeft(v ChatMemberLeft) { _ = "STUB: not implemented"; return }
 
 // GetChatMemberLeft returns ChatMemberLeft and true boolean if ChatMember is ChatMemberLeft.
 func (s ChatMember) GetChatMemberLeft() (v ChatMemberLeft, ok bool) {
-	if !s.IsChatMemberLeft() {
-		return v, false
-	}
-	return s.ChatMemberLeft, true
+	_ = "STUB: not implemented"
+	return *new(ChatMemberLeft), false
 }
 
 // NewChatMemberLeftChatMember returns new ChatMember from ChatMemberLeft.
 func NewChatMemberLeftChatMember(v ChatMemberLeft) ChatMember {
-	var s ChatMember
-	s.SetChatMemberLeft(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ChatMember)
 }
 
 // SetChatMemberBanned sets ChatMember to ChatMemberBanned.
-func (s *ChatMember) SetChatMemberBanned(v ChatMemberBanned) {
-	s.Type = ChatMemberBannedChatMember
-	s.ChatMemberBanned = v
-}
+func (s *ChatMember) SetChatMemberBanned(v ChatMemberBanned) { _ = "STUB: not implemented"; return }
 
 // GetChatMemberBanned returns ChatMemberBanned and true boolean if ChatMember is ChatMemberBanned.
 func (s ChatMember) GetChatMemberBanned() (v ChatMemberBanned, ok bool) {
-	if !s.IsChatMemberBanned() {
-		return v, false
-	}
-	return s.ChatMemberBanned, true
+	_ = "STUB: not implemented"
+	return *new(ChatMemberBanned), false
 }
 
 // NewChatMemberBannedChatMember returns new ChatMember from ChatMemberBanned.
 func NewChatMemberBannedChatMember(v ChatMemberBanned) ChatMember {
-	var s ChatMember
-	s.SetChatMemberBanned(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(ChatMember)
 }
 
 // Represents a chat member that has some additional privileges.
@@ -1874,153 +2091,159 @@ type ChatMemberAdministrator struct {
 
 // GetStatus returns the value of Status.
 func (s *ChatMemberAdministrator) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return ""
 }
 
-// GetUser returns the value of User.
 func (s *ChatMemberAdministrator) GetUser() User {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// GetCanBeEdited returns the value of CanBeEdited.
+	return *new(User)
 }
 
-// GetCanBeEdited returns the value of CanBeEdited.
-func (s *ChatMemberAdministrator) GetCanBeEdited() bool {
-	return s.CanBeEdited
-}
+func (s *ChatMemberAdministrator) GetCanBeEdited() bool { _ = "STUB: not implemented"; return false }
 
 // GetIsAnonymous returns the value of IsAnonymous.
-func (s *ChatMemberAdministrator) GetIsAnonymous() bool {
-	return s.IsAnonymous
-}
+func (s *ChatMemberAdministrator) GetIsAnonymous() bool { _ = "STUB: not implemented"; return false }
 
 // GetCanManageChat returns the value of CanManageChat.
-func (s *ChatMemberAdministrator) GetCanManageChat() bool {
-	return s.CanManageChat
-}
+func (s *ChatMemberAdministrator) GetCanManageChat() bool { _ = "STUB: not implemented"; return false }
 
 // GetCanDeleteMessages returns the value of CanDeleteMessages.
 func (s *ChatMemberAdministrator) GetCanDeleteMessages() bool {
-	return s.CanDeleteMessages
+	_ = "STUB: not implemented"
+	return false
+
+	// GetCanManageVoiceChats returns the value of CanManageVoiceChats.
 }
 
-// GetCanManageVoiceChats returns the value of CanManageVoiceChats.
 func (s *ChatMemberAdministrator) GetCanManageVoiceChats() bool {
-	return s.CanManageVoiceChats
+	_ = "STUB: not implemented"
+	return false
+
+	// GetCanRestrictMembers returns the value of CanRestrictMembers.
 }
 
-// GetCanRestrictMembers returns the value of CanRestrictMembers.
 func (s *ChatMemberAdministrator) GetCanRestrictMembers() bool {
-	return s.CanRestrictMembers
+	_ = "STUB: not implemented"
+	return false
+
+	// GetCanPromoteMembers returns the value of CanPromoteMembers.
 }
 
-// GetCanPromoteMembers returns the value of CanPromoteMembers.
 func (s *ChatMemberAdministrator) GetCanPromoteMembers() bool {
-	return s.CanPromoteMembers
+	_ = "STUB: not implemented"
+	return false
+
+	// GetCanChangeInfo returns the value of CanChangeInfo.
 }
 
-// GetCanChangeInfo returns the value of CanChangeInfo.
-func (s *ChatMemberAdministrator) GetCanChangeInfo() bool {
-	return s.CanChangeInfo
-}
+func (s *ChatMemberAdministrator) GetCanChangeInfo() bool { _ = "STUB: not implemented"; return false }
 
 // GetCanInviteUsers returns the value of CanInviteUsers.
-func (s *ChatMemberAdministrator) GetCanInviteUsers() bool {
-	return s.CanInviteUsers
-}
+func (s *ChatMemberAdministrator) GetCanInviteUsers() bool { _ = "STUB: not implemented"; return false }
 
 // GetCanPostMessages returns the value of CanPostMessages.
 func (s *ChatMemberAdministrator) GetCanPostMessages() OptBool {
-	return s.CanPostMessages
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanEditMessages returns the value of CanEditMessages.
+	new(OptBool)
 }
 
-// GetCanEditMessages returns the value of CanEditMessages.
 func (s *ChatMemberAdministrator) GetCanEditMessages() OptBool {
-	return s.CanEditMessages
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanPinMessages returns the value of CanPinMessages.
+	new(OptBool)
 }
 
-// GetCanPinMessages returns the value of CanPinMessages.
 func (s *ChatMemberAdministrator) GetCanPinMessages() OptBool {
-	return s.CanPinMessages
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCustomTitle returns the value of CustomTitle.
+	new(OptBool)
 }
 
-// GetCustomTitle returns the value of CustomTitle.
 func (s *ChatMemberAdministrator) GetCustomTitle() OptString {
-	return s.CustomTitle
+	_ = "STUB: not implemented"
+	return *
+
+	// SetStatus sets the value of Status.
+	new(OptString)
 }
 
-// SetStatus sets the value of Status.
 func (s *ChatMemberAdministrator) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *ChatMemberAdministrator) SetUser(val User) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// SetCanBeEdited sets the value of CanBeEdited.
+	return
 }
 
-// SetCanBeEdited sets the value of CanBeEdited.
-func (s *ChatMemberAdministrator) SetCanBeEdited(val bool) {
-	s.CanBeEdited = val
-}
+func (s *ChatMemberAdministrator) SetCanBeEdited(val bool) { _ = "STUB: not implemented"; return }
 
 // SetIsAnonymous sets the value of IsAnonymous.
-func (s *ChatMemberAdministrator) SetIsAnonymous(val bool) {
-	s.IsAnonymous = val
-}
+func (s *ChatMemberAdministrator) SetIsAnonymous(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanManageChat sets the value of CanManageChat.
-func (s *ChatMemberAdministrator) SetCanManageChat(val bool) {
-	s.CanManageChat = val
-}
+func (s *ChatMemberAdministrator) SetCanManageChat(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanDeleteMessages sets the value of CanDeleteMessages.
-func (s *ChatMemberAdministrator) SetCanDeleteMessages(val bool) {
-	s.CanDeleteMessages = val
-}
+func (s *ChatMemberAdministrator) SetCanDeleteMessages(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanManageVoiceChats sets the value of CanManageVoiceChats.
 func (s *ChatMemberAdministrator) SetCanManageVoiceChats(val bool) {
-	s.CanManageVoiceChats = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetCanRestrictMembers sets the value of CanRestrictMembers.
 func (s *ChatMemberAdministrator) SetCanRestrictMembers(val bool) {
-	s.CanRestrictMembers = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetCanPromoteMembers sets the value of CanPromoteMembers.
-func (s *ChatMemberAdministrator) SetCanPromoteMembers(val bool) {
-	s.CanPromoteMembers = val
-}
+func (s *ChatMemberAdministrator) SetCanPromoteMembers(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanChangeInfo sets the value of CanChangeInfo.
-func (s *ChatMemberAdministrator) SetCanChangeInfo(val bool) {
-	s.CanChangeInfo = val
-}
+func (s *ChatMemberAdministrator) SetCanChangeInfo(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanInviteUsers sets the value of CanInviteUsers.
-func (s *ChatMemberAdministrator) SetCanInviteUsers(val bool) {
-	s.CanInviteUsers = val
-}
+func (s *ChatMemberAdministrator) SetCanInviteUsers(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanPostMessages sets the value of CanPostMessages.
 func (s *ChatMemberAdministrator) SetCanPostMessages(val OptBool) {
-	s.CanPostMessages = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetCanEditMessages sets the value of CanEditMessages.
 }
 
-// SetCanEditMessages sets the value of CanEditMessages.
 func (s *ChatMemberAdministrator) SetCanEditMessages(val OptBool) {
-	s.CanEditMessages = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetCanPinMessages sets the value of CanPinMessages.
 }
 
-// SetCanPinMessages sets the value of CanPinMessages.
-func (s *ChatMemberAdministrator) SetCanPinMessages(val OptBool) {
-	s.CanPinMessages = val
-}
+func (s *ChatMemberAdministrator) SetCanPinMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCustomTitle sets the value of CustomTitle.
-func (s *ChatMemberAdministrator) SetCustomTitle(val OptString) {
-	s.CustomTitle = val
-}
+func (s *ChatMemberAdministrator) SetCustomTitle(val OptString) { _ = "STUB: not implemented"; return }
 
 // Represents a chat member that was banned in the chat and can't return to the chat or view chat
 // messages.
@@ -2036,36 +2259,48 @@ type ChatMemberBanned struct {
 
 // GetStatus returns the value of Status.
 func (s *ChatMemberBanned) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return ""
 }
 
-// GetUser returns the value of User.
 func (s *ChatMemberBanned) GetUser() User {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// GetUntilDate returns the value of UntilDate.
+	return *new(User)
 }
 
-// GetUntilDate returns the value of UntilDate.
 func (s *ChatMemberBanned) GetUntilDate() int {
-	return s.UntilDate
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return 0
 }
 
-// SetStatus sets the value of Status.
 func (s *ChatMemberBanned) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *ChatMemberBanned) SetUser(val User) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// SetUntilDate sets the value of UntilDate.
+	return
 }
 
-// SetUntilDate sets the value of UntilDate.
 func (s *ChatMemberBanned) SetUntilDate(val int) {
-	s.UntilDate = val
+	_ = "STUB: not implemented"
+
+	// Represents a chat member that isn't currently a member of the chat, but may join it themselves.
+	// Ref: #/components/schemas/ChatMemberLeft
+	return
 }
 
-// Represents a chat member that isn't currently a member of the chat, but may join it themselves.
-// Ref: #/components/schemas/ChatMemberLeft
 type ChatMemberLeft struct {
 	// The member's status in the chat, always “left”.
 	Status string `json:"status"`
@@ -2074,26 +2309,34 @@ type ChatMemberLeft struct {
 
 // GetStatus returns the value of Status.
 func (s *ChatMemberLeft) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return ""
 }
 
-// GetUser returns the value of User.
 func (s *ChatMemberLeft) GetUser() User {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return *new(User)
 }
 
-// SetStatus sets the value of Status.
 func (s *ChatMemberLeft) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *ChatMemberLeft) SetUser(val User) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// Represents a chat member that has no additional privileges or restrictions.
+	// Ref: #/components/schemas/ChatMemberMember
+	return
 }
 
-// Represents a chat member that has no additional privileges or restrictions.
-// Ref: #/components/schemas/ChatMemberMember
 type ChatMemberMember struct {
 	// The member's status in the chat, always “member”.
 	Status string `json:"status"`
@@ -2102,26 +2345,34 @@ type ChatMemberMember struct {
 
 // GetStatus returns the value of Status.
 func (s *ChatMemberMember) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return ""
 }
 
-// GetUser returns the value of User.
 func (s *ChatMemberMember) GetUser() User {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return *new(User)
 }
 
-// SetStatus sets the value of Status.
 func (s *ChatMemberMember) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *ChatMemberMember) SetUser(val User) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// Represents a chat member that owns the chat and has all administrator privileges.
+	// Ref: #/components/schemas/ChatMemberOwner
+	return
 }
 
-// Represents a chat member that owns the chat and has all administrator privileges.
-// Ref: #/components/schemas/ChatMemberOwner
 type ChatMemberOwner struct {
 	// The member's status in the chat, always “creator”.
 	Status string `json:"status"`
@@ -2134,43 +2385,48 @@ type ChatMemberOwner struct {
 
 // GetStatus returns the value of Status.
 func (s *ChatMemberOwner) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return ""
 }
 
-// GetUser returns the value of User.
 func (s *ChatMemberOwner) GetUser() User {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// GetIsAnonymous returns the value of IsAnonymous.
+	return *new(User)
 }
 
-// GetIsAnonymous returns the value of IsAnonymous.
-func (s *ChatMemberOwner) GetIsAnonymous() bool {
-	return s.IsAnonymous
-}
+func (s *ChatMemberOwner) GetIsAnonymous() bool { _ = "STUB: not implemented"; return false }
 
 // GetCustomTitle returns the value of CustomTitle.
 func (s *ChatMemberOwner) GetCustomTitle() OptString {
-	return s.CustomTitle
+	_ = "STUB: not implemented"
+	return *
+
+	// SetStatus sets the value of Status.
+	new(OptString)
 }
 
-// SetStatus sets the value of Status.
 func (s *ChatMemberOwner) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *ChatMemberOwner) SetUser(val User) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// SetIsAnonymous sets the value of IsAnonymous.
+	return
 }
 
-// SetIsAnonymous sets the value of IsAnonymous.
-func (s *ChatMemberOwner) SetIsAnonymous(val bool) {
-	s.IsAnonymous = val
-}
+func (s *ChatMemberOwner) SetIsAnonymous(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCustomTitle sets the value of CustomTitle.
-func (s *ChatMemberOwner) SetCustomTitle(val OptString) {
-	s.CustomTitle = val
-}
+func (s *ChatMemberOwner) SetCustomTitle(val OptString) { _ = "STUB: not implemented"; return }
 
 // Represents a chat member that is under certain restrictions in the chat. Supergroups only.
 // Ref: #/components/schemas/ChatMemberRestricted
@@ -2203,126 +2459,122 @@ type ChatMemberRestricted struct {
 
 // GetStatus returns the value of Status.
 func (s *ChatMemberRestricted) GetStatus() string {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return ""
 }
 
-// GetUser returns the value of User.
 func (s *ChatMemberRestricted) GetUser() User {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// GetIsMember returns the value of IsMember.
+	return *new(User)
 }
 
-// GetIsMember returns the value of IsMember.
 func (s *ChatMemberRestricted) GetIsMember() bool {
-	return s.IsMember
+	_ = "STUB: not implemented"
+
+	// GetCanChangeInfo returns the value of CanChangeInfo.
+	return false
 }
 
-// GetCanChangeInfo returns the value of CanChangeInfo.
-func (s *ChatMemberRestricted) GetCanChangeInfo() bool {
-	return s.CanChangeInfo
-}
+func (s *ChatMemberRestricted) GetCanChangeInfo() bool { _ = "STUB: not implemented"; return false }
 
 // GetCanInviteUsers returns the value of CanInviteUsers.
-func (s *ChatMemberRestricted) GetCanInviteUsers() bool {
-	return s.CanInviteUsers
-}
+func (s *ChatMemberRestricted) GetCanInviteUsers() bool { _ = "STUB: not implemented"; return false }
 
 // GetCanPinMessages returns the value of CanPinMessages.
-func (s *ChatMemberRestricted) GetCanPinMessages() bool {
-	return s.CanPinMessages
-}
+func (s *ChatMemberRestricted) GetCanPinMessages() bool { _ = "STUB: not implemented"; return false }
 
 // GetCanSendMessages returns the value of CanSendMessages.
-func (s *ChatMemberRestricted) GetCanSendMessages() bool {
-	return s.CanSendMessages
-}
+func (s *ChatMemberRestricted) GetCanSendMessages() bool { _ = "STUB: not implemented"; return false }
 
 // GetCanSendMediaMessages returns the value of CanSendMediaMessages.
 func (s *ChatMemberRestricted) GetCanSendMediaMessages() bool {
-	return s.CanSendMediaMessages
+	_ = "STUB: not implemented"
+	return false
 }
 
 // GetCanSendPolls returns the value of CanSendPolls.
-func (s *ChatMemberRestricted) GetCanSendPolls() bool {
-	return s.CanSendPolls
-}
+func (s *ChatMemberRestricted) GetCanSendPolls() bool { _ = "STUB: not implemented"; return false }
 
 // GetCanSendOtherMessages returns the value of CanSendOtherMessages.
 func (s *ChatMemberRestricted) GetCanSendOtherMessages() bool {
-	return s.CanSendOtherMessages
+	_ = "STUB: not implemented"
+	return false
 }
 
 // GetCanAddWebPagePreviews returns the value of CanAddWebPagePreviews.
 func (s *ChatMemberRestricted) GetCanAddWebPagePreviews() bool {
-	return s.CanAddWebPagePreviews
+	_ = "STUB: not implemented"
+	return false
 }
 
 // GetUntilDate returns the value of UntilDate.
 func (s *ChatMemberRestricted) GetUntilDate() int {
-	return s.UntilDate
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return 0
 }
 
-// SetStatus sets the value of Status.
 func (s *ChatMemberRestricted) SetStatus(val string) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *ChatMemberRestricted) SetUser(val User) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// SetIsMember sets the value of IsMember.
+	return
 }
 
-// SetIsMember sets the value of IsMember.
 func (s *ChatMemberRestricted) SetIsMember(val bool) {
-	s.IsMember = val
+	_ = "STUB: not implemented"
+
+	// SetCanChangeInfo sets the value of CanChangeInfo.
+	return
 }
 
-// SetCanChangeInfo sets the value of CanChangeInfo.
-func (s *ChatMemberRestricted) SetCanChangeInfo(val bool) {
-	s.CanChangeInfo = val
-}
+func (s *ChatMemberRestricted) SetCanChangeInfo(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanInviteUsers sets the value of CanInviteUsers.
-func (s *ChatMemberRestricted) SetCanInviteUsers(val bool) {
-	s.CanInviteUsers = val
-}
+func (s *ChatMemberRestricted) SetCanInviteUsers(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanPinMessages sets the value of CanPinMessages.
-func (s *ChatMemberRestricted) SetCanPinMessages(val bool) {
-	s.CanPinMessages = val
-}
+func (s *ChatMemberRestricted) SetCanPinMessages(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanSendMessages sets the value of CanSendMessages.
-func (s *ChatMemberRestricted) SetCanSendMessages(val bool) {
-	s.CanSendMessages = val
-}
+func (s *ChatMemberRestricted) SetCanSendMessages(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanSendMediaMessages sets the value of CanSendMediaMessages.
-func (s *ChatMemberRestricted) SetCanSendMediaMessages(val bool) {
-	s.CanSendMediaMessages = val
-}
+func (s *ChatMemberRestricted) SetCanSendMediaMessages(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanSendPolls sets the value of CanSendPolls.
-func (s *ChatMemberRestricted) SetCanSendPolls(val bool) {
-	s.CanSendPolls = val
-}
+func (s *ChatMemberRestricted) SetCanSendPolls(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanSendOtherMessages sets the value of CanSendOtherMessages.
-func (s *ChatMemberRestricted) SetCanSendOtherMessages(val bool) {
-	s.CanSendOtherMessages = val
-}
+func (s *ChatMemberRestricted) SetCanSendOtherMessages(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCanAddWebPagePreviews sets the value of CanAddWebPagePreviews.
 func (s *ChatMemberRestricted) SetCanAddWebPagePreviews(val bool) {
-	s.CanAddWebPagePreviews = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetUntilDate sets the value of UntilDate.
 func (s *ChatMemberRestricted) SetUntilDate(val int) {
-	s.UntilDate = val
+	_ = "STUB: not implemented"
+
+	// This object represents changes in the status of a chat member.
+	// Ref: #/components/schemas/ChatMemberUpdated
+	return
 }
 
-// This object represents changes in the status of a chat member.
-// Ref: #/components/schemas/ChatMemberUpdated
 type ChatMemberUpdated struct {
 	Chat Chat `json:"chat"`
 	From User `json:"from"`
@@ -2335,66 +2587,85 @@ type ChatMemberUpdated struct {
 
 // GetChat returns the value of Chat.
 func (s *ChatMemberUpdated) GetChat() Chat {
-	return s.Chat
+	_ = "STUB: not implemented"
+
+	// GetFrom returns the value of From.
+	return *new(Chat)
 }
 
-// GetFrom returns the value of From.
 func (s *ChatMemberUpdated) GetFrom() User {
-	return s.From
+	_ = "STUB: not implemented"
+
+	// GetDate returns the value of Date.
+	return *new(User)
 }
 
-// GetDate returns the value of Date.
 func (s *ChatMemberUpdated) GetDate() int {
-	return s.Date
+	_ = "STUB: not implemented"
+
+	// GetOldChatMember returns the value of OldChatMember.
+	return 0
 }
 
-// GetOldChatMember returns the value of OldChatMember.
 func (s *ChatMemberUpdated) GetOldChatMember() ChatMember {
-	return s.OldChatMember
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNewChatMember returns the value of NewChatMember.
+	new(ChatMember)
 }
 
-// GetNewChatMember returns the value of NewChatMember.
 func (s *ChatMemberUpdated) GetNewChatMember() ChatMember {
-	return s.NewChatMember
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInviteLink returns the value of InviteLink.
+	new(ChatMember)
 }
 
-// GetInviteLink returns the value of InviteLink.
 func (s *ChatMemberUpdated) GetInviteLink() OptChatInviteLink {
-	return s.InviteLink
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChat sets the value of Chat.
+	new(OptChatInviteLink)
 }
 
-// SetChat sets the value of Chat.
 func (s *ChatMemberUpdated) SetChat(val Chat) {
-	s.Chat = val
+	_ = "STUB: not implemented"
+
+	// SetFrom sets the value of From.
+	return
 }
 
-// SetFrom sets the value of From.
 func (s *ChatMemberUpdated) SetFrom(val User) {
-	s.From = val
+	_ = "STUB: not implemented"
+
+	// SetDate sets the value of Date.
+	return
 }
 
-// SetDate sets the value of Date.
 func (s *ChatMemberUpdated) SetDate(val int) {
-	s.Date = val
+	_ = "STUB: not implemented"
+
+	// SetOldChatMember sets the value of OldChatMember.
+	return
 }
 
-// SetOldChatMember sets the value of OldChatMember.
-func (s *ChatMemberUpdated) SetOldChatMember(val ChatMember) {
-	s.OldChatMember = val
-}
+func (s *ChatMemberUpdated) SetOldChatMember(val ChatMember) { _ = "STUB: not implemented"; return }
 
 // SetNewChatMember sets the value of NewChatMember.
-func (s *ChatMemberUpdated) SetNewChatMember(val ChatMember) {
-	s.NewChatMember = val
-}
+func (s *ChatMemberUpdated) SetNewChatMember(val ChatMember) { _ = "STUB: not implemented"; return }
 
 // SetInviteLink sets the value of InviteLink.
 func (s *ChatMemberUpdated) SetInviteLink(val OptChatInviteLink) {
-	s.InviteLink = val
+	_ = "STUB: not implemented"
+
+	// Describes actions that a non-administrator user is allowed to take in a chat.
+	// Ref: #/components/schemas/ChatPermissions
+	return
 }
 
-// Describes actions that a non-administrator user is allowed to take in a chat.
-// Ref: #/components/schemas/ChatPermissions
 type ChatPermissions struct {
 	// True, if the user is allowed to send text messages, contacts, locations and venues.
 	CanSendMessages OptBool `json:"can_send_messages"`
@@ -2420,83 +2691,85 @@ type ChatPermissions struct {
 
 // GetCanSendMessages returns the value of CanSendMessages.
 func (s *ChatPermissions) GetCanSendMessages() OptBool {
-	return s.CanSendMessages
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanSendMediaMessages returns the value of CanSendMediaMessages.
+	new(OptBool)
 }
 
-// GetCanSendMediaMessages returns the value of CanSendMediaMessages.
 func (s *ChatPermissions) GetCanSendMediaMessages() OptBool {
-	return s.CanSendMediaMessages
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetCanSendPolls returns the value of CanSendPolls.
 func (s *ChatPermissions) GetCanSendPolls() OptBool {
-	return s.CanSendPolls
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanSendOtherMessages returns the value of CanSendOtherMessages.
+	new(OptBool)
 }
 
-// GetCanSendOtherMessages returns the value of CanSendOtherMessages.
 func (s *ChatPermissions) GetCanSendOtherMessages() OptBool {
-	return s.CanSendOtherMessages
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetCanAddWebPagePreviews returns the value of CanAddWebPagePreviews.
 func (s *ChatPermissions) GetCanAddWebPagePreviews() OptBool {
-	return s.CanAddWebPagePreviews
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetCanChangeInfo returns the value of CanChangeInfo.
 func (s *ChatPermissions) GetCanChangeInfo() OptBool {
-	return s.CanChangeInfo
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanInviteUsers returns the value of CanInviteUsers.
+	new(OptBool)
 }
 
-// GetCanInviteUsers returns the value of CanInviteUsers.
 func (s *ChatPermissions) GetCanInviteUsers() OptBool {
-	return s.CanInviteUsers
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanPinMessages returns the value of CanPinMessages.
+	new(OptBool)
 }
 
-// GetCanPinMessages returns the value of CanPinMessages.
 func (s *ChatPermissions) GetCanPinMessages() OptBool {
-	return s.CanPinMessages
+	_ = "STUB: not implemented"
+	return *
+
+	// SetCanSendMessages sets the value of CanSendMessages.
+	new(OptBool)
 }
 
-// SetCanSendMessages sets the value of CanSendMessages.
-func (s *ChatPermissions) SetCanSendMessages(val OptBool) {
-	s.CanSendMessages = val
-}
+func (s *ChatPermissions) SetCanSendMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanSendMediaMessages sets the value of CanSendMediaMessages.
-func (s *ChatPermissions) SetCanSendMediaMessages(val OptBool) {
-	s.CanSendMediaMessages = val
-}
+func (s *ChatPermissions) SetCanSendMediaMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanSendPolls sets the value of CanSendPolls.
-func (s *ChatPermissions) SetCanSendPolls(val OptBool) {
-	s.CanSendPolls = val
-}
+func (s *ChatPermissions) SetCanSendPolls(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanSendOtherMessages sets the value of CanSendOtherMessages.
-func (s *ChatPermissions) SetCanSendOtherMessages(val OptBool) {
-	s.CanSendOtherMessages = val
-}
+func (s *ChatPermissions) SetCanSendOtherMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanAddWebPagePreviews sets the value of CanAddWebPagePreviews.
-func (s *ChatPermissions) SetCanAddWebPagePreviews(val OptBool) {
-	s.CanAddWebPagePreviews = val
-}
+func (s *ChatPermissions) SetCanAddWebPagePreviews(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanChangeInfo sets the value of CanChangeInfo.
-func (s *ChatPermissions) SetCanChangeInfo(val OptBool) {
-	s.CanChangeInfo = val
-}
+func (s *ChatPermissions) SetCanChangeInfo(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanInviteUsers sets the value of CanInviteUsers.
-func (s *ChatPermissions) SetCanInviteUsers(val OptBool) {
-	s.CanInviteUsers = val
-}
+func (s *ChatPermissions) SetCanInviteUsers(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanPinMessages sets the value of CanPinMessages.
-func (s *ChatPermissions) SetCanPinMessages(val OptBool) {
-	s.CanPinMessages = val
-}
+func (s *ChatPermissions) SetCanPinMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // This object represents a chat photo.
 // Ref: #/components/schemas/ChatPhoto
@@ -2516,44 +2789,36 @@ type ChatPhoto struct {
 }
 
 // GetSmallFileID returns the value of SmallFileID.
-func (s *ChatPhoto) GetSmallFileID() string {
-	return s.SmallFileID
-}
+func (s *ChatPhoto) GetSmallFileID() string { _ = "STUB: not implemented"; return "" }
 
 // GetSmallFileUniqueID returns the value of SmallFileUniqueID.
-func (s *ChatPhoto) GetSmallFileUniqueID() string {
-	return s.SmallFileUniqueID
-}
+func (s *ChatPhoto) GetSmallFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetBigFileID returns the value of BigFileID.
 func (s *ChatPhoto) GetBigFileID() string {
-	return s.BigFileID
+	_ = "STUB: not implemented"
+
+	// GetBigFileUniqueID returns the value of BigFileUniqueID.
+	return ""
 }
 
-// GetBigFileUniqueID returns the value of BigFileUniqueID.
-func (s *ChatPhoto) GetBigFileUniqueID() string {
-	return s.BigFileUniqueID
-}
+func (s *ChatPhoto) GetBigFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // SetSmallFileID sets the value of SmallFileID.
-func (s *ChatPhoto) SetSmallFileID(val string) {
-	s.SmallFileID = val
-}
+func (s *ChatPhoto) SetSmallFileID(val string) { _ = "STUB: not implemented"; return }
 
 // SetSmallFileUniqueID sets the value of SmallFileUniqueID.
-func (s *ChatPhoto) SetSmallFileUniqueID(val string) {
-	s.SmallFileUniqueID = val
-}
+func (s *ChatPhoto) SetSmallFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetBigFileID sets the value of BigFileID.
 func (s *ChatPhoto) SetBigFileID(val string) {
-	s.BigFileID = val
+	_ = "STUB: not implemented"
+
+	// SetBigFileUniqueID sets the value of BigFileUniqueID.
+	return
 }
 
-// SetBigFileUniqueID sets the value of BigFileUniqueID.
-func (s *ChatPhoto) SetBigFileUniqueID(val string) {
-	s.BigFileUniqueID = val
-}
+func (s *ChatPhoto) SetBigFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // Type of chat, can be either “private”, “group”, “supergroup” or “channel”.
 type ChatType string
@@ -2566,50 +2831,13 @@ const (
 )
 
 // AllValues returns all ChatType values.
-func (ChatType) AllValues() []ChatType {
-	return []ChatType{
-		ChatTypePrivate,
-		ChatTypeGroup,
-		ChatTypeSupergroup,
-		ChatTypeChannel,
-	}
-}
+func (ChatType) AllValues() []ChatType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s ChatType) MarshalText() ([]byte, error) {
-	switch s {
-	case ChatTypePrivate:
-		return []byte(s), nil
-	case ChatTypeGroup:
-		return []byte(s), nil
-	case ChatTypeSupergroup:
-		return []byte(s), nil
-	case ChatTypeChannel:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s ChatType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *ChatType) UnmarshalText(data []byte) error {
-	switch ChatType(data) {
-	case ChatTypePrivate:
-		*s = ChatTypePrivate
-		return nil
-	case ChatTypeGroup:
-		*s = ChatTypeGroup
-		return nil
-	case ChatTypeSupergroup:
-		*s = ChatTypeSupergroup
-		return nil
-	case ChatTypeChannel:
-		*s = ChatTypeChannel
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *ChatType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Represents a result of an inline query that was chosen by the user and sent to their chat partner.
 // Ref: #/components/schemas/ChosenInlineResult
@@ -2627,56 +2855,73 @@ type ChosenInlineResult struct {
 
 // GetResultID returns the value of ResultID.
 func (s *ChosenInlineResult) GetResultID() string {
-	return s.ResultID
+	_ = "STUB: not implemented"
+
+	// GetFrom returns the value of From.
+	return ""
 }
 
-// GetFrom returns the value of From.
 func (s *ChosenInlineResult) GetFrom() User {
-	return s.From
+	_ = "STUB: not implemented"
+
+	// GetLocation returns the value of Location.
+	return *new(User)
 }
 
-// GetLocation returns the value of Location.
 func (s *ChosenInlineResult) GetLocation() OptLocation {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// GetInlineMessageID returns the value of InlineMessageID.
+	return *new(OptLocation)
 }
 
-// GetInlineMessageID returns the value of InlineMessageID.
 func (s *ChosenInlineResult) GetInlineMessageID() OptString {
-	return s.InlineMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetQuery returns the value of Query.
+	new(OptString)
 }
 
-// GetQuery returns the value of Query.
 func (s *ChosenInlineResult) GetQuery() string {
-	return s.Query
+	_ = "STUB: not implemented"
+
+	// SetResultID sets the value of ResultID.
+	return ""
 }
 
-// SetResultID sets the value of ResultID.
 func (s *ChosenInlineResult) SetResultID(val string) {
-	s.ResultID = val
+	_ = "STUB: not implemented"
+
+	// SetFrom sets the value of From.
+	return
 }
 
-// SetFrom sets the value of From.
 func (s *ChosenInlineResult) SetFrom(val User) {
-	s.From = val
+	_ = "STUB: not implemented"
+
+	// SetLocation sets the value of Location.
+	return
 }
 
-// SetLocation sets the value of Location.
 func (s *ChosenInlineResult) SetLocation(val OptLocation) {
-	s.Location = val
+	_ = "STUB: not implemented"
+
+	// SetInlineMessageID sets the value of InlineMessageID.
+	return
 }
 
-// SetInlineMessageID sets the value of InlineMessageID.
-func (s *ChosenInlineResult) SetInlineMessageID(val OptString) {
-	s.InlineMessageID = val
-}
+func (s *ChosenInlineResult) SetInlineMessageID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetQuery sets the value of Query.
 func (s *ChosenInlineResult) SetQuery(val string) {
-	s.Query = val
+	_ = "STUB: not implemented"
+
+	// This object represents a phone contact.
+	// Ref: #/components/schemas/Contact
+	return
 }
 
-// This object represents a phone contact.
-// Ref: #/components/schemas/Contact
 type Contact struct {
 	// Contact's phone number.
 	PhoneNumber string `json:"phone_number"`
@@ -2694,57 +2939,69 @@ type Contact struct {
 }
 
 // GetPhoneNumber returns the value of PhoneNumber.
-func (s *Contact) GetPhoneNumber() string {
-	return s.PhoneNumber
-}
+func (s *Contact) GetPhoneNumber() string { _ = "STUB: not implemented"; return "" }
 
 // GetFirstName returns the value of FirstName.
 func (s *Contact) GetFirstName() string {
-	return s.FirstName
+	_ = "STUB: not implemented"
+
+	// GetLastName returns the value of LastName.
+	return ""
 }
 
-// GetLastName returns the value of LastName.
 func (s *Contact) GetLastName() OptString {
-	return s.LastName
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return *new(OptString)
 }
 
-// GetUserID returns the value of UserID.
 func (s *Contact) GetUserID() OptInt64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetVcard returns the value of Vcard.
+	return *new(OptInt64)
 }
 
-// GetVcard returns the value of Vcard.
 func (s *Contact) GetVcard() OptString {
-	return s.Vcard
+	_ = "STUB: not implemented"
+
+	// SetPhoneNumber sets the value of PhoneNumber.
+	return *new(OptString)
 }
 
-// SetPhoneNumber sets the value of PhoneNumber.
-func (s *Contact) SetPhoneNumber(val string) {
-	s.PhoneNumber = val
-}
+func (s *Contact) SetPhoneNumber(val string) { _ = "STUB: not implemented"; return }
 
 // SetFirstName sets the value of FirstName.
 func (s *Contact) SetFirstName(val string) {
-	s.FirstName = val
+	_ = "STUB: not implemented"
+
+	// SetLastName sets the value of LastName.
+	return
 }
 
-// SetLastName sets the value of LastName.
 func (s *Contact) SetLastName(val OptString) {
-	s.LastName = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *Contact) SetUserID(val OptInt64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetVcard sets the value of Vcard.
+	return
 }
 
-// SetVcard sets the value of Vcard.
 func (s *Contact) SetVcard(val OptString) {
-	s.Vcard = val
+	_ = "STUB: not implemented"
+
+	// Input for copyMessage.
+	// Ref: #/components/schemas/copyMessage
+	return
 }
 
-// Input for copyMessage.
-// Ref: #/components/schemas/copyMessage
 type CopyMessage struct {
 	ChatID     ID `json:"chat_id"`
 	FromChatID ID `json:"from_chat_id"`
@@ -2771,107 +3028,128 @@ type CopyMessage struct {
 
 // GetChatID returns the value of ChatID.
 func (s *CopyMessage) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetFromChatID returns the value of FromChatID.
+	return *new(ID)
 }
 
-// GetFromChatID returns the value of FromChatID.
 func (s *CopyMessage) GetFromChatID() ID {
-	return s.FromChatID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMessageID returns the value of MessageID.
+	new(ID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *CopyMessage) GetMessageID() int {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return 0
 }
 
-// GetCaption returns the value of Caption.
 func (s *CopyMessage) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *CopyMessage) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	return *new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
-func (s *CopyMessage) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
-}
+func (s *CopyMessage) GetCaptionEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetDisableNotification returns the value of DisableNotification.
 func (s *CopyMessage) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *CopyMessage) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *CopyMessage) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *CopyMessage) GetReplyMarkup() OptCopyMessageReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptCopyMessageReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *CopyMessage) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetFromChatID sets the value of FromChatID.
+	return
 }
 
-// SetFromChatID sets the value of FromChatID.
 func (s *CopyMessage) SetFromChatID(val ID) {
-	s.FromChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *CopyMessage) SetMessageID(val int) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *CopyMessage) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *CopyMessage) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
-func (s *CopyMessage) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
-}
+func (s *CopyMessage) SetCaptionEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetDisableNotification sets the value of DisableNotification.
-func (s *CopyMessage) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *CopyMessage) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *CopyMessage) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *CopyMessage) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *CopyMessage) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *CopyMessage) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *CopyMessage) SetReplyMarkup(val OptCopyMessageReplyMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
+	// keyboard, instructions to remove reply keyboard or to force a reply from the user.
+	// CopyMessageReplyMarkup represents sum type.
 }
 
-// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
-// keyboard, instructions to remove reply keyboard or to force a reply from the user.
-// CopyMessageReplyMarkup represents sum type.
 type CopyMessageReplyMarkup struct {
 	Type                 CopyMessageReplyMarkupType // switch on this field
 	InlineKeyboardMarkup InlineKeyboardMarkup
@@ -2893,106 +3171,92 @@ const (
 
 // IsInlineKeyboardMarkup reports whether CopyMessageReplyMarkup is InlineKeyboardMarkup.
 func (s CopyMessageReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupCopyMessageReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether CopyMessageReplyMarkup is ReplyKeyboardMarkup.
 func (s CopyMessageReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupCopyMessageReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardRemove reports whether CopyMessageReplyMarkup is ReplyKeyboardRemove.
 func (s CopyMessageReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveCopyMessageReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsForceReply reports whether CopyMessageReplyMarkup is ForceReply.
-func (s CopyMessageReplyMarkup) IsForceReply() bool {
-	return s.Type == ForceReplyCopyMessageReplyMarkup
-}
+func (s CopyMessageReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets CopyMessageReplyMarkup to InlineKeyboardMarkup.
 func (s *CopyMessageReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupCopyMessageReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if CopyMessageReplyMarkup is InlineKeyboardMarkup.
 func (s CopyMessageReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupCopyMessageReplyMarkup returns new CopyMessageReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupCopyMessageReplyMarkup(v InlineKeyboardMarkup) CopyMessageReplyMarkup {
-	var s CopyMessageReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CopyMessageReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets CopyMessageReplyMarkup to ReplyKeyboardMarkup.
 func (s *CopyMessageReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupCopyMessageReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if CopyMessageReplyMarkup is ReplyKeyboardMarkup.
 func (s CopyMessageReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupCopyMessageReplyMarkup returns new CopyMessageReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupCopyMessageReplyMarkup(v ReplyKeyboardMarkup) CopyMessageReplyMarkup {
-	var s CopyMessageReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CopyMessageReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets CopyMessageReplyMarkup to ReplyKeyboardRemove.
 func (s *CopyMessageReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveCopyMessageReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if CopyMessageReplyMarkup is ReplyKeyboardRemove.
 func (s CopyMessageReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveCopyMessageReplyMarkup returns new CopyMessageReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveCopyMessageReplyMarkup(v ReplyKeyboardRemove) CopyMessageReplyMarkup {
-	var s CopyMessageReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CopyMessageReplyMarkup)
 }
 
 // SetForceReply sets CopyMessageReplyMarkup to ForceReply.
-func (s *CopyMessageReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplyCopyMessageReplyMarkup
-	s.ForceReply = v
-}
+func (s *CopyMessageReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if CopyMessageReplyMarkup is ForceReply.
 func (s CopyMessageReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplyCopyMessageReplyMarkup returns new CopyMessageReplyMarkup from ForceReply.
 func NewForceReplyCopyMessageReplyMarkup(v ForceReply) CopyMessageReplyMarkup {
-	var s CopyMessageReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(CopyMessageReplyMarkup)
 }
 
 // Input for createChatInviteLink.
@@ -3013,52 +3277,68 @@ type CreateChatInviteLink struct {
 
 // GetChatID returns the value of ChatID.
 func (s *CreateChatInviteLink) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(ID)
 }
 
-// GetName returns the value of Name.
 func (s *CreateChatInviteLink) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetExpireDate returns the value of ExpireDate.
+	return *new(OptString)
 }
 
-// GetExpireDate returns the value of ExpireDate.
 func (s *CreateChatInviteLink) GetExpireDate() OptInt {
-	return s.ExpireDate
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMemberLimit returns the value of MemberLimit.
+	new(OptInt)
 }
 
-// GetMemberLimit returns the value of MemberLimit.
 func (s *CreateChatInviteLink) GetMemberLimit() OptInt {
-	return s.MemberLimit
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCreatesJoinRequest returns the value of CreatesJoinRequest.
+	new(OptInt)
 }
 
-// GetCreatesJoinRequest returns the value of CreatesJoinRequest.
 func (s *CreateChatInviteLink) GetCreatesJoinRequest() OptBool {
-	return s.CreatesJoinRequest
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // SetChatID sets the value of ChatID.
 func (s *CreateChatInviteLink) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *CreateChatInviteLink) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetExpireDate sets the value of ExpireDate.
+	return
 }
 
-// SetExpireDate sets the value of ExpireDate.
 func (s *CreateChatInviteLink) SetExpireDate(val OptInt) {
-	s.ExpireDate = val
+	_ = "STUB: not implemented"
+
+	// SetMemberLimit sets the value of MemberLimit.
+	return
 }
 
-// SetMemberLimit sets the value of MemberLimit.
-func (s *CreateChatInviteLink) SetMemberLimit(val OptInt) {
-	s.MemberLimit = val
-}
+func (s *CreateChatInviteLink) SetMemberLimit(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetCreatesJoinRequest sets the value of CreatesJoinRequest.
 func (s *CreateChatInviteLink) SetCreatesJoinRequest(val OptBool) {
-	s.CreatesJoinRequest = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Input for createNewStickerSet.
@@ -3090,86 +3370,118 @@ type CreateNewStickerSet struct {
 
 // GetUserID returns the value of UserID.
 func (s *CreateNewStickerSet) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *CreateNewStickerSet) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return ""
 }
 
-// GetTitle returns the value of Title.
 func (s *CreateNewStickerSet) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetPNGSticker returns the value of PNGSticker.
+	return ""
 }
 
-// GetPNGSticker returns the value of PNGSticker.
 func (s *CreateNewStickerSet) GetPNGSticker() OptString {
-	return s.PNGSticker
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTgsSticker returns the value of TgsSticker.
+	new(OptString)
 }
 
-// GetTgsSticker returns the value of TgsSticker.
 func (s *CreateNewStickerSet) GetTgsSticker() OptString {
-	return s.TgsSticker
+	_ = "STUB: not implemented"
+	return *
+
+	// GetEmojis returns the value of Emojis.
+	new(OptString)
 }
 
-// GetEmojis returns the value of Emojis.
 func (s *CreateNewStickerSet) GetEmojis() string {
-	return s.Emojis
+	_ = "STUB: not implemented"
+
+	// GetContainsMasks returns the value of ContainsMasks.
+	return ""
 }
 
-// GetContainsMasks returns the value of ContainsMasks.
 func (s *CreateNewStickerSet) GetContainsMasks() OptBool {
-	return s.ContainsMasks
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMaskPosition returns the value of MaskPosition.
+	new(OptBool)
 }
 
-// GetMaskPosition returns the value of MaskPosition.
 func (s *CreateNewStickerSet) GetMaskPosition() OptMaskPosition {
-	return s.MaskPosition
+	_ = "STUB: not implemented"
+	return *
+
+	// SetUserID sets the value of UserID.
+	new(OptMaskPosition)
 }
 
-// SetUserID sets the value of UserID.
 func (s *CreateNewStickerSet) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *CreateNewStickerSet) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *CreateNewStickerSet) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetPNGSticker sets the value of PNGSticker.
+	return
 }
 
-// SetPNGSticker sets the value of PNGSticker.
 func (s *CreateNewStickerSet) SetPNGSticker(val OptString) {
-	s.PNGSticker = val
+	_ = "STUB: not implemented"
+
+	// SetTgsSticker sets the value of TgsSticker.
+	return
 }
 
-// SetTgsSticker sets the value of TgsSticker.
 func (s *CreateNewStickerSet) SetTgsSticker(val OptString) {
-	s.TgsSticker = val
+	_ = "STUB: not implemented"
+
+	// SetEmojis sets the value of Emojis.
+	return
 }
 
-// SetEmojis sets the value of Emojis.
 func (s *CreateNewStickerSet) SetEmojis(val string) {
-	s.Emojis = val
+	_ = "STUB: not implemented"
+
+	// SetContainsMasks sets the value of ContainsMasks.
+	return
 }
 
-// SetContainsMasks sets the value of ContainsMasks.
-func (s *CreateNewStickerSet) SetContainsMasks(val OptBool) {
-	s.ContainsMasks = val
-}
+func (s *CreateNewStickerSet) SetContainsMasks(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetMaskPosition sets the value of MaskPosition.
 func (s *CreateNewStickerSet) SetMaskPosition(val OptMaskPosition) {
-	s.MaskPosition = val
+	_ = "STUB: not implemented"
+	return
+
+	// Input for declineChatJoinRequest.
+	// Ref: #/components/schemas/declineChatJoinRequest
 }
 
-// Input for declineChatJoinRequest.
-// Ref: #/components/schemas/declineChatJoinRequest
 type DeclineChatJoinRequest struct {
 	ChatID ID `json:"chat_id"`
 	// Unique identifier of the target user.
@@ -3178,58 +3490,74 @@ type DeclineChatJoinRequest struct {
 
 // GetChatID returns the value of ChatID.
 func (s *DeclineChatJoinRequest) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return *new(ID)
 }
 
-// GetUserID returns the value of UserID.
 func (s *DeclineChatJoinRequest) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return 0
 }
 
-// SetChatID sets the value of ChatID.
 func (s *DeclineChatJoinRequest) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *DeclineChatJoinRequest) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// Input for deleteChatPhoto.
+	// Ref: #/components/schemas/deleteChatPhoto
+	return
 }
 
-// Input for deleteChatPhoto.
-// Ref: #/components/schemas/deleteChatPhoto
 type DeleteChatPhoto struct {
 	ChatID ID `json:"chat_id"`
 }
 
 // GetChatID returns the value of ChatID.
 func (s *DeleteChatPhoto) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return *new(ID)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *DeleteChatPhoto) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// Input for deleteChatStickerSet.
+	// Ref: #/components/schemas/deleteChatStickerSet
+	return
 }
 
-// Input for deleteChatStickerSet.
-// Ref: #/components/schemas/deleteChatStickerSet
 type DeleteChatStickerSet struct {
 	ChatID ID `json:"chat_id"`
 }
 
 // GetChatID returns the value of ChatID.
 func (s *DeleteChatStickerSet) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return *new(ID)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *DeleteChatStickerSet) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// Input for deleteMessage.
+	// Ref: #/components/schemas/deleteMessage
+	return
 }
 
-// Input for deleteMessage.
-// Ref: #/components/schemas/deleteMessage
 type DeleteMessage struct {
 	ChatID ID `json:"chat_id"`
 	// Identifier of the message to delete.
@@ -3238,26 +3566,34 @@ type DeleteMessage struct {
 
 // GetChatID returns the value of ChatID.
 func (s *DeleteMessage) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(ID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *DeleteMessage) GetMessageID() int {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return 0
 }
 
-// SetChatID sets the value of ChatID.
 func (s *DeleteMessage) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *DeleteMessage) SetMessageID(val int) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// Input for deleteMyCommands.
+	// Ref: #/components/schemas/deleteMyCommands
+	return
 }
 
-// Input for deleteMyCommands.
-// Ref: #/components/schemas/deleteMyCommands
 type DeleteMyCommands struct {
 	Scope OptBotCommandScope `json:"scope"`
 	// A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the
@@ -3267,23 +3603,28 @@ type DeleteMyCommands struct {
 
 // GetScope returns the value of Scope.
 func (s *DeleteMyCommands) GetScope() OptBotCommandScope {
-	return s.Scope
+	_ = "STUB: not implemented"
+
+	// GetLanguageCode returns the value of LanguageCode.
+	return *new(OptBotCommandScope)
 }
 
-// GetLanguageCode returns the value of LanguageCode.
 func (s *DeleteMyCommands) GetLanguageCode() OptString {
-	return s.LanguageCode
+	_ = "STUB: not implemented"
+	return *
+
+	// SetScope sets the value of Scope.
+	new(OptString)
 }
 
-// SetScope sets the value of Scope.
 func (s *DeleteMyCommands) SetScope(val OptBotCommandScope) {
-	s.Scope = val
+	_ = "STUB: not implemented"
+
+	// SetLanguageCode sets the value of LanguageCode.
+	return
 }
 
-// SetLanguageCode sets the value of LanguageCode.
-func (s *DeleteMyCommands) SetLanguageCode(val OptString) {
-	s.LanguageCode = val
-}
+func (s *DeleteMyCommands) SetLanguageCode(val OptString) { _ = "STUB: not implemented"; return }
 
 // Input for deleteStickerFromSet.
 // Ref: #/components/schemas/deleteStickerFromSet
@@ -3294,16 +3635,20 @@ type DeleteStickerFromSet struct {
 
 // GetSticker returns the value of Sticker.
 func (s *DeleteStickerFromSet) GetSticker() string {
-	return s.Sticker
+	_ = "STUB: not implemented"
+
+	// SetSticker sets the value of Sticker.
+	return ""
 }
 
-// SetSticker sets the value of Sticker.
 func (s *DeleteStickerFromSet) SetSticker(val string) {
-	s.Sticker = val
+	_ = "STUB: not implemented"
+
+	// Input for deleteWebhook.
+	// Ref: #/components/schemas/deleteWebhook
+	return
 }
 
-// Input for deleteWebhook.
-// Ref: #/components/schemas/deleteWebhook
 type DeleteWebhook struct {
 	// Pass True to drop all pending updates.
 	DropPendingUpdates OptBool `json:"drop_pending_updates"`
@@ -3311,13 +3656,12 @@ type DeleteWebhook struct {
 
 // GetDropPendingUpdates returns the value of DropPendingUpdates.
 func (s *DeleteWebhook) GetDropPendingUpdates() OptBool {
-	return s.DropPendingUpdates
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // SetDropPendingUpdates sets the value of DropPendingUpdates.
-func (s *DeleteWebhook) SetDropPendingUpdates(val OptBool) {
-	s.DropPendingUpdates = val
-}
+func (s *DeleteWebhook) SetDropPendingUpdates(val OptBool) { _ = "STUB: not implemented"; return }
 
 // This object represents an animated emoji that displays a random value.
 // Ref: #/components/schemas/Dice
@@ -3331,26 +3675,34 @@ type Dice struct {
 
 // GetEmoji returns the value of Emoji.
 func (s *Dice) GetEmoji() string {
-	return s.Emoji
+	_ = "STUB: not implemented"
+
+	// GetValue returns the value of Value.
+	return ""
 }
 
-// GetValue returns the value of Value.
 func (s *Dice) GetValue() int {
-	return s.Value
+	_ = "STUB: not implemented"
+
+	// SetEmoji sets the value of Emoji.
+	return 0
 }
 
-// SetEmoji sets the value of Emoji.
 func (s *Dice) SetEmoji(val string) {
-	s.Emoji = val
+	_ = "STUB: not implemented"
+
+	// SetValue sets the value of Value.
+	return
 }
 
-// SetValue sets the value of Value.
 func (s *Dice) SetValue(val int) {
-	s.Value = val
+	_ = "STUB: not implemented"
+
+	// This object represents a general file (as opposed to photos, voice messages and audio files).
+	// Ref: #/components/schemas/Document
+	return
 }
 
-// This object represents a general file (as opposed to photos, voice messages and audio files).
-// Ref: #/components/schemas/Document
 type Document struct {
 	// Identifier for this file, which can be used to download or reuse the file.
 	FileID string `json:"file_id"`
@@ -3368,66 +3720,82 @@ type Document struct {
 
 // GetFileID returns the value of FileID.
 func (s *Document) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// GetFileUniqueID returns the value of FileUniqueID.
+	return ""
 }
 
-// GetFileUniqueID returns the value of FileUniqueID.
-func (s *Document) GetFileUniqueID() string {
-	return s.FileUniqueID
-}
+func (s *Document) GetFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetThumb returns the value of Thumb.
 func (s *Document) GetThumb() OptPhotoSize {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetFileName returns the value of FileName.
+	return *new(OptPhotoSize)
 }
 
-// GetFileName returns the value of FileName.
 func (s *Document) GetFileName() OptString {
-	return s.FileName
+	_ = "STUB: not implemented"
+
+	// GetMimeType returns the value of MimeType.
+	return *new(OptString)
 }
 
-// GetMimeType returns the value of MimeType.
 func (s *Document) GetMimeType() OptString {
-	return s.MimeType
+	_ = "STUB: not implemented"
+
+	// GetFileSize returns the value of FileSize.
+	return *new(OptString)
 }
 
-// GetFileSize returns the value of FileSize.
 func (s *Document) GetFileSize() OptInt {
-	return s.FileSize
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return *new(OptInt)
 }
 
-// SetFileID sets the value of FileID.
 func (s *Document) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// SetFileUniqueID sets the value of FileUniqueID.
+	return
 }
 
-// SetFileUniqueID sets the value of FileUniqueID.
-func (s *Document) SetFileUniqueID(val string) {
-	s.FileUniqueID = val
-}
+func (s *Document) SetFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetThumb sets the value of Thumb.
 func (s *Document) SetThumb(val OptPhotoSize) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetFileName sets the value of FileName.
+	return
 }
 
-// SetFileName sets the value of FileName.
 func (s *Document) SetFileName(val OptString) {
-	s.FileName = val
+	_ = "STUB: not implemented"
+
+	// SetMimeType sets the value of MimeType.
+	return
 }
 
-// SetMimeType sets the value of MimeType.
 func (s *Document) SetMimeType(val OptString) {
-	s.MimeType = val
+	_ = "STUB: not implemented"
+
+	// SetFileSize sets the value of FileSize.
+	return
 }
 
-// SetFileSize sets the value of FileSize.
 func (s *Document) SetFileSize(val OptInt) {
-	s.FileSize = val
+	_ = "STUB: not implemented"
+
+	// Input for editChatInviteLink.
+	// Ref: #/components/schemas/editChatInviteLink
+	return
 }
 
-// Input for editChatInviteLink.
-// Ref: #/components/schemas/editChatInviteLink
 type EditChatInviteLink struct {
 	ChatID ID `json:"chat_id"`
 	// The invite link to edit.
@@ -3446,63 +3814,76 @@ type EditChatInviteLink struct {
 
 // GetChatID returns the value of ChatID.
 func (s *EditChatInviteLink) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetInviteLink returns the value of InviteLink.
+	return *new(ID)
 }
 
-// GetInviteLink returns the value of InviteLink.
-func (s *EditChatInviteLink) GetInviteLink() string {
-	return s.InviteLink
-}
+func (s *EditChatInviteLink) GetInviteLink() string { _ = "STUB: not implemented"; return "" }
 
 // GetName returns the value of Name.
 func (s *EditChatInviteLink) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetExpireDate returns the value of ExpireDate.
+	return *new(OptString)
 }
 
-// GetExpireDate returns the value of ExpireDate.
 func (s *EditChatInviteLink) GetExpireDate() OptInt {
-	return s.ExpireDate
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMemberLimit returns the value of MemberLimit.
+	new(OptInt)
 }
 
-// GetMemberLimit returns the value of MemberLimit.
 func (s *EditChatInviteLink) GetMemberLimit() OptInt {
-	return s.MemberLimit
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCreatesJoinRequest returns the value of CreatesJoinRequest.
+	new(OptInt)
 }
 
-// GetCreatesJoinRequest returns the value of CreatesJoinRequest.
 func (s *EditChatInviteLink) GetCreatesJoinRequest() OptBool {
-	return s.CreatesJoinRequest
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // SetChatID sets the value of ChatID.
 func (s *EditChatInviteLink) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetInviteLink sets the value of InviteLink.
+	return
 }
 
-// SetInviteLink sets the value of InviteLink.
 func (s *EditChatInviteLink) SetInviteLink(val string) {
-	s.InviteLink = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *EditChatInviteLink) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetExpireDate sets the value of ExpireDate.
+	return
 }
 
-// SetExpireDate sets the value of ExpireDate.
 func (s *EditChatInviteLink) SetExpireDate(val OptInt) {
-	s.ExpireDate = val
+	_ = "STUB: not implemented"
+
+	// SetMemberLimit sets the value of MemberLimit.
+	return
 }
 
-// SetMemberLimit sets the value of MemberLimit.
-func (s *EditChatInviteLink) SetMemberLimit(val OptInt) {
-	s.MemberLimit = val
-}
+func (s *EditChatInviteLink) SetMemberLimit(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetCreatesJoinRequest sets the value of CreatesJoinRequest.
-func (s *EditChatInviteLink) SetCreatesJoinRequest(val OptBool) {
-	s.CreatesJoinRequest = val
-}
+func (s *EditChatInviteLink) SetCreatesJoinRequest(val OptBool) { _ = "STUB: not implemented"; return }
 
 // Input for editMessageCaption.
 // Ref: #/components/schemas/editMessageCaption
@@ -3524,76 +3905,103 @@ type EditMessageCaption struct {
 
 // GetChatID returns the value of ChatID.
 func (s *EditMessageCaption) GetChatID() OptID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(OptID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *EditMessageCaption) GetMessageID() OptInt {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// GetInlineMessageID returns the value of InlineMessageID.
+	return *new(OptInt)
 }
 
-// GetInlineMessageID returns the value of InlineMessageID.
 func (s *EditMessageCaption) GetInlineMessageID() OptString {
-	return s.InlineMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaption returns the value of Caption.
+	new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *EditMessageCaption) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *EditMessageCaption) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *EditMessageCaption) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *EditMessageCaption) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *EditMessageCaption) SetChatID(val OptID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *EditMessageCaption) SetMessageID(val OptInt) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetInlineMessageID sets the value of InlineMessageID.
+	return
 }
 
-// SetInlineMessageID sets the value of InlineMessageID.
-func (s *EditMessageCaption) SetInlineMessageID(val OptString) {
-	s.InlineMessageID = val
-}
+func (s *EditMessageCaption) SetInlineMessageID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetCaption sets the value of Caption.
 func (s *EditMessageCaption) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *EditMessageCaption) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *EditMessageCaption) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *EditMessageCaption) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Input for editMessageLiveLocation.
+	// Ref: #/components/schemas/editMessageLiveLocation
 }
 
-// Input for editMessageLiveLocation.
-// Ref: #/components/schemas/editMessageLiveLocation
 type EditMessageLiveLocation struct {
 	ChatID OptID `json:"chat_id"`
 	// Required if inline_message_id is not specified. Identifier of the message to edit.
@@ -3616,96 +4024,131 @@ type EditMessageLiveLocation struct {
 
 // GetChatID returns the value of ChatID.
 func (s *EditMessageLiveLocation) GetChatID() OptID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(OptID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *EditMessageLiveLocation) GetMessageID() OptInt {
-	return s.MessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInlineMessageID returns the value of InlineMessageID.
+	new(OptInt)
 }
 
-// GetInlineMessageID returns the value of InlineMessageID.
 func (s *EditMessageLiveLocation) GetInlineMessageID() OptString {
-	return s.InlineMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLatitude returns the value of Latitude.
+	new(OptString)
 }
 
-// GetLatitude returns the value of Latitude.
 func (s *EditMessageLiveLocation) GetLatitude() float64 {
-	return s.Latitude
+	_ = "STUB: not implemented"
+
+	// GetLongitude returns the value of Longitude.
+	return 0
 }
 
-// GetLongitude returns the value of Longitude.
 func (s *EditMessageLiveLocation) GetLongitude() float64 {
-	return s.Longitude
+	_ = "STUB: not implemented"
+
+	// GetHorizontalAccuracy returns the value of HorizontalAccuracy.
+	return 0
 }
 
-// GetHorizontalAccuracy returns the value of HorizontalAccuracy.
 func (s *EditMessageLiveLocation) GetHorizontalAccuracy() OptFloat64 {
-	return s.HorizontalAccuracy
+	_ = "STUB: not implemented"
+	return *new(OptFloat64)
 }
 
 // GetHeading returns the value of Heading.
 func (s *EditMessageLiveLocation) GetHeading() OptInt {
-	return s.Heading
+	_ = "STUB: not implemented"
+
+	// GetProximityAlertRadius returns the value of ProximityAlertRadius.
+	return *new(OptInt)
 }
 
-// GetProximityAlertRadius returns the value of ProximityAlertRadius.
 func (s *EditMessageLiveLocation) GetProximityAlertRadius() OptInt {
-	return s.ProximityAlertRadius
+	_ = "STUB: not implemented"
+	return *new(OptInt)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *EditMessageLiveLocation) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *EditMessageLiveLocation) SetChatID(val OptID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *EditMessageLiveLocation) SetMessageID(val OptInt) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetInlineMessageID sets the value of InlineMessageID.
+	return
 }
 
-// SetInlineMessageID sets the value of InlineMessageID.
 func (s *EditMessageLiveLocation) SetInlineMessageID(val OptString) {
-	s.InlineMessageID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetLatitude sets the value of Latitude.
 }
 
-// SetLatitude sets the value of Latitude.
 func (s *EditMessageLiveLocation) SetLatitude(val float64) {
-	s.Latitude = val
+	_ = "STUB: not implemented"
+
+	// SetLongitude sets the value of Longitude.
+	return
 }
 
-// SetLongitude sets the value of Longitude.
 func (s *EditMessageLiveLocation) SetLongitude(val float64) {
-	s.Longitude = val
+	_ = "STUB: not implemented"
+
+	// SetHorizontalAccuracy sets the value of HorizontalAccuracy.
+	return
 }
 
-// SetHorizontalAccuracy sets the value of HorizontalAccuracy.
 func (s *EditMessageLiveLocation) SetHorizontalAccuracy(val OptFloat64) {
-	s.HorizontalAccuracy = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetHeading sets the value of Heading.
 func (s *EditMessageLiveLocation) SetHeading(val OptInt) {
-	s.Heading = val
+	_ = "STUB: not implemented"
+
+	// SetProximityAlertRadius sets the value of ProximityAlertRadius.
+	return
 }
 
-// SetProximityAlertRadius sets the value of ProximityAlertRadius.
 func (s *EditMessageLiveLocation) SetProximityAlertRadius(val OptInt) {
-	s.ProximityAlertRadius = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *EditMessageLiveLocation) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Input for editMessageMedia.
+	// Ref: #/components/schemas/editMessageMedia
 }
 
-// Input for editMessageMedia.
-// Ref: #/components/schemas/editMessageMedia
 type EditMessageMedia struct {
 	ChatID OptID `json:"chat_id"`
 	// Required if inline_message_id is not specified. Identifier of the message to edit.
@@ -3718,56 +4161,74 @@ type EditMessageMedia struct {
 
 // GetChatID returns the value of ChatID.
 func (s *EditMessageMedia) GetChatID() OptID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(OptID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *EditMessageMedia) GetMessageID() OptInt {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// GetInlineMessageID returns the value of InlineMessageID.
+	return *new(OptInt)
 }
 
-// GetInlineMessageID returns the value of InlineMessageID.
 func (s *EditMessageMedia) GetInlineMessageID() OptString {
-	return s.InlineMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMedia returns the value of Media.
+	new(OptString)
 }
 
-// GetMedia returns the value of Media.
 func (s *EditMessageMedia) GetMedia() InputMedia {
-	return s.Media
+	_ = "STUB: not implemented"
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
+	return *new(InputMedia)
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *EditMessageMedia) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *EditMessageMedia) SetChatID(val OptID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *EditMessageMedia) SetMessageID(val OptInt) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetInlineMessageID sets the value of InlineMessageID.
+	return
 }
 
-// SetInlineMessageID sets the value of InlineMessageID.
-func (s *EditMessageMedia) SetInlineMessageID(val OptString) {
-	s.InlineMessageID = val
-}
+func (s *EditMessageMedia) SetInlineMessageID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetMedia sets the value of Media.
 func (s *EditMessageMedia) SetMedia(val InputMedia) {
-	s.Media = val
+	_ = "STUB: not implemented"
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
+	return
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *EditMessageMedia) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Input for editMessageReplyMarkup.
+	// Ref: #/components/schemas/editMessageReplyMarkup
 }
 
-// Input for editMessageReplyMarkup.
-// Ref: #/components/schemas/editMessageReplyMarkup
 type EditMessageReplyMarkup struct {
 	ChatID OptID `json:"chat_id"`
 	// Required if inline_message_id is not specified. Identifier of the message to edit.
@@ -3779,46 +4240,65 @@ type EditMessageReplyMarkup struct {
 
 // GetChatID returns the value of ChatID.
 func (s *EditMessageReplyMarkup) GetChatID() OptID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(OptID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *EditMessageReplyMarkup) GetMessageID() OptInt {
-	return s.MessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInlineMessageID returns the value of InlineMessageID.
+	new(OptInt)
 }
 
-// GetInlineMessageID returns the value of InlineMessageID.
 func (s *EditMessageReplyMarkup) GetInlineMessageID() OptString {
-	return s.InlineMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
+	new(OptString)
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *EditMessageReplyMarkup) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *EditMessageReplyMarkup) SetChatID(val OptID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *EditMessageReplyMarkup) SetMessageID(val OptInt) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetInlineMessageID sets the value of InlineMessageID.
+	return
 }
 
-// SetInlineMessageID sets the value of InlineMessageID.
 func (s *EditMessageReplyMarkup) SetInlineMessageID(val OptString) {
-	s.InlineMessageID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *EditMessageReplyMarkup) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Input for editMessageText.
+	// Ref: #/components/schemas/editMessageText
 }
 
-// Input for editMessageText.
-// Ref: #/components/schemas/editMessageText
 type EditMessageText struct {
 	ChatID OptID `json:"chat_id"`
 	// Required if inline_message_id is not specified. Identifier of the message to edit.
@@ -3839,88 +4319,114 @@ type EditMessageText struct {
 
 // GetChatID returns the value of ChatID.
 func (s *EditMessageText) GetChatID() OptID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(OptID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *EditMessageText) GetMessageID() OptInt {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// GetInlineMessageID returns the value of InlineMessageID.
+	return *new(OptInt)
 }
 
-// GetInlineMessageID returns the value of InlineMessageID.
 func (s *EditMessageText) GetInlineMessageID() OptString {
-	return s.InlineMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetText returns the value of Text.
+	new(OptString)
 }
 
-// GetText returns the value of Text.
 func (s *EditMessageText) GetText() string {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return ""
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *EditMessageText) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetEntities returns the value of Entities.
+	new(OptString)
 }
 
-// GetEntities returns the value of Entities.
 func (s *EditMessageText) GetEntities() []MessageEntity {
-	return s.Entities
+	_ = "STUB: not implemented"
+
+	// GetDisableWebPagePreview returns the value of DisableWebPagePreview.
+	return nil
 }
 
-// GetDisableWebPagePreview returns the value of DisableWebPagePreview.
 func (s *EditMessageText) GetDisableWebPagePreview() OptBool {
-	return s.DisableWebPagePreview
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *EditMessageText) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *EditMessageText) SetChatID(val OptID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *EditMessageText) SetMessageID(val OptInt) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetInlineMessageID sets the value of InlineMessageID.
+	return
 }
 
-// SetInlineMessageID sets the value of InlineMessageID.
-func (s *EditMessageText) SetInlineMessageID(val OptString) {
-	s.InlineMessageID = val
-}
+func (s *EditMessageText) SetInlineMessageID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetText sets the value of Text.
 func (s *EditMessageText) SetText(val string) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *EditMessageText) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetEntities sets the value of Entities.
+	return
 }
 
-// SetEntities sets the value of Entities.
 func (s *EditMessageText) SetEntities(val []MessageEntity) {
-	s.Entities = val
+	_ = "STUB: not implemented"
+
+	// SetDisableWebPagePreview sets the value of DisableWebPagePreview.
+	return
 }
 
-// SetDisableWebPagePreview sets the value of DisableWebPagePreview.
-func (s *EditMessageText) SetDisableWebPagePreview(val OptBool) {
-	s.DisableWebPagePreview = val
-}
+func (s *EditMessageText) SetDisableWebPagePreview(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *EditMessageText) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Contains data required for decrypting and authenticating EncryptedPassportElement. See the
+	// Telegram Passport Documentation for a complete description of the data decryption and
+	// authentication processes.
+	// Ref: #/components/schemas/EncryptedCredentials
 }
 
-// Contains data required for decrypting and authenticating EncryptedPassportElement. See the
-// Telegram Passport Documentation for a complete description of the data decryption and
-// authentication processes.
-// Ref: #/components/schemas/EncryptedCredentials
 type EncryptedCredentials struct {
 	// Base64-encoded encrypted JSON-serialized data with unique user's payload, data hashes and secrets
 	// required for EncryptedPassportElement decryption and authentication.
@@ -3933,37 +4439,49 @@ type EncryptedCredentials struct {
 
 // GetData returns the value of Data.
 func (s *EncryptedCredentials) GetData() string {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// GetHash returns the value of Hash.
+	return ""
 }
 
-// GetHash returns the value of Hash.
 func (s *EncryptedCredentials) GetHash() string {
-	return s.Hash
+	_ = "STUB: not implemented"
+
+	// GetSecret returns the value of Secret.
+	return ""
 }
 
-// GetSecret returns the value of Secret.
 func (s *EncryptedCredentials) GetSecret() string {
-	return s.Secret
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return ""
 }
 
-// SetData sets the value of Data.
 func (s *EncryptedCredentials) SetData(val string) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// SetHash sets the value of Hash.
+	return
 }
 
-// SetHash sets the value of Hash.
 func (s *EncryptedCredentials) SetHash(val string) {
-	s.Hash = val
+	_ = "STUB: not implemented"
+
+	// SetSecret sets the value of Secret.
+	return
 }
 
-// SetSecret sets the value of Secret.
 func (s *EncryptedCredentials) SetSecret(val string) {
-	s.Secret = val
+	_ = "STUB: not implemented"
+
+	// Contains information about documents or other Telegram Passport elements shared with the bot by
+	// the user.
+	// Ref: #/components/schemas/EncryptedPassportElement
+	return
 }
 
-// Contains information about documents or other Telegram Passport elements shared with the bot by
-// the user.
-// Ref: #/components/schemas/EncryptedPassportElement
 type EncryptedPassportElement struct {
 	// Element type. One of “personal_details”, “passport”, “driver_license”,
 	// “identity_card”, “internal_passport”, “address”, “utility_bill”,
@@ -3999,108 +4517,147 @@ type EncryptedPassportElement struct {
 
 // GetType returns the value of Type.
 func (s *EncryptedPassportElement) GetType() EncryptedPassportElementType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetData returns the value of Data.
+	return *new(EncryptedPassportElementType)
 }
 
-// GetData returns the value of Data.
 func (s *EncryptedPassportElement) GetData() OptString {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// GetPhoneNumber returns the value of PhoneNumber.
+	return *new(OptString)
 }
 
-// GetPhoneNumber returns the value of PhoneNumber.
 func (s *EncryptedPassportElement) GetPhoneNumber() OptString {
-	return s.PhoneNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetEmail returns the value of Email.
+	new(OptString)
 }
 
-// GetEmail returns the value of Email.
 func (s *EncryptedPassportElement) GetEmail() OptString {
-	return s.Email
+	_ = "STUB: not implemented"
+
+	// GetFiles returns the value of Files.
+	return *new(OptString)
 }
 
-// GetFiles returns the value of Files.
 func (s *EncryptedPassportElement) GetFiles() []PassportFile {
-	return s.Files
+	_ = "STUB: not implemented"
+
+	// GetFrontSide returns the value of FrontSide.
+	return nil
 }
 
-// GetFrontSide returns the value of FrontSide.
 func (s *EncryptedPassportElement) GetFrontSide() OptPassportFile {
-	return s.FrontSide
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReverseSide returns the value of ReverseSide.
+	new(OptPassportFile)
 }
 
-// GetReverseSide returns the value of ReverseSide.
 func (s *EncryptedPassportElement) GetReverseSide() OptPassportFile {
-	return s.ReverseSide
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSelfie returns the value of Selfie.
+	new(OptPassportFile)
 }
 
-// GetSelfie returns the value of Selfie.
 func (s *EncryptedPassportElement) GetSelfie() OptPassportFile {
-	return s.Selfie
+	_ = "STUB: not implemented"
+
+	// GetTranslation returns the value of Translation.
+	return *new(OptPassportFile)
 }
 
-// GetTranslation returns the value of Translation.
 func (s *EncryptedPassportElement) GetTranslation() []PassportFile {
-	return s.Translation
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetHash returns the value of Hash.
 }
 
-// GetHash returns the value of Hash.
 func (s *EncryptedPassportElement) GetHash() string {
-	return s.Hash
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return ""
 }
 
-// SetType sets the value of Type.
 func (s *EncryptedPassportElement) SetType(val EncryptedPassportElementType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetData sets the value of Data.
+	return
 }
 
-// SetData sets the value of Data.
 func (s *EncryptedPassportElement) SetData(val OptString) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// SetPhoneNumber sets the value of PhoneNumber.
+	return
 }
 
-// SetPhoneNumber sets the value of PhoneNumber.
-func (s *EncryptedPassportElement) SetPhoneNumber(val OptString) {
-	s.PhoneNumber = val
-}
+func (s *EncryptedPassportElement) SetPhoneNumber(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetEmail sets the value of Email.
 func (s *EncryptedPassportElement) SetEmail(val OptString) {
-	s.Email = val
+	_ = "STUB: not implemented"
+
+	// SetFiles sets the value of Files.
+	return
 }
 
-// SetFiles sets the value of Files.
 func (s *EncryptedPassportElement) SetFiles(val []PassportFile) {
-	s.Files = val
+	_ = "STUB: not implemented"
+
+	// SetFrontSide sets the value of FrontSide.
+	return
 }
 
-// SetFrontSide sets the value of FrontSide.
 func (s *EncryptedPassportElement) SetFrontSide(val OptPassportFile) {
-	s.FrontSide = val
+	_ = "STUB: not implemented"
+
+	// SetReverseSide sets the value of ReverseSide.
+	return
 }
 
-// SetReverseSide sets the value of ReverseSide.
 func (s *EncryptedPassportElement) SetReverseSide(val OptPassportFile) {
-	s.ReverseSide = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetSelfie sets the value of Selfie.
 }
 
-// SetSelfie sets the value of Selfie.
 func (s *EncryptedPassportElement) SetSelfie(val OptPassportFile) {
-	s.Selfie = val
+	_ = "STUB: not implemented"
+
+	// SetTranslation sets the value of Translation.
+	return
 }
 
-// SetTranslation sets the value of Translation.
 func (s *EncryptedPassportElement) SetTranslation(val []PassportFile) {
-	s.Translation = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetHash sets the value of Hash.
 }
 
-// SetHash sets the value of Hash.
 func (s *EncryptedPassportElement) SetHash(val string) {
-	s.Hash = val
+	_ = "STUB: not implemented"
+
+	// Element type. One of “personal_details”, “passport”, “driver_license”,
+	// “identity_card”, “internal_passport”, “address”, “utility_bill”,
+	// “bank_statement”, “rental_agreement”, “passport_registration”,
+	// “temporary_registration”, “phone_number”, “email”.
+	return
 }
 
-// Element type. One of “personal_details”, “passport”, “driver_license”,
-// “identity_card”, “internal_passport”, “address”, “utility_bill”,
-// “bank_statement”, “rental_agreement”, “passport_registration”,
-// “temporary_registration”, “phone_number”, “email”.
 type EncryptedPassportElementType string
 
 const (
@@ -4121,102 +4678,20 @@ const (
 
 // AllValues returns all EncryptedPassportElementType values.
 func (EncryptedPassportElementType) AllValues() []EncryptedPassportElementType {
-	return []EncryptedPassportElementType{
-		EncryptedPassportElementTypePersonalDetails,
-		EncryptedPassportElementTypePassport,
-		EncryptedPassportElementTypeDriverLicense,
-		EncryptedPassportElementTypeIdentityCard,
-		EncryptedPassportElementTypeInternalPassport,
-		EncryptedPassportElementTypeAddress,
-		EncryptedPassportElementTypeUtilityBill,
-		EncryptedPassportElementTypeBankStatement,
-		EncryptedPassportElementTypeRentalAgreement,
-		EncryptedPassportElementTypePassportRegistration,
-		EncryptedPassportElementTypeTemporaryRegistration,
-		EncryptedPassportElementTypePhoneNumber,
-		EncryptedPassportElementTypeEmail,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s EncryptedPassportElementType) MarshalText() ([]byte, error) {
-	switch s {
-	case EncryptedPassportElementTypePersonalDetails:
-		return []byte(s), nil
-	case EncryptedPassportElementTypePassport:
-		return []byte(s), nil
-	case EncryptedPassportElementTypeDriverLicense:
-		return []byte(s), nil
-	case EncryptedPassportElementTypeIdentityCard:
-		return []byte(s), nil
-	case EncryptedPassportElementTypeInternalPassport:
-		return []byte(s), nil
-	case EncryptedPassportElementTypeAddress:
-		return []byte(s), nil
-	case EncryptedPassportElementTypeUtilityBill:
-		return []byte(s), nil
-	case EncryptedPassportElementTypeBankStatement:
-		return []byte(s), nil
-	case EncryptedPassportElementTypeRentalAgreement:
-		return []byte(s), nil
-	case EncryptedPassportElementTypePassportRegistration:
-		return []byte(s), nil
-	case EncryptedPassportElementTypeTemporaryRegistration:
-		return []byte(s), nil
-	case EncryptedPassportElementTypePhoneNumber:
-		return []byte(s), nil
-	case EncryptedPassportElementTypeEmail:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *EncryptedPassportElementType) UnmarshalText(data []byte) error {
-	switch EncryptedPassportElementType(data) {
-	case EncryptedPassportElementTypePersonalDetails:
-		*s = EncryptedPassportElementTypePersonalDetails
-		return nil
-	case EncryptedPassportElementTypePassport:
-		*s = EncryptedPassportElementTypePassport
-		return nil
-	case EncryptedPassportElementTypeDriverLicense:
-		*s = EncryptedPassportElementTypeDriverLicense
-		return nil
-	case EncryptedPassportElementTypeIdentityCard:
-		*s = EncryptedPassportElementTypeIdentityCard
-		return nil
-	case EncryptedPassportElementTypeInternalPassport:
-		*s = EncryptedPassportElementTypeInternalPassport
-		return nil
-	case EncryptedPassportElementTypeAddress:
-		*s = EncryptedPassportElementTypeAddress
-		return nil
-	case EncryptedPassportElementTypeUtilityBill:
-		*s = EncryptedPassportElementTypeUtilityBill
-		return nil
-	case EncryptedPassportElementTypeBankStatement:
-		*s = EncryptedPassportElementTypeBankStatement
-		return nil
-	case EncryptedPassportElementTypeRentalAgreement:
-		*s = EncryptedPassportElementTypeRentalAgreement
-		return nil
-	case EncryptedPassportElementTypePassportRegistration:
-		*s = EncryptedPassportElementTypePassportRegistration
-		return nil
-	case EncryptedPassportElementTypeTemporaryRegistration:
-		*s = EncryptedPassportElementTypeTemporaryRegistration
-		return nil
-	case EncryptedPassportElementTypePhoneNumber:
-		*s = EncryptedPassportElementTypePhoneNumber
-		return nil
-	case EncryptedPassportElementTypeEmail:
-		*s = EncryptedPassportElementTypeEmail
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/Error
@@ -4229,90 +4704,107 @@ type Error struct {
 
 // GetOk returns the value of Ok.
 func (s *Error) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// GetErrorCode returns the value of ErrorCode.
+	return false
 }
 
-// GetErrorCode returns the value of ErrorCode.
 func (s *Error) GetErrorCode() int {
-	return s.ErrorCode
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return 0
 }
 
-// GetDescription returns the value of Description.
-func (s *Error) GetDescription() string {
-	return s.Description
-}
+func (s *Error) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 // GetParameters returns the value of Parameters.
 func (s *Error) GetParameters() OptResponse {
-	return s.Parameters
+	_ = "STUB: not implemented"
+	return *
+
+	// SetOk sets the value of Ok.
+	new(OptResponse)
 }
 
-// SetOk sets the value of Ok.
 func (s *Error) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// SetErrorCode sets the value of ErrorCode.
+	return
 }
 
-// SetErrorCode sets the value of ErrorCode.
 func (s *Error) SetErrorCode(val int) {
-	s.ErrorCode = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Error) SetDescription(val string) {
-	s.Description = val
-}
+func (s *Error) SetDescription(val string) { _ = "STUB: not implemented"; return }
 
 // SetParameters sets the value of Parameters.
 func (s *Error) SetParameters(val OptResponse) {
-	s.Parameters = val
+	_ = "STUB: not implemented"
+
+	// ErrorStatusCode wraps Error with StatusCode.
+	return
 }
 
-// ErrorStatusCode wraps Error with StatusCode.
 type ErrorStatusCode struct {
 	StatusCode int
 	Response   Error
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorStatusCode) GetResponse() Error {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(Error)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
 func (s *ErrorStatusCode) SetResponse(val Error) {
-	s.Response = val
+	_ = "STUB: not implemented"
+
+	// Input for exportChatInviteLink.
+	// Ref: #/components/schemas/exportChatInviteLink
+	return
 }
 
-// Input for exportChatInviteLink.
-// Ref: #/components/schemas/exportChatInviteLink
 type ExportChatInviteLink struct {
 	ChatID ID `json:"chat_id"`
 }
 
 // GetChatID returns the value of ChatID.
 func (s *ExportChatInviteLink) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return *new(ID)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *ExportChatInviteLink) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// This object represents a file ready to be downloaded. The file can be downloaded via the link
+	// https://api.telegram.org/file/bot<token>/<file_path>. It is guaranteed that the link will be valid
+	// for at least 1 hour. When the link expires, a new one can be requested by calling getFile.
+	// Ref: #/components/schemas/File
+	return
 }
 
-// This object represents a file ready to be downloaded. The file can be downloaded via the link
-// https://api.telegram.org/file/bot<token>/<file_path>. It is guaranteed that the link will be valid
-// for at least 1 hour. When the link expires, a new one can be requested by calling getFile.
-// Ref: #/components/schemas/File
 type File struct {
 	// Identifier for this file, which can be used to download or reuse the file.
 	FileID string `json:"file_id"`
@@ -4327,49 +4819,57 @@ type File struct {
 
 // GetFileID returns the value of FileID.
 func (s *File) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// GetFileUniqueID returns the value of FileUniqueID.
+	return ""
 }
 
-// GetFileUniqueID returns the value of FileUniqueID.
-func (s *File) GetFileUniqueID() string {
-	return s.FileUniqueID
-}
+func (s *File) GetFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetFileSize returns the value of FileSize.
 func (s *File) GetFileSize() OptInt {
-	return s.FileSize
+	_ = "STUB: not implemented"
+
+	// GetFilePath returns the value of FilePath.
+	return *new(OptInt)
 }
 
-// GetFilePath returns the value of FilePath.
 func (s *File) GetFilePath() OptString {
-	return s.FilePath
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return *new(OptString)
 }
 
-// SetFileID sets the value of FileID.
 func (s *File) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// SetFileUniqueID sets the value of FileUniqueID.
+	return
 }
 
-// SetFileUniqueID sets the value of FileUniqueID.
-func (s *File) SetFileUniqueID(val string) {
-	s.FileUniqueID = val
-}
+func (s *File) SetFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetFileSize sets the value of FileSize.
 func (s *File) SetFileSize(val OptInt) {
-	s.FileSize = val
+	_ = "STUB: not implemented"
+
+	// SetFilePath sets the value of FilePath.
+	return
 }
 
-// SetFilePath sets the value of FilePath.
 func (s *File) SetFilePath(val OptString) {
-	s.FilePath = val
+	_ = "STUB: not implemented"
+
+	// Upon receiving a message with this object, Telegram clients will display a reply interface to the
+	// user (act as if the user has selected the bot's message and tapped 'Reply'). This can be extremely
+	// useful if you want to create user-friendly step-by-step interfaces without having to sacrifice
+	// privacy mode.
+	// Ref: #/components/schemas/ForceReply
+	return
 }
 
-// Upon receiving a message with this object, Telegram clients will display a reply interface to the
-// user (act as if the user has selected the bot's message and tapped 'Reply'). This can be extremely
-// useful if you want to create user-friendly step-by-step interfaces without having to sacrifice
-// privacy mode.
-// Ref: #/components/schemas/ForceReply
 type ForceReply struct {
 	// Shows reply interface to the user, as if they manually selected the bot's message and tapped
 	// 'Reply'.
@@ -4383,37 +4883,40 @@ type ForceReply struct {
 }
 
 // GetForceReply returns the value of ForceReply.
-func (s *ForceReply) GetForceReply() bool {
-	return s.ForceReply
-}
+func (s *ForceReply) GetForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // GetInputFieldPlaceholder returns the value of InputFieldPlaceholder.
 func (s *ForceReply) GetInputFieldPlaceholder() OptString {
-	return s.InputFieldPlaceholder
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetSelective returns the value of Selective.
 func (s *ForceReply) GetSelective() OptBool {
-	return s.Selective
+	_ = "STUB: not implemented"
+
+	// SetForceReply sets the value of ForceReply.
+	return *new(OptBool)
 }
 
-// SetForceReply sets the value of ForceReply.
 func (s *ForceReply) SetForceReply(val bool) {
-	s.ForceReply = val
+	_ = "STUB: not implemented"
+
+	// SetInputFieldPlaceholder sets the value of InputFieldPlaceholder.
+	return
 }
 
-// SetInputFieldPlaceholder sets the value of InputFieldPlaceholder.
-func (s *ForceReply) SetInputFieldPlaceholder(val OptString) {
-	s.InputFieldPlaceholder = val
-}
+func (s *ForceReply) SetInputFieldPlaceholder(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetSelective sets the value of Selective.
 func (s *ForceReply) SetSelective(val OptBool) {
-	s.Selective = val
+	_ = "STUB: not implemented"
+
+	// Input for forwardMessage.
+	// Ref: #/components/schemas/forwardMessage
+	return
 }
 
-// Input for forwardMessage.
-// Ref: #/components/schemas/forwardMessage
 type ForwardMessage struct {
 	ChatID     ID `json:"chat_id"`
 	FromChatID ID `json:"from_chat_id"`
@@ -4425,47 +4928,59 @@ type ForwardMessage struct {
 
 // GetChatID returns the value of ChatID.
 func (s *ForwardMessage) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetFromChatID returns the value of FromChatID.
+	return *new(ID)
 }
 
-// GetFromChatID returns the value of FromChatID.
 func (s *ForwardMessage) GetFromChatID() ID {
-	return s.FromChatID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetDisableNotification returns the value of DisableNotification.
+	new(ID)
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *ForwardMessage) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetMessageID returns the value of MessageID.
 func (s *ForwardMessage) GetMessageID() int {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return 0
 }
 
-// SetChatID sets the value of ChatID.
 func (s *ForwardMessage) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetFromChatID sets the value of FromChatID.
+	return
 }
 
-// SetFromChatID sets the value of FromChatID.
 func (s *ForwardMessage) SetFromChatID(val ID) {
-	s.FromChatID = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *ForwardMessage) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *ForwardMessage) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetMessageID sets the value of MessageID.
 func (s *ForwardMessage) SetMessageID(val int) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// This object represents a game. Use BotFather to create and edit games, their short names will act
+	// as unique identifiers.
+	// Ref: #/components/schemas/Game
+	return
 }
 
-// This object represents a game. Use BotFather to create and edit games, their short names will act
-// as unique identifiers.
-// Ref: #/components/schemas/Game
 type Game struct {
 	// Title of the game.
 	Title string `json:"title"`
@@ -4484,66 +4999,74 @@ type Game struct {
 
 // GetTitle returns the value of Title.
 func (s *Game) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
-func (s *Game) GetDescription() string {
-	return s.Description
-}
+func (s *Game) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 // GetPhoto returns the value of Photo.
 func (s *Game) GetPhoto() []PhotoSize {
-	return s.Photo
+	_ = "STUB: not implemented"
+
+	// GetText returns the value of Text.
+	return nil
 }
 
-// GetText returns the value of Text.
 func (s *Game) GetText() OptString {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetTextEntities returns the value of TextEntities.
+	return *new(OptString)
 }
 
-// GetTextEntities returns the value of TextEntities.
-func (s *Game) GetTextEntities() []MessageEntity {
-	return s.TextEntities
-}
+func (s *Game) GetTextEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetAnimation returns the value of Animation.
 func (s *Game) GetAnimation() OptAnimation {
-	return s.Animation
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return *new(OptAnimation)
 }
 
-// SetTitle sets the value of Title.
 func (s *Game) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Game) SetDescription(val string) {
-	s.Description = val
-}
+func (s *Game) SetDescription(val string) { _ = "STUB: not implemented"; return }
 
 // SetPhoto sets the value of Photo.
 func (s *Game) SetPhoto(val []PhotoSize) {
-	s.Photo = val
+	_ = "STUB: not implemented"
+
+	// SetText sets the value of Text.
+	return
 }
 
-// SetText sets the value of Text.
 func (s *Game) SetText(val OptString) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetTextEntities sets the value of TextEntities.
+	return
 }
 
-// SetTextEntities sets the value of TextEntities.
-func (s *Game) SetTextEntities(val []MessageEntity) {
-	s.TextEntities = val
-}
+func (s *Game) SetTextEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetAnimation sets the value of Animation.
 func (s *Game) SetAnimation(val OptAnimation) {
-	s.Animation = val
+	_ = "STUB: not implemented"
+
+	// This object represents one row of the high scores table for a game.
+	// Ref: #/components/schemas/GameHighScore
+	return
 }
 
-// This object represents one row of the high scores table for a game.
-// Ref: #/components/schemas/GameHighScore
 type GameHighScore struct {
 	// Position in high score table for the game.
 	Position int  `json:"position"`
@@ -4554,68 +5077,88 @@ type GameHighScore struct {
 
 // GetPosition returns the value of Position.
 func (s *GameHighScore) GetPosition() int {
-	return s.Position
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return 0
 }
 
-// GetUser returns the value of User.
 func (s *GameHighScore) GetUser() User {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// GetScore returns the value of Score.
+	return *new(User)
 }
 
-// GetScore returns the value of Score.
 func (s *GameHighScore) GetScore() int {
-	return s.Score
+	_ = "STUB: not implemented"
+
+	// SetPosition sets the value of Position.
+	return 0
 }
 
-// SetPosition sets the value of Position.
 func (s *GameHighScore) SetPosition(val int) {
-	s.Position = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *GameHighScore) SetUser(val User) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// SetScore sets the value of Score.
+	return
 }
 
-// SetScore sets the value of Score.
 func (s *GameHighScore) SetScore(val int) {
-	s.Score = val
+	_ = "STUB: not implemented"
+
+	// Input for getChat.
+	// Ref: #/components/schemas/getChat
+	return
 }
 
-// Input for getChat.
-// Ref: #/components/schemas/getChat
 type GetChat struct {
 	ChatID ID `json:"chat_id"`
 }
 
 // GetChatID returns the value of ChatID.
 func (s *GetChat) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return *new(ID)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *GetChat) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// Input for getChatAdministrators.
+	// Ref: #/components/schemas/getChatAdministrators
+	return
 }
 
-// Input for getChatAdministrators.
-// Ref: #/components/schemas/getChatAdministrators
 type GetChatAdministrators struct {
 	ChatID ID `json:"chat_id"`
 }
 
 // GetChatID returns the value of ChatID.
 func (s *GetChatAdministrators) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return *new(ID)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *GetChatAdministrators) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// Input for getChatMember.
+	// Ref: #/components/schemas/getChatMember
+	return
 }
 
-// Input for getChatMember.
-// Ref: #/components/schemas/getChatMember
 type GetChatMember struct {
 	ChatID ID `json:"chat_id"`
 	// Unique identifier of the target user.
@@ -4624,42 +5167,54 @@ type GetChatMember struct {
 
 // GetChatID returns the value of ChatID.
 func (s *GetChatMember) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return *new(ID)
 }
 
-// GetUserID returns the value of UserID.
 func (s *GetChatMember) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return 0
 }
 
-// SetChatID sets the value of ChatID.
 func (s *GetChatMember) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *GetChatMember) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// Input for getChatMemberCount.
+	// Ref: #/components/schemas/getChatMemberCount
+	return
 }
 
-// Input for getChatMemberCount.
-// Ref: #/components/schemas/getChatMemberCount
 type GetChatMemberCount struct {
 	ChatID ID `json:"chat_id"`
 }
 
 // GetChatID returns the value of ChatID.
 func (s *GetChatMemberCount) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return *new(ID)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *GetChatMemberCount) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// Input for getFile.
+	// Ref: #/components/schemas/getFile
+	return
 }
 
-// Input for getFile.
-// Ref: #/components/schemas/getFile
 type GetFile struct {
 	// File identifier to get info about.
 	FileID string `json:"file_id"`
@@ -4667,16 +5222,20 @@ type GetFile struct {
 
 // GetFileID returns the value of FileID.
 func (s *GetFile) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return ""
 }
 
-// SetFileID sets the value of FileID.
 func (s *GetFile) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// Input for getGameHighScores.
+	// Ref: #/components/schemas/getGameHighScores
+	return
 }
 
-// Input for getGameHighScores.
-// Ref: #/components/schemas/getGameHighScores
 type GetGameHighScores struct {
 	// Target user id.
 	UserID int64 `json:"user_id"`
@@ -4690,43 +5249,56 @@ type GetGameHighScores struct {
 
 // GetUserID returns the value of UserID.
 func (s *GetGameHighScores) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetChatID returns the value of ChatID.
+	return 0
 }
 
-// GetChatID returns the value of ChatID.
 func (s *GetGameHighScores) GetChatID() OptInt64 {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(OptInt64)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *GetGameHighScores) GetMessageID() OptInt {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// GetInlineMessageID returns the value of InlineMessageID.
+	return *new(OptInt)
 }
 
-// GetInlineMessageID returns the value of InlineMessageID.
 func (s *GetGameHighScores) GetInlineMessageID() OptString {
-	return s.InlineMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// SetUserID sets the value of UserID.
+	new(OptString)
 }
 
-// SetUserID sets the value of UserID.
 func (s *GetGameHighScores) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return
 }
 
-// SetChatID sets the value of ChatID.
 func (s *GetGameHighScores) SetChatID(val OptInt64) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *GetGameHighScores) SetMessageID(val OptInt) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetInlineMessageID sets the value of InlineMessageID.
+	return
 }
 
-// SetInlineMessageID sets the value of InlineMessageID.
-func (s *GetGameHighScores) SetInlineMessageID(val OptString) {
-	s.InlineMessageID = val
-}
+func (s *GetGameHighScores) SetInlineMessageID(val OptString) { _ = "STUB: not implemented"; return }
 
 // Input for getMyCommands.
 // Ref: #/components/schemas/getMyCommands
@@ -4738,23 +5310,28 @@ type GetMyCommands struct {
 
 // GetScope returns the value of Scope.
 func (s *GetMyCommands) GetScope() OptBotCommandScope {
-	return s.Scope
+	_ = "STUB: not implemented"
+
+	// GetLanguageCode returns the value of LanguageCode.
+	return *new(OptBotCommandScope)
 }
 
-// GetLanguageCode returns the value of LanguageCode.
 func (s *GetMyCommands) GetLanguageCode() OptString {
-	return s.LanguageCode
+	_ = "STUB: not implemented"
+	return *
+
+	// SetScope sets the value of Scope.
+	new(OptString)
 }
 
-// SetScope sets the value of Scope.
 func (s *GetMyCommands) SetScope(val OptBotCommandScope) {
-	s.Scope = val
+	_ = "STUB: not implemented"
+
+	// SetLanguageCode sets the value of LanguageCode.
+	return
 }
 
-// SetLanguageCode sets the value of LanguageCode.
-func (s *GetMyCommands) SetLanguageCode(val OptString) {
-	s.LanguageCode = val
-}
+func (s *GetMyCommands) SetLanguageCode(val OptString) { _ = "STUB: not implemented"; return }
 
 // Input for getStickerSet.
 // Ref: #/components/schemas/getStickerSet
@@ -4765,16 +5342,20 @@ type GetStickerSet struct {
 
 // GetName returns the value of Name.
 func (s *GetStickerSet) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return ""
 }
 
-// SetName sets the value of Name.
 func (s *GetStickerSet) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// Input for getUpdates.
+	// Ref: #/components/schemas/getUpdates
+	return
 }
 
-// Input for getUpdates.
-// Ref: #/components/schemas/getUpdates
 type GetUpdates struct {
 	// Identifier of the first update to be returned. Must be greater by one than the highest among the
 	// identifiers of previously received updates. By default, updates starting with the earliest
@@ -4798,43 +5379,51 @@ type GetUpdates struct {
 
 // GetOffset returns the value of Offset.
 func (s *GetUpdates) GetOffset() OptInt {
-	return s.Offset
+	_ = "STUB: not implemented"
+
+	// GetLimit returns the value of Limit.
+	return *new(OptInt)
 }
 
-// GetLimit returns the value of Limit.
 func (s *GetUpdates) GetLimit() OptInt {
-	return s.Limit
+	_ = "STUB: not implemented"
+
+	// GetTimeout returns the value of Timeout.
+	return *new(OptInt)
 }
 
-// GetTimeout returns the value of Timeout.
 func (s *GetUpdates) GetTimeout() OptInt {
-	return s.Timeout
+	_ = "STUB: not implemented"
+
+	// GetAllowedUpdates returns the value of AllowedUpdates.
+	return *new(OptInt)
 }
 
-// GetAllowedUpdates returns the value of AllowedUpdates.
-func (s *GetUpdates) GetAllowedUpdates() []string {
-	return s.AllowedUpdates
-}
+func (s *GetUpdates) GetAllowedUpdates() []string { _ = "STUB: not implemented"; return nil }
 
 // SetOffset sets the value of Offset.
 func (s *GetUpdates) SetOffset(val OptInt) {
-	s.Offset = val
+	_ = "STUB: not implemented"
+
+	// SetLimit sets the value of Limit.
+	return
 }
 
-// SetLimit sets the value of Limit.
 func (s *GetUpdates) SetLimit(val OptInt) {
-	s.Limit = val
+	_ = "STUB: not implemented"
+
+	// SetTimeout sets the value of Timeout.
+	return
 }
 
-// SetTimeout sets the value of Timeout.
 func (s *GetUpdates) SetTimeout(val OptInt) {
-	s.Timeout = val
+	_ = "STUB: not implemented"
+
+	// SetAllowedUpdates sets the value of AllowedUpdates.
+	return
 }
 
-// SetAllowedUpdates sets the value of AllowedUpdates.
-func (s *GetUpdates) SetAllowedUpdates(val []string) {
-	s.AllowedUpdates = val
-}
+func (s *GetUpdates) SetAllowedUpdates(val []string) { _ = "STUB: not implemented"; return }
 
 // Input for getUserProfilePhotos.
 // Ref: #/components/schemas/getUserProfilePhotos
@@ -4849,36 +5438,48 @@ type GetUserProfilePhotos struct {
 
 // GetUserID returns the value of UserID.
 func (s *GetUserProfilePhotos) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetOffset returns the value of Offset.
+	return 0
 }
 
-// GetOffset returns the value of Offset.
 func (s *GetUserProfilePhotos) GetOffset() OptInt {
-	return s.Offset
+	_ = "STUB: not implemented"
+
+	// GetLimit returns the value of Limit.
+	return *new(OptInt)
 }
 
-// GetLimit returns the value of Limit.
 func (s *GetUserProfilePhotos) GetLimit() OptInt {
-	return s.Limit
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return *new(OptInt)
 }
 
-// SetUserID sets the value of UserID.
 func (s *GetUserProfilePhotos) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetOffset sets the value of Offset.
+	return
 }
 
-// SetOffset sets the value of Offset.
 func (s *GetUserProfilePhotos) SetOffset(val OptInt) {
-	s.Offset = val
+	_ = "STUB: not implemented"
+
+	// SetLimit sets the value of Limit.
+	return
 }
 
-// SetLimit sets the value of Limit.
 func (s *GetUserProfilePhotos) SetLimit(val OptInt) {
-	s.Limit = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ID
+	// ID represents sum type.
+	return
 }
 
-// Ref: #/components/schemas/ID
-// ID represents sum type.
 type ID struct {
 	Type   IDType // switch on this field
 	String string
@@ -4895,52 +5496,28 @@ const (
 )
 
 // IsString reports whether ID is string.
-func (s ID) IsString() bool { return s.Type == StringID }
+func (s ID) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsInt64 reports whether ID is int64.
-func (s ID) IsInt64() bool { return s.Type == Int64ID }
+func (s ID) IsInt64() bool { _ = "STUB: not implemented"; return false }
 
 // SetString sets ID to string.
-func (s *ID) SetString(v string) {
-	s.Type = StringID
-	s.String = v
-}
+func (s *ID) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if ID is string.
-func (s ID) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
-}
+func (s ID) GetString() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // NewStringID returns new ID from string.
-func NewStringID(v string) ID {
-	var s ID
-	s.SetString(v)
-	return s
-}
+func NewStringID(v string) ID { _ = "STUB: not implemented"; return *new(ID) }
 
 // SetInt64 sets ID to int64.
-func (s *ID) SetInt64(v int64) {
-	s.Type = Int64ID
-	s.Int64 = v
-}
+func (s *ID) SetInt64(v int64) { _ = "STUB: not implemented"; return }
 
 // GetInt64 returns int64 and true boolean if ID is int64.
-func (s ID) GetInt64() (v int64, ok bool) {
-	if !s.IsInt64() {
-		return v, false
-	}
-	return s.Int64, true
-}
+func (s ID) GetInt64() (v int64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // NewInt64ID returns new ID from int64.
-func NewInt64ID(v int64) ID {
-	var s ID
-	s.SetInt64(v)
-	return s
-}
+func NewInt64ID(v int64) ID { _ = "STUB: not implemented"; return *new(ID) }
 
 // This object represents one button of an inline keyboard. You must use exactly one of the optional
 // fields.
@@ -4975,86 +5552,111 @@ type InlineKeyboardButton struct {
 
 // GetText returns the value of Text.
 func (s *InlineKeyboardButton) GetText() string {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetURL returns the value of URL.
+	return ""
 }
 
-// GetURL returns the value of URL.
 func (s *InlineKeyboardButton) GetURL() OptURI {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetLoginURL returns the value of LoginURL.
+	return *new(OptURI)
 }
 
-// GetLoginURL returns the value of LoginURL.
 func (s *InlineKeyboardButton) GetLoginURL() OptLoginUrl {
-	return s.LoginURL
+	_ = "STUB: not implemented"
+
+	// GetCallbackData returns the value of CallbackData.
+	return *new(OptLoginUrl)
 }
 
-// GetCallbackData returns the value of CallbackData.
 func (s *InlineKeyboardButton) GetCallbackData() OptString {
-	return s.CallbackData
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSwitchInlineQuery returns the value of SwitchInlineQuery.
+	new(OptString)
 }
 
-// GetSwitchInlineQuery returns the value of SwitchInlineQuery.
 func (s *InlineKeyboardButton) GetSwitchInlineQuery() OptString {
-	return s.SwitchInlineQuery
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetSwitchInlineQueryCurrentChat returns the value of SwitchInlineQueryCurrentChat.
 func (s *InlineKeyboardButton) GetSwitchInlineQueryCurrentChat() OptString {
-	return s.SwitchInlineQueryCurrentChat
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetCallbackGame returns the value of CallbackGame.
 func (s *InlineKeyboardButton) GetCallbackGame() *CallbackGame {
-	return s.CallbackGame
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetPay returns the value of Pay.
 }
 
-// GetPay returns the value of Pay.
 func (s *InlineKeyboardButton) GetPay() OptBool {
-	return s.Pay
+	_ = "STUB: not implemented"
+
+	// SetText sets the value of Text.
+	return *new(OptBool)
 }
 
-// SetText sets the value of Text.
 func (s *InlineKeyboardButton) SetText(val string) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetURL sets the value of URL.
+	return
 }
 
-// SetURL sets the value of URL.
 func (s *InlineKeyboardButton) SetURL(val OptURI) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetLoginURL sets the value of LoginURL.
+	return
 }
 
-// SetLoginURL sets the value of LoginURL.
 func (s *InlineKeyboardButton) SetLoginURL(val OptLoginUrl) {
-	s.LoginURL = val
+	_ = "STUB: not implemented"
+
+	// SetCallbackData sets the value of CallbackData.
+	return
 }
 
-// SetCallbackData sets the value of CallbackData.
-func (s *InlineKeyboardButton) SetCallbackData(val OptString) {
-	s.CallbackData = val
-}
+func (s *InlineKeyboardButton) SetCallbackData(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetSwitchInlineQuery sets the value of SwitchInlineQuery.
 func (s *InlineKeyboardButton) SetSwitchInlineQuery(val OptString) {
-	s.SwitchInlineQuery = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetSwitchInlineQueryCurrentChat sets the value of SwitchInlineQueryCurrentChat.
 func (s *InlineKeyboardButton) SetSwitchInlineQueryCurrentChat(val OptString) {
-	s.SwitchInlineQueryCurrentChat = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetCallbackGame sets the value of CallbackGame.
 func (s *InlineKeyboardButton) SetCallbackGame(val *CallbackGame) {
-	s.CallbackGame = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetPay sets the value of Pay.
 }
 
-// SetPay sets the value of Pay.
 func (s *InlineKeyboardButton) SetPay(val OptBool) {
-	s.Pay = val
+	_ = "STUB: not implemented"
+
+	// This object represents an inline keyboard that appears right next to the message it belongs to.
+	// Ref: #/components/schemas/InlineKeyboardMarkup
+	return
 }
 
-// This object represents an inline keyboard that appears right next to the message it belongs to.
-// Ref: #/components/schemas/InlineKeyboardMarkup
 type InlineKeyboardMarkup struct {
 	// Array of button rows, each represented by an Array of InlineKeyboardButton objects.
 	InlineKeyboard [][]InlineKeyboardButton `json:"inline_keyboard"`
@@ -5062,17 +5664,21 @@ type InlineKeyboardMarkup struct {
 
 // GetInlineKeyboard returns the value of InlineKeyboard.
 func (s *InlineKeyboardMarkup) GetInlineKeyboard() [][]InlineKeyboardButton {
-	return s.InlineKeyboard
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetInlineKeyboard sets the value of InlineKeyboard.
 }
 
-// SetInlineKeyboard sets the value of InlineKeyboard.
 func (s *InlineKeyboardMarkup) SetInlineKeyboard(val [][]InlineKeyboardButton) {
-	s.InlineKeyboard = val
+	_ = "STUB: not implemented"
+	return
+
+	// This object represents an incoming inline query. When the user sends an empty query, your bot
+	// could return some default or trending results.
+	// Ref: #/components/schemas/InlineQuery
 }
 
-// This object represents an incoming inline query. When the user sends an empty query, your bot
-// could return some default or trending results.
-// Ref: #/components/schemas/InlineQuery
 type InlineQuery struct {
 	// Unique identifier for this query.
 	ID   string `json:"id"`
@@ -5091,68 +5697,92 @@ type InlineQuery struct {
 
 // GetID returns the value of ID.
 func (s *InlineQuery) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetFrom returns the value of From.
+	return ""
 }
 
-// GetFrom returns the value of From.
 func (s *InlineQuery) GetFrom() User {
-	return s.From
+	_ = "STUB: not implemented"
+
+	// GetQuery returns the value of Query.
+	return *new(User)
 }
 
-// GetQuery returns the value of Query.
 func (s *InlineQuery) GetQuery() string {
-	return s.Query
+	_ = "STUB: not implemented"
+
+	// GetOffset returns the value of Offset.
+	return ""
 }
 
-// GetOffset returns the value of Offset.
 func (s *InlineQuery) GetOffset() string {
-	return s.Offset
+	_ = "STUB: not implemented"
+
+	// GetChatType returns the value of ChatType.
+	return ""
 }
 
-// GetChatType returns the value of ChatType.
 func (s *InlineQuery) GetChatType() OptInlineQueryChatType {
-	return s.ChatType
+	_ = "STUB: not implemented"
+
+	// GetLocation returns the value of Location.
+	return *new(OptInlineQueryChatType)
 }
 
-// GetLocation returns the value of Location.
 func (s *InlineQuery) GetLocation() OptLocation {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptLocation)
 }
 
-// SetID sets the value of ID.
 func (s *InlineQuery) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetFrom sets the value of From.
+	return
 }
 
-// SetFrom sets the value of From.
 func (s *InlineQuery) SetFrom(val User) {
-	s.From = val
+	_ = "STUB: not implemented"
+
+	// SetQuery sets the value of Query.
+	return
 }
 
-// SetQuery sets the value of Query.
 func (s *InlineQuery) SetQuery(val string) {
-	s.Query = val
+	_ = "STUB: not implemented"
+
+	// SetOffset sets the value of Offset.
+	return
 }
 
-// SetOffset sets the value of Offset.
 func (s *InlineQuery) SetOffset(val string) {
-	s.Offset = val
+	_ = "STUB: not implemented"
+
+	// SetChatType sets the value of ChatType.
+	return
 }
 
-// SetChatType sets the value of ChatType.
 func (s *InlineQuery) SetChatType(val OptInlineQueryChatType) {
-	s.ChatType = val
+	_ = "STUB: not implemented"
+
+	// SetLocation sets the value of Location.
+	return
 }
 
-// SetLocation sets the value of Location.
 func (s *InlineQuery) SetLocation(val OptLocation) {
-	s.Location = val
+	_ = "STUB: not implemented"
+
+	// Type of the chat, from which the inline query was sent. Can be either “sender” for a private
+	// chat with the inline query sender, “private”, “group”, “supergroup”, or “channel”.
+	// The chat type should be always known for requests sent from official clients and most third-party
+	// clients, unless the request was sent from a secret chat.
+	return
 }
 
-// Type of the chat, from which the inline query was sent. Can be either “sender” for a private
-// chat with the inline query sender, “private”, “group”, “supergroup”, or “channel”.
-// The chat type should be always known for requests sent from official clients and most third-party
-// clients, unless the request was sent from a secret chat.
 type InlineQueryChatType string
 
 const (
@@ -5164,55 +5794,18 @@ const (
 )
 
 // AllValues returns all InlineQueryChatType values.
-func (InlineQueryChatType) AllValues() []InlineQueryChatType {
-	return []InlineQueryChatType{
-		InlineQueryChatTypeSender,
-		InlineQueryChatTypePrivate,
-		InlineQueryChatTypeGroup,
-		InlineQueryChatTypeSupergroup,
-		InlineQueryChatTypeChannel,
-	}
-}
+func (InlineQueryChatType) AllValues() []InlineQueryChatType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s InlineQueryChatType) MarshalText() ([]byte, error) {
-	switch s {
-	case InlineQueryChatTypeSender:
-		return []byte(s), nil
-	case InlineQueryChatTypePrivate:
-		return []byte(s), nil
-	case InlineQueryChatTypeGroup:
-		return []byte(s), nil
-	case InlineQueryChatTypeSupergroup:
-		return []byte(s), nil
-	case InlineQueryChatTypeChannel:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *InlineQueryChatType) UnmarshalText(data []byte) error {
-	switch InlineQueryChatType(data) {
-	case InlineQueryChatTypeSender:
-		*s = InlineQueryChatTypeSender
-		return nil
-	case InlineQueryChatTypePrivate:
-		*s = InlineQueryChatTypePrivate
-		return nil
-	case InlineQueryChatTypeGroup:
-		*s = InlineQueryChatTypeGroup
-		return nil
-	case InlineQueryChatTypeSupergroup:
-		*s = InlineQueryChatTypeSupergroup
-		return nil
-	case InlineQueryChatTypeChannel:
-		*s = InlineQueryChatTypeChannel
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // An inline query. Telegram clients currently support results of the following 20 types:.
@@ -5271,522 +5864,461 @@ const (
 
 // IsInlineQueryResultCachedAudio reports whether InlineQueryResult is InlineQueryResultCachedAudio.
 func (s InlineQueryResult) IsInlineQueryResultCachedAudio() bool {
-	return s.Type == InlineQueryResultCachedAudioInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultCachedDocument reports whether InlineQueryResult is InlineQueryResultCachedDocument.
 func (s InlineQueryResult) IsInlineQueryResultCachedDocument() bool {
-	return s.Type == InlineQueryResultCachedDocumentInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultCachedGif reports whether InlineQueryResult is InlineQueryResultCachedGif.
 func (s InlineQueryResult) IsInlineQueryResultCachedGif() bool {
-	return s.Type == InlineQueryResultCachedGifInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultCachedMpeg4Gif reports whether InlineQueryResult is InlineQueryResultCachedMpeg4Gif.
 func (s InlineQueryResult) IsInlineQueryResultCachedMpeg4Gif() bool {
-	return s.Type == InlineQueryResultCachedMpeg4GifInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultCachedPhoto reports whether InlineQueryResult is InlineQueryResultCachedPhoto.
 func (s InlineQueryResult) IsInlineQueryResultCachedPhoto() bool {
-	return s.Type == InlineQueryResultCachedPhotoInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultCachedSticker reports whether InlineQueryResult is InlineQueryResultCachedSticker.
 func (s InlineQueryResult) IsInlineQueryResultCachedSticker() bool {
-	return s.Type == InlineQueryResultCachedStickerInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultCachedVideo reports whether InlineQueryResult is InlineQueryResultCachedVideo.
 func (s InlineQueryResult) IsInlineQueryResultCachedVideo() bool {
-	return s.Type == InlineQueryResultCachedVideoInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultCachedVoice reports whether InlineQueryResult is InlineQueryResultCachedVoice.
 func (s InlineQueryResult) IsInlineQueryResultCachedVoice() bool {
-	return s.Type == InlineQueryResultCachedVoiceInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultArticle reports whether InlineQueryResult is InlineQueryResultArticle.
 func (s InlineQueryResult) IsInlineQueryResultArticle() bool {
-	return s.Type == InlineQueryResultArticleInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultAudio reports whether InlineQueryResult is InlineQueryResultAudio.
-func (s InlineQueryResult) IsInlineQueryResultAudio() bool {
-	return s.Type == InlineQueryResultAudioInlineQueryResult
-}
+func (s InlineQueryResult) IsInlineQueryResultAudio() bool { _ = "STUB: not implemented"; return false }
 
 // IsInlineQueryResultContact reports whether InlineQueryResult is InlineQueryResultContact.
 func (s InlineQueryResult) IsInlineQueryResultContact() bool {
-	return s.Type == InlineQueryResultContactInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultGame reports whether InlineQueryResult is InlineQueryResultGame.
-func (s InlineQueryResult) IsInlineQueryResultGame() bool {
-	return s.Type == InlineQueryResultGameInlineQueryResult
-}
+func (s InlineQueryResult) IsInlineQueryResultGame() bool { _ = "STUB: not implemented"; return false }
 
 // IsInlineQueryResultDocument reports whether InlineQueryResult is InlineQueryResultDocument.
 func (s InlineQueryResult) IsInlineQueryResultDocument() bool {
-	return s.Type == InlineQueryResultDocumentInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultGif reports whether InlineQueryResult is InlineQueryResultGif.
-func (s InlineQueryResult) IsInlineQueryResultGif() bool {
-	return s.Type == InlineQueryResultGifInlineQueryResult
-}
+func (s InlineQueryResult) IsInlineQueryResultGif() bool { _ = "STUB: not implemented"; return false }
 
 // IsInlineQueryResultLocation reports whether InlineQueryResult is InlineQueryResultLocation.
 func (s InlineQueryResult) IsInlineQueryResultLocation() bool {
-	return s.Type == InlineQueryResultLocationInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultMpeg4Gif reports whether InlineQueryResult is InlineQueryResultMpeg4Gif.
 func (s InlineQueryResult) IsInlineQueryResultMpeg4Gif() bool {
-	return s.Type == InlineQueryResultMpeg4GifInlineQueryResult
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInlineQueryResultPhoto reports whether InlineQueryResult is InlineQueryResultPhoto.
-func (s InlineQueryResult) IsInlineQueryResultPhoto() bool {
-	return s.Type == InlineQueryResultPhotoInlineQueryResult
-}
+func (s InlineQueryResult) IsInlineQueryResultPhoto() bool { _ = "STUB: not implemented"; return false }
 
 // IsInlineQueryResultVenue reports whether InlineQueryResult is InlineQueryResultVenue.
-func (s InlineQueryResult) IsInlineQueryResultVenue() bool {
-	return s.Type == InlineQueryResultVenueInlineQueryResult
-}
+func (s InlineQueryResult) IsInlineQueryResultVenue() bool { _ = "STUB: not implemented"; return false }
 
 // IsInlineQueryResultVideo reports whether InlineQueryResult is InlineQueryResultVideo.
-func (s InlineQueryResult) IsInlineQueryResultVideo() bool {
-	return s.Type == InlineQueryResultVideoInlineQueryResult
-}
+func (s InlineQueryResult) IsInlineQueryResultVideo() bool { _ = "STUB: not implemented"; return false }
 
 // IsInlineQueryResultVoice reports whether InlineQueryResult is InlineQueryResultVoice.
-func (s InlineQueryResult) IsInlineQueryResultVoice() bool {
-	return s.Type == InlineQueryResultVoiceInlineQueryResult
-}
+func (s InlineQueryResult) IsInlineQueryResultVoice() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineQueryResultCachedAudio sets InlineQueryResult to InlineQueryResultCachedAudio.
 func (s *InlineQueryResult) SetInlineQueryResultCachedAudio(v InlineQueryResultCachedAudio) {
-	s.Type = InlineQueryResultCachedAudioInlineQueryResult
-	s.InlineQueryResultCachedAudio = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultCachedAudio returns InlineQueryResultCachedAudio and true boolean if InlineQueryResult is InlineQueryResultCachedAudio.
 func (s InlineQueryResult) GetInlineQueryResultCachedAudio() (v InlineQueryResultCachedAudio, ok bool) {
-	if !s.IsInlineQueryResultCachedAudio() {
-		return v, false
-	}
-	return s.InlineQueryResultCachedAudio, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultCachedAudio), false
 }
 
 // NewInlineQueryResultCachedAudioInlineQueryResult returns new InlineQueryResult from InlineQueryResultCachedAudio.
 func NewInlineQueryResultCachedAudioInlineQueryResult(v InlineQueryResultCachedAudio) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultCachedAudio(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultCachedDocument sets InlineQueryResult to InlineQueryResultCachedDocument.
 func (s *InlineQueryResult) SetInlineQueryResultCachedDocument(v InlineQueryResultCachedDocument) {
-	s.Type = InlineQueryResultCachedDocumentInlineQueryResult
-	s.InlineQueryResultCachedDocument = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultCachedDocument returns InlineQueryResultCachedDocument and true boolean if InlineQueryResult is InlineQueryResultCachedDocument.
 func (s InlineQueryResult) GetInlineQueryResultCachedDocument() (v InlineQueryResultCachedDocument, ok bool) {
-	if !s.IsInlineQueryResultCachedDocument() {
-		return v, false
-	}
-	return s.InlineQueryResultCachedDocument, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultCachedDocument), false
 }
 
 // NewInlineQueryResultCachedDocumentInlineQueryResult returns new InlineQueryResult from InlineQueryResultCachedDocument.
 func NewInlineQueryResultCachedDocumentInlineQueryResult(v InlineQueryResultCachedDocument) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultCachedDocument(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultCachedGif sets InlineQueryResult to InlineQueryResultCachedGif.
 func (s *InlineQueryResult) SetInlineQueryResultCachedGif(v InlineQueryResultCachedGif) {
-	s.Type = InlineQueryResultCachedGifInlineQueryResult
-	s.InlineQueryResultCachedGif = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultCachedGif returns InlineQueryResultCachedGif and true boolean if InlineQueryResult is InlineQueryResultCachedGif.
 func (s InlineQueryResult) GetInlineQueryResultCachedGif() (v InlineQueryResultCachedGif, ok bool) {
-	if !s.IsInlineQueryResultCachedGif() {
-		return v, false
-	}
-	return s.InlineQueryResultCachedGif, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultCachedGif), false
 }
 
 // NewInlineQueryResultCachedGifInlineQueryResult returns new InlineQueryResult from InlineQueryResultCachedGif.
 func NewInlineQueryResultCachedGifInlineQueryResult(v InlineQueryResultCachedGif) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultCachedGif(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultCachedMpeg4Gif sets InlineQueryResult to InlineQueryResultCachedMpeg4Gif.
 func (s *InlineQueryResult) SetInlineQueryResultCachedMpeg4Gif(v InlineQueryResultCachedMpeg4Gif) {
-	s.Type = InlineQueryResultCachedMpeg4GifInlineQueryResult
-	s.InlineQueryResultCachedMpeg4Gif = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultCachedMpeg4Gif returns InlineQueryResultCachedMpeg4Gif and true boolean if InlineQueryResult is InlineQueryResultCachedMpeg4Gif.
 func (s InlineQueryResult) GetInlineQueryResultCachedMpeg4Gif() (v InlineQueryResultCachedMpeg4Gif, ok bool) {
-	if !s.IsInlineQueryResultCachedMpeg4Gif() {
-		return v, false
-	}
-	return s.InlineQueryResultCachedMpeg4Gif, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultCachedMpeg4Gif), false
 }
 
 // NewInlineQueryResultCachedMpeg4GifInlineQueryResult returns new InlineQueryResult from InlineQueryResultCachedMpeg4Gif.
 func NewInlineQueryResultCachedMpeg4GifInlineQueryResult(v InlineQueryResultCachedMpeg4Gif) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultCachedMpeg4Gif(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultCachedPhoto sets InlineQueryResult to InlineQueryResultCachedPhoto.
 func (s *InlineQueryResult) SetInlineQueryResultCachedPhoto(v InlineQueryResultCachedPhoto) {
-	s.Type = InlineQueryResultCachedPhotoInlineQueryResult
-	s.InlineQueryResultCachedPhoto = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultCachedPhoto returns InlineQueryResultCachedPhoto and true boolean if InlineQueryResult is InlineQueryResultCachedPhoto.
 func (s InlineQueryResult) GetInlineQueryResultCachedPhoto() (v InlineQueryResultCachedPhoto, ok bool) {
-	if !s.IsInlineQueryResultCachedPhoto() {
-		return v, false
-	}
-	return s.InlineQueryResultCachedPhoto, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultCachedPhoto), false
 }
 
 // NewInlineQueryResultCachedPhotoInlineQueryResult returns new InlineQueryResult from InlineQueryResultCachedPhoto.
 func NewInlineQueryResultCachedPhotoInlineQueryResult(v InlineQueryResultCachedPhoto) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultCachedPhoto(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultCachedSticker sets InlineQueryResult to InlineQueryResultCachedSticker.
 func (s *InlineQueryResult) SetInlineQueryResultCachedSticker(v InlineQueryResultCachedSticker) {
-	s.Type = InlineQueryResultCachedStickerInlineQueryResult
-	s.InlineQueryResultCachedSticker = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultCachedSticker returns InlineQueryResultCachedSticker and true boolean if InlineQueryResult is InlineQueryResultCachedSticker.
 func (s InlineQueryResult) GetInlineQueryResultCachedSticker() (v InlineQueryResultCachedSticker, ok bool) {
-	if !s.IsInlineQueryResultCachedSticker() {
-		return v, false
-	}
-	return s.InlineQueryResultCachedSticker, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultCachedSticker), false
 }
 
 // NewInlineQueryResultCachedStickerInlineQueryResult returns new InlineQueryResult from InlineQueryResultCachedSticker.
 func NewInlineQueryResultCachedStickerInlineQueryResult(v InlineQueryResultCachedSticker) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultCachedSticker(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultCachedVideo sets InlineQueryResult to InlineQueryResultCachedVideo.
 func (s *InlineQueryResult) SetInlineQueryResultCachedVideo(v InlineQueryResultCachedVideo) {
-	s.Type = InlineQueryResultCachedVideoInlineQueryResult
-	s.InlineQueryResultCachedVideo = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultCachedVideo returns InlineQueryResultCachedVideo and true boolean if InlineQueryResult is InlineQueryResultCachedVideo.
 func (s InlineQueryResult) GetInlineQueryResultCachedVideo() (v InlineQueryResultCachedVideo, ok bool) {
-	if !s.IsInlineQueryResultCachedVideo() {
-		return v, false
-	}
-	return s.InlineQueryResultCachedVideo, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultCachedVideo), false
 }
 
 // NewInlineQueryResultCachedVideoInlineQueryResult returns new InlineQueryResult from InlineQueryResultCachedVideo.
 func NewInlineQueryResultCachedVideoInlineQueryResult(v InlineQueryResultCachedVideo) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultCachedVideo(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultCachedVoice sets InlineQueryResult to InlineQueryResultCachedVoice.
 func (s *InlineQueryResult) SetInlineQueryResultCachedVoice(v InlineQueryResultCachedVoice) {
-	s.Type = InlineQueryResultCachedVoiceInlineQueryResult
-	s.InlineQueryResultCachedVoice = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultCachedVoice returns InlineQueryResultCachedVoice and true boolean if InlineQueryResult is InlineQueryResultCachedVoice.
 func (s InlineQueryResult) GetInlineQueryResultCachedVoice() (v InlineQueryResultCachedVoice, ok bool) {
-	if !s.IsInlineQueryResultCachedVoice() {
-		return v, false
-	}
-	return s.InlineQueryResultCachedVoice, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultCachedVoice), false
 }
 
 // NewInlineQueryResultCachedVoiceInlineQueryResult returns new InlineQueryResult from InlineQueryResultCachedVoice.
 func NewInlineQueryResultCachedVoiceInlineQueryResult(v InlineQueryResultCachedVoice) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultCachedVoice(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultArticle sets InlineQueryResult to InlineQueryResultArticle.
 func (s *InlineQueryResult) SetInlineQueryResultArticle(v InlineQueryResultArticle) {
-	s.Type = InlineQueryResultArticleInlineQueryResult
-	s.InlineQueryResultArticle = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultArticle returns InlineQueryResultArticle and true boolean if InlineQueryResult is InlineQueryResultArticle.
 func (s InlineQueryResult) GetInlineQueryResultArticle() (v InlineQueryResultArticle, ok bool) {
-	if !s.IsInlineQueryResultArticle() {
-		return v, false
-	}
-	return s.InlineQueryResultArticle, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultArticle), false
 }
 
 // NewInlineQueryResultArticleInlineQueryResult returns new InlineQueryResult from InlineQueryResultArticle.
 func NewInlineQueryResultArticleInlineQueryResult(v InlineQueryResultArticle) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultArticle(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultAudio sets InlineQueryResult to InlineQueryResultAudio.
 func (s *InlineQueryResult) SetInlineQueryResultAudio(v InlineQueryResultAudio) {
-	s.Type = InlineQueryResultAudioInlineQueryResult
-	s.InlineQueryResultAudio = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultAudio returns InlineQueryResultAudio and true boolean if InlineQueryResult is InlineQueryResultAudio.
 func (s InlineQueryResult) GetInlineQueryResultAudio() (v InlineQueryResultAudio, ok bool) {
-	if !s.IsInlineQueryResultAudio() {
-		return v, false
-	}
-	return s.InlineQueryResultAudio, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultAudio), false
 }
 
 // NewInlineQueryResultAudioInlineQueryResult returns new InlineQueryResult from InlineQueryResultAudio.
 func NewInlineQueryResultAudioInlineQueryResult(v InlineQueryResultAudio) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultAudio(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultContact sets InlineQueryResult to InlineQueryResultContact.
 func (s *InlineQueryResult) SetInlineQueryResultContact(v InlineQueryResultContact) {
-	s.Type = InlineQueryResultContactInlineQueryResult
-	s.InlineQueryResultContact = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultContact returns InlineQueryResultContact and true boolean if InlineQueryResult is InlineQueryResultContact.
 func (s InlineQueryResult) GetInlineQueryResultContact() (v InlineQueryResultContact, ok bool) {
-	if !s.IsInlineQueryResultContact() {
-		return v, false
-	}
-	return s.InlineQueryResultContact, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultContact), false
 }
 
 // NewInlineQueryResultContactInlineQueryResult returns new InlineQueryResult from InlineQueryResultContact.
 func NewInlineQueryResultContactInlineQueryResult(v InlineQueryResultContact) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultContact(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultGame sets InlineQueryResult to InlineQueryResultGame.
 func (s *InlineQueryResult) SetInlineQueryResultGame(v InlineQueryResultGame) {
-	s.Type = InlineQueryResultGameInlineQueryResult
-	s.InlineQueryResultGame = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultGame returns InlineQueryResultGame and true boolean if InlineQueryResult is InlineQueryResultGame.
 func (s InlineQueryResult) GetInlineQueryResultGame() (v InlineQueryResultGame, ok bool) {
-	if !s.IsInlineQueryResultGame() {
-		return v, false
-	}
-	return s.InlineQueryResultGame, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultGame), false
 }
 
 // NewInlineQueryResultGameInlineQueryResult returns new InlineQueryResult from InlineQueryResultGame.
 func NewInlineQueryResultGameInlineQueryResult(v InlineQueryResultGame) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultGame(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultDocument sets InlineQueryResult to InlineQueryResultDocument.
 func (s *InlineQueryResult) SetInlineQueryResultDocument(v InlineQueryResultDocument) {
-	s.Type = InlineQueryResultDocumentInlineQueryResult
-	s.InlineQueryResultDocument = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultDocument returns InlineQueryResultDocument and true boolean if InlineQueryResult is InlineQueryResultDocument.
 func (s InlineQueryResult) GetInlineQueryResultDocument() (v InlineQueryResultDocument, ok bool) {
-	if !s.IsInlineQueryResultDocument() {
-		return v, false
-	}
-	return s.InlineQueryResultDocument, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultDocument), false
 }
 
 // NewInlineQueryResultDocumentInlineQueryResult returns new InlineQueryResult from InlineQueryResultDocument.
 func NewInlineQueryResultDocumentInlineQueryResult(v InlineQueryResultDocument) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultDocument(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultGif sets InlineQueryResult to InlineQueryResultGif.
 func (s *InlineQueryResult) SetInlineQueryResultGif(v InlineQueryResultGif) {
-	s.Type = InlineQueryResultGifInlineQueryResult
-	s.InlineQueryResultGif = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultGif returns InlineQueryResultGif and true boolean if InlineQueryResult is InlineQueryResultGif.
 func (s InlineQueryResult) GetInlineQueryResultGif() (v InlineQueryResultGif, ok bool) {
-	if !s.IsInlineQueryResultGif() {
-		return v, false
-	}
-	return s.InlineQueryResultGif, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultGif), false
 }
 
 // NewInlineQueryResultGifInlineQueryResult returns new InlineQueryResult from InlineQueryResultGif.
 func NewInlineQueryResultGifInlineQueryResult(v InlineQueryResultGif) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultGif(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultLocation sets InlineQueryResult to InlineQueryResultLocation.
 func (s *InlineQueryResult) SetInlineQueryResultLocation(v InlineQueryResultLocation) {
-	s.Type = InlineQueryResultLocationInlineQueryResult
-	s.InlineQueryResultLocation = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultLocation returns InlineQueryResultLocation and true boolean if InlineQueryResult is InlineQueryResultLocation.
 func (s InlineQueryResult) GetInlineQueryResultLocation() (v InlineQueryResultLocation, ok bool) {
-	if !s.IsInlineQueryResultLocation() {
-		return v, false
-	}
-	return s.InlineQueryResultLocation, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultLocation), false
 }
 
 // NewInlineQueryResultLocationInlineQueryResult returns new InlineQueryResult from InlineQueryResultLocation.
 func NewInlineQueryResultLocationInlineQueryResult(v InlineQueryResultLocation) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultLocation(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultMpeg4Gif sets InlineQueryResult to InlineQueryResultMpeg4Gif.
 func (s *InlineQueryResult) SetInlineQueryResultMpeg4Gif(v InlineQueryResultMpeg4Gif) {
-	s.Type = InlineQueryResultMpeg4GifInlineQueryResult
-	s.InlineQueryResultMpeg4Gif = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultMpeg4Gif returns InlineQueryResultMpeg4Gif and true boolean if InlineQueryResult is InlineQueryResultMpeg4Gif.
 func (s InlineQueryResult) GetInlineQueryResultMpeg4Gif() (v InlineQueryResultMpeg4Gif, ok bool) {
-	if !s.IsInlineQueryResultMpeg4Gif() {
-		return v, false
-	}
-	return s.InlineQueryResultMpeg4Gif, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultMpeg4Gif), false
 }
 
 // NewInlineQueryResultMpeg4GifInlineQueryResult returns new InlineQueryResult from InlineQueryResultMpeg4Gif.
 func NewInlineQueryResultMpeg4GifInlineQueryResult(v InlineQueryResultMpeg4Gif) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultMpeg4Gif(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultPhoto sets InlineQueryResult to InlineQueryResultPhoto.
 func (s *InlineQueryResult) SetInlineQueryResultPhoto(v InlineQueryResultPhoto) {
-	s.Type = InlineQueryResultPhotoInlineQueryResult
-	s.InlineQueryResultPhoto = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultPhoto returns InlineQueryResultPhoto and true boolean if InlineQueryResult is InlineQueryResultPhoto.
 func (s InlineQueryResult) GetInlineQueryResultPhoto() (v InlineQueryResultPhoto, ok bool) {
-	if !s.IsInlineQueryResultPhoto() {
-		return v, false
-	}
-	return s.InlineQueryResultPhoto, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultPhoto), false
 }
 
 // NewInlineQueryResultPhotoInlineQueryResult returns new InlineQueryResult from InlineQueryResultPhoto.
 func NewInlineQueryResultPhotoInlineQueryResult(v InlineQueryResultPhoto) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultPhoto(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultVenue sets InlineQueryResult to InlineQueryResultVenue.
 func (s *InlineQueryResult) SetInlineQueryResultVenue(v InlineQueryResultVenue) {
-	s.Type = InlineQueryResultVenueInlineQueryResult
-	s.InlineQueryResultVenue = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultVenue returns InlineQueryResultVenue and true boolean if InlineQueryResult is InlineQueryResultVenue.
 func (s InlineQueryResult) GetInlineQueryResultVenue() (v InlineQueryResultVenue, ok bool) {
-	if !s.IsInlineQueryResultVenue() {
-		return v, false
-	}
-	return s.InlineQueryResultVenue, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultVenue), false
 }
 
 // NewInlineQueryResultVenueInlineQueryResult returns new InlineQueryResult from InlineQueryResultVenue.
 func NewInlineQueryResultVenueInlineQueryResult(v InlineQueryResultVenue) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultVenue(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultVideo sets InlineQueryResult to InlineQueryResultVideo.
 func (s *InlineQueryResult) SetInlineQueryResultVideo(v InlineQueryResultVideo) {
-	s.Type = InlineQueryResultVideoInlineQueryResult
-	s.InlineQueryResultVideo = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultVideo returns InlineQueryResultVideo and true boolean if InlineQueryResult is InlineQueryResultVideo.
 func (s InlineQueryResult) GetInlineQueryResultVideo() (v InlineQueryResultVideo, ok bool) {
-	if !s.IsInlineQueryResultVideo() {
-		return v, false
-	}
-	return s.InlineQueryResultVideo, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultVideo), false
 }
 
 // NewInlineQueryResultVideoInlineQueryResult returns new InlineQueryResult from InlineQueryResultVideo.
 func NewInlineQueryResultVideoInlineQueryResult(v InlineQueryResultVideo) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultVideo(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // SetInlineQueryResultVoice sets InlineQueryResult to InlineQueryResultVoice.
 func (s *InlineQueryResult) SetInlineQueryResultVoice(v InlineQueryResultVoice) {
-	s.Type = InlineQueryResultVoiceInlineQueryResult
-	s.InlineQueryResultVoice = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineQueryResultVoice returns InlineQueryResultVoice and true boolean if InlineQueryResult is InlineQueryResultVoice.
 func (s InlineQueryResult) GetInlineQueryResultVoice() (v InlineQueryResultVoice, ok bool) {
-	if !s.IsInlineQueryResultVoice() {
-		return v, false
-	}
-	return s.InlineQueryResultVoice, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResultVoice), false
 }
 
 // NewInlineQueryResultVoiceInlineQueryResult returns new InlineQueryResult from InlineQueryResultVoice.
 func NewInlineQueryResultVoiceInlineQueryResult(v InlineQueryResultVoice) InlineQueryResult {
-	var s InlineQueryResult
-	s.SetInlineQueryResultVoice(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InlineQueryResult)
 }
 
 // Represents a link to an article or web page.
@@ -5816,113 +6348,151 @@ type InlineQueryResultArticle struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultArticle) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultArticle) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return ""
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultArticle) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	return ""
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultArticle) GetInputMessageContent() InputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(InputMessageContent)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultArticle) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetURL returns the value of URL.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetURL returns the value of URL.
 func (s *InlineQueryResultArticle) GetURL() OptURI {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetHideURL returns the value of HideURL.
+	return *new(OptURI)
 }
 
-// GetHideURL returns the value of HideURL.
 func (s *InlineQueryResultArticle) GetHideURL() OptBool {
-	return s.HideURL
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(OptBool)
 }
 
-// GetDescription returns the value of Description.
 func (s *InlineQueryResultArticle) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetThumbURL returns the value of ThumbURL.
+	new(OptString)
 }
 
-// GetThumbURL returns the value of ThumbURL.
 func (s *InlineQueryResultArticle) GetThumbURL() OptURI {
-	return s.ThumbURL
+	_ = "STUB: not implemented"
+
+	// GetThumbWidth returns the value of ThumbWidth.
+	return *new(OptURI)
 }
 
-// GetThumbWidth returns the value of ThumbWidth.
 func (s *InlineQueryResultArticle) GetThumbWidth() OptInt {
-	return s.ThumbWidth
+	_ = "STUB: not implemented"
+	return *
+
+	// GetThumbHeight returns the value of ThumbHeight.
+	new(OptInt)
 }
 
-// GetThumbHeight returns the value of ThumbHeight.
 func (s *InlineQueryResultArticle) GetThumbHeight() OptInt {
-	return s.ThumbHeight
+	_ = "STUB: not implemented"
+	return *
+
+	// SetType sets the value of Type.
+	new(OptInt)
 }
 
-// SetType sets the value of Type.
 func (s *InlineQueryResultArticle) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultArticle) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultArticle) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetInputMessageContent sets the value of InputMessageContent.
+	return
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultArticle) SetInputMessageContent(val InputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultArticle) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetURL sets the value of URL.
 }
 
-// SetURL sets the value of URL.
 func (s *InlineQueryResultArticle) SetURL(val OptURI) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetHideURL sets the value of HideURL.
+	return
 }
 
-// SetHideURL sets the value of HideURL.
 func (s *InlineQueryResultArticle) SetHideURL(val OptBool) {
-	s.HideURL = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *InlineQueryResultArticle) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *InlineQueryResultArticle) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetThumbURL sets the value of ThumbURL.
 func (s *InlineQueryResultArticle) SetThumbURL(val OptURI) {
-	s.ThumbURL = val
+	_ = "STUB: not implemented"
+
+	// SetThumbWidth sets the value of ThumbWidth.
+	return
 }
 
-// SetThumbWidth sets the value of ThumbWidth.
 func (s *InlineQueryResultArticle) SetThumbWidth(val OptInt) {
-	s.ThumbWidth = val
+	_ = "STUB: not implemented"
+
+	// SetThumbHeight sets the value of ThumbHeight.
+	return
 }
 
-// SetThumbHeight sets the value of ThumbHeight.
-func (s *InlineQueryResultArticle) SetThumbHeight(val OptInt) {
-	s.ThumbHeight = val
-}
+func (s *InlineQueryResultArticle) SetThumbHeight(val OptInt) { _ = "STUB: not implemented"; return }
 
 // Represents a link to an MP3 audio file. By default, this audio file will be sent by the user.
 // Alternatively, you can use input_message_content to send a message with the specified content
@@ -5953,112 +6523,154 @@ type InlineQueryResultAudio struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultAudio) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultAudio) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetAudioURL returns the value of AudioURL.
+	return ""
 }
 
-// GetAudioURL returns the value of AudioURL.
 func (s *InlineQueryResultAudio) GetAudioURL() url.URL {
-	return s.AudioURL
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return *new(url.URL)
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultAudio) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return ""
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultAudio) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultAudio) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultAudio) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetPerformer returns the value of Performer.
 }
 
-// GetPerformer returns the value of Performer.
 func (s *InlineQueryResultAudio) GetPerformer() OptString {
-	return s.Performer
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAudioDuration returns the value of AudioDuration.
+	new(OptString)
 }
 
-// GetAudioDuration returns the value of AudioDuration.
 func (s *InlineQueryResultAudio) GetAudioDuration() OptInt {
-	return s.AudioDuration
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
+	new(OptInt)
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultAudio) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultAudio) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultAudio) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultAudio) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetAudioURL sets the value of AudioURL.
+	return
 }
 
-// SetAudioURL sets the value of AudioURL.
 func (s *InlineQueryResultAudio) SetAudioURL(val url.URL) {
-	s.AudioURL = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultAudio) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultAudio) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultAudio) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultAudio) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetPerformer sets the value of Performer.
 }
 
-// SetPerformer sets the value of Performer.
 func (s *InlineQueryResultAudio) SetPerformer(val OptString) {
-	s.Performer = val
+	_ = "STUB: not implemented"
+
+	// SetAudioDuration sets the value of AudioDuration.
+	return
 }
 
-// SetAudioDuration sets the value of AudioDuration.
-func (s *InlineQueryResultAudio) SetAudioDuration(val OptInt) {
-	s.AudioDuration = val
-}
+func (s *InlineQueryResultAudio) SetAudioDuration(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultAudio) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultAudio) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a link to an MP3 audio file stored on the Telegram servers. By default, this audio file
@@ -6084,82 +6696,114 @@ type InlineQueryResultCachedAudio struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultCachedAudio) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultCachedAudio) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetAudioFileID returns the value of AudioFileID.
+	return ""
 }
 
-// GetAudioFileID returns the value of AudioFileID.
 func (s *InlineQueryResultCachedAudio) GetAudioFileID() string {
-	return s.AudioFileID
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetCaption returns the value of Caption.
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultCachedAudio) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultCachedAudio) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultCachedAudio) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultCachedAudio) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultCachedAudio) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultCachedAudio) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultCachedAudio) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetAudioFileID sets the value of AudioFileID.
+	return
 }
 
-// SetAudioFileID sets the value of AudioFileID.
 func (s *InlineQueryResultCachedAudio) SetAudioFileID(val string) {
-	s.AudioFileID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetCaption sets the value of Caption.
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultCachedAudio) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultCachedAudio) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultCachedAudio) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultCachedAudio) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultCachedAudio) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a link to a file stored on the Telegram servers. By default, this file will be sent by
@@ -6189,102 +6833,143 @@ type InlineQueryResultCachedDocument struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultCachedDocument) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultCachedDocument) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return ""
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultCachedDocument) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetDocumentFileID returns the value of DocumentFileID.
+	return ""
 }
 
-// GetDocumentFileID returns the value of DocumentFileID.
 func (s *InlineQueryResultCachedDocument) GetDocumentFileID() string {
-	return s.DocumentFileID
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetDescription returns the value of Description.
 }
 
-// GetDescription returns the value of Description.
 func (s *InlineQueryResultCachedDocument) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaption returns the value of Caption.
+	new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultCachedDocument) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultCachedDocument) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultCachedDocument) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultCachedDocument) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultCachedDocument) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultCachedDocument) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultCachedDocument) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultCachedDocument) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetDocumentFileID sets the value of DocumentFileID.
+	return
 }
 
-// SetDocumentFileID sets the value of DocumentFileID.
 func (s *InlineQueryResultCachedDocument) SetDocumentFileID(val string) {
-	s.DocumentFileID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetDescription sets the value of Description.
 }
 
-// SetDescription sets the value of Description.
 func (s *InlineQueryResultCachedDocument) SetDescription(val OptString) {
-	s.Description = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetCaption sets the value of Caption.
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultCachedDocument) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultCachedDocument) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultCachedDocument) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultCachedDocument) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultCachedDocument) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a link to an animated GIF file stored on the Telegram servers. By default, this
@@ -6312,92 +6997,128 @@ type InlineQueryResultCachedGif struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultCachedGif) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultCachedGif) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetGIFFileID returns the value of GIFFileID.
+	return ""
 }
 
-// GetGIFFileID returns the value of GIFFileID.
 func (s *InlineQueryResultCachedGif) GetGIFFileID() string {
-	return s.GIFFileID
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return ""
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultCachedGif) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultCachedGif) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultCachedGif) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultCachedGif) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultCachedGif) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultCachedGif) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultCachedGif) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultCachedGif) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetGIFFileID sets the value of GIFFileID.
+	return
 }
 
-// SetGIFFileID sets the value of GIFFileID.
 func (s *InlineQueryResultCachedGif) SetGIFFileID(val string) {
-	s.GIFFileID = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultCachedGif) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultCachedGif) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultCachedGif) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultCachedGif) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultCachedGif) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultCachedGif) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a link to a video animation (H.264/MPEG-4 AVC video without sound) stored on the
@@ -6426,92 +7147,128 @@ type InlineQueryResultCachedMpeg4Gif struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultCachedMpeg4Gif) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultCachedMpeg4Gif) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetMpeg4FileID returns the value of Mpeg4FileID.
+	return ""
 }
 
-// GetMpeg4FileID returns the value of Mpeg4FileID.
 func (s *InlineQueryResultCachedMpeg4Gif) GetMpeg4FileID() string {
-	return s.Mpeg4FileID
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetTitle returns the value of Title.
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultCachedMpeg4Gif) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultCachedMpeg4Gif) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultCachedMpeg4Gif) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultCachedMpeg4Gif) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultCachedMpeg4Gif) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultCachedMpeg4Gif) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultCachedMpeg4Gif) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultCachedMpeg4Gif) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetMpeg4FileID sets the value of Mpeg4FileID.
+	return
 }
 
-// SetMpeg4FileID sets the value of Mpeg4FileID.
 func (s *InlineQueryResultCachedMpeg4Gif) SetMpeg4FileID(val string) {
-	s.Mpeg4FileID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTitle sets the value of Title.
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultCachedMpeg4Gif) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultCachedMpeg4Gif) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultCachedMpeg4Gif) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultCachedMpeg4Gif) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultCachedMpeg4Gif) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultCachedMpeg4Gif) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a link to a photo stored on the Telegram servers. By default, this photo will be sent
@@ -6541,102 +7298,143 @@ type InlineQueryResultCachedPhoto struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultCachedPhoto) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultCachedPhoto) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetPhotoFileID returns the value of PhotoFileID.
+	return ""
 }
 
-// GetPhotoFileID returns the value of PhotoFileID.
 func (s *InlineQueryResultCachedPhoto) GetPhotoFileID() string {
-	return s.PhotoFileID
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetTitle returns the value of Title.
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultCachedPhoto) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(OptString)
 }
 
-// GetDescription returns the value of Description.
 func (s *InlineQueryResultCachedPhoto) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaption returns the value of Caption.
+	new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultCachedPhoto) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultCachedPhoto) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultCachedPhoto) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultCachedPhoto) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultCachedPhoto) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultCachedPhoto) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultCachedPhoto) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoFileID sets the value of PhotoFileID.
+	return
 }
 
-// SetPhotoFileID sets the value of PhotoFileID.
 func (s *InlineQueryResultCachedPhoto) SetPhotoFileID(val string) {
-	s.PhotoFileID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTitle sets the value of Title.
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultCachedPhoto) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
 func (s *InlineQueryResultCachedPhoto) SetDescription(val OptString) {
-	s.Description = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetCaption sets the value of Caption.
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultCachedPhoto) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultCachedPhoto) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultCachedPhoto) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultCachedPhoto) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultCachedPhoto) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a link to a sticker stored on the Telegram servers. By default, this sticker will be
@@ -6656,52 +7454,71 @@ type InlineQueryResultCachedSticker struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultCachedSticker) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultCachedSticker) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetStickerFileID returns the value of StickerFileID.
+	return ""
 }
 
-// GetStickerFileID returns the value of StickerFileID.
 func (s *InlineQueryResultCachedSticker) GetStickerFileID() string {
-	return s.StickerFileID
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultCachedSticker) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultCachedSticker) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultCachedSticker) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultCachedSticker) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetStickerFileID sets the value of StickerFileID.
+	return
 }
 
-// SetStickerFileID sets the value of StickerFileID.
 func (s *InlineQueryResultCachedSticker) SetStickerFileID(val string) {
-	s.StickerFileID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultCachedSticker) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultCachedSticker) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a link to a video file stored on the Telegram servers. By default, this video file will
@@ -6731,102 +7548,143 @@ type InlineQueryResultCachedVideo struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultCachedVideo) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultCachedVideo) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetVideoFileID returns the value of VideoFileID.
+	return ""
 }
 
-// GetVideoFileID returns the value of VideoFileID.
 func (s *InlineQueryResultCachedVideo) GetVideoFileID() string {
-	return s.VideoFileID
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetTitle returns the value of Title.
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultCachedVideo) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
 func (s *InlineQueryResultCachedVideo) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaption returns the value of Caption.
+	new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultCachedVideo) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultCachedVideo) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultCachedVideo) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultCachedVideo) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultCachedVideo) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultCachedVideo) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultCachedVideo) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetVideoFileID sets the value of VideoFileID.
+	return
 }
 
-// SetVideoFileID sets the value of VideoFileID.
 func (s *InlineQueryResultCachedVideo) SetVideoFileID(val string) {
-	s.VideoFileID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTitle sets the value of Title.
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultCachedVideo) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
 func (s *InlineQueryResultCachedVideo) SetDescription(val OptString) {
-	s.Description = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetCaption sets the value of Caption.
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultCachedVideo) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultCachedVideo) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultCachedVideo) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultCachedVideo) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultCachedVideo) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a link to a voice message stored on the Telegram servers. By default, this voice
@@ -6854,92 +7712,128 @@ type InlineQueryResultCachedVoice struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultCachedVoice) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultCachedVoice) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetVoiceFileID returns the value of VoiceFileID.
+	return ""
 }
 
-// GetVoiceFileID returns the value of VoiceFileID.
 func (s *InlineQueryResultCachedVoice) GetVoiceFileID() string {
-	return s.VoiceFileID
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetTitle returns the value of Title.
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultCachedVoice) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return ""
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultCachedVoice) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultCachedVoice) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultCachedVoice) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultCachedVoice) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultCachedVoice) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultCachedVoice) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultCachedVoice) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetVoiceFileID sets the value of VoiceFileID.
+	return
 }
 
-// SetVoiceFileID sets the value of VoiceFileID.
 func (s *InlineQueryResultCachedVoice) SetVoiceFileID(val string) {
-	s.VoiceFileID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTitle sets the value of Title.
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultCachedVoice) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultCachedVoice) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultCachedVoice) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultCachedVoice) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultCachedVoice) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultCachedVoice) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a contact with a phone number. By default, this contact will be sent by the user.
@@ -6971,113 +7865,146 @@ type InlineQueryResultContact struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultContact) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultContact) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetPhoneNumber returns the value of PhoneNumber.
+	return ""
 }
 
-// GetPhoneNumber returns the value of PhoneNumber.
-func (s *InlineQueryResultContact) GetPhoneNumber() string {
-	return s.PhoneNumber
-}
+func (s *InlineQueryResultContact) GetPhoneNumber() string { _ = "STUB: not implemented"; return "" }
 
 // GetFirstName returns the value of FirstName.
 func (s *InlineQueryResultContact) GetFirstName() string {
-	return s.FirstName
+	_ = "STUB: not implemented"
+
+	// GetLastName returns the value of LastName.
+	return ""
 }
 
-// GetLastName returns the value of LastName.
 func (s *InlineQueryResultContact) GetLastName() OptString {
-	return s.LastName
+	_ = "STUB: not implemented"
+
+	// GetVcard returns the value of Vcard.
+	return *new(OptString)
 }
 
-// GetVcard returns the value of Vcard.
 func (s *InlineQueryResultContact) GetVcard() OptString {
-	return s.Vcard
+	_ = "STUB: not implemented"
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
+	return *new(OptString)
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultContact) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultContact) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // GetThumbURL returns the value of ThumbURL.
 func (s *InlineQueryResultContact) GetThumbURL() OptURI {
-	return s.ThumbURL
+	_ = "STUB: not implemented"
+
+	// GetThumbWidth returns the value of ThumbWidth.
+	return *new(OptURI)
 }
 
-// GetThumbWidth returns the value of ThumbWidth.
 func (s *InlineQueryResultContact) GetThumbWidth() OptInt {
-	return s.ThumbWidth
+	_ = "STUB: not implemented"
+	return *
+
+	// GetThumbHeight returns the value of ThumbHeight.
+	new(OptInt)
 }
 
-// GetThumbHeight returns the value of ThumbHeight.
 func (s *InlineQueryResultContact) GetThumbHeight() OptInt {
-	return s.ThumbHeight
+	_ = "STUB: not implemented"
+	return *
+
+	// SetType sets the value of Type.
+	new(OptInt)
 }
 
-// SetType sets the value of Type.
 func (s *InlineQueryResultContact) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultContact) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetPhoneNumber sets the value of PhoneNumber.
+	return
 }
 
-// SetPhoneNumber sets the value of PhoneNumber.
-func (s *InlineQueryResultContact) SetPhoneNumber(val string) {
-	s.PhoneNumber = val
-}
+func (s *InlineQueryResultContact) SetPhoneNumber(val string) { _ = "STUB: not implemented"; return }
 
 // SetFirstName sets the value of FirstName.
 func (s *InlineQueryResultContact) SetFirstName(val string) {
-	s.FirstName = val
+	_ = "STUB: not implemented"
+
+	// SetLastName sets the value of LastName.
+	return
 }
 
-// SetLastName sets the value of LastName.
 func (s *InlineQueryResultContact) SetLastName(val OptString) {
-	s.LastName = val
+	_ = "STUB: not implemented"
+
+	// SetVcard sets the value of Vcard.
+	return
 }
 
-// SetVcard sets the value of Vcard.
 func (s *InlineQueryResultContact) SetVcard(val OptString) {
-	s.Vcard = val
+	_ = "STUB: not implemented"
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
+	return
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultContact) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultContact) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetThumbURL sets the value of ThumbURL.
 func (s *InlineQueryResultContact) SetThumbURL(val OptURI) {
-	s.ThumbURL = val
+	_ = "STUB: not implemented"
+
+	// SetThumbWidth sets the value of ThumbWidth.
+	return
 }
 
-// SetThumbWidth sets the value of ThumbWidth.
 func (s *InlineQueryResultContact) SetThumbWidth(val OptInt) {
-	s.ThumbWidth = val
+	_ = "STUB: not implemented"
+
+	// SetThumbHeight sets the value of ThumbHeight.
+	return
 }
 
-// SetThumbHeight sets the value of ThumbHeight.
-func (s *InlineQueryResultContact) SetThumbHeight(val OptInt) {
-	s.ThumbHeight = val
-}
+func (s *InlineQueryResultContact) SetThumbHeight(val OptInt) { _ = "STUB: not implemented"; return }
 
 // Represents a link to a file. By default, this file will be sent by the user with an optional
 // caption. Alternatively, you can use input_message_content to send a message with the specified
@@ -7114,143 +8041,195 @@ type InlineQueryResultDocument struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultDocument) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultDocument) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return ""
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultDocument) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return ""
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultDocument) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultDocument) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultDocument) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetDocumentURL returns the value of DocumentURL.
 }
 
-// GetDocumentURL returns the value of DocumentURL.
 func (s *InlineQueryResultDocument) GetDocumentURL() url.URL {
-	return s.DocumentURL
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMimeType returns the value of MimeType.
+	new(url.URL)
 }
 
-// GetMimeType returns the value of MimeType.
 func (s *InlineQueryResultDocument) GetMimeType() string {
-	return s.MimeType
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
 func (s *InlineQueryResultDocument) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
+	new(OptString)
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultDocument) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultDocument) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // GetThumbURL returns the value of ThumbURL.
 func (s *InlineQueryResultDocument) GetThumbURL() OptURI {
-	return s.ThumbURL
+	_ = "STUB: not implemented"
+
+	// GetThumbWidth returns the value of ThumbWidth.
+	return *new(OptURI)
 }
 
-// GetThumbWidth returns the value of ThumbWidth.
 func (s *InlineQueryResultDocument) GetThumbWidth() OptInt {
-	return s.ThumbWidth
+	_ = "STUB: not implemented"
+	return *
+
+	// GetThumbHeight returns the value of ThumbHeight.
+	new(OptInt)
 }
 
-// GetThumbHeight returns the value of ThumbHeight.
 func (s *InlineQueryResultDocument) GetThumbHeight() OptInt {
-	return s.ThumbHeight
+	_ = "STUB: not implemented"
+	return *
+
+	// SetType sets the value of Type.
+	new(OptInt)
 }
 
-// SetType sets the value of Type.
 func (s *InlineQueryResultDocument) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultDocument) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultDocument) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultDocument) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultDocument) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultDocument) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetDocumentURL sets the value of DocumentURL.
 }
 
-// SetDocumentURL sets the value of DocumentURL.
-func (s *InlineQueryResultDocument) SetDocumentURL(val url.URL) {
-	s.DocumentURL = val
-}
+func (s *InlineQueryResultDocument) SetDocumentURL(val url.URL) { _ = "STUB: not implemented"; return }
 
 // SetMimeType sets the value of MimeType.
 func (s *InlineQueryResultDocument) SetMimeType(val string) {
-	s.MimeType = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
 func (s *InlineQueryResultDocument) SetDescription(val OptString) {
-	s.Description = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultDocument) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultDocument) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetThumbURL sets the value of ThumbURL.
 func (s *InlineQueryResultDocument) SetThumbURL(val OptURI) {
-	s.ThumbURL = val
+	_ = "STUB: not implemented"
+
+	// SetThumbWidth sets the value of ThumbWidth.
+	return
 }
 
-// SetThumbWidth sets the value of ThumbWidth.
 func (s *InlineQueryResultDocument) SetThumbWidth(val OptInt) {
-	s.ThumbWidth = val
+	_ = "STUB: not implemented"
+
+	// SetThumbHeight sets the value of ThumbHeight.
+	return
 }
 
-// SetThumbHeight sets the value of ThumbHeight.
-func (s *InlineQueryResultDocument) SetThumbHeight(val OptInt) {
-	s.ThumbHeight = val
-}
+func (s *InlineQueryResultDocument) SetThumbHeight(val OptInt) { _ = "STUB: not implemented"; return }
 
 // Represents a Game.
 // Ref: #/components/schemas/InlineQueryResultGame
@@ -7266,48 +8245,57 @@ type InlineQueryResultGame struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultGame) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultGame) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetGameShortName returns the value of GameShortName.
+	return ""
 }
 
-// GetGameShortName returns the value of GameShortName.
-func (s *InlineQueryResultGame) GetGameShortName() string {
-	return s.GameShortName
-}
+func (s *InlineQueryResultGame) GetGameShortName() string { _ = "STUB: not implemented"; return "" }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultGame) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetType sets the value of Type.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetType sets the value of Type.
 func (s *InlineQueryResultGame) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultGame) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetGameShortName sets the value of GameShortName.
+	return
 }
 
-// SetGameShortName sets the value of GameShortName.
-func (s *InlineQueryResultGame) SetGameShortName(val string) {
-	s.GameShortName = val
-}
+func (s *InlineQueryResultGame) SetGameShortName(val string) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultGame) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Represents a link to an animated GIF file. By default, this animated GIF file will be sent by the
+	// user with optional caption. Alternatively, you can use input_message_content to send a message
+	// with the specified content instead of the animation.
+	// Ref: #/components/schemas/InlineQueryResultGif
 }
 
-// Represents a link to an animated GIF file. By default, this animated GIF file will be sent by the
-// user with optional caption. Alternatively, you can use input_message_content to send a message
-// with the specified content instead of the animation.
-// Ref: #/components/schemas/InlineQueryResultGif
 type InlineQueryResultGif struct {
 	// Type of the result, must be gif.
 	Type string `json:"type"`
@@ -7340,142 +8328,193 @@ type InlineQueryResultGif struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultGif) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultGif) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetGIFURL returns the value of GIFURL.
+	return ""
 }
 
-// GetGIFURL returns the value of GIFURL.
 func (s *InlineQueryResultGif) GetGIFURL() url.URL {
-	return s.GIFURL
+	_ = "STUB: not implemented"
+
+	// GetGIFWidth returns the value of GIFWidth.
+	return *new(url.URL)
 }
 
-// GetGIFWidth returns the value of GIFWidth.
 func (s *InlineQueryResultGif) GetGIFWidth() OptInt {
-	return s.GIFWidth
+	_ = "STUB: not implemented"
+
+	// GetGIFHeight returns the value of GIFHeight.
+	return *new(OptInt)
 }
 
-// GetGIFHeight returns the value of GIFHeight.
 func (s *InlineQueryResultGif) GetGIFHeight() OptInt {
-	return s.GIFHeight
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGIFDuration returns the value of GIFDuration.
+	new(OptInt)
 }
 
-// GetGIFDuration returns the value of GIFDuration.
 func (s *InlineQueryResultGif) GetGIFDuration() OptInt {
-	return s.GIFDuration
+	_ = "STUB: not implemented"
+	return *
+
+	// GetThumbURL returns the value of ThumbURL.
+	new(OptInt)
 }
 
-// GetThumbURL returns the value of ThumbURL.
 func (s *InlineQueryResultGif) GetThumbURL() url.URL {
-	return s.ThumbURL
+	_ = "STUB: not implemented"
+
+	// GetThumbMimeType returns the value of ThumbMimeType.
+	return *new(url.URL)
 }
 
-// GetThumbMimeType returns the value of ThumbMimeType.
 func (s *InlineQueryResultGif) GetThumbMimeType() OptString {
-	return s.ThumbMimeType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTitle returns the value of Title.
+	new(OptString)
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultGif) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultGif) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultGif) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultGif) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultGif) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultGif) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultGif) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultGif) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetGIFURL sets the value of GIFURL.
+	return
 }
 
-// SetGIFURL sets the value of GIFURL.
 func (s *InlineQueryResultGif) SetGIFURL(val url.URL) {
-	s.GIFURL = val
+	_ = "STUB: not implemented"
+
+	// SetGIFWidth sets the value of GIFWidth.
+	return
 }
 
-// SetGIFWidth sets the value of GIFWidth.
 func (s *InlineQueryResultGif) SetGIFWidth(val OptInt) {
-	s.GIFWidth = val
+	_ = "STUB: not implemented"
+
+	// SetGIFHeight sets the value of GIFHeight.
+	return
 }
 
-// SetGIFHeight sets the value of GIFHeight.
 func (s *InlineQueryResultGif) SetGIFHeight(val OptInt) {
-	s.GIFHeight = val
+	_ = "STUB: not implemented"
+
+	// SetGIFDuration sets the value of GIFDuration.
+	return
 }
 
-// SetGIFDuration sets the value of GIFDuration.
-func (s *InlineQueryResultGif) SetGIFDuration(val OptInt) {
-	s.GIFDuration = val
-}
+func (s *InlineQueryResultGif) SetGIFDuration(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetThumbURL sets the value of ThumbURL.
 func (s *InlineQueryResultGif) SetThumbURL(val url.URL) {
-	s.ThumbURL = val
+	_ = "STUB: not implemented"
+
+	// SetThumbMimeType sets the value of ThumbMimeType.
+	return
 }
 
-// SetThumbMimeType sets the value of ThumbMimeType.
-func (s *InlineQueryResultGif) SetThumbMimeType(val OptString) {
-	s.ThumbMimeType = val
-}
+func (s *InlineQueryResultGif) SetThumbMimeType(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetTitle sets the value of Title.
 func (s *InlineQueryResultGif) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultGif) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultGif) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultGif) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultGif) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultGif) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a location on a map. By default, the location will be sent by the user. Alternatively,
@@ -7515,143 +8554,193 @@ type InlineQueryResultLocation struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultLocation) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultLocation) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetLatitude returns the value of Latitude.
+	return ""
 }
 
-// GetLatitude returns the value of Latitude.
 func (s *InlineQueryResultLocation) GetLatitude() float64 {
-	return s.Latitude
+	_ = "STUB: not implemented"
+
+	// GetLongitude returns the value of Longitude.
+	return 0
 }
 
-// GetLongitude returns the value of Longitude.
 func (s *InlineQueryResultLocation) GetLongitude() float64 {
-	return s.Longitude
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return 0
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultLocation) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetHorizontalAccuracy returns the value of HorizontalAccuracy.
+	return ""
 }
 
-// GetHorizontalAccuracy returns the value of HorizontalAccuracy.
 func (s *InlineQueryResultLocation) GetHorizontalAccuracy() OptFloat64 {
-	return s.HorizontalAccuracy
+	_ = "STUB: not implemented"
+	return *new(OptFloat64)
 }
 
 // GetLivePeriod returns the value of LivePeriod.
 func (s *InlineQueryResultLocation) GetLivePeriod() OptInt {
-	return s.LivePeriod
+	_ = "STUB: not implemented"
+	return *
+
+	// GetHeading returns the value of Heading.
+	new(OptInt)
 }
 
-// GetHeading returns the value of Heading.
 func (s *InlineQueryResultLocation) GetHeading() OptInt {
-	return s.Heading
+	_ = "STUB: not implemented"
+
+	// GetProximityAlertRadius returns the value of ProximityAlertRadius.
+	return *new(OptInt)
 }
 
-// GetProximityAlertRadius returns the value of ProximityAlertRadius.
 func (s *InlineQueryResultLocation) GetProximityAlertRadius() OptInt {
-	return s.ProximityAlertRadius
+	_ = "STUB: not implemented"
+	return *new(OptInt)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultLocation) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultLocation) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // GetThumbURL returns the value of ThumbURL.
 func (s *InlineQueryResultLocation) GetThumbURL() OptURI {
-	return s.ThumbURL
+	_ = "STUB: not implemented"
+
+	// GetThumbWidth returns the value of ThumbWidth.
+	return *new(OptURI)
 }
 
-// GetThumbWidth returns the value of ThumbWidth.
 func (s *InlineQueryResultLocation) GetThumbWidth() OptInt {
-	return s.ThumbWidth
+	_ = "STUB: not implemented"
+	return *
+
+	// GetThumbHeight returns the value of ThumbHeight.
+	new(OptInt)
 }
 
-// GetThumbHeight returns the value of ThumbHeight.
 func (s *InlineQueryResultLocation) GetThumbHeight() OptInt {
-	return s.ThumbHeight
+	_ = "STUB: not implemented"
+	return *
+
+	// SetType sets the value of Type.
+	new(OptInt)
 }
 
-// SetType sets the value of Type.
 func (s *InlineQueryResultLocation) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultLocation) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetLatitude sets the value of Latitude.
+	return
 }
 
-// SetLatitude sets the value of Latitude.
 func (s *InlineQueryResultLocation) SetLatitude(val float64) {
-	s.Latitude = val
+	_ = "STUB: not implemented"
+
+	// SetLongitude sets the value of Longitude.
+	return
 }
 
-// SetLongitude sets the value of Longitude.
 func (s *InlineQueryResultLocation) SetLongitude(val float64) {
-	s.Longitude = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultLocation) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetHorizontalAccuracy sets the value of HorizontalAccuracy.
+	return
 }
 
-// SetHorizontalAccuracy sets the value of HorizontalAccuracy.
 func (s *InlineQueryResultLocation) SetHorizontalAccuracy(val OptFloat64) {
-	s.HorizontalAccuracy = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetLivePeriod sets the value of LivePeriod.
 func (s *InlineQueryResultLocation) SetLivePeriod(val OptInt) {
-	s.LivePeriod = val
+	_ = "STUB: not implemented"
+
+	// SetHeading sets the value of Heading.
+	return
 }
 
-// SetHeading sets the value of Heading.
 func (s *InlineQueryResultLocation) SetHeading(val OptInt) {
-	s.Heading = val
+	_ = "STUB: not implemented"
+
+	// SetProximityAlertRadius sets the value of ProximityAlertRadius.
+	return
 }
 
-// SetProximityAlertRadius sets the value of ProximityAlertRadius.
 func (s *InlineQueryResultLocation) SetProximityAlertRadius(val OptInt) {
-	s.ProximityAlertRadius = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultLocation) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultLocation) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetThumbURL sets the value of ThumbURL.
 func (s *InlineQueryResultLocation) SetThumbURL(val OptURI) {
-	s.ThumbURL = val
+	_ = "STUB: not implemented"
+
+	// SetThumbWidth sets the value of ThumbWidth.
+	return
 }
 
-// SetThumbWidth sets the value of ThumbWidth.
 func (s *InlineQueryResultLocation) SetThumbWidth(val OptInt) {
-	s.ThumbWidth = val
+	_ = "STUB: not implemented"
+
+	// SetThumbHeight sets the value of ThumbHeight.
+	return
 }
 
-// SetThumbHeight sets the value of ThumbHeight.
-func (s *InlineQueryResultLocation) SetThumbHeight(val OptInt) {
-	s.ThumbHeight = val
-}
+func (s *InlineQueryResultLocation) SetThumbHeight(val OptInt) { _ = "STUB: not implemented"; return }
 
 // Represents a link to a video animation (H.264/MPEG-4 AVC video without sound). By default, this
 // animated MPEG-4 file will be sent by the user with optional caption. Alternatively, you can use
@@ -7689,142 +8778,194 @@ type InlineQueryResultMpeg4Gif struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultMpeg4Gif) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultMpeg4Gif) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetMpeg4URL returns the value of Mpeg4URL.
+	return ""
 }
 
-// GetMpeg4URL returns the value of Mpeg4URL.
 func (s *InlineQueryResultMpeg4Gif) GetMpeg4URL() url.URL {
-	return s.Mpeg4URL
+	_ = "STUB: not implemented"
+
+	// GetMpeg4Width returns the value of Mpeg4Width.
+	return *new(url.URL)
 }
 
-// GetMpeg4Width returns the value of Mpeg4Width.
 func (s *InlineQueryResultMpeg4Gif) GetMpeg4Width() OptInt {
-	return s.Mpeg4Width
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMpeg4Height returns the value of Mpeg4Height.
+	new(OptInt)
 }
 
-// GetMpeg4Height returns the value of Mpeg4Height.
 func (s *InlineQueryResultMpeg4Gif) GetMpeg4Height() OptInt {
-	return s.Mpeg4Height
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMpeg4Duration returns the value of Mpeg4Duration.
+	new(OptInt)
 }
 
-// GetMpeg4Duration returns the value of Mpeg4Duration.
 func (s *InlineQueryResultMpeg4Gif) GetMpeg4Duration() OptInt {
-	return s.Mpeg4Duration
+	_ = "STUB: not implemented"
+	return *
+
+	// GetThumbURL returns the value of ThumbURL.
+	new(OptInt)
 }
 
-// GetThumbURL returns the value of ThumbURL.
 func (s *InlineQueryResultMpeg4Gif) GetThumbURL() url.URL {
-	return s.ThumbURL
+	_ = "STUB: not implemented"
+
+	// GetThumbMimeType returns the value of ThumbMimeType.
+	return *new(url.URL)
 }
 
-// GetThumbMimeType returns the value of ThumbMimeType.
 func (s *InlineQueryResultMpeg4Gif) GetThumbMimeType() OptString {
-	return s.ThumbMimeType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTitle returns the value of Title.
+	new(OptString)
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultMpeg4Gif) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultMpeg4Gif) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultMpeg4Gif) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultMpeg4Gif) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultMpeg4Gif) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultMpeg4Gif) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultMpeg4Gif) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultMpeg4Gif) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetMpeg4URL sets the value of Mpeg4URL.
+	return
 }
 
-// SetMpeg4URL sets the value of Mpeg4URL.
 func (s *InlineQueryResultMpeg4Gif) SetMpeg4URL(val url.URL) {
-	s.Mpeg4URL = val
+	_ = "STUB: not implemented"
+
+	// SetMpeg4Width sets the value of Mpeg4Width.
+	return
 }
 
-// SetMpeg4Width sets the value of Mpeg4Width.
 func (s *InlineQueryResultMpeg4Gif) SetMpeg4Width(val OptInt) {
-	s.Mpeg4Width = val
+	_ = "STUB: not implemented"
+
+	// SetMpeg4Height sets the value of Mpeg4Height.
+	return
 }
 
-// SetMpeg4Height sets the value of Mpeg4Height.
-func (s *InlineQueryResultMpeg4Gif) SetMpeg4Height(val OptInt) {
-	s.Mpeg4Height = val
-}
+func (s *InlineQueryResultMpeg4Gif) SetMpeg4Height(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetMpeg4Duration sets the value of Mpeg4Duration.
-func (s *InlineQueryResultMpeg4Gif) SetMpeg4Duration(val OptInt) {
-	s.Mpeg4Duration = val
-}
+func (s *InlineQueryResultMpeg4Gif) SetMpeg4Duration(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetThumbURL sets the value of ThumbURL.
 func (s *InlineQueryResultMpeg4Gif) SetThumbURL(val url.URL) {
-	s.ThumbURL = val
+	_ = "STUB: not implemented"
+
+	// SetThumbMimeType sets the value of ThumbMimeType.
+	return
 }
 
-// SetThumbMimeType sets the value of ThumbMimeType.
 func (s *InlineQueryResultMpeg4Gif) SetThumbMimeType(val OptString) {
-	s.ThumbMimeType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTitle sets the value of Title.
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultMpeg4Gif) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultMpeg4Gif) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultMpeg4Gif) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultMpeg4Gif) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultMpeg4Gif) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultMpeg4Gif) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a link to a photo. By default, this photo will be sent by the user with optional
@@ -7860,132 +9001,179 @@ type InlineQueryResultPhoto struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultPhoto) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultPhoto) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetPhotoURL returns the value of PhotoURL.
+	return ""
 }
 
-// GetPhotoURL returns the value of PhotoURL.
 func (s *InlineQueryResultPhoto) GetPhotoURL() url.URL {
-	return s.PhotoURL
+	_ = "STUB: not implemented"
+
+	// GetThumbURL returns the value of ThumbURL.
+	return *new(url.URL)
 }
 
-// GetThumbURL returns the value of ThumbURL.
 func (s *InlineQueryResultPhoto) GetThumbURL() url.URL {
-	return s.ThumbURL
+	_ = "STUB: not implemented"
+
+	// GetPhotoWidth returns the value of PhotoWidth.
+	return *new(url.URL)
 }
 
-// GetPhotoWidth returns the value of PhotoWidth.
 func (s *InlineQueryResultPhoto) GetPhotoWidth() OptInt {
-	return s.PhotoWidth
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPhotoHeight returns the value of PhotoHeight.
+	new(OptInt)
 }
 
-// GetPhotoHeight returns the value of PhotoHeight.
 func (s *InlineQueryResultPhoto) GetPhotoHeight() OptInt {
-	return s.PhotoHeight
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTitle returns the value of Title.
+	new(OptInt)
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultPhoto) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(OptString)
 }
 
-// GetDescription returns the value of Description.
 func (s *InlineQueryResultPhoto) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaption returns the value of Caption.
+	new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultPhoto) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultPhoto) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultPhoto) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultPhoto) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultPhoto) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultPhoto) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultPhoto) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoURL sets the value of PhotoURL.
+	return
 }
 
-// SetPhotoURL sets the value of PhotoURL.
 func (s *InlineQueryResultPhoto) SetPhotoURL(val url.URL) {
-	s.PhotoURL = val
+	_ = "STUB: not implemented"
+
+	// SetThumbURL sets the value of ThumbURL.
+	return
 }
 
-// SetThumbURL sets the value of ThumbURL.
 func (s *InlineQueryResultPhoto) SetThumbURL(val url.URL) {
-	s.ThumbURL = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoWidth sets the value of PhotoWidth.
+	return
 }
 
-// SetPhotoWidth sets the value of PhotoWidth.
 func (s *InlineQueryResultPhoto) SetPhotoWidth(val OptInt) {
-	s.PhotoWidth = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoHeight sets the value of PhotoHeight.
+	return
 }
 
-// SetPhotoHeight sets the value of PhotoHeight.
-func (s *InlineQueryResultPhoto) SetPhotoHeight(val OptInt) {
-	s.PhotoHeight = val
-}
+func (s *InlineQueryResultPhoto) SetPhotoHeight(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetTitle sets the value of Title.
 func (s *InlineQueryResultPhoto) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *InlineQueryResultPhoto) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *InlineQueryResultPhoto) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetCaption sets the value of Caption.
 func (s *InlineQueryResultPhoto) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultPhoto) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultPhoto) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultPhoto) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultPhoto) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a venue. By default, the venue will be sent by the user. Alternatively, you can use
@@ -8025,153 +9213,206 @@ type InlineQueryResultVenue struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultVenue) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultVenue) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetLatitude returns the value of Latitude.
+	return ""
 }
 
-// GetLatitude returns the value of Latitude.
 func (s *InlineQueryResultVenue) GetLatitude() float64 {
-	return s.Latitude
+	_ = "STUB: not implemented"
+
+	// GetLongitude returns the value of Longitude.
+	return 0
 }
 
-// GetLongitude returns the value of Longitude.
 func (s *InlineQueryResultVenue) GetLongitude() float64 {
-	return s.Longitude
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return 0
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultVenue) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetAddress returns the value of Address.
+	return ""
 }
 
-// GetAddress returns the value of Address.
 func (s *InlineQueryResultVenue) GetAddress() string {
-	return s.Address
+	_ = "STUB: not implemented"
+
+	// GetFoursquareID returns the value of FoursquareID.
+	return ""
 }
 
-// GetFoursquareID returns the value of FoursquareID.
 func (s *InlineQueryResultVenue) GetFoursquareID() OptString {
-	return s.FoursquareID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFoursquareType returns the value of FoursquareType.
+	new(OptString)
 }
 
-// GetFoursquareType returns the value of FoursquareType.
 func (s *InlineQueryResultVenue) GetFoursquareType() OptString {
-	return s.FoursquareType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGooglePlaceID returns the value of GooglePlaceID.
+	new(OptString)
 }
 
-// GetGooglePlaceID returns the value of GooglePlaceID.
 func (s *InlineQueryResultVenue) GetGooglePlaceID() OptString {
-	return s.GooglePlaceID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGooglePlaceType returns the value of GooglePlaceType.
+	new(OptString)
 }
 
-// GetGooglePlaceType returns the value of GooglePlaceType.
 func (s *InlineQueryResultVenue) GetGooglePlaceType() OptString {
-	return s.GooglePlaceType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
+	new(OptString)
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultVenue) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultVenue) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // GetThumbURL returns the value of ThumbURL.
 func (s *InlineQueryResultVenue) GetThumbURL() OptURI {
-	return s.ThumbURL
+	_ = "STUB: not implemented"
+
+	// GetThumbWidth returns the value of ThumbWidth.
+	return *new(OptURI)
 }
 
-// GetThumbWidth returns the value of ThumbWidth.
 func (s *InlineQueryResultVenue) GetThumbWidth() OptInt {
-	return s.ThumbWidth
+	_ = "STUB: not implemented"
+	return *
+
+	// GetThumbHeight returns the value of ThumbHeight.
+	new(OptInt)
 }
 
-// GetThumbHeight returns the value of ThumbHeight.
 func (s *InlineQueryResultVenue) GetThumbHeight() OptInt {
-	return s.ThumbHeight
+	_ = "STUB: not implemented"
+	return *
+
+	// SetType sets the value of Type.
+	new(OptInt)
 }
 
-// SetType sets the value of Type.
 func (s *InlineQueryResultVenue) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultVenue) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetLatitude sets the value of Latitude.
+	return
 }
 
-// SetLatitude sets the value of Latitude.
 func (s *InlineQueryResultVenue) SetLatitude(val float64) {
-	s.Latitude = val
+	_ = "STUB: not implemented"
+
+	// SetLongitude sets the value of Longitude.
+	return
 }
 
-// SetLongitude sets the value of Longitude.
 func (s *InlineQueryResultVenue) SetLongitude(val float64) {
-	s.Longitude = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultVenue) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetAddress sets the value of Address.
+	return
 }
 
-// SetAddress sets the value of Address.
 func (s *InlineQueryResultVenue) SetAddress(val string) {
-	s.Address = val
+	_ = "STUB: not implemented"
+
+	// SetFoursquareID sets the value of FoursquareID.
+	return
 }
 
-// SetFoursquareID sets the value of FoursquareID.
-func (s *InlineQueryResultVenue) SetFoursquareID(val OptString) {
-	s.FoursquareID = val
-}
+func (s *InlineQueryResultVenue) SetFoursquareID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetFoursquareType sets the value of FoursquareType.
 func (s *InlineQueryResultVenue) SetFoursquareType(val OptString) {
-	s.FoursquareType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetGooglePlaceID sets the value of GooglePlaceID.
 }
 
-// SetGooglePlaceID sets the value of GooglePlaceID.
-func (s *InlineQueryResultVenue) SetGooglePlaceID(val OptString) {
-	s.GooglePlaceID = val
-}
+func (s *InlineQueryResultVenue) SetGooglePlaceID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetGooglePlaceType sets the value of GooglePlaceType.
 func (s *InlineQueryResultVenue) SetGooglePlaceType(val OptString) {
-	s.GooglePlaceType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultVenue) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultVenue) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetThumbURL sets the value of ThumbURL.
 func (s *InlineQueryResultVenue) SetThumbURL(val OptURI) {
-	s.ThumbURL = val
+	_ = "STUB: not implemented"
+
+	// SetThumbWidth sets the value of ThumbWidth.
+	return
 }
 
-// SetThumbWidth sets the value of ThumbWidth.
 func (s *InlineQueryResultVenue) SetThumbWidth(val OptInt) {
-	s.ThumbWidth = val
+	_ = "STUB: not implemented"
+
+	// SetThumbHeight sets the value of ThumbHeight.
+	return
 }
 
-// SetThumbHeight sets the value of ThumbHeight.
-func (s *InlineQueryResultVenue) SetThumbHeight(val OptInt) {
-	s.ThumbHeight = val
-}
+func (s *InlineQueryResultVenue) SetThumbHeight(val OptInt) { _ = "STUB: not implemented"; return }
 
 // Represents a link to a page containing an embedded video player or a video file. By default, this
 // video file will be sent by the user with an optional caption. Alternatively, you can use
@@ -8210,152 +9451,204 @@ type InlineQueryResultVideo struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultVideo) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultVideo) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetVideoURL returns the value of VideoURL.
+	return ""
 }
 
-// GetVideoURL returns the value of VideoURL.
 func (s *InlineQueryResultVideo) GetVideoURL() url.URL {
-	return s.VideoURL
+	_ = "STUB: not implemented"
+
+	// GetMimeType returns the value of MimeType.
+	return *new(url.URL)
 }
 
-// GetMimeType returns the value of MimeType.
 func (s *InlineQueryResultVideo) GetMimeType() string {
-	return s.MimeType
+	_ = "STUB: not implemented"
+
+	// GetThumbURL returns the value of ThumbURL.
+	return ""
 }
 
-// GetThumbURL returns the value of ThumbURL.
 func (s *InlineQueryResultVideo) GetThumbURL() url.URL {
-	return s.ThumbURL
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return *new(url.URL)
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultVideo) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return ""
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultVideo) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultVideo) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultVideo) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetVideoWidth returns the value of VideoWidth.
 }
 
-// GetVideoWidth returns the value of VideoWidth.
 func (s *InlineQueryResultVideo) GetVideoWidth() OptInt {
-	return s.VideoWidth
+	_ = "STUB: not implemented"
+	return *
+
+	// GetVideoHeight returns the value of VideoHeight.
+	new(OptInt)
 }
 
-// GetVideoHeight returns the value of VideoHeight.
 func (s *InlineQueryResultVideo) GetVideoHeight() OptInt {
-	return s.VideoHeight
+	_ = "STUB: not implemented"
+	return *
+
+	// GetVideoDuration returns the value of VideoDuration.
+	new(OptInt)
 }
 
-// GetVideoDuration returns the value of VideoDuration.
 func (s *InlineQueryResultVideo) GetVideoDuration() OptInt {
-	return s.VideoDuration
+	_ = "STUB: not implemented"
+	return *
+
+	// GetDescription returns the value of Description.
+	new(OptInt)
 }
 
-// GetDescription returns the value of Description.
 func (s *InlineQueryResultVideo) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
+	new(OptString)
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultVideo) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultVideo) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultVideo) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultVideo) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetVideoURL sets the value of VideoURL.
+	return
 }
 
-// SetVideoURL sets the value of VideoURL.
 func (s *InlineQueryResultVideo) SetVideoURL(val url.URL) {
-	s.VideoURL = val
+	_ = "STUB: not implemented"
+
+	// SetMimeType sets the value of MimeType.
+	return
 }
 
-// SetMimeType sets the value of MimeType.
 func (s *InlineQueryResultVideo) SetMimeType(val string) {
-	s.MimeType = val
+	_ = "STUB: not implemented"
+
+	// SetThumbURL sets the value of ThumbURL.
+	return
 }
 
-// SetThumbURL sets the value of ThumbURL.
 func (s *InlineQueryResultVideo) SetThumbURL(val url.URL) {
-	s.ThumbURL = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultVideo) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultVideo) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultVideo) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultVideo) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetVideoWidth sets the value of VideoWidth.
 }
 
-// SetVideoWidth sets the value of VideoWidth.
 func (s *InlineQueryResultVideo) SetVideoWidth(val OptInt) {
-	s.VideoWidth = val
+	_ = "STUB: not implemented"
+
+	// SetVideoHeight sets the value of VideoHeight.
+	return
 }
 
-// SetVideoHeight sets the value of VideoHeight.
-func (s *InlineQueryResultVideo) SetVideoHeight(val OptInt) {
-	s.VideoHeight = val
-}
+func (s *InlineQueryResultVideo) SetVideoHeight(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetVideoDuration sets the value of VideoDuration.
-func (s *InlineQueryResultVideo) SetVideoDuration(val OptInt) {
-	s.VideoDuration = val
-}
+func (s *InlineQueryResultVideo) SetVideoDuration(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetDescription sets the value of Description.
-func (s *InlineQueryResultVideo) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *InlineQueryResultVideo) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultVideo) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultVideo) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a link to a voice recording in an .OGG container encoded with OPUS. By default, this
@@ -8385,102 +9678,139 @@ type InlineQueryResultVoice struct {
 
 // GetType returns the value of Type.
 func (s *InlineQueryResultVoice) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InlineQueryResultVoice) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetVoiceURL returns the value of VoiceURL.
+	return ""
 }
 
-// GetVoiceURL returns the value of VoiceURL.
 func (s *InlineQueryResultVoice) GetVoiceURL() url.URL {
-	return s.VoiceURL
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return *new(url.URL)
 }
 
-// GetTitle returns the value of Title.
 func (s *InlineQueryResultVoice) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return ""
 }
 
-// GetCaption returns the value of Caption.
 func (s *InlineQueryResultVoice) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InlineQueryResultVoice) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InlineQueryResultVoice) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetVoiceDuration returns the value of VoiceDuration.
 }
 
-// GetVoiceDuration returns the value of VoiceDuration.
 func (s *InlineQueryResultVoice) GetVoiceDuration() OptInt {
-	return s.VoiceDuration
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
+	new(OptInt)
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *InlineQueryResultVoice) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputMessageContent returns the value of InputMessageContent.
+	new(OptInlineKeyboardMarkup)
 }
 
-// GetInputMessageContent returns the value of InputMessageContent.
 func (s *InlineQueryResultVoice) GetInputMessageContent() OptInputMessageContent {
-	return s.InputMessageContent
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // SetType sets the value of Type.
 func (s *InlineQueryResultVoice) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InlineQueryResultVoice) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetVoiceURL sets the value of VoiceURL.
+	return
 }
 
-// SetVoiceURL sets the value of VoiceURL.
 func (s *InlineQueryResultVoice) SetVoiceURL(val url.URL) {
-	s.VoiceURL = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InlineQueryResultVoice) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InlineQueryResultVoice) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InlineQueryResultVoice) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InlineQueryResultVoice) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetVoiceDuration sets the value of VoiceDuration.
 }
 
-// SetVoiceDuration sets the value of VoiceDuration.
-func (s *InlineQueryResultVoice) SetVoiceDuration(val OptInt) {
-	s.VoiceDuration = val
-}
+func (s *InlineQueryResultVoice) SetVoiceDuration(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *InlineQueryResultVoice) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetInputMessageContent sets the value of InputMessageContent.
 }
 
-// SetInputMessageContent sets the value of InputMessageContent.
 func (s *InlineQueryResultVoice) SetInputMessageContent(val OptInputMessageContent) {
-	s.InputMessageContent = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents the content of a contact message to be sent as the result of an inline query.
@@ -8497,47 +9827,55 @@ type InputContactMessageContent struct {
 }
 
 // GetPhoneNumber returns the value of PhoneNumber.
-func (s *InputContactMessageContent) GetPhoneNumber() string {
-	return s.PhoneNumber
-}
+func (s *InputContactMessageContent) GetPhoneNumber() string { _ = "STUB: not implemented"; return "" }
 
 // GetFirstName returns the value of FirstName.
 func (s *InputContactMessageContent) GetFirstName() string {
-	return s.FirstName
+	_ = "STUB: not implemented"
+
+	// GetLastName returns the value of LastName.
+	return ""
 }
 
-// GetLastName returns the value of LastName.
 func (s *InputContactMessageContent) GetLastName() OptString {
-	return s.LastName
+	_ = "STUB: not implemented"
+
+	// GetVcard returns the value of Vcard.
+	return *new(OptString)
 }
 
-// GetVcard returns the value of Vcard.
 func (s *InputContactMessageContent) GetVcard() OptString {
-	return s.Vcard
+	_ = "STUB: not implemented"
+
+	// SetPhoneNumber sets the value of PhoneNumber.
+	return *new(OptString)
 }
 
-// SetPhoneNumber sets the value of PhoneNumber.
-func (s *InputContactMessageContent) SetPhoneNumber(val string) {
-	s.PhoneNumber = val
-}
+func (s *InputContactMessageContent) SetPhoneNumber(val string) { _ = "STUB: not implemented"; return }
 
 // SetFirstName sets the value of FirstName.
 func (s *InputContactMessageContent) SetFirstName(val string) {
-	s.FirstName = val
+	_ = "STUB: not implemented"
+
+	// SetLastName sets the value of LastName.
+	return
 }
 
-// SetLastName sets the value of LastName.
 func (s *InputContactMessageContent) SetLastName(val OptString) {
-	s.LastName = val
+	_ = "STUB: not implemented"
+
+	// SetVcard sets the value of Vcard.
+	return
 }
 
-// SetVcard sets the value of Vcard.
 func (s *InputContactMessageContent) SetVcard(val OptString) {
-	s.Vcard = val
+	_ = "STUB: not implemented"
+
+	// Represents the content of an invoice message to be sent as the result of an inline query.
+	// Ref: #/components/schemas/InputInvoiceMessageContent
+	return
 }
 
-// Represents the content of an invoice message to be sent as the result of an inline query.
-// Ref: #/components/schemas/InputInvoiceMessageContent
 type InputInvoiceMessageContent struct {
 	// Product name, 1-32 characters.
 	Title string `json:"title"`
@@ -8592,206 +9930,270 @@ type InputInvoiceMessageContent struct {
 
 // GetTitle returns the value of Title.
 func (s *InputInvoiceMessageContent) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
-func (s *InputInvoiceMessageContent) GetDescription() string {
-	return s.Description
-}
+func (s *InputInvoiceMessageContent) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 // GetPayload returns the value of Payload.
 func (s *InputInvoiceMessageContent) GetPayload() string {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// GetProviderToken returns the value of ProviderToken.
+	return ""
 }
 
-// GetProviderToken returns the value of ProviderToken.
 func (s *InputInvoiceMessageContent) GetProviderToken() string {
-	return s.ProviderToken
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetCurrency returns the value of Currency.
 }
 
-// GetCurrency returns the value of Currency.
 func (s *InputInvoiceMessageContent) GetCurrency() string {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetPrices returns the value of Prices.
+	return ""
 }
 
-// GetPrices returns the value of Prices.
 func (s *InputInvoiceMessageContent) GetPrices() []LabeledPrice {
-	return s.Prices
+	_ = "STUB: not implemented"
+
+	// GetMaxTipAmount returns the value of MaxTipAmount.
+	return nil
 }
 
-// GetMaxTipAmount returns the value of MaxTipAmount.
 func (s *InputInvoiceMessageContent) GetMaxTipAmount() OptInt {
-	return s.MaxTipAmount
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSuggestedTipAmounts returns the value of SuggestedTipAmounts.
+	new(OptInt)
 }
 
-// GetSuggestedTipAmounts returns the value of SuggestedTipAmounts.
 func (s *InputInvoiceMessageContent) GetSuggestedTipAmounts() []int {
-	return s.SuggestedTipAmounts
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetProviderData returns the value of ProviderData.
 func (s *InputInvoiceMessageContent) GetProviderData() OptString {
-	return s.ProviderData
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPhotoURL returns the value of PhotoURL.
+	new(OptString)
 }
 
-// GetPhotoURL returns the value of PhotoURL.
 func (s *InputInvoiceMessageContent) GetPhotoURL() OptURI {
-	return s.PhotoURL
+	_ = "STUB: not implemented"
+
+	// GetPhotoSize returns the value of PhotoSize.
+	return *new(OptURI)
 }
 
-// GetPhotoSize returns the value of PhotoSize.
 func (s *InputInvoiceMessageContent) GetPhotoSize() OptInt {
-	return s.PhotoSize
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPhotoWidth returns the value of PhotoWidth.
+	new(OptInt)
 }
 
-// GetPhotoWidth returns the value of PhotoWidth.
 func (s *InputInvoiceMessageContent) GetPhotoWidth() OptInt {
-	return s.PhotoWidth
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPhotoHeight returns the value of PhotoHeight.
+	new(OptInt)
 }
 
-// GetPhotoHeight returns the value of PhotoHeight.
 func (s *InputInvoiceMessageContent) GetPhotoHeight() OptInt {
-	return s.PhotoHeight
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNeedName returns the value of NeedName.
+	new(OptInt)
 }
 
-// GetNeedName returns the value of NeedName.
 func (s *InputInvoiceMessageContent) GetNeedName() OptBool {
-	return s.NeedName
+	_ = "STUB: not implemented"
+
+	// GetNeedPhoneNumber returns the value of NeedPhoneNumber.
+	return *new(OptBool)
 }
 
-// GetNeedPhoneNumber returns the value of NeedPhoneNumber.
 func (s *InputInvoiceMessageContent) GetNeedPhoneNumber() OptBool {
-	return s.NeedPhoneNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNeedEmail returns the value of NeedEmail.
+	new(OptBool)
 }
 
-// GetNeedEmail returns the value of NeedEmail.
 func (s *InputInvoiceMessageContent) GetNeedEmail() OptBool {
-	return s.NeedEmail
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNeedShippingAddress returns the value of NeedShippingAddress.
+	new(OptBool)
 }
 
-// GetNeedShippingAddress returns the value of NeedShippingAddress.
 func (s *InputInvoiceMessageContent) GetNeedShippingAddress() OptBool {
-	return s.NeedShippingAddress
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetSendPhoneNumberToProvider returns the value of SendPhoneNumberToProvider.
 func (s *InputInvoiceMessageContent) GetSendPhoneNumberToProvider() OptBool {
-	return s.SendPhoneNumberToProvider
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetSendEmailToProvider returns the value of SendEmailToProvider.
 func (s *InputInvoiceMessageContent) GetSendEmailToProvider() OptBool {
-	return s.SendEmailToProvider
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetIsFlexible returns the value of IsFlexible.
 func (s *InputInvoiceMessageContent) GetIsFlexible() OptBool {
-	return s.IsFlexible
+	_ = "STUB: not implemented"
+	return *
+
+	// SetTitle sets the value of Title.
+	new(OptBool)
 }
 
-// SetTitle sets the value of Title.
 func (s *InputInvoiceMessageContent) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *InputInvoiceMessageContent) SetDescription(val string) {
-	s.Description = val
-}
+func (s *InputInvoiceMessageContent) SetDescription(val string) { _ = "STUB: not implemented"; return }
 
 // SetPayload sets the value of Payload.
 func (s *InputInvoiceMessageContent) SetPayload(val string) {
-	s.Payload = val
+	_ = "STUB: not implemented"
+
+	// SetProviderToken sets the value of ProviderToken.
+	return
 }
 
-// SetProviderToken sets the value of ProviderToken.
 func (s *InputInvoiceMessageContent) SetProviderToken(val string) {
-	s.ProviderToken = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetCurrency sets the value of Currency.
 }
 
-// SetCurrency sets the value of Currency.
 func (s *InputInvoiceMessageContent) SetCurrency(val string) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetPrices sets the value of Prices.
+	return
 }
 
-// SetPrices sets the value of Prices.
 func (s *InputInvoiceMessageContent) SetPrices(val []LabeledPrice) {
-	s.Prices = val
+	_ = "STUB: not implemented"
+
+	// SetMaxTipAmount sets the value of MaxTipAmount.
+	return
 }
 
-// SetMaxTipAmount sets the value of MaxTipAmount.
-func (s *InputInvoiceMessageContent) SetMaxTipAmount(val OptInt) {
-	s.MaxTipAmount = val
-}
+func (s *InputInvoiceMessageContent) SetMaxTipAmount(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetSuggestedTipAmounts sets the value of SuggestedTipAmounts.
 func (s *InputInvoiceMessageContent) SetSuggestedTipAmounts(val []int) {
-	s.SuggestedTipAmounts = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetProviderData sets the value of ProviderData.
 func (s *InputInvoiceMessageContent) SetProviderData(val OptString) {
-	s.ProviderData = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetPhotoURL sets the value of PhotoURL.
 }
 
-// SetPhotoURL sets the value of PhotoURL.
 func (s *InputInvoiceMessageContent) SetPhotoURL(val OptURI) {
-	s.PhotoURL = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoSize sets the value of PhotoSize.
+	return
 }
 
-// SetPhotoSize sets the value of PhotoSize.
 func (s *InputInvoiceMessageContent) SetPhotoSize(val OptInt) {
-	s.PhotoSize = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoWidth sets the value of PhotoWidth.
+	return
 }
 
-// SetPhotoWidth sets the value of PhotoWidth.
 func (s *InputInvoiceMessageContent) SetPhotoWidth(val OptInt) {
-	s.PhotoWidth = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoHeight sets the value of PhotoHeight.
+	return
 }
 
-// SetPhotoHeight sets the value of PhotoHeight.
-func (s *InputInvoiceMessageContent) SetPhotoHeight(val OptInt) {
-	s.PhotoHeight = val
-}
+func (s *InputInvoiceMessageContent) SetPhotoHeight(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetNeedName sets the value of NeedName.
 func (s *InputInvoiceMessageContent) SetNeedName(val OptBool) {
-	s.NeedName = val
+	_ = "STUB: not implemented"
+
+	// SetNeedPhoneNumber sets the value of NeedPhoneNumber.
+	return
 }
 
-// SetNeedPhoneNumber sets the value of NeedPhoneNumber.
 func (s *InputInvoiceMessageContent) SetNeedPhoneNumber(val OptBool) {
-	s.NeedPhoneNumber = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetNeedEmail sets the value of NeedEmail.
 }
 
-// SetNeedEmail sets the value of NeedEmail.
 func (s *InputInvoiceMessageContent) SetNeedEmail(val OptBool) {
-	s.NeedEmail = val
+	_ = "STUB: not implemented"
+
+	// SetNeedShippingAddress sets the value of NeedShippingAddress.
+	return
 }
 
-// SetNeedShippingAddress sets the value of NeedShippingAddress.
 func (s *InputInvoiceMessageContent) SetNeedShippingAddress(val OptBool) {
-	s.NeedShippingAddress = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetSendPhoneNumberToProvider sets the value of SendPhoneNumberToProvider.
 func (s *InputInvoiceMessageContent) SetSendPhoneNumberToProvider(val OptBool) {
-	s.SendPhoneNumberToProvider = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetSendEmailToProvider sets the value of SendEmailToProvider.
 func (s *InputInvoiceMessageContent) SetSendEmailToProvider(val OptBool) {
-	s.SendEmailToProvider = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetIsFlexible sets the value of IsFlexible.
 func (s *InputInvoiceMessageContent) SetIsFlexible(val OptBool) {
-	s.IsFlexible = val
+	_ = "STUB: not implemented"
+
+	// Represents the content of a location message to be sent as the result of an inline query.
+	// Ref: #/components/schemas/InputLocationMessageContent
+	return
 }
 
-// Represents the content of a location message to be sent as the result of an inline query.
-// Ref: #/components/schemas/InputLocationMessageContent
 type InputLocationMessageContent struct {
 	// Latitude of the location in degrees.
 	Latitude float64 `json:"latitude"`
@@ -8811,62 +10213,83 @@ type InputLocationMessageContent struct {
 
 // GetLatitude returns the value of Latitude.
 func (s *InputLocationMessageContent) GetLatitude() float64 {
-	return s.Latitude
+	_ = "STUB: not implemented"
+
+	// GetLongitude returns the value of Longitude.
+	return 0
 }
 
-// GetLongitude returns the value of Longitude.
 func (s *InputLocationMessageContent) GetLongitude() float64 {
-	return s.Longitude
+	_ = "STUB: not implemented"
+
+	// GetHorizontalAccuracy returns the value of HorizontalAccuracy.
+	return 0
 }
 
-// GetHorizontalAccuracy returns the value of HorizontalAccuracy.
 func (s *InputLocationMessageContent) GetHorizontalAccuracy() OptFloat64 {
-	return s.HorizontalAccuracy
+	_ = "STUB: not implemented"
+	return *new(OptFloat64)
 }
 
 // GetLivePeriod returns the value of LivePeriod.
 func (s *InputLocationMessageContent) GetLivePeriod() OptInt {
-	return s.LivePeriod
+	_ = "STUB: not implemented"
+	return *
+
+	// GetHeading returns the value of Heading.
+	new(OptInt)
 }
 
-// GetHeading returns the value of Heading.
 func (s *InputLocationMessageContent) GetHeading() OptInt {
-	return s.Heading
+	_ = "STUB: not implemented"
+
+	// GetProximityAlertRadius returns the value of ProximityAlertRadius.
+	return *new(OptInt)
 }
 
-// GetProximityAlertRadius returns the value of ProximityAlertRadius.
 func (s *InputLocationMessageContent) GetProximityAlertRadius() OptInt {
-	return s.ProximityAlertRadius
+	_ = "STUB: not implemented"
+	return *new(OptInt)
 }
 
 // SetLatitude sets the value of Latitude.
 func (s *InputLocationMessageContent) SetLatitude(val float64) {
-	s.Latitude = val
+	_ = "STUB: not implemented"
+
+	// SetLongitude sets the value of Longitude.
+	return
 }
 
-// SetLongitude sets the value of Longitude.
 func (s *InputLocationMessageContent) SetLongitude(val float64) {
-	s.Longitude = val
+	_ = "STUB: not implemented"
+
+	// SetHorizontalAccuracy sets the value of HorizontalAccuracy.
+	return
 }
 
-// SetHorizontalAccuracy sets the value of HorizontalAccuracy.
 func (s *InputLocationMessageContent) SetHorizontalAccuracy(val OptFloat64) {
-	s.HorizontalAccuracy = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetLivePeriod sets the value of LivePeriod.
 func (s *InputLocationMessageContent) SetLivePeriod(val OptInt) {
-	s.LivePeriod = val
+	_ = "STUB: not implemented"
+
+	// SetHeading sets the value of Heading.
+	return
 }
 
-// SetHeading sets the value of Heading.
 func (s *InputLocationMessageContent) SetHeading(val OptInt) {
-	s.Heading = val
+	_ = "STUB: not implemented"
+
+	// SetProximityAlertRadius sets the value of ProximityAlertRadius.
+	return
 }
 
-// SetProximityAlertRadius sets the value of ProximityAlertRadius.
 func (s *InputLocationMessageContent) SetProximityAlertRadius(val OptInt) {
-	s.ProximityAlertRadius = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // This object represents the content of a media message to be sent.
@@ -8894,123 +10317,96 @@ const (
 )
 
 // IsInputMediaAnimation reports whether InputMedia is InputMediaAnimation.
-func (s InputMedia) IsInputMediaAnimation() bool { return s.Type == InputMediaAnimationInputMedia }
+func (s InputMedia) IsInputMediaAnimation() bool { _ = "STUB: not implemented"; return false }
 
 // IsInputMediaDocument reports whether InputMedia is InputMediaDocument.
-func (s InputMedia) IsInputMediaDocument() bool { return s.Type == InputMediaDocumentInputMedia }
+func (s InputMedia) IsInputMediaDocument() bool { _ = "STUB: not implemented"; return false }
 
 // IsInputMediaAudio reports whether InputMedia is InputMediaAudio.
-func (s InputMedia) IsInputMediaAudio() bool { return s.Type == InputMediaAudioInputMedia }
+func (s InputMedia) IsInputMediaAudio() bool { _ = "STUB: not implemented"; return false }
 
 // IsInputMediaPhoto reports whether InputMedia is InputMediaPhoto.
-func (s InputMedia) IsInputMediaPhoto() bool { return s.Type == InputMediaPhotoInputMedia }
+func (s InputMedia) IsInputMediaPhoto() bool { _ = "STUB: not implemented"; return false }
 
 // IsInputMediaVideo reports whether InputMedia is InputMediaVideo.
-func (s InputMedia) IsInputMediaVideo() bool { return s.Type == InputMediaVideoInputMedia }
+func (s InputMedia) IsInputMediaVideo() bool { _ = "STUB: not implemented"; return false }
 
 // SetInputMediaAnimation sets InputMedia to InputMediaAnimation.
 func (s *InputMedia) SetInputMediaAnimation(v InputMediaAnimation) {
-	s.Type = InputMediaAnimationInputMedia
-	s.InputMediaAnimation = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInputMediaAnimation returns InputMediaAnimation and true boolean if InputMedia is InputMediaAnimation.
 func (s InputMedia) GetInputMediaAnimation() (v InputMediaAnimation, ok bool) {
-	if !s.IsInputMediaAnimation() {
-		return v, false
-	}
-	return s.InputMediaAnimation, true
+	_ = "STUB: not implemented"
+	return *new(InputMediaAnimation), false
 }
 
 // NewInputMediaAnimationInputMedia returns new InputMedia from InputMediaAnimation.
 func NewInputMediaAnimationInputMedia(v InputMediaAnimation) InputMedia {
-	var s InputMedia
-	s.SetInputMediaAnimation(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InputMedia)
 }
 
 // SetInputMediaDocument sets InputMedia to InputMediaDocument.
-func (s *InputMedia) SetInputMediaDocument(v InputMediaDocument) {
-	s.Type = InputMediaDocumentInputMedia
-	s.InputMediaDocument = v
-}
+func (s *InputMedia) SetInputMediaDocument(v InputMediaDocument) { _ = "STUB: not implemented"; return }
 
 // GetInputMediaDocument returns InputMediaDocument and true boolean if InputMedia is InputMediaDocument.
 func (s InputMedia) GetInputMediaDocument() (v InputMediaDocument, ok bool) {
-	if !s.IsInputMediaDocument() {
-		return v, false
-	}
-	return s.InputMediaDocument, true
+	_ = "STUB: not implemented"
+	return *new(InputMediaDocument), false
 }
 
 // NewInputMediaDocumentInputMedia returns new InputMedia from InputMediaDocument.
 func NewInputMediaDocumentInputMedia(v InputMediaDocument) InputMedia {
-	var s InputMedia
-	s.SetInputMediaDocument(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InputMedia)
 }
 
 // SetInputMediaAudio sets InputMedia to InputMediaAudio.
-func (s *InputMedia) SetInputMediaAudio(v InputMediaAudio) {
-	s.Type = InputMediaAudioInputMedia
-	s.InputMediaAudio = v
-}
+func (s *InputMedia) SetInputMediaAudio(v InputMediaAudio) { _ = "STUB: not implemented"; return }
 
 // GetInputMediaAudio returns InputMediaAudio and true boolean if InputMedia is InputMediaAudio.
 func (s InputMedia) GetInputMediaAudio() (v InputMediaAudio, ok bool) {
-	if !s.IsInputMediaAudio() {
-		return v, false
-	}
-	return s.InputMediaAudio, true
+	_ = "STUB: not implemented"
+	return *new(InputMediaAudio), false
 }
 
 // NewInputMediaAudioInputMedia returns new InputMedia from InputMediaAudio.
 func NewInputMediaAudioInputMedia(v InputMediaAudio) InputMedia {
-	var s InputMedia
-	s.SetInputMediaAudio(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InputMedia)
 }
 
 // SetInputMediaPhoto sets InputMedia to InputMediaPhoto.
-func (s *InputMedia) SetInputMediaPhoto(v InputMediaPhoto) {
-	s.Type = InputMediaPhotoInputMedia
-	s.InputMediaPhoto = v
-}
+func (s *InputMedia) SetInputMediaPhoto(v InputMediaPhoto) { _ = "STUB: not implemented"; return }
 
 // GetInputMediaPhoto returns InputMediaPhoto and true boolean if InputMedia is InputMediaPhoto.
 func (s InputMedia) GetInputMediaPhoto() (v InputMediaPhoto, ok bool) {
-	if !s.IsInputMediaPhoto() {
-		return v, false
-	}
-	return s.InputMediaPhoto, true
+	_ = "STUB: not implemented"
+	return *new(InputMediaPhoto), false
 }
 
 // NewInputMediaPhotoInputMedia returns new InputMedia from InputMediaPhoto.
 func NewInputMediaPhotoInputMedia(v InputMediaPhoto) InputMedia {
-	var s InputMedia
-	s.SetInputMediaPhoto(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InputMedia)
 }
 
 // SetInputMediaVideo sets InputMedia to InputMediaVideo.
-func (s *InputMedia) SetInputMediaVideo(v InputMediaVideo) {
-	s.Type = InputMediaVideoInputMedia
-	s.InputMediaVideo = v
-}
+func (s *InputMedia) SetInputMediaVideo(v InputMediaVideo) { _ = "STUB: not implemented"; return }
 
 // GetInputMediaVideo returns InputMediaVideo and true boolean if InputMedia is InputMediaVideo.
 func (s InputMedia) GetInputMediaVideo() (v InputMediaVideo, ok bool) {
-	if !s.IsInputMediaVideo() {
-		return v, false
-	}
-	return s.InputMediaVideo, true
+	_ = "STUB: not implemented"
+	return *new(InputMediaVideo), false
 }
 
 // NewInputMediaVideoInputMedia returns new InputMedia from InputMediaVideo.
 func NewInputMediaVideoInputMedia(v InputMediaVideo) InputMedia {
-	var s InputMedia
-	s.SetInputMediaVideo(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InputMedia)
 }
 
 // Represents an animation file (GIF or H.264/MPEG-4 AVC video without sound) to be sent.
@@ -9046,96 +10442,133 @@ type InputMediaAnimation struct {
 
 // GetType returns the value of Type.
 func (s *InputMediaAnimation) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetMedia returns the value of Media.
+	return ""
 }
 
-// GetMedia returns the value of Media.
 func (s *InputMediaAnimation) GetMedia() string {
-	return s.Media
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return ""
 }
 
-// GetThumb returns the value of Thumb.
 func (s *InputMediaAnimation) GetThumb() OptString {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InputMediaAnimation) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InputMediaAnimation) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InputMediaAnimation) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetWidth returns the value of Width.
 }
 
-// GetWidth returns the value of Width.
 func (s *InputMediaAnimation) GetWidth() OptInt {
-	return s.Width
+	_ = "STUB: not implemented"
+
+	// GetHeight returns the value of Height.
+	return *new(OptInt)
 }
 
-// GetHeight returns the value of Height.
 func (s *InputMediaAnimation) GetHeight() OptInt {
-	return s.Height
+	_ = "STUB: not implemented"
+
+	// GetDuration returns the value of Duration.
+	return *new(OptInt)
 }
 
-// GetDuration returns the value of Duration.
 func (s *InputMediaAnimation) GetDuration() OptInt {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return *new(OptInt)
 }
 
-// SetType sets the value of Type.
 func (s *InputMediaAnimation) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetMedia sets the value of Media.
+	return
 }
 
-// SetMedia sets the value of Media.
 func (s *InputMediaAnimation) SetMedia(val string) {
-	s.Media = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *InputMediaAnimation) SetThumb(val OptString) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InputMediaAnimation) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InputMediaAnimation) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InputMediaAnimation) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetWidth sets the value of Width.
 }
 
-// SetWidth sets the value of Width.
 func (s *InputMediaAnimation) SetWidth(val OptInt) {
-	s.Width = val
+	_ = "STUB: not implemented"
+
+	// SetHeight sets the value of Height.
+	return
 }
 
-// SetHeight sets the value of Height.
 func (s *InputMediaAnimation) SetHeight(val OptInt) {
-	s.Height = val
+	_ = "STUB: not implemented"
+
+	// SetDuration sets the value of Duration.
+	return
 }
 
-// SetDuration sets the value of Duration.
 func (s *InputMediaAnimation) SetDuration(val OptInt) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// Represents an audio file to be treated as music to be sent.
+	// Ref: #/components/schemas/InputMediaAudio
+	return
 }
 
-// Represents an audio file to be treated as music to be sent.
-// Ref: #/components/schemas/InputMediaAudio
 type InputMediaAudio struct {
 	// Type of the result, must be audio.
 	Type string `json:"type"`
@@ -9167,96 +10600,134 @@ type InputMediaAudio struct {
 
 // GetType returns the value of Type.
 func (s *InputMediaAudio) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetMedia returns the value of Media.
+	return ""
 }
 
-// GetMedia returns the value of Media.
 func (s *InputMediaAudio) GetMedia() string {
-	return s.Media
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return ""
 }
 
-// GetThumb returns the value of Thumb.
 func (s *InputMediaAudio) GetThumb() OptString {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InputMediaAudio) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InputMediaAudio) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InputMediaAudio) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetDuration returns the value of Duration.
 }
 
-// GetDuration returns the value of Duration.
 func (s *InputMediaAudio) GetDuration() OptInt {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetPerformer returns the value of Performer.
+	return *new(OptInt)
 }
 
-// GetPerformer returns the value of Performer.
 func (s *InputMediaAudio) GetPerformer() OptString {
-	return s.Performer
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTitle returns the value of Title.
+	new(OptString)
 }
 
-// GetTitle returns the value of Title.
 func (s *InputMediaAudio) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return *new(OptString)
 }
 
-// SetType sets the value of Type.
 func (s *InputMediaAudio) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetMedia sets the value of Media.
+	return
 }
 
-// SetMedia sets the value of Media.
 func (s *InputMediaAudio) SetMedia(val string) {
-	s.Media = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *InputMediaAudio) SetThumb(val OptString) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InputMediaAudio) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InputMediaAudio) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InputMediaAudio) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetDuration sets the value of Duration.
 }
 
-// SetDuration sets the value of Duration.
 func (s *InputMediaAudio) SetDuration(val OptInt) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetPerformer sets the value of Performer.
+	return
 }
 
-// SetPerformer sets the value of Performer.
 func (s *InputMediaAudio) SetPerformer(val OptString) {
-	s.Performer = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InputMediaAudio) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// Represents a general file to be sent.
+	// Ref: #/components/schemas/InputMediaDocument
+	return
 }
 
-// Represents a general file to be sent.
-// Ref: #/components/schemas/InputMediaDocument
 type InputMediaDocument struct {
 	// Type of the result, must be document.
 	Type string `json:"type"`
@@ -9285,72 +10756,99 @@ type InputMediaDocument struct {
 
 // GetType returns the value of Type.
 func (s *InputMediaDocument) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetMedia returns the value of Media.
+	return ""
 }
 
-// GetMedia returns the value of Media.
 func (s *InputMediaDocument) GetMedia() string {
-	return s.Media
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return ""
 }
 
-// GetThumb returns the value of Thumb.
 func (s *InputMediaDocument) GetThumb() OptString {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InputMediaDocument) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InputMediaDocument) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InputMediaDocument) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetDisableContentTypeDetection returns the value of DisableContentTypeDetection.
 }
 
-// GetDisableContentTypeDetection returns the value of DisableContentTypeDetection.
 func (s *InputMediaDocument) GetDisableContentTypeDetection() OptBool {
-	return s.DisableContentTypeDetection
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // SetType sets the value of Type.
 func (s *InputMediaDocument) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetMedia sets the value of Media.
+	return
 }
 
-// SetMedia sets the value of Media.
 func (s *InputMediaDocument) SetMedia(val string) {
-	s.Media = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *InputMediaDocument) SetThumb(val OptString) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InputMediaDocument) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InputMediaDocument) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InputMediaDocument) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetDisableContentTypeDetection sets the value of DisableContentTypeDetection.
 }
 
-// SetDisableContentTypeDetection sets the value of DisableContentTypeDetection.
 func (s *InputMediaDocument) SetDisableContentTypeDetection(val OptBool) {
-	s.DisableContentTypeDetection = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents a photo to be sent.
@@ -9373,56 +10871,77 @@ type InputMediaPhoto struct {
 
 // GetType returns the value of Type.
 func (s *InputMediaPhoto) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetMedia returns the value of Media.
+	return ""
 }
 
-// GetMedia returns the value of Media.
 func (s *InputMediaPhoto) GetMedia() string {
-	return s.Media
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return ""
 }
 
-// GetCaption returns the value of Caption.
 func (s *InputMediaPhoto) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InputMediaPhoto) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InputMediaPhoto) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// SetType sets the value of Type.
 }
 
-// SetType sets the value of Type.
 func (s *InputMediaPhoto) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetMedia sets the value of Media.
+	return
 }
 
-// SetMedia sets the value of Media.
 func (s *InputMediaPhoto) SetMedia(val string) {
-	s.Media = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InputMediaPhoto) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InputMediaPhoto) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InputMediaPhoto) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// Represents a video to be sent.
+	// Ref: #/components/schemas/InputMediaVideo
 }
 
-// Represents a video to be sent.
-// Ref: #/components/schemas/InputMediaVideo
 type InputMediaVideo struct {
 	// Type of the result, must be video.
 	Type string `json:"type"`
@@ -9456,103 +10975,139 @@ type InputMediaVideo struct {
 
 // GetType returns the value of Type.
 func (s *InputMediaVideo) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetMedia returns the value of Media.
+	return ""
 }
 
-// GetMedia returns the value of Media.
 func (s *InputMediaVideo) GetMedia() string {
-	return s.Media
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return ""
 }
 
-// GetThumb returns the value of Thumb.
 func (s *InputMediaVideo) GetThumb() OptString {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *InputMediaVideo) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *InputMediaVideo) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
 func (s *InputMediaVideo) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetWidth returns the value of Width.
 }
 
-// GetWidth returns the value of Width.
 func (s *InputMediaVideo) GetWidth() OptInt {
-	return s.Width
+	_ = "STUB: not implemented"
+
+	// GetHeight returns the value of Height.
+	return *new(OptInt)
 }
 
-// GetHeight returns the value of Height.
 func (s *InputMediaVideo) GetHeight() OptInt {
-	return s.Height
+	_ = "STUB: not implemented"
+
+	// GetDuration returns the value of Duration.
+	return *new(OptInt)
 }
 
-// GetDuration returns the value of Duration.
 func (s *InputMediaVideo) GetDuration() OptInt {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetSupportsStreaming returns the value of SupportsStreaming.
+	return *new(OptInt)
 }
 
-// GetSupportsStreaming returns the value of SupportsStreaming.
 func (s *InputMediaVideo) GetSupportsStreaming() OptBool {
-	return s.SupportsStreaming
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // SetType sets the value of Type.
 func (s *InputMediaVideo) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetMedia sets the value of Media.
+	return
 }
 
-// SetMedia sets the value of Media.
 func (s *InputMediaVideo) SetMedia(val string) {
-	s.Media = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *InputMediaVideo) SetThumb(val OptString) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *InputMediaVideo) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *InputMediaVideo) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
 func (s *InputMediaVideo) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetWidth sets the value of Width.
 }
 
-// SetWidth sets the value of Width.
 func (s *InputMediaVideo) SetWidth(val OptInt) {
-	s.Width = val
+	_ = "STUB: not implemented"
+
+	// SetHeight sets the value of Height.
+	return
 }
 
-// SetHeight sets the value of Height.
 func (s *InputMediaVideo) SetHeight(val OptInt) {
-	s.Height = val
+	_ = "STUB: not implemented"
+
+	// SetDuration sets the value of Duration.
+	return
 }
 
-// SetDuration sets the value of Duration.
 func (s *InputMediaVideo) SetDuration(val OptInt) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetSupportsStreaming sets the value of SupportsStreaming.
+	return
 }
 
-// SetSupportsStreaming sets the value of SupportsStreaming.
-func (s *InputMediaVideo) SetSupportsStreaming(val OptBool) {
-	s.SupportsStreaming = val
-}
+func (s *InputMediaVideo) SetSupportsStreaming(val OptBool) { _ = "STUB: not implemented"; return }
 
 // This object represents the content of a message to be sent as a result of an inline query.  5
 // types:.
@@ -9581,132 +11136,122 @@ const (
 
 // IsInputTextMessageContent reports whether InputMessageContent is InputTextMessageContent.
 func (s InputMessageContent) IsInputTextMessageContent() bool {
-	return s.Type == InputTextMessageContentInputMessageContent
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInputLocationMessageContent reports whether InputMessageContent is InputLocationMessageContent.
 func (s InputMessageContent) IsInputLocationMessageContent() bool {
-	return s.Type == InputLocationMessageContentInputMessageContent
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInputVenueMessageContent reports whether InputMessageContent is InputVenueMessageContent.
 func (s InputMessageContent) IsInputVenueMessageContent() bool {
-	return s.Type == InputVenueMessageContentInputMessageContent
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInputContactMessageContent reports whether InputMessageContent is InputContactMessageContent.
 func (s InputMessageContent) IsInputContactMessageContent() bool {
-	return s.Type == InputContactMessageContentInputMessageContent
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInputInvoiceMessageContent reports whether InputMessageContent is InputInvoiceMessageContent.
 func (s InputMessageContent) IsInputInvoiceMessageContent() bool {
-	return s.Type == InputInvoiceMessageContentInputMessageContent
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetInputTextMessageContent sets InputMessageContent to InputTextMessageContent.
 func (s *InputMessageContent) SetInputTextMessageContent(v InputTextMessageContent) {
-	s.Type = InputTextMessageContentInputMessageContent
-	s.InputTextMessageContent = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInputTextMessageContent returns InputTextMessageContent and true boolean if InputMessageContent is InputTextMessageContent.
 func (s InputMessageContent) GetInputTextMessageContent() (v InputTextMessageContent, ok bool) {
-	if !s.IsInputTextMessageContent() {
-		return v, false
-	}
-	return s.InputTextMessageContent, true
+	_ = "STUB: not implemented"
+	return *new(InputTextMessageContent), false
 }
 
 // NewInputTextMessageContentInputMessageContent returns new InputMessageContent from InputTextMessageContent.
 func NewInputTextMessageContentInputMessageContent(v InputTextMessageContent) InputMessageContent {
-	var s InputMessageContent
-	s.SetInputTextMessageContent(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InputMessageContent)
 }
 
 // SetInputLocationMessageContent sets InputMessageContent to InputLocationMessageContent.
 func (s *InputMessageContent) SetInputLocationMessageContent(v InputLocationMessageContent) {
-	s.Type = InputLocationMessageContentInputMessageContent
-	s.InputLocationMessageContent = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInputLocationMessageContent returns InputLocationMessageContent and true boolean if InputMessageContent is InputLocationMessageContent.
 func (s InputMessageContent) GetInputLocationMessageContent() (v InputLocationMessageContent, ok bool) {
-	if !s.IsInputLocationMessageContent() {
-		return v, false
-	}
-	return s.InputLocationMessageContent, true
+	_ = "STUB: not implemented"
+	return *new(InputLocationMessageContent), false
 }
 
 // NewInputLocationMessageContentInputMessageContent returns new InputMessageContent from InputLocationMessageContent.
 func NewInputLocationMessageContentInputMessageContent(v InputLocationMessageContent) InputMessageContent {
-	var s InputMessageContent
-	s.SetInputLocationMessageContent(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InputMessageContent)
 }
 
 // SetInputVenueMessageContent sets InputMessageContent to InputVenueMessageContent.
 func (s *InputMessageContent) SetInputVenueMessageContent(v InputVenueMessageContent) {
-	s.Type = InputVenueMessageContentInputMessageContent
-	s.InputVenueMessageContent = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInputVenueMessageContent returns InputVenueMessageContent and true boolean if InputMessageContent is InputVenueMessageContent.
 func (s InputMessageContent) GetInputVenueMessageContent() (v InputVenueMessageContent, ok bool) {
-	if !s.IsInputVenueMessageContent() {
-		return v, false
-	}
-	return s.InputVenueMessageContent, true
+	_ = "STUB: not implemented"
+	return *new(InputVenueMessageContent), false
 }
 
 // NewInputVenueMessageContentInputMessageContent returns new InputMessageContent from InputVenueMessageContent.
 func NewInputVenueMessageContentInputMessageContent(v InputVenueMessageContent) InputMessageContent {
-	var s InputMessageContent
-	s.SetInputVenueMessageContent(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InputMessageContent)
 }
 
 // SetInputContactMessageContent sets InputMessageContent to InputContactMessageContent.
 func (s *InputMessageContent) SetInputContactMessageContent(v InputContactMessageContent) {
-	s.Type = InputContactMessageContentInputMessageContent
-	s.InputContactMessageContent = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInputContactMessageContent returns InputContactMessageContent and true boolean if InputMessageContent is InputContactMessageContent.
 func (s InputMessageContent) GetInputContactMessageContent() (v InputContactMessageContent, ok bool) {
-	if !s.IsInputContactMessageContent() {
-		return v, false
-	}
-	return s.InputContactMessageContent, true
+	_ = "STUB: not implemented"
+	return *new(InputContactMessageContent), false
 }
 
 // NewInputContactMessageContentInputMessageContent returns new InputMessageContent from InputContactMessageContent.
 func NewInputContactMessageContentInputMessageContent(v InputContactMessageContent) InputMessageContent {
-	var s InputMessageContent
-	s.SetInputContactMessageContent(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InputMessageContent)
 }
 
 // SetInputInvoiceMessageContent sets InputMessageContent to InputInvoiceMessageContent.
 func (s *InputMessageContent) SetInputInvoiceMessageContent(v InputInvoiceMessageContent) {
-	s.Type = InputInvoiceMessageContentInputMessageContent
-	s.InputInvoiceMessageContent = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInputInvoiceMessageContent returns InputInvoiceMessageContent and true boolean if InputMessageContent is InputInvoiceMessageContent.
 func (s InputMessageContent) GetInputInvoiceMessageContent() (v InputInvoiceMessageContent, ok bool) {
-	if !s.IsInputInvoiceMessageContent() {
-		return v, false
-	}
-	return s.InputInvoiceMessageContent, true
+	_ = "STUB: not implemented"
+	return *new(InputInvoiceMessageContent), false
 }
 
 // NewInputInvoiceMessageContentInputMessageContent returns new InputMessageContent from InputInvoiceMessageContent.
 func NewInputInvoiceMessageContentInputMessageContent(v InputInvoiceMessageContent) InputMessageContent {
-	var s InputMessageContent
-	s.SetInputInvoiceMessageContent(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(InputMessageContent)
 }
 
 // Represents the content of a text message to be sent as the result of an inline query.
@@ -9723,43 +11268,50 @@ type InputTextMessageContent struct {
 }
 
 // GetMessageText returns the value of MessageText.
-func (s *InputTextMessageContent) GetMessageText() string {
-	return s.MessageText
-}
+func (s *InputTextMessageContent) GetMessageText() string { _ = "STUB: not implemented"; return "" }
 
 // GetParseMode returns the value of ParseMode.
 func (s *InputTextMessageContent) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetEntities returns the value of Entities.
+	new(OptString)
 }
 
-// GetEntities returns the value of Entities.
 func (s *InputTextMessageContent) GetEntities() []MessageEntity {
-	return s.Entities
+	_ = "STUB: not implemented"
+
+	// GetDisableWebPagePreview returns the value of DisableWebPagePreview.
+	return nil
 }
 
-// GetDisableWebPagePreview returns the value of DisableWebPagePreview.
 func (s *InputTextMessageContent) GetDisableWebPagePreview() OptBool {
-	return s.DisableWebPagePreview
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // SetMessageText sets the value of MessageText.
-func (s *InputTextMessageContent) SetMessageText(val string) {
-	s.MessageText = val
-}
+func (s *InputTextMessageContent) SetMessageText(val string) { _ = "STUB: not implemented"; return }
 
 // SetParseMode sets the value of ParseMode.
 func (s *InputTextMessageContent) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetEntities sets the value of Entities.
+	return
 }
 
-// SetEntities sets the value of Entities.
 func (s *InputTextMessageContent) SetEntities(val []MessageEntity) {
-	s.Entities = val
+	_ = "STUB: not implemented"
+
+	// SetDisableWebPagePreview sets the value of DisableWebPagePreview.
+	return
 }
 
-// SetDisableWebPagePreview sets the value of DisableWebPagePreview.
 func (s *InputTextMessageContent) SetDisableWebPagePreview(val OptBool) {
-	s.DisableWebPagePreview = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Represents the content of a venue message to be sent as the result of an inline query.
@@ -9786,86 +11338,122 @@ type InputVenueMessageContent struct {
 
 // GetLatitude returns the value of Latitude.
 func (s *InputVenueMessageContent) GetLatitude() float64 {
-	return s.Latitude
+	_ = "STUB: not implemented"
+
+	// GetLongitude returns the value of Longitude.
+	return 0
 }
 
-// GetLongitude returns the value of Longitude.
 func (s *InputVenueMessageContent) GetLongitude() float64 {
-	return s.Longitude
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return 0
 }
 
-// GetTitle returns the value of Title.
 func (s *InputVenueMessageContent) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetAddress returns the value of Address.
+	return ""
 }
 
-// GetAddress returns the value of Address.
 func (s *InputVenueMessageContent) GetAddress() string {
-	return s.Address
+	_ = "STUB: not implemented"
+
+	// GetFoursquareID returns the value of FoursquareID.
+	return ""
 }
 
-// GetFoursquareID returns the value of FoursquareID.
 func (s *InputVenueMessageContent) GetFoursquareID() OptString {
-	return s.FoursquareID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFoursquareType returns the value of FoursquareType.
+	new(OptString)
 }
 
-// GetFoursquareType returns the value of FoursquareType.
 func (s *InputVenueMessageContent) GetFoursquareType() OptString {
-	return s.FoursquareType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGooglePlaceID returns the value of GooglePlaceID.
+	new(OptString)
 }
 
-// GetGooglePlaceID returns the value of GooglePlaceID.
 func (s *InputVenueMessageContent) GetGooglePlaceID() OptString {
-	return s.GooglePlaceID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGooglePlaceType returns the value of GooglePlaceType.
+	new(OptString)
 }
 
-// GetGooglePlaceType returns the value of GooglePlaceType.
 func (s *InputVenueMessageContent) GetGooglePlaceType() OptString {
-	return s.GooglePlaceType
+	_ = "STUB: not implemented"
+	return *
+
+	// SetLatitude sets the value of Latitude.
+	new(OptString)
 }
 
-// SetLatitude sets the value of Latitude.
 func (s *InputVenueMessageContent) SetLatitude(val float64) {
-	s.Latitude = val
+	_ = "STUB: not implemented"
+
+	// SetLongitude sets the value of Longitude.
+	return
 }
 
-// SetLongitude sets the value of Longitude.
 func (s *InputVenueMessageContent) SetLongitude(val float64) {
-	s.Longitude = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *InputVenueMessageContent) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetAddress sets the value of Address.
+	return
 }
 
-// SetAddress sets the value of Address.
 func (s *InputVenueMessageContent) SetAddress(val string) {
-	s.Address = val
+	_ = "STUB: not implemented"
+
+	// SetFoursquareID sets the value of FoursquareID.
+	return
 }
 
-// SetFoursquareID sets the value of FoursquareID.
 func (s *InputVenueMessageContent) SetFoursquareID(val OptString) {
-	s.FoursquareID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetFoursquareType sets the value of FoursquareType.
 }
 
-// SetFoursquareType sets the value of FoursquareType.
 func (s *InputVenueMessageContent) SetFoursquareType(val OptString) {
-	s.FoursquareType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetGooglePlaceID sets the value of GooglePlaceID.
 }
 
-// SetGooglePlaceID sets the value of GooglePlaceID.
 func (s *InputVenueMessageContent) SetGooglePlaceID(val OptString) {
-	s.GooglePlaceID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetGooglePlaceType sets the value of GooglePlaceType.
 }
 
-// SetGooglePlaceType sets the value of GooglePlaceType.
 func (s *InputVenueMessageContent) SetGooglePlaceType(val OptString) {
-	s.GooglePlaceType = val
+	_ = "STUB: not implemented"
+	return
+
+	// This object contains basic information about an invoice.
+	// Ref: #/components/schemas/Invoice
 }
 
-// This object contains basic information about an invoice.
-// Ref: #/components/schemas/Invoice
 type Invoice struct {
 	// Product name.
 	Title string `json:"title"`
@@ -9883,53 +11471,49 @@ type Invoice struct {
 
 // GetTitle returns the value of Title.
 func (s *Invoice) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
-func (s *Invoice) GetDescription() string {
-	return s.Description
-}
+func (s *Invoice) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 // GetStartParameter returns the value of StartParameter.
-func (s *Invoice) GetStartParameter() string {
-	return s.StartParameter
-}
+func (s *Invoice) GetStartParameter() string { _ = "STUB: not implemented"; return "" }
 
 // GetCurrency returns the value of Currency.
 func (s *Invoice) GetCurrency() string {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetTotalAmount returns the value of TotalAmount.
+	return ""
 }
 
-// GetTotalAmount returns the value of TotalAmount.
-func (s *Invoice) GetTotalAmount() int {
-	return s.TotalAmount
-}
+func (s *Invoice) GetTotalAmount() int { _ = "STUB: not implemented"; return 0 }
 
 // SetTitle sets the value of Title.
 func (s *Invoice) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *Invoice) SetDescription(val string) {
-	s.Description = val
-}
+func (s *Invoice) SetDescription(val string) { _ = "STUB: not implemented"; return }
 
 // SetStartParameter sets the value of StartParameter.
-func (s *Invoice) SetStartParameter(val string) {
-	s.StartParameter = val
-}
+func (s *Invoice) SetStartParameter(val string) { _ = "STUB: not implemented"; return }
 
 // SetCurrency sets the value of Currency.
 func (s *Invoice) SetCurrency(val string) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetTotalAmount sets the value of TotalAmount.
+	return
 }
 
-// SetTotalAmount sets the value of TotalAmount.
-func (s *Invoice) SetTotalAmount(val int) {
-	s.TotalAmount = val
-}
+func (s *Invoice) SetTotalAmount(val int) { _ = "STUB: not implemented"; return }
 
 // This object represents one button of the reply keyboard. For simple text buttons String can be
 // used instead of this object to specify text of the button. Optional fields request_contact,
@@ -9952,53 +11536,42 @@ const (
 )
 
 // IsString reports whether KeyboardButton is string.
-func (s KeyboardButton) IsString() bool { return s.Type == StringKeyboardButton }
+func (s KeyboardButton) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // IsKeyboardButtonObject reports whether KeyboardButton is KeyboardButtonObject.
-func (s KeyboardButton) IsKeyboardButtonObject() bool {
-	return s.Type == KeyboardButtonObjectKeyboardButton
-}
+func (s KeyboardButton) IsKeyboardButtonObject() bool { _ = "STUB: not implemented"; return false }
 
 // SetString sets KeyboardButton to string.
-func (s *KeyboardButton) SetString(v string) {
-	s.Type = StringKeyboardButton
-	s.String = v
-}
+func (s *KeyboardButton) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if KeyboardButton is string.
 func (s KeyboardButton) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringKeyboardButton returns new KeyboardButton from string.
 func NewStringKeyboardButton(v string) KeyboardButton {
-	var s KeyboardButton
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(KeyboardButton)
 }
 
 // SetKeyboardButtonObject sets KeyboardButton to KeyboardButtonObject.
 func (s *KeyboardButton) SetKeyboardButtonObject(v KeyboardButtonObject) {
-	s.Type = KeyboardButtonObjectKeyboardButton
-	s.KeyboardButtonObject = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetKeyboardButtonObject returns KeyboardButtonObject and true boolean if KeyboardButton is KeyboardButtonObject.
 func (s KeyboardButton) GetKeyboardButtonObject() (v KeyboardButtonObject, ok bool) {
-	if !s.IsKeyboardButtonObject() {
-		return v, false
-	}
-	return s.KeyboardButtonObject, true
+	_ = "STUB: not implemented"
+	return *new(KeyboardButtonObject), false
 }
 
 // NewKeyboardButtonObjectKeyboardButton returns new KeyboardButton from KeyboardButtonObject.
 func NewKeyboardButtonObjectKeyboardButton(v KeyboardButtonObject) KeyboardButton {
-	var s KeyboardButton
-	s.SetKeyboardButtonObject(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(KeyboardButton)
 }
 
 // This object represents one button of the reply keyboard. For simple text buttons String can be
@@ -10020,47 +11593,58 @@ type KeyboardButtonObject struct {
 
 // GetText returns the value of Text.
 func (s *KeyboardButtonObject) GetText() string {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetRequestContact returns the value of RequestContact.
+	return ""
 }
 
-// GetRequestContact returns the value of RequestContact.
 func (s *KeyboardButtonObject) GetRequestContact() OptBool {
-	return s.RequestContact
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRequestLocation returns the value of RequestLocation.
+	new(OptBool)
 }
 
-// GetRequestLocation returns the value of RequestLocation.
 func (s *KeyboardButtonObject) GetRequestLocation() OptBool {
-	return s.RequestLocation
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRequestPoll returns the value of RequestPoll.
+	new(OptBool)
 }
 
-// GetRequestPoll returns the value of RequestPoll.
 func (s *KeyboardButtonObject) GetRequestPoll() OptKeyboardButtonPollType {
-	return s.RequestPoll
+	_ = "STUB: not implemented"
+	return *
+
+	// SetText sets the value of Text.
+	new(OptKeyboardButtonPollType)
 }
 
-// SetText sets the value of Text.
 func (s *KeyboardButtonObject) SetText(val string) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetRequestContact sets the value of RequestContact.
+	return
 }
 
-// SetRequestContact sets the value of RequestContact.
-func (s *KeyboardButtonObject) SetRequestContact(val OptBool) {
-	s.RequestContact = val
-}
+func (s *KeyboardButtonObject) SetRequestContact(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetRequestLocation sets the value of RequestLocation.
-func (s *KeyboardButtonObject) SetRequestLocation(val OptBool) {
-	s.RequestLocation = val
-}
+func (s *KeyboardButtonObject) SetRequestLocation(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetRequestPoll sets the value of RequestPoll.
 func (s *KeyboardButtonObject) SetRequestPoll(val OptKeyboardButtonPollType) {
-	s.RequestPoll = val
+	_ = "STUB: not implemented"
+	return
+
+	// This object represents type of a poll, which is allowed to be created and sent when the
+	// corresponding button is pressed.
+	// Ref: #/components/schemas/KeyboardButtonPollType
 }
 
-// This object represents type of a poll, which is allowed to be created and sent when the
-// corresponding button is pressed.
-// Ref: #/components/schemas/KeyboardButtonPollType
 type KeyboardButtonPollType struct {
 	// If quiz is passed, the user will be allowed to create only polls in the quiz mode. If regular is
 	// passed, only regular polls will be allowed. Otherwise, the user will be allowed to create a poll
@@ -10070,16 +11654,20 @@ type KeyboardButtonPollType struct {
 
 // GetType returns the value of Type.
 func (s *KeyboardButtonPollType) GetType() OptString {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return *new(OptString)
 }
 
-// SetType sets the value of Type.
 func (s *KeyboardButtonPollType) SetType(val OptString) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// This object represents a portion of the price for goods or services.
+	// Ref: #/components/schemas/LabeledPrice
+	return
 }
 
-// This object represents a portion of the price for goods or services.
-// Ref: #/components/schemas/LabeledPrice
 type LabeledPrice struct {
 	// Portion label.
 	Label string `json:"label"`
@@ -10092,42 +11680,54 @@ type LabeledPrice struct {
 
 // GetLabel returns the value of Label.
 func (s *LabeledPrice) GetLabel() string {
-	return s.Label
+	_ = "STUB: not implemented"
+
+	// GetAmount returns the value of Amount.
+	return ""
 }
 
-// GetAmount returns the value of Amount.
 func (s *LabeledPrice) GetAmount() int {
-	return s.Amount
+	_ = "STUB: not implemented"
+
+	// SetLabel sets the value of Label.
+	return 0
 }
 
-// SetLabel sets the value of Label.
 func (s *LabeledPrice) SetLabel(val string) {
-	s.Label = val
+	_ = "STUB: not implemented"
+
+	// SetAmount sets the value of Amount.
+	return
 }
 
-// SetAmount sets the value of Amount.
 func (s *LabeledPrice) SetAmount(val int) {
-	s.Amount = val
+	_ = "STUB: not implemented"
+
+	// Input for leaveChat.
+	// Ref: #/components/schemas/leaveChat
+	return
 }
 
-// Input for leaveChat.
-// Ref: #/components/schemas/leaveChat
 type LeaveChat struct {
 	ChatID ID `json:"chat_id"`
 }
 
 // GetChatID returns the value of ChatID.
 func (s *LeaveChat) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return *new(ID)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *LeaveChat) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// This object represents a point on the map.
+	// Ref: #/components/schemas/Location
+	return
 }
 
-// This object represents a point on the map.
-// Ref: #/components/schemas/Location
 type Location struct {
 	// Longitude as defined by sender.
 	Longitude float64 `json:"longitude"`
@@ -10147,63 +11747,75 @@ type Location struct {
 
 // GetLongitude returns the value of Longitude.
 func (s *Location) GetLongitude() float64 {
-	return s.Longitude
+	_ = "STUB: not implemented"
+
+	// GetLatitude returns the value of Latitude.
+	return 0
 }
 
-// GetLatitude returns the value of Latitude.
 func (s *Location) GetLatitude() float64 {
-	return s.Latitude
+	_ = "STUB: not implemented"
+
+	// GetHorizontalAccuracy returns the value of HorizontalAccuracy.
+	return 0
 }
 
-// GetHorizontalAccuracy returns the value of HorizontalAccuracy.
 func (s *Location) GetHorizontalAccuracy() OptFloat64 {
-	return s.HorizontalAccuracy
+	_ = "STUB: not implemented"
+	return *new(OptFloat64)
 }
 
 // GetLivePeriod returns the value of LivePeriod.
 func (s *Location) GetLivePeriod() OptInt {
-	return s.LivePeriod
+	_ = "STUB: not implemented"
+	return *
+
+	// GetHeading returns the value of Heading.
+	new(OptInt)
 }
 
-// GetHeading returns the value of Heading.
 func (s *Location) GetHeading() OptInt {
-	return s.Heading
+	_ = "STUB: not implemented"
+
+	// GetProximityAlertRadius returns the value of ProximityAlertRadius.
+	return *new(OptInt)
 }
 
-// GetProximityAlertRadius returns the value of ProximityAlertRadius.
-func (s *Location) GetProximityAlertRadius() OptInt {
-	return s.ProximityAlertRadius
-}
+func (s *Location) GetProximityAlertRadius() OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // SetLongitude sets the value of Longitude.
 func (s *Location) SetLongitude(val float64) {
-	s.Longitude = val
+	_ = "STUB: not implemented"
+
+	// SetLatitude sets the value of Latitude.
+	return
 }
 
-// SetLatitude sets the value of Latitude.
 func (s *Location) SetLatitude(val float64) {
-	s.Latitude = val
+	_ = "STUB: not implemented"
+
+	// SetHorizontalAccuracy sets the value of HorizontalAccuracy.
+	return
 }
 
-// SetHorizontalAccuracy sets the value of HorizontalAccuracy.
-func (s *Location) SetHorizontalAccuracy(val OptFloat64) {
-	s.HorizontalAccuracy = val
-}
+func (s *Location) SetHorizontalAccuracy(val OptFloat64) { _ = "STUB: not implemented"; return }
 
 // SetLivePeriod sets the value of LivePeriod.
 func (s *Location) SetLivePeriod(val OptInt) {
-	s.LivePeriod = val
+	_ = "STUB: not implemented"
+
+	// SetHeading sets the value of Heading.
+	return
 }
 
-// SetHeading sets the value of Heading.
 func (s *Location) SetHeading(val OptInt) {
-	s.Heading = val
+	_ = "STUB: not implemented"
+
+	// SetProximityAlertRadius sets the value of ProximityAlertRadius.
+	return
 }
 
-// SetProximityAlertRadius sets the value of ProximityAlertRadius.
-func (s *Location) SetProximityAlertRadius(val OptInt) {
-	s.ProximityAlertRadius = val
-}
+func (s *Location) SetProximityAlertRadius(val OptInt) { _ = "STUB: not implemented"; return }
 
 // Telegram apps support these buttons as of version 5.7.
 // Ref: #/components/schemas/LoginUrl
@@ -10226,43 +11838,45 @@ type LoginUrl struct {
 
 // GetURL returns the value of URL.
 func (s *LoginUrl) GetURL() url.URL {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetForwardText returns the value of ForwardText.
+	return *new(url.URL)
 }
 
-// GetForwardText returns the value of ForwardText.
 func (s *LoginUrl) GetForwardText() OptString {
-	return s.ForwardText
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBotUsername returns the value of BotUsername.
+	new(OptString)
 }
 
-// GetBotUsername returns the value of BotUsername.
 func (s *LoginUrl) GetBotUsername() OptString {
-	return s.BotUsername
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRequestWriteAccess returns the value of RequestWriteAccess.
+	new(OptString)
 }
 
-// GetRequestWriteAccess returns the value of RequestWriteAccess.
-func (s *LoginUrl) GetRequestWriteAccess() OptBool {
-	return s.RequestWriteAccess
-}
+func (s *LoginUrl) GetRequestWriteAccess() OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // SetURL sets the value of URL.
 func (s *LoginUrl) SetURL(val url.URL) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetForwardText sets the value of ForwardText.
+	return
 }
 
-// SetForwardText sets the value of ForwardText.
-func (s *LoginUrl) SetForwardText(val OptString) {
-	s.ForwardText = val
-}
+func (s *LoginUrl) SetForwardText(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetBotUsername sets the value of BotUsername.
-func (s *LoginUrl) SetBotUsername(val OptString) {
-	s.BotUsername = val
-}
+func (s *LoginUrl) SetBotUsername(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetRequestWriteAccess sets the value of RequestWriteAccess.
-func (s *LoginUrl) SetRequestWriteAccess(val OptBool) {
-	s.RequestWriteAccess = val
-}
+func (s *LoginUrl) SetRequestWriteAccess(val OptBool) { _ = "STUB: not implemented"; return }
 
 // This object describes the position on faces where a mask should be placed by default.
 // Ref: #/components/schemas/MaskPosition
@@ -10282,46 +11896,62 @@ type MaskPosition struct {
 
 // GetPoint returns the value of Point.
 func (s *MaskPosition) GetPoint() string {
-	return s.Point
+	_ = "STUB: not implemented"
+
+	// GetXShift returns the value of XShift.
+	return ""
 }
 
-// GetXShift returns the value of XShift.
 func (s *MaskPosition) GetXShift() float64 {
-	return s.XShift
+	_ = "STUB: not implemented"
+
+	// GetYShift returns the value of YShift.
+	return 0
 }
 
-// GetYShift returns the value of YShift.
 func (s *MaskPosition) GetYShift() float64 {
-	return s.YShift
+	_ = "STUB: not implemented"
+
+	// GetScale returns the value of Scale.
+	return 0
 }
 
-// GetScale returns the value of Scale.
 func (s *MaskPosition) GetScale() float64 {
-	return s.Scale
+	_ = "STUB: not implemented"
+
+	// SetPoint sets the value of Point.
+	return 0
 }
 
-// SetPoint sets the value of Point.
 func (s *MaskPosition) SetPoint(val string) {
-	s.Point = val
+	_ = "STUB: not implemented"
+
+	// SetXShift sets the value of XShift.
+	return
 }
 
-// SetXShift sets the value of XShift.
 func (s *MaskPosition) SetXShift(val float64) {
-	s.XShift = val
+	_ = "STUB: not implemented"
+
+	// SetYShift sets the value of YShift.
+	return
 }
 
-// SetYShift sets the value of YShift.
 func (s *MaskPosition) SetYShift(val float64) {
-	s.YShift = val
+	_ = "STUB: not implemented"
+
+	// SetScale sets the value of Scale.
+	return
 }
 
-// SetScale sets the value of Scale.
 func (s *MaskPosition) SetScale(val float64) {
-	s.Scale = val
+	_ = "STUB: not implemented"
+
+	// This object represents a message.
+	// Ref: #/components/schemas/Message
+	return
 }
 
-// This object represents a message.
-// Ref: #/components/schemas/Message
 type Message struct {
 	// Unique message identifier inside this chat.
 	MessageID  int     `json:"message_id"`
@@ -10428,583 +12058,656 @@ type Message struct {
 
 // GetMessageID returns the value of MessageID.
 func (s *Message) GetMessageID() int {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// GetFrom returns the value of From.
+	return 0
 }
 
-// GetFrom returns the value of From.
 func (s *Message) GetFrom() OptUser {
-	return s.From
+	_ = "STUB: not implemented"
+
+	// GetSenderChat returns the value of SenderChat.
+	return *new(OptUser)
 }
 
-// GetSenderChat returns the value of SenderChat.
 func (s *Message) GetSenderChat() OptChat {
-	return s.SenderChat
+	_ = "STUB: not implemented"
+	return *
+
+	// GetDate returns the value of Date.
+	new(OptChat)
 }
 
-// GetDate returns the value of Date.
 func (s *Message) GetDate() int {
-	return s.Date
+	_ = "STUB: not implemented"
+
+	// GetChat returns the value of Chat.
+	return 0
 }
 
-// GetChat returns the value of Chat.
 func (s *Message) GetChat() Chat {
-	return s.Chat
+	_ = "STUB: not implemented"
+
+	// GetForwardFrom returns the value of ForwardFrom.
+	return *new(Chat)
 }
 
-// GetForwardFrom returns the value of ForwardFrom.
 func (s *Message) GetForwardFrom() OptUser {
-	return s.ForwardFrom
+	_ = "STUB: not implemented"
+	return *
+
+	// GetForwardFromChat returns the value of ForwardFromChat.
+	new(OptUser)
 }
 
-// GetForwardFromChat returns the value of ForwardFromChat.
 func (s *Message) GetForwardFromChat() OptChat {
-	return s.ForwardFromChat
+	_ = "STUB: not implemented"
+	return *
+
+	// GetForwardFromMessageID returns the value of ForwardFromMessageID.
+	new(OptChat)
 }
 
-// GetForwardFromMessageID returns the value of ForwardFromMessageID.
-func (s *Message) GetForwardFromMessageID() OptInt {
-	return s.ForwardFromMessageID
-}
+func (s *Message) GetForwardFromMessageID() OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // GetForwardSignature returns the value of ForwardSignature.
 func (s *Message) GetForwardSignature() OptString {
-	return s.ForwardSignature
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetForwardSenderName returns the value of ForwardSenderName.
 func (s *Message) GetForwardSenderName() OptString {
-	return s.ForwardSenderName
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetForwardDate returns the value of ForwardDate.
 func (s *Message) GetForwardDate() OptInt {
-	return s.ForwardDate
+	_ = "STUB: not implemented"
+	return *
+
+	// GetIsAutomaticForward returns the value of IsAutomaticForward.
+	new(OptInt)
 }
 
-// GetIsAutomaticForward returns the value of IsAutomaticForward.
-func (s *Message) GetIsAutomaticForward() OptBool {
-	return s.IsAutomaticForward
-}
+func (s *Message) GetIsAutomaticForward() OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // GetReplyToMessage returns the value of ReplyToMessage.
-func (s *Message) GetReplyToMessage() *Message {
-	return s.ReplyToMessage
-}
+func (s *Message) GetReplyToMessage() *Message { _ = "STUB: not implemented"; return nil }
 
 // GetViaBot returns the value of ViaBot.
 func (s *Message) GetViaBot() OptUser {
-	return s.ViaBot
+	_ = "STUB: not implemented"
+
+	// GetEditDate returns the value of EditDate.
+	return *new(OptUser)
 }
 
-// GetEditDate returns the value of EditDate.
 func (s *Message) GetEditDate() OptInt {
-	return s.EditDate
+	_ = "STUB: not implemented"
+
+	// GetHasProtectedContent returns the value of HasProtectedContent.
+	return *new(OptInt)
 }
 
-// GetHasProtectedContent returns the value of HasProtectedContent.
-func (s *Message) GetHasProtectedContent() OptBool {
-	return s.HasProtectedContent
-}
+func (s *Message) GetHasProtectedContent() OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // GetMediaGroupID returns the value of MediaGroupID.
 func (s *Message) GetMediaGroupID() OptString {
-	return s.MediaGroupID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAuthorSignature returns the value of AuthorSignature.
+	new(OptString)
 }
 
-// GetAuthorSignature returns the value of AuthorSignature.
 func (s *Message) GetAuthorSignature() OptString {
-	return s.AuthorSignature
+	_ = "STUB: not implemented"
+	return *
+
+	// GetText returns the value of Text.
+	new(OptString)
 }
 
-// GetText returns the value of Text.
 func (s *Message) GetText() OptString {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetEntities returns the value of Entities.
+	return *new(OptString)
 }
 
-// GetEntities returns the value of Entities.
 func (s *Message) GetEntities() []MessageEntity {
-	return s.Entities
+	_ = "STUB: not implemented"
+
+	// GetAnimation returns the value of Animation.
+	return nil
 }
 
-// GetAnimation returns the value of Animation.
 func (s *Message) GetAnimation() OptAnimation {
-	return s.Animation
+	_ = "STUB: not implemented"
+
+	// GetAudio returns the value of Audio.
+	return *new(OptAnimation)
 }
 
-// GetAudio returns the value of Audio.
 func (s *Message) GetAudio() OptAudio {
-	return s.Audio
+	_ = "STUB: not implemented"
+
+	// GetDocument returns the value of Document.
+	return *new(OptAudio)
 }
 
-// GetDocument returns the value of Document.
 func (s *Message) GetDocument() OptDocument {
-	return s.Document
+	_ = "STUB: not implemented"
+
+	// GetPhoto returns the value of Photo.
+	return *new(OptDocument)
 }
 
-// GetPhoto returns the value of Photo.
 func (s *Message) GetPhoto() []PhotoSize {
-	return s.Photo
+	_ = "STUB: not implemented"
+
+	// GetSticker returns the value of Sticker.
+	return nil
 }
 
-// GetSticker returns the value of Sticker.
 func (s *Message) GetSticker() OptSticker {
-	return s.Sticker
+	_ = "STUB: not implemented"
+
+	// GetVideo returns the value of Video.
+	return *new(OptSticker)
 }
 
-// GetVideo returns the value of Video.
 func (s *Message) GetVideo() OptVideo {
-	return s.Video
+	_ = "STUB: not implemented"
+
+	// GetVideoNote returns the value of VideoNote.
+	return *new(OptVideo)
 }
 
-// GetVideoNote returns the value of VideoNote.
 func (s *Message) GetVideoNote() OptVideoNote {
-	return s.VideoNote
+	_ = "STUB: not implemented"
+
+	// GetVoice returns the value of Voice.
+	return *new(OptVideoNote)
 }
 
-// GetVoice returns the value of Voice.
 func (s *Message) GetVoice() OptVoice {
-	return s.Voice
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptVoice)
 }
 
-// GetCaption returns the value of Caption.
 func (s *Message) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	return *new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
-func (s *Message) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
-}
+func (s *Message) GetCaptionEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetContact returns the value of Contact.
 func (s *Message) GetContact() OptContact {
-	return s.Contact
+	_ = "STUB: not implemented"
+
+	// GetDice returns the value of Dice.
+	return *new(OptContact)
 }
 
-// GetDice returns the value of Dice.
 func (s *Message) GetDice() OptDice {
-	return s.Dice
+	_ = "STUB: not implemented"
+
+	// GetGame returns the value of Game.
+	return *new(OptDice)
 }
 
-// GetGame returns the value of Game.
 func (s *Message) GetGame() OptGame {
-	return s.Game
+	_ = "STUB: not implemented"
+
+	// GetPoll returns the value of Poll.
+	return *new(OptGame)
 }
 
-// GetPoll returns the value of Poll.
 func (s *Message) GetPoll() OptPoll {
-	return s.Poll
+	_ = "STUB: not implemented"
+
+	// GetVenue returns the value of Venue.
+	return *new(OptPoll)
 }
 
-// GetVenue returns the value of Venue.
 func (s *Message) GetVenue() OptVenue {
-	return s.Venue
+	_ = "STUB: not implemented"
+
+	// GetLocation returns the value of Location.
+	return *new(OptVenue)
 }
 
-// GetLocation returns the value of Location.
 func (s *Message) GetLocation() OptLocation {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// GetNewChatMembers returns the value of NewChatMembers.
+	return *new(OptLocation)
 }
 
-// GetNewChatMembers returns the value of NewChatMembers.
-func (s *Message) GetNewChatMembers() []User {
-	return s.NewChatMembers
-}
+func (s *Message) GetNewChatMembers() []User { _ = "STUB: not implemented"; return nil }
 
 // GetLeftChatMember returns the value of LeftChatMember.
 func (s *Message) GetLeftChatMember() OptUser {
-	return s.LeftChatMember
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNewChatTitle returns the value of NewChatTitle.
+	new(OptUser)
 }
 
-// GetNewChatTitle returns the value of NewChatTitle.
 func (s *Message) GetNewChatTitle() OptString {
-	return s.NewChatTitle
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNewChatPhoto returns the value of NewChatPhoto.
+	new(OptString)
 }
 
-// GetNewChatPhoto returns the value of NewChatPhoto.
-func (s *Message) GetNewChatPhoto() []PhotoSize {
-	return s.NewChatPhoto
-}
+func (s *Message) GetNewChatPhoto() []PhotoSize { _ = "STUB: not implemented"; return nil }
 
 // GetDeleteChatPhoto returns the value of DeleteChatPhoto.
 func (s *Message) GetDeleteChatPhoto() OptBool {
-	return s.DeleteChatPhoto
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGroupChatCreated returns the value of GroupChatCreated.
+	new(OptBool)
 }
 
-// GetGroupChatCreated returns the value of GroupChatCreated.
 func (s *Message) GetGroupChatCreated() OptBool {
-	return s.GroupChatCreated
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSupergroupChatCreated returns the value of SupergroupChatCreated.
+	new(OptBool)
 }
 
-// GetSupergroupChatCreated returns the value of SupergroupChatCreated.
 func (s *Message) GetSupergroupChatCreated() OptBool {
-	return s.SupergroupChatCreated
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetChannelChatCreated returns the value of ChannelChatCreated.
-func (s *Message) GetChannelChatCreated() OptBool {
-	return s.ChannelChatCreated
-}
+func (s *Message) GetChannelChatCreated() OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // GetMessageAutoDeleteTimerChanged returns the value of MessageAutoDeleteTimerChanged.
 func (s *Message) GetMessageAutoDeleteTimerChanged() OptMessageAutoDeleteTimerChanged {
-	return s.MessageAutoDeleteTimerChanged
+	_ = "STUB: not implemented"
+	return *new(OptMessageAutoDeleteTimerChanged)
 }
 
 // GetMigrateToChatID returns the value of MigrateToChatID.
 func (s *Message) GetMigrateToChatID() OptInt64 {
-	return s.MigrateToChatID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMigrateFromChatID returns the value of MigrateFromChatID.
+	new(OptInt64)
 }
 
-// GetMigrateFromChatID returns the value of MigrateFromChatID.
-func (s *Message) GetMigrateFromChatID() OptInt64 {
-	return s.MigrateFromChatID
-}
+func (s *Message) GetMigrateFromChatID() OptInt64 { _ = "STUB: not implemented"; return *new(OptInt64) }
 
 // GetPinnedMessage returns the value of PinnedMessage.
-func (s *Message) GetPinnedMessage() *Message {
-	return s.PinnedMessage
-}
+func (s *Message) GetPinnedMessage() *Message { _ = "STUB: not implemented"; return nil }
 
 // GetInvoice returns the value of Invoice.
 func (s *Message) GetInvoice() OptInvoice {
-	return s.Invoice
+	_ = "STUB: not implemented"
+
+	// GetSuccessfulPayment returns the value of SuccessfulPayment.
+	return *new(OptInvoice)
 }
 
-// GetSuccessfulPayment returns the value of SuccessfulPayment.
 func (s *Message) GetSuccessfulPayment() OptSuccessfulPayment {
-	return s.SuccessfulPayment
+	_ = "STUB: not implemented"
+	return *new(OptSuccessfulPayment)
 }
 
 // GetConnectedWebsite returns the value of ConnectedWebsite.
 func (s *Message) GetConnectedWebsite() OptString {
-	return s.ConnectedWebsite
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetPassportData returns the value of PassportData.
 func (s *Message) GetPassportData() OptPassportData {
-	return s.PassportData
+	_ = "STUB: not implemented"
+	return *
+
+	// GetProximityAlertTriggered returns the value of ProximityAlertTriggered.
+	new(OptPassportData)
 }
 
-// GetProximityAlertTriggered returns the value of ProximityAlertTriggered.
 func (s *Message) GetProximityAlertTriggered() OptProximityAlertTriggered {
-	return s.ProximityAlertTriggered
+	_ = "STUB: not implemented"
+	return *new(OptProximityAlertTriggered)
 }
 
 // GetVoiceChatScheduled returns the value of VoiceChatScheduled.
 func (s *Message) GetVoiceChatScheduled() OptVoiceChatScheduled {
-	return s.VoiceChatScheduled
+	_ = "STUB: not implemented"
+	return *new(OptVoiceChatScheduled)
 }
 
 // GetVoiceChatStarted returns the value of VoiceChatStarted.
-func (s *Message) GetVoiceChatStarted() *VoiceChatStarted {
-	return s.VoiceChatStarted
-}
+func (s *Message) GetVoiceChatStarted() *VoiceChatStarted { _ = "STUB: not implemented"; return nil }
 
 // GetVoiceChatEnded returns the value of VoiceChatEnded.
 func (s *Message) GetVoiceChatEnded() OptVoiceChatEnded {
-	return s.VoiceChatEnded
+	_ = "STUB: not implemented"
+	return *
+
+	// GetVoiceChatParticipantsInvited returns the value of VoiceChatParticipantsInvited.
+	new(OptVoiceChatEnded)
 }
 
-// GetVoiceChatParticipantsInvited returns the value of VoiceChatParticipantsInvited.
 func (s *Message) GetVoiceChatParticipantsInvited() OptVoiceChatParticipantsInvited {
-	return s.VoiceChatParticipantsInvited
+	_ = "STUB: not implemented"
+	return *new(OptVoiceChatParticipantsInvited)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *Message) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetMessageID sets the value of MessageID.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *Message) SetMessageID(val int) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetFrom sets the value of From.
+	return
 }
 
-// SetFrom sets the value of From.
 func (s *Message) SetFrom(val OptUser) {
-	s.From = val
+	_ = "STUB: not implemented"
+
+	// SetSenderChat sets the value of SenderChat.
+	return
 }
 
-// SetSenderChat sets the value of SenderChat.
 func (s *Message) SetSenderChat(val OptChat) {
-	s.SenderChat = val
+	_ = "STUB: not implemented"
+
+	// SetDate sets the value of Date.
+	return
 }
 
-// SetDate sets the value of Date.
 func (s *Message) SetDate(val int) {
-	s.Date = val
+	_ = "STUB: not implemented"
+
+	// SetChat sets the value of Chat.
+	return
 }
 
-// SetChat sets the value of Chat.
 func (s *Message) SetChat(val Chat) {
-	s.Chat = val
+	_ = "STUB: not implemented"
+
+	// SetForwardFrom sets the value of ForwardFrom.
+	return
 }
 
-// SetForwardFrom sets the value of ForwardFrom.
-func (s *Message) SetForwardFrom(val OptUser) {
-	s.ForwardFrom = val
-}
+func (s *Message) SetForwardFrom(val OptUser) { _ = "STUB: not implemented"; return }
 
 // SetForwardFromChat sets the value of ForwardFromChat.
-func (s *Message) SetForwardFromChat(val OptChat) {
-	s.ForwardFromChat = val
-}
+func (s *Message) SetForwardFromChat(val OptChat) { _ = "STUB: not implemented"; return }
 
 // SetForwardFromMessageID sets the value of ForwardFromMessageID.
-func (s *Message) SetForwardFromMessageID(val OptInt) {
-	s.ForwardFromMessageID = val
-}
+func (s *Message) SetForwardFromMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetForwardSignature sets the value of ForwardSignature.
-func (s *Message) SetForwardSignature(val OptString) {
-	s.ForwardSignature = val
-}
+func (s *Message) SetForwardSignature(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetForwardSenderName sets the value of ForwardSenderName.
-func (s *Message) SetForwardSenderName(val OptString) {
-	s.ForwardSenderName = val
-}
+func (s *Message) SetForwardSenderName(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetForwardDate sets the value of ForwardDate.
-func (s *Message) SetForwardDate(val OptInt) {
-	s.ForwardDate = val
-}
+func (s *Message) SetForwardDate(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetIsAutomaticForward sets the value of IsAutomaticForward.
-func (s *Message) SetIsAutomaticForward(val OptBool) {
-	s.IsAutomaticForward = val
-}
+func (s *Message) SetIsAutomaticForward(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessage sets the value of ReplyToMessage.
-func (s *Message) SetReplyToMessage(val *Message) {
-	s.ReplyToMessage = val
-}
+func (s *Message) SetReplyToMessage(val *Message) { _ = "STUB: not implemented"; return }
 
 // SetViaBot sets the value of ViaBot.
 func (s *Message) SetViaBot(val OptUser) {
-	s.ViaBot = val
+	_ = "STUB: not implemented"
+
+	// SetEditDate sets the value of EditDate.
+	return
 }
 
-// SetEditDate sets the value of EditDate.
 func (s *Message) SetEditDate(val OptInt) {
-	s.EditDate = val
+	_ = "STUB: not implemented"
+
+	// SetHasProtectedContent sets the value of HasProtectedContent.
+	return
 }
 
-// SetHasProtectedContent sets the value of HasProtectedContent.
-func (s *Message) SetHasProtectedContent(val OptBool) {
-	s.HasProtectedContent = val
-}
+func (s *Message) SetHasProtectedContent(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetMediaGroupID sets the value of MediaGroupID.
-func (s *Message) SetMediaGroupID(val OptString) {
-	s.MediaGroupID = val
-}
+func (s *Message) SetMediaGroupID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetAuthorSignature sets the value of AuthorSignature.
-func (s *Message) SetAuthorSignature(val OptString) {
-	s.AuthorSignature = val
-}
+func (s *Message) SetAuthorSignature(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetText sets the value of Text.
 func (s *Message) SetText(val OptString) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetEntities sets the value of Entities.
+	return
 }
 
-// SetEntities sets the value of Entities.
 func (s *Message) SetEntities(val []MessageEntity) {
-	s.Entities = val
+	_ = "STUB: not implemented"
+
+	// SetAnimation sets the value of Animation.
+	return
 }
 
-// SetAnimation sets the value of Animation.
 func (s *Message) SetAnimation(val OptAnimation) {
-	s.Animation = val
+	_ = "STUB: not implemented"
+
+	// SetAudio sets the value of Audio.
+	return
 }
 
-// SetAudio sets the value of Audio.
 func (s *Message) SetAudio(val OptAudio) {
-	s.Audio = val
+	_ = "STUB: not implemented"
+
+	// SetDocument sets the value of Document.
+	return
 }
 
-// SetDocument sets the value of Document.
 func (s *Message) SetDocument(val OptDocument) {
-	s.Document = val
+	_ = "STUB: not implemented"
+
+	// SetPhoto sets the value of Photo.
+	return
 }
 
-// SetPhoto sets the value of Photo.
 func (s *Message) SetPhoto(val []PhotoSize) {
-	s.Photo = val
+	_ = "STUB: not implemented"
+
+	// SetSticker sets the value of Sticker.
+	return
 }
 
-// SetSticker sets the value of Sticker.
 func (s *Message) SetSticker(val OptSticker) {
-	s.Sticker = val
+	_ = "STUB: not implemented"
+
+	// SetVideo sets the value of Video.
+	return
 }
 
-// SetVideo sets the value of Video.
 func (s *Message) SetVideo(val OptVideo) {
-	s.Video = val
+	_ = "STUB: not implemented"
+
+	// SetVideoNote sets the value of VideoNote.
+	return
 }
 
-// SetVideoNote sets the value of VideoNote.
 func (s *Message) SetVideoNote(val OptVideoNote) {
-	s.VideoNote = val
+	_ = "STUB: not implemented"
+
+	// SetVoice sets the value of Voice.
+	return
 }
 
-// SetVoice sets the value of Voice.
 func (s *Message) SetVoice(val OptVoice) {
-	s.Voice = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *Message) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
-func (s *Message) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
-}
+func (s *Message) SetCaptionEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetContact sets the value of Contact.
 func (s *Message) SetContact(val OptContact) {
-	s.Contact = val
+	_ = "STUB: not implemented"
+
+	// SetDice sets the value of Dice.
+	return
 }
 
-// SetDice sets the value of Dice.
 func (s *Message) SetDice(val OptDice) {
-	s.Dice = val
+	_ = "STUB: not implemented"
+
+	// SetGame sets the value of Game.
+	return
 }
 
-// SetGame sets the value of Game.
 func (s *Message) SetGame(val OptGame) {
-	s.Game = val
+	_ = "STUB: not implemented"
+
+	// SetPoll sets the value of Poll.
+	return
 }
 
-// SetPoll sets the value of Poll.
 func (s *Message) SetPoll(val OptPoll) {
-	s.Poll = val
+	_ = "STUB: not implemented"
+
+	// SetVenue sets the value of Venue.
+	return
 }
 
-// SetVenue sets the value of Venue.
 func (s *Message) SetVenue(val OptVenue) {
-	s.Venue = val
+	_ = "STUB: not implemented"
+
+	// SetLocation sets the value of Location.
+	return
 }
 
-// SetLocation sets the value of Location.
 func (s *Message) SetLocation(val OptLocation) {
-	s.Location = val
+	_ = "STUB: not implemented"
+
+	// SetNewChatMembers sets the value of NewChatMembers.
+	return
 }
 
-// SetNewChatMembers sets the value of NewChatMembers.
-func (s *Message) SetNewChatMembers(val []User) {
-	s.NewChatMembers = val
-}
+func (s *Message) SetNewChatMembers(val []User) { _ = "STUB: not implemented"; return }
 
 // SetLeftChatMember sets the value of LeftChatMember.
-func (s *Message) SetLeftChatMember(val OptUser) {
-	s.LeftChatMember = val
-}
+func (s *Message) SetLeftChatMember(val OptUser) { _ = "STUB: not implemented"; return }
 
 // SetNewChatTitle sets the value of NewChatTitle.
-func (s *Message) SetNewChatTitle(val OptString) {
-	s.NewChatTitle = val
-}
+func (s *Message) SetNewChatTitle(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetNewChatPhoto sets the value of NewChatPhoto.
-func (s *Message) SetNewChatPhoto(val []PhotoSize) {
-	s.NewChatPhoto = val
-}
+func (s *Message) SetNewChatPhoto(val []PhotoSize) { _ = "STUB: not implemented"; return }
 
 // SetDeleteChatPhoto sets the value of DeleteChatPhoto.
-func (s *Message) SetDeleteChatPhoto(val OptBool) {
-	s.DeleteChatPhoto = val
-}
+func (s *Message) SetDeleteChatPhoto(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetGroupChatCreated sets the value of GroupChatCreated.
-func (s *Message) SetGroupChatCreated(val OptBool) {
-	s.GroupChatCreated = val
-}
+func (s *Message) SetGroupChatCreated(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetSupergroupChatCreated sets the value of SupergroupChatCreated.
-func (s *Message) SetSupergroupChatCreated(val OptBool) {
-	s.SupergroupChatCreated = val
-}
+func (s *Message) SetSupergroupChatCreated(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetChannelChatCreated sets the value of ChannelChatCreated.
-func (s *Message) SetChannelChatCreated(val OptBool) {
-	s.ChannelChatCreated = val
-}
+func (s *Message) SetChannelChatCreated(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetMessageAutoDeleteTimerChanged sets the value of MessageAutoDeleteTimerChanged.
 func (s *Message) SetMessageAutoDeleteTimerChanged(val OptMessageAutoDeleteTimerChanged) {
-	s.MessageAutoDeleteTimerChanged = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetMigrateToChatID sets the value of MigrateToChatID.
-func (s *Message) SetMigrateToChatID(val OptInt64) {
-	s.MigrateToChatID = val
-}
+func (s *Message) SetMigrateToChatID(val OptInt64) { _ = "STUB: not implemented"; return }
 
 // SetMigrateFromChatID sets the value of MigrateFromChatID.
-func (s *Message) SetMigrateFromChatID(val OptInt64) {
-	s.MigrateFromChatID = val
-}
+func (s *Message) SetMigrateFromChatID(val OptInt64) { _ = "STUB: not implemented"; return }
 
 // SetPinnedMessage sets the value of PinnedMessage.
-func (s *Message) SetPinnedMessage(val *Message) {
-	s.PinnedMessage = val
-}
+func (s *Message) SetPinnedMessage(val *Message) { _ = "STUB: not implemented"; return }
 
 // SetInvoice sets the value of Invoice.
 func (s *Message) SetInvoice(val OptInvoice) {
-	s.Invoice = val
+	_ = "STUB: not implemented"
+
+	// SetSuccessfulPayment sets the value of SuccessfulPayment.
+	return
 }
 
-// SetSuccessfulPayment sets the value of SuccessfulPayment.
-func (s *Message) SetSuccessfulPayment(val OptSuccessfulPayment) {
-	s.SuccessfulPayment = val
-}
+func (s *Message) SetSuccessfulPayment(val OptSuccessfulPayment) { _ = "STUB: not implemented"; return }
 
 // SetConnectedWebsite sets the value of ConnectedWebsite.
-func (s *Message) SetConnectedWebsite(val OptString) {
-	s.ConnectedWebsite = val
-}
+func (s *Message) SetConnectedWebsite(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetPassportData sets the value of PassportData.
-func (s *Message) SetPassportData(val OptPassportData) {
-	s.PassportData = val
-}
+func (s *Message) SetPassportData(val OptPassportData) { _ = "STUB: not implemented"; return }
 
 // SetProximityAlertTriggered sets the value of ProximityAlertTriggered.
 func (s *Message) SetProximityAlertTriggered(val OptProximityAlertTriggered) {
-	s.ProximityAlertTriggered = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetVoiceChatScheduled sets the value of VoiceChatScheduled.
 func (s *Message) SetVoiceChatScheduled(val OptVoiceChatScheduled) {
-	s.VoiceChatScheduled = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetVoiceChatStarted sets the value of VoiceChatStarted.
-func (s *Message) SetVoiceChatStarted(val *VoiceChatStarted) {
-	s.VoiceChatStarted = val
-}
+func (s *Message) SetVoiceChatStarted(val *VoiceChatStarted) { _ = "STUB: not implemented"; return }
 
 // SetVoiceChatEnded sets the value of VoiceChatEnded.
-func (s *Message) SetVoiceChatEnded(val OptVoiceChatEnded) {
-	s.VoiceChatEnded = val
-}
+func (s *Message) SetVoiceChatEnded(val OptVoiceChatEnded) { _ = "STUB: not implemented"; return }
 
 // SetVoiceChatParticipantsInvited sets the value of VoiceChatParticipantsInvited.
 func (s *Message) SetVoiceChatParticipantsInvited(val OptVoiceChatParticipantsInvited) {
-	s.VoiceChatParticipantsInvited = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
-func (s *Message) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
-}
+func (s *Message) SetReplyMarkup(val OptInlineKeyboardMarkup) { _ = "STUB: not implemented"; return }
 
 // This object represents a service message about a change in auto-delete timer settings.
 // Ref: #/components/schemas/MessageAutoDeleteTimerChanged
@@ -11015,12 +12718,14 @@ type MessageAutoDeleteTimerChanged struct {
 
 // GetMessageAutoDeleteTime returns the value of MessageAutoDeleteTime.
 func (s *MessageAutoDeleteTimerChanged) GetMessageAutoDeleteTime() int {
-	return s.MessageAutoDeleteTime
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // SetMessageAutoDeleteTime sets the value of MessageAutoDeleteTime.
 func (s *MessageAutoDeleteTimerChanged) SetMessageAutoDeleteTime(val int) {
-	s.MessageAutoDeleteTime = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // This object represents one special entity in a text message. For example, hashtags, usernames,
@@ -11047,70 +12752,94 @@ type MessageEntity struct {
 
 // GetType returns the value of Type.
 func (s *MessageEntity) GetType() MessageEntityType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetOffset returns the value of Offset.
+	return *new(MessageEntityType)
 }
 
-// GetOffset returns the value of Offset.
 func (s *MessageEntity) GetOffset() int {
-	return s.Offset
+	_ = "STUB: not implemented"
+
+	// GetLength returns the value of Length.
+	return 0
 }
 
-// GetLength returns the value of Length.
 func (s *MessageEntity) GetLength() int {
-	return s.Length
+	_ = "STUB: not implemented"
+
+	// GetURL returns the value of URL.
+	return 0
 }
 
-// GetURL returns the value of URL.
 func (s *MessageEntity) GetURL() OptURI {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return *new(OptURI)
 }
 
-// GetUser returns the value of User.
 func (s *MessageEntity) GetUser() OptUser {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// GetLanguage returns the value of Language.
+	return *new(OptUser)
 }
 
-// GetLanguage returns the value of Language.
 func (s *MessageEntity) GetLanguage() OptString {
-	return s.Language
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return *new(OptString)
 }
 
-// SetType sets the value of Type.
 func (s *MessageEntity) SetType(val MessageEntityType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetOffset sets the value of Offset.
+	return
 }
 
-// SetOffset sets the value of Offset.
 func (s *MessageEntity) SetOffset(val int) {
-	s.Offset = val
+	_ = "STUB: not implemented"
+
+	// SetLength sets the value of Length.
+	return
 }
 
-// SetLength sets the value of Length.
 func (s *MessageEntity) SetLength(val int) {
-	s.Length = val
+	_ = "STUB: not implemented"
+
+	// SetURL sets the value of URL.
+	return
 }
 
-// SetURL sets the value of URL.
 func (s *MessageEntity) SetURL(val OptURI) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *MessageEntity) SetUser(val OptUser) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// SetLanguage sets the value of Language.
+	return
 }
 
-// SetLanguage sets the value of Language.
 func (s *MessageEntity) SetLanguage(val OptString) {
-	s.Language = val
+	_ = "STUB: not implemented"
+
+	// Type of the entity. Can be “mention” (@username), “hashtag” (#hashtag), “cashtag”
+	// ($USD), “bot_command” (/start@jobs_bot), “url” (https://telegram.org), “email”
+	// (do-not-reply@telegram.org), “phone_number” (+1-212-555-0123), “bold” (bold text),
+	// “italic” (italic text), “underline” (underlined text), “strikethrough” (strikethrough
+	// text), “code” (monowidth string), “pre” (monowidth block), “text_link” (for clickable
+	// text URLs), “text_mention” (for users without usernames).
+	return
 }
 
-// Type of the entity. Can be “mention” (@username), “hashtag” (#hashtag), “cashtag”
-// ($USD), “bot_command” (/start@jobs_bot), “url” (https://telegram.org), “email”
-// (do-not-reply@telegram.org), “phone_number” (+1-212-555-0123), “bold” (bold text),
-// “italic” (italic text), “underline” (underlined text), “strikethrough” (strikethrough
-// text), “code” (monowidth string), “pre” (monowidth block), “text_link” (for clickable
-// text URLs), “text_mention” (for users without usernames).
 type MessageEntityType string
 
 const (
@@ -11132,116 +12861,16 @@ const (
 )
 
 // AllValues returns all MessageEntityType values.
-func (MessageEntityType) AllValues() []MessageEntityType {
-	return []MessageEntityType{
-		MessageEntityTypeMention,
-		MessageEntityTypeHashtag,
-		MessageEntityTypeCashtag,
-		MessageEntityTypeBotCommand,
-		MessageEntityTypeURL,
-		MessageEntityTypeEmail,
-		MessageEntityTypePhoneNumber,
-		MessageEntityTypeBold,
-		MessageEntityTypeItalic,
-		MessageEntityTypeUnderline,
-		MessageEntityTypeStrikethrough,
-		MessageEntityTypeCode,
-		MessageEntityTypePre,
-		MessageEntityTypeTextLink,
-		MessageEntityTypeTextMention,
-	}
-}
+func (MessageEntityType) AllValues() []MessageEntityType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s MessageEntityType) MarshalText() ([]byte, error) {
-	switch s {
-	case MessageEntityTypeMention:
-		return []byte(s), nil
-	case MessageEntityTypeHashtag:
-		return []byte(s), nil
-	case MessageEntityTypeCashtag:
-		return []byte(s), nil
-	case MessageEntityTypeBotCommand:
-		return []byte(s), nil
-	case MessageEntityTypeURL:
-		return []byte(s), nil
-	case MessageEntityTypeEmail:
-		return []byte(s), nil
-	case MessageEntityTypePhoneNumber:
-		return []byte(s), nil
-	case MessageEntityTypeBold:
-		return []byte(s), nil
-	case MessageEntityTypeItalic:
-		return []byte(s), nil
-	case MessageEntityTypeUnderline:
-		return []byte(s), nil
-	case MessageEntityTypeStrikethrough:
-		return []byte(s), nil
-	case MessageEntityTypeCode:
-		return []byte(s), nil
-	case MessageEntityTypePre:
-		return []byte(s), nil
-	case MessageEntityTypeTextLink:
-		return []byte(s), nil
-	case MessageEntityTypeTextMention:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *MessageEntityType) UnmarshalText(data []byte) error {
-	switch MessageEntityType(data) {
-	case MessageEntityTypeMention:
-		*s = MessageEntityTypeMention
-		return nil
-	case MessageEntityTypeHashtag:
-		*s = MessageEntityTypeHashtag
-		return nil
-	case MessageEntityTypeCashtag:
-		*s = MessageEntityTypeCashtag
-		return nil
-	case MessageEntityTypeBotCommand:
-		*s = MessageEntityTypeBotCommand
-		return nil
-	case MessageEntityTypeURL:
-		*s = MessageEntityTypeURL
-		return nil
-	case MessageEntityTypeEmail:
-		*s = MessageEntityTypeEmail
-		return nil
-	case MessageEntityTypePhoneNumber:
-		*s = MessageEntityTypePhoneNumber
-		return nil
-	case MessageEntityTypeBold:
-		*s = MessageEntityTypeBold
-		return nil
-	case MessageEntityTypeItalic:
-		*s = MessageEntityTypeItalic
-		return nil
-	case MessageEntityTypeUnderline:
-		*s = MessageEntityTypeUnderline
-		return nil
-	case MessageEntityTypeStrikethrough:
-		*s = MessageEntityTypeStrikethrough
-		return nil
-	case MessageEntityTypeCode:
-		*s = MessageEntityTypeCode
-		return nil
-	case MessageEntityTypePre:
-		*s = MessageEntityTypePre
-		return nil
-	case MessageEntityTypeTextLink:
-		*s = MessageEntityTypeTextLink
-		return nil
-	case MessageEntityTypeTextMention:
-		*s = MessageEntityTypeTextMention
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *MessageEntityType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // This object represents a unique message identifier.
 // Ref: #/components/schemas/MessageId
@@ -11252,20 +12881,22 @@ type MessageId struct {
 
 // GetMessageID returns the value of MessageID.
 func (s *MessageId) GetMessageID() int {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return 0
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *MessageId) SetMessageID(val int) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// NewOptAnimation returns new OptAnimation with value set to v.
+	return
 }
 
-// NewOptAnimation returns new OptAnimation with value set to v.
 func NewOptAnimation(v Animation) OptAnimation {
-	return OptAnimation{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptAnimation)
 }
 
 // OptAnimation is optional Animation.
@@ -11275,44 +12906,29 @@ type OptAnimation struct {
 }
 
 // IsSet returns true if OptAnimation was set.
-func (o OptAnimation) IsSet() bool { return o.Set }
+func (o OptAnimation) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptAnimation) Reset() {
-	var v Animation
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptAnimation) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptAnimation) SetTo(v Animation) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptAnimation) SetTo(v Animation) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptAnimation) Get() (v Animation, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Animation), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptAnimation) Or(d Animation) Animation {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptAnimation) Or(d Animation) Animation { _ = "STUB: not implemented"; return *new(Animation) }
 
 // NewOptAudio returns new OptAudio with value set to v.
-func NewOptAudio(v Audio) OptAudio {
-	return OptAudio{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptAudio(v Audio) OptAudio { _ = "STUB: not implemented"; return *new(OptAudio) }
 
 // OptAudio is optional Audio.
 type OptAudio struct {
@@ -11321,44 +12937,26 @@ type OptAudio struct {
 }
 
 // IsSet returns true if OptAudio was set.
-func (o OptAudio) IsSet() bool { return o.Set }
+func (o OptAudio) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptAudio) Reset() {
-	var v Audio
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptAudio) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptAudio) SetTo(v Audio) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptAudio) SetTo(v Audio) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptAudio) Get() (v Audio, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptAudio) Get() (v Audio, ok bool) { _ = "STUB: not implemented"; return *new(Audio), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptAudio) Or(d Audio) Audio {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptAudio) Or(d Audio) Audio { _ = "STUB: not implemented"; return *new(Audio) }
 
 // NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -11367,43 +12965,28 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptBotCommandScope returns new OptBotCommandScope with value set to v.
 func NewOptBotCommandScope(v BotCommandScope) OptBotCommandScope {
-	return OptBotCommandScope{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptBotCommandScope)
 }
 
 // OptBotCommandScope is optional BotCommandScope.
@@ -11413,43 +12996,34 @@ type OptBotCommandScope struct {
 }
 
 // IsSet returns true if OptBotCommandScope was set.
-func (o OptBotCommandScope) IsSet() bool { return o.Set }
+func (o OptBotCommandScope) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBotCommandScope) Reset() {
-	var v BotCommandScope
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBotCommandScope) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBotCommandScope) SetTo(v BotCommandScope) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBotCommandScope) SetTo(v BotCommandScope) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptBotCommandScope) Get() (v BotCommandScope, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(BotCommandScope), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptBotCommandScope) Or(d BotCommandScope) BotCommandScope {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(BotCommandScope)
 }
 
 // NewOptCallbackQuery returns new OptCallbackQuery with value set to v.
 func NewOptCallbackQuery(v CallbackQuery) OptCallbackQuery {
-	return OptCallbackQuery{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCallbackQuery)
 }
 
 // OptCallbackQuery is optional CallbackQuery.
@@ -11459,44 +13033,32 @@ type OptCallbackQuery struct {
 }
 
 // IsSet returns true if OptCallbackQuery was set.
-func (o OptCallbackQuery) IsSet() bool { return o.Set }
+func (o OptCallbackQuery) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCallbackQuery) Reset() {
-	var v CallbackQuery
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCallbackQuery) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptCallbackQuery) SetTo(v CallbackQuery) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptCallbackQuery) SetTo(v CallbackQuery) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCallbackQuery) Get() (v CallbackQuery, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CallbackQuery), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptCallbackQuery) Or(d CallbackQuery) CallbackQuery {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CallbackQuery)
 }
 
 // NewOptChat returns new OptChat with value set to v.
-func NewOptChat(v Chat) OptChat {
-	return OptChat{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptChat(v Chat) OptChat { _ = "STUB: not implemented"; return *new(OptChat) }
 
 // OptChat is optional Chat.
 type OptChat struct {
@@ -11505,43 +13067,28 @@ type OptChat struct {
 }
 
 // IsSet returns true if OptChat was set.
-func (o OptChat) IsSet() bool { return o.Set }
+func (o OptChat) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptChat) Reset() {
-	var v Chat
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptChat) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptChat) SetTo(v Chat) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptChat) SetTo(v Chat) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptChat) Get() (v Chat, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptChat) Get() (v Chat, ok bool) { _ = "STUB: not implemented"; return *new(Chat), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptChat) Or(d Chat) Chat {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptChat) Or(d Chat) Chat { _ = "STUB: not implemented"; return *new(Chat) }
 
 // NewOptChatInviteLink returns new OptChatInviteLink with value set to v.
 func NewOptChatInviteLink(v ChatInviteLink) OptChatInviteLink {
-	return OptChatInviteLink{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptChatInviteLink)
 }
 
 // OptChatInviteLink is optional ChatInviteLink.
@@ -11551,43 +13098,34 @@ type OptChatInviteLink struct {
 }
 
 // IsSet returns true if OptChatInviteLink was set.
-func (o OptChatInviteLink) IsSet() bool { return o.Set }
+func (o OptChatInviteLink) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptChatInviteLink) Reset() {
-	var v ChatInviteLink
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptChatInviteLink) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptChatInviteLink) SetTo(v ChatInviteLink) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptChatInviteLink) SetTo(v ChatInviteLink) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptChatInviteLink) Get() (v ChatInviteLink, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ChatInviteLink), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptChatInviteLink) Or(d ChatInviteLink) ChatInviteLink {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ChatInviteLink)
 }
 
 // NewOptChatJoinRequest returns new OptChatJoinRequest with value set to v.
 func NewOptChatJoinRequest(v ChatJoinRequest) OptChatJoinRequest {
-	return OptChatJoinRequest{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptChatJoinRequest)
 }
 
 // OptChatJoinRequest is optional ChatJoinRequest.
@@ -11597,43 +13135,34 @@ type OptChatJoinRequest struct {
 }
 
 // IsSet returns true if OptChatJoinRequest was set.
-func (o OptChatJoinRequest) IsSet() bool { return o.Set }
+func (o OptChatJoinRequest) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptChatJoinRequest) Reset() {
-	var v ChatJoinRequest
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptChatJoinRequest) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptChatJoinRequest) SetTo(v ChatJoinRequest) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptChatJoinRequest) SetTo(v ChatJoinRequest) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptChatJoinRequest) Get() (v ChatJoinRequest, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ChatJoinRequest), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptChatJoinRequest) Or(d ChatJoinRequest) ChatJoinRequest {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ChatJoinRequest)
 }
 
 // NewOptChatLocation returns new OptChatLocation with value set to v.
 func NewOptChatLocation(v ChatLocation) OptChatLocation {
-	return OptChatLocation{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptChatLocation)
 }
 
 // OptChatLocation is optional ChatLocation.
@@ -11643,43 +13172,34 @@ type OptChatLocation struct {
 }
 
 // IsSet returns true if OptChatLocation was set.
-func (o OptChatLocation) IsSet() bool { return o.Set }
+func (o OptChatLocation) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptChatLocation) Reset() {
-	var v ChatLocation
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptChatLocation) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptChatLocation) SetTo(v ChatLocation) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptChatLocation) SetTo(v ChatLocation) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptChatLocation) Get() (v ChatLocation, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ChatLocation), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptChatLocation) Or(d ChatLocation) ChatLocation {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ChatLocation)
 }
 
 // NewOptChatMember returns new OptChatMember with value set to v.
 func NewOptChatMember(v ChatMember) OptChatMember {
-	return OptChatMember{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptChatMember)
 }
 
 // OptChatMember is optional ChatMember.
@@ -11689,43 +13209,34 @@ type OptChatMember struct {
 }
 
 // IsSet returns true if OptChatMember was set.
-func (o OptChatMember) IsSet() bool { return o.Set }
+func (o OptChatMember) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptChatMember) Reset() {
-	var v ChatMember
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptChatMember) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptChatMember) SetTo(v ChatMember) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptChatMember) SetTo(v ChatMember) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptChatMember) Get() (v ChatMember, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ChatMember), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptChatMember) Or(d ChatMember) ChatMember {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ChatMember)
 }
 
 // NewOptChatMemberUpdated returns new OptChatMemberUpdated with value set to v.
 func NewOptChatMemberUpdated(v ChatMemberUpdated) OptChatMemberUpdated {
-	return OptChatMemberUpdated{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptChatMemberUpdated)
 }
 
 // OptChatMemberUpdated is optional ChatMemberUpdated.
@@ -11735,43 +13246,34 @@ type OptChatMemberUpdated struct {
 }
 
 // IsSet returns true if OptChatMemberUpdated was set.
-func (o OptChatMemberUpdated) IsSet() bool { return o.Set }
+func (o OptChatMemberUpdated) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptChatMemberUpdated) Reset() {
-	var v ChatMemberUpdated
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptChatMemberUpdated) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptChatMemberUpdated) SetTo(v ChatMemberUpdated) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptChatMemberUpdated) SetTo(v ChatMemberUpdated) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptChatMemberUpdated) Get() (v ChatMemberUpdated, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ChatMemberUpdated), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptChatMemberUpdated) Or(d ChatMemberUpdated) ChatMemberUpdated {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ChatMemberUpdated)
 }
 
 // NewOptChatPermissions returns new OptChatPermissions with value set to v.
 func NewOptChatPermissions(v ChatPermissions) OptChatPermissions {
-	return OptChatPermissions{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptChatPermissions)
 }
 
 // OptChatPermissions is optional ChatPermissions.
@@ -11781,43 +13283,34 @@ type OptChatPermissions struct {
 }
 
 // IsSet returns true if OptChatPermissions was set.
-func (o OptChatPermissions) IsSet() bool { return o.Set }
+func (o OptChatPermissions) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptChatPermissions) Reset() {
-	var v ChatPermissions
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptChatPermissions) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptChatPermissions) SetTo(v ChatPermissions) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptChatPermissions) SetTo(v ChatPermissions) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptChatPermissions) Get() (v ChatPermissions, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ChatPermissions), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptChatPermissions) Or(d ChatPermissions) ChatPermissions {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ChatPermissions)
 }
 
 // NewOptChatPhoto returns new OptChatPhoto with value set to v.
 func NewOptChatPhoto(v ChatPhoto) OptChatPhoto {
-	return OptChatPhoto{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptChatPhoto)
 }
 
 // OptChatPhoto is optional ChatPhoto.
@@ -11827,43 +13320,31 @@ type OptChatPhoto struct {
 }
 
 // IsSet returns true if OptChatPhoto was set.
-func (o OptChatPhoto) IsSet() bool { return o.Set }
+func (o OptChatPhoto) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptChatPhoto) Reset() {
-	var v ChatPhoto
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptChatPhoto) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptChatPhoto) SetTo(v ChatPhoto) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptChatPhoto) SetTo(v ChatPhoto) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptChatPhoto) Get() (v ChatPhoto, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ChatPhoto), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptChatPhoto) Or(d ChatPhoto) ChatPhoto {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptChatPhoto) Or(d ChatPhoto) ChatPhoto { _ = "STUB: not implemented"; return *new(ChatPhoto) }
 
 // NewOptChosenInlineResult returns new OptChosenInlineResult with value set to v.
 func NewOptChosenInlineResult(v ChosenInlineResult) OptChosenInlineResult {
-	return OptChosenInlineResult{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptChosenInlineResult)
 }
 
 // OptChosenInlineResult is optional ChosenInlineResult.
@@ -11873,44 +13354,32 @@ type OptChosenInlineResult struct {
 }
 
 // IsSet returns true if OptChosenInlineResult was set.
-func (o OptChosenInlineResult) IsSet() bool { return o.Set }
+func (o OptChosenInlineResult) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptChosenInlineResult) Reset() {
-	var v ChosenInlineResult
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptChosenInlineResult) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptChosenInlineResult) SetTo(v ChosenInlineResult) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptChosenInlineResult) SetTo(v ChosenInlineResult) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptChosenInlineResult) Get() (v ChosenInlineResult, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ChosenInlineResult), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptChosenInlineResult) Or(d ChosenInlineResult) ChosenInlineResult {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ChosenInlineResult)
 }
 
 // NewOptContact returns new OptContact with value set to v.
-func NewOptContact(v Contact) OptContact {
-	return OptContact{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptContact(v Contact) OptContact { _ = "STUB: not implemented"; return *new(OptContact) }
 
 // OptContact is optional Contact.
 type OptContact struct {
@@ -11919,43 +13388,31 @@ type OptContact struct {
 }
 
 // IsSet returns true if OptContact was set.
-func (o OptContact) IsSet() bool { return o.Set }
+func (o OptContact) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptContact) Reset() {
-	var v Contact
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptContact) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptContact) SetTo(v Contact) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptContact) SetTo(v Contact) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptContact) Get() (v Contact, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Contact), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptContact) Or(d Contact) Contact {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptContact) Or(d Contact) Contact { _ = "STUB: not implemented"; return *new(Contact) }
 
 // NewOptCopyMessageReplyMarkup returns new OptCopyMessageReplyMarkup with value set to v.
 func NewOptCopyMessageReplyMarkup(v CopyMessageReplyMarkup) OptCopyMessageReplyMarkup {
-	return OptCopyMessageReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCopyMessageReplyMarkup)
 }
 
 // OptCopyMessageReplyMarkup is optional CopyMessageReplyMarkup.
@@ -11965,43 +13422,37 @@ type OptCopyMessageReplyMarkup struct {
 }
 
 // IsSet returns true if OptCopyMessageReplyMarkup was set.
-func (o OptCopyMessageReplyMarkup) IsSet() bool { return o.Set }
+func (o OptCopyMessageReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCopyMessageReplyMarkup) Reset() {
-	var v CopyMessageReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCopyMessageReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptCopyMessageReplyMarkup) SetTo(v CopyMessageReplyMarkup) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCopyMessageReplyMarkup) Get() (v CopyMessageReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CopyMessageReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptCopyMessageReplyMarkup) Or(d CopyMessageReplyMarkup) CopyMessageReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CopyMessageReplyMarkup)
 }
 
 // NewOptDeleteMyCommands returns new OptDeleteMyCommands with value set to v.
 func NewOptDeleteMyCommands(v DeleteMyCommands) OptDeleteMyCommands {
-	return OptDeleteMyCommands{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptDeleteMyCommands)
 }
 
 // OptDeleteMyCommands is optional DeleteMyCommands.
@@ -12011,43 +13462,34 @@ type OptDeleteMyCommands struct {
 }
 
 // IsSet returns true if OptDeleteMyCommands was set.
-func (o OptDeleteMyCommands) IsSet() bool { return o.Set }
+func (o OptDeleteMyCommands) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDeleteMyCommands) Reset() {
-	var v DeleteMyCommands
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDeleteMyCommands) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDeleteMyCommands) SetTo(v DeleteMyCommands) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDeleteMyCommands) SetTo(v DeleteMyCommands) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDeleteMyCommands) Get() (v DeleteMyCommands, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(DeleteMyCommands), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptDeleteMyCommands) Or(d DeleteMyCommands) DeleteMyCommands {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(DeleteMyCommands)
 }
 
 // NewOptDeleteWebhook returns new OptDeleteWebhook with value set to v.
 func NewOptDeleteWebhook(v DeleteWebhook) OptDeleteWebhook {
-	return OptDeleteWebhook{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptDeleteWebhook)
 }
 
 // OptDeleteWebhook is optional DeleteWebhook.
@@ -12057,44 +13499,32 @@ type OptDeleteWebhook struct {
 }
 
 // IsSet returns true if OptDeleteWebhook was set.
-func (o OptDeleteWebhook) IsSet() bool { return o.Set }
+func (o OptDeleteWebhook) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDeleteWebhook) Reset() {
-	var v DeleteWebhook
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDeleteWebhook) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDeleteWebhook) SetTo(v DeleteWebhook) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDeleteWebhook) SetTo(v DeleteWebhook) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDeleteWebhook) Get() (v DeleteWebhook, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(DeleteWebhook), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptDeleteWebhook) Or(d DeleteWebhook) DeleteWebhook {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(DeleteWebhook)
 }
 
 // NewOptDice returns new OptDice with value set to v.
-func NewOptDice(v Dice) OptDice {
-	return OptDice{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptDice(v Dice) OptDice { _ = "STUB: not implemented"; return *new(OptDice) }
 
 // OptDice is optional Dice.
 type OptDice struct {
@@ -12103,44 +13533,26 @@ type OptDice struct {
 }
 
 // IsSet returns true if OptDice was set.
-func (o OptDice) IsSet() bool { return o.Set }
+func (o OptDice) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDice) Reset() {
-	var v Dice
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDice) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDice) SetTo(v Dice) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDice) SetTo(v Dice) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptDice) Get() (v Dice, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptDice) Get() (v Dice, ok bool) { _ = "STUB: not implemented"; return *new(Dice), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDice) Or(d Dice) Dice {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDice) Or(d Dice) Dice { _ = "STUB: not implemented"; return *new(Dice) }
 
 // NewOptDocument returns new OptDocument with value set to v.
-func NewOptDocument(v Document) OptDocument {
-	return OptDocument{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptDocument(v Document) OptDocument { _ = "STUB: not implemented"; return *new(OptDocument) }
 
 // OptDocument is optional Document.
 type OptDocument struct {
@@ -12149,44 +13561,29 @@ type OptDocument struct {
 }
 
 // IsSet returns true if OptDocument was set.
-func (o OptDocument) IsSet() bool { return o.Set }
+func (o OptDocument) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptDocument) Reset() {
-	var v Document
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptDocument) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptDocument) SetTo(v Document) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptDocument) SetTo(v Document) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptDocument) Get() (v Document, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Document), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptDocument) Or(d Document) Document {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptDocument) Or(d Document) Document { _ = "STUB: not implemented"; return *new(Document) }
 
 // NewOptFile returns new OptFile with value set to v.
-func NewOptFile(v File) OptFile {
-	return OptFile{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptFile(v File) OptFile { _ = "STUB: not implemented"; return *new(OptFile) }
 
 // OptFile is optional File.
 type OptFile struct {
@@ -12195,44 +13592,26 @@ type OptFile struct {
 }
 
 // IsSet returns true if OptFile was set.
-func (o OptFile) IsSet() bool { return o.Set }
+func (o OptFile) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFile) Reset() {
-	var v File
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFile) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFile) SetTo(v File) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFile) SetTo(v File) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptFile) Get() (v File, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptFile) Get() (v File, ok bool) { _ = "STUB: not implemented"; return *new(File), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptFile) Or(d File) File {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptFile) Or(d File) File { _ = "STUB: not implemented"; return *new(File) }
 
 // NewOptFloat64 returns new OptFloat64 with value set to v.
-func NewOptFloat64(v float64) OptFloat64 {
-	return OptFloat64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptFloat64(v float64) OptFloat64 { _ = "STUB: not implemented"; return *new(OptFloat64) }
 
 // OptFloat64 is optional float64.
 type OptFloat64 struct {
@@ -12241,44 +13620,26 @@ type OptFloat64 struct {
 }
 
 // IsSet returns true if OptFloat64 was set.
-func (o OptFloat64) IsSet() bool { return o.Set }
+func (o OptFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptFloat64) Get() (v float64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptGame returns new OptGame with value set to v.
-func NewOptGame(v Game) OptGame {
-	return OptGame{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptGame(v Game) OptGame { _ = "STUB: not implemented"; return *new(OptGame) }
 
 // OptGame is optional Game.
 type OptGame struct {
@@ -12287,43 +13648,28 @@ type OptGame struct {
 }
 
 // IsSet returns true if OptGame was set.
-func (o OptGame) IsSet() bool { return o.Set }
+func (o OptGame) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptGame) Reset() {
-	var v Game
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptGame) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptGame) SetTo(v Game) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptGame) SetTo(v Game) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptGame) Get() (v Game, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptGame) Get() (v Game, ok bool) { _ = "STUB: not implemented"; return *new(Game), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptGame) Or(d Game) Game {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptGame) Or(d Game) Game { _ = "STUB: not implemented"; return *new(Game) }
 
 // NewOptGetMyCommands returns new OptGetMyCommands with value set to v.
 func NewOptGetMyCommands(v GetMyCommands) OptGetMyCommands {
-	return OptGetMyCommands{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptGetMyCommands)
 }
 
 // OptGetMyCommands is optional GetMyCommands.
@@ -12333,43 +13679,34 @@ type OptGetMyCommands struct {
 }
 
 // IsSet returns true if OptGetMyCommands was set.
-func (o OptGetMyCommands) IsSet() bool { return o.Set }
+func (o OptGetMyCommands) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptGetMyCommands) Reset() {
-	var v GetMyCommands
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptGetMyCommands) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptGetMyCommands) SetTo(v GetMyCommands) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptGetMyCommands) SetTo(v GetMyCommands) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptGetMyCommands) Get() (v GetMyCommands, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(GetMyCommands), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptGetMyCommands) Or(d GetMyCommands) GetMyCommands {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(GetMyCommands)
 }
 
 // NewOptGetUpdates returns new OptGetUpdates with value set to v.
 func NewOptGetUpdates(v GetUpdates) OptGetUpdates {
-	return OptGetUpdates{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptGetUpdates)
 }
 
 // OptGetUpdates is optional GetUpdates.
@@ -12379,44 +13716,32 @@ type OptGetUpdates struct {
 }
 
 // IsSet returns true if OptGetUpdates was set.
-func (o OptGetUpdates) IsSet() bool { return o.Set }
+func (o OptGetUpdates) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptGetUpdates) Reset() {
-	var v GetUpdates
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptGetUpdates) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptGetUpdates) SetTo(v GetUpdates) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptGetUpdates) SetTo(v GetUpdates) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptGetUpdates) Get() (v GetUpdates, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(GetUpdates), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptGetUpdates) Or(d GetUpdates) GetUpdates {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(GetUpdates)
 }
 
 // NewOptID returns new OptID with value set to v.
-func NewOptID(v ID) OptID {
-	return OptID{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptID(v ID) OptID { _ = "STUB: not implemented"; return *new(OptID) }
 
 // OptID is optional ID.
 type OptID struct {
@@ -12425,43 +13750,28 @@ type OptID struct {
 }
 
 // IsSet returns true if OptID was set.
-func (o OptID) IsSet() bool { return o.Set }
+func (o OptID) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptID) Reset() {
-	var v ID
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptID) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptID) SetTo(v ID) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptID) SetTo(v ID) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptID) Get() (v ID, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptID) Get() (v ID, ok bool) { _ = "STUB: not implemented"; return *new(ID), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptID) Or(d ID) ID {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptID) Or(d ID) ID { _ = "STUB: not implemented"; return *new(ID) }
 
 // NewOptInlineKeyboardMarkup returns new OptInlineKeyboardMarkup with value set to v.
 func NewOptInlineKeyboardMarkup(v InlineKeyboardMarkup) OptInlineKeyboardMarkup {
-	return OptInlineKeyboardMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptInlineKeyboardMarkup)
 }
 
 // OptInlineKeyboardMarkup is optional InlineKeyboardMarkup.
@@ -12471,43 +13781,34 @@ type OptInlineKeyboardMarkup struct {
 }
 
 // IsSet returns true if OptInlineKeyboardMarkup was set.
-func (o OptInlineKeyboardMarkup) IsSet() bool { return o.Set }
+func (o OptInlineKeyboardMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInlineKeyboardMarkup) Reset() {
-	var v InlineKeyboardMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInlineKeyboardMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInlineKeyboardMarkup) SetTo(v InlineKeyboardMarkup) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInlineKeyboardMarkup) SetTo(v InlineKeyboardMarkup) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptInlineKeyboardMarkup) Get() (v InlineKeyboardMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptInlineKeyboardMarkup) Or(d InlineKeyboardMarkup) InlineKeyboardMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup)
 }
 
 // NewOptInlineQuery returns new OptInlineQuery with value set to v.
 func NewOptInlineQuery(v InlineQuery) OptInlineQuery {
-	return OptInlineQuery{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptInlineQuery)
 }
 
 // OptInlineQuery is optional InlineQuery.
@@ -12517,43 +13818,34 @@ type OptInlineQuery struct {
 }
 
 // IsSet returns true if OptInlineQuery was set.
-func (o OptInlineQuery) IsSet() bool { return o.Set }
+func (o OptInlineQuery) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInlineQuery) Reset() {
-	var v InlineQuery
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInlineQuery) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInlineQuery) SetTo(v InlineQuery) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInlineQuery) SetTo(v InlineQuery) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptInlineQuery) Get() (v InlineQuery, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(InlineQuery), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptInlineQuery) Or(d InlineQuery) InlineQuery {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(InlineQuery)
 }
 
 // NewOptInlineQueryChatType returns new OptInlineQueryChatType with value set to v.
 func NewOptInlineQueryChatType(v InlineQueryChatType) OptInlineQueryChatType {
-	return OptInlineQueryChatType{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptInlineQueryChatType)
 }
 
 // OptInlineQueryChatType is optional InlineQueryChatType.
@@ -12563,43 +13855,34 @@ type OptInlineQueryChatType struct {
 }
 
 // IsSet returns true if OptInlineQueryChatType was set.
-func (o OptInlineQueryChatType) IsSet() bool { return o.Set }
+func (o OptInlineQueryChatType) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInlineQueryChatType) Reset() {
-	var v InlineQueryChatType
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInlineQueryChatType) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInlineQueryChatType) SetTo(v InlineQueryChatType) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInlineQueryChatType) SetTo(v InlineQueryChatType) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptInlineQueryChatType) Get() (v InlineQueryChatType, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(InlineQueryChatType), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptInlineQueryChatType) Or(d InlineQueryChatType) InlineQueryChatType {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(InlineQueryChatType)
 }
 
 // NewOptInputMessageContent returns new OptInputMessageContent with value set to v.
 func NewOptInputMessageContent(v InputMessageContent) OptInputMessageContent {
-	return OptInputMessageContent{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptInputMessageContent)
 }
 
 // OptInputMessageContent is optional InputMessageContent.
@@ -12609,44 +13892,32 @@ type OptInputMessageContent struct {
 }
 
 // IsSet returns true if OptInputMessageContent was set.
-func (o OptInputMessageContent) IsSet() bool { return o.Set }
+func (o OptInputMessageContent) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInputMessageContent) Reset() {
-	var v InputMessageContent
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInputMessageContent) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInputMessageContent) SetTo(v InputMessageContent) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInputMessageContent) SetTo(v InputMessageContent) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptInputMessageContent) Get() (v InputMessageContent, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(InputMessageContent), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptInputMessageContent) Or(d InputMessageContent) InputMessageContent {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(InputMessageContent)
 }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -12655,44 +13926,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt64 returns new OptInt64 with value set to v.
-func NewOptInt64(v int64) OptInt64 {
-	return OptInt64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt64(v int64) OptInt64 { _ = "STUB: not implemented"; return *new(OptInt64) }
 
 // OptInt64 is optional int64.
 type OptInt64 struct {
@@ -12701,44 +13954,26 @@ type OptInt64 struct {
 }
 
 // IsSet returns true if OptInt64 was set.
-func (o OptInt64) IsSet() bool { return o.Set }
+func (o OptInt64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt64) Reset() {
-	var v int64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt64) SetTo(v int64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt64) SetTo(v int64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt64) Get() (v int64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt64) Get() (v int64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt64) Or(d int64) int64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt64) Or(d int64) int64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInvoice returns new OptInvoice with value set to v.
-func NewOptInvoice(v Invoice) OptInvoice {
-	return OptInvoice{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInvoice(v Invoice) OptInvoice { _ = "STUB: not implemented"; return *new(OptInvoice) }
 
 // OptInvoice is optional Invoice.
 type OptInvoice struct {
@@ -12747,43 +13982,31 @@ type OptInvoice struct {
 }
 
 // IsSet returns true if OptInvoice was set.
-func (o OptInvoice) IsSet() bool { return o.Set }
+func (o OptInvoice) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInvoice) Reset() {
-	var v Invoice
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInvoice) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInvoice) SetTo(v Invoice) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInvoice) SetTo(v Invoice) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptInvoice) Get() (v Invoice, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Invoice), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInvoice) Or(d Invoice) Invoice {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInvoice) Or(d Invoice) Invoice { _ = "STUB: not implemented"; return *new(Invoice) }
 
 // NewOptKeyboardButtonPollType returns new OptKeyboardButtonPollType with value set to v.
 func NewOptKeyboardButtonPollType(v KeyboardButtonPollType) OptKeyboardButtonPollType {
-	return OptKeyboardButtonPollType{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptKeyboardButtonPollType)
 }
 
 // OptKeyboardButtonPollType is optional KeyboardButtonPollType.
@@ -12793,44 +14016,35 @@ type OptKeyboardButtonPollType struct {
 }
 
 // IsSet returns true if OptKeyboardButtonPollType was set.
-func (o OptKeyboardButtonPollType) IsSet() bool { return o.Set }
+func (o OptKeyboardButtonPollType) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptKeyboardButtonPollType) Reset() {
-	var v KeyboardButtonPollType
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptKeyboardButtonPollType) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptKeyboardButtonPollType) SetTo(v KeyboardButtonPollType) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptKeyboardButtonPollType) Get() (v KeyboardButtonPollType, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(KeyboardButtonPollType), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptKeyboardButtonPollType) Or(d KeyboardButtonPollType) KeyboardButtonPollType {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(KeyboardButtonPollType)
 }
 
 // NewOptLocation returns new OptLocation with value set to v.
-func NewOptLocation(v Location) OptLocation {
-	return OptLocation{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLocation(v Location) OptLocation { _ = "STUB: not implemented"; return *new(OptLocation) }
 
 // OptLocation is optional Location.
 type OptLocation struct {
@@ -12839,44 +14053,29 @@ type OptLocation struct {
 }
 
 // IsSet returns true if OptLocation was set.
-func (o OptLocation) IsSet() bool { return o.Set }
+func (o OptLocation) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLocation) Reset() {
-	var v Location
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLocation) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLocation) SetTo(v Location) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLocation) SetTo(v Location) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptLocation) Get() (v Location, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Location), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLocation) Or(d Location) Location {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLocation) Or(d Location) Location { _ = "STUB: not implemented"; return *new(Location) }
 
 // NewOptLoginUrl returns new OptLoginUrl with value set to v.
-func NewOptLoginUrl(v LoginUrl) OptLoginUrl {
-	return OptLoginUrl{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLoginUrl(v LoginUrl) OptLoginUrl { _ = "STUB: not implemented"; return *new(OptLoginUrl) }
 
 // OptLoginUrl is optional LoginUrl.
 type OptLoginUrl struct {
@@ -12885,43 +14084,31 @@ type OptLoginUrl struct {
 }
 
 // IsSet returns true if OptLoginUrl was set.
-func (o OptLoginUrl) IsSet() bool { return o.Set }
+func (o OptLoginUrl) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLoginUrl) Reset() {
-	var v LoginUrl
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLoginUrl) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLoginUrl) SetTo(v LoginUrl) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLoginUrl) SetTo(v LoginUrl) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptLoginUrl) Get() (v LoginUrl, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(LoginUrl), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLoginUrl) Or(d LoginUrl) LoginUrl {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLoginUrl) Or(d LoginUrl) LoginUrl { _ = "STUB: not implemented"; return *new(LoginUrl) }
 
 // NewOptMaskPosition returns new OptMaskPosition with value set to v.
 func NewOptMaskPosition(v MaskPosition) OptMaskPosition {
-	return OptMaskPosition{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMaskPosition)
 }
 
 // OptMaskPosition is optional MaskPosition.
@@ -12931,44 +14118,32 @@ type OptMaskPosition struct {
 }
 
 // IsSet returns true if OptMaskPosition was set.
-func (o OptMaskPosition) IsSet() bool { return o.Set }
+func (o OptMaskPosition) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMaskPosition) Reset() {
-	var v MaskPosition
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMaskPosition) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMaskPosition) SetTo(v MaskPosition) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMaskPosition) SetTo(v MaskPosition) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMaskPosition) Get() (v MaskPosition, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MaskPosition), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMaskPosition) Or(d MaskPosition) MaskPosition {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MaskPosition)
 }
 
 // NewOptMessage returns new OptMessage with value set to v.
-func NewOptMessage(v Message) OptMessage {
-	return OptMessage{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptMessage(v Message) OptMessage { _ = "STUB: not implemented"; return *new(OptMessage) }
 
 // OptMessage is optional Message.
 type OptMessage struct {
@@ -12977,43 +14152,31 @@ type OptMessage struct {
 }
 
 // IsSet returns true if OptMessage was set.
-func (o OptMessage) IsSet() bool { return o.Set }
+func (o OptMessage) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMessage) Reset() {
-	var v Message
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMessage) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMessage) SetTo(v Message) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMessage) SetTo(v Message) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMessage) Get() (v Message, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Message), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptMessage) Or(d Message) Message {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptMessage) Or(d Message) Message { _ = "STUB: not implemented"; return *new(Message) }
 
 // NewOptMessageAutoDeleteTimerChanged returns new OptMessageAutoDeleteTimerChanged with value set to v.
 func NewOptMessageAutoDeleteTimerChanged(v MessageAutoDeleteTimerChanged) OptMessageAutoDeleteTimerChanged {
-	return OptMessageAutoDeleteTimerChanged{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMessageAutoDeleteTimerChanged)
 }
 
 // OptMessageAutoDeleteTimerChanged is optional MessageAutoDeleteTimerChanged.
@@ -13023,43 +14186,37 @@ type OptMessageAutoDeleteTimerChanged struct {
 }
 
 // IsSet returns true if OptMessageAutoDeleteTimerChanged was set.
-func (o OptMessageAutoDeleteTimerChanged) IsSet() bool { return o.Set }
+func (o OptMessageAutoDeleteTimerChanged) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMessageAutoDeleteTimerChanged) Reset() {
-	var v MessageAutoDeleteTimerChanged
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMessageAutoDeleteTimerChanged) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptMessageAutoDeleteTimerChanged) SetTo(v MessageAutoDeleteTimerChanged) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMessageAutoDeleteTimerChanged) Get() (v MessageAutoDeleteTimerChanged, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MessageAutoDeleteTimerChanged), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMessageAutoDeleteTimerChanged) Or(d MessageAutoDeleteTimerChanged) MessageAutoDeleteTimerChanged {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MessageAutoDeleteTimerChanged)
 }
 
 // NewOptMessageId returns new OptMessageId with value set to v.
 func NewOptMessageId(v MessageId) OptMessageId {
-	return OptMessageId{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMessageId)
 }
 
 // OptMessageId is optional MessageId.
@@ -13069,43 +14226,31 @@ type OptMessageId struct {
 }
 
 // IsSet returns true if OptMessageId was set.
-func (o OptMessageId) IsSet() bool { return o.Set }
+func (o OptMessageId) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMessageId) Reset() {
-	var v MessageId
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMessageId) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMessageId) SetTo(v MessageId) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMessageId) SetTo(v MessageId) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMessageId) Get() (v MessageId, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MessageId), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptMessageId) Or(d MessageId) MessageId {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptMessageId) Or(d MessageId) MessageId { _ = "STUB: not implemented"; return *new(MessageId) }
 
 // NewOptOrderInfo returns new OptOrderInfo with value set to v.
 func NewOptOrderInfo(v OrderInfo) OptOrderInfo {
-	return OptOrderInfo{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptOrderInfo)
 }
 
 // OptOrderInfo is optional OrderInfo.
@@ -13115,43 +14260,31 @@ type OptOrderInfo struct {
 }
 
 // IsSet returns true if OptOrderInfo was set.
-func (o OptOrderInfo) IsSet() bool { return o.Set }
+func (o OptOrderInfo) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptOrderInfo) Reset() {
-	var v OrderInfo
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptOrderInfo) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptOrderInfo) SetTo(v OrderInfo) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptOrderInfo) SetTo(v OrderInfo) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptOrderInfo) Get() (v OrderInfo, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(OrderInfo), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptOrderInfo) Or(d OrderInfo) OrderInfo {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptOrderInfo) Or(d OrderInfo) OrderInfo { _ = "STUB: not implemented"; return *new(OrderInfo) }
 
 // NewOptPassportData returns new OptPassportData with value set to v.
 func NewOptPassportData(v PassportData) OptPassportData {
-	return OptPassportData{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptPassportData)
 }
 
 // OptPassportData is optional PassportData.
@@ -13161,43 +14294,34 @@ type OptPassportData struct {
 }
 
 // IsSet returns true if OptPassportData was set.
-func (o OptPassportData) IsSet() bool { return o.Set }
+func (o OptPassportData) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPassportData) Reset() {
-	var v PassportData
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPassportData) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPassportData) SetTo(v PassportData) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPassportData) SetTo(v PassportData) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPassportData) Get() (v PassportData, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(PassportData), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptPassportData) Or(d PassportData) PassportData {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(PassportData)
 }
 
 // NewOptPassportFile returns new OptPassportFile with value set to v.
 func NewOptPassportFile(v PassportFile) OptPassportFile {
-	return OptPassportFile{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptPassportFile)
 }
 
 // OptPassportFile is optional PassportFile.
@@ -13207,43 +14331,34 @@ type OptPassportFile struct {
 }
 
 // IsSet returns true if OptPassportFile was set.
-func (o OptPassportFile) IsSet() bool { return o.Set }
+func (o OptPassportFile) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPassportFile) Reset() {
-	var v PassportFile
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPassportFile) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPassportFile) SetTo(v PassportFile) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPassportFile) SetTo(v PassportFile) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPassportFile) Get() (v PassportFile, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(PassportFile), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptPassportFile) Or(d PassportFile) PassportFile {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(PassportFile)
 }
 
 // NewOptPhotoSize returns new OptPhotoSize with value set to v.
 func NewOptPhotoSize(v PhotoSize) OptPhotoSize {
-	return OptPhotoSize{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptPhotoSize)
 }
 
 // OptPhotoSize is optional PhotoSize.
@@ -13253,44 +14368,29 @@ type OptPhotoSize struct {
 }
 
 // IsSet returns true if OptPhotoSize was set.
-func (o OptPhotoSize) IsSet() bool { return o.Set }
+func (o OptPhotoSize) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPhotoSize) Reset() {
-	var v PhotoSize
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPhotoSize) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPhotoSize) SetTo(v PhotoSize) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPhotoSize) SetTo(v PhotoSize) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPhotoSize) Get() (v PhotoSize, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(PhotoSize), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptPhotoSize) Or(d PhotoSize) PhotoSize {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptPhotoSize) Or(d PhotoSize) PhotoSize { _ = "STUB: not implemented"; return *new(PhotoSize) }
 
 // NewOptPoll returns new OptPoll with value set to v.
-func NewOptPoll(v Poll) OptPoll {
-	return OptPoll{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptPoll(v Poll) OptPoll { _ = "STUB: not implemented"; return *new(OptPoll) }
 
 // OptPoll is optional Poll.
 type OptPoll struct {
@@ -13299,43 +14399,28 @@ type OptPoll struct {
 }
 
 // IsSet returns true if OptPoll was set.
-func (o OptPoll) IsSet() bool { return o.Set }
+func (o OptPoll) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPoll) Reset() {
-	var v Poll
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPoll) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPoll) SetTo(v Poll) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPoll) SetTo(v Poll) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptPoll) Get() (v Poll, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptPoll) Get() (v Poll, ok bool) { _ = "STUB: not implemented"; return *new(Poll), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptPoll) Or(d Poll) Poll {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptPoll) Or(d Poll) Poll { _ = "STUB: not implemented"; return *new(Poll) }
 
 // NewOptPollAnswer returns new OptPollAnswer with value set to v.
 func NewOptPollAnswer(v PollAnswer) OptPollAnswer {
-	return OptPollAnswer{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptPollAnswer)
 }
 
 // OptPollAnswer is optional PollAnswer.
@@ -13345,43 +14430,34 @@ type OptPollAnswer struct {
 }
 
 // IsSet returns true if OptPollAnswer was set.
-func (o OptPollAnswer) IsSet() bool { return o.Set }
+func (o OptPollAnswer) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPollAnswer) Reset() {
-	var v PollAnswer
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPollAnswer) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPollAnswer) SetTo(v PollAnswer) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPollAnswer) SetTo(v PollAnswer) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPollAnswer) Get() (v PollAnswer, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(PollAnswer), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptPollAnswer) Or(d PollAnswer) PollAnswer {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(PollAnswer)
 }
 
 // NewOptPreCheckoutQuery returns new OptPreCheckoutQuery with value set to v.
 func NewOptPreCheckoutQuery(v PreCheckoutQuery) OptPreCheckoutQuery {
-	return OptPreCheckoutQuery{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptPreCheckoutQuery)
 }
 
 // OptPreCheckoutQuery is optional PreCheckoutQuery.
@@ -13391,43 +14467,34 @@ type OptPreCheckoutQuery struct {
 }
 
 // IsSet returns true if OptPreCheckoutQuery was set.
-func (o OptPreCheckoutQuery) IsSet() bool { return o.Set }
+func (o OptPreCheckoutQuery) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPreCheckoutQuery) Reset() {
-	var v PreCheckoutQuery
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPreCheckoutQuery) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPreCheckoutQuery) SetTo(v PreCheckoutQuery) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPreCheckoutQuery) SetTo(v PreCheckoutQuery) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPreCheckoutQuery) Get() (v PreCheckoutQuery, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(PreCheckoutQuery), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptPreCheckoutQuery) Or(d PreCheckoutQuery) PreCheckoutQuery {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(PreCheckoutQuery)
 }
 
 // NewOptProximityAlertTriggered returns new OptProximityAlertTriggered with value set to v.
 func NewOptProximityAlertTriggered(v ProximityAlertTriggered) OptProximityAlertTriggered {
-	return OptProximityAlertTriggered{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptProximityAlertTriggered)
 }
 
 // OptProximityAlertTriggered is optional ProximityAlertTriggered.
@@ -13437,44 +14504,35 @@ type OptProximityAlertTriggered struct {
 }
 
 // IsSet returns true if OptProximityAlertTriggered was set.
-func (o OptProximityAlertTriggered) IsSet() bool { return o.Set }
+func (o OptProximityAlertTriggered) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptProximityAlertTriggered) Reset() {
-	var v ProximityAlertTriggered
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptProximityAlertTriggered) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptProximityAlertTriggered) SetTo(v ProximityAlertTriggered) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptProximityAlertTriggered) Get() (v ProximityAlertTriggered, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ProximityAlertTriggered), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptProximityAlertTriggered) Or(d ProximityAlertTriggered) ProximityAlertTriggered {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ProximityAlertTriggered)
 }
 
 // NewOptResponse returns new OptResponse with value set to v.
-func NewOptResponse(v Response) OptResponse {
-	return OptResponse{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptResponse(v Response) OptResponse { _ = "STUB: not implemented"; return *new(OptResponse) }
 
 // OptResponse is optional Response.
 type OptResponse struct {
@@ -13483,43 +14541,31 @@ type OptResponse struct {
 }
 
 // IsSet returns true if OptResponse was set.
-func (o OptResponse) IsSet() bool { return o.Set }
+func (o OptResponse) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptResponse) Reset() {
-	var v Response
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptResponse) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptResponse) SetTo(v Response) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptResponse) SetTo(v Response) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptResponse) Get() (v Response, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Response), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptResponse) Or(d Response) Response {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptResponse) Or(d Response) Response { _ = "STUB: not implemented"; return *new(Response) }
 
 // NewOptSendAnimationReplyMarkup returns new OptSendAnimationReplyMarkup with value set to v.
 func NewOptSendAnimationReplyMarkup(v SendAnimationReplyMarkup) OptSendAnimationReplyMarkup {
-	return OptSendAnimationReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendAnimationReplyMarkup)
 }
 
 // OptSendAnimationReplyMarkup is optional SendAnimationReplyMarkup.
@@ -13529,43 +14575,37 @@ type OptSendAnimationReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendAnimationReplyMarkup was set.
-func (o OptSendAnimationReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendAnimationReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendAnimationReplyMarkup) Reset() {
-	var v SendAnimationReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendAnimationReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSendAnimationReplyMarkup) SetTo(v SendAnimationReplyMarkup) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendAnimationReplyMarkup) Get() (v SendAnimationReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendAnimationReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendAnimationReplyMarkup) Or(d SendAnimationReplyMarkup) SendAnimationReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendAnimationReplyMarkup)
 }
 
 // NewOptSendAudioReplyMarkup returns new OptSendAudioReplyMarkup with value set to v.
 func NewOptSendAudioReplyMarkup(v SendAudioReplyMarkup) OptSendAudioReplyMarkup {
-	return OptSendAudioReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendAudioReplyMarkup)
 }
 
 // OptSendAudioReplyMarkup is optional SendAudioReplyMarkup.
@@ -13575,43 +14615,34 @@ type OptSendAudioReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendAudioReplyMarkup was set.
-func (o OptSendAudioReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendAudioReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendAudioReplyMarkup) Reset() {
-	var v SendAudioReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendAudioReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSendAudioReplyMarkup) SetTo(v SendAudioReplyMarkup) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSendAudioReplyMarkup) SetTo(v SendAudioReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendAudioReplyMarkup) Get() (v SendAudioReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendAudioReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendAudioReplyMarkup) Or(d SendAudioReplyMarkup) SendAudioReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendAudioReplyMarkup)
 }
 
 // NewOptSendContactReplyMarkup returns new OptSendContactReplyMarkup with value set to v.
 func NewOptSendContactReplyMarkup(v SendContactReplyMarkup) OptSendContactReplyMarkup {
-	return OptSendContactReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendContactReplyMarkup)
 }
 
 // OptSendContactReplyMarkup is optional SendContactReplyMarkup.
@@ -13621,43 +14652,37 @@ type OptSendContactReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendContactReplyMarkup was set.
-func (o OptSendContactReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendContactReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendContactReplyMarkup) Reset() {
-	var v SendContactReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendContactReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSendContactReplyMarkup) SetTo(v SendContactReplyMarkup) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendContactReplyMarkup) Get() (v SendContactReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendContactReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendContactReplyMarkup) Or(d SendContactReplyMarkup) SendContactReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendContactReplyMarkup)
 }
 
 // NewOptSendDiceReplyMarkup returns new OptSendDiceReplyMarkup with value set to v.
 func NewOptSendDiceReplyMarkup(v SendDiceReplyMarkup) OptSendDiceReplyMarkup {
-	return OptSendDiceReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendDiceReplyMarkup)
 }
 
 // OptSendDiceReplyMarkup is optional SendDiceReplyMarkup.
@@ -13667,43 +14692,34 @@ type OptSendDiceReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendDiceReplyMarkup was set.
-func (o OptSendDiceReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendDiceReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendDiceReplyMarkup) Reset() {
-	var v SendDiceReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendDiceReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSendDiceReplyMarkup) SetTo(v SendDiceReplyMarkup) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSendDiceReplyMarkup) SetTo(v SendDiceReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendDiceReplyMarkup) Get() (v SendDiceReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendDiceReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendDiceReplyMarkup) Or(d SendDiceReplyMarkup) SendDiceReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendDiceReplyMarkup)
 }
 
 // NewOptSendDocumentReplyMarkup returns new OptSendDocumentReplyMarkup with value set to v.
 func NewOptSendDocumentReplyMarkup(v SendDocumentReplyMarkup) OptSendDocumentReplyMarkup {
-	return OptSendDocumentReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendDocumentReplyMarkup)
 }
 
 // OptSendDocumentReplyMarkup is optional SendDocumentReplyMarkup.
@@ -13713,43 +14729,37 @@ type OptSendDocumentReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendDocumentReplyMarkup was set.
-func (o OptSendDocumentReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendDocumentReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendDocumentReplyMarkup) Reset() {
-	var v SendDocumentReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendDocumentReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSendDocumentReplyMarkup) SetTo(v SendDocumentReplyMarkup) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendDocumentReplyMarkup) Get() (v SendDocumentReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendDocumentReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendDocumentReplyMarkup) Or(d SendDocumentReplyMarkup) SendDocumentReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendDocumentReplyMarkup)
 }
 
 // NewOptSendLocationReplyMarkup returns new OptSendLocationReplyMarkup with value set to v.
 func NewOptSendLocationReplyMarkup(v SendLocationReplyMarkup) OptSendLocationReplyMarkup {
-	return OptSendLocationReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendLocationReplyMarkup)
 }
 
 // OptSendLocationReplyMarkup is optional SendLocationReplyMarkup.
@@ -13759,43 +14769,37 @@ type OptSendLocationReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendLocationReplyMarkup was set.
-func (o OptSendLocationReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendLocationReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendLocationReplyMarkup) Reset() {
-	var v SendLocationReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendLocationReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSendLocationReplyMarkup) SetTo(v SendLocationReplyMarkup) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendLocationReplyMarkup) Get() (v SendLocationReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendLocationReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendLocationReplyMarkup) Or(d SendLocationReplyMarkup) SendLocationReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendLocationReplyMarkup)
 }
 
 // NewOptSendMessageReplyMarkup returns new OptSendMessageReplyMarkup with value set to v.
 func NewOptSendMessageReplyMarkup(v SendMessageReplyMarkup) OptSendMessageReplyMarkup {
-	return OptSendMessageReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendMessageReplyMarkup)
 }
 
 // OptSendMessageReplyMarkup is optional SendMessageReplyMarkup.
@@ -13805,43 +14809,37 @@ type OptSendMessageReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendMessageReplyMarkup was set.
-func (o OptSendMessageReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendMessageReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendMessageReplyMarkup) Reset() {
-	var v SendMessageReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendMessageReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSendMessageReplyMarkup) SetTo(v SendMessageReplyMarkup) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendMessageReplyMarkup) Get() (v SendMessageReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendMessageReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendMessageReplyMarkup) Or(d SendMessageReplyMarkup) SendMessageReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendMessageReplyMarkup)
 }
 
 // NewOptSendPhotoReplyMarkup returns new OptSendPhotoReplyMarkup with value set to v.
 func NewOptSendPhotoReplyMarkup(v SendPhotoReplyMarkup) OptSendPhotoReplyMarkup {
-	return OptSendPhotoReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendPhotoReplyMarkup)
 }
 
 // OptSendPhotoReplyMarkup is optional SendPhotoReplyMarkup.
@@ -13851,43 +14849,34 @@ type OptSendPhotoReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendPhotoReplyMarkup was set.
-func (o OptSendPhotoReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendPhotoReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendPhotoReplyMarkup) Reset() {
-	var v SendPhotoReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendPhotoReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSendPhotoReplyMarkup) SetTo(v SendPhotoReplyMarkup) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSendPhotoReplyMarkup) SetTo(v SendPhotoReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendPhotoReplyMarkup) Get() (v SendPhotoReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendPhotoReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendPhotoReplyMarkup) Or(d SendPhotoReplyMarkup) SendPhotoReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendPhotoReplyMarkup)
 }
 
 // NewOptSendPollReplyMarkup returns new OptSendPollReplyMarkup with value set to v.
 func NewOptSendPollReplyMarkup(v SendPollReplyMarkup) OptSendPollReplyMarkup {
-	return OptSendPollReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendPollReplyMarkup)
 }
 
 // OptSendPollReplyMarkup is optional SendPollReplyMarkup.
@@ -13897,43 +14886,34 @@ type OptSendPollReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendPollReplyMarkup was set.
-func (o OptSendPollReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendPollReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendPollReplyMarkup) Reset() {
-	var v SendPollReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendPollReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSendPollReplyMarkup) SetTo(v SendPollReplyMarkup) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSendPollReplyMarkup) SetTo(v SendPollReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendPollReplyMarkup) Get() (v SendPollReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendPollReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendPollReplyMarkup) Or(d SendPollReplyMarkup) SendPollReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendPollReplyMarkup)
 }
 
 // NewOptSendStickerReplyMarkup returns new OptSendStickerReplyMarkup with value set to v.
 func NewOptSendStickerReplyMarkup(v SendStickerReplyMarkup) OptSendStickerReplyMarkup {
-	return OptSendStickerReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendStickerReplyMarkup)
 }
 
 // OptSendStickerReplyMarkup is optional SendStickerReplyMarkup.
@@ -13943,43 +14923,37 @@ type OptSendStickerReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendStickerReplyMarkup was set.
-func (o OptSendStickerReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendStickerReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendStickerReplyMarkup) Reset() {
-	var v SendStickerReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendStickerReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSendStickerReplyMarkup) SetTo(v SendStickerReplyMarkup) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendStickerReplyMarkup) Get() (v SendStickerReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendStickerReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendStickerReplyMarkup) Or(d SendStickerReplyMarkup) SendStickerReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendStickerReplyMarkup)
 }
 
 // NewOptSendVenueReplyMarkup returns new OptSendVenueReplyMarkup with value set to v.
 func NewOptSendVenueReplyMarkup(v SendVenueReplyMarkup) OptSendVenueReplyMarkup {
-	return OptSendVenueReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendVenueReplyMarkup)
 }
 
 // OptSendVenueReplyMarkup is optional SendVenueReplyMarkup.
@@ -13989,43 +14963,34 @@ type OptSendVenueReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendVenueReplyMarkup was set.
-func (o OptSendVenueReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendVenueReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendVenueReplyMarkup) Reset() {
-	var v SendVenueReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendVenueReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSendVenueReplyMarkup) SetTo(v SendVenueReplyMarkup) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSendVenueReplyMarkup) SetTo(v SendVenueReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendVenueReplyMarkup) Get() (v SendVenueReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendVenueReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendVenueReplyMarkup) Or(d SendVenueReplyMarkup) SendVenueReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendVenueReplyMarkup)
 }
 
 // NewOptSendVideoNoteReplyMarkup returns new OptSendVideoNoteReplyMarkup with value set to v.
 func NewOptSendVideoNoteReplyMarkup(v SendVideoNoteReplyMarkup) OptSendVideoNoteReplyMarkup {
-	return OptSendVideoNoteReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendVideoNoteReplyMarkup)
 }
 
 // OptSendVideoNoteReplyMarkup is optional SendVideoNoteReplyMarkup.
@@ -14035,43 +15000,37 @@ type OptSendVideoNoteReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendVideoNoteReplyMarkup was set.
-func (o OptSendVideoNoteReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendVideoNoteReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendVideoNoteReplyMarkup) Reset() {
-	var v SendVideoNoteReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendVideoNoteReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSendVideoNoteReplyMarkup) SetTo(v SendVideoNoteReplyMarkup) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendVideoNoteReplyMarkup) Get() (v SendVideoNoteReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendVideoNoteReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendVideoNoteReplyMarkup) Or(d SendVideoNoteReplyMarkup) SendVideoNoteReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendVideoNoteReplyMarkup)
 }
 
 // NewOptSendVideoReplyMarkup returns new OptSendVideoReplyMarkup with value set to v.
 func NewOptSendVideoReplyMarkup(v SendVideoReplyMarkup) OptSendVideoReplyMarkup {
-	return OptSendVideoReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendVideoReplyMarkup)
 }
 
 // OptSendVideoReplyMarkup is optional SendVideoReplyMarkup.
@@ -14081,43 +15040,34 @@ type OptSendVideoReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendVideoReplyMarkup was set.
-func (o OptSendVideoReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendVideoReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendVideoReplyMarkup) Reset() {
-	var v SendVideoReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendVideoReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSendVideoReplyMarkup) SetTo(v SendVideoReplyMarkup) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSendVideoReplyMarkup) SetTo(v SendVideoReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendVideoReplyMarkup) Get() (v SendVideoReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendVideoReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendVideoReplyMarkup) Or(d SendVideoReplyMarkup) SendVideoReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendVideoReplyMarkup)
 }
 
 // NewOptSendVoiceReplyMarkup returns new OptSendVoiceReplyMarkup with value set to v.
 func NewOptSendVoiceReplyMarkup(v SendVoiceReplyMarkup) OptSendVoiceReplyMarkup {
-	return OptSendVoiceReplyMarkup{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSendVoiceReplyMarkup)
 }
 
 // OptSendVoiceReplyMarkup is optional SendVoiceReplyMarkup.
@@ -14127,43 +15077,34 @@ type OptSendVoiceReplyMarkup struct {
 }
 
 // IsSet returns true if OptSendVoiceReplyMarkup was set.
-func (o OptSendVoiceReplyMarkup) IsSet() bool { return o.Set }
+func (o OptSendVoiceReplyMarkup) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSendVoiceReplyMarkup) Reset() {
-	var v SendVoiceReplyMarkup
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSendVoiceReplyMarkup) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSendVoiceReplyMarkup) SetTo(v SendVoiceReplyMarkup) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSendVoiceReplyMarkup) SetTo(v SendVoiceReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSendVoiceReplyMarkup) Get() (v SendVoiceReplyMarkup, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SendVoiceReplyMarkup), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSendVoiceReplyMarkup) Or(d SendVoiceReplyMarkup) SendVoiceReplyMarkup {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SendVoiceReplyMarkup)
 }
 
 // NewOptShippingAddress returns new OptShippingAddress with value set to v.
 func NewOptShippingAddress(v ShippingAddress) OptShippingAddress {
-	return OptShippingAddress{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptShippingAddress)
 }
 
 // OptShippingAddress is optional ShippingAddress.
@@ -14173,43 +15114,34 @@ type OptShippingAddress struct {
 }
 
 // IsSet returns true if OptShippingAddress was set.
-func (o OptShippingAddress) IsSet() bool { return o.Set }
+func (o OptShippingAddress) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptShippingAddress) Reset() {
-	var v ShippingAddress
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptShippingAddress) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptShippingAddress) SetTo(v ShippingAddress) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptShippingAddress) SetTo(v ShippingAddress) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptShippingAddress) Get() (v ShippingAddress, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ShippingAddress), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptShippingAddress) Or(d ShippingAddress) ShippingAddress {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ShippingAddress)
 }
 
 // NewOptShippingQuery returns new OptShippingQuery with value set to v.
 func NewOptShippingQuery(v ShippingQuery) OptShippingQuery {
-	return OptShippingQuery{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptShippingQuery)
 }
 
 // OptShippingQuery is optional ShippingQuery.
@@ -14219,44 +15151,32 @@ type OptShippingQuery struct {
 }
 
 // IsSet returns true if OptShippingQuery was set.
-func (o OptShippingQuery) IsSet() bool { return o.Set }
+func (o OptShippingQuery) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptShippingQuery) Reset() {
-	var v ShippingQuery
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptShippingQuery) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptShippingQuery) SetTo(v ShippingQuery) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptShippingQuery) SetTo(v ShippingQuery) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptShippingQuery) Get() (v ShippingQuery, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ShippingQuery), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptShippingQuery) Or(d ShippingQuery) ShippingQuery {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ShippingQuery)
 }
 
 // NewOptSticker returns new OptSticker with value set to v.
-func NewOptSticker(v Sticker) OptSticker {
-	return OptSticker{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptSticker(v Sticker) OptSticker { _ = "STUB: not implemented"; return *new(OptSticker) }
 
 // OptSticker is optional Sticker.
 type OptSticker struct {
@@ -14265,44 +15185,29 @@ type OptSticker struct {
 }
 
 // IsSet returns true if OptSticker was set.
-func (o OptSticker) IsSet() bool { return o.Set }
+func (o OptSticker) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSticker) Reset() {
-	var v Sticker
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSticker) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSticker) SetTo(v Sticker) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSticker) SetTo(v Sticker) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSticker) Get() (v Sticker, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Sticker), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptSticker) Or(d Sticker) Sticker {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptSticker) Or(d Sticker) Sticker { _ = "STUB: not implemented"; return *new(Sticker) }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -14311,43 +15216,28 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptSuccessfulPayment returns new OptSuccessfulPayment with value set to v.
 func NewOptSuccessfulPayment(v SuccessfulPayment) OptSuccessfulPayment {
-	return OptSuccessfulPayment{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSuccessfulPayment)
 }
 
 // OptSuccessfulPayment is optional SuccessfulPayment.
@@ -14357,44 +15247,32 @@ type OptSuccessfulPayment struct {
 }
 
 // IsSet returns true if OptSuccessfulPayment was set.
-func (o OptSuccessfulPayment) IsSet() bool { return o.Set }
+func (o OptSuccessfulPayment) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSuccessfulPayment) Reset() {
-	var v SuccessfulPayment
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSuccessfulPayment) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptSuccessfulPayment) SetTo(v SuccessfulPayment) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptSuccessfulPayment) SetTo(v SuccessfulPayment) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSuccessfulPayment) Get() (v SuccessfulPayment, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SuccessfulPayment), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSuccessfulPayment) Or(d SuccessfulPayment) SuccessfulPayment {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SuccessfulPayment)
 }
 
 // NewOptURI returns new OptURI with value set to v.
-func NewOptURI(v url.URL) OptURI {
-	return OptURI{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptURI(v url.URL) OptURI { _ = "STUB: not implemented"; return *new(OptURI) }
 
 // OptURI is optional url.URL.
 type OptURI struct {
@@ -14403,44 +15281,26 @@ type OptURI struct {
 }
 
 // IsSet returns true if OptURI was set.
-func (o OptURI) IsSet() bool { return o.Set }
+func (o OptURI) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptURI) Reset() {
-	var v url.URL
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptURI) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptURI) SetTo(v url.URL) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptURI) SetTo(v url.URL) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptURI) Get() (v url.URL, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptURI) Get() (v url.URL, ok bool) { _ = "STUB: not implemented"; return *new(url.URL), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptURI) Or(d url.URL) url.URL {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptURI) Or(d url.URL) url.URL { _ = "STUB: not implemented"; return *new(url.URL) }
 
 // NewOptUser returns new OptUser with value set to v.
-func NewOptUser(v User) OptUser {
-	return OptUser{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUser(v User) OptUser { _ = "STUB: not implemented"; return *new(OptUser) }
 
 // OptUser is optional User.
 type OptUser struct {
@@ -14449,43 +15309,28 @@ type OptUser struct {
 }
 
 // IsSet returns true if OptUser was set.
-func (o OptUser) IsSet() bool { return o.Set }
+func (o OptUser) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUser) Reset() {
-	var v User
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUser) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUser) SetTo(v User) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUser) SetTo(v User) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptUser) Get() (v User, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptUser) Get() (v User, ok bool) { _ = "STUB: not implemented"; return *new(User), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUser) Or(d User) User {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUser) Or(d User) User { _ = "STUB: not implemented"; return *new(User) }
 
 // NewOptUserProfilePhotos returns new OptUserProfilePhotos with value set to v.
 func NewOptUserProfilePhotos(v UserProfilePhotos) OptUserProfilePhotos {
-	return OptUserProfilePhotos{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptUserProfilePhotos)
 }
 
 // OptUserProfilePhotos is optional UserProfilePhotos.
@@ -14495,44 +15340,32 @@ type OptUserProfilePhotos struct {
 }
 
 // IsSet returns true if OptUserProfilePhotos was set.
-func (o OptUserProfilePhotos) IsSet() bool { return o.Set }
+func (o OptUserProfilePhotos) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUserProfilePhotos) Reset() {
-	var v UserProfilePhotos
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUserProfilePhotos) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUserProfilePhotos) SetTo(v UserProfilePhotos) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUserProfilePhotos) SetTo(v UserProfilePhotos) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUserProfilePhotos) Get() (v UserProfilePhotos, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(UserProfilePhotos), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptUserProfilePhotos) Or(d UserProfilePhotos) UserProfilePhotos {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(UserProfilePhotos)
 }
 
 // NewOptVenue returns new OptVenue with value set to v.
-func NewOptVenue(v Venue) OptVenue {
-	return OptVenue{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptVenue(v Venue) OptVenue { _ = "STUB: not implemented"; return *new(OptVenue) }
 
 // OptVenue is optional Venue.
 type OptVenue struct {
@@ -14541,44 +15374,26 @@ type OptVenue struct {
 }
 
 // IsSet returns true if OptVenue was set.
-func (o OptVenue) IsSet() bool { return o.Set }
+func (o OptVenue) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptVenue) Reset() {
-	var v Venue
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptVenue) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptVenue) SetTo(v Venue) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptVenue) SetTo(v Venue) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptVenue) Get() (v Venue, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptVenue) Get() (v Venue, ok bool) { _ = "STUB: not implemented"; return *new(Venue), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptVenue) Or(d Venue) Venue {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptVenue) Or(d Venue) Venue { _ = "STUB: not implemented"; return *new(Venue) }
 
 // NewOptVideo returns new OptVideo with value set to v.
-func NewOptVideo(v Video) OptVideo {
-	return OptVideo{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptVideo(v Video) OptVideo { _ = "STUB: not implemented"; return *new(OptVideo) }
 
 // OptVideo is optional Video.
 type OptVideo struct {
@@ -14587,43 +15402,28 @@ type OptVideo struct {
 }
 
 // IsSet returns true if OptVideo was set.
-func (o OptVideo) IsSet() bool { return o.Set }
+func (o OptVideo) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptVideo) Reset() {
-	var v Video
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptVideo) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptVideo) SetTo(v Video) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptVideo) SetTo(v Video) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptVideo) Get() (v Video, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptVideo) Get() (v Video, ok bool) { _ = "STUB: not implemented"; return *new(Video), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptVideo) Or(d Video) Video {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptVideo) Or(d Video) Video { _ = "STUB: not implemented"; return *new(Video) }
 
 // NewOptVideoNote returns new OptVideoNote with value set to v.
 func NewOptVideoNote(v VideoNote) OptVideoNote {
-	return OptVideoNote{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptVideoNote)
 }
 
 // OptVideoNote is optional VideoNote.
@@ -14633,44 +15433,29 @@ type OptVideoNote struct {
 }
 
 // IsSet returns true if OptVideoNote was set.
-func (o OptVideoNote) IsSet() bool { return o.Set }
+func (o OptVideoNote) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptVideoNote) Reset() {
-	var v VideoNote
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptVideoNote) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptVideoNote) SetTo(v VideoNote) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptVideoNote) SetTo(v VideoNote) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptVideoNote) Get() (v VideoNote, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(VideoNote), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptVideoNote) Or(d VideoNote) VideoNote {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptVideoNote) Or(d VideoNote) VideoNote { _ = "STUB: not implemented"; return *new(VideoNote) }
 
 // NewOptVoice returns new OptVoice with value set to v.
-func NewOptVoice(v Voice) OptVoice {
-	return OptVoice{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptVoice(v Voice) OptVoice { _ = "STUB: not implemented"; return *new(OptVoice) }
 
 // OptVoice is optional Voice.
 type OptVoice struct {
@@ -14679,43 +15464,28 @@ type OptVoice struct {
 }
 
 // IsSet returns true if OptVoice was set.
-func (o OptVoice) IsSet() bool { return o.Set }
+func (o OptVoice) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptVoice) Reset() {
-	var v Voice
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptVoice) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptVoice) SetTo(v Voice) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptVoice) SetTo(v Voice) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptVoice) Get() (v Voice, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptVoice) Get() (v Voice, ok bool) { _ = "STUB: not implemented"; return *new(Voice), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptVoice) Or(d Voice) Voice {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptVoice) Or(d Voice) Voice { _ = "STUB: not implemented"; return *new(Voice) }
 
 // NewOptVoiceChatEnded returns new OptVoiceChatEnded with value set to v.
 func NewOptVoiceChatEnded(v VoiceChatEnded) OptVoiceChatEnded {
-	return OptVoiceChatEnded{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptVoiceChatEnded)
 }
 
 // OptVoiceChatEnded is optional VoiceChatEnded.
@@ -14725,43 +15495,34 @@ type OptVoiceChatEnded struct {
 }
 
 // IsSet returns true if OptVoiceChatEnded was set.
-func (o OptVoiceChatEnded) IsSet() bool { return o.Set }
+func (o OptVoiceChatEnded) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptVoiceChatEnded) Reset() {
-	var v VoiceChatEnded
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptVoiceChatEnded) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptVoiceChatEnded) SetTo(v VoiceChatEnded) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptVoiceChatEnded) SetTo(v VoiceChatEnded) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptVoiceChatEnded) Get() (v VoiceChatEnded, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(VoiceChatEnded), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptVoiceChatEnded) Or(d VoiceChatEnded) VoiceChatEnded {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(VoiceChatEnded)
 }
 
 // NewOptVoiceChatParticipantsInvited returns new OptVoiceChatParticipantsInvited with value set to v.
 func NewOptVoiceChatParticipantsInvited(v VoiceChatParticipantsInvited) OptVoiceChatParticipantsInvited {
-	return OptVoiceChatParticipantsInvited{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptVoiceChatParticipantsInvited)
 }
 
 // OptVoiceChatParticipantsInvited is optional VoiceChatParticipantsInvited.
@@ -14771,43 +15532,37 @@ type OptVoiceChatParticipantsInvited struct {
 }
 
 // IsSet returns true if OptVoiceChatParticipantsInvited was set.
-func (o OptVoiceChatParticipantsInvited) IsSet() bool { return o.Set }
+func (o OptVoiceChatParticipantsInvited) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptVoiceChatParticipantsInvited) Reset() {
-	var v VoiceChatParticipantsInvited
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptVoiceChatParticipantsInvited) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptVoiceChatParticipantsInvited) SetTo(v VoiceChatParticipantsInvited) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptVoiceChatParticipantsInvited) Get() (v VoiceChatParticipantsInvited, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(VoiceChatParticipantsInvited), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptVoiceChatParticipantsInvited) Or(d VoiceChatParticipantsInvited) VoiceChatParticipantsInvited {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(VoiceChatParticipantsInvited)
 }
 
 // NewOptVoiceChatScheduled returns new OptVoiceChatScheduled with value set to v.
 func NewOptVoiceChatScheduled(v VoiceChatScheduled) OptVoiceChatScheduled {
-	return OptVoiceChatScheduled{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptVoiceChatScheduled)
 }
 
 // OptVoiceChatScheduled is optional VoiceChatScheduled.
@@ -14817,43 +15572,34 @@ type OptVoiceChatScheduled struct {
 }
 
 // IsSet returns true if OptVoiceChatScheduled was set.
-func (o OptVoiceChatScheduled) IsSet() bool { return o.Set }
+func (o OptVoiceChatScheduled) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptVoiceChatScheduled) Reset() {
-	var v VoiceChatScheduled
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptVoiceChatScheduled) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptVoiceChatScheduled) SetTo(v VoiceChatScheduled) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptVoiceChatScheduled) SetTo(v VoiceChatScheduled) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptVoiceChatScheduled) Get() (v VoiceChatScheduled, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(VoiceChatScheduled), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptVoiceChatScheduled) Or(d VoiceChatScheduled) VoiceChatScheduled {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(VoiceChatScheduled)
 }
 
 // NewOptWebhookInfo returns new OptWebhookInfo with value set to v.
 func NewOptWebhookInfo(v WebhookInfo) OptWebhookInfo {
-	return OptWebhookInfo{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptWebhookInfo)
 }
 
 // OptWebhookInfo is optional WebhookInfo.
@@ -14863,35 +15609,28 @@ type OptWebhookInfo struct {
 }
 
 // IsSet returns true if OptWebhookInfo was set.
-func (o OptWebhookInfo) IsSet() bool { return o.Set }
+func (o OptWebhookInfo) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptWebhookInfo) Reset() {
-	var v WebhookInfo
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptWebhookInfo) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptWebhookInfo) SetTo(v WebhookInfo) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptWebhookInfo) SetTo(v WebhookInfo) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptWebhookInfo) Get() (v WebhookInfo, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(WebhookInfo), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptWebhookInfo) Or(d WebhookInfo) WebhookInfo {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(WebhookInfo)
 }
 
 // This object represents information about an order.
@@ -14908,43 +15647,53 @@ type OrderInfo struct {
 
 // GetName returns the value of Name.
 func (s *OrderInfo) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetPhoneNumber returns the value of PhoneNumber.
+	return *new(OptString)
 }
 
-// GetPhoneNumber returns the value of PhoneNumber.
 func (s *OrderInfo) GetPhoneNumber() OptString {
-	return s.PhoneNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetEmail returns the value of Email.
+	new(OptString)
 }
 
-// GetEmail returns the value of Email.
 func (s *OrderInfo) GetEmail() OptString {
-	return s.Email
+	_ = "STUB: not implemented"
+
+	// GetShippingAddress returns the value of ShippingAddress.
+	return *new(OptString)
 }
 
-// GetShippingAddress returns the value of ShippingAddress.
 func (s *OrderInfo) GetShippingAddress() OptShippingAddress {
-	return s.ShippingAddress
+	_ = "STUB: not implemented"
+	return *
+
+	// SetName sets the value of Name.
+	new(OptShippingAddress)
 }
 
-// SetName sets the value of Name.
 func (s *OrderInfo) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetPhoneNumber sets the value of PhoneNumber.
+	return
 }
 
-// SetPhoneNumber sets the value of PhoneNumber.
-func (s *OrderInfo) SetPhoneNumber(val OptString) {
-	s.PhoneNumber = val
-}
+func (s *OrderInfo) SetPhoneNumber(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetEmail sets the value of Email.
 func (s *OrderInfo) SetEmail(val OptString) {
-	s.Email = val
+	_ = "STUB: not implemented"
+
+	// SetShippingAddress sets the value of ShippingAddress.
+	return
 }
 
-// SetShippingAddress sets the value of ShippingAddress.
-func (s *OrderInfo) SetShippingAddress(val OptShippingAddress) {
-	s.ShippingAddress = val
-}
+func (s *OrderInfo) SetShippingAddress(val OptShippingAddress) { _ = "STUB: not implemented"; return }
 
 // Contains information about Telegram Passport data shared with the bot by the user.
 // Ref: #/components/schemas/PassportData
@@ -14957,23 +15706,28 @@ type PassportData struct {
 
 // GetData returns the value of Data.
 func (s *PassportData) GetData() []EncryptedPassportElement {
-	return s.Data
+	_ = "STUB: not implemented"
+
+	// GetCredentials returns the value of Credentials.
+	return nil
 }
 
-// GetCredentials returns the value of Credentials.
 func (s *PassportData) GetCredentials() EncryptedCredentials {
-	return s.Credentials
+	_ = "STUB: not implemented"
+	return *
+
+	// SetData sets the value of Data.
+	new(EncryptedCredentials)
 }
 
-// SetData sets the value of Data.
 func (s *PassportData) SetData(val []EncryptedPassportElement) {
-	s.Data = val
+	_ = "STUB: not implemented"
+
+	// SetCredentials sets the value of Credentials.
+	return
 }
 
-// SetCredentials sets the value of Credentials.
-func (s *PassportData) SetCredentials(val EncryptedCredentials) {
-	s.Credentials = val
-}
+func (s *PassportData) SetCredentials(val EncryptedCredentials) { _ = "STUB: not implemented"; return }
 
 // This object represents an error in the Telegram Passport element which was submitted that should
 // be resolved by the user. :.
@@ -15010,236 +15764,218 @@ const (
 
 // IsPassportElementErrorDataField reports whether PassportElementError is PassportElementErrorDataField.
 func (s PassportElementError) IsPassportElementErrorDataField() bool {
-	return s.Type == PassportElementErrorDataFieldPassportElementError
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsPassportElementErrorFrontSide reports whether PassportElementError is PassportElementErrorFrontSide.
 func (s PassportElementError) IsPassportElementErrorFrontSide() bool {
-	return s.Type == PassportElementErrorFrontSidePassportElementError
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsPassportElementErrorReverseSide reports whether PassportElementError is PassportElementErrorReverseSide.
 func (s PassportElementError) IsPassportElementErrorReverseSide() bool {
-	return s.Type == PassportElementErrorReverseSidePassportElementError
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsPassportElementErrorSelfie reports whether PassportElementError is PassportElementErrorSelfie.
 func (s PassportElementError) IsPassportElementErrorSelfie() bool {
-	return s.Type == PassportElementErrorSelfiePassportElementError
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsPassportElementErrorFile reports whether PassportElementError is PassportElementErrorFile.
 func (s PassportElementError) IsPassportElementErrorFile() bool {
-	return s.Type == PassportElementErrorFilePassportElementError
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsPassportElementErrorFiles reports whether PassportElementError is PassportElementErrorFiles.
 func (s PassportElementError) IsPassportElementErrorFiles() bool {
-	return s.Type == PassportElementErrorFilesPassportElementError
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsPassportElementErrorTranslationFile reports whether PassportElementError is PassportElementErrorTranslationFile.
 func (s PassportElementError) IsPassportElementErrorTranslationFile() bool {
-	return s.Type == PassportElementErrorTranslationFilePassportElementError
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsPassportElementErrorTranslationFiles reports whether PassportElementError is PassportElementErrorTranslationFiles.
 func (s PassportElementError) IsPassportElementErrorTranslationFiles() bool {
-	return s.Type == PassportElementErrorTranslationFilesPassportElementError
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsPassportElementErrorUnspecified reports whether PassportElementError is PassportElementErrorUnspecified.
 func (s PassportElementError) IsPassportElementErrorUnspecified() bool {
-	return s.Type == PassportElementErrorUnspecifiedPassportElementError
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SetPassportElementErrorDataField sets PassportElementError to PassportElementErrorDataField.
 func (s *PassportElementError) SetPassportElementErrorDataField(v PassportElementErrorDataField) {
-	s.Type = PassportElementErrorDataFieldPassportElementError
-	s.PassportElementErrorDataField = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPassportElementErrorDataField returns PassportElementErrorDataField and true boolean if PassportElementError is PassportElementErrorDataField.
 func (s PassportElementError) GetPassportElementErrorDataField() (v PassportElementErrorDataField, ok bool) {
-	if !s.IsPassportElementErrorDataField() {
-		return v, false
-	}
-	return s.PassportElementErrorDataField, true
+	_ = "STUB: not implemented"
+	return *new(PassportElementErrorDataField), false
 }
 
 // NewPassportElementErrorDataFieldPassportElementError returns new PassportElementError from PassportElementErrorDataField.
 func NewPassportElementErrorDataFieldPassportElementError(v PassportElementErrorDataField) PassportElementError {
-	var s PassportElementError
-	s.SetPassportElementErrorDataField(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(PassportElementError)
 }
 
 // SetPassportElementErrorFrontSide sets PassportElementError to PassportElementErrorFrontSide.
 func (s *PassportElementError) SetPassportElementErrorFrontSide(v PassportElementErrorFrontSide) {
-	s.Type = PassportElementErrorFrontSidePassportElementError
-	s.PassportElementErrorFrontSide = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPassportElementErrorFrontSide returns PassportElementErrorFrontSide and true boolean if PassportElementError is PassportElementErrorFrontSide.
 func (s PassportElementError) GetPassportElementErrorFrontSide() (v PassportElementErrorFrontSide, ok bool) {
-	if !s.IsPassportElementErrorFrontSide() {
-		return v, false
-	}
-	return s.PassportElementErrorFrontSide, true
+	_ = "STUB: not implemented"
+	return *new(PassportElementErrorFrontSide), false
 }
 
 // NewPassportElementErrorFrontSidePassportElementError returns new PassportElementError from PassportElementErrorFrontSide.
 func NewPassportElementErrorFrontSidePassportElementError(v PassportElementErrorFrontSide) PassportElementError {
-	var s PassportElementError
-	s.SetPassportElementErrorFrontSide(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(PassportElementError)
 }
 
 // SetPassportElementErrorReverseSide sets PassportElementError to PassportElementErrorReverseSide.
 func (s *PassportElementError) SetPassportElementErrorReverseSide(v PassportElementErrorReverseSide) {
-	s.Type = PassportElementErrorReverseSidePassportElementError
-	s.PassportElementErrorReverseSide = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPassportElementErrorReverseSide returns PassportElementErrorReverseSide and true boolean if PassportElementError is PassportElementErrorReverseSide.
 func (s PassportElementError) GetPassportElementErrorReverseSide() (v PassportElementErrorReverseSide, ok bool) {
-	if !s.IsPassportElementErrorReverseSide() {
-		return v, false
-	}
-	return s.PassportElementErrorReverseSide, true
+	_ = "STUB: not implemented"
+	return *new(PassportElementErrorReverseSide), false
 }
 
 // NewPassportElementErrorReverseSidePassportElementError returns new PassportElementError from PassportElementErrorReverseSide.
 func NewPassportElementErrorReverseSidePassportElementError(v PassportElementErrorReverseSide) PassportElementError {
-	var s PassportElementError
-	s.SetPassportElementErrorReverseSide(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(PassportElementError)
 }
 
 // SetPassportElementErrorSelfie sets PassportElementError to PassportElementErrorSelfie.
 func (s *PassportElementError) SetPassportElementErrorSelfie(v PassportElementErrorSelfie) {
-	s.Type = PassportElementErrorSelfiePassportElementError
-	s.PassportElementErrorSelfie = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPassportElementErrorSelfie returns PassportElementErrorSelfie and true boolean if PassportElementError is PassportElementErrorSelfie.
 func (s PassportElementError) GetPassportElementErrorSelfie() (v PassportElementErrorSelfie, ok bool) {
-	if !s.IsPassportElementErrorSelfie() {
-		return v, false
-	}
-	return s.PassportElementErrorSelfie, true
+	_ = "STUB: not implemented"
+	return *new(PassportElementErrorSelfie), false
 }
 
 // NewPassportElementErrorSelfiePassportElementError returns new PassportElementError from PassportElementErrorSelfie.
 func NewPassportElementErrorSelfiePassportElementError(v PassportElementErrorSelfie) PassportElementError {
-	var s PassportElementError
-	s.SetPassportElementErrorSelfie(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(PassportElementError)
 }
 
 // SetPassportElementErrorFile sets PassportElementError to PassportElementErrorFile.
 func (s *PassportElementError) SetPassportElementErrorFile(v PassportElementErrorFile) {
-	s.Type = PassportElementErrorFilePassportElementError
-	s.PassportElementErrorFile = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPassportElementErrorFile returns PassportElementErrorFile and true boolean if PassportElementError is PassportElementErrorFile.
 func (s PassportElementError) GetPassportElementErrorFile() (v PassportElementErrorFile, ok bool) {
-	if !s.IsPassportElementErrorFile() {
-		return v, false
-	}
-	return s.PassportElementErrorFile, true
+	_ = "STUB: not implemented"
+	return *new(PassportElementErrorFile), false
 }
 
 // NewPassportElementErrorFilePassportElementError returns new PassportElementError from PassportElementErrorFile.
 func NewPassportElementErrorFilePassportElementError(v PassportElementErrorFile) PassportElementError {
-	var s PassportElementError
-	s.SetPassportElementErrorFile(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(PassportElementError)
 }
 
 // SetPassportElementErrorFiles sets PassportElementError to PassportElementErrorFiles.
 func (s *PassportElementError) SetPassportElementErrorFiles(v PassportElementErrorFiles) {
-	s.Type = PassportElementErrorFilesPassportElementError
-	s.PassportElementErrorFiles = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPassportElementErrorFiles returns PassportElementErrorFiles and true boolean if PassportElementError is PassportElementErrorFiles.
 func (s PassportElementError) GetPassportElementErrorFiles() (v PassportElementErrorFiles, ok bool) {
-	if !s.IsPassportElementErrorFiles() {
-		return v, false
-	}
-	return s.PassportElementErrorFiles, true
+	_ = "STUB: not implemented"
+	return *new(PassportElementErrorFiles), false
 }
 
 // NewPassportElementErrorFilesPassportElementError returns new PassportElementError from PassportElementErrorFiles.
 func NewPassportElementErrorFilesPassportElementError(v PassportElementErrorFiles) PassportElementError {
-	var s PassportElementError
-	s.SetPassportElementErrorFiles(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(PassportElementError)
 }
 
 // SetPassportElementErrorTranslationFile sets PassportElementError to PassportElementErrorTranslationFile.
 func (s *PassportElementError) SetPassportElementErrorTranslationFile(v PassportElementErrorTranslationFile) {
-	s.Type = PassportElementErrorTranslationFilePassportElementError
-	s.PassportElementErrorTranslationFile = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPassportElementErrorTranslationFile returns PassportElementErrorTranslationFile and true boolean if PassportElementError is PassportElementErrorTranslationFile.
 func (s PassportElementError) GetPassportElementErrorTranslationFile() (v PassportElementErrorTranslationFile, ok bool) {
-	if !s.IsPassportElementErrorTranslationFile() {
-		return v, false
-	}
-	return s.PassportElementErrorTranslationFile, true
+	_ = "STUB: not implemented"
+	return *new(PassportElementErrorTranslationFile), false
 }
 
 // NewPassportElementErrorTranslationFilePassportElementError returns new PassportElementError from PassportElementErrorTranslationFile.
 func NewPassportElementErrorTranslationFilePassportElementError(v PassportElementErrorTranslationFile) PassportElementError {
-	var s PassportElementError
-	s.SetPassportElementErrorTranslationFile(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(PassportElementError)
 }
 
 // SetPassportElementErrorTranslationFiles sets PassportElementError to PassportElementErrorTranslationFiles.
 func (s *PassportElementError) SetPassportElementErrorTranslationFiles(v PassportElementErrorTranslationFiles) {
-	s.Type = PassportElementErrorTranslationFilesPassportElementError
-	s.PassportElementErrorTranslationFiles = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPassportElementErrorTranslationFiles returns PassportElementErrorTranslationFiles and true boolean if PassportElementError is PassportElementErrorTranslationFiles.
 func (s PassportElementError) GetPassportElementErrorTranslationFiles() (v PassportElementErrorTranslationFiles, ok bool) {
-	if !s.IsPassportElementErrorTranslationFiles() {
-		return v, false
-	}
-	return s.PassportElementErrorTranslationFiles, true
+	_ = "STUB: not implemented"
+	return *new(PassportElementErrorTranslationFiles), false
 }
 
 // NewPassportElementErrorTranslationFilesPassportElementError returns new PassportElementError from PassportElementErrorTranslationFiles.
 func NewPassportElementErrorTranslationFilesPassportElementError(v PassportElementErrorTranslationFiles) PassportElementError {
-	var s PassportElementError
-	s.SetPassportElementErrorTranslationFiles(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(PassportElementError)
 }
 
 // SetPassportElementErrorUnspecified sets PassportElementError to PassportElementErrorUnspecified.
 func (s *PassportElementError) SetPassportElementErrorUnspecified(v PassportElementErrorUnspecified) {
-	s.Type = PassportElementErrorUnspecifiedPassportElementError
-	s.PassportElementErrorUnspecified = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPassportElementErrorUnspecified returns PassportElementErrorUnspecified and true boolean if PassportElementError is PassportElementErrorUnspecified.
 func (s PassportElementError) GetPassportElementErrorUnspecified() (v PassportElementErrorUnspecified, ok bool) {
-	if !s.IsPassportElementErrorUnspecified() {
-		return v, false
-	}
-	return s.PassportElementErrorUnspecified, true
+	_ = "STUB: not implemented"
+	return *new(PassportElementErrorUnspecified), false
 }
 
 // NewPassportElementErrorUnspecifiedPassportElementError returns new PassportElementError from PassportElementErrorUnspecified.
 func NewPassportElementErrorUnspecifiedPassportElementError(v PassportElementErrorUnspecified) PassportElementError {
-	var s PassportElementError
-	s.SetPassportElementErrorUnspecified(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(PassportElementError)
 }
 
 // Represents an issue in one of the data fields that was provided by the user. The error is
@@ -15261,56 +15997,76 @@ type PassportElementErrorDataField struct {
 
 // GetSource returns the value of Source.
 func (s *PassportElementErrorDataField) GetSource() string {
-	return s.Source
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *PassportElementErrorDataField) GetType() PassportElementErrorDataFieldType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetFieldName returns the value of FieldName.
+	return *new(PassportElementErrorDataFieldType)
 }
 
-// GetFieldName returns the value of FieldName.
 func (s *PassportElementErrorDataField) GetFieldName() string {
-	return s.FieldName
+	_ = "STUB: not implemented"
+
+	// GetDataHash returns the value of DataHash.
+	return ""
 }
 
-// GetDataHash returns the value of DataHash.
 func (s *PassportElementErrorDataField) GetDataHash() string {
-	return s.DataHash
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return ""
 }
 
-// GetMessage returns the value of Message.
 func (s *PassportElementErrorDataField) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetSource sets the value of Source.
+	return ""
 }
 
-// SetSource sets the value of Source.
 func (s *PassportElementErrorDataField) SetSource(val string) {
-	s.Source = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *PassportElementErrorDataField) SetType(val PassportElementErrorDataFieldType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetFieldName sets the value of FieldName.
+	return
 }
 
-// SetFieldName sets the value of FieldName.
 func (s *PassportElementErrorDataField) SetFieldName(val string) {
-	s.FieldName = val
+	_ = "STUB: not implemented"
+
+	// SetDataHash sets the value of DataHash.
+	return
 }
 
-// SetDataHash sets the value of DataHash.
 func (s *PassportElementErrorDataField) SetDataHash(val string) {
-	s.DataHash = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *PassportElementErrorDataField) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// The section of the user's Telegram Passport which has the error, one of “personal_details”,
+	// “passport”, “driver_license”, “identity_card”, “internal_passport”, “address”.
+	return
 }
 
-// The section of the user's Telegram Passport which has the error, one of “personal_details”,
-// “passport”, “driver_license”, “identity_card”, “internal_passport”, “address”.
 type PassportElementErrorDataFieldType string
 
 const (
@@ -15324,60 +16080,20 @@ const (
 
 // AllValues returns all PassportElementErrorDataFieldType values.
 func (PassportElementErrorDataFieldType) AllValues() []PassportElementErrorDataFieldType {
-	return []PassportElementErrorDataFieldType{
-		PassportElementErrorDataFieldTypePersonalDetails,
-		PassportElementErrorDataFieldTypePassport,
-		PassportElementErrorDataFieldTypeDriverLicense,
-		PassportElementErrorDataFieldTypeIdentityCard,
-		PassportElementErrorDataFieldTypeInternalPassport,
-		PassportElementErrorDataFieldTypeAddress,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s PassportElementErrorDataFieldType) MarshalText() ([]byte, error) {
-	switch s {
-	case PassportElementErrorDataFieldTypePersonalDetails:
-		return []byte(s), nil
-	case PassportElementErrorDataFieldTypePassport:
-		return []byte(s), nil
-	case PassportElementErrorDataFieldTypeDriverLicense:
-		return []byte(s), nil
-	case PassportElementErrorDataFieldTypeIdentityCard:
-		return []byte(s), nil
-	case PassportElementErrorDataFieldTypeInternalPassport:
-		return []byte(s), nil
-	case PassportElementErrorDataFieldTypeAddress:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *PassportElementErrorDataFieldType) UnmarshalText(data []byte) error {
-	switch PassportElementErrorDataFieldType(data) {
-	case PassportElementErrorDataFieldTypePersonalDetails:
-		*s = PassportElementErrorDataFieldTypePersonalDetails
-		return nil
-	case PassportElementErrorDataFieldTypePassport:
-		*s = PassportElementErrorDataFieldTypePassport
-		return nil
-	case PassportElementErrorDataFieldTypeDriverLicense:
-		*s = PassportElementErrorDataFieldTypeDriverLicense
-		return nil
-	case PassportElementErrorDataFieldTypeIdentityCard:
-		*s = PassportElementErrorDataFieldTypeIdentityCard
-		return nil
-	case PassportElementErrorDataFieldTypeInternalPassport:
-		*s = PassportElementErrorDataFieldTypeInternalPassport
-		return nil
-	case PassportElementErrorDataFieldTypeAddress:
-		*s = PassportElementErrorDataFieldTypeAddress
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Represents an issue with a document scan. The error is considered resolved when the file with the
@@ -15398,47 +16114,63 @@ type PassportElementErrorFile struct {
 
 // GetSource returns the value of Source.
 func (s *PassportElementErrorFile) GetSource() string {
-	return s.Source
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *PassportElementErrorFile) GetType() PassportElementErrorFileType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetFileHash returns the value of FileHash.
+	return *new(PassportElementErrorFileType)
 }
 
-// GetFileHash returns the value of FileHash.
 func (s *PassportElementErrorFile) GetFileHash() string {
-	return s.FileHash
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return ""
 }
 
-// GetMessage returns the value of Message.
 func (s *PassportElementErrorFile) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetSource sets the value of Source.
+	return ""
 }
 
-// SetSource sets the value of Source.
 func (s *PassportElementErrorFile) SetSource(val string) {
-	s.Source = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *PassportElementErrorFile) SetType(val PassportElementErrorFileType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetFileHash sets the value of FileHash.
+	return
 }
 
-// SetFileHash sets the value of FileHash.
 func (s *PassportElementErrorFile) SetFileHash(val string) {
-	s.FileHash = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *PassportElementErrorFile) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// The section of the user's Telegram Passport which has the issue, one of “utility_bill”,
+	// “bank_statement”, “rental_agreement”, “passport_registration”,
+	// “temporary_registration”.
+	return
 }
 
-// The section of the user's Telegram Passport which has the issue, one of “utility_bill”,
-// “bank_statement”, “rental_agreement”, “passport_registration”,
-// “temporary_registration”.
 type PassportElementErrorFileType string
 
 const (
@@ -15451,54 +16183,20 @@ const (
 
 // AllValues returns all PassportElementErrorFileType values.
 func (PassportElementErrorFileType) AllValues() []PassportElementErrorFileType {
-	return []PassportElementErrorFileType{
-		PassportElementErrorFileTypeUtilityBill,
-		PassportElementErrorFileTypeBankStatement,
-		PassportElementErrorFileTypeRentalAgreement,
-		PassportElementErrorFileTypePassportRegistration,
-		PassportElementErrorFileTypeTemporaryRegistration,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s PassportElementErrorFileType) MarshalText() ([]byte, error) {
-	switch s {
-	case PassportElementErrorFileTypeUtilityBill:
-		return []byte(s), nil
-	case PassportElementErrorFileTypeBankStatement:
-		return []byte(s), nil
-	case PassportElementErrorFileTypeRentalAgreement:
-		return []byte(s), nil
-	case PassportElementErrorFileTypePassportRegistration:
-		return []byte(s), nil
-	case PassportElementErrorFileTypeTemporaryRegistration:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *PassportElementErrorFileType) UnmarshalText(data []byte) error {
-	switch PassportElementErrorFileType(data) {
-	case PassportElementErrorFileTypeUtilityBill:
-		*s = PassportElementErrorFileTypeUtilityBill
-		return nil
-	case PassportElementErrorFileTypeBankStatement:
-		*s = PassportElementErrorFileTypeBankStatement
-		return nil
-	case PassportElementErrorFileTypeRentalAgreement:
-		*s = PassportElementErrorFileTypeRentalAgreement
-		return nil
-	case PassportElementErrorFileTypePassportRegistration:
-		*s = PassportElementErrorFileTypePassportRegistration
-		return nil
-	case PassportElementErrorFileTypeTemporaryRegistration:
-		*s = PassportElementErrorFileTypeTemporaryRegistration
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Represents an issue with a list of scans. The error is considered resolved when the list of files
@@ -15519,47 +16217,59 @@ type PassportElementErrorFiles struct {
 
 // GetSource returns the value of Source.
 func (s *PassportElementErrorFiles) GetSource() string {
-	return s.Source
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *PassportElementErrorFiles) GetType() PassportElementErrorFilesType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetFileHashes returns the value of FileHashes.
+	return *new(PassportElementErrorFilesType)
 }
 
-// GetFileHashes returns the value of FileHashes.
-func (s *PassportElementErrorFiles) GetFileHashes() []string {
-	return s.FileHashes
-}
+func (s *PassportElementErrorFiles) GetFileHashes() []string { _ = "STUB: not implemented"; return nil }
 
 // GetMessage returns the value of Message.
 func (s *PassportElementErrorFiles) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetSource sets the value of Source.
+	return ""
 }
 
-// SetSource sets the value of Source.
 func (s *PassportElementErrorFiles) SetSource(val string) {
-	s.Source = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *PassportElementErrorFiles) SetType(val PassportElementErrorFilesType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetFileHashes sets the value of FileHashes.
+	return
 }
 
-// SetFileHashes sets the value of FileHashes.
 func (s *PassportElementErrorFiles) SetFileHashes(val []string) {
-	s.FileHashes = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *PassportElementErrorFiles) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// The section of the user's Telegram Passport which has the issue, one of “utility_bill”,
+	// “bank_statement”, “rental_agreement”, “passport_registration”,
+	// “temporary_registration”.
+	return
 }
 
-// The section of the user's Telegram Passport which has the issue, one of “utility_bill”,
-// “bank_statement”, “rental_agreement”, “passport_registration”,
-// “temporary_registration”.
 type PassportElementErrorFilesType string
 
 const (
@@ -15572,54 +16282,20 @@ const (
 
 // AllValues returns all PassportElementErrorFilesType values.
 func (PassportElementErrorFilesType) AllValues() []PassportElementErrorFilesType {
-	return []PassportElementErrorFilesType{
-		PassportElementErrorFilesTypeUtilityBill,
-		PassportElementErrorFilesTypeBankStatement,
-		PassportElementErrorFilesTypeRentalAgreement,
-		PassportElementErrorFilesTypePassportRegistration,
-		PassportElementErrorFilesTypeTemporaryRegistration,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s PassportElementErrorFilesType) MarshalText() ([]byte, error) {
-	switch s {
-	case PassportElementErrorFilesTypeUtilityBill:
-		return []byte(s), nil
-	case PassportElementErrorFilesTypeBankStatement:
-		return []byte(s), nil
-	case PassportElementErrorFilesTypeRentalAgreement:
-		return []byte(s), nil
-	case PassportElementErrorFilesTypePassportRegistration:
-		return []byte(s), nil
-	case PassportElementErrorFilesTypeTemporaryRegistration:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *PassportElementErrorFilesType) UnmarshalText(data []byte) error {
-	switch PassportElementErrorFilesType(data) {
-	case PassportElementErrorFilesTypeUtilityBill:
-		*s = PassportElementErrorFilesTypeUtilityBill
-		return nil
-	case PassportElementErrorFilesTypeBankStatement:
-		*s = PassportElementErrorFilesTypeBankStatement
-		return nil
-	case PassportElementErrorFilesTypeRentalAgreement:
-		*s = PassportElementErrorFilesTypeRentalAgreement
-		return nil
-	case PassportElementErrorFilesTypePassportRegistration:
-		*s = PassportElementErrorFilesTypePassportRegistration
-		return nil
-	case PassportElementErrorFilesTypeTemporaryRegistration:
-		*s = PassportElementErrorFilesTypeTemporaryRegistration
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Represents an issue with the front side of a document. The error is considered resolved when the
@@ -15639,46 +16315,62 @@ type PassportElementErrorFrontSide struct {
 
 // GetSource returns the value of Source.
 func (s *PassportElementErrorFrontSide) GetSource() string {
-	return s.Source
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *PassportElementErrorFrontSide) GetType() PassportElementErrorFrontSideType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetFileHash returns the value of FileHash.
+	return *new(PassportElementErrorFrontSideType)
 }
 
-// GetFileHash returns the value of FileHash.
 func (s *PassportElementErrorFrontSide) GetFileHash() string {
-	return s.FileHash
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return ""
 }
 
-// GetMessage returns the value of Message.
 func (s *PassportElementErrorFrontSide) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetSource sets the value of Source.
+	return ""
 }
 
-// SetSource sets the value of Source.
 func (s *PassportElementErrorFrontSide) SetSource(val string) {
-	s.Source = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *PassportElementErrorFrontSide) SetType(val PassportElementErrorFrontSideType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetFileHash sets the value of FileHash.
+	return
 }
 
-// SetFileHash sets the value of FileHash.
 func (s *PassportElementErrorFrontSide) SetFileHash(val string) {
-	s.FileHash = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *PassportElementErrorFrontSide) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// The section of the user's Telegram Passport which has the issue, one of “passport”,
+	// “driver_license”, “identity_card”, “internal_passport”.
+	return
 }
 
-// The section of the user's Telegram Passport which has the issue, one of “passport”,
-// “driver_license”, “identity_card”, “internal_passport”.
 type PassportElementErrorFrontSideType string
 
 const (
@@ -15690,48 +16382,20 @@ const (
 
 // AllValues returns all PassportElementErrorFrontSideType values.
 func (PassportElementErrorFrontSideType) AllValues() []PassportElementErrorFrontSideType {
-	return []PassportElementErrorFrontSideType{
-		PassportElementErrorFrontSideTypePassport,
-		PassportElementErrorFrontSideTypeDriverLicense,
-		PassportElementErrorFrontSideTypeIdentityCard,
-		PassportElementErrorFrontSideTypeInternalPassport,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s PassportElementErrorFrontSideType) MarshalText() ([]byte, error) {
-	switch s {
-	case PassportElementErrorFrontSideTypePassport:
-		return []byte(s), nil
-	case PassportElementErrorFrontSideTypeDriverLicense:
-		return []byte(s), nil
-	case PassportElementErrorFrontSideTypeIdentityCard:
-		return []byte(s), nil
-	case PassportElementErrorFrontSideTypeInternalPassport:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *PassportElementErrorFrontSideType) UnmarshalText(data []byte) error {
-	switch PassportElementErrorFrontSideType(data) {
-	case PassportElementErrorFrontSideTypePassport:
-		*s = PassportElementErrorFrontSideTypePassport
-		return nil
-	case PassportElementErrorFrontSideTypeDriverLicense:
-		*s = PassportElementErrorFrontSideTypeDriverLicense
-		return nil
-	case PassportElementErrorFrontSideTypeIdentityCard:
-		*s = PassportElementErrorFrontSideTypeIdentityCard
-		return nil
-	case PassportElementErrorFrontSideTypeInternalPassport:
-		*s = PassportElementErrorFrontSideTypeInternalPassport
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Represents an issue with the reverse side of a document. The error is considered resolved when the
@@ -15751,46 +16415,62 @@ type PassportElementErrorReverseSide struct {
 
 // GetSource returns the value of Source.
 func (s *PassportElementErrorReverseSide) GetSource() string {
-	return s.Source
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *PassportElementErrorReverseSide) GetType() PassportElementErrorReverseSideType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetFileHash returns the value of FileHash.
+	return *new(PassportElementErrorReverseSideType)
 }
 
-// GetFileHash returns the value of FileHash.
 func (s *PassportElementErrorReverseSide) GetFileHash() string {
-	return s.FileHash
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return ""
 }
 
-// GetMessage returns the value of Message.
 func (s *PassportElementErrorReverseSide) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetSource sets the value of Source.
+	return ""
 }
 
-// SetSource sets the value of Source.
 func (s *PassportElementErrorReverseSide) SetSource(val string) {
-	s.Source = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *PassportElementErrorReverseSide) SetType(val PassportElementErrorReverseSideType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetFileHash sets the value of FileHash.
+	return
 }
 
-// SetFileHash sets the value of FileHash.
 func (s *PassportElementErrorReverseSide) SetFileHash(val string) {
-	s.FileHash = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *PassportElementErrorReverseSide) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// The section of the user's Telegram Passport which has the issue, one of “driver_license”,
+	// “identity_card”.
+	return
 }
 
-// The section of the user's Telegram Passport which has the issue, one of “driver_license”,
-// “identity_card”.
 type PassportElementErrorReverseSideType string
 
 const (
@@ -15800,36 +16480,20 @@ const (
 
 // AllValues returns all PassportElementErrorReverseSideType values.
 func (PassportElementErrorReverseSideType) AllValues() []PassportElementErrorReverseSideType {
-	return []PassportElementErrorReverseSideType{
-		PassportElementErrorReverseSideTypeDriverLicense,
-		PassportElementErrorReverseSideTypeIdentityCard,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s PassportElementErrorReverseSideType) MarshalText() ([]byte, error) {
-	switch s {
-	case PassportElementErrorReverseSideTypeDriverLicense:
-		return []byte(s), nil
-	case PassportElementErrorReverseSideTypeIdentityCard:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *PassportElementErrorReverseSideType) UnmarshalText(data []byte) error {
-	switch PassportElementErrorReverseSideType(data) {
-	case PassportElementErrorReverseSideTypeDriverLicense:
-		*s = PassportElementErrorReverseSideTypeDriverLicense
-		return nil
-	case PassportElementErrorReverseSideTypeIdentityCard:
-		*s = PassportElementErrorReverseSideTypeIdentityCard
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Represents an issue with the selfie with a document. The error is considered resolved when the
@@ -15849,46 +16513,62 @@ type PassportElementErrorSelfie struct {
 
 // GetSource returns the value of Source.
 func (s *PassportElementErrorSelfie) GetSource() string {
-	return s.Source
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *PassportElementErrorSelfie) GetType() PassportElementErrorSelfieType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetFileHash returns the value of FileHash.
+	return *new(PassportElementErrorSelfieType)
 }
 
-// GetFileHash returns the value of FileHash.
 func (s *PassportElementErrorSelfie) GetFileHash() string {
-	return s.FileHash
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return ""
 }
 
-// GetMessage returns the value of Message.
 func (s *PassportElementErrorSelfie) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetSource sets the value of Source.
+	return ""
 }
 
-// SetSource sets the value of Source.
 func (s *PassportElementErrorSelfie) SetSource(val string) {
-	s.Source = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *PassportElementErrorSelfie) SetType(val PassportElementErrorSelfieType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetFileHash sets the value of FileHash.
+	return
 }
 
-// SetFileHash sets the value of FileHash.
 func (s *PassportElementErrorSelfie) SetFileHash(val string) {
-	s.FileHash = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *PassportElementErrorSelfie) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// The section of the user's Telegram Passport which has the issue, one of “passport”,
+	// “driver_license”, “identity_card”, “internal_passport”.
+	return
 }
 
-// The section of the user's Telegram Passport which has the issue, one of “passport”,
-// “driver_license”, “identity_card”, “internal_passport”.
 type PassportElementErrorSelfieType string
 
 const (
@@ -15900,48 +16580,20 @@ const (
 
 // AllValues returns all PassportElementErrorSelfieType values.
 func (PassportElementErrorSelfieType) AllValues() []PassportElementErrorSelfieType {
-	return []PassportElementErrorSelfieType{
-		PassportElementErrorSelfieTypePassport,
-		PassportElementErrorSelfieTypeDriverLicense,
-		PassportElementErrorSelfieTypeIdentityCard,
-		PassportElementErrorSelfieTypeInternalPassport,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s PassportElementErrorSelfieType) MarshalText() ([]byte, error) {
-	switch s {
-	case PassportElementErrorSelfieTypePassport:
-		return []byte(s), nil
-	case PassportElementErrorSelfieTypeDriverLicense:
-		return []byte(s), nil
-	case PassportElementErrorSelfieTypeIdentityCard:
-		return []byte(s), nil
-	case PassportElementErrorSelfieTypeInternalPassport:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *PassportElementErrorSelfieType) UnmarshalText(data []byte) error {
-	switch PassportElementErrorSelfieType(data) {
-	case PassportElementErrorSelfieTypePassport:
-		*s = PassportElementErrorSelfieTypePassport
-		return nil
-	case PassportElementErrorSelfieTypeDriverLicense:
-		*s = PassportElementErrorSelfieTypeDriverLicense
-		return nil
-	case PassportElementErrorSelfieTypeIdentityCard:
-		*s = PassportElementErrorSelfieTypeIdentityCard
-		return nil
-	case PassportElementErrorSelfieTypeInternalPassport:
-		*s = PassportElementErrorSelfieTypeInternalPassport
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Represents an issue with one of the files that constitute the translation of a document. The error
@@ -15963,48 +16615,64 @@ type PassportElementErrorTranslationFile struct {
 
 // GetSource returns the value of Source.
 func (s *PassportElementErrorTranslationFile) GetSource() string {
-	return s.Source
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *PassportElementErrorTranslationFile) GetType() PassportElementErrorTranslationFileType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetFileHash returns the value of FileHash.
+	return *new(PassportElementErrorTranslationFileType)
 }
 
-// GetFileHash returns the value of FileHash.
 func (s *PassportElementErrorTranslationFile) GetFileHash() string {
-	return s.FileHash
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return ""
 }
 
-// GetMessage returns the value of Message.
 func (s *PassportElementErrorTranslationFile) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetSource sets the value of Source.
+	return ""
 }
 
-// SetSource sets the value of Source.
 func (s *PassportElementErrorTranslationFile) SetSource(val string) {
-	s.Source = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *PassportElementErrorTranslationFile) SetType(val PassportElementErrorTranslationFileType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetFileHash sets the value of FileHash.
+	return
 }
 
-// SetFileHash sets the value of FileHash.
 func (s *PassportElementErrorTranslationFile) SetFileHash(val string) {
-	s.FileHash = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *PassportElementErrorTranslationFile) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// Type of element of the user's Telegram Passport which has the issue, one of “passport”,
+	// “driver_license”, “identity_card”, “internal_passport”, “utility_bill”,
+	// “bank_statement”, “rental_agreement”, “passport_registration”,
+	// “temporary_registration”.
+	return
 }
 
-// Type of element of the user's Telegram Passport which has the issue, one of “passport”,
-// “driver_license”, “identity_card”, “internal_passport”, “utility_bill”,
-// “bank_statement”, “rental_agreement”, “passport_registration”,
-// “temporary_registration”.
 type PassportElementErrorTranslationFileType string
 
 const (
@@ -16021,78 +16689,20 @@ const (
 
 // AllValues returns all PassportElementErrorTranslationFileType values.
 func (PassportElementErrorTranslationFileType) AllValues() []PassportElementErrorTranslationFileType {
-	return []PassportElementErrorTranslationFileType{
-		PassportElementErrorTranslationFileTypePassport,
-		PassportElementErrorTranslationFileTypeDriverLicense,
-		PassportElementErrorTranslationFileTypeIdentityCard,
-		PassportElementErrorTranslationFileTypeInternalPassport,
-		PassportElementErrorTranslationFileTypeUtilityBill,
-		PassportElementErrorTranslationFileTypeBankStatement,
-		PassportElementErrorTranslationFileTypeRentalAgreement,
-		PassportElementErrorTranslationFileTypePassportRegistration,
-		PassportElementErrorTranslationFileTypeTemporaryRegistration,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s PassportElementErrorTranslationFileType) MarshalText() ([]byte, error) {
-	switch s {
-	case PassportElementErrorTranslationFileTypePassport:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFileTypeDriverLicense:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFileTypeIdentityCard:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFileTypeInternalPassport:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFileTypeUtilityBill:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFileTypeBankStatement:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFileTypeRentalAgreement:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFileTypePassportRegistration:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFileTypeTemporaryRegistration:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *PassportElementErrorTranslationFileType) UnmarshalText(data []byte) error {
-	switch PassportElementErrorTranslationFileType(data) {
-	case PassportElementErrorTranslationFileTypePassport:
-		*s = PassportElementErrorTranslationFileTypePassport
-		return nil
-	case PassportElementErrorTranslationFileTypeDriverLicense:
-		*s = PassportElementErrorTranslationFileTypeDriverLicense
-		return nil
-	case PassportElementErrorTranslationFileTypeIdentityCard:
-		*s = PassportElementErrorTranslationFileTypeIdentityCard
-		return nil
-	case PassportElementErrorTranslationFileTypeInternalPassport:
-		*s = PassportElementErrorTranslationFileTypeInternalPassport
-		return nil
-	case PassportElementErrorTranslationFileTypeUtilityBill:
-		*s = PassportElementErrorTranslationFileTypeUtilityBill
-		return nil
-	case PassportElementErrorTranslationFileTypeBankStatement:
-		*s = PassportElementErrorTranslationFileTypeBankStatement
-		return nil
-	case PassportElementErrorTranslationFileTypeRentalAgreement:
-		*s = PassportElementErrorTranslationFileTypeRentalAgreement
-		return nil
-	case PassportElementErrorTranslationFileTypePassportRegistration:
-		*s = PassportElementErrorTranslationFileTypePassportRegistration
-		return nil
-	case PassportElementErrorTranslationFileTypeTemporaryRegistration:
-		*s = PassportElementErrorTranslationFileTypeTemporaryRegistration
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Represents an issue with the translated version of a document. The error is considered resolved
@@ -16114,48 +16724,64 @@ type PassportElementErrorTranslationFiles struct {
 
 // GetSource returns the value of Source.
 func (s *PassportElementErrorTranslationFiles) GetSource() string {
-	return s.Source
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *PassportElementErrorTranslationFiles) GetType() PassportElementErrorTranslationFilesType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetFileHashes returns the value of FileHashes.
+	return *new(PassportElementErrorTranslationFilesType)
 }
 
-// GetFileHashes returns the value of FileHashes.
 func (s *PassportElementErrorTranslationFiles) GetFileHashes() []string {
-	return s.FileHashes
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetMessage returns the value of Message.
 }
 
-// GetMessage returns the value of Message.
 func (s *PassportElementErrorTranslationFiles) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetSource sets the value of Source.
+	return ""
 }
 
-// SetSource sets the value of Source.
 func (s *PassportElementErrorTranslationFiles) SetSource(val string) {
-	s.Source = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *PassportElementErrorTranslationFiles) SetType(val PassportElementErrorTranslationFilesType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetFileHashes sets the value of FileHashes.
+	return
 }
 
-// SetFileHashes sets the value of FileHashes.
 func (s *PassportElementErrorTranslationFiles) SetFileHashes(val []string) {
-	s.FileHashes = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetMessage sets the value of Message.
 }
 
-// SetMessage sets the value of Message.
 func (s *PassportElementErrorTranslationFiles) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// Type of element of the user's Telegram Passport which has the issue, one of “passport”,
+	// “driver_license”, “identity_card”, “internal_passport”, “utility_bill”,
+	// “bank_statement”, “rental_agreement”, “passport_registration”,
+	// “temporary_registration”.
+	return
 }
 
-// Type of element of the user's Telegram Passport which has the issue, one of “passport”,
-// “driver_license”, “identity_card”, “internal_passport”, “utility_bill”,
-// “bank_statement”, “rental_agreement”, “passport_registration”,
-// “temporary_registration”.
 type PassportElementErrorTranslationFilesType string
 
 const (
@@ -16172,78 +16798,20 @@ const (
 
 // AllValues returns all PassportElementErrorTranslationFilesType values.
 func (PassportElementErrorTranslationFilesType) AllValues() []PassportElementErrorTranslationFilesType {
-	return []PassportElementErrorTranslationFilesType{
-		PassportElementErrorTranslationFilesTypePassport,
-		PassportElementErrorTranslationFilesTypeDriverLicense,
-		PassportElementErrorTranslationFilesTypeIdentityCard,
-		PassportElementErrorTranslationFilesTypeInternalPassport,
-		PassportElementErrorTranslationFilesTypeUtilityBill,
-		PassportElementErrorTranslationFilesTypeBankStatement,
-		PassportElementErrorTranslationFilesTypeRentalAgreement,
-		PassportElementErrorTranslationFilesTypePassportRegistration,
-		PassportElementErrorTranslationFilesTypeTemporaryRegistration,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s PassportElementErrorTranslationFilesType) MarshalText() ([]byte, error) {
-	switch s {
-	case PassportElementErrorTranslationFilesTypePassport:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFilesTypeDriverLicense:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFilesTypeIdentityCard:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFilesTypeInternalPassport:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFilesTypeUtilityBill:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFilesTypeBankStatement:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFilesTypeRentalAgreement:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFilesTypePassportRegistration:
-		return []byte(s), nil
-	case PassportElementErrorTranslationFilesTypeTemporaryRegistration:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *PassportElementErrorTranslationFilesType) UnmarshalText(data []byte) error {
-	switch PassportElementErrorTranslationFilesType(data) {
-	case PassportElementErrorTranslationFilesTypePassport:
-		*s = PassportElementErrorTranslationFilesTypePassport
-		return nil
-	case PassportElementErrorTranslationFilesTypeDriverLicense:
-		*s = PassportElementErrorTranslationFilesTypeDriverLicense
-		return nil
-	case PassportElementErrorTranslationFilesTypeIdentityCard:
-		*s = PassportElementErrorTranslationFilesTypeIdentityCard
-		return nil
-	case PassportElementErrorTranslationFilesTypeInternalPassport:
-		*s = PassportElementErrorTranslationFilesTypeInternalPassport
-		return nil
-	case PassportElementErrorTranslationFilesTypeUtilityBill:
-		*s = PassportElementErrorTranslationFilesTypeUtilityBill
-		return nil
-	case PassportElementErrorTranslationFilesTypeBankStatement:
-		*s = PassportElementErrorTranslationFilesTypeBankStatement
-		return nil
-	case PassportElementErrorTranslationFilesTypeRentalAgreement:
-		*s = PassportElementErrorTranslationFilesTypeRentalAgreement
-		return nil
-	case PassportElementErrorTranslationFilesTypePassportRegistration:
-		*s = PassportElementErrorTranslationFilesTypePassportRegistration
-		return nil
-	case PassportElementErrorTranslationFilesTypeTemporaryRegistration:
-		*s = PassportElementErrorTranslationFilesTypeTemporaryRegistration
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Represents an issue in an unspecified place. The error is considered resolved when new data is
@@ -16262,47 +16830,63 @@ type PassportElementErrorUnspecified struct {
 
 // GetSource returns the value of Source.
 func (s *PassportElementErrorUnspecified) GetSource() string {
-	return s.Source
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return ""
 }
 
-// GetType returns the value of Type.
 func (s *PassportElementErrorUnspecified) GetType() string {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetElementHash returns the value of ElementHash.
+	return ""
 }
 
-// GetElementHash returns the value of ElementHash.
 func (s *PassportElementErrorUnspecified) GetElementHash() string {
-	return s.ElementHash
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetMessage returns the value of Message.
 }
 
-// GetMessage returns the value of Message.
 func (s *PassportElementErrorUnspecified) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetSource sets the value of Source.
+	return ""
 }
 
-// SetSource sets the value of Source.
 func (s *PassportElementErrorUnspecified) SetSource(val string) {
-	s.Source = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *PassportElementErrorUnspecified) SetType(val string) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetElementHash sets the value of ElementHash.
+	return
 }
 
-// SetElementHash sets the value of ElementHash.
 func (s *PassportElementErrorUnspecified) SetElementHash(val string) {
-	s.ElementHash = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetMessage sets the value of Message.
 }
 
-// SetMessage sets the value of Message.
 func (s *PassportElementErrorUnspecified) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// This object represents a file uploaded to Telegram Passport. Currently all Telegram Passport files
+	// are in JPEG format when decrypted and don't exceed 10MB.
+	// Ref: #/components/schemas/PassportFile
+	return
 }
 
-// This object represents a file uploaded to Telegram Passport. Currently all Telegram Passport files
-// are in JPEG format when decrypted and don't exceed 10MB.
-// Ref: #/components/schemas/PassportFile
 type PassportFile struct {
 	// Identifier for this file, which can be used to download or reuse the file.
 	FileID string `json:"file_id"`
@@ -16317,46 +16901,54 @@ type PassportFile struct {
 
 // GetFileID returns the value of FileID.
 func (s *PassportFile) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// GetFileUniqueID returns the value of FileUniqueID.
+	return ""
 }
 
-// GetFileUniqueID returns the value of FileUniqueID.
-func (s *PassportFile) GetFileUniqueID() string {
-	return s.FileUniqueID
-}
+func (s *PassportFile) GetFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetFileSize returns the value of FileSize.
 func (s *PassportFile) GetFileSize() int {
-	return s.FileSize
+	_ = "STUB: not implemented"
+
+	// GetFileDate returns the value of FileDate.
+	return 0
 }
 
-// GetFileDate returns the value of FileDate.
 func (s *PassportFile) GetFileDate() int {
-	return s.FileDate
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return 0
 }
 
-// SetFileID sets the value of FileID.
 func (s *PassportFile) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// SetFileUniqueID sets the value of FileUniqueID.
+	return
 }
 
-// SetFileUniqueID sets the value of FileUniqueID.
-func (s *PassportFile) SetFileUniqueID(val string) {
-	s.FileUniqueID = val
-}
+func (s *PassportFile) SetFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetFileSize sets the value of FileSize.
 func (s *PassportFile) SetFileSize(val int) {
-	s.FileSize = val
+	_ = "STUB: not implemented"
+
+	// SetFileDate sets the value of FileDate.
+	return
 }
 
-// SetFileDate sets the value of FileDate.
 func (s *PassportFile) SetFileDate(val int) {
-	s.FileDate = val
+	_ = "STUB: not implemented"
+
+	// This object represents one size of a photo or a file / sticker thumbnail.
+	// Ref: #/components/schemas/PhotoSize
+	return
 }
 
-// This object represents one size of a photo or a file / sticker thumbnail.
-// Ref: #/components/schemas/PhotoSize
 type PhotoSize struct {
 	// Identifier for this file, which can be used to download or reuse the file.
 	FileID string `json:"file_id"`
@@ -16373,56 +16965,68 @@ type PhotoSize struct {
 
 // GetFileID returns the value of FileID.
 func (s *PhotoSize) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// GetFileUniqueID returns the value of FileUniqueID.
+	return ""
 }
 
-// GetFileUniqueID returns the value of FileUniqueID.
-func (s *PhotoSize) GetFileUniqueID() string {
-	return s.FileUniqueID
-}
+func (s *PhotoSize) GetFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetWidth returns the value of Width.
 func (s *PhotoSize) GetWidth() int {
-	return s.Width
+	_ = "STUB: not implemented"
+
+	// GetHeight returns the value of Height.
+	return 0
 }
 
-// GetHeight returns the value of Height.
 func (s *PhotoSize) GetHeight() int {
-	return s.Height
+	_ = "STUB: not implemented"
+
+	// GetFileSize returns the value of FileSize.
+	return 0
 }
 
-// GetFileSize returns the value of FileSize.
 func (s *PhotoSize) GetFileSize() OptInt {
-	return s.FileSize
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return *new(OptInt)
 }
 
-// SetFileID sets the value of FileID.
 func (s *PhotoSize) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// SetFileUniqueID sets the value of FileUniqueID.
+	return
 }
 
-// SetFileUniqueID sets the value of FileUniqueID.
-func (s *PhotoSize) SetFileUniqueID(val string) {
-	s.FileUniqueID = val
-}
+func (s *PhotoSize) SetFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetWidth sets the value of Width.
 func (s *PhotoSize) SetWidth(val int) {
-	s.Width = val
+	_ = "STUB: not implemented"
+
+	// SetHeight sets the value of Height.
+	return
 }
 
-// SetHeight sets the value of Height.
 func (s *PhotoSize) SetHeight(val int) {
-	s.Height = val
+	_ = "STUB: not implemented"
+
+	// SetFileSize sets the value of FileSize.
+	return
 }
 
-// SetFileSize sets the value of FileSize.
 func (s *PhotoSize) SetFileSize(val OptInt) {
-	s.FileSize = val
+	_ = "STUB: not implemented"
+
+	// Input for pinChatMessage.
+	// Ref: #/components/schemas/pinChatMessage
+	return
 }
 
-// Input for pinChatMessage.
-// Ref: #/components/schemas/pinChatMessage
 type PinChatMessage struct {
 	ChatID ID `json:"chat_id"`
 	// Identifier of a message to pin.
@@ -16434,33 +17038,40 @@ type PinChatMessage struct {
 
 // GetChatID returns the value of ChatID.
 func (s *PinChatMessage) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(ID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *PinChatMessage) GetMessageID() int {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// GetDisableNotification returns the value of DisableNotification.
+	return 0
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *PinChatMessage) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // SetChatID sets the value of ChatID.
 func (s *PinChatMessage) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *PinChatMessage) SetMessageID(val int) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *PinChatMessage) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *PinChatMessage) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // This object contains information about a poll.
 // Ref: #/components/schemas/Poll
@@ -16497,136 +17108,151 @@ type Poll struct {
 
 // GetID returns the value of ID.
 func (s *Poll) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetQuestion returns the value of Question.
+	return ""
 }
 
-// GetQuestion returns the value of Question.
 func (s *Poll) GetQuestion() string {
-	return s.Question
+	_ = "STUB: not implemented"
+
+	// GetOptions returns the value of Options.
+	return ""
 }
 
-// GetOptions returns the value of Options.
 func (s *Poll) GetOptions() []PollOption {
-	return s.Options
+	_ = "STUB: not implemented"
+
+	// GetTotalVoterCount returns the value of TotalVoterCount.
+	return nil
 }
 
-// GetTotalVoterCount returns the value of TotalVoterCount.
-func (s *Poll) GetTotalVoterCount() int {
-	return s.TotalVoterCount
-}
+func (s *Poll) GetTotalVoterCount() int { _ = "STUB: not implemented"; return 0 }
 
 // GetIsClosed returns the value of IsClosed.
 func (s *Poll) GetIsClosed() bool {
-	return s.IsClosed
+	_ = "STUB: not implemented"
+
+	// GetIsAnonymous returns the value of IsAnonymous.
+	return false
 }
 
-// GetIsAnonymous returns the value of IsAnonymous.
-func (s *Poll) GetIsAnonymous() bool {
-	return s.IsAnonymous
-}
+func (s *Poll) GetIsAnonymous() bool { _ = "STUB: not implemented"; return false }
 
 // GetType returns the value of Type.
 func (s *Poll) GetType() PollType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetAllowsMultipleAnswers returns the value of AllowsMultipleAnswers.
+	return *new(PollType)
 }
 
-// GetAllowsMultipleAnswers returns the value of AllowsMultipleAnswers.
-func (s *Poll) GetAllowsMultipleAnswers() bool {
-	return s.AllowsMultipleAnswers
-}
+func (s *Poll) GetAllowsMultipleAnswers() bool { _ = "STUB: not implemented"; return false }
 
 // GetCorrectOptionID returns the value of CorrectOptionID.
 func (s *Poll) GetCorrectOptionID() OptInt {
-	return s.CorrectOptionID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExplanation returns the value of Explanation.
+	new(OptInt)
 }
 
-// GetExplanation returns the value of Explanation.
 func (s *Poll) GetExplanation() OptString {
-	return s.Explanation
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExplanationEntities returns the value of ExplanationEntities.
+	new(OptString)
 }
 
-// GetExplanationEntities returns the value of ExplanationEntities.
-func (s *Poll) GetExplanationEntities() []MessageEntity {
-	return s.ExplanationEntities
-}
+func (s *Poll) GetExplanationEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetOpenPeriod returns the value of OpenPeriod.
 func (s *Poll) GetOpenPeriod() OptInt {
-	return s.OpenPeriod
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCloseDate returns the value of CloseDate.
+	new(OptInt)
 }
 
-// GetCloseDate returns the value of CloseDate.
 func (s *Poll) GetCloseDate() OptInt {
-	return s.CloseDate
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return *new(OptInt)
 }
 
-// SetID sets the value of ID.
 func (s *Poll) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetQuestion sets the value of Question.
+	return
 }
 
-// SetQuestion sets the value of Question.
 func (s *Poll) SetQuestion(val string) {
-	s.Question = val
+	_ = "STUB: not implemented"
+
+	// SetOptions sets the value of Options.
+	return
 }
 
-// SetOptions sets the value of Options.
 func (s *Poll) SetOptions(val []PollOption) {
-	s.Options = val
+	_ = "STUB: not implemented"
+
+	// SetTotalVoterCount sets the value of TotalVoterCount.
+	return
 }
 
-// SetTotalVoterCount sets the value of TotalVoterCount.
-func (s *Poll) SetTotalVoterCount(val int) {
-	s.TotalVoterCount = val
-}
+func (s *Poll) SetTotalVoterCount(val int) { _ = "STUB: not implemented"; return }
 
 // SetIsClosed sets the value of IsClosed.
 func (s *Poll) SetIsClosed(val bool) {
-	s.IsClosed = val
+	_ = "STUB: not implemented"
+
+	// SetIsAnonymous sets the value of IsAnonymous.
+	return
 }
 
-// SetIsAnonymous sets the value of IsAnonymous.
-func (s *Poll) SetIsAnonymous(val bool) {
-	s.IsAnonymous = val
-}
+func (s *Poll) SetIsAnonymous(val bool) { _ = "STUB: not implemented"; return }
 
 // SetType sets the value of Type.
 func (s *Poll) SetType(val PollType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetAllowsMultipleAnswers sets the value of AllowsMultipleAnswers.
+	return
 }
 
-// SetAllowsMultipleAnswers sets the value of AllowsMultipleAnswers.
-func (s *Poll) SetAllowsMultipleAnswers(val bool) {
-	s.AllowsMultipleAnswers = val
-}
+func (s *Poll) SetAllowsMultipleAnswers(val bool) { _ = "STUB: not implemented"; return }
 
 // SetCorrectOptionID sets the value of CorrectOptionID.
-func (s *Poll) SetCorrectOptionID(val OptInt) {
-	s.CorrectOptionID = val
-}
+func (s *Poll) SetCorrectOptionID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetExplanation sets the value of Explanation.
-func (s *Poll) SetExplanation(val OptString) {
-	s.Explanation = val
-}
+func (s *Poll) SetExplanation(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetExplanationEntities sets the value of ExplanationEntities.
-func (s *Poll) SetExplanationEntities(val []MessageEntity) {
-	s.ExplanationEntities = val
-}
+func (s *Poll) SetExplanationEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetOpenPeriod sets the value of OpenPeriod.
 func (s *Poll) SetOpenPeriod(val OptInt) {
-	s.OpenPeriod = val
+	_ = "STUB: not implemented"
+
+	// SetCloseDate sets the value of CloseDate.
+	return
 }
 
-// SetCloseDate sets the value of CloseDate.
 func (s *Poll) SetCloseDate(val OptInt) {
-	s.CloseDate = val
+	_ = "STUB: not implemented"
+
+	// This object represents an answer of a user in a non-anonymous poll.
+	// Ref: #/components/schemas/PollAnswer
+	return
 }
 
-// This object represents an answer of a user in a non-anonymous poll.
-// Ref: #/components/schemas/PollAnswer
 type PollAnswer struct {
 	// Unique poll identifier.
 	PollID string `json:"poll_id"`
@@ -16638,36 +17264,48 @@ type PollAnswer struct {
 
 // GetPollID returns the value of PollID.
 func (s *PollAnswer) GetPollID() string {
-	return s.PollID
+	_ = "STUB: not implemented"
+
+	// GetUser returns the value of User.
+	return ""
 }
 
-// GetUser returns the value of User.
 func (s *PollAnswer) GetUser() User {
-	return s.User
+	_ = "STUB: not implemented"
+
+	// GetOptionIds returns the value of OptionIds.
+	return *new(User)
 }
 
-// GetOptionIds returns the value of OptionIds.
 func (s *PollAnswer) GetOptionIds() []int {
-	return s.OptionIds
+	_ = "STUB: not implemented"
+
+	// SetPollID sets the value of PollID.
+	return nil
 }
 
-// SetPollID sets the value of PollID.
 func (s *PollAnswer) SetPollID(val string) {
-	s.PollID = val
+	_ = "STUB: not implemented"
+
+	// SetUser sets the value of User.
+	return
 }
 
-// SetUser sets the value of User.
 func (s *PollAnswer) SetUser(val User) {
-	s.User = val
+	_ = "STUB: not implemented"
+
+	// SetOptionIds sets the value of OptionIds.
+	return
 }
 
-// SetOptionIds sets the value of OptionIds.
 func (s *PollAnswer) SetOptionIds(val []int) {
-	s.OptionIds = val
+	_ = "STUB: not implemented"
+
+	// This object contains information about one answer option in a poll.
+	// Ref: #/components/schemas/PollOption
+	return
 }
 
-// This object contains information about one answer option in a poll.
-// Ref: #/components/schemas/PollOption
 type PollOption struct {
 	// Option text, 1-100 characters.
 	Text string `json:"text"`
@@ -16677,25 +17315,29 @@ type PollOption struct {
 
 // GetText returns the value of Text.
 func (s *PollOption) GetText() string {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetVoterCount returns the value of VoterCount.
+	return ""
 }
 
-// GetVoterCount returns the value of VoterCount.
-func (s *PollOption) GetVoterCount() int {
-	return s.VoterCount
-}
+func (s *PollOption) GetVoterCount() int { _ = "STUB: not implemented"; return 0 }
 
 // SetText sets the value of Text.
 func (s *PollOption) SetText(val string) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetVoterCount sets the value of VoterCount.
+	return
 }
 
-// SetVoterCount sets the value of VoterCount.
 func (s *PollOption) SetVoterCount(val int) {
-	s.VoterCount = val
+	_ = "STUB: not implemented"
+
+	// Poll type, currently can be “regular” or “quiz”.
+	return
 }
 
-// Poll type, currently can be “regular” or “quiz”.
 type PollType string
 
 const (
@@ -16704,38 +17346,13 @@ const (
 )
 
 // AllValues returns all PollType values.
-func (PollType) AllValues() []PollType {
-	return []PollType{
-		PollTypeRegular,
-		PollTypeQuiz,
-	}
-}
+func (PollType) AllValues() []PollType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s PollType) MarshalText() ([]byte, error) {
-	switch s {
-	case PollTypeRegular:
-		return []byte(s), nil
-	case PollTypeQuiz:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s PollType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *PollType) UnmarshalText(data []byte) error {
-	switch PollType(data) {
-	case PollTypeRegular:
-		*s = PollTypeRegular
-		return nil
-	case PollTypeQuiz:
-		*s = PollTypeQuiz
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *PollType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // This object contains information about an incoming pre-checkout query.
 // Ref: #/components/schemas/PreCheckoutQuery
@@ -16758,76 +17375,84 @@ type PreCheckoutQuery struct {
 
 // GetID returns the value of ID.
 func (s *PreCheckoutQuery) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetFrom returns the value of From.
+	return ""
 }
 
-// GetFrom returns the value of From.
 func (s *PreCheckoutQuery) GetFrom() User {
-	return s.From
+	_ = "STUB: not implemented"
+
+	// GetCurrency returns the value of Currency.
+	return *new(User)
 }
 
-// GetCurrency returns the value of Currency.
 func (s *PreCheckoutQuery) GetCurrency() string {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetTotalAmount returns the value of TotalAmount.
+	return ""
 }
 
-// GetTotalAmount returns the value of TotalAmount.
-func (s *PreCheckoutQuery) GetTotalAmount() int {
-	return s.TotalAmount
-}
+func (s *PreCheckoutQuery) GetTotalAmount() int { _ = "STUB: not implemented"; return 0 }
 
 // GetInvoicePayload returns the value of InvoicePayload.
-func (s *PreCheckoutQuery) GetInvoicePayload() string {
-	return s.InvoicePayload
-}
+func (s *PreCheckoutQuery) GetInvoicePayload() string { _ = "STUB: not implemented"; return "" }
 
 // GetShippingOptionID returns the value of ShippingOptionID.
 func (s *PreCheckoutQuery) GetShippingOptionID() OptString {
-	return s.ShippingOptionID
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOrderInfo returns the value of OrderInfo.
 func (s *PreCheckoutQuery) GetOrderInfo() OptOrderInfo {
-	return s.OrderInfo
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptOrderInfo)
 }
 
-// SetID sets the value of ID.
 func (s *PreCheckoutQuery) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetFrom sets the value of From.
+	return
 }
 
-// SetFrom sets the value of From.
 func (s *PreCheckoutQuery) SetFrom(val User) {
-	s.From = val
+	_ = "STUB: not implemented"
+
+	// SetCurrency sets the value of Currency.
+	return
 }
 
-// SetCurrency sets the value of Currency.
 func (s *PreCheckoutQuery) SetCurrency(val string) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetTotalAmount sets the value of TotalAmount.
+	return
 }
 
-// SetTotalAmount sets the value of TotalAmount.
-func (s *PreCheckoutQuery) SetTotalAmount(val int) {
-	s.TotalAmount = val
-}
+func (s *PreCheckoutQuery) SetTotalAmount(val int) { _ = "STUB: not implemented"; return }
 
 // SetInvoicePayload sets the value of InvoicePayload.
-func (s *PreCheckoutQuery) SetInvoicePayload(val string) {
-	s.InvoicePayload = val
-}
+func (s *PreCheckoutQuery) SetInvoicePayload(val string) { _ = "STUB: not implemented"; return }
 
 // SetShippingOptionID sets the value of ShippingOptionID.
-func (s *PreCheckoutQuery) SetShippingOptionID(val OptString) {
-	s.ShippingOptionID = val
-}
+func (s *PreCheckoutQuery) SetShippingOptionID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetOrderInfo sets the value of OrderInfo.
 func (s *PreCheckoutQuery) SetOrderInfo(val OptOrderInfo) {
-	s.OrderInfo = val
+	_ = "STUB: not implemented"
+
+	// Input for promoteChatMember.
+	// Ref: #/components/schemas/promoteChatMember
+	return
 }
 
-// Input for promoteChatMember.
-// Ref: #/components/schemas/promoteChatMember
 type PromoteChatMember struct {
 	ChatID ID `json:"chat_id"`
 	// Unique identifier of the target user.
@@ -16863,133 +17488,144 @@ type PromoteChatMember struct {
 
 // GetChatID returns the value of ChatID.
 func (s *PromoteChatMember) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return *new(ID)
 }
 
-// GetUserID returns the value of UserID.
 func (s *PromoteChatMember) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetIsAnonymous returns the value of IsAnonymous.
+	return 0
 }
 
-// GetIsAnonymous returns the value of IsAnonymous.
 func (s *PromoteChatMember) GetIsAnonymous() OptBool {
-	return s.IsAnonymous
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanManageChat returns the value of CanManageChat.
+	new(OptBool)
 }
 
-// GetCanManageChat returns the value of CanManageChat.
 func (s *PromoteChatMember) GetCanManageChat() OptBool {
-	return s.CanManageChat
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanPostMessages returns the value of CanPostMessages.
+	new(OptBool)
 }
 
-// GetCanPostMessages returns the value of CanPostMessages.
 func (s *PromoteChatMember) GetCanPostMessages() OptBool {
-	return s.CanPostMessages
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanEditMessages returns the value of CanEditMessages.
+	new(OptBool)
 }
 
-// GetCanEditMessages returns the value of CanEditMessages.
 func (s *PromoteChatMember) GetCanEditMessages() OptBool {
-	return s.CanEditMessages
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanDeleteMessages returns the value of CanDeleteMessages.
+	new(OptBool)
 }
 
-// GetCanDeleteMessages returns the value of CanDeleteMessages.
 func (s *PromoteChatMember) GetCanDeleteMessages() OptBool {
-	return s.CanDeleteMessages
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetCanManageVoiceChats returns the value of CanManageVoiceChats.
 func (s *PromoteChatMember) GetCanManageVoiceChats() OptBool {
-	return s.CanManageVoiceChats
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetCanRestrictMembers returns the value of CanRestrictMembers.
 func (s *PromoteChatMember) GetCanRestrictMembers() OptBool {
-	return s.CanRestrictMembers
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetCanPromoteMembers returns the value of CanPromoteMembers.
 func (s *PromoteChatMember) GetCanPromoteMembers() OptBool {
-	return s.CanPromoteMembers
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetCanChangeInfo returns the value of CanChangeInfo.
 func (s *PromoteChatMember) GetCanChangeInfo() OptBool {
-	return s.CanChangeInfo
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanInviteUsers returns the value of CanInviteUsers.
+	new(OptBool)
 }
 
-// GetCanInviteUsers returns the value of CanInviteUsers.
 func (s *PromoteChatMember) GetCanInviteUsers() OptBool {
-	return s.CanInviteUsers
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanPinMessages returns the value of CanPinMessages.
+	new(OptBool)
 }
 
-// GetCanPinMessages returns the value of CanPinMessages.
 func (s *PromoteChatMember) GetCanPinMessages() OptBool {
-	return s.CanPinMessages
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptBool)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *PromoteChatMember) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *PromoteChatMember) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetIsAnonymous sets the value of IsAnonymous.
+	return
 }
 
-// SetIsAnonymous sets the value of IsAnonymous.
-func (s *PromoteChatMember) SetIsAnonymous(val OptBool) {
-	s.IsAnonymous = val
-}
+func (s *PromoteChatMember) SetIsAnonymous(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanManageChat sets the value of CanManageChat.
-func (s *PromoteChatMember) SetCanManageChat(val OptBool) {
-	s.CanManageChat = val
-}
+func (s *PromoteChatMember) SetCanManageChat(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanPostMessages sets the value of CanPostMessages.
-func (s *PromoteChatMember) SetCanPostMessages(val OptBool) {
-	s.CanPostMessages = val
-}
+func (s *PromoteChatMember) SetCanPostMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanEditMessages sets the value of CanEditMessages.
-func (s *PromoteChatMember) SetCanEditMessages(val OptBool) {
-	s.CanEditMessages = val
-}
+func (s *PromoteChatMember) SetCanEditMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanDeleteMessages sets the value of CanDeleteMessages.
-func (s *PromoteChatMember) SetCanDeleteMessages(val OptBool) {
-	s.CanDeleteMessages = val
-}
+func (s *PromoteChatMember) SetCanDeleteMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanManageVoiceChats sets the value of CanManageVoiceChats.
-func (s *PromoteChatMember) SetCanManageVoiceChats(val OptBool) {
-	s.CanManageVoiceChats = val
-}
+func (s *PromoteChatMember) SetCanManageVoiceChats(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanRestrictMembers sets the value of CanRestrictMembers.
-func (s *PromoteChatMember) SetCanRestrictMembers(val OptBool) {
-	s.CanRestrictMembers = val
-}
+func (s *PromoteChatMember) SetCanRestrictMembers(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanPromoteMembers sets the value of CanPromoteMembers.
-func (s *PromoteChatMember) SetCanPromoteMembers(val OptBool) {
-	s.CanPromoteMembers = val
-}
+func (s *PromoteChatMember) SetCanPromoteMembers(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanChangeInfo sets the value of CanChangeInfo.
-func (s *PromoteChatMember) SetCanChangeInfo(val OptBool) {
-	s.CanChangeInfo = val
-}
+func (s *PromoteChatMember) SetCanChangeInfo(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanInviteUsers sets the value of CanInviteUsers.
-func (s *PromoteChatMember) SetCanInviteUsers(val OptBool) {
-	s.CanInviteUsers = val
-}
+func (s *PromoteChatMember) SetCanInviteUsers(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanPinMessages sets the value of CanPinMessages.
-func (s *PromoteChatMember) SetCanPinMessages(val OptBool) {
-	s.CanPinMessages = val
-}
+func (s *PromoteChatMember) SetCanPinMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // This object represents the content of a service message, sent whenever a user in the chat triggers
 // a proximity alert set by another user.
@@ -17003,37 +17639,49 @@ type ProximityAlertTriggered struct {
 
 // GetTraveler returns the value of Traveler.
 func (s *ProximityAlertTriggered) GetTraveler() User {
-	return s.Traveler
+	_ = "STUB: not implemented"
+
+	// GetWatcher returns the value of Watcher.
+	return *new(User)
 }
 
-// GetWatcher returns the value of Watcher.
 func (s *ProximityAlertTriggered) GetWatcher() User {
-	return s.Watcher
+	_ = "STUB: not implemented"
+
+	// GetDistance returns the value of Distance.
+	return *new(User)
 }
 
-// GetDistance returns the value of Distance.
 func (s *ProximityAlertTriggered) GetDistance() int {
-	return s.Distance
+	_ = "STUB: not implemented"
+
+	// SetTraveler sets the value of Traveler.
+	return 0
 }
 
-// SetTraveler sets the value of Traveler.
 func (s *ProximityAlertTriggered) SetTraveler(val User) {
-	s.Traveler = val
+	_ = "STUB: not implemented"
+
+	// SetWatcher sets the value of Watcher.
+	return
 }
 
-// SetWatcher sets the value of Watcher.
 func (s *ProximityAlertTriggered) SetWatcher(val User) {
-	s.Watcher = val
+	_ = "STUB: not implemented"
+
+	// SetDistance sets the value of Distance.
+	return
 }
 
-// SetDistance sets the value of Distance.
 func (s *ProximityAlertTriggered) SetDistance(val int) {
-	s.Distance = val
+	_ = "STUB: not implemented"
+
+	// This object represents a custom keyboard with reply options (see Introduction to bots for details
+	// and examples).
+	// Ref: #/components/schemas/ReplyKeyboardMarkup
+	return
 }
 
-// This object represents a custom keyboard with reply options (see Introduction to bots for details
-// and examples).
-// Ref: #/components/schemas/ReplyKeyboardMarkup
 type ReplyKeyboardMarkup struct {
 	// Array of button rows, each represented by an Array of KeyboardButton objects.
 	Keyboard [][]KeyboardButton `json:"keyboard"`
@@ -17058,59 +17706,72 @@ type ReplyKeyboardMarkup struct {
 
 // GetKeyboard returns the value of Keyboard.
 func (s *ReplyKeyboardMarkup) GetKeyboard() [][]KeyboardButton {
-	return s.Keyboard
+	_ = "STUB: not implemented"
+
+	// GetResizeKeyboard returns the value of ResizeKeyboard.
+	return nil
 }
 
-// GetResizeKeyboard returns the value of ResizeKeyboard.
 func (s *ReplyKeyboardMarkup) GetResizeKeyboard() OptBool {
-	return s.ResizeKeyboard
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOneTimeKeyboard returns the value of OneTimeKeyboard.
+	new(OptBool)
 }
 
-// GetOneTimeKeyboard returns the value of OneTimeKeyboard.
 func (s *ReplyKeyboardMarkup) GetOneTimeKeyboard() OptBool {
-	return s.OneTimeKeyboard
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInputFieldPlaceholder returns the value of InputFieldPlaceholder.
+	new(OptBool)
 }
 
-// GetInputFieldPlaceholder returns the value of InputFieldPlaceholder.
 func (s *ReplyKeyboardMarkup) GetInputFieldPlaceholder() OptString {
-	return s.InputFieldPlaceholder
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetSelective returns the value of Selective.
 func (s *ReplyKeyboardMarkup) GetSelective() OptBool {
-	return s.Selective
+	_ = "STUB: not implemented"
+	return *
+
+	// SetKeyboard sets the value of Keyboard.
+	new(OptBool)
 }
 
-// SetKeyboard sets the value of Keyboard.
 func (s *ReplyKeyboardMarkup) SetKeyboard(val [][]KeyboardButton) {
-	s.Keyboard = val
+	_ = "STUB: not implemented"
+
+	// SetResizeKeyboard sets the value of ResizeKeyboard.
+	return
 }
 
-// SetResizeKeyboard sets the value of ResizeKeyboard.
-func (s *ReplyKeyboardMarkup) SetResizeKeyboard(val OptBool) {
-	s.ResizeKeyboard = val
-}
+func (s *ReplyKeyboardMarkup) SetResizeKeyboard(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetOneTimeKeyboard sets the value of OneTimeKeyboard.
-func (s *ReplyKeyboardMarkup) SetOneTimeKeyboard(val OptBool) {
-	s.OneTimeKeyboard = val
-}
+func (s *ReplyKeyboardMarkup) SetOneTimeKeyboard(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetInputFieldPlaceholder sets the value of InputFieldPlaceholder.
 func (s *ReplyKeyboardMarkup) SetInputFieldPlaceholder(val OptString) {
-	s.InputFieldPlaceholder = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetSelective sets the value of Selective.
 func (s *ReplyKeyboardMarkup) SetSelective(val OptBool) {
-	s.Selective = val
+	_ = "STUB: not implemented"
+
+	// Upon receiving a message with this object, Telegram clients will remove the current custom
+	// keyboard and display the default letter-keyboard. By default, custom keyboards are displayed until
+	// a new keyboard is sent by a bot. An exception is made for one-time keyboards that are hidden
+	// immediately after the user presses a button (see ReplyKeyboardMarkup).
+	// Ref: #/components/schemas/ReplyKeyboardRemove
+	return
 }
 
-// Upon receiving a message with this object, Telegram clients will remove the current custom
-// keyboard and display the default letter-keyboard. By default, custom keyboards are displayed until
-// a new keyboard is sent by a bot. An exception is made for one-time keyboards that are hidden
-// immediately after the user presses a button (see ReplyKeyboardMarkup).
-// Ref: #/components/schemas/ReplyKeyboardRemove
 type ReplyKeyboardRemove struct {
 	// Requests clients to remove the custom keyboard (user will not be able to summon this keyboard; if
 	// you want to hide the keyboard from sight but keep it accessible, use one_time_keyboard in
@@ -17125,27 +17786,28 @@ type ReplyKeyboardRemove struct {
 }
 
 // GetRemoveKeyboard returns the value of RemoveKeyboard.
-func (s *ReplyKeyboardRemove) GetRemoveKeyboard() bool {
-	return s.RemoveKeyboard
-}
+func (s *ReplyKeyboardRemove) GetRemoveKeyboard() bool { _ = "STUB: not implemented"; return false }
 
 // GetSelective returns the value of Selective.
 func (s *ReplyKeyboardRemove) GetSelective() OptBool {
-	return s.Selective
+	_ = "STUB: not implemented"
+	return *
+
+	// SetRemoveKeyboard sets the value of RemoveKeyboard.
+	new(OptBool)
 }
 
-// SetRemoveKeyboard sets the value of RemoveKeyboard.
-func (s *ReplyKeyboardRemove) SetRemoveKeyboard(val bool) {
-	s.RemoveKeyboard = val
-}
+func (s *ReplyKeyboardRemove) SetRemoveKeyboard(val bool) { _ = "STUB: not implemented"; return }
 
 // SetSelective sets the value of Selective.
 func (s *ReplyKeyboardRemove) SetSelective(val OptBool) {
-	s.Selective = val
+	_ = "STUB: not implemented"
+
+	// Contains information about why a request was unsuccessful.
+	// Ref: #/components/schemas/Response
+	return
 }
 
-// Contains information about why a request was unsuccessful.
-// Ref: #/components/schemas/Response
 type Response struct {
 	// The group has been migrated to a supergroup with the specified identifier. This number may be
 	// greater than 32 bits and some programming languages may have difficulty/silent defects in
@@ -17159,26 +17821,32 @@ type Response struct {
 
 // GetMigrateToChatID returns the value of MigrateToChatID.
 func (s *Response) GetMigrateToChatID() OptInt64 {
-	return s.MigrateToChatID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRetryAfter returns the value of RetryAfter.
+	new(OptInt64)
 }
 
-// GetRetryAfter returns the value of RetryAfter.
 func (s *Response) GetRetryAfter() OptInt {
-	return s.RetryAfter
+	_ = "STUB: not implemented"
+	return *
+
+	// SetMigrateToChatID sets the value of MigrateToChatID.
+	new(OptInt)
 }
 
-// SetMigrateToChatID sets the value of MigrateToChatID.
-func (s *Response) SetMigrateToChatID(val OptInt64) {
-	s.MigrateToChatID = val
-}
+func (s *Response) SetMigrateToChatID(val OptInt64) { _ = "STUB: not implemented"; return }
 
 // SetRetryAfter sets the value of RetryAfter.
 func (s *Response) SetRetryAfter(val OptInt) {
-	s.RetryAfter = val
+	_ = "STUB: not implemented"
+
+	// Input for restrictChatMember.
+	// Ref: #/components/schemas/restrictChatMember
+	return
 }
 
-// Input for restrictChatMember.
-// Ref: #/components/schemas/restrictChatMember
 type RestrictChatMember struct {
 	ChatID ID `json:"chat_id"`
 	// Unique identifier of the target user.
@@ -17192,45 +17860,58 @@ type RestrictChatMember struct {
 
 // GetChatID returns the value of ChatID.
 func (s *RestrictChatMember) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return *new(ID)
 }
 
-// GetUserID returns the value of UserID.
 func (s *RestrictChatMember) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetPermissions returns the value of Permissions.
+	return 0
 }
 
-// GetPermissions returns the value of Permissions.
 func (s *RestrictChatMember) GetPermissions() ChatPermissions {
-	return s.Permissions
+	_ = "STUB: not implemented"
+	return *
+
+	// GetUntilDate returns the value of UntilDate.
+	new(ChatPermissions)
 }
 
-// GetUntilDate returns the value of UntilDate.
 func (s *RestrictChatMember) GetUntilDate() OptInt {
-	return s.UntilDate
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return *new(OptInt)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *RestrictChatMember) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *RestrictChatMember) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetPermissions sets the value of Permissions.
+	return
 }
 
-// SetPermissions sets the value of Permissions.
-func (s *RestrictChatMember) SetPermissions(val ChatPermissions) {
-	s.Permissions = val
-}
+func (s *RestrictChatMember) SetPermissions(val ChatPermissions) { _ = "STUB: not implemented"; return }
 
 // SetUntilDate sets the value of UntilDate.
 func (s *RestrictChatMember) SetUntilDate(val OptInt) {
-	s.UntilDate = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Result
+	return
 }
 
-// Ref: #/components/schemas/Result
 type Result struct {
 	Result OptBool `json:"result"`
 	Ok     bool    `json:"ok"`
@@ -17238,25 +17919,33 @@ type Result struct {
 
 // GetResult returns the value of Result.
 func (s *Result) GetResult() OptBool {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptBool)
 }
 
-// GetOk returns the value of Ok.
 func (s *Result) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *Result) SetResult(val OptBool) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *Result) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultArrayOfBotCommand
+	return
 }
 
-// Ref: #/components/schemas/ResultArrayOfBotCommand
 type ResultArrayOfBotCommand struct {
 	Result []BotCommand `json:"result"`
 	Ok     bool         `json:"ok"`
@@ -17264,25 +17953,33 @@ type ResultArrayOfBotCommand struct {
 
 // GetResult returns the value of Result.
 func (s *ResultArrayOfBotCommand) GetResult() []BotCommand {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return nil
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultArrayOfBotCommand) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultArrayOfBotCommand) SetResult(val []BotCommand) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultArrayOfBotCommand) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultArrayOfChatMember
+	return
 }
 
-// Ref: #/components/schemas/ResultArrayOfChatMember
 type ResultArrayOfChatMember struct {
 	Result []ChatMember `json:"result"`
 	Ok     bool         `json:"ok"`
@@ -17290,25 +17987,33 @@ type ResultArrayOfChatMember struct {
 
 // GetResult returns the value of Result.
 func (s *ResultArrayOfChatMember) GetResult() []ChatMember {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return nil
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultArrayOfChatMember) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultArrayOfChatMember) SetResult(val []ChatMember) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultArrayOfChatMember) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultArrayOfGameHighScore
+	return
 }
 
-// Ref: #/components/schemas/ResultArrayOfGameHighScore
 type ResultArrayOfGameHighScore struct {
 	Result []GameHighScore `json:"result"`
 	Ok     bool            `json:"ok"`
@@ -17316,25 +18021,33 @@ type ResultArrayOfGameHighScore struct {
 
 // GetResult returns the value of Result.
 func (s *ResultArrayOfGameHighScore) GetResult() []GameHighScore {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return nil
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultArrayOfGameHighScore) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultArrayOfGameHighScore) SetResult(val []GameHighScore) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultArrayOfGameHighScore) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultArrayOfMessage
+	return
 }
 
-// Ref: #/components/schemas/ResultArrayOfMessage
 type ResultArrayOfMessage struct {
 	Result []Message `json:"result"`
 	Ok     bool      `json:"ok"`
@@ -17342,25 +18055,33 @@ type ResultArrayOfMessage struct {
 
 // GetResult returns the value of Result.
 func (s *ResultArrayOfMessage) GetResult() []Message {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return nil
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultArrayOfMessage) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultArrayOfMessage) SetResult(val []Message) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultArrayOfMessage) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultArrayOfUpdate
+	return
 }
 
-// Ref: #/components/schemas/ResultArrayOfUpdate
 type ResultArrayOfUpdate struct {
 	Result []Update `json:"result"`
 	Ok     bool     `json:"ok"`
@@ -17368,25 +18089,33 @@ type ResultArrayOfUpdate struct {
 
 // GetResult returns the value of Result.
 func (s *ResultArrayOfUpdate) GetResult() []Update {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return nil
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultArrayOfUpdate) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultArrayOfUpdate) SetResult(val []Update) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultArrayOfUpdate) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultChat
+	return
 }
 
-// Ref: #/components/schemas/ResultChat
 type ResultChat struct {
 	Result OptChat `json:"result"`
 	Ok     bool    `json:"ok"`
@@ -17394,25 +18123,33 @@ type ResultChat struct {
 
 // GetResult returns the value of Result.
 func (s *ResultChat) GetResult() OptChat {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptChat)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultChat) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultChat) SetResult(val OptChat) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultChat) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultChatInviteLink
+	return
 }
 
-// Ref: #/components/schemas/ResultChatInviteLink
 type ResultChatInviteLink struct {
 	Result OptChatInviteLink `json:"result"`
 	Ok     bool              `json:"ok"`
@@ -17420,25 +18157,33 @@ type ResultChatInviteLink struct {
 
 // GetResult returns the value of Result.
 func (s *ResultChatInviteLink) GetResult() OptChatInviteLink {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptChatInviteLink)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultChatInviteLink) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultChatInviteLink) SetResult(val OptChatInviteLink) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultChatInviteLink) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultChatMember
+	return
 }
 
-// Ref: #/components/schemas/ResultChatMember
 type ResultChatMember struct {
 	Result OptChatMember `json:"result"`
 	Ok     bool          `json:"ok"`
@@ -17446,25 +18191,33 @@ type ResultChatMember struct {
 
 // GetResult returns the value of Result.
 func (s *ResultChatMember) GetResult() OptChatMember {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptChatMember)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultChatMember) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultChatMember) SetResult(val OptChatMember) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultChatMember) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultFile
+	return
 }
 
-// Ref: #/components/schemas/ResultFile
 type ResultFile struct {
 	Result OptFile `json:"result"`
 	Ok     bool    `json:"ok"`
@@ -17472,25 +18225,33 @@ type ResultFile struct {
 
 // GetResult returns the value of Result.
 func (s *ResultFile) GetResult() OptFile {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptFile)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultFile) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultFile) SetResult(val OptFile) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultFile) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultInt
+	return
 }
 
-// Ref: #/components/schemas/ResultInt
 type ResultInt struct {
 	Result OptInt `json:"result"`
 	Ok     bool   `json:"ok"`
@@ -17498,25 +18259,33 @@ type ResultInt struct {
 
 // GetResult returns the value of Result.
 func (s *ResultInt) GetResult() OptInt {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptInt)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultInt) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultInt) SetResult(val OptInt) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultInt) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultMessage
+	return
 }
 
-// Ref: #/components/schemas/ResultMessage
 type ResultMessage struct {
 	Result OptMessage `json:"result"`
 	Ok     bool       `json:"ok"`
@@ -17524,25 +18293,33 @@ type ResultMessage struct {
 
 // GetResult returns the value of Result.
 func (s *ResultMessage) GetResult() OptMessage {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptMessage)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultMessage) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultMessage) SetResult(val OptMessage) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultMessage) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultMessageId
+	return
 }
 
-// Ref: #/components/schemas/ResultMessageId
 type ResultMessageId struct {
 	Result OptMessageId `json:"result"`
 	Ok     bool         `json:"ok"`
@@ -17550,25 +18327,33 @@ type ResultMessageId struct {
 
 // GetResult returns the value of Result.
 func (s *ResultMessageId) GetResult() OptMessageId {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptMessageId)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultMessageId) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultMessageId) SetResult(val OptMessageId) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultMessageId) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultPoll
+	return
 }
 
-// Ref: #/components/schemas/ResultPoll
 type ResultPoll struct {
 	Result OptPoll `json:"result"`
 	Ok     bool    `json:"ok"`
@@ -17576,25 +18361,33 @@ type ResultPoll struct {
 
 // GetResult returns the value of Result.
 func (s *ResultPoll) GetResult() OptPoll {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptPoll)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultPoll) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultPoll) SetResult(val OptPoll) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultPoll) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultString
+	return
 }
 
-// Ref: #/components/schemas/ResultString
 type ResultString struct {
 	Result OptString `json:"result"`
 	Ok     bool      `json:"ok"`
@@ -17602,25 +18395,33 @@ type ResultString struct {
 
 // GetResult returns the value of Result.
 func (s *ResultString) GetResult() OptString {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptString)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultString) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultString) SetResult(val OptString) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultString) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultUser
+	return
 }
 
-// Ref: #/components/schemas/ResultUser
 type ResultUser struct {
 	Result OptUser `json:"result"`
 	Ok     bool    `json:"ok"`
@@ -17628,25 +18429,33 @@ type ResultUser struct {
 
 // GetResult returns the value of Result.
 func (s *ResultUser) GetResult() OptUser {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptUser)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultUser) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultUser) SetResult(val OptUser) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultUser) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultUserProfilePhotos
+	return
 }
 
-// Ref: #/components/schemas/ResultUserProfilePhotos
 type ResultUserProfilePhotos struct {
 	Result OptUserProfilePhotos `json:"result"`
 	Ok     bool                 `json:"ok"`
@@ -17654,25 +18463,33 @@ type ResultUserProfilePhotos struct {
 
 // GetResult returns the value of Result.
 func (s *ResultUserProfilePhotos) GetResult() OptUserProfilePhotos {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptUserProfilePhotos)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultUserProfilePhotos) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultUserProfilePhotos) SetResult(val OptUserProfilePhotos) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultUserProfilePhotos) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/ResultWebhookInfo
+	return
 }
 
-// Ref: #/components/schemas/ResultWebhookInfo
 type ResultWebhookInfo struct {
 	Result OptWebhookInfo `json:"result"`
 	Ok     bool           `json:"ok"`
@@ -17680,26 +18497,34 @@ type ResultWebhookInfo struct {
 
 // GetResult returns the value of Result.
 func (s *ResultWebhookInfo) GetResult() OptWebhookInfo {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetOk returns the value of Ok.
+	return *new(OptWebhookInfo)
 }
 
-// GetOk returns the value of Ok.
 func (s *ResultWebhookInfo) GetOk() bool {
-	return s.Ok
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return false
 }
 
-// SetResult sets the value of Result.
 func (s *ResultWebhookInfo) SetResult(val OptWebhookInfo) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetOk sets the value of Ok.
+	return
 }
 
-// SetOk sets the value of Ok.
 func (s *ResultWebhookInfo) SetOk(val bool) {
-	s.Ok = val
+	_ = "STUB: not implemented"
+
+	// Input for revokeChatInviteLink.
+	// Ref: #/components/schemas/revokeChatInviteLink
+	return
 }
 
-// Input for revokeChatInviteLink.
-// Ref: #/components/schemas/revokeChatInviteLink
 type RevokeChatInviteLink struct {
 	ChatID ID `json:"chat_id"`
 	// The invite link to revoke.
@@ -17708,26 +18533,30 @@ type RevokeChatInviteLink struct {
 
 // GetChatID returns the value of ChatID.
 func (s *RevokeChatInviteLink) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetInviteLink returns the value of InviteLink.
+	return *new(ID)
 }
 
-// GetInviteLink returns the value of InviteLink.
-func (s *RevokeChatInviteLink) GetInviteLink() string {
-	return s.InviteLink
-}
+func (s *RevokeChatInviteLink) GetInviteLink() string { _ = "STUB: not implemented"; return "" }
 
 // SetChatID sets the value of ChatID.
 func (s *RevokeChatInviteLink) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetInviteLink sets the value of InviteLink.
+	return
 }
 
-// SetInviteLink sets the value of InviteLink.
 func (s *RevokeChatInviteLink) SetInviteLink(val string) {
-	s.InviteLink = val
+	_ = "STUB: not implemented"
+
+	// Input for sendAnimation.
+	// Ref: #/components/schemas/sendAnimation
+	return
 }
 
-// Input for sendAnimation.
-// Ref: #/components/schemas/sendAnimation
 type SendAnimation struct {
 	ChatID ID `json:"chat_id"`
 	// Animation to send. Pass a file_id as String to send an animation that exists on the Telegram
@@ -17768,137 +18597,167 @@ type SendAnimation struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendAnimation) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetAnimation returns the value of Animation.
+	return *new(ID)
 }
 
-// GetAnimation returns the value of Animation.
 func (s *SendAnimation) GetAnimation() string {
-	return s.Animation
+	_ = "STUB: not implemented"
+
+	// GetDuration returns the value of Duration.
+	return ""
 }
 
-// GetDuration returns the value of Duration.
 func (s *SendAnimation) GetDuration() OptInt {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetWidth returns the value of Width.
+	return *new(OptInt)
 }
 
-// GetWidth returns the value of Width.
 func (s *SendAnimation) GetWidth() OptInt {
-	return s.Width
+	_ = "STUB: not implemented"
+
+	// GetHeight returns the value of Height.
+	return *new(OptInt)
 }
 
-// GetHeight returns the value of Height.
 func (s *SendAnimation) GetHeight() OptInt {
-	return s.Height
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return *new(OptInt)
 }
 
-// GetThumb returns the value of Thumb.
 func (s *SendAnimation) GetThumb() OptString {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *SendAnimation) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *SendAnimation) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	return *new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
-func (s *SendAnimation) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
-}
+func (s *SendAnimation) GetCaptionEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetDisableNotification returns the value of DisableNotification.
 func (s *SendAnimation) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendAnimation) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *new(OptInt)
 }
 
 // GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendAnimation) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendAnimation) GetReplyMarkup() OptSendAnimationReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendAnimationReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendAnimation) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetAnimation sets the value of Animation.
+	return
 }
 
-// SetAnimation sets the value of Animation.
 func (s *SendAnimation) SetAnimation(val string) {
-	s.Animation = val
+	_ = "STUB: not implemented"
+
+	// SetDuration sets the value of Duration.
+	return
 }
 
-// SetDuration sets the value of Duration.
 func (s *SendAnimation) SetDuration(val OptInt) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetWidth sets the value of Width.
+	return
 }
 
-// SetWidth sets the value of Width.
 func (s *SendAnimation) SetWidth(val OptInt) {
-	s.Width = val
+	_ = "STUB: not implemented"
+
+	// SetHeight sets the value of Height.
+	return
 }
 
-// SetHeight sets the value of Height.
 func (s *SendAnimation) SetHeight(val OptInt) {
-	s.Height = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *SendAnimation) SetThumb(val OptString) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *SendAnimation) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *SendAnimation) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
-func (s *SendAnimation) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
-}
+func (s *SendAnimation) SetCaptionEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetDisableNotification sets the value of DisableNotification.
-func (s *SendAnimation) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendAnimation) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendAnimation) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendAnimation) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendAnimation) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendAnimation) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *SendAnimation) SetReplyMarkup(val OptSendAnimationReplyMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
+	// keyboard, instructions to remove reply keyboard or to force a reply from the user.
+	// SendAnimationReplyMarkup represents sum type.
 }
 
-// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
-// keyboard, instructions to remove reply keyboard or to force a reply from the user.
-// SendAnimationReplyMarkup represents sum type.
 type SendAnimationReplyMarkup struct {
 	Type                 SendAnimationReplyMarkupType // switch on this field
 	InlineKeyboardMarkup InlineKeyboardMarkup
@@ -17920,106 +18779,92 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendAnimationReplyMarkup is InlineKeyboardMarkup.
 func (s SendAnimationReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendAnimationReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendAnimationReplyMarkup is ReplyKeyboardMarkup.
 func (s SendAnimationReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendAnimationReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardRemove reports whether SendAnimationReplyMarkup is ReplyKeyboardRemove.
 func (s SendAnimationReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendAnimationReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsForceReply reports whether SendAnimationReplyMarkup is ForceReply.
-func (s SendAnimationReplyMarkup) IsForceReply() bool {
-	return s.Type == ForceReplySendAnimationReplyMarkup
-}
+func (s SendAnimationReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendAnimationReplyMarkup to InlineKeyboardMarkup.
 func (s *SendAnimationReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendAnimationReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendAnimationReplyMarkup is InlineKeyboardMarkup.
 func (s SendAnimationReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendAnimationReplyMarkup returns new SendAnimationReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendAnimationReplyMarkup(v InlineKeyboardMarkup) SendAnimationReplyMarkup {
-	var s SendAnimationReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendAnimationReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendAnimationReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendAnimationReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendAnimationReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendAnimationReplyMarkup is ReplyKeyboardMarkup.
 func (s SendAnimationReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendAnimationReplyMarkup returns new SendAnimationReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendAnimationReplyMarkup(v ReplyKeyboardMarkup) SendAnimationReplyMarkup {
-	var s SendAnimationReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendAnimationReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendAnimationReplyMarkup to ReplyKeyboardRemove.
 func (s *SendAnimationReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendAnimationReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendAnimationReplyMarkup is ReplyKeyboardRemove.
 func (s SendAnimationReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendAnimationReplyMarkup returns new SendAnimationReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendAnimationReplyMarkup(v ReplyKeyboardRemove) SendAnimationReplyMarkup {
-	var s SendAnimationReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendAnimationReplyMarkup)
 }
 
 // SetForceReply sets SendAnimationReplyMarkup to ForceReply.
-func (s *SendAnimationReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendAnimationReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendAnimationReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendAnimationReplyMarkup is ForceReply.
 func (s SendAnimationReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendAnimationReplyMarkup returns new SendAnimationReplyMarkup from ForceReply.
 func NewForceReplySendAnimationReplyMarkup(v ForceReply) SendAnimationReplyMarkup {
-	var s SendAnimationReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendAnimationReplyMarkup)
 }
 
 // Input for sendAudio.
@@ -18063,133 +18908,161 @@ type SendAudio struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendAudio) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetAudio returns the value of Audio.
+	return *new(ID)
 }
 
-// GetAudio returns the value of Audio.
 func (s *SendAudio) GetAudio() string {
-	return s.Audio
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return ""
 }
 
-// GetCaption returns the value of Caption.
 func (s *SendAudio) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *SendAudio) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	return *new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
-func (s *SendAudio) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
-}
+func (s *SendAudio) GetCaptionEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetDuration returns the value of Duration.
 func (s *SendAudio) GetDuration() OptInt {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetPerformer returns the value of Performer.
+	return *new(OptInt)
 }
 
-// GetPerformer returns the value of Performer.
 func (s *SendAudio) GetPerformer() OptString {
-	return s.Performer
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return *new(OptString)
 }
 
-// GetTitle returns the value of Title.
 func (s *SendAudio) GetTitle() OptString {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return *new(OptString)
 }
 
-// GetThumb returns the value of Thumb.
 func (s *SendAudio) GetThumb() OptString {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetDisableNotification returns the value of DisableNotification.
+	return *new(OptString)
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *SendAudio) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendAudio) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendAudio) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendAudio) GetReplyMarkup() OptSendAudioReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendAudioReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendAudio) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetAudio sets the value of Audio.
+	return
 }
 
-// SetAudio sets the value of Audio.
 func (s *SendAudio) SetAudio(val string) {
-	s.Audio = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *SendAudio) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *SendAudio) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
-func (s *SendAudio) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
-}
+func (s *SendAudio) SetCaptionEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetDuration sets the value of Duration.
 func (s *SendAudio) SetDuration(val OptInt) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetPerformer sets the value of Performer.
+	return
 }
 
-// SetPerformer sets the value of Performer.
 func (s *SendAudio) SetPerformer(val OptString) {
-	s.Performer = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *SendAudio) SetTitle(val OptString) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *SendAudio) SetThumb(val OptString) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *SendAudio) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendAudio) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendAudio) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendAudio) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendAudio) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendAudio) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
-func (s *SendAudio) SetReplyMarkup(val OptSendAudioReplyMarkup) {
-	s.ReplyMarkup = val
-}
+func (s *SendAudio) SetReplyMarkup(val OptSendAudioReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
 // keyboard, instructions to remove reply keyboard or to force a reply from the user.
@@ -18215,104 +19088,86 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendAudioReplyMarkup is InlineKeyboardMarkup.
 func (s SendAudioReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendAudioReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendAudioReplyMarkup is ReplyKeyboardMarkup.
-func (s SendAudioReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendAudioReplyMarkup
-}
+func (s SendAudioReplyMarkup) IsReplyKeyboardMarkup() bool { _ = "STUB: not implemented"; return false }
 
 // IsReplyKeyboardRemove reports whether SendAudioReplyMarkup is ReplyKeyboardRemove.
-func (s SendAudioReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendAudioReplyMarkup
-}
+func (s SendAudioReplyMarkup) IsReplyKeyboardRemove() bool { _ = "STUB: not implemented"; return false }
 
 // IsForceReply reports whether SendAudioReplyMarkup is ForceReply.
-func (s SendAudioReplyMarkup) IsForceReply() bool { return s.Type == ForceReplySendAudioReplyMarkup }
+func (s SendAudioReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendAudioReplyMarkup to InlineKeyboardMarkup.
 func (s *SendAudioReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendAudioReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendAudioReplyMarkup is InlineKeyboardMarkup.
 func (s SendAudioReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendAudioReplyMarkup returns new SendAudioReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendAudioReplyMarkup(v InlineKeyboardMarkup) SendAudioReplyMarkup {
-	var s SendAudioReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendAudioReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendAudioReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendAudioReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendAudioReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendAudioReplyMarkup is ReplyKeyboardMarkup.
 func (s SendAudioReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendAudioReplyMarkup returns new SendAudioReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendAudioReplyMarkup(v ReplyKeyboardMarkup) SendAudioReplyMarkup {
-	var s SendAudioReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendAudioReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendAudioReplyMarkup to ReplyKeyboardRemove.
 func (s *SendAudioReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendAudioReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendAudioReplyMarkup is ReplyKeyboardRemove.
 func (s SendAudioReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendAudioReplyMarkup returns new SendAudioReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendAudioReplyMarkup(v ReplyKeyboardRemove) SendAudioReplyMarkup {
-	var s SendAudioReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendAudioReplyMarkup)
 }
 
 // SetForceReply sets SendAudioReplyMarkup to ForceReply.
-func (s *SendAudioReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendAudioReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendAudioReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendAudioReplyMarkup is ForceReply.
 func (s SendAudioReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendAudioReplyMarkup returns new SendAudioReplyMarkup from ForceReply.
 func NewForceReplySendAudioReplyMarkup(v ForceReply) SendAudioReplyMarkup {
-	var s SendAudioReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendAudioReplyMarkup)
 }
 
 // Input for sendChatAction.
@@ -18328,26 +19183,34 @@ type SendChatAction struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendChatAction) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetAction returns the value of Action.
+	return *new(ID)
 }
 
-// GetAction returns the value of Action.
 func (s *SendChatAction) GetAction() string {
-	return s.Action
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return ""
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendChatAction) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetAction sets the value of Action.
+	return
 }
 
-// SetAction sets the value of Action.
 func (s *SendChatAction) SetAction(val string) {
-	s.Action = val
+	_ = "STUB: not implemented"
+
+	// Input for sendContact.
+	// Ref: #/components/schemas/sendContact
+	return
 }
 
-// Input for sendContact.
-// Ref: #/components/schemas/sendContact
 type SendContact struct {
 	ChatID ID `json:"chat_id"`
 	// Contact's phone number.
@@ -18371,97 +19234,113 @@ type SendContact struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendContact) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetPhoneNumber returns the value of PhoneNumber.
+	return *new(ID)
 }
 
-// GetPhoneNumber returns the value of PhoneNumber.
-func (s *SendContact) GetPhoneNumber() string {
-	return s.PhoneNumber
-}
+func (s *SendContact) GetPhoneNumber() string { _ = "STUB: not implemented"; return "" }
 
 // GetFirstName returns the value of FirstName.
 func (s *SendContact) GetFirstName() string {
-	return s.FirstName
+	_ = "STUB: not implemented"
+
+	// GetLastName returns the value of LastName.
+	return ""
 }
 
-// GetLastName returns the value of LastName.
 func (s *SendContact) GetLastName() OptString {
-	return s.LastName
+	_ = "STUB: not implemented"
+
+	// GetVcard returns the value of Vcard.
+	return *new(OptString)
 }
 
-// GetVcard returns the value of Vcard.
 func (s *SendContact) GetVcard() OptString {
-	return s.Vcard
+	_ = "STUB: not implemented"
+
+	// GetDisableNotification returns the value of DisableNotification.
+	return *new(OptString)
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *SendContact) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendContact) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendContact) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendContact) GetReplyMarkup() OptSendContactReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendContactReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendContact) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetPhoneNumber sets the value of PhoneNumber.
+	return
 }
 
-// SetPhoneNumber sets the value of PhoneNumber.
-func (s *SendContact) SetPhoneNumber(val string) {
-	s.PhoneNumber = val
-}
+func (s *SendContact) SetPhoneNumber(val string) { _ = "STUB: not implemented"; return }
 
 // SetFirstName sets the value of FirstName.
 func (s *SendContact) SetFirstName(val string) {
-	s.FirstName = val
+	_ = "STUB: not implemented"
+
+	// SetLastName sets the value of LastName.
+	return
 }
 
-// SetLastName sets the value of LastName.
 func (s *SendContact) SetLastName(val OptString) {
-	s.LastName = val
+	_ = "STUB: not implemented"
+
+	// SetVcard sets the value of Vcard.
+	return
 }
 
-// SetVcard sets the value of Vcard.
 func (s *SendContact) SetVcard(val OptString) {
-	s.Vcard = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *SendContact) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendContact) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendContact) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendContact) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendContact) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendContact) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *SendContact) SetReplyMarkup(val OptSendContactReplyMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
+	// keyboard, instructions to remove keyboard or to force a reply from the user.
+	// SendContactReplyMarkup represents sum type.
 }
 
-// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
-// keyboard, instructions to remove keyboard or to force a reply from the user.
-// SendContactReplyMarkup represents sum type.
 type SendContactReplyMarkup struct {
 	Type                 SendContactReplyMarkupType // switch on this field
 	InlineKeyboardMarkup InlineKeyboardMarkup
@@ -18483,106 +19362,92 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendContactReplyMarkup is InlineKeyboardMarkup.
 func (s SendContactReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendContactReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendContactReplyMarkup is ReplyKeyboardMarkup.
 func (s SendContactReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendContactReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardRemove reports whether SendContactReplyMarkup is ReplyKeyboardRemove.
 func (s SendContactReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendContactReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsForceReply reports whether SendContactReplyMarkup is ForceReply.
-func (s SendContactReplyMarkup) IsForceReply() bool {
-	return s.Type == ForceReplySendContactReplyMarkup
-}
+func (s SendContactReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendContactReplyMarkup to InlineKeyboardMarkup.
 func (s *SendContactReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendContactReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendContactReplyMarkup is InlineKeyboardMarkup.
 func (s SendContactReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendContactReplyMarkup returns new SendContactReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendContactReplyMarkup(v InlineKeyboardMarkup) SendContactReplyMarkup {
-	var s SendContactReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendContactReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendContactReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendContactReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendContactReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendContactReplyMarkup is ReplyKeyboardMarkup.
 func (s SendContactReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendContactReplyMarkup returns new SendContactReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendContactReplyMarkup(v ReplyKeyboardMarkup) SendContactReplyMarkup {
-	var s SendContactReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendContactReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendContactReplyMarkup to ReplyKeyboardRemove.
 func (s *SendContactReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendContactReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendContactReplyMarkup is ReplyKeyboardRemove.
 func (s SendContactReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendContactReplyMarkup returns new SendContactReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendContactReplyMarkup(v ReplyKeyboardRemove) SendContactReplyMarkup {
-	var s SendContactReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendContactReplyMarkup)
 }
 
 // SetForceReply sets SendContactReplyMarkup to ForceReply.
-func (s *SendContactReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendContactReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendContactReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendContactReplyMarkup is ForceReply.
 func (s SendContactReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendContactReplyMarkup returns new SendContactReplyMarkup from ForceReply.
 func NewForceReplySendContactReplyMarkup(v ForceReply) SendContactReplyMarkup {
-	var s SendContactReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendContactReplyMarkup)
 }
 
 // Input for sendDice.
@@ -18606,63 +19471,71 @@ type SendDice struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendDice) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetEmoji returns the value of Emoji.
+	return *new(ID)
 }
 
-// GetEmoji returns the value of Emoji.
 func (s *SendDice) GetEmoji() OptString {
-	return s.Emoji
+	_ = "STUB: not implemented"
+
+	// GetDisableNotification returns the value of DisableNotification.
+	return *new(OptString)
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *SendDice) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendDice) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendDice) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendDice) GetReplyMarkup() OptSendDiceReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendDiceReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendDice) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetEmoji sets the value of Emoji.
+	return
 }
 
-// SetEmoji sets the value of Emoji.
 func (s *SendDice) SetEmoji(val OptString) {
-	s.Emoji = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *SendDice) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendDice) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendDice) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendDice) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendDice) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendDice) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
-func (s *SendDice) SetReplyMarkup(val OptSendDiceReplyMarkup) {
-	s.ReplyMarkup = val
-}
+func (s *SendDice) SetReplyMarkup(val OptSendDiceReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
 // keyboard, instructions to remove reply keyboard or to force a reply from the user.
@@ -18687,105 +19560,84 @@ const (
 )
 
 // IsInlineKeyboardMarkup reports whether SendDiceReplyMarkup is InlineKeyboardMarkup.
-func (s SendDiceReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendDiceReplyMarkup
-}
+func (s SendDiceReplyMarkup) IsInlineKeyboardMarkup() bool { _ = "STUB: not implemented"; return false }
 
 // IsReplyKeyboardMarkup reports whether SendDiceReplyMarkup is ReplyKeyboardMarkup.
-func (s SendDiceReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendDiceReplyMarkup
-}
+func (s SendDiceReplyMarkup) IsReplyKeyboardMarkup() bool { _ = "STUB: not implemented"; return false }
 
 // IsReplyKeyboardRemove reports whether SendDiceReplyMarkup is ReplyKeyboardRemove.
-func (s SendDiceReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendDiceReplyMarkup
-}
+func (s SendDiceReplyMarkup) IsReplyKeyboardRemove() bool { _ = "STUB: not implemented"; return false }
 
 // IsForceReply reports whether SendDiceReplyMarkup is ForceReply.
-func (s SendDiceReplyMarkup) IsForceReply() bool { return s.Type == ForceReplySendDiceReplyMarkup }
+func (s SendDiceReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendDiceReplyMarkup to InlineKeyboardMarkup.
 func (s *SendDiceReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendDiceReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendDiceReplyMarkup is InlineKeyboardMarkup.
 func (s SendDiceReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendDiceReplyMarkup returns new SendDiceReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendDiceReplyMarkup(v InlineKeyboardMarkup) SendDiceReplyMarkup {
-	var s SendDiceReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendDiceReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendDiceReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendDiceReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendDiceReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendDiceReplyMarkup is ReplyKeyboardMarkup.
 func (s SendDiceReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendDiceReplyMarkup returns new SendDiceReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendDiceReplyMarkup(v ReplyKeyboardMarkup) SendDiceReplyMarkup {
-	var s SendDiceReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendDiceReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendDiceReplyMarkup to ReplyKeyboardRemove.
 func (s *SendDiceReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendDiceReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendDiceReplyMarkup is ReplyKeyboardRemove.
 func (s SendDiceReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendDiceReplyMarkup returns new SendDiceReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendDiceReplyMarkup(v ReplyKeyboardRemove) SendDiceReplyMarkup {
-	var s SendDiceReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendDiceReplyMarkup)
 }
 
 // SetForceReply sets SendDiceReplyMarkup to ForceReply.
-func (s *SendDiceReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendDiceReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendDiceReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendDiceReplyMarkup is ForceReply.
 func (s SendDiceReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendDiceReplyMarkup returns new SendDiceReplyMarkup from ForceReply.
 func NewForceReplySendDiceReplyMarkup(v ForceReply) SendDiceReplyMarkup {
-	var s SendDiceReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendDiceReplyMarkup)
 }
 
 // Input for sendDocument.
@@ -18826,117 +19678,139 @@ type SendDocument struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendDocument) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetDocument returns the value of Document.
+	return *new(ID)
 }
 
-// GetDocument returns the value of Document.
 func (s *SendDocument) GetDocument() string {
-	return s.Document
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return ""
 }
 
-// GetThumb returns the value of Thumb.
 func (s *SendDocument) GetThumb() OptString {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *SendDocument) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *SendDocument) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	return *new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
-func (s *SendDocument) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
-}
+func (s *SendDocument) GetCaptionEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetDisableContentTypeDetection returns the value of DisableContentTypeDetection.
 func (s *SendDocument) GetDisableContentTypeDetection() OptBool {
-	return s.DisableContentTypeDetection
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetDisableNotification returns the value of DisableNotification.
 func (s *SendDocument) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendDocument) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendDocument) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendDocument) GetReplyMarkup() OptSendDocumentReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendDocumentReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendDocument) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetDocument sets the value of Document.
+	return
 }
 
-// SetDocument sets the value of Document.
 func (s *SendDocument) SetDocument(val string) {
-	s.Document = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *SendDocument) SetThumb(val OptString) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *SendDocument) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *SendDocument) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
-func (s *SendDocument) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
-}
+func (s *SendDocument) SetCaptionEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetDisableContentTypeDetection sets the value of DisableContentTypeDetection.
 func (s *SendDocument) SetDisableContentTypeDetection(val OptBool) {
-	s.DisableContentTypeDetection = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetDisableNotification sets the value of DisableNotification.
-func (s *SendDocument) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendDocument) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendDocument) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendDocument) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendDocument) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendDocument) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *SendDocument) SetReplyMarkup(val OptSendDocumentReplyMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
+	// keyboard, instructions to remove reply keyboard or to force a reply from the user.
+	// SendDocumentReplyMarkup represents sum type.
 }
 
-// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
-// keyboard, instructions to remove reply keyboard or to force a reply from the user.
-// SendDocumentReplyMarkup represents sum type.
 type SendDocumentReplyMarkup struct {
 	Type                 SendDocumentReplyMarkupType // switch on this field
 	InlineKeyboardMarkup InlineKeyboardMarkup
@@ -18958,106 +19832,92 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendDocumentReplyMarkup is InlineKeyboardMarkup.
 func (s SendDocumentReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendDocumentReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendDocumentReplyMarkup is ReplyKeyboardMarkup.
 func (s SendDocumentReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendDocumentReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardRemove reports whether SendDocumentReplyMarkup is ReplyKeyboardRemove.
 func (s SendDocumentReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendDocumentReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsForceReply reports whether SendDocumentReplyMarkup is ForceReply.
-func (s SendDocumentReplyMarkup) IsForceReply() bool {
-	return s.Type == ForceReplySendDocumentReplyMarkup
-}
+func (s SendDocumentReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendDocumentReplyMarkup to InlineKeyboardMarkup.
 func (s *SendDocumentReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendDocumentReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendDocumentReplyMarkup is InlineKeyboardMarkup.
 func (s SendDocumentReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendDocumentReplyMarkup returns new SendDocumentReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendDocumentReplyMarkup(v InlineKeyboardMarkup) SendDocumentReplyMarkup {
-	var s SendDocumentReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendDocumentReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendDocumentReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendDocumentReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendDocumentReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendDocumentReplyMarkup is ReplyKeyboardMarkup.
 func (s SendDocumentReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendDocumentReplyMarkup returns new SendDocumentReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendDocumentReplyMarkup(v ReplyKeyboardMarkup) SendDocumentReplyMarkup {
-	var s SendDocumentReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendDocumentReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendDocumentReplyMarkup to ReplyKeyboardRemove.
 func (s *SendDocumentReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendDocumentReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendDocumentReplyMarkup is ReplyKeyboardRemove.
 func (s SendDocumentReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendDocumentReplyMarkup returns new SendDocumentReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendDocumentReplyMarkup(v ReplyKeyboardRemove) SendDocumentReplyMarkup {
-	var s SendDocumentReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendDocumentReplyMarkup)
 }
 
 // SetForceReply sets SendDocumentReplyMarkup to ForceReply.
-func (s *SendDocumentReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendDocumentReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendDocumentReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendDocumentReplyMarkup is ForceReply.
 func (s SendDocumentReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendDocumentReplyMarkup returns new SendDocumentReplyMarkup from ForceReply.
 func NewForceReplySendDocumentReplyMarkup(v ForceReply) SendDocumentReplyMarkup {
-	var s SendDocumentReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendDocumentReplyMarkup)
 }
 
 // Input for sendGame.
@@ -19079,63 +19939,63 @@ type SendGame struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendGame) GetChatID() int64 {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetGameShortName returns the value of GameShortName.
+	return 0
 }
 
-// GetGameShortName returns the value of GameShortName.
-func (s *SendGame) GetGameShortName() string {
-	return s.GameShortName
-}
+func (s *SendGame) GetGameShortName() string { _ = "STUB: not implemented"; return "" }
 
 // GetDisableNotification returns the value of DisableNotification.
 func (s *SendGame) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendGame) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendGame) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendGame) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendGame) SetChatID(val int64) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetGameShortName sets the value of GameShortName.
+	return
 }
 
-// SetGameShortName sets the value of GameShortName.
-func (s *SendGame) SetGameShortName(val string) {
-	s.GameShortName = val
-}
+func (s *SendGame) SetGameShortName(val string) { _ = "STUB: not implemented"; return }
 
 // SetDisableNotification sets the value of DisableNotification.
-func (s *SendGame) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendGame) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendGame) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendGame) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendGame) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendGame) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
-func (s *SendGame) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
-}
+func (s *SendGame) SetReplyMarkup(val OptInlineKeyboardMarkup) { _ = "STUB: not implemented"; return }
 
 // Input for sendInvoice.
 // Ref: #/components/schemas/sendInvoice
@@ -19206,266 +20066,306 @@ type SendInvoice struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendInvoice) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return *new(ID)
 }
 
-// GetTitle returns the value of Title.
 func (s *SendInvoice) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return ""
 }
 
-// GetDescription returns the value of Description.
-func (s *SendInvoice) GetDescription() string {
-	return s.Description
-}
+func (s *SendInvoice) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 // GetPayload returns the value of Payload.
 func (s *SendInvoice) GetPayload() string {
-	return s.Payload
+	_ = "STUB: not implemented"
+
+	// GetProviderToken returns the value of ProviderToken.
+	return ""
 }
 
-// GetProviderToken returns the value of ProviderToken.
-func (s *SendInvoice) GetProviderToken() string {
-	return s.ProviderToken
-}
+func (s *SendInvoice) GetProviderToken() string { _ = "STUB: not implemented"; return "" }
 
 // GetCurrency returns the value of Currency.
 func (s *SendInvoice) GetCurrency() string {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetPrices returns the value of Prices.
+	return ""
 }
 
-// GetPrices returns the value of Prices.
 func (s *SendInvoice) GetPrices() []LabeledPrice {
-	return s.Prices
+	_ = "STUB: not implemented"
+
+	// GetMaxTipAmount returns the value of MaxTipAmount.
+	return nil
 }
 
-// GetMaxTipAmount returns the value of MaxTipAmount.
 func (s *SendInvoice) GetMaxTipAmount() OptInt {
-	return s.MaxTipAmount
+	_ = "STUB: not implemented"
+	return *
+
+	// GetSuggestedTipAmounts returns the value of SuggestedTipAmounts.
+	new(OptInt)
 }
 
-// GetSuggestedTipAmounts returns the value of SuggestedTipAmounts.
-func (s *SendInvoice) GetSuggestedTipAmounts() []int {
-	return s.SuggestedTipAmounts
-}
+func (s *SendInvoice) GetSuggestedTipAmounts() []int { _ = "STUB: not implemented"; return nil }
 
 // GetStartParameter returns the value of StartParameter.
 func (s *SendInvoice) GetStartParameter() OptString {
-	return s.StartParameter
+	_ = "STUB: not implemented"
+	return *
+
+	// GetProviderData returns the value of ProviderData.
+	new(OptString)
 }
 
-// GetProviderData returns the value of ProviderData.
 func (s *SendInvoice) GetProviderData() OptString {
-	return s.ProviderData
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPhotoURL returns the value of PhotoURL.
+	new(OptString)
 }
 
-// GetPhotoURL returns the value of PhotoURL.
 func (s *SendInvoice) GetPhotoURL() OptURI {
-	return s.PhotoURL
+	_ = "STUB: not implemented"
+
+	// GetPhotoSize returns the value of PhotoSize.
+	return *new(OptURI)
 }
 
-// GetPhotoSize returns the value of PhotoSize.
 func (s *SendInvoice) GetPhotoSize() OptInt {
-	return s.PhotoSize
+	_ = "STUB: not implemented"
+
+	// GetPhotoWidth returns the value of PhotoWidth.
+	return *new(OptInt)
 }
 
-// GetPhotoWidth returns the value of PhotoWidth.
 func (s *SendInvoice) GetPhotoWidth() OptInt {
-	return s.PhotoWidth
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPhotoHeight returns the value of PhotoHeight.
+	new(OptInt)
 }
 
-// GetPhotoHeight returns the value of PhotoHeight.
 func (s *SendInvoice) GetPhotoHeight() OptInt {
-	return s.PhotoHeight
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNeedName returns the value of NeedName.
+	new(OptInt)
 }
 
-// GetNeedName returns the value of NeedName.
 func (s *SendInvoice) GetNeedName() OptBool {
-	return s.NeedName
+	_ = "STUB: not implemented"
+
+	// GetNeedPhoneNumber returns the value of NeedPhoneNumber.
+	return *new(OptBool)
 }
 
-// GetNeedPhoneNumber returns the value of NeedPhoneNumber.
 func (s *SendInvoice) GetNeedPhoneNumber() OptBool {
-	return s.NeedPhoneNumber
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNeedEmail returns the value of NeedEmail.
+	new(OptBool)
 }
 
-// GetNeedEmail returns the value of NeedEmail.
 func (s *SendInvoice) GetNeedEmail() OptBool {
-	return s.NeedEmail
+	_ = "STUB: not implemented"
+
+	// GetNeedShippingAddress returns the value of NeedShippingAddress.
+	return *new(OptBool)
 }
 
-// GetNeedShippingAddress returns the value of NeedShippingAddress.
 func (s *SendInvoice) GetNeedShippingAddress() OptBool {
-	return s.NeedShippingAddress
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetSendPhoneNumberToProvider returns the value of SendPhoneNumberToProvider.
 func (s *SendInvoice) GetSendPhoneNumberToProvider() OptBool {
-	return s.SendPhoneNumberToProvider
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetSendEmailToProvider returns the value of SendEmailToProvider.
 func (s *SendInvoice) GetSendEmailToProvider() OptBool {
-	return s.SendEmailToProvider
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetIsFlexible returns the value of IsFlexible.
 func (s *SendInvoice) GetIsFlexible() OptBool {
-	return s.IsFlexible
+	_ = "STUB: not implemented"
+	return *
+
+	// GetDisableNotification returns the value of DisableNotification.
+	new(OptBool)
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *SendInvoice) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendInvoice) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendInvoice) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendInvoice) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendInvoice) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *SendInvoice) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *SendInvoice) SetDescription(val string) {
-	s.Description = val
-}
+func (s *SendInvoice) SetDescription(val string) { _ = "STUB: not implemented"; return }
 
 // SetPayload sets the value of Payload.
 func (s *SendInvoice) SetPayload(val string) {
-	s.Payload = val
+	_ = "STUB: not implemented"
+
+	// SetProviderToken sets the value of ProviderToken.
+	return
 }
 
-// SetProviderToken sets the value of ProviderToken.
-func (s *SendInvoice) SetProviderToken(val string) {
-	s.ProviderToken = val
-}
+func (s *SendInvoice) SetProviderToken(val string) { _ = "STUB: not implemented"; return }
 
 // SetCurrency sets the value of Currency.
 func (s *SendInvoice) SetCurrency(val string) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetPrices sets the value of Prices.
+	return
 }
 
-// SetPrices sets the value of Prices.
 func (s *SendInvoice) SetPrices(val []LabeledPrice) {
-	s.Prices = val
+	_ = "STUB: not implemented"
+
+	// SetMaxTipAmount sets the value of MaxTipAmount.
+	return
 }
 
-// SetMaxTipAmount sets the value of MaxTipAmount.
-func (s *SendInvoice) SetMaxTipAmount(val OptInt) {
-	s.MaxTipAmount = val
-}
+func (s *SendInvoice) SetMaxTipAmount(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetSuggestedTipAmounts sets the value of SuggestedTipAmounts.
-func (s *SendInvoice) SetSuggestedTipAmounts(val []int) {
-	s.SuggestedTipAmounts = val
-}
+func (s *SendInvoice) SetSuggestedTipAmounts(val []int) { _ = "STUB: not implemented"; return }
 
 // SetStartParameter sets the value of StartParameter.
-func (s *SendInvoice) SetStartParameter(val OptString) {
-	s.StartParameter = val
-}
+func (s *SendInvoice) SetStartParameter(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetProviderData sets the value of ProviderData.
-func (s *SendInvoice) SetProviderData(val OptString) {
-	s.ProviderData = val
-}
+func (s *SendInvoice) SetProviderData(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetPhotoURL sets the value of PhotoURL.
 func (s *SendInvoice) SetPhotoURL(val OptURI) {
-	s.PhotoURL = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoSize sets the value of PhotoSize.
+	return
 }
 
-// SetPhotoSize sets the value of PhotoSize.
 func (s *SendInvoice) SetPhotoSize(val OptInt) {
-	s.PhotoSize = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoWidth sets the value of PhotoWidth.
+	return
 }
 
-// SetPhotoWidth sets the value of PhotoWidth.
 func (s *SendInvoice) SetPhotoWidth(val OptInt) {
-	s.PhotoWidth = val
+	_ = "STUB: not implemented"
+
+	// SetPhotoHeight sets the value of PhotoHeight.
+	return
 }
 
-// SetPhotoHeight sets the value of PhotoHeight.
-func (s *SendInvoice) SetPhotoHeight(val OptInt) {
-	s.PhotoHeight = val
-}
+func (s *SendInvoice) SetPhotoHeight(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetNeedName sets the value of NeedName.
 func (s *SendInvoice) SetNeedName(val OptBool) {
-	s.NeedName = val
+	_ = "STUB: not implemented"
+
+	// SetNeedPhoneNumber sets the value of NeedPhoneNumber.
+	return
 }
 
-// SetNeedPhoneNumber sets the value of NeedPhoneNumber.
-func (s *SendInvoice) SetNeedPhoneNumber(val OptBool) {
-	s.NeedPhoneNumber = val
-}
+func (s *SendInvoice) SetNeedPhoneNumber(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetNeedEmail sets the value of NeedEmail.
 func (s *SendInvoice) SetNeedEmail(val OptBool) {
-	s.NeedEmail = val
+	_ = "STUB: not implemented"
+
+	// SetNeedShippingAddress sets the value of NeedShippingAddress.
+	return
 }
 
-// SetNeedShippingAddress sets the value of NeedShippingAddress.
-func (s *SendInvoice) SetNeedShippingAddress(val OptBool) {
-	s.NeedShippingAddress = val
-}
+func (s *SendInvoice) SetNeedShippingAddress(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetSendPhoneNumberToProvider sets the value of SendPhoneNumberToProvider.
-func (s *SendInvoice) SetSendPhoneNumberToProvider(val OptBool) {
-	s.SendPhoneNumberToProvider = val
-}
+func (s *SendInvoice) SetSendPhoneNumberToProvider(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetSendEmailToProvider sets the value of SendEmailToProvider.
-func (s *SendInvoice) SetSendEmailToProvider(val OptBool) {
-	s.SendEmailToProvider = val
-}
+func (s *SendInvoice) SetSendEmailToProvider(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetIsFlexible sets the value of IsFlexible.
 func (s *SendInvoice) SetIsFlexible(val OptBool) {
-	s.IsFlexible = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *SendInvoice) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendInvoice) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendInvoice) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendInvoice) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendInvoice) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendInvoice) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *SendInvoice) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Input for sendLocation.
+	// Ref: #/components/schemas/sendLocation
 }
 
-// Input for sendLocation.
-// Ref: #/components/schemas/sendLocation
 type SendLocation struct {
 	ChatID ID `json:"chat_id"`
 	// Latitude of the location.
@@ -19496,117 +20396,140 @@ type SendLocation struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendLocation) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetLatitude returns the value of Latitude.
+	return *new(ID)
 }
 
-// GetLatitude returns the value of Latitude.
 func (s *SendLocation) GetLatitude() float64 {
-	return s.Latitude
+	_ = "STUB: not implemented"
+
+	// GetLongitude returns the value of Longitude.
+	return 0
 }
 
-// GetLongitude returns the value of Longitude.
 func (s *SendLocation) GetLongitude() float64 {
-	return s.Longitude
+	_ = "STUB: not implemented"
+
+	// GetHorizontalAccuracy returns the value of HorizontalAccuracy.
+	return 0
 }
 
-// GetHorizontalAccuracy returns the value of HorizontalAccuracy.
 func (s *SendLocation) GetHorizontalAccuracy() OptFloat64 {
-	return s.HorizontalAccuracy
+	_ = "STUB: not implemented"
+	return *new(OptFloat64)
 }
 
 // GetLivePeriod returns the value of LivePeriod.
 func (s *SendLocation) GetLivePeriod() OptInt {
-	return s.LivePeriod
+	_ = "STUB: not implemented"
+	return *
+
+	// GetHeading returns the value of Heading.
+	new(OptInt)
 }
 
-// GetHeading returns the value of Heading.
 func (s *SendLocation) GetHeading() OptInt {
-	return s.Heading
+	_ = "STUB: not implemented"
+
+	// GetProximityAlertRadius returns the value of ProximityAlertRadius.
+	return *new(OptInt)
 }
 
-// GetProximityAlertRadius returns the value of ProximityAlertRadius.
 func (s *SendLocation) GetProximityAlertRadius() OptInt {
-	return s.ProximityAlertRadius
+	_ = "STUB: not implemented"
+	return *new(OptInt)
 }
 
 // GetDisableNotification returns the value of DisableNotification.
 func (s *SendLocation) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendLocation) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendLocation) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendLocation) GetReplyMarkup() OptSendLocationReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendLocationReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendLocation) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetLatitude sets the value of Latitude.
+	return
 }
 
-// SetLatitude sets the value of Latitude.
 func (s *SendLocation) SetLatitude(val float64) {
-	s.Latitude = val
+	_ = "STUB: not implemented"
+
+	// SetLongitude sets the value of Longitude.
+	return
 }
 
-// SetLongitude sets the value of Longitude.
 func (s *SendLocation) SetLongitude(val float64) {
-	s.Longitude = val
+	_ = "STUB: not implemented"
+
+	// SetHorizontalAccuracy sets the value of HorizontalAccuracy.
+	return
 }
 
-// SetHorizontalAccuracy sets the value of HorizontalAccuracy.
-func (s *SendLocation) SetHorizontalAccuracy(val OptFloat64) {
-	s.HorizontalAccuracy = val
-}
+func (s *SendLocation) SetHorizontalAccuracy(val OptFloat64) { _ = "STUB: not implemented"; return }
 
 // SetLivePeriod sets the value of LivePeriod.
 func (s *SendLocation) SetLivePeriod(val OptInt) {
-	s.LivePeriod = val
+	_ = "STUB: not implemented"
+
+	// SetHeading sets the value of Heading.
+	return
 }
 
-// SetHeading sets the value of Heading.
 func (s *SendLocation) SetHeading(val OptInt) {
-	s.Heading = val
+	_ = "STUB: not implemented"
+
+	// SetProximityAlertRadius sets the value of ProximityAlertRadius.
+	return
 }
 
-// SetProximityAlertRadius sets the value of ProximityAlertRadius.
-func (s *SendLocation) SetProximityAlertRadius(val OptInt) {
-	s.ProximityAlertRadius = val
-}
+func (s *SendLocation) SetProximityAlertRadius(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetDisableNotification sets the value of DisableNotification.
-func (s *SendLocation) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendLocation) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendLocation) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendLocation) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendLocation) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendLocation) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *SendLocation) SetReplyMarkup(val OptSendLocationReplyMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
+	// keyboard, instructions to remove reply keyboard or to force a reply from the user.
+	// SendLocationReplyMarkup represents sum type.
 }
 
-// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
-// keyboard, instructions to remove reply keyboard or to force a reply from the user.
-// SendLocationReplyMarkup represents sum type.
 type SendLocationReplyMarkup struct {
 	Type                 SendLocationReplyMarkupType // switch on this field
 	InlineKeyboardMarkup InlineKeyboardMarkup
@@ -19628,106 +20551,92 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendLocationReplyMarkup is InlineKeyboardMarkup.
 func (s SendLocationReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendLocationReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendLocationReplyMarkup is ReplyKeyboardMarkup.
 func (s SendLocationReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendLocationReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardRemove reports whether SendLocationReplyMarkup is ReplyKeyboardRemove.
 func (s SendLocationReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendLocationReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsForceReply reports whether SendLocationReplyMarkup is ForceReply.
-func (s SendLocationReplyMarkup) IsForceReply() bool {
-	return s.Type == ForceReplySendLocationReplyMarkup
-}
+func (s SendLocationReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendLocationReplyMarkup to InlineKeyboardMarkup.
 func (s *SendLocationReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendLocationReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendLocationReplyMarkup is InlineKeyboardMarkup.
 func (s SendLocationReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendLocationReplyMarkup returns new SendLocationReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendLocationReplyMarkup(v InlineKeyboardMarkup) SendLocationReplyMarkup {
-	var s SendLocationReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendLocationReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendLocationReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendLocationReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendLocationReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendLocationReplyMarkup is ReplyKeyboardMarkup.
 func (s SendLocationReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendLocationReplyMarkup returns new SendLocationReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendLocationReplyMarkup(v ReplyKeyboardMarkup) SendLocationReplyMarkup {
-	var s SendLocationReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendLocationReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendLocationReplyMarkup to ReplyKeyboardRemove.
 func (s *SendLocationReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendLocationReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendLocationReplyMarkup is ReplyKeyboardRemove.
 func (s SendLocationReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendLocationReplyMarkup returns new SendLocationReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendLocationReplyMarkup(v ReplyKeyboardRemove) SendLocationReplyMarkup {
-	var s SendLocationReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendLocationReplyMarkup)
 }
 
 // SetForceReply sets SendLocationReplyMarkup to ForceReply.
-func (s *SendLocationReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendLocationReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendLocationReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendLocationReplyMarkup is ForceReply.
 func (s SendLocationReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendLocationReplyMarkup returns new SendLocationReplyMarkup from ForceReply.
 func NewForceReplySendLocationReplyMarkup(v ForceReply) SendLocationReplyMarkup {
-	var s SendLocationReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendLocationReplyMarkup)
 }
 
 // Input for sendMediaGroup.
@@ -19746,52 +20655,60 @@ type SendMediaGroup struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendMediaGroup) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMedia returns the value of Media.
+	return *new(ID)
 }
 
-// GetMedia returns the value of Media.
 func (s *SendMediaGroup) GetMedia() []SendMediaGroupMediaItem {
-	return s.Media
+	_ = "STUB: not implemented"
+
+	// GetDisableNotification returns the value of DisableNotification.
+	return nil
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *SendMediaGroup) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendMediaGroup) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *new(OptInt)
 }
 
 // GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendMediaGroup) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // SetChatID sets the value of ChatID.
 func (s *SendMediaGroup) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMedia sets the value of Media.
+	return
 }
 
-// SetMedia sets the value of Media.
 func (s *SendMediaGroup) SetMedia(val []SendMediaGroupMediaItem) {
-	s.Media = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *SendMediaGroup) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendMediaGroup) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendMediaGroup) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendMediaGroup) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
 func (s *SendMediaGroup) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SendMediaGroupMediaItem represents sum type.
@@ -19815,107 +20732,90 @@ const (
 )
 
 // IsInputMediaAudio reports whether SendMediaGroupMediaItem is InputMediaAudio.
-func (s SendMediaGroupMediaItem) IsInputMediaAudio() bool {
-	return s.Type == InputMediaAudioSendMediaGroupMediaItem
-}
+func (s SendMediaGroupMediaItem) IsInputMediaAudio() bool { _ = "STUB: not implemented"; return false }
 
 // IsInputMediaDocument reports whether SendMediaGroupMediaItem is InputMediaDocument.
 func (s SendMediaGroupMediaItem) IsInputMediaDocument() bool {
-	return s.Type == InputMediaDocumentSendMediaGroupMediaItem
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsInputMediaPhoto reports whether SendMediaGroupMediaItem is InputMediaPhoto.
-func (s SendMediaGroupMediaItem) IsInputMediaPhoto() bool {
-	return s.Type == InputMediaPhotoSendMediaGroupMediaItem
-}
+func (s SendMediaGroupMediaItem) IsInputMediaPhoto() bool { _ = "STUB: not implemented"; return false }
 
 // IsInputMediaVideo reports whether SendMediaGroupMediaItem is InputMediaVideo.
-func (s SendMediaGroupMediaItem) IsInputMediaVideo() bool {
-	return s.Type == InputMediaVideoSendMediaGroupMediaItem
-}
+func (s SendMediaGroupMediaItem) IsInputMediaVideo() bool { _ = "STUB: not implemented"; return false }
 
 // SetInputMediaAudio sets SendMediaGroupMediaItem to InputMediaAudio.
 func (s *SendMediaGroupMediaItem) SetInputMediaAudio(v InputMediaAudio) {
-	s.Type = InputMediaAudioSendMediaGroupMediaItem
-	s.InputMediaAudio = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInputMediaAudio returns InputMediaAudio and true boolean if SendMediaGroupMediaItem is InputMediaAudio.
 func (s SendMediaGroupMediaItem) GetInputMediaAudio() (v InputMediaAudio, ok bool) {
-	if !s.IsInputMediaAudio() {
-		return v, false
-	}
-	return s.InputMediaAudio, true
+	_ = "STUB: not implemented"
+	return *new(InputMediaAudio), false
 }
 
 // NewInputMediaAudioSendMediaGroupMediaItem returns new SendMediaGroupMediaItem from InputMediaAudio.
 func NewInputMediaAudioSendMediaGroupMediaItem(v InputMediaAudio) SendMediaGroupMediaItem {
-	var s SendMediaGroupMediaItem
-	s.SetInputMediaAudio(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendMediaGroupMediaItem)
 }
 
 // SetInputMediaDocument sets SendMediaGroupMediaItem to InputMediaDocument.
 func (s *SendMediaGroupMediaItem) SetInputMediaDocument(v InputMediaDocument) {
-	s.Type = InputMediaDocumentSendMediaGroupMediaItem
-	s.InputMediaDocument = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInputMediaDocument returns InputMediaDocument and true boolean if SendMediaGroupMediaItem is InputMediaDocument.
 func (s SendMediaGroupMediaItem) GetInputMediaDocument() (v InputMediaDocument, ok bool) {
-	if !s.IsInputMediaDocument() {
-		return v, false
-	}
-	return s.InputMediaDocument, true
+	_ = "STUB: not implemented"
+	return *new(InputMediaDocument), false
 }
 
 // NewInputMediaDocumentSendMediaGroupMediaItem returns new SendMediaGroupMediaItem from InputMediaDocument.
 func NewInputMediaDocumentSendMediaGroupMediaItem(v InputMediaDocument) SendMediaGroupMediaItem {
-	var s SendMediaGroupMediaItem
-	s.SetInputMediaDocument(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendMediaGroupMediaItem)
 }
 
 // SetInputMediaPhoto sets SendMediaGroupMediaItem to InputMediaPhoto.
 func (s *SendMediaGroupMediaItem) SetInputMediaPhoto(v InputMediaPhoto) {
-	s.Type = InputMediaPhotoSendMediaGroupMediaItem
-	s.InputMediaPhoto = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInputMediaPhoto returns InputMediaPhoto and true boolean if SendMediaGroupMediaItem is InputMediaPhoto.
 func (s SendMediaGroupMediaItem) GetInputMediaPhoto() (v InputMediaPhoto, ok bool) {
-	if !s.IsInputMediaPhoto() {
-		return v, false
-	}
-	return s.InputMediaPhoto, true
+	_ = "STUB: not implemented"
+	return *new(InputMediaPhoto), false
 }
 
 // NewInputMediaPhotoSendMediaGroupMediaItem returns new SendMediaGroupMediaItem from InputMediaPhoto.
 func NewInputMediaPhotoSendMediaGroupMediaItem(v InputMediaPhoto) SendMediaGroupMediaItem {
-	var s SendMediaGroupMediaItem
-	s.SetInputMediaPhoto(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendMediaGroupMediaItem)
 }
 
 // SetInputMediaVideo sets SendMediaGroupMediaItem to InputMediaVideo.
 func (s *SendMediaGroupMediaItem) SetInputMediaVideo(v InputMediaVideo) {
-	s.Type = InputMediaVideoSendMediaGroupMediaItem
-	s.InputMediaVideo = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInputMediaVideo returns InputMediaVideo and true boolean if SendMediaGroupMediaItem is InputMediaVideo.
 func (s SendMediaGroupMediaItem) GetInputMediaVideo() (v InputMediaVideo, ok bool) {
-	if !s.IsInputMediaVideo() {
-		return v, false
-	}
-	return s.InputMediaVideo, true
+	_ = "STUB: not implemented"
+	return *new(InputMediaVideo), false
 }
 
 // NewInputMediaVideoSendMediaGroupMediaItem returns new SendMediaGroupMediaItem from InputMediaVideo.
 func NewInputMediaVideoSendMediaGroupMediaItem(v InputMediaVideo) SendMediaGroupMediaItem {
-	var s SendMediaGroupMediaItem
-	s.SetInputMediaVideo(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendMediaGroupMediaItem)
 }
 
 // Input for sendMessage.
@@ -19944,97 +20844,116 @@ type SendMessage struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendMessage) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetText returns the value of Text.
+	return *new(ID)
 }
 
-// GetText returns the value of Text.
 func (s *SendMessage) GetText() string {
-	return s.Text
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return ""
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *SendMessage) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+
+	// GetEntities returns the value of Entities.
+	return *new(OptString)
 }
 
-// GetEntities returns the value of Entities.
 func (s *SendMessage) GetEntities() []MessageEntity {
-	return s.Entities
+	_ = "STUB: not implemented"
+
+	// GetDisableWebPagePreview returns the value of DisableWebPagePreview.
+	return nil
 }
 
-// GetDisableWebPagePreview returns the value of DisableWebPagePreview.
 func (s *SendMessage) GetDisableWebPagePreview() OptBool {
-	return s.DisableWebPagePreview
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetDisableNotification returns the value of DisableNotification.
 func (s *SendMessage) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendMessage) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendMessage) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendMessage) GetReplyMarkup() OptSendMessageReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendMessageReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendMessage) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetText sets the value of Text.
+	return
 }
 
-// SetText sets the value of Text.
 func (s *SendMessage) SetText(val string) {
-	s.Text = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *SendMessage) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetEntities sets the value of Entities.
+	return
 }
 
-// SetEntities sets the value of Entities.
 func (s *SendMessage) SetEntities(val []MessageEntity) {
-	s.Entities = val
+	_ = "STUB: not implemented"
+
+	// SetDisableWebPagePreview sets the value of DisableWebPagePreview.
+	return
 }
 
-// SetDisableWebPagePreview sets the value of DisableWebPagePreview.
-func (s *SendMessage) SetDisableWebPagePreview(val OptBool) {
-	s.DisableWebPagePreview = val
-}
+func (s *SendMessage) SetDisableWebPagePreview(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetDisableNotification sets the value of DisableNotification.
-func (s *SendMessage) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendMessage) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendMessage) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendMessage) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendMessage) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendMessage) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *SendMessage) SetReplyMarkup(val OptSendMessageReplyMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
+	// keyboard, instructions to remove reply keyboard or to force a reply from the user.
+	// SendMessageReplyMarkup represents sum type.
 }
 
-// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
-// keyboard, instructions to remove reply keyboard or to force a reply from the user.
-// SendMessageReplyMarkup represents sum type.
 type SendMessageReplyMarkup struct {
 	Type                 SendMessageReplyMarkupType // switch on this field
 	InlineKeyboardMarkup InlineKeyboardMarkup
@@ -20056,106 +20975,92 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendMessageReplyMarkup is InlineKeyboardMarkup.
 func (s SendMessageReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendMessageReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendMessageReplyMarkup is ReplyKeyboardMarkup.
 func (s SendMessageReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendMessageReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardRemove reports whether SendMessageReplyMarkup is ReplyKeyboardRemove.
 func (s SendMessageReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendMessageReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsForceReply reports whether SendMessageReplyMarkup is ForceReply.
-func (s SendMessageReplyMarkup) IsForceReply() bool {
-	return s.Type == ForceReplySendMessageReplyMarkup
-}
+func (s SendMessageReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendMessageReplyMarkup to InlineKeyboardMarkup.
 func (s *SendMessageReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendMessageReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendMessageReplyMarkup is InlineKeyboardMarkup.
 func (s SendMessageReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendMessageReplyMarkup returns new SendMessageReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendMessageReplyMarkup(v InlineKeyboardMarkup) SendMessageReplyMarkup {
-	var s SendMessageReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendMessageReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendMessageReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendMessageReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendMessageReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendMessageReplyMarkup is ReplyKeyboardMarkup.
 func (s SendMessageReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendMessageReplyMarkup returns new SendMessageReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendMessageReplyMarkup(v ReplyKeyboardMarkup) SendMessageReplyMarkup {
-	var s SendMessageReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendMessageReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendMessageReplyMarkup to ReplyKeyboardRemove.
 func (s *SendMessageReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendMessageReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendMessageReplyMarkup is ReplyKeyboardRemove.
 func (s SendMessageReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendMessageReplyMarkup returns new SendMessageReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendMessageReplyMarkup(v ReplyKeyboardRemove) SendMessageReplyMarkup {
-	var s SendMessageReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendMessageReplyMarkup)
 }
 
 // SetForceReply sets SendMessageReplyMarkup to ForceReply.
-func (s *SendMessageReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendMessageReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendMessageReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendMessageReplyMarkup is ForceReply.
 func (s SendMessageReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendMessageReplyMarkup returns new SendMessageReplyMarkup from ForceReply.
 func NewForceReplySendMessageReplyMarkup(v ForceReply) SendMessageReplyMarkup {
-	var s SendMessageReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendMessageReplyMarkup)
 }
 
 // Input for sendPhoto.
@@ -20189,93 +21094,105 @@ type SendPhoto struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendPhoto) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetPhoto returns the value of Photo.
+	return *new(ID)
 }
 
-// GetPhoto returns the value of Photo.
 func (s *SendPhoto) GetPhoto() string {
-	return s.Photo
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return ""
 }
 
-// GetCaption returns the value of Caption.
 func (s *SendPhoto) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *SendPhoto) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	return *new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
-func (s *SendPhoto) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
-}
+func (s *SendPhoto) GetCaptionEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetDisableNotification returns the value of DisableNotification.
 func (s *SendPhoto) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendPhoto) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendPhoto) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendPhoto) GetReplyMarkup() OptSendPhotoReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendPhotoReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendPhoto) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetPhoto sets the value of Photo.
+	return
 }
 
-// SetPhoto sets the value of Photo.
 func (s *SendPhoto) SetPhoto(val string) {
-	s.Photo = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *SendPhoto) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *SendPhoto) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
-func (s *SendPhoto) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
-}
+func (s *SendPhoto) SetCaptionEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetDisableNotification sets the value of DisableNotification.
-func (s *SendPhoto) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendPhoto) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendPhoto) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendPhoto) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendPhoto) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendPhoto) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
-func (s *SendPhoto) SetReplyMarkup(val OptSendPhotoReplyMarkup) {
-	s.ReplyMarkup = val
-}
+func (s *SendPhoto) SetReplyMarkup(val OptSendPhotoReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
 // keyboard, instructions to remove reply keyboard or to force a reply from the user.
@@ -20301,104 +21218,86 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendPhotoReplyMarkup is InlineKeyboardMarkup.
 func (s SendPhotoReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendPhotoReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendPhotoReplyMarkup is ReplyKeyboardMarkup.
-func (s SendPhotoReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendPhotoReplyMarkup
-}
+func (s SendPhotoReplyMarkup) IsReplyKeyboardMarkup() bool { _ = "STUB: not implemented"; return false }
 
 // IsReplyKeyboardRemove reports whether SendPhotoReplyMarkup is ReplyKeyboardRemove.
-func (s SendPhotoReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendPhotoReplyMarkup
-}
+func (s SendPhotoReplyMarkup) IsReplyKeyboardRemove() bool { _ = "STUB: not implemented"; return false }
 
 // IsForceReply reports whether SendPhotoReplyMarkup is ForceReply.
-func (s SendPhotoReplyMarkup) IsForceReply() bool { return s.Type == ForceReplySendPhotoReplyMarkup }
+func (s SendPhotoReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendPhotoReplyMarkup to InlineKeyboardMarkup.
 func (s *SendPhotoReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendPhotoReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendPhotoReplyMarkup is InlineKeyboardMarkup.
 func (s SendPhotoReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendPhotoReplyMarkup returns new SendPhotoReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendPhotoReplyMarkup(v InlineKeyboardMarkup) SendPhotoReplyMarkup {
-	var s SendPhotoReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendPhotoReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendPhotoReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendPhotoReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendPhotoReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendPhotoReplyMarkup is ReplyKeyboardMarkup.
 func (s SendPhotoReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendPhotoReplyMarkup returns new SendPhotoReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendPhotoReplyMarkup(v ReplyKeyboardMarkup) SendPhotoReplyMarkup {
-	var s SendPhotoReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendPhotoReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendPhotoReplyMarkup to ReplyKeyboardRemove.
 func (s *SendPhotoReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendPhotoReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendPhotoReplyMarkup is ReplyKeyboardRemove.
 func (s SendPhotoReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendPhotoReplyMarkup returns new SendPhotoReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendPhotoReplyMarkup(v ReplyKeyboardRemove) SendPhotoReplyMarkup {
-	var s SendPhotoReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendPhotoReplyMarkup)
 }
 
 // SetForceReply sets SendPhotoReplyMarkup to ForceReply.
-func (s *SendPhotoReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendPhotoReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendPhotoReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendPhotoReplyMarkup is ForceReply.
 func (s SendPhotoReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendPhotoReplyMarkup returns new SendPhotoReplyMarkup from ForceReply.
 func NewForceReplySendPhotoReplyMarkup(v ForceReply) SendPhotoReplyMarkup {
-	var s SendPhotoReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendPhotoReplyMarkup)
 }
 
 // Input for sendPoll.
@@ -20446,173 +21345,199 @@ type SendPoll struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendPoll) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetQuestion returns the value of Question.
+	return *new(ID)
 }
 
-// GetQuestion returns the value of Question.
 func (s *SendPoll) GetQuestion() string {
-	return s.Question
+	_ = "STUB: not implemented"
+
+	// GetOptions returns the value of Options.
+	return ""
 }
 
-// GetOptions returns the value of Options.
 func (s *SendPoll) GetOptions() []string {
-	return s.Options
+	_ = "STUB: not implemented"
+
+	// GetIsAnonymous returns the value of IsAnonymous.
+	return nil
 }
 
-// GetIsAnonymous returns the value of IsAnonymous.
 func (s *SendPoll) GetIsAnonymous() OptBool {
-	return s.IsAnonymous
+	_ = "STUB: not implemented"
+	return *
+
+	// GetType returns the value of Type.
+	new(OptBool)
 }
 
-// GetType returns the value of Type.
 func (s *SendPoll) GetType() OptString {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetAllowsMultipleAnswers returns the value of AllowsMultipleAnswers.
+	return *new(OptString)
 }
 
-// GetAllowsMultipleAnswers returns the value of AllowsMultipleAnswers.
 func (s *SendPoll) GetAllowsMultipleAnswers() OptBool {
-	return s.AllowsMultipleAnswers
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetCorrectOptionID returns the value of CorrectOptionID.
 func (s *SendPoll) GetCorrectOptionID() OptInt {
-	return s.CorrectOptionID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExplanation returns the value of Explanation.
+	new(OptInt)
 }
 
-// GetExplanation returns the value of Explanation.
 func (s *SendPoll) GetExplanation() OptString {
-	return s.Explanation
+	_ = "STUB: not implemented"
+	return *
+
+	// GetExplanationParseMode returns the value of ExplanationParseMode.
+	new(OptString)
 }
 
-// GetExplanationParseMode returns the value of ExplanationParseMode.
 func (s *SendPoll) GetExplanationParseMode() OptString {
-	return s.ExplanationParseMode
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetExplanationEntities returns the value of ExplanationEntities.
-func (s *SendPoll) GetExplanationEntities() []MessageEntity {
-	return s.ExplanationEntities
-}
+func (s *SendPoll) GetExplanationEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetOpenPeriod returns the value of OpenPeriod.
 func (s *SendPoll) GetOpenPeriod() OptInt {
-	return s.OpenPeriod
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCloseDate returns the value of CloseDate.
+	new(OptInt)
 }
 
-// GetCloseDate returns the value of CloseDate.
 func (s *SendPoll) GetCloseDate() OptInt {
-	return s.CloseDate
+	_ = "STUB: not implemented"
+
+	// GetIsClosed returns the value of IsClosed.
+	return *new(OptInt)
 }
 
-// GetIsClosed returns the value of IsClosed.
 func (s *SendPoll) GetIsClosed() OptBool {
-	return s.IsClosed
+	_ = "STUB: not implemented"
+
+	// GetDisableNotification returns the value of DisableNotification.
+	return *new(OptBool)
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *SendPoll) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendPoll) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendPoll) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendPoll) GetReplyMarkup() OptSendPollReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendPollReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendPoll) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetQuestion sets the value of Question.
+	return
 }
 
-// SetQuestion sets the value of Question.
 func (s *SendPoll) SetQuestion(val string) {
-	s.Question = val
+	_ = "STUB: not implemented"
+
+	// SetOptions sets the value of Options.
+	return
 }
 
-// SetOptions sets the value of Options.
 func (s *SendPoll) SetOptions(val []string) {
-	s.Options = val
+	_ = "STUB: not implemented"
+
+	// SetIsAnonymous sets the value of IsAnonymous.
+	return
 }
 
-// SetIsAnonymous sets the value of IsAnonymous.
-func (s *SendPoll) SetIsAnonymous(val OptBool) {
-	s.IsAnonymous = val
-}
+func (s *SendPoll) SetIsAnonymous(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetType sets the value of Type.
 func (s *SendPoll) SetType(val OptString) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetAllowsMultipleAnswers sets the value of AllowsMultipleAnswers.
+	return
 }
 
-// SetAllowsMultipleAnswers sets the value of AllowsMultipleAnswers.
-func (s *SendPoll) SetAllowsMultipleAnswers(val OptBool) {
-	s.AllowsMultipleAnswers = val
-}
+func (s *SendPoll) SetAllowsMultipleAnswers(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCorrectOptionID sets the value of CorrectOptionID.
-func (s *SendPoll) SetCorrectOptionID(val OptInt) {
-	s.CorrectOptionID = val
-}
+func (s *SendPoll) SetCorrectOptionID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetExplanation sets the value of Explanation.
-func (s *SendPoll) SetExplanation(val OptString) {
-	s.Explanation = val
-}
+func (s *SendPoll) SetExplanation(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetExplanationParseMode sets the value of ExplanationParseMode.
-func (s *SendPoll) SetExplanationParseMode(val OptString) {
-	s.ExplanationParseMode = val
-}
+func (s *SendPoll) SetExplanationParseMode(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetExplanationEntities sets the value of ExplanationEntities.
-func (s *SendPoll) SetExplanationEntities(val []MessageEntity) {
-	s.ExplanationEntities = val
-}
+func (s *SendPoll) SetExplanationEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetOpenPeriod sets the value of OpenPeriod.
 func (s *SendPoll) SetOpenPeriod(val OptInt) {
-	s.OpenPeriod = val
+	_ = "STUB: not implemented"
+
+	// SetCloseDate sets the value of CloseDate.
+	return
 }
 
-// SetCloseDate sets the value of CloseDate.
 func (s *SendPoll) SetCloseDate(val OptInt) {
-	s.CloseDate = val
+	_ = "STUB: not implemented"
+
+	// SetIsClosed sets the value of IsClosed.
+	return
 }
 
-// SetIsClosed sets the value of IsClosed.
 func (s *SendPoll) SetIsClosed(val OptBool) {
-	s.IsClosed = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *SendPoll) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendPoll) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendPoll) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendPoll) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendPoll) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendPoll) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
-func (s *SendPoll) SetReplyMarkup(val OptSendPollReplyMarkup) {
-	s.ReplyMarkup = val
-}
+func (s *SendPoll) SetReplyMarkup(val OptSendPollReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
 // keyboard, instructions to remove reply keyboard or to force a reply from the user.
@@ -20637,105 +21562,84 @@ const (
 )
 
 // IsInlineKeyboardMarkup reports whether SendPollReplyMarkup is InlineKeyboardMarkup.
-func (s SendPollReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendPollReplyMarkup
-}
+func (s SendPollReplyMarkup) IsInlineKeyboardMarkup() bool { _ = "STUB: not implemented"; return false }
 
 // IsReplyKeyboardMarkup reports whether SendPollReplyMarkup is ReplyKeyboardMarkup.
-func (s SendPollReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendPollReplyMarkup
-}
+func (s SendPollReplyMarkup) IsReplyKeyboardMarkup() bool { _ = "STUB: not implemented"; return false }
 
 // IsReplyKeyboardRemove reports whether SendPollReplyMarkup is ReplyKeyboardRemove.
-func (s SendPollReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendPollReplyMarkup
-}
+func (s SendPollReplyMarkup) IsReplyKeyboardRemove() bool { _ = "STUB: not implemented"; return false }
 
 // IsForceReply reports whether SendPollReplyMarkup is ForceReply.
-func (s SendPollReplyMarkup) IsForceReply() bool { return s.Type == ForceReplySendPollReplyMarkup }
+func (s SendPollReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendPollReplyMarkup to InlineKeyboardMarkup.
 func (s *SendPollReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendPollReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendPollReplyMarkup is InlineKeyboardMarkup.
 func (s SendPollReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendPollReplyMarkup returns new SendPollReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendPollReplyMarkup(v InlineKeyboardMarkup) SendPollReplyMarkup {
-	var s SendPollReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendPollReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendPollReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendPollReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendPollReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendPollReplyMarkup is ReplyKeyboardMarkup.
 func (s SendPollReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendPollReplyMarkup returns new SendPollReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendPollReplyMarkup(v ReplyKeyboardMarkup) SendPollReplyMarkup {
-	var s SendPollReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendPollReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendPollReplyMarkup to ReplyKeyboardRemove.
 func (s *SendPollReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendPollReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendPollReplyMarkup is ReplyKeyboardRemove.
 func (s SendPollReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendPollReplyMarkup returns new SendPollReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendPollReplyMarkup(v ReplyKeyboardRemove) SendPollReplyMarkup {
-	var s SendPollReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendPollReplyMarkup)
 }
 
 // SetForceReply sets SendPollReplyMarkup to ForceReply.
-func (s *SendPollReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendPollReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendPollReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendPollReplyMarkup is ForceReply.
 func (s SendPollReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendPollReplyMarkup returns new SendPollReplyMarkup from ForceReply.
 func NewForceReplySendPollReplyMarkup(v ForceReply) SendPollReplyMarkup {
-	var s SendPollReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendPollReplyMarkup)
 }
 
 // Input for sendSticker.
@@ -20759,67 +21663,79 @@ type SendSticker struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendSticker) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetSticker returns the value of Sticker.
+	return *new(ID)
 }
 
-// GetSticker returns the value of Sticker.
 func (s *SendSticker) GetSticker() string {
-	return s.Sticker
+	_ = "STUB: not implemented"
+
+	// GetDisableNotification returns the value of DisableNotification.
+	return ""
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *SendSticker) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendSticker) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendSticker) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendSticker) GetReplyMarkup() OptSendStickerReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendStickerReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendSticker) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetSticker sets the value of Sticker.
+	return
 }
 
-// SetSticker sets the value of Sticker.
 func (s *SendSticker) SetSticker(val string) {
-	s.Sticker = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *SendSticker) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendSticker) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendSticker) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendSticker) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendSticker) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendSticker) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *SendSticker) SetReplyMarkup(val OptSendStickerReplyMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
+	// keyboard, instructions to remove reply keyboard or to force a reply from the user.
+	// SendStickerReplyMarkup represents sum type.
 }
 
-// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
-// keyboard, instructions to remove reply keyboard or to force a reply from the user.
-// SendStickerReplyMarkup represents sum type.
 type SendStickerReplyMarkup struct {
 	Type                 SendStickerReplyMarkupType // switch on this field
 	InlineKeyboardMarkup InlineKeyboardMarkup
@@ -20841,106 +21757,92 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendStickerReplyMarkup is InlineKeyboardMarkup.
 func (s SendStickerReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendStickerReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendStickerReplyMarkup is ReplyKeyboardMarkup.
 func (s SendStickerReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendStickerReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardRemove reports whether SendStickerReplyMarkup is ReplyKeyboardRemove.
 func (s SendStickerReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendStickerReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsForceReply reports whether SendStickerReplyMarkup is ForceReply.
-func (s SendStickerReplyMarkup) IsForceReply() bool {
-	return s.Type == ForceReplySendStickerReplyMarkup
-}
+func (s SendStickerReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendStickerReplyMarkup to InlineKeyboardMarkup.
 func (s *SendStickerReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendStickerReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendStickerReplyMarkup is InlineKeyboardMarkup.
 func (s SendStickerReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendStickerReplyMarkup returns new SendStickerReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendStickerReplyMarkup(v InlineKeyboardMarkup) SendStickerReplyMarkup {
-	var s SendStickerReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendStickerReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendStickerReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendStickerReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendStickerReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendStickerReplyMarkup is ReplyKeyboardMarkup.
 func (s SendStickerReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendStickerReplyMarkup returns new SendStickerReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendStickerReplyMarkup(v ReplyKeyboardMarkup) SendStickerReplyMarkup {
-	var s SendStickerReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendStickerReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendStickerReplyMarkup to ReplyKeyboardRemove.
 func (s *SendStickerReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendStickerReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendStickerReplyMarkup is ReplyKeyboardRemove.
 func (s SendStickerReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendStickerReplyMarkup returns new SendStickerReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendStickerReplyMarkup(v ReplyKeyboardRemove) SendStickerReplyMarkup {
-	var s SendStickerReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendStickerReplyMarkup)
 }
 
 // SetForceReply sets SendStickerReplyMarkup to ForceReply.
-func (s *SendStickerReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendStickerReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendStickerReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendStickerReplyMarkup is ForceReply.
 func (s SendStickerReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendStickerReplyMarkup returns new SendStickerReplyMarkup from ForceReply.
 func NewForceReplySendStickerReplyMarkup(v ForceReply) SendStickerReplyMarkup {
-	var s SendStickerReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendStickerReplyMarkup)
 }
 
 // Input for sendVenue.
@@ -20977,133 +21879,157 @@ type SendVenue struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendVenue) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetLatitude returns the value of Latitude.
+	return *new(ID)
 }
 
-// GetLatitude returns the value of Latitude.
 func (s *SendVenue) GetLatitude() float64 {
-	return s.Latitude
+	_ = "STUB: not implemented"
+
+	// GetLongitude returns the value of Longitude.
+	return 0
 }
 
-// GetLongitude returns the value of Longitude.
 func (s *SendVenue) GetLongitude() float64 {
-	return s.Longitude
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return 0
 }
 
-// GetTitle returns the value of Title.
 func (s *SendVenue) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetAddress returns the value of Address.
+	return ""
 }
 
-// GetAddress returns the value of Address.
 func (s *SendVenue) GetAddress() string {
-	return s.Address
+	_ = "STUB: not implemented"
+
+	// GetFoursquareID returns the value of FoursquareID.
+	return ""
 }
 
-// GetFoursquareID returns the value of FoursquareID.
 func (s *SendVenue) GetFoursquareID() OptString {
-	return s.FoursquareID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFoursquareType returns the value of FoursquareType.
+	new(OptString)
 }
 
-// GetFoursquareType returns the value of FoursquareType.
 func (s *SendVenue) GetFoursquareType() OptString {
-	return s.FoursquareType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGooglePlaceID returns the value of GooglePlaceID.
+	new(OptString)
 }
 
-// GetGooglePlaceID returns the value of GooglePlaceID.
 func (s *SendVenue) GetGooglePlaceID() OptString {
-	return s.GooglePlaceID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGooglePlaceType returns the value of GooglePlaceType.
+	new(OptString)
 }
 
-// GetGooglePlaceType returns the value of GooglePlaceType.
 func (s *SendVenue) GetGooglePlaceType() OptString {
-	return s.GooglePlaceType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetDisableNotification returns the value of DisableNotification.
+	new(OptString)
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *SendVenue) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendVenue) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendVenue) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendVenue) GetReplyMarkup() OptSendVenueReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendVenueReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendVenue) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetLatitude sets the value of Latitude.
+	return
 }
 
-// SetLatitude sets the value of Latitude.
 func (s *SendVenue) SetLatitude(val float64) {
-	s.Latitude = val
+	_ = "STUB: not implemented"
+
+	// SetLongitude sets the value of Longitude.
+	return
 }
 
-// SetLongitude sets the value of Longitude.
 func (s *SendVenue) SetLongitude(val float64) {
-	s.Longitude = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *SendVenue) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetAddress sets the value of Address.
+	return
 }
 
-// SetAddress sets the value of Address.
 func (s *SendVenue) SetAddress(val string) {
-	s.Address = val
+	_ = "STUB: not implemented"
+
+	// SetFoursquareID sets the value of FoursquareID.
+	return
 }
 
-// SetFoursquareID sets the value of FoursquareID.
-func (s *SendVenue) SetFoursquareID(val OptString) {
-	s.FoursquareID = val
-}
+func (s *SendVenue) SetFoursquareID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetFoursquareType sets the value of FoursquareType.
-func (s *SendVenue) SetFoursquareType(val OptString) {
-	s.FoursquareType = val
-}
+func (s *SendVenue) SetFoursquareType(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetGooglePlaceID sets the value of GooglePlaceID.
-func (s *SendVenue) SetGooglePlaceID(val OptString) {
-	s.GooglePlaceID = val
-}
+func (s *SendVenue) SetGooglePlaceID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetGooglePlaceType sets the value of GooglePlaceType.
-func (s *SendVenue) SetGooglePlaceType(val OptString) {
-	s.GooglePlaceType = val
-}
+func (s *SendVenue) SetGooglePlaceType(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetDisableNotification sets the value of DisableNotification.
-func (s *SendVenue) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendVenue) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendVenue) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendVenue) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendVenue) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendVenue) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
-func (s *SendVenue) SetReplyMarkup(val OptSendVenueReplyMarkup) {
-	s.ReplyMarkup = val
-}
+func (s *SendVenue) SetReplyMarkup(val OptSendVenueReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
 // keyboard, instructions to remove reply keyboard or to force a reply from the user.
@@ -21129,104 +22055,86 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendVenueReplyMarkup is InlineKeyboardMarkup.
 func (s SendVenueReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendVenueReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendVenueReplyMarkup is ReplyKeyboardMarkup.
-func (s SendVenueReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendVenueReplyMarkup
-}
+func (s SendVenueReplyMarkup) IsReplyKeyboardMarkup() bool { _ = "STUB: not implemented"; return false }
 
 // IsReplyKeyboardRemove reports whether SendVenueReplyMarkup is ReplyKeyboardRemove.
-func (s SendVenueReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendVenueReplyMarkup
-}
+func (s SendVenueReplyMarkup) IsReplyKeyboardRemove() bool { _ = "STUB: not implemented"; return false }
 
 // IsForceReply reports whether SendVenueReplyMarkup is ForceReply.
-func (s SendVenueReplyMarkup) IsForceReply() bool { return s.Type == ForceReplySendVenueReplyMarkup }
+func (s SendVenueReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendVenueReplyMarkup to InlineKeyboardMarkup.
 func (s *SendVenueReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendVenueReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendVenueReplyMarkup is InlineKeyboardMarkup.
 func (s SendVenueReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendVenueReplyMarkup returns new SendVenueReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendVenueReplyMarkup(v InlineKeyboardMarkup) SendVenueReplyMarkup {
-	var s SendVenueReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVenueReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendVenueReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendVenueReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendVenueReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendVenueReplyMarkup is ReplyKeyboardMarkup.
 func (s SendVenueReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendVenueReplyMarkup returns new SendVenueReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendVenueReplyMarkup(v ReplyKeyboardMarkup) SendVenueReplyMarkup {
-	var s SendVenueReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVenueReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendVenueReplyMarkup to ReplyKeyboardRemove.
 func (s *SendVenueReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendVenueReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendVenueReplyMarkup is ReplyKeyboardRemove.
 func (s SendVenueReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendVenueReplyMarkup returns new SendVenueReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendVenueReplyMarkup(v ReplyKeyboardRemove) SendVenueReplyMarkup {
-	var s SendVenueReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVenueReplyMarkup)
 }
 
 // SetForceReply sets SendVenueReplyMarkup to ForceReply.
-func (s *SendVenueReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendVenueReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendVenueReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendVenueReplyMarkup is ForceReply.
 func (s SendVenueReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendVenueReplyMarkup returns new SendVenueReplyMarkup from ForceReply.
 func NewForceReplySendVenueReplyMarkup(v ForceReply) SendVenueReplyMarkup {
-	var s SendVenueReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVenueReplyMarkup)
 }
 
 // Input for sendVideo.
@@ -21273,143 +22181,167 @@ type SendVideo struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendVideo) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetVideo returns the value of Video.
+	return *new(ID)
 }
 
-// GetVideo returns the value of Video.
 func (s *SendVideo) GetVideo() string {
-	return s.Video
+	_ = "STUB: not implemented"
+
+	// GetDuration returns the value of Duration.
+	return ""
 }
 
-// GetDuration returns the value of Duration.
 func (s *SendVideo) GetDuration() OptInt {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetWidth returns the value of Width.
+	return *new(OptInt)
 }
 
-// GetWidth returns the value of Width.
 func (s *SendVideo) GetWidth() OptInt {
-	return s.Width
+	_ = "STUB: not implemented"
+
+	// GetHeight returns the value of Height.
+	return *new(OptInt)
 }
 
-// GetHeight returns the value of Height.
 func (s *SendVideo) GetHeight() OptInt {
-	return s.Height
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return *new(OptInt)
 }
 
-// GetThumb returns the value of Thumb.
 func (s *SendVideo) GetThumb() OptString {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return *new(OptString)
 }
 
-// GetCaption returns the value of Caption.
 func (s *SendVideo) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *SendVideo) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	return *new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
-func (s *SendVideo) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
-}
+func (s *SendVideo) GetCaptionEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetSupportsStreaming returns the value of SupportsStreaming.
-func (s *SendVideo) GetSupportsStreaming() OptBool {
-	return s.SupportsStreaming
-}
+func (s *SendVideo) GetSupportsStreaming() OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // GetDisableNotification returns the value of DisableNotification.
 func (s *SendVideo) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendVideo) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendVideo) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendVideo) GetReplyMarkup() OptSendVideoReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendVideoReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendVideo) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetVideo sets the value of Video.
+	return
 }
 
-// SetVideo sets the value of Video.
 func (s *SendVideo) SetVideo(val string) {
-	s.Video = val
+	_ = "STUB: not implemented"
+
+	// SetDuration sets the value of Duration.
+	return
 }
 
-// SetDuration sets the value of Duration.
 func (s *SendVideo) SetDuration(val OptInt) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetWidth sets the value of Width.
+	return
 }
 
-// SetWidth sets the value of Width.
 func (s *SendVideo) SetWidth(val OptInt) {
-	s.Width = val
+	_ = "STUB: not implemented"
+
+	// SetHeight sets the value of Height.
+	return
 }
 
-// SetHeight sets the value of Height.
 func (s *SendVideo) SetHeight(val OptInt) {
-	s.Height = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *SendVideo) SetThumb(val OptString) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *SendVideo) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *SendVideo) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
-func (s *SendVideo) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
-}
+func (s *SendVideo) SetCaptionEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetSupportsStreaming sets the value of SupportsStreaming.
-func (s *SendVideo) SetSupportsStreaming(val OptBool) {
-	s.SupportsStreaming = val
-}
+func (s *SendVideo) SetSupportsStreaming(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetDisableNotification sets the value of DisableNotification.
-func (s *SendVideo) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendVideo) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendVideo) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendVideo) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendVideo) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendVideo) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
-func (s *SendVideo) SetReplyMarkup(val OptSendVideoReplyMarkup) {
-	s.ReplyMarkup = val
-}
+func (s *SendVideo) SetReplyMarkup(val OptSendVideoReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Input for sendVideoNote.
 // Ref: #/components/schemas/sendVideoNote
@@ -21443,97 +22375,119 @@ type SendVideoNote struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendVideoNote) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetVideoNote returns the value of VideoNote.
+	return *new(ID)
 }
 
-// GetVideoNote returns the value of VideoNote.
 func (s *SendVideoNote) GetVideoNote() string {
-	return s.VideoNote
+	_ = "STUB: not implemented"
+
+	// GetDuration returns the value of Duration.
+	return ""
 }
 
-// GetDuration returns the value of Duration.
 func (s *SendVideoNote) GetDuration() OptInt {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetLength returns the value of Length.
+	return *new(OptInt)
 }
 
-// GetLength returns the value of Length.
 func (s *SendVideoNote) GetLength() OptInt {
-	return s.Length
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return *new(OptInt)
 }
 
-// GetThumb returns the value of Thumb.
 func (s *SendVideoNote) GetThumb() OptString {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetDisableNotification returns the value of DisableNotification.
+	return *new(OptString)
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *SendVideoNote) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendVideoNote) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *new(OptInt)
 }
 
 // GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendVideoNote) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendVideoNote) GetReplyMarkup() OptSendVideoNoteReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendVideoNoteReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendVideoNote) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetVideoNote sets the value of VideoNote.
+	return
 }
 
-// SetVideoNote sets the value of VideoNote.
 func (s *SendVideoNote) SetVideoNote(val string) {
-	s.VideoNote = val
+	_ = "STUB: not implemented"
+
+	// SetDuration sets the value of Duration.
+	return
 }
 
-// SetDuration sets the value of Duration.
 func (s *SendVideoNote) SetDuration(val OptInt) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetLength sets the value of Length.
+	return
 }
 
-// SetLength sets the value of Length.
 func (s *SendVideoNote) SetLength(val OptInt) {
-	s.Length = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *SendVideoNote) SetThumb(val OptString) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *SendVideoNote) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendVideoNote) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendVideoNote) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendVideoNote) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendVideoNote) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendVideoNote) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
 func (s *SendVideoNote) SetReplyMarkup(val OptSendVideoNoteReplyMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
+	// keyboard, instructions to remove reply keyboard or to force a reply from the user.
+	// SendVideoNoteReplyMarkup represents sum type.
 }
 
-// Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
-// keyboard, instructions to remove reply keyboard or to force a reply from the user.
-// SendVideoNoteReplyMarkup represents sum type.
 type SendVideoNoteReplyMarkup struct {
 	Type                 SendVideoNoteReplyMarkupType // switch on this field
 	InlineKeyboardMarkup InlineKeyboardMarkup
@@ -21555,106 +22509,92 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendVideoNoteReplyMarkup is InlineKeyboardMarkup.
 func (s SendVideoNoteReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendVideoNoteReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendVideoNoteReplyMarkup is ReplyKeyboardMarkup.
 func (s SendVideoNoteReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendVideoNoteReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardRemove reports whether SendVideoNoteReplyMarkup is ReplyKeyboardRemove.
 func (s SendVideoNoteReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendVideoNoteReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsForceReply reports whether SendVideoNoteReplyMarkup is ForceReply.
-func (s SendVideoNoteReplyMarkup) IsForceReply() bool {
-	return s.Type == ForceReplySendVideoNoteReplyMarkup
-}
+func (s SendVideoNoteReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendVideoNoteReplyMarkup to InlineKeyboardMarkup.
 func (s *SendVideoNoteReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendVideoNoteReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendVideoNoteReplyMarkup is InlineKeyboardMarkup.
 func (s SendVideoNoteReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendVideoNoteReplyMarkup returns new SendVideoNoteReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendVideoNoteReplyMarkup(v InlineKeyboardMarkup) SendVideoNoteReplyMarkup {
-	var s SendVideoNoteReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVideoNoteReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendVideoNoteReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendVideoNoteReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendVideoNoteReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendVideoNoteReplyMarkup is ReplyKeyboardMarkup.
 func (s SendVideoNoteReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendVideoNoteReplyMarkup returns new SendVideoNoteReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendVideoNoteReplyMarkup(v ReplyKeyboardMarkup) SendVideoNoteReplyMarkup {
-	var s SendVideoNoteReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVideoNoteReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendVideoNoteReplyMarkup to ReplyKeyboardRemove.
 func (s *SendVideoNoteReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendVideoNoteReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendVideoNoteReplyMarkup is ReplyKeyboardRemove.
 func (s SendVideoNoteReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendVideoNoteReplyMarkup returns new SendVideoNoteReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendVideoNoteReplyMarkup(v ReplyKeyboardRemove) SendVideoNoteReplyMarkup {
-	var s SendVideoNoteReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVideoNoteReplyMarkup)
 }
 
 // SetForceReply sets SendVideoNoteReplyMarkup to ForceReply.
-func (s *SendVideoNoteReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendVideoNoteReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendVideoNoteReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendVideoNoteReplyMarkup is ForceReply.
 func (s SendVideoNoteReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendVideoNoteReplyMarkup returns new SendVideoNoteReplyMarkup from ForceReply.
 func NewForceReplySendVideoNoteReplyMarkup(v ForceReply) SendVideoNoteReplyMarkup {
-	var s SendVideoNoteReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVideoNoteReplyMarkup)
 }
 
 // Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
@@ -21681,104 +22621,86 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendVideoReplyMarkup is InlineKeyboardMarkup.
 func (s SendVideoReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendVideoReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendVideoReplyMarkup is ReplyKeyboardMarkup.
-func (s SendVideoReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendVideoReplyMarkup
-}
+func (s SendVideoReplyMarkup) IsReplyKeyboardMarkup() bool { _ = "STUB: not implemented"; return false }
 
 // IsReplyKeyboardRemove reports whether SendVideoReplyMarkup is ReplyKeyboardRemove.
-func (s SendVideoReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendVideoReplyMarkup
-}
+func (s SendVideoReplyMarkup) IsReplyKeyboardRemove() bool { _ = "STUB: not implemented"; return false }
 
 // IsForceReply reports whether SendVideoReplyMarkup is ForceReply.
-func (s SendVideoReplyMarkup) IsForceReply() bool { return s.Type == ForceReplySendVideoReplyMarkup }
+func (s SendVideoReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendVideoReplyMarkup to InlineKeyboardMarkup.
 func (s *SendVideoReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendVideoReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendVideoReplyMarkup is InlineKeyboardMarkup.
 func (s SendVideoReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendVideoReplyMarkup returns new SendVideoReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendVideoReplyMarkup(v InlineKeyboardMarkup) SendVideoReplyMarkup {
-	var s SendVideoReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVideoReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendVideoReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendVideoReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendVideoReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendVideoReplyMarkup is ReplyKeyboardMarkup.
 func (s SendVideoReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendVideoReplyMarkup returns new SendVideoReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendVideoReplyMarkup(v ReplyKeyboardMarkup) SendVideoReplyMarkup {
-	var s SendVideoReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVideoReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendVideoReplyMarkup to ReplyKeyboardRemove.
 func (s *SendVideoReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendVideoReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendVideoReplyMarkup is ReplyKeyboardRemove.
 func (s SendVideoReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendVideoReplyMarkup returns new SendVideoReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendVideoReplyMarkup(v ReplyKeyboardRemove) SendVideoReplyMarkup {
-	var s SendVideoReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVideoReplyMarkup)
 }
 
 // SetForceReply sets SendVideoReplyMarkup to ForceReply.
-func (s *SendVideoReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendVideoReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendVideoReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendVideoReplyMarkup is ForceReply.
 func (s SendVideoReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendVideoReplyMarkup returns new SendVideoReplyMarkup from ForceReply.
 func NewForceReplySendVideoReplyMarkup(v ForceReply) SendVideoReplyMarkup {
-	var s SendVideoReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVideoReplyMarkup)
 }
 
 // Input for sendVoice.
@@ -21811,103 +22733,119 @@ type SendVoice struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SendVoice) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetVoice returns the value of Voice.
+	return *new(ID)
 }
 
-// GetVoice returns the value of Voice.
 func (s *SendVoice) GetVoice() string {
-	return s.Voice
+	_ = "STUB: not implemented"
+
+	// GetCaption returns the value of Caption.
+	return ""
 }
 
-// GetCaption returns the value of Caption.
 func (s *SendVoice) GetCaption() OptString {
-	return s.Caption
+	_ = "STUB: not implemented"
+
+	// GetParseMode returns the value of ParseMode.
+	return *new(OptString)
 }
 
-// GetParseMode returns the value of ParseMode.
 func (s *SendVoice) GetParseMode() OptString {
-	return s.ParseMode
+	_ = "STUB: not implemented"
+
+	// GetCaptionEntities returns the value of CaptionEntities.
+	return *new(OptString)
 }
 
-// GetCaptionEntities returns the value of CaptionEntities.
-func (s *SendVoice) GetCaptionEntities() []MessageEntity {
-	return s.CaptionEntities
-}
+func (s *SendVoice) GetCaptionEntities() []MessageEntity { _ = "STUB: not implemented"; return nil }
 
 // GetDuration returns the value of Duration.
 func (s *SendVoice) GetDuration() OptInt {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetDisableNotification returns the value of DisableNotification.
+	return *new(OptInt)
 }
 
-// GetDisableNotification returns the value of DisableNotification.
 func (s *SendVoice) GetDisableNotification() OptBool {
-	return s.DisableNotification
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyToMessageID returns the value of ReplyToMessageID.
 func (s *SendVoice) GetReplyToMessageID() OptInt {
-	return s.ReplyToMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
+	new(OptInt)
 }
 
-// GetAllowSendingWithoutReply returns the value of AllowSendingWithoutReply.
 func (s *SendVoice) GetAllowSendingWithoutReply() OptBool {
-	return s.AllowSendingWithoutReply
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetReplyMarkup returns the value of ReplyMarkup.
 func (s *SendVoice) GetReplyMarkup() OptSendVoiceReplyMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptSendVoiceReplyMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SendVoice) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetVoice sets the value of Voice.
+	return
 }
 
-// SetVoice sets the value of Voice.
 func (s *SendVoice) SetVoice(val string) {
-	s.Voice = val
+	_ = "STUB: not implemented"
+
+	// SetCaption sets the value of Caption.
+	return
 }
 
-// SetCaption sets the value of Caption.
 func (s *SendVoice) SetCaption(val OptString) {
-	s.Caption = val
+	_ = "STUB: not implemented"
+
+	// SetParseMode sets the value of ParseMode.
+	return
 }
 
-// SetParseMode sets the value of ParseMode.
 func (s *SendVoice) SetParseMode(val OptString) {
-	s.ParseMode = val
+	_ = "STUB: not implemented"
+
+	// SetCaptionEntities sets the value of CaptionEntities.
+	return
 }
 
-// SetCaptionEntities sets the value of CaptionEntities.
-func (s *SendVoice) SetCaptionEntities(val []MessageEntity) {
-	s.CaptionEntities = val
-}
+func (s *SendVoice) SetCaptionEntities(val []MessageEntity) { _ = "STUB: not implemented"; return }
 
 // SetDuration sets the value of Duration.
 func (s *SendVoice) SetDuration(val OptInt) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetDisableNotification sets the value of DisableNotification.
+	return
 }
 
-// SetDisableNotification sets the value of DisableNotification.
-func (s *SendVoice) SetDisableNotification(val OptBool) {
-	s.DisableNotification = val
-}
+func (s *SendVoice) SetDisableNotification(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyToMessageID sets the value of ReplyToMessageID.
-func (s *SendVoice) SetReplyToMessageID(val OptInt) {
-	s.ReplyToMessageID = val
-}
+func (s *SendVoice) SetReplyToMessageID(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowSendingWithoutReply sets the value of AllowSendingWithoutReply.
-func (s *SendVoice) SetAllowSendingWithoutReply(val OptBool) {
-	s.AllowSendingWithoutReply = val
-}
+func (s *SendVoice) SetAllowSendingWithoutReply(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetReplyMarkup sets the value of ReplyMarkup.
-func (s *SendVoice) SetReplyMarkup(val OptSendVoiceReplyMarkup) {
-	s.ReplyMarkup = val
-}
+func (s *SendVoice) SetReplyMarkup(val OptSendVoiceReplyMarkup) { _ = "STUB: not implemented"; return }
 
 // Additional interface options. A JSON-serialized object for an inline keyboard, custom reply
 // keyboard, instructions to remove reply keyboard or to force a reply from the user.
@@ -21933,104 +22871,86 @@ const (
 
 // IsInlineKeyboardMarkup reports whether SendVoiceReplyMarkup is InlineKeyboardMarkup.
 func (s SendVoiceReplyMarkup) IsInlineKeyboardMarkup() bool {
-	return s.Type == InlineKeyboardMarkupSendVoiceReplyMarkup
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplyKeyboardMarkup reports whether SendVoiceReplyMarkup is ReplyKeyboardMarkup.
-func (s SendVoiceReplyMarkup) IsReplyKeyboardMarkup() bool {
-	return s.Type == ReplyKeyboardMarkupSendVoiceReplyMarkup
-}
+func (s SendVoiceReplyMarkup) IsReplyKeyboardMarkup() bool { _ = "STUB: not implemented"; return false }
 
 // IsReplyKeyboardRemove reports whether SendVoiceReplyMarkup is ReplyKeyboardRemove.
-func (s SendVoiceReplyMarkup) IsReplyKeyboardRemove() bool {
-	return s.Type == ReplyKeyboardRemoveSendVoiceReplyMarkup
-}
+func (s SendVoiceReplyMarkup) IsReplyKeyboardRemove() bool { _ = "STUB: not implemented"; return false }
 
 // IsForceReply reports whether SendVoiceReplyMarkup is ForceReply.
-func (s SendVoiceReplyMarkup) IsForceReply() bool { return s.Type == ForceReplySendVoiceReplyMarkup }
+func (s SendVoiceReplyMarkup) IsForceReply() bool { _ = "STUB: not implemented"; return false }
 
 // SetInlineKeyboardMarkup sets SendVoiceReplyMarkup to InlineKeyboardMarkup.
 func (s *SendVoiceReplyMarkup) SetInlineKeyboardMarkup(v InlineKeyboardMarkup) {
-	s.Type = InlineKeyboardMarkupSendVoiceReplyMarkup
-	s.InlineKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInlineKeyboardMarkup returns InlineKeyboardMarkup and true boolean if SendVoiceReplyMarkup is InlineKeyboardMarkup.
 func (s SendVoiceReplyMarkup) GetInlineKeyboardMarkup() (v InlineKeyboardMarkup, ok bool) {
-	if !s.IsInlineKeyboardMarkup() {
-		return v, false
-	}
-	return s.InlineKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(InlineKeyboardMarkup), false
 }
 
 // NewInlineKeyboardMarkupSendVoiceReplyMarkup returns new SendVoiceReplyMarkup from InlineKeyboardMarkup.
 func NewInlineKeyboardMarkupSendVoiceReplyMarkup(v InlineKeyboardMarkup) SendVoiceReplyMarkup {
-	var s SendVoiceReplyMarkup
-	s.SetInlineKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVoiceReplyMarkup)
 }
 
 // SetReplyKeyboardMarkup sets SendVoiceReplyMarkup to ReplyKeyboardMarkup.
 func (s *SendVoiceReplyMarkup) SetReplyKeyboardMarkup(v ReplyKeyboardMarkup) {
-	s.Type = ReplyKeyboardMarkupSendVoiceReplyMarkup
-	s.ReplyKeyboardMarkup = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardMarkup returns ReplyKeyboardMarkup and true boolean if SendVoiceReplyMarkup is ReplyKeyboardMarkup.
 func (s SendVoiceReplyMarkup) GetReplyKeyboardMarkup() (v ReplyKeyboardMarkup, ok bool) {
-	if !s.IsReplyKeyboardMarkup() {
-		return v, false
-	}
-	return s.ReplyKeyboardMarkup, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardMarkup), false
 }
 
 // NewReplyKeyboardMarkupSendVoiceReplyMarkup returns new SendVoiceReplyMarkup from ReplyKeyboardMarkup.
 func NewReplyKeyboardMarkupSendVoiceReplyMarkup(v ReplyKeyboardMarkup) SendVoiceReplyMarkup {
-	var s SendVoiceReplyMarkup
-	s.SetReplyKeyboardMarkup(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVoiceReplyMarkup)
 }
 
 // SetReplyKeyboardRemove sets SendVoiceReplyMarkup to ReplyKeyboardRemove.
 func (s *SendVoiceReplyMarkup) SetReplyKeyboardRemove(v ReplyKeyboardRemove) {
-	s.Type = ReplyKeyboardRemoveSendVoiceReplyMarkup
-	s.ReplyKeyboardRemove = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetReplyKeyboardRemove returns ReplyKeyboardRemove and true boolean if SendVoiceReplyMarkup is ReplyKeyboardRemove.
 func (s SendVoiceReplyMarkup) GetReplyKeyboardRemove() (v ReplyKeyboardRemove, ok bool) {
-	if !s.IsReplyKeyboardRemove() {
-		return v, false
-	}
-	return s.ReplyKeyboardRemove, true
+	_ = "STUB: not implemented"
+	return *new(ReplyKeyboardRemove), false
 }
 
 // NewReplyKeyboardRemoveSendVoiceReplyMarkup returns new SendVoiceReplyMarkup from ReplyKeyboardRemove.
 func NewReplyKeyboardRemoveSendVoiceReplyMarkup(v ReplyKeyboardRemove) SendVoiceReplyMarkup {
-	var s SendVoiceReplyMarkup
-	s.SetReplyKeyboardRemove(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVoiceReplyMarkup)
 }
 
 // SetForceReply sets SendVoiceReplyMarkup to ForceReply.
-func (s *SendVoiceReplyMarkup) SetForceReply(v ForceReply) {
-	s.Type = ForceReplySendVoiceReplyMarkup
-	s.ForceReply = v
-}
+func (s *SendVoiceReplyMarkup) SetForceReply(v ForceReply) { _ = "STUB: not implemented"; return }
 
 // GetForceReply returns ForceReply and true boolean if SendVoiceReplyMarkup is ForceReply.
 func (s SendVoiceReplyMarkup) GetForceReply() (v ForceReply, ok bool) {
-	if !s.IsForceReply() {
-		return v, false
-	}
-	return s.ForceReply, true
+	_ = "STUB: not implemented"
+	return *new(ForceReply), false
 }
 
 // NewForceReplySendVoiceReplyMarkup returns new SendVoiceReplyMarkup from ForceReply.
 func NewForceReplySendVoiceReplyMarkup(v ForceReply) SendVoiceReplyMarkup {
-	var s SendVoiceReplyMarkup
-	s.SetForceReply(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SendVoiceReplyMarkup)
 }
 
 // Input for setChatAdministratorCustomTitle.
@@ -22045,36 +22965,48 @@ type SetChatAdministratorCustomTitle struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SetChatAdministratorCustomTitle) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return *new(ID)
 }
 
-// GetUserID returns the value of UserID.
 func (s *SetChatAdministratorCustomTitle) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetCustomTitle returns the value of CustomTitle.
+	return 0
 }
 
-// GetCustomTitle returns the value of CustomTitle.
 func (s *SetChatAdministratorCustomTitle) GetCustomTitle() string {
-	return s.CustomTitle
+	_ = "STUB: not implemented"
+	return ""
+
+	// SetChatID sets the value of ChatID.
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SetChatAdministratorCustomTitle) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *SetChatAdministratorCustomTitle) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetCustomTitle sets the value of CustomTitle.
+	return
 }
 
-// SetCustomTitle sets the value of CustomTitle.
 func (s *SetChatAdministratorCustomTitle) SetCustomTitle(val string) {
-	s.CustomTitle = val
+	_ = "STUB: not implemented"
+	return
+
+	// Input for setChatDescription.
+	// Ref: #/components/schemas/setChatDescription
 }
 
-// Input for setChatDescription.
-// Ref: #/components/schemas/setChatDescription
 type SetChatDescription struct {
 	ChatID ID `json:"chat_id"`
 	// New chat description, 0-255 characters.
@@ -22083,23 +23015,28 @@ type SetChatDescription struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SetChatDescription) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return *new(ID)
 }
 
-// GetDescription returns the value of Description.
 func (s *SetChatDescription) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptString)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SetChatDescription) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *SetChatDescription) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *SetChatDescription) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // Input for setChatPermissions.
 // Ref: #/components/schemas/setChatPermissions
@@ -22110,23 +23047,28 @@ type SetChatPermissions struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SetChatPermissions) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetPermissions returns the value of Permissions.
+	return *new(ID)
 }
 
-// GetPermissions returns the value of Permissions.
 func (s *SetChatPermissions) GetPermissions() ChatPermissions {
-	return s.Permissions
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(ChatPermissions)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SetChatPermissions) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetPermissions sets the value of Permissions.
+	return
 }
 
-// SetPermissions sets the value of Permissions.
-func (s *SetChatPermissions) SetPermissions(val ChatPermissions) {
-	s.Permissions = val
-}
+func (s *SetChatPermissions) SetPermissions(val ChatPermissions) { _ = "STUB: not implemented"; return }
 
 // Input for setChatPhoto.
 // Ref: #/components/schemas/setChatPhoto
@@ -22138,26 +23080,34 @@ type SetChatPhoto struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SetChatPhoto) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetPhoto returns the value of Photo.
+	return *new(ID)
 }
 
-// GetPhoto returns the value of Photo.
 func (s *SetChatPhoto) GetPhoto() string {
-	return s.Photo
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return ""
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SetChatPhoto) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetPhoto sets the value of Photo.
+	return
 }
 
-// SetPhoto sets the value of Photo.
 func (s *SetChatPhoto) SetPhoto(val string) {
-	s.Photo = val
+	_ = "STUB: not implemented"
+
+	// Input for setChatStickerSet.
+	// Ref: #/components/schemas/setChatStickerSet
+	return
 }
 
-// Input for setChatStickerSet.
-// Ref: #/components/schemas/setChatStickerSet
 type SetChatStickerSet struct {
 	ChatID ID `json:"chat_id"`
 	// Name of the sticker set to be set as the group sticker set.
@@ -22166,23 +23116,23 @@ type SetChatStickerSet struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SetChatStickerSet) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetStickerSetName returns the value of StickerSetName.
+	return *new(ID)
 }
 
-// GetStickerSetName returns the value of StickerSetName.
-func (s *SetChatStickerSet) GetStickerSetName() string {
-	return s.StickerSetName
-}
+func (s *SetChatStickerSet) GetStickerSetName() string { _ = "STUB: not implemented"; return "" }
 
 // SetChatID sets the value of ChatID.
 func (s *SetChatStickerSet) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetStickerSetName sets the value of StickerSetName.
+	return
 }
 
-// SetStickerSetName sets the value of StickerSetName.
-func (s *SetChatStickerSet) SetStickerSetName(val string) {
-	s.StickerSetName = val
-}
+func (s *SetChatStickerSet) SetStickerSetName(val string) { _ = "STUB: not implemented"; return }
 
 // Input for setChatTitle.
 // Ref: #/components/schemas/setChatTitle
@@ -22194,26 +23144,34 @@ type SetChatTitle struct {
 
 // GetChatID returns the value of ChatID.
 func (s *SetChatTitle) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return *new(ID)
 }
 
-// GetTitle returns the value of Title.
 func (s *SetChatTitle) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return ""
 }
 
-// SetChatID sets the value of ChatID.
 func (s *SetChatTitle) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *SetChatTitle) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// Input for setGameScore.
+	// Ref: #/components/schemas/setGameScore
+	return
 }
 
-// Input for setGameScore.
-// Ref: #/components/schemas/setGameScore
 type SetGameScore struct {
 	// User identifier.
 	UserID int64 `json:"user_id"`
@@ -22234,73 +23192,93 @@ type SetGameScore struct {
 
 // GetUserID returns the value of UserID.
 func (s *SetGameScore) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetScore returns the value of Score.
+	return 0
 }
 
-// GetScore returns the value of Score.
 func (s *SetGameScore) GetScore() int {
-	return s.Score
+	_ = "STUB: not implemented"
+
+	// GetForce returns the value of Force.
+	return 0
 }
 
-// GetForce returns the value of Force.
 func (s *SetGameScore) GetForce() OptBool {
-	return s.Force
+	_ = "STUB: not implemented"
+
+	// GetDisableEditMessage returns the value of DisableEditMessage.
+	return *new(OptBool)
 }
 
-// GetDisableEditMessage returns the value of DisableEditMessage.
 func (s *SetGameScore) GetDisableEditMessage() OptBool {
-	return s.DisableEditMessage
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetChatID returns the value of ChatID.
 func (s *SetGameScore) GetChatID() OptInt64 {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(OptInt64)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *SetGameScore) GetMessageID() OptInt {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// GetInlineMessageID returns the value of InlineMessageID.
+	return *new(OptInt)
 }
 
-// GetInlineMessageID returns the value of InlineMessageID.
 func (s *SetGameScore) GetInlineMessageID() OptString {
-	return s.InlineMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// SetUserID sets the value of UserID.
+	new(OptString)
 }
 
-// SetUserID sets the value of UserID.
 func (s *SetGameScore) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetScore sets the value of Score.
+	return
 }
 
-// SetScore sets the value of Score.
 func (s *SetGameScore) SetScore(val int) {
-	s.Score = val
+	_ = "STUB: not implemented"
+
+	// SetForce sets the value of Force.
+	return
 }
 
-// SetForce sets the value of Force.
 func (s *SetGameScore) SetForce(val OptBool) {
-	s.Force = val
+	_ = "STUB: not implemented"
+
+	// SetDisableEditMessage sets the value of DisableEditMessage.
+	return
 }
 
-// SetDisableEditMessage sets the value of DisableEditMessage.
-func (s *SetGameScore) SetDisableEditMessage(val OptBool) {
-	s.DisableEditMessage = val
-}
+func (s *SetGameScore) SetDisableEditMessage(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetChatID sets the value of ChatID.
 func (s *SetGameScore) SetChatID(val OptInt64) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *SetGameScore) SetMessageID(val OptInt) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetInlineMessageID sets the value of InlineMessageID.
+	return
 }
 
-// SetInlineMessageID sets the value of InlineMessageID.
-func (s *SetGameScore) SetInlineMessageID(val OptString) {
-	s.InlineMessageID = val
-}
+func (s *SetGameScore) SetInlineMessageID(val OptString) { _ = "STUB: not implemented"; return }
 
 // Input for setMyCommands.
 // Ref: #/components/schemas/setMyCommands
@@ -22316,33 +23294,42 @@ type SetMyCommands struct {
 
 // GetCommands returns the value of Commands.
 func (s *SetMyCommands) GetCommands() []BotCommand {
-	return s.Commands
+	_ = "STUB: not implemented"
+
+	// GetScope returns the value of Scope.
+	return nil
 }
 
-// GetScope returns the value of Scope.
 func (s *SetMyCommands) GetScope() OptBotCommandScope {
-	return s.Scope
+	_ = "STUB: not implemented"
+
+	// GetLanguageCode returns the value of LanguageCode.
+	return *new(OptBotCommandScope)
 }
 
-// GetLanguageCode returns the value of LanguageCode.
 func (s *SetMyCommands) GetLanguageCode() OptString {
-	return s.LanguageCode
+	_ = "STUB: not implemented"
+	return *
+
+	// SetCommands sets the value of Commands.
+	new(OptString)
 }
 
-// SetCommands sets the value of Commands.
 func (s *SetMyCommands) SetCommands(val []BotCommand) {
-	s.Commands = val
+	_ = "STUB: not implemented"
+
+	// SetScope sets the value of Scope.
+	return
 }
 
-// SetScope sets the value of Scope.
 func (s *SetMyCommands) SetScope(val OptBotCommandScope) {
-	s.Scope = val
+	_ = "STUB: not implemented"
+
+	// SetLanguageCode sets the value of LanguageCode.
+	return
 }
 
-// SetLanguageCode sets the value of LanguageCode.
-func (s *SetMyCommands) SetLanguageCode(val OptString) {
-	s.LanguageCode = val
-}
+func (s *SetMyCommands) SetLanguageCode(val OptString) { _ = "STUB: not implemented"; return }
 
 // Input for setPassportDataErrors.
 // Ref: #/components/schemas/setPassportDataErrors
@@ -22355,26 +23342,34 @@ type SetPassportDataErrors struct {
 
 // GetUserID returns the value of UserID.
 func (s *SetPassportDataErrors) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetErrors returns the value of Errors.
+	return 0
 }
 
-// GetErrors returns the value of Errors.
 func (s *SetPassportDataErrors) GetErrors() []PassportElementError {
-	return s.Errors
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return nil
 }
 
-// SetUserID sets the value of UserID.
 func (s *SetPassportDataErrors) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetErrors sets the value of Errors.
+	return
 }
 
-// SetErrors sets the value of Errors.
 func (s *SetPassportDataErrors) SetErrors(val []PassportElementError) {
-	s.Errors = val
+	_ = "STUB: not implemented"
+
+	// Input for setStickerPositionInSet.
+	// Ref: #/components/schemas/setStickerPositionInSet
+	return
 }
 
-// Input for setStickerPositionInSet.
-// Ref: #/components/schemas/setStickerPositionInSet
 type SetStickerPositionInSet struct {
 	// File identifier of the sticker.
 	Sticker string `json:"sticker"`
@@ -22384,26 +23379,34 @@ type SetStickerPositionInSet struct {
 
 // GetSticker returns the value of Sticker.
 func (s *SetStickerPositionInSet) GetSticker() string {
-	return s.Sticker
+	_ = "STUB: not implemented"
+
+	// GetPosition returns the value of Position.
+	return ""
 }
 
-// GetPosition returns the value of Position.
 func (s *SetStickerPositionInSet) GetPosition() int {
-	return s.Position
+	_ = "STUB: not implemented"
+
+	// SetSticker sets the value of Sticker.
+	return 0
 }
 
-// SetSticker sets the value of Sticker.
 func (s *SetStickerPositionInSet) SetSticker(val string) {
-	s.Sticker = val
+	_ = "STUB: not implemented"
+
+	// SetPosition sets the value of Position.
+	return
 }
 
-// SetPosition sets the value of Position.
 func (s *SetStickerPositionInSet) SetPosition(val int) {
-	s.Position = val
+	_ = "STUB: not implemented"
+
+	// Input for setStickerSetThumb.
+	// Ref: #/components/schemas/setStickerSetThumb
+	return
 }
 
-// Input for setStickerSetThumb.
-// Ref: #/components/schemas/setStickerSetThumb
 type SetStickerSetThumb struct {
 	// Sticker set name.
 	Name string `json:"name"`
@@ -22421,36 +23424,48 @@ type SetStickerSetThumb struct {
 
 // GetName returns the value of Name.
 func (s *SetStickerSetThumb) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return ""
 }
 
-// GetUserID returns the value of UserID.
 func (s *SetStickerSetThumb) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return 0
 }
 
-// GetThumb returns the value of Thumb.
 func (s *SetStickerSetThumb) GetThumb() OptString {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return *new(OptString)
 }
 
-// SetName sets the value of Name.
 func (s *SetStickerSetThumb) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *SetStickerSetThumb) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *SetStickerSetThumb) SetThumb(val OptString) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// Input for setWebhook.
+	// Ref: #/components/schemas/setWebhook
+	return
 }
 
-// Input for setWebhook.
-// Ref: #/components/schemas/setWebhook
 type SetWebhook struct {
 	// HTTPS url to send updates to. Use an empty string to remove webhook integration.
 	URL url.URL `json:"url"`
@@ -22477,63 +23492,68 @@ type SetWebhook struct {
 
 // GetURL returns the value of URL.
 func (s *SetWebhook) GetURL() url.URL {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetCertificate returns the value of Certificate.
+	return *new(url.URL)
 }
 
-// GetCertificate returns the value of Certificate.
 func (s *SetWebhook) GetCertificate() OptString {
-	return s.Certificate
+	_ = "STUB: not implemented"
+	return *
+
+	// GetIPAddress returns the value of IPAddress.
+	new(OptString)
 }
 
-// GetIPAddress returns the value of IPAddress.
 func (s *SetWebhook) GetIPAddress() OptString {
-	return s.IPAddress
+	_ = "STUB: not implemented"
+
+	// GetMaxConnections returns the value of MaxConnections.
+	return *new(OptString)
 }
 
-// GetMaxConnections returns the value of MaxConnections.
 func (s *SetWebhook) GetMaxConnections() OptInt {
-	return s.MaxConnections
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowedUpdates returns the value of AllowedUpdates.
+	new(OptInt)
 }
 
-// GetAllowedUpdates returns the value of AllowedUpdates.
-func (s *SetWebhook) GetAllowedUpdates() []string {
-	return s.AllowedUpdates
-}
+func (s *SetWebhook) GetAllowedUpdates() []string { _ = "STUB: not implemented"; return nil }
 
 // GetDropPendingUpdates returns the value of DropPendingUpdates.
 func (s *SetWebhook) GetDropPendingUpdates() OptBool {
-	return s.DropPendingUpdates
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // SetURL sets the value of URL.
 func (s *SetWebhook) SetURL(val url.URL) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetCertificate sets the value of Certificate.
+	return
 }
 
-// SetCertificate sets the value of Certificate.
-func (s *SetWebhook) SetCertificate(val OptString) {
-	s.Certificate = val
-}
+func (s *SetWebhook) SetCertificate(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetIPAddress sets the value of IPAddress.
 func (s *SetWebhook) SetIPAddress(val OptString) {
-	s.IPAddress = val
+	_ = "STUB: not implemented"
+
+	// SetMaxConnections sets the value of MaxConnections.
+	return
 }
 
-// SetMaxConnections sets the value of MaxConnections.
-func (s *SetWebhook) SetMaxConnections(val OptInt) {
-	s.MaxConnections = val
-}
+func (s *SetWebhook) SetMaxConnections(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowedUpdates sets the value of AllowedUpdates.
-func (s *SetWebhook) SetAllowedUpdates(val []string) {
-	s.AllowedUpdates = val
-}
+func (s *SetWebhook) SetAllowedUpdates(val []string) { _ = "STUB: not implemented"; return }
 
 // SetDropPendingUpdates sets the value of DropPendingUpdates.
-func (s *SetWebhook) SetDropPendingUpdates(val OptBool) {
-	s.DropPendingUpdates = val
-}
+func (s *SetWebhook) SetDropPendingUpdates(val OptBool) { _ = "STUB: not implemented"; return }
 
 // This object represents a shipping address.
 // Ref: #/components/schemas/ShippingAddress
@@ -22553,67 +23573,67 @@ type ShippingAddress struct {
 }
 
 // GetCountryCode returns the value of CountryCode.
-func (s *ShippingAddress) GetCountryCode() string {
-	return s.CountryCode
-}
+func (s *ShippingAddress) GetCountryCode() string { _ = "STUB: not implemented"; return "" }
 
 // GetState returns the value of State.
 func (s *ShippingAddress) GetState() string {
-	return s.State
+	_ = "STUB: not implemented"
+
+	// GetCity returns the value of City.
+	return ""
 }
 
-// GetCity returns the value of City.
 func (s *ShippingAddress) GetCity() string {
-	return s.City
+	_ = "STUB: not implemented"
+
+	// GetStreetLine1 returns the value of StreetLine1.
+	return ""
 }
 
-// GetStreetLine1 returns the value of StreetLine1.
-func (s *ShippingAddress) GetStreetLine1() string {
-	return s.StreetLine1
-}
+func (s *ShippingAddress) GetStreetLine1() string { _ = "STUB: not implemented"; return "" }
 
 // GetStreetLine2 returns the value of StreetLine2.
-func (s *ShippingAddress) GetStreetLine2() string {
-	return s.StreetLine2
-}
+func (s *ShippingAddress) GetStreetLine2() string { _ = "STUB: not implemented"; return "" }
 
 // GetPostCode returns the value of PostCode.
 func (s *ShippingAddress) GetPostCode() string {
-	return s.PostCode
+	_ = "STUB: not implemented"
+
+	// SetCountryCode sets the value of CountryCode.
+	return ""
 }
 
-// SetCountryCode sets the value of CountryCode.
-func (s *ShippingAddress) SetCountryCode(val string) {
-	s.CountryCode = val
-}
+func (s *ShippingAddress) SetCountryCode(val string) { _ = "STUB: not implemented"; return }
 
 // SetState sets the value of State.
 func (s *ShippingAddress) SetState(val string) {
-	s.State = val
+	_ = "STUB: not implemented"
+
+	// SetCity sets the value of City.
+	return
 }
 
-// SetCity sets the value of City.
 func (s *ShippingAddress) SetCity(val string) {
-	s.City = val
+	_ = "STUB: not implemented"
+
+	// SetStreetLine1 sets the value of StreetLine1.
+	return
 }
 
-// SetStreetLine1 sets the value of StreetLine1.
-func (s *ShippingAddress) SetStreetLine1(val string) {
-	s.StreetLine1 = val
-}
+func (s *ShippingAddress) SetStreetLine1(val string) { _ = "STUB: not implemented"; return }
 
 // SetStreetLine2 sets the value of StreetLine2.
-func (s *ShippingAddress) SetStreetLine2(val string) {
-	s.StreetLine2 = val
-}
+func (s *ShippingAddress) SetStreetLine2(val string) { _ = "STUB: not implemented"; return }
 
 // SetPostCode sets the value of PostCode.
 func (s *ShippingAddress) SetPostCode(val string) {
-	s.PostCode = val
+	_ = "STUB: not implemented"
+
+	// This object represents one shipping option.
+	// Ref: #/components/schemas/ShippingOption
+	return
 }
 
-// This object represents one shipping option.
-// Ref: #/components/schemas/ShippingOption
 type ShippingOption struct {
 	// Shipping option identifier.
 	ID string `json:"id"`
@@ -22625,36 +23645,48 @@ type ShippingOption struct {
 
 // GetID returns the value of ID.
 func (s *ShippingOption) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return ""
 }
 
-// GetTitle returns the value of Title.
 func (s *ShippingOption) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetPrices returns the value of Prices.
+	return ""
 }
 
-// GetPrices returns the value of Prices.
 func (s *ShippingOption) GetPrices() []LabeledPrice {
-	return s.Prices
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return nil
 }
 
-// SetID sets the value of ID.
 func (s *ShippingOption) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *ShippingOption) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetPrices sets the value of Prices.
+	return
 }
 
-// SetPrices sets the value of Prices.
 func (s *ShippingOption) SetPrices(val []LabeledPrice) {
-	s.Prices = val
+	_ = "STUB: not implemented"
+
+	// This object contains information about an incoming shipping query.
+	// Ref: #/components/schemas/ShippingQuery
+	return
 }
 
-// This object contains information about an incoming shipping query.
-// Ref: #/components/schemas/ShippingQuery
 type ShippingQuery struct {
 	// Unique query identifier.
 	ID   string `json:"id"`
@@ -22666,43 +23698,48 @@ type ShippingQuery struct {
 
 // GetID returns the value of ID.
 func (s *ShippingQuery) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetFrom returns the value of From.
+	return ""
 }
 
-// GetFrom returns the value of From.
 func (s *ShippingQuery) GetFrom() User {
-	return s.From
+	_ = "STUB: not implemented"
+
+	// GetInvoicePayload returns the value of InvoicePayload.
+	return *new(User)
 }
 
-// GetInvoicePayload returns the value of InvoicePayload.
-func (s *ShippingQuery) GetInvoicePayload() string {
-	return s.InvoicePayload
-}
+func (s *ShippingQuery) GetInvoicePayload() string { _ = "STUB: not implemented"; return "" }
 
 // GetShippingAddress returns the value of ShippingAddress.
 func (s *ShippingQuery) GetShippingAddress() ShippingAddress {
-	return s.ShippingAddress
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(ShippingAddress)
 }
 
-// SetID sets the value of ID.
 func (s *ShippingQuery) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetFrom sets the value of From.
+	return
 }
 
-// SetFrom sets the value of From.
 func (s *ShippingQuery) SetFrom(val User) {
-	s.From = val
+	_ = "STUB: not implemented"
+
+	// SetInvoicePayload sets the value of InvoicePayload.
+	return
 }
 
-// SetInvoicePayload sets the value of InvoicePayload.
-func (s *ShippingQuery) SetInvoicePayload(val string) {
-	s.InvoicePayload = val
-}
+func (s *ShippingQuery) SetInvoicePayload(val string) { _ = "STUB: not implemented"; return }
 
 // SetShippingAddress sets the value of ShippingAddress.
-func (s *ShippingQuery) SetShippingAddress(val ShippingAddress) {
-	s.ShippingAddress = val
-}
+func (s *ShippingQuery) SetShippingAddress(val ShippingAddress) { _ = "STUB: not implemented"; return }
 
 // This object represents a sticker.
 // Ref: #/components/schemas/Sticker
@@ -22730,106 +23767,131 @@ type Sticker struct {
 
 // GetFileID returns the value of FileID.
 func (s *Sticker) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// GetFileUniqueID returns the value of FileUniqueID.
+	return ""
 }
 
-// GetFileUniqueID returns the value of FileUniqueID.
-func (s *Sticker) GetFileUniqueID() string {
-	return s.FileUniqueID
-}
+func (s *Sticker) GetFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetWidth returns the value of Width.
 func (s *Sticker) GetWidth() int {
-	return s.Width
+	_ = "STUB: not implemented"
+
+	// GetHeight returns the value of Height.
+	return 0
 }
 
-// GetHeight returns the value of Height.
 func (s *Sticker) GetHeight() int {
-	return s.Height
+	_ = "STUB: not implemented"
+
+	// GetIsAnimated returns the value of IsAnimated.
+	return 0
 }
 
-// GetIsAnimated returns the value of IsAnimated.
-func (s *Sticker) GetIsAnimated() bool {
-	return s.IsAnimated
-}
+func (s *Sticker) GetIsAnimated() bool { _ = "STUB: not implemented"; return false }
 
 // GetThumb returns the value of Thumb.
 func (s *Sticker) GetThumb() OptPhotoSize {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetEmoji returns the value of Emoji.
+	return *new(OptPhotoSize)
 }
 
-// GetEmoji returns the value of Emoji.
 func (s *Sticker) GetEmoji() OptString {
-	return s.Emoji
+	_ = "STUB: not implemented"
+
+	// GetSetName returns the value of SetName.
+	return *new(OptString)
 }
 
-// GetSetName returns the value of SetName.
 func (s *Sticker) GetSetName() OptString {
-	return s.SetName
+	_ = "STUB: not implemented"
+
+	// GetMaskPosition returns the value of MaskPosition.
+	return *new(OptString)
 }
 
-// GetMaskPosition returns the value of MaskPosition.
 func (s *Sticker) GetMaskPosition() OptMaskPosition {
-	return s.MaskPosition
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFileSize returns the value of FileSize.
+	new(OptMaskPosition)
 }
 
-// GetFileSize returns the value of FileSize.
 func (s *Sticker) GetFileSize() OptInt {
-	return s.FileSize
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return *new(OptInt)
 }
 
-// SetFileID sets the value of FileID.
 func (s *Sticker) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// SetFileUniqueID sets the value of FileUniqueID.
+	return
 }
 
-// SetFileUniqueID sets the value of FileUniqueID.
-func (s *Sticker) SetFileUniqueID(val string) {
-	s.FileUniqueID = val
-}
+func (s *Sticker) SetFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetWidth sets the value of Width.
 func (s *Sticker) SetWidth(val int) {
-	s.Width = val
+	_ = "STUB: not implemented"
+
+	// SetHeight sets the value of Height.
+	return
 }
 
-// SetHeight sets the value of Height.
 func (s *Sticker) SetHeight(val int) {
-	s.Height = val
+	_ = "STUB: not implemented"
+
+	// SetIsAnimated sets the value of IsAnimated.
+	return
 }
 
-// SetIsAnimated sets the value of IsAnimated.
 func (s *Sticker) SetIsAnimated(val bool) {
-	s.IsAnimated = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *Sticker) SetThumb(val OptPhotoSize) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetEmoji sets the value of Emoji.
+	return
 }
 
-// SetEmoji sets the value of Emoji.
 func (s *Sticker) SetEmoji(val OptString) {
-	s.Emoji = val
+	_ = "STUB: not implemented"
+
+	// SetSetName sets the value of SetName.
+	return
 }
 
-// SetSetName sets the value of SetName.
 func (s *Sticker) SetSetName(val OptString) {
-	s.SetName = val
+	_ = "STUB: not implemented"
+
+	// SetMaskPosition sets the value of MaskPosition.
+	return
 }
 
-// SetMaskPosition sets the value of MaskPosition.
-func (s *Sticker) SetMaskPosition(val OptMaskPosition) {
-	s.MaskPosition = val
-}
+func (s *Sticker) SetMaskPosition(val OptMaskPosition) { _ = "STUB: not implemented"; return }
 
 // SetFileSize sets the value of FileSize.
 func (s *Sticker) SetFileSize(val OptInt) {
-	s.FileSize = val
+	_ = "STUB: not implemented"
+
+	// Input for stopMessageLiveLocation.
+	// Ref: #/components/schemas/stopMessageLiveLocation
+	return
 }
 
-// Input for stopMessageLiveLocation.
-// Ref: #/components/schemas/stopMessageLiveLocation
 type StopMessageLiveLocation struct {
 	ChatID OptID `json:"chat_id"`
 	// Required if inline_message_id is not specified. Identifier of the message with live location to
@@ -22842,46 +23904,65 @@ type StopMessageLiveLocation struct {
 
 // GetChatID returns the value of ChatID.
 func (s *StopMessageLiveLocation) GetChatID() OptID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(OptID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *StopMessageLiveLocation) GetMessageID() OptInt {
-	return s.MessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetInlineMessageID returns the value of InlineMessageID.
+	new(OptInt)
 }
 
-// GetInlineMessageID returns the value of InlineMessageID.
 func (s *StopMessageLiveLocation) GetInlineMessageID() OptString {
-	return s.InlineMessageID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
+	new(OptString)
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *StopMessageLiveLocation) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *StopMessageLiveLocation) SetChatID(val OptID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *StopMessageLiveLocation) SetMessageID(val OptInt) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetInlineMessageID sets the value of InlineMessageID.
+	return
 }
 
-// SetInlineMessageID sets the value of InlineMessageID.
 func (s *StopMessageLiveLocation) SetInlineMessageID(val OptString) {
-	s.InlineMessageID = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
 func (s *StopMessageLiveLocation) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
+	_ = "STUB: not implemented"
+	return
+
+	// Input for stopPoll.
+	// Ref: #/components/schemas/stopPoll
 }
 
-// Input for stopPoll.
-// Ref: #/components/schemas/stopPoll
 type StopPoll struct {
 	ChatID ID `json:"chat_id"`
 	// Identifier of the original message with the poll.
@@ -22891,33 +23972,42 @@ type StopPoll struct {
 
 // GetChatID returns the value of ChatID.
 func (s *StopPoll) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(ID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *StopPoll) GetMessageID() int {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// GetReplyMarkup returns the value of ReplyMarkup.
+	return 0
 }
 
-// GetReplyMarkup returns the value of ReplyMarkup.
 func (s *StopPoll) GetReplyMarkup() OptInlineKeyboardMarkup {
-	return s.ReplyMarkup
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptInlineKeyboardMarkup)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *StopPoll) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *StopPoll) SetMessageID(val int) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// SetReplyMarkup sets the value of ReplyMarkup.
+	return
 }
 
-// SetReplyMarkup sets the value of ReplyMarkup.
-func (s *StopPoll) SetReplyMarkup(val OptInlineKeyboardMarkup) {
-	s.ReplyMarkup = val
-}
+func (s *StopPoll) SetReplyMarkup(val OptInlineKeyboardMarkup) { _ = "STUB: not implemented"; return }
 
 // This object contains basic information about a successful payment.
 // Ref: #/components/schemas/SuccessfulPayment
@@ -22941,72 +24031,76 @@ type SuccessfulPayment struct {
 
 // GetCurrency returns the value of Currency.
 func (s *SuccessfulPayment) GetCurrency() string {
-	return s.Currency
+	_ = "STUB: not implemented"
+
+	// GetTotalAmount returns the value of TotalAmount.
+	return ""
 }
 
-// GetTotalAmount returns the value of TotalAmount.
-func (s *SuccessfulPayment) GetTotalAmount() int {
-	return s.TotalAmount
-}
+func (s *SuccessfulPayment) GetTotalAmount() int { _ = "STUB: not implemented"; return 0 }
 
 // GetInvoicePayload returns the value of InvoicePayload.
-func (s *SuccessfulPayment) GetInvoicePayload() string {
-	return s.InvoicePayload
-}
+func (s *SuccessfulPayment) GetInvoicePayload() string { _ = "STUB: not implemented"; return "" }
 
 // GetShippingOptionID returns the value of ShippingOptionID.
 func (s *SuccessfulPayment) GetShippingOptionID() OptString {
-	return s.ShippingOptionID
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetOrderInfo returns the value of OrderInfo.
 func (s *SuccessfulPayment) GetOrderInfo() OptOrderInfo {
-	return s.OrderInfo
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTelegramPaymentChargeID returns the value of TelegramPaymentChargeID.
+	new(OptOrderInfo)
 }
 
-// GetTelegramPaymentChargeID returns the value of TelegramPaymentChargeID.
 func (s *SuccessfulPayment) GetTelegramPaymentChargeID() string {
-	return s.TelegramPaymentChargeID
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetProviderPaymentChargeID returns the value of ProviderPaymentChargeID.
 func (s *SuccessfulPayment) GetProviderPaymentChargeID() string {
-	return s.ProviderPaymentChargeID
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // SetCurrency sets the value of Currency.
 func (s *SuccessfulPayment) SetCurrency(val string) {
-	s.Currency = val
+	_ = "STUB: not implemented"
+
+	// SetTotalAmount sets the value of TotalAmount.
+	return
 }
 
-// SetTotalAmount sets the value of TotalAmount.
-func (s *SuccessfulPayment) SetTotalAmount(val int) {
-	s.TotalAmount = val
-}
+func (s *SuccessfulPayment) SetTotalAmount(val int) { _ = "STUB: not implemented"; return }
 
 // SetInvoicePayload sets the value of InvoicePayload.
-func (s *SuccessfulPayment) SetInvoicePayload(val string) {
-	s.InvoicePayload = val
-}
+func (s *SuccessfulPayment) SetInvoicePayload(val string) { _ = "STUB: not implemented"; return }
 
 // SetShippingOptionID sets the value of ShippingOptionID.
-func (s *SuccessfulPayment) SetShippingOptionID(val OptString) {
-	s.ShippingOptionID = val
-}
+func (s *SuccessfulPayment) SetShippingOptionID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetOrderInfo sets the value of OrderInfo.
 func (s *SuccessfulPayment) SetOrderInfo(val OptOrderInfo) {
-	s.OrderInfo = val
+	_ = "STUB: not implemented"
+
+	// SetTelegramPaymentChargeID sets the value of TelegramPaymentChargeID.
+	return
 }
 
-// SetTelegramPaymentChargeID sets the value of TelegramPaymentChargeID.
 func (s *SuccessfulPayment) SetTelegramPaymentChargeID(val string) {
-	s.TelegramPaymentChargeID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetProviderPaymentChargeID sets the value of ProviderPaymentChargeID.
 func (s *SuccessfulPayment) SetProviderPaymentChargeID(val string) {
-	s.ProviderPaymentChargeID = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // Input for unbanChatMember.
@@ -23021,33 +24115,42 @@ type UnbanChatMember struct {
 
 // GetChatID returns the value of ChatID.
 func (s *UnbanChatMember) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetUserID returns the value of UserID.
+	return *new(ID)
 }
 
-// GetUserID returns the value of UserID.
 func (s *UnbanChatMember) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetOnlyIfBanned returns the value of OnlyIfBanned.
+	return 0
 }
 
-// GetOnlyIfBanned returns the value of OnlyIfBanned.
 func (s *UnbanChatMember) GetOnlyIfBanned() OptBool {
-	return s.OnlyIfBanned
+	_ = "STUB: not implemented"
+	return *
+
+	// SetChatID sets the value of ChatID.
+	new(OptBool)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *UnbanChatMember) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetUserID sets the value of UserID.
+	return
 }
 
-// SetUserID sets the value of UserID.
 func (s *UnbanChatMember) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetOnlyIfBanned sets the value of OnlyIfBanned.
+	return
 }
 
-// SetOnlyIfBanned sets the value of OnlyIfBanned.
-func (s *UnbanChatMember) SetOnlyIfBanned(val OptBool) {
-	s.OnlyIfBanned = val
-}
+func (s *UnbanChatMember) SetOnlyIfBanned(val OptBool) { _ = "STUB: not implemented"; return }
 
 // Input for unbanChatSenderChat.
 // Ref: #/components/schemas/unbanChatSenderChat
@@ -23059,23 +24162,23 @@ type UnbanChatSenderChat struct {
 
 // GetChatID returns the value of ChatID.
 func (s *UnbanChatSenderChat) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetSenderChatID returns the value of SenderChatID.
+	return *new(ID)
 }
 
-// GetSenderChatID returns the value of SenderChatID.
-func (s *UnbanChatSenderChat) GetSenderChatID() int64 {
-	return s.SenderChatID
-}
+func (s *UnbanChatSenderChat) GetSenderChatID() int64 { _ = "STUB: not implemented"; return 0 }
 
 // SetChatID sets the value of ChatID.
 func (s *UnbanChatSenderChat) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetSenderChatID sets the value of SenderChatID.
+	return
 }
 
-// SetSenderChatID sets the value of SenderChatID.
-func (s *UnbanChatSenderChat) SetSenderChatID(val int64) {
-	s.SenderChatID = val
-}
+func (s *UnbanChatSenderChat) SetSenderChatID(val int64) { _ = "STUB: not implemented"; return }
 
 // Input for unpinAllChatMessages.
 // Ref: #/components/schemas/unpinAllChatMessages
@@ -23085,16 +24188,20 @@ type UnpinAllChatMessages struct {
 
 // GetChatID returns the value of ChatID.
 func (s *UnpinAllChatMessages) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return *new(ID)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *UnpinAllChatMessages) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// Input for unpinChatMessage.
+	// Ref: #/components/schemas/unpinChatMessage
+	return
 }
 
-// Input for unpinChatMessage.
-// Ref: #/components/schemas/unpinChatMessage
 type UnpinChatMessage struct {
 	ChatID ID `json:"chat_id"`
 	// Identifier of a message to unpin. If not specified, the most recent pinned message (by sending
@@ -23104,27 +24211,35 @@ type UnpinChatMessage struct {
 
 // GetChatID returns the value of ChatID.
 func (s *UnpinChatMessage) GetChatID() ID {
-	return s.ChatID
+	_ = "STUB: not implemented"
+
+	// GetMessageID returns the value of MessageID.
+	return *new(ID)
 }
 
-// GetMessageID returns the value of MessageID.
 func (s *UnpinChatMessage) GetMessageID() OptInt {
-	return s.MessageID
+	_ = "STUB: not implemented"
+
+	// SetChatID sets the value of ChatID.
+	return *new(OptInt)
 }
 
-// SetChatID sets the value of ChatID.
 func (s *UnpinChatMessage) SetChatID(val ID) {
-	s.ChatID = val
+	_ = "STUB: not implemented"
+
+	// SetMessageID sets the value of MessageID.
+	return
 }
 
-// SetMessageID sets the value of MessageID.
 func (s *UnpinChatMessage) SetMessageID(val OptInt) {
-	s.MessageID = val
+	_ = "STUB: not implemented"
+
+	// This object represents an incoming update.At most one of the optional parameters can be present in
+	// any given update.
+	// Ref: #/components/schemas/Update
+	return
 }
 
-// This object represents an incoming update.At most one of the optional parameters can be present in
-// any given update.
-// Ref: #/components/schemas/Update
 type Update struct {
 	// The update's unique identifier. Update identifiers start from a certain positive number and
 	// increase sequentially. This ID becomes especially handy if you're using Webhooks, since it allows
@@ -23150,153 +24265,182 @@ type Update struct {
 
 // GetUpdateID returns the value of UpdateID.
 func (s *Update) GetUpdateID() int {
-	return s.UpdateID
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return 0
 }
 
-// GetMessage returns the value of Message.
 func (s *Update) GetMessage() OptMessage {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// GetEditedMessage returns the value of EditedMessage.
+	return *new(OptMessage)
 }
 
-// GetEditedMessage returns the value of EditedMessage.
 func (s *Update) GetEditedMessage() OptMessage {
-	return s.EditedMessage
+	_ = "STUB: not implemented"
+	return *
+
+	// GetChannelPost returns the value of ChannelPost.
+	new(OptMessage)
 }
 
-// GetChannelPost returns the value of ChannelPost.
 func (s *Update) GetChannelPost() OptMessage {
-	return s.ChannelPost
+	_ = "STUB: not implemented"
+	return *
+
+	// GetEditedChannelPost returns the value of EditedChannelPost.
+	new(OptMessage)
 }
 
-// GetEditedChannelPost returns the value of EditedChannelPost.
 func (s *Update) GetEditedChannelPost() OptMessage {
-	return s.EditedChannelPost
+	_ = "STUB: not implemented"
+	return *new(OptMessage)
 }
 
 // GetInlineQuery returns the value of InlineQuery.
 func (s *Update) GetInlineQuery() OptInlineQuery {
-	return s.InlineQuery
+	_ = "STUB: not implemented"
+	return *
+
+	// GetChosenInlineResult returns the value of ChosenInlineResult.
+	new(OptInlineQuery)
 }
 
-// GetChosenInlineResult returns the value of ChosenInlineResult.
 func (s *Update) GetChosenInlineResult() OptChosenInlineResult {
-	return s.ChosenInlineResult
+	_ = "STUB: not implemented"
+	return *new(OptChosenInlineResult)
 }
 
 // GetCallbackQuery returns the value of CallbackQuery.
 func (s *Update) GetCallbackQuery() OptCallbackQuery {
-	return s.CallbackQuery
+	_ = "STUB: not implemented"
+	return *
+
+	// GetShippingQuery returns the value of ShippingQuery.
+	new(OptCallbackQuery)
 }
 
-// GetShippingQuery returns the value of ShippingQuery.
 func (s *Update) GetShippingQuery() OptShippingQuery {
-	return s.ShippingQuery
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPreCheckoutQuery returns the value of PreCheckoutQuery.
+	new(OptShippingQuery)
 }
 
-// GetPreCheckoutQuery returns the value of PreCheckoutQuery.
 func (s *Update) GetPreCheckoutQuery() OptPreCheckoutQuery {
-	return s.PreCheckoutQuery
+	_ = "STUB: not implemented"
+	return *new(OptPreCheckoutQuery)
 }
 
 // GetPoll returns the value of Poll.
 func (s *Update) GetPoll() OptPoll {
-	return s.Poll
+	_ = "STUB: not implemented"
+
+	// GetPollAnswer returns the value of PollAnswer.
+	return *new(OptPoll)
 }
 
-// GetPollAnswer returns the value of PollAnswer.
 func (s *Update) GetPollAnswer() OptPollAnswer {
-	return s.PollAnswer
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMyChatMember returns the value of MyChatMember.
+	new(OptPollAnswer)
 }
 
-// GetMyChatMember returns the value of MyChatMember.
 func (s *Update) GetMyChatMember() OptChatMemberUpdated {
-	return s.MyChatMember
+	_ = "STUB: not implemented"
+	return *
+
+	// GetChatMember returns the value of ChatMember.
+	new(OptChatMemberUpdated)
 }
 
-// GetChatMember returns the value of ChatMember.
 func (s *Update) GetChatMember() OptChatMemberUpdated {
-	return s.ChatMember
+	_ = "STUB: not implemented"
+	return *
+
+	// GetChatJoinRequest returns the value of ChatJoinRequest.
+	new(OptChatMemberUpdated)
 }
 
-// GetChatJoinRequest returns the value of ChatJoinRequest.
 func (s *Update) GetChatJoinRequest() OptChatJoinRequest {
-	return s.ChatJoinRequest
+	_ = "STUB: not implemented"
+	return *
+
+	// SetUpdateID sets the value of UpdateID.
+	new(OptChatJoinRequest)
 }
 
-// SetUpdateID sets the value of UpdateID.
 func (s *Update) SetUpdateID(val int) {
-	s.UpdateID = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *Update) SetMessage(val OptMessage) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// SetEditedMessage sets the value of EditedMessage.
+	return
 }
 
-// SetEditedMessage sets the value of EditedMessage.
-func (s *Update) SetEditedMessage(val OptMessage) {
-	s.EditedMessage = val
-}
+func (s *Update) SetEditedMessage(val OptMessage) { _ = "STUB: not implemented"; return }
 
 // SetChannelPost sets the value of ChannelPost.
-func (s *Update) SetChannelPost(val OptMessage) {
-	s.ChannelPost = val
-}
+func (s *Update) SetChannelPost(val OptMessage) { _ = "STUB: not implemented"; return }
 
 // SetEditedChannelPost sets the value of EditedChannelPost.
-func (s *Update) SetEditedChannelPost(val OptMessage) {
-	s.EditedChannelPost = val
-}
+func (s *Update) SetEditedChannelPost(val OptMessage) { _ = "STUB: not implemented"; return }
 
 // SetInlineQuery sets the value of InlineQuery.
-func (s *Update) SetInlineQuery(val OptInlineQuery) {
-	s.InlineQuery = val
-}
+func (s *Update) SetInlineQuery(val OptInlineQuery) { _ = "STUB: not implemented"; return }
 
 // SetChosenInlineResult sets the value of ChosenInlineResult.
 func (s *Update) SetChosenInlineResult(val OptChosenInlineResult) {
-	s.ChosenInlineResult = val
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetCallbackQuery sets the value of CallbackQuery.
-func (s *Update) SetCallbackQuery(val OptCallbackQuery) {
-	s.CallbackQuery = val
-}
+func (s *Update) SetCallbackQuery(val OptCallbackQuery) { _ = "STUB: not implemented"; return }
 
 // SetShippingQuery sets the value of ShippingQuery.
-func (s *Update) SetShippingQuery(val OptShippingQuery) {
-	s.ShippingQuery = val
-}
+func (s *Update) SetShippingQuery(val OptShippingQuery) { _ = "STUB: not implemented"; return }
 
 // SetPreCheckoutQuery sets the value of PreCheckoutQuery.
-func (s *Update) SetPreCheckoutQuery(val OptPreCheckoutQuery) {
-	s.PreCheckoutQuery = val
-}
+func (s *Update) SetPreCheckoutQuery(val OptPreCheckoutQuery) { _ = "STUB: not implemented"; return }
 
 // SetPoll sets the value of Poll.
 func (s *Update) SetPoll(val OptPoll) {
-	s.Poll = val
+	_ = "STUB: not implemented"
+
+	// SetPollAnswer sets the value of PollAnswer.
+	return
 }
 
-// SetPollAnswer sets the value of PollAnswer.
 func (s *Update) SetPollAnswer(val OptPollAnswer) {
-	s.PollAnswer = val
+	_ = "STUB: not implemented"
+
+	// SetMyChatMember sets the value of MyChatMember.
+	return
 }
 
-// SetMyChatMember sets the value of MyChatMember.
-func (s *Update) SetMyChatMember(val OptChatMemberUpdated) {
-	s.MyChatMember = val
-}
+func (s *Update) SetMyChatMember(val OptChatMemberUpdated) { _ = "STUB: not implemented"; return }
 
 // SetChatMember sets the value of ChatMember.
 func (s *Update) SetChatMember(val OptChatMemberUpdated) {
-	s.ChatMember = val
+	_ = "STUB: not implemented"
+
+	// SetChatJoinRequest sets the value of ChatJoinRequest.
+	return
 }
 
-// SetChatJoinRequest sets the value of ChatJoinRequest.
-func (s *Update) SetChatJoinRequest(val OptChatJoinRequest) {
-	s.ChatJoinRequest = val
-}
+func (s *Update) SetChatJoinRequest(val OptChatJoinRequest) { _ = "STUB: not implemented"; return }
 
 // Input for uploadStickerFile.
 // Ref: #/components/schemas/uploadStickerFile
@@ -23310,26 +24454,30 @@ type UploadStickerFile struct {
 
 // GetUserID returns the value of UserID.
 func (s *UploadStickerFile) GetUserID() int64 {
-	return s.UserID
+	_ = "STUB: not implemented"
+
+	// GetPNGSticker returns the value of PNGSticker.
+	return 0
 }
 
-// GetPNGSticker returns the value of PNGSticker.
-func (s *UploadStickerFile) GetPNGSticker() string {
-	return s.PNGSticker
-}
+func (s *UploadStickerFile) GetPNGSticker() string { _ = "STUB: not implemented"; return "" }
 
 // SetUserID sets the value of UserID.
 func (s *UploadStickerFile) SetUserID(val int64) {
-	s.UserID = val
+	_ = "STUB: not implemented"
+
+	// SetPNGSticker sets the value of PNGSticker.
+	return
 }
 
-// SetPNGSticker sets the value of PNGSticker.
 func (s *UploadStickerFile) SetPNGSticker(val string) {
-	s.PNGSticker = val
+	_ = "STUB: not implemented"
+
+	// This object represents a Telegram user or bot.
+	// Ref: #/components/schemas/User
+	return
 }
 
-// This object represents a Telegram user or bot.
-// Ref: #/components/schemas/User
 type User struct {
 	// Unique identifier for this user or bot. This number may have more than 32 significant bits and
 	// some programming languages may have difficulty/silent defects in interpreting it. But it has at
@@ -23356,93 +24504,110 @@ type User struct {
 
 // GetID returns the value of ID.
 func (s *User) GetID() int64 {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetIsBot returns the value of IsBot.
+	return 0
 }
 
-// GetIsBot returns the value of IsBot.
 func (s *User) GetIsBot() bool {
-	return s.IsBot
+	_ = "STUB: not implemented"
+
+	// GetFirstName returns the value of FirstName.
+	return false
 }
 
-// GetFirstName returns the value of FirstName.
 func (s *User) GetFirstName() string {
-	return s.FirstName
+	_ = "STUB: not implemented"
+
+	// GetLastName returns the value of LastName.
+	return ""
 }
 
-// GetLastName returns the value of LastName.
 func (s *User) GetLastName() OptString {
-	return s.LastName
+	_ = "STUB: not implemented"
+
+	// GetUsername returns the value of Username.
+	return *new(OptString)
 }
 
-// GetUsername returns the value of Username.
 func (s *User) GetUsername() OptString {
-	return s.Username
+	_ = "STUB: not implemented"
+
+	// GetLanguageCode returns the value of LanguageCode.
+	return *new(OptString)
 }
 
-// GetLanguageCode returns the value of LanguageCode.
 func (s *User) GetLanguageCode() OptString {
-	return s.LanguageCode
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanJoinGroups returns the value of CanJoinGroups.
+	new(OptString)
 }
 
-// GetCanJoinGroups returns the value of CanJoinGroups.
 func (s *User) GetCanJoinGroups() OptBool {
-	return s.CanJoinGroups
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCanReadAllGroupMessages returns the value of CanReadAllGroupMessages.
+	new(OptBool)
 }
 
-// GetCanReadAllGroupMessages returns the value of CanReadAllGroupMessages.
 func (s *User) GetCanReadAllGroupMessages() OptBool {
-	return s.CanReadAllGroupMessages
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetSupportsInlineQueries returns the value of SupportsInlineQueries.
-func (s *User) GetSupportsInlineQueries() OptBool {
-	return s.SupportsInlineQueries
-}
+func (s *User) GetSupportsInlineQueries() OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // SetID sets the value of ID.
 func (s *User) SetID(val int64) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetIsBot sets the value of IsBot.
+	return
 }
 
-// SetIsBot sets the value of IsBot.
 func (s *User) SetIsBot(val bool) {
-	s.IsBot = val
+	_ = "STUB: not implemented"
+
+	// SetFirstName sets the value of FirstName.
+	return
 }
 
-// SetFirstName sets the value of FirstName.
 func (s *User) SetFirstName(val string) {
-	s.FirstName = val
+	_ = "STUB: not implemented"
+
+	// SetLastName sets the value of LastName.
+	return
 }
 
-// SetLastName sets the value of LastName.
 func (s *User) SetLastName(val OptString) {
-	s.LastName = val
+	_ = "STUB: not implemented"
+
+	// SetUsername sets the value of Username.
+	return
 }
 
-// SetUsername sets the value of Username.
 func (s *User) SetUsername(val OptString) {
-	s.Username = val
+	_ = "STUB: not implemented"
+
+	// SetLanguageCode sets the value of LanguageCode.
+	return
 }
 
-// SetLanguageCode sets the value of LanguageCode.
-func (s *User) SetLanguageCode(val OptString) {
-	s.LanguageCode = val
-}
+func (s *User) SetLanguageCode(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetCanJoinGroups sets the value of CanJoinGroups.
-func (s *User) SetCanJoinGroups(val OptBool) {
-	s.CanJoinGroups = val
-}
+func (s *User) SetCanJoinGroups(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetCanReadAllGroupMessages sets the value of CanReadAllGroupMessages.
-func (s *User) SetCanReadAllGroupMessages(val OptBool) {
-	s.CanReadAllGroupMessages = val
-}
+func (s *User) SetCanReadAllGroupMessages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetSupportsInlineQueries sets the value of SupportsInlineQueries.
-func (s *User) SetSupportsInlineQueries(val OptBool) {
-	s.SupportsInlineQueries = val
-}
+func (s *User) SetSupportsInlineQueries(val OptBool) { _ = "STUB: not implemented"; return }
 
 // This object represent a user's profile pictures.
 // Ref: #/components/schemas/UserProfilePhotos
@@ -23454,27 +24619,31 @@ type UserProfilePhotos struct {
 }
 
 // GetTotalCount returns the value of TotalCount.
-func (s *UserProfilePhotos) GetTotalCount() int {
-	return s.TotalCount
-}
+func (s *UserProfilePhotos) GetTotalCount() int { _ = "STUB: not implemented"; return 0 }
 
 // GetPhotos returns the value of Photos.
 func (s *UserProfilePhotos) GetPhotos() [][]PhotoSize {
-	return s.Photos
+	_ = "STUB: not implemented"
+
+	// SetTotalCount sets the value of TotalCount.
+	return nil
 }
 
-// SetTotalCount sets the value of TotalCount.
 func (s *UserProfilePhotos) SetTotalCount(val int) {
-	s.TotalCount = val
+	_ = "STUB: not implemented"
+
+	// SetPhotos sets the value of Photos.
+	return
 }
 
-// SetPhotos sets the value of Photos.
 func (s *UserProfilePhotos) SetPhotos(val [][]PhotoSize) {
-	s.Photos = val
+	_ = "STUB: not implemented"
+
+	// This object represents a venue.
+	// Ref: #/components/schemas/Venue
+	return
 }
 
-// This object represents a venue.
-// Ref: #/components/schemas/Venue
 type Venue struct {
 	Location Location `json:"location"`
 	// Name of the venue.
@@ -23494,73 +24663,89 @@ type Venue struct {
 
 // GetLocation returns the value of Location.
 func (s *Venue) GetLocation() Location {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// GetTitle returns the value of Title.
+	return *new(Location)
 }
 
-// GetTitle returns the value of Title.
 func (s *Venue) GetTitle() string {
-	return s.Title
+	_ = "STUB: not implemented"
+
+	// GetAddress returns the value of Address.
+	return ""
 }
 
-// GetAddress returns the value of Address.
 func (s *Venue) GetAddress() string {
-	return s.Address
+	_ = "STUB: not implemented"
+
+	// GetFoursquareID returns the value of FoursquareID.
+	return ""
 }
 
-// GetFoursquareID returns the value of FoursquareID.
 func (s *Venue) GetFoursquareID() OptString {
-	return s.FoursquareID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFoursquareType returns the value of FoursquareType.
+	new(OptString)
 }
 
-// GetFoursquareType returns the value of FoursquareType.
 func (s *Venue) GetFoursquareType() OptString {
-	return s.FoursquareType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGooglePlaceID returns the value of GooglePlaceID.
+	new(OptString)
 }
 
-// GetGooglePlaceID returns the value of GooglePlaceID.
 func (s *Venue) GetGooglePlaceID() OptString {
-	return s.GooglePlaceID
+	_ = "STUB: not implemented"
+	return *
+
+	// GetGooglePlaceType returns the value of GooglePlaceType.
+	new(OptString)
 }
 
-// GetGooglePlaceType returns the value of GooglePlaceType.
 func (s *Venue) GetGooglePlaceType() OptString {
-	return s.GooglePlaceType
+	_ = "STUB: not implemented"
+	return *
+
+	// SetLocation sets the value of Location.
+	new(OptString)
 }
 
-// SetLocation sets the value of Location.
 func (s *Venue) SetLocation(val Location) {
-	s.Location = val
+	_ = "STUB: not implemented"
+
+	// SetTitle sets the value of Title.
+	return
 }
 
-// SetTitle sets the value of Title.
 func (s *Venue) SetTitle(val string) {
-	s.Title = val
+	_ = "STUB: not implemented"
+
+	// SetAddress sets the value of Address.
+	return
 }
 
-// SetAddress sets the value of Address.
 func (s *Venue) SetAddress(val string) {
-	s.Address = val
+	_ = "STUB: not implemented"
+
+	// SetFoursquareID sets the value of FoursquareID.
+	return
 }
 
-// SetFoursquareID sets the value of FoursquareID.
-func (s *Venue) SetFoursquareID(val OptString) {
-	s.FoursquareID = val
-}
+func (s *Venue) SetFoursquareID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetFoursquareType sets the value of FoursquareType.
-func (s *Venue) SetFoursquareType(val OptString) {
-	s.FoursquareType = val
-}
+func (s *Venue) SetFoursquareType(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetGooglePlaceID sets the value of GooglePlaceID.
-func (s *Venue) SetGooglePlaceID(val OptString) {
-	s.GooglePlaceID = val
-}
+func (s *Venue) SetGooglePlaceID(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetGooglePlaceType sets the value of GooglePlaceType.
-func (s *Venue) SetGooglePlaceType(val OptString) {
-	s.GooglePlaceType = val
-}
+func (s *Venue) SetGooglePlaceType(val OptString) { _ = "STUB: not implemented"; return }
 
 // This object represents a video file.
 // Ref: #/components/schemas/Video
@@ -23587,96 +24772,124 @@ type Video struct {
 
 // GetFileID returns the value of FileID.
 func (s *Video) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// GetFileUniqueID returns the value of FileUniqueID.
+	return ""
 }
 
-// GetFileUniqueID returns the value of FileUniqueID.
-func (s *Video) GetFileUniqueID() string {
-	return s.FileUniqueID
-}
+func (s *Video) GetFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetWidth returns the value of Width.
 func (s *Video) GetWidth() int {
-	return s.Width
+	_ = "STUB: not implemented"
+
+	// GetHeight returns the value of Height.
+	return 0
 }
 
-// GetHeight returns the value of Height.
 func (s *Video) GetHeight() int {
-	return s.Height
+	_ = "STUB: not implemented"
+
+	// GetDuration returns the value of Duration.
+	return 0
 }
 
-// GetDuration returns the value of Duration.
 func (s *Video) GetDuration() int {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return 0
 }
 
-// GetThumb returns the value of Thumb.
 func (s *Video) GetThumb() OptPhotoSize {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetFileName returns the value of FileName.
+	return *new(OptPhotoSize)
 }
 
-// GetFileName returns the value of FileName.
 func (s *Video) GetFileName() OptString {
-	return s.FileName
+	_ = "STUB: not implemented"
+
+	// GetMimeType returns the value of MimeType.
+	return *new(OptString)
 }
 
-// GetMimeType returns the value of MimeType.
 func (s *Video) GetMimeType() OptString {
-	return s.MimeType
+	_ = "STUB: not implemented"
+
+	// GetFileSize returns the value of FileSize.
+	return *new(OptString)
 }
 
-// GetFileSize returns the value of FileSize.
 func (s *Video) GetFileSize() OptInt {
-	return s.FileSize
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return *new(OptInt)
 }
 
-// SetFileID sets the value of FileID.
 func (s *Video) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// SetFileUniqueID sets the value of FileUniqueID.
+	return
 }
 
-// SetFileUniqueID sets the value of FileUniqueID.
-func (s *Video) SetFileUniqueID(val string) {
-	s.FileUniqueID = val
-}
+func (s *Video) SetFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetWidth sets the value of Width.
 func (s *Video) SetWidth(val int) {
-	s.Width = val
+	_ = "STUB: not implemented"
+
+	// SetHeight sets the value of Height.
+	return
 }
 
-// SetHeight sets the value of Height.
 func (s *Video) SetHeight(val int) {
-	s.Height = val
+	_ = "STUB: not implemented"
+
+	// SetDuration sets the value of Duration.
+	return
 }
 
-// SetDuration sets the value of Duration.
 func (s *Video) SetDuration(val int) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *Video) SetThumb(val OptPhotoSize) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetFileName sets the value of FileName.
+	return
 }
 
-// SetFileName sets the value of FileName.
 func (s *Video) SetFileName(val OptString) {
-	s.FileName = val
+	_ = "STUB: not implemented"
+
+	// SetMimeType sets the value of MimeType.
+	return
 }
 
-// SetMimeType sets the value of MimeType.
 func (s *Video) SetMimeType(val OptString) {
-	s.MimeType = val
+	_ = "STUB: not implemented"
+
+	// SetFileSize sets the value of FileSize.
+	return
 }
 
-// SetFileSize sets the value of FileSize.
 func (s *Video) SetFileSize(val OptInt) {
-	s.FileSize = val
+	_ = "STUB: not implemented"
+
+	// This object represents a video message (available in Telegram apps as of v.4.0).
+	// Ref: #/components/schemas/VideoNote
+	return
 }
 
-// This object represents a video message (available in Telegram apps as of v.4.0).
-// Ref: #/components/schemas/VideoNote
 type VideoNote struct {
 	// Identifier for this file, which can be used to download or reuse the file.
 	FileID string `json:"file_id"`
@@ -23694,66 +24907,82 @@ type VideoNote struct {
 
 // GetFileID returns the value of FileID.
 func (s *VideoNote) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// GetFileUniqueID returns the value of FileUniqueID.
+	return ""
 }
 
-// GetFileUniqueID returns the value of FileUniqueID.
-func (s *VideoNote) GetFileUniqueID() string {
-	return s.FileUniqueID
-}
+func (s *VideoNote) GetFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetLength returns the value of Length.
 func (s *VideoNote) GetLength() int {
-	return s.Length
+	_ = "STUB: not implemented"
+
+	// GetDuration returns the value of Duration.
+	return 0
 }
 
-// GetDuration returns the value of Duration.
 func (s *VideoNote) GetDuration() int {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetThumb returns the value of Thumb.
+	return 0
 }
 
-// GetThumb returns the value of Thumb.
 func (s *VideoNote) GetThumb() OptPhotoSize {
-	return s.Thumb
+	_ = "STUB: not implemented"
+
+	// GetFileSize returns the value of FileSize.
+	return *new(OptPhotoSize)
 }
 
-// GetFileSize returns the value of FileSize.
 func (s *VideoNote) GetFileSize() OptInt {
-	return s.FileSize
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return *new(OptInt)
 }
 
-// SetFileID sets the value of FileID.
 func (s *VideoNote) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// SetFileUniqueID sets the value of FileUniqueID.
+	return
 }
 
-// SetFileUniqueID sets the value of FileUniqueID.
-func (s *VideoNote) SetFileUniqueID(val string) {
-	s.FileUniqueID = val
-}
+func (s *VideoNote) SetFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetLength sets the value of Length.
 func (s *VideoNote) SetLength(val int) {
-	s.Length = val
+	_ = "STUB: not implemented"
+
+	// SetDuration sets the value of Duration.
+	return
 }
 
-// SetDuration sets the value of Duration.
 func (s *VideoNote) SetDuration(val int) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetThumb sets the value of Thumb.
+	return
 }
 
-// SetThumb sets the value of Thumb.
 func (s *VideoNote) SetThumb(val OptPhotoSize) {
-	s.Thumb = val
+	_ = "STUB: not implemented"
+
+	// SetFileSize sets the value of FileSize.
+	return
 }
 
-// SetFileSize sets the value of FileSize.
 func (s *VideoNote) SetFileSize(val OptInt) {
-	s.FileSize = val
+	_ = "STUB: not implemented"
+
+	// This object represents a voice note.
+	// Ref: #/components/schemas/Voice
+	return
 }
 
-// This object represents a voice note.
-// Ref: #/components/schemas/Voice
 type Voice struct {
 	// Identifier for this file, which can be used to download or reuse the file.
 	FileID string `json:"file_id"`
@@ -23770,56 +24999,68 @@ type Voice struct {
 
 // GetFileID returns the value of FileID.
 func (s *Voice) GetFileID() string {
-	return s.FileID
+	_ = "STUB: not implemented"
+
+	// GetFileUniqueID returns the value of FileUniqueID.
+	return ""
 }
 
-// GetFileUniqueID returns the value of FileUniqueID.
-func (s *Voice) GetFileUniqueID() string {
-	return s.FileUniqueID
-}
+func (s *Voice) GetFileUniqueID() string { _ = "STUB: not implemented"; return "" }
 
 // GetDuration returns the value of Duration.
 func (s *Voice) GetDuration() int {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetMimeType returns the value of MimeType.
+	return 0
 }
 
-// GetMimeType returns the value of MimeType.
 func (s *Voice) GetMimeType() OptString {
-	return s.MimeType
+	_ = "STUB: not implemented"
+
+	// GetFileSize returns the value of FileSize.
+	return *new(OptString)
 }
 
-// GetFileSize returns the value of FileSize.
 func (s *Voice) GetFileSize() OptInt {
-	return s.FileSize
+	_ = "STUB: not implemented"
+
+	// SetFileID sets the value of FileID.
+	return *new(OptInt)
 }
 
-// SetFileID sets the value of FileID.
 func (s *Voice) SetFileID(val string) {
-	s.FileID = val
+	_ = "STUB: not implemented"
+
+	// SetFileUniqueID sets the value of FileUniqueID.
+	return
 }
 
-// SetFileUniqueID sets the value of FileUniqueID.
-func (s *Voice) SetFileUniqueID(val string) {
-	s.FileUniqueID = val
-}
+func (s *Voice) SetFileUniqueID(val string) { _ = "STUB: not implemented"; return }
 
 // SetDuration sets the value of Duration.
 func (s *Voice) SetDuration(val int) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetMimeType sets the value of MimeType.
+	return
 }
 
-// SetMimeType sets the value of MimeType.
 func (s *Voice) SetMimeType(val OptString) {
-	s.MimeType = val
+	_ = "STUB: not implemented"
+
+	// SetFileSize sets the value of FileSize.
+	return
 }
 
-// SetFileSize sets the value of FileSize.
 func (s *Voice) SetFileSize(val OptInt) {
-	s.FileSize = val
+	_ = "STUB: not implemented"
+
+	// This object represents a service message about a voice chat ended in the chat.
+	// Ref: #/components/schemas/VoiceChatEnded
+	return
 }
 
-// This object represents a service message about a voice chat ended in the chat.
-// Ref: #/components/schemas/VoiceChatEnded
 type VoiceChatEnded struct {
 	// Voice chat duration in seconds.
 	Duration int `json:"duration"`
@@ -23827,16 +25068,20 @@ type VoiceChatEnded struct {
 
 // GetDuration returns the value of Duration.
 func (s *VoiceChatEnded) GetDuration() int {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// SetDuration sets the value of Duration.
+	return 0
 }
 
-// SetDuration sets the value of Duration.
 func (s *VoiceChatEnded) SetDuration(val int) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// This object represents a service message about new members invited to a voice chat.
+	// Ref: #/components/schemas/VoiceChatParticipantsInvited
+	return
 }
 
-// This object represents a service message about new members invited to a voice chat.
-// Ref: #/components/schemas/VoiceChatParticipantsInvited
 type VoiceChatParticipantsInvited struct {
 	// New members that were invited to the voice chat.
 	Users []User `json:"users"`
@@ -23844,16 +25089,20 @@ type VoiceChatParticipantsInvited struct {
 
 // GetUsers returns the value of Users.
 func (s *VoiceChatParticipantsInvited) GetUsers() []User {
-	return s.Users
+	_ = "STUB: not implemented"
+
+	// SetUsers sets the value of Users.
+	return nil
 }
 
-// SetUsers sets the value of Users.
 func (s *VoiceChatParticipantsInvited) SetUsers(val []User) {
-	s.Users = val
+	_ = "STUB: not implemented"
+
+	// This object represents a service message about a voice chat scheduled in the chat.
+	// Ref: #/components/schemas/VoiceChatScheduled
+	return
 }
 
-// This object represents a service message about a voice chat scheduled in the chat.
-// Ref: #/components/schemas/VoiceChatScheduled
 type VoiceChatScheduled struct {
 	// Point in time (Unix timestamp) when the voice chat is supposed to be started by a chat
 	// administrator.
@@ -23862,17 +25111,21 @@ type VoiceChatScheduled struct {
 
 // GetStartDate returns the value of StartDate.
 func (s *VoiceChatScheduled) GetStartDate() int {
-	return s.StartDate
+	_ = "STUB: not implemented"
+
+	// SetStartDate sets the value of StartDate.
+	return 0
 }
 
-// SetStartDate sets the value of StartDate.
 func (s *VoiceChatScheduled) SetStartDate(val int) {
-	s.StartDate = val
+	_ = "STUB: not implemented"
+
+	// This object represents a service message about a voice chat started in the chat. Currently holds
+	// no information.
+	// Ref: #/components/schemas/VoiceChatStarted
+	return
 }
 
-// This object represents a service message about a voice chat started in the chat. Currently holds
-// no information.
-// Ref: #/components/schemas/VoiceChatStarted
 type VoiceChatStarted struct{}
 
 // Contains information about the current status of a webhook.
@@ -23899,80 +25152,77 @@ type WebhookInfo struct {
 
 // GetURL returns the value of URL.
 func (s *WebhookInfo) GetURL() url.URL {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// GetHasCustomCertificate returns the value of HasCustomCertificate.
+	return *new(url.URL)
 }
 
-// GetHasCustomCertificate returns the value of HasCustomCertificate.
-func (s *WebhookInfo) GetHasCustomCertificate() bool {
-	return s.HasCustomCertificate
-}
+func (s *WebhookInfo) GetHasCustomCertificate() bool { _ = "STUB: not implemented"; return false }
 
 // GetPendingUpdateCount returns the value of PendingUpdateCount.
-func (s *WebhookInfo) GetPendingUpdateCount() int {
-	return s.PendingUpdateCount
-}
+func (s *WebhookInfo) GetPendingUpdateCount() int { _ = "STUB: not implemented"; return 0 }
 
 // GetIPAddress returns the value of IPAddress.
 func (s *WebhookInfo) GetIPAddress() OptString {
-	return s.IPAddress
+	_ = "STUB: not implemented"
+
+	// GetLastErrorDate returns the value of LastErrorDate.
+	return *new(OptString)
 }
 
-// GetLastErrorDate returns the value of LastErrorDate.
 func (s *WebhookInfo) GetLastErrorDate() OptInt {
-	return s.LastErrorDate
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLastErrorMessage returns the value of LastErrorMessage.
+	new(OptInt)
 }
 
-// GetLastErrorMessage returns the value of LastErrorMessage.
 func (s *WebhookInfo) GetLastErrorMessage() OptString {
-	return s.LastErrorMessage
+	_ = "STUB: not implemented"
+	return *new(OptString)
 }
 
 // GetMaxConnections returns the value of MaxConnections.
 func (s *WebhookInfo) GetMaxConnections() OptInt {
-	return s.MaxConnections
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAllowedUpdates returns the value of AllowedUpdates.
+	new(OptInt)
 }
 
-// GetAllowedUpdates returns the value of AllowedUpdates.
-func (s *WebhookInfo) GetAllowedUpdates() []string {
-	return s.AllowedUpdates
-}
+func (s *WebhookInfo) GetAllowedUpdates() []string { _ = "STUB: not implemented"; return nil }
 
 // SetURL sets the value of URL.
 func (s *WebhookInfo) SetURL(val url.URL) {
-	s.URL = val
+	_ = "STUB: not implemented"
+
+	// SetHasCustomCertificate sets the value of HasCustomCertificate.
+	return
 }
 
-// SetHasCustomCertificate sets the value of HasCustomCertificate.
-func (s *WebhookInfo) SetHasCustomCertificate(val bool) {
-	s.HasCustomCertificate = val
-}
+func (s *WebhookInfo) SetHasCustomCertificate(val bool) { _ = "STUB: not implemented"; return }
 
 // SetPendingUpdateCount sets the value of PendingUpdateCount.
-func (s *WebhookInfo) SetPendingUpdateCount(val int) {
-	s.PendingUpdateCount = val
-}
+func (s *WebhookInfo) SetPendingUpdateCount(val int) { _ = "STUB: not implemented"; return }
 
 // SetIPAddress sets the value of IPAddress.
 func (s *WebhookInfo) SetIPAddress(val OptString) {
-	s.IPAddress = val
+	_ = "STUB: not implemented"
+
+	// SetLastErrorDate sets the value of LastErrorDate.
+	return
 }
 
-// SetLastErrorDate sets the value of LastErrorDate.
-func (s *WebhookInfo) SetLastErrorDate(val OptInt) {
-	s.LastErrorDate = val
-}
+func (s *WebhookInfo) SetLastErrorDate(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetLastErrorMessage sets the value of LastErrorMessage.
-func (s *WebhookInfo) SetLastErrorMessage(val OptString) {
-	s.LastErrorMessage = val
-}
+func (s *WebhookInfo) SetLastErrorMessage(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetMaxConnections sets the value of MaxConnections.
-func (s *WebhookInfo) SetMaxConnections(val OptInt) {
-	s.MaxConnections = val
-}
+func (s *WebhookInfo) SetMaxConnections(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetAllowedUpdates sets the value of AllowedUpdates.
-func (s *WebhookInfo) SetAllowedUpdates(val []string) {
-	s.AllowedUpdates = val
-}
+func (s *WebhookInfo) SetAllowedUpdates(val []string) { _ = "STUB: not implemented"; return }

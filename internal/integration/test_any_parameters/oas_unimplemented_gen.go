@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,23 +17,28 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /any/array
 func (UnimplementedHandler) AnyArrayParam(ctx context.Context, params AnyArrayParamParams) (r *AnyArrayParamOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// AnyParams implements anyParams operation.
+	//
+	// Test all parameter locations with any type.
+	//
+	// GET /any/{pathParam}
 }
 
-// AnyParams implements anyParams operation.
-//
-// Test all parameter locations with any type.
-//
-// GET /any/{pathParam}
 func (UnimplementedHandler) AnyParams(ctx context.Context, params AnyParamsParams) (r *AnyParamsOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// AnyParamsRequired implements anyParamsRequired operation.
+	//
+	// Test required any type parameters.
+	//
+	// GET /any/required/{pathParam}
 }
 
-// AnyParamsRequired implements anyParamsRequired operation.
-//
-// Test required any type parameters.
-//
-// GET /any/required/{pathParam}
 func (UnimplementedHandler) AnyParamsRequired(ctx context.Context, params AnyParamsRequiredParams) (r *AnyParamsRequiredOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
 }

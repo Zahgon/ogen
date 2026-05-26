@@ -4,15 +4,19 @@ package ir
 type PrimitiveType string
 
 func (p PrimitiveType) String() string {
-	return string(p)
+	_ = "STUB: not implemented"
+
+	// IsString whether this type is string.
+	return ""
 }
 
-// IsString whether this type is string.
 func (p PrimitiveType) IsString() bool {
-	return p == String
+	_ = "STUB: not implemented"
+
+	// Primitive types.
+	return false
 }
 
-// Primitive types.
 const (
 	None      PrimitiveType = ""
 	String    PrimitiveType = "string"

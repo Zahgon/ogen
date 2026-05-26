@@ -26,75 +26,57 @@ const (
 )
 
 // IsInt reports whether AnyOfIntegerNumberString is int.
-func (s AnyOfIntegerNumberString) IsInt() bool { return s.Type == IntAnyOfIntegerNumberString }
+func (s AnyOfIntegerNumberString) IsInt() bool { _ = "STUB: not implemented"; return false }
 
 // IsFloat64 reports whether AnyOfIntegerNumberString is float64.
-func (s AnyOfIntegerNumberString) IsFloat64() bool { return s.Type == Float64AnyOfIntegerNumberString }
+func (s AnyOfIntegerNumberString) IsFloat64() bool { _ = "STUB: not implemented"; return false }
 
 // IsString reports whether AnyOfIntegerNumberString is string.
-func (s AnyOfIntegerNumberString) IsString() bool { return s.Type == StringAnyOfIntegerNumberString }
+func (s AnyOfIntegerNumberString) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // SetInt sets AnyOfIntegerNumberString to int.
-func (s *AnyOfIntegerNumberString) SetInt(v int) {
-	s.Type = IntAnyOfIntegerNumberString
-	s.Int = v
-}
+func (s *AnyOfIntegerNumberString) SetInt(v int) { _ = "STUB: not implemented"; return }
 
 // GetInt returns int and true boolean if AnyOfIntegerNumberString is int.
 func (s AnyOfIntegerNumberString) GetInt() (v int, ok bool) {
-	if !s.IsInt() {
-		return v, false
-	}
-	return s.Int, true
+	_ = "STUB: not implemented"
+	return 0, false
 }
 
 // NewIntAnyOfIntegerNumberString returns new AnyOfIntegerNumberString from int.
 func NewIntAnyOfIntegerNumberString(v int) AnyOfIntegerNumberString {
-	var s AnyOfIntegerNumberString
-	s.SetInt(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(AnyOfIntegerNumberString)
 }
 
 // SetFloat64 sets AnyOfIntegerNumberString to float64.
-func (s *AnyOfIntegerNumberString) SetFloat64(v float64) {
-	s.Type = Float64AnyOfIntegerNumberString
-	s.Float64 = v
-}
+func (s *AnyOfIntegerNumberString) SetFloat64(v float64) { _ = "STUB: not implemented"; return }
 
 // GetFloat64 returns float64 and true boolean if AnyOfIntegerNumberString is float64.
 func (s AnyOfIntegerNumberString) GetFloat64() (v float64, ok bool) {
-	if !s.IsFloat64() {
-		return v, false
-	}
-	return s.Float64, true
+	_ = "STUB: not implemented"
+	return 0, false
 }
 
 // NewFloat64AnyOfIntegerNumberString returns new AnyOfIntegerNumberString from float64.
 func NewFloat64AnyOfIntegerNumberString(v float64) AnyOfIntegerNumberString {
-	var s AnyOfIntegerNumberString
-	s.SetFloat64(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(AnyOfIntegerNumberString)
 }
 
 // SetString sets AnyOfIntegerNumberString to string.
-func (s *AnyOfIntegerNumberString) SetString(v string) {
-	s.Type = StringAnyOfIntegerNumberString
-	s.String = v
-}
+func (s *AnyOfIntegerNumberString) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if AnyOfIntegerNumberString is string.
 func (s AnyOfIntegerNumberString) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringAnyOfIntegerNumberString returns new AnyOfIntegerNumberString from string.
 func NewStringAnyOfIntegerNumberString(v string) AnyOfIntegerNumberString {
-	var s AnyOfIntegerNumberString
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(AnyOfIntegerNumberString)
 }
 
 // Ref: #/components/schemas/IntegerNumber
@@ -104,15 +86,19 @@ type IntegerNumber struct {
 
 // GetPlain returns the value of Plain.
 func (s *IntegerNumber) GetPlain() AnyOfIntegerNumberString {
-	return s.Plain
+	_ = "STUB: not implemented"
+
+	// SetPlain sets the value of Plain.
+	return *new(AnyOfIntegerNumberString)
 }
 
-// SetPlain sets the value of Plain.
 func (s *IntegerNumber) SetPlain(val AnyOfIntegerNumberString) {
-	s.Plain = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/JaegerAnyOf
+	return
 }
 
-// Ref: #/components/schemas/JaegerAnyOf
 type JaegerAnyOf struct {
 	Medium    string               `json:"medium"`
 	SizeLimit JaegerAnyOfSizeLimit `json:"sizeLimit"`
@@ -120,25 +106,34 @@ type JaegerAnyOf struct {
 
 // GetMedium returns the value of Medium.
 func (s *JaegerAnyOf) GetMedium() string {
-	return s.Medium
+	_ = "STUB: not implemented"
+
+	// GetSizeLimit returns the value of SizeLimit.
+	return ""
 }
 
-// GetSizeLimit returns the value of SizeLimit.
 func (s *JaegerAnyOf) GetSizeLimit() JaegerAnyOfSizeLimit {
-	return s.SizeLimit
+	_ = "STUB: not implemented"
+	return *
+
+	// SetMedium sets the value of Medium.
+	new(JaegerAnyOfSizeLimit)
 }
 
-// SetMedium sets the value of Medium.
 func (s *JaegerAnyOf) SetMedium(val string) {
-	s.Medium = val
+	_ = "STUB: not implemented"
+
+	// SetSizeLimit sets the value of SizeLimit.
+	return
 }
 
-// SetSizeLimit sets the value of SizeLimit.
 func (s *JaegerAnyOf) SetSizeLimit(val JaegerAnyOfSizeLimit) {
-	s.SizeLimit = val
+	_ = "STUB: not implemented"
+
+	// JaegerAnyOfSizeLimit represents sum type.
+	return
 }
 
-// JaegerAnyOfSizeLimit represents sum type.
 type JaegerAnyOfSizeLimit struct {
 	Type   JaegerAnyOfSizeLimitType // switch on this field
 	Int    int
@@ -155,51 +150,36 @@ const (
 )
 
 // IsInt reports whether JaegerAnyOfSizeLimit is int.
-func (s JaegerAnyOfSizeLimit) IsInt() bool { return s.Type == IntJaegerAnyOfSizeLimit }
+func (s JaegerAnyOfSizeLimit) IsInt() bool { _ = "STUB: not implemented"; return false }
 
 // IsString reports whether JaegerAnyOfSizeLimit is string.
-func (s JaegerAnyOfSizeLimit) IsString() bool { return s.Type == StringJaegerAnyOfSizeLimit }
+func (s JaegerAnyOfSizeLimit) IsString() bool { _ = "STUB: not implemented"; return false }
 
 // SetInt sets JaegerAnyOfSizeLimit to int.
-func (s *JaegerAnyOfSizeLimit) SetInt(v int) {
-	s.Type = IntJaegerAnyOfSizeLimit
-	s.Int = v
-}
+func (s *JaegerAnyOfSizeLimit) SetInt(v int) { _ = "STUB: not implemented"; return }
 
 // GetInt returns int and true boolean if JaegerAnyOfSizeLimit is int.
-func (s JaegerAnyOfSizeLimit) GetInt() (v int, ok bool) {
-	if !s.IsInt() {
-		return v, false
-	}
-	return s.Int, true
-}
+func (s JaegerAnyOfSizeLimit) GetInt() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // NewIntJaegerAnyOfSizeLimit returns new JaegerAnyOfSizeLimit from int.
 func NewIntJaegerAnyOfSizeLimit(v int) JaegerAnyOfSizeLimit {
-	var s JaegerAnyOfSizeLimit
-	s.SetInt(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(JaegerAnyOfSizeLimit)
 }
 
 // SetString sets JaegerAnyOfSizeLimit to string.
-func (s *JaegerAnyOfSizeLimit) SetString(v string) {
-	s.Type = StringJaegerAnyOfSizeLimit
-	s.String = v
-}
+func (s *JaegerAnyOfSizeLimit) SetString(v string) { _ = "STUB: not implemented"; return }
 
 // GetString returns string and true boolean if JaegerAnyOfSizeLimit is string.
 func (s JaegerAnyOfSizeLimit) GetString() (v string, ok bool) {
-	if !s.IsString() {
-		return v, false
-	}
-	return s.String, true
+	_ = "STUB: not implemented"
+	return "", false
 }
 
 // NewStringJaegerAnyOfSizeLimit returns new JaegerAnyOfSizeLimit from string.
 func NewStringJaegerAnyOfSizeLimit(v string) JaegerAnyOfSizeLimit {
-	var s JaegerAnyOfSizeLimit
-	s.SetString(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(JaegerAnyOfSizeLimit)
 }
 
 // Ref: #/components/schemas/OneUUID
@@ -211,33 +191,42 @@ type OneUUID struct {
 
 // GetOwner returns the value of Owner.
 func (s *OneUUID) GetOwner() string {
-	return s.Owner
+	_ = "STUB: not implemented"
+
+	// GetVersion returns the value of Version.
+	return ""
 }
 
-// GetVersion returns the value of Version.
 func (s *OneUUID) GetVersion() int32 {
-	return s.Version
+	_ = "STUB: not implemented"
+
+	// GetSubscriptionID returns the value of SubscriptionID.
+	return 0
 }
 
-// GetSubscriptionID returns the value of SubscriptionID.
 func (s *OneUUID) GetSubscriptionID() OneUUIDSubscriptionID {
-	return s.SubscriptionID
+	_ = "STUB: not implemented"
+	return *
+
+	// SetOwner sets the value of Owner.
+	new(OneUUIDSubscriptionID)
 }
 
-// SetOwner sets the value of Owner.
 func (s *OneUUID) SetOwner(val string) {
-	s.Owner = val
+	_ = "STUB: not implemented"
+
+	// SetVersion sets the value of Version.
+	return
 }
 
-// SetVersion sets the value of Version.
 func (s *OneUUID) SetVersion(val int32) {
-	s.Version = val
+	_ = "STUB: not implemented"
+
+	// SetSubscriptionID sets the value of SubscriptionID.
+	return
 }
 
-// SetSubscriptionID sets the value of SubscriptionID.
-func (s *OneUUID) SetSubscriptionID(val OneUUIDSubscriptionID) {
-	s.SubscriptionID = val
-}
+func (s *OneUUID) SetSubscriptionID(val OneUUIDSubscriptionID) { _ = "STUB: not implemented"; return }
 
 // OneUUIDSubscriptionID represents sum type.
 type OneUUIDSubscriptionID struct {
@@ -254,29 +243,24 @@ const (
 )
 
 // IsSubscriptionUUID reports whether OneUUIDSubscriptionID is SubscriptionUUID.
-func (s OneUUIDSubscriptionID) IsSubscriptionUUID() bool {
-	return s.Type == SubscriptionUUIDOneUUIDSubscriptionID
-}
+func (s OneUUIDSubscriptionID) IsSubscriptionUUID() bool { _ = "STUB: not implemented"; return false }
 
 // SetSubscriptionUUID sets OneUUIDSubscriptionID to SubscriptionUUID.
 func (s *OneUUIDSubscriptionID) SetSubscriptionUUID(v SubscriptionUUID) {
-	s.Type = SubscriptionUUIDOneUUIDSubscriptionID
-	s.SubscriptionUUID = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetSubscriptionUUID returns SubscriptionUUID and true boolean if OneUUIDSubscriptionID is SubscriptionUUID.
 func (s OneUUIDSubscriptionID) GetSubscriptionUUID() (v SubscriptionUUID, ok bool) {
-	if !s.IsSubscriptionUUID() {
-		return v, false
-	}
-	return s.SubscriptionUUID, true
+	_ = "STUB: not implemented"
+	return *new(SubscriptionUUID), false
 }
 
 // NewSubscriptionUUIDOneUUIDSubscriptionID returns new OneUUIDSubscriptionID from SubscriptionUUID.
 func NewSubscriptionUUIDOneUUIDSubscriptionID(v SubscriptionUUID) OneUUIDSubscriptionID {
-	var s OneUUIDSubscriptionID
-	s.SetSubscriptionUUID(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(OneUUIDSubscriptionID)
 }
 
 // Ref: #/components/schemas/SubscriptionUUID
@@ -295,27 +279,21 @@ const (
 )
 
 // IsUUIDv4 reports whether SubscriptionUUID is UUIDv4.
-func (s SubscriptionUUID) IsUUIDv4() bool { return s.Type == UUIDv4SubscriptionUUID }
+func (s SubscriptionUUID) IsUUIDv4() bool { _ = "STUB: not implemented"; return false }
 
 // SetUUIDv4 sets SubscriptionUUID to UUIDv4.
-func (s *SubscriptionUUID) SetUUIDv4(v UUIDv4) {
-	s.Type = UUIDv4SubscriptionUUID
-	s.UUIDv4 = v
-}
+func (s *SubscriptionUUID) SetUUIDv4(v UUIDv4) { _ = "STUB: not implemented"; return }
 
 // GetUUIDv4 returns UUIDv4 and true boolean if SubscriptionUUID is UUIDv4.
 func (s SubscriptionUUID) GetUUIDv4() (v UUIDv4, ok bool) {
-	if !s.IsUUIDv4() {
-		return v, false
-	}
-	return s.UUIDv4, true
+	_ = "STUB: not implemented"
+	return *new(UUIDv4), false
 }
 
 // NewUUIDv4SubscriptionUUID returns new SubscriptionUUID from UUIDv4.
 func NewUUIDv4SubscriptionUUID(v UUIDv4) SubscriptionUUID {
-	var s SubscriptionUUID
-	s.SetUUIDv4(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(SubscriptionUUID)
 }
 
 type UUIDv4 uuid.UUID

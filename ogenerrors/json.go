@@ -22,24 +22,19 @@ type DecodeBodyError struct {
 
 // Unwrap returns child error.
 func (d *DecodeBodyError) Unwrap() error {
-	return d.Err
+	_ = "STUB: not implemented"
+
+	// FormatError implements errors.Formatter.
+	return nil
 }
 
-// FormatError implements errors.Formatter.
 func (d *DecodeBodyError) FormatError(p errors.Printer) (next error) {
-	p.Printf("decode %s", d.ContentType)
-	if p.Detail() {
-		p.Printf("body: %s", d.Body)
-	}
-	return d.Err
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Format implements fmt.Formatter.
-func (d *DecodeBodyError) Format(s fmt.State, verb rune) {
-	errors.FormatError(d, s, verb)
-}
+func (d *DecodeBodyError) Format(s fmt.State, verb rune) { _ = "STUB: not implemented"; return }
 
 // Error implements error.
-func (d *DecodeBodyError) Error() string {
-	return fmt.Sprintf("decode %s: %s", d.ContentType, d.Err)
-}
+func (d *DecodeBodyError) Error() string { _ = "STUB: not implemented"; return "" }

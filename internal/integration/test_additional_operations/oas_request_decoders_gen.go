@@ -3,11 +3,7 @@
 package api
 
 import (
-	"mime"
 	"net/http"
-
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/validate"
 )
 
 func (s *Server) decodeEchoRequest(r *http.Request) (
@@ -16,31 +12,8 @@ func (s *Server) decodeEchoRequest(r *http.Request) (
 	close func() error,
 	rerr error,
 ) {
-	var closers []func() error
-	close = func() error {
-		var merr error
-		// Close in reverse order, to match defer behavior.
-		for i := len(closers) - 1; i >= 0; i-- {
-			c := closers[i]
-			merr = errors.Join(merr, c())
-		}
-		return merr
-	}
-	defer func() {
-		if rerr != nil {
-			rerr = errors.Join(rerr, close())
-		}
-	}()
-	ct, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-	if err != nil {
-		return req, rawBody, close, errors.Wrap(err, "parse media type")
-	}
-	switch {
-	case ct == "text/plain":
-		reader := r.Body
-		request := EchoReq{Data: reader}
-		return request, rawBody, close, nil
-	default:
-		return req, rawBody, close, validate.InvalidContentType(ct)
-	}
+	_ = "STUB: not implemented"
+	return *new(EchoReq), nil, nil, nil
 }
+
+// Close in reverse order, to match defer behavior.

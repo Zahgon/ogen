@@ -2,14 +2,7 @@ package main
 
 type Stage int
 
-func (s Stage) OnlyCounter() bool {
-	switch s {
-	case NotImplemented, Good:
-		return true
-	default:
-		return false
-	}
-}
+func (s Stage) OnlyCounter() bool { _ = "STUB: not implemented"; return false }
 
 const (
 	InvalidYAML Stage = iota
@@ -26,22 +19,6 @@ const (
 	last
 )
 
-func (s Stage) String() string {
-	r := [last]string{
-		"invalidYAML",
-		"invalidJSON",
-		"unmarshal",
-		"parse",
-		"buildIR",
-		"buildRouter",
-		"template",
-		"format",
-		"notImplemented",
-		"good",
-		"crash",
-	}
-	if int(s) >= len(r) {
-		return ""
-	}
-	return r[s] // #nosec G602
-}
+func (s Stage) String() string { _ = "STUB: not implemented"; return "" }
+
+// #nosec G602

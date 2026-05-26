@@ -5,485 +5,88 @@ package api
 import (
 	"net/http"
 	"net/url"
-	"strings"
-
-	"github.com/ogen-go/ogen/uri"
 )
 
-func (s *Server) cutPrefix(path string) (string, bool) {
-	prefix := s.cfg.Prefix
-	if prefix == "" {
-		return path, true
-	}
-	if !strings.HasPrefix(path, prefix) {
-		// Prefix doesn't match.
-		return "", false
-	}
-	// Cut prefix from the path.
-	return strings.TrimPrefix(path, prefix), true
-}
+func (s *Server) cutPrefix(path string) (string, bool) { _ = "STUB: not implemented"; return "", false }
+
+// Prefix doesn't match.
+
+// Cut prefix from the path.
 
 // ServeHTTP serves http request as defined by OpenAPI v3 specification,
 // calling handler that matches the path or returning not found error.
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	elem := r.URL.Path
-	elemIsEscaped := false
-	if rawPath := r.URL.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-			elemIsEscaped = strings.ContainsRune(elem, '%')
-		}
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok || len(elem) == 0 {
-		s.notFound(w, r)
-		return
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'a': // Prefix: "anyContentTypeBinaryStringSchema"
-
-				if l := len("anyContentTypeBinaryStringSchema"); len(elem) >= l && elem[0:l] == "anyContentTypeBinaryStringSchema" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					switch r.Method {
-					case "GET":
-						s.handleAnyContentTypeBinaryStringSchemaRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-				switch elem[0] {
-				case 'D': // Prefix: "Default"
-
-					if l := len("Default"); len(elem) >= l && elem[0:l] == "Default" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleAnyContentTypeBinaryStringSchemaDefaultRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: nil,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				}
-
-			case 'c': // Prefix: "combined"
-
-				if l := len("combined"); len(elem) >= l && elem[0:l] == "combined" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleCombinedRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'h': // Prefix: "headers"
-
-				if l := len("headers"); len(elem) >= l && elem[0:l] == "headers" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case '2': // Prefix: "200"
-
-					if l := len("200"); len(elem) >= l && elem[0:l] == "200" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleHeaders200Request([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: nil,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				case 'C': // Prefix: "Combined"
-
-					if l := len("Combined"); len(elem) >= l && elem[0:l] == "Combined" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleHeadersCombinedRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: nil,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				case 'D': // Prefix: "Default"
-
-					if l := len("Default"); len(elem) >= l && elem[0:l] == "Default" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleHeadersDefaultRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: nil,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				case 'J': // Prefix: "JSON"
-
-					if l := len("JSON"); len(elem) >= l && elem[0:l] == "JSON" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleHeadersJSONRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: nil,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				case 'P': // Prefix: "Pattern"
-
-					if l := len("Pattern"); len(elem) >= l && elem[0:l] == "Pattern" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleHeadersPatternRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: nil,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				}
-
-			case 'i': // Prefix: "intersectPatternCode"
-
-				if l := len("intersectPatternCode"); len(elem) >= l && elem[0:l] == "intersectPatternCode" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleIntersectPatternCodeRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'm': // Prefix: "multipleGenericResponses"
-
-				if l := len("multipleGenericResponses"); len(elem) >= l && elem[0:l] == "multipleGenericResponses" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleMultipleGenericResponsesRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'o': // Prefix: "o"
-
-				if l := len("o"); len(elem) >= l && elem[0:l] == "o" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'c': // Prefix: "ctetStream"
-
-					if l := len("ctetStream"); len(elem) >= l && elem[0:l] == "ctetStream" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'B': // Prefix: "BinaryStringSchema"
-
-						if l := len("BinaryStringSchema"); len(elem) >= l && elem[0:l] == "BinaryStringSchema" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "GET":
-								s.handleOctetStreamBinaryStringSchemaRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: nil,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					case 'E': // Prefix: "EmptySchema"
-
-						if l := len("EmptySchema"); len(elem) >= l && elem[0:l] == "EmptySchema" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch r.Method {
-							case "GET":
-								s.handleOctetStreamEmptySchemaRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: nil,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-
-					}
-
-				case 'p': // Prefix: "ptionalHeaders"
-
-					if l := len("ptionalHeaders"); len(elem) >= l && elem[0:l] == "ptionalHeaders" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch r.Method {
-						case "GET":
-							s.handleOptionalHeadersRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: nil,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-
-				}
-
-			case 's': // Prefix: "streamJSON"
-
-				if l := len("streamJSON"); len(elem) >= l && elem[0:l] == "streamJSON" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "POST":
-						s.handleStreamJSONRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "POST",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 't': // Prefix: "textPlainBinaryStringSchema"
-
-				if l := len("textPlainBinaryStringSchema"); len(elem) >= l && elem[0:l] == "textPlainBinaryStringSchema" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleTextPlainBinaryStringSchemaRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: nil,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			}
-
-		}
-	}
-	s.notFound(w, r)
+	_ = "STUB: not implemented"
+	return
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "anyContentTypeBinaryStringSchema"
+
+// Prefix: "Default"
+
+// Leaf node.
+
+// Prefix: "combined"
+
+// Leaf node.
+
+// Prefix: "headers"
+
+// Prefix: "200"
+
+// Leaf node.
+
+// Prefix: "Combined"
+
+// Leaf node.
+
+// Prefix: "Default"
+
+// Leaf node.
+
+// Prefix: "JSON"
+
+// Leaf node.
+
+// Prefix: "Pattern"
+
+// Leaf node.
+
+// Prefix: "intersectPatternCode"
+
+// Leaf node.
+
+// Prefix: "multipleGenericResponses"
+
+// Leaf node.
+
+// Prefix: "o"
+
+// Prefix: "ctetStream"
+
+// Prefix: "BinaryStringSchema"
+
+// Leaf node.
+
+// Prefix: "EmptySchema"
+
+// Leaf node.
+
+// Prefix: "ptionalHeaders"
+
+// Leaf node.
+
+// Prefix: "streamJSON"
+
+// Leaf node.
+
+// Prefix: "textPlainBinaryStringSchema"
+
+// Leaf node.
 
 // Route is route object.
 type Route struct {
@@ -500,505 +103,108 @@ type Route struct {
 //
 // It is guaranteed to be unique and not empty.
 func (r Route) Name() string {
-	return r.name
+	_ = "STUB: not implemented"
+
+	// Summary returns OpenAPI summary.
+	return ""
 }
 
-// Summary returns OpenAPI summary.
 func (r Route) Summary() string {
-	return r.summary
+	_ = "STUB: not implemented"
+
+	// OperationID returns OpenAPI operationId.
+	return ""
 }
 
-// OperationID returns OpenAPI operationId.
-func (r Route) OperationID() string {
-	return r.operationID
-}
+func (r Route) OperationID() string { _ = "STUB: not implemented"; return "" }
 
 // OperationGroup returns the x-ogen-operation-group value.
-func (r Route) OperationGroup() string {
-	return r.operationGroup
-}
+func (r Route) OperationGroup() string { _ = "STUB: not implemented"; return "" }
 
 // PathPattern returns OpenAPI path.
-func (r Route) PathPattern() string {
-	return r.pathPattern
-}
+func (r Route) PathPattern() string { _ = "STUB: not implemented"; return "" }
 
 // Args returns parsed arguments.
-func (r Route) Args() []string {
-	return r.args[:r.count]
-}
+func (r Route) Args() []string { _ = "STUB: not implemented"; return nil }
 
 // FindRoute finds Route for given method and path.
 //
 // Note: this method does not unescape path or handle reserved characters in path properly. Use FindPath instead.
 func (s *Server) FindRoute(method, path string) (Route, bool) {
-	return s.FindPath(method, &url.URL{Path: path})
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
 
 // FindPath finds Route for given method and URL.
 func (s *Server) FindPath(method string, u *url.URL) (r Route, _ bool) {
-	var (
-		elem = u.Path
-		args = r.args
-	)
-	if rawPath := u.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-		}
-		defer func() {
-			for i, arg := range r.args[:r.count] {
-				if unescaped, err := url.PathUnescape(arg); err == nil {
-					r.args[i] = unescaped
-				}
-			}
-		}()
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok {
-		return r, false
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case 'a': // Prefix: "anyContentTypeBinaryStringSchema"
-
-				if l := len("anyContentTypeBinaryStringSchema"); len(elem) >= l && elem[0:l] == "anyContentTypeBinaryStringSchema" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					switch method {
-					case "GET":
-						r.name = AnyContentTypeBinaryStringSchemaOperation
-						r.summary = ""
-						r.operationID = "anyContentTypeBinaryStringSchema"
-						r.operationGroup = ""
-						r.pathPattern = "/anyContentTypeBinaryStringSchema"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-				switch elem[0] {
-				case 'D': // Prefix: "Default"
-
-					if l := len("Default"); len(elem) >= l && elem[0:l] == "Default" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = AnyContentTypeBinaryStringSchemaDefaultOperation
-							r.summary = ""
-							r.operationID = "anyContentTypeBinaryStringSchemaDefault"
-							r.operationGroup = ""
-							r.pathPattern = "/anyContentTypeBinaryStringSchemaDefault"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				}
-
-			case 'c': // Prefix: "combined"
-
-				if l := len("combined"); len(elem) >= l && elem[0:l] == "combined" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = CombinedOperation
-						r.summary = ""
-						r.operationID = "combined"
-						r.operationGroup = ""
-						r.pathPattern = "/combined"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'h': // Prefix: "headers"
-
-				if l := len("headers"); len(elem) >= l && elem[0:l] == "headers" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case '2': // Prefix: "200"
-
-					if l := len("200"); len(elem) >= l && elem[0:l] == "200" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = Headers200Operation
-							r.summary = ""
-							r.operationID = "headers200"
-							r.operationGroup = ""
-							r.pathPattern = "/headers200"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				case 'C': // Prefix: "Combined"
-
-					if l := len("Combined"); len(elem) >= l && elem[0:l] == "Combined" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = HeadersCombinedOperation
-							r.summary = ""
-							r.operationID = "headersCombined"
-							r.operationGroup = ""
-							r.pathPattern = "/headersCombined"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				case 'D': // Prefix: "Default"
-
-					if l := len("Default"); len(elem) >= l && elem[0:l] == "Default" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = HeadersDefaultOperation
-							r.summary = ""
-							r.operationID = "headersDefault"
-							r.operationGroup = ""
-							r.pathPattern = "/headersDefault"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				case 'J': // Prefix: "JSON"
-
-					if l := len("JSON"); len(elem) >= l && elem[0:l] == "JSON" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = HeadersJSONOperation
-							r.summary = ""
-							r.operationID = "headersJSON"
-							r.operationGroup = ""
-							r.pathPattern = "/headersJSON"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				case 'P': // Prefix: "Pattern"
-
-					if l := len("Pattern"); len(elem) >= l && elem[0:l] == "Pattern" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = HeadersPatternOperation
-							r.summary = ""
-							r.operationID = "headersPattern"
-							r.operationGroup = ""
-							r.pathPattern = "/headersPattern"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				}
-
-			case 'i': // Prefix: "intersectPatternCode"
-
-				if l := len("intersectPatternCode"); len(elem) >= l && elem[0:l] == "intersectPatternCode" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = IntersectPatternCodeOperation
-						r.summary = ""
-						r.operationID = "intersectPatternCode"
-						r.operationGroup = ""
-						r.pathPattern = "/intersectPatternCode"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'm': // Prefix: "multipleGenericResponses"
-
-				if l := len("multipleGenericResponses"); len(elem) >= l && elem[0:l] == "multipleGenericResponses" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = MultipleGenericResponsesOperation
-						r.summary = ""
-						r.operationID = "multipleGenericResponses"
-						r.operationGroup = ""
-						r.pathPattern = "/multipleGenericResponses"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'o': // Prefix: "o"
-
-				if l := len("o"); len(elem) >= l && elem[0:l] == "o" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case 'c': // Prefix: "ctetStream"
-
-					if l := len("ctetStream"); len(elem) >= l && elem[0:l] == "ctetStream" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						break
-					}
-					switch elem[0] {
-					case 'B': // Prefix: "BinaryStringSchema"
-
-						if l := len("BinaryStringSchema"); len(elem) >= l && elem[0:l] == "BinaryStringSchema" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "GET":
-								r.name = OctetStreamBinaryStringSchemaOperation
-								r.summary = ""
-								r.operationID = "octetStreamBinaryStringSchema"
-								r.operationGroup = ""
-								r.pathPattern = "/octetStreamBinaryStringSchema"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-
-					case 'E': // Prefix: "EmptySchema"
-
-						if l := len("EmptySchema"); len(elem) >= l && elem[0:l] == "EmptySchema" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							// Leaf node.
-							switch method {
-							case "GET":
-								r.name = OctetStreamEmptySchemaOperation
-								r.summary = ""
-								r.operationID = "octetStreamEmptySchema"
-								r.operationGroup = ""
-								r.pathPattern = "/octetStreamEmptySchema"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-
-					}
-
-				case 'p': // Prefix: "ptionalHeaders"
-
-					if l := len("ptionalHeaders"); len(elem) >= l && elem[0:l] == "ptionalHeaders" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						// Leaf node.
-						switch method {
-						case "GET":
-							r.name = OptionalHeadersOperation
-							r.summary = ""
-							r.operationID = "optionalHeaders"
-							r.operationGroup = ""
-							r.pathPattern = "/optionalHeaders"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-
-				}
-
-			case 's': // Prefix: "streamJSON"
-
-				if l := len("streamJSON"); len(elem) >= l && elem[0:l] == "streamJSON" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "POST":
-						r.name = StreamJSONOperation
-						r.summary = ""
-						r.operationID = "streamJSON"
-						r.operationGroup = ""
-						r.pathPattern = "/streamJSON"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 't': // Prefix: "textPlainBinaryStringSchema"
-
-				if l := len("textPlainBinaryStringSchema"); len(elem) >= l && elem[0:l] == "textPlainBinaryStringSchema" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = TextPlainBinaryStringSchemaOperation
-						r.summary = ""
-						r.operationID = "textPlainBinaryStringSchema"
-						r.operationGroup = ""
-						r.pathPattern = "/textPlainBinaryStringSchema"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			}
-
-		}
-	}
-	return r, false
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: "anyContentTypeBinaryStringSchema"
+
+// Prefix: "Default"
+
+// Leaf node.
+
+// Prefix: "combined"
+
+// Leaf node.
+
+// Prefix: "headers"
+
+// Prefix: "200"
+
+// Leaf node.
+
+// Prefix: "Combined"
+
+// Leaf node.
+
+// Prefix: "Default"
+
+// Leaf node.
+
+// Prefix: "JSON"
+
+// Leaf node.
+
+// Prefix: "Pattern"
+
+// Leaf node.
+
+// Prefix: "intersectPatternCode"
+
+// Leaf node.
+
+// Prefix: "multipleGenericResponses"
+
+// Leaf node.
+
+// Prefix: "o"
+
+// Prefix: "ctetStream"
+
+// Prefix: "BinaryStringSchema"
+
+// Leaf node.
+
+// Prefix: "EmptySchema"
+
+// Leaf node.
+
+// Prefix: "ptionalHeaders"
+
+// Leaf node.
+
+// Prefix: "streamJSON"
+
+// Leaf node.
+
+// Prefix: "textPlainBinaryStringSchema"
+
+// Leaf node.

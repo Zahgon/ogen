@@ -13,25 +13,33 @@ type BearerToken struct {
 
 // GetToken returns the value of Token.
 func (s *BearerToken) GetToken() string {
-	return s.Token
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *BearerToken) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetToken sets the value of Token.
+	return nil
 }
 
-// SetToken sets the value of Token.
 func (s *BearerToken) SetToken(val string) {
-	s.Token = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
 func (s *BearerToken) SetRoles(val []string) {
-	s.Roles = val
+	_ = "STUB: not implemented"
+
+	// FooGetOK is response for FooGet operation.
+	return
 }
 
-// FooGetOK is response for FooGet operation.
 type FooGetOK struct{}
 
 // FooPatchOK is response for FooPatch operation.
@@ -44,12 +52,7 @@ type FooPatchReq struct {
 // Read reads data from the Data reader.
 //
 // Kept to satisfy the io.Reader interface.
-func (s FooPatchReq) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
-}
+func (s FooPatchReq) Read(p []byte) (n int, err error) { _ = "STUB: not implemented"; return 0, nil }
 
 // FooPostOK is response for FooPost operation.
 type FooPostOK struct {
@@ -58,17 +61,17 @@ type FooPostOK struct {
 
 // GetLocation returns the value of Location.
 func (s *FooPostOK) GetLocation() string {
-	return s.Location
+	_ = "STUB: not implemented"
+
+	// SetLocation sets the value of Location.
+	return ""
 }
 
-// SetLocation sets the value of Location.
-func (s *FooPostOK) SetLocation(val string) {
-	s.Location = val
-}
+func (s *FooPostOK) SetLocation(val string) { _ = "STUB: not implemented"; return }
 
 type FooPostReqApplicationJSON string
 
-func (*FooPostReqApplicationJSON) fooPostReq() {}
+func (*FooPostReqApplicationJSON) fooPostReq() { _ = "STUB: not implemented"; return }
 
 type FooPostReqTextPlain struct {
 	Data io.Reader
@@ -78,13 +81,11 @@ type FooPostReqTextPlain struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s FooPostReqTextPlain) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
-func (*FooPostReqTextPlain) fooPostReq() {}
+func (*FooPostReqTextPlain) fooPostReq() { _ = "STUB: not implemented"; return }
 
 type HeaderKey struct {
 	APIKey string
@@ -93,20 +94,24 @@ type HeaderKey struct {
 
 // GetAPIKey returns the value of APIKey.
 func (s *HeaderKey) GetAPIKey() string {
-	return s.APIKey
+	_ = "STUB: not implemented"
+
+	// GetRoles returns the value of Roles.
+	return ""
 }
 
-// GetRoles returns the value of Roles.
 func (s *HeaderKey) GetRoles() []string {
-	return s.Roles
+	_ = "STUB: not implemented"
+
+	// SetAPIKey sets the value of APIKey.
+	return nil
 }
 
-// SetAPIKey sets the value of APIKey.
 func (s *HeaderKey) SetAPIKey(val string) {
-	s.APIKey = val
+	_ = "STUB: not implemented"
+
+	// SetRoles sets the value of Roles.
+	return
 }
 
-// SetRoles sets the value of Roles.
-func (s *HeaderKey) SetRoles(val []string) {
-	s.Roles = val
-}
+func (s *HeaderKey) SetRoles(val []string) { _ = "STUB: not implemented"; return }

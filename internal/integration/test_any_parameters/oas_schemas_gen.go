@@ -8,13 +8,13 @@ type AnyArrayParamOK struct {
 
 // GetCount returns the value of Count.
 func (s *AnyArrayParamOK) GetCount() OptInt {
-	return s.Count
+	_ = "STUB: not implemented"
+
+	// SetCount sets the value of Count.
+	return *new(OptInt)
 }
 
-// SetCount sets the value of Count.
-func (s *AnyArrayParamOK) SetCount(val OptInt) {
-	s.Count = val
-}
+func (s *AnyArrayParamOK) SetCount(val OptInt) { _ = "STUB: not implemented"; return }
 
 type AnyParamsOK struct {
 	Echo AnyParamsOKEcho `json:"echo"`
@@ -22,13 +22,13 @@ type AnyParamsOK struct {
 
 // GetEcho returns the value of Echo.
 func (s *AnyParamsOK) GetEcho() AnyParamsOKEcho {
-	return s.Echo
+	_ = "STUB: not implemented"
+
+	// SetEcho sets the value of Echo.
+	return *new(AnyParamsOKEcho)
 }
 
-// SetEcho sets the value of Echo.
-func (s *AnyParamsOK) SetEcho(val AnyParamsOKEcho) {
-	s.Echo = val
-}
+func (s *AnyParamsOK) SetEcho(val AnyParamsOKEcho) { _ = "STUB: not implemented"; return }
 
 type AnyParamsOKEcho struct {
 	PathParam   string    `json:"pathParam"`
@@ -39,43 +39,54 @@ type AnyParamsOKEcho struct {
 
 // GetPathParam returns the value of PathParam.
 func (s *AnyParamsOKEcho) GetPathParam() string {
-	return s.PathParam
+	_ = "STUB: not implemented"
+
+	// GetQueryParam returns the value of QueryParam.
+	return ""
 }
 
-// GetQueryParam returns the value of QueryParam.
 func (s *AnyParamsOKEcho) GetQueryParam() OptString {
-	return s.QueryParam
+	_ = "STUB: not implemented"
+	return *
+
+	// GetHeaderParam returns the value of HeaderParam.
+	new(OptString)
 }
 
-// GetHeaderParam returns the value of HeaderParam.
 func (s *AnyParamsOKEcho) GetHeaderParam() OptString {
-	return s.HeaderParam
+	_ = "STUB: not implemented"
+	return *
+
+	// GetCookieParam returns the value of CookieParam.
+	new(OptString)
 }
 
-// GetCookieParam returns the value of CookieParam.
 func (s *AnyParamsOKEcho) GetCookieParam() OptString {
-	return s.CookieParam
+	_ = "STUB: not implemented"
+	return *
+
+	// SetPathParam sets the value of PathParam.
+	new(OptString)
 }
 
-// SetPathParam sets the value of PathParam.
 func (s *AnyParamsOKEcho) SetPathParam(val string) {
-	s.PathParam = val
+	_ = "STUB: not implemented"
+
+	// SetQueryParam sets the value of QueryParam.
+	return
 }
 
-// SetQueryParam sets the value of QueryParam.
 func (s *AnyParamsOKEcho) SetQueryParam(val OptString) {
-	s.QueryParam = val
+	_ = "STUB: not implemented"
+
+	// SetHeaderParam sets the value of HeaderParam.
+	return
 }
 
-// SetHeaderParam sets the value of HeaderParam.
-func (s *AnyParamsOKEcho) SetHeaderParam(val OptString) {
-	s.HeaderParam = val
-}
+func (s *AnyParamsOKEcho) SetHeaderParam(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetCookieParam sets the value of CookieParam.
-func (s *AnyParamsOKEcho) SetCookieParam(val OptString) {
-	s.CookieParam = val
-}
+func (s *AnyParamsOKEcho) SetCookieParam(val OptString) { _ = "STUB: not implemented"; return }
 
 type AnyParamsRequiredOK struct {
 	Received bool `json:"received"`
@@ -83,21 +94,20 @@ type AnyParamsRequiredOK struct {
 
 // GetReceived returns the value of Received.
 func (s *AnyParamsRequiredOK) GetReceived() bool {
-	return s.Received
+	_ = "STUB: not implemented"
+
+	// SetReceived sets the value of Received.
+	return false
 }
 
-// SetReceived sets the value of Received.
 func (s *AnyParamsRequiredOK) SetReceived(val bool) {
-	s.Received = val
+	_ = "STUB: not implemented"
+
+	// NewOptInt returns new OptInt with value set to v.
+	return
 }
 
-// NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -106,44 +116,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -152,33 +144,20 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }

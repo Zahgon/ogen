@@ -2,10 +2,6 @@
 
 package api
 
-import (
-	"github.com/go-faster/errors"
-)
-
 // Item with all field type categories.
 // Ref: #/components/schemas/ComprehensiveItem
 type ComprehensiveItem struct {
@@ -47,175 +43,243 @@ type ComprehensiveItem struct {
 
 // GetID returns the value of ID.
 func (s *ComprehensiveItem) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *ComprehensiveItem) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetPriority returns the value of Priority.
+	return ""
 }
 
-// GetPriority returns the value of Priority.
 func (s *ComprehensiveItem) GetPriority() int {
-	return s.Priority
+	_ = "STUB: not implemented"
+
+	// GetActive returns the value of Active.
+	return 0
 }
 
-// GetActive returns the value of Active.
 func (s *ComprehensiveItem) GetActive() bool {
-	return s.Active
+	_ = "STUB: not implemented"
+
+	// GetDescription returns the value of Description.
+	return false
 }
 
-// GetDescription returns the value of Description.
 func (s *ComprehensiveItem) GetDescription() OptString {
-	return s.Description
+	_ = "STUB: not implemented"
+	return *
+
+	// GetScore returns the value of Score.
+	new(OptString)
 }
 
-// GetScore returns the value of Score.
 func (s *ComprehensiveItem) GetScore() OptFloat64 {
-	return s.Score
+	_ = "STUB: not implemented"
+
+	// GetExternalId returns the value of ExternalId.
+	return *new(OptFloat64)
 }
 
-// GetExternalId returns the value of ExternalId.
 func (s *ComprehensiveItem) GetExternalId() OptNilString {
-	return s.ExternalId
+	_ = "STUB: not implemented"
+	return *
+
+	// GetStatus returns the value of Status.
+	new(OptNilString)
 }
 
-// GetStatus returns the value of Status.
 func (s *ComprehensiveItem) GetStatus() OptComprehensiveItemStatus {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// GetCategory returns the value of Category.
+	return *new(OptComprehensiveItemStatus)
 }
 
-// GetCategory returns the value of Category.
 func (s *ComprehensiveItem) GetCategory() OptComprehensiveItemCategory {
-	return s.Category
+	_ = "STUB: not implemented"
+
+	// GetTags returns the value of Tags.
+	return *new(OptComprehensiveItemCategory)
 }
 
-// GetTags returns the value of Tags.
 func (s *ComprehensiveItem) GetTags() []string {
-	return s.Tags
+	_ = "STUB: not implemented"
+
+	// GetLabels returns the value of Labels.
+	return nil
 }
 
-// GetLabels returns the value of Labels.
 func (s *ComprehensiveItem) GetLabels() []string {
-	return s.Labels
+	_ = "STUB: not implemented"
+
+	// GetMetadata returns the value of Metadata.
+	return nil
 }
 
-// GetMetadata returns the value of Metadata.
 func (s *ComprehensiveItem) GetMetadata() OptComprehensiveItemMetadata {
-	return s.Metadata
+	_ = "STUB: not implemented"
+
+	// GetCustomFields returns the value of CustomFields.
+	return *new(OptComprehensiveItemMetadata)
 }
 
-// GetCustomFields returns the value of CustomFields.
 func (s *ComprehensiveItem) GetCustomFields() OptComprehensiveItemCustomFields {
-	return s.CustomFields
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOwner returns the value of Owner.
+	new(OptComprehensiveItemCustomFields)
 }
 
-// GetOwner returns the value of Owner.
 func (s *ComprehensiveItem) GetOwner() OptUser {
-	return s.Owner
+	_ = "STUB: not implemented"
+
+	// GetAssignee returns the value of Assignee.
+	return *new(OptUser)
 }
 
-// GetAssignee returns the value of Assignee.
 func (s *ComprehensiveItem) GetAssignee() OptUser {
-	return s.Assignee
+	_ = "STUB: not implemented"
+
+	// GetWatchers returns the value of Watchers.
+	return *new(OptUser)
 }
 
-// GetWatchers returns the value of Watchers.
 func (s *ComprehensiveItem) GetWatchers() []User {
-	return s.Watchers
+	_ = "STUB: not implemented"
+
+	// GetConfiguration returns the value of Configuration.
+	return nil
 }
 
-// GetConfiguration returns the value of Configuration.
 func (s *ComprehensiveItem) GetConfiguration() OptConfiguration {
-	return s.Configuration
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptConfiguration)
 }
 
-// SetID sets the value of ID.
 func (s *ComprehensiveItem) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *ComprehensiveItem) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetPriority sets the value of Priority.
+	return
 }
 
-// SetPriority sets the value of Priority.
 func (s *ComprehensiveItem) SetPriority(val int) {
-	s.Priority = val
+	_ = "STUB: not implemented"
+
+	// SetActive sets the value of Active.
+	return
 }
 
-// SetActive sets the value of Active.
 func (s *ComprehensiveItem) SetActive(val bool) {
-	s.Active = val
+	_ = "STUB: not implemented"
+
+	// SetDescription sets the value of Description.
+	return
 }
 
-// SetDescription sets the value of Description.
-func (s *ComprehensiveItem) SetDescription(val OptString) {
-	s.Description = val
-}
+func (s *ComprehensiveItem) SetDescription(val OptString) { _ = "STUB: not implemented"; return }
 
 // SetScore sets the value of Score.
 func (s *ComprehensiveItem) SetScore(val OptFloat64) {
-	s.Score = val
+	_ = "STUB: not implemented"
+
+	// SetExternalId sets the value of ExternalId.
+	return
 }
 
-// SetExternalId sets the value of ExternalId.
 func (s *ComprehensiveItem) SetExternalId(val OptNilString) {
-	s.ExternalId = val
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return
 }
 
-// SetStatus sets the value of Status.
 func (s *ComprehensiveItem) SetStatus(val OptComprehensiveItemStatus) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// SetCategory sets the value of Category.
+	return
 }
 
-// SetCategory sets the value of Category.
 func (s *ComprehensiveItem) SetCategory(val OptComprehensiveItemCategory) {
-	s.Category = val
+	_ = "STUB: not implemented"
+
+	// SetTags sets the value of Tags.
+	return
 }
 
-// SetTags sets the value of Tags.
 func (s *ComprehensiveItem) SetTags(val []string) {
-	s.Tags = val
+	_ = "STUB: not implemented"
+
+	// SetLabels sets the value of Labels.
+	return
 }
 
-// SetLabels sets the value of Labels.
 func (s *ComprehensiveItem) SetLabels(val []string) {
-	s.Labels = val
+	_ = "STUB: not implemented"
+
+	// SetMetadata sets the value of Metadata.
+	return
 }
 
-// SetMetadata sets the value of Metadata.
 func (s *ComprehensiveItem) SetMetadata(val OptComprehensiveItemMetadata) {
-	s.Metadata = val
+	_ = "STUB: not implemented"
+
+	// SetCustomFields sets the value of CustomFields.
+	return
 }
 
-// SetCustomFields sets the value of CustomFields.
 func (s *ComprehensiveItem) SetCustomFields(val OptComprehensiveItemCustomFields) {
-	s.CustomFields = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetOwner sets the value of Owner.
 }
 
-// SetOwner sets the value of Owner.
 func (s *ComprehensiveItem) SetOwner(val OptUser) {
-	s.Owner = val
+	_ = "STUB: not implemented"
+
+	// SetAssignee sets the value of Assignee.
+	return
 }
 
-// SetAssignee sets the value of Assignee.
 func (s *ComprehensiveItem) SetAssignee(val OptUser) {
-	s.Assignee = val
+	_ = "STUB: not implemented"
+
+	// SetWatchers sets the value of Watchers.
+	return
 }
 
-// SetWatchers sets the value of Watchers.
 func (s *ComprehensiveItem) SetWatchers(val []User) {
-	s.Watchers = val
+	_ = "STUB: not implemented"
+
+	// SetConfiguration sets the value of Configuration.
+	return
 }
 
-// SetConfiguration sets the value of Configuration.
 func (s *ComprehensiveItem) SetConfiguration(val OptConfiguration) {
-	s.Configuration = val
+	_ = "STUB: not implemented"
+	return
+
+	// Optional category.
 }
 
-// Optional category.
 type ComprehensiveItemCategory string
 
 const (
@@ -226,42 +290,20 @@ const (
 
 // AllValues returns all ComprehensiveItemCategory values.
 func (ComprehensiveItemCategory) AllValues() []ComprehensiveItemCategory {
-	return []ComprehensiveItemCategory{
-		ComprehensiveItemCategoryFeature,
-		ComprehensiveItemCategoryBug,
-		ComprehensiveItemCategoryTask,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s ComprehensiveItemCategory) MarshalText() ([]byte, error) {
-	switch s {
-	case ComprehensiveItemCategoryFeature:
-		return []byte(s), nil
-	case ComprehensiveItemCategoryBug:
-		return []byte(s), nil
-	case ComprehensiveItemCategoryTask:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *ComprehensiveItemCategory) UnmarshalText(data []byte) error {
-	switch ComprehensiveItemCategory(data) {
-	case ComprehensiveItemCategoryFeature:
-		*s = ComprehensiveItemCategoryFeature
-		return nil
-	case ComprehensiveItemCategoryBug:
-		*s = ComprehensiveItemCategoryBug
-		return nil
-	case ComprehensiveItemCategoryTask:
-		*s = ComprehensiveItemCategoryTask
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Optional custom fields.
@@ -299,42 +341,20 @@ const (
 
 // AllValues returns all ComprehensiveItemStatus values.
 func (ComprehensiveItemStatus) AllValues() []ComprehensiveItemStatus {
-	return []ComprehensiveItemStatus{
-		ComprehensiveItemStatusDraft,
-		ComprehensiveItemStatusPublished,
-		ComprehensiveItemStatusArchived,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s ComprehensiveItemStatus) MarshalText() ([]byte, error) {
-	switch s {
-	case ComprehensiveItemStatusDraft:
-		return []byte(s), nil
-	case ComprehensiveItemStatusPublished:
-		return []byte(s), nil
-	case ComprehensiveItemStatusArchived:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *ComprehensiveItemStatus) UnmarshalText(data []byte) error {
-	switch ComprehensiveItemStatus(data) {
-	case ComprehensiveItemStatusDraft:
-		*s = ComprehensiveItemStatusDraft
-		return nil
-	case ComprehensiveItemStatusPublished:
-		*s = ComprehensiveItemStatusPublished
-		return nil
-	case ComprehensiveItemStatusArchived:
-		*s = ComprehensiveItemStatusArchived
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Complex configuration with nested objects and maps.
@@ -347,33 +367,41 @@ type Configuration struct {
 
 // GetVersion returns the value of Version.
 func (s *Configuration) GetVersion() OptString {
-	return s.Version
+	_ = "STUB: not implemented"
+
+	// GetSettings returns the value of Settings.
+	return *new(OptString)
 }
 
-// GetSettings returns the value of Settings.
 func (s *Configuration) GetSettings() OptConfigurationSettings {
-	return s.Settings
+	_ = "STUB: not implemented"
+
+	// GetFeatures returns the value of Features.
+	return *new(OptConfigurationSettings)
 }
 
-// GetFeatures returns the value of Features.
 func (s *Configuration) GetFeatures() []Feature {
-	return s.Features
+	_ = "STUB: not implemented"
+
+	// SetVersion sets the value of Version.
+	return nil
 }
 
-// SetVersion sets the value of Version.
 func (s *Configuration) SetVersion(val OptString) {
-	s.Version = val
+	_ = "STUB: not implemented"
+
+	// SetSettings sets the value of Settings.
+	return
 }
 
-// SetSettings sets the value of Settings.
 func (s *Configuration) SetSettings(val OptConfigurationSettings) {
-	s.Settings = val
+	_ = "STUB: not implemented"
+
+	// SetFeatures sets the value of Features.
+	return
 }
 
-// SetFeatures sets the value of Features.
-func (s *Configuration) SetFeatures(val []Feature) {
-	s.Features = val
-}
+func (s *Configuration) SetFeatures(val []Feature) { _ = "STUB: not implemented"; return }
 
 type ConfigurationSettings map[string]string
 
@@ -392,13 +420,13 @@ type CreateIntegrationItemsOK struct {
 
 // GetCreated returns the value of Created.
 func (s *CreateIntegrationItemsOK) GetCreated() OptInt {
-	return s.Created
+	_ = "STUB: not implemented"
+
+	// SetCreated sets the value of Created.
+	return *new(OptInt)
 }
 
-// SetCreated sets the value of Created.
-func (s *CreateIntegrationItemsOK) SetCreated(val OptInt) {
-	s.Created = val
-}
+func (s *CreateIntegrationItemsOK) SetCreated(val OptInt) { _ = "STUB: not implemented"; return }
 
 type CreateIntegrationItemsReq struct {
 	Items []ComprehensiveItem `json:"items"`
@@ -406,16 +434,20 @@ type CreateIntegrationItemsReq struct {
 
 // GetItems returns the value of Items.
 func (s *CreateIntegrationItemsReq) GetItems() []ComprehensiveItem {
-	return s.Items
+	_ = "STUB: not implemented"
+
+	// SetItems sets the value of Items.
+	return nil
 }
 
-// SetItems sets the value of Items.
 func (s *CreateIntegrationItemsReq) SetItems(val []ComprehensiveItem) {
-	s.Items = val
+	_ = "STUB: not implemented"
+
+	// Feature flag.
+	// Ref: #/components/schemas/Feature
+	return
 }
 
-// Feature flag.
-// Ref: #/components/schemas/Feature
 type Feature struct {
 	Name       OptString            `json:"name"`
 	Enabled    OptBool              `json:"enabled"`
@@ -424,33 +456,42 @@ type Feature struct {
 
 // GetName returns the value of Name.
 func (s *Feature) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetEnabled returns the value of Enabled.
+	return *new(OptString)
 }
 
-// GetEnabled returns the value of Enabled.
 func (s *Feature) GetEnabled() OptBool {
-	return s.Enabled
+	_ = "STUB: not implemented"
+
+	// GetParameters returns the value of Parameters.
+	return *new(OptBool)
 }
 
-// GetParameters returns the value of Parameters.
 func (s *Feature) GetParameters() OptFeatureParameters {
-	return s.Parameters
+	_ = "STUB: not implemented"
+	return *
+
+	// SetName sets the value of Name.
+	new(OptFeatureParameters)
 }
 
-// SetName sets the value of Name.
 func (s *Feature) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetEnabled sets the value of Enabled.
+	return
 }
 
-// SetEnabled sets the value of Enabled.
 func (s *Feature) SetEnabled(val OptBool) {
-	s.Enabled = val
+	_ = "STUB: not implemented"
+
+	// SetParameters sets the value of Parameters.
+	return
 }
 
-// SetParameters sets the value of Parameters.
-func (s *Feature) SetParameters(val OptFeatureParameters) {
-	s.Parameters = val
-}
+func (s *Feature) SetParameters(val OptFeatureParameters) { _ = "STUB: not implemented"; return }
 
 type FeatureParameters map[string]string
 
@@ -464,12 +505,7 @@ func (s *FeatureParameters) init() FeatureParameters {
 }
 
 // NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -478,43 +514,28 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptComprehensiveItemCategory returns new OptComprehensiveItemCategory with value set to v.
 func NewOptComprehensiveItemCategory(v ComprehensiveItemCategory) OptComprehensiveItemCategory {
-	return OptComprehensiveItemCategory{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptComprehensiveItemCategory)
 }
 
 // OptComprehensiveItemCategory is optional ComprehensiveItemCategory.
@@ -524,43 +545,37 @@ type OptComprehensiveItemCategory struct {
 }
 
 // IsSet returns true if OptComprehensiveItemCategory was set.
-func (o OptComprehensiveItemCategory) IsSet() bool { return o.Set }
+func (o OptComprehensiveItemCategory) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptComprehensiveItemCategory) Reset() {
-	var v ComprehensiveItemCategory
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptComprehensiveItemCategory) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptComprehensiveItemCategory) SetTo(v ComprehensiveItemCategory) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptComprehensiveItemCategory) Get() (v ComprehensiveItemCategory, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ComprehensiveItemCategory), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptComprehensiveItemCategory) Or(d ComprehensiveItemCategory) ComprehensiveItemCategory {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ComprehensiveItemCategory)
 }
 
 // NewOptComprehensiveItemCustomFields returns new OptComprehensiveItemCustomFields with value set to v.
 func NewOptComprehensiveItemCustomFields(v ComprehensiveItemCustomFields) OptComprehensiveItemCustomFields {
-	return OptComprehensiveItemCustomFields{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptComprehensiveItemCustomFields)
 }
 
 // OptComprehensiveItemCustomFields is optional ComprehensiveItemCustomFields.
@@ -570,43 +585,37 @@ type OptComprehensiveItemCustomFields struct {
 }
 
 // IsSet returns true if OptComprehensiveItemCustomFields was set.
-func (o OptComprehensiveItemCustomFields) IsSet() bool { return o.Set }
+func (o OptComprehensiveItemCustomFields) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptComprehensiveItemCustomFields) Reset() {
-	var v ComprehensiveItemCustomFields
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptComprehensiveItemCustomFields) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptComprehensiveItemCustomFields) SetTo(v ComprehensiveItemCustomFields) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptComprehensiveItemCustomFields) Get() (v ComprehensiveItemCustomFields, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ComprehensiveItemCustomFields), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptComprehensiveItemCustomFields) Or(d ComprehensiveItemCustomFields) ComprehensiveItemCustomFields {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ComprehensiveItemCustomFields)
 }
 
 // NewOptComprehensiveItemMetadata returns new OptComprehensiveItemMetadata with value set to v.
 func NewOptComprehensiveItemMetadata(v ComprehensiveItemMetadata) OptComprehensiveItemMetadata {
-	return OptComprehensiveItemMetadata{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptComprehensiveItemMetadata)
 }
 
 // OptComprehensiveItemMetadata is optional ComprehensiveItemMetadata.
@@ -616,43 +625,37 @@ type OptComprehensiveItemMetadata struct {
 }
 
 // IsSet returns true if OptComprehensiveItemMetadata was set.
-func (o OptComprehensiveItemMetadata) IsSet() bool { return o.Set }
+func (o OptComprehensiveItemMetadata) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptComprehensiveItemMetadata) Reset() {
-	var v ComprehensiveItemMetadata
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptComprehensiveItemMetadata) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptComprehensiveItemMetadata) SetTo(v ComprehensiveItemMetadata) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptComprehensiveItemMetadata) Get() (v ComprehensiveItemMetadata, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ComprehensiveItemMetadata), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptComprehensiveItemMetadata) Or(d ComprehensiveItemMetadata) ComprehensiveItemMetadata {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ComprehensiveItemMetadata)
 }
 
 // NewOptComprehensiveItemStatus returns new OptComprehensiveItemStatus with value set to v.
 func NewOptComprehensiveItemStatus(v ComprehensiveItemStatus) OptComprehensiveItemStatus {
-	return OptComprehensiveItemStatus{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptComprehensiveItemStatus)
 }
 
 // OptComprehensiveItemStatus is optional ComprehensiveItemStatus.
@@ -662,43 +665,37 @@ type OptComprehensiveItemStatus struct {
 }
 
 // IsSet returns true if OptComprehensiveItemStatus was set.
-func (o OptComprehensiveItemStatus) IsSet() bool { return o.Set }
+func (o OptComprehensiveItemStatus) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptComprehensiveItemStatus) Reset() {
-	var v ComprehensiveItemStatus
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptComprehensiveItemStatus) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptComprehensiveItemStatus) SetTo(v ComprehensiveItemStatus) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptComprehensiveItemStatus) Get() (v ComprehensiveItemStatus, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ComprehensiveItemStatus), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptComprehensiveItemStatus) Or(d ComprehensiveItemStatus) ComprehensiveItemStatus {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ComprehensiveItemStatus)
 }
 
 // NewOptConfiguration returns new OptConfiguration with value set to v.
 func NewOptConfiguration(v Configuration) OptConfiguration {
-	return OptConfiguration{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptConfiguration)
 }
 
 // OptConfiguration is optional Configuration.
@@ -708,43 +705,34 @@ type OptConfiguration struct {
 }
 
 // IsSet returns true if OptConfiguration was set.
-func (o OptConfiguration) IsSet() bool { return o.Set }
+func (o OptConfiguration) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptConfiguration) Reset() {
-	var v Configuration
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptConfiguration) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptConfiguration) SetTo(v Configuration) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptConfiguration) SetTo(v Configuration) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptConfiguration) Get() (v Configuration, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Configuration), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptConfiguration) Or(d Configuration) Configuration {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(Configuration)
 }
 
 // NewOptConfigurationSettings returns new OptConfigurationSettings with value set to v.
 func NewOptConfigurationSettings(v ConfigurationSettings) OptConfigurationSettings {
-	return OptConfigurationSettings{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptConfigurationSettings)
 }
 
 // OptConfigurationSettings is optional ConfigurationSettings.
@@ -754,43 +742,37 @@ type OptConfigurationSettings struct {
 }
 
 // IsSet returns true if OptConfigurationSettings was set.
-func (o OptConfigurationSettings) IsSet() bool { return o.Set }
+func (o OptConfigurationSettings) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptConfigurationSettings) Reset() {
-	var v ConfigurationSettings
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptConfigurationSettings) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptConfigurationSettings) SetTo(v ConfigurationSettings) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptConfigurationSettings) Get() (v ConfigurationSettings, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ConfigurationSettings), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptConfigurationSettings) Or(d ConfigurationSettings) ConfigurationSettings {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(ConfigurationSettings)
 }
 
 // NewOptFeatureParameters returns new OptFeatureParameters with value set to v.
 func NewOptFeatureParameters(v FeatureParameters) OptFeatureParameters {
-	return OptFeatureParameters{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptFeatureParameters)
 }
 
 // OptFeatureParameters is optional FeatureParameters.
@@ -800,44 +782,32 @@ type OptFeatureParameters struct {
 }
 
 // IsSet returns true if OptFeatureParameters was set.
-func (o OptFeatureParameters) IsSet() bool { return o.Set }
+func (o OptFeatureParameters) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFeatureParameters) Reset() {
-	var v FeatureParameters
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFeatureParameters) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFeatureParameters) SetTo(v FeatureParameters) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFeatureParameters) SetTo(v FeatureParameters) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptFeatureParameters) Get() (v FeatureParameters, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(FeatureParameters), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptFeatureParameters) Or(d FeatureParameters) FeatureParameters {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(FeatureParameters)
 }
 
 // NewOptFloat64 returns new OptFloat64 with value set to v.
-func NewOptFloat64(v float64) OptFloat64 {
-	return OptFloat64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptFloat64(v float64) OptFloat64 { _ = "STUB: not implemented"; return *new(OptFloat64) }
 
 // OptFloat64 is optional float64.
 type OptFloat64 struct {
@@ -846,44 +816,26 @@ type OptFloat64 struct {
 }
 
 // IsSet returns true if OptFloat64 was set.
-func (o OptFloat64) IsSet() bool { return o.Set }
+func (o OptFloat64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptFloat64) Reset() {
-	var v float64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptFloat64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptFloat64) SetTo(v float64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptFloat64) SetTo(v float64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptFloat64) Get() (v float64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptFloat64) Get() (v float64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptFloat64) Or(d float64) float64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptFloat64) Or(d float64) float64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -892,44 +844,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptNilString returns new OptNilString with value set to v.
-func NewOptNilString(v string) OptNilString {
-	return OptNilString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptNilString(v string) OptNilString { _ = "STUB: not implemented"; return *new(OptNilString) }
 
 // OptNilString is optional nullable string.
 type OptNilString struct {
@@ -939,60 +873,36 @@ type OptNilString struct {
 }
 
 // IsSet returns true if OptNilString was set.
-func (o OptNilString) IsSet() bool { return o.Set }
+func (o OptNilString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptNilString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
-	o.Null = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptNilString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptNilString) SetTo(v string) {
-	o.Set = true
-	o.Null = false
-	o.Value = v
-}
+func (o *OptNilString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // IsNull returns true if value is Null.
-func (o OptNilString) IsNull() bool { return o.Null }
+func (o OptNilString) IsNull() bool {
+	_ = "STUB: not implemented"
 
-// SetToNull sets value to null.
-func (o *OptNilString) SetToNull() {
-	o.Set = true
-	o.Null = true
-	var v string
-	o.Value = v
+	// SetToNull sets value to null.
+	return false
 }
+
+func (o *OptNilString) SetToNull() { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptNilString) Get() (v string, ok bool) {
-	if o.Null {
-		return v, false
-	}
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptNilString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptNilString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptNilString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -1001,44 +911,26 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptUser returns new OptUser with value set to v.
-func NewOptUser(v User) OptUser {
-	return OptUser{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptUser(v User) OptUser { _ = "STUB: not implemented"; return *new(OptUser) }
 
 // OptUser is optional User.
 type OptUser struct {
@@ -1047,36 +939,23 @@ type OptUser struct {
 }
 
 // IsSet returns true if OptUser was set.
-func (o OptUser) IsSet() bool { return o.Set }
+func (o OptUser) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUser) Reset() {
-	var v User
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUser) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUser) SetTo(v User) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUser) SetTo(v User) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptUser) Get() (v User, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptUser) Get() (v User, ok bool) { _ = "STUB: not implemented"; return *new(User), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptUser) Or(d User) User {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptUser) Or(d User) User { _ = "STUB: not implemented"; return *new(User) }
 
 // User information.
 // Ref: #/components/schemas/User
@@ -1089,40 +968,52 @@ type User struct {
 
 // GetUsername returns the value of Username.
 func (s *User) GetUsername() string {
-	return s.Username
+	_ = "STUB: not implemented"
+
+	// GetEmail returns the value of Email.
+	return ""
 }
 
-// GetEmail returns the value of Email.
 func (s *User) GetEmail() OptString {
-	return s.Email
+	_ = "STUB: not implemented"
+
+	// GetFullName returns the value of FullName.
+	return *new(OptString)
 }
 
-// GetFullName returns the value of FullName.
 func (s *User) GetFullName() OptString {
-	return s.FullName
+	_ = "STUB: not implemented"
+
+	// GetVerified returns the value of Verified.
+	return *new(OptString)
 }
 
-// GetVerified returns the value of Verified.
 func (s *User) GetVerified() OptBool {
-	return s.Verified
+	_ = "STUB: not implemented"
+
+	// SetUsername sets the value of Username.
+	return *new(OptBool)
 }
 
-// SetUsername sets the value of Username.
 func (s *User) SetUsername(val string) {
-	s.Username = val
+	_ = "STUB: not implemented"
+
+	// SetEmail sets the value of Email.
+	return
 }
 
-// SetEmail sets the value of Email.
 func (s *User) SetEmail(val OptString) {
-	s.Email = val
+	_ = "STUB: not implemented"
+
+	// SetFullName sets the value of FullName.
+	return
 }
 
-// SetFullName sets the value of FullName.
 func (s *User) SetFullName(val OptString) {
-	s.FullName = val
+	_ = "STUB: not implemented"
+
+	// SetVerified sets the value of Verified.
+	return
 }
 
-// SetVerified sets the value of Verified.
-func (s *User) SetVerified(val OptBool) {
-	s.Verified = val
-}
+func (s *User) SetVerified(val OptBool) { _ = "STUB: not implemented"; return }

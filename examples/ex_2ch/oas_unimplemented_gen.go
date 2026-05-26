@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,16 +17,19 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /api/captcha/2chcaptcha/id
 func (UnimplementedHandler) APICaptcha2chcaptchaIDGet(ctx context.Context, params APICaptcha2chcaptchaIDGetParams) (r *Captcha, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// APICaptcha2chcaptchaShowGet implements GET /api/captcha/2chcaptcha/show operation.
+	//
+	// Отображение 2chcaptcha по id.
+	//
+	// GET /api/captcha/2chcaptcha/show
 }
 
-// APICaptcha2chcaptchaShowGet implements GET /api/captcha/2chcaptcha/show operation.
-//
-// Отображение 2chcaptcha по id.
-//
-// GET /api/captcha/2chcaptcha/show
 func (UnimplementedHandler) APICaptcha2chcaptchaShowGet(ctx context.Context, params APICaptcha2chcaptchaShowGetParams) (r APICaptcha2chcaptchaShowGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(APICaptcha2chcaptchaShowGetRes), nil
 }
 
 // APICaptchaAppIDPublicKeyGet implements GET /api/captcha/app/id/{public_key} operation.
@@ -41,25 +42,30 @@ func (UnimplementedHandler) APICaptcha2chcaptchaShowGet(ctx context.Context, par
 //
 // GET /api/captcha/app/id/{public_key}
 func (UnimplementedHandler) APICaptchaAppIDPublicKeyGet(ctx context.Context, params APICaptchaAppIDPublicKeyGetParams) (r *Captcha, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// APICaptchaInvisibleRecaptchaIDGet implements GET /api/captcha/invisible_recaptcha/id operation.
+	//
+	// Получение публичного ключа invisible recaptcha.
+	//
+	// GET /api/captcha/invisible_recaptcha/id
 }
 
-// APICaptchaInvisibleRecaptchaIDGet implements GET /api/captcha/invisible_recaptcha/id operation.
-//
-// Получение публичного ключа invisible recaptcha.
-//
-// GET /api/captcha/invisible_recaptcha/id
 func (UnimplementedHandler) APICaptchaInvisibleRecaptchaIDGet(ctx context.Context, params APICaptchaInvisibleRecaptchaIDGetParams) (r *Captcha, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// APICaptchaInvisibleRecaptchaMobileGet implements GET /api/captcha/invisible_recaptcha/mobile operation.
+	//
+	// Получение html страницы для решения капчи, CORS отключён.
+	//
+	// GET /api/captcha/invisible_recaptcha/mobile
 }
 
-// APICaptchaInvisibleRecaptchaMobileGet implements GET /api/captcha/invisible_recaptcha/mobile operation.
-//
-// Получение html страницы для решения капчи, CORS отключён.
-//
-// GET /api/captcha/invisible_recaptcha/mobile
 func (UnimplementedHandler) APICaptchaInvisibleRecaptchaMobileGet(ctx context.Context) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // APICaptchaRecaptchaIDGet implements GET /api/captcha/recaptcha/id operation.
@@ -68,16 +74,19 @@ func (UnimplementedHandler) APICaptchaInvisibleRecaptchaMobileGet(ctx context.Co
 //
 // GET /api/captcha/recaptcha/id
 func (UnimplementedHandler) APICaptchaRecaptchaIDGet(ctx context.Context, params APICaptchaRecaptchaIDGetParams) (r *Captcha, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// APICaptchaRecaptchaMobileGet implements GET /api/captcha/recaptcha/mobile operation.
+	//
+	// Получение html страницы для решения капчи, CORS отключён.
+	//
+	// GET /api/captcha/recaptcha/mobile
 }
 
-// APICaptchaRecaptchaMobileGet implements GET /api/captcha/recaptcha/mobile operation.
-//
-// Получение html страницы для решения капчи, CORS отключён.
-//
-// GET /api/captcha/recaptcha/mobile
 func (UnimplementedHandler) APICaptchaRecaptchaMobileGet(ctx context.Context) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // APIDislikeGet implements GET /api/dislike operation.
@@ -86,36 +95,43 @@ func (UnimplementedHandler) APICaptchaRecaptchaMobileGet(ctx context.Context) er
 //
 // GET /api/dislike
 func (UnimplementedHandler) APIDislikeGet(ctx context.Context, params APIDislikeGetParams) (r *Like, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// APILikeGet implements GET /api/like operation.
+	//
+	// Добавление лайка на пост.
+	//
+	// GET /api/like
 }
 
-// APILikeGet implements GET /api/like operation.
-//
-// Добавление лайка на пост.
-//
-// GET /api/like
 func (UnimplementedHandler) APILikeGet(ctx context.Context, params APILikeGetParams) (r *Like, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// APIMobileV2AfterBoardThreadNumGet implements GET /api/mobile/v2/after/{board}/{thread}/{num} operation.
+	//
+	// Получение постов в треде >= указанного. Не
+	// рекомендуется использовать для получения треда
+	// целиком, только для проверки новых постов.
+	//
+	// GET /api/mobile/v2/after/{board}/{thread}/{num}
 }
 
-// APIMobileV2AfterBoardThreadNumGet implements GET /api/mobile/v2/after/{board}/{thread}/{num} operation.
-//
-// Получение постов в треде >= указанного. Не
-// рекомендуется использовать для получения треда
-// целиком, только для проверки новых постов.
-//
-// GET /api/mobile/v2/after/{board}/{thread}/{num}
 func (UnimplementedHandler) APIMobileV2AfterBoardThreadNumGet(ctx context.Context, params APIMobileV2AfterBoardThreadNumGetParams) (r *MobileThreadPostsAfter, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// APIMobileV2BoardsGet implements GET /api/mobile/v2/boards operation.
+	//
+	// Получение списка досок и их настроек.
+	//
+	// GET /api/mobile/v2/boards
 }
 
-// APIMobileV2BoardsGet implements GET /api/mobile/v2/boards operation.
-//
-// Получение списка досок и их настроек.
-//
-// GET /api/mobile/v2/boards
 func (UnimplementedHandler) APIMobileV2BoardsGet(ctx context.Context) (r Boards, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(Boards), nil
 }
 
 // APIMobileV2InfoBoardThreadGet implements GET /api/mobile/v2/info/{board}/{thread} operation.
@@ -124,34 +140,41 @@ func (UnimplementedHandler) APIMobileV2BoardsGet(ctx context.Context) (r Boards,
 //
 // GET /api/mobile/v2/info/{board}/{thread}
 func (UnimplementedHandler) APIMobileV2InfoBoardThreadGet(ctx context.Context, params APIMobileV2InfoBoardThreadGetParams) (r *MobileThreadLastInfo, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// APIMobileV2PostBoardNumGet implements GET /api/mobile/v2/post/{board}/{num} operation.
+	//
+	// Получение информации о посте.
+	//
+	// GET /api/mobile/v2/post/{board}/{num}
 }
 
-// APIMobileV2PostBoardNumGet implements GET /api/mobile/v2/post/{board}/{num} operation.
-//
-// Получение информации о посте.
-//
-// GET /api/mobile/v2/post/{board}/{num}
 func (UnimplementedHandler) APIMobileV2PostBoardNumGet(ctx context.Context, params APIMobileV2PostBoardNumGetParams) (r *MobilePost, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UserPassloginPost implements POST /user/passlogin operation.
+	//
+	// Авторизация пасскода.
+	//
+	// POST /user/passlogin
 }
 
-// UserPassloginPost implements POST /user/passlogin operation.
-//
-// Авторизация пасскода.
-//
-// POST /user/passlogin
 func (UnimplementedHandler) UserPassloginPost(ctx context.Context, req OptUserPassloginPostReq, params UserPassloginPostParams) (r *Passcode, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UserPostingPost implements POST /user/posting operation.
+	//
+	// Создание нового поста или треда.
+	//
+	// POST /user/posting
 }
 
-// UserPostingPost implements POST /user/posting operation.
-//
-// Создание нового поста или треда.
-//
-// POST /user/posting
 func (UnimplementedHandler) UserPostingPost(ctx context.Context, req OptUserPostingPostReq) (r UserPostingPostOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UserPostingPostOK), nil
 }
 
 // UserReportPost implements POST /user/report operation.
@@ -160,5 +183,6 @@ func (UnimplementedHandler) UserPostingPost(ctx context.Context, req OptUserPost
 //
 // POST /user/report
 func (UnimplementedHandler) UserReportPost(ctx context.Context, req OptUserReportPostReq) (r *Report, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
 }

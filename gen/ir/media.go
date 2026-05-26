@@ -1,15 +1,17 @@
 package ir
 
-import "strings"
-
 // ContentType is a Content-Type header value.
 type ContentType string
 
-func (t ContentType) Mask() bool { return strings.ContainsRune(string(t), '*') }
+func (t ContentType) Mask() bool { _ = "STUB: not implemented"; return false }
 
-func (t ContentType) String() string { return string(t) }
+func (t ContentType) String() string {
+	_ = "STUB: not implemented"
 
-// Encoding of body.
+	// Encoding of body.
+	return ""
+}
+
 type Encoding string
 
 const (
@@ -26,19 +28,19 @@ const (
 	EncodingTextPlain Encoding = "text/plain"
 )
 
-func (t Encoding) String() string { return string(t) }
+func (t Encoding) String() string { _ = "STUB: not implemented"; return "" }
 
-func (t Encoding) JSON() bool { return t == EncodingJSON }
+func (t Encoding) JSON() bool { _ = "STUB: not implemented"; return false }
 
-func (t Encoding) ProblemJSON() bool { return t == EncodingProblemJSON }
+func (t Encoding) ProblemJSON() bool { _ = "STUB: not implemented"; return false }
 
-func (t Encoding) FormURLEncoded() bool { return t == EncodingFormURLEncoded }
+func (t Encoding) FormURLEncoded() bool { _ = "STUB: not implemented"; return false }
 
-func (t Encoding) MultipartForm() bool { return t == EncodingMultipart }
+func (t Encoding) MultipartForm() bool { _ = "STUB: not implemented"; return false }
 
-func (t Encoding) OctetStream() bool { return t == EncodingOctetStream }
+func (t Encoding) OctetStream() bool { _ = "STUB: not implemented"; return false }
 
-func (t Encoding) TextPlain() bool { return t == EncodingTextPlain }
+func (t Encoding) TextPlain() bool { _ = "STUB: not implemented"; return false }
 
 type Media struct {
 	// Encoding is the parsed content type used for encoding, but not for header value.

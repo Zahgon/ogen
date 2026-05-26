@@ -12,10 +12,10 @@ type TestOK struct {
 
 // GetTest returns the value of Test.
 func (s *TestOK) GetTest() baz.Test {
-	return s.Test
+	_ = "STUB: not implemented"
+
+	// SetTest sets the value of Test.
+	return *new(baz.Test)
 }
 
-// SetTest sets the value of Test.
-func (s *TestOK) SetTest(val baz.Test) {
-	s.Test = val
-}
+func (s *TestOK) SetTest(val baz.Test) { _ = "STUB: not implemented"; return }

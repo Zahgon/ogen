@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -27,7 +25,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}
 func (UnimplementedHandler) ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.Context, params ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsAddSelectedRepoToOrgSecret implements actions/add-selected-repo-to-org-secret operation.
@@ -40,7 +39,8 @@ func (UnimplementedHandler) ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg(ctx
 //
 // PUT /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}
 func (UnimplementedHandler) ActionsAddSelectedRepoToOrgSecret(ctx context.Context, params ActionsAddSelectedRepoToOrgSecretParams) (r ActionsAddSelectedRepoToOrgSecretRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActionsAddSelectedRepoToOrgSecretRes), nil
 }
 
 // ActionsAddSelfHostedRunnerToGroupForOrg implements actions/add-self-hosted-runner-to-group-for-org operation.
@@ -54,7 +54,8 @@ func (UnimplementedHandler) ActionsAddSelectedRepoToOrgSecret(ctx context.Contex
 //
 // PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}
 func (UnimplementedHandler) ActionsAddSelfHostedRunnerToGroupForOrg(ctx context.Context, params ActionsAddSelfHostedRunnerToGroupForOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsApproveWorkflowRun implements actions/approve-workflow-run operation.
@@ -67,7 +68,8 @@ func (UnimplementedHandler) ActionsAddSelfHostedRunnerToGroupForOrg(ctx context.
 //
 // POST /repos/{owner}/{repo}/actions/runs/{run_id}/approve
 func (UnimplementedHandler) ActionsApproveWorkflowRun(ctx context.Context, params ActionsApproveWorkflowRunParams) (r ActionsApproveWorkflowRunRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActionsApproveWorkflowRunRes), nil
 }
 
 // ActionsCancelWorkflowRun implements actions/cancel-workflow-run operation.
@@ -78,7 +80,8 @@ func (UnimplementedHandler) ActionsApproveWorkflowRun(ctx context.Context, param
 //
 // POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel
 func (UnimplementedHandler) ActionsCancelWorkflowRun(ctx context.Context, params ActionsCancelWorkflowRunParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsCreateOrUpdateEnvironmentSecret implements actions/create-or-update-environment-secret operation.
@@ -140,7 +143,8 @@ func (UnimplementedHandler) ActionsCancelWorkflowRun(ctx context.Context, params
 //
 // PUT /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}
 func (UnimplementedHandler) ActionsCreateOrUpdateEnvironmentSecret(ctx context.Context, req *ActionsCreateOrUpdateEnvironmentSecretReq, params ActionsCreateOrUpdateEnvironmentSecretParams) (r ActionsCreateOrUpdateEnvironmentSecretRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActionsCreateOrUpdateEnvironmentSecretRes), nil
 }
 
 // ActionsCreateOrUpdateOrgSecret implements actions/create-or-update-org-secret operation.
@@ -202,7 +206,8 @@ func (UnimplementedHandler) ActionsCreateOrUpdateEnvironmentSecret(ctx context.C
 //
 // PUT /orgs/{org}/actions/secrets/{secret_name}
 func (UnimplementedHandler) ActionsCreateOrUpdateOrgSecret(ctx context.Context, req *ActionsCreateOrUpdateOrgSecretReq, params ActionsCreateOrUpdateOrgSecretParams) (r ActionsCreateOrUpdateOrgSecretRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActionsCreateOrUpdateOrgSecretRes), nil
 }
 
 // ActionsCreateOrUpdateRepoSecret implements actions/create-or-update-repo-secret operation.
@@ -264,7 +269,8 @@ func (UnimplementedHandler) ActionsCreateOrUpdateOrgSecret(ctx context.Context, 
 //
 // PUT /repos/{owner}/{repo}/actions/secrets/{secret_name}
 func (UnimplementedHandler) ActionsCreateOrUpdateRepoSecret(ctx context.Context, req *ActionsCreateOrUpdateRepoSecretReq, params ActionsCreateOrUpdateRepoSecretParams) (r ActionsCreateOrUpdateRepoSecretRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActionsCreateOrUpdateRepoSecretRes), nil
 }
 
 // ActionsCreateRegistrationTokenForOrg implements actions/create-registration-token-for-org operation.
@@ -280,91 +286,102 @@ func (UnimplementedHandler) ActionsCreateOrUpdateRepoSecret(ctx context.Context,
 //
 // POST /orgs/{org}/actions/runners/registration-token
 func (UnimplementedHandler) ActionsCreateRegistrationTokenForOrg(ctx context.Context, params ActionsCreateRegistrationTokenForOrgParams) (r *AuthenticationToken, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsCreateRegistrationTokenForRepo implements actions/create-registration-token-for-repo operation.
+	//
+	// Returns a token that you can pass to the `config` script. The token expires after one hour. You
+	// must authenticate
+	// using an access token with the `repo` scope to use this endpoint.
+	// #### Example using registration token
+	// Configure your self-hosted runner, replacing `TOKEN` with the registration token provided by this
+	// endpoint.
+	// ```
+	// ./config.sh --url https://github.com/octo-org/octo-repo-artifacts --token TOKEN
+	// ```.
+	//
+	// POST /repos/{owner}/{repo}/actions/runners/registration-token
 }
 
-// ActionsCreateRegistrationTokenForRepo implements actions/create-registration-token-for-repo operation.
-//
-// Returns a token that you can pass to the `config` script. The token expires after one hour. You
-// must authenticate
-// using an access token with the `repo` scope to use this endpoint.
-// #### Example using registration token
-// Configure your self-hosted runner, replacing `TOKEN` with the registration token provided by this
-// endpoint.
-// ```
-// ./config.sh --url https://github.com/octo-org/octo-repo-artifacts --token TOKEN
-// ```.
-//
-// POST /repos/{owner}/{repo}/actions/runners/registration-token
 func (UnimplementedHandler) ActionsCreateRegistrationTokenForRepo(ctx context.Context, params ActionsCreateRegistrationTokenForRepoParams) (r *AuthenticationToken, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsCreateRemoveTokenForOrg implements actions/create-remove-token-for-org operation.
+	//
+	// Returns a token that you can pass to the `config` script to remove a self-hosted runner from an
+	// organization. The token expires after one hour.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	// #### Example using remove token
+	// To remove your self-hosted runner from an organization, replace `TOKEN` with the remove token
+	// provided by this
+	// endpoint.
+	// ```
+	// ./config.sh remove --token TOKEN
+	// ```.
+	//
+	// POST /orgs/{org}/actions/runners/remove-token
 }
 
-// ActionsCreateRemoveTokenForOrg implements actions/create-remove-token-for-org operation.
-//
-// Returns a token that you can pass to the `config` script to remove a self-hosted runner from an
-// organization. The token expires after one hour.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-// #### Example using remove token
-// To remove your self-hosted runner from an organization, replace `TOKEN` with the remove token
-// provided by this
-// endpoint.
-// ```
-// ./config.sh remove --token TOKEN
-// ```.
-//
-// POST /orgs/{org}/actions/runners/remove-token
 func (UnimplementedHandler) ActionsCreateRemoveTokenForOrg(ctx context.Context, params ActionsCreateRemoveTokenForOrgParams) (r *AuthenticationToken, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsCreateRemoveTokenForRepo implements actions/create-remove-token-for-repo operation.
+	//
+	// Returns a token that you can pass to remove a self-hosted runner from a repository. The token
+	// expires after one hour.
+	// You must authenticate using an access token with the `repo` scope to use this endpoint.
+	// #### Example using remove token
+	// To remove your self-hosted runner from a repository, replace TOKEN with the remove token provided
+	// by this endpoint.
+	// ```
+	// ./config.sh remove --token TOKEN
+	// ```.
+	//
+	// POST /repos/{owner}/{repo}/actions/runners/remove-token
 }
 
-// ActionsCreateRemoveTokenForRepo implements actions/create-remove-token-for-repo operation.
-//
-// Returns a token that you can pass to remove a self-hosted runner from a repository. The token
-// expires after one hour.
-// You must authenticate using an access token with the `repo` scope to use this endpoint.
-// #### Example using remove token
-// To remove your self-hosted runner from a repository, replace TOKEN with the remove token provided
-// by this endpoint.
-// ```
-// ./config.sh remove --token TOKEN
-// ```.
-//
-// POST /repos/{owner}/{repo}/actions/runners/remove-token
 func (UnimplementedHandler) ActionsCreateRemoveTokenForRepo(ctx context.Context, params ActionsCreateRemoveTokenForRepoParams) (r *AuthenticationToken, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsCreateSelfHostedRunnerGroupForOrg implements actions/create-self-hosted-runner-group-for-org operation.
+	//
+	// The self-hosted runner groups REST API is available with GitHub Enterprise Cloud and GitHub
+	// Enterprise Server. For more information, see "[GitHub's products](https://docs.github.
+	// com/github/getting-started-with-github/githubs-products)."
+	// Creates a new self-hosted runner group for an organization.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	//
+	// POST /orgs/{org}/actions/runner-groups
 }
 
-// ActionsCreateSelfHostedRunnerGroupForOrg implements actions/create-self-hosted-runner-group-for-org operation.
-//
-// The self-hosted runner groups REST API is available with GitHub Enterprise Cloud and GitHub
-// Enterprise Server. For more information, see "[GitHub's products](https://docs.github.
-// com/github/getting-started-with-github/githubs-products)."
-// Creates a new self-hosted runner group for an organization.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-//
-// POST /orgs/{org}/actions/runner-groups
 func (UnimplementedHandler) ActionsCreateSelfHostedRunnerGroupForOrg(ctx context.Context, req *ActionsCreateSelfHostedRunnerGroupForOrgReq, params ActionsCreateSelfHostedRunnerGroupForOrgParams) (r *RunnerGroupsOrg, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsCreateWorkflowDispatch implements actions/create-workflow-dispatch operation.
+	//
+	// You can use this endpoint to manually trigger a GitHub Actions workflow run. You can replace
+	// `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
+	// You must configure your GitHub Actions workflow to run when the [`workflow_dispatch`
+	// webhook](/developers/webhooks-and-events/webhook-events-and-payloads#workflow_dispatch) event
+	// occurs. The `inputs` are configured in the workflow file. For more information about how to
+	// configure the `workflow_dispatch` event in the workflow file, see "[Events that trigger
+	// workflows](/actions/reference/events-that-trigger-workflows#workflow_dispatch)."
+	// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub
+	// Apps must have the `actions:write` permission to use this endpoint. For more information, see
+	// "[Creating a personal access token for the command line](https://help.github.
+	// com/articles/creating-a-personal-access-token-for-the-command-line).".
+	//
+	// POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches
 }
 
-// ActionsCreateWorkflowDispatch implements actions/create-workflow-dispatch operation.
-//
-// You can use this endpoint to manually trigger a GitHub Actions workflow run. You can replace
-// `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
-// You must configure your GitHub Actions workflow to run when the [`workflow_dispatch`
-// webhook](/developers/webhooks-and-events/webhook-events-and-payloads#workflow_dispatch) event
-// occurs. The `inputs` are configured in the workflow file. For more information about how to
-// configure the `workflow_dispatch` event in the workflow file, see "[Events that trigger
-// workflows](/actions/reference/events-that-trigger-workflows#workflow_dispatch)."
-// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub
-// Apps must have the `actions:write` permission to use this endpoint. For more information, see
-// "[Creating a personal access token for the command line](https://help.github.
-// com/articles/creating-a-personal-access-token-for-the-command-line).".
-//
-// POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches
 func (UnimplementedHandler) ActionsCreateWorkflowDispatch(ctx context.Context, req *ActionsCreateWorkflowDispatchReq, params ActionsCreateWorkflowDispatchParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDeleteArtifact implements actions/delete-artifact operation.
@@ -375,7 +392,8 @@ func (UnimplementedHandler) ActionsCreateWorkflowDispatch(ctx context.Context, r
 //
 // DELETE /repos/{owner}/{repo}/actions/artifacts/{artifact_id}
 func (UnimplementedHandler) ActionsDeleteArtifact(ctx context.Context, params ActionsDeleteArtifactParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDeleteEnvironmentSecret implements actions/delete-environment-secret operation.
@@ -386,7 +404,8 @@ func (UnimplementedHandler) ActionsDeleteArtifact(ctx context.Context, params Ac
 //
 // DELETE /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}
 func (UnimplementedHandler) ActionsDeleteEnvironmentSecret(ctx context.Context, params ActionsDeleteEnvironmentSecretParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDeleteOrgSecret implements actions/delete-org-secret operation.
@@ -397,7 +416,8 @@ func (UnimplementedHandler) ActionsDeleteEnvironmentSecret(ctx context.Context, 
 //
 // DELETE /orgs/{org}/actions/secrets/{secret_name}
 func (UnimplementedHandler) ActionsDeleteOrgSecret(ctx context.Context, params ActionsDeleteOrgSecretParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDeleteRepoSecret implements actions/delete-repo-secret operation.
@@ -408,7 +428,8 @@ func (UnimplementedHandler) ActionsDeleteOrgSecret(ctx context.Context, params A
 //
 // DELETE /repos/{owner}/{repo}/actions/secrets/{secret_name}
 func (UnimplementedHandler) ActionsDeleteRepoSecret(ctx context.Context, params ActionsDeleteRepoSecretParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDeleteSelfHostedRunnerFromOrg implements actions/delete-self-hosted-runner-from-org operation.
@@ -419,7 +440,8 @@ func (UnimplementedHandler) ActionsDeleteRepoSecret(ctx context.Context, params 
 //
 // DELETE /orgs/{org}/actions/runners/{runner_id}
 func (UnimplementedHandler) ActionsDeleteSelfHostedRunnerFromOrg(ctx context.Context, params ActionsDeleteSelfHostedRunnerFromOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDeleteSelfHostedRunnerFromRepo implements actions/delete-self-hosted-runner-from-repo operation.
@@ -431,7 +453,8 @@ func (UnimplementedHandler) ActionsDeleteSelfHostedRunnerFromOrg(ctx context.Con
 //
 // DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}
 func (UnimplementedHandler) ActionsDeleteSelfHostedRunnerFromRepo(ctx context.Context, params ActionsDeleteSelfHostedRunnerFromRepoParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDeleteSelfHostedRunnerGroupFromOrg implements actions/delete-self-hosted-runner-group-from-org operation.
@@ -444,7 +467,8 @@ func (UnimplementedHandler) ActionsDeleteSelfHostedRunnerFromRepo(ctx context.Co
 //
 // DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}
 func (UnimplementedHandler) ActionsDeleteSelfHostedRunnerGroupFromOrg(ctx context.Context, params ActionsDeleteSelfHostedRunnerGroupFromOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDeleteWorkflowRun implements actions/delete-workflow-run operation.
@@ -457,7 +481,8 @@ func (UnimplementedHandler) ActionsDeleteSelfHostedRunnerGroupFromOrg(ctx contex
 //
 // DELETE /repos/{owner}/{repo}/actions/runs/{run_id}
 func (UnimplementedHandler) ActionsDeleteWorkflowRun(ctx context.Context, params ActionsDeleteWorkflowRunParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDeleteWorkflowRunLogs implements actions/delete-workflow-run-logs operation.
@@ -468,7 +493,8 @@ func (UnimplementedHandler) ActionsDeleteWorkflowRun(ctx context.Context, params
 //
 // DELETE /repos/{owner}/{repo}/actions/runs/{run_id}/logs
 func (UnimplementedHandler) ActionsDeleteWorkflowRunLogs(ctx context.Context, params ActionsDeleteWorkflowRunLogsParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDisableSelectedRepositoryGithubActionsOrganization implements actions/disable-selected-repository-github-actions-organization operation.
@@ -482,7 +508,8 @@ func (UnimplementedHandler) ActionsDeleteWorkflowRunLogs(ctx context.Context, pa
 //
 // DELETE /orgs/{org}/actions/permissions/repositories/{repository_id}
 func (UnimplementedHandler) ActionsDisableSelectedRepositoryGithubActionsOrganization(ctx context.Context, params ActionsDisableSelectedRepositoryGithubActionsOrganizationParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDisableWorkflow implements actions/disable-workflow operation.
@@ -494,7 +521,8 @@ func (UnimplementedHandler) ActionsDisableSelectedRepositoryGithubActionsOrganiz
 //
 // PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable
 func (UnimplementedHandler) ActionsDisableWorkflow(ctx context.Context, params ActionsDisableWorkflowParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsDownloadArtifact implements actions/download-artifact operation.
@@ -509,53 +537,60 @@ func (UnimplementedHandler) ActionsDisableWorkflow(ctx context.Context, params A
 //
 // GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}
 func (UnimplementedHandler) ActionsDownloadArtifact(ctx context.Context, params ActionsDownloadArtifactParams) (r *ActionsDownloadArtifactFound, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsDownloadJobLogsForWorkflowRun implements actions/download-job-logs-for-workflow-run operation.
+	//
+	// Gets a redirect URL to download a plain text file of logs for a workflow job. This link expires
+	// after 1 minute. Look
+	// for `Location:` in the response header to find the URL for the download. Anyone with read access
+	// to the repository can
+	// use this endpoint. If the repository is private you must use an access token with the `repo` scope.
+	//
+	//	GitHub Apps must
+	//
+	// have the `actions:read` permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/jobs/{job_id}/logs
 }
 
-// ActionsDownloadJobLogsForWorkflowRun implements actions/download-job-logs-for-workflow-run operation.
-//
-// Gets a redirect URL to download a plain text file of logs for a workflow job. This link expires
-// after 1 minute. Look
-// for `Location:` in the response header to find the URL for the download. Anyone with read access
-// to the repository can
-// use this endpoint. If the repository is private you must use an access token with the `repo` scope.
-//
-//	GitHub Apps must
-//
-// have the `actions:read` permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/jobs/{job_id}/logs
 func (UnimplementedHandler) ActionsDownloadJobLogsForWorkflowRun(ctx context.Context, params ActionsDownloadJobLogsForWorkflowRunParams) (r *ActionsDownloadJobLogsForWorkflowRunFound, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsDownloadWorkflowRunLogs implements actions/download-workflow-run-logs operation.
+	//
+	// Gets a redirect URL to download an archive of log files for a workflow run. This link expires
+	// after 1 minute. Look for
+	// `Location:` in the response header to find the URL for the download. Anyone with read access to
+	// the repository can use
+	// this endpoint. If the repository is private you must use an access token with the `repo` scope.
+	// GitHub Apps must have
+	// the `actions:read` permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/runs/{run_id}/logs
 }
 
-// ActionsDownloadWorkflowRunLogs implements actions/download-workflow-run-logs operation.
-//
-// Gets a redirect URL to download an archive of log files for a workflow run. This link expires
-// after 1 minute. Look for
-// `Location:` in the response header to find the URL for the download. Anyone with read access to
-// the repository can use
-// this endpoint. If the repository is private you must use an access token with the `repo` scope.
-// GitHub Apps must have
-// the `actions:read` permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/runs/{run_id}/logs
 func (UnimplementedHandler) ActionsDownloadWorkflowRunLogs(ctx context.Context, params ActionsDownloadWorkflowRunLogsParams) (r *ActionsDownloadWorkflowRunLogsFound, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsEnableSelectedRepositoryGithubActionsOrganization implements actions/enable-selected-repository-github-actions-organization operation.
+	//
+	// Adds a repository to the list of selected repositories that are enabled for GitHub Actions in an
+	// organization. To use this endpoint, the organization permission policy for `enabled_repositories`
+	// must be must be configured to `selected`. For more information, see "[Set GitHub Actions
+	// permissions for an organization](#set-github-actions-permissions-for-an-organization)."
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	// GitHub Apps must have the `administration` organization permission to use this API.
+	//
+	// PUT /orgs/{org}/actions/permissions/repositories/{repository_id}
 }
 
-// ActionsEnableSelectedRepositoryGithubActionsOrganization implements actions/enable-selected-repository-github-actions-organization operation.
-//
-// Adds a repository to the list of selected repositories that are enabled for GitHub Actions in an
-// organization. To use this endpoint, the organization permission policy for `enabled_repositories`
-// must be must be configured to `selected`. For more information, see "[Set GitHub Actions
-// permissions for an organization](#set-github-actions-permissions-for-an-organization)."
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-// GitHub Apps must have the `administration` organization permission to use this API.
-//
-// PUT /orgs/{org}/actions/permissions/repositories/{repository_id}
 func (UnimplementedHandler) ActionsEnableSelectedRepositoryGithubActionsOrganization(ctx context.Context, params ActionsEnableSelectedRepositoryGithubActionsOrganizationParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsEnableWorkflow implements actions/enable-workflow operation.
@@ -567,7 +602,8 @@ func (UnimplementedHandler) ActionsEnableSelectedRepositoryGithubActionsOrganiza
 //
 // PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable
 func (UnimplementedHandler) ActionsEnableWorkflow(ctx context.Context, params ActionsEnableWorkflowParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsGetAllowedActionsOrganization implements actions/get-allowed-actions-organization operation.
@@ -581,468 +617,545 @@ func (UnimplementedHandler) ActionsEnableWorkflow(ctx context.Context, params Ac
 //
 // GET /orgs/{org}/actions/permissions/selected-actions
 func (UnimplementedHandler) ActionsGetAllowedActionsOrganization(ctx context.Context, params ActionsGetAllowedActionsOrganizationParams) (r *SelectedActions, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetAllowedActionsRepository implements actions/get-allowed-actions-repository operation.
+	//
+	// Gets the settings for selected actions that are allowed in a repository. To use this endpoint, the
+	// repository policy for `allowed_actions` must be configured to `selected`. For more information,
+	// see "[Set GitHub Actions permissions for a
+	// repository](#set-github-actions-permissions-for-a-repository)."
+	// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub
+	// Apps must have the `administration` repository permission to use this API.
+	//
+	// GET /repos/{owner}/{repo}/actions/permissions/selected-actions
 }
 
-// ActionsGetAllowedActionsRepository implements actions/get-allowed-actions-repository operation.
-//
-// Gets the settings for selected actions that are allowed in a repository. To use this endpoint, the
-// repository policy for `allowed_actions` must be configured to `selected`. For more information,
-// see "[Set GitHub Actions permissions for a
-// repository](#set-github-actions-permissions-for-a-repository)."
-// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub
-// Apps must have the `administration` repository permission to use this API.
-//
-// GET /repos/{owner}/{repo}/actions/permissions/selected-actions
 func (UnimplementedHandler) ActionsGetAllowedActionsRepository(ctx context.Context, params ActionsGetAllowedActionsRepositoryParams) (r *SelectedActions, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetArtifact implements actions/get-artifact operation.
+	//
+	// Gets a specific artifact for a workflow run. Anyone with read access to the repository can use
+	// this endpoint. If the repository is private you must use an access token with the `repo` scope.
+	// GitHub Apps must have the `actions:read` permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}
 }
 
-// ActionsGetArtifact implements actions/get-artifact operation.
-//
-// Gets a specific artifact for a workflow run. Anyone with read access to the repository can use
-// this endpoint. If the repository is private you must use an access token with the `repo` scope.
-// GitHub Apps must have the `actions:read` permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}
 func (UnimplementedHandler) ActionsGetArtifact(ctx context.Context, params ActionsGetArtifactParams) (r *Artifact, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetEnvironmentPublicKey implements actions/get-environment-public-key operation.
+	//
+	// Get the public key for an environment, which you need to encrypt environment secrets. You need to
+	// encrypt a secret before you can create or update secrets. Anyone with read access to the
+	// repository can use this endpoint. If the repository is private you must use an access token with
+	// the `repo` scope. GitHub Apps must have the `secrets` repository permission to use this endpoint.
+	//
+	// GET /repositories/{repository_id}/environments/{environment_name}/secrets/public-key
 }
 
-// ActionsGetEnvironmentPublicKey implements actions/get-environment-public-key operation.
-//
-// Get the public key for an environment, which you need to encrypt environment secrets. You need to
-// encrypt a secret before you can create or update secrets. Anyone with read access to the
-// repository can use this endpoint. If the repository is private you must use an access token with
-// the `repo` scope. GitHub Apps must have the `secrets` repository permission to use this endpoint.
-//
-// GET /repositories/{repository_id}/environments/{environment_name}/secrets/public-key
 func (UnimplementedHandler) ActionsGetEnvironmentPublicKey(ctx context.Context, params ActionsGetEnvironmentPublicKeyParams) (r *ActionsPublicKey, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetEnvironmentSecret implements actions/get-environment-secret operation.
+	//
+	// Gets a single environment secret without revealing its encrypted value. You must authenticate
+	// using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the
+	// `secrets` repository permission to use this endpoint.
+	//
+	// GET /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}
 }
 
-// ActionsGetEnvironmentSecret implements actions/get-environment-secret operation.
-//
-// Gets a single environment secret without revealing its encrypted value. You must authenticate
-// using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the
-// `secrets` repository permission to use this endpoint.
-//
-// GET /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}
 func (UnimplementedHandler) ActionsGetEnvironmentSecret(ctx context.Context, params ActionsGetEnvironmentSecretParams) (r *ActionsSecret, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetGithubActionsPermissionsOrganization implements actions/get-github-actions-permissions-organization operation.
+	//
+	// Gets the GitHub Actions permissions policy for repositories and allowed actions in an organization.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	// GitHub Apps must have the `administration` organization permission to use this API.
+	//
+	// GET /orgs/{org}/actions/permissions
 }
 
-// ActionsGetGithubActionsPermissionsOrganization implements actions/get-github-actions-permissions-organization operation.
-//
-// Gets the GitHub Actions permissions policy for repositories and allowed actions in an organization.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-// GitHub Apps must have the `administration` organization permission to use this API.
-//
-// GET /orgs/{org}/actions/permissions
 func (UnimplementedHandler) ActionsGetGithubActionsPermissionsOrganization(ctx context.Context, params ActionsGetGithubActionsPermissionsOrganizationParams) (r *ActionsOrganizationPermissions, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetGithubActionsPermissionsRepository implements actions/get-github-actions-permissions-repository operation.
+	//
+	// Gets the GitHub Actions permissions policy for a repository, including whether GitHub Actions is
+	// enabled and the actions allowed to run in the repository.
+	// You must authenticate using an access token with the `repo` scope to use this
+	// endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+	//
+	// GET /repos/{owner}/{repo}/actions/permissions
 }
 
-// ActionsGetGithubActionsPermissionsRepository implements actions/get-github-actions-permissions-repository operation.
-//
-// Gets the GitHub Actions permissions policy for a repository, including whether GitHub Actions is
-// enabled and the actions allowed to run in the repository.
-// You must authenticate using an access token with the `repo` scope to use this
-// endpoint. GitHub Apps must have the `administration` repository permission to use this API.
-//
-// GET /repos/{owner}/{repo}/actions/permissions
 func (UnimplementedHandler) ActionsGetGithubActionsPermissionsRepository(ctx context.Context, params ActionsGetGithubActionsPermissionsRepositoryParams) (r *ActionsRepositoryPermissions, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetJobForWorkflowRun implements actions/get-job-for-workflow-run operation.
+	//
+	// Gets a specific job in a workflow run. Anyone with read access to the repository can use this
+	// endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub
+	// Apps must have the `actions:read` permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/jobs/{job_id}
 }
 
-// ActionsGetJobForWorkflowRun implements actions/get-job-for-workflow-run operation.
-//
-// Gets a specific job in a workflow run. Anyone with read access to the repository can use this
-// endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub
-// Apps must have the `actions:read` permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/jobs/{job_id}
 func (UnimplementedHandler) ActionsGetJobForWorkflowRun(ctx context.Context, params ActionsGetJobForWorkflowRunParams) (r *Job, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetOrgPublicKey implements actions/get-org-public-key operation.
+	//
+	// Gets your public key, which you need to encrypt secrets. You need to encrypt a secret before you
+	// can create or update secrets. You must authenticate using an access token with the `admin:org`
+	// scope to use this endpoint. GitHub Apps must have the `secrets` organization permission to use
+	// this endpoint.
+	//
+	// GET /orgs/{org}/actions/secrets/public-key
 }
 
-// ActionsGetOrgPublicKey implements actions/get-org-public-key operation.
-//
-// Gets your public key, which you need to encrypt secrets. You need to encrypt a secret before you
-// can create or update secrets. You must authenticate using an access token with the `admin:org`
-// scope to use this endpoint. GitHub Apps must have the `secrets` organization permission to use
-// this endpoint.
-//
-// GET /orgs/{org}/actions/secrets/public-key
 func (UnimplementedHandler) ActionsGetOrgPublicKey(ctx context.Context, params ActionsGetOrgPublicKeyParams) (r *ActionsPublicKey, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetOrgSecret implements actions/get-org-secret operation.
+	//
+	// Gets a single organization secret without revealing its encrypted value. You must authenticate
+	// using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the
+	// `secrets` organization permission to use this endpoint.
+	//
+	// GET /orgs/{org}/actions/secrets/{secret_name}
 }
 
-// ActionsGetOrgSecret implements actions/get-org-secret operation.
-//
-// Gets a single organization secret without revealing its encrypted value. You must authenticate
-// using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the
-// `secrets` organization permission to use this endpoint.
-//
-// GET /orgs/{org}/actions/secrets/{secret_name}
 func (UnimplementedHandler) ActionsGetOrgSecret(ctx context.Context, params ActionsGetOrgSecretParams) (r *OrganizationActionsSecret, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetRepoPublicKey implements actions/get-repo-public-key operation.
+	//
+	// Gets your public key, which you need to encrypt secrets. You need to encrypt a secret before you
+	// can create or update secrets. Anyone with read access to the repository can use this endpoint. If
+	// the repository is private you must use an access token with the `repo` scope. GitHub Apps must
+	// have the `secrets` repository permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/secrets/public-key
 }
 
-// ActionsGetRepoPublicKey implements actions/get-repo-public-key operation.
-//
-// Gets your public key, which you need to encrypt secrets. You need to encrypt a secret before you
-// can create or update secrets. Anyone with read access to the repository can use this endpoint. If
-// the repository is private you must use an access token with the `repo` scope. GitHub Apps must
-// have the `secrets` repository permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/secrets/public-key
 func (UnimplementedHandler) ActionsGetRepoPublicKey(ctx context.Context, params ActionsGetRepoPublicKeyParams) (r *ActionsPublicKey, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetRepoSecret implements actions/get-repo-secret operation.
+	//
+	// Gets a single repository secret without revealing its encrypted value. You must authenticate using
+	// an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `secrets`
+	// repository permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/secrets/{secret_name}
 }
 
-// ActionsGetRepoSecret implements actions/get-repo-secret operation.
-//
-// Gets a single repository secret without revealing its encrypted value. You must authenticate using
-// an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `secrets`
-// repository permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/secrets/{secret_name}
 func (UnimplementedHandler) ActionsGetRepoSecret(ctx context.Context, params ActionsGetRepoSecretParams) (r *ActionsSecret, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetReviewsForRun implements actions/get-reviews-for-run operation.
+	//
+	// Anyone with read access to the repository can use this endpoint. If the repository is private, you
+	// must use an access token with the `repo` scope. GitHub Apps must have the `actions:read`
+	// permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/runs/{run_id}/approvals
 }
 
-// ActionsGetReviewsForRun implements actions/get-reviews-for-run operation.
-//
-// Anyone with read access to the repository can use this endpoint. If the repository is private, you
-// must use an access token with the `repo` scope. GitHub Apps must have the `actions:read`
-// permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/runs/{run_id}/approvals
 func (UnimplementedHandler) ActionsGetReviewsForRun(ctx context.Context, params ActionsGetReviewsForRunParams) (r []EnvironmentApprovals, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetSelfHostedRunnerForOrg implements actions/get-self-hosted-runner-for-org operation.
+	//
+	// Gets a specific self-hosted runner configured in an organization.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	//
+	// GET /orgs/{org}/actions/runners/{runner_id}
 }
 
-// ActionsGetSelfHostedRunnerForOrg implements actions/get-self-hosted-runner-for-org operation.
-//
-// Gets a specific self-hosted runner configured in an organization.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-//
-// GET /orgs/{org}/actions/runners/{runner_id}
 func (UnimplementedHandler) ActionsGetSelfHostedRunnerForOrg(ctx context.Context, params ActionsGetSelfHostedRunnerForOrgParams) (r *Runner, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetSelfHostedRunnerForRepo implements actions/get-self-hosted-runner-for-repo operation.
+	//
+	// Gets a specific self-hosted runner configured in a repository.
+	// You must authenticate using an access token with the `repo` scope to use this
+	// endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/runners/{runner_id}
 }
 
-// ActionsGetSelfHostedRunnerForRepo implements actions/get-self-hosted-runner-for-repo operation.
-//
-// Gets a specific self-hosted runner configured in a repository.
-// You must authenticate using an access token with the `repo` scope to use this
-// endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/runners/{runner_id}
 func (UnimplementedHandler) ActionsGetSelfHostedRunnerForRepo(ctx context.Context, params ActionsGetSelfHostedRunnerForRepoParams) (r *Runner, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetSelfHostedRunnerGroupForOrg implements actions/get-self-hosted-runner-group-for-org operation.
+	//
+	// The self-hosted runner groups REST API is available with GitHub Enterprise Cloud. For more
+	// information, see "[GitHub's products](https://docs.github.
+	// com/github/getting-started-with-github/githubs-products)."
+	// Gets a specific self-hosted runner group for an organization.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	//
+	// GET /orgs/{org}/actions/runner-groups/{runner_group_id}
 }
 
-// ActionsGetSelfHostedRunnerGroupForOrg implements actions/get-self-hosted-runner-group-for-org operation.
-//
-// The self-hosted runner groups REST API is available with GitHub Enterprise Cloud. For more
-// information, see "[GitHub's products](https://docs.github.
-// com/github/getting-started-with-github/githubs-products)."
-// Gets a specific self-hosted runner group for an organization.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-//
-// GET /orgs/{org}/actions/runner-groups/{runner_group_id}
 func (UnimplementedHandler) ActionsGetSelfHostedRunnerGroupForOrg(ctx context.Context, params ActionsGetSelfHostedRunnerGroupForOrgParams) (r *RunnerGroupsOrg, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetWorkflow implements actions/get-workflow operation.
+	//
+	// Gets a specific workflow. You can replace `workflow_id` with the workflow file name. For example,
+	// you could use `main.yaml`. Anyone with read access to the repository can use this endpoint. If the
+	// repository is private you must use an access token with the `repo` scope. GitHub Apps must have
+	// the `actions:read` permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}
 }
 
-// ActionsGetWorkflow implements actions/get-workflow operation.
-//
-// Gets a specific workflow. You can replace `workflow_id` with the workflow file name. For example,
-// you could use `main.yaml`. Anyone with read access to the repository can use this endpoint. If the
-// repository is private you must use an access token with the `repo` scope. GitHub Apps must have
-// the `actions:read` permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}
 func (UnimplementedHandler) ActionsGetWorkflow(ctx context.Context, params ActionsGetWorkflowParams) (r *Workflow, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetWorkflowRun implements actions/get-workflow-run operation.
+	//
+	// Gets a specific workflow run. Anyone with read access to the repository can use this endpoint. If
+	// the repository is private you must use an access token with the `repo` scope. GitHub Apps must
+	// have the `actions:read` permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/runs/{run_id}
 }
 
-// ActionsGetWorkflowRun implements actions/get-workflow-run operation.
-//
-// Gets a specific workflow run. Anyone with read access to the repository can use this endpoint. If
-// the repository is private you must use an access token with the `repo` scope. GitHub Apps must
-// have the `actions:read` permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/runs/{run_id}
 func (UnimplementedHandler) ActionsGetWorkflowRun(ctx context.Context, params ActionsGetWorkflowRunParams) (r *WorkflowRun, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetWorkflowRunUsage implements actions/get-workflow-run-usage operation.
+	//
+	// Gets the number of billable minutes and total run time for a specific workflow run. Billable
+	// minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is
+	// listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also
+	// included in the usage. The usage does not include the multiplier for macOS and Windows runners and
+	// is not rounded up to the nearest whole minute. For more information, see "[Managing billing for
+	// GitHub Actions](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
+	// Anyone with read access to the repository can use this endpoint. If the repository is private you
+	// must use an access token with the `repo` scope. GitHub Apps must have the `actions:read`
+	// permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/runs/{run_id}/timing
 }
 
-// ActionsGetWorkflowRunUsage implements actions/get-workflow-run-usage operation.
-//
-// Gets the number of billable minutes and total run time for a specific workflow run. Billable
-// minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is
-// listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also
-// included in the usage. The usage does not include the multiplier for macOS and Windows runners and
-// is not rounded up to the nearest whole minute. For more information, see "[Managing billing for
-// GitHub Actions](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
-// Anyone with read access to the repository can use this endpoint. If the repository is private you
-// must use an access token with the `repo` scope. GitHub Apps must have the `actions:read`
-// permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/runs/{run_id}/timing
 func (UnimplementedHandler) ActionsGetWorkflowRunUsage(ctx context.Context, params ActionsGetWorkflowRunUsageParams) (r *WorkflowRunUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsGetWorkflowUsage implements actions/get-workflow-usage operation.
+	//
+	// Gets the number of billable minutes used by a specific workflow during the current billing cycle.
+	// Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners.
+	// Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs
+	// are also included in the usage. The usage does not include the multiplier for macOS and Windows
+	// runners and is not rounded up to the nearest whole minute. For more information, see "[Managing
+	// billing for GitHub Actions](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
+	// You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
+	// Anyone with read access to the repository can use this endpoint. If the repository is private you
+	// must use an access token with the `repo` scope. GitHub Apps must have the `actions:read`
+	// permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing
 }
 
-// ActionsGetWorkflowUsage implements actions/get-workflow-usage operation.
-//
-// Gets the number of billable minutes used by a specific workflow during the current billing cycle.
-// Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners.
-// Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs
-// are also included in the usage. The usage does not include the multiplier for macOS and Windows
-// runners and is not rounded up to the nearest whole minute. For more information, see "[Managing
-// billing for GitHub Actions](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
-// You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
-// Anyone with read access to the repository can use this endpoint. If the repository is private you
-// must use an access token with the `repo` scope. GitHub Apps must have the `actions:read`
-// permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing
 func (UnimplementedHandler) ActionsGetWorkflowUsage(ctx context.Context, params ActionsGetWorkflowUsageParams) (r *WorkflowUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListArtifactsForRepo implements actions/list-artifacts-for-repo operation.
+	//
+	// Lists all artifacts for a repository. Anyone with read access to the repository can use this
+	// endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub
+	// Apps must have the `actions:read` permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/artifacts
 }
 
-// ActionsListArtifactsForRepo implements actions/list-artifacts-for-repo operation.
-//
-// Lists all artifacts for a repository. Anyone with read access to the repository can use this
-// endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub
-// Apps must have the `actions:read` permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/artifacts
 func (UnimplementedHandler) ActionsListArtifactsForRepo(ctx context.Context, params ActionsListArtifactsForRepoParams) (r *ActionsListArtifactsForRepoOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListEnvironmentSecrets implements actions/list-environment-secrets operation.
+	//
+	// Lists all secrets available in an environment without revealing their encrypted values. You must
+	// authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must
+	// have the `secrets` repository permission to use this endpoint.
+	//
+	// GET /repositories/{repository_id}/environments/{environment_name}/secrets
 }
 
-// ActionsListEnvironmentSecrets implements actions/list-environment-secrets operation.
-//
-// Lists all secrets available in an environment without revealing their encrypted values. You must
-// authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must
-// have the `secrets` repository permission to use this endpoint.
-//
-// GET /repositories/{repository_id}/environments/{environment_name}/secrets
 func (UnimplementedHandler) ActionsListEnvironmentSecrets(ctx context.Context, params ActionsListEnvironmentSecretsParams) (r *ActionsListEnvironmentSecretsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListJobsForWorkflowRun implements actions/list-jobs-for-workflow-run operation.
+	//
+	// Lists jobs for a workflow run. Anyone with read access to the repository can use this endpoint. If
+	// the repository is private you must use an access token with the `repo` scope. GitHub Apps must
+	// have the `actions:read` permission to use this endpoint. You can use parameters to narrow the list
+	// of results. For more information about using parameters, see [Parameters](https://docs.github.
+	// com/rest/overview/resources-in-the-rest-api#parameters).
+	//
+	// GET /repos/{owner}/{repo}/actions/runs/{run_id}/jobs
 }
 
-// ActionsListJobsForWorkflowRun implements actions/list-jobs-for-workflow-run operation.
-//
-// Lists jobs for a workflow run. Anyone with read access to the repository can use this endpoint. If
-// the repository is private you must use an access token with the `repo` scope. GitHub Apps must
-// have the `actions:read` permission to use this endpoint. You can use parameters to narrow the list
-// of results. For more information about using parameters, see [Parameters](https://docs.github.
-// com/rest/overview/resources-in-the-rest-api#parameters).
-//
-// GET /repos/{owner}/{repo}/actions/runs/{run_id}/jobs
 func (UnimplementedHandler) ActionsListJobsForWorkflowRun(ctx context.Context, params ActionsListJobsForWorkflowRunParams) (r *ActionsListJobsForWorkflowRunOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListOrgSecrets implements actions/list-org-secrets operation.
+	//
+	// Lists all secrets available in an organization without revealing their encrypted values. You must
+	// authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps
+	// must have the `secrets` organization permission to use this endpoint.
+	//
+	// GET /orgs/{org}/actions/secrets
 }
 
-// ActionsListOrgSecrets implements actions/list-org-secrets operation.
-//
-// Lists all secrets available in an organization without revealing their encrypted values. You must
-// authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps
-// must have the `secrets` organization permission to use this endpoint.
-//
-// GET /orgs/{org}/actions/secrets
 func (UnimplementedHandler) ActionsListOrgSecrets(ctx context.Context, params ActionsListOrgSecretsParams) (r *ActionsListOrgSecretsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListRepoAccessToSelfHostedRunnerGroupInOrg implements actions/list-repo-access-to-self-hosted-runner-group-in-org operation.
+	//
+	// The self-hosted runner groups REST API is available with GitHub Enterprise Cloud and GitHub
+	// Enterprise Server. For more information, see "[GitHub's products](https://docs.github.
+	// com/github/getting-started-with-github/githubs-products)."
+	// Lists the repositories with access to a self-hosted runner group configured in an organization.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	//
+	// GET /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories
 }
 
-// ActionsListRepoAccessToSelfHostedRunnerGroupInOrg implements actions/list-repo-access-to-self-hosted-runner-group-in-org operation.
-//
-// The self-hosted runner groups REST API is available with GitHub Enterprise Cloud and GitHub
-// Enterprise Server. For more information, see "[GitHub's products](https://docs.github.
-// com/github/getting-started-with-github/githubs-products)."
-// Lists the repositories with access to a self-hosted runner group configured in an organization.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-//
-// GET /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories
 func (UnimplementedHandler) ActionsListRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.Context, params ActionsListRepoAccessToSelfHostedRunnerGroupInOrgParams) (r *ActionsListRepoAccessToSelfHostedRunnerGroupInOrgOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListRepoSecrets implements actions/list-repo-secrets operation.
+	//
+	// Lists all secrets available in a repository without revealing their encrypted values. You must
+	// authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must
+	// have the `secrets` repository permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/secrets
 }
 
-// ActionsListRepoSecrets implements actions/list-repo-secrets operation.
-//
-// Lists all secrets available in a repository without revealing their encrypted values. You must
-// authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must
-// have the `secrets` repository permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/secrets
 func (UnimplementedHandler) ActionsListRepoSecrets(ctx context.Context, params ActionsListRepoSecretsParams) (r *ActionsListRepoSecretsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListRepoWorkflows implements actions/list-repo-workflows operation.
+	//
+	// Lists the workflows in a repository. Anyone with read access to the repository can use this
+	// endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub
+	// Apps must have the `actions:read` permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/workflows
 }
 
-// ActionsListRepoWorkflows implements actions/list-repo-workflows operation.
-//
-// Lists the workflows in a repository. Anyone with read access to the repository can use this
-// endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub
-// Apps must have the `actions:read` permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/workflows
 func (UnimplementedHandler) ActionsListRepoWorkflows(ctx context.Context, params ActionsListRepoWorkflowsParams) (r *ActionsListRepoWorkflowsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListRunnerApplicationsForOrg implements actions/list-runner-applications-for-org operation.
+	//
+	// Lists binaries for the runner application that you can download and run.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	//
+	// GET /orgs/{org}/actions/runners/downloads
 }
 
-// ActionsListRunnerApplicationsForOrg implements actions/list-runner-applications-for-org operation.
-//
-// Lists binaries for the runner application that you can download and run.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-//
-// GET /orgs/{org}/actions/runners/downloads
 func (UnimplementedHandler) ActionsListRunnerApplicationsForOrg(ctx context.Context, params ActionsListRunnerApplicationsForOrgParams) (r []RunnerApplication, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListRunnerApplicationsForRepo implements actions/list-runner-applications-for-repo operation.
+	//
+	// Lists binaries for the runner application that you can download and run.
+	// You must authenticate using an access token with the `repo` scope to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/runners/downloads
 }
 
-// ActionsListRunnerApplicationsForRepo implements actions/list-runner-applications-for-repo operation.
-//
-// Lists binaries for the runner application that you can download and run.
-// You must authenticate using an access token with the `repo` scope to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/runners/downloads
 func (UnimplementedHandler) ActionsListRunnerApplicationsForRepo(ctx context.Context, params ActionsListRunnerApplicationsForRepoParams) (r []RunnerApplication, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListSelectedReposForOrgSecret implements actions/list-selected-repos-for-org-secret operation.
+	//
+	// Lists all repositories that have been selected when the `visibility` for repository access to a
+	// secret is set to `selected`. You must authenticate using an access token with the `admin:org`
+	// scope to use this endpoint. GitHub Apps must have the `secrets` organization permission to use
+	// this endpoint.
+	//
+	// GET /orgs/{org}/actions/secrets/{secret_name}/repositories
 }
 
-// ActionsListSelectedReposForOrgSecret implements actions/list-selected-repos-for-org-secret operation.
-//
-// Lists all repositories that have been selected when the `visibility` for repository access to a
-// secret is set to `selected`. You must authenticate using an access token with the `admin:org`
-// scope to use this endpoint. GitHub Apps must have the `secrets` organization permission to use
-// this endpoint.
-//
-// GET /orgs/{org}/actions/secrets/{secret_name}/repositories
 func (UnimplementedHandler) ActionsListSelectedReposForOrgSecret(ctx context.Context, params ActionsListSelectedReposForOrgSecretParams) (r *ActionsListSelectedReposForOrgSecretOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListSelectedRepositoriesEnabledGithubActionsOrganization implements actions/list-selected-repositories-enabled-github-actions-organization operation.
+	//
+	// Lists the selected repositories that are enabled for GitHub Actions in an organization. To use
+	// this endpoint, the organization permission policy for `enabled_repositories` must be configured to
+	// `selected`. For more information, see "[Set GitHub Actions permissions for an
+	// organization](#set-github-actions-permissions-for-an-organization)."
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	// GitHub Apps must have the `administration` organization permission to use this API.
+	//
+	// GET /orgs/{org}/actions/permissions/repositories
 }
 
-// ActionsListSelectedRepositoriesEnabledGithubActionsOrganization implements actions/list-selected-repositories-enabled-github-actions-organization operation.
-//
-// Lists the selected repositories that are enabled for GitHub Actions in an organization. To use
-// this endpoint, the organization permission policy for `enabled_repositories` must be configured to
-// `selected`. For more information, see "[Set GitHub Actions permissions for an
-// organization](#set-github-actions-permissions-for-an-organization)."
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-// GitHub Apps must have the `administration` organization permission to use this API.
-//
-// GET /orgs/{org}/actions/permissions/repositories
 func (UnimplementedHandler) ActionsListSelectedRepositoriesEnabledGithubActionsOrganization(ctx context.Context, params ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationParams) (r *ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListSelfHostedRunnerGroupsForOrg implements actions/list-self-hosted-runner-groups-for-org operation.
+	//
+	// The self-hosted runner groups REST API is available with GitHub Enterprise Cloud. For more
+	// information, see "[GitHub's products](https://docs.github.
+	// com/github/getting-started-with-github/githubs-products)."
+	// Lists all self-hosted runner groups configured in an organization and inherited from an enterprise.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	//
+	// GET /orgs/{org}/actions/runner-groups
 }
 
-// ActionsListSelfHostedRunnerGroupsForOrg implements actions/list-self-hosted-runner-groups-for-org operation.
-//
-// The self-hosted runner groups REST API is available with GitHub Enterprise Cloud. For more
-// information, see "[GitHub's products](https://docs.github.
-// com/github/getting-started-with-github/githubs-products)."
-// Lists all self-hosted runner groups configured in an organization and inherited from an enterprise.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-//
-// GET /orgs/{org}/actions/runner-groups
 func (UnimplementedHandler) ActionsListSelfHostedRunnerGroupsForOrg(ctx context.Context, params ActionsListSelfHostedRunnerGroupsForOrgParams) (r *ActionsListSelfHostedRunnerGroupsForOrgOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListSelfHostedRunnersForOrg implements actions/list-self-hosted-runners-for-org operation.
+	//
+	// Lists all self-hosted runners configured in an organization.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	//
+	// GET /orgs/{org}/actions/runners
 }
 
-// ActionsListSelfHostedRunnersForOrg implements actions/list-self-hosted-runners-for-org operation.
-//
-// Lists all self-hosted runners configured in an organization.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-//
-// GET /orgs/{org}/actions/runners
 func (UnimplementedHandler) ActionsListSelfHostedRunnersForOrg(ctx context.Context, params ActionsListSelfHostedRunnersForOrgParams) (r *ActionsListSelfHostedRunnersForOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListSelfHostedRunnersForRepo implements actions/list-self-hosted-runners-for-repo operation.
+	//
+	// Lists all self-hosted runners configured in a repository. You must authenticate using an access
+	// token with the `repo` scope to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/runners
 }
 
-// ActionsListSelfHostedRunnersForRepo implements actions/list-self-hosted-runners-for-repo operation.
-//
-// Lists all self-hosted runners configured in a repository. You must authenticate using an access
-// token with the `repo` scope to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/runners
 func (UnimplementedHandler) ActionsListSelfHostedRunnersForRepo(ctx context.Context, params ActionsListSelfHostedRunnersForRepoParams) (r *ActionsListSelfHostedRunnersForRepoOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListSelfHostedRunnersInGroupForOrg implements actions/list-self-hosted-runners-in-group-for-org operation.
+	//
+	// The self-hosted runner groups REST API is available with GitHub Enterprise Cloud. For more
+	// information, see "[GitHub's products](https://docs.github.
+	// com/github/getting-started-with-github/githubs-products)."
+	// Lists self-hosted runners that are in a specific organization group.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	//
+	// GET /orgs/{org}/actions/runner-groups/{runner_group_id}/runners
 }
 
-// ActionsListSelfHostedRunnersInGroupForOrg implements actions/list-self-hosted-runners-in-group-for-org operation.
-//
-// The self-hosted runner groups REST API is available with GitHub Enterprise Cloud. For more
-// information, see "[GitHub's products](https://docs.github.
-// com/github/getting-started-with-github/githubs-products)."
-// Lists self-hosted runners that are in a specific organization group.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-//
-// GET /orgs/{org}/actions/runner-groups/{runner_group_id}/runners
 func (UnimplementedHandler) ActionsListSelfHostedRunnersInGroupForOrg(ctx context.Context, params ActionsListSelfHostedRunnersInGroupForOrgParams) (r *ActionsListSelfHostedRunnersInGroupForOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListWorkflowRunArtifacts implements actions/list-workflow-run-artifacts operation.
+	//
+	// Lists artifacts for a workflow run. Anyone with read access to the repository can use this
+	// endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub
+	// Apps must have the `actions:read` permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/runs/{run_id}/artifacts
 }
 
-// ActionsListWorkflowRunArtifacts implements actions/list-workflow-run-artifacts operation.
-//
-// Lists artifacts for a workflow run. Anyone with read access to the repository can use this
-// endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub
-// Apps must have the `actions:read` permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/runs/{run_id}/artifacts
 func (UnimplementedHandler) ActionsListWorkflowRunArtifacts(ctx context.Context, params ActionsListWorkflowRunArtifactsParams) (r *ActionsListWorkflowRunArtifactsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListWorkflowRuns implements actions/list-workflow-runs operation.
+	//
+	// List all workflow runs for a workflow. You can replace `workflow_id` with the workflow file name.
+	// For example, you could use `main.yaml`. You can use parameters to narrow the list of results. For
+	// more information about using parameters, see [Parameters](https://docs.github.
+	// com/rest/overview/resources-in-the-rest-api#parameters).
+	// Anyone with read access to the repository can use this endpoint. If the repository is private you
+	// must use an access token with the `repo` scope.
+	//
+	// GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs
 }
 
-// ActionsListWorkflowRuns implements actions/list-workflow-runs operation.
-//
-// List all workflow runs for a workflow. You can replace `workflow_id` with the workflow file name.
-// For example, you could use `main.yaml`. You can use parameters to narrow the list of results. For
-// more information about using parameters, see [Parameters](https://docs.github.
-// com/rest/overview/resources-in-the-rest-api#parameters).
-// Anyone with read access to the repository can use this endpoint. If the repository is private you
-// must use an access token with the `repo` scope.
-//
-// GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs
 func (UnimplementedHandler) ActionsListWorkflowRuns(ctx context.Context, params ActionsListWorkflowRunsParams) (r *ActionsListWorkflowRunsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsListWorkflowRunsForRepo implements actions/list-workflow-runs-for-repo operation.
+	//
+	// Lists all workflow runs for a repository. You can use parameters to narrow the list of results.
+	// For more information about using parameters, see [Parameters](https://docs.github.
+	// com/rest/overview/resources-in-the-rest-api#parameters).
+	// Anyone with read access to the repository can use this endpoint. If the repository is private you
+	// must use an access token with the `repo` scope. GitHub Apps must have the `actions:read`
+	// permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/actions/runs
 }
 
-// ActionsListWorkflowRunsForRepo implements actions/list-workflow-runs-for-repo operation.
-//
-// Lists all workflow runs for a repository. You can use parameters to narrow the list of results.
-// For more information about using parameters, see [Parameters](https://docs.github.
-// com/rest/overview/resources-in-the-rest-api#parameters).
-// Anyone with read access to the repository can use this endpoint. If the repository is private you
-// must use an access token with the `repo` scope. GitHub Apps must have the `actions:read`
-// permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/actions/runs
 func (UnimplementedHandler) ActionsListWorkflowRunsForRepo(ctx context.Context, params ActionsListWorkflowRunsForRepoParams) (r *ActionsListWorkflowRunsForRepoOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsReRunWorkflow implements actions/re-run-workflow operation.
+	//
+	// **Deprecation Notice:** This endpoint is deprecated.
+	// We recommend migrating your existing code to use the new [retry workflow](https://docs.github.
+	// com/rest/reference/actions#retry-a-workflow) endpoint.
+	// Re-runs your workflow run using its `id`. You must authenticate using
+	// an access token with the `repo` scope to use this endpoint. GitHub Apps must have
+	// the `actions:write` permission to use this endpoint.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun
 }
 
-// ActionsReRunWorkflow implements actions/re-run-workflow operation.
-//
-// **Deprecation Notice:** This endpoint is deprecated.
-// We recommend migrating your existing code to use the new [retry workflow](https://docs.github.
-// com/rest/reference/actions#retry-a-workflow) endpoint.
-// Re-runs your workflow run using its `id`. You must authenticate using
-// an access token with the `repo` scope to use this endpoint. GitHub Apps must have
-// the `actions:write` permission to use this endpoint.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun
 func (UnimplementedHandler) ActionsReRunWorkflow(ctx context.Context, params ActionsReRunWorkflowParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg implements actions/remove-repo-access-to-self-hosted-runner-group-in-org operation.
@@ -1058,7 +1171,8 @@ func (UnimplementedHandler) ActionsReRunWorkflow(ctx context.Context, params Act
 //
 // DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}
 func (UnimplementedHandler) ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.Context, params ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsRemoveSelectedRepoFromOrgSecret implements actions/remove-selected-repo-from-org-secret operation.
@@ -1071,7 +1185,8 @@ func (UnimplementedHandler) ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg(
 //
 // DELETE /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}
 func (UnimplementedHandler) ActionsRemoveSelectedRepoFromOrgSecret(ctx context.Context, params ActionsRemoveSelectedRepoFromOrgSecretParams) (r ActionsRemoveSelectedRepoFromOrgSecretRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActionsRemoveSelectedRepoFromOrgSecretRes), nil
 }
 
 // ActionsRemoveSelfHostedRunnerFromGroupForOrg implements actions/remove-self-hosted-runner-from-group-for-org operation.
@@ -1085,7 +1200,8 @@ func (UnimplementedHandler) ActionsRemoveSelectedRepoFromOrgSecret(ctx context.C
 //
 // DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}
 func (UnimplementedHandler) ActionsRemoveSelfHostedRunnerFromGroupForOrg(ctx context.Context, params ActionsRemoveSelfHostedRunnerFromGroupForOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsRetryWorkflow implements actions/retry-workflow operation.
@@ -1096,7 +1212,8 @@ func (UnimplementedHandler) ActionsRemoveSelfHostedRunnerFromGroupForOrg(ctx con
 //
 // POST /repos/{owner}/{repo}/actions/runs/{run_id}/retry
 func (UnimplementedHandler) ActionsRetryWorkflow(ctx context.Context, params ActionsRetryWorkflowParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsReviewPendingDeploymentsForRun implements actions/review-pending-deployments-for-run operation.
@@ -1106,26 +1223,29 @@ func (UnimplementedHandler) ActionsRetryWorkflow(ctx context.Context, params Act
 //
 // POST /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments
 func (UnimplementedHandler) ActionsReviewPendingDeploymentsForRun(ctx context.Context, req *ActionsReviewPendingDeploymentsForRunReq, params ActionsReviewPendingDeploymentsForRunParams) (r []Deployment, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActionsSetAllowedActionsOrganization implements actions/set-allowed-actions-organization operation.
+	//
+	// Sets the actions that are allowed in an organization. To use this endpoint, the organization
+	// permission policy for `allowed_actions` must be configured to `selected`. For more information,
+	// see "[Set GitHub Actions permissions for an
+	// organization](#set-github-actions-permissions-for-an-organization)."
+	// If the organization belongs to an enterprise that has `selected` actions set at the enterprise
+	// level, then you cannot override any of the enterprise's allowed actions settings.
+	// To use the `patterns_allowed` setting for private repositories, the organization must belong to an
+	// enterprise. If the organization does not belong to an enterprise, then the `patterns_allowed`
+	// setting only applies to public repositories in the organization.
+	// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+	// GitHub Apps must have the `administration` organization permission to use this API.
+	//
+	// PUT /orgs/{org}/actions/permissions/selected-actions
 }
 
-// ActionsSetAllowedActionsOrganization implements actions/set-allowed-actions-organization operation.
-//
-// Sets the actions that are allowed in an organization. To use this endpoint, the organization
-// permission policy for `allowed_actions` must be configured to `selected`. For more information,
-// see "[Set GitHub Actions permissions for an
-// organization](#set-github-actions-permissions-for-an-organization)."
-// If the organization belongs to an enterprise that has `selected` actions set at the enterprise
-// level, then you cannot override any of the enterprise's allowed actions settings.
-// To use the `patterns_allowed` setting for private repositories, the organization must belong to an
-// enterprise. If the organization does not belong to an enterprise, then the `patterns_allowed`
-// setting only applies to public repositories in the organization.
-// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-// GitHub Apps must have the `administration` organization permission to use this API.
-//
-// PUT /orgs/{org}/actions/permissions/selected-actions
 func (UnimplementedHandler) ActionsSetAllowedActionsOrganization(ctx context.Context, req OptSelectedActions, params ActionsSetAllowedActionsOrganizationParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsSetAllowedActionsRepository implements actions/set-allowed-actions-repository operation.
@@ -1143,7 +1263,8 @@ func (UnimplementedHandler) ActionsSetAllowedActionsOrganization(ctx context.Con
 //
 // PUT /repos/{owner}/{repo}/actions/permissions/selected-actions
 func (UnimplementedHandler) ActionsSetAllowedActionsRepository(ctx context.Context, req OptSelectedActions, params ActionsSetAllowedActionsRepositoryParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsSetGithubActionsPermissionsOrganization implements actions/set-github-actions-permissions-organization operation.
@@ -1157,7 +1278,8 @@ func (UnimplementedHandler) ActionsSetAllowedActionsRepository(ctx context.Conte
 //
 // PUT /orgs/{org}/actions/permissions
 func (UnimplementedHandler) ActionsSetGithubActionsPermissionsOrganization(ctx context.Context, req *ActionsSetGithubActionsPermissionsOrganizationReq, params ActionsSetGithubActionsPermissionsOrganizationParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsSetGithubActionsPermissionsRepository implements actions/set-github-actions-permissions-repository operation.
@@ -1172,7 +1294,8 @@ func (UnimplementedHandler) ActionsSetGithubActionsPermissionsOrganization(ctx c
 //
 // PUT /repos/{owner}/{repo}/actions/permissions
 func (UnimplementedHandler) ActionsSetGithubActionsPermissionsRepository(ctx context.Context, req *ActionsSetGithubActionsPermissionsRepositoryReq, params ActionsSetGithubActionsPermissionsRepositoryParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg implements actions/set-repo-access-to-self-hosted-runner-group-in-org operation.
@@ -1186,7 +1309,8 @@ func (UnimplementedHandler) ActionsSetGithubActionsPermissionsRepository(ctx con
 //
 // PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories
 func (UnimplementedHandler) ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.Context, req *ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgReq, params ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsSetSelectedReposForOrgSecret implements actions/set-selected-repos-for-org-secret operation.
@@ -1199,7 +1323,8 @@ func (UnimplementedHandler) ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg(ctx
 //
 // PUT /orgs/{org}/actions/secrets/{secret_name}/repositories
 func (UnimplementedHandler) ActionsSetSelectedReposForOrgSecret(ctx context.Context, req *ActionsSetSelectedReposForOrgSecretReq, params ActionsSetSelectedReposForOrgSecretParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsSetSelectedRepositoriesEnabledGithubActionsOrganization implements actions/set-selected-repositories-enabled-github-actions-organization operation.
@@ -1213,7 +1338,8 @@ func (UnimplementedHandler) ActionsSetSelectedReposForOrgSecret(ctx context.Cont
 //
 // PUT /orgs/{org}/actions/permissions/repositories
 func (UnimplementedHandler) ActionsSetSelectedRepositoriesEnabledGithubActionsOrganization(ctx context.Context, req *ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationReq, params ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsSetSelfHostedRunnersInGroupForOrg implements actions/set-self-hosted-runners-in-group-for-org operation.
@@ -1226,7 +1352,8 @@ func (UnimplementedHandler) ActionsSetSelectedRepositoriesEnabledGithubActionsOr
 //
 // PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners
 func (UnimplementedHandler) ActionsSetSelfHostedRunnersInGroupForOrg(ctx context.Context, req *ActionsSetSelfHostedRunnersInGroupForOrgReq, params ActionsSetSelfHostedRunnersInGroupForOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActionsUpdateSelfHostedRunnerGroupForOrg implements actions/update-self-hosted-runner-group-for-org operation.
@@ -1239,16 +1366,19 @@ func (UnimplementedHandler) ActionsSetSelfHostedRunnersInGroupForOrg(ctx context
 //
 // PATCH /orgs/{org}/actions/runner-groups/{runner_group_id}
 func (UnimplementedHandler) ActionsUpdateSelfHostedRunnerGroupForOrg(ctx context.Context, req *ActionsUpdateSelfHostedRunnerGroupForOrgReq, params ActionsUpdateSelfHostedRunnerGroupForOrgParams) (r *RunnerGroupsOrg, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityCheckRepoIsStarredByAuthenticatedUser implements activity/check-repo-is-starred-by-authenticated-user operation.
+	//
+	// Check if a repository is starred by the authenticated user.
+	//
+	// GET /user/starred/{owner}/{repo}
 }
 
-// ActivityCheckRepoIsStarredByAuthenticatedUser implements activity/check-repo-is-starred-by-authenticated-user operation.
-//
-// Check if a repository is starred by the authenticated user.
-//
-// GET /user/starred/{owner}/{repo}
 func (UnimplementedHandler) ActivityCheckRepoIsStarredByAuthenticatedUser(ctx context.Context, params ActivityCheckRepoIsStarredByAuthenticatedUserParams) (r ActivityCheckRepoIsStarredByAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityCheckRepoIsStarredByAuthenticatedUserRes), nil
 }
 
 // ActivityDeleteRepoSubscription implements activity/delete-repo-subscription operation.
@@ -1259,7 +1389,8 @@ func (UnimplementedHandler) ActivityCheckRepoIsStarredByAuthenticatedUser(ctx co
 //
 // DELETE /repos/{owner}/{repo}/subscription
 func (UnimplementedHandler) ActivityDeleteRepoSubscription(ctx context.Context, params ActivityDeleteRepoSubscriptionParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ActivityDeleteThreadSubscription implements activity/delete-thread-subscription operation.
@@ -1272,7 +1403,8 @@ func (UnimplementedHandler) ActivityDeleteRepoSubscription(ctx context.Context, 
 //
 // DELETE /notifications/threads/{thread_id}/subscription
 func (UnimplementedHandler) ActivityDeleteThreadSubscription(ctx context.Context, params ActivityDeleteThreadSubscriptionParams) (r ActivityDeleteThreadSubscriptionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityDeleteThreadSubscriptionRes), nil
 }
 
 // ActivityGetFeeds implements activity/get-feeds operation.
@@ -1295,16 +1427,19 @@ func (UnimplementedHandler) ActivityDeleteThreadSubscription(ctx context.Context
 //
 // GET /feeds
 func (UnimplementedHandler) ActivityGetFeeds(ctx context.Context) (r *Feed, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityGetRepoSubscription implements activity/get-repo-subscription operation.
+	//
+	// Get a repository subscription.
+	//
+	// GET /repos/{owner}/{repo}/subscription
 }
 
-// ActivityGetRepoSubscription implements activity/get-repo-subscription operation.
-//
-// Get a repository subscription.
-//
-// GET /repos/{owner}/{repo}/subscription
 func (UnimplementedHandler) ActivityGetRepoSubscription(ctx context.Context, params ActivityGetRepoSubscriptionParams) (r ActivityGetRepoSubscriptionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityGetRepoSubscriptionRes), nil
 }
 
 // ActivityGetThread implements activity/get-thread operation.
@@ -1313,7 +1448,8 @@ func (UnimplementedHandler) ActivityGetRepoSubscription(ctx context.Context, par
 //
 // GET /notifications/threads/{thread_id}
 func (UnimplementedHandler) ActivityGetThread(ctx context.Context, params ActivityGetThreadParams) (r ActivityGetThreadRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityGetThreadRes), nil
 }
 
 // ActivityGetThreadSubscriptionForAuthenticatedUser implements activity/get-thread-subscription-for-authenticated-user operation.
@@ -1325,7 +1461,8 @@ func (UnimplementedHandler) ActivityGetThread(ctx context.Context, params Activi
 //
 // GET /notifications/threads/{thread_id}/subscription
 func (UnimplementedHandler) ActivityGetThreadSubscriptionForAuthenticatedUser(ctx context.Context, params ActivityGetThreadSubscriptionForAuthenticatedUserParams) (r ActivityGetThreadSubscriptionForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityGetThreadSubscriptionForAuthenticatedUserRes), nil
 }
 
 // ActivityListEventsForAuthenticatedUser implements activity/list-events-for-authenticated-user operation.
@@ -1335,16 +1472,19 @@ func (UnimplementedHandler) ActivityGetThreadSubscriptionForAuthenticatedUser(ct
 //
 // GET /users/{username}/events
 func (UnimplementedHandler) ActivityListEventsForAuthenticatedUser(ctx context.Context, params ActivityListEventsForAuthenticatedUserParams) (r []Event, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityListNotificationsForAuthenticatedUser implements activity/list-notifications-for-authenticated-user operation.
+	//
+	// List all notifications for the current user, sorted by most recently updated.
+	//
+	// GET /notifications
 }
 
-// ActivityListNotificationsForAuthenticatedUser implements activity/list-notifications-for-authenticated-user operation.
-//
-// List all notifications for the current user, sorted by most recently updated.
-//
-// GET /notifications
 func (UnimplementedHandler) ActivityListNotificationsForAuthenticatedUser(ctx context.Context, params ActivityListNotificationsForAuthenticatedUserParams) (r ActivityListNotificationsForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityListNotificationsForAuthenticatedUserRes), nil
 }
 
 // ActivityListOrgEventsForAuthenticatedUser implements activity/list-org-events-for-authenticated-user operation.
@@ -1353,17 +1493,20 @@ func (UnimplementedHandler) ActivityListNotificationsForAuthenticatedUser(ctx co
 //
 // GET /users/{username}/events/orgs/{org}
 func (UnimplementedHandler) ActivityListOrgEventsForAuthenticatedUser(ctx context.Context, params ActivityListOrgEventsForAuthenticatedUserParams) (r []Event, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityListPublicEvents implements activity/list-public-events operation.
+	//
+	// We delay the public events feed by five minutes, which means the most recent event returned by the
+	// public events API actually occurred at least five minutes ago.
+	//
+	// GET /events
 }
 
-// ActivityListPublicEvents implements activity/list-public-events operation.
-//
-// We delay the public events feed by five minutes, which means the most recent event returned by the
-// public events API actually occurred at least five minutes ago.
-//
-// GET /events
 func (UnimplementedHandler) ActivityListPublicEvents(ctx context.Context, params ActivityListPublicEventsParams) (r ActivityListPublicEventsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityListPublicEventsRes), nil
 }
 
 // ActivityListPublicEventsForRepoNetwork implements activity/list-public-events-for-repo-network operation.
@@ -1372,7 +1515,8 @@ func (UnimplementedHandler) ActivityListPublicEvents(ctx context.Context, params
 //
 // GET /networks/{owner}/{repo}/events
 func (UnimplementedHandler) ActivityListPublicEventsForRepoNetwork(ctx context.Context, params ActivityListPublicEventsForRepoNetworkParams) (r ActivityListPublicEventsForRepoNetworkRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityListPublicEventsForRepoNetworkRes), nil
 }
 
 // ActivityListPublicEventsForUser implements activity/list-public-events-for-user operation.
@@ -1381,65 +1525,78 @@ func (UnimplementedHandler) ActivityListPublicEventsForRepoNetwork(ctx context.C
 //
 // GET /users/{username}/events/public
 func (UnimplementedHandler) ActivityListPublicEventsForUser(ctx context.Context, params ActivityListPublicEventsForUserParams) (r []Event, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityListPublicOrgEvents implements activity/list-public-org-events operation.
+	//
+	// List public organization events.
+	//
+	// GET /orgs/{org}/events
 }
 
-// ActivityListPublicOrgEvents implements activity/list-public-org-events operation.
-//
-// List public organization events.
-//
-// GET /orgs/{org}/events
 func (UnimplementedHandler) ActivityListPublicOrgEvents(ctx context.Context, params ActivityListPublicOrgEventsParams) (r []Event, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityListReceivedEventsForUser implements activity/list-received-events-for-user operation.
+	//
+	// These are events that you've received by watching repos and following users. If you are
+	// authenticated as the given user, you will see private events. Otherwise, you'll only see public
+	// events.
+	//
+	// GET /users/{username}/received_events
 }
 
-// ActivityListReceivedEventsForUser implements activity/list-received-events-for-user operation.
-//
-// These are events that you've received by watching repos and following users. If you are
-// authenticated as the given user, you will see private events. Otherwise, you'll only see public
-// events.
-//
-// GET /users/{username}/received_events
 func (UnimplementedHandler) ActivityListReceivedEventsForUser(ctx context.Context, params ActivityListReceivedEventsForUserParams) (r []Event, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityListReceivedPublicEventsForUser implements activity/list-received-public-events-for-user operation.
+	//
+	// List public events received by a user.
+	//
+	// GET /users/{username}/received_events/public
 }
 
-// ActivityListReceivedPublicEventsForUser implements activity/list-received-public-events-for-user operation.
-//
-// List public events received by a user.
-//
-// GET /users/{username}/received_events/public
 func (UnimplementedHandler) ActivityListReceivedPublicEventsForUser(ctx context.Context, params ActivityListReceivedPublicEventsForUserParams) (r []Event, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityListRepoEvents implements activity/list-repo-events operation.
+	//
+	// List repository events.
+	//
+	// GET /repos/{owner}/{repo}/events
 }
 
-// ActivityListRepoEvents implements activity/list-repo-events operation.
-//
-// List repository events.
-//
-// GET /repos/{owner}/{repo}/events
 func (UnimplementedHandler) ActivityListRepoEvents(ctx context.Context, params ActivityListRepoEventsParams) (r []Event, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityListRepoNotificationsForAuthenticatedUser implements activity/list-repo-notifications-for-authenticated-user operation.
+	//
+	// List all notifications for the current user.
+	//
+	// GET /repos/{owner}/{repo}/notifications
 }
 
-// ActivityListRepoNotificationsForAuthenticatedUser implements activity/list-repo-notifications-for-authenticated-user operation.
-//
-// List all notifications for the current user.
-//
-// GET /repos/{owner}/{repo}/notifications
 func (UnimplementedHandler) ActivityListRepoNotificationsForAuthenticatedUser(ctx context.Context, params ActivityListRepoNotificationsForAuthenticatedUserParams) (r *ActivityListRepoNotificationsForAuthenticatedUserOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityListReposStarredByAuthenticatedUser implements activity/list-repos-starred-by-authenticated-user operation.
+	//
+	// Lists repositories the authenticated user has starred.
+	// You can also find out _when_ stars were created by passing the following custom [media
+	// type](https://docs.github.com/rest/overview/media-types/) via the `Accept` header:.
+	//
+	// GET /user/starred
 }
 
-// ActivityListReposStarredByAuthenticatedUser implements activity/list-repos-starred-by-authenticated-user operation.
-//
-// Lists repositories the authenticated user has starred.
-// You can also find out _when_ stars were created by passing the following custom [media
-// type](https://docs.github.com/rest/overview/media-types/) via the `Accept` header:.
-//
-// GET /user/starred
 func (UnimplementedHandler) ActivityListReposStarredByAuthenticatedUser(ctx context.Context, params ActivityListReposStarredByAuthenticatedUserParams) (r ActivityListReposStarredByAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityListReposStarredByAuthenticatedUserRes), nil
 }
 
 // ActivityListReposWatchedByUser implements activity/list-repos-watched-by-user operation.
@@ -1448,16 +1605,19 @@ func (UnimplementedHandler) ActivityListReposStarredByAuthenticatedUser(ctx cont
 //
 // GET /users/{username}/subscriptions
 func (UnimplementedHandler) ActivityListReposWatchedByUser(ctx context.Context, params ActivityListReposWatchedByUserParams) (r *ActivityListReposWatchedByUserOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityListWatchedReposForAuthenticatedUser implements activity/list-watched-repos-for-authenticated-user operation.
+	//
+	// Lists repositories the authenticated user is watching.
+	//
+	// GET /user/subscriptions
 }
 
-// ActivityListWatchedReposForAuthenticatedUser implements activity/list-watched-repos-for-authenticated-user operation.
-//
-// Lists repositories the authenticated user is watching.
-//
-// GET /user/subscriptions
 func (UnimplementedHandler) ActivityListWatchedReposForAuthenticatedUser(ctx context.Context, params ActivityListWatchedReposForAuthenticatedUserParams) (r ActivityListWatchedReposForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityListWatchedReposForAuthenticatedUserRes), nil
 }
 
 // ActivityListWatchersForRepo implements activity/list-watchers-for-repo operation.
@@ -1466,22 +1626,25 @@ func (UnimplementedHandler) ActivityListWatchedReposForAuthenticatedUser(ctx con
 //
 // GET /repos/{owner}/{repo}/subscribers
 func (UnimplementedHandler) ActivityListWatchersForRepo(ctx context.Context, params ActivityListWatchersForRepoParams) (r *ActivityListWatchersForRepoOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivityMarkNotificationsAsRead implements activity/mark-notifications-as-read operation.
+	//
+	// Marks all notifications as "read" removes it from the [default view on GitHub](https://github.
+	// com/notifications). If the number of notifications is too large to complete in one request, you
+	// will receive a `202 Accepted` status and GitHub will run an asynchronous process to mark
+	// notifications as "read." To check whether any "unread" notifications remain, you can use the [List
+	// notifications for the authenticated user](https://docs.github.
+	// com/rest/reference/activity#list-notifications-for-the-authenticated-user) endpoint and pass the
+	// query parameter `all=false`.
+	//
+	// PUT /notifications
 }
 
-// ActivityMarkNotificationsAsRead implements activity/mark-notifications-as-read operation.
-//
-// Marks all notifications as "read" removes it from the [default view on GitHub](https://github.
-// com/notifications). If the number of notifications is too large to complete in one request, you
-// will receive a `202 Accepted` status and GitHub will run an asynchronous process to mark
-// notifications as "read." To check whether any "unread" notifications remain, you can use the [List
-// notifications for the authenticated user](https://docs.github.
-// com/rest/reference/activity#list-notifications-for-the-authenticated-user) endpoint and pass the
-// query parameter `all=false`.
-//
-// PUT /notifications
 func (UnimplementedHandler) ActivityMarkNotificationsAsRead(ctx context.Context, req OptActivityMarkNotificationsAsReadReq) (r ActivityMarkNotificationsAsReadRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityMarkNotificationsAsReadRes), nil
 }
 
 // ActivityMarkRepoNotificationsAsRead implements activity/mark-repo-notifications-as-read operation.
@@ -1496,7 +1659,8 @@ func (UnimplementedHandler) ActivityMarkNotificationsAsRead(ctx context.Context,
 //
 // PUT /repos/{owner}/{repo}/notifications
 func (UnimplementedHandler) ActivityMarkRepoNotificationsAsRead(ctx context.Context, req OptActivityMarkRepoNotificationsAsReadReq, params ActivityMarkRepoNotificationsAsReadParams) (r ActivityMarkRepoNotificationsAsReadRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityMarkRepoNotificationsAsReadRes), nil
 }
 
 // ActivityMarkThreadAsRead implements activity/mark-thread-as-read operation.
@@ -1505,7 +1669,8 @@ func (UnimplementedHandler) ActivityMarkRepoNotificationsAsRead(ctx context.Cont
 //
 // PATCH /notifications/threads/{thread_id}
 func (UnimplementedHandler) ActivityMarkThreadAsRead(ctx context.Context, params ActivityMarkThreadAsReadParams) (r ActivityMarkThreadAsReadRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityMarkThreadAsReadRes), nil
 }
 
 // ActivitySetRepoSubscription implements activity/set-repo-subscription operation.
@@ -1517,23 +1682,26 @@ func (UnimplementedHandler) ActivityMarkThreadAsRead(ctx context.Context, params
 //
 // PUT /repos/{owner}/{repo}/subscription
 func (UnimplementedHandler) ActivitySetRepoSubscription(ctx context.Context, req OptActivitySetRepoSubscriptionReq, params ActivitySetRepoSubscriptionParams) (r *RepositorySubscription, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ActivitySetThreadSubscription implements activity/set-thread-subscription operation.
+	//
+	// If you are watching a repository, you receive notifications for all threads by default. Use this
+	// endpoint to ignore future notifications for threads until you comment on the thread or get an
+	// **@mention**.
+	// You can also use this endpoint to subscribe to threads that you are currently not receiving
+	// notifications for or to subscribed to threads that you have previously ignored.
+	// Unsubscribing from a conversation in a repository that you are not watching is functionally
+	// equivalent to the [Delete a thread subscription](https://docs.github.
+	// com/rest/reference/activity#delete-a-thread-subscription) endpoint.
+	//
+	// PUT /notifications/threads/{thread_id}/subscription
 }
 
-// ActivitySetThreadSubscription implements activity/set-thread-subscription operation.
-//
-// If you are watching a repository, you receive notifications for all threads by default. Use this
-// endpoint to ignore future notifications for threads until you comment on the thread or get an
-// **@mention**.
-// You can also use this endpoint to subscribe to threads that you are currently not receiving
-// notifications for or to subscribed to threads that you have previously ignored.
-// Unsubscribing from a conversation in a repository that you are not watching is functionally
-// equivalent to the [Delete a thread subscription](https://docs.github.
-// com/rest/reference/activity#delete-a-thread-subscription) endpoint.
-//
-// PUT /notifications/threads/{thread_id}/subscription
 func (UnimplementedHandler) ActivitySetThreadSubscription(ctx context.Context, req OptActivitySetThreadSubscriptionReq, params ActivitySetThreadSubscriptionParams) (r ActivitySetThreadSubscriptionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivitySetThreadSubscriptionRes), nil
 }
 
 // ActivityStarRepoForAuthenticatedUser implements activity/star-repo-for-authenticated-user operation.
@@ -1544,7 +1712,8 @@ func (UnimplementedHandler) ActivitySetThreadSubscription(ctx context.Context, r
 //
 // PUT /user/starred/{owner}/{repo}
 func (UnimplementedHandler) ActivityStarRepoForAuthenticatedUser(ctx context.Context, params ActivityStarRepoForAuthenticatedUserParams) (r ActivityStarRepoForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityStarRepoForAuthenticatedUserRes), nil
 }
 
 // ActivityUnstarRepoForAuthenticatedUser implements activity/unstar-repo-for-authenticated-user operation.
@@ -1553,7 +1722,8 @@ func (UnimplementedHandler) ActivityStarRepoForAuthenticatedUser(ctx context.Con
 //
 // DELETE /user/starred/{owner}/{repo}
 func (UnimplementedHandler) ActivityUnstarRepoForAuthenticatedUser(ctx context.Context, params ActivityUnstarRepoForAuthenticatedUserParams) (r ActivityUnstarRepoForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ActivityUnstarRepoForAuthenticatedUserRes), nil
 }
 
 // AppsAddRepoToInstallation implements apps/add-repo-to-installation operation.
@@ -1567,7 +1737,8 @@ func (UnimplementedHandler) ActivityUnstarRepoForAuthenticatedUser(ctx context.C
 //
 // PUT /user/installations/{installation_id}/repositories/{repository_id}
 func (UnimplementedHandler) AppsAddRepoToInstallation(ctx context.Context, params AppsAddRepoToInstallationParams) (r AppsAddRepoToInstallationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsAddRepoToInstallationRes), nil
 }
 
 // AppsCheckToken implements apps/check-token operation.
@@ -1581,7 +1752,8 @@ func (UnimplementedHandler) AppsAddRepoToInstallation(ctx context.Context, param
 //
 // POST /applications/{client_id}/token
 func (UnimplementedHandler) AppsCheckToken(ctx context.Context, req *AppsCheckTokenReq, params AppsCheckTokenParams) (r AppsCheckTokenRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsCheckTokenRes), nil
 }
 
 // AppsCreateContentAttachment implements apps/create-content-attachment operation.
@@ -1599,7 +1771,8 @@ func (UnimplementedHandler) AppsCheckToken(ctx context.Context, req *AppsCheckTo
 //
 // POST /repos/{owner}/{repo}/content_references/{content_reference_id}/attachments
 func (UnimplementedHandler) AppsCreateContentAttachment(ctx context.Context, req *AppsCreateContentAttachmentReq, params AppsCreateContentAttachmentParams) (r AppsCreateContentAttachmentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsCreateContentAttachmentRes), nil
 }
 
 // AppsCreateFromManifest implements apps/create-from-manifest operation.
@@ -1611,7 +1784,8 @@ func (UnimplementedHandler) AppsCreateContentAttachment(ctx context.Context, req
 //
 // POST /app-manifests/{code}/conversions
 func (UnimplementedHandler) AppsCreateFromManifest(ctx context.Context, req *AppsCreateFromManifestReq, params AppsCreateFromManifestParams) (r AppsCreateFromManifestRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsCreateFromManifestRes), nil
 }
 
 // AppsCreateInstallationAccessToken implements apps/create-installation-access-token operation.
@@ -1629,7 +1803,8 @@ func (UnimplementedHandler) AppsCreateFromManifest(ctx context.Context, req *App
 //
 // POST /app/installations/{installation_id}/access_tokens
 func (UnimplementedHandler) AppsCreateInstallationAccessToken(ctx context.Context, req OptAppsCreateInstallationAccessTokenReq, params AppsCreateInstallationAccessTokenParams) (r AppsCreateInstallationAccessTokenRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsCreateInstallationAccessTokenRes), nil
 }
 
 // AppsDeleteAuthorization implements apps/delete-authorization operation.
@@ -1647,7 +1822,8 @@ func (UnimplementedHandler) AppsCreateInstallationAccessToken(ctx context.Contex
 //
 // DELETE /applications/{client_id}/grant
 func (UnimplementedHandler) AppsDeleteAuthorization(ctx context.Context, req *AppsDeleteAuthorizationReq, params AppsDeleteAuthorizationParams) (r AppsDeleteAuthorizationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsDeleteAuthorizationRes), nil
 }
 
 // AppsDeleteInstallation implements apps/delete-installation operation.
@@ -1661,7 +1837,8 @@ func (UnimplementedHandler) AppsDeleteAuthorization(ctx context.Context, req *Ap
 //
 // DELETE /app/installations/{installation_id}
 func (UnimplementedHandler) AppsDeleteInstallation(ctx context.Context, params AppsDeleteInstallationParams) (r AppsDeleteInstallationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsDeleteInstallationRes), nil
 }
 
 // AppsDeleteToken implements apps/delete-token operation.
@@ -1673,7 +1850,8 @@ func (UnimplementedHandler) AppsDeleteInstallation(ctx context.Context, params A
 //
 // DELETE /applications/{client_id}/token
 func (UnimplementedHandler) AppsDeleteToken(ctx context.Context, req *AppsDeleteTokenReq, params AppsDeleteTokenParams) (r AppsDeleteTokenRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsDeleteTokenRes), nil
 }
 
 // AppsGetAuthenticated implements apps/get-authenticated operation.
@@ -1689,23 +1867,26 @@ func (UnimplementedHandler) AppsDeleteToken(ctx context.Context, req *AppsDelete
 //
 // GET /app
 func (UnimplementedHandler) AppsGetAuthenticated(ctx context.Context) (r *Integration, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// AppsGetBySlug implements apps/get-by-slug operation.
+	//
+	// **Note**: The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on
+	// the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
+	// If the GitHub App you specify is public, you can access this endpoint without authenticating. If
+	// the GitHub App you specify is private, you must authenticate with a [personal access
+	// token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or
+	// an [installation access token](https://docs.github.
+	// com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation)
+	// to access this endpoint.
+	//
+	// GET /apps/{app_slug}
 }
 
-// AppsGetBySlug implements apps/get-by-slug operation.
-//
-// **Note**: The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on
-// the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
-// If the GitHub App you specify is public, you can access this endpoint without authenticating. If
-// the GitHub App you specify is private, you must authenticate with a [personal access
-// token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or
-// an [installation access token](https://docs.github.
-// com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation)
-// to access this endpoint.
-//
-// GET /apps/{app_slug}
 func (UnimplementedHandler) AppsGetBySlug(ctx context.Context, params AppsGetBySlugParams) (r AppsGetBySlugRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsGetBySlugRes), nil
 }
 
 // AppsGetSubscriptionPlanForAccount implements apps/get-subscription-plan-for-account operation.
@@ -1721,7 +1902,8 @@ func (UnimplementedHandler) AppsGetBySlug(ctx context.Context, params AppsGetByS
 //
 // GET /marketplace_listing/accounts/{account_id}
 func (UnimplementedHandler) AppsGetSubscriptionPlanForAccount(ctx context.Context, params AppsGetSubscriptionPlanForAccountParams) (r AppsGetSubscriptionPlanForAccountRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsGetSubscriptionPlanForAccountRes), nil
 }
 
 // AppsGetSubscriptionPlanForAccountStubbed implements apps/get-subscription-plan-for-account-stubbed operation.
@@ -1737,7 +1919,8 @@ func (UnimplementedHandler) AppsGetSubscriptionPlanForAccount(ctx context.Contex
 //
 // GET /marketplace_listing/stubbed/accounts/{account_id}
 func (UnimplementedHandler) AppsGetSubscriptionPlanForAccountStubbed(ctx context.Context, params AppsGetSubscriptionPlanForAccountStubbedParams) (r AppsGetSubscriptionPlanForAccountStubbedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsGetSubscriptionPlanForAccountStubbedRes), nil
 }
 
 // AppsGetWebhookConfigForApp implements apps/get-webhook-config-for-app operation.
@@ -1750,19 +1933,22 @@ func (UnimplementedHandler) AppsGetSubscriptionPlanForAccountStubbed(ctx context
 //
 // GET /app/hook/config
 func (UnimplementedHandler) AppsGetWebhookConfigForApp(ctx context.Context) (r *WebhookConfig, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// AppsGetWebhookDelivery implements apps/get-webhook-delivery operation.
+	//
+	// Returns a delivery for the webhook configured for a GitHub App.
+	// You must use a [JWT](https://docs.github.
+	// com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to
+	// access this endpoint.
+	//
+	// GET /app/hook/deliveries/{delivery_id}
 }
 
-// AppsGetWebhookDelivery implements apps/get-webhook-delivery operation.
-//
-// Returns a delivery for the webhook configured for a GitHub App.
-// You must use a [JWT](https://docs.github.
-// com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to
-// access this endpoint.
-//
-// GET /app/hook/deliveries/{delivery_id}
 func (UnimplementedHandler) AppsGetWebhookDelivery(ctx context.Context, params AppsGetWebhookDeliveryParams) (r AppsGetWebhookDeliveryRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsGetWebhookDeliveryRes), nil
 }
 
 // AppsListAccountsForPlan implements apps/list-accounts-for-plan operation.
@@ -1779,7 +1965,8 @@ func (UnimplementedHandler) AppsGetWebhookDelivery(ctx context.Context, params A
 //
 // GET /marketplace_listing/plans/{plan_id}/accounts
 func (UnimplementedHandler) AppsListAccountsForPlan(ctx context.Context, params AppsListAccountsForPlanParams) (r AppsListAccountsForPlanRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsListAccountsForPlanRes), nil
 }
 
 // AppsListAccountsForPlanStubbed implements apps/list-accounts-for-plan-stubbed operation.
@@ -1796,7 +1983,8 @@ func (UnimplementedHandler) AppsListAccountsForPlan(ctx context.Context, params 
 //
 // GET /marketplace_listing/stubbed/plans/{plan_id}/accounts
 func (UnimplementedHandler) AppsListAccountsForPlanStubbed(ctx context.Context, params AppsListAccountsForPlanStubbedParams) (r AppsListAccountsForPlanStubbedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsListAccountsForPlanStubbedRes), nil
 }
 
 // AppsListInstallationReposForAuthenticatedUser implements apps/list-installation-repos-for-authenticated-user operation.
@@ -1811,7 +1999,8 @@ func (UnimplementedHandler) AppsListAccountsForPlanStubbed(ctx context.Context, 
 //
 // GET /user/installations/{installation_id}/repositories
 func (UnimplementedHandler) AppsListInstallationReposForAuthenticatedUser(ctx context.Context, params AppsListInstallationReposForAuthenticatedUserParams) (r AppsListInstallationReposForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsListInstallationReposForAuthenticatedUserRes), nil
 }
 
 // AppsListPlans implements apps/list-plans operation.
@@ -1825,7 +2014,8 @@ func (UnimplementedHandler) AppsListInstallationReposForAuthenticatedUser(ctx co
 //
 // GET /marketplace_listing/plans
 func (UnimplementedHandler) AppsListPlans(ctx context.Context, params AppsListPlansParams) (r AppsListPlansRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsListPlansRes), nil
 }
 
 // AppsListPlansStubbed implements apps/list-plans-stubbed operation.
@@ -1839,7 +2029,8 @@ func (UnimplementedHandler) AppsListPlans(ctx context.Context, params AppsListPl
 //
 // GET /marketplace_listing/stubbed/plans
 func (UnimplementedHandler) AppsListPlansStubbed(ctx context.Context, params AppsListPlansStubbedParams) (r AppsListPlansStubbedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsListPlansStubbedRes), nil
 }
 
 // AppsListReposAccessibleToInstallation implements apps/list-repos-accessible-to-installation operation.
@@ -1851,7 +2042,8 @@ func (UnimplementedHandler) AppsListPlansStubbed(ctx context.Context, params App
 //
 // GET /installation/repositories
 func (UnimplementedHandler) AppsListReposAccessibleToInstallation(ctx context.Context, params AppsListReposAccessibleToInstallationParams) (r AppsListReposAccessibleToInstallationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsListReposAccessibleToInstallationRes), nil
 }
 
 // AppsListSubscriptionsForAuthenticatedUser implements apps/list-subscriptions-for-authenticated-user operation.
@@ -1862,7 +2054,8 @@ func (UnimplementedHandler) AppsListReposAccessibleToInstallation(ctx context.Co
 //
 // GET /user/marketplace_purchases
 func (UnimplementedHandler) AppsListSubscriptionsForAuthenticatedUser(ctx context.Context, params AppsListSubscriptionsForAuthenticatedUserParams) (r AppsListSubscriptionsForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsListSubscriptionsForAuthenticatedUserRes), nil
 }
 
 // AppsListSubscriptionsForAuthenticatedUserStubbed implements apps/list-subscriptions-for-authenticated-user-stubbed operation.
@@ -1873,7 +2066,8 @@ func (UnimplementedHandler) AppsListSubscriptionsForAuthenticatedUser(ctx contex
 //
 // GET /user/marketplace_purchases/stubbed
 func (UnimplementedHandler) AppsListSubscriptionsForAuthenticatedUserStubbed(ctx context.Context, params AppsListSubscriptionsForAuthenticatedUserStubbedParams) (r AppsListSubscriptionsForAuthenticatedUserStubbedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsListSubscriptionsForAuthenticatedUserStubbedRes), nil
 }
 
 // AppsListWebhookDeliveries implements apps/list-webhook-deliveries operation.
@@ -1885,7 +2079,8 @@ func (UnimplementedHandler) AppsListSubscriptionsForAuthenticatedUserStubbed(ctx
 //
 // GET /app/hook/deliveries
 func (UnimplementedHandler) AppsListWebhookDeliveries(ctx context.Context, params AppsListWebhookDeliveriesParams) (r AppsListWebhookDeliveriesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsListWebhookDeliveriesRes), nil
 }
 
 // AppsRedeliverWebhookDelivery implements apps/redeliver-webhook-delivery operation.
@@ -1897,7 +2092,8 @@ func (UnimplementedHandler) AppsListWebhookDeliveries(ctx context.Context, param
 //
 // POST /app/hook/deliveries/{delivery_id}/attempts
 func (UnimplementedHandler) AppsRedeliverWebhookDelivery(ctx context.Context, params AppsRedeliverWebhookDeliveryParams) (r AppsRedeliverWebhookDeliveryRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsRedeliverWebhookDeliveryRes), nil
 }
 
 // AppsRemoveRepoFromInstallation implements apps/remove-repo-from-installation operation.
@@ -1911,7 +2107,8 @@ func (UnimplementedHandler) AppsRedeliverWebhookDelivery(ctx context.Context, pa
 //
 // DELETE /user/installations/{installation_id}/repositories/{repository_id}
 func (UnimplementedHandler) AppsRemoveRepoFromInstallation(ctx context.Context, params AppsRemoveRepoFromInstallationParams) (r AppsRemoveRepoFromInstallationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsRemoveRepoFromInstallationRes), nil
 }
 
 // AppsResetToken implements apps/reset-token operation.
@@ -1925,7 +2122,8 @@ func (UnimplementedHandler) AppsRemoveRepoFromInstallation(ctx context.Context, 
 //
 // PATCH /applications/{client_id}/token
 func (UnimplementedHandler) AppsResetToken(ctx context.Context, req *AppsResetTokenReq, params AppsResetTokenParams) (r AppsResetTokenRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsResetTokenRes), nil
 }
 
 // AppsRevokeInstallationAccessToken implements apps/revoke-installation-access-token operation.
@@ -1943,7 +2141,8 @@ func (UnimplementedHandler) AppsResetToken(ctx context.Context, req *AppsResetTo
 //
 // DELETE /installation/token
 func (UnimplementedHandler) AppsRevokeInstallationAccessToken(ctx context.Context) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // AppsScopeToken implements apps/scope-token operation.
@@ -1957,7 +2156,8 @@ func (UnimplementedHandler) AppsRevokeInstallationAccessToken(ctx context.Contex
 //
 // POST /applications/{client_id}/token/scoped
 func (UnimplementedHandler) AppsScopeToken(ctx context.Context, req *AppsScopeTokenReq, params AppsScopeTokenParams) (r AppsScopeTokenRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsScopeTokenRes), nil
 }
 
 // AppsSuspendInstallation implements apps/suspend-installation operation.
@@ -1971,7 +2171,8 @@ func (UnimplementedHandler) AppsScopeToken(ctx context.Context, req *AppsScopeTo
 //
 // PUT /app/installations/{installation_id}/suspended
 func (UnimplementedHandler) AppsSuspendInstallation(ctx context.Context, params AppsSuspendInstallationParams) (r AppsSuspendInstallationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsSuspendInstallationRes), nil
 }
 
 // AppsUnsuspendInstallation implements apps/unsuspend-installation operation.
@@ -1983,7 +2184,8 @@ func (UnimplementedHandler) AppsSuspendInstallation(ctx context.Context, params 
 //
 // DELETE /app/installations/{installation_id}/suspended
 func (UnimplementedHandler) AppsUnsuspendInstallation(ctx context.Context, params AppsUnsuspendInstallationParams) (r AppsUnsuspendInstallationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(AppsUnsuspendInstallationRes), nil
 }
 
 // AppsUpdateWebhookConfigForApp implements apps/update-webhook-config-for-app operation.
@@ -1996,165 +2198,188 @@ func (UnimplementedHandler) AppsUnsuspendInstallation(ctx context.Context, param
 //
 // PATCH /app/hook/config
 func (UnimplementedHandler) AppsUpdateWebhookConfigForApp(ctx context.Context, req OptAppsUpdateWebhookConfigForAppReq) (r *WebhookConfig, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BillingGetGithubActionsBillingGhe implements billing/get-github-actions-billing-ghe operation.
+	//
+	// Gets the summary of the free and paid GitHub Actions minutes used.
+	// Paid minutes only apply to workflows in private repositories that use GitHub-hosted runners.
+	// Minutes used is listed for each GitHub-hosted runner operating system. Any job re-runs are also
+	// included in the usage. The usage does not include the multiplier for macOS and Windows runners and
+	// is not rounded up to the nearest whole minute. For more information, see "[Managing billing for
+	// GitHub Actions](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
+	// The authenticated user must be an enterprise admin.
+	//
+	// GET /enterprises/{enterprise}/settings/billing/actions
 }
 
-// BillingGetGithubActionsBillingGhe implements billing/get-github-actions-billing-ghe operation.
-//
-// Gets the summary of the free and paid GitHub Actions minutes used.
-// Paid minutes only apply to workflows in private repositories that use GitHub-hosted runners.
-// Minutes used is listed for each GitHub-hosted runner operating system. Any job re-runs are also
-// included in the usage. The usage does not include the multiplier for macOS and Windows runners and
-// is not rounded up to the nearest whole minute. For more information, see "[Managing billing for
-// GitHub Actions](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
-// The authenticated user must be an enterprise admin.
-//
-// GET /enterprises/{enterprise}/settings/billing/actions
 func (UnimplementedHandler) BillingGetGithubActionsBillingGhe(ctx context.Context, params BillingGetGithubActionsBillingGheParams) (r *ActionsBillingUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BillingGetGithubActionsBillingOrg implements billing/get-github-actions-billing-org operation.
+	//
+	// Gets the summary of the free and paid GitHub Actions minutes used.
+	// Paid minutes only apply to workflows in private repositories that use GitHub-hosted runners.
+	// Minutes used is listed for each GitHub-hosted runner operating system. Any job re-runs are also
+	// included in the usage. The usage returned includes any minute multipliers for macOS and Windows
+	// runners, and is rounded up to the nearest whole minute. For more information, see "[Managing
+	// billing for GitHub Actions](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
+	// Access tokens must have the `repo` or `admin:org` scope.
+	//
+	// GET /orgs/{org}/settings/billing/actions
 }
 
-// BillingGetGithubActionsBillingOrg implements billing/get-github-actions-billing-org operation.
-//
-// Gets the summary of the free and paid GitHub Actions minutes used.
-// Paid minutes only apply to workflows in private repositories that use GitHub-hosted runners.
-// Minutes used is listed for each GitHub-hosted runner operating system. Any job re-runs are also
-// included in the usage. The usage returned includes any minute multipliers for macOS and Windows
-// runners, and is rounded up to the nearest whole minute. For more information, see "[Managing
-// billing for GitHub Actions](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
-// Access tokens must have the `repo` or `admin:org` scope.
-//
-// GET /orgs/{org}/settings/billing/actions
 func (UnimplementedHandler) BillingGetGithubActionsBillingOrg(ctx context.Context, params BillingGetGithubActionsBillingOrgParams) (r *ActionsBillingUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BillingGetGithubActionsBillingUser implements billing/get-github-actions-billing-user operation.
+	//
+	// Gets the summary of the free and paid GitHub Actions minutes used.
+	// Paid minutes only apply to workflows in private repositories that use GitHub-hosted runners.
+	// Minutes used is listed for each GitHub-hosted runner operating system. Any job re-runs are also
+	// included in the usage. The usage returned includes any minute multipliers for macOS and Windows
+	// runners, and is rounded up to the nearest whole minute. For more information, see "[Managing
+	// billing for GitHub Actions](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
+	// Access tokens must have the `user` scope.
+	//
+	// GET /users/{username}/settings/billing/actions
 }
 
-// BillingGetGithubActionsBillingUser implements billing/get-github-actions-billing-user operation.
-//
-// Gets the summary of the free and paid GitHub Actions minutes used.
-// Paid minutes only apply to workflows in private repositories that use GitHub-hosted runners.
-// Minutes used is listed for each GitHub-hosted runner operating system. Any job re-runs are also
-// included in the usage. The usage returned includes any minute multipliers for macOS and Windows
-// runners, and is rounded up to the nearest whole minute. For more information, see "[Managing
-// billing for GitHub Actions](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
-// Access tokens must have the `user` scope.
-//
-// GET /users/{username}/settings/billing/actions
 func (UnimplementedHandler) BillingGetGithubActionsBillingUser(ctx context.Context, params BillingGetGithubActionsBillingUserParams) (r *ActionsBillingUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BillingGetGithubPackagesBillingGhe implements billing/get-github-packages-billing-ghe operation.
+	//
+	// Gets the free and paid storage used for GitHub Packages in gigabytes.
+	// Paid minutes only apply to packages stored for private repositories. For more information, see
+	// "[Managing billing for GitHub Packages](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
+	// The authenticated user must be an enterprise admin.
+	//
+	// GET /enterprises/{enterprise}/settings/billing/packages
 }
 
-// BillingGetGithubPackagesBillingGhe implements billing/get-github-packages-billing-ghe operation.
-//
-// Gets the free and paid storage used for GitHub Packages in gigabytes.
-// Paid minutes only apply to packages stored for private repositories. For more information, see
-// "[Managing billing for GitHub Packages](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
-// The authenticated user must be an enterprise admin.
-//
-// GET /enterprises/{enterprise}/settings/billing/packages
 func (UnimplementedHandler) BillingGetGithubPackagesBillingGhe(ctx context.Context, params BillingGetGithubPackagesBillingGheParams) (r *PackagesBillingUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BillingGetGithubPackagesBillingOrg implements billing/get-github-packages-billing-org operation.
+	//
+	// Gets the free and paid storage used for GitHub Packages in gigabytes.
+	// Paid minutes only apply to packages stored for private repositories. For more information, see
+	// "[Managing billing for GitHub Packages](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
+	// Access tokens must have the `repo` or `admin:org` scope.
+	//
+	// GET /orgs/{org}/settings/billing/packages
 }
 
-// BillingGetGithubPackagesBillingOrg implements billing/get-github-packages-billing-org operation.
-//
-// Gets the free and paid storage used for GitHub Packages in gigabytes.
-// Paid minutes only apply to packages stored for private repositories. For more information, see
-// "[Managing billing for GitHub Packages](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
-// Access tokens must have the `repo` or `admin:org` scope.
-//
-// GET /orgs/{org}/settings/billing/packages
 func (UnimplementedHandler) BillingGetGithubPackagesBillingOrg(ctx context.Context, params BillingGetGithubPackagesBillingOrgParams) (r *PackagesBillingUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BillingGetGithubPackagesBillingUser implements billing/get-github-packages-billing-user operation.
+	//
+	// Gets the free and paid storage used for GitHub Packages in gigabytes.
+	// Paid minutes only apply to packages stored for private repositories. For more information, see
+	// "[Managing billing for GitHub Packages](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
+	// Access tokens must have the `user` scope.
+	//
+	// GET /users/{username}/settings/billing/packages
 }
 
-// BillingGetGithubPackagesBillingUser implements billing/get-github-packages-billing-user operation.
-//
-// Gets the free and paid storage used for GitHub Packages in gigabytes.
-// Paid minutes only apply to packages stored for private repositories. For more information, see
-// "[Managing billing for GitHub Packages](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
-// Access tokens must have the `user` scope.
-//
-// GET /users/{username}/settings/billing/packages
 func (UnimplementedHandler) BillingGetGithubPackagesBillingUser(ctx context.Context, params BillingGetGithubPackagesBillingUserParams) (r *PackagesBillingUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BillingGetSharedStorageBillingGhe implements billing/get-shared-storage-billing-ghe operation.
+	//
+	// Gets the estimated paid and estimated total storage used for GitHub Actions and Github Packages.
+	// Paid minutes only apply to packages stored for private repositories. For more information, see
+	// "[Managing billing for GitHub Packages](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
+	// The authenticated user must be an enterprise admin.
+	//
+	// GET /enterprises/{enterprise}/settings/billing/shared-storage
 }
 
-// BillingGetSharedStorageBillingGhe implements billing/get-shared-storage-billing-ghe operation.
-//
-// Gets the estimated paid and estimated total storage used for GitHub Actions and Github Packages.
-// Paid minutes only apply to packages stored for private repositories. For more information, see
-// "[Managing billing for GitHub Packages](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
-// The authenticated user must be an enterprise admin.
-//
-// GET /enterprises/{enterprise}/settings/billing/shared-storage
 func (UnimplementedHandler) BillingGetSharedStorageBillingGhe(ctx context.Context, params BillingGetSharedStorageBillingGheParams) (r *CombinedBillingUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BillingGetSharedStorageBillingOrg implements billing/get-shared-storage-billing-org operation.
+	//
+	// Gets the estimated paid and estimated total storage used for GitHub Actions and Github Packages.
+	// Paid minutes only apply to packages stored for private repositories. For more information, see
+	// "[Managing billing for GitHub Packages](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
+	// Access tokens must have the `repo` or `admin:org` scope.
+	//
+	// GET /orgs/{org}/settings/billing/shared-storage
 }
 
-// BillingGetSharedStorageBillingOrg implements billing/get-shared-storage-billing-org operation.
-//
-// Gets the estimated paid and estimated total storage used for GitHub Actions and Github Packages.
-// Paid minutes only apply to packages stored for private repositories. For more information, see
-// "[Managing billing for GitHub Packages](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
-// Access tokens must have the `repo` or `admin:org` scope.
-//
-// GET /orgs/{org}/settings/billing/shared-storage
 func (UnimplementedHandler) BillingGetSharedStorageBillingOrg(ctx context.Context, params BillingGetSharedStorageBillingOrgParams) (r *CombinedBillingUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// BillingGetSharedStorageBillingUser implements billing/get-shared-storage-billing-user operation.
+	//
+	// Gets the estimated paid and estimated total storage used for GitHub Actions and Github Packages.
+	// Paid minutes only apply to packages stored for private repositories. For more information, see
+	// "[Managing billing for GitHub Packages](https://help.github.
+	// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
+	// Access tokens must have the `user` scope.
+	//
+	// GET /users/{username}/settings/billing/shared-storage
 }
 
-// BillingGetSharedStorageBillingUser implements billing/get-shared-storage-billing-user operation.
-//
-// Gets the estimated paid and estimated total storage used for GitHub Actions and Github Packages.
-// Paid minutes only apply to packages stored for private repositories. For more information, see
-// "[Managing billing for GitHub Packages](https://help.github.
-// com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
-// Access tokens must have the `user` scope.
-//
-// GET /users/{username}/settings/billing/shared-storage
 func (UnimplementedHandler) BillingGetSharedStorageBillingUser(ctx context.Context, params BillingGetSharedStorageBillingUserParams) (r *CombinedBillingUsage, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ChecksCreate implements checks/create operation.
+	//
+	// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
+	// run were created. Pushes to a branch in a forked repository are not detected and return an empty
+	// `pull_requests` array.
+	// Creates a new check run for a specific commit in a repository. Your GitHub App must have the
+	// `checks:write` permission to create check runs.
+	// In a check suite, GitHub limits the number of check runs with the same name to 1000. Once these
+	// check runs exceed 1000, GitHub will start to automatically delete older check runs.
+	//
+	// POST /repos/{owner}/{repo}/check-runs
 }
 
-// ChecksCreate implements checks/create operation.
-//
-// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
-// run were created. Pushes to a branch in a forked repository are not detected and return an empty
-// `pull_requests` array.
-// Creates a new check run for a specific commit in a repository. Your GitHub App must have the
-// `checks:write` permission to create check runs.
-// In a check suite, GitHub limits the number of check runs with the same name to 1000. Once these
-// check runs exceed 1000, GitHub will start to automatically delete older check runs.
-//
-// POST /repos/{owner}/{repo}/check-runs
 func (UnimplementedHandler) ChecksCreate(ctx context.Context, req *ChecksCreateReq, params ChecksCreateParams) (r *CheckRun, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ChecksCreateSuite implements checks/create-suite operation.
+	//
+	// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
+	// run were created. Pushes to a branch in a forked repository are not detected and return an empty
+	// `pull_requests` array and a `null` value for `head_branch`.
+	// By default, check suites are automatically created when you create a [check run](https://docs.
+	// github.com/rest/reference/checks#check-runs). You only need to use this endpoint for manually
+	// creating check suites when you've disabled automatic creation using "[Update repository
+	// preferences for check suites](https://docs.github.
+	// com/rest/reference/checks#update-repository-preferences-for-check-suites)". Your GitHub App must
+	// have the `checks:write` permission to create check suites.
+	//
+	// POST /repos/{owner}/{repo}/check-suites
 }
 
-// ChecksCreateSuite implements checks/create-suite operation.
-//
-// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
-// run were created. Pushes to a branch in a forked repository are not detected and return an empty
-// `pull_requests` array and a `null` value for `head_branch`.
-// By default, check suites are automatically created when you create a [check run](https://docs.
-// github.com/rest/reference/checks#check-runs). You only need to use this endpoint for manually
-// creating check suites when you've disabled automatic creation using "[Update repository
-// preferences for check suites](https://docs.github.
-// com/rest/reference/checks#update-repository-preferences-for-check-suites)". Your GitHub App must
-// have the `checks:write` permission to create check suites.
-//
-// POST /repos/{owner}/{repo}/check-suites
 func (UnimplementedHandler) ChecksCreateSuite(ctx context.Context, req *ChecksCreateSuiteReq, params ChecksCreateSuiteParams) (r ChecksCreateSuiteRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ChecksCreateSuiteRes), nil
 }
 
 // ChecksGet implements checks/get operation.
@@ -2168,91 +2393,104 @@ func (UnimplementedHandler) ChecksCreateSuite(ctx context.Context, req *ChecksCr
 //
 // GET /repos/{owner}/{repo}/check-runs/{check_run_id}
 func (UnimplementedHandler) ChecksGet(ctx context.Context, params ChecksGetParams) (r *CheckRun, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ChecksGetSuite implements checks/get-suite operation.
+	//
+	// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
+	// run were created. Pushes to a branch in a forked repository are not detected and return an empty
+	// `pull_requests` array and a `null` value for `head_branch`.
+	// Gets a single check suite using its `id`. GitHub Apps must have the `checks:read` permission on a
+	// private repository or pull access to a public repository to get check suites. OAuth Apps and
+	// authenticated users must have the `repo` scope to get check suites in a private repository.
+	//
+	// GET /repos/{owner}/{repo}/check-suites/{check_suite_id}
 }
 
-// ChecksGetSuite implements checks/get-suite operation.
-//
-// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
-// run were created. Pushes to a branch in a forked repository are not detected and return an empty
-// `pull_requests` array and a `null` value for `head_branch`.
-// Gets a single check suite using its `id`. GitHub Apps must have the `checks:read` permission on a
-// private repository or pull access to a public repository to get check suites. OAuth Apps and
-// authenticated users must have the `repo` scope to get check suites in a private repository.
-//
-// GET /repos/{owner}/{repo}/check-suites/{check_suite_id}
 func (UnimplementedHandler) ChecksGetSuite(ctx context.Context, params ChecksGetSuiteParams) (r *CheckSuite, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ChecksListAnnotations implements checks/list-annotations operation.
+	//
+	// Lists annotations for a check run using the annotation `id`. GitHub Apps must have the
+	// `checks:read` permission on a private repository or pull access to a public repository to get
+	// annotations for a check run. OAuth Apps and authenticated users must have the `repo` scope to get
+	// annotations for a check run in a private repository.
+	//
+	// GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations
 }
 
-// ChecksListAnnotations implements checks/list-annotations operation.
-//
-// Lists annotations for a check run using the annotation `id`. GitHub Apps must have the
-// `checks:read` permission on a private repository or pull access to a public repository to get
-// annotations for a check run. OAuth Apps and authenticated users must have the `repo` scope to get
-// annotations for a check run in a private repository.
-//
-// GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations
 func (UnimplementedHandler) ChecksListAnnotations(ctx context.Context, params ChecksListAnnotationsParams) (r *ChecksListAnnotationsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ChecksListForRef implements checks/list-for-ref operation.
+	//
+	// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
+	// run were created. Pushes to a branch in a forked repository are not detected and return an empty
+	// `pull_requests` array.
+	// Lists check runs for a commit ref. The `ref` can be a SHA, branch name, or a tag name. GitHub Apps
+	// must have the `checks:read` permission on a private repository or pull access to a public
+	// repository to get check runs. OAuth Apps and authenticated users must have the `repo` scope to get
+	// check runs in a private repository.
+	//
+	// GET /repos/{owner}/{repo}/commits/{ref}/check-runs
 }
 
-// ChecksListForRef implements checks/list-for-ref operation.
-//
-// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
-// run were created. Pushes to a branch in a forked repository are not detected and return an empty
-// `pull_requests` array.
-// Lists check runs for a commit ref. The `ref` can be a SHA, branch name, or a tag name. GitHub Apps
-// must have the `checks:read` permission on a private repository or pull access to a public
-// repository to get check runs. OAuth Apps and authenticated users must have the `repo` scope to get
-// check runs in a private repository.
-//
-// GET /repos/{owner}/{repo}/commits/{ref}/check-runs
 func (UnimplementedHandler) ChecksListForRef(ctx context.Context, params ChecksListForRefParams) (r *ChecksListForRefOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ChecksListForSuite implements checks/list-for-suite operation.
+	//
+	// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
+	// run were created. Pushes to a branch in a forked repository are not detected and return an empty
+	// `pull_requests` array.
+	// Lists check runs for a check suite using its `id`. GitHub Apps must have the `checks:read`
+	// permission on a private repository or pull access to a public repository to get check runs. OAuth
+	// Apps and authenticated users must have the `repo` scope to get check runs in a private repository.
+	//
+	// GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs
 }
 
-// ChecksListForSuite implements checks/list-for-suite operation.
-//
-// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
-// run were created. Pushes to a branch in a forked repository are not detected and return an empty
-// `pull_requests` array.
-// Lists check runs for a check suite using its `id`. GitHub Apps must have the `checks:read`
-// permission on a private repository or pull access to a public repository to get check runs. OAuth
-// Apps and authenticated users must have the `repo` scope to get check runs in a private repository.
-//
-// GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs
 func (UnimplementedHandler) ChecksListForSuite(ctx context.Context, params ChecksListForSuiteParams) (r *ChecksListForSuiteOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ChecksListSuitesForRef implements checks/list-suites-for-ref operation.
+	//
+	// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
+	// run were created. Pushes to a branch in a forked repository are not detected and return an empty
+	// `pull_requests` array and a `null` value for `head_branch`.
+	// Lists check suites for a commit `ref`. The `ref` can be a SHA, branch name, or a tag name. GitHub
+	// Apps must have the `checks:read` permission on a private repository or pull access to a public
+	// repository to list check suites. OAuth Apps and authenticated users must have the `repo` scope to
+	// get check suites in a private repository.
+	//
+	// GET /repos/{owner}/{repo}/commits/{ref}/check-suites
 }
 
-// ChecksListSuitesForRef implements checks/list-suites-for-ref operation.
-//
-// **Note:** The Checks API only looks for pushes in the repository where the check suite or check
-// run were created. Pushes to a branch in a forked repository are not detected and return an empty
-// `pull_requests` array and a `null` value for `head_branch`.
-// Lists check suites for a commit `ref`. The `ref` can be a SHA, branch name, or a tag name. GitHub
-// Apps must have the `checks:read` permission on a private repository or pull access to a public
-// repository to list check suites. OAuth Apps and authenticated users must have the `repo` scope to
-// get check suites in a private repository.
-//
-// GET /repos/{owner}/{repo}/commits/{ref}/check-suites
 func (UnimplementedHandler) ChecksListSuitesForRef(ctx context.Context, params ChecksListSuitesForRefParams) (r *ChecksListSuitesForRefOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ChecksRerequestSuite implements checks/rerequest-suite operation.
+	//
+	// Triggers GitHub to rerequest an existing check suite, without pushing new code to a repository.
+	// This endpoint will trigger the [`check_suite` webhook](https://docs.github.
+	// com/webhooks/event-payloads/#check_suite) event with the action `rerequested`. When a check suite
+	// is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
+	// To rerequest a check suite, your GitHub App must have the `checks:read` permission on a private
+	// repository or pull access to a public repository.
+	//
+	// POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest
 }
 
-// ChecksRerequestSuite implements checks/rerequest-suite operation.
-//
-// Triggers GitHub to rerequest an existing check suite, without pushing new code to a repository.
-// This endpoint will trigger the [`check_suite` webhook](https://docs.github.
-// com/webhooks/event-payloads/#check_suite) event with the action `rerequested`. When a check suite
-// is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
-// To rerequest a check suite, your GitHub App must have the `checks:read` permission on a private
-// repository or pull access to a public repository.
-//
-// POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest
 func (UnimplementedHandler) ChecksRerequestSuite(ctx context.Context, params ChecksRerequestSuiteParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ChecksSetSuitesPreferences implements checks/set-suites-preferences operation.
@@ -2265,74 +2503,77 @@ func (UnimplementedHandler) ChecksRerequestSuite(ctx context.Context, params Che
 //
 // PATCH /repos/{owner}/{repo}/check-suites/preferences
 func (UnimplementedHandler) ChecksSetSuitesPreferences(ctx context.Context, req *ChecksSetSuitesPreferencesReq, params ChecksSetSuitesPreferencesParams) (r *CheckSuitePreference, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// CodeScanningDeleteAnalysis implements code-scanning/delete-analysis operation.
+	//
+	// Deletes a specified code scanning analysis from a repository. For
+	// private repositories, you must use an access token with the `repo` scope. For public repositories,
+	// you must use an access token with `public_repo` and `repo:security_events` scopes.
+	// GitHub Apps must have the `security_events` write permission to use this endpoint.
+	// You can delete one analysis at a time.
+	// To delete a series of analyses, start with the most recent analysis and work backwards.
+	// Conceptually, the process is similar to the undo function in a text editor.
+	// When you list the analyses for a repository,
+	// one or more will be identified as deletable in the response:
+	// ```
+	// "deletable": true
+	// ```
+	// An analysis is deletable when it's the most recent in a set of analyses.
+	// Typically, a repository will have multiple sets of analyses
+	// for each enabled code scanning tool,
+	// where a set is determined by a unique combination of analysis values:
+	// * `ref`
+	// * `tool`
+	// * `analysis_key`
+	// * `environment`
+	// If you attempt to delete an analysis that is not the most recent in a set,
+	// you'll get a 400 response with the message:
+	// ```
+	// Analysis specified is not deletable.
+	// ```
+	// The response from a successful `DELETE` operation provides you with
+	// two alternative URLs for deleting the next analysis in the set
+	// (see the example default response below).
+	// Use the `next_analysis_url` URL if you want to avoid accidentally deleting the final analysis
+	// in the set. This is a useful option if you want to preserve at least one analysis
+	// for the specified tool in your repository.
+	// Use the `confirm_delete_url` URL if you are content to remove all analyses for a tool.
+	// When you delete the last analysis in a set the value of `next_analysis_url` and
+	// `confirm_delete_url`
+	// in the 200 response is `null`.
+	// As an example of the deletion process,
+	// let's imagine that you added a workflow that configured a particular code scanning tool
+	// to analyze the code in a repository. This tool has added 15 analyses:
+	// 10 on the default branch, and another 5 on a topic branch.
+	// You therefore have two separate sets of analyses for this tool.
+	// You've now decided that you want to remove all of the analyses for the tool.
+	// To do this you must make 15 separate deletion requests.
+	// To start, you must find the deletable analysis for one of the sets,
+	// step through deleting the analyses in that set,
+	// and then repeat the process for the second set.
+	// The procedure therefore consists of a nested loop:
+	// **Outer loop**:
+	// * List the analyses for the repository, filtered by tool.
+	// * Parse this list to find a deletable analysis. If found:
+	// **Inner loop**:
+	// * Delete the identified analysis.
+	// * Parse the response for the value of `confirm_delete_url` and, if found, use this in the next
+	// iteration.
+	// The above process assumes that you want to remove all trace of the tool's analyses from the GitHub
+	// user interface, for the specified repository, and it therefore uses the `confirm_delete_url` value.
+	//
+	//	Alternatively, you could use the `next_analysis_url` value, which would leave the last analysis
+	//
+	// in each set undeleted to avoid removing a tool's analysis entirely.
+	//
+	// DELETE /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}
 }
 
-// CodeScanningDeleteAnalysis implements code-scanning/delete-analysis operation.
-//
-// Deletes a specified code scanning analysis from a repository. For
-// private repositories, you must use an access token with the `repo` scope. For public repositories,
-// you must use an access token with `public_repo` and `repo:security_events` scopes.
-// GitHub Apps must have the `security_events` write permission to use this endpoint.
-// You can delete one analysis at a time.
-// To delete a series of analyses, start with the most recent analysis and work backwards.
-// Conceptually, the process is similar to the undo function in a text editor.
-// When you list the analyses for a repository,
-// one or more will be identified as deletable in the response:
-// ```
-// "deletable": true
-// ```
-// An analysis is deletable when it's the most recent in a set of analyses.
-// Typically, a repository will have multiple sets of analyses
-// for each enabled code scanning tool,
-// where a set is determined by a unique combination of analysis values:
-// * `ref`
-// * `tool`
-// * `analysis_key`
-// * `environment`
-// If you attempt to delete an analysis that is not the most recent in a set,
-// you'll get a 400 response with the message:
-// ```
-// Analysis specified is not deletable.
-// ```
-// The response from a successful `DELETE` operation provides you with
-// two alternative URLs for deleting the next analysis in the set
-// (see the example default response below).
-// Use the `next_analysis_url` URL if you want to avoid accidentally deleting the final analysis
-// in the set. This is a useful option if you want to preserve at least one analysis
-// for the specified tool in your repository.
-// Use the `confirm_delete_url` URL if you are content to remove all analyses for a tool.
-// When you delete the last analysis in a set the value of `next_analysis_url` and
-// `confirm_delete_url`
-// in the 200 response is `null`.
-// As an example of the deletion process,
-// let's imagine that you added a workflow that configured a particular code scanning tool
-// to analyze the code in a repository. This tool has added 15 analyses:
-// 10 on the default branch, and another 5 on a topic branch.
-// You therefore have two separate sets of analyses for this tool.
-// You've now decided that you want to remove all of the analyses for the tool.
-// To do this you must make 15 separate deletion requests.
-// To start, you must find the deletable analysis for one of the sets,
-// step through deleting the analyses in that set,
-// and then repeat the process for the second set.
-// The procedure therefore consists of a nested loop:
-// **Outer loop**:
-// * List the analyses for the repository, filtered by tool.
-// * Parse this list to find a deletable analysis. If found:
-// **Inner loop**:
-// * Delete the identified analysis.
-// * Parse the response for the value of `confirm_delete_url` and, if found, use this in the next
-// iteration.
-// The above process assumes that you want to remove all trace of the tool's analyses from the GitHub
-// user interface, for the specified repository, and it therefore uses the `confirm_delete_url` value.
-//
-//	Alternatively, you could use the `next_analysis_url` value, which would leave the last analysis
-//
-// in each set undeleted to avoid removing a tool's analysis entirely.
-//
-// DELETE /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}
 func (UnimplementedHandler) CodeScanningDeleteAnalysis(ctx context.Context, params CodeScanningDeleteAnalysisParams) (r CodeScanningDeleteAnalysisRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodeScanningDeleteAnalysisRes), nil
 }
 
 // CodeScanningGetAlert implements code-scanning/get-alert operation.
@@ -2347,7 +2588,8 @@ func (UnimplementedHandler) CodeScanningDeleteAnalysis(ctx context.Context, para
 //
 // GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}
 func (UnimplementedHandler) CodeScanningGetAlert(ctx context.Context, params CodeScanningGetAlertParams) (r CodeScanningGetAlertRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodeScanningGetAlertRes), nil
 }
 
 // CodeScanningGetAnalysis implements code-scanning/get-analysis operation.
@@ -2374,7 +2616,8 @@ func (UnimplementedHandler) CodeScanningGetAlert(ctx context.Context, params Cod
 //
 // GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}
 func (UnimplementedHandler) CodeScanningGetAnalysis(ctx context.Context, params CodeScanningGetAnalysisParams) (r CodeScanningGetAnalysisRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodeScanningGetAnalysisRes), nil
 }
 
 // CodeScanningGetSarif implements code-scanning/get-sarif operation.
@@ -2388,7 +2631,8 @@ func (UnimplementedHandler) CodeScanningGetAnalysis(ctx context.Context, params 
 //
 // GET /repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}
 func (UnimplementedHandler) CodeScanningGetSarif(ctx context.Context, params CodeScanningGetSarifParams) (r CodeScanningGetSarifRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodeScanningGetSarifRes), nil
 }
 
 // CodeScanningListAlertInstances implements code-scanning/list-alert-instances operation.
@@ -2399,7 +2643,8 @@ func (UnimplementedHandler) CodeScanningGetSarif(ctx context.Context, params Cod
 //
 // GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances
 func (UnimplementedHandler) CodeScanningListAlertInstances(ctx context.Context, params CodeScanningListAlertInstancesParams) (r CodeScanningListAlertInstancesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodeScanningListAlertInstancesRes), nil
 }
 
 // CodeScanningListAlertsForRepo implements code-scanning/list-alerts-for-repo operation.
@@ -2415,7 +2660,8 @@ func (UnimplementedHandler) CodeScanningListAlertInstances(ctx context.Context, 
 //
 // GET /repos/{owner}/{repo}/code-scanning/alerts
 func (UnimplementedHandler) CodeScanningListAlertsForRepo(ctx context.Context, params CodeScanningListAlertsForRepoParams) (r CodeScanningListAlertsForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodeScanningListAlertsForRepoRes), nil
 }
 
 // CodeScanningListRecentAnalyses implements code-scanning/list-recent-analyses operation.
@@ -2438,7 +2684,8 @@ func (UnimplementedHandler) CodeScanningListAlertsForRepo(ctx context.Context, p
 //
 // GET /repos/{owner}/{repo}/code-scanning/analyses
 func (UnimplementedHandler) CodeScanningListRecentAnalyses(ctx context.Context, params CodeScanningListRecentAnalysesParams) (r CodeScanningListRecentAnalysesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodeScanningListRecentAnalysesRes), nil
 }
 
 // CodeScanningUpdateAlert implements code-scanning/update-alert operation.
@@ -2449,7 +2696,8 @@ func (UnimplementedHandler) CodeScanningListRecentAnalyses(ctx context.Context, 
 //
 // PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}
 func (UnimplementedHandler) CodeScanningUpdateAlert(ctx context.Context, req *CodeScanningUpdateAlertReq, params CodeScanningUpdateAlertParams) (r CodeScanningUpdateAlertRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodeScanningUpdateAlertRes), nil
 }
 
 // CodeScanningUploadSarif implements code-scanning/upload-sarif operation.
@@ -2484,7 +2732,8 @@ func (UnimplementedHandler) CodeScanningUpdateAlert(ctx context.Context, req *Co
 //
 // POST /repos/{owner}/{repo}/code-scanning/sarifs
 func (UnimplementedHandler) CodeScanningUploadSarif(ctx context.Context, req *CodeScanningUploadSarifReq, params CodeScanningUploadSarifParams) (r CodeScanningUploadSarifRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodeScanningUploadSarifRes), nil
 }
 
 // CodesOfConductGetAllCodesOfConduct implements codes-of-conduct/get-all-codes-of-conduct operation.
@@ -2493,7 +2742,8 @@ func (UnimplementedHandler) CodeScanningUploadSarif(ctx context.Context, req *Co
 //
 // GET /codes_of_conduct
 func (UnimplementedHandler) CodesOfConductGetAllCodesOfConduct(ctx context.Context) (r CodesOfConductGetAllCodesOfConductRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodesOfConductGetAllCodesOfConductRes), nil
 }
 
 // CodesOfConductGetConductCode implements codes-of-conduct/get-conduct-code operation.
@@ -2502,7 +2752,8 @@ func (UnimplementedHandler) CodesOfConductGetAllCodesOfConduct(ctx context.Conte
 //
 // GET /codes_of_conduct/{key}
 func (UnimplementedHandler) CodesOfConductGetConductCode(ctx context.Context, params CodesOfConductGetConductCodeParams) (r CodesOfConductGetConductCodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CodesOfConductGetConductCodeRes), nil
 }
 
 // EmojisGet implements emojis/get operation.
@@ -2511,7 +2762,8 @@ func (UnimplementedHandler) CodesOfConductGetConductCode(ctx context.Context, pa
 //
 // GET /emojis
 func (UnimplementedHandler) EmojisGet(ctx context.Context) (r EmojisGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(EmojisGetRes), nil
 }
 
 // EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprise implements enterprise-admin/add-org-access-to-self-hosted-runner-group-in-enterprise operation.
@@ -2524,7 +2776,8 @@ func (UnimplementedHandler) EmojisGet(ctx context.Context) (r EmojisGetRes, _ er
 //
 // PUT /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations/{org_id}
 func (UnimplementedHandler) EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprise(ctx context.Context, params EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminAddSelfHostedRunnerToGroupForEnterprise implements enterprise-admin/add-self-hosted-runner-to-group-for-enterprise operation.
@@ -2535,7 +2788,8 @@ func (UnimplementedHandler) EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupIn
 //
 // PUT /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners/{runner_id}
 func (UnimplementedHandler) EnterpriseAdminAddSelfHostedRunnerToGroupForEnterprise(ctx context.Context, params EnterpriseAdminAddSelfHostedRunnerToGroupForEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminCreateRegistrationTokenForEnterprise implements enterprise-admin/create-registration-token-for-enterprise operation.
@@ -2551,45 +2805,52 @@ func (UnimplementedHandler) EnterpriseAdminAddSelfHostedRunnerToGroupForEnterpri
 //
 // POST /enterprises/{enterprise}/actions/runners/registration-token
 func (UnimplementedHandler) EnterpriseAdminCreateRegistrationTokenForEnterprise(ctx context.Context, params EnterpriseAdminCreateRegistrationTokenForEnterpriseParams) (r *AuthenticationToken, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminCreateRemoveTokenForEnterprise implements enterprise-admin/create-remove-token-for-enterprise operation.
+	//
+	// Returns a token that you can pass to the `config` script to remove a self-hosted runner from an
+	// enterprise. The token expires after one hour.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	// #### Example using remove token
+	// To remove your self-hosted runner from an enterprise, replace `TOKEN` with the remove token
+	// provided by this
+	// endpoint.
+	// ```
+	// ./config.sh remove --token TOKEN
+	// ```.
+	//
+	// POST /enterprises/{enterprise}/actions/runners/remove-token
 }
 
-// EnterpriseAdminCreateRemoveTokenForEnterprise implements enterprise-admin/create-remove-token-for-enterprise operation.
-//
-// Returns a token that you can pass to the `config` script to remove a self-hosted runner from an
-// enterprise. The token expires after one hour.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-// #### Example using remove token
-// To remove your self-hosted runner from an enterprise, replace `TOKEN` with the remove token
-// provided by this
-// endpoint.
-// ```
-// ./config.sh remove --token TOKEN
-// ```.
-//
-// POST /enterprises/{enterprise}/actions/runners/remove-token
 func (UnimplementedHandler) EnterpriseAdminCreateRemoveTokenForEnterprise(ctx context.Context, params EnterpriseAdminCreateRemoveTokenForEnterpriseParams) (r *AuthenticationToken, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminCreateSelfHostedRunnerGroupForEnterprise implements enterprise-admin/create-self-hosted-runner-group-for-enterprise operation.
+	//
+	// Creates a new self-hosted runner group for an enterprise.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// POST /enterprises/{enterprise}/actions/runner-groups
 }
 
-// EnterpriseAdminCreateSelfHostedRunnerGroupForEnterprise implements enterprise-admin/create-self-hosted-runner-group-for-enterprise operation.
-//
-// Creates a new self-hosted runner group for an enterprise.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// POST /enterprises/{enterprise}/actions/runner-groups
 func (UnimplementedHandler) EnterpriseAdminCreateSelfHostedRunnerGroupForEnterprise(ctx context.Context, req *EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseReq, params EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseParams) (r *RunnerGroupsEnterprise, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminDeleteScimGroupFromEnterprise implements enterprise-admin/delete-scim-group-from-enterprise operation.
+	//
+	// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
+	// change.
+	//
+	// DELETE /scim/v2/enterprises/{enterprise}/Groups/{scim_group_id}
 }
 
-// EnterpriseAdminDeleteScimGroupFromEnterprise implements enterprise-admin/delete-scim-group-from-enterprise operation.
-//
-// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
-// change.
-//
-// DELETE /scim/v2/enterprises/{enterprise}/Groups/{scim_group_id}
 func (UnimplementedHandler) EnterpriseAdminDeleteScimGroupFromEnterprise(ctx context.Context, params EnterpriseAdminDeleteScimGroupFromEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminDeleteSelfHostedRunnerFromEnterprise implements enterprise-admin/delete-self-hosted-runner-from-enterprise operation.
@@ -2600,7 +2861,8 @@ func (UnimplementedHandler) EnterpriseAdminDeleteScimGroupFromEnterprise(ctx con
 //
 // DELETE /enterprises/{enterprise}/actions/runners/{runner_id}
 func (UnimplementedHandler) EnterpriseAdminDeleteSelfHostedRunnerFromEnterprise(ctx context.Context, params EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprise implements enterprise-admin/delete-self-hosted-runner-group-from-enterprise operation.
@@ -2610,7 +2872,8 @@ func (UnimplementedHandler) EnterpriseAdminDeleteSelfHostedRunnerFromEnterprise(
 //
 // DELETE /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}
 func (UnimplementedHandler) EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprise(ctx context.Context, params EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminDeleteUserFromEnterprise implements enterprise-admin/delete-user-from-enterprise operation.
@@ -2620,7 +2883,8 @@ func (UnimplementedHandler) EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterp
 //
 // DELETE /scim/v2/enterprises/{enterprise}/Users/{scim_user_id}
 func (UnimplementedHandler) EnterpriseAdminDeleteUserFromEnterprise(ctx context.Context, params EnterpriseAdminDeleteUserFromEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterprise implements enterprise-admin/disable-selected-organization-github-actions-enterprise operation.
@@ -2633,7 +2897,8 @@ func (UnimplementedHandler) EnterpriseAdminDeleteUserFromEnterprise(ctx context.
 //
 // DELETE /enterprises/{enterprise}/actions/permissions/organizations/{org_id}
 func (UnimplementedHandler) EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterprise(ctx context.Context, params EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprise implements enterprise-admin/enable-selected-organization-github-actions-enterprise operation.
@@ -2646,7 +2911,8 @@ func (UnimplementedHandler) EnterpriseAdminDisableSelectedOrganizationGithubActi
 //
 // PUT /enterprises/{enterprise}/actions/permissions/organizations/{org_id}
 func (UnimplementedHandler) EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprise(ctx context.Context, params EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminGetAllowedActionsEnterprise implements enterprise-admin/get-allowed-actions-enterprise operation.
@@ -2659,216 +2925,251 @@ func (UnimplementedHandler) EnterpriseAdminEnableSelectedOrganizationGithubActio
 //
 // GET /enterprises/{enterprise}/actions/permissions/selected-actions
 func (UnimplementedHandler) EnterpriseAdminGetAllowedActionsEnterprise(ctx context.Context, params EnterpriseAdminGetAllowedActionsEnterpriseParams) (r *SelectedActions, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminGetAuditLog implements enterprise-admin/get-audit-log operation.
+	//
+	// Gets the audit log for an enterprise. To use this endpoint, you must be an enterprise admin, and
+	// you must use an access token with the `admin:enterprise` scope.
+	//
+	// GET /enterprises/{enterprise}/audit-log
 }
 
-// EnterpriseAdminGetAuditLog implements enterprise-admin/get-audit-log operation.
-//
-// Gets the audit log for an enterprise. To use this endpoint, you must be an enterprise admin, and
-// you must use an access token with the `admin:enterprise` scope.
-//
-// GET /enterprises/{enterprise}/audit-log
 func (UnimplementedHandler) EnterpriseAdminGetAuditLog(ctx context.Context, params EnterpriseAdminGetAuditLogParams) (r []AuditLogEvent, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminGetGithubActionsPermissionsEnterprise implements enterprise-admin/get-github-actions-permissions-enterprise operation.
+	//
+	// Gets the GitHub Actions permissions policy for organizations and allowed actions in an enterprise.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// GET /enterprises/{enterprise}/actions/permissions
 }
 
-// EnterpriseAdminGetGithubActionsPermissionsEnterprise implements enterprise-admin/get-github-actions-permissions-enterprise operation.
-//
-// Gets the GitHub Actions permissions policy for organizations and allowed actions in an enterprise.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// GET /enterprises/{enterprise}/actions/permissions
 func (UnimplementedHandler) EnterpriseAdminGetGithubActionsPermissionsEnterprise(ctx context.Context, params EnterpriseAdminGetGithubActionsPermissionsEnterpriseParams) (r *ActionsEnterprisePermissions, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminGetProvisioningInformationForEnterpriseGroup implements enterprise-admin/get-provisioning-information-for-enterprise-group operation.
+	//
+	// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
+	// change.
+	//
+	// GET /scim/v2/enterprises/{enterprise}/Groups/{scim_group_id}
 }
 
-// EnterpriseAdminGetProvisioningInformationForEnterpriseGroup implements enterprise-admin/get-provisioning-information-for-enterprise-group operation.
-//
-// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
-// change.
-//
-// GET /scim/v2/enterprises/{enterprise}/Groups/{scim_group_id}
 func (UnimplementedHandler) EnterpriseAdminGetProvisioningInformationForEnterpriseGroup(ctx context.Context, params EnterpriseAdminGetProvisioningInformationForEnterpriseGroupParams) (r *ScimEnterpriseGroup, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminGetProvisioningInformationForEnterpriseUser implements enterprise-admin/get-provisioning-information-for-enterprise-user operation.
+	//
+	// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
+	// change.
+	//
+	// GET /scim/v2/enterprises/{enterprise}/Users/{scim_user_id}
 }
 
-// EnterpriseAdminGetProvisioningInformationForEnterpriseUser implements enterprise-admin/get-provisioning-information-for-enterprise-user operation.
-//
-// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
-// change.
-//
-// GET /scim/v2/enterprises/{enterprise}/Users/{scim_user_id}
 func (UnimplementedHandler) EnterpriseAdminGetProvisioningInformationForEnterpriseUser(ctx context.Context, params EnterpriseAdminGetProvisioningInformationForEnterpriseUserParams) (r *ScimEnterpriseUser, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminGetSelfHostedRunnerForEnterprise implements enterprise-admin/get-self-hosted-runner-for-enterprise operation.
+	//
+	// Gets a specific self-hosted runner configured in an enterprise.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// GET /enterprises/{enterprise}/actions/runners/{runner_id}
 }
 
-// EnterpriseAdminGetSelfHostedRunnerForEnterprise implements enterprise-admin/get-self-hosted-runner-for-enterprise operation.
-//
-// Gets a specific self-hosted runner configured in an enterprise.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// GET /enterprises/{enterprise}/actions/runners/{runner_id}
 func (UnimplementedHandler) EnterpriseAdminGetSelfHostedRunnerForEnterprise(ctx context.Context, params EnterpriseAdminGetSelfHostedRunnerForEnterpriseParams) (r *Runner, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminGetSelfHostedRunnerGroupForEnterprise implements enterprise-admin/get-self-hosted-runner-group-for-enterprise operation.
+	//
+	// Gets a specific self-hosted runner group for an enterprise.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// GET /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}
 }
 
-// EnterpriseAdminGetSelfHostedRunnerGroupForEnterprise implements enterprise-admin/get-self-hosted-runner-group-for-enterprise operation.
-//
-// Gets a specific self-hosted runner group for an enterprise.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// GET /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}
 func (UnimplementedHandler) EnterpriseAdminGetSelfHostedRunnerGroupForEnterprise(ctx context.Context, params EnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseParams) (r *RunnerGroupsEnterprise, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise implements enterprise-admin/list-org-access-to-self-hosted-runner-group-in-enterprise operation.
+	//
+	// Lists the organizations with access to a self-hosted runner group.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// GET /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations
 }
 
-// EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise implements enterprise-admin/list-org-access-to-self-hosted-runner-group-in-enterprise operation.
-//
-// Lists the organizations with access to a self-hosted runner group.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// GET /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations
 func (UnimplementedHandler) EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise(ctx context.Context, params EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseParams) (r *EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminListProvisionedGroupsEnterprise implements enterprise-admin/list-provisioned-groups-enterprise operation.
+	//
+	// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
+	// change.
+	//
+	// GET /scim/v2/enterprises/{enterprise}/Groups
 }
 
-// EnterpriseAdminListProvisionedGroupsEnterprise implements enterprise-admin/list-provisioned-groups-enterprise operation.
-//
-// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
-// change.
-//
-// GET /scim/v2/enterprises/{enterprise}/Groups
 func (UnimplementedHandler) EnterpriseAdminListProvisionedGroupsEnterprise(ctx context.Context, params EnterpriseAdminListProvisionedGroupsEnterpriseParams) (r *ScimGroupListEnterprise, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminListProvisionedIdentitiesEnterprise implements enterprise-admin/list-provisioned-identities-enterprise operation.
+	//
+	// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
+	// change.
+	// Retrieves a paginated list of all provisioned enterprise members, including pending invitations.
+	// When a user with a SAML-provisioned external identity leaves (or is removed from) an enterprise,
+	// the account's metadata is immediately removed. However, the returned list of user accounts might
+	// not always match the organization or enterprise member list you see on GitHub. This can happen in
+	// certain cases where an external identity associated with an organization will not match an
+	// organization member:
+	// - When a user with a SCIM-provisioned external identity is removed from an enterprise, the
+	// account's metadata is preserved to allow the user to re-join the organization in the future.
+	// - When inviting a user to join an organization, you can expect to see their external identity in
+	// the results before they accept the invitation, or if the invitation is cancelled (or never
+	// accepted).
+	// - When a user is invited over SCIM, an external identity is created that matches with the
+	// invitee's email address. However, this identity is only linked to a user account when the user
+	// accepts the invitation by going through SAML SSO.
+	// The returned list of external identities can include an entry for a `null` user. These are
+	// unlinked SAML identities that are created when a user goes through the following Single Sign-On
+	// (SSO) process but does not sign in to their GitHub account after completing SSO:
+	// 1. The user is granted access by the IdP and is not a member of the GitHub enterprise.
+	// 1. The user attempts to access the GitHub enterprise and initiates the SAML SSO process, and is
+	// not currently signed in to their GitHub account.
+	// 1. After successfully authenticating with the SAML SSO IdP, the `null` external identity entry is
+	// created and the user is prompted to sign in to their GitHub account:
+	// - If the user signs in, their GitHub account is linked to this entry.
+	// - If the user does not sign in (or does not create a new account when prompted), they are not
+	// added to the GitHub enterprise, and the external identity `null` entry remains in place.
+	//
+	// GET /scim/v2/enterprises/{enterprise}/Users
 }
 
-// EnterpriseAdminListProvisionedIdentitiesEnterprise implements enterprise-admin/list-provisioned-identities-enterprise operation.
-//
-// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
-// change.
-// Retrieves a paginated list of all provisioned enterprise members, including pending invitations.
-// When a user with a SAML-provisioned external identity leaves (or is removed from) an enterprise,
-// the account's metadata is immediately removed. However, the returned list of user accounts might
-// not always match the organization or enterprise member list you see on GitHub. This can happen in
-// certain cases where an external identity associated with an organization will not match an
-// organization member:
-// - When a user with a SCIM-provisioned external identity is removed from an enterprise, the
-// account's metadata is preserved to allow the user to re-join the organization in the future.
-// - When inviting a user to join an organization, you can expect to see their external identity in
-// the results before they accept the invitation, or if the invitation is cancelled (or never
-// accepted).
-// - When a user is invited over SCIM, an external identity is created that matches with the
-// invitee's email address. However, this identity is only linked to a user account when the user
-// accepts the invitation by going through SAML SSO.
-// The returned list of external identities can include an entry for a `null` user. These are
-// unlinked SAML identities that are created when a user goes through the following Single Sign-On
-// (SSO) process but does not sign in to their GitHub account after completing SSO:
-// 1. The user is granted access by the IdP and is not a member of the GitHub enterprise.
-// 1. The user attempts to access the GitHub enterprise and initiates the SAML SSO process, and is
-// not currently signed in to their GitHub account.
-// 1. After successfully authenticating with the SAML SSO IdP, the `null` external identity entry is
-// created and the user is prompted to sign in to their GitHub account:
-// - If the user signs in, their GitHub account is linked to this entry.
-// - If the user does not sign in (or does not create a new account when prompted), they are not
-// added to the GitHub enterprise, and the external identity `null` entry remains in place.
-//
-// GET /scim/v2/enterprises/{enterprise}/Users
 func (UnimplementedHandler) EnterpriseAdminListProvisionedIdentitiesEnterprise(ctx context.Context, params EnterpriseAdminListProvisionedIdentitiesEnterpriseParams) (r *ScimUserListEnterprise, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminListRunnerApplicationsForEnterprise implements enterprise-admin/list-runner-applications-for-enterprise operation.
+	//
+	// Lists binaries for the runner application that you can download and run.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// GET /enterprises/{enterprise}/actions/runners/downloads
 }
 
-// EnterpriseAdminListRunnerApplicationsForEnterprise implements enterprise-admin/list-runner-applications-for-enterprise operation.
-//
-// Lists binaries for the runner application that you can download and run.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// GET /enterprises/{enterprise}/actions/runners/downloads
 func (UnimplementedHandler) EnterpriseAdminListRunnerApplicationsForEnterprise(ctx context.Context, params EnterpriseAdminListRunnerApplicationsForEnterpriseParams) (r []RunnerApplication, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise implements enterprise-admin/list-selected-organizations-enabled-github-actions-enterprise operation.
+	//
+	// Lists the organizations that are selected to have GitHub Actions enabled in an enterprise. To use
+	// this endpoint, the enterprise permission policy for `enabled_organizations` must be configured to
+	// `selected`. For more information, see "[Set GitHub Actions permissions for an
+	// enterprise](#set-github-actions-permissions-for-an-enterprise)."
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// GET /enterprises/{enterprise}/actions/permissions/organizations
 }
 
-// EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise implements enterprise-admin/list-selected-organizations-enabled-github-actions-enterprise operation.
-//
-// Lists the organizations that are selected to have GitHub Actions enabled in an enterprise. To use
-// this endpoint, the enterprise permission policy for `enabled_organizations` must be configured to
-// `selected`. For more information, see "[Set GitHub Actions permissions for an
-// enterprise](#set-github-actions-permissions-for-an-enterprise)."
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// GET /enterprises/{enterprise}/actions/permissions/organizations
 func (UnimplementedHandler) EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise(ctx context.Context, params EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseParams) (r *EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise implements enterprise-admin/list-self-hosted-runner-groups-for-enterprise operation.
+	//
+	// Lists all self-hosted runner groups for an enterprise.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// GET /enterprises/{enterprise}/actions/runner-groups
 }
 
-// EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise implements enterprise-admin/list-self-hosted-runner-groups-for-enterprise operation.
-//
-// Lists all self-hosted runner groups for an enterprise.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// GET /enterprises/{enterprise}/actions/runner-groups
 func (UnimplementedHandler) EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise(ctx context.Context, params EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseParams) (r *EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminListSelfHostedRunnersForEnterprise implements enterprise-admin/list-self-hosted-runners-for-enterprise operation.
+	//
+	// Lists all self-hosted runners configured for an enterprise.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// GET /enterprises/{enterprise}/actions/runners
 }
 
-// EnterpriseAdminListSelfHostedRunnersForEnterprise implements enterprise-admin/list-self-hosted-runners-for-enterprise operation.
-//
-// Lists all self-hosted runners configured for an enterprise.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// GET /enterprises/{enterprise}/actions/runners
 func (UnimplementedHandler) EnterpriseAdminListSelfHostedRunnersForEnterprise(ctx context.Context, params EnterpriseAdminListSelfHostedRunnersForEnterpriseParams) (r *EnterpriseAdminListSelfHostedRunnersForEnterpriseOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminListSelfHostedRunnersInGroupForEnterprise implements enterprise-admin/list-self-hosted-runners-in-group-for-enterprise operation.
+	//
+	// Lists the self-hosted runners that are in a specific enterprise group.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// GET /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners
 }
 
-// EnterpriseAdminListSelfHostedRunnersInGroupForEnterprise implements enterprise-admin/list-self-hosted-runners-in-group-for-enterprise operation.
-//
-// Lists the self-hosted runners that are in a specific enterprise group.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// GET /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners
 func (UnimplementedHandler) EnterpriseAdminListSelfHostedRunnersInGroupForEnterprise(ctx context.Context, params EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseParams) (r *EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminProvisionAndInviteEnterpriseGroup implements enterprise-admin/provision-and-invite-enterprise-group operation.
+	//
+	// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
+	// change.
+	// Provision an enterprise group, and invite users to the group. This sends invitation emails to the
+	// email address of the invited users to join the GitHub organization that the SCIM group corresponds
+	// to.
+	//
+	// POST /scim/v2/enterprises/{enterprise}/Groups
 }
 
-// EnterpriseAdminProvisionAndInviteEnterpriseGroup implements enterprise-admin/provision-and-invite-enterprise-group operation.
-//
-// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
-// change.
-// Provision an enterprise group, and invite users to the group. This sends invitation emails to the
-// email address of the invited users to join the GitHub organization that the SCIM group corresponds
-// to.
-//
-// POST /scim/v2/enterprises/{enterprise}/Groups
 func (UnimplementedHandler) EnterpriseAdminProvisionAndInviteEnterpriseGroup(ctx context.Context, req *EnterpriseAdminProvisionAndInviteEnterpriseGroupReq, params EnterpriseAdminProvisionAndInviteEnterpriseGroupParams) (r *ScimEnterpriseGroup, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminProvisionAndInviteEnterpriseUser implements enterprise-admin/provision-and-invite-enterprise-user operation.
+	//
+	// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
+	// change.
+	// Provision enterprise membership for a user, and send organization invitation emails to the email
+	// address.
+	// You can optionally include the groups a user will be invited to join. If you do not provide a list
+	// of `groups`, the user is provisioned for the enterprise, but no organization invitation emails
+	// will be sent.
+	//
+	// POST /scim/v2/enterprises/{enterprise}/Users
 }
 
-// EnterpriseAdminProvisionAndInviteEnterpriseUser implements enterprise-admin/provision-and-invite-enterprise-user operation.
-//
-// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
-// change.
-// Provision enterprise membership for a user, and send organization invitation emails to the email
-// address.
-// You can optionally include the groups a user will be invited to join. If you do not provide a list
-// of `groups`, the user is provisioned for the enterprise, but no organization invitation emails
-// will be sent.
-//
-// POST /scim/v2/enterprises/{enterprise}/Users
 func (UnimplementedHandler) EnterpriseAdminProvisionAndInviteEnterpriseUser(ctx context.Context, req *EnterpriseAdminProvisionAndInviteEnterpriseUserReq, params EnterpriseAdminProvisionAndInviteEnterpriseUserParams) (r *ScimEnterpriseUser, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterprise implements enterprise-admin/remove-org-access-to-self-hosted-runner-group-in-enterprise operation.
+	//
+	// Removes an organization from the list of selected organizations that can access a self-hosted
+	// runner group. The runner group must have `visibility` set to `selected`. For more information, see
+	// "[Create a self-hosted runner group for an
+	// enterprise](#create-a-self-hosted-runner-group-for-an-enterprise)."
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// DELETE /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations/{org_id}
 }
 
-// EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterprise implements enterprise-admin/remove-org-access-to-self-hosted-runner-group-in-enterprise operation.
-//
-// Removes an organization from the list of selected organizations that can access a self-hosted
-// runner group. The runner group must have `visibility` set to `selected`. For more information, see
-// "[Create a self-hosted runner group for an
-// enterprise](#create-a-self-hosted-runner-group-for-an-enterprise)."
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// DELETE /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations/{org_id}
 func (UnimplementedHandler) EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterprise(ctx context.Context, params EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprise implements enterprise-admin/remove-self-hosted-runner-from-group-for-enterprise operation.
@@ -2879,7 +3180,8 @@ func (UnimplementedHandler) EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGrou
 //
 // DELETE /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners/{runner_id}
 func (UnimplementedHandler) EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprise(ctx context.Context, params EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminSetAllowedActionsEnterprise implements enterprise-admin/set-allowed-actions-enterprise operation.
@@ -2892,7 +3194,8 @@ func (UnimplementedHandler) EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnt
 //
 // PUT /enterprises/{enterprise}/actions/permissions/selected-actions
 func (UnimplementedHandler) EnterpriseAdminSetAllowedActionsEnterprise(ctx context.Context, req *SelectedActions, params EnterpriseAdminSetAllowedActionsEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminSetGithubActionsPermissionsEnterprise implements enterprise-admin/set-github-actions-permissions-enterprise operation.
@@ -2902,7 +3205,8 @@ func (UnimplementedHandler) EnterpriseAdminSetAllowedActionsEnterprise(ctx conte
 //
 // PUT /enterprises/{enterprise}/actions/permissions
 func (UnimplementedHandler) EnterpriseAdminSetGithubActionsPermissionsEnterprise(ctx context.Context, req *EnterpriseAdminSetGithubActionsPermissionsEnterpriseReq, params EnterpriseAdminSetGithubActionsPermissionsEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminSetInformationForProvisionedEnterpriseGroup implements enterprise-admin/set-information-for-provisioned-enterprise-group operation.
@@ -2917,36 +3221,41 @@ func (UnimplementedHandler) EnterpriseAdminSetGithubActionsPermissionsEnterprise
 //
 // PUT /scim/v2/enterprises/{enterprise}/Groups/{scim_group_id}
 func (UnimplementedHandler) EnterpriseAdminSetInformationForProvisionedEnterpriseGroup(ctx context.Context, req *EnterpriseAdminSetInformationForProvisionedEnterpriseGroupReq, params EnterpriseAdminSetInformationForProvisionedEnterpriseGroupParams) (r *ScimEnterpriseGroup, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminSetInformationForProvisionedEnterpriseUser implements enterprise-admin/set-information-for-provisioned-enterprise-user operation.
+	//
+	// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
+	// change.
+	// Replaces an existing provisioned user's information. You must provide all the information required
+	// for the user as if you were provisioning them for the first time. Any existing user information
+	// that you don't provide will be removed. If you want to only update a specific attribute, use the
+	// [Update an attribute for a SCIM user](#update-an-attribute-for-an-enterprise-scim-user) endpoint
+	// instead.
+	// You must at least provide the required values for the user: `userName`, `name`, and `emails`.
+	// **Warning:** Setting `active: false` removes the user from the enterprise, deletes the external
+	// identity, and deletes the associated `{scim_user_id}`.
+	//
+	// PUT /scim/v2/enterprises/{enterprise}/Users/{scim_user_id}
 }
 
-// EnterpriseAdminSetInformationForProvisionedEnterpriseUser implements enterprise-admin/set-information-for-provisioned-enterprise-user operation.
-//
-// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
-// change.
-// Replaces an existing provisioned user's information. You must provide all the information required
-// for the user as if you were provisioning them for the first time. Any existing user information
-// that you don't provide will be removed. If you want to only update a specific attribute, use the
-// [Update an attribute for a SCIM user](#update-an-attribute-for-an-enterprise-scim-user) endpoint
-// instead.
-// You must at least provide the required values for the user: `userName`, `name`, and `emails`.
-// **Warning:** Setting `active: false` removes the user from the enterprise, deletes the external
-// identity, and deletes the associated `{scim_user_id}`.
-//
-// PUT /scim/v2/enterprises/{enterprise}/Users/{scim_user_id}
 func (UnimplementedHandler) EnterpriseAdminSetInformationForProvisionedEnterpriseUser(ctx context.Context, req *EnterpriseAdminSetInformationForProvisionedEnterpriseUserReq, params EnterpriseAdminSetInformationForProvisionedEnterpriseUserParams) (r *ScimEnterpriseUser, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprise implements enterprise-admin/set-org-access-to-self-hosted-runner-group-in-enterprise operation.
+	//
+	// Replaces the list of organizations that have access to a self-hosted runner configured in an
+	// enterprise.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// PUT /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations
 }
 
-// EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprise implements enterprise-admin/set-org-access-to-self-hosted-runner-group-in-enterprise operation.
-//
-// Replaces the list of organizations that have access to a self-hosted runner configured in an
-// enterprise.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// PUT /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations
 func (UnimplementedHandler) EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprise(ctx context.Context, req *EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseReq, params EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprise implements enterprise-admin/set-selected-organizations-enabled-github-actions-enterprise operation.
@@ -2959,7 +3268,8 @@ func (UnimplementedHandler) EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupIn
 //
 // PUT /enterprises/{enterprise}/actions/permissions/organizations
 func (UnimplementedHandler) EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprise(ctx context.Context, req *EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseReq, params EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprise implements enterprise-admin/set-self-hosted-runners-in-group-for-enterprise operation.
@@ -2969,7 +3279,8 @@ func (UnimplementedHandler) EnterpriseAdminSetSelectedOrganizationsEnabledGithub
 //
 // PUT /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners
 func (UnimplementedHandler) EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprise(ctx context.Context, req *EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseReq, params EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EnterpriseAdminUpdateAttributeForEnterpriseGroup implements enterprise-admin/update-attribute-for-enterprise-group operation.
@@ -2983,57 +3294,64 @@ func (UnimplementedHandler) EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpr
 //
 // PATCH /scim/v2/enterprises/{enterprise}/Groups/{scim_group_id}
 func (UnimplementedHandler) EnterpriseAdminUpdateAttributeForEnterpriseGroup(ctx context.Context, req *EnterpriseAdminUpdateAttributeForEnterpriseGroupReq, params EnterpriseAdminUpdateAttributeForEnterpriseGroupParams) (r *ScimEnterpriseGroup, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminUpdateAttributeForEnterpriseUser implements enterprise-admin/update-attribute-for-enterprise-user operation.
+	//
+	// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
+	// change.
+	// Allows you to change a provisioned user's individual attributes. To change a user's values, you
+	// must provide a specific `Operations` JSON format that contains at least one of the `add`, `remove`,
+	//
+	//	or `replace` operations. For examples and more information on the SCIM operations format, see the
+	//
+	// [SCIM specification](https://tools.ietf.org/html/rfc7644#section-3.5.2).
+	// **Note:** Complicated SCIM `path` selectors that include filters are not supported. For example, a
+	// `path` selector defined as `"path": "emails[type eq \"work\"]"` will not work.
+	// **Warning:** If you set `active:false` using the `replace` operation (as shown in the JSON example
+	// below), it removes the user from the enterprise, deletes the external identity, and deletes the
+	// associated `:scim_user_id`.
+	// ```
+	// {
+	// "Operations":[{
+	// "op":"replace",
+	// "value":{
+	// "active":false
+	// }
+	// }]
+	// }
+	// ```.
+	//
+	// PATCH /scim/v2/enterprises/{enterprise}/Users/{scim_user_id}
 }
 
-// EnterpriseAdminUpdateAttributeForEnterpriseUser implements enterprise-admin/update-attribute-for-enterprise-user operation.
-//
-// **Note:** The SCIM API endpoints for enterprise accounts are currently in beta and are subject to
-// change.
-// Allows you to change a provisioned user's individual attributes. To change a user's values, you
-// must provide a specific `Operations` JSON format that contains at least one of the `add`, `remove`,
-//
-//	or `replace` operations. For examples and more information on the SCIM operations format, see the
-//
-// [SCIM specification](https://tools.ietf.org/html/rfc7644#section-3.5.2).
-// **Note:** Complicated SCIM `path` selectors that include filters are not supported. For example, a
-// `path` selector defined as `"path": "emails[type eq \"work\"]"` will not work.
-// **Warning:** If you set `active:false` using the `replace` operation (as shown in the JSON example
-// below), it removes the user from the enterprise, deletes the external identity, and deletes the
-// associated `:scim_user_id`.
-// ```
-// {
-// "Operations":[{
-// "op":"replace",
-// "value":{
-// "active":false
-// }
-// }]
-// }
-// ```.
-//
-// PATCH /scim/v2/enterprises/{enterprise}/Users/{scim_user_id}
 func (UnimplementedHandler) EnterpriseAdminUpdateAttributeForEnterpriseUser(ctx context.Context, req *EnterpriseAdminUpdateAttributeForEnterpriseUserReq, params EnterpriseAdminUpdateAttributeForEnterpriseUserParams) (r *ScimEnterpriseUser, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprise implements enterprise-admin/update-self-hosted-runner-group-for-enterprise operation.
+	//
+	// Updates the `name` and `visibility` of a self-hosted runner group in an enterprise.
+	// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
+	//
+	// PATCH /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}
 }
 
-// EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprise implements enterprise-admin/update-self-hosted-runner-group-for-enterprise operation.
-//
-// Updates the `name` and `visibility` of a self-hosted runner group in an enterprise.
-// You must authenticate using an access token with the `admin:enterprise` scope to use this endpoint.
-//
-// PATCH /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}
 func (UnimplementedHandler) EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprise(ctx context.Context, req OptEnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseReq, params EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseParams) (r *RunnerGroupsEnterprise, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GistsCheckIsStarred implements gists/check-is-starred operation.
+	//
+	// Check if a gist is starred.
+	//
+	// GET /gists/{gist_id}/star
 }
 
-// GistsCheckIsStarred implements gists/check-is-starred operation.
-//
-// Check if a gist is starred.
-//
-// GET /gists/{gist_id}/star
 func (UnimplementedHandler) GistsCheckIsStarred(ctx context.Context, params GistsCheckIsStarredParams) (r GistsCheckIsStarredRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsCheckIsStarredRes), nil
 }
 
 // GistsCreate implements gists/create operation.
@@ -3044,7 +3362,8 @@ func (UnimplementedHandler) GistsCheckIsStarred(ctx context.Context, params Gist
 //
 // POST /gists
 func (UnimplementedHandler) GistsCreate(ctx context.Context, req *GistsCreateReq) (r GistsCreateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsCreateRes), nil
 }
 
 // GistsCreateComment implements gists/create-comment operation.
@@ -3053,7 +3372,8 @@ func (UnimplementedHandler) GistsCreate(ctx context.Context, req *GistsCreateReq
 //
 // POST /gists/{gist_id}/comments
 func (UnimplementedHandler) GistsCreateComment(ctx context.Context, req *GistsCreateCommentReq, params GistsCreateCommentParams) (r GistsCreateCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsCreateCommentRes), nil
 }
 
 // GistsDelete implements gists/delete operation.
@@ -3062,7 +3382,8 @@ func (UnimplementedHandler) GistsCreateComment(ctx context.Context, req *GistsCr
 //
 // DELETE /gists/{gist_id}
 func (UnimplementedHandler) GistsDelete(ctx context.Context, params GistsDeleteParams) (r GistsDeleteRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsDeleteRes), nil
 }
 
 // GistsDeleteComment implements gists/delete-comment operation.
@@ -3071,7 +3392,8 @@ func (UnimplementedHandler) GistsDelete(ctx context.Context, params GistsDeleteP
 //
 // DELETE /gists/{gist_id}/comments/{comment_id}
 func (UnimplementedHandler) GistsDeleteComment(ctx context.Context, params GistsDeleteCommentParams) (r GistsDeleteCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsDeleteCommentRes), nil
 }
 
 // GistsFork implements gists/fork operation.
@@ -3080,7 +3402,8 @@ func (UnimplementedHandler) GistsDeleteComment(ctx context.Context, params Gists
 //
 // POST /gists/{gist_id}/forks
 func (UnimplementedHandler) GistsFork(ctx context.Context, params GistsForkParams) (r GistsForkRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsForkRes), nil
 }
 
 // GistsGet implements gists/get operation.
@@ -3089,7 +3412,8 @@ func (UnimplementedHandler) GistsFork(ctx context.Context, params GistsForkParam
 //
 // GET /gists/{gist_id}
 func (UnimplementedHandler) GistsGet(ctx context.Context, params GistsGetParams) (r GistsGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsGetRes), nil
 }
 
 // GistsGetComment implements gists/get-comment operation.
@@ -3098,7 +3422,8 @@ func (UnimplementedHandler) GistsGet(ctx context.Context, params GistsGetParams)
 //
 // GET /gists/{gist_id}/comments/{comment_id}
 func (UnimplementedHandler) GistsGetComment(ctx context.Context, params GistsGetCommentParams) (r GistsGetCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsGetCommentRes), nil
 }
 
 // GistsGetRevision implements gists/get-revision operation.
@@ -3107,7 +3432,8 @@ func (UnimplementedHandler) GistsGetComment(ctx context.Context, params GistsGet
 //
 // GET /gists/{gist_id}/{sha}
 func (UnimplementedHandler) GistsGetRevision(ctx context.Context, params GistsGetRevisionParams) (r GistsGetRevisionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsGetRevisionRes), nil
 }
 
 // GistsList implements gists/list operation.
@@ -3117,7 +3443,8 @@ func (UnimplementedHandler) GistsGetRevision(ctx context.Context, params GistsGe
 //
 // GET /gists
 func (UnimplementedHandler) GistsList(ctx context.Context, params GistsListParams) (r GistsListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsListRes), nil
 }
 
 // GistsListComments implements gists/list-comments operation.
@@ -3126,7 +3453,8 @@ func (UnimplementedHandler) GistsList(ctx context.Context, params GistsListParam
 //
 // GET /gists/{gist_id}/comments
 func (UnimplementedHandler) GistsListComments(ctx context.Context, params GistsListCommentsParams) (r GistsListCommentsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsListCommentsRes), nil
 }
 
 // GistsListCommits implements gists/list-commits operation.
@@ -3135,7 +3463,8 @@ func (UnimplementedHandler) GistsListComments(ctx context.Context, params GistsL
 //
 // GET /gists/{gist_id}/commits
 func (UnimplementedHandler) GistsListCommits(ctx context.Context, params GistsListCommitsParams) (r GistsListCommitsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsListCommitsRes), nil
 }
 
 // GistsListForUser implements gists/list-for-user operation.
@@ -3144,7 +3473,8 @@ func (UnimplementedHandler) GistsListCommits(ctx context.Context, params GistsLi
 //
 // GET /users/{username}/gists
 func (UnimplementedHandler) GistsListForUser(ctx context.Context, params GistsListForUserParams) (r GistsListForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsListForUserRes), nil
 }
 
 // GistsListForks implements gists/list-forks operation.
@@ -3153,7 +3483,8 @@ func (UnimplementedHandler) GistsListForUser(ctx context.Context, params GistsLi
 //
 // GET /gists/{gist_id}/forks
 func (UnimplementedHandler) GistsListForks(ctx context.Context, params GistsListForksParams) (r GistsListForksRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsListForksRes), nil
 }
 
 // GistsListPublic implements gists/list-public operation.
@@ -3165,7 +3496,8 @@ func (UnimplementedHandler) GistsListForks(ctx context.Context, params GistsList
 //
 // GET /gists/public
 func (UnimplementedHandler) GistsListPublic(ctx context.Context, params GistsListPublicParams) (r GistsListPublicRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsListPublicRes), nil
 }
 
 // GistsListStarred implements gists/list-starred operation.
@@ -3174,7 +3506,8 @@ func (UnimplementedHandler) GistsListPublic(ctx context.Context, params GistsLis
 //
 // GET /gists/starred
 func (UnimplementedHandler) GistsListStarred(ctx context.Context, params GistsListStarredParams) (r GistsListStarredRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsListStarredRes), nil
 }
 
 // GistsStar implements gists/star operation.
@@ -3185,7 +3518,8 @@ func (UnimplementedHandler) GistsListStarred(ctx context.Context, params GistsLi
 //
 // PUT /gists/{gist_id}/star
 func (UnimplementedHandler) GistsStar(ctx context.Context, params GistsStarParams) (r GistsStarRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsStarRes), nil
 }
 
 // GistsUnstar implements gists/unstar operation.
@@ -3194,7 +3528,8 @@ func (UnimplementedHandler) GistsStar(ctx context.Context, params GistsStarParam
 //
 // DELETE /gists/{gist_id}/star
 func (UnimplementedHandler) GistsUnstar(ctx context.Context, params GistsUnstarParams) (r GistsUnstarRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsUnstarRes), nil
 }
 
 // GistsUpdateComment implements gists/update-comment operation.
@@ -3203,7 +3538,8 @@ func (UnimplementedHandler) GistsUnstar(ctx context.Context, params GistsUnstarP
 //
 // PATCH /gists/{gist_id}/comments/{comment_id}
 func (UnimplementedHandler) GistsUpdateComment(ctx context.Context, req *GistsUpdateCommentReq, params GistsUpdateCommentParams) (r GistsUpdateCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GistsUpdateCommentRes), nil
 }
 
 // GitCreateBlob implements git/create-blob operation.
@@ -3212,7 +3548,8 @@ func (UnimplementedHandler) GistsUpdateComment(ctx context.Context, req *GistsUp
 //
 // POST /repos/{owner}/{repo}/git/blobs
 func (UnimplementedHandler) GitCreateBlob(ctx context.Context, req *GitCreateBlobReq, params GitCreateBlobParams) (r GitCreateBlobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitCreateBlobRes), nil
 }
 
 // GitCreateCommit implements git/create-commit operation.
@@ -3254,7 +3591,8 @@ func (UnimplementedHandler) GitCreateBlob(ctx context.Context, req *GitCreateBlo
 //
 // POST /repos/{owner}/{repo}/git/commits
 func (UnimplementedHandler) GitCreateCommit(ctx context.Context, req *GitCreateCommitReq, params GitCreateCommitParams) (r GitCreateCommitRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitCreateCommitRes), nil
 }
 
 // GitCreateRef implements git/create-ref operation.
@@ -3265,7 +3603,8 @@ func (UnimplementedHandler) GitCreateCommit(ctx context.Context, req *GitCreateC
 //
 // POST /repos/{owner}/{repo}/git/refs
 func (UnimplementedHandler) GitCreateRef(ctx context.Context, req *GitCreateRefReq, params GitCreateRefParams) (r GitCreateRefRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitCreateRefRes), nil
 }
 
 // GitCreateTag implements git/create-tag operation.
@@ -3310,7 +3649,8 @@ func (UnimplementedHandler) GitCreateRef(ctx context.Context, req *GitCreateRefR
 //
 // POST /repos/{owner}/{repo}/git/tags
 func (UnimplementedHandler) GitCreateTag(ctx context.Context, req *GitCreateTagReq, params GitCreateTagParams) (r GitCreateTagRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitCreateTagRes), nil
 }
 
 // GitCreateTree implements git/create-tree operation.
@@ -3325,7 +3665,8 @@ func (UnimplementedHandler) GitCreateTag(ctx context.Context, req *GitCreateTagR
 //
 // POST /repos/{owner}/{repo}/git/trees
 func (UnimplementedHandler) GitCreateTree(ctx context.Context, req *GitCreateTreeReq, params GitCreateTreeParams) (r GitCreateTreeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitCreateTreeRes), nil
 }
 
 // GitDeleteRef implements git/delete-ref operation.
@@ -3334,7 +3675,8 @@ func (UnimplementedHandler) GitCreateTree(ctx context.Context, req *GitCreateTre
 //
 // DELETE /repos/{owner}/{repo}/git/refs/{ref}
 func (UnimplementedHandler) GitDeleteRef(ctx context.Context, params GitDeleteRefParams) (r GitDeleteRefRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitDeleteRefRes), nil
 }
 
 // GitGetBlob implements git/get-blob operation.
@@ -3344,7 +3686,8 @@ func (UnimplementedHandler) GitDeleteRef(ctx context.Context, params GitDeleteRe
 //
 // GET /repos/{owner}/{repo}/git/blobs/{file_sha}
 func (UnimplementedHandler) GitGetBlob(ctx context.Context, params GitGetBlobParams) (r GitGetBlobRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitGetBlobRes), nil
 }
 
 // GitGetCommit implements git/get-commit operation.
@@ -3386,7 +3729,8 @@ func (UnimplementedHandler) GitGetBlob(ctx context.Context, params GitGetBlobPar
 //
 // GET /repos/{owner}/{repo}/git/commits/{commit_sha}
 func (UnimplementedHandler) GitGetCommit(ctx context.Context, params GitGetCommitParams) (r GitGetCommitRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitGetCommitRes), nil
 }
 
 // GitGetRef implements git/get-ref operation.
@@ -3402,7 +3746,8 @@ func (UnimplementedHandler) GitGetCommit(ctx context.Context, params GitGetCommi
 //
 // GET /repos/{owner}/{repo}/git/ref/{ref}
 func (UnimplementedHandler) GitGetRef(ctx context.Context, params GitGetRefParams) (r GitGetRefRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitGetRefRes), nil
 }
 
 // GitGetTag implements git/get-tag operation.
@@ -3442,7 +3787,8 @@ func (UnimplementedHandler) GitGetRef(ctx context.Context, params GitGetRefParam
 //
 // GET /repos/{owner}/{repo}/git/tags/{tag_sha}
 func (UnimplementedHandler) GitGetTag(ctx context.Context, params GitGetTagParams) (r GitGetTagRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitGetTagRes), nil
 }
 
 // GitGetTree implements git/get-tree operation.
@@ -3454,7 +3800,8 @@ func (UnimplementedHandler) GitGetTag(ctx context.Context, params GitGetTagParam
 //
 // GET /repos/{owner}/{repo}/git/trees/{tree_sha}
 func (UnimplementedHandler) GitGetTree(ctx context.Context, params GitGetTreeParams) (r GitGetTreeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitGetTreeRes), nil
 }
 
 // GitListMatchingRefs implements git/list-matching-refs operation.
@@ -3477,16 +3824,19 @@ func (UnimplementedHandler) GitGetTree(ctx context.Context, params GitGetTreePar
 //
 // GET /repos/{owner}/{repo}/git/matching-refs/{ref}
 func (UnimplementedHandler) GitListMatchingRefs(ctx context.Context, params GitListMatchingRefsParams) (r *GitListMatchingRefsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GitUpdateRef implements git/update-ref operation.
+	//
+	// Update a reference.
+	//
+	// PATCH /repos/{owner}/{repo}/git/refs/{ref}
 }
 
-// GitUpdateRef implements git/update-ref operation.
-//
-// Update a reference.
-//
-// PATCH /repos/{owner}/{repo}/git/refs/{ref}
 func (UnimplementedHandler) GitUpdateRef(ctx context.Context, req *GitUpdateRefReq, params GitUpdateRefParams) (r GitUpdateRefRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitUpdateRefRes), nil
 }
 
 // GitignoreGetAllTemplates implements gitignore/get-all-templates operation.
@@ -3496,7 +3846,8 @@ func (UnimplementedHandler) GitUpdateRef(ctx context.Context, req *GitUpdateRefR
 //
 // GET /gitignore/templates
 func (UnimplementedHandler) GitignoreGetAllTemplates(ctx context.Context) (r GitignoreGetAllTemplatesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitignoreGetAllTemplatesRes), nil
 }
 
 // GitignoreGetTemplate implements gitignore/get-template operation.
@@ -3507,7 +3858,8 @@ func (UnimplementedHandler) GitignoreGetAllTemplates(ctx context.Context) (r Git
 //
 // GET /gitignore/templates/{name}
 func (UnimplementedHandler) GitignoreGetTemplate(ctx context.Context, params GitignoreGetTemplateParams) (r GitignoreGetTemplateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(GitignoreGetTemplateRes), nil
 }
 
 // InteractionsRemoveRestrictionsForAuthenticatedUser implements interactions/remove-restrictions-for-authenticated-user operation.
@@ -3516,7 +3868,8 @@ func (UnimplementedHandler) GitignoreGetTemplate(ctx context.Context, params Git
 //
 // DELETE /user/interaction-limits
 func (UnimplementedHandler) InteractionsRemoveRestrictionsForAuthenticatedUser(ctx context.Context) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // InteractionsRemoveRestrictionsForOrg implements interactions/remove-restrictions-for-org operation.
@@ -3526,7 +3879,8 @@ func (UnimplementedHandler) InteractionsRemoveRestrictionsForAuthenticatedUser(c
 //
 // DELETE /orgs/{org}/interaction-limits
 func (UnimplementedHandler) InteractionsRemoveRestrictionsForOrg(ctx context.Context, params InteractionsRemoveRestrictionsForOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // InteractionsRemoveRestrictionsForRepo implements interactions/remove-restrictions-for-repo operation.
@@ -3538,7 +3892,8 @@ func (UnimplementedHandler) InteractionsRemoveRestrictionsForOrg(ctx context.Con
 //
 // DELETE /repos/{owner}/{repo}/interaction-limits
 func (UnimplementedHandler) InteractionsRemoveRestrictionsForRepo(ctx context.Context, params InteractionsRemoveRestrictionsForRepoParams) (r InteractionsRemoveRestrictionsForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(InteractionsRemoveRestrictionsForRepoRes), nil
 }
 
 // InteractionsSetRestrictionsForAuthenticatedUser implements interactions/set-restrictions-for-authenticated-user operation.
@@ -3549,7 +3904,8 @@ func (UnimplementedHandler) InteractionsRemoveRestrictionsForRepo(ctx context.Co
 //
 // PUT /user/interaction-limits
 func (UnimplementedHandler) InteractionsSetRestrictionsForAuthenticatedUser(ctx context.Context, req *InteractionLimit) (r InteractionsSetRestrictionsForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(InteractionsSetRestrictionsForAuthenticatedUserRes), nil
 }
 
 // InteractionsSetRestrictionsForOrg implements interactions/set-restrictions-for-org operation.
@@ -3561,7 +3917,8 @@ func (UnimplementedHandler) InteractionsSetRestrictionsForAuthenticatedUser(ctx 
 //
 // PUT /orgs/{org}/interaction-limits
 func (UnimplementedHandler) InteractionsSetRestrictionsForOrg(ctx context.Context, req *InteractionLimit, params InteractionsSetRestrictionsForOrgParams) (r InteractionsSetRestrictionsForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(InteractionsSetRestrictionsForOrgRes), nil
 }
 
 // InteractionsSetRestrictionsForRepo implements interactions/set-restrictions-for-repo operation.
@@ -3573,7 +3930,8 @@ func (UnimplementedHandler) InteractionsSetRestrictionsForOrg(ctx context.Contex
 //
 // PUT /repos/{owner}/{repo}/interaction-limits
 func (UnimplementedHandler) InteractionsSetRestrictionsForRepo(ctx context.Context, req *InteractionLimit, params InteractionsSetRestrictionsForRepoParams) (r InteractionsSetRestrictionsForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(InteractionsSetRestrictionsForRepoRes), nil
 }
 
 // IssuesAddAssignees implements issues/add-assignees operation.
@@ -3582,19 +3940,22 @@ func (UnimplementedHandler) InteractionsSetRestrictionsForRepo(ctx context.Conte
 //
 // POST /repos/{owner}/{repo}/issues/{issue_number}/assignees
 func (UnimplementedHandler) IssuesAddAssignees(ctx context.Context, req OptIssuesAddAssigneesReq, params IssuesAddAssigneesParams) (r *IssueSimple, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// IssuesCheckUserCanBeAssigned implements issues/check-user-can-be-assigned operation.
+	//
+	// Checks if a user has permission to be assigned to an issue in this repository.
+	// If the `assignee` can be assigned to issues in the repository, a `204` header with no content is
+	// returned.
+	// Otherwise a `404` status code is returned.
+	//
+	// GET /repos/{owner}/{repo}/assignees/{assignee}
 }
 
-// IssuesCheckUserCanBeAssigned implements issues/check-user-can-be-assigned operation.
-//
-// Checks if a user has permission to be assigned to an issue in this repository.
-// If the `assignee` can be assigned to issues in the repository, a `204` header with no content is
-// returned.
-// Otherwise a `404` status code is returned.
-//
-// GET /repos/{owner}/{repo}/assignees/{assignee}
 func (UnimplementedHandler) IssuesCheckUserCanBeAssigned(ctx context.Context, params IssuesCheckUserCanBeAssignedParams) (r IssuesCheckUserCanBeAssignedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesCheckUserCanBeAssignedRes), nil
 }
 
 // IssuesCreate implements issues/create operation.
@@ -3612,7 +3973,8 @@ func (UnimplementedHandler) IssuesCheckUserCanBeAssigned(ctx context.Context, pa
 //
 // POST /repos/{owner}/{repo}/issues
 func (UnimplementedHandler) IssuesCreate(ctx context.Context, req *IssuesCreateReq, params IssuesCreateParams) (r IssuesCreateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesCreateRes), nil
 }
 
 // IssuesCreateComment implements issues/create-comment operation.
@@ -3627,7 +3989,8 @@ func (UnimplementedHandler) IssuesCreate(ctx context.Context, req *IssuesCreateR
 //
 // POST /repos/{owner}/{repo}/issues/{issue_number}/comments
 func (UnimplementedHandler) IssuesCreateComment(ctx context.Context, req *IssuesCreateCommentReq, params IssuesCreateCommentParams) (r IssuesCreateCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesCreateCommentRes), nil
 }
 
 // IssuesCreateLabel implements issues/create-label operation.
@@ -3636,7 +3999,8 @@ func (UnimplementedHandler) IssuesCreateComment(ctx context.Context, req *Issues
 //
 // POST /repos/{owner}/{repo}/labels
 func (UnimplementedHandler) IssuesCreateLabel(ctx context.Context, req *IssuesCreateLabelReq, params IssuesCreateLabelParams) (r IssuesCreateLabelRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesCreateLabelRes), nil
 }
 
 // IssuesCreateMilestone implements issues/create-milestone operation.
@@ -3645,7 +4009,8 @@ func (UnimplementedHandler) IssuesCreateLabel(ctx context.Context, req *IssuesCr
 //
 // POST /repos/{owner}/{repo}/milestones
 func (UnimplementedHandler) IssuesCreateMilestone(ctx context.Context, req *IssuesCreateMilestoneReq, params IssuesCreateMilestoneParams) (r IssuesCreateMilestoneRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesCreateMilestoneRes), nil
 }
 
 // IssuesDeleteComment implements issues/delete-comment operation.
@@ -3654,7 +4019,8 @@ func (UnimplementedHandler) IssuesCreateMilestone(ctx context.Context, req *Issu
 //
 // DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}
 func (UnimplementedHandler) IssuesDeleteComment(ctx context.Context, params IssuesDeleteCommentParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // IssuesDeleteLabel implements issues/delete-label operation.
@@ -3663,7 +4029,8 @@ func (UnimplementedHandler) IssuesDeleteComment(ctx context.Context, params Issu
 //
 // DELETE /repos/{owner}/{repo}/labels/{name}
 func (UnimplementedHandler) IssuesDeleteLabel(ctx context.Context, params IssuesDeleteLabelParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // IssuesDeleteMilestone implements issues/delete-milestone operation.
@@ -3672,7 +4039,8 @@ func (UnimplementedHandler) IssuesDeleteLabel(ctx context.Context, params Issues
 //
 // DELETE /repos/{owner}/{repo}/milestones/{milestone_number}
 func (UnimplementedHandler) IssuesDeleteMilestone(ctx context.Context, params IssuesDeleteMilestoneParams) (r IssuesDeleteMilestoneRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesDeleteMilestoneRes), nil
 }
 
 // IssuesGet implements issues/get operation.
@@ -3699,7 +4067,8 @@ func (UnimplementedHandler) IssuesDeleteMilestone(ctx context.Context, params Is
 //
 // GET /repos/{owner}/{repo}/issues/{issue_number}
 func (UnimplementedHandler) IssuesGet(ctx context.Context, params IssuesGetParams) (r IssuesGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesGetRes), nil
 }
 
 // IssuesGetComment implements issues/get-comment operation.
@@ -3708,7 +4077,8 @@ func (UnimplementedHandler) IssuesGet(ctx context.Context, params IssuesGetParam
 //
 // GET /repos/{owner}/{repo}/issues/comments/{comment_id}
 func (UnimplementedHandler) IssuesGetComment(ctx context.Context, params IssuesGetCommentParams) (r IssuesGetCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesGetCommentRes), nil
 }
 
 // IssuesGetEvent implements issues/get-event operation.
@@ -3717,7 +4087,8 @@ func (UnimplementedHandler) IssuesGetComment(ctx context.Context, params IssuesG
 //
 // GET /repos/{owner}/{repo}/issues/events/{event_id}
 func (UnimplementedHandler) IssuesGetEvent(ctx context.Context, params IssuesGetEventParams) (r IssuesGetEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesGetEventRes), nil
 }
 
 // IssuesGetLabel implements issues/get-label operation.
@@ -3726,7 +4097,8 @@ func (UnimplementedHandler) IssuesGetEvent(ctx context.Context, params IssuesGet
 //
 // GET /repos/{owner}/{repo}/labels/{name}
 func (UnimplementedHandler) IssuesGetLabel(ctx context.Context, params IssuesGetLabelParams) (r IssuesGetLabelRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesGetLabelRes), nil
 }
 
 // IssuesGetMilestone implements issues/get-milestone operation.
@@ -3735,7 +4107,8 @@ func (UnimplementedHandler) IssuesGetLabel(ctx context.Context, params IssuesGet
 //
 // GET /repos/{owner}/{repo}/milestones/{milestone_number}
 func (UnimplementedHandler) IssuesGetMilestone(ctx context.Context, params IssuesGetMilestoneParams) (r IssuesGetMilestoneRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesGetMilestoneRes), nil
 }
 
 // IssuesList implements issues/list operation.
@@ -3756,7 +4129,8 @@ func (UnimplementedHandler) IssuesGetMilestone(ctx context.Context, params Issue
 //
 // GET /issues
 func (UnimplementedHandler) IssuesList(ctx context.Context, params IssuesListParams) (r IssuesListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListRes), nil
 }
 
 // IssuesListAssignees implements issues/list-assignees operation.
@@ -3766,7 +4140,8 @@ func (UnimplementedHandler) IssuesList(ctx context.Context, params IssuesListPar
 //
 // GET /repos/{owner}/{repo}/assignees
 func (UnimplementedHandler) IssuesListAssignees(ctx context.Context, params IssuesListAssigneesParams) (r IssuesListAssigneesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListAssigneesRes), nil
 }
 
 // IssuesListComments implements issues/list-comments operation.
@@ -3775,7 +4150,8 @@ func (UnimplementedHandler) IssuesListAssignees(ctx context.Context, params Issu
 //
 // GET /repos/{owner}/{repo}/issues/{issue_number}/comments
 func (UnimplementedHandler) IssuesListComments(ctx context.Context, params IssuesListCommentsParams) (r IssuesListCommentsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListCommentsRes), nil
 }
 
 // IssuesListCommentsForRepo implements issues/list-comments-for-repo operation.
@@ -3784,7 +4160,8 @@ func (UnimplementedHandler) IssuesListComments(ctx context.Context, params Issue
 //
 // GET /repos/{owner}/{repo}/issues/comments
 func (UnimplementedHandler) IssuesListCommentsForRepo(ctx context.Context, params IssuesListCommentsForRepoParams) (r IssuesListCommentsForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListCommentsForRepoRes), nil
 }
 
 // IssuesListEventsForRepo implements issues/list-events-for-repo operation.
@@ -3793,7 +4170,8 @@ func (UnimplementedHandler) IssuesListCommentsForRepo(ctx context.Context, param
 //
 // GET /repos/{owner}/{repo}/issues/events
 func (UnimplementedHandler) IssuesListEventsForRepo(ctx context.Context, params IssuesListEventsForRepoParams) (r IssuesListEventsForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListEventsForRepoRes), nil
 }
 
 // IssuesListForAuthenticatedUser implements issues/list-for-authenticated-user operation.
@@ -3810,7 +4188,8 @@ func (UnimplementedHandler) IssuesListEventsForRepo(ctx context.Context, params 
 //
 // GET /user/issues
 func (UnimplementedHandler) IssuesListForAuthenticatedUser(ctx context.Context, params IssuesListForAuthenticatedUserParams) (r IssuesListForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListForAuthenticatedUserRes), nil
 }
 
 // IssuesListForOrg implements issues/list-for-org operation.
@@ -3827,7 +4206,8 @@ func (UnimplementedHandler) IssuesListForAuthenticatedUser(ctx context.Context, 
 //
 // GET /orgs/{org}/issues
 func (UnimplementedHandler) IssuesListForOrg(ctx context.Context, params IssuesListForOrgParams) (r IssuesListForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListForOrgRes), nil
 }
 
 // IssuesListForRepo implements issues/list-for-repo operation.
@@ -3844,7 +4224,8 @@ func (UnimplementedHandler) IssuesListForOrg(ctx context.Context, params IssuesL
 //
 // GET /repos/{owner}/{repo}/issues
 func (UnimplementedHandler) IssuesListForRepo(ctx context.Context, params IssuesListForRepoParams) (r IssuesListForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListForRepoRes), nil
 }
 
 // IssuesListLabelsForMilestone implements issues/list-labels-for-milestone operation.
@@ -3853,16 +4234,19 @@ func (UnimplementedHandler) IssuesListForRepo(ctx context.Context, params Issues
 //
 // GET /repos/{owner}/{repo}/milestones/{milestone_number}/labels
 func (UnimplementedHandler) IssuesListLabelsForMilestone(ctx context.Context, params IssuesListLabelsForMilestoneParams) (r *IssuesListLabelsForMilestoneOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// IssuesListLabelsForRepo implements issues/list-labels-for-repo operation.
+	//
+	// List labels for a repository.
+	//
+	// GET /repos/{owner}/{repo}/labels
 }
 
-// IssuesListLabelsForRepo implements issues/list-labels-for-repo operation.
-//
-// List labels for a repository.
-//
-// GET /repos/{owner}/{repo}/labels
 func (UnimplementedHandler) IssuesListLabelsForRepo(ctx context.Context, params IssuesListLabelsForRepoParams) (r IssuesListLabelsForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListLabelsForRepoRes), nil
 }
 
 // IssuesListLabelsOnIssue implements issues/list-labels-on-issue operation.
@@ -3871,7 +4255,8 @@ func (UnimplementedHandler) IssuesListLabelsForRepo(ctx context.Context, params 
 //
 // GET /repos/{owner}/{repo}/issues/{issue_number}/labels
 func (UnimplementedHandler) IssuesListLabelsOnIssue(ctx context.Context, params IssuesListLabelsOnIssueParams) (r IssuesListLabelsOnIssueRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListLabelsOnIssueRes), nil
 }
 
 // IssuesListMilestones implements issues/list-milestones operation.
@@ -3880,7 +4265,8 @@ func (UnimplementedHandler) IssuesListLabelsOnIssue(ctx context.Context, params 
 //
 // GET /repos/{owner}/{repo}/milestones
 func (UnimplementedHandler) IssuesListMilestones(ctx context.Context, params IssuesListMilestonesParams) (r IssuesListMilestonesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesListMilestonesRes), nil
 }
 
 // IssuesLock implements issues/lock operation.
@@ -3892,7 +4278,8 @@ func (UnimplementedHandler) IssuesListMilestones(ctx context.Context, params Iss
 //
 // PUT /repos/{owner}/{repo}/issues/{issue_number}/lock
 func (UnimplementedHandler) IssuesLock(ctx context.Context, req OptNilIssuesLockReq, params IssuesLockParams) (r IssuesLockRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesLockRes), nil
 }
 
 // IssuesRemoveAllLabels implements issues/remove-all-labels operation.
@@ -3901,7 +4288,8 @@ func (UnimplementedHandler) IssuesLock(ctx context.Context, req OptNilIssuesLock
 //
 // DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels
 func (UnimplementedHandler) IssuesRemoveAllLabels(ctx context.Context, params IssuesRemoveAllLabelsParams) (r IssuesRemoveAllLabelsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesRemoveAllLabelsRes), nil
 }
 
 // IssuesRemoveAssignees implements issues/remove-assignees operation.
@@ -3910,17 +4298,20 @@ func (UnimplementedHandler) IssuesRemoveAllLabels(ctx context.Context, params Is
 //
 // DELETE /repos/{owner}/{repo}/issues/{issue_number}/assignees
 func (UnimplementedHandler) IssuesRemoveAssignees(ctx context.Context, req OptIssuesRemoveAssigneesReq, params IssuesRemoveAssigneesParams) (r *IssueSimple, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// IssuesRemoveLabel implements issues/remove-label operation.
+	//
+	// Removes the specified label from the issue, and returns the remaining labels on the issue. This
+	// endpoint returns a `404 Not Found` status if the label does not exist.
+	//
+	// DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels/{name}
 }
 
-// IssuesRemoveLabel implements issues/remove-label operation.
-//
-// Removes the specified label from the issue, and returns the remaining labels on the issue. This
-// endpoint returns a `404 Not Found` status if the label does not exist.
-//
-// DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels/{name}
 func (UnimplementedHandler) IssuesRemoveLabel(ctx context.Context, params IssuesRemoveLabelParams) (r IssuesRemoveLabelRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesRemoveLabelRes), nil
 }
 
 // IssuesUnlock implements issues/unlock operation.
@@ -3929,7 +4320,8 @@ func (UnimplementedHandler) IssuesRemoveLabel(ctx context.Context, params Issues
 //
 // DELETE /repos/{owner}/{repo}/issues/{issue_number}/lock
 func (UnimplementedHandler) IssuesUnlock(ctx context.Context, params IssuesUnlockParams) (r IssuesUnlockRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesUnlockRes), nil
 }
 
 // IssuesUpdate implements issues/update operation.
@@ -3938,7 +4330,8 @@ func (UnimplementedHandler) IssuesUnlock(ctx context.Context, params IssuesUnloc
 //
 // PATCH /repos/{owner}/{repo}/issues/{issue_number}
 func (UnimplementedHandler) IssuesUpdate(ctx context.Context, req OptIssuesUpdateReq, params IssuesUpdateParams) (r IssuesUpdateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesUpdateRes), nil
 }
 
 // IssuesUpdateComment implements issues/update-comment operation.
@@ -3947,7 +4340,8 @@ func (UnimplementedHandler) IssuesUpdate(ctx context.Context, req OptIssuesUpdat
 //
 // PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}
 func (UnimplementedHandler) IssuesUpdateComment(ctx context.Context, req *IssuesUpdateCommentReq, params IssuesUpdateCommentParams) (r IssuesUpdateCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(IssuesUpdateCommentRes), nil
 }
 
 // IssuesUpdateLabel implements issues/update-label operation.
@@ -3956,25 +4350,30 @@ func (UnimplementedHandler) IssuesUpdateComment(ctx context.Context, req *Issues
 //
 // PATCH /repos/{owner}/{repo}/labels/{name}
 func (UnimplementedHandler) IssuesUpdateLabel(ctx context.Context, req OptIssuesUpdateLabelReq, params IssuesUpdateLabelParams) (r *Label, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// IssuesUpdateMilestone implements issues/update-milestone operation.
+	//
+	// Update a milestone.
+	//
+	// PATCH /repos/{owner}/{repo}/milestones/{milestone_number}
 }
 
-// IssuesUpdateMilestone implements issues/update-milestone operation.
-//
-// Update a milestone.
-//
-// PATCH /repos/{owner}/{repo}/milestones/{milestone_number}
 func (UnimplementedHandler) IssuesUpdateMilestone(ctx context.Context, req OptIssuesUpdateMilestoneReq, params IssuesUpdateMilestoneParams) (r *Milestone, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// LicensesGet implements licenses/get operation.
+	//
+	// Get a license.
+	//
+	// GET /licenses/{license}
 }
 
-// LicensesGet implements licenses/get operation.
-//
-// Get a license.
-//
-// GET /licenses/{license}
 func (UnimplementedHandler) LicensesGet(ctx context.Context, params LicensesGetParams) (r LicensesGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(LicensesGetRes), nil
 }
 
 // LicensesGetAllCommonlyUsed implements licenses/get-all-commonly-used operation.
@@ -3983,7 +4382,8 @@ func (UnimplementedHandler) LicensesGet(ctx context.Context, params LicensesGetP
 //
 // GET /licenses
 func (UnimplementedHandler) LicensesGetAllCommonlyUsed(ctx context.Context, params LicensesGetAllCommonlyUsedParams) (r LicensesGetAllCommonlyUsedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(LicensesGetAllCommonlyUsedRes), nil
 }
 
 // LicensesGetForRepo implements licenses/get-for-repo operation.
@@ -3996,16 +4396,19 @@ func (UnimplementedHandler) LicensesGetAllCommonlyUsed(ctx context.Context, para
 //
 // GET /repos/{owner}/{repo}/license
 func (UnimplementedHandler) LicensesGetForRepo(ctx context.Context, params LicensesGetForRepoParams) (r *LicenseContent, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// MarkdownRender implements markdown/render operation.
+	//
+	// Render a Markdown document.
+	//
+	// POST /markdown
 }
 
-// MarkdownRender implements markdown/render operation.
-//
-// Render a Markdown document.
-//
-// POST /markdown
 func (UnimplementedHandler) MarkdownRender(ctx context.Context, req *MarkdownRenderReq) (r MarkdownRenderRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MarkdownRenderRes), nil
 }
 
 // MarkdownRenderRaw implements markdown/render-raw operation.
@@ -4017,7 +4420,8 @@ func (UnimplementedHandler) MarkdownRender(ctx context.Context, req *MarkdownRen
 //
 // POST /markdown/raw
 func (UnimplementedHandler) MarkdownRenderRaw(ctx context.Context, req MarkdownRenderRawReq) (r MarkdownRenderRawRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MarkdownRenderRawRes), nil
 }
 
 // MetaGet implements meta/get operation.
@@ -4030,7 +4434,8 @@ func (UnimplementedHandler) MarkdownRenderRaw(ctx context.Context, req MarkdownR
 //
 // GET /meta
 func (UnimplementedHandler) MetaGet(ctx context.Context) (r MetaGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MetaGetRes), nil
 }
 
 // MetaGetOctocat implements meta/get-octocat operation.
@@ -4039,7 +4444,8 @@ func (UnimplementedHandler) MetaGet(ctx context.Context) (r MetaGetRes, _ error)
 //
 // GET /octocat
 func (UnimplementedHandler) MetaGetOctocat(ctx context.Context, params MetaGetOctocatParams) (r MetaGetOctocatOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MetaGetOctocatOK), nil
 }
 
 // MetaGetZen implements meta/get-zen operation.
@@ -4048,7 +4454,8 @@ func (UnimplementedHandler) MetaGetOctocat(ctx context.Context, params MetaGetOc
 //
 // GET /zen
 func (UnimplementedHandler) MetaGetZen(ctx context.Context) (r MetaGetZenOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MetaGetZenOK), nil
 }
 
 // MetaRoot implements meta/root operation.
@@ -4057,16 +4464,19 @@ func (UnimplementedHandler) MetaGetZen(ctx context.Context) (r MetaGetZenOK, _ e
 //
 // GET /
 func (UnimplementedHandler) MetaRoot(ctx context.Context) (r *MetaRootOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// MigrationsCancelImport implements migrations/cancel-import operation.
+	//
+	// Stop an import for a repository.
+	//
+	// DELETE /repos/{owner}/{repo}/import
 }
 
-// MigrationsCancelImport implements migrations/cancel-import operation.
-//
-// Stop an import for a repository.
-//
-// DELETE /repos/{owner}/{repo}/import
 func (UnimplementedHandler) MigrationsCancelImport(ctx context.Context, params MigrationsCancelImportParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MigrationsDeleteArchiveForAuthenticatedUser implements migrations/delete-archive-for-authenticated-user operation.
@@ -4079,7 +4489,8 @@ func (UnimplementedHandler) MigrationsCancelImport(ctx context.Context, params M
 //
 // DELETE /user/migrations/{migration_id}/archive
 func (UnimplementedHandler) MigrationsDeleteArchiveForAuthenticatedUser(ctx context.Context, params MigrationsDeleteArchiveForAuthenticatedUserParams) (r MigrationsDeleteArchiveForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsDeleteArchiveForAuthenticatedUserRes), nil
 }
 
 // MigrationsDeleteArchiveForOrg implements migrations/delete-archive-for-org operation.
@@ -4089,7 +4500,8 @@ func (UnimplementedHandler) MigrationsDeleteArchiveForAuthenticatedUser(ctx cont
 //
 // DELETE /orgs/{org}/migrations/{migration_id}/archive
 func (UnimplementedHandler) MigrationsDeleteArchiveForOrg(ctx context.Context, params MigrationsDeleteArchiveForOrgParams) (r MigrationsDeleteArchiveForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsDeleteArchiveForOrgRes), nil
 }
 
 // MigrationsDownloadArchiveForOrg implements migrations/download-archive-for-org operation.
@@ -4098,7 +4510,8 @@ func (UnimplementedHandler) MigrationsDeleteArchiveForOrg(ctx context.Context, p
 //
 // GET /orgs/{org}/migrations/{migration_id}/archive
 func (UnimplementedHandler) MigrationsDownloadArchiveForOrg(ctx context.Context, params MigrationsDownloadArchiveForOrgParams) (r MigrationsDownloadArchiveForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsDownloadArchiveForOrgRes), nil
 }
 
 // MigrationsGetArchiveForAuthenticatedUser implements migrations/get-archive-for-authenticated-user operation.
@@ -4127,7 +4540,8 @@ func (UnimplementedHandler) MigrationsDownloadArchiveForOrg(ctx context.Context,
 //
 // GET /user/migrations/{migration_id}/archive
 func (UnimplementedHandler) MigrationsGetArchiveForAuthenticatedUser(ctx context.Context, params MigrationsGetArchiveForAuthenticatedUserParams) (r MigrationsGetArchiveForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsGetArchiveForAuthenticatedUserRes), nil
 }
 
 // MigrationsGetCommitAuthors implements migrations/get-commit-authors operation.
@@ -4143,7 +4557,8 @@ func (UnimplementedHandler) MigrationsGetArchiveForAuthenticatedUser(ctx context
 //
 // GET /repos/{owner}/{repo}/import/authors
 func (UnimplementedHandler) MigrationsGetCommitAuthors(ctx context.Context, params MigrationsGetCommitAuthorsParams) (r MigrationsGetCommitAuthorsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsGetCommitAuthorsRes), nil
 }
 
 // MigrationsGetImportStatus implements migrations/get-import-status operation.
@@ -4204,7 +4619,8 @@ func (UnimplementedHandler) MigrationsGetCommitAuthors(ctx context.Context, para
 //
 // GET /repos/{owner}/{repo}/import
 func (UnimplementedHandler) MigrationsGetImportStatus(ctx context.Context, params MigrationsGetImportStatusParams) (r MigrationsGetImportStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsGetImportStatusRes), nil
 }
 
 // MigrationsGetLargeFiles implements migrations/get-large-files operation.
@@ -4213,23 +4629,26 @@ func (UnimplementedHandler) MigrationsGetImportStatus(ctx context.Context, param
 //
 // GET /repos/{owner}/{repo}/import/large_files
 func (UnimplementedHandler) MigrationsGetLargeFiles(ctx context.Context, params MigrationsGetLargeFilesParams) (r []PorterLargeFile, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// MigrationsGetStatusForAuthenticatedUser implements migrations/get-status-for-authenticated-user operation.
+	//
+	// Fetches a single user migration. The response includes the `state` of the migration, which can be
+	// one of the following values:
+	// *   `pending` - the migration hasn't started yet.
+	// *   `exporting` - the migration is in progress.
+	// *   `exported` - the migration finished successfully.
+	// *   `failed` - the migration failed.
+	// Once the migration has been `exported` you can [download the migration archive](https://docs.
+	// github.com/rest/reference/migrations#download-a-user-migration-archive).
+	//
+	// GET /user/migrations/{migration_id}
 }
 
-// MigrationsGetStatusForAuthenticatedUser implements migrations/get-status-for-authenticated-user operation.
-//
-// Fetches a single user migration. The response includes the `state` of the migration, which can be
-// one of the following values:
-// *   `pending` - the migration hasn't started yet.
-// *   `exporting` - the migration is in progress.
-// *   `exported` - the migration finished successfully.
-// *   `failed` - the migration failed.
-// Once the migration has been `exported` you can [download the migration archive](https://docs.
-// github.com/rest/reference/migrations#download-a-user-migration-archive).
-//
-// GET /user/migrations/{migration_id}
 func (UnimplementedHandler) MigrationsGetStatusForAuthenticatedUser(ctx context.Context, params MigrationsGetStatusForAuthenticatedUserParams) (r MigrationsGetStatusForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsGetStatusForAuthenticatedUserRes), nil
 }
 
 // MigrationsGetStatusForOrg implements migrations/get-status-for-org operation.
@@ -4243,7 +4662,8 @@ func (UnimplementedHandler) MigrationsGetStatusForAuthenticatedUser(ctx context.
 //
 // GET /orgs/{org}/migrations/{migration_id}
 func (UnimplementedHandler) MigrationsGetStatusForOrg(ctx context.Context, params MigrationsGetStatusForOrgParams) (r MigrationsGetStatusForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsGetStatusForOrgRes), nil
 }
 
 // MigrationsListForAuthenticatedUser implements migrations/list-for-authenticated-user operation.
@@ -4252,7 +4672,8 @@ func (UnimplementedHandler) MigrationsGetStatusForOrg(ctx context.Context, param
 //
 // GET /user/migrations
 func (UnimplementedHandler) MigrationsListForAuthenticatedUser(ctx context.Context, params MigrationsListForAuthenticatedUserParams) (r MigrationsListForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsListForAuthenticatedUserRes), nil
 }
 
 // MigrationsListForOrg implements migrations/list-for-org operation.
@@ -4261,16 +4682,19 @@ func (UnimplementedHandler) MigrationsListForAuthenticatedUser(ctx context.Conte
 //
 // GET /orgs/{org}/migrations
 func (UnimplementedHandler) MigrationsListForOrg(ctx context.Context, params MigrationsListForOrgParams) (r *MigrationsListForOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// MigrationsListReposForOrg implements migrations/list-repos-for-org operation.
+	//
+	// List all the repositories for this organization migration.
+	//
+	// GET /orgs/{org}/migrations/{migration_id}/repositories
 }
 
-// MigrationsListReposForOrg implements migrations/list-repos-for-org operation.
-//
-// List all the repositories for this organization migration.
-//
-// GET /orgs/{org}/migrations/{migration_id}/repositories
 func (UnimplementedHandler) MigrationsListReposForOrg(ctx context.Context, params MigrationsListReposForOrgParams) (r MigrationsListReposForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsListReposForOrgRes), nil
 }
 
 // MigrationsListReposForUser implements migrations/list-repos-for-user operation.
@@ -4279,7 +4703,8 @@ func (UnimplementedHandler) MigrationsListReposForOrg(ctx context.Context, param
 //
 // GET /user/migrations/{migration_id}/repositories
 func (UnimplementedHandler) MigrationsListReposForUser(ctx context.Context, params MigrationsListReposForUserParams) (r MigrationsListReposForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsListReposForUserRes), nil
 }
 
 // MigrationsMapCommitAuthor implements migrations/map-commit-author operation.
@@ -4289,7 +4714,8 @@ func (UnimplementedHandler) MigrationsListReposForUser(ctx context.Context, para
 //
 // PATCH /repos/{owner}/{repo}/import/authors/{author_id}
 func (UnimplementedHandler) MigrationsMapCommitAuthor(ctx context.Context, req OptMigrationsMapCommitAuthorReq, params MigrationsMapCommitAuthorParams) (r MigrationsMapCommitAuthorRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsMapCommitAuthorRes), nil
 }
 
 // MigrationsSetLfsPreference implements migrations/set-lfs-preference operation.
@@ -4301,7 +4727,8 @@ func (UnimplementedHandler) MigrationsMapCommitAuthor(ctx context.Context, req O
 //
 // PATCH /repos/{owner}/{repo}/import/lfs
 func (UnimplementedHandler) MigrationsSetLfsPreference(ctx context.Context, req *MigrationsSetLfsPreferenceReq, params MigrationsSetLfsPreferenceParams) (r MigrationsSetLfsPreferenceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsSetLfsPreferenceRes), nil
 }
 
 // MigrationsStartForAuthenticatedUser implements migrations/start-for-authenticated-user operation.
@@ -4310,7 +4737,8 @@ func (UnimplementedHandler) MigrationsSetLfsPreference(ctx context.Context, req 
 //
 // POST /user/migrations
 func (UnimplementedHandler) MigrationsStartForAuthenticatedUser(ctx context.Context, req *MigrationsStartForAuthenticatedUserReq) (r MigrationsStartForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsStartForAuthenticatedUserRes), nil
 }
 
 // MigrationsStartForOrg implements migrations/start-for-org operation.
@@ -4319,7 +4747,8 @@ func (UnimplementedHandler) MigrationsStartForAuthenticatedUser(ctx context.Cont
 //
 // POST /orgs/{org}/migrations
 func (UnimplementedHandler) MigrationsStartForOrg(ctx context.Context, req *MigrationsStartForOrgReq, params MigrationsStartForOrgParams) (r MigrationsStartForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsStartForOrgRes), nil
 }
 
 // MigrationsStartImport implements migrations/start-import operation.
@@ -4328,7 +4757,8 @@ func (UnimplementedHandler) MigrationsStartForOrg(ctx context.Context, req *Migr
 //
 // PUT /repos/{owner}/{repo}/import
 func (UnimplementedHandler) MigrationsStartImport(ctx context.Context, req *MigrationsStartImportReq, params MigrationsStartImportParams) (r MigrationsStartImportRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsStartImportRes), nil
 }
 
 // MigrationsUnlockRepoForAuthenticatedUser implements migrations/unlock-repo-for-authenticated-user operation.
@@ -4341,7 +4771,8 @@ func (UnimplementedHandler) MigrationsStartImport(ctx context.Context, req *Migr
 //
 // DELETE /user/migrations/{migration_id}/repos/{repo_name}/lock
 func (UnimplementedHandler) MigrationsUnlockRepoForAuthenticatedUser(ctx context.Context, params MigrationsUnlockRepoForAuthenticatedUserParams) (r MigrationsUnlockRepoForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsUnlockRepoForAuthenticatedUserRes), nil
 }
 
 // MigrationsUnlockRepoForOrg implements migrations/unlock-repo-for-org operation.
@@ -4352,7 +4783,8 @@ func (UnimplementedHandler) MigrationsUnlockRepoForAuthenticatedUser(ctx context
 //
 // DELETE /orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock
 func (UnimplementedHandler) MigrationsUnlockRepoForOrg(ctx context.Context, params MigrationsUnlockRepoForOrgParams) (r MigrationsUnlockRepoForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MigrationsUnlockRepoForOrgRes), nil
 }
 
 // MigrationsUpdateImport implements migrations/update-import operation.
@@ -4363,45 +4795,48 @@ func (UnimplementedHandler) MigrationsUnlockRepoForOrg(ctx context.Context, para
 //
 // PATCH /repos/{owner}/{repo}/import
 func (UnimplementedHandler) MigrationsUpdateImport(ctx context.Context, req OptNilMigrationsUpdateImportReq, params MigrationsUpdateImportParams) (r *Import, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// OAuthAuthorizationsCreateAuthorization implements oauth-authorizations/create-authorization operation.
+	//
+	// **Deprecation Notice:** GitHub will discontinue the [OAuth Authorizations API](https://docs.github.
+	// com/rest/reference/oauth-authorizations), which is used by integrations to create personal access
+	// tokens and OAuth tokens, and you must now create these tokens using our [web application
+	// flow](https://docs.github.com/developers/apps/authorizing-oauth-apps#web-application-flow). The
+	// [OAuth Authorizations API](https://docs.github.com/rest/reference/oauth-authorizations) will be
+	// removed on November, 13, 2020. For more information, including scheduled brownouts, see the [blog
+	// post](https://developer.github.com/changes/2020-02-14-deprecating-oauth-auth-endpoint/).
+	// **Warning:** Apps must use the [web application flow](https://docs.github.
+	// com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow) to obtain OAuth tokens
+	// that work with GitHub SAML organizations. OAuth tokens created using the Authorizations API will
+	// be unable to access GitHub SAML organizations. For more information, see the [blog
+	// post](https://developer.github.com/changes/2019-11-05-deprecated-passwords-and-authorizations-api).
+	// Creates OAuth tokens using [Basic Authentication](https://docs.github.
+	// com/rest/overview/other-authentication-methods#basic-authentication). If you have two-factor
+	// authentication setup, Basic Authentication for this endpoint requires that you use a one-time
+	// password (OTP) and your username and password instead of tokens. For more information, see
+	// "[Working with two-factor authentication](https://docs.github.
+	// com/rest/overview/other-authentication-methods#working-with-two-factor-authentication)."
+	// To create tokens for a particular OAuth application using this endpoint, you must authenticate as
+	// the user you want to create an authorization for and provide the app's client ID and secret, found
+	// on your OAuth application's settings page. If your OAuth application intends to create multiple
+	// tokens for one user, use `fingerprint` to differentiate between them.
+	// You can also create tokens on GitHub from the [personal access tokens settings](https://github.
+	// com/settings/tokens) page. Read more about these tokens in [the GitHub Help
+	// documentation](https://help.github.com/articles/creating-an-access-token-for-command-line-use).
+	// Organizations that enforce SAML SSO require personal access tokens to be allowed. Read more about
+	// allowing tokens in [the GitHub Help documentation](https://help.github.
+	// com/articles/about-identity-and-access-management-with-saml-single-sign-on).
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// POST /authorizations
 }
 
-// OAuthAuthorizationsCreateAuthorization implements oauth-authorizations/create-authorization operation.
-//
-// **Deprecation Notice:** GitHub will discontinue the [OAuth Authorizations API](https://docs.github.
-// com/rest/reference/oauth-authorizations), which is used by integrations to create personal access
-// tokens and OAuth tokens, and you must now create these tokens using our [web application
-// flow](https://docs.github.com/developers/apps/authorizing-oauth-apps#web-application-flow). The
-// [OAuth Authorizations API](https://docs.github.com/rest/reference/oauth-authorizations) will be
-// removed on November, 13, 2020. For more information, including scheduled brownouts, see the [blog
-// post](https://developer.github.com/changes/2020-02-14-deprecating-oauth-auth-endpoint/).
-// **Warning:** Apps must use the [web application flow](https://docs.github.
-// com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow) to obtain OAuth tokens
-// that work with GitHub SAML organizations. OAuth tokens created using the Authorizations API will
-// be unable to access GitHub SAML organizations. For more information, see the [blog
-// post](https://developer.github.com/changes/2019-11-05-deprecated-passwords-and-authorizations-api).
-// Creates OAuth tokens using [Basic Authentication](https://docs.github.
-// com/rest/overview/other-authentication-methods#basic-authentication). If you have two-factor
-// authentication setup, Basic Authentication for this endpoint requires that you use a one-time
-// password (OTP) and your username and password instead of tokens. For more information, see
-// "[Working with two-factor authentication](https://docs.github.
-// com/rest/overview/other-authentication-methods#working-with-two-factor-authentication)."
-// To create tokens for a particular OAuth application using this endpoint, you must authenticate as
-// the user you want to create an authorization for and provide the app's client ID and secret, found
-// on your OAuth application's settings page. If your OAuth application intends to create multiple
-// tokens for one user, use `fingerprint` to differentiate between them.
-// You can also create tokens on GitHub from the [personal access tokens settings](https://github.
-// com/settings/tokens) page. Read more about these tokens in [the GitHub Help
-// documentation](https://help.github.com/articles/creating-an-access-token-for-command-line-use).
-// Organizations that enforce SAML SSO require personal access tokens to be allowed. Read more about
-// allowing tokens in [the GitHub Help documentation](https://help.github.
-// com/articles/about-identity-and-access-management-with-saml-single-sign-on).
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// POST /authorizations
 func (UnimplementedHandler) OAuthAuthorizationsCreateAuthorization(ctx context.Context, req OptOAuthAuthorizationsCreateAuthorizationReq) (r OAuthAuthorizationsCreateAuthorizationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OAuthAuthorizationsCreateAuthorizationRes), nil
 }
 
 // OAuthAuthorizationsDeleteAuthorization implements oauth-authorizations/delete-authorization operation.
@@ -4419,7 +4854,8 @@ func (UnimplementedHandler) OAuthAuthorizationsCreateAuthorization(ctx context.C
 //
 // DELETE /authorizations/{authorization_id}
 func (UnimplementedHandler) OAuthAuthorizationsDeleteAuthorization(ctx context.Context, params OAuthAuthorizationsDeleteAuthorizationParams) (r OAuthAuthorizationsDeleteAuthorizationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OAuthAuthorizationsDeleteAuthorizationRes), nil
 }
 
 // OAuthAuthorizationsDeleteGrant implements oauth-authorizations/delete-grant operation.
@@ -4440,7 +4876,8 @@ func (UnimplementedHandler) OAuthAuthorizationsDeleteAuthorization(ctx context.C
 //
 // DELETE /applications/grants/{grant_id}
 func (UnimplementedHandler) OAuthAuthorizationsDeleteGrant(ctx context.Context, params OAuthAuthorizationsDeleteGrantParams) (r OAuthAuthorizationsDeleteGrantRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OAuthAuthorizationsDeleteGrantRes), nil
 }
 
 // OAuthAuthorizationsGetAuthorization implements oauth-authorizations/get-authorization operation.
@@ -4458,7 +4895,8 @@ func (UnimplementedHandler) OAuthAuthorizationsDeleteGrant(ctx context.Context, 
 //
 // GET /authorizations/{authorization_id}
 func (UnimplementedHandler) OAuthAuthorizationsGetAuthorization(ctx context.Context, params OAuthAuthorizationsGetAuthorizationParams) (r OAuthAuthorizationsGetAuthorizationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OAuthAuthorizationsGetAuthorizationRes), nil
 }
 
 // OAuthAuthorizationsGetGrant implements oauth-authorizations/get-grant operation.
@@ -4476,7 +4914,8 @@ func (UnimplementedHandler) OAuthAuthorizationsGetAuthorization(ctx context.Cont
 //
 // GET /applications/grants/{grant_id}
 func (UnimplementedHandler) OAuthAuthorizationsGetGrant(ctx context.Context, params OAuthAuthorizationsGetGrantParams) (r OAuthAuthorizationsGetGrantRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OAuthAuthorizationsGetGrantRes), nil
 }
 
 // OAuthAuthorizationsGetOrCreateAuthorizationForApp implements oauth-authorizations/get-or-create-authorization-for-app operation.
@@ -4513,7 +4952,8 @@ func (UnimplementedHandler) OAuthAuthorizationsGetGrant(ctx context.Context, par
 //
 // PUT /authorizations/clients/{client_id}
 func (UnimplementedHandler) OAuthAuthorizationsGetOrCreateAuthorizationForApp(ctx context.Context, req *OAuthAuthorizationsGetOrCreateAuthorizationForAppReq, params OAuthAuthorizationsGetOrCreateAuthorizationForAppParams) (r OAuthAuthorizationsGetOrCreateAuthorizationForAppRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OAuthAuthorizationsGetOrCreateAuthorizationForAppRes), nil
 }
 
 // OAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprint implements oauth-authorizations/get-or-create-authorization-for-app-and-fingerprint operation.
@@ -4545,7 +4985,8 @@ func (UnimplementedHandler) OAuthAuthorizationsGetOrCreateAuthorizationForApp(ct
 //
 // PUT /authorizations/clients/{client_id}/{fingerprint}
 func (UnimplementedHandler) OAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprint(ctx context.Context, req *OAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintReq, params OAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintParams) (r OAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRes), nil
 }
 
 // OAuthAuthorizationsListAuthorizations implements oauth-authorizations/list-authorizations operation.
@@ -4563,7 +5004,8 @@ func (UnimplementedHandler) OAuthAuthorizationsGetOrCreateAuthorizationForAppAnd
 //
 // GET /authorizations
 func (UnimplementedHandler) OAuthAuthorizationsListAuthorizations(ctx context.Context, params OAuthAuthorizationsListAuthorizationsParams) (r OAuthAuthorizationsListAuthorizationsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OAuthAuthorizationsListAuthorizationsRes), nil
 }
 
 // OAuthAuthorizationsListGrants implements oauth-authorizations/list-grants operation.
@@ -4592,7 +5034,8 @@ func (UnimplementedHandler) OAuthAuthorizationsListAuthorizations(ctx context.Co
 //
 // GET /applications/grants
 func (UnimplementedHandler) OAuthAuthorizationsListGrants(ctx context.Context, params OAuthAuthorizationsListGrantsParams) (r OAuthAuthorizationsListGrantsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OAuthAuthorizationsListGrantsRes), nil
 }
 
 // OAuthAuthorizationsUpdateAuthorization implements oauth-authorizations/update-authorization operation.
@@ -4614,7 +5057,8 @@ func (UnimplementedHandler) OAuthAuthorizationsListGrants(ctx context.Context, p
 //
 // PATCH /authorizations/{authorization_id}
 func (UnimplementedHandler) OAuthAuthorizationsUpdateAuthorization(ctx context.Context, req OptOAuthAuthorizationsUpdateAuthorizationReq, params OAuthAuthorizationsUpdateAuthorizationParams) (r OAuthAuthorizationsUpdateAuthorizationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OAuthAuthorizationsUpdateAuthorizationRes), nil
 }
 
 // OrgsBlockUser implements orgs/block-user operation.
@@ -4623,7 +5067,8 @@ func (UnimplementedHandler) OAuthAuthorizationsUpdateAuthorization(ctx context.C
 //
 // PUT /orgs/{org}/blocks/{username}
 func (UnimplementedHandler) OrgsBlockUser(ctx context.Context, params OrgsBlockUserParams) (r OrgsBlockUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsBlockUserRes), nil
 }
 
 // OrgsCancelInvitation implements orgs/cancel-invitation operation.
@@ -4635,7 +5080,8 @@ func (UnimplementedHandler) OrgsBlockUser(ctx context.Context, params OrgsBlockU
 //
 // DELETE /orgs/{org}/invitations/{invitation_id}
 func (UnimplementedHandler) OrgsCancelInvitation(ctx context.Context, params OrgsCancelInvitationParams) (r OrgsCancelInvitationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsCancelInvitationRes), nil
 }
 
 // OrgsCheckBlockedUser implements orgs/check-blocked-user operation.
@@ -4644,7 +5090,8 @@ func (UnimplementedHandler) OrgsCancelInvitation(ctx context.Context, params Org
 //
 // GET /orgs/{org}/blocks/{username}
 func (UnimplementedHandler) OrgsCheckBlockedUser(ctx context.Context, params OrgsCheckBlockedUserParams) (r OrgsCheckBlockedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsCheckBlockedUserRes), nil
 }
 
 // OrgsCheckMembershipForUser implements orgs/check-membership-for-user operation.
@@ -4653,7 +5100,8 @@ func (UnimplementedHandler) OrgsCheckBlockedUser(ctx context.Context, params Org
 //
 // GET /orgs/{org}/members/{username}
 func (UnimplementedHandler) OrgsCheckMembershipForUser(ctx context.Context, params OrgsCheckMembershipForUserParams) (r OrgsCheckMembershipForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsCheckMembershipForUserRes), nil
 }
 
 // OrgsCheckPublicMembershipForUser implements orgs/check-public-membership-for-user operation.
@@ -4662,7 +5110,8 @@ func (UnimplementedHandler) OrgsCheckMembershipForUser(ctx context.Context, para
 //
 // GET /orgs/{org}/public_members/{username}
 func (UnimplementedHandler) OrgsCheckPublicMembershipForUser(ctx context.Context, params OrgsCheckPublicMembershipForUserParams) (r OrgsCheckPublicMembershipForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsCheckPublicMembershipForUserRes), nil
 }
 
 // OrgsConvertMemberToOutsideCollaborator implements orgs/convert-member-to-outside-collaborator operation.
@@ -4675,7 +5124,8 @@ func (UnimplementedHandler) OrgsCheckPublicMembershipForUser(ctx context.Context
 //
 // PUT /orgs/{org}/outside_collaborators/{username}
 func (UnimplementedHandler) OrgsConvertMemberToOutsideCollaborator(ctx context.Context, params OrgsConvertMemberToOutsideCollaboratorParams) (r OrgsConvertMemberToOutsideCollaboratorRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsConvertMemberToOutsideCollaboratorRes), nil
 }
 
 // OrgsCreateInvitation implements orgs/create-invitation operation.
@@ -4692,7 +5142,8 @@ func (UnimplementedHandler) OrgsConvertMemberToOutsideCollaborator(ctx context.C
 //
 // POST /orgs/{org}/invitations
 func (UnimplementedHandler) OrgsCreateInvitation(ctx context.Context, req OptOrgsCreateInvitationReq, params OrgsCreateInvitationParams) (r OrgsCreateInvitationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsCreateInvitationRes), nil
 }
 
 // OrgsCreateWebhook implements orgs/create-webhook operation.
@@ -4701,7 +5152,8 @@ func (UnimplementedHandler) OrgsCreateInvitation(ctx context.Context, req OptOrg
 //
 // POST /orgs/{org}/hooks
 func (UnimplementedHandler) OrgsCreateWebhook(ctx context.Context, req *OrgsCreateWebhookReq, params OrgsCreateWebhookParams) (r OrgsCreateWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsCreateWebhookRes), nil
 }
 
 // OrgsDeleteWebhook implements orgs/delete-webhook operation.
@@ -4710,7 +5162,8 @@ func (UnimplementedHandler) OrgsCreateWebhook(ctx context.Context, req *OrgsCrea
 //
 // DELETE /orgs/{org}/hooks/{hook_id}
 func (UnimplementedHandler) OrgsDeleteWebhook(ctx context.Context, params OrgsDeleteWebhookParams) (r OrgsDeleteWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsDeleteWebhookRes), nil
 }
 
 // OrgsGet implements orgs/get operation.
@@ -4727,7 +5180,8 @@ func (UnimplementedHandler) OrgsDeleteWebhook(ctx context.Context, params OrgsDe
 //
 // GET /orgs/{org}
 func (UnimplementedHandler) OrgsGet(ctx context.Context, params OrgsGetParams) (r OrgsGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsGetRes), nil
 }
 
 // OrgsGetAuditLog implements orgs/get-audit-log operation.
@@ -4741,16 +5195,19 @@ func (UnimplementedHandler) OrgsGet(ctx context.Context, params OrgsGetParams) (
 //
 // GET /orgs/{org}/audit-log
 func (UnimplementedHandler) OrgsGetAuditLog(ctx context.Context, params OrgsGetAuditLogParams) (r []AuditLogEvent, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// OrgsGetMembershipForAuthenticatedUser implements orgs/get-membership-for-authenticated-user operation.
+	//
+	// Get an organization membership for the authenticated user.
+	//
+	// GET /user/memberships/orgs/{org}
 }
 
-// OrgsGetMembershipForAuthenticatedUser implements orgs/get-membership-for-authenticated-user operation.
-//
-// Get an organization membership for the authenticated user.
-//
-// GET /user/memberships/orgs/{org}
 func (UnimplementedHandler) OrgsGetMembershipForAuthenticatedUser(ctx context.Context, params OrgsGetMembershipForAuthenticatedUserParams) (r OrgsGetMembershipForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsGetMembershipForAuthenticatedUserRes), nil
 }
 
 // OrgsGetMembershipForUser implements orgs/get-membership-for-user operation.
@@ -4761,7 +5218,8 @@ func (UnimplementedHandler) OrgsGetMembershipForAuthenticatedUser(ctx context.Co
 //
 // GET /orgs/{org}/memberships/{username}
 func (UnimplementedHandler) OrgsGetMembershipForUser(ctx context.Context, params OrgsGetMembershipForUserParams) (r OrgsGetMembershipForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsGetMembershipForUserRes), nil
 }
 
 // OrgsGetWebhook implements orgs/get-webhook operation.
@@ -4772,7 +5230,8 @@ func (UnimplementedHandler) OrgsGetMembershipForUser(ctx context.Context, params
 //
 // GET /orgs/{org}/hooks/{hook_id}
 func (UnimplementedHandler) OrgsGetWebhook(ctx context.Context, params OrgsGetWebhookParams) (r OrgsGetWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsGetWebhookRes), nil
 }
 
 // OrgsGetWebhookConfigForOrg implements orgs/get-webhook-config-for-org operation.
@@ -4785,16 +5244,19 @@ func (UnimplementedHandler) OrgsGetWebhook(ctx context.Context, params OrgsGetWe
 //
 // GET /orgs/{org}/hooks/{hook_id}/config
 func (UnimplementedHandler) OrgsGetWebhookConfigForOrg(ctx context.Context, params OrgsGetWebhookConfigForOrgParams) (r *WebhookConfig, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// OrgsGetWebhookDelivery implements orgs/get-webhook-delivery operation.
+	//
+	// Returns a delivery for a webhook configured in an organization.
+	//
+	// GET /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}
 }
 
-// OrgsGetWebhookDelivery implements orgs/get-webhook-delivery operation.
-//
-// Returns a delivery for a webhook configured in an organization.
-//
-// GET /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}
 func (UnimplementedHandler) OrgsGetWebhookDelivery(ctx context.Context, params OrgsGetWebhookDeliveryParams) (r OrgsGetWebhookDeliveryRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsGetWebhookDeliveryRes), nil
 }
 
 // OrgsList implements orgs/list operation.
@@ -4806,7 +5268,8 @@ func (UnimplementedHandler) OrgsGetWebhookDelivery(ctx context.Context, params O
 //
 // GET /organizations
 func (UnimplementedHandler) OrgsList(ctx context.Context, params OrgsListParams) (r OrgsListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsListRes), nil
 }
 
 // OrgsListBlockedUsers implements orgs/list-blocked-users operation.
@@ -4815,7 +5278,8 @@ func (UnimplementedHandler) OrgsList(ctx context.Context, params OrgsListParams)
 //
 // GET /orgs/{org}/blocks
 func (UnimplementedHandler) OrgsListBlockedUsers(ctx context.Context, params OrgsListBlockedUsersParams) (r OrgsListBlockedUsersRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsListBlockedUsersRes), nil
 }
 
 // OrgsListFailedInvitations implements orgs/list-failed-invitations operation.
@@ -4825,7 +5289,8 @@ func (UnimplementedHandler) OrgsListBlockedUsers(ctx context.Context, params Org
 //
 // GET /orgs/{org}/failed_invitations
 func (UnimplementedHandler) OrgsListFailedInvitations(ctx context.Context, params OrgsListFailedInvitationsParams) (r OrgsListFailedInvitationsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsListFailedInvitationsRes), nil
 }
 
 // OrgsListForAuthenticatedUser implements orgs/list-for-authenticated-user operation.
@@ -4839,7 +5304,8 @@ func (UnimplementedHandler) OrgsListFailedInvitations(ctx context.Context, param
 //
 // GET /user/orgs
 func (UnimplementedHandler) OrgsListForAuthenticatedUser(ctx context.Context, params OrgsListForAuthenticatedUserParams) (r OrgsListForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsListForAuthenticatedUserRes), nil
 }
 
 // OrgsListForUser implements orgs/list-for-user operation.
@@ -4853,17 +5319,20 @@ func (UnimplementedHandler) OrgsListForAuthenticatedUser(ctx context.Context, pa
 //
 // GET /users/{username}/orgs
 func (UnimplementedHandler) OrgsListForUser(ctx context.Context, params OrgsListForUserParams) (r *OrgsListForUserOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// OrgsListInvitationTeams implements orgs/list-invitation-teams operation.
+	//
+	// List all teams associated with an invitation. In order to see invitations in an organization, the
+	// authenticated user must be an organization owner.
+	//
+	// GET /orgs/{org}/invitations/{invitation_id}/teams
 }
 
-// OrgsListInvitationTeams implements orgs/list-invitation-teams operation.
-//
-// List all teams associated with an invitation. In order to see invitations in an organization, the
-// authenticated user must be an organization owner.
-//
-// GET /orgs/{org}/invitations/{invitation_id}/teams
 func (UnimplementedHandler) OrgsListInvitationTeams(ctx context.Context, params OrgsListInvitationTeamsParams) (r OrgsListInvitationTeamsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsListInvitationTeamsRes), nil
 }
 
 // OrgsListMembers implements orgs/list-members operation.
@@ -4873,7 +5342,8 @@ func (UnimplementedHandler) OrgsListInvitationTeams(ctx context.Context, params 
 //
 // GET /orgs/{org}/members
 func (UnimplementedHandler) OrgsListMembers(ctx context.Context, params OrgsListMembersParams) (r OrgsListMembersRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsListMembersRes), nil
 }
 
 // OrgsListMembershipsForAuthenticatedUser implements orgs/list-memberships-for-authenticated-user operation.
@@ -4882,7 +5352,8 @@ func (UnimplementedHandler) OrgsListMembers(ctx context.Context, params OrgsList
 //
 // GET /user/memberships/orgs
 func (UnimplementedHandler) OrgsListMembershipsForAuthenticatedUser(ctx context.Context, params OrgsListMembershipsForAuthenticatedUserParams) (r OrgsListMembershipsForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsListMembershipsForAuthenticatedUserRes), nil
 }
 
 // OrgsListOutsideCollaborators implements orgs/list-outside-collaborators operation.
@@ -4891,19 +5362,22 @@ func (UnimplementedHandler) OrgsListMembershipsForAuthenticatedUser(ctx context.
 //
 // GET /orgs/{org}/outside_collaborators
 func (UnimplementedHandler) OrgsListOutsideCollaborators(ctx context.Context, params OrgsListOutsideCollaboratorsParams) (r *OrgsListOutsideCollaboratorsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// OrgsListPendingInvitations implements orgs/list-pending-invitations operation.
+	//
+	// The return hash contains a `role` field which refers to the Organization Invitation role and will
+	// be one of the following values: `direct_member`, `admin`, `billing_manager`, `hiring_manager`, or
+	// `reinstate`. If the invitee is not a GitHub member, the `login` field in the return hash will be
+	// `null`.
+	//
+	// GET /orgs/{org}/invitations
 }
 
-// OrgsListPendingInvitations implements orgs/list-pending-invitations operation.
-//
-// The return hash contains a `role` field which refers to the Organization Invitation role and will
-// be one of the following values: `direct_member`, `admin`, `billing_manager`, `hiring_manager`, or
-// `reinstate`. If the invitee is not a GitHub member, the `login` field in the return hash will be
-// `null`.
-//
-// GET /orgs/{org}/invitations
 func (UnimplementedHandler) OrgsListPendingInvitations(ctx context.Context, params OrgsListPendingInvitationsParams) (r OrgsListPendingInvitationsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsListPendingInvitationsRes), nil
 }
 
 // OrgsListPublicMembers implements orgs/list-public-members operation.
@@ -4912,32 +5386,37 @@ func (UnimplementedHandler) OrgsListPendingInvitations(ctx context.Context, para
 //
 // GET /orgs/{org}/public_members
 func (UnimplementedHandler) OrgsListPublicMembers(ctx context.Context, params OrgsListPublicMembersParams) (r *OrgsListPublicMembersOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// OrgsListSamlSSOAuthorizations implements orgs/list-saml-sso-authorizations operation.
+	//
+	// Listing and deleting credential authorizations is available to organizations with GitHub
+	// Enterprise Cloud. For more information, see [GitHub's products](https://help.github.
+	// com/github/getting-started-with-github/githubs-products).
+	// An authenticated organization owner with the `read:org` scope can list all credential
+	// authorizations for an organization that uses SAML single sign-on (SSO). The credentials are either
+	// personal access tokens or SSH keys that organization members have authorized for the organization.
+	// For more information, see [About authentication with SAML single sign-on](https://help.github.
+	// com/en/articles/about-authentication-with-saml-single-sign-on).
+	//
+	// GET /orgs/{org}/credential-authorizations
 }
 
-// OrgsListSamlSSOAuthorizations implements orgs/list-saml-sso-authorizations operation.
-//
-// Listing and deleting credential authorizations is available to organizations with GitHub
-// Enterprise Cloud. For more information, see [GitHub's products](https://help.github.
-// com/github/getting-started-with-github/githubs-products).
-// An authenticated organization owner with the `read:org` scope can list all credential
-// authorizations for an organization that uses SAML single sign-on (SSO). The credentials are either
-// personal access tokens or SSH keys that organization members have authorized for the organization.
-// For more information, see [About authentication with SAML single sign-on](https://help.github.
-// com/en/articles/about-authentication-with-saml-single-sign-on).
-//
-// GET /orgs/{org}/credential-authorizations
 func (UnimplementedHandler) OrgsListSamlSSOAuthorizations(ctx context.Context, params OrgsListSamlSSOAuthorizationsParams) (r []CredentialAuthorization, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// OrgsListWebhookDeliveries implements orgs/list-webhook-deliveries operation.
+	//
+	// Returns a list of webhook deliveries for a webhook configured in an organization.
+	//
+	// GET /orgs/{org}/hooks/{hook_id}/deliveries
 }
 
-// OrgsListWebhookDeliveries implements orgs/list-webhook-deliveries operation.
-//
-// Returns a list of webhook deliveries for a webhook configured in an organization.
-//
-// GET /orgs/{org}/hooks/{hook_id}/deliveries
 func (UnimplementedHandler) OrgsListWebhookDeliveries(ctx context.Context, params OrgsListWebhookDeliveriesParams) (r OrgsListWebhookDeliveriesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsListWebhookDeliveriesRes), nil
 }
 
 // OrgsListWebhooks implements orgs/list-webhooks operation.
@@ -4946,7 +5425,8 @@ func (UnimplementedHandler) OrgsListWebhookDeliveries(ctx context.Context, param
 //
 // GET /orgs/{org}/hooks
 func (UnimplementedHandler) OrgsListWebhooks(ctx context.Context, params OrgsListWebhooksParams) (r OrgsListWebhooksRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsListWebhooksRes), nil
 }
 
 // OrgsPingWebhook implements orgs/ping-webhook operation.
@@ -4956,7 +5436,8 @@ func (UnimplementedHandler) OrgsListWebhooks(ctx context.Context, params OrgsLis
 //
 // POST /orgs/{org}/hooks/{hook_id}/pings
 func (UnimplementedHandler) OrgsPingWebhook(ctx context.Context, params OrgsPingWebhookParams) (r OrgsPingWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsPingWebhookRes), nil
 }
 
 // OrgsRedeliverWebhookDelivery implements orgs/redeliver-webhook-delivery operation.
@@ -4965,7 +5446,8 @@ func (UnimplementedHandler) OrgsPingWebhook(ctx context.Context, params OrgsPing
 //
 // POST /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts
 func (UnimplementedHandler) OrgsRedeliverWebhookDelivery(ctx context.Context, params OrgsRedeliverWebhookDeliveryParams) (r OrgsRedeliverWebhookDeliveryRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsRedeliverWebhookDeliveryRes), nil
 }
 
 // OrgsRemoveMember implements orgs/remove-member operation.
@@ -4975,7 +5457,8 @@ func (UnimplementedHandler) OrgsRedeliverWebhookDelivery(ctx context.Context, pa
 //
 // DELETE /orgs/{org}/members/{username}
 func (UnimplementedHandler) OrgsRemoveMember(ctx context.Context, params OrgsRemoveMemberParams) (r OrgsRemoveMemberRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsRemoveMemberRes), nil
 }
 
 // OrgsRemoveMembershipForUser implements orgs/remove-membership-for-user operation.
@@ -4988,7 +5471,8 @@ func (UnimplementedHandler) OrgsRemoveMember(ctx context.Context, params OrgsRem
 //
 // DELETE /orgs/{org}/memberships/{username}
 func (UnimplementedHandler) OrgsRemoveMembershipForUser(ctx context.Context, params OrgsRemoveMembershipForUserParams) (r OrgsRemoveMembershipForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsRemoveMembershipForUserRes), nil
 }
 
 // OrgsRemoveOutsideCollaborator implements orgs/remove-outside-collaborator operation.
@@ -4997,7 +5481,8 @@ func (UnimplementedHandler) OrgsRemoveMembershipForUser(ctx context.Context, par
 //
 // DELETE /orgs/{org}/outside_collaborators/{username}
 func (UnimplementedHandler) OrgsRemoveOutsideCollaborator(ctx context.Context, params OrgsRemoveOutsideCollaboratorParams) (r OrgsRemoveOutsideCollaboratorRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsRemoveOutsideCollaboratorRes), nil
 }
 
 // OrgsRemovePublicMembershipForAuthenticatedUser implements orgs/remove-public-membership-for-authenticated-user operation.
@@ -5006,7 +5491,8 @@ func (UnimplementedHandler) OrgsRemoveOutsideCollaborator(ctx context.Context, p
 //
 // DELETE /orgs/{org}/public_members/{username}
 func (UnimplementedHandler) OrgsRemovePublicMembershipForAuthenticatedUser(ctx context.Context, params OrgsRemovePublicMembershipForAuthenticatedUserParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // OrgsRemoveSamlSSOAuthorization implements orgs/remove-saml-sso-authorization operation.
@@ -5021,7 +5507,8 @@ func (UnimplementedHandler) OrgsRemovePublicMembershipForAuthenticatedUser(ctx c
 //
 // DELETE /orgs/{org}/credential-authorizations/{credential_id}
 func (UnimplementedHandler) OrgsRemoveSamlSSOAuthorization(ctx context.Context, params OrgsRemoveSamlSSOAuthorizationParams) (r OrgsRemoveSamlSSOAuthorizationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsRemoveSamlSSOAuthorizationRes), nil
 }
 
 // OrgsSetMembershipForUser implements orgs/set-membership-for-user operation.
@@ -5043,7 +5530,8 @@ func (UnimplementedHandler) OrgsRemoveSamlSSOAuthorization(ctx context.Context, 
 //
 // PUT /orgs/{org}/memberships/{username}
 func (UnimplementedHandler) OrgsSetMembershipForUser(ctx context.Context, req OptOrgsSetMembershipForUserReq, params OrgsSetMembershipForUserParams) (r OrgsSetMembershipForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsSetMembershipForUserRes), nil
 }
 
 // OrgsSetPublicMembershipForAuthenticatedUser implements orgs/set-public-membership-for-authenticated-user operation.
@@ -5056,7 +5544,8 @@ func (UnimplementedHandler) OrgsSetMembershipForUser(ctx context.Context, req Op
 //
 // PUT /orgs/{org}/public_members/{username}
 func (UnimplementedHandler) OrgsSetPublicMembershipForAuthenticatedUser(ctx context.Context, params OrgsSetPublicMembershipForAuthenticatedUserParams) (r OrgsSetPublicMembershipForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsSetPublicMembershipForAuthenticatedUserRes), nil
 }
 
 // OrgsUnblockUser implements orgs/unblock-user operation.
@@ -5065,7 +5554,8 @@ func (UnimplementedHandler) OrgsSetPublicMembershipForAuthenticatedUser(ctx cont
 //
 // DELETE /orgs/{org}/blocks/{username}
 func (UnimplementedHandler) OrgsUnblockUser(ctx context.Context, params OrgsUnblockUserParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // OrgsUpdateMembershipForAuthenticatedUser implements orgs/update-membership-for-authenticated-user operation.
@@ -5074,7 +5564,8 @@ func (UnimplementedHandler) OrgsUnblockUser(ctx context.Context, params OrgsUnbl
 //
 // PATCH /user/memberships/orgs/{org}
 func (UnimplementedHandler) OrgsUpdateMembershipForAuthenticatedUser(ctx context.Context, req *OrgsUpdateMembershipForAuthenticatedUserReq, params OrgsUpdateMembershipForAuthenticatedUserParams) (r OrgsUpdateMembershipForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsUpdateMembershipForAuthenticatedUserRes), nil
 }
 
 // OrgsUpdateWebhook implements orgs/update-webhook operation.
@@ -5087,7 +5578,8 @@ func (UnimplementedHandler) OrgsUpdateMembershipForAuthenticatedUser(ctx context
 //
 // PATCH /orgs/{org}/hooks/{hook_id}
 func (UnimplementedHandler) OrgsUpdateWebhook(ctx context.Context, req OptOrgsUpdateWebhookReq, params OrgsUpdateWebhookParams) (r OrgsUpdateWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(OrgsUpdateWebhookRes), nil
 }
 
 // OrgsUpdateWebhookConfigForOrg implements orgs/update-webhook-config-for-org operation.
@@ -5100,21 +5592,24 @@ func (UnimplementedHandler) OrgsUpdateWebhook(ctx context.Context, req OptOrgsUp
 //
 // PATCH /orgs/{org}/hooks/{hook_id}/config
 func (UnimplementedHandler) OrgsUpdateWebhookConfigForOrg(ctx context.Context, req OptOrgsUpdateWebhookConfigForOrgReq, params OrgsUpdateWebhookConfigForOrgParams) (r *WebhookConfig, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PackagesDeletePackageForAuthenticatedUser implements packages/delete-package-for-authenticated-user operation.
+	//
+	// Deletes a package owned by the authenticated user. You cannot delete a public package if any
+	// version of the package has more than 5,000 downloads. In this scenario, contact GitHub support for
+	// further assistance.
+	// To use this endpoint, you must authenticate using an access token with the `packages:read` and
+	// `packages:delete` scopes.
+	// If `package_type` is not `container`, your token must also include the `repo` scope.
+	//
+	// DELETE /user/packages/{package_type}/{package_name}
 }
 
-// PackagesDeletePackageForAuthenticatedUser implements packages/delete-package-for-authenticated-user operation.
-//
-// Deletes a package owned by the authenticated user. You cannot delete a public package if any
-// version of the package has more than 5,000 downloads. In this scenario, contact GitHub support for
-// further assistance.
-// To use this endpoint, you must authenticate using an access token with the `packages:read` and
-// `packages:delete` scopes.
-// If `package_type` is not `container`, your token must also include the `repo` scope.
-//
-// DELETE /user/packages/{package_type}/{package_name}
 func (UnimplementedHandler) PackagesDeletePackageForAuthenticatedUser(ctx context.Context, params PackagesDeletePackageForAuthenticatedUserParams) (r PackagesDeletePackageForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesDeletePackageForAuthenticatedUserRes), nil
 }
 
 // PackagesDeletePackageForOrg implements packages/delete-package-for-org operation.
@@ -5130,7 +5625,8 @@ func (UnimplementedHandler) PackagesDeletePackageForAuthenticatedUser(ctx contex
 //
 // DELETE /orgs/{org}/packages/{package_type}/{package_name}
 func (UnimplementedHandler) PackagesDeletePackageForOrg(ctx context.Context, params PackagesDeletePackageForOrgParams) (r PackagesDeletePackageForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesDeletePackageForOrgRes), nil
 }
 
 // PackagesDeletePackageForUser implements packages/delete-package-for-user operation.
@@ -5146,7 +5642,8 @@ func (UnimplementedHandler) PackagesDeletePackageForOrg(ctx context.Context, par
 //
 // DELETE /users/{username}/packages/{package_type}/{package_name}
 func (UnimplementedHandler) PackagesDeletePackageForUser(ctx context.Context, params PackagesDeletePackageForUserParams) (r PackagesDeletePackageForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesDeletePackageForUserRes), nil
 }
 
 // PackagesDeletePackageVersionForAuthenticatedUser implements packages/delete-package-version-for-authenticated-user operation.
@@ -5160,7 +5657,8 @@ func (UnimplementedHandler) PackagesDeletePackageForUser(ctx context.Context, pa
 //
 // DELETE /user/packages/{package_type}/{package_name}/versions/{package_version_id}
 func (UnimplementedHandler) PackagesDeletePackageVersionForAuthenticatedUser(ctx context.Context, params PackagesDeletePackageVersionForAuthenticatedUserParams) (r PackagesDeletePackageVersionForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesDeletePackageVersionForAuthenticatedUserRes), nil
 }
 
 // PackagesDeletePackageVersionForOrg implements packages/delete-package-version-for-org operation.
@@ -5176,7 +5674,8 @@ func (UnimplementedHandler) PackagesDeletePackageVersionForAuthenticatedUser(ctx
 //
 // DELETE /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}
 func (UnimplementedHandler) PackagesDeletePackageVersionForOrg(ctx context.Context, params PackagesDeletePackageVersionForOrgParams) (r PackagesDeletePackageVersionForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesDeletePackageVersionForOrgRes), nil
 }
 
 // PackagesDeletePackageVersionForUser implements packages/delete-package-version-for-user operation.
@@ -5192,7 +5691,8 @@ func (UnimplementedHandler) PackagesDeletePackageVersionForOrg(ctx context.Conte
 //
 // DELETE /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}
 func (UnimplementedHandler) PackagesDeletePackageVersionForUser(ctx context.Context, params PackagesDeletePackageVersionForUserParams) (r PackagesDeletePackageVersionForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesDeletePackageVersionForUserRes), nil
 }
 
 // PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser implements packages/get-all-package-versions-for-package-owned-by-authenticated-user operation.
@@ -5203,7 +5703,8 @@ func (UnimplementedHandler) PackagesDeletePackageVersionForUser(ctx context.Cont
 //
 // GET /user/packages/{package_type}/{package_name}/versions
 func (UnimplementedHandler) PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser(ctx context.Context, params PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserParams) (r PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserRes), nil
 }
 
 // PackagesGetAllPackageVersionsForPackageOwnedByOrg implements packages/get-all-package-versions-for-package-owned-by-org operation.
@@ -5214,7 +5715,8 @@ func (UnimplementedHandler) PackagesGetAllPackageVersionsForPackageOwnedByAuthen
 //
 // GET /orgs/{org}/packages/{package_type}/{package_name}/versions
 func (UnimplementedHandler) PackagesGetAllPackageVersionsForPackageOwnedByOrg(ctx context.Context, params PackagesGetAllPackageVersionsForPackageOwnedByOrgParams) (r PackagesGetAllPackageVersionsForPackageOwnedByOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesGetAllPackageVersionsForPackageOwnedByOrgRes), nil
 }
 
 // PackagesGetAllPackageVersionsForPackageOwnedByUser implements packages/get-all-package-versions-for-package-owned-by-user operation.
@@ -5225,7 +5727,8 @@ func (UnimplementedHandler) PackagesGetAllPackageVersionsForPackageOwnedByOrg(ct
 //
 // GET /users/{username}/packages/{package_type}/{package_name}/versions
 func (UnimplementedHandler) PackagesGetAllPackageVersionsForPackageOwnedByUser(ctx context.Context, params PackagesGetAllPackageVersionsForPackageOwnedByUserParams) (r PackagesGetAllPackageVersionsForPackageOwnedByUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesGetAllPackageVersionsForPackageOwnedByUserRes), nil
 }
 
 // PackagesGetPackageForAuthenticatedUser implements packages/get-package-for-authenticated-user operation.
@@ -5236,85 +5739,100 @@ func (UnimplementedHandler) PackagesGetAllPackageVersionsForPackageOwnedByUser(c
 //
 // GET /user/packages/{package_type}/{package_name}
 func (UnimplementedHandler) PackagesGetPackageForAuthenticatedUser(ctx context.Context, params PackagesGetPackageForAuthenticatedUserParams) (r *Package, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PackagesGetPackageForOrganization implements packages/get-package-for-organization operation.
+	//
+	// Gets a specific package in an organization.
+	// To use this endpoint, you must authenticate using an access token with the `packages:read` scope.
+	// If `package_type` is not `container`, your token must also include the `repo` scope.
+	//
+	// GET /orgs/{org}/packages/{package_type}/{package_name}
 }
 
-// PackagesGetPackageForOrganization implements packages/get-package-for-organization operation.
-//
-// Gets a specific package in an organization.
-// To use this endpoint, you must authenticate using an access token with the `packages:read` scope.
-// If `package_type` is not `container`, your token must also include the `repo` scope.
-//
-// GET /orgs/{org}/packages/{package_type}/{package_name}
 func (UnimplementedHandler) PackagesGetPackageForOrganization(ctx context.Context, params PackagesGetPackageForOrganizationParams) (r *Package, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PackagesGetPackageForUser implements packages/get-package-for-user operation.
+	//
+	// Gets a specific package metadata for a public package owned by a user.
+	// To use this endpoint, you must authenticate using an access token with the `packages:read` scope.
+	// If `package_type` is not `container`, your token must also include the `repo` scope.
+	//
+	// GET /users/{username}/packages/{package_type}/{package_name}
 }
 
-// PackagesGetPackageForUser implements packages/get-package-for-user operation.
-//
-// Gets a specific package metadata for a public package owned by a user.
-// To use this endpoint, you must authenticate using an access token with the `packages:read` scope.
-// If `package_type` is not `container`, your token must also include the `repo` scope.
-//
-// GET /users/{username}/packages/{package_type}/{package_name}
 func (UnimplementedHandler) PackagesGetPackageForUser(ctx context.Context, params PackagesGetPackageForUserParams) (r *Package, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PackagesGetPackageVersionForAuthenticatedUser implements packages/get-package-version-for-authenticated-user operation.
+	//
+	// Gets a specific package version for a package owned by the authenticated user.
+	// To use this endpoint, you must authenticate using an access token with the `packages:read` scope.
+	// If `package_type` is not `container`, your token must also include the `repo` scope.
+	//
+	// GET /user/packages/{package_type}/{package_name}/versions/{package_version_id}
 }
 
-// PackagesGetPackageVersionForAuthenticatedUser implements packages/get-package-version-for-authenticated-user operation.
-//
-// Gets a specific package version for a package owned by the authenticated user.
-// To use this endpoint, you must authenticate using an access token with the `packages:read` scope.
-// If `package_type` is not `container`, your token must also include the `repo` scope.
-//
-// GET /user/packages/{package_type}/{package_name}/versions/{package_version_id}
 func (UnimplementedHandler) PackagesGetPackageVersionForAuthenticatedUser(ctx context.Context, params PackagesGetPackageVersionForAuthenticatedUserParams) (r *PackageVersion, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PackagesGetPackageVersionForOrganization implements packages/get-package-version-for-organization operation.
+	//
+	// Gets a specific package version in an organization.
+	// You must authenticate using an access token with the `packages:read` scope.
+	// If `package_type` is not `container`, your token must also include the `repo` scope.
+	//
+	// GET /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}
 }
 
-// PackagesGetPackageVersionForOrganization implements packages/get-package-version-for-organization operation.
-//
-// Gets a specific package version in an organization.
-// You must authenticate using an access token with the `packages:read` scope.
-// If `package_type` is not `container`, your token must also include the `repo` scope.
-//
-// GET /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}
 func (UnimplementedHandler) PackagesGetPackageVersionForOrganization(ctx context.Context, params PackagesGetPackageVersionForOrganizationParams) (r *PackageVersion, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PackagesGetPackageVersionForUser implements packages/get-package-version-for-user operation.
+	//
+	// Gets a specific package version for a public package owned by a specified user.
+	// At this time, to use this endpoint, you must authenticate using an access token with the
+	// `packages:read` scope.
+	// If `package_type` is not `container`, your token must also include the `repo` scope.
+	//
+	// GET /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}
 }
 
-// PackagesGetPackageVersionForUser implements packages/get-package-version-for-user operation.
-//
-// Gets a specific package version for a public package owned by a specified user.
-// At this time, to use this endpoint, you must authenticate using an access token with the
-// `packages:read` scope.
-// If `package_type` is not `container`, your token must also include the `repo` scope.
-//
-// GET /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}
 func (UnimplementedHandler) PackagesGetPackageVersionForUser(ctx context.Context, params PackagesGetPackageVersionForUserParams) (r *PackageVersion, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PackagesListPackagesForAuthenticatedUser implements packages/list-packages-for-authenticated-user operation.
+	//
+	// Lists packages owned by the authenticated user within the user's namespace.
+	// To use this endpoint, you must authenticate using an access token with the `packages:read` scope.
+	// If `package_type` is not `container`, your token must also include the `repo` scope.
+	//
+	// GET /user/packages
 }
 
-// PackagesListPackagesForAuthenticatedUser implements packages/list-packages-for-authenticated-user operation.
-//
-// Lists packages owned by the authenticated user within the user's namespace.
-// To use this endpoint, you must authenticate using an access token with the `packages:read` scope.
-// If `package_type` is not `container`, your token must also include the `repo` scope.
-//
-// GET /user/packages
 func (UnimplementedHandler) PackagesListPackagesForAuthenticatedUser(ctx context.Context, params PackagesListPackagesForAuthenticatedUserParams) (r []Package, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PackagesListPackagesForOrganization implements packages/list-packages-for-organization operation.
+	//
+	// Lists all packages in an organization readable by the user.
+	// To use this endpoint, you must authenticate using an access token with the `packages:read` scope.
+	// If `package_type` is not `container`, your token must also include the `repo` scope.
+	//
+	// GET /orgs/{org}/packages
 }
 
-// PackagesListPackagesForOrganization implements packages/list-packages-for-organization operation.
-//
-// Lists all packages in an organization readable by the user.
-// To use this endpoint, you must authenticate using an access token with the `packages:read` scope.
-// If `package_type` is not `container`, your token must also include the `repo` scope.
-//
-// GET /orgs/{org}/packages
 func (UnimplementedHandler) PackagesListPackagesForOrganization(ctx context.Context, params PackagesListPackagesForOrganizationParams) (r PackagesListPackagesForOrganizationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesListPackagesForOrganizationRes), nil
 }
 
 // PackagesListPackagesForUser implements packages/list-packages-for-user operation.
@@ -5325,7 +5843,8 @@ func (UnimplementedHandler) PackagesListPackagesForOrganization(ctx context.Cont
 //
 // GET /users/{username}/packages
 func (UnimplementedHandler) PackagesListPackagesForUser(ctx context.Context, params PackagesListPackagesForUserParams) (r PackagesListPackagesForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesListPackagesForUserRes), nil
 }
 
 // PackagesRestorePackageForAuthenticatedUser implements packages/restore-package-for-authenticated-user operation.
@@ -5343,7 +5862,8 @@ func (UnimplementedHandler) PackagesListPackagesForUser(ctx context.Context, par
 //
 // POST /user/packages/{package_type}/{package_name}/restore
 func (UnimplementedHandler) PackagesRestorePackageForAuthenticatedUser(ctx context.Context, params PackagesRestorePackageForAuthenticatedUserParams) (r PackagesRestorePackageForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesRestorePackageForAuthenticatedUserRes), nil
 }
 
 // PackagesRestorePackageForOrg implements packages/restore-package-for-org operation.
@@ -5363,7 +5883,8 @@ func (UnimplementedHandler) PackagesRestorePackageForAuthenticatedUser(ctx conte
 //
 // POST /orgs/{org}/packages/{package_type}/{package_name}/restore
 func (UnimplementedHandler) PackagesRestorePackageForOrg(ctx context.Context, params PackagesRestorePackageForOrgParams) (r PackagesRestorePackageForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesRestorePackageForOrgRes), nil
 }
 
 // PackagesRestorePackageForUser implements packages/restore-package-for-user operation.
@@ -5383,7 +5904,8 @@ func (UnimplementedHandler) PackagesRestorePackageForOrg(ctx context.Context, pa
 //
 // POST /users/{username}/packages/{package_type}/{package_name}/restore
 func (UnimplementedHandler) PackagesRestorePackageForUser(ctx context.Context, params PackagesRestorePackageForUserParams) (r PackagesRestorePackageForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesRestorePackageForUserRes), nil
 }
 
 // PackagesRestorePackageVersionForAuthenticatedUser implements packages/restore-package-version-for-authenticated-user operation.
@@ -5401,7 +5923,8 @@ func (UnimplementedHandler) PackagesRestorePackageForUser(ctx context.Context, p
 //
 // POST /user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore
 func (UnimplementedHandler) PackagesRestorePackageVersionForAuthenticatedUser(ctx context.Context, params PackagesRestorePackageVersionForAuthenticatedUserParams) (r PackagesRestorePackageVersionForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesRestorePackageVersionForAuthenticatedUserRes), nil
 }
 
 // PackagesRestorePackageVersionForOrg implements packages/restore-package-version-for-org operation.
@@ -5421,7 +5944,8 @@ func (UnimplementedHandler) PackagesRestorePackageVersionForAuthenticatedUser(ct
 //
 // POST /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore
 func (UnimplementedHandler) PackagesRestorePackageVersionForOrg(ctx context.Context, params PackagesRestorePackageVersionForOrgParams) (r PackagesRestorePackageVersionForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesRestorePackageVersionForOrgRes), nil
 }
 
 // PackagesRestorePackageVersionForUser implements packages/restore-package-version-for-user operation.
@@ -5441,7 +5965,8 @@ func (UnimplementedHandler) PackagesRestorePackageVersionForOrg(ctx context.Cont
 //
 // POST /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore
 func (UnimplementedHandler) PackagesRestorePackageVersionForUser(ctx context.Context, params PackagesRestorePackageVersionForUserParams) (r PackagesRestorePackageVersionForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PackagesRestorePackageVersionForUserRes), nil
 }
 
 // ProjectsAddCollaborator implements projects/add-collaborator operation.
@@ -5451,7 +5976,8 @@ func (UnimplementedHandler) PackagesRestorePackageVersionForUser(ctx context.Con
 //
 // PUT /projects/{project_id}/collaborators/{username}
 func (UnimplementedHandler) ProjectsAddCollaborator(ctx context.Context, req OptNilProjectsAddCollaboratorReq, params ProjectsAddCollaboratorParams) (r ProjectsAddCollaboratorRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsAddCollaboratorRes), nil
 }
 
 // ProjectsCreateColumn implements projects/create-column operation.
@@ -5460,7 +5986,8 @@ func (UnimplementedHandler) ProjectsAddCollaborator(ctx context.Context, req Opt
 //
 // POST /projects/{project_id}/columns
 func (UnimplementedHandler) ProjectsCreateColumn(ctx context.Context, req *ProjectsCreateColumnReq, params ProjectsCreateColumnParams) (r ProjectsCreateColumnRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsCreateColumnRes), nil
 }
 
 // ProjectsCreateForAuthenticatedUser implements projects/create-for-authenticated-user operation.
@@ -5469,7 +5996,8 @@ func (UnimplementedHandler) ProjectsCreateColumn(ctx context.Context, req *Proje
 //
 // POST /user/projects
 func (UnimplementedHandler) ProjectsCreateForAuthenticatedUser(ctx context.Context, req *ProjectsCreateForAuthenticatedUserReq) (r ProjectsCreateForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsCreateForAuthenticatedUserRes), nil
 }
 
 // ProjectsCreateForOrg implements projects/create-for-org operation.
@@ -5480,7 +6008,8 @@ func (UnimplementedHandler) ProjectsCreateForAuthenticatedUser(ctx context.Conte
 //
 // POST /orgs/{org}/projects
 func (UnimplementedHandler) ProjectsCreateForOrg(ctx context.Context, req *ProjectsCreateForOrgReq, params ProjectsCreateForOrgParams) (r ProjectsCreateForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsCreateForOrgRes), nil
 }
 
 // ProjectsCreateForRepo implements projects/create-for-repo operation.
@@ -5491,7 +6020,8 @@ func (UnimplementedHandler) ProjectsCreateForOrg(ctx context.Context, req *Proje
 //
 // POST /repos/{owner}/{repo}/projects
 func (UnimplementedHandler) ProjectsCreateForRepo(ctx context.Context, req *ProjectsCreateForRepoReq, params ProjectsCreateForRepoParams) (r ProjectsCreateForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsCreateForRepoRes), nil
 }
 
 // ProjectsDelete implements projects/delete operation.
@@ -5500,7 +6030,8 @@ func (UnimplementedHandler) ProjectsCreateForRepo(ctx context.Context, req *Proj
 //
 // DELETE /projects/{project_id}
 func (UnimplementedHandler) ProjectsDelete(ctx context.Context, params ProjectsDeleteParams) (r ProjectsDeleteRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsDeleteRes), nil
 }
 
 // ProjectsDeleteCard implements projects/delete-card operation.
@@ -5509,7 +6040,8 @@ func (UnimplementedHandler) ProjectsDelete(ctx context.Context, params ProjectsD
 //
 // DELETE /projects/columns/cards/{card_id}
 func (UnimplementedHandler) ProjectsDeleteCard(ctx context.Context, params ProjectsDeleteCardParams) (r ProjectsDeleteCardRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsDeleteCardRes), nil
 }
 
 // ProjectsDeleteColumn implements projects/delete-column operation.
@@ -5518,7 +6050,8 @@ func (UnimplementedHandler) ProjectsDeleteCard(ctx context.Context, params Proje
 //
 // DELETE /projects/columns/{column_id}
 func (UnimplementedHandler) ProjectsDeleteColumn(ctx context.Context, params ProjectsDeleteColumnParams) (r ProjectsDeleteColumnRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsDeleteColumnRes), nil
 }
 
 // ProjectsGet implements projects/get operation.
@@ -5529,7 +6062,8 @@ func (UnimplementedHandler) ProjectsDeleteColumn(ctx context.Context, params Pro
 //
 // GET /projects/{project_id}
 func (UnimplementedHandler) ProjectsGet(ctx context.Context, params ProjectsGetParams) (r ProjectsGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsGetRes), nil
 }
 
 // ProjectsGetCard implements projects/get-card operation.
@@ -5538,7 +6072,8 @@ func (UnimplementedHandler) ProjectsGet(ctx context.Context, params ProjectsGetP
 //
 // GET /projects/columns/cards/{card_id}
 func (UnimplementedHandler) ProjectsGetCard(ctx context.Context, params ProjectsGetCardParams) (r ProjectsGetCardRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsGetCardRes), nil
 }
 
 // ProjectsGetColumn implements projects/get-column operation.
@@ -5547,7 +6082,8 @@ func (UnimplementedHandler) ProjectsGetCard(ctx context.Context, params Projects
 //
 // GET /projects/columns/{column_id}
 func (UnimplementedHandler) ProjectsGetColumn(ctx context.Context, params ProjectsGetColumnParams) (r ProjectsGetColumnRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsGetColumnRes), nil
 }
 
 // ProjectsGetPermissionForUser implements projects/get-permission-for-user operation.
@@ -5558,7 +6094,8 @@ func (UnimplementedHandler) ProjectsGetColumn(ctx context.Context, params Projec
 //
 // GET /projects/{project_id}/collaborators/{username}/permission
 func (UnimplementedHandler) ProjectsGetPermissionForUser(ctx context.Context, params ProjectsGetPermissionForUserParams) (r ProjectsGetPermissionForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsGetPermissionForUserRes), nil
 }
 
 // ProjectsListCards implements projects/list-cards operation.
@@ -5567,7 +6104,8 @@ func (UnimplementedHandler) ProjectsGetPermissionForUser(ctx context.Context, pa
 //
 // GET /projects/columns/{column_id}/cards
 func (UnimplementedHandler) ProjectsListCards(ctx context.Context, params ProjectsListCardsParams) (r ProjectsListCardsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsListCardsRes), nil
 }
 
 // ProjectsListCollaborators implements projects/list-collaborators operation.
@@ -5580,7 +6118,8 @@ func (UnimplementedHandler) ProjectsListCards(ctx context.Context, params Projec
 //
 // GET /projects/{project_id}/collaborators
 func (UnimplementedHandler) ProjectsListCollaborators(ctx context.Context, params ProjectsListCollaboratorsParams) (r ProjectsListCollaboratorsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsListCollaboratorsRes), nil
 }
 
 // ProjectsListColumns implements projects/list-columns operation.
@@ -5589,7 +6128,8 @@ func (UnimplementedHandler) ProjectsListCollaborators(ctx context.Context, param
 //
 // GET /projects/{project_id}/columns
 func (UnimplementedHandler) ProjectsListColumns(ctx context.Context, params ProjectsListColumnsParams) (r ProjectsListColumnsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsListColumnsRes), nil
 }
 
 // ProjectsListForOrg implements projects/list-for-org operation.
@@ -5600,7 +6140,8 @@ func (UnimplementedHandler) ProjectsListColumns(ctx context.Context, params Proj
 //
 // GET /orgs/{org}/projects
 func (UnimplementedHandler) ProjectsListForOrg(ctx context.Context, params ProjectsListForOrgParams) (r ProjectsListForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsListForOrgRes), nil
 }
 
 // ProjectsListForRepo implements projects/list-for-repo operation.
@@ -5611,7 +6152,8 @@ func (UnimplementedHandler) ProjectsListForOrg(ctx context.Context, params Proje
 //
 // GET /repos/{owner}/{repo}/projects
 func (UnimplementedHandler) ProjectsListForRepo(ctx context.Context, params ProjectsListForRepoParams) (r ProjectsListForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsListForRepoRes), nil
 }
 
 // ProjectsListForUser implements projects/list-for-user operation.
@@ -5620,7 +6162,8 @@ func (UnimplementedHandler) ProjectsListForRepo(ctx context.Context, params Proj
 //
 // GET /users/{username}/projects
 func (UnimplementedHandler) ProjectsListForUser(ctx context.Context, params ProjectsListForUserParams) (r ProjectsListForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsListForUserRes), nil
 }
 
 // ProjectsMoveCard implements projects/move-card operation.
@@ -5629,7 +6172,8 @@ func (UnimplementedHandler) ProjectsListForUser(ctx context.Context, params Proj
 //
 // POST /projects/columns/cards/{card_id}/moves
 func (UnimplementedHandler) ProjectsMoveCard(ctx context.Context, req *ProjectsMoveCardReq, params ProjectsMoveCardParams) (r ProjectsMoveCardRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsMoveCardRes), nil
 }
 
 // ProjectsMoveColumn implements projects/move-column operation.
@@ -5638,7 +6182,8 @@ func (UnimplementedHandler) ProjectsMoveCard(ctx context.Context, req *ProjectsM
 //
 // POST /projects/columns/{column_id}/moves
 func (UnimplementedHandler) ProjectsMoveColumn(ctx context.Context, req *ProjectsMoveColumnReq, params ProjectsMoveColumnParams) (r ProjectsMoveColumnRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsMoveColumnRes), nil
 }
 
 // ProjectsRemoveCollaborator implements projects/remove-collaborator operation.
@@ -5648,7 +6193,8 @@ func (UnimplementedHandler) ProjectsMoveColumn(ctx context.Context, req *Project
 //
 // DELETE /projects/{project_id}/collaborators/{username}
 func (UnimplementedHandler) ProjectsRemoveCollaborator(ctx context.Context, params ProjectsRemoveCollaboratorParams) (r ProjectsRemoveCollaboratorRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsRemoveCollaboratorRes), nil
 }
 
 // ProjectsUpdate implements projects/update operation.
@@ -5659,7 +6205,8 @@ func (UnimplementedHandler) ProjectsRemoveCollaborator(ctx context.Context, para
 //
 // PATCH /projects/{project_id}
 func (UnimplementedHandler) ProjectsUpdate(ctx context.Context, req OptProjectsUpdateReq, params ProjectsUpdateParams) (r ProjectsUpdateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsUpdateRes), nil
 }
 
 // ProjectsUpdateCard implements projects/update-card operation.
@@ -5668,7 +6215,8 @@ func (UnimplementedHandler) ProjectsUpdate(ctx context.Context, req OptProjectsU
 //
 // PATCH /projects/columns/cards/{card_id}
 func (UnimplementedHandler) ProjectsUpdateCard(ctx context.Context, req OptProjectsUpdateCardReq, params ProjectsUpdateCardParams) (r ProjectsUpdateCardRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsUpdateCardRes), nil
 }
 
 // ProjectsUpdateColumn implements projects/update-column operation.
@@ -5677,7 +6225,8 @@ func (UnimplementedHandler) ProjectsUpdateCard(ctx context.Context, req OptProje
 //
 // PATCH /projects/columns/{column_id}
 func (UnimplementedHandler) ProjectsUpdateColumn(ctx context.Context, req *ProjectsUpdateColumnReq, params ProjectsUpdateColumnParams) (r ProjectsUpdateColumnRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ProjectsUpdateColumnRes), nil
 }
 
 // PullsCheckIfMerged implements pulls/check-if-merged operation.
@@ -5686,7 +6235,8 @@ func (UnimplementedHandler) ProjectsUpdateColumn(ctx context.Context, req *Proje
 //
 // GET /repos/{owner}/{repo}/pulls/{pull_number}/merge
 func (UnimplementedHandler) PullsCheckIfMerged(ctx context.Context, params PullsCheckIfMergedParams) (r PullsCheckIfMergedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsCheckIfMergedRes), nil
 }
 
 // PullsCreate implements pulls/create operation.
@@ -5710,7 +6260,8 @@ func (UnimplementedHandler) PullsCheckIfMerged(ctx context.Context, params Pulls
 //
 // POST /repos/{owner}/{repo}/pulls
 func (UnimplementedHandler) PullsCreate(ctx context.Context, req *PullsCreateReq, params PullsCreateParams) (r PullsCreateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsCreateRes), nil
 }
 
 // PullsCreateReplyForReviewComment implements pulls/create-reply-for-review-comment operation.
@@ -5728,7 +6279,8 @@ func (UnimplementedHandler) PullsCreate(ctx context.Context, req *PullsCreateReq
 //
 // POST /repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies
 func (UnimplementedHandler) PullsCreateReplyForReviewComment(ctx context.Context, req *PullsCreateReplyForReviewCommentReq, params PullsCreateReplyForReviewCommentParams) (r PullsCreateReplyForReviewCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsCreateReplyForReviewCommentRes), nil
 }
 
 // PullsCreateReview implements pulls/create-review operation.
@@ -5755,7 +6307,8 @@ func (UnimplementedHandler) PullsCreateReplyForReviewComment(ctx context.Context
 //
 // POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews
 func (UnimplementedHandler) PullsCreateReview(ctx context.Context, req OptPullsCreateReviewReq, params PullsCreateReviewParams) (r PullsCreateReviewRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsCreateReviewRes), nil
 }
 
 // PullsCreateReviewComment implements pulls/create-review-comment operation.
@@ -5783,7 +6336,8 @@ func (UnimplementedHandler) PullsCreateReview(ctx context.Context, req OptPullsC
 //
 // POST /repos/{owner}/{repo}/pulls/{pull_number}/comments
 func (UnimplementedHandler) PullsCreateReviewComment(ctx context.Context, req *PullsCreateReviewCommentReq, params PullsCreateReviewCommentParams) (r PullsCreateReviewCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsCreateReviewCommentRes), nil
 }
 
 // PullsDeletePendingReview implements pulls/delete-pending-review operation.
@@ -5792,7 +6346,8 @@ func (UnimplementedHandler) PullsCreateReviewComment(ctx context.Context, req *P
 //
 // DELETE /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}
 func (UnimplementedHandler) PullsDeletePendingReview(ctx context.Context, params PullsDeletePendingReviewParams) (r PullsDeletePendingReviewRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsDeletePendingReviewRes), nil
 }
 
 // PullsDeleteReviewComment implements pulls/delete-review-comment operation.
@@ -5801,7 +6356,8 @@ func (UnimplementedHandler) PullsDeletePendingReview(ctx context.Context, params
 //
 // DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}
 func (UnimplementedHandler) PullsDeleteReviewComment(ctx context.Context, params PullsDeleteReviewCommentParams) (r PullsDeleteReviewCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsDeleteReviewCommentRes), nil
 }
 
 // PullsDismissReview implements pulls/dismiss-review operation.
@@ -5812,7 +6368,8 @@ func (UnimplementedHandler) PullsDeleteReviewComment(ctx context.Context, params
 //
 // PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals
 func (UnimplementedHandler) PullsDismissReview(ctx context.Context, req *PullsDismissReviewReq, params PullsDismissReviewParams) (r PullsDismissReviewRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsDismissReviewRes), nil
 }
 
 // PullsGet implements pulls/get operation.
@@ -5854,7 +6411,8 @@ func (UnimplementedHandler) PullsDismissReview(ctx context.Context, req *PullsDi
 //
 // GET /repos/{owner}/{repo}/pulls/{pull_number}
 func (UnimplementedHandler) PullsGet(ctx context.Context, params PullsGetParams) (r PullsGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsGetRes), nil
 }
 
 // PullsGetReview implements pulls/get-review operation.
@@ -5863,7 +6421,8 @@ func (UnimplementedHandler) PullsGet(ctx context.Context, params PullsGetParams)
 //
 // GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}
 func (UnimplementedHandler) PullsGetReview(ctx context.Context, params PullsGetReviewParams) (r PullsGetReviewRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsGetReviewRes), nil
 }
 
 // PullsGetReviewComment implements pulls/get-review-comment operation.
@@ -5872,7 +6431,8 @@ func (UnimplementedHandler) PullsGetReview(ctx context.Context, params PullsGetR
 //
 // GET /repos/{owner}/{repo}/pulls/comments/{comment_id}
 func (UnimplementedHandler) PullsGetReviewComment(ctx context.Context, params PullsGetReviewCommentParams) (r PullsGetReviewCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsGetReviewCommentRes), nil
 }
 
 // PullsList implements pulls/list operation.
@@ -5885,7 +6445,8 @@ func (UnimplementedHandler) PullsGetReviewComment(ctx context.Context, params Pu
 //
 // GET /repos/{owner}/{repo}/pulls
 func (UnimplementedHandler) PullsList(ctx context.Context, params PullsListParams) (r PullsListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsListRes), nil
 }
 
 // PullsListCommentsForReview implements pulls/list-comments-for-review operation.
@@ -5894,7 +6455,8 @@ func (UnimplementedHandler) PullsList(ctx context.Context, params PullsListParam
 //
 // GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments
 func (UnimplementedHandler) PullsListCommentsForReview(ctx context.Context, params PullsListCommentsForReviewParams) (r PullsListCommentsForReviewRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsListCommentsForReviewRes), nil
 }
 
 // PullsListCommits implements pulls/list-commits operation.
@@ -5905,17 +6467,20 @@ func (UnimplementedHandler) PullsListCommentsForReview(ctx context.Context, para
 //
 // GET /repos/{owner}/{repo}/pulls/{pull_number}/commits
 func (UnimplementedHandler) PullsListCommits(ctx context.Context, params PullsListCommitsParams) (r *PullsListCommitsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PullsListFiles implements pulls/list-files operation.
+	//
+	// **Note:** Responses include a maximum of 3000 files. The paginated response returns 30 files per
+	// page by default.
+	//
+	// GET /repos/{owner}/{repo}/pulls/{pull_number}/files
 }
 
-// PullsListFiles implements pulls/list-files operation.
-//
-// **Note:** Responses include a maximum of 3000 files. The paginated response returns 30 files per
-// page by default.
-//
-// GET /repos/{owner}/{repo}/pulls/{pull_number}/files
 func (UnimplementedHandler) PullsListFiles(ctx context.Context, params PullsListFilesParams) (r PullsListFilesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsListFilesRes), nil
 }
 
 // PullsListRequestedReviewers implements pulls/list-requested-reviewers operation.
@@ -5924,51 +6489,60 @@ func (UnimplementedHandler) PullsListFiles(ctx context.Context, params PullsList
 //
 // GET /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers
 func (UnimplementedHandler) PullsListRequestedReviewers(ctx context.Context, params PullsListRequestedReviewersParams) (r *PullRequestReviewRequestHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PullsListReviewComments implements pulls/list-review-comments operation.
+	//
+	// Lists all review comments for a pull request. By default, review comments are in ascending order
+	// by ID.
+	//
+	// GET /repos/{owner}/{repo}/pulls/{pull_number}/comments
 }
 
-// PullsListReviewComments implements pulls/list-review-comments operation.
-//
-// Lists all review comments for a pull request. By default, review comments are in ascending order
-// by ID.
-//
-// GET /repos/{owner}/{repo}/pulls/{pull_number}/comments
 func (UnimplementedHandler) PullsListReviewComments(ctx context.Context, params PullsListReviewCommentsParams) (r *PullsListReviewCommentsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PullsListReviewCommentsForRepo implements pulls/list-review-comments-for-repo operation.
+	//
+	// Lists review comments for all pull requests in a repository. By default, review comments are in
+	// ascending order by ID.
+	//
+	// GET /repos/{owner}/{repo}/pulls/comments
 }
 
-// PullsListReviewCommentsForRepo implements pulls/list-review-comments-for-repo operation.
-//
-// Lists review comments for all pull requests in a repository. By default, review comments are in
-// ascending order by ID.
-//
-// GET /repos/{owner}/{repo}/pulls/comments
 func (UnimplementedHandler) PullsListReviewCommentsForRepo(ctx context.Context, params PullsListReviewCommentsForRepoParams) (r *PullsListReviewCommentsForRepoOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PullsListReviews implements pulls/list-reviews operation.
+	//
+	// The list of reviews returns in chronological order.
+	//
+	// GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews
 }
 
-// PullsListReviews implements pulls/list-reviews operation.
-//
-// The list of reviews returns in chronological order.
-//
-// GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews
 func (UnimplementedHandler) PullsListReviews(ctx context.Context, params PullsListReviewsParams) (r *PullsListReviewsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// PullsMerge implements pulls/merge operation.
+	//
+	// This endpoint triggers [notifications](https://docs.github.
+	// com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating
+	// content too quickly using this endpoint may result in secondary rate limiting. See "[Secondary
+	// rate limits](https://docs.github.
+	// com/rest/overview/resources-in-the-rest-api#secondary-rate-limits)" and "[Dealing with secondary
+	// rate limits](https://docs.github.
+	// com/rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)" for details.
+	//
+	// PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge
 }
 
-// PullsMerge implements pulls/merge operation.
-//
-// This endpoint triggers [notifications](https://docs.github.
-// com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating
-// content too quickly using this endpoint may result in secondary rate limiting. See "[Secondary
-// rate limits](https://docs.github.
-// com/rest/overview/resources-in-the-rest-api#secondary-rate-limits)" and "[Dealing with secondary
-// rate limits](https://docs.github.
-// com/rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)" for details.
-//
-// PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge
 func (UnimplementedHandler) PullsMerge(ctx context.Context, req OptNilPullsMergeReq, params PullsMergeParams) (r PullsMergeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsMergeRes), nil
 }
 
 // PullsRemoveRequestedReviewers implements pulls/remove-requested-reviewers operation.
@@ -5977,7 +6551,8 @@ func (UnimplementedHandler) PullsMerge(ctx context.Context, req OptNilPullsMerge
 //
 // DELETE /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers
 func (UnimplementedHandler) PullsRemoveRequestedReviewers(ctx context.Context, req *PullsRemoveRequestedReviewersReq, params PullsRemoveRequestedReviewersParams) (r PullsRemoveRequestedReviewersRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsRemoveRequestedReviewersRes), nil
 }
 
 // PullsSubmitReview implements pulls/submit-review operation.
@@ -5986,7 +6561,8 @@ func (UnimplementedHandler) PullsRemoveRequestedReviewers(ctx context.Context, r
 //
 // POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events
 func (UnimplementedHandler) PullsSubmitReview(ctx context.Context, req *PullsSubmitReviewReq, params PullsSubmitReviewParams) (r PullsSubmitReviewRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsSubmitReviewRes), nil
 }
 
 // PullsUpdate implements pulls/update operation.
@@ -6002,7 +6578,8 @@ func (UnimplementedHandler) PullsSubmitReview(ctx context.Context, req *PullsSub
 //
 // PATCH /repos/{owner}/{repo}/pulls/{pull_number}
 func (UnimplementedHandler) PullsUpdate(ctx context.Context, req OptPullsUpdateReq, params PullsUpdateParams) (r PullsUpdateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsUpdateRes), nil
 }
 
 // PullsUpdateBranch implements pulls/update-branch operation.
@@ -6012,7 +6589,8 @@ func (UnimplementedHandler) PullsUpdate(ctx context.Context, req OptPullsUpdateR
 //
 // PUT /repos/{owner}/{repo}/pulls/{pull_number}/update-branch
 func (UnimplementedHandler) PullsUpdateBranch(ctx context.Context, req OptNilPullsUpdateBranchReq, params PullsUpdateBranchParams) (r PullsUpdateBranchRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsUpdateBranchRes), nil
 }
 
 // PullsUpdateReview implements pulls/update-review operation.
@@ -6021,7 +6599,8 @@ func (UnimplementedHandler) PullsUpdateBranch(ctx context.Context, req OptNilPul
 //
 // PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}
 func (UnimplementedHandler) PullsUpdateReview(ctx context.Context, req *PullsUpdateReviewReq, params PullsUpdateReviewParams) (r PullsUpdateReviewRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PullsUpdateReviewRes), nil
 }
 
 // PullsUpdateReviewComment implements pulls/update-review-comment operation.
@@ -6030,19 +6609,22 @@ func (UnimplementedHandler) PullsUpdateReview(ctx context.Context, req *PullsUpd
 //
 // PATCH /repos/{owner}/{repo}/pulls/comments/{comment_id}
 func (UnimplementedHandler) PullsUpdateReviewComment(ctx context.Context, req *PullsUpdateReviewCommentReq, params PullsUpdateReviewCommentParams) (r *PullRequestReviewComment, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// RateLimitGet implements rate-limit/get operation.
+	//
+	// **Note:** Accessing this endpoint does not count against your REST API rate limit.
+	// **Note:** The `rate` object is deprecated. If you're writing new API client code or updating
+	// existing code, you should use the `core` object instead of the `rate` object. The `core` object
+	// contains the same information that is present in the `rate` object.
+	//
+	// GET /rate_limit
 }
 
-// RateLimitGet implements rate-limit/get operation.
-//
-// **Note:** Accessing this endpoint does not count against your REST API rate limit.
-// **Note:** The `rate` object is deprecated. If you're writing new API client code or updating
-// existing code, you should use the `core` object instead of the `rate` object. The `core` object
-// contains the same information that is present in the `rate` object.
-//
-// GET /rate_limit
 func (UnimplementedHandler) RateLimitGet(ctx context.Context) (r RateLimitGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(RateLimitGetRes), nil
 }
 
 // ReactionsCreateForCommitComment implements reactions/create-for-commit-comment operation.
@@ -6053,7 +6635,8 @@ func (UnimplementedHandler) RateLimitGet(ctx context.Context) (r RateLimitGetRes
 //
 // POST /repos/{owner}/{repo}/comments/{comment_id}/reactions
 func (UnimplementedHandler) ReactionsCreateForCommitComment(ctx context.Context, req *ReactionsCreateForCommitCommentReq, params ReactionsCreateForCommitCommentParams) (r ReactionsCreateForCommitCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsCreateForCommitCommentRes), nil
 }
 
 // ReactionsCreateForIssue implements reactions/create-for-issue operation.
@@ -6063,7 +6646,8 @@ func (UnimplementedHandler) ReactionsCreateForCommitComment(ctx context.Context,
 //
 // POST /repos/{owner}/{repo}/issues/{issue_number}/reactions
 func (UnimplementedHandler) ReactionsCreateForIssue(ctx context.Context, req *ReactionsCreateForIssueReq, params ReactionsCreateForIssueParams) (r ReactionsCreateForIssueRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsCreateForIssueRes), nil
 }
 
 // ReactionsCreateForIssueComment implements reactions/create-for-issue-comment operation.
@@ -6074,7 +6658,8 @@ func (UnimplementedHandler) ReactionsCreateForIssue(ctx context.Context, req *Re
 //
 // POST /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions
 func (UnimplementedHandler) ReactionsCreateForIssueComment(ctx context.Context, req *ReactionsCreateForIssueCommentReq, params ReactionsCreateForIssueCommentParams) (r ReactionsCreateForIssueCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsCreateForIssueCommentRes), nil
 }
 
 // ReactionsCreateForPullRequestReviewComment implements reactions/create-for-pull-request-review-comment operation.
@@ -6085,7 +6670,8 @@ func (UnimplementedHandler) ReactionsCreateForIssueComment(ctx context.Context, 
 //
 // POST /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions
 func (UnimplementedHandler) ReactionsCreateForPullRequestReviewComment(ctx context.Context, req *ReactionsCreateForPullRequestReviewCommentReq, params ReactionsCreateForPullRequestReviewCommentParams) (r ReactionsCreateForPullRequestReviewCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsCreateForPullRequestReviewCommentRes), nil
 }
 
 // ReactionsCreateForRelease implements reactions/create-for-release operation.
@@ -6095,7 +6681,8 @@ func (UnimplementedHandler) ReactionsCreateForPullRequestReviewComment(ctx conte
 //
 // POST /repos/{owner}/{repo}/releases/{release_id}/reactions
 func (UnimplementedHandler) ReactionsCreateForRelease(ctx context.Context, req *ReactionsCreateForReleaseReq, params ReactionsCreateForReleaseParams) (r ReactionsCreateForReleaseRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsCreateForReleaseRes), nil
 }
 
 // ReactionsCreateForTeamDiscussionCommentInOrg implements reactions/create-for-team-discussion-comment-in-org operation.
@@ -6110,7 +6697,8 @@ func (UnimplementedHandler) ReactionsCreateForRelease(ctx context.Context, req *
 //
 // POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions
 func (UnimplementedHandler) ReactionsCreateForTeamDiscussionCommentInOrg(ctx context.Context, req *ReactionsCreateForTeamDiscussionCommentInOrgReq, params ReactionsCreateForTeamDiscussionCommentInOrgParams) (r ReactionsCreateForTeamDiscussionCommentInOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsCreateForTeamDiscussionCommentInOrgRes), nil
 }
 
 // ReactionsCreateForTeamDiscussionCommentLegacy implements reactions/create-for-team-discussion-comment-legacy operation.
@@ -6129,23 +6717,26 @@ func (UnimplementedHandler) ReactionsCreateForTeamDiscussionCommentInOrg(ctx con
 //
 // POST /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions
 func (UnimplementedHandler) ReactionsCreateForTeamDiscussionCommentLegacy(ctx context.Context, req *ReactionsCreateForTeamDiscussionCommentLegacyReq, params ReactionsCreateForTeamDiscussionCommentLegacyParams) (r *Reaction, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReactionsCreateForTeamDiscussionInOrg implements reactions/create-for-team-discussion-in-org operation.
+	//
+	// Create a reaction to a [team discussion](https://docs.github.com/rest/reference/teams#discussions).
+	//
+	//	OAuth access tokens require the `write:discussion` [scope](https://docs.github.
+	//
+	// com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/). A response with an HTTP `200`
+	// status means that you already added the reaction type to this team discussion.
+	// **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST
+	// /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
+	//
+	// POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions
 }
 
-// ReactionsCreateForTeamDiscussionInOrg implements reactions/create-for-team-discussion-in-org operation.
-//
-// Create a reaction to a [team discussion](https://docs.github.com/rest/reference/teams#discussions).
-//
-//	OAuth access tokens require the `write:discussion` [scope](https://docs.github.
-//
-// com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/). A response with an HTTP `200`
-// status means that you already added the reaction type to this team discussion.
-// **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST
-// /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
-//
-// POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions
 func (UnimplementedHandler) ReactionsCreateForTeamDiscussionInOrg(ctx context.Context, req *ReactionsCreateForTeamDiscussionInOrgReq, params ReactionsCreateForTeamDiscussionInOrgParams) (r ReactionsCreateForTeamDiscussionInOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsCreateForTeamDiscussionInOrgRes), nil
 }
 
 // ReactionsCreateForTeamDiscussionLegacy implements reactions/create-for-team-discussion-legacy operation.
@@ -6165,18 +6756,21 @@ func (UnimplementedHandler) ReactionsCreateForTeamDiscussionInOrg(ctx context.Co
 //
 // POST /teams/{team_id}/discussions/{discussion_number}/reactions
 func (UnimplementedHandler) ReactionsCreateForTeamDiscussionLegacy(ctx context.Context, req *ReactionsCreateForTeamDiscussionLegacyReq, params ReactionsCreateForTeamDiscussionLegacyParams) (r *Reaction, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReactionsDeleteForCommitComment implements reactions/delete-for-commit-comment operation.
+	//
+	// **Note:** You can also specify a repository by `repository_id` using the route `DELETE
+	// /repositories/:repository_id/comments/:comment_id/reactions/:reaction_id`.
+	// Delete a reaction to a [commit comment](https://docs.github.com/rest/reference/repos#comments).
+	//
+	// DELETE /repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}
 }
 
-// ReactionsDeleteForCommitComment implements reactions/delete-for-commit-comment operation.
-//
-// **Note:** You can also specify a repository by `repository_id` using the route `DELETE
-// /repositories/:repository_id/comments/:comment_id/reactions/:reaction_id`.
-// Delete a reaction to a [commit comment](https://docs.github.com/rest/reference/repos#comments).
-//
-// DELETE /repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}
 func (UnimplementedHandler) ReactionsDeleteForCommitComment(ctx context.Context, params ReactionsDeleteForCommitCommentParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReactionsDeleteForIssue implements reactions/delete-for-issue operation.
@@ -6187,7 +6781,8 @@ func (UnimplementedHandler) ReactionsDeleteForCommitComment(ctx context.Context,
 //
 // DELETE /repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}
 func (UnimplementedHandler) ReactionsDeleteForIssue(ctx context.Context, params ReactionsDeleteForIssueParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReactionsDeleteForIssueComment implements reactions/delete-for-issue-comment operation.
@@ -6198,7 +6793,8 @@ func (UnimplementedHandler) ReactionsDeleteForIssue(ctx context.Context, params 
 //
 // DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}
 func (UnimplementedHandler) ReactionsDeleteForIssueComment(ctx context.Context, params ReactionsDeleteForIssueCommentParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReactionsDeleteForPullRequestComment implements reactions/delete-for-pull-request-comment operation.
@@ -6210,7 +6806,8 @@ func (UnimplementedHandler) ReactionsDeleteForIssueComment(ctx context.Context, 
 //
 // DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}
 func (UnimplementedHandler) ReactionsDeleteForPullRequestComment(ctx context.Context, params ReactionsDeleteForPullRequestCommentParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReactionsDeleteForTeamDiscussion implements reactions/delete-for-team-discussion operation.
@@ -6226,7 +6823,8 @@ func (UnimplementedHandler) ReactionsDeleteForPullRequestComment(ctx context.Con
 //
 // DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}
 func (UnimplementedHandler) ReactionsDeleteForTeamDiscussion(ctx context.Context, params ReactionsDeleteForTeamDiscussionParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReactionsDeleteForTeamDiscussionComment implements reactions/delete-for-team-discussion-comment operation.
@@ -6240,7 +6838,8 @@ func (UnimplementedHandler) ReactionsDeleteForTeamDiscussion(ctx context.Context
 //
 // DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}
 func (UnimplementedHandler) ReactionsDeleteForTeamDiscussionComment(ctx context.Context, params ReactionsDeleteForTeamDiscussionCommentParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReactionsDeleteLegacy implements reactions/delete-legacy operation.
@@ -6258,7 +6857,8 @@ func (UnimplementedHandler) ReactionsDeleteForTeamDiscussionComment(ctx context.
 //
 // DELETE /reactions/{reaction_id}
 func (UnimplementedHandler) ReactionsDeleteLegacy(ctx context.Context, params ReactionsDeleteLegacyParams) (r ReactionsDeleteLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsDeleteLegacyRes), nil
 }
 
 // ReactionsListForCommitComment implements reactions/list-for-commit-comment operation.
@@ -6267,7 +6867,8 @@ func (UnimplementedHandler) ReactionsDeleteLegacy(ctx context.Context, params Re
 //
 // GET /repos/{owner}/{repo}/comments/{comment_id}/reactions
 func (UnimplementedHandler) ReactionsListForCommitComment(ctx context.Context, params ReactionsListForCommitCommentParams) (r ReactionsListForCommitCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsListForCommitCommentRes), nil
 }
 
 // ReactionsListForIssue implements reactions/list-for-issue operation.
@@ -6276,7 +6877,8 @@ func (UnimplementedHandler) ReactionsListForCommitComment(ctx context.Context, p
 //
 // GET /repos/{owner}/{repo}/issues/{issue_number}/reactions
 func (UnimplementedHandler) ReactionsListForIssue(ctx context.Context, params ReactionsListForIssueParams) (r ReactionsListForIssueRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsListForIssueRes), nil
 }
 
 // ReactionsListForIssueComment implements reactions/list-for-issue-comment operation.
@@ -6285,7 +6887,8 @@ func (UnimplementedHandler) ReactionsListForIssue(ctx context.Context, params Re
 //
 // GET /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions
 func (UnimplementedHandler) ReactionsListForIssueComment(ctx context.Context, params ReactionsListForIssueCommentParams) (r ReactionsListForIssueCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsListForIssueCommentRes), nil
 }
 
 // ReactionsListForPullRequestReviewComment implements reactions/list-for-pull-request-review-comment operation.
@@ -6295,7 +6898,8 @@ func (UnimplementedHandler) ReactionsListForIssueComment(ctx context.Context, pa
 //
 // GET /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions
 func (UnimplementedHandler) ReactionsListForPullRequestReviewComment(ctx context.Context, params ReactionsListForPullRequestReviewCommentParams) (r ReactionsListForPullRequestReviewCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReactionsListForPullRequestReviewCommentRes), nil
 }
 
 // ReactionsListForTeamDiscussionCommentInOrg implements reactions/list-for-team-discussion-comment-in-org operation.
@@ -6308,63 +6912,72 @@ func (UnimplementedHandler) ReactionsListForPullRequestReviewComment(ctx context
 //
 // GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions
 func (UnimplementedHandler) ReactionsListForTeamDiscussionCommentInOrg(ctx context.Context, params ReactionsListForTeamDiscussionCommentInOrgParams) (r *ReactionsListForTeamDiscussionCommentInOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReactionsListForTeamDiscussionCommentLegacy implements reactions/list-for-team-discussion-comment-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [`List reactions for a team discussion
+	// comment`](https://docs.github.
+	// com/rest/reference/reactions#list-reactions-for-a-team-discussion-comment) endpoint.
+	// List the reactions to a [team discussion comment](https://docs.github.
+	// com/rest/reference/teams#discussion-comments). OAuth access tokens require the `read:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions
 }
 
-// ReactionsListForTeamDiscussionCommentLegacy implements reactions/list-for-team-discussion-comment-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [`List reactions for a team discussion
-// comment`](https://docs.github.
-// com/rest/reference/reactions#list-reactions-for-a-team-discussion-comment) endpoint.
-// List the reactions to a [team discussion comment](https://docs.github.
-// com/rest/reference/teams#discussion-comments). OAuth access tokens require the `read:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions
 func (UnimplementedHandler) ReactionsListForTeamDiscussionCommentLegacy(ctx context.Context, params ReactionsListForTeamDiscussionCommentLegacyParams) (r *ReactionsListForTeamDiscussionCommentLegacyOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReactionsListForTeamDiscussionInOrg implements reactions/list-for-team-discussion-in-org operation.
+	//
+	// List the reactions to a [team discussion](https://docs.github.
+	// com/rest/reference/teams#discussions). OAuth access tokens require the `read:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET
+	// /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
+	//
+	// GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions
 }
 
-// ReactionsListForTeamDiscussionInOrg implements reactions/list-for-team-discussion-in-org operation.
-//
-// List the reactions to a [team discussion](https://docs.github.
-// com/rest/reference/teams#discussions). OAuth access tokens require the `read:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET
-// /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
-//
-// GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions
 func (UnimplementedHandler) ReactionsListForTeamDiscussionInOrg(ctx context.Context, params ReactionsListForTeamDiscussionInOrgParams) (r *ReactionsListForTeamDiscussionInOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReactionsListForTeamDiscussionLegacy implements reactions/list-for-team-discussion-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [`List reactions for a team
+	// discussion`](https://docs.github.
+	// com/rest/reference/reactions#list-reactions-for-a-team-discussion) endpoint.
+	// List the reactions to a [team discussion](https://docs.github.
+	// com/rest/reference/teams#discussions). OAuth access tokens require the `read:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/discussions/{discussion_number}/reactions
 }
 
-// ReactionsListForTeamDiscussionLegacy implements reactions/list-for-team-discussion-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [`List reactions for a team
-// discussion`](https://docs.github.
-// com/rest/reference/reactions#list-reactions-for-a-team-discussion) endpoint.
-// List the reactions to a [team discussion](https://docs.github.
-// com/rest/reference/teams#discussions). OAuth access tokens require the `read:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/discussions/{discussion_number}/reactions
 func (UnimplementedHandler) ReactionsListForTeamDiscussionLegacy(ctx context.Context, params ReactionsListForTeamDiscussionLegacyParams) (r *ReactionsListForTeamDiscussionLegacyOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposAcceptInvitation implements repos/accept-invitation operation.
+	//
+	// Accept a repository invitation.
+	//
+	// PATCH /user/repository_invitations/{invitation_id}
 }
 
-// ReposAcceptInvitation implements repos/accept-invitation operation.
-//
-// Accept a repository invitation.
-//
-// PATCH /user/repository_invitations/{invitation_id}
 func (UnimplementedHandler) ReposAcceptInvitation(ctx context.Context, params ReposAcceptInvitationParams) (r ReposAcceptInvitationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposAcceptInvitationRes), nil
 }
 
 // ReposAddAppAccessRestrictions implements repos/add-app-access-restrictions operation.
@@ -6387,7 +7000,8 @@ func (UnimplementedHandler) ReposAcceptInvitation(ctx context.Context, params Re
 //
 // POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps
 func (UnimplementedHandler) ReposAddAppAccessRestrictions(ctx context.Context, req OptReposAddAppAccessRestrictionsReq, params ReposAddAppAccessRestrictionsParams) (r ReposAddAppAccessRestrictionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposAddAppAccessRestrictionsRes), nil
 }
 
 // ReposAddCollaborator implements repos/add-collaborator operation.
@@ -6415,7 +7029,8 @@ func (UnimplementedHandler) ReposAddAppAccessRestrictions(ctx context.Context, r
 //
 // PUT /repos/{owner}/{repo}/collaborators/{username}
 func (UnimplementedHandler) ReposAddCollaborator(ctx context.Context, req OptReposAddCollaboratorReq, params ReposAddCollaboratorParams) (r ReposAddCollaboratorRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposAddCollaboratorRes), nil
 }
 
 // ReposAddStatusCheckContexts implements repos/add-status-check-contexts operation.
@@ -6428,7 +7043,8 @@ func (UnimplementedHandler) ReposAddCollaborator(ctx context.Context, req OptRep
 //
 // POST /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts
 func (UnimplementedHandler) ReposAddStatusCheckContexts(ctx context.Context, req OptReposAddStatusCheckContextsReq, params ReposAddStatusCheckContextsParams) (r ReposAddStatusCheckContextsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposAddStatusCheckContextsRes), nil
 }
 
 // ReposAddTeamAccessRestrictions implements repos/add-team-access-restrictions operation.
@@ -6451,7 +7067,8 @@ func (UnimplementedHandler) ReposAddStatusCheckContexts(ctx context.Context, req
 //
 // POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams
 func (UnimplementedHandler) ReposAddTeamAccessRestrictions(ctx context.Context, req OptReposAddTeamAccessRestrictionsReq, params ReposAddTeamAccessRestrictionsParams) (r ReposAddTeamAccessRestrictionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposAddTeamAccessRestrictionsRes), nil
 }
 
 // ReposAddUserAccessRestrictions implements repos/add-user-access-restrictions operation.
@@ -6473,7 +7090,8 @@ func (UnimplementedHandler) ReposAddTeamAccessRestrictions(ctx context.Context, 
 //
 // POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users
 func (UnimplementedHandler) ReposAddUserAccessRestrictions(ctx context.Context, req OptReposAddUserAccessRestrictionsReq, params ReposAddUserAccessRestrictionsParams) (r ReposAddUserAccessRestrictionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposAddUserAccessRestrictionsRes), nil
 }
 
 // ReposCheckCollaborator implements repos/check-collaborator operation.
@@ -6486,7 +7104,8 @@ func (UnimplementedHandler) ReposAddUserAccessRestrictions(ctx context.Context, 
 //
 // GET /repos/{owner}/{repo}/collaborators/{username}
 func (UnimplementedHandler) ReposCheckCollaborator(ctx context.Context, params ReposCheckCollaboratorParams) (r ReposCheckCollaboratorRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCheckCollaboratorRes), nil
 }
 
 // ReposCheckVulnerabilityAlerts implements repos/check-vulnerability-alerts operation.
@@ -6498,7 +7117,8 @@ func (UnimplementedHandler) ReposCheckCollaborator(ctx context.Context, params R
 //
 // GET /repos/{owner}/{repo}/vulnerability-alerts
 func (UnimplementedHandler) ReposCheckVulnerabilityAlerts(ctx context.Context, params ReposCheckVulnerabilityAlertsParams) (r ReposCheckVulnerabilityAlertsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCheckVulnerabilityAlertsRes), nil
 }
 
 // ReposCompareCommits implements repos/compare-commits operation.
@@ -6561,7 +7181,8 @@ func (UnimplementedHandler) ReposCheckVulnerabilityAlerts(ctx context.Context, p
 //
 // GET /repos/{owner}/{repo}/compare/{basehead}
 func (UnimplementedHandler) ReposCompareCommits(ctx context.Context, params ReposCompareCommitsParams) (r ReposCompareCommitsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCompareCommitsRes), nil
 }
 
 // ReposCreateAutolink implements repos/create-autolink operation.
@@ -6570,7 +7191,8 @@ func (UnimplementedHandler) ReposCompareCommits(ctx context.Context, params Repo
 //
 // POST /repos/{owner}/{repo}/autolinks
 func (UnimplementedHandler) ReposCreateAutolink(ctx context.Context, req *ReposCreateAutolinkReq, params ReposCreateAutolinkParams) (r ReposCreateAutolinkRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateAutolinkRes), nil
 }
 
 // ReposCreateCommitComment implements repos/create-commit-comment operation.
@@ -6586,7 +7208,8 @@ func (UnimplementedHandler) ReposCreateAutolink(ctx context.Context, req *ReposC
 //
 // POST /repos/{owner}/{repo}/commits/{commit_sha}/comments
 func (UnimplementedHandler) ReposCreateCommitComment(ctx context.Context, req *ReposCreateCommitCommentReq, params ReposCreateCommitCommentParams) (r ReposCreateCommitCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateCommitCommentRes), nil
 }
 
 // ReposCreateCommitSignatureProtection implements repos/create-commit-signature-protection operation.
@@ -6601,7 +7224,8 @@ func (UnimplementedHandler) ReposCreateCommitComment(ctx context.Context, req *R
 //
 // POST /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures
 func (UnimplementedHandler) ReposCreateCommitSignatureProtection(ctx context.Context, params ReposCreateCommitSignatureProtectionParams) (r ReposCreateCommitSignatureProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateCommitSignatureProtectionRes), nil
 }
 
 // ReposCreateCommitStatus implements repos/create-commit-status operation.
@@ -6612,16 +7236,19 @@ func (UnimplementedHandler) ReposCreateCommitSignatureProtection(ctx context.Con
 //
 // POST /repos/{owner}/{repo}/statuses/{sha}
 func (UnimplementedHandler) ReposCreateCommitStatus(ctx context.Context, req *ReposCreateCommitStatusReq, params ReposCreateCommitStatusParams) (r *StatusHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposCreateDeployKey implements repos/create-deploy-key operation.
+	//
+	// You can create a read-only deploy key.
+	//
+	// POST /repos/{owner}/{repo}/keys
 }
 
-// ReposCreateDeployKey implements repos/create-deploy-key operation.
-//
-// You can create a read-only deploy key.
-//
-// POST /repos/{owner}/{repo}/keys
 func (UnimplementedHandler) ReposCreateDeployKey(ctx context.Context, req *ReposCreateDeployKeyReq, params ReposCreateDeployKeyParams) (r ReposCreateDeployKeyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateDeployKeyRes), nil
 }
 
 // ReposCreateDeployment implements repos/create-deployment operation.
@@ -6685,7 +7312,8 @@ func (UnimplementedHandler) ReposCreateDeployKey(ctx context.Context, req *Repos
 //
 // POST /repos/{owner}/{repo}/deployments
 func (UnimplementedHandler) ReposCreateDeployment(ctx context.Context, req *ReposCreateDeploymentReq, params ReposCreateDeploymentParams) (r ReposCreateDeploymentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateDeploymentRes), nil
 }
 
 // ReposCreateDeploymentStatus implements repos/create-deployment-status operation.
@@ -6696,7 +7324,8 @@ func (UnimplementedHandler) ReposCreateDeployment(ctx context.Context, req *Repo
 //
 // POST /repos/{owner}/{repo}/deployments/{deployment_id}/statuses
 func (UnimplementedHandler) ReposCreateDeploymentStatus(ctx context.Context, req *ReposCreateDeploymentStatusReq, params ReposCreateDeploymentStatusParams) (r ReposCreateDeploymentStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateDeploymentStatusRes), nil
 }
 
 // ReposCreateDispatchEvent implements repos/create-dispatch-event operation.
@@ -6724,7 +7353,8 @@ func (UnimplementedHandler) ReposCreateDeploymentStatus(ctx context.Context, req
 //
 // POST /repos/{owner}/{repo}/dispatches
 func (UnimplementedHandler) ReposCreateDispatchEvent(ctx context.Context, req *ReposCreateDispatchEventReq, params ReposCreateDispatchEventParams) (r ReposCreateDispatchEventRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateDispatchEventRes), nil
 }
 
 // ReposCreateForAuthenticatedUser implements repos/create-for-authenticated-user operation.
@@ -6739,7 +7369,8 @@ func (UnimplementedHandler) ReposCreateDispatchEvent(ctx context.Context, req *R
 //
 // POST /user/repos
 func (UnimplementedHandler) ReposCreateForAuthenticatedUser(ctx context.Context, req *ReposCreateForAuthenticatedUserReq) (r ReposCreateForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateForAuthenticatedUserRes), nil
 }
 
 // ReposCreateFork implements repos/create-fork operation.
@@ -6751,7 +7382,8 @@ func (UnimplementedHandler) ReposCreateForAuthenticatedUser(ctx context.Context,
 //
 // POST /repos/{owner}/{repo}/forks
 func (UnimplementedHandler) ReposCreateFork(ctx context.Context, req OptNilReposCreateForkReq, params ReposCreateForkParams) (r ReposCreateForkRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateForkRes), nil
 }
 
 // ReposCreateInOrg implements repos/create-in-org operation.
@@ -6767,7 +7399,8 @@ func (UnimplementedHandler) ReposCreateFork(ctx context.Context, req OptNilRepos
 //
 // POST /orgs/{org}/repos
 func (UnimplementedHandler) ReposCreateInOrg(ctx context.Context, req *ReposCreateInOrgReq, params ReposCreateInOrgParams) (r ReposCreateInOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateInOrgRes), nil
 }
 
 // ReposCreateOrUpdateFileContents implements repos/create-or-update-file-contents operation.
@@ -6776,7 +7409,8 @@ func (UnimplementedHandler) ReposCreateInOrg(ctx context.Context, req *ReposCrea
 //
 // PUT /repos/{owner}/{repo}/contents/{path}
 func (UnimplementedHandler) ReposCreateOrUpdateFileContents(ctx context.Context, req *ReposCreateOrUpdateFileContentsReq, params ReposCreateOrUpdateFileContentsParams) (r ReposCreateOrUpdateFileContentsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateOrUpdateFileContentsRes), nil
 }
 
 // ReposCreatePagesSite implements repos/create-pages-site operation.
@@ -6786,7 +7420,8 @@ func (UnimplementedHandler) ReposCreateOrUpdateFileContents(ctx context.Context,
 //
 // POST /repos/{owner}/{repo}/pages
 func (UnimplementedHandler) ReposCreatePagesSite(ctx context.Context, req NilReposCreatePagesSiteReq, params ReposCreatePagesSiteParams) (r ReposCreatePagesSiteRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreatePagesSiteRes), nil
 }
 
 // ReposCreateRelease implements repos/create-release operation.
@@ -6802,7 +7437,8 @@ func (UnimplementedHandler) ReposCreatePagesSite(ctx context.Context, req NilRep
 //
 // POST /repos/{owner}/{repo}/releases
 func (UnimplementedHandler) ReposCreateRelease(ctx context.Context, req *ReposCreateReleaseReq, params ReposCreateReleaseParams) (r ReposCreateReleaseRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateReleaseRes), nil
 }
 
 // ReposCreateUsingTemplate implements repos/create-using-template operation.
@@ -6822,18 +7458,21 @@ func (UnimplementedHandler) ReposCreateRelease(ctx context.Context, req *ReposCr
 //
 // POST /repos/{template_owner}/{template_repo}/generate
 func (UnimplementedHandler) ReposCreateUsingTemplate(ctx context.Context, req *ReposCreateUsingTemplateReq, params ReposCreateUsingTemplateParams) (r *RepositoryHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposCreateWebhook implements repos/create-webhook operation.
+	//
+	// Repositories can have multiple webhooks installed. Each webhook should have a unique `config`.
+	// Multiple webhooks can
+	// share the same `config` as long as those webhooks do not have any `events` that overlap.
+	//
+	// POST /repos/{owner}/{repo}/hooks
 }
 
-// ReposCreateWebhook implements repos/create-webhook operation.
-//
-// Repositories can have multiple webhooks installed. Each webhook should have a unique `config`.
-// Multiple webhooks can
-// share the same `config` as long as those webhooks do not have any `events` that overlap.
-//
-// POST /repos/{owner}/{repo}/hooks
 func (UnimplementedHandler) ReposCreateWebhook(ctx context.Context, req OptNilReposCreateWebhookReq, params ReposCreateWebhookParams) (r ReposCreateWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposCreateWebhookRes), nil
 }
 
 // ReposDeclineInvitation implements repos/decline-invitation operation.
@@ -6842,7 +7481,8 @@ func (UnimplementedHandler) ReposCreateWebhook(ctx context.Context, req OptNilRe
 //
 // DELETE /user/repository_invitations/{invitation_id}
 func (UnimplementedHandler) ReposDeclineInvitation(ctx context.Context, params ReposDeclineInvitationParams) (r ReposDeclineInvitationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeclineInvitationRes), nil
 }
 
 // ReposDelete implements repos/delete operation.
@@ -6854,7 +7494,8 @@ func (UnimplementedHandler) ReposDeclineInvitation(ctx context.Context, params R
 //
 // DELETE /repos/{owner}/{repo}
 func (UnimplementedHandler) ReposDelete(ctx context.Context, params ReposDeleteParams) (r ReposDeleteRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeleteRes), nil
 }
 
 // ReposDeleteAccessRestrictions implements repos/delete-access-restrictions operation.
@@ -6868,7 +7509,8 @@ func (UnimplementedHandler) ReposDelete(ctx context.Context, params ReposDeleteP
 //
 // DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions
 func (UnimplementedHandler) ReposDeleteAccessRestrictions(ctx context.Context, params ReposDeleteAccessRestrictionsParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposDeleteAdminBranchProtection implements repos/delete-admin-branch-protection operation.
@@ -6883,7 +7525,8 @@ func (UnimplementedHandler) ReposDeleteAccessRestrictions(ctx context.Context, p
 //
 // DELETE /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins
 func (UnimplementedHandler) ReposDeleteAdminBranchProtection(ctx context.Context, params ReposDeleteAdminBranchProtectionParams) (r ReposDeleteAdminBranchProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeleteAdminBranchProtectionRes), nil
 }
 
 // ReposDeleteAnEnvironment implements repos/delete-an-environment operation.
@@ -6892,7 +7535,8 @@ func (UnimplementedHandler) ReposDeleteAdminBranchProtection(ctx context.Context
 //
 // DELETE /repos/{owner}/{repo}/environments/{environment_name}
 func (UnimplementedHandler) ReposDeleteAnEnvironment(ctx context.Context, params ReposDeleteAnEnvironmentParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposDeleteAutolink implements repos/delete-autolink operation.
@@ -6902,7 +7546,8 @@ func (UnimplementedHandler) ReposDeleteAnEnvironment(ctx context.Context, params
 //
 // DELETE /repos/{owner}/{repo}/autolinks/{autolink_id}
 func (UnimplementedHandler) ReposDeleteAutolink(ctx context.Context, params ReposDeleteAutolinkParams) (r ReposDeleteAutolinkRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeleteAutolinkRes), nil
 }
 
 // ReposDeleteBranchProtection implements repos/delete-branch-protection operation.
@@ -6915,7 +7560,8 @@ func (UnimplementedHandler) ReposDeleteAutolink(ctx context.Context, params Repo
 //
 // DELETE /repos/{owner}/{repo}/branches/{branch}/protection
 func (UnimplementedHandler) ReposDeleteBranchProtection(ctx context.Context, params ReposDeleteBranchProtectionParams) (r ReposDeleteBranchProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeleteBranchProtectionRes), nil
 }
 
 // ReposDeleteCommitComment implements repos/delete-commit-comment operation.
@@ -6924,7 +7570,8 @@ func (UnimplementedHandler) ReposDeleteBranchProtection(ctx context.Context, par
 //
 // DELETE /repos/{owner}/{repo}/comments/{comment_id}
 func (UnimplementedHandler) ReposDeleteCommitComment(ctx context.Context, params ReposDeleteCommitCommentParams) (r ReposDeleteCommitCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeleteCommitCommentRes), nil
 }
 
 // ReposDeleteCommitSignatureProtection implements repos/delete-commit-signature-protection operation.
@@ -6940,7 +7587,8 @@ func (UnimplementedHandler) ReposDeleteCommitComment(ctx context.Context, params
 //
 // DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures
 func (UnimplementedHandler) ReposDeleteCommitSignatureProtection(ctx context.Context, params ReposDeleteCommitSignatureProtectionParams) (r ReposDeleteCommitSignatureProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeleteCommitSignatureProtectionRes), nil
 }
 
 // ReposDeleteDeployKey implements repos/delete-deploy-key operation.
@@ -6950,7 +7598,8 @@ func (UnimplementedHandler) ReposDeleteCommitSignatureProtection(ctx context.Con
 //
 // DELETE /repos/{owner}/{repo}/keys/{key_id}
 func (UnimplementedHandler) ReposDeleteDeployKey(ctx context.Context, params ReposDeleteDeployKeyParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposDeleteDeployment implements repos/delete-deployment operation.
@@ -6967,7 +7616,8 @@ func (UnimplementedHandler) ReposDeleteDeployKey(ctx context.Context, params Rep
 //
 // DELETE /repos/{owner}/{repo}/deployments/{deployment_id}
 func (UnimplementedHandler) ReposDeleteDeployment(ctx context.Context, params ReposDeleteDeploymentParams) (r ReposDeleteDeploymentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeleteDeploymentRes), nil
 }
 
 // ReposDeleteFile implements repos/delete-file operation.
@@ -6983,7 +7633,8 @@ func (UnimplementedHandler) ReposDeleteDeployment(ctx context.Context, params Re
 //
 // DELETE /repos/{owner}/{repo}/contents/{path}
 func (UnimplementedHandler) ReposDeleteFile(ctx context.Context, req *ReposDeleteFileReq, params ReposDeleteFileParams) (r ReposDeleteFileRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeleteFileRes), nil
 }
 
 // ReposDeleteInvitation implements repos/delete-invitation operation.
@@ -6992,7 +7643,8 @@ func (UnimplementedHandler) ReposDeleteFile(ctx context.Context, req *ReposDelet
 //
 // DELETE /repos/{owner}/{repo}/invitations/{invitation_id}
 func (UnimplementedHandler) ReposDeleteInvitation(ctx context.Context, params ReposDeleteInvitationParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposDeletePagesSite implements repos/delete-pages-site operation.
@@ -7001,7 +7653,8 @@ func (UnimplementedHandler) ReposDeleteInvitation(ctx context.Context, params Re
 //
 // DELETE /repos/{owner}/{repo}/pages
 func (UnimplementedHandler) ReposDeletePagesSite(ctx context.Context, params ReposDeletePagesSiteParams) (r ReposDeletePagesSiteRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeletePagesSiteRes), nil
 }
 
 // ReposDeletePullRequestReviewProtection implements repos/delete-pull-request-review-protection operation.
@@ -7014,7 +7667,8 @@ func (UnimplementedHandler) ReposDeletePagesSite(ctx context.Context, params Rep
 //
 // DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews
 func (UnimplementedHandler) ReposDeletePullRequestReviewProtection(ctx context.Context, params ReposDeletePullRequestReviewProtectionParams) (r ReposDeletePullRequestReviewProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeletePullRequestReviewProtectionRes), nil
 }
 
 // ReposDeleteRelease implements repos/delete-release operation.
@@ -7023,7 +7677,8 @@ func (UnimplementedHandler) ReposDeletePullRequestReviewProtection(ctx context.C
 //
 // DELETE /repos/{owner}/{repo}/releases/{release_id}
 func (UnimplementedHandler) ReposDeleteRelease(ctx context.Context, params ReposDeleteReleaseParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposDeleteReleaseAsset implements repos/delete-release-asset operation.
@@ -7032,7 +7687,8 @@ func (UnimplementedHandler) ReposDeleteRelease(ctx context.Context, params Repos
 //
 // DELETE /repos/{owner}/{repo}/releases/assets/{asset_id}
 func (UnimplementedHandler) ReposDeleteReleaseAsset(ctx context.Context, params ReposDeleteReleaseAssetParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposDeleteWebhook implements repos/delete-webhook operation.
@@ -7041,7 +7697,8 @@ func (UnimplementedHandler) ReposDeleteReleaseAsset(ctx context.Context, params 
 //
 // DELETE /repos/{owner}/{repo}/hooks/{hook_id}
 func (UnimplementedHandler) ReposDeleteWebhook(ctx context.Context, params ReposDeleteWebhookParams) (r ReposDeleteWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposDeleteWebhookRes), nil
 }
 
 // ReposDisableAutomatedSecurityFixes implements repos/disable-automated-security-fixes operation.
@@ -7052,7 +7709,8 @@ func (UnimplementedHandler) ReposDeleteWebhook(ctx context.Context, params Repos
 //
 // DELETE /repos/{owner}/{repo}/automated-security-fixes
 func (UnimplementedHandler) ReposDisableAutomatedSecurityFixes(ctx context.Context, params ReposDisableAutomatedSecurityFixesParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposDisableLfsForRepo implements repos/disable-lfs-for-repo operation.
@@ -7061,7 +7719,8 @@ func (UnimplementedHandler) ReposDisableAutomatedSecurityFixes(ctx context.Conte
 //
 // DELETE /repos/{owner}/{repo}/lfs
 func (UnimplementedHandler) ReposDisableLfsForRepo(ctx context.Context, params ReposDisableLfsForRepoParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposDisableVulnerabilityAlerts implements repos/disable-vulnerability-alerts operation.
@@ -7073,7 +7732,8 @@ func (UnimplementedHandler) ReposDisableLfsForRepo(ctx context.Context, params R
 //
 // DELETE /repos/{owner}/{repo}/vulnerability-alerts
 func (UnimplementedHandler) ReposDisableVulnerabilityAlerts(ctx context.Context, params ReposDisableVulnerabilityAlertsParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposDownloadTarballArchive implements repos/download-tarball-archive operation.
@@ -7087,32 +7747,37 @@ func (UnimplementedHandler) ReposDisableVulnerabilityAlerts(ctx context.Context,
 //
 // GET /repos/{owner}/{repo}/tarball/{ref}
 func (UnimplementedHandler) ReposDownloadTarballArchive(ctx context.Context, params ReposDownloadTarballArchiveParams) (r *ReposDownloadTarballArchiveFound, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposDownloadZipballArchive implements repos/download-zipball-archive operation.
+	//
+	// Gets a redirect URL to download a zip archive for a repository. If you omit `:ref`, the
+	// repository’s default branch (usually
+	// `master`) will be used. Please make sure your HTTP framework is configured to follow redirects or
+	// you will need to use
+	// the `Location` header to make a second `GET` request.
+	// **Note**: For private repositories, these links are temporary and expire after five minutes.
+	//
+	// GET /repos/{owner}/{repo}/zipball/{ref}
 }
 
-// ReposDownloadZipballArchive implements repos/download-zipball-archive operation.
-//
-// Gets a redirect URL to download a zip archive for a repository. If you omit `:ref`, the
-// repository’s default branch (usually
-// `master`) will be used. Please make sure your HTTP framework is configured to follow redirects or
-// you will need to use
-// the `Location` header to make a second `GET` request.
-// **Note**: For private repositories, these links are temporary and expire after five minutes.
-//
-// GET /repos/{owner}/{repo}/zipball/{ref}
 func (UnimplementedHandler) ReposDownloadZipballArchive(ctx context.Context, params ReposDownloadZipballArchiveParams) (r *ReposDownloadZipballArchiveFound, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposEnableAutomatedSecurityFixes implements repos/enable-automated-security-fixes operation.
+	//
+	// Enables automated security fixes for a repository. The authenticated user must have admin access
+	// to the repository. For more information, see "[Configuring automated security fixes](https://help.
+	// github.com/en/articles/configuring-automated-security-fixes)".
+	//
+	// PUT /repos/{owner}/{repo}/automated-security-fixes
 }
 
-// ReposEnableAutomatedSecurityFixes implements repos/enable-automated-security-fixes operation.
-//
-// Enables automated security fixes for a repository. The authenticated user must have admin access
-// to the repository. For more information, see "[Configuring automated security fixes](https://help.
-// github.com/en/articles/configuring-automated-security-fixes)".
-//
-// PUT /repos/{owner}/{repo}/automated-security-fixes
 func (UnimplementedHandler) ReposEnableAutomatedSecurityFixes(ctx context.Context, params ReposEnableAutomatedSecurityFixesParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposEnableLfsForRepo implements repos/enable-lfs-for-repo operation.
@@ -7121,7 +7786,8 @@ func (UnimplementedHandler) ReposEnableAutomatedSecurityFixes(ctx context.Contex
 //
 // PUT /repos/{owner}/{repo}/lfs
 func (UnimplementedHandler) ReposEnableLfsForRepo(ctx context.Context, params ReposEnableLfsForRepoParams) (r ReposEnableLfsForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposEnableLfsForRepoRes), nil
 }
 
 // ReposEnableVulnerabilityAlerts implements repos/enable-vulnerability-alerts operation.
@@ -7133,7 +7799,8 @@ func (UnimplementedHandler) ReposEnableLfsForRepo(ctx context.Context, params Re
 //
 // PUT /repos/{owner}/{repo}/vulnerability-alerts
 func (UnimplementedHandler) ReposEnableVulnerabilityAlerts(ctx context.Context, params ReposEnableVulnerabilityAlertsParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposGet implements repos/get operation.
@@ -7143,7 +7810,8 @@ func (UnimplementedHandler) ReposEnableVulnerabilityAlerts(ctx context.Context, 
 //
 // GET /repos/{owner}/{repo}
 func (UnimplementedHandler) ReposGet(ctx context.Context, params ReposGetParams) (r ReposGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetRes), nil
 }
 
 // ReposGetAccessRestrictions implements repos/get-access-restrictions operation.
@@ -7159,7 +7827,8 @@ func (UnimplementedHandler) ReposGet(ctx context.Context, params ReposGetParams)
 //
 // GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions
 func (UnimplementedHandler) ReposGetAccessRestrictions(ctx context.Context, params ReposGetAccessRestrictionsParams) (r ReposGetAccessRestrictionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetAccessRestrictionsRes), nil
 }
 
 // ReposGetAdminBranchProtection implements repos/get-admin-branch-protection operation.
@@ -7172,20 +7841,23 @@ func (UnimplementedHandler) ReposGetAccessRestrictions(ctx context.Context, para
 //
 // GET /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins
 func (UnimplementedHandler) ReposGetAdminBranchProtection(ctx context.Context, params ReposGetAdminBranchProtectionParams) (r *ProtectedBranchAdminEnforced, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposGetAllStatusCheckContexts implements repos/get-all-status-check-contexts operation.
+	//
+	// Protected branches are available in public repositories with GitHub Free and GitHub Free for
+	// organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub
+	// Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's
+	// products](https://help.github.com/github/getting-started-with-github/githubs-products) in the
+	// GitHub Help documentation.
+	//
+	// GET /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts
 }
 
-// ReposGetAllStatusCheckContexts implements repos/get-all-status-check-contexts operation.
-//
-// Protected branches are available in public repositories with GitHub Free and GitHub Free for
-// organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub
-// Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's
-// products](https://help.github.com/github/getting-started-with-github/githubs-products) in the
-// GitHub Help documentation.
-//
-// GET /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts
 func (UnimplementedHandler) ReposGetAllStatusCheckContexts(ctx context.Context, params ReposGetAllStatusCheckContextsParams) (r ReposGetAllStatusCheckContextsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetAllStatusCheckContextsRes), nil
 }
 
 // ReposGetAllTopics implements repos/get-all-topics operation.
@@ -7194,7 +7866,8 @@ func (UnimplementedHandler) ReposGetAllStatusCheckContexts(ctx context.Context, 
 //
 // GET /repos/{owner}/{repo}/topics
 func (UnimplementedHandler) ReposGetAllTopics(ctx context.Context, params ReposGetAllTopicsParams) (r ReposGetAllTopicsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetAllTopicsRes), nil
 }
 
 // ReposGetAppsWithAccessToProtectedBranch implements repos/get-apps-with-access-to-protected-branch operation.
@@ -7210,7 +7883,8 @@ func (UnimplementedHandler) ReposGetAllTopics(ctx context.Context, params ReposG
 //
 // GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps
 func (UnimplementedHandler) ReposGetAppsWithAccessToProtectedBranch(ctx context.Context, params ReposGetAppsWithAccessToProtectedBranchParams) (r ReposGetAppsWithAccessToProtectedBranchRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetAppsWithAccessToProtectedBranchRes), nil
 }
 
 // ReposGetAutolink implements repos/get-autolink operation.
@@ -7220,7 +7894,8 @@ func (UnimplementedHandler) ReposGetAppsWithAccessToProtectedBranch(ctx context.
 //
 // GET /repos/{owner}/{repo}/autolinks/{autolink_id}
 func (UnimplementedHandler) ReposGetAutolink(ctx context.Context, params ReposGetAutolinkParams) (r ReposGetAutolinkRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetAutolinkRes), nil
 }
 
 // ReposGetBranch implements repos/get-branch operation.
@@ -7229,7 +7904,8 @@ func (UnimplementedHandler) ReposGetAutolink(ctx context.Context, params ReposGe
 //
 // GET /repos/{owner}/{repo}/branches/{branch}
 func (UnimplementedHandler) ReposGetBranch(ctx context.Context, params ReposGetBranchParams) (r ReposGetBranchRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetBranchRes), nil
 }
 
 // ReposGetBranchProtection implements repos/get-branch-protection operation.
@@ -7242,7 +7918,8 @@ func (UnimplementedHandler) ReposGetBranch(ctx context.Context, params ReposGetB
 //
 // GET /repos/{owner}/{repo}/branches/{branch}/protection
 func (UnimplementedHandler) ReposGetBranchProtection(ctx context.Context, params ReposGetBranchProtectionParams) (r ReposGetBranchProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetBranchProtectionRes), nil
 }
 
 // ReposGetClones implements repos/get-clones operation.
@@ -7252,7 +7929,8 @@ func (UnimplementedHandler) ReposGetBranchProtection(ctx context.Context, params
 //
 // GET /repos/{owner}/{repo}/traffic/clones
 func (UnimplementedHandler) ReposGetClones(ctx context.Context, params ReposGetClonesParams) (r ReposGetClonesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetClonesRes), nil
 }
 
 // ReposGetCodeFrequencyStats implements repos/get-code-frequency-stats operation.
@@ -7261,7 +7939,8 @@ func (UnimplementedHandler) ReposGetClones(ctx context.Context, params ReposGetC
 //
 // GET /repos/{owner}/{repo}/stats/code_frequency
 func (UnimplementedHandler) ReposGetCodeFrequencyStats(ctx context.Context, params ReposGetCodeFrequencyStatsParams) (r ReposGetCodeFrequencyStatsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetCodeFrequencyStatsRes), nil
 }
 
 // ReposGetCollaboratorPermissionLevel implements repos/get-collaborator-permission-level operation.
@@ -7271,7 +7950,8 @@ func (UnimplementedHandler) ReposGetCodeFrequencyStats(ctx context.Context, para
 //
 // GET /repos/{owner}/{repo}/collaborators/{username}/permission
 func (UnimplementedHandler) ReposGetCollaboratorPermissionLevel(ctx context.Context, params ReposGetCollaboratorPermissionLevelParams) (r ReposGetCollaboratorPermissionLevelRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetCollaboratorPermissionLevelRes), nil
 }
 
 // ReposGetCombinedStatusForRef implements repos/get-combined-status-for-ref operation.
@@ -7288,7 +7968,8 @@ func (UnimplementedHandler) ReposGetCollaboratorPermissionLevel(ctx context.Cont
 //
 // GET /repos/{owner}/{repo}/commits/{ref}/status
 func (UnimplementedHandler) ReposGetCombinedStatusForRef(ctx context.Context, params ReposGetCombinedStatusForRefParams) (r ReposGetCombinedStatusForRefRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetCombinedStatusForRefRes), nil
 }
 
 // ReposGetCommit implements repos/get-commit operation.
@@ -7343,7 +8024,8 @@ func (UnimplementedHandler) ReposGetCombinedStatusForRef(ctx context.Context, pa
 //
 // GET /repos/{owner}/{repo}/commits/{ref}
 func (UnimplementedHandler) ReposGetCommit(ctx context.Context, params ReposGetCommitParams) (r ReposGetCommitRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetCommitRes), nil
 }
 
 // ReposGetCommitActivityStats implements repos/get-commit-activity-stats operation.
@@ -7353,7 +8035,8 @@ func (UnimplementedHandler) ReposGetCommit(ctx context.Context, params ReposGetC
 //
 // GET /repos/{owner}/{repo}/stats/commit_activity
 func (UnimplementedHandler) ReposGetCommitActivityStats(ctx context.Context, params ReposGetCommitActivityStatsParams) (r ReposGetCommitActivityStatsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetCommitActivityStatsRes), nil
 }
 
 // ReposGetCommitComment implements repos/get-commit-comment operation.
@@ -7362,7 +8045,8 @@ func (UnimplementedHandler) ReposGetCommitActivityStats(ctx context.Context, par
 //
 // GET /repos/{owner}/{repo}/comments/{comment_id}
 func (UnimplementedHandler) ReposGetCommitComment(ctx context.Context, params ReposGetCommitCommentParams) (r ReposGetCommitCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetCommitCommentRes), nil
 }
 
 // ReposGetCommitSignatureProtection implements repos/get-commit-signature-protection operation.
@@ -7380,7 +8064,8 @@ func (UnimplementedHandler) ReposGetCommitComment(ctx context.Context, params Re
 //
 // GET /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures
 func (UnimplementedHandler) ReposGetCommitSignatureProtection(ctx context.Context, params ReposGetCommitSignatureProtectionParams) (r ReposGetCommitSignatureProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetCommitSignatureProtectionRes), nil
 }
 
 // ReposGetCommunityProfileMetrics implements repos/get-community-profile-metrics operation.
@@ -7398,21 +8083,24 @@ func (UnimplementedHandler) ReposGetCommitSignatureProtection(ctx context.Contex
 //
 // GET /repos/{owner}/{repo}/community/profile
 func (UnimplementedHandler) ReposGetCommunityProfileMetrics(ctx context.Context, params ReposGetCommunityProfileMetricsParams) (r *CommunityProfile, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposGetContributorsStats implements repos/get-contributors-stats operation.
+	//
+	// Returns the `total` number of commits authored by the contributor. In addition, the response
+	// includes a Weekly Hash (`weeks` array) with the following information:
+	// *   `w` - Start of the week, given as a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time).
+	// *   `a` - Number of additions
+	// *   `d` - Number of deletions
+	// *   `c` - Number of commits.
+	//
+	// GET /repos/{owner}/{repo}/stats/contributors
 }
 
-// ReposGetContributorsStats implements repos/get-contributors-stats operation.
-//
-// Returns the `total` number of commits authored by the contributor. In addition, the response
-// includes a Weekly Hash (`weeks` array) with the following information:
-// *   `w` - Start of the week, given as a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time).
-// *   `a` - Number of additions
-// *   `d` - Number of deletions
-// *   `c` - Number of commits.
-//
-// GET /repos/{owner}/{repo}/stats/contributors
 func (UnimplementedHandler) ReposGetContributorsStats(ctx context.Context, params ReposGetContributorsStatsParams) (r ReposGetContributorsStatsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetContributorsStatsRes), nil
 }
 
 // ReposGetDeployKey implements repos/get-deploy-key operation.
@@ -7421,7 +8109,8 @@ func (UnimplementedHandler) ReposGetContributorsStats(ctx context.Context, param
 //
 // GET /repos/{owner}/{repo}/keys/{key_id}
 func (UnimplementedHandler) ReposGetDeployKey(ctx context.Context, params ReposGetDeployKeyParams) (r ReposGetDeployKeyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetDeployKeyRes), nil
 }
 
 // ReposGetDeployment implements repos/get-deployment operation.
@@ -7430,7 +8119,8 @@ func (UnimplementedHandler) ReposGetDeployKey(ctx context.Context, params ReposG
 //
 // GET /repos/{owner}/{repo}/deployments/{deployment_id}
 func (UnimplementedHandler) ReposGetDeployment(ctx context.Context, params ReposGetDeploymentParams) (r ReposGetDeploymentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetDeploymentRes), nil
 }
 
 // ReposGetDeploymentStatus implements repos/get-deployment-status operation.
@@ -7439,7 +8129,8 @@ func (UnimplementedHandler) ReposGetDeployment(ctx context.Context, params Repos
 //
 // GET /repos/{owner}/{repo}/deployments/{deployment_id}/statuses/{status_id}
 func (UnimplementedHandler) ReposGetDeploymentStatus(ctx context.Context, params ReposGetDeploymentStatusParams) (r ReposGetDeploymentStatusRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetDeploymentStatusRes), nil
 }
 
 // ReposGetLatestPagesBuild implements repos/get-latest-pages-build operation.
@@ -7448,28 +8139,33 @@ func (UnimplementedHandler) ReposGetDeploymentStatus(ctx context.Context, params
 //
 // GET /repos/{owner}/{repo}/pages/builds/latest
 func (UnimplementedHandler) ReposGetLatestPagesBuild(ctx context.Context, params ReposGetLatestPagesBuildParams) (r *PageBuild, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposGetLatestRelease implements repos/get-latest-release operation.
+	//
+	// View the latest published full release for the repository.
+	// The latest release is the most recent non-prerelease, non-draft release, sorted by the
+	// `created_at` attribute. The `created_at` attribute is the date of the commit used for the release,
+	// and not the date when the release was drafted or published.
+	//
+	// GET /repos/{owner}/{repo}/releases/latest
 }
 
-// ReposGetLatestRelease implements repos/get-latest-release operation.
-//
-// View the latest published full release for the repository.
-// The latest release is the most recent non-prerelease, non-draft release, sorted by the
-// `created_at` attribute. The `created_at` attribute is the date of the commit used for the release,
-// and not the date when the release was drafted or published.
-//
-// GET /repos/{owner}/{repo}/releases/latest
 func (UnimplementedHandler) ReposGetLatestRelease(ctx context.Context, params ReposGetLatestReleaseParams) (r *Release, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposGetPages implements repos/get-pages operation.
+	//
+	// Get a GitHub Pages site.
+	//
+	// GET /repos/{owner}/{repo}/pages
 }
 
-// ReposGetPages implements repos/get-pages operation.
-//
-// Get a GitHub Pages site.
-//
-// GET /repos/{owner}/{repo}/pages
 func (UnimplementedHandler) ReposGetPages(ctx context.Context, params ReposGetPagesParams) (r ReposGetPagesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetPagesRes), nil
 }
 
 // ReposGetPagesBuild implements repos/get-pages-build operation.
@@ -7478,22 +8174,25 @@ func (UnimplementedHandler) ReposGetPages(ctx context.Context, params ReposGetPa
 //
 // GET /repos/{owner}/{repo}/pages/builds/{build_id}
 func (UnimplementedHandler) ReposGetPagesBuild(ctx context.Context, params ReposGetPagesBuildParams) (r *PageBuild, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposGetPagesHealthCheck implements repos/get-pages-health-check operation.
+	//
+	// Gets a health check of the DNS settings for the `CNAME` record configured for a repository's
+	// GitHub Pages.
+	// The first request to this endpoint returns a `202 Accepted` status and starts an asynchronous
+	// background task to get the results for the domain. After the background task completes, subsequent
+	// requests to this endpoint return a `200 OK` status with the health check results in the response.
+	// Users must have admin or owner permissions. GitHub Apps must have the `pages:write` and
+	// `administration:write` permission to use this endpoint.
+	//
+	// GET /repos/{owner}/{repo}/pages/health
 }
 
-// ReposGetPagesHealthCheck implements repos/get-pages-health-check operation.
-//
-// Gets a health check of the DNS settings for the `CNAME` record configured for a repository's
-// GitHub Pages.
-// The first request to this endpoint returns a `202 Accepted` status and starts an asynchronous
-// background task to get the results for the domain. After the background task completes, subsequent
-// requests to this endpoint return a `200 OK` status with the health check results in the response.
-// Users must have admin or owner permissions. GitHub Apps must have the `pages:write` and
-// `administration:write` permission to use this endpoint.
-//
-// GET /repos/{owner}/{repo}/pages/health
 func (UnimplementedHandler) ReposGetPagesHealthCheck(ctx context.Context, params ReposGetPagesHealthCheckParams) (r ReposGetPagesHealthCheckRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetPagesHealthCheckRes), nil
 }
 
 // ReposGetParticipationStats implements repos/get-participation-stats operation.
@@ -7505,7 +8204,8 @@ func (UnimplementedHandler) ReposGetPagesHealthCheck(ctx context.Context, params
 //
 // GET /repos/{owner}/{repo}/stats/participation
 func (UnimplementedHandler) ReposGetParticipationStats(ctx context.Context, params ReposGetParticipationStatsParams) (r ReposGetParticipationStatsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetParticipationStatsRes), nil
 }
 
 // ReposGetPullRequestReviewProtection implements repos/get-pull-request-review-protection operation.
@@ -7518,21 +8218,24 @@ func (UnimplementedHandler) ReposGetParticipationStats(ctx context.Context, para
 //
 // GET /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews
 func (UnimplementedHandler) ReposGetPullRequestReviewProtection(ctx context.Context, params ReposGetPullRequestReviewProtectionParams) (r *ProtectedBranchPullRequestReview, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposGetPunchCardStats implements repos/get-punch-card-stats operation.
+	//
+	// Each array contains the day number, hour number, and number of commits:
+	// *   `0-6`: Sunday - Saturday
+	// *   `0-23`: Hour of day
+	// *   Number of commits
+	// For example, `[2, 14, 25]` indicates that there were 25 total commits, during the 2:00pm hour on
+	// Tuesdays. All times are based on the time zone of individual commits.
+	//
+	// GET /repos/{owner}/{repo}/stats/punch_card
 }
 
-// ReposGetPunchCardStats implements repos/get-punch-card-stats operation.
-//
-// Each array contains the day number, hour number, and number of commits:
-// *   `0-6`: Sunday - Saturday
-// *   `0-23`: Hour of day
-// *   Number of commits
-// For example, `[2, 14, 25]` indicates that there were 25 total commits, during the 2:00pm hour on
-// Tuesdays. All times are based on the time zone of individual commits.
-//
-// GET /repos/{owner}/{repo}/stats/punch_card
 func (UnimplementedHandler) ReposGetPunchCardStats(ctx context.Context, params ReposGetPunchCardStatsParams) (r ReposGetPunchCardStatsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetPunchCardStatsRes), nil
 }
 
 // ReposGetReadme implements repos/get-readme operation.
@@ -7543,7 +8246,8 @@ func (UnimplementedHandler) ReposGetPunchCardStats(ctx context.Context, params R
 //
 // GET /repos/{owner}/{repo}/readme
 func (UnimplementedHandler) ReposGetReadme(ctx context.Context, params ReposGetReadmeParams) (r ReposGetReadmeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetReadmeRes), nil
 }
 
 // ReposGetReadmeInDirectory implements repos/get-readme-in-directory operation.
@@ -7554,7 +8258,8 @@ func (UnimplementedHandler) ReposGetReadme(ctx context.Context, params ReposGetR
 //
 // GET /repos/{owner}/{repo}/readme/{dir}
 func (UnimplementedHandler) ReposGetReadmeInDirectory(ctx context.Context, params ReposGetReadmeInDirectoryParams) (r ReposGetReadmeInDirectoryRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetReadmeInDirectoryRes), nil
 }
 
 // ReposGetRelease implements repos/get-release operation.
@@ -7565,7 +8270,8 @@ func (UnimplementedHandler) ReposGetReadmeInDirectory(ctx context.Context, param
 //
 // GET /repos/{owner}/{repo}/releases/{release_id}
 func (UnimplementedHandler) ReposGetRelease(ctx context.Context, params ReposGetReleaseParams) (r ReposGetReleaseRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetReleaseRes), nil
 }
 
 // ReposGetReleaseAsset implements repos/get-release-asset operation.
@@ -7577,7 +8283,8 @@ func (UnimplementedHandler) ReposGetRelease(ctx context.Context, params ReposGet
 //
 // GET /repos/{owner}/{repo}/releases/assets/{asset_id}
 func (UnimplementedHandler) ReposGetReleaseAsset(ctx context.Context, params ReposGetReleaseAssetParams) (r ReposGetReleaseAssetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetReleaseAssetRes), nil
 }
 
 // ReposGetReleaseByTag implements repos/get-release-by-tag operation.
@@ -7586,7 +8293,8 @@ func (UnimplementedHandler) ReposGetReleaseAsset(ctx context.Context, params Rep
 //
 // GET /repos/{owner}/{repo}/releases/tags/{tag}
 func (UnimplementedHandler) ReposGetReleaseByTag(ctx context.Context, params ReposGetReleaseByTagParams) (r ReposGetReleaseByTagRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetReleaseByTagRes), nil
 }
 
 // ReposGetStatusChecksProtection implements repos/get-status-checks-protection operation.
@@ -7599,7 +8307,8 @@ func (UnimplementedHandler) ReposGetReleaseByTag(ctx context.Context, params Rep
 //
 // GET /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks
 func (UnimplementedHandler) ReposGetStatusChecksProtection(ctx context.Context, params ReposGetStatusChecksProtectionParams) (r ReposGetStatusChecksProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetStatusChecksProtectionRes), nil
 }
 
 // ReposGetTeamsWithAccessToProtectedBranch implements repos/get-teams-with-access-to-protected-branch operation.
@@ -7613,7 +8322,8 @@ func (UnimplementedHandler) ReposGetStatusChecksProtection(ctx context.Context, 
 //
 // GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams
 func (UnimplementedHandler) ReposGetTeamsWithAccessToProtectedBranch(ctx context.Context, params ReposGetTeamsWithAccessToProtectedBranchParams) (r ReposGetTeamsWithAccessToProtectedBranchRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetTeamsWithAccessToProtectedBranchRes), nil
 }
 
 // ReposGetTopPaths implements repos/get-top-paths operation.
@@ -7622,7 +8332,8 @@ func (UnimplementedHandler) ReposGetTeamsWithAccessToProtectedBranch(ctx context
 //
 // GET /repos/{owner}/{repo}/traffic/popular/paths
 func (UnimplementedHandler) ReposGetTopPaths(ctx context.Context, params ReposGetTopPathsParams) (r ReposGetTopPathsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetTopPathsRes), nil
 }
 
 // ReposGetTopReferrers implements repos/get-top-referrers operation.
@@ -7631,7 +8342,8 @@ func (UnimplementedHandler) ReposGetTopPaths(ctx context.Context, params ReposGe
 //
 // GET /repos/{owner}/{repo}/traffic/popular/referrers
 func (UnimplementedHandler) ReposGetTopReferrers(ctx context.Context, params ReposGetTopReferrersParams) (r ReposGetTopReferrersRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetTopReferrersRes), nil
 }
 
 // ReposGetUsersWithAccessToProtectedBranch implements repos/get-users-with-access-to-protected-branch operation.
@@ -7645,7 +8357,8 @@ func (UnimplementedHandler) ReposGetTopReferrers(ctx context.Context, params Rep
 //
 // GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users
 func (UnimplementedHandler) ReposGetUsersWithAccessToProtectedBranch(ctx context.Context, params ReposGetUsersWithAccessToProtectedBranchParams) (r ReposGetUsersWithAccessToProtectedBranchRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetUsersWithAccessToProtectedBranchRes), nil
 }
 
 // ReposGetViews implements repos/get-views operation.
@@ -7655,7 +8368,8 @@ func (UnimplementedHandler) ReposGetUsersWithAccessToProtectedBranch(ctx context
 //
 // GET /repos/{owner}/{repo}/traffic/views
 func (UnimplementedHandler) ReposGetViews(ctx context.Context, params ReposGetViewsParams) (r ReposGetViewsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetViewsRes), nil
 }
 
 // ReposGetWebhook implements repos/get-webhook operation.
@@ -7666,7 +8380,8 @@ func (UnimplementedHandler) ReposGetViews(ctx context.Context, params ReposGetVi
 //
 // GET /repos/{owner}/{repo}/hooks/{hook_id}
 func (UnimplementedHandler) ReposGetWebhook(ctx context.Context, params ReposGetWebhookParams) (r ReposGetWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetWebhookRes), nil
 }
 
 // ReposGetWebhookConfigForRepo implements repos/get-webhook-config-for-repo operation.
@@ -7679,16 +8394,19 @@ func (UnimplementedHandler) ReposGetWebhook(ctx context.Context, params ReposGet
 //
 // GET /repos/{owner}/{repo}/hooks/{hook_id}/config
 func (UnimplementedHandler) ReposGetWebhookConfigForRepo(ctx context.Context, params ReposGetWebhookConfigForRepoParams) (r *WebhookConfig, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposGetWebhookDelivery implements repos/get-webhook-delivery operation.
+	//
+	// Returns a delivery for a webhook configured in a repository.
+	//
+	// GET /repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}
 }
 
-// ReposGetWebhookDelivery implements repos/get-webhook-delivery operation.
-//
-// Returns a delivery for a webhook configured in a repository.
-//
-// GET /repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}
 func (UnimplementedHandler) ReposGetWebhookDelivery(ctx context.Context, params ReposGetWebhookDeliveryParams) (r ReposGetWebhookDeliveryRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposGetWebhookDeliveryRes), nil
 }
 
 // ReposListAutolinks implements repos/list-autolinks operation.
@@ -7698,16 +8416,19 @@ func (UnimplementedHandler) ReposGetWebhookDelivery(ctx context.Context, params 
 //
 // GET /repos/{owner}/{repo}/autolinks
 func (UnimplementedHandler) ReposListAutolinks(ctx context.Context, params ReposListAutolinksParams) (r []Autolink, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListBranches implements repos/list-branches operation.
+	//
+	// List branches.
+	//
+	// GET /repos/{owner}/{repo}/branches
 }
 
-// ReposListBranches implements repos/list-branches operation.
-//
-// List branches.
-//
-// GET /repos/{owner}/{repo}/branches
 func (UnimplementedHandler) ReposListBranches(ctx context.Context, params ReposListBranchesParams) (r ReposListBranchesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListBranchesRes), nil
 }
 
 // ReposListBranchesForHeadCommit implements repos/list-branches-for-head-commit operation.
@@ -7721,7 +8442,8 @@ func (UnimplementedHandler) ReposListBranches(ctx context.Context, params ReposL
 //
 // GET /repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head
 func (UnimplementedHandler) ReposListBranchesForHeadCommit(ctx context.Context, params ReposListBranchesForHeadCommitParams) (r ReposListBranchesForHeadCommitRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListBranchesForHeadCommitRes), nil
 }
 
 // ReposListCollaborators implements repos/list-collaborators operation.
@@ -7734,7 +8456,8 @@ func (UnimplementedHandler) ReposListBranchesForHeadCommit(ctx context.Context, 
 //
 // GET /repos/{owner}/{repo}/collaborators
 func (UnimplementedHandler) ReposListCollaborators(ctx context.Context, params ReposListCollaboratorsParams) (r ReposListCollaboratorsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListCollaboratorsRes), nil
 }
 
 // ReposListCommentsForCommit implements repos/list-comments-for-commit operation.
@@ -7743,31 +8466,36 @@ func (UnimplementedHandler) ReposListCollaborators(ctx context.Context, params R
 //
 // GET /repos/{owner}/{repo}/commits/{commit_sha}/comments
 func (UnimplementedHandler) ReposListCommentsForCommit(ctx context.Context, params ReposListCommentsForCommitParams) (r *ReposListCommentsForCommitOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListCommitCommentsForRepo implements repos/list-commit-comments-for-repo operation.
+	//
+	// Commit Comments use [these custom media types](https://docs.github.
+	// com/rest/reference/repos#custom-media-types). You can read more about the use of media types in
+	// the API [here](https://docs.github.com/rest/overview/media-types/).
+	// Comments are ordered by ascending ID.
+	//
+	// GET /repos/{owner}/{repo}/comments
 }
 
-// ReposListCommitCommentsForRepo implements repos/list-commit-comments-for-repo operation.
-//
-// Commit Comments use [these custom media types](https://docs.github.
-// com/rest/reference/repos#custom-media-types). You can read more about the use of media types in
-// the API [here](https://docs.github.com/rest/overview/media-types/).
-// Comments are ordered by ascending ID.
-//
-// GET /repos/{owner}/{repo}/comments
 func (UnimplementedHandler) ReposListCommitCommentsForRepo(ctx context.Context, params ReposListCommitCommentsForRepoParams) (r *ReposListCommitCommentsForRepoOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListCommitStatusesForRef implements repos/list-commit-statuses-for-ref operation.
+	//
+	// Users with pull access in a repository can view commit statuses for a given ref. The ref can be a
+	// SHA, a branch name, or a tag name. Statuses are returned in reverse chronological order. The first
+	// status in the list will be the latest one.
+	// This resource is also available via a legacy route: `GET /repos/:owner/:repo/statuses/:ref`.
+	//
+	// GET /repos/{owner}/{repo}/commits/{ref}/statuses
 }
 
-// ReposListCommitStatusesForRef implements repos/list-commit-statuses-for-ref operation.
-//
-// Users with pull access in a repository can view commit statuses for a given ref. The ref can be a
-// SHA, a branch name, or a tag name. Statuses are returned in reverse chronological order. The first
-// status in the list will be the latest one.
-// This resource is also available via a legacy route: `GET /repos/:owner/:repo/statuses/:ref`.
-//
-// GET /repos/{owner}/{repo}/commits/{ref}/statuses
 func (UnimplementedHandler) ReposListCommitStatusesForRef(ctx context.Context, params ReposListCommitStatusesForRefParams) (r ReposListCommitStatusesForRefRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListCommitStatusesForRefRes), nil
 }
 
 // ReposListCommits implements repos/list-commits operation.
@@ -7807,7 +8535,8 @@ func (UnimplementedHandler) ReposListCommitStatusesForRef(ctx context.Context, p
 //
 // GET /repos/{owner}/{repo}/commits
 func (UnimplementedHandler) ReposListCommits(ctx context.Context, params ReposListCommitsParams) (r ReposListCommitsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListCommitsRes), nil
 }
 
 // ReposListContributors implements repos/list-contributors operation.
@@ -7822,7 +8551,8 @@ func (UnimplementedHandler) ReposListCommits(ctx context.Context, params ReposLi
 //
 // GET /repos/{owner}/{repo}/contributors
 func (UnimplementedHandler) ReposListContributors(ctx context.Context, params ReposListContributorsParams) (r ReposListContributorsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListContributorsRes), nil
 }
 
 // ReposListDeployKeys implements repos/list-deploy-keys operation.
@@ -7831,16 +8561,19 @@ func (UnimplementedHandler) ReposListContributors(ctx context.Context, params Re
 //
 // GET /repos/{owner}/{repo}/keys
 func (UnimplementedHandler) ReposListDeployKeys(ctx context.Context, params ReposListDeployKeysParams) (r *ReposListDeployKeysOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListDeploymentStatuses implements repos/list-deployment-statuses operation.
+	//
+	// Users with pull access can view deployment statuses for a deployment:.
+	//
+	// GET /repos/{owner}/{repo}/deployments/{deployment_id}/statuses
 }
 
-// ReposListDeploymentStatuses implements repos/list-deployment-statuses operation.
-//
-// Users with pull access can view deployment statuses for a deployment:.
-//
-// GET /repos/{owner}/{repo}/deployments/{deployment_id}/statuses
 func (UnimplementedHandler) ReposListDeploymentStatuses(ctx context.Context, params ReposListDeploymentStatusesParams) (r ReposListDeploymentStatusesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListDeploymentStatusesRes), nil
 }
 
 // ReposListDeployments implements repos/list-deployments operation.
@@ -7849,19 +8582,22 @@ func (UnimplementedHandler) ReposListDeploymentStatuses(ctx context.Context, par
 //
 // GET /repos/{owner}/{repo}/deployments
 func (UnimplementedHandler) ReposListDeployments(ctx context.Context, params ReposListDeploymentsParams) (r *ReposListDeploymentsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListForAuthenticatedUser implements repos/list-for-authenticated-user operation.
+	//
+	// Lists repositories that the authenticated user has explicit permission (`:read`, `:write`, or
+	// `:admin`) to access.
+	// The authenticated user has explicit permission to access repositories they own, repositories where
+	// they are a collaborator, and repositories that they can access through an organization membership.
+	//
+	// GET /user/repos
 }
 
-// ReposListForAuthenticatedUser implements repos/list-for-authenticated-user operation.
-//
-// Lists repositories that the authenticated user has explicit permission (`:read`, `:write`, or
-// `:admin`) to access.
-// The authenticated user has explicit permission to access repositories they own, repositories where
-// they are a collaborator, and repositories that they can access through an organization membership.
-//
-// GET /user/repos
 func (UnimplementedHandler) ReposListForAuthenticatedUser(ctx context.Context, params ReposListForAuthenticatedUserParams) (r ReposListForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListForAuthenticatedUserRes), nil
 }
 
 // ReposListForOrg implements repos/list-for-org operation.
@@ -7870,26 +8606,31 @@ func (UnimplementedHandler) ReposListForAuthenticatedUser(ctx context.Context, p
 //
 // GET /orgs/{org}/repos
 func (UnimplementedHandler) ReposListForOrg(ctx context.Context, params ReposListForOrgParams) (r *ReposListForOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListForUser implements repos/list-for-user operation.
+	//
+	// Lists public repositories for the specified user. Note: For GitHub AE, this endpoint will list
+	// internal repositories for the specified user.
+	//
+	// GET /users/{username}/repos
 }
 
-// ReposListForUser implements repos/list-for-user operation.
-//
-// Lists public repositories for the specified user. Note: For GitHub AE, this endpoint will list
-// internal repositories for the specified user.
-//
-// GET /users/{username}/repos
 func (UnimplementedHandler) ReposListForUser(ctx context.Context, params ReposListForUserParams) (r *ReposListForUserOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListForks implements repos/list-forks operation.
+	//
+	// List forks.
+	//
+	// GET /repos/{owner}/{repo}/forks
 }
 
-// ReposListForks implements repos/list-forks operation.
-//
-// List forks.
-//
-// GET /repos/{owner}/{repo}/forks
 func (UnimplementedHandler) ReposListForks(ctx context.Context, params ReposListForksParams) (r ReposListForksRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListForksRes), nil
 }
 
 // ReposListInvitations implements repos/list-invitations operation.
@@ -7899,17 +8640,20 @@ func (UnimplementedHandler) ReposListForks(ctx context.Context, params ReposList
 //
 // GET /repos/{owner}/{repo}/invitations
 func (UnimplementedHandler) ReposListInvitations(ctx context.Context, params ReposListInvitationsParams) (r *ReposListInvitationsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListInvitationsForAuthenticatedUser implements repos/list-invitations-for-authenticated-user operation.
+	//
+	// When authenticating as a user, this endpoint will list all currently open repository invitations
+	// for that user.
+	//
+	// GET /user/repository_invitations
 }
 
-// ReposListInvitationsForAuthenticatedUser implements repos/list-invitations-for-authenticated-user operation.
-//
-// When authenticating as a user, this endpoint will list all currently open repository invitations
-// for that user.
-//
-// GET /user/repository_invitations
 func (UnimplementedHandler) ReposListInvitationsForAuthenticatedUser(ctx context.Context, params ReposListInvitationsForAuthenticatedUserParams) (r ReposListInvitationsForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListInvitationsForAuthenticatedUserRes), nil
 }
 
 // ReposListLanguages implements repos/list-languages operation.
@@ -7919,7 +8663,8 @@ func (UnimplementedHandler) ReposListInvitationsForAuthenticatedUser(ctx context
 //
 // GET /repos/{owner}/{repo}/languages
 func (UnimplementedHandler) ReposListLanguages(ctx context.Context, params ReposListLanguagesParams) (r Language, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(Language), nil
 }
 
 // ReposListPagesBuilds implements repos/list-pages-builds operation.
@@ -7928,22 +8673,25 @@ func (UnimplementedHandler) ReposListLanguages(ctx context.Context, params Repos
 //
 // GET /repos/{owner}/{repo}/pages/builds
 func (UnimplementedHandler) ReposListPagesBuilds(ctx context.Context, params ReposListPagesBuildsParams) (r *ReposListPagesBuildsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListPublic implements repos/list-public operation.
+	//
+	// Lists all public repositories in the order that they were created.
+	// Note:
+	// - For GitHub Enterprise Server, this endpoint will only list repositories available to all users
+	// on the enterprise.
+	// - Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://docs.
+	// github.com/rest/overview/resources-in-the-rest-api#link-header) to get the URL for the next page
+	// of repositories.
+	//
+	// GET /repositories
 }
 
-// ReposListPublic implements repos/list-public operation.
-//
-// Lists all public repositories in the order that they were created.
-// Note:
-// - For GitHub Enterprise Server, this endpoint will only list repositories available to all users
-// on the enterprise.
-// - Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://docs.
-// github.com/rest/overview/resources-in-the-rest-api#link-header) to get the URL for the next page
-// of repositories.
-//
-// GET /repositories
 func (UnimplementedHandler) ReposListPublic(ctx context.Context, params ReposListPublicParams) (r ReposListPublicRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListPublicRes), nil
 }
 
 // ReposListPullRequestsAssociatedWithCommit implements repos/list-pull-requests-associated-with-commit operation.
@@ -7957,29 +8705,34 @@ func (UnimplementedHandler) ReposListPublic(ctx context.Context, params ReposLis
 //
 // GET /repos/{owner}/{repo}/commits/{commit_sha}/pulls
 func (UnimplementedHandler) ReposListPullRequestsAssociatedWithCommit(ctx context.Context, params ReposListPullRequestsAssociatedWithCommitParams) (r *ReposListPullRequestsAssociatedWithCommitOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListReleaseAssets implements repos/list-release-assets operation.
+	//
+	// List release assets.
+	//
+	// GET /repos/{owner}/{repo}/releases/{release_id}/assets
 }
 
-// ReposListReleaseAssets implements repos/list-release-assets operation.
-//
-// List release assets.
-//
-// GET /repos/{owner}/{repo}/releases/{release_id}/assets
 func (UnimplementedHandler) ReposListReleaseAssets(ctx context.Context, params ReposListReleaseAssetsParams) (r *ReposListReleaseAssetsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListReleases implements repos/list-releases operation.
+	//
+	// This returns a list of releases, which does not include regular Git tags that have not been
+	// associated with a release. To get a list of Git tags, use the [Repository Tags API](https://docs.
+	// github.com/rest/reference/repos#list-repository-tags).
+	// Information about published releases are available to everyone. Only users with push access will
+	// receive listings for draft releases.
+	//
+	// GET /repos/{owner}/{repo}/releases
 }
 
-// ReposListReleases implements repos/list-releases operation.
-//
-// This returns a list of releases, which does not include regular Git tags that have not been
-// associated with a release. To get a list of Git tags, use the [Repository Tags API](https://docs.
-// github.com/rest/reference/repos#list-repository-tags).
-// Information about published releases are available to everyone. Only users with push access will
-// receive listings for draft releases.
-//
-// GET /repos/{owner}/{repo}/releases
 func (UnimplementedHandler) ReposListReleases(ctx context.Context, params ReposListReleasesParams) (r ReposListReleasesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListReleasesRes), nil
 }
 
 // ReposListTags implements repos/list-tags operation.
@@ -7988,25 +8741,30 @@ func (UnimplementedHandler) ReposListReleases(ctx context.Context, params ReposL
 //
 // GET /repos/{owner}/{repo}/tags
 func (UnimplementedHandler) ReposListTags(ctx context.Context, params ReposListTagsParams) (r *ReposListTagsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListTeams implements repos/list-teams operation.
+	//
+	// List repository teams.
+	//
+	// GET /repos/{owner}/{repo}/teams
 }
 
-// ReposListTeams implements repos/list-teams operation.
-//
-// List repository teams.
-//
-// GET /repos/{owner}/{repo}/teams
 func (UnimplementedHandler) ReposListTeams(ctx context.Context, params ReposListTeamsParams) (r *ReposListTeamsOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposListWebhookDeliveries implements repos/list-webhook-deliveries operation.
+	//
+	// Returns a list of webhook deliveries for a webhook configured in a repository.
+	//
+	// GET /repos/{owner}/{repo}/hooks/{hook_id}/deliveries
 }
 
-// ReposListWebhookDeliveries implements repos/list-webhook-deliveries operation.
-//
-// Returns a list of webhook deliveries for a webhook configured in a repository.
-//
-// GET /repos/{owner}/{repo}/hooks/{hook_id}/deliveries
 func (UnimplementedHandler) ReposListWebhookDeliveries(ctx context.Context, params ReposListWebhookDeliveriesParams) (r ReposListWebhookDeliveriesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListWebhookDeliveriesRes), nil
 }
 
 // ReposListWebhooks implements repos/list-webhooks operation.
@@ -8015,7 +8773,8 @@ func (UnimplementedHandler) ReposListWebhookDeliveries(ctx context.Context, para
 //
 // GET /repos/{owner}/{repo}/hooks
 func (UnimplementedHandler) ReposListWebhooks(ctx context.Context, params ReposListWebhooksParams) (r ReposListWebhooksRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposListWebhooksRes), nil
 }
 
 // ReposMerge implements repos/merge operation.
@@ -8024,7 +8783,8 @@ func (UnimplementedHandler) ReposListWebhooks(ctx context.Context, params ReposL
 //
 // POST /repos/{owner}/{repo}/merges
 func (UnimplementedHandler) ReposMerge(ctx context.Context, req *ReposMergeReq, params ReposMergeParams) (r ReposMergeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposMergeRes), nil
 }
 
 // ReposMergeUpstream implements repos/merge-upstream operation.
@@ -8034,7 +8794,8 @@ func (UnimplementedHandler) ReposMerge(ctx context.Context, req *ReposMergeReq, 
 //
 // POST /repos/{owner}/{repo}/merge-upstream
 func (UnimplementedHandler) ReposMergeUpstream(ctx context.Context, req *ReposMergeUpstreamReq, params ReposMergeUpstreamParams) (r ReposMergeUpstreamRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposMergeUpstreamRes), nil
 }
 
 // ReposPingWebhook implements repos/ping-webhook operation.
@@ -8044,7 +8805,8 @@ func (UnimplementedHandler) ReposMergeUpstream(ctx context.Context, req *ReposMe
 //
 // POST /repos/{owner}/{repo}/hooks/{hook_id}/pings
 func (UnimplementedHandler) ReposPingWebhook(ctx context.Context, params ReposPingWebhookParams) (r ReposPingWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposPingWebhookRes), nil
 }
 
 // ReposRedeliverWebhookDelivery implements repos/redeliver-webhook-delivery operation.
@@ -8053,7 +8815,8 @@ func (UnimplementedHandler) ReposPingWebhook(ctx context.Context, params ReposPi
 //
 // POST /repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}/attempts
 func (UnimplementedHandler) ReposRedeliverWebhookDelivery(ctx context.Context, params ReposRedeliverWebhookDeliveryParams) (r ReposRedeliverWebhookDeliveryRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposRedeliverWebhookDeliveryRes), nil
 }
 
 // ReposRemoveAppAccessRestrictions implements repos/remove-app-access-restrictions operation.
@@ -8076,7 +8839,8 @@ func (UnimplementedHandler) ReposRedeliverWebhookDelivery(ctx context.Context, p
 //
 // DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps
 func (UnimplementedHandler) ReposRemoveAppAccessRestrictions(ctx context.Context, req OptReposRemoveAppAccessRestrictionsReq, params ReposRemoveAppAccessRestrictionsParams) (r ReposRemoveAppAccessRestrictionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposRemoveAppAccessRestrictionsRes), nil
 }
 
 // ReposRemoveCollaborator implements repos/remove-collaborator operation.
@@ -8085,7 +8849,8 @@ func (UnimplementedHandler) ReposRemoveAppAccessRestrictions(ctx context.Context
 //
 // DELETE /repos/{owner}/{repo}/collaborators/{username}
 func (UnimplementedHandler) ReposRemoveCollaborator(ctx context.Context, params ReposRemoveCollaboratorParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposRemoveStatusCheckContexts implements repos/remove-status-check-contexts operation.
@@ -8098,7 +8863,8 @@ func (UnimplementedHandler) ReposRemoveCollaborator(ctx context.Context, params 
 //
 // DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts
 func (UnimplementedHandler) ReposRemoveStatusCheckContexts(ctx context.Context, req OptReposRemoveStatusCheckContextsReq, params ReposRemoveStatusCheckContextsParams) (r ReposRemoveStatusCheckContextsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposRemoveStatusCheckContextsRes), nil
 }
 
 // ReposRemoveStatusCheckProtection implements repos/remove-status-check-protection operation.
@@ -8111,7 +8877,8 @@ func (UnimplementedHandler) ReposRemoveStatusCheckContexts(ctx context.Context, 
 //
 // DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks
 func (UnimplementedHandler) ReposRemoveStatusCheckProtection(ctx context.Context, params ReposRemoveStatusCheckProtectionParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReposRemoveTeamAccessRestrictions implements repos/remove-team-access-restrictions operation.
@@ -8134,7 +8901,8 @@ func (UnimplementedHandler) ReposRemoveStatusCheckProtection(ctx context.Context
 //
 // DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams
 func (UnimplementedHandler) ReposRemoveTeamAccessRestrictions(ctx context.Context, req OptReposRemoveTeamAccessRestrictionsReq, params ReposRemoveTeamAccessRestrictionsParams) (r ReposRemoveTeamAccessRestrictionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposRemoveTeamAccessRestrictionsRes), nil
 }
 
 // ReposRemoveUserAccessRestrictions implements repos/remove-user-access-restrictions operation.
@@ -8156,7 +8924,8 @@ func (UnimplementedHandler) ReposRemoveTeamAccessRestrictions(ctx context.Contex
 //
 // DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users
 func (UnimplementedHandler) ReposRemoveUserAccessRestrictions(ctx context.Context, req OptReposRemoveUserAccessRestrictionsReq, params ReposRemoveUserAccessRestrictionsParams) (r ReposRemoveUserAccessRestrictionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposRemoveUserAccessRestrictionsRes), nil
 }
 
 // ReposRenameBranch implements repos/rename-branch operation.
@@ -8177,7 +8946,8 @@ func (UnimplementedHandler) ReposRemoveUserAccessRestrictions(ctx context.Contex
 //
 // POST /repos/{owner}/{repo}/branches/{branch}/rename
 func (UnimplementedHandler) ReposRenameBranch(ctx context.Context, req OptReposRenameBranchReq, params ReposRenameBranchParams) (r ReposRenameBranchRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposRenameBranchRes), nil
 }
 
 // ReposReplaceAllTopics implements repos/replace-all-topics operation.
@@ -8186,7 +8956,8 @@ func (UnimplementedHandler) ReposRenameBranch(ctx context.Context, req OptReposR
 //
 // PUT /repos/{owner}/{repo}/topics
 func (UnimplementedHandler) ReposReplaceAllTopics(ctx context.Context, req *ReposReplaceAllTopicsReq, params ReposReplaceAllTopicsParams) (r ReposReplaceAllTopicsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposReplaceAllTopicsRes), nil
 }
 
 // ReposRequestPagesBuild implements repos/request-pages-build operation.
@@ -8200,47 +8971,52 @@ func (UnimplementedHandler) ReposReplaceAllTopics(ctx context.Context, req *Repo
 //
 // POST /repos/{owner}/{repo}/pages/builds
 func (UnimplementedHandler) ReposRequestPagesBuild(ctx context.Context, params ReposRequestPagesBuildParams) (r *PageBuildStatus, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposSetAdminBranchProtection implements repos/set-admin-branch-protection operation.
+	//
+	// Protected branches are available in public repositories with GitHub Free and GitHub Free for
+	// organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub
+	// Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's
+	// products](https://help.github.com/github/getting-started-with-github/githubs-products) in the
+	// GitHub Help documentation.
+	// Adding admin enforcement requires admin or owner permissions to the repository and branch
+	// protection to be enabled.
+	//
+	// POST /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins
 }
 
-// ReposSetAdminBranchProtection implements repos/set-admin-branch-protection operation.
-//
-// Protected branches are available in public repositories with GitHub Free and GitHub Free for
-// organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub
-// Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's
-// products](https://help.github.com/github/getting-started-with-github/githubs-products) in the
-// GitHub Help documentation.
-// Adding admin enforcement requires admin or owner permissions to the repository and branch
-// protection to be enabled.
-//
-// POST /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins
 func (UnimplementedHandler) ReposSetAdminBranchProtection(ctx context.Context, params ReposSetAdminBranchProtectionParams) (r *ProtectedBranchAdminEnforced, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposSetAppAccessRestrictions implements repos/set-app-access-restrictions operation.
+	//
+	// Protected branches are available in public repositories with GitHub Free and GitHub Free for
+	// organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub
+	// Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's
+	// products](https://help.github.com/github/getting-started-with-github/githubs-products) in the
+	// GitHub Help documentation.
+	// Replaces the list of apps that have push access to this branch. This removes all apps that
+	// previously had push access and grants push access to the new list of apps. Only installed GitHub
+	// Apps with `write` access to the `contents` permission can be added as authorized actors on a
+	// protected branch.
+	// | Type    | Description
+	//
+	//	|
+	//
+	// | ------- |
+	// ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+	// | `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**:
+	// The list of users, apps, and teams in total is limited to 100 items. |.
+	//
+	// PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps
 }
 
-// ReposSetAppAccessRestrictions implements repos/set-app-access-restrictions operation.
-//
-// Protected branches are available in public repositories with GitHub Free and GitHub Free for
-// organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub
-// Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's
-// products](https://help.github.com/github/getting-started-with-github/githubs-products) in the
-// GitHub Help documentation.
-// Replaces the list of apps that have push access to this branch. This removes all apps that
-// previously had push access and grants push access to the new list of apps. Only installed GitHub
-// Apps with `write` access to the `contents` permission can be added as authorized actors on a
-// protected branch.
-// | Type    | Description
-//
-//	|
-//
-// | ------- |
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-// | `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**:
-// The list of users, apps, and teams in total is limited to 100 items. |.
-//
-// PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps
 func (UnimplementedHandler) ReposSetAppAccessRestrictions(ctx context.Context, req OptReposSetAppAccessRestrictionsReq, params ReposSetAppAccessRestrictionsParams) (r ReposSetAppAccessRestrictionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposSetAppAccessRestrictionsRes), nil
 }
 
 // ReposSetStatusCheckContexts implements repos/set-status-check-contexts operation.
@@ -8253,7 +9029,8 @@ func (UnimplementedHandler) ReposSetAppAccessRestrictions(ctx context.Context, r
 //
 // PUT /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts
 func (UnimplementedHandler) ReposSetStatusCheckContexts(ctx context.Context, req OptReposSetStatusCheckContextsReq, params ReposSetStatusCheckContextsParams) (r ReposSetStatusCheckContextsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposSetStatusCheckContextsRes), nil
 }
 
 // ReposSetTeamAccessRestrictions implements repos/set-team-access-restrictions operation.
@@ -8277,7 +9054,8 @@ func (UnimplementedHandler) ReposSetStatusCheckContexts(ctx context.Context, req
 //
 // PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams
 func (UnimplementedHandler) ReposSetTeamAccessRestrictions(ctx context.Context, req OptReposSetTeamAccessRestrictionsReq, params ReposSetTeamAccessRestrictionsParams) (r ReposSetTeamAccessRestrictionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposSetTeamAccessRestrictionsRes), nil
 }
 
 // ReposSetUserAccessRestrictions implements repos/set-user-access-restrictions operation.
@@ -8300,7 +9078,8 @@ func (UnimplementedHandler) ReposSetTeamAccessRestrictions(ctx context.Context, 
 //
 // PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users
 func (UnimplementedHandler) ReposSetUserAccessRestrictions(ctx context.Context, req OptReposSetUserAccessRestrictionsReq, params ReposSetUserAccessRestrictionsParams) (r ReposSetUserAccessRestrictionsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposSetUserAccessRestrictionsRes), nil
 }
 
 // ReposTestPushWebhook implements repos/test-push-webhook operation.
@@ -8312,7 +9091,8 @@ func (UnimplementedHandler) ReposSetUserAccessRestrictions(ctx context.Context, 
 //
 // POST /repos/{owner}/{repo}/hooks/{hook_id}/tests
 func (UnimplementedHandler) ReposTestPushWebhook(ctx context.Context, params ReposTestPushWebhookParams) (r ReposTestPushWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposTestPushWebhookRes), nil
 }
 
 // ReposTransfer implements repos/transfer operation.
@@ -8325,17 +9105,20 @@ func (UnimplementedHandler) ReposTestPushWebhook(ctx context.Context, params Rep
 //
 // POST /repos/{owner}/{repo}/transfer
 func (UnimplementedHandler) ReposTransfer(ctx context.Context, req *ReposTransferReq, params ReposTransferParams) (r *MinimalRepository, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposUpdate implements repos/update operation.
+	//
+	// **Note**: To edit a repository's topics, use the [Replace all repository topics](https://docs.
+	// github.com/rest/reference/repos#replace-all-repository-topics) endpoint.
+	//
+	// PATCH /repos/{owner}/{repo}
 }
 
-// ReposUpdate implements repos/update operation.
-//
-// **Note**: To edit a repository's topics, use the [Replace all repository topics](https://docs.
-// github.com/rest/reference/repos#replace-all-repository-topics) endpoint.
-//
-// PATCH /repos/{owner}/{repo}
 func (UnimplementedHandler) ReposUpdate(ctx context.Context, req OptReposUpdateReq, params ReposUpdateParams) (r ReposUpdateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposUpdateRes), nil
 }
 
 // ReposUpdateBranchProtection implements repos/update-branch-protection operation.
@@ -8351,7 +9134,8 @@ func (UnimplementedHandler) ReposUpdate(ctx context.Context, req OptReposUpdateR
 //
 // PUT /repos/{owner}/{repo}/branches/{branch}/protection
 func (UnimplementedHandler) ReposUpdateBranchProtection(ctx context.Context, req *ReposUpdateBranchProtectionReq, params ReposUpdateBranchProtectionParams) (r ReposUpdateBranchProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposUpdateBranchProtectionRes), nil
 }
 
 // ReposUpdateCommitComment implements repos/update-commit-comment operation.
@@ -8360,7 +9144,8 @@ func (UnimplementedHandler) ReposUpdateBranchProtection(ctx context.Context, req
 //
 // PATCH /repos/{owner}/{repo}/comments/{comment_id}
 func (UnimplementedHandler) ReposUpdateCommitComment(ctx context.Context, req *ReposUpdateCommitCommentReq, params ReposUpdateCommitCommentParams) (r ReposUpdateCommitCommentRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposUpdateCommitCommentRes), nil
 }
 
 // ReposUpdateInvitation implements repos/update-invitation operation.
@@ -8369,23 +9154,26 @@ func (UnimplementedHandler) ReposUpdateCommitComment(ctx context.Context, req *R
 //
 // PATCH /repos/{owner}/{repo}/invitations/{invitation_id}
 func (UnimplementedHandler) ReposUpdateInvitation(ctx context.Context, req OptReposUpdateInvitationReq, params ReposUpdateInvitationParams) (r *RepositoryInvitation, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposUpdatePullRequestReviewProtection implements repos/update-pull-request-review-protection operation.
+	//
+	// Protected branches are available in public repositories with GitHub Free and GitHub Free for
+	// organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub
+	// Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's
+	// products](https://help.github.com/github/getting-started-with-github/githubs-products) in the
+	// GitHub Help documentation.
+	// Updating pull request review enforcement requires admin or owner permissions to the repository and
+	// branch protection to be enabled.
+	// **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+	//
+	// PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews
 }
 
-// ReposUpdatePullRequestReviewProtection implements repos/update-pull-request-review-protection operation.
-//
-// Protected branches are available in public repositories with GitHub Free and GitHub Free for
-// organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub
-// Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's
-// products](https://help.github.com/github/getting-started-with-github/githubs-products) in the
-// GitHub Help documentation.
-// Updating pull request review enforcement requires admin or owner permissions to the repository and
-// branch protection to be enabled.
-// **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
-//
-// PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews
 func (UnimplementedHandler) ReposUpdatePullRequestReviewProtection(ctx context.Context, req OptReposUpdatePullRequestReviewProtectionReq, params ReposUpdatePullRequestReviewProtectionParams) (r ReposUpdatePullRequestReviewProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposUpdatePullRequestReviewProtectionRes), nil
 }
 
 // ReposUpdateRelease implements repos/update-release operation.
@@ -8394,7 +9182,8 @@ func (UnimplementedHandler) ReposUpdatePullRequestReviewProtection(ctx context.C
 //
 // PATCH /repos/{owner}/{repo}/releases/{release_id}
 func (UnimplementedHandler) ReposUpdateRelease(ctx context.Context, req OptReposUpdateReleaseReq, params ReposUpdateReleaseParams) (r ReposUpdateReleaseRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposUpdateReleaseRes), nil
 }
 
 // ReposUpdateReleaseAsset implements repos/update-release-asset operation.
@@ -8403,22 +9192,25 @@ func (UnimplementedHandler) ReposUpdateRelease(ctx context.Context, req OptRepos
 //
 // PATCH /repos/{owner}/{repo}/releases/assets/{asset_id}
 func (UnimplementedHandler) ReposUpdateReleaseAsset(ctx context.Context, req OptReposUpdateReleaseAssetReq, params ReposUpdateReleaseAssetParams) (r *ReleaseAsset, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposUpdateStatusCheckProtection implements repos/update-status-check-protection operation.
+	//
+	// Protected branches are available in public repositories with GitHub Free and GitHub Free for
+	// organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub
+	// Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's
+	// products](https://help.github.com/github/getting-started-with-github/githubs-products) in the
+	// GitHub Help documentation.
+	// Updating required status checks requires admin or owner permissions to the repository and branch
+	// protection to be enabled.
+	//
+	// PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks
 }
 
-// ReposUpdateStatusCheckProtection implements repos/update-status-check-protection operation.
-//
-// Protected branches are available in public repositories with GitHub Free and GitHub Free for
-// organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub
-// Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's
-// products](https://help.github.com/github/getting-started-with-github/githubs-products) in the
-// GitHub Help documentation.
-// Updating required status checks requires admin or owner permissions to the repository and branch
-// protection to be enabled.
-//
-// PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks
 func (UnimplementedHandler) ReposUpdateStatusCheckProtection(ctx context.Context, req OptReposUpdateStatusCheckProtectionReq, params ReposUpdateStatusCheckProtectionParams) (r ReposUpdateStatusCheckProtectionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposUpdateStatusCheckProtectionRes), nil
 }
 
 // ReposUpdateWebhook implements repos/update-webhook operation.
@@ -8430,7 +9222,8 @@ func (UnimplementedHandler) ReposUpdateStatusCheckProtection(ctx context.Context
 //
 // PATCH /repos/{owner}/{repo}/hooks/{hook_id}
 func (UnimplementedHandler) ReposUpdateWebhook(ctx context.Context, req OptReposUpdateWebhookReq, params ReposUpdateWebhookParams) (r ReposUpdateWebhookRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ReposUpdateWebhookRes), nil
 }
 
 // ReposUpdateWebhookConfigForRepo implements repos/update-webhook-config-for-repo operation.
@@ -8443,50 +9236,55 @@ func (UnimplementedHandler) ReposUpdateWebhook(ctx context.Context, req OptRepos
 //
 // PATCH /repos/{owner}/{repo}/hooks/{hook_id}/config
 func (UnimplementedHandler) ReposUpdateWebhookConfigForRepo(ctx context.Context, req OptReposUpdateWebhookConfigForRepoReq, params ReposUpdateWebhookConfigForRepoParams) (r *WebhookConfig, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ReposUploadReleaseAsset implements repos/upload-release-asset operation.
+	//
+	// This endpoint makes use of [a Hypermedia relation](https://docs.github.
+	// com/rest/overview/resources-in-the-rest-api#hypermedia) to determine which URL to access. The
+	// endpoint you call to upload release assets is specific to your release. Use the `upload_url`
+	// returned in
+	// the response of the [Create a release endpoint](https://docs.github.
+	// com/rest/reference/repos#create-a-release) to upload a release asset.
+	// You need to use an HTTP client which supports [SNI](http://en.wikipedia.
+	// org/wiki/Server_Name_Indication) to make calls to this endpoint.
+	// Most libraries will set the required `Content-Length` header automatically. Use the required
+	// `Content-Type` header to provide the media type of the asset. For a list of media types, see
+	// [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml). For example:
+	// `application/zip`
+	// GitHub expects the asset data in its raw binary form, rather than JSON. You will send the raw
+	// binary content of the asset as the request body. Everything else about the endpoint is the same as
+	// the rest of the API. For example,
+	// you'll still need to pass your authentication to be able to upload an asset.
+	// When an upstream failure occurs, you will receive a `502 Bad Gateway` status. This may leave an
+	// empty asset with a state of `starter`. It can be safely deleted.
+	// **Notes:**
+	// *   GitHub renames asset filenames that have special characters, non-alphanumeric characters, and
+	// leading or trailing periods. The "[List assets for a release](https://docs.github.
+	// com/rest/reference/repos#list-assets-for-a-release)"
+	// endpoint lists the renamed filenames. For more information and help, contact [GitHub
+	// Support](https://support.github.com/contact?tags=dotcom-rest-api).
+	// *   If you upload an asset with the same filename as another uploaded asset, you'll receive an
+	// error and must delete the old file before you can re-upload the new asset.
+	//
+	// POST /repos/{owner}/{repo}/releases/{release_id}/assets
 }
 
-// ReposUploadReleaseAsset implements repos/upload-release-asset operation.
-//
-// This endpoint makes use of [a Hypermedia relation](https://docs.github.
-// com/rest/overview/resources-in-the-rest-api#hypermedia) to determine which URL to access. The
-// endpoint you call to upload release assets is specific to your release. Use the `upload_url`
-// returned in
-// the response of the [Create a release endpoint](https://docs.github.
-// com/rest/reference/repos#create-a-release) to upload a release asset.
-// You need to use an HTTP client which supports [SNI](http://en.wikipedia.
-// org/wiki/Server_Name_Indication) to make calls to this endpoint.
-// Most libraries will set the required `Content-Length` header automatically. Use the required
-// `Content-Type` header to provide the media type of the asset. For a list of media types, see
-// [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml). For example:
-// `application/zip`
-// GitHub expects the asset data in its raw binary form, rather than JSON. You will send the raw
-// binary content of the asset as the request body. Everything else about the endpoint is the same as
-// the rest of the API. For example,
-// you'll still need to pass your authentication to be able to upload an asset.
-// When an upstream failure occurs, you will receive a `502 Bad Gateway` status. This may leave an
-// empty asset with a state of `starter`. It can be safely deleted.
-// **Notes:**
-// *   GitHub renames asset filenames that have special characters, non-alphanumeric characters, and
-// leading or trailing periods. The "[List assets for a release](https://docs.github.
-// com/rest/reference/repos#list-assets-for-a-release)"
-// endpoint lists the renamed filenames. For more information and help, contact [GitHub
-// Support](https://support.github.com/contact?tags=dotcom-rest-api).
-// *   If you upload an asset with the same filename as another uploaded asset, you'll receive an
-// error and must delete the old file before you can re-upload the new asset.
-//
-// POST /repos/{owner}/{repo}/releases/{release_id}/assets
 func (UnimplementedHandler) ReposUploadReleaseAsset(ctx context.Context, req *ReposUploadReleaseAssetReqWithContentType, params ReposUploadReleaseAssetParams) (r *ReleaseAsset, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// ScimDeleteUserFromOrg implements scim/delete-user-from-org operation.
+	//
+	// Delete a SCIM user from an organization.
+	//
+	// DELETE /scim/v2/organizations/{org}/Users/{scim_user_id}
 }
 
-// ScimDeleteUserFromOrg implements scim/delete-user-from-org operation.
-//
-// Delete a SCIM user from an organization.
-//
-// DELETE /scim/v2/organizations/{org}/Users/{scim_user_id}
 func (UnimplementedHandler) ScimDeleteUserFromOrg(ctx context.Context, params ScimDeleteUserFromOrgParams) (r ScimDeleteUserFromOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ScimDeleteUserFromOrgRes), nil
 }
 
 // ScimGetProvisioningInformationForUser implements scim/get-provisioning-information-for-user operation.
@@ -8495,7 +9293,8 @@ func (UnimplementedHandler) ScimDeleteUserFromOrg(ctx context.Context, params Sc
 //
 // GET /scim/v2/organizations/{org}/Users/{scim_user_id}
 func (UnimplementedHandler) ScimGetProvisioningInformationForUser(ctx context.Context, params ScimGetProvisioningInformationForUserParams) (r ScimGetProvisioningInformationForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ScimGetProvisioningInformationForUserRes), nil
 }
 
 // ScimListProvisionedIdentities implements scim/list-provisioned-identities operation.
@@ -8530,7 +9329,8 @@ func (UnimplementedHandler) ScimGetProvisioningInformationForUser(ctx context.Co
 //
 // GET /scim/v2/organizations/{org}/Users
 func (UnimplementedHandler) ScimListProvisionedIdentities(ctx context.Context, params ScimListProvisionedIdentitiesParams) (r ScimListProvisionedIdentitiesRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ScimListProvisionedIdentitiesRes), nil
 }
 
 // ScimProvisionAndInviteUser implements scim/provision-and-invite-user operation.
@@ -8539,7 +9339,8 @@ func (UnimplementedHandler) ScimListProvisionedIdentities(ctx context.Context, p
 //
 // POST /scim/v2/organizations/{org}/Users
 func (UnimplementedHandler) ScimProvisionAndInviteUser(ctx context.Context, req *ScimProvisionAndInviteUserReq, params ScimProvisionAndInviteUserParams) (r ScimProvisionAndInviteUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ScimProvisionAndInviteUserRes), nil
 }
 
 // ScimSetInformationForProvisionedUser implements scim/set-information-for-provisioned-user operation.
@@ -8555,7 +9356,8 @@ func (UnimplementedHandler) ScimProvisionAndInviteUser(ctx context.Context, req 
 //
 // PUT /scim/v2/organizations/{org}/Users/{scim_user_id}
 func (UnimplementedHandler) ScimSetInformationForProvisionedUser(ctx context.Context, req *ScimSetInformationForProvisionedUserReq, params ScimSetInformationForProvisionedUserParams) (r ScimSetInformationForProvisionedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ScimSetInformationForProvisionedUserRes), nil
 }
 
 // ScimUpdateAttributeForUser implements scim/update-attribute-for-user operation.
@@ -8584,7 +9386,8 @@ func (UnimplementedHandler) ScimSetInformationForProvisionedUser(ctx context.Con
 //
 // PATCH /scim/v2/organizations/{org}/Users/{scim_user_id}
 func (UnimplementedHandler) ScimUpdateAttributeForUser(ctx context.Context, req *ScimUpdateAttributeForUserReq, params ScimUpdateAttributeForUserParams) (r ScimUpdateAttributeForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ScimUpdateAttributeForUserRes), nil
 }
 
 // SearchCode implements search/code operation.
@@ -8612,7 +9415,8 @@ func (UnimplementedHandler) ScimUpdateAttributeForUser(ctx context.Context, req 
 //
 // GET /search/code
 func (UnimplementedHandler) SearchCode(ctx context.Context, params SearchCodeParams) (r SearchCodeRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SearchCodeRes), nil
 }
 
 // SearchCommits implements search/commits operation.
@@ -8631,7 +9435,8 @@ func (UnimplementedHandler) SearchCode(ctx context.Context, params SearchCodePar
 //
 // GET /search/commits
 func (UnimplementedHandler) SearchCommits(ctx context.Context, params SearchCommitsParams) (r SearchCommitsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SearchCommitsRes), nil
 }
 
 // SearchIssuesAndPullRequests implements search/issues-and-pull-requests operation.
@@ -8662,7 +9467,8 @@ func (UnimplementedHandler) SearchCommits(ctx context.Context, params SearchComm
 //
 // GET /search/issues
 func (UnimplementedHandler) SearchIssuesAndPullRequests(ctx context.Context, params SearchIssuesAndPullRequestsParams) (r SearchIssuesAndPullRequestsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SearchIssuesAndPullRequestsRes), nil
 }
 
 // SearchLabels implements search/labels operation.
@@ -8680,7 +9486,8 @@ func (UnimplementedHandler) SearchIssuesAndPullRequests(ctx context.Context, par
 //
 // GET /search/labels
 func (UnimplementedHandler) SearchLabels(ctx context.Context, params SearchLabelsParams) (r SearchLabelsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SearchLabelsRes), nil
 }
 
 // SearchRepos implements search/repos operation.
@@ -8704,7 +9511,8 @@ func (UnimplementedHandler) SearchLabels(ctx context.Context, params SearchLabel
 //
 // GET /search/repositories
 func (UnimplementedHandler) SearchRepos(ctx context.Context, params SearchReposParams) (r SearchReposRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SearchReposRes), nil
 }
 
 // SearchTopics implements search/topics operation.
@@ -8726,7 +9534,8 @@ func (UnimplementedHandler) SearchRepos(ctx context.Context, params SearchReposP
 //
 // GET /search/topics
 func (UnimplementedHandler) SearchTopics(ctx context.Context, params SearchTopicsParams) (r SearchTopicsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SearchTopicsRes), nil
 }
 
 // SearchUsers implements search/users operation.
@@ -8746,7 +9555,8 @@ func (UnimplementedHandler) SearchTopics(ctx context.Context, params SearchTopic
 //
 // GET /search/users
 func (UnimplementedHandler) SearchUsers(ctx context.Context, params SearchUsersParams) (r SearchUsersRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SearchUsersRes), nil
 }
 
 // SecretScanningGetAlert implements secret-scanning/get-alert operation.
@@ -8758,7 +9568,8 @@ func (UnimplementedHandler) SearchUsers(ctx context.Context, params SearchUsersP
 //
 // GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}
 func (UnimplementedHandler) SecretScanningGetAlert(ctx context.Context, params SecretScanningGetAlertParams) (r SecretScanningGetAlertRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SecretScanningGetAlertRes), nil
 }
 
 // SecretScanningListAlertsForOrg implements secret-scanning/list-alerts-for-org operation.
@@ -8771,7 +9582,8 @@ func (UnimplementedHandler) SecretScanningGetAlert(ctx context.Context, params S
 //
 // GET /orgs/{org}/secret-scanning/alerts
 func (UnimplementedHandler) SecretScanningListAlertsForOrg(ctx context.Context, params SecretScanningListAlertsForOrgParams) (r SecretScanningListAlertsForOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SecretScanningListAlertsForOrgRes), nil
 }
 
 // SecretScanningListAlertsForRepo implements secret-scanning/list-alerts-for-repo operation.
@@ -8783,7 +9595,8 @@ func (UnimplementedHandler) SecretScanningListAlertsForOrg(ctx context.Context, 
 //
 // GET /repos/{owner}/{repo}/secret-scanning/alerts
 func (UnimplementedHandler) SecretScanningListAlertsForRepo(ctx context.Context, params SecretScanningListAlertsForRepoParams) (r SecretScanningListAlertsForRepoRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SecretScanningListAlertsForRepoRes), nil
 }
 
 // SecretScanningUpdateAlert implements secret-scanning/update-alert operation.
@@ -8795,7 +9608,8 @@ func (UnimplementedHandler) SecretScanningListAlertsForRepo(ctx context.Context,
 //
 // PATCH /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}
 func (UnimplementedHandler) SecretScanningUpdateAlert(ctx context.Context, req *SecretScanningUpdateAlertReq, params SecretScanningUpdateAlertParams) (r SecretScanningUpdateAlertRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(SecretScanningUpdateAlertRes), nil
 }
 
 // TeamsAddMemberLegacy implements teams/add-member-legacy operation.
@@ -8825,7 +9639,8 @@ func (UnimplementedHandler) SecretScanningUpdateAlert(ctx context.Context, req *
 //
 // PUT /teams/{team_id}/members/{username}
 func (UnimplementedHandler) TeamsAddMemberLegacy(ctx context.Context, params TeamsAddMemberLegacyParams) (r TeamsAddMemberLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsAddMemberLegacyRes), nil
 }
 
 // TeamsAddOrUpdateMembershipForUserInOrg implements teams/add-or-update-membership-for-user-in-org operation.
@@ -8855,7 +9670,8 @@ func (UnimplementedHandler) TeamsAddMemberLegacy(ctx context.Context, params Tea
 //
 // PUT /orgs/{org}/teams/{team_slug}/memberships/{username}
 func (UnimplementedHandler) TeamsAddOrUpdateMembershipForUserInOrg(ctx context.Context, req OptTeamsAddOrUpdateMembershipForUserInOrgReq, params TeamsAddOrUpdateMembershipForUserInOrgParams) (r TeamsAddOrUpdateMembershipForUserInOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsAddOrUpdateMembershipForUserInOrgRes), nil
 }
 
 // TeamsAddOrUpdateMembershipForUserLegacy implements teams/add-or-update-membership-for-user-legacy operation.
@@ -8890,7 +9706,8 @@ func (UnimplementedHandler) TeamsAddOrUpdateMembershipForUserInOrg(ctx context.C
 //
 // PUT /teams/{team_id}/memberships/{username}
 func (UnimplementedHandler) TeamsAddOrUpdateMembershipForUserLegacy(ctx context.Context, req OptTeamsAddOrUpdateMembershipForUserLegacyReq, params TeamsAddOrUpdateMembershipForUserLegacyParams) (r TeamsAddOrUpdateMembershipForUserLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsAddOrUpdateMembershipForUserLegacyRes), nil
 }
 
 // TeamsAddOrUpdateProjectPermissionsInOrg implements teams/add-or-update-project-permissions-in-org operation.
@@ -8903,7 +9720,8 @@ func (UnimplementedHandler) TeamsAddOrUpdateMembershipForUserLegacy(ctx context.
 //
 // PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}
 func (UnimplementedHandler) TeamsAddOrUpdateProjectPermissionsInOrg(ctx context.Context, req OptNilTeamsAddOrUpdateProjectPermissionsInOrgReq, params TeamsAddOrUpdateProjectPermissionsInOrgParams) (r TeamsAddOrUpdateProjectPermissionsInOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsAddOrUpdateProjectPermissionsInOrgRes), nil
 }
 
 // TeamsAddOrUpdateProjectPermissionsLegacy implements teams/add-or-update-project-permissions-legacy operation.
@@ -8920,7 +9738,8 @@ func (UnimplementedHandler) TeamsAddOrUpdateProjectPermissionsInOrg(ctx context.
 //
 // PUT /teams/{team_id}/projects/{project_id}
 func (UnimplementedHandler) TeamsAddOrUpdateProjectPermissionsLegacy(ctx context.Context, req OptTeamsAddOrUpdateProjectPermissionsLegacyReq, params TeamsAddOrUpdateProjectPermissionsLegacyParams) (r TeamsAddOrUpdateProjectPermissionsLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsAddOrUpdateProjectPermissionsLegacyRes), nil
 }
 
 // TeamsAddOrUpdateRepoPermissionsInOrg implements teams/add-or-update-repo-permissions-in-org operation.
@@ -8940,7 +9759,8 @@ func (UnimplementedHandler) TeamsAddOrUpdateProjectPermissionsLegacy(ctx context
 //
 // PUT /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}
 func (UnimplementedHandler) TeamsAddOrUpdateRepoPermissionsInOrg(ctx context.Context, req OptTeamsAddOrUpdateRepoPermissionsInOrgReq, params TeamsAddOrUpdateRepoPermissionsInOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TeamsAddOrUpdateRepoPermissionsLegacy implements teams/add-or-update-repo-permissions-legacy operation.
@@ -8962,7 +9782,8 @@ func (UnimplementedHandler) TeamsAddOrUpdateRepoPermissionsInOrg(ctx context.Con
 //
 // PUT /teams/{team_id}/repos/{owner}/{repo}
 func (UnimplementedHandler) TeamsAddOrUpdateRepoPermissionsLegacy(ctx context.Context, req OptTeamsAddOrUpdateRepoPermissionsLegacyReq, params TeamsAddOrUpdateRepoPermissionsLegacyParams) (r TeamsAddOrUpdateRepoPermissionsLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsAddOrUpdateRepoPermissionsLegacyRes), nil
 }
 
 // TeamsCheckPermissionsForProjectInOrg implements teams/check-permissions-for-project-in-org operation.
@@ -8974,7 +9795,8 @@ func (UnimplementedHandler) TeamsAddOrUpdateRepoPermissionsLegacy(ctx context.Co
 //
 // GET /orgs/{org}/teams/{team_slug}/projects/{project_id}
 func (UnimplementedHandler) TeamsCheckPermissionsForProjectInOrg(ctx context.Context, params TeamsCheckPermissionsForProjectInOrgParams) (r TeamsCheckPermissionsForProjectInOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsCheckPermissionsForProjectInOrgRes), nil
 }
 
 // TeamsCheckPermissionsForProjectLegacy implements teams/check-permissions-for-project-legacy operation.
@@ -8990,7 +9812,8 @@ func (UnimplementedHandler) TeamsCheckPermissionsForProjectInOrg(ctx context.Con
 //
 // GET /teams/{team_id}/projects/{project_id}
 func (UnimplementedHandler) TeamsCheckPermissionsForProjectLegacy(ctx context.Context, params TeamsCheckPermissionsForProjectLegacyParams) (r TeamsCheckPermissionsForProjectLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsCheckPermissionsForProjectLegacyRes), nil
 }
 
 // TeamsCheckPermissionsForRepoInOrg implements teams/check-permissions-for-repo-in-org operation.
@@ -9007,7 +9830,8 @@ func (UnimplementedHandler) TeamsCheckPermissionsForProjectLegacy(ctx context.Co
 //
 // GET /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}
 func (UnimplementedHandler) TeamsCheckPermissionsForRepoInOrg(ctx context.Context, params TeamsCheckPermissionsForRepoInOrgParams) (r TeamsCheckPermissionsForRepoInOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsCheckPermissionsForRepoInOrgRes), nil
 }
 
 // TeamsCheckPermissionsForRepoLegacy implements teams/check-permissions-for-repo-legacy operation.
@@ -9025,7 +9849,8 @@ func (UnimplementedHandler) TeamsCheckPermissionsForRepoInOrg(ctx context.Contex
 //
 // GET /teams/{team_id}/repos/{owner}/{repo}
 func (UnimplementedHandler) TeamsCheckPermissionsForRepoLegacy(ctx context.Context, params TeamsCheckPermissionsForRepoLegacyParams) (r TeamsCheckPermissionsForRepoLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsCheckPermissionsForRepoLegacyRes), nil
 }
 
 // TeamsCreate implements teams/create operation.
@@ -9041,7 +9866,8 @@ func (UnimplementedHandler) TeamsCheckPermissionsForRepoLegacy(ctx context.Conte
 //
 // POST /orgs/{org}/teams
 func (UnimplementedHandler) TeamsCreate(ctx context.Context, req *TeamsCreateReq, params TeamsCreateParams) (r TeamsCreateRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsCreateRes), nil
 }
 
 // TeamsCreateDiscussionCommentInOrg implements teams/create-discussion-comment-in-org operation.
@@ -9060,106 +9886,117 @@ func (UnimplementedHandler) TeamsCreate(ctx context.Context, req *TeamsCreateReq
 //
 // POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments
 func (UnimplementedHandler) TeamsCreateDiscussionCommentInOrg(ctx context.Context, req *TeamsCreateDiscussionCommentInOrgReq, params TeamsCreateDiscussionCommentInOrgParams) (r *TeamDiscussionComment, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsCreateDiscussionCommentLegacy implements teams/create-discussion-comment-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [Create a discussion
+	// comment](https://docs.github.com/rest/reference/teams#create-a-discussion-comment) endpoint.
+	// Creates a new comment on a team discussion. OAuth access tokens require the `write:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	// This endpoint triggers [notifications](https://docs.github.
+	// com/en/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating
+	// content too quickly using this endpoint may result in secondary rate limiting. See "[Secondary
+	// rate limits](https://docs.github.
+	// com/rest/overview/resources-in-the-rest-api#secondary-rate-limits)" and "[Dealing with secondary
+	// rate limits](https://docs.github.
+	// com/rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)" for details.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// POST /teams/{team_id}/discussions/{discussion_number}/comments
 }
 
-// TeamsCreateDiscussionCommentLegacy implements teams/create-discussion-comment-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [Create a discussion
-// comment](https://docs.github.com/rest/reference/teams#create-a-discussion-comment) endpoint.
-// Creates a new comment on a team discussion. OAuth access tokens require the `write:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-// This endpoint triggers [notifications](https://docs.github.
-// com/en/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating
-// content too quickly using this endpoint may result in secondary rate limiting. See "[Secondary
-// rate limits](https://docs.github.
-// com/rest/overview/resources-in-the-rest-api#secondary-rate-limits)" and "[Dealing with secondary
-// rate limits](https://docs.github.
-// com/rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)" for details.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// POST /teams/{team_id}/discussions/{discussion_number}/comments
 func (UnimplementedHandler) TeamsCreateDiscussionCommentLegacy(ctx context.Context, req *TeamsCreateDiscussionCommentLegacyReq, params TeamsCreateDiscussionCommentLegacyParams) (r *TeamDiscussionComment, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsCreateDiscussionInOrg implements teams/create-discussion-in-org operation.
+	//
+	// Creates a new discussion post on a team's page. OAuth access tokens require the `write:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	// This endpoint triggers [notifications](https://docs.github.
+	// com/en/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating
+	// content too quickly using this endpoint may result in secondary rate limiting. See "[Secondary
+	// rate limits](https://docs.github.
+	// com/rest/overview/resources-in-the-rest-api#secondary-rate-limits)" and "[Dealing with secondary
+	// rate limits](https://docs.github.
+	// com/rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)" for details.
+	// **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST
+	// /organizations/{org_id}/team/{team_id}/discussions`.
+	//
+	// POST /orgs/{org}/teams/{team_slug}/discussions
 }
 
-// TeamsCreateDiscussionInOrg implements teams/create-discussion-in-org operation.
-//
-// Creates a new discussion post on a team's page. OAuth access tokens require the `write:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-// This endpoint triggers [notifications](https://docs.github.
-// com/en/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating
-// content too quickly using this endpoint may result in secondary rate limiting. See "[Secondary
-// rate limits](https://docs.github.
-// com/rest/overview/resources-in-the-rest-api#secondary-rate-limits)" and "[Dealing with secondary
-// rate limits](https://docs.github.
-// com/rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)" for details.
-// **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST
-// /organizations/{org_id}/team/{team_id}/discussions`.
-//
-// POST /orgs/{org}/teams/{team_slug}/discussions
 func (UnimplementedHandler) TeamsCreateDiscussionInOrg(ctx context.Context, req *TeamsCreateDiscussionInOrgReq, params TeamsCreateDiscussionInOrgParams) (r *TeamDiscussion, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsCreateDiscussionLegacy implements teams/create-discussion-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [`Create a discussion`](https://docs.
+	// github.com/rest/reference/teams#create-a-discussion) endpoint.
+	// Creates a new discussion post on a team's page. OAuth access tokens require the `write:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	// This endpoint triggers [notifications](https://docs.github.
+	// com/en/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating
+	// content too quickly using this endpoint may result in secondary rate limiting. See "[Secondary
+	// rate limits](https://docs.github.
+	// com/rest/overview/resources-in-the-rest-api#secondary-rate-limits)" and "[Dealing with secondary
+	// rate limits](https://docs.github.
+	// com/rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)" for details.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// POST /teams/{team_id}/discussions
 }
 
-// TeamsCreateDiscussionLegacy implements teams/create-discussion-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [`Create a discussion`](https://docs.
-// github.com/rest/reference/teams#create-a-discussion) endpoint.
-// Creates a new discussion post on a team's page. OAuth access tokens require the `write:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-// This endpoint triggers [notifications](https://docs.github.
-// com/en/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating
-// content too quickly using this endpoint may result in secondary rate limiting. See "[Secondary
-// rate limits](https://docs.github.
-// com/rest/overview/resources-in-the-rest-api#secondary-rate-limits)" and "[Dealing with secondary
-// rate limits](https://docs.github.
-// com/rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)" for details.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// POST /teams/{team_id}/discussions
 func (UnimplementedHandler) TeamsCreateDiscussionLegacy(ctx context.Context, req *TeamsCreateDiscussionLegacyReq, params TeamsCreateDiscussionLegacyParams) (r *TeamDiscussion, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsCreateOrUpdateIdpGroupConnectionsInOrg implements teams/create-or-update-idp-group-connections-in-org operation.
+	//
+	// Team synchronization is available for organizations using GitHub Enterprise Cloud. For more
+	// information, see [GitHub's products](https://help.github.
+	// com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+	// Creates, updates, or removes a connection between a team and an IdP group. When adding groups to a
+	// team, you must include all new and existing groups to avoid replacing existing groups with the new
+	// ones. Specifying an empty `groups` array will remove all connections for a team.
+	// **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH
+	// /organizations/{org_id}/team/{team_id}/team-sync/group-mappings`.
+	//
+	// PATCH /orgs/{org}/teams/{team_slug}/team-sync/group-mappings
 }
 
-// TeamsCreateOrUpdateIdpGroupConnectionsInOrg implements teams/create-or-update-idp-group-connections-in-org operation.
-//
-// Team synchronization is available for organizations using GitHub Enterprise Cloud. For more
-// information, see [GitHub's products](https://help.github.
-// com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
-// Creates, updates, or removes a connection between a team and an IdP group. When adding groups to a
-// team, you must include all new and existing groups to avoid replacing existing groups with the new
-// ones. Specifying an empty `groups` array will remove all connections for a team.
-// **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH
-// /organizations/{org_id}/team/{team_id}/team-sync/group-mappings`.
-//
-// PATCH /orgs/{org}/teams/{team_slug}/team-sync/group-mappings
 func (UnimplementedHandler) TeamsCreateOrUpdateIdpGroupConnectionsInOrg(ctx context.Context, req *TeamsCreateOrUpdateIdpGroupConnectionsInOrgReq, params TeamsCreateOrUpdateIdpGroupConnectionsInOrgParams) (r *GroupMapping, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsCreateOrUpdateIdpGroupConnectionsLegacy implements teams/create-or-update-idp-group-connections-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [`Create or update IdP group
+	// connections`](https://docs.github.com/rest/reference/teams#create-or-update-idp-group-connections)
+	// endpoint.
+	// Team synchronization is available for organizations using GitHub Enterprise Cloud. For more
+	// information, see [GitHub's products](https://help.github.
+	// com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+	// Creates, updates, or removes a connection between a team and an IdP group. When adding groups to a
+	// team, you must include all new and existing groups to avoid replacing existing groups with the new
+	// ones. Specifying an empty `groups` array will remove all connections for a team.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// PATCH /teams/{team_id}/team-sync/group-mappings
 }
 
-// TeamsCreateOrUpdateIdpGroupConnectionsLegacy implements teams/create-or-update-idp-group-connections-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [`Create or update IdP group
-// connections`](https://docs.github.com/rest/reference/teams#create-or-update-idp-group-connections)
-// endpoint.
-// Team synchronization is available for organizations using GitHub Enterprise Cloud. For more
-// information, see [GitHub's products](https://help.github.
-// com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
-// Creates, updates, or removes a connection between a team and an IdP group. When adding groups to a
-// team, you must include all new and existing groups to avoid replacing existing groups with the new
-// ones. Specifying an empty `groups` array will remove all connections for a team.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// PATCH /teams/{team_id}/team-sync/group-mappings
 func (UnimplementedHandler) TeamsCreateOrUpdateIdpGroupConnectionsLegacy(ctx context.Context, req *TeamsCreateOrUpdateIdpGroupConnectionsLegacyReq, params TeamsCreateOrUpdateIdpGroupConnectionsLegacyParams) (r TeamsCreateOrUpdateIdpGroupConnectionsLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsCreateOrUpdateIdpGroupConnectionsLegacyRes), nil
 }
 
 // TeamsDeleteDiscussionCommentInOrg implements teams/delete-discussion-comment-in-org operation.
@@ -9171,7 +10008,8 @@ func (UnimplementedHandler) TeamsCreateOrUpdateIdpGroupConnectionsLegacy(ctx con
 //
 // DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}
 func (UnimplementedHandler) TeamsDeleteDiscussionCommentInOrg(ctx context.Context, params TeamsDeleteDiscussionCommentInOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TeamsDeleteDiscussionCommentLegacy implements teams/delete-discussion-comment-legacy operation.
@@ -9186,7 +10024,8 @@ func (UnimplementedHandler) TeamsDeleteDiscussionCommentInOrg(ctx context.Contex
 //
 // DELETE /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}
 func (UnimplementedHandler) TeamsDeleteDiscussionCommentLegacy(ctx context.Context, params TeamsDeleteDiscussionCommentLegacyParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TeamsDeleteDiscussionInOrg implements teams/delete-discussion-in-org operation.
@@ -9198,7 +10037,8 @@ func (UnimplementedHandler) TeamsDeleteDiscussionCommentLegacy(ctx context.Conte
 //
 // DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}
 func (UnimplementedHandler) TeamsDeleteDiscussionInOrg(ctx context.Context, params TeamsDeleteDiscussionInOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TeamsDeleteDiscussionLegacy implements teams/delete-discussion-legacy operation.
@@ -9213,7 +10053,8 @@ func (UnimplementedHandler) TeamsDeleteDiscussionInOrg(ctx context.Context, para
 //
 // DELETE /teams/{team_id}/discussions/{discussion_number}
 func (UnimplementedHandler) TeamsDeleteDiscussionLegacy(ctx context.Context, params TeamsDeleteDiscussionLegacyParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TeamsDeleteInOrg implements teams/delete-in-org operation.
@@ -9226,7 +10067,8 @@ func (UnimplementedHandler) TeamsDeleteDiscussionLegacy(ctx context.Context, par
 //
 // DELETE /orgs/{org}/teams/{team_slug}
 func (UnimplementedHandler) TeamsDeleteInOrg(ctx context.Context, params TeamsDeleteInOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TeamsDeleteLegacy implements teams/delete-legacy operation.
@@ -9242,7 +10084,8 @@ func (UnimplementedHandler) TeamsDeleteInOrg(ctx context.Context, params TeamsDe
 //
 // DELETE /teams/{team_id}
 func (UnimplementedHandler) TeamsDeleteLegacy(ctx context.Context, params TeamsDeleteLegacyParams) (r TeamsDeleteLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsDeleteLegacyRes), nil
 }
 
 // TeamsGetByName implements teams/get-by-name operation.
@@ -9253,7 +10096,8 @@ func (UnimplementedHandler) TeamsDeleteLegacy(ctx context.Context, params TeamsD
 //
 // GET /orgs/{org}/teams/{team_slug}
 func (UnimplementedHandler) TeamsGetByName(ctx context.Context, params TeamsGetByNameParams) (r TeamsGetByNameRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsGetByNameRes), nil
 }
 
 // TeamsGetDiscussionCommentInOrg implements teams/get-discussion-comment-in-org operation.
@@ -9265,62 +10109,71 @@ func (UnimplementedHandler) TeamsGetByName(ctx context.Context, params TeamsGetB
 //
 // GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}
 func (UnimplementedHandler) TeamsGetDiscussionCommentInOrg(ctx context.Context, params TeamsGetDiscussionCommentInOrgParams) (r *TeamDiscussionComment, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsGetDiscussionCommentLegacy implements teams/get-discussion-comment-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [Get a discussion comment](https://docs.
+	// github.com/rest/reference/teams#get-a-discussion-comment) endpoint.
+	// Get a specific comment on a team discussion. OAuth access tokens require the `read:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}
 }
 
-// TeamsGetDiscussionCommentLegacy implements teams/get-discussion-comment-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [Get a discussion comment](https://docs.
-// github.com/rest/reference/teams#get-a-discussion-comment) endpoint.
-// Get a specific comment on a team discussion. OAuth access tokens require the `read:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}
 func (UnimplementedHandler) TeamsGetDiscussionCommentLegacy(ctx context.Context, params TeamsGetDiscussionCommentLegacyParams) (r *TeamDiscussionComment, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsGetDiscussionInOrg implements teams/get-discussion-in-org operation.
+	//
+	// Get a specific discussion on a team's page. OAuth access tokens require the `read:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET
+	// /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
+	//
+	// GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}
 }
 
-// TeamsGetDiscussionInOrg implements teams/get-discussion-in-org operation.
-//
-// Get a specific discussion on a team's page. OAuth access tokens require the `read:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET
-// /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
-//
-// GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}
 func (UnimplementedHandler) TeamsGetDiscussionInOrg(ctx context.Context, params TeamsGetDiscussionInOrgParams) (r *TeamDiscussion, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsGetDiscussionLegacy implements teams/get-discussion-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [Get a discussion](https://docs.github.
+	// com/rest/reference/teams#get-a-discussion) endpoint.
+	// Get a specific discussion on a team's page. OAuth access tokens require the `read:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/discussions/{discussion_number}
 }
 
-// TeamsGetDiscussionLegacy implements teams/get-discussion-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [Get a discussion](https://docs.github.
-// com/rest/reference/teams#get-a-discussion) endpoint.
-// Get a specific discussion on a team's page. OAuth access tokens require the `read:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/discussions/{discussion_number}
 func (UnimplementedHandler) TeamsGetDiscussionLegacy(ctx context.Context, params TeamsGetDiscussionLegacyParams) (r *TeamDiscussion, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsGetLegacy implements teams/get-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the [Get a team by name](https://docs.github.
+	// com/rest/reference/teams#get-a-team-by-name) endpoint.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}
 }
 
-// TeamsGetLegacy implements teams/get-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the [Get a team by name](https://docs.github.
-// com/rest/reference/teams#get-a-team-by-name) endpoint.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}
 func (UnimplementedHandler) TeamsGetLegacy(ctx context.Context, params TeamsGetLegacyParams) (r TeamsGetLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsGetLegacyRes), nil
 }
 
 // TeamsGetMemberLegacy implements teams/get-member-legacy operation.
@@ -9335,7 +10188,8 @@ func (UnimplementedHandler) TeamsGetLegacy(ctx context.Context, params TeamsGetL
 //
 // GET /teams/{team_id}/members/{username}
 func (UnimplementedHandler) TeamsGetMemberLegacy(ctx context.Context, params TeamsGetMemberLegacyParams) (r TeamsGetMemberLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsGetMemberLegacyRes), nil
 }
 
 // TeamsGetMembershipForUserInOrg implements teams/get-membership-for-user-in-org operation.
@@ -9351,7 +10205,8 @@ func (UnimplementedHandler) TeamsGetMemberLegacy(ctx context.Context, params Tea
 //
 // GET /orgs/{org}/teams/{team_slug}/memberships/{username}
 func (UnimplementedHandler) TeamsGetMembershipForUserInOrg(ctx context.Context, params TeamsGetMembershipForUserInOrgParams) (r TeamsGetMembershipForUserInOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsGetMembershipForUserInOrgRes), nil
 }
 
 // TeamsGetMembershipForUserLegacy implements teams/get-membership-for-user-legacy operation.
@@ -9370,7 +10225,8 @@ func (UnimplementedHandler) TeamsGetMembershipForUserInOrg(ctx context.Context, 
 //
 // GET /teams/{team_id}/memberships/{username}
 func (UnimplementedHandler) TeamsGetMembershipForUserLegacy(ctx context.Context, params TeamsGetMembershipForUserLegacyParams) (r TeamsGetMembershipForUserLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsGetMembershipForUserLegacyRes), nil
 }
 
 // TeamsList implements teams/list operation.
@@ -9379,7 +10235,8 @@ func (UnimplementedHandler) TeamsGetMembershipForUserLegacy(ctx context.Context,
 //
 // GET /orgs/{org}/teams
 func (UnimplementedHandler) TeamsList(ctx context.Context, params TeamsListParams) (r TeamsListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsListRes), nil
 }
 
 // TeamsListChildInOrg implements teams/list-child-in-org operation.
@@ -9390,20 +10247,23 @@ func (UnimplementedHandler) TeamsList(ctx context.Context, params TeamsListParam
 //
 // GET /orgs/{org}/teams/{team_slug}/teams
 func (UnimplementedHandler) TeamsListChildInOrg(ctx context.Context, params TeamsListChildInOrgParams) (r *TeamsListChildInOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListChildLegacy implements teams/list-child-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [`List child teams`](https://docs.github.
+	// com/rest/reference/teams#list-child-teams) endpoint.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/teams
 }
 
-// TeamsListChildLegacy implements teams/list-child-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [`List child teams`](https://docs.github.
-// com/rest/reference/teams#list-child-teams) endpoint.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/teams
 func (UnimplementedHandler) TeamsListChildLegacy(ctx context.Context, params TeamsListChildLegacyParams) (r TeamsListChildLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsListChildLegacyRes), nil
 }
 
 // TeamsListDiscussionCommentsInOrg implements teams/list-discussion-comments-in-org operation.
@@ -9415,61 +10275,70 @@ func (UnimplementedHandler) TeamsListChildLegacy(ctx context.Context, params Tea
 //
 // GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments
 func (UnimplementedHandler) TeamsListDiscussionCommentsInOrg(ctx context.Context, params TeamsListDiscussionCommentsInOrgParams) (r *TeamsListDiscussionCommentsInOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListDiscussionCommentsLegacy implements teams/list-discussion-comments-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [List discussion comments](https://docs.
+	// github.com/rest/reference/teams#list-discussion-comments) endpoint.
+	// List all comments on a team discussion. OAuth access tokens require the `read:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/discussions/{discussion_number}/comments
 }
 
-// TeamsListDiscussionCommentsLegacy implements teams/list-discussion-comments-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [List discussion comments](https://docs.
-// github.com/rest/reference/teams#list-discussion-comments) endpoint.
-// List all comments on a team discussion. OAuth access tokens require the `read:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/discussions/{discussion_number}/comments
 func (UnimplementedHandler) TeamsListDiscussionCommentsLegacy(ctx context.Context, params TeamsListDiscussionCommentsLegacyParams) (r *TeamsListDiscussionCommentsLegacyOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListDiscussionsInOrg implements teams/list-discussions-in-org operation.
+	//
+	// List all discussions on a team's page. OAuth access tokens require the `read:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET
+	// /organizations/{org_id}/team/{team_id}/discussions`.
+	//
+	// GET /orgs/{org}/teams/{team_slug}/discussions
 }
 
-// TeamsListDiscussionsInOrg implements teams/list-discussions-in-org operation.
-//
-// List all discussions on a team's page. OAuth access tokens require the `read:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET
-// /organizations/{org_id}/team/{team_id}/discussions`.
-//
-// GET /orgs/{org}/teams/{team_slug}/discussions
 func (UnimplementedHandler) TeamsListDiscussionsInOrg(ctx context.Context, params TeamsListDiscussionsInOrgParams) (r *TeamsListDiscussionsInOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListDiscussionsLegacy implements teams/list-discussions-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [`List discussions`](https://docs.github.
+	// com/rest/reference/teams#list-discussions) endpoint.
+	// List all discussions on a team's page. OAuth access tokens require the `read:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/discussions
 }
 
-// TeamsListDiscussionsLegacy implements teams/list-discussions-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [`List discussions`](https://docs.github.
-// com/rest/reference/teams#list-discussions) endpoint.
-// List all discussions on a team's page. OAuth access tokens require the `read:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/discussions
 func (UnimplementedHandler) TeamsListDiscussionsLegacy(ctx context.Context, params TeamsListDiscussionsLegacyParams) (r *TeamsListDiscussionsLegacyOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListForAuthenticatedUser implements teams/list-for-authenticated-user operation.
+	//
+	// List all of the teams across all of the organizations to which the authenticated user belongs.
+	// This method requires `user`, `repo`, or `read:org` [scope](https://docs.github.
+	// com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/) when authenticating via
+	// [OAuth](https://docs.github.com/apps/building-oauth-apps/).
+	//
+	// GET /user/teams
 }
 
-// TeamsListForAuthenticatedUser implements teams/list-for-authenticated-user operation.
-//
-// List all of the teams across all of the organizations to which the authenticated user belongs.
-// This method requires `user`, `repo`, or `read:org` [scope](https://docs.github.
-// com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/) when authenticating via
-// [OAuth](https://docs.github.com/apps/building-oauth-apps/).
-//
-// GET /user/teams
 func (UnimplementedHandler) TeamsListForAuthenticatedUser(ctx context.Context, params TeamsListForAuthenticatedUserParams) (r TeamsListForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsListForAuthenticatedUserRes), nil
 }
 
 // TeamsListIdpGroupsForLegacy implements teams/list-idp-groups-for-legacy operation.
@@ -9486,7 +10355,8 @@ func (UnimplementedHandler) TeamsListForAuthenticatedUser(ctx context.Context, p
 //
 // GET /teams/{team_id}/team-sync/group-mappings
 func (UnimplementedHandler) TeamsListIdpGroupsForLegacy(ctx context.Context, params TeamsListIdpGroupsForLegacyParams) (r TeamsListIdpGroupsForLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsListIdpGroupsForLegacyRes), nil
 }
 
 // TeamsListIdpGroupsForOrg implements teams/list-idp-groups-for-org operation.
@@ -9501,45 +10371,52 @@ func (UnimplementedHandler) TeamsListIdpGroupsForLegacy(ctx context.Context, par
 //
 // GET /orgs/{org}/team-sync/groups
 func (UnimplementedHandler) TeamsListIdpGroupsForOrg(ctx context.Context, params TeamsListIdpGroupsForOrgParams) (r *GroupMappingHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListIdpGroupsInOrg implements teams/list-idp-groups-in-org operation.
+	//
+	// Team synchronization is available for organizations using GitHub Enterprise Cloud. For more
+	// information, see [GitHub's products](https://help.github.
+	// com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
+	// List IdP groups connected to a team on GitHub.
+	// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET
+	// /organizations/{org_id}/team/{team_id}/team-sync/group-mappings`.
+	//
+	// GET /orgs/{org}/teams/{team_slug}/team-sync/group-mappings
 }
 
-// TeamsListIdpGroupsInOrg implements teams/list-idp-groups-in-org operation.
-//
-// Team synchronization is available for organizations using GitHub Enterprise Cloud. For more
-// information, see [GitHub's products](https://help.github.
-// com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
-// List IdP groups connected to a team on GitHub.
-// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET
-// /organizations/{org_id}/team/{team_id}/team-sync/group-mappings`.
-//
-// GET /orgs/{org}/teams/{team_slug}/team-sync/group-mappings
 func (UnimplementedHandler) TeamsListIdpGroupsInOrg(ctx context.Context, params TeamsListIdpGroupsInOrgParams) (r *GroupMapping, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListMembersInOrg implements teams/list-members-in-org operation.
+	//
+	// Team members will include the members of child teams.
+	// To list members in a team, the team must be visible to the authenticated user.
+	//
+	// GET /orgs/{org}/teams/{team_slug}/members
 }
 
-// TeamsListMembersInOrg implements teams/list-members-in-org operation.
-//
-// Team members will include the members of child teams.
-// To list members in a team, the team must be visible to the authenticated user.
-//
-// GET /orgs/{org}/teams/{team_slug}/members
 func (UnimplementedHandler) TeamsListMembersInOrg(ctx context.Context, params TeamsListMembersInOrgParams) (r *TeamsListMembersInOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListMembersLegacy implements teams/list-members-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [`List team members`](https://docs.github.
+	// com/rest/reference/teams#list-team-members) endpoint.
+	// Team members will include the members of child teams.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/members
 }
 
-// TeamsListMembersLegacy implements teams/list-members-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [`List team members`](https://docs.github.
-// com/rest/reference/teams#list-team-members) endpoint.
-// Team members will include the members of child teams.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/members
 func (UnimplementedHandler) TeamsListMembersLegacy(ctx context.Context, params TeamsListMembersLegacyParams) (r TeamsListMembersLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsListMembersLegacyRes), nil
 }
 
 // TeamsListPendingInvitationsInOrg implements teams/list-pending-invitations-in-org operation.
@@ -9553,49 +10430,56 @@ func (UnimplementedHandler) TeamsListMembersLegacy(ctx context.Context, params T
 //
 // GET /orgs/{org}/teams/{team_slug}/invitations
 func (UnimplementedHandler) TeamsListPendingInvitationsInOrg(ctx context.Context, params TeamsListPendingInvitationsInOrgParams) (r *TeamsListPendingInvitationsInOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListPendingInvitationsLegacy implements teams/list-pending-invitations-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [`List pending team
+	// invitations`](https://docs.github.com/rest/reference/teams#list-pending-team-invitations) endpoint.
+	// The return hash contains a `role` field which refers to the Organization Invitation role and will
+	// be one of the following values: `direct_member`, `admin`, `billing_manager`, `hiring_manager`, or
+	// `reinstate`. If the invitee is not a GitHub member, the `login` field in the return hash will be
+	// `null`.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/invitations
 }
 
-// TeamsListPendingInvitationsLegacy implements teams/list-pending-invitations-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [`List pending team
-// invitations`](https://docs.github.com/rest/reference/teams#list-pending-team-invitations) endpoint.
-// The return hash contains a `role` field which refers to the Organization Invitation role and will
-// be one of the following values: `direct_member`, `admin`, `billing_manager`, `hiring_manager`, or
-// `reinstate`. If the invitee is not a GitHub member, the `login` field in the return hash will be
-// `null`.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/invitations
 func (UnimplementedHandler) TeamsListPendingInvitationsLegacy(ctx context.Context, params TeamsListPendingInvitationsLegacyParams) (r *TeamsListPendingInvitationsLegacyOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListProjectsInOrg implements teams/list-projects-in-org operation.
+	//
+	// Lists the organization projects for a team.
+	// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET
+	// /organizations/{org_id}/team/{team_id}/projects`.
+	//
+	// GET /orgs/{org}/teams/{team_slug}/projects
 }
 
-// TeamsListProjectsInOrg implements teams/list-projects-in-org operation.
-//
-// Lists the organization projects for a team.
-// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET
-// /organizations/{org_id}/team/{team_id}/projects`.
-//
-// GET /orgs/{org}/teams/{team_slug}/projects
 func (UnimplementedHandler) TeamsListProjectsInOrg(ctx context.Context, params TeamsListProjectsInOrgParams) (r *TeamsListProjectsInOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListProjectsLegacy implements teams/list-projects-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [`List team projects`](https://docs.
+	// github.com/rest/reference/teams#list-team-projects) endpoint.
+	// Lists the organization projects for a team.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/projects
 }
 
-// TeamsListProjectsLegacy implements teams/list-projects-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [`List team projects`](https://docs.
-// github.com/rest/reference/teams#list-team-projects) endpoint.
-// Lists the organization projects for a team.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/projects
 func (UnimplementedHandler) TeamsListProjectsLegacy(ctx context.Context, params TeamsListProjectsLegacyParams) (r TeamsListProjectsLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsListProjectsLegacyRes), nil
 }
 
 // TeamsListReposInOrg implements teams/list-repos-in-org operation.
@@ -9606,20 +10490,23 @@ func (UnimplementedHandler) TeamsListProjectsLegacy(ctx context.Context, params 
 //
 // GET /orgs/{org}/teams/{team_slug}/repos
 func (UnimplementedHandler) TeamsListReposInOrg(ctx context.Context, params TeamsListReposInOrgParams) (r *TeamsListReposInOrgOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsListReposLegacy implements teams/list-repos-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [List team repositories](https://docs.
+	// github.com/rest/reference/teams#list-team-repositories) endpoint.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// GET /teams/{team_id}/repos
 }
 
-// TeamsListReposLegacy implements teams/list-repos-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [List team repositories](https://docs.
-// github.com/rest/reference/teams#list-team-repositories) endpoint.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// GET /teams/{team_id}/repos
 func (UnimplementedHandler) TeamsListReposLegacy(ctx context.Context, params TeamsListReposLegacyParams) (r TeamsListReposLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsListReposLegacyRes), nil
 }
 
 // TeamsRemoveMemberLegacy implements teams/remove-member-legacy operation.
@@ -9648,7 +10535,8 @@ func (UnimplementedHandler) TeamsListReposLegacy(ctx context.Context, params Tea
 //
 // DELETE /teams/{team_id}/members/{username}
 func (UnimplementedHandler) TeamsRemoveMemberLegacy(ctx context.Context, params TeamsRemoveMemberLegacyParams) (r TeamsRemoveMemberLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsRemoveMemberLegacyRes), nil
 }
 
 // TeamsRemoveMembershipForUserInOrg implements teams/remove-membership-for-user-in-org operation.
@@ -9671,7 +10559,8 @@ func (UnimplementedHandler) TeamsRemoveMemberLegacy(ctx context.Context, params 
 //
 // DELETE /orgs/{org}/teams/{team_slug}/memberships/{username}
 func (UnimplementedHandler) TeamsRemoveMembershipForUserInOrg(ctx context.Context, params TeamsRemoveMembershipForUserInOrgParams) (r TeamsRemoveMembershipForUserInOrgRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsRemoveMembershipForUserInOrgRes), nil
 }
 
 // TeamsRemoveMembershipForUserLegacy implements teams/remove-membership-for-user-legacy operation.
@@ -9697,7 +10586,8 @@ func (UnimplementedHandler) TeamsRemoveMembershipForUserInOrg(ctx context.Contex
 //
 // DELETE /teams/{team_id}/memberships/{username}
 func (UnimplementedHandler) TeamsRemoveMembershipForUserLegacy(ctx context.Context, params TeamsRemoveMembershipForUserLegacyParams) (r TeamsRemoveMembershipForUserLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsRemoveMembershipForUserLegacyRes), nil
 }
 
 // TeamsRemoveProjectInOrg implements teams/remove-project-in-org operation.
@@ -9711,7 +10601,8 @@ func (UnimplementedHandler) TeamsRemoveMembershipForUserLegacy(ctx context.Conte
 //
 // DELETE /orgs/{org}/teams/{team_slug}/projects/{project_id}
 func (UnimplementedHandler) TeamsRemoveProjectInOrg(ctx context.Context, params TeamsRemoveProjectInOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TeamsRemoveProjectLegacy implements teams/remove-project-legacy operation.
@@ -9728,7 +10619,8 @@ func (UnimplementedHandler) TeamsRemoveProjectInOrg(ctx context.Context, params 
 //
 // DELETE /teams/{team_id}/projects/{project_id}
 func (UnimplementedHandler) TeamsRemoveProjectLegacy(ctx context.Context, params TeamsRemoveProjectLegacyParams) (r TeamsRemoveProjectLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsRemoveProjectLegacyRes), nil
 }
 
 // TeamsRemoveRepoInOrg implements teams/remove-repo-in-org operation.
@@ -9742,7 +10634,8 @@ func (UnimplementedHandler) TeamsRemoveProjectLegacy(ctx context.Context, params
 //
 // DELETE /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}
 func (UnimplementedHandler) TeamsRemoveRepoInOrg(ctx context.Context, params TeamsRemoveRepoInOrgParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TeamsRemoveRepoLegacy implements teams/remove-repo-legacy operation.
@@ -9759,7 +10652,8 @@ func (UnimplementedHandler) TeamsRemoveRepoInOrg(ctx context.Context, params Tea
 //
 // DELETE /teams/{team_id}/repos/{owner}/{repo}
 func (UnimplementedHandler) TeamsRemoveRepoLegacy(ctx context.Context, params TeamsRemoveRepoLegacyParams) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TeamsUpdateDiscussionCommentInOrg implements teams/update-discussion-comment-in-org operation.
@@ -9771,77 +10665,88 @@ func (UnimplementedHandler) TeamsRemoveRepoLegacy(ctx context.Context, params Te
 //
 // PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}
 func (UnimplementedHandler) TeamsUpdateDiscussionCommentInOrg(ctx context.Context, req *TeamsUpdateDiscussionCommentInOrgReq, params TeamsUpdateDiscussionCommentInOrgParams) (r *TeamDiscussionComment, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsUpdateDiscussionCommentLegacy implements teams/update-discussion-comment-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [Update a discussion
+	// comment](https://docs.github.com/rest/reference/teams#update-a-discussion-comment) endpoint.
+	// Edits the body text of a discussion comment. OAuth access tokens require the `write:discussion`
+	// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// PATCH /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}
 }
 
-// TeamsUpdateDiscussionCommentLegacy implements teams/update-discussion-comment-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [Update a discussion
-// comment](https://docs.github.com/rest/reference/teams#update-a-discussion-comment) endpoint.
-// Edits the body text of a discussion comment. OAuth access tokens require the `write:discussion`
-// [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// PATCH /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}
 func (UnimplementedHandler) TeamsUpdateDiscussionCommentLegacy(ctx context.Context, req *TeamsUpdateDiscussionCommentLegacyReq, params TeamsUpdateDiscussionCommentLegacyParams) (r *TeamDiscussionComment, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsUpdateDiscussionInOrg implements teams/update-discussion-in-org operation.
+	//
+	// Edits the title and body text of a discussion post. Only the parameters you provide are updated.
+	// OAuth access tokens require the `write:discussion` [scope](https://docs.github.
+	// com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	// **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH
+	// /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
+	//
+	// PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}
 }
 
-// TeamsUpdateDiscussionInOrg implements teams/update-discussion-in-org operation.
-//
-// Edits the title and body text of a discussion post. Only the parameters you provide are updated.
-// OAuth access tokens require the `write:discussion` [scope](https://docs.github.
-// com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-// **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH
-// /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
-//
-// PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}
 func (UnimplementedHandler) TeamsUpdateDiscussionInOrg(ctx context.Context, req OptTeamsUpdateDiscussionInOrgReq, params TeamsUpdateDiscussionInOrgParams) (r *TeamDiscussion, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsUpdateDiscussionLegacy implements teams/update-discussion-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [Update a discussion](https://docs.github.
+	// com/rest/reference/teams#update-a-discussion) endpoint.
+	// Edits the title and body text of a discussion post. Only the parameters you provide are updated.
+	// OAuth access tokens require the `write:discussion` [scope](https://docs.github.
+	// com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// PATCH /teams/{team_id}/discussions/{discussion_number}
 }
 
-// TeamsUpdateDiscussionLegacy implements teams/update-discussion-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [Update a discussion](https://docs.github.
-// com/rest/reference/teams#update-a-discussion) endpoint.
-// Edits the title and body text of a discussion post. Only the parameters you provide are updated.
-// OAuth access tokens require the `write:discussion` [scope](https://docs.github.
-// com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// PATCH /teams/{team_id}/discussions/{discussion_number}
 func (UnimplementedHandler) TeamsUpdateDiscussionLegacy(ctx context.Context, req OptTeamsUpdateDiscussionLegacyReq, params TeamsUpdateDiscussionLegacyParams) (r *TeamDiscussion, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsUpdateInOrg implements teams/update-in-org operation.
+	//
+	// To edit a team, the authenticated user must either be an organization owner or a team maintainer.
+	// **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH
+	// /organizations/{org_id}/team/{team_id}`.
+	//
+	// PATCH /orgs/{org}/teams/{team_slug}
 }
 
-// TeamsUpdateInOrg implements teams/update-in-org operation.
-//
-// To edit a team, the authenticated user must either be an organization owner or a team maintainer.
-// **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH
-// /organizations/{org_id}/team/{team_id}`.
-//
-// PATCH /orgs/{org}/teams/{team_slug}
 func (UnimplementedHandler) TeamsUpdateInOrg(ctx context.Context, req OptTeamsUpdateInOrgReq, params TeamsUpdateInOrgParams) (r *TeamFull, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TeamsUpdateLegacy implements teams/update-legacy operation.
+	//
+	// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
+	// We recommend migrating your existing code to use the new [Update a team](https://docs.github.
+	// com/rest/reference/teams#update-a-team) endpoint.
+	// To edit a team, the authenticated user must either be an organization owner or a team maintainer.
+	// **Note:** With nested teams, the `privacy` for parent teams cannot be `secret`.
+	//
+	// Deprecated: schema marks this operation as deprecated.
+	//
+	// PATCH /teams/{team_id}
 }
 
-// TeamsUpdateLegacy implements teams/update-legacy operation.
-//
-// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API.
-// We recommend migrating your existing code to use the new [Update a team](https://docs.github.
-// com/rest/reference/teams#update-a-team) endpoint.
-// To edit a team, the authenticated user must either be an organization owner or a team maintainer.
-// **Note:** With nested teams, the `privacy` for parent teams cannot be `secret`.
-//
-// Deprecated: schema marks this operation as deprecated.
-//
-// PATCH /teams/{team_id}
 func (UnimplementedHandler) TeamsUpdateLegacy(ctx context.Context, req *TeamsUpdateLegacyReq, params TeamsUpdateLegacyParams) (r TeamsUpdateLegacyRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(TeamsUpdateLegacyRes), nil
 }
 
 // UsersAddEmailForAuthenticated implements users/add-email-for-authenticated operation.
@@ -9850,7 +10755,8 @@ func (UnimplementedHandler) TeamsUpdateLegacy(ctx context.Context, req *TeamsUpd
 //
 // POST /user/emails
 func (UnimplementedHandler) UsersAddEmailForAuthenticated(ctx context.Context, req OptUsersAddEmailForAuthenticatedReq) (r UsersAddEmailForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersAddEmailForAuthenticatedRes), nil
 }
 
 // UsersBlock implements users/block operation.
@@ -9859,7 +10765,8 @@ func (UnimplementedHandler) UsersAddEmailForAuthenticated(ctx context.Context, r
 //
 // PUT /user/blocks/{username}
 func (UnimplementedHandler) UsersBlock(ctx context.Context, params UsersBlockParams) (r UsersBlockRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersBlockRes), nil
 }
 
 // UsersCheckBlocked implements users/check-blocked operation.
@@ -9868,7 +10775,8 @@ func (UnimplementedHandler) UsersBlock(ctx context.Context, params UsersBlockPar
 //
 // GET /user/blocks/{username}
 func (UnimplementedHandler) UsersCheckBlocked(ctx context.Context, params UsersCheckBlockedParams) (r UsersCheckBlockedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersCheckBlockedRes), nil
 }
 
 // UsersCheckFollowingForUser implements users/check-following-for-user operation.
@@ -9877,7 +10785,8 @@ func (UnimplementedHandler) UsersCheckBlocked(ctx context.Context, params UsersC
 //
 // GET /users/{username}/following/{target_user}
 func (UnimplementedHandler) UsersCheckFollowingForUser(ctx context.Context, params UsersCheckFollowingForUserParams) (r UsersCheckFollowingForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersCheckFollowingForUserRes), nil
 }
 
 // UsersCheckPersonIsFollowedByAuthenticated implements users/check-person-is-followed-by-authenticated operation.
@@ -9886,7 +10795,8 @@ func (UnimplementedHandler) UsersCheckFollowingForUser(ctx context.Context, para
 //
 // GET /user/following/{username}
 func (UnimplementedHandler) UsersCheckPersonIsFollowedByAuthenticated(ctx context.Context, params UsersCheckPersonIsFollowedByAuthenticatedParams) (r UsersCheckPersonIsFollowedByAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersCheckPersonIsFollowedByAuthenticatedRes), nil
 }
 
 // UsersCreateGpgKeyForAuthenticated implements users/create-gpg-key-for-authenticated operation.
@@ -9897,7 +10807,8 @@ func (UnimplementedHandler) UsersCheckPersonIsFollowedByAuthenticated(ctx contex
 //
 // POST /user/gpg_keys
 func (UnimplementedHandler) UsersCreateGpgKeyForAuthenticated(ctx context.Context, req *UsersCreateGpgKeyForAuthenticatedReq) (r UsersCreateGpgKeyForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersCreateGpgKeyForAuthenticatedRes), nil
 }
 
 // UsersCreatePublicSSHKeyForAuthenticated implements users/create-public-ssh-key-for-authenticated operation.
@@ -9908,7 +10819,8 @@ func (UnimplementedHandler) UsersCreateGpgKeyForAuthenticated(ctx context.Contex
 //
 // POST /user/keys
 func (UnimplementedHandler) UsersCreatePublicSSHKeyForAuthenticated(ctx context.Context, req *UsersCreatePublicSSHKeyForAuthenticatedReq) (r UsersCreatePublicSSHKeyForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersCreatePublicSSHKeyForAuthenticatedRes), nil
 }
 
 // UsersDeleteEmailForAuthenticated implements users/delete-email-for-authenticated operation.
@@ -9917,7 +10829,8 @@ func (UnimplementedHandler) UsersCreatePublicSSHKeyForAuthenticated(ctx context.
 //
 // DELETE /user/emails
 func (UnimplementedHandler) UsersDeleteEmailForAuthenticated(ctx context.Context, req OptUsersDeleteEmailForAuthenticatedReq) (r UsersDeleteEmailForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersDeleteEmailForAuthenticatedRes), nil
 }
 
 // UsersDeleteGpgKeyForAuthenticated implements users/delete-gpg-key-for-authenticated operation.
@@ -9928,7 +10841,8 @@ func (UnimplementedHandler) UsersDeleteEmailForAuthenticated(ctx context.Context
 //
 // DELETE /user/gpg_keys/{gpg_key_id}
 func (UnimplementedHandler) UsersDeleteGpgKeyForAuthenticated(ctx context.Context, params UsersDeleteGpgKeyForAuthenticatedParams) (r UsersDeleteGpgKeyForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersDeleteGpgKeyForAuthenticatedRes), nil
 }
 
 // UsersDeletePublicSSHKeyForAuthenticated implements users/delete-public-ssh-key-for-authenticated operation.
@@ -9939,7 +10853,8 @@ func (UnimplementedHandler) UsersDeleteGpgKeyForAuthenticated(ctx context.Contex
 //
 // DELETE /user/keys/{key_id}
 func (UnimplementedHandler) UsersDeletePublicSSHKeyForAuthenticated(ctx context.Context, params UsersDeletePublicSSHKeyForAuthenticatedParams) (r UsersDeletePublicSSHKeyForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersDeletePublicSSHKeyForAuthenticatedRes), nil
 }
 
 // UsersFollow implements users/follow operation.
@@ -9952,7 +10867,8 @@ func (UnimplementedHandler) UsersDeletePublicSSHKeyForAuthenticated(ctx context.
 //
 // PUT /user/following/{username}
 func (UnimplementedHandler) UsersFollow(ctx context.Context, params UsersFollowParams) (r UsersFollowRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersFollowRes), nil
 }
 
 // UsersGetAuthenticated implements users/get-authenticated operation.
@@ -9964,7 +10880,8 @@ func (UnimplementedHandler) UsersFollow(ctx context.Context, params UsersFollowP
 //
 // GET /user
 func (UnimplementedHandler) UsersGetAuthenticated(ctx context.Context) (r UsersGetAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersGetAuthenticatedRes), nil
 }
 
 // UsersGetByUsername implements users/get-by-username operation.
@@ -9987,7 +10904,8 @@ func (UnimplementedHandler) UsersGetAuthenticated(ctx context.Context) (r UsersG
 //
 // GET /users/{username}
 func (UnimplementedHandler) UsersGetByUsername(ctx context.Context, params UsersGetByUsernameParams) (r UsersGetByUsernameRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersGetByUsernameRes), nil
 }
 
 // UsersGetContextForUser implements users/get-context-for-user operation.
@@ -10005,7 +10923,8 @@ func (UnimplementedHandler) UsersGetByUsername(ctx context.Context, params Users
 //
 // GET /users/{username}/hovercard
 func (UnimplementedHandler) UsersGetContextForUser(ctx context.Context, params UsersGetContextForUserParams) (r UsersGetContextForUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersGetContextForUserRes), nil
 }
 
 // UsersGetGpgKeyForAuthenticated implements users/get-gpg-key-for-authenticated operation.
@@ -10016,7 +10935,8 @@ func (UnimplementedHandler) UsersGetContextForUser(ctx context.Context, params U
 //
 // GET /user/gpg_keys/{gpg_key_id}
 func (UnimplementedHandler) UsersGetGpgKeyForAuthenticated(ctx context.Context, params UsersGetGpgKeyForAuthenticatedParams) (r UsersGetGpgKeyForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersGetGpgKeyForAuthenticatedRes), nil
 }
 
 // UsersGetPublicSSHKeyForAuthenticated implements users/get-public-ssh-key-for-authenticated operation.
@@ -10027,7 +10947,8 @@ func (UnimplementedHandler) UsersGetGpgKeyForAuthenticated(ctx context.Context, 
 //
 // GET /user/keys/{key_id}
 func (UnimplementedHandler) UsersGetPublicSSHKeyForAuthenticated(ctx context.Context, params UsersGetPublicSSHKeyForAuthenticatedParams) (r UsersGetPublicSSHKeyForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersGetPublicSSHKeyForAuthenticatedRes), nil
 }
 
 // UsersList implements users/list operation.
@@ -10040,7 +10961,8 @@ func (UnimplementedHandler) UsersGetPublicSSHKeyForAuthenticated(ctx context.Con
 //
 // GET /users
 func (UnimplementedHandler) UsersList(ctx context.Context, params UsersListParams) (r UsersListRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersListRes), nil
 }
 
 // UsersListBlockedByAuthenticated implements users/list-blocked-by-authenticated operation.
@@ -10049,7 +10971,8 @@ func (UnimplementedHandler) UsersList(ctx context.Context, params UsersListParam
 //
 // GET /user/blocks
 func (UnimplementedHandler) UsersListBlockedByAuthenticated(ctx context.Context) (r UsersListBlockedByAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersListBlockedByAuthenticatedRes), nil
 }
 
 // UsersListEmailsForAuthenticated implements users/list-emails-for-authenticated operation.
@@ -10059,7 +10982,8 @@ func (UnimplementedHandler) UsersListBlockedByAuthenticated(ctx context.Context)
 //
 // GET /user/emails
 func (UnimplementedHandler) UsersListEmailsForAuthenticated(ctx context.Context, params UsersListEmailsForAuthenticatedParams) (r UsersListEmailsForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersListEmailsForAuthenticatedRes), nil
 }
 
 // UsersListFollowedByAuthenticated implements users/list-followed-by-authenticated operation.
@@ -10068,7 +10992,8 @@ func (UnimplementedHandler) UsersListEmailsForAuthenticated(ctx context.Context,
 //
 // GET /user/following
 func (UnimplementedHandler) UsersListFollowedByAuthenticated(ctx context.Context, params UsersListFollowedByAuthenticatedParams) (r UsersListFollowedByAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersListFollowedByAuthenticatedRes), nil
 }
 
 // UsersListFollowersForAuthenticatedUser implements users/list-followers-for-authenticated-user operation.
@@ -10077,7 +11002,8 @@ func (UnimplementedHandler) UsersListFollowedByAuthenticated(ctx context.Context
 //
 // GET /user/followers
 func (UnimplementedHandler) UsersListFollowersForAuthenticatedUser(ctx context.Context, params UsersListFollowersForAuthenticatedUserParams) (r UsersListFollowersForAuthenticatedUserRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersListFollowersForAuthenticatedUserRes), nil
 }
 
 // UsersListFollowersForUser implements users/list-followers-for-user operation.
@@ -10086,27 +11012,32 @@ func (UnimplementedHandler) UsersListFollowersForAuthenticatedUser(ctx context.C
 //
 // GET /users/{username}/followers
 func (UnimplementedHandler) UsersListFollowersForUser(ctx context.Context, params UsersListFollowersForUserParams) (r *UsersListFollowersForUserOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UsersListFollowingForUser implements users/list-following-for-user operation.
+	//
+	// Lists the people who the specified user follows.
+	//
+	// GET /users/{username}/following
 }
 
-// UsersListFollowingForUser implements users/list-following-for-user operation.
-//
-// Lists the people who the specified user follows.
-//
-// GET /users/{username}/following
 func (UnimplementedHandler) UsersListFollowingForUser(ctx context.Context, params UsersListFollowingForUserParams) (r *UsersListFollowingForUserOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UsersListGpgKeysForAuthenticated implements users/list-gpg-keys-for-authenticated operation.
+	//
+	// Lists the current user's GPG keys. Requires that you are authenticated via Basic Auth or via OAuth
+	// with at least `read:gpg_key` [scope](https://docs.github.
+	// com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	//
+	// GET /user/gpg_keys
 }
 
-// UsersListGpgKeysForAuthenticated implements users/list-gpg-keys-for-authenticated operation.
-//
-// Lists the current user's GPG keys. Requires that you are authenticated via Basic Auth or via OAuth
-// with at least `read:gpg_key` [scope](https://docs.github.
-// com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-//
-// GET /user/gpg_keys
 func (UnimplementedHandler) UsersListGpgKeysForAuthenticated(ctx context.Context, params UsersListGpgKeysForAuthenticatedParams) (r UsersListGpgKeysForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersListGpgKeysForAuthenticatedRes), nil
 }
 
 // UsersListGpgKeysForUser implements users/list-gpg-keys-for-user operation.
@@ -10115,19 +11046,22 @@ func (UnimplementedHandler) UsersListGpgKeysForAuthenticated(ctx context.Context
 //
 // GET /users/{username}/gpg_keys
 func (UnimplementedHandler) UsersListGpgKeysForUser(ctx context.Context, params UsersListGpgKeysForUserParams) (r *UsersListGpgKeysForUserOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UsersListPublicEmailsForAuthenticated implements users/list-public-emails-for-authenticated operation.
+	//
+	// Lists your publicly visible email address, which you can set with the [Set primary email
+	// visibility for the authenticated user](https://docs.github.
+	// com/rest/reference/users#set-primary-email-visibility-for-the-authenticated-user) endpoint. This
+	// endpoint is accessible with the `user:email` scope.
+	//
+	// GET /user/public_emails
 }
 
-// UsersListPublicEmailsForAuthenticated implements users/list-public-emails-for-authenticated operation.
-//
-// Lists your publicly visible email address, which you can set with the [Set primary email
-// visibility for the authenticated user](https://docs.github.
-// com/rest/reference/users#set-primary-email-visibility-for-the-authenticated-user) endpoint. This
-// endpoint is accessible with the `user:email` scope.
-//
-// GET /user/public_emails
 func (UnimplementedHandler) UsersListPublicEmailsForAuthenticated(ctx context.Context, params UsersListPublicEmailsForAuthenticatedParams) (r UsersListPublicEmailsForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersListPublicEmailsForAuthenticatedRes), nil
 }
 
 // UsersListPublicKeysForUser implements users/list-public-keys-for-user operation.
@@ -10136,18 +11070,21 @@ func (UnimplementedHandler) UsersListPublicEmailsForAuthenticated(ctx context.Co
 //
 // GET /users/{username}/keys
 func (UnimplementedHandler) UsersListPublicKeysForUser(ctx context.Context, params UsersListPublicKeysForUserParams) (r *UsersListPublicKeysForUserOKHeaders, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// UsersListPublicSSHKeysForAuthenticated implements users/list-public-ssh-keys-for-authenticated operation.
+	//
+	// Lists the public SSH keys for the authenticated user's GitHub account. Requires that you are
+	// authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://docs.
+	// github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+	//
+	// GET /user/keys
 }
 
-// UsersListPublicSSHKeysForAuthenticated implements users/list-public-ssh-keys-for-authenticated operation.
-//
-// Lists the public SSH keys for the authenticated user's GitHub account. Requires that you are
-// authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://docs.
-// github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
-//
-// GET /user/keys
 func (UnimplementedHandler) UsersListPublicSSHKeysForAuthenticated(ctx context.Context, params UsersListPublicSSHKeysForAuthenticatedParams) (r UsersListPublicSSHKeysForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersListPublicSSHKeysForAuthenticatedRes), nil
 }
 
 // UsersSetPrimaryEmailVisibilityForAuthenticated implements users/set-primary-email-visibility-for-authenticated operation.
@@ -10156,7 +11093,8 @@ func (UnimplementedHandler) UsersListPublicSSHKeysForAuthenticated(ctx context.C
 //
 // PATCH /user/email/visibility
 func (UnimplementedHandler) UsersSetPrimaryEmailVisibilityForAuthenticated(ctx context.Context, req *UsersSetPrimaryEmailVisibilityForAuthenticatedReq) (r UsersSetPrimaryEmailVisibilityForAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersSetPrimaryEmailVisibilityForAuthenticatedRes), nil
 }
 
 // UsersUnblock implements users/unblock operation.
@@ -10165,7 +11103,8 @@ func (UnimplementedHandler) UsersSetPrimaryEmailVisibilityForAuthenticated(ctx c
 //
 // DELETE /user/blocks/{username}
 func (UnimplementedHandler) UsersUnblock(ctx context.Context, params UsersUnblockParams) (r UsersUnblockRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersUnblockRes), nil
 }
 
 // UsersUnfollow implements users/unfollow operation.
@@ -10175,7 +11114,8 @@ func (UnimplementedHandler) UsersUnblock(ctx context.Context, params UsersUnbloc
 //
 // DELETE /user/following/{username}
 func (UnimplementedHandler) UsersUnfollow(ctx context.Context, params UsersUnfollowParams) (r UsersUnfollowRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersUnfollowRes), nil
 }
 
 // UsersUpdateAuthenticated implements users/update-authenticated operation.
@@ -10186,5 +11126,6 @@ func (UnimplementedHandler) UsersUnfollow(ctx context.Context, params UsersUnfol
 //
 // PATCH /user
 func (UnimplementedHandler) UsersUpdateAuthenticated(ctx context.Context, req OptUsersUpdateAuthenticatedReq) (r UsersUpdateAuthenticatedRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(UsersUpdateAuthenticatedRes), nil
 }

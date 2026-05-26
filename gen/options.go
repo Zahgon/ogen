@@ -1,22 +1,13 @@
 package gen
 
 import (
-	"context"
 	"net/url"
-	"os"
-	"path"
-	"path/filepath"
 	"regexp"
-	"runtime"
-	"slices"
-	"strings"
 
-	"github.com/go-faster/errors"
 	"github.com/go-faster/yaml"
 	"go.uber.org/zap"
 
 	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/internal/urlpath"
 	"github.com/ogen-go/ogen/jsonschema"
 	"github.com/ogen-go/ogen/location"
 	"github.com/ogen-go/ogen/openapi"
@@ -40,15 +31,11 @@ type Options struct {
 // SetLocation sets File, RootURL and RemoteOptions using given path or URL
 // and returns file data.
 func (o *Options) SetLocation(p string, opts RemoteOptions) ([]byte, error) {
-	return o.Parser.SetLocation(p, opts)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (o *Options) setDefaults() {
-	o.Parser.setDefaults()
-	if o.Logger == nil {
-		o.Logger = zap.NewNop()
-	}
-}
+func (o *Options) setDefaults() { _ = "STUB: not implemented"; return }
 
 // RemoteOptions is remote reference resolver options.
 type RemoteOptions = jsonschema.ExternalOptions
@@ -95,77 +82,15 @@ type ParseOptions struct {
 // SetLocation sets File, RootURL and RemoteOptions using given path or URL
 // and returns file data.
 func (o *ParseOptions) SetLocation(p string, opts RemoteOptions) ([]byte, error) {
-	o.Remote = opts
-	r := jsonschema.NewExternalResolver(opts)
-
-	containsDrive := runtime.GOOS == "windows" && filepath.VolumeName(p) != ""
-	if u, _ := url.Parse(p); u != nil && !containsDrive && u.Scheme != "" {
-		switch u.Scheme {
-		case "http", "https":
-			_, fileName := path.Split(u.Path)
-
-			// FIXME(tdakkota): pass context.
-			data, err := r.Get(context.Background(), p)
-			if err != nil {
-				return nil, err
-			}
-
-			o.RootURL = u
-			o.File = location.NewFile(fileName, p, data)
-			// Guard against reading local files in remote mode.
-			o.Remote.ReadFile = func(p string) ([]byte, error) {
-				return nil, errors.New("local files are not supported in remote mode")
-			}
-
-			return data, nil
-		case "file":
-			toPath := opts.URLToFilePath
-			if toPath == nil {
-				toPath = urlpath.URLToFilePath
-			}
-
-			converted, err := toPath(u)
-			if err != nil {
-				return nil, errors.Wrap(err, "convert url to file path")
-			}
-			p = converted
-		default:
-			return nil, errors.Errorf("unsupported scheme %q", u.Scheme)
-		}
-	}
-	p = filepath.Clean(p)
-
-	abs, err := filepath.Abs(p)
-	if err != nil {
-		return nil, err
-	}
-	_, fileName := filepath.Split(p)
-
-	readFile := o.Remote.ReadFile
-	if readFile == nil {
-		readFile = os.ReadFile
-	}
-
-	data, err := readFile(p)
-	if err != nil {
-		return nil, err
-	}
-
-	u, err := urlpath.URLFromFilePath(abs)
-	if err != nil {
-		return nil, errors.Wrap(err, "convert file path to url")
-	}
-
-	o.RootURL = u
-	o.File = location.NewFile(fileName, p, data)
-	return data, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (o *ParseOptions) setDefaults() {
-	if o.SchemaDepthLimit <= 0 {
-		o.SchemaDepthLimit = defaultSchemaDepthLimit
-	}
-}
+// FIXME(tdakkota): pass context.
+
+// Guard against reading local files in remote mode.
+
+func (o *ParseOptions) setDefaults() { _ = "STUB: not implemented"; return }
 
 // GenerateOptions sets generator options.
 type GenerateOptions struct {
@@ -205,91 +130,42 @@ type ConvenientErrors int
 
 // IsDisabled whether Convenient Errors is disabled.
 func (c ConvenientErrors) IsDisabled() bool {
-	return c < 0
+	_ = "STUB: not implemented"
+
+	// IsForced whether Convenient Errors is forced.
+	return false
 }
 
-// IsForced whether Convenient Errors is forced.
 func (c ConvenientErrors) IsForced() bool {
-	return c > 0
+	_ = "STUB: not implemented"
+
+	// String implements fmt.Stringer.
+	return false
 }
 
-// String implements fmt.Stringer.
-func (c ConvenientErrors) String() string {
-	switch {
-	case c < 0:
-		return "off"
-	case c > 0:
-		return "on"
-	default:
-		return "auto"
-	}
-}
+func (c ConvenientErrors) String() string { _ = "STUB: not implemented"; return "" }
 
 // IsBoolFlag implements flag.boolFlag.
 func (c *ConvenientErrors) IsBoolFlag() bool {
-	return true
+	_ = "STUB: not implemented"
+
+	// UnmarshalYAML implements [yaml.Unmarshaler].
+	return false
 }
 
-// UnmarshalYAML implements [yaml.Unmarshaler].
-func (c *ConvenientErrors) UnmarshalYAML(n *yaml.Node) error {
-	var value string
-	if err := n.Decode(&value); err != nil {
-		return err
-	}
-	return c.Set(value)
-}
+func (c *ConvenientErrors) UnmarshalYAML(n *yaml.Node) error { _ = "STUB: not implemented"; return nil }
 
 // Set implements flag.Value.
-func (c *ConvenientErrors) Set(s string) error {
-	switch s {
-	case "auto":
-		*c = 0
-		return nil
-	case "on", "true":
-		*c = 1
-		return nil
-	case "off", "false":
-		*c = -1
-		return nil
-	default:
-		return errors.Errorf(`expected "on", "off" or "auto", got %q`, s)
-	}
-}
+func (c *ConvenientErrors) Set(s string) error { _ = "STUB: not implemented"; return nil }
 
 // ContentTypeAliases maps content type to concrete ogen encoding.
 type ContentTypeAliases map[string]ir.Encoding
 
 // String implements fmt.Stringer.
-func (m ContentTypeAliases) String() string {
-	var (
-		b     strings.Builder
-		first = true
-	)
-	for k, v := range m {
-		if first {
-			first = false
-		} else {
-			b.WriteString(",")
-		}
-		b.WriteString(k)
-		b.WriteByte('=')
-		b.WriteString(v.String())
-	}
-	return b.String()
-}
+func (m ContentTypeAliases) String() string { _ = "STUB: not implemented"; return "" }
 
 // Set implements flag.Value.
-func (m *ContentTypeAliases) Set(value string) error {
-	if *m == nil {
-		*m = ContentTypeAliases{}
-	}
-	before, after, ok := strings.Cut(value, "=")
-	if !ok {
-		return errors.Errorf("invalid mapping %q", value)
-	}
-	(*m)[before] = ir.Encoding(after)
-	return nil
-}
+func (m *ContentTypeAliases) Set(value string) error { _ = "STUB: not implemented"; return nil }
 
 // Filters contains filters to skip operations.
 type Filters struct {
@@ -298,32 +174,6 @@ type Filters struct {
 }
 
 // UnmarshalYAML implements [yaml.Unmarshaler].
-func (f *Filters) UnmarshalYAML(n *yaml.Node) error {
-	var v struct {
-		PathRegex string   `yaml:"path_regex"`
-		Methods   []string `yaml:"methods"`
-	}
-	if err := n.Decode(&v); err != nil {
-		return err
-	}
+func (f *Filters) UnmarshalYAML(n *yaml.Node) error { _ = "STUB: not implemented"; return nil }
 
-	var err error
-	f.PathRegex, err = regexp.Compile(v.PathRegex)
-	if err != nil {
-		return errors.Wrapf(err, "compile path regex %q", v.PathRegex)
-	}
-	f.Methods = v.Methods
-	return nil
-}
-
-func (f Filters) accept(op *openapi.Operation) bool {
-	if f.PathRegex != nil && !f.PathRegex.MatchString(op.Path.String()) {
-		return false
-	}
-
-	if len(f.Methods) > 0 {
-		return slices.ContainsFunc(f.Methods, func(m string) bool { return strings.EqualFold(m, op.HTTPMethod) })
-	}
-
-	return true
-}
+func (f Filters) accept(op *openapi.Operation) bool { _ = "STUB: not implemented"; return false }

@@ -3,14 +3,10 @@
 package api
 
 import (
-	"fmt"
-
 	"github.com/google/uuid"
 )
 
-func (s *ErrorStatusCode) Error() string {
-	return fmt.Sprintf("code %d: %+v", s.StatusCode, s.Response)
-}
+func (s *ErrorStatusCode) Error() string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/Error
 type Error struct {
@@ -19,44 +15,52 @@ type Error struct {
 
 // GetError returns the value of Error.
 func (s *Error) GetError() string {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return ""
 }
 
-// SetError sets the value of Error.
 func (s *Error) SetError(val string) {
-	s.Error = val
+	_ = "STUB: not implemented"
+
+	// ErrorStatusCode wraps Error with StatusCode.
+	return
 }
 
-// ErrorStatusCode wraps Error with StatusCode.
 type ErrorStatusCode struct {
 	StatusCode int
 	Response   Error
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorStatusCode) GetResponse() Error {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(Error)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
-func (s *ErrorStatusCode) SetResponse(val Error) {
-	s.Response = val
+func (s *ErrorStatusCode) SetResponse(val Error) { _ = "STUB: not implemented"; return }
+
+func (*ErrorStatusCode) updateDeleteRes() { _ = "STUB: not implemented"; return }
+func (*ErrorStatusCode) updateWebhookRes() {
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Event
+	return
 }
 
-func (*ErrorStatusCode) updateDeleteRes()  {}
-func (*ErrorStatusCode) updateWebhookRes() {}
-
-// Ref: #/components/schemas/Event
 type Event struct {
 	ID      uuid.UUID `json:"id"`
 	Message string    `json:"message"`
@@ -64,31 +68,34 @@ type Event struct {
 
 // GetID returns the value of ID.
 func (s *Event) GetID() uuid.UUID {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return *new(uuid.UUID)
 }
 
-// GetMessage returns the value of Message.
 func (s *Event) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return ""
 }
 
-// SetID sets the value of ID.
 func (s *Event) SetID(val uuid.UUID) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *Event) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// NewOptEvent returns new OptEvent with value set to v.
+	return
 }
 
-// NewOptEvent returns new OptEvent with value set to v.
-func NewOptEvent(v Event) OptEvent {
-	return OptEvent{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptEvent(v Event) OptEvent { _ = "STUB: not implemented"; return *new(OptEvent) }
 
 // OptEvent is optional Event.
 type OptEvent struct {
@@ -97,44 +104,26 @@ type OptEvent struct {
 }
 
 // IsSet returns true if OptEvent was set.
-func (o OptEvent) IsSet() bool { return o.Set }
+func (o OptEvent) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptEvent) Reset() {
-	var v Event
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptEvent) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptEvent) SetTo(v Event) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptEvent) SetTo(v Event) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptEvent) Get() (v Event, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptEvent) Get() (v Event, ok bool) { _ = "STUB: not implemented"; return *new(Event), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptEvent) Or(d Event) Event {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptEvent) Or(d Event) Event { _ = "STUB: not implemented"; return *new(Event) }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -143,36 +132,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 type StatusWebhookOK struct {
 	Status OptString `json:"status"`
@@ -180,20 +156,28 @@ type StatusWebhookOK struct {
 
 // GetStatus returns the value of Status.
 func (s *StatusWebhookOK) GetStatus() OptString {
-	return s.Status
+	_ = "STUB: not implemented"
+
+	// SetStatus sets the value of Status.
+	return *new(OptString)
 }
 
-// SetStatus sets the value of Status.
 func (s *StatusWebhookOK) SetStatus(val OptString) {
-	s.Status = val
+	_ = "STUB: not implemented"
+
+	// UpdateDeleteOK is response for UpdateDelete operation.
+	return
 }
 
-// UpdateDeleteOK is response for UpdateDelete operation.
 type UpdateDeleteOK struct{}
 
-func (*UpdateDeleteOK) updateDeleteRes() {}
+func (*UpdateDeleteOK) updateDeleteRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/WebhookResponse
+	// Ref: #/components/schemas/WebhookResponse
+	return
+}
+
 type WebhookResponse struct {
 	ID        uuid.UUID `json:"id"`
 	EventType OptString `json:"event_type"`
@@ -201,22 +185,27 @@ type WebhookResponse struct {
 
 // GetID returns the value of ID.
 func (s *WebhookResponse) GetID() uuid.UUID {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetEventType returns the value of EventType.
+	return *new(uuid.UUID)
 }
 
-// GetEventType returns the value of EventType.
 func (s *WebhookResponse) GetEventType() OptString {
-	return s.EventType
+	_ = "STUB: not implemented"
+	return *
+
+	// SetID sets the value of ID.
+	new(OptString)
 }
 
-// SetID sets the value of ID.
 func (s *WebhookResponse) SetID(val uuid.UUID) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetEventType sets the value of EventType.
+	return
 }
 
-// SetEventType sets the value of EventType.
-func (s *WebhookResponse) SetEventType(val OptString) {
-	s.EventType = val
-}
+func (s *WebhookResponse) SetEventType(val OptString) { _ = "STUB: not implemented"; return }
 
-func (*WebhookResponse) updateWebhookRes() {}
+func (*WebhookResponse) updateWebhookRes() { _ = "STUB: not implemented"; return }

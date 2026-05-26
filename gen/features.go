@@ -1,10 +1,6 @@
 package gen
 
 import (
-	"fmt"
-	"slices"
-
-	"github.com/go-faster/errors"
 	"github.com/go-faster/yaml"
 )
 
@@ -23,74 +19,28 @@ type FeatureOptions struct {
 
 // Build returns final set.
 func (cfg *FeatureOptions) Build() (set FeatureSet, _ error) {
-	if cfg == nil {
-		cfg = &FeatureOptions{}
-	}
-
-	set = make(FeatureSet)
-	if !cfg.DisableAll {
-		for _, f := range DefaultFeatures {
-			if err := set.Enable(f.Name); err != nil {
-				panic(fmt.Sprintf("bad default feature %q", f.Name))
-			}
-		}
-	}
-	for name := range cfg.Disable {
-		set.Disable(name)
-	}
-	for name := range cfg.Enable {
-		if err := set.Enable(name); err != nil {
-			return set, err
-		}
-	}
-	return set, nil
+	_ = "STUB: not implemented"
+	return *new(FeatureSet), nil
 }
 
 // FeatureSet is set of [Feature] names.
 type FeatureSet map[string]struct{}
 
 // Enable adds a feature to set.
-func (s *FeatureSet) Enable(name string) error {
-	if *s == nil {
-		*s = make(FeatureSet)
-	}
-	if !slices.ContainsFunc(
-		AllFeatures,
-		func(f Feature) bool { return f.Name == name },
-	) {
-		return errors.Errorf("unknown feature %q", name)
-	}
-	(*s)[name] = struct{}{}
-	return nil
-}
+func (s *FeatureSet) Enable(name string) error { _ = "STUB: not implemented"; return nil }
 
 // Disable removes a feature from set.
 func (s *FeatureSet) Disable(name string) {
-	delete(*s, name)
+	_ = "STUB: not implemented"
+
+	// Has whether if set has given feature.
+	return
 }
 
-// Has whether if set has given feature.
-func (s FeatureSet) Has(feature Feature) bool {
-	_, ok := s[feature.Name]
-	return ok
-}
+func (s FeatureSet) Has(feature Feature) bool { _ = "STUB: not implemented"; return false }
 
 // UnmarshalYAML implements [yaml.Unmarshaler].
-func (s *FeatureSet) UnmarshalYAML(n *yaml.Node) error {
-	var value []string
-	if err := n.Decode(&value); err != nil {
-		return err
-	}
-
-	*s = make(FeatureSet, len(value))
-	for _, name := range value {
-		if err := s.Enable(name); err != nil {
-			return err
-		}
-	}
-
-	return nil
-}
+func (s *FeatureSet) UnmarshalYAML(n *yaml.Node) error { _ = "STUB: not implemented"; return nil }
 
 var (
 	PathsClient = Feature{

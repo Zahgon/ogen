@@ -3,7 +3,6 @@
 package api
 
 import (
-	"bytes"
 	"net"
 	"net/http"
 	"net/netip"
@@ -12,8 +11,6 @@ import (
 
 	"github.com/go-faster/jx"
 	"github.com/google/uuid"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/json"
 	"github.com/shopspring/decimal"
 )
 
@@ -21,13 +18,7 @@ func encodeTestQueryParameterRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -35,15 +26,7 @@ func encodeTestRequestAnyRequest(
 	req jx.Raw,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if len(req) != 0 {
-			e.Raw(req)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -51,39 +34,17 @@ func encodeTestRequestBooleanRequest(
 	req OptBool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestBooleanArrayRequest(
 	req []bool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Bool(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -91,23 +52,7 @@ func encodeTestRequestBooleanArrayArrayRequest(
 	req [][]bool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Bool(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -115,39 +60,17 @@ func encodeTestRequestBooleanNullableRequest(
 	req OptNilBool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestBooleanNullableArrayRequest(
 	req []NilBool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -155,23 +78,7 @@ func encodeTestRequestBooleanNullableArrayArrayRequest(
 	req [][]NilBool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -179,15 +86,7 @@ func encodeTestRequestEmptyStructRequest(
 	req *TestRequestEmptyStructReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -195,59 +94,27 @@ func encodeTestRequestFormatTestRequest(
 	req OptTestRequestFormatTestReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerRequest(
 	req OptInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerArrayRequest(
 	req []int,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Int(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -255,23 +122,7 @@ func encodeTestRequestIntegerArrayArrayRequest(
 	req [][]int,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Int(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -279,39 +130,17 @@ func encodeTestRequestIntegerInt16Request(
 	req OptInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerInt16ArrayRequest(
 	req []int16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Int16(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -319,23 +148,7 @@ func encodeTestRequestIntegerInt16ArrayArrayRequest(
 	req [][]int16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Int16(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -343,39 +156,17 @@ func encodeTestRequestIntegerInt16NullableRequest(
 	req OptNilInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerInt16NullableArrayRequest(
 	req []NilInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -383,23 +174,7 @@ func encodeTestRequestIntegerInt16NullableArrayArrayRequest(
 	req [][]NilInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -407,39 +182,17 @@ func encodeTestRequestIntegerInt32Request(
 	req OptInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerInt32ArrayRequest(
 	req []int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Int32(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -447,23 +200,7 @@ func encodeTestRequestIntegerInt32ArrayArrayRequest(
 	req [][]int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Int32(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -471,39 +208,17 @@ func encodeTestRequestIntegerInt32NullableRequest(
 	req OptNilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerInt32NullableArrayRequest(
 	req []NilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -511,23 +226,7 @@ func encodeTestRequestIntegerInt32NullableArrayArrayRequest(
 	req [][]NilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -535,39 +234,17 @@ func encodeTestRequestIntegerInt64Request(
 	req OptInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerInt64ArrayRequest(
 	req []int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Int64(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -575,23 +252,7 @@ func encodeTestRequestIntegerInt64ArrayArrayRequest(
 	req [][]int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Int64(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -599,39 +260,17 @@ func encodeTestRequestIntegerInt64NullableRequest(
 	req OptNilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerInt64NullableArrayRequest(
 	req []NilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -639,23 +278,7 @@ func encodeTestRequestIntegerInt64NullableArrayArrayRequest(
 	req [][]NilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -663,39 +286,17 @@ func encodeTestRequestIntegerInt8Request(
 	req OptInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerInt8ArrayRequest(
 	req []int8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Int8(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -703,23 +304,7 @@ func encodeTestRequestIntegerInt8ArrayArrayRequest(
 	req [][]int8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Int8(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -727,39 +312,17 @@ func encodeTestRequestIntegerInt8NullableRequest(
 	req OptNilInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerInt8NullableArrayRequest(
 	req []NilInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -767,23 +330,7 @@ func encodeTestRequestIntegerInt8NullableArrayArrayRequest(
 	req [][]NilInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -791,39 +338,17 @@ func encodeTestRequestIntegerNullableRequest(
 	req OptNilInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerNullableArrayRequest(
 	req []NilInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -831,23 +356,7 @@ func encodeTestRequestIntegerNullableArrayArrayRequest(
 	req [][]NilInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -855,59 +364,27 @@ func encodeTestRequestIntegerUintRequest(
 	req OptUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUint16Request(
 	req OptUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUint16ArrayRequest(
 	req []uint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.UInt16(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -915,23 +392,7 @@ func encodeTestRequestIntegerUint16ArrayArrayRequest(
 	req [][]uint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.UInt16(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -939,39 +400,17 @@ func encodeTestRequestIntegerUint16NullableRequest(
 	req OptNilUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUint16NullableArrayRequest(
 	req []NilUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -979,23 +418,7 @@ func encodeTestRequestIntegerUint16NullableArrayArrayRequest(
 	req [][]NilUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1003,39 +426,17 @@ func encodeTestRequestIntegerUint32Request(
 	req OptUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUint32ArrayRequest(
 	req []uint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.UInt32(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1043,23 +444,7 @@ func encodeTestRequestIntegerUint32ArrayArrayRequest(
 	req [][]uint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.UInt32(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1067,39 +452,17 @@ func encodeTestRequestIntegerUint32NullableRequest(
 	req OptNilUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUint32NullableArrayRequest(
 	req []NilUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1107,23 +470,7 @@ func encodeTestRequestIntegerUint32NullableArrayArrayRequest(
 	req [][]NilUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1131,39 +478,17 @@ func encodeTestRequestIntegerUint64Request(
 	req OptUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUint64ArrayRequest(
 	req []uint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.UInt64(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1171,23 +496,7 @@ func encodeTestRequestIntegerUint64ArrayArrayRequest(
 	req [][]uint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.UInt64(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1195,39 +504,17 @@ func encodeTestRequestIntegerUint64NullableRequest(
 	req OptNilUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUint64NullableArrayRequest(
 	req []NilUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1235,23 +522,7 @@ func encodeTestRequestIntegerUint64NullableArrayArrayRequest(
 	req [][]NilUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1259,39 +530,17 @@ func encodeTestRequestIntegerUint8Request(
 	req OptUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUint8ArrayRequest(
 	req []uint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.UInt8(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1299,23 +548,7 @@ func encodeTestRequestIntegerUint8ArrayArrayRequest(
 	req [][]uint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.UInt8(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1323,39 +556,17 @@ func encodeTestRequestIntegerUint8NullableRequest(
 	req OptNilUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUint8NullableArrayRequest(
 	req []NilUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1363,23 +574,7 @@ func encodeTestRequestIntegerUint8NullableArrayArrayRequest(
 	req [][]NilUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1387,19 +582,7 @@ func encodeTestRequestIntegerUintArrayRequest(
 	req []uint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.UInt(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1407,23 +590,7 @@ func encodeTestRequestIntegerUintArrayArrayRequest(
 	req [][]uint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.UInt(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1431,39 +598,17 @@ func encodeTestRequestIntegerUintNullableRequest(
 	req OptNilUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUintNullableArrayRequest(
 	req []NilUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1471,23 +616,7 @@ func encodeTestRequestIntegerUintNullableArrayArrayRequest(
 	req [][]NilUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1495,39 +624,17 @@ func encodeTestRequestIntegerUnixRequest(
 	req OptUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeUnixSeconds)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUnixArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeUnixSeconds(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1535,23 +642,7 @@ func encodeTestRequestIntegerUnixArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeUnixSeconds(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1559,39 +650,17 @@ func encodeTestRequestIntegerUnixMicroRequest(
 	req OptUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeUnixMicro)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUnixMicroArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeUnixMicro(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1599,23 +668,7 @@ func encodeTestRequestIntegerUnixMicroArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeUnixMicro(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1623,39 +676,17 @@ func encodeTestRequestIntegerUnixMicroNullableRequest(
 	req OptNilUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeUnixMicro)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUnixMicroNullableArrayRequest(
 	req []NilUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeUnixMicro)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1663,23 +694,7 @@ func encodeTestRequestIntegerUnixMicroNullableArrayArrayRequest(
 	req [][]NilUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeUnixMicro)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1687,39 +702,17 @@ func encodeTestRequestIntegerUnixMilliRequest(
 	req OptUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeUnixMilli)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUnixMilliArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeUnixMilli(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1727,23 +720,7 @@ func encodeTestRequestIntegerUnixMilliArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeUnixMilli(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1751,39 +728,17 @@ func encodeTestRequestIntegerUnixMilliNullableRequest(
 	req OptNilUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeUnixMilli)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUnixMilliNullableArrayRequest(
 	req []NilUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeUnixMilli)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1791,23 +746,7 @@ func encodeTestRequestIntegerUnixMilliNullableArrayArrayRequest(
 	req [][]NilUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeUnixMilli)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1815,39 +754,17 @@ func encodeTestRequestIntegerUnixNanoRequest(
 	req OptUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeUnixNano)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUnixNanoArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeUnixNano(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1855,23 +772,7 @@ func encodeTestRequestIntegerUnixNanoArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeUnixNano(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1879,39 +780,17 @@ func encodeTestRequestIntegerUnixNanoNullableRequest(
 	req OptNilUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeUnixNano)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUnixNanoNullableArrayRequest(
 	req []NilUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeUnixNano)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1919,23 +798,7 @@ func encodeTestRequestIntegerUnixNanoNullableArrayArrayRequest(
 	req [][]NilUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeUnixNano)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1943,39 +806,17 @@ func encodeTestRequestIntegerUnixNullableRequest(
 	req OptNilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeUnixSeconds)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUnixNullableArrayRequest(
 	req []NilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeUnixSeconds)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1983,23 +824,7 @@ func encodeTestRequestIntegerUnixNullableArrayArrayRequest(
 	req [][]NilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeUnixSeconds)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2007,39 +832,17 @@ func encodeTestRequestIntegerUnixSecondsRequest(
 	req OptUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeUnixSeconds)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUnixSecondsArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeUnixSeconds(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2047,23 +850,7 @@ func encodeTestRequestIntegerUnixSecondsArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeUnixSeconds(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2071,39 +858,17 @@ func encodeTestRequestIntegerUnixSecondsNullableRequest(
 	req OptNilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeUnixSeconds)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestIntegerUnixSecondsNullableArrayRequest(
 	req []NilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeUnixSeconds)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2111,23 +876,7 @@ func encodeTestRequestIntegerUnixSecondsNullableArrayArrayRequest(
 	req [][]NilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeUnixSeconds)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2135,40 +884,17 @@ func encodeTestRequestNullRequest(
 	req OptNull,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNullArrayRequest(
 	req []struct{},
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				_ = elem
-				e.Null()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2176,24 +902,7 @@ func encodeTestRequestNullArrayArrayRequest(
 	req [][]struct{},
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					_ = elem
-					e.Null()
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2201,40 +910,17 @@ func encodeTestRequestNullNullableRequest(
 	req OptNull,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNullNullableArrayRequest(
 	req []struct{},
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				_ = elem
-				e.Null()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2242,24 +928,7 @@ func encodeTestRequestNullNullableArrayArrayRequest(
 	req [][]struct{},
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					_ = elem
-					e.Null()
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2267,39 +936,17 @@ func encodeTestRequestNumberRequest(
 	req OptFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberArrayRequest(
 	req []float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Float64(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2307,23 +954,7 @@ func encodeTestRequestNumberArrayArrayRequest(
 	req [][]float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Float64(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2331,39 +962,17 @@ func encodeTestRequestNumberDecimalRequest(
 	req OptDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberDecimalArrayRequest(
 	req []decimal.Decimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeDecimal(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2371,23 +980,7 @@ func encodeTestRequestNumberDecimalArrayArrayRequest(
 	req [][]decimal.Decimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeDecimal(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2395,39 +988,17 @@ func encodeTestRequestNumberDecimalNullableRequest(
 	req OptNilDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberDecimalNullableArrayRequest(
 	req []NilDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2435,23 +1006,7 @@ func encodeTestRequestNumberDecimalNullableArrayArrayRequest(
 	req [][]NilDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2459,39 +1014,17 @@ func encodeTestRequestNumberDoubleRequest(
 	req OptFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberDoubleArrayRequest(
 	req []float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Float64(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2499,23 +1032,7 @@ func encodeTestRequestNumberDoubleArrayArrayRequest(
 	req [][]float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Float64(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2523,39 +1040,17 @@ func encodeTestRequestNumberDoubleNullableRequest(
 	req OptNilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberDoubleNullableArrayRequest(
 	req []NilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2563,23 +1058,7 @@ func encodeTestRequestNumberDoubleNullableArrayArrayRequest(
 	req [][]NilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2587,39 +1066,17 @@ func encodeTestRequestNumberFloatRequest(
 	req OptFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberFloatArrayRequest(
 	req []float32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Float32(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2627,23 +1084,7 @@ func encodeTestRequestNumberFloatArrayArrayRequest(
 	req [][]float32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Float32(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2651,39 +1092,17 @@ func encodeTestRequestNumberFloatNullableRequest(
 	req OptNilFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberFloatNullableArrayRequest(
 	req []NilFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2691,23 +1110,7 @@ func encodeTestRequestNumberFloatNullableArrayArrayRequest(
 	req [][]NilFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2715,39 +1118,17 @@ func encodeTestRequestNumberInt32Request(
 	req OptInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberInt32ArrayRequest(
 	req []int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Int32(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2755,23 +1136,7 @@ func encodeTestRequestNumberInt32ArrayArrayRequest(
 	req [][]int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Int32(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2779,39 +1144,17 @@ func encodeTestRequestNumberInt32NullableRequest(
 	req OptNilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberInt32NullableArrayRequest(
 	req []NilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2819,23 +1162,7 @@ func encodeTestRequestNumberInt32NullableArrayArrayRequest(
 	req [][]NilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2843,39 +1170,17 @@ func encodeTestRequestNumberInt64Request(
 	req OptInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberInt64ArrayRequest(
 	req []int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Int64(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2883,23 +1188,7 @@ func encodeTestRequestNumberInt64ArrayArrayRequest(
 	req [][]int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Int64(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2907,39 +1196,17 @@ func encodeTestRequestNumberInt64NullableRequest(
 	req OptNilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberInt64NullableArrayRequest(
 	req []NilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2947,23 +1214,7 @@ func encodeTestRequestNumberInt64NullableArrayArrayRequest(
 	req [][]NilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2971,39 +1222,17 @@ func encodeTestRequestNumberNullableRequest(
 	req OptNilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestNumberNullableArrayRequest(
 	req []NilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3011,23 +1240,7 @@ func encodeTestRequestNumberNullableArrayArrayRequest(
 	req [][]NilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3035,15 +1248,7 @@ func encodeTestRequestRequiredAnyRequest(
 	req jx.Raw,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if len(req) != 0 {
-			e.Raw(req)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3051,13 +1256,7 @@ func encodeTestRequestRequiredBooleanRequest(
 	req bool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Bool(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3065,17 +1264,7 @@ func encodeTestRequestRequiredBooleanArrayRequest(
 	req []bool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Bool(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3083,21 +1272,7 @@ func encodeTestRequestRequiredBooleanArrayArrayRequest(
 	req [][]bool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Bool(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3105,13 +1280,7 @@ func encodeTestRequestRequiredBooleanNullableRequest(
 	req NilBool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3119,17 +1288,7 @@ func encodeTestRequestRequiredBooleanNullableArrayRequest(
 	req []NilBool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3137,21 +1296,7 @@ func encodeTestRequestRequiredBooleanNullableArrayArrayRequest(
 	req [][]NilBool,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3159,13 +1304,7 @@ func encodeTestRequestRequiredEmptyStructRequest(
 	req *TestRequestRequiredEmptyStructReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3173,13 +1312,7 @@ func encodeTestRequestRequiredFormatTestRequest(
 	req *TestRequestRequiredFormatTestReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3187,13 +1320,7 @@ func encodeTestRequestRequiredIntegerRequest(
 	req int,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Int(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3201,17 +1328,7 @@ func encodeTestRequestRequiredIntegerArrayRequest(
 	req []int,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Int(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3219,21 +1336,7 @@ func encodeTestRequestRequiredIntegerArrayArrayRequest(
 	req [][]int,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Int(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3241,13 +1344,7 @@ func encodeTestRequestRequiredIntegerInt16Request(
 	req int16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Int16(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3255,17 +1352,7 @@ func encodeTestRequestRequiredIntegerInt16ArrayRequest(
 	req []int16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Int16(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3273,21 +1360,7 @@ func encodeTestRequestRequiredIntegerInt16ArrayArrayRequest(
 	req [][]int16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Int16(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3295,13 +1368,7 @@ func encodeTestRequestRequiredIntegerInt16NullableRequest(
 	req NilInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3309,17 +1376,7 @@ func encodeTestRequestRequiredIntegerInt16NullableArrayRequest(
 	req []NilInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3327,21 +1384,7 @@ func encodeTestRequestRequiredIntegerInt16NullableArrayArrayRequest(
 	req [][]NilInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3349,13 +1392,7 @@ func encodeTestRequestRequiredIntegerInt32Request(
 	req int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Int32(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3363,17 +1400,7 @@ func encodeTestRequestRequiredIntegerInt32ArrayRequest(
 	req []int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Int32(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3381,21 +1408,7 @@ func encodeTestRequestRequiredIntegerInt32ArrayArrayRequest(
 	req [][]int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Int32(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3403,13 +1416,7 @@ func encodeTestRequestRequiredIntegerInt32NullableRequest(
 	req NilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3417,17 +1424,7 @@ func encodeTestRequestRequiredIntegerInt32NullableArrayRequest(
 	req []NilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3435,21 +1432,7 @@ func encodeTestRequestRequiredIntegerInt32NullableArrayArrayRequest(
 	req [][]NilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3457,13 +1440,7 @@ func encodeTestRequestRequiredIntegerInt64Request(
 	req int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Int64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3471,17 +1448,7 @@ func encodeTestRequestRequiredIntegerInt64ArrayRequest(
 	req []int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Int64(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3489,21 +1456,7 @@ func encodeTestRequestRequiredIntegerInt64ArrayArrayRequest(
 	req [][]int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Int64(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3511,13 +1464,7 @@ func encodeTestRequestRequiredIntegerInt64NullableRequest(
 	req NilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3525,17 +1472,7 @@ func encodeTestRequestRequiredIntegerInt64NullableArrayRequest(
 	req []NilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3543,21 +1480,7 @@ func encodeTestRequestRequiredIntegerInt64NullableArrayArrayRequest(
 	req [][]NilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3565,13 +1488,7 @@ func encodeTestRequestRequiredIntegerInt8Request(
 	req int8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Int8(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3579,17 +1496,7 @@ func encodeTestRequestRequiredIntegerInt8ArrayRequest(
 	req []int8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Int8(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3597,21 +1504,7 @@ func encodeTestRequestRequiredIntegerInt8ArrayArrayRequest(
 	req [][]int8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Int8(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3619,13 +1512,7 @@ func encodeTestRequestRequiredIntegerInt8NullableRequest(
 	req NilInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3633,17 +1520,7 @@ func encodeTestRequestRequiredIntegerInt8NullableArrayRequest(
 	req []NilInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3651,21 +1528,7 @@ func encodeTestRequestRequiredIntegerInt8NullableArrayArrayRequest(
 	req [][]NilInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3673,13 +1536,7 @@ func encodeTestRequestRequiredIntegerNullableRequest(
 	req NilInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3687,17 +1544,7 @@ func encodeTestRequestRequiredIntegerNullableArrayRequest(
 	req []NilInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3705,21 +1552,7 @@ func encodeTestRequestRequiredIntegerNullableArrayArrayRequest(
 	req [][]NilInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3727,13 +1560,7 @@ func encodeTestRequestRequiredIntegerUintRequest(
 	req uint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.UInt(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3741,13 +1568,7 @@ func encodeTestRequestRequiredIntegerUint16Request(
 	req uint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.UInt16(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3755,17 +1576,7 @@ func encodeTestRequestRequiredIntegerUint16ArrayRequest(
 	req []uint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.UInt16(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3773,21 +1584,7 @@ func encodeTestRequestRequiredIntegerUint16ArrayArrayRequest(
 	req [][]uint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.UInt16(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3795,13 +1592,7 @@ func encodeTestRequestRequiredIntegerUint16NullableRequest(
 	req NilUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3809,17 +1600,7 @@ func encodeTestRequestRequiredIntegerUint16NullableArrayRequest(
 	req []NilUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3827,21 +1608,7 @@ func encodeTestRequestRequiredIntegerUint16NullableArrayArrayRequest(
 	req [][]NilUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3849,13 +1616,7 @@ func encodeTestRequestRequiredIntegerUint32Request(
 	req uint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.UInt32(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3863,17 +1624,7 @@ func encodeTestRequestRequiredIntegerUint32ArrayRequest(
 	req []uint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.UInt32(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3881,21 +1632,7 @@ func encodeTestRequestRequiredIntegerUint32ArrayArrayRequest(
 	req [][]uint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.UInt32(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3903,13 +1640,7 @@ func encodeTestRequestRequiredIntegerUint32NullableRequest(
 	req NilUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3917,17 +1648,7 @@ func encodeTestRequestRequiredIntegerUint32NullableArrayRequest(
 	req []NilUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3935,21 +1656,7 @@ func encodeTestRequestRequiredIntegerUint32NullableArrayArrayRequest(
 	req [][]NilUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3957,13 +1664,7 @@ func encodeTestRequestRequiredIntegerUint64Request(
 	req uint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.UInt64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3971,17 +1672,7 @@ func encodeTestRequestRequiredIntegerUint64ArrayRequest(
 	req []uint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.UInt64(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3989,21 +1680,7 @@ func encodeTestRequestRequiredIntegerUint64ArrayArrayRequest(
 	req [][]uint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.UInt64(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4011,13 +1688,7 @@ func encodeTestRequestRequiredIntegerUint64NullableRequest(
 	req NilUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4025,17 +1696,7 @@ func encodeTestRequestRequiredIntegerUint64NullableArrayRequest(
 	req []NilUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4043,21 +1704,7 @@ func encodeTestRequestRequiredIntegerUint64NullableArrayArrayRequest(
 	req [][]NilUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4065,13 +1712,7 @@ func encodeTestRequestRequiredIntegerUint8Request(
 	req uint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.UInt8(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4079,17 +1720,7 @@ func encodeTestRequestRequiredIntegerUint8ArrayRequest(
 	req []uint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.UInt8(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4097,21 +1728,7 @@ func encodeTestRequestRequiredIntegerUint8ArrayArrayRequest(
 	req [][]uint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.UInt8(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4119,13 +1736,7 @@ func encodeTestRequestRequiredIntegerUint8NullableRequest(
 	req NilUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4133,17 +1744,7 @@ func encodeTestRequestRequiredIntegerUint8NullableArrayRequest(
 	req []NilUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4151,21 +1752,7 @@ func encodeTestRequestRequiredIntegerUint8NullableArrayArrayRequest(
 	req [][]NilUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4173,17 +1760,7 @@ func encodeTestRequestRequiredIntegerUintArrayRequest(
 	req []uint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.UInt(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4191,21 +1768,7 @@ func encodeTestRequestRequiredIntegerUintArrayArrayRequest(
 	req [][]uint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.UInt(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4213,13 +1776,7 @@ func encodeTestRequestRequiredIntegerUintNullableRequest(
 	req NilUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4227,17 +1784,7 @@ func encodeTestRequestRequiredIntegerUintNullableArrayRequest(
 	req []NilUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4245,21 +1792,7 @@ func encodeTestRequestRequiredIntegerUintNullableArrayArrayRequest(
 	req [][]NilUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4267,13 +1800,7 @@ func encodeTestRequestRequiredIntegerUnixRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeUnixSeconds(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4281,17 +1808,7 @@ func encodeTestRequestRequiredIntegerUnixArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeUnixSeconds(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4299,21 +1816,7 @@ func encodeTestRequestRequiredIntegerUnixArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeUnixSeconds(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4321,13 +1824,7 @@ func encodeTestRequestRequiredIntegerUnixMicroRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeUnixMicro(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4335,17 +1832,7 @@ func encodeTestRequestRequiredIntegerUnixMicroArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeUnixMicro(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4353,21 +1840,7 @@ func encodeTestRequestRequiredIntegerUnixMicroArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeUnixMicro(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4375,13 +1848,7 @@ func encodeTestRequestRequiredIntegerUnixMicroNullableRequest(
 	req NilUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeUnixMicro)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4389,17 +1856,7 @@ func encodeTestRequestRequiredIntegerUnixMicroNullableArrayRequest(
 	req []NilUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeUnixMicro)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4407,21 +1864,7 @@ func encodeTestRequestRequiredIntegerUnixMicroNullableArrayArrayRequest(
 	req [][]NilUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeUnixMicro)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4429,13 +1872,7 @@ func encodeTestRequestRequiredIntegerUnixMilliRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeUnixMilli(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4443,17 +1880,7 @@ func encodeTestRequestRequiredIntegerUnixMilliArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeUnixMilli(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4461,21 +1888,7 @@ func encodeTestRequestRequiredIntegerUnixMilliArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeUnixMilli(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4483,13 +1896,7 @@ func encodeTestRequestRequiredIntegerUnixMilliNullableRequest(
 	req NilUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeUnixMilli)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4497,17 +1904,7 @@ func encodeTestRequestRequiredIntegerUnixMilliNullableArrayRequest(
 	req []NilUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeUnixMilli)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4515,21 +1912,7 @@ func encodeTestRequestRequiredIntegerUnixMilliNullableArrayArrayRequest(
 	req [][]NilUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeUnixMilli)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4537,13 +1920,7 @@ func encodeTestRequestRequiredIntegerUnixNanoRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeUnixNano(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4551,17 +1928,7 @@ func encodeTestRequestRequiredIntegerUnixNanoArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeUnixNano(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4569,21 +1936,7 @@ func encodeTestRequestRequiredIntegerUnixNanoArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeUnixNano(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4591,13 +1944,7 @@ func encodeTestRequestRequiredIntegerUnixNanoNullableRequest(
 	req NilUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeUnixNano)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4605,17 +1952,7 @@ func encodeTestRequestRequiredIntegerUnixNanoNullableArrayRequest(
 	req []NilUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeUnixNano)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4623,21 +1960,7 @@ func encodeTestRequestRequiredIntegerUnixNanoNullableArrayArrayRequest(
 	req [][]NilUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeUnixNano)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4645,13 +1968,7 @@ func encodeTestRequestRequiredIntegerUnixNullableRequest(
 	req NilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeUnixSeconds)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4659,17 +1976,7 @@ func encodeTestRequestRequiredIntegerUnixNullableArrayRequest(
 	req []NilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeUnixSeconds)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4677,21 +1984,7 @@ func encodeTestRequestRequiredIntegerUnixNullableArrayArrayRequest(
 	req [][]NilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeUnixSeconds)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4699,13 +1992,7 @@ func encodeTestRequestRequiredIntegerUnixSecondsRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeUnixSeconds(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4713,17 +2000,7 @@ func encodeTestRequestRequiredIntegerUnixSecondsArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeUnixSeconds(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4731,21 +2008,7 @@ func encodeTestRequestRequiredIntegerUnixSecondsArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeUnixSeconds(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4753,13 +2016,7 @@ func encodeTestRequestRequiredIntegerUnixSecondsNullableRequest(
 	req NilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeUnixSeconds)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4767,17 +2024,7 @@ func encodeTestRequestRequiredIntegerUnixSecondsNullableArrayRequest(
 	req []NilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeUnixSeconds)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4785,21 +2032,7 @@ func encodeTestRequestRequiredIntegerUnixSecondsNullableArrayArrayRequest(
 	req [][]NilUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeUnixSeconds)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4807,14 +2040,7 @@ func encodeTestRequestRequiredNullRequest(
 	req struct{},
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		_ = req
-		e.Null()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4822,18 +2048,7 @@ func encodeTestRequestRequiredNullArrayRequest(
 	req []struct{},
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			_ = elem
-			e.Null()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4841,22 +2056,7 @@ func encodeTestRequestRequiredNullArrayArrayRequest(
 	req [][]struct{},
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				_ = elem
-				e.Null()
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4864,14 +2064,7 @@ func encodeTestRequestRequiredNullNullableRequest(
 	req struct{},
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		_ = req
-		e.Null()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4879,18 +2072,7 @@ func encodeTestRequestRequiredNullNullableArrayRequest(
 	req []struct{},
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			_ = elem
-			e.Null()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4898,22 +2080,7 @@ func encodeTestRequestRequiredNullNullableArrayArrayRequest(
 	req [][]struct{},
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				_ = elem
-				e.Null()
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4921,13 +2088,7 @@ func encodeTestRequestRequiredNumberRequest(
 	req float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Float64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4935,17 +2096,7 @@ func encodeTestRequestRequiredNumberArrayRequest(
 	req []float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Float64(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4953,21 +2104,7 @@ func encodeTestRequestRequiredNumberArrayArrayRequest(
 	req [][]float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Float64(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4975,13 +2112,7 @@ func encodeTestRequestRequiredNumberDecimalRequest(
 	req decimal.Decimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeDecimal(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -4989,17 +2120,7 @@ func encodeTestRequestRequiredNumberDecimalArrayRequest(
 	req []decimal.Decimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeDecimal(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5007,21 +2128,7 @@ func encodeTestRequestRequiredNumberDecimalArrayArrayRequest(
 	req [][]decimal.Decimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeDecimal(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5029,13 +2136,7 @@ func encodeTestRequestRequiredNumberDecimalNullableRequest(
 	req NilDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5043,17 +2144,7 @@ func encodeTestRequestRequiredNumberDecimalNullableArrayRequest(
 	req []NilDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5061,21 +2152,7 @@ func encodeTestRequestRequiredNumberDecimalNullableArrayArrayRequest(
 	req [][]NilDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5083,13 +2160,7 @@ func encodeTestRequestRequiredNumberDoubleRequest(
 	req float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Float64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5097,17 +2168,7 @@ func encodeTestRequestRequiredNumberDoubleArrayRequest(
 	req []float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Float64(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5115,21 +2176,7 @@ func encodeTestRequestRequiredNumberDoubleArrayArrayRequest(
 	req [][]float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Float64(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5137,13 +2184,7 @@ func encodeTestRequestRequiredNumberDoubleNullableRequest(
 	req NilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5151,17 +2192,7 @@ func encodeTestRequestRequiredNumberDoubleNullableArrayRequest(
 	req []NilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5169,21 +2200,7 @@ func encodeTestRequestRequiredNumberDoubleNullableArrayArrayRequest(
 	req [][]NilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5191,13 +2208,7 @@ func encodeTestRequestRequiredNumberFloatRequest(
 	req float32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Float32(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5205,17 +2216,7 @@ func encodeTestRequestRequiredNumberFloatArrayRequest(
 	req []float32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Float32(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5223,21 +2224,7 @@ func encodeTestRequestRequiredNumberFloatArrayArrayRequest(
 	req [][]float32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Float32(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5245,13 +2232,7 @@ func encodeTestRequestRequiredNumberFloatNullableRequest(
 	req NilFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5259,17 +2240,7 @@ func encodeTestRequestRequiredNumberFloatNullableArrayRequest(
 	req []NilFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5277,21 +2248,7 @@ func encodeTestRequestRequiredNumberFloatNullableArrayArrayRequest(
 	req [][]NilFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5299,13 +2256,7 @@ func encodeTestRequestRequiredNumberInt32Request(
 	req int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Int32(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5313,17 +2264,7 @@ func encodeTestRequestRequiredNumberInt32ArrayRequest(
 	req []int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Int32(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5331,21 +2272,7 @@ func encodeTestRequestRequiredNumberInt32ArrayArrayRequest(
 	req [][]int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Int32(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5353,13 +2280,7 @@ func encodeTestRequestRequiredNumberInt32NullableRequest(
 	req NilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5367,17 +2288,7 @@ func encodeTestRequestRequiredNumberInt32NullableArrayRequest(
 	req []NilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5385,21 +2296,7 @@ func encodeTestRequestRequiredNumberInt32NullableArrayArrayRequest(
 	req [][]NilInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5407,13 +2304,7 @@ func encodeTestRequestRequiredNumberInt64Request(
 	req int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Int64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5421,17 +2312,7 @@ func encodeTestRequestRequiredNumberInt64ArrayRequest(
 	req []int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Int64(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5439,21 +2320,7 @@ func encodeTestRequestRequiredNumberInt64ArrayArrayRequest(
 	req [][]int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Int64(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5461,13 +2328,7 @@ func encodeTestRequestRequiredNumberInt64NullableRequest(
 	req NilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5475,17 +2336,7 @@ func encodeTestRequestRequiredNumberInt64NullableArrayRequest(
 	req []NilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5493,21 +2344,7 @@ func encodeTestRequestRequiredNumberInt64NullableArrayArrayRequest(
 	req [][]NilInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5515,13 +2352,7 @@ func encodeTestRequestRequiredNumberNullableRequest(
 	req NilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5529,17 +2360,7 @@ func encodeTestRequestRequiredNumberNullableArrayRequest(
 	req []NilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5547,21 +2368,7 @@ func encodeTestRequestRequiredNumberNullableArrayArrayRequest(
 	req [][]NilFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5569,13 +2376,7 @@ func encodeTestRequestRequiredStringRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5583,17 +2384,7 @@ func encodeTestRequestRequiredStringArrayRequest(
 	req []string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Str(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5601,21 +2392,7 @@ func encodeTestRequestRequiredStringArrayArrayRequest(
 	req [][]string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5623,13 +2400,7 @@ func encodeTestRequestRequiredStringBase64Request(
 	req []byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Base64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5637,17 +2408,7 @@ func encodeTestRequestRequiredStringBase64ArrayRequest(
 	req [][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Base64(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5655,21 +2416,7 @@ func encodeTestRequestRequiredStringBase64ArrayArrayRequest(
 	req [][][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Base64(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5677,13 +2424,7 @@ func encodeTestRequestRequiredStringBase64NullableRequest(
 	req []byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Base64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5691,17 +2432,7 @@ func encodeTestRequestRequiredStringBase64NullableArrayRequest(
 	req [][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Base64(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5709,21 +2440,7 @@ func encodeTestRequestRequiredStringBase64NullableArrayArrayRequest(
 	req [][][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Base64(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5731,13 +2448,7 @@ func encodeTestRequestRequiredStringBinaryRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5745,17 +2456,7 @@ func encodeTestRequestRequiredStringBinaryArrayRequest(
 	req []string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Str(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5763,21 +2464,7 @@ func encodeTestRequestRequiredStringBinaryArrayArrayRequest(
 	req [][]string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5785,13 +2472,7 @@ func encodeTestRequestRequiredStringBinaryNullableRequest(
 	req NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5799,17 +2480,7 @@ func encodeTestRequestRequiredStringBinaryNullableArrayRequest(
 	req []NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5817,21 +2488,7 @@ func encodeTestRequestRequiredStringBinaryNullableArrayArrayRequest(
 	req [][]NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5839,13 +2496,7 @@ func encodeTestRequestRequiredStringByteRequest(
 	req []byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Base64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5853,17 +2504,7 @@ func encodeTestRequestRequiredStringByteArrayRequest(
 	req [][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Base64(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5871,21 +2512,7 @@ func encodeTestRequestRequiredStringByteArrayArrayRequest(
 	req [][][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Base64(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5893,13 +2520,7 @@ func encodeTestRequestRequiredStringByteNullableRequest(
 	req []byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Base64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5907,17 +2528,7 @@ func encodeTestRequestRequiredStringByteNullableArrayRequest(
 	req [][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Base64(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5925,21 +2536,7 @@ func encodeTestRequestRequiredStringByteNullableArrayArrayRequest(
 	req [][][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Base64(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5947,13 +2544,7 @@ func encodeTestRequestRequiredStringDateRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeDate(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5961,17 +2552,7 @@ func encodeTestRequestRequiredStringDateArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeDate(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -5979,21 +2560,7 @@ func encodeTestRequestRequiredStringDateArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeDate(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6001,13 +2568,7 @@ func encodeTestRequestRequiredStringDateNullableRequest(
 	req NilDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeDate)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6015,17 +2576,7 @@ func encodeTestRequestRequiredStringDateNullableArrayRequest(
 	req []NilDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeDate)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6033,21 +2584,7 @@ func encodeTestRequestRequiredStringDateNullableArrayArrayRequest(
 	req [][]NilDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeDate)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6055,13 +2592,7 @@ func encodeTestRequestRequiredStringDateTimeRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeDateTime(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6069,17 +2600,7 @@ func encodeTestRequestRequiredStringDateTimeArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeDateTime(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6087,21 +2608,7 @@ func encodeTestRequestRequiredStringDateTimeArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeDateTime(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6109,13 +2616,7 @@ func encodeTestRequestRequiredStringDateTimeNullableRequest(
 	req NilDateTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeDateTime)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6123,17 +2624,7 @@ func encodeTestRequestRequiredStringDateTimeNullableArrayRequest(
 	req []NilDateTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeDateTime)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6141,21 +2632,7 @@ func encodeTestRequestRequiredStringDateTimeNullableArrayArrayRequest(
 	req [][]NilDateTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeDateTime)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6163,13 +2640,7 @@ func encodeTestRequestRequiredStringDecimalRequest(
 	req decimal.Decimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringDecimal(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6177,17 +2648,7 @@ func encodeTestRequestRequiredStringDecimalArrayRequest(
 	req []decimal.Decimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringDecimal(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6195,21 +2656,7 @@ func encodeTestRequestRequiredStringDecimalArrayArrayRequest(
 	req [][]decimal.Decimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringDecimal(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6217,13 +2664,7 @@ func encodeTestRequestRequiredStringDecimalNullableRequest(
 	req NilStringDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6231,17 +2672,7 @@ func encodeTestRequestRequiredStringDecimalNullableArrayRequest(
 	req []NilStringDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6249,21 +2680,7 @@ func encodeTestRequestRequiredStringDecimalNullableArrayArrayRequest(
 	req [][]NilStringDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6271,13 +2688,7 @@ func encodeTestRequestRequiredStringDurationRequest(
 	req time.Duration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeDuration(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6285,17 +2696,7 @@ func encodeTestRequestRequiredStringDurationArrayRequest(
 	req []time.Duration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeDuration(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6303,21 +2704,7 @@ func encodeTestRequestRequiredStringDurationArrayArrayRequest(
 	req [][]time.Duration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeDuration(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6325,13 +2712,7 @@ func encodeTestRequestRequiredStringDurationNullableRequest(
 	req NilDuration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6339,17 +2720,7 @@ func encodeTestRequestRequiredStringDurationNullableArrayRequest(
 	req []NilDuration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6357,21 +2728,7 @@ func encodeTestRequestRequiredStringDurationNullableArrayArrayRequest(
 	req [][]NilDuration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6379,13 +2736,7 @@ func encodeTestRequestRequiredStringEmailRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6393,17 +2744,7 @@ func encodeTestRequestRequiredStringEmailArrayRequest(
 	req []string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Str(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6411,21 +2752,7 @@ func encodeTestRequestRequiredStringEmailArrayArrayRequest(
 	req [][]string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6433,13 +2760,7 @@ func encodeTestRequestRequiredStringEmailNullableRequest(
 	req NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6447,17 +2768,7 @@ func encodeTestRequestRequiredStringEmailNullableArrayRequest(
 	req []NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6465,21 +2776,7 @@ func encodeTestRequestRequiredStringEmailNullableArrayArrayRequest(
 	req [][]NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6487,13 +2784,7 @@ func encodeTestRequestRequiredStringFloat32Request(
 	req float32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringFloat32(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6501,17 +2792,7 @@ func encodeTestRequestRequiredStringFloat32ArrayRequest(
 	req []float32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringFloat32(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6519,21 +2800,7 @@ func encodeTestRequestRequiredStringFloat32ArrayArrayRequest(
 	req [][]float32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringFloat32(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6541,13 +2808,7 @@ func encodeTestRequestRequiredStringFloat32NullableRequest(
 	req NilStringFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6555,17 +2816,7 @@ func encodeTestRequestRequiredStringFloat32NullableArrayRequest(
 	req []NilStringFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6573,21 +2824,7 @@ func encodeTestRequestRequiredStringFloat32NullableArrayArrayRequest(
 	req [][]NilStringFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6595,13 +2832,7 @@ func encodeTestRequestRequiredStringFloat64Request(
 	req float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringFloat64(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6609,17 +2840,7 @@ func encodeTestRequestRequiredStringFloat64ArrayRequest(
 	req []float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringFloat64(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6627,21 +2848,7 @@ func encodeTestRequestRequiredStringFloat64ArrayArrayRequest(
 	req [][]float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringFloat64(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6649,13 +2856,7 @@ func encodeTestRequestRequiredStringFloat64NullableRequest(
 	req NilStringFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6663,17 +2864,7 @@ func encodeTestRequestRequiredStringFloat64NullableArrayRequest(
 	req []NilStringFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6681,21 +2872,7 @@ func encodeTestRequestRequiredStringFloat64NullableArrayArrayRequest(
 	req [][]NilStringFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6703,13 +2880,7 @@ func encodeTestRequestRequiredStringHTTPDateRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeHTTPDate(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6717,17 +2888,7 @@ func encodeTestRequestRequiredStringHTTPDateArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeHTTPDate(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6735,21 +2896,7 @@ func encodeTestRequestRequiredStringHTTPDateArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeHTTPDate(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6757,13 +2904,7 @@ func encodeTestRequestRequiredStringHTTPDateNullableRequest(
 	req NilHTTPDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeHTTPDate)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6771,17 +2912,7 @@ func encodeTestRequestRequiredStringHTTPDateNullableArrayRequest(
 	req []NilHTTPDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeHTTPDate)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6789,21 +2920,7 @@ func encodeTestRequestRequiredStringHTTPDateNullableArrayArrayRequest(
 	req [][]NilHTTPDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeHTTPDate)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6811,13 +2928,7 @@ func encodeTestRequestRequiredStringHostnameRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6825,17 +2936,7 @@ func encodeTestRequestRequiredStringHostnameArrayRequest(
 	req []string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Str(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6843,21 +2944,7 @@ func encodeTestRequestRequiredStringHostnameArrayArrayRequest(
 	req [][]string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6865,13 +2952,7 @@ func encodeTestRequestRequiredStringHostnameNullableRequest(
 	req NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6879,17 +2960,7 @@ func encodeTestRequestRequiredStringHostnameNullableArrayRequest(
 	req []NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6897,21 +2968,7 @@ func encodeTestRequestRequiredStringHostnameNullableArrayArrayRequest(
 	req [][]NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6919,13 +2976,7 @@ func encodeTestRequestRequiredStringIPRequest(
 	req netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeIP(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6933,17 +2984,7 @@ func encodeTestRequestRequiredStringIPArrayRequest(
 	req []netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeIP(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6951,21 +2992,7 @@ func encodeTestRequestRequiredStringIPArrayArrayRequest(
 	req [][]netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeIP(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6973,13 +3000,7 @@ func encodeTestRequestRequiredStringIPNullableRequest(
 	req NilIP,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -6987,17 +3008,7 @@ func encodeTestRequestRequiredStringIPNullableArrayRequest(
 	req []NilIP,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7005,21 +3016,7 @@ func encodeTestRequestRequiredStringIPNullableArrayArrayRequest(
 	req [][]NilIP,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7027,13 +3024,7 @@ func encodeTestRequestRequiredStringIntRequest(
 	req int,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringInt(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7041,13 +3032,7 @@ func encodeTestRequestRequiredStringInt16Request(
 	req int16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringInt16(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7055,17 +3040,7 @@ func encodeTestRequestRequiredStringInt16ArrayRequest(
 	req []int16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringInt16(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7073,21 +3048,7 @@ func encodeTestRequestRequiredStringInt16ArrayArrayRequest(
 	req [][]int16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringInt16(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7095,13 +3056,7 @@ func encodeTestRequestRequiredStringInt16NullableRequest(
 	req NilStringInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7109,17 +3064,7 @@ func encodeTestRequestRequiredStringInt16NullableArrayRequest(
 	req []NilStringInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7127,21 +3072,7 @@ func encodeTestRequestRequiredStringInt16NullableArrayArrayRequest(
 	req [][]NilStringInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7149,13 +3080,7 @@ func encodeTestRequestRequiredStringInt32Request(
 	req int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringInt32(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7163,17 +3088,7 @@ func encodeTestRequestRequiredStringInt32ArrayRequest(
 	req []int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringInt32(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7181,21 +3096,7 @@ func encodeTestRequestRequiredStringInt32ArrayArrayRequest(
 	req [][]int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringInt32(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7203,13 +3104,7 @@ func encodeTestRequestRequiredStringInt32NullableRequest(
 	req NilStringInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7217,17 +3112,7 @@ func encodeTestRequestRequiredStringInt32NullableArrayRequest(
 	req []NilStringInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7235,21 +3120,7 @@ func encodeTestRequestRequiredStringInt32NullableArrayArrayRequest(
 	req [][]NilStringInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7257,13 +3128,7 @@ func encodeTestRequestRequiredStringInt64Request(
 	req int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringInt64(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7271,17 +3136,7 @@ func encodeTestRequestRequiredStringInt64ArrayRequest(
 	req []int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringInt64(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7289,21 +3144,7 @@ func encodeTestRequestRequiredStringInt64ArrayArrayRequest(
 	req [][]int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringInt64(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7311,13 +3152,7 @@ func encodeTestRequestRequiredStringInt64NullableRequest(
 	req NilStringInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7325,17 +3160,7 @@ func encodeTestRequestRequiredStringInt64NullableArrayRequest(
 	req []NilStringInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7343,21 +3168,7 @@ func encodeTestRequestRequiredStringInt64NullableArrayArrayRequest(
 	req [][]NilStringInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7365,13 +3176,7 @@ func encodeTestRequestRequiredStringInt8Request(
 	req int8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringInt8(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7379,17 +3184,7 @@ func encodeTestRequestRequiredStringInt8ArrayRequest(
 	req []int8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringInt8(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7397,21 +3192,7 @@ func encodeTestRequestRequiredStringInt8ArrayArrayRequest(
 	req [][]int8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringInt8(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7419,13 +3200,7 @@ func encodeTestRequestRequiredStringInt8NullableRequest(
 	req NilStringInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7433,17 +3208,7 @@ func encodeTestRequestRequiredStringInt8NullableArrayRequest(
 	req []NilStringInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7451,21 +3216,7 @@ func encodeTestRequestRequiredStringInt8NullableArrayArrayRequest(
 	req [][]NilStringInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7473,17 +3224,7 @@ func encodeTestRequestRequiredStringIntArrayRequest(
 	req []int,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringInt(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7491,21 +3232,7 @@ func encodeTestRequestRequiredStringIntArrayArrayRequest(
 	req [][]int,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringInt(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7513,13 +3240,7 @@ func encodeTestRequestRequiredStringIntNullableRequest(
 	req NilStringInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7527,17 +3248,7 @@ func encodeTestRequestRequiredStringIntNullableArrayRequest(
 	req []NilStringInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7545,21 +3256,7 @@ func encodeTestRequestRequiredStringIntNullableArrayArrayRequest(
 	req [][]NilStringInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7567,13 +3264,7 @@ func encodeTestRequestRequiredStringIpv4Request(
 	req netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeIPv4(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7581,17 +3272,7 @@ func encodeTestRequestRequiredStringIpv4ArrayRequest(
 	req []netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeIPv4(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7599,21 +3280,7 @@ func encodeTestRequestRequiredStringIpv4ArrayArrayRequest(
 	req [][]netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeIPv4(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7621,13 +3288,7 @@ func encodeTestRequestRequiredStringIpv4NullableRequest(
 	req NilIPv4,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7635,17 +3296,7 @@ func encodeTestRequestRequiredStringIpv4NullableArrayRequest(
 	req []NilIPv4,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7653,21 +3304,7 @@ func encodeTestRequestRequiredStringIpv4NullableArrayArrayRequest(
 	req [][]NilIPv4,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7675,13 +3312,7 @@ func encodeTestRequestRequiredStringIpv6Request(
 	req netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeIPv6(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7689,17 +3320,7 @@ func encodeTestRequestRequiredStringIpv6ArrayRequest(
 	req []netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeIPv6(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7707,21 +3328,7 @@ func encodeTestRequestRequiredStringIpv6ArrayArrayRequest(
 	req [][]netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeIPv6(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7729,13 +3336,7 @@ func encodeTestRequestRequiredStringIpv6NullableRequest(
 	req NilIPv6,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7743,17 +3344,7 @@ func encodeTestRequestRequiredStringIpv6NullableArrayRequest(
 	req []NilIPv6,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7761,21 +3352,7 @@ func encodeTestRequestRequiredStringIpv6NullableArrayArrayRequest(
 	req [][]NilIPv6,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7783,13 +3360,7 @@ func encodeTestRequestRequiredStringMACRequest(
 	req net.HardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeMAC(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7797,17 +3368,7 @@ func encodeTestRequestRequiredStringMACArrayRequest(
 	req []net.HardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeMAC(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7815,21 +3376,7 @@ func encodeTestRequestRequiredStringMACArrayArrayRequest(
 	req [][]net.HardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeMAC(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7837,13 +3384,7 @@ func encodeTestRequestRequiredStringMACNullableRequest(
 	req NilHardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7851,17 +3392,7 @@ func encodeTestRequestRequiredStringMACNullableArrayRequest(
 	req []NilHardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7869,21 +3400,7 @@ func encodeTestRequestRequiredStringMACNullableArrayArrayRequest(
 	req [][]NilHardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7891,13 +3408,7 @@ func encodeTestRequestRequiredStringNullableRequest(
 	req NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7905,17 +3416,7 @@ func encodeTestRequestRequiredStringNullableArrayRequest(
 	req []NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7923,21 +3424,7 @@ func encodeTestRequestRequiredStringNullableArrayArrayRequest(
 	req [][]NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7945,13 +3432,7 @@ func encodeTestRequestRequiredStringPasswordRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7959,17 +3440,7 @@ func encodeTestRequestRequiredStringPasswordArrayRequest(
 	req []string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.Str(elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7977,21 +3448,7 @@ func encodeTestRequestRequiredStringPasswordArrayArrayRequest(
 	req [][]string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -7999,13 +3456,7 @@ func encodeTestRequestRequiredStringPasswordNullableRequest(
 	req NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8013,17 +3464,7 @@ func encodeTestRequestRequiredStringPasswordNullableArrayRequest(
 	req []NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8031,21 +3472,7 @@ func encodeTestRequestRequiredStringPasswordNullableArrayArrayRequest(
 	req [][]NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8053,13 +3480,7 @@ func encodeTestRequestRequiredStringTimeRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeTime(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8067,17 +3488,7 @@ func encodeTestRequestRequiredStringTimeArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeTime(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8085,21 +3496,7 @@ func encodeTestRequestRequiredStringTimeArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeTime(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8107,13 +3504,7 @@ func encodeTestRequestRequiredStringTimeNullableRequest(
 	req NilTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeTime)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8121,17 +3512,7 @@ func encodeTestRequestRequiredStringTimeNullableArrayRequest(
 	req []NilTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeTime)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8139,21 +3520,7 @@ func encodeTestRequestRequiredStringTimeNullableArrayArrayRequest(
 	req [][]NilTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeTime)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8161,13 +3528,7 @@ func encodeTestRequestRequiredStringURIRequest(
 	req url.URL,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeURI(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8175,17 +3536,7 @@ func encodeTestRequestRequiredStringURIArrayRequest(
 	req []url.URL,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeURI(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8193,21 +3544,7 @@ func encodeTestRequestRequiredStringURIArrayArrayRequest(
 	req [][]url.URL,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeURI(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8215,13 +3552,7 @@ func encodeTestRequestRequiredStringURINullableRequest(
 	req NilURI,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8229,17 +3560,7 @@ func encodeTestRequestRequiredStringURINullableArrayRequest(
 	req []NilURI,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8247,21 +3568,7 @@ func encodeTestRequestRequiredStringURINullableArrayArrayRequest(
 	req [][]NilURI,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8269,13 +3576,7 @@ func encodeTestRequestRequiredStringUUIDRequest(
 	req uuid.UUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeUUID(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8283,17 +3584,7 @@ func encodeTestRequestRequiredStringUUIDArrayRequest(
 	req []uuid.UUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeUUID(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8301,21 +3592,7 @@ func encodeTestRequestRequiredStringUUIDArrayArrayRequest(
 	req [][]uuid.UUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeUUID(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8323,13 +3600,7 @@ func encodeTestRequestRequiredStringUUIDNullableRequest(
 	req NilUUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8337,17 +3608,7 @@ func encodeTestRequestRequiredStringUUIDNullableArrayRequest(
 	req []NilUUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8355,21 +3616,7 @@ func encodeTestRequestRequiredStringUUIDNullableArrayArrayRequest(
 	req [][]NilUUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8377,13 +3624,7 @@ func encodeTestRequestRequiredStringUintRequest(
 	req uint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringUint(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8391,13 +3632,7 @@ func encodeTestRequestRequiredStringUint16Request(
 	req uint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringUint16(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8405,17 +3640,7 @@ func encodeTestRequestRequiredStringUint16ArrayRequest(
 	req []uint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringUint16(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8423,21 +3648,7 @@ func encodeTestRequestRequiredStringUint16ArrayArrayRequest(
 	req [][]uint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringUint16(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8445,13 +3656,7 @@ func encodeTestRequestRequiredStringUint16NullableRequest(
 	req NilStringUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8459,17 +3664,7 @@ func encodeTestRequestRequiredStringUint16NullableArrayRequest(
 	req []NilStringUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8477,21 +3672,7 @@ func encodeTestRequestRequiredStringUint16NullableArrayArrayRequest(
 	req [][]NilStringUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8499,13 +3680,7 @@ func encodeTestRequestRequiredStringUint32Request(
 	req uint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringUint32(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8513,17 +3688,7 @@ func encodeTestRequestRequiredStringUint32ArrayRequest(
 	req []uint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringUint32(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8531,21 +3696,7 @@ func encodeTestRequestRequiredStringUint32ArrayArrayRequest(
 	req [][]uint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringUint32(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8553,13 +3704,7 @@ func encodeTestRequestRequiredStringUint32NullableRequest(
 	req NilStringUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8567,17 +3712,7 @@ func encodeTestRequestRequiredStringUint32NullableArrayRequest(
 	req []NilStringUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8585,21 +3720,7 @@ func encodeTestRequestRequiredStringUint32NullableArrayArrayRequest(
 	req [][]NilStringUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8607,13 +3728,7 @@ func encodeTestRequestRequiredStringUint64Request(
 	req uint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringUint64(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8621,17 +3736,7 @@ func encodeTestRequestRequiredStringUint64ArrayRequest(
 	req []uint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringUint64(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8639,21 +3744,7 @@ func encodeTestRequestRequiredStringUint64ArrayArrayRequest(
 	req [][]uint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringUint64(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8661,13 +3752,7 @@ func encodeTestRequestRequiredStringUint64NullableRequest(
 	req NilStringUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8675,17 +3760,7 @@ func encodeTestRequestRequiredStringUint64NullableArrayRequest(
 	req []NilStringUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8693,21 +3768,7 @@ func encodeTestRequestRequiredStringUint64NullableArrayArrayRequest(
 	req [][]NilStringUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8715,13 +3776,7 @@ func encodeTestRequestRequiredStringUint8Request(
 	req uint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringUint8(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8729,17 +3784,7 @@ func encodeTestRequestRequiredStringUint8ArrayRequest(
 	req []uint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringUint8(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8747,21 +3792,7 @@ func encodeTestRequestRequiredStringUint8ArrayArrayRequest(
 	req [][]uint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringUint8(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8769,13 +3800,7 @@ func encodeTestRequestRequiredStringUint8NullableRequest(
 	req NilStringUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8783,17 +3808,7 @@ func encodeTestRequestRequiredStringUint8NullableArrayRequest(
 	req []NilStringUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8801,21 +3816,7 @@ func encodeTestRequestRequiredStringUint8NullableArrayArrayRequest(
 	req [][]NilStringUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8823,17 +3824,7 @@ func encodeTestRequestRequiredStringUintArrayRequest(
 	req []uint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringUint(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8841,21 +3832,7 @@ func encodeTestRequestRequiredStringUintArrayArrayRequest(
 	req [][]uint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringUint(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8863,13 +3840,7 @@ func encodeTestRequestRequiredStringUintNullableRequest(
 	req NilStringUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8877,17 +3848,7 @@ func encodeTestRequestRequiredStringUintNullableArrayRequest(
 	req []NilStringUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8895,21 +3856,7 @@ func encodeTestRequestRequiredStringUintNullableArrayArrayRequest(
 	req [][]NilStringUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8917,13 +3864,7 @@ func encodeTestRequestRequiredStringUnixRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringUnixSeconds(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8931,17 +3872,7 @@ func encodeTestRequestRequiredStringUnixArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringUnixSeconds(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8949,21 +3880,7 @@ func encodeTestRequestRequiredStringUnixArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringUnixSeconds(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8971,13 +3888,7 @@ func encodeTestRequestRequiredStringUnixMicroRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringUnixMicro(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -8985,17 +3896,7 @@ func encodeTestRequestRequiredStringUnixMicroArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringUnixMicro(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9003,21 +3904,7 @@ func encodeTestRequestRequiredStringUnixMicroArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringUnixMicro(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9025,13 +3912,7 @@ func encodeTestRequestRequiredStringUnixMicroNullableRequest(
 	req NilStringUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeStringUnixMicro)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9039,17 +3920,7 @@ func encodeTestRequestRequiredStringUnixMicroNullableArrayRequest(
 	req []NilStringUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeStringUnixMicro)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9057,21 +3928,7 @@ func encodeTestRequestRequiredStringUnixMicroNullableArrayArrayRequest(
 	req [][]NilStringUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeStringUnixMicro)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9079,13 +3936,7 @@ func encodeTestRequestRequiredStringUnixMilliRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringUnixMilli(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9093,17 +3944,7 @@ func encodeTestRequestRequiredStringUnixMilliArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringUnixMilli(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9111,21 +3952,7 @@ func encodeTestRequestRequiredStringUnixMilliArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringUnixMilli(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9133,13 +3960,7 @@ func encodeTestRequestRequiredStringUnixMilliNullableRequest(
 	req NilStringUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeStringUnixMilli)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9147,17 +3968,7 @@ func encodeTestRequestRequiredStringUnixMilliNullableArrayRequest(
 	req []NilStringUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeStringUnixMilli)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9165,21 +3976,7 @@ func encodeTestRequestRequiredStringUnixMilliNullableArrayArrayRequest(
 	req [][]NilStringUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeStringUnixMilli)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9187,13 +3984,7 @@ func encodeTestRequestRequiredStringUnixNanoRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringUnixNano(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9201,17 +3992,7 @@ func encodeTestRequestRequiredStringUnixNanoArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringUnixNano(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9219,21 +4000,7 @@ func encodeTestRequestRequiredStringUnixNanoArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringUnixNano(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9241,13 +4008,7 @@ func encodeTestRequestRequiredStringUnixNanoNullableRequest(
 	req NilStringUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeStringUnixNano)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9255,17 +4016,7 @@ func encodeTestRequestRequiredStringUnixNanoNullableArrayRequest(
 	req []NilStringUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeStringUnixNano)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9273,21 +4024,7 @@ func encodeTestRequestRequiredStringUnixNanoNullableArrayArrayRequest(
 	req [][]NilStringUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeStringUnixNano)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9295,13 +4032,7 @@ func encodeTestRequestRequiredStringUnixNullableRequest(
 	req NilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeStringUnixSeconds)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9309,17 +4040,7 @@ func encodeTestRequestRequiredStringUnixNullableArrayRequest(
 	req []NilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeStringUnixSeconds)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9327,21 +4048,7 @@ func encodeTestRequestRequiredStringUnixNullableArrayArrayRequest(
 	req [][]NilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeStringUnixSeconds)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9349,13 +4056,7 @@ func encodeTestRequestRequiredStringUnixSecondsRequest(
 	req time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		json.EncodeStringUnixSeconds(e, req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9363,17 +4064,7 @@ func encodeTestRequestRequiredStringUnixSecondsArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			json.EncodeStringUnixSeconds(e, elem)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9381,21 +4072,7 @@ func encodeTestRequestRequiredStringUnixSecondsArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				json.EncodeStringUnixSeconds(e, elem)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9403,13 +4080,7 @@ func encodeTestRequestRequiredStringUnixSecondsNullableRequest(
 	req NilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e, json.EncodeStringUnixSeconds)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9417,17 +4088,7 @@ func encodeTestRequestRequiredStringUnixSecondsNullableArrayRequest(
 	req []NilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			elem.Encode(e, json.EncodeStringUnixSeconds)
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9435,21 +4096,7 @@ func encodeTestRequestRequiredStringUnixSecondsNullableArrayArrayRequest(
 	req [][]NilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.ArrStart()
-		for _, elem := range req {
-			e.ArrStart()
-			for _, elem := range elem {
-				elem.Encode(e, json.EncodeStringUnixSeconds)
-			}
-			e.ArrEnd()
-		}
-		e.ArrEnd()
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9457,39 +4104,17 @@ func encodeTestRequestStringRequest(
 	req OptString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringArrayRequest(
 	req []string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9497,23 +4122,7 @@ func encodeTestRequestStringArrayArrayRequest(
 	req [][]string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Str(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9521,13 +4130,7 @@ func encodeTestRequestStringBase64Request(
 	req []byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Base64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9535,19 +4138,7 @@ func encodeTestRequestStringBase64ArrayRequest(
 	req [][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Base64(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9555,23 +4146,7 @@ func encodeTestRequestStringBase64ArrayArrayRequest(
 	req [][][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Base64(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9579,39 +4154,17 @@ func encodeTestRequestStringBase64NullableRequest(
 	req OptNilByte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringBase64NullableArrayRequest(
 	req [][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Base64(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9619,23 +4172,7 @@ func encodeTestRequestStringBase64NullableArrayArrayRequest(
 	req [][][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Base64(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9643,39 +4180,17 @@ func encodeTestRequestStringBinaryRequest(
 	req OptString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringBinaryArrayRequest(
 	req []string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9683,23 +4198,7 @@ func encodeTestRequestStringBinaryArrayArrayRequest(
 	req [][]string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Str(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9707,39 +4206,17 @@ func encodeTestRequestStringBinaryNullableRequest(
 	req OptNilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringBinaryNullableArrayRequest(
 	req []NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9747,23 +4224,7 @@ func encodeTestRequestStringBinaryNullableArrayArrayRequest(
 	req [][]NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9771,13 +4232,7 @@ func encodeTestRequestStringByteRequest(
 	req []byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Base64(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9785,19 +4240,7 @@ func encodeTestRequestStringByteArrayRequest(
 	req [][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Base64(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9805,23 +4248,7 @@ func encodeTestRequestStringByteArrayArrayRequest(
 	req [][][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Base64(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9829,39 +4256,17 @@ func encodeTestRequestStringByteNullableRequest(
 	req OptNilByte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringByteNullableArrayRequest(
 	req [][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Base64(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9869,23 +4274,7 @@ func encodeTestRequestStringByteNullableArrayArrayRequest(
 	req [][][]byte,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Base64(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9893,39 +4282,17 @@ func encodeTestRequestStringDateRequest(
 	req OptDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeDate)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringDateArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeDate(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9933,23 +4300,7 @@ func encodeTestRequestStringDateArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeDate(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9957,39 +4308,17 @@ func encodeTestRequestStringDateNullableRequest(
 	req OptNilDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeDate)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringDateNullableArrayRequest(
 	req []NilDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeDate)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -9997,23 +4326,7 @@ func encodeTestRequestStringDateNullableArrayArrayRequest(
 	req [][]NilDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeDate)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10021,39 +4334,17 @@ func encodeTestRequestStringDateTimeRequest(
 	req OptDateTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeDateTime)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringDateTimeArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeDateTime(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10061,23 +4352,7 @@ func encodeTestRequestStringDateTimeArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeDateTime(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10085,39 +4360,17 @@ func encodeTestRequestStringDateTimeNullableRequest(
 	req OptNilDateTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeDateTime)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringDateTimeNullableArrayRequest(
 	req []NilDateTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeDateTime)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10125,23 +4378,7 @@ func encodeTestRequestStringDateTimeNullableArrayArrayRequest(
 	req [][]NilDateTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeDateTime)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10149,39 +4386,17 @@ func encodeTestRequestStringDecimalRequest(
 	req OptStringDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringDecimalArrayRequest(
 	req []decimal.Decimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringDecimal(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10189,23 +4404,7 @@ func encodeTestRequestStringDecimalArrayArrayRequest(
 	req [][]decimal.Decimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringDecimal(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10213,39 +4412,17 @@ func encodeTestRequestStringDecimalNullableRequest(
 	req OptNilStringDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringDecimalNullableArrayRequest(
 	req []NilStringDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10253,23 +4430,7 @@ func encodeTestRequestStringDecimalNullableArrayArrayRequest(
 	req [][]NilStringDecimal,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10277,39 +4438,17 @@ func encodeTestRequestStringDurationRequest(
 	req OptDuration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringDurationArrayRequest(
 	req []time.Duration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeDuration(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10317,23 +4456,7 @@ func encodeTestRequestStringDurationArrayArrayRequest(
 	req [][]time.Duration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeDuration(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10341,39 +4464,17 @@ func encodeTestRequestStringDurationNullableRequest(
 	req OptNilDuration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringDurationNullableArrayRequest(
 	req []NilDuration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10381,23 +4482,7 @@ func encodeTestRequestStringDurationNullableArrayArrayRequest(
 	req [][]NilDuration,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10405,39 +4490,17 @@ func encodeTestRequestStringEmailRequest(
 	req OptString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringEmailArrayRequest(
 	req []string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10445,23 +4508,7 @@ func encodeTestRequestStringEmailArrayArrayRequest(
 	req [][]string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Str(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10469,39 +4516,17 @@ func encodeTestRequestStringEmailNullableRequest(
 	req OptNilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringEmailNullableArrayRequest(
 	req []NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10509,23 +4534,7 @@ func encodeTestRequestStringEmailNullableArrayArrayRequest(
 	req [][]NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10533,39 +4542,17 @@ func encodeTestRequestStringFloat32Request(
 	req OptStringFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringFloat32ArrayRequest(
 	req []float32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringFloat32(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10573,23 +4560,7 @@ func encodeTestRequestStringFloat32ArrayArrayRequest(
 	req [][]float32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringFloat32(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10597,39 +4568,17 @@ func encodeTestRequestStringFloat32NullableRequest(
 	req OptNilStringFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringFloat32NullableArrayRequest(
 	req []NilStringFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10637,23 +4586,7 @@ func encodeTestRequestStringFloat32NullableArrayArrayRequest(
 	req [][]NilStringFloat32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10661,39 +4594,17 @@ func encodeTestRequestStringFloat64Request(
 	req OptStringFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringFloat64ArrayRequest(
 	req []float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringFloat64(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10701,23 +4612,7 @@ func encodeTestRequestStringFloat64ArrayArrayRequest(
 	req [][]float64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringFloat64(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10725,39 +4620,17 @@ func encodeTestRequestStringFloat64NullableRequest(
 	req OptNilStringFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringFloat64NullableArrayRequest(
 	req []NilStringFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10765,23 +4638,7 @@ func encodeTestRequestStringFloat64NullableArrayArrayRequest(
 	req [][]NilStringFloat64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10789,39 +4646,17 @@ func encodeTestRequestStringHTTPDateRequest(
 	req OptHTTPDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeHTTPDate)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringHTTPDateArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeHTTPDate(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10829,23 +4664,7 @@ func encodeTestRequestStringHTTPDateArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeHTTPDate(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10853,39 +4672,17 @@ func encodeTestRequestStringHTTPDateNullableRequest(
 	req OptNilHTTPDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeHTTPDate)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringHTTPDateNullableArrayRequest(
 	req []NilHTTPDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeHTTPDate)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10893,23 +4690,7 @@ func encodeTestRequestStringHTTPDateNullableArrayArrayRequest(
 	req [][]NilHTTPDate,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeHTTPDate)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10917,39 +4698,17 @@ func encodeTestRequestStringHostnameRequest(
 	req OptString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringHostnameArrayRequest(
 	req []string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10957,23 +4716,7 @@ func encodeTestRequestStringHostnameArrayArrayRequest(
 	req [][]string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Str(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -10981,39 +4724,17 @@ func encodeTestRequestStringHostnameNullableRequest(
 	req OptNilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringHostnameNullableArrayRequest(
 	req []NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11021,23 +4742,7 @@ func encodeTestRequestStringHostnameNullableArrayArrayRequest(
 	req [][]NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11045,39 +4750,17 @@ func encodeTestRequestStringIPRequest(
 	req OptIP,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringIPArrayRequest(
 	req []netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeIP(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11085,23 +4768,7 @@ func encodeTestRequestStringIPArrayArrayRequest(
 	req [][]netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeIP(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11109,39 +4776,17 @@ func encodeTestRequestStringIPNullableRequest(
 	req OptNilIP,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringIPNullableArrayRequest(
 	req []NilIP,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11149,23 +4794,7 @@ func encodeTestRequestStringIPNullableArrayArrayRequest(
 	req [][]NilIP,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11173,59 +4802,27 @@ func encodeTestRequestStringIntRequest(
 	req OptStringInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringInt16Request(
 	req OptStringInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringInt16ArrayRequest(
 	req []int16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringInt16(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11233,23 +4830,7 @@ func encodeTestRequestStringInt16ArrayArrayRequest(
 	req [][]int16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringInt16(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11257,39 +4838,17 @@ func encodeTestRequestStringInt16NullableRequest(
 	req OptNilStringInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringInt16NullableArrayRequest(
 	req []NilStringInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11297,23 +4856,7 @@ func encodeTestRequestStringInt16NullableArrayArrayRequest(
 	req [][]NilStringInt16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11321,39 +4864,17 @@ func encodeTestRequestStringInt32Request(
 	req OptStringInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringInt32ArrayRequest(
 	req []int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringInt32(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11361,23 +4882,7 @@ func encodeTestRequestStringInt32ArrayArrayRequest(
 	req [][]int32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringInt32(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11385,39 +4890,17 @@ func encodeTestRequestStringInt32NullableRequest(
 	req OptNilStringInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringInt32NullableArrayRequest(
 	req []NilStringInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11425,23 +4908,7 @@ func encodeTestRequestStringInt32NullableArrayArrayRequest(
 	req [][]NilStringInt32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11449,39 +4916,17 @@ func encodeTestRequestStringInt64Request(
 	req OptStringInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringInt64ArrayRequest(
 	req []int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringInt64(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11489,23 +4934,7 @@ func encodeTestRequestStringInt64ArrayArrayRequest(
 	req [][]int64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringInt64(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11513,39 +4942,17 @@ func encodeTestRequestStringInt64NullableRequest(
 	req OptNilStringInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringInt64NullableArrayRequest(
 	req []NilStringInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11553,23 +4960,7 @@ func encodeTestRequestStringInt64NullableArrayArrayRequest(
 	req [][]NilStringInt64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11577,39 +4968,17 @@ func encodeTestRequestStringInt8Request(
 	req OptStringInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringInt8ArrayRequest(
 	req []int8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringInt8(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11617,23 +4986,7 @@ func encodeTestRequestStringInt8ArrayArrayRequest(
 	req [][]int8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringInt8(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11641,39 +4994,17 @@ func encodeTestRequestStringInt8NullableRequest(
 	req OptNilStringInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringInt8NullableArrayRequest(
 	req []NilStringInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11681,23 +5012,7 @@ func encodeTestRequestStringInt8NullableArrayArrayRequest(
 	req [][]NilStringInt8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11705,19 +5020,7 @@ func encodeTestRequestStringIntArrayRequest(
 	req []int,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringInt(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11725,23 +5028,7 @@ func encodeTestRequestStringIntArrayArrayRequest(
 	req [][]int,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringInt(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11749,39 +5036,17 @@ func encodeTestRequestStringIntNullableRequest(
 	req OptNilStringInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringIntNullableArrayRequest(
 	req []NilStringInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11789,23 +5054,7 @@ func encodeTestRequestStringIntNullableArrayArrayRequest(
 	req [][]NilStringInt,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11813,39 +5062,17 @@ func encodeTestRequestStringIpv4Request(
 	req OptIPv4,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringIpv4ArrayRequest(
 	req []netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeIPv4(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11853,23 +5080,7 @@ func encodeTestRequestStringIpv4ArrayArrayRequest(
 	req [][]netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeIPv4(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11877,39 +5088,17 @@ func encodeTestRequestStringIpv4NullableRequest(
 	req OptNilIPv4,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringIpv4NullableArrayRequest(
 	req []NilIPv4,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11917,23 +5106,7 @@ func encodeTestRequestStringIpv4NullableArrayArrayRequest(
 	req [][]NilIPv4,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11941,39 +5114,17 @@ func encodeTestRequestStringIpv6Request(
 	req OptIPv6,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringIpv6ArrayRequest(
 	req []netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeIPv6(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -11981,23 +5132,7 @@ func encodeTestRequestStringIpv6ArrayArrayRequest(
 	req [][]netip.Addr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeIPv6(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12005,39 +5140,17 @@ func encodeTestRequestStringIpv6NullableRequest(
 	req OptNilIPv6,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringIpv6NullableArrayRequest(
 	req []NilIPv6,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12045,23 +5158,7 @@ func encodeTestRequestStringIpv6NullableArrayArrayRequest(
 	req [][]NilIPv6,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12069,39 +5166,17 @@ func encodeTestRequestStringMACRequest(
 	req OptHardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringMACArrayRequest(
 	req []net.HardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeMAC(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12109,23 +5184,7 @@ func encodeTestRequestStringMACArrayArrayRequest(
 	req [][]net.HardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeMAC(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12133,39 +5192,17 @@ func encodeTestRequestStringMACNullableRequest(
 	req OptNilHardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringMACNullableArrayRequest(
 	req []NilHardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12173,23 +5210,7 @@ func encodeTestRequestStringMACNullableArrayArrayRequest(
 	req [][]NilHardwareAddr,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12197,39 +5218,17 @@ func encodeTestRequestStringNullableRequest(
 	req OptNilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringNullableArrayRequest(
 	req []NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12237,23 +5236,7 @@ func encodeTestRequestStringNullableArrayArrayRequest(
 	req [][]NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12261,39 +5244,17 @@ func encodeTestRequestStringPasswordRequest(
 	req OptString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringPasswordArrayRequest(
 	req []string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12301,23 +5262,7 @@ func encodeTestRequestStringPasswordArrayArrayRequest(
 	req [][]string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					e.Str(elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12325,39 +5270,17 @@ func encodeTestRequestStringPasswordNullableRequest(
 	req OptNilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringPasswordNullableArrayRequest(
 	req []NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12365,23 +5288,7 @@ func encodeTestRequestStringPasswordNullableArrayArrayRequest(
 	req [][]NilString,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12389,39 +5296,17 @@ func encodeTestRequestStringTimeRequest(
 	req OptTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeTime)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringTimeArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeTime(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12429,23 +5314,7 @@ func encodeTestRequestStringTimeArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeTime(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12453,39 +5322,17 @@ func encodeTestRequestStringTimeNullableRequest(
 	req OptNilTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeTime)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringTimeNullableArrayRequest(
 	req []NilTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeTime)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12493,23 +5340,7 @@ func encodeTestRequestStringTimeNullableArrayArrayRequest(
 	req [][]NilTime,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeTime)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12517,39 +5348,17 @@ func encodeTestRequestStringURIRequest(
 	req OptURI,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringURIArrayRequest(
 	req []url.URL,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeURI(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12557,23 +5366,7 @@ func encodeTestRequestStringURIArrayArrayRequest(
 	req [][]url.URL,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeURI(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12581,39 +5374,17 @@ func encodeTestRequestStringURINullableRequest(
 	req OptNilURI,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringURINullableArrayRequest(
 	req []NilURI,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12621,23 +5392,7 @@ func encodeTestRequestStringURINullableArrayArrayRequest(
 	req [][]NilURI,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12645,39 +5400,17 @@ func encodeTestRequestStringUUIDRequest(
 	req OptUUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUUIDArrayRequest(
 	req []uuid.UUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeUUID(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12685,23 +5418,7 @@ func encodeTestRequestStringUUIDArrayArrayRequest(
 	req [][]uuid.UUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeUUID(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12709,39 +5426,17 @@ func encodeTestRequestStringUUIDNullableRequest(
 	req OptNilUUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUUIDNullableArrayRequest(
 	req []NilUUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12749,23 +5444,7 @@ func encodeTestRequestStringUUIDNullableArrayArrayRequest(
 	req [][]NilUUID,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12773,59 +5452,27 @@ func encodeTestRequestStringUintRequest(
 	req OptStringUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUint16Request(
 	req OptStringUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUint16ArrayRequest(
 	req []uint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringUint16(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12833,23 +5480,7 @@ func encodeTestRequestStringUint16ArrayArrayRequest(
 	req [][]uint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringUint16(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12857,39 +5488,17 @@ func encodeTestRequestStringUint16NullableRequest(
 	req OptNilStringUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUint16NullableArrayRequest(
 	req []NilStringUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12897,23 +5506,7 @@ func encodeTestRequestStringUint16NullableArrayArrayRequest(
 	req [][]NilStringUint16,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12921,39 +5514,17 @@ func encodeTestRequestStringUint32Request(
 	req OptStringUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUint32ArrayRequest(
 	req []uint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringUint32(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12961,23 +5532,7 @@ func encodeTestRequestStringUint32ArrayArrayRequest(
 	req [][]uint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringUint32(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -12985,39 +5540,17 @@ func encodeTestRequestStringUint32NullableRequest(
 	req OptNilStringUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUint32NullableArrayRequest(
 	req []NilStringUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13025,23 +5558,7 @@ func encodeTestRequestStringUint32NullableArrayArrayRequest(
 	req [][]NilStringUint32,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13049,39 +5566,17 @@ func encodeTestRequestStringUint64Request(
 	req OptStringUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUint64ArrayRequest(
 	req []uint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringUint64(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13089,23 +5584,7 @@ func encodeTestRequestStringUint64ArrayArrayRequest(
 	req [][]uint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringUint64(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13113,39 +5592,17 @@ func encodeTestRequestStringUint64NullableRequest(
 	req OptNilStringUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUint64NullableArrayRequest(
 	req []NilStringUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13153,23 +5610,7 @@ func encodeTestRequestStringUint64NullableArrayArrayRequest(
 	req [][]NilStringUint64,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13177,39 +5618,17 @@ func encodeTestRequestStringUint8Request(
 	req OptStringUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUint8ArrayRequest(
 	req []uint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringUint8(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13217,23 +5636,7 @@ func encodeTestRequestStringUint8ArrayArrayRequest(
 	req [][]uint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringUint8(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13241,39 +5644,17 @@ func encodeTestRequestStringUint8NullableRequest(
 	req OptNilStringUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUint8NullableArrayRequest(
 	req []NilStringUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13281,23 +5662,7 @@ func encodeTestRequestStringUint8NullableArrayArrayRequest(
 	req [][]NilStringUint8,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13305,19 +5670,7 @@ func encodeTestRequestStringUintArrayRequest(
 	req []uint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringUint(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13325,23 +5678,7 @@ func encodeTestRequestStringUintArrayArrayRequest(
 	req [][]uint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringUint(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13349,39 +5686,17 @@ func encodeTestRequestStringUintNullableRequest(
 	req OptNilStringUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUintNullableArrayRequest(
 	req []NilStringUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13389,23 +5704,7 @@ func encodeTestRequestStringUintNullableArrayArrayRequest(
 	req [][]NilStringUint,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13413,39 +5712,17 @@ func encodeTestRequestStringUnixRequest(
 	req OptStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeStringUnixSeconds)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUnixArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringUnixSeconds(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13453,23 +5730,7 @@ func encodeTestRequestStringUnixArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringUnixSeconds(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13477,39 +5738,17 @@ func encodeTestRequestStringUnixMicroRequest(
 	req OptStringUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeStringUnixMicro)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUnixMicroArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringUnixMicro(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13517,23 +5756,7 @@ func encodeTestRequestStringUnixMicroArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringUnixMicro(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13541,39 +5764,17 @@ func encodeTestRequestStringUnixMicroNullableRequest(
 	req OptNilStringUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeStringUnixMicro)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUnixMicroNullableArrayRequest(
 	req []NilStringUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeStringUnixMicro)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13581,23 +5782,7 @@ func encodeTestRequestStringUnixMicroNullableArrayArrayRequest(
 	req [][]NilStringUnixMicro,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeStringUnixMicro)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13605,39 +5790,17 @@ func encodeTestRequestStringUnixMilliRequest(
 	req OptStringUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeStringUnixMilli)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUnixMilliArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringUnixMilli(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13645,23 +5808,7 @@ func encodeTestRequestStringUnixMilliArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringUnixMilli(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13669,39 +5816,17 @@ func encodeTestRequestStringUnixMilliNullableRequest(
 	req OptNilStringUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeStringUnixMilli)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUnixMilliNullableArrayRequest(
 	req []NilStringUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeStringUnixMilli)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13709,23 +5834,7 @@ func encodeTestRequestStringUnixMilliNullableArrayArrayRequest(
 	req [][]NilStringUnixMilli,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeStringUnixMilli)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13733,39 +5842,17 @@ func encodeTestRequestStringUnixNanoRequest(
 	req OptStringUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeStringUnixNano)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUnixNanoArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringUnixNano(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13773,23 +5860,7 @@ func encodeTestRequestStringUnixNanoArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringUnixNano(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13797,39 +5868,17 @@ func encodeTestRequestStringUnixNanoNullableRequest(
 	req OptNilStringUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeStringUnixNano)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUnixNanoNullableArrayRequest(
 	req []NilStringUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeStringUnixNano)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13837,23 +5886,7 @@ func encodeTestRequestStringUnixNanoNullableArrayArrayRequest(
 	req [][]NilStringUnixNano,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeStringUnixNano)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13861,39 +5894,17 @@ func encodeTestRequestStringUnixNullableRequest(
 	req OptNilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeStringUnixSeconds)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUnixNullableArrayRequest(
 	req []NilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeStringUnixSeconds)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13901,23 +5912,7 @@ func encodeTestRequestStringUnixNullableArrayArrayRequest(
 	req [][]NilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeStringUnixSeconds)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13925,39 +5920,17 @@ func encodeTestRequestStringUnixSecondsRequest(
 	req OptStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeStringUnixSeconds)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUnixSecondsArrayRequest(
 	req []time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				json.EncodeStringUnixSeconds(e, elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13965,23 +5938,7 @@ func encodeTestRequestStringUnixSecondsArrayArrayRequest(
 	req [][]time.Time,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					json.EncodeStringUnixSeconds(e, elem)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -13989,39 +5946,17 @@ func encodeTestRequestStringUnixSecondsNullableRequest(
 	req OptNilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	if !req.Set {
-		// Keep request with empty body if value is not set.
-		return nil
-	}
-	e := new(jx.Encoder)
-	{
-		if req.Set {
-			req.Encode(e, json.EncodeStringUnixSeconds)
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Keep request with empty body if value is not set.
 
 func encodeTestRequestStringUnixSecondsNullableArrayRequest(
 	req []NilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				elem.Encode(e, json.EncodeStringUnixSeconds)
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14029,23 +5964,7 @@ func encodeTestRequestStringUnixSecondsNullableArrayArrayRequest(
 	req [][]NilStringUnixSeconds,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		if req != nil {
-			e.ArrStart()
-			for _, elem := range req {
-				e.ArrStart()
-				for _, elem := range elem {
-					elem.Encode(e, json.EncodeStringUnixSeconds)
-				}
-				e.ArrEnd()
-			}
-			e.ArrEnd()
-		}
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14053,13 +5972,7 @@ func encodeTestResponseAnyRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14067,13 +5980,7 @@ func encodeTestResponseBooleanRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14081,13 +5988,7 @@ func encodeTestResponseBooleanArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14095,13 +5996,7 @@ func encodeTestResponseBooleanArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14109,13 +6004,7 @@ func encodeTestResponseBooleanNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14123,13 +6012,7 @@ func encodeTestResponseBooleanNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14137,13 +6020,7 @@ func encodeTestResponseBooleanNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14151,13 +6028,7 @@ func encodeTestResponseEmptyStructRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14165,13 +6036,7 @@ func encodeTestResponseFormatTestRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14179,13 +6044,7 @@ func encodeTestResponseIntegerRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14193,13 +6052,7 @@ func encodeTestResponseIntegerArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14207,13 +6060,7 @@ func encodeTestResponseIntegerArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14221,13 +6068,7 @@ func encodeTestResponseIntegerInt16Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14235,13 +6076,7 @@ func encodeTestResponseIntegerInt16ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14249,13 +6084,7 @@ func encodeTestResponseIntegerInt16ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14263,13 +6092,7 @@ func encodeTestResponseIntegerInt16NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14277,13 +6100,7 @@ func encodeTestResponseIntegerInt16NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14291,13 +6108,7 @@ func encodeTestResponseIntegerInt16NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14305,13 +6116,7 @@ func encodeTestResponseIntegerInt32Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14319,13 +6124,7 @@ func encodeTestResponseIntegerInt32ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14333,13 +6132,7 @@ func encodeTestResponseIntegerInt32ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14347,13 +6140,7 @@ func encodeTestResponseIntegerInt32NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14361,13 +6148,7 @@ func encodeTestResponseIntegerInt32NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14375,13 +6156,7 @@ func encodeTestResponseIntegerInt32NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14389,13 +6164,7 @@ func encodeTestResponseIntegerInt64Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14403,13 +6172,7 @@ func encodeTestResponseIntegerInt64ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14417,13 +6180,7 @@ func encodeTestResponseIntegerInt64ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14431,13 +6188,7 @@ func encodeTestResponseIntegerInt64NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14445,13 +6196,7 @@ func encodeTestResponseIntegerInt64NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14459,13 +6204,7 @@ func encodeTestResponseIntegerInt64NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14473,13 +6212,7 @@ func encodeTestResponseIntegerInt8Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14487,13 +6220,7 @@ func encodeTestResponseIntegerInt8ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14501,13 +6228,7 @@ func encodeTestResponseIntegerInt8ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14515,13 +6236,7 @@ func encodeTestResponseIntegerInt8NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14529,13 +6244,7 @@ func encodeTestResponseIntegerInt8NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14543,13 +6252,7 @@ func encodeTestResponseIntegerInt8NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14557,13 +6260,7 @@ func encodeTestResponseIntegerNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14571,13 +6268,7 @@ func encodeTestResponseIntegerNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14585,13 +6276,7 @@ func encodeTestResponseIntegerNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14599,13 +6284,7 @@ func encodeTestResponseIntegerUintRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14613,13 +6292,7 @@ func encodeTestResponseIntegerUint16Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14627,13 +6300,7 @@ func encodeTestResponseIntegerUint16ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14641,13 +6308,7 @@ func encodeTestResponseIntegerUint16ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14655,13 +6316,7 @@ func encodeTestResponseIntegerUint16NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14669,13 +6324,7 @@ func encodeTestResponseIntegerUint16NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14683,13 +6332,7 @@ func encodeTestResponseIntegerUint16NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14697,13 +6340,7 @@ func encodeTestResponseIntegerUint32Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14711,13 +6348,7 @@ func encodeTestResponseIntegerUint32ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14725,13 +6356,7 @@ func encodeTestResponseIntegerUint32ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14739,13 +6364,7 @@ func encodeTestResponseIntegerUint32NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14753,13 +6372,7 @@ func encodeTestResponseIntegerUint32NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14767,13 +6380,7 @@ func encodeTestResponseIntegerUint32NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14781,13 +6388,7 @@ func encodeTestResponseIntegerUint64Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14795,13 +6396,7 @@ func encodeTestResponseIntegerUint64ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14809,13 +6404,7 @@ func encodeTestResponseIntegerUint64ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14823,13 +6412,7 @@ func encodeTestResponseIntegerUint64NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14837,13 +6420,7 @@ func encodeTestResponseIntegerUint64NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14851,13 +6428,7 @@ func encodeTestResponseIntegerUint64NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14865,13 +6436,7 @@ func encodeTestResponseIntegerUint8Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14879,13 +6444,7 @@ func encodeTestResponseIntegerUint8ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14893,13 +6452,7 @@ func encodeTestResponseIntegerUint8ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14907,13 +6460,7 @@ func encodeTestResponseIntegerUint8NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14921,13 +6468,7 @@ func encodeTestResponseIntegerUint8NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14935,13 +6476,7 @@ func encodeTestResponseIntegerUint8NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14949,13 +6484,7 @@ func encodeTestResponseIntegerUintArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14963,13 +6492,7 @@ func encodeTestResponseIntegerUintArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14977,13 +6500,7 @@ func encodeTestResponseIntegerUintNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -14991,13 +6508,7 @@ func encodeTestResponseIntegerUintNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15005,13 +6516,7 @@ func encodeTestResponseIntegerUintNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15019,13 +6524,7 @@ func encodeTestResponseIntegerUnixRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15033,13 +6532,7 @@ func encodeTestResponseIntegerUnixArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15047,13 +6540,7 @@ func encodeTestResponseIntegerUnixArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15061,13 +6548,7 @@ func encodeTestResponseIntegerUnixMicroRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15075,13 +6556,7 @@ func encodeTestResponseIntegerUnixMicroArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15089,13 +6564,7 @@ func encodeTestResponseIntegerUnixMicroArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15103,13 +6572,7 @@ func encodeTestResponseIntegerUnixMicroNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15117,13 +6580,7 @@ func encodeTestResponseIntegerUnixMicroNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15131,13 +6588,7 @@ func encodeTestResponseIntegerUnixMicroNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15145,13 +6596,7 @@ func encodeTestResponseIntegerUnixMilliRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15159,13 +6604,7 @@ func encodeTestResponseIntegerUnixMilliArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15173,13 +6612,7 @@ func encodeTestResponseIntegerUnixMilliArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15187,13 +6620,7 @@ func encodeTestResponseIntegerUnixMilliNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15201,13 +6628,7 @@ func encodeTestResponseIntegerUnixMilliNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15215,13 +6636,7 @@ func encodeTestResponseIntegerUnixMilliNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15229,13 +6644,7 @@ func encodeTestResponseIntegerUnixNanoRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15243,13 +6652,7 @@ func encodeTestResponseIntegerUnixNanoArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15257,13 +6660,7 @@ func encodeTestResponseIntegerUnixNanoArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15271,13 +6668,7 @@ func encodeTestResponseIntegerUnixNanoNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15285,13 +6676,7 @@ func encodeTestResponseIntegerUnixNanoNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15299,13 +6684,7 @@ func encodeTestResponseIntegerUnixNanoNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15313,13 +6692,7 @@ func encodeTestResponseIntegerUnixNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15327,13 +6700,7 @@ func encodeTestResponseIntegerUnixNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15341,13 +6708,7 @@ func encodeTestResponseIntegerUnixNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15355,13 +6716,7 @@ func encodeTestResponseIntegerUnixSecondsRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15369,13 +6724,7 @@ func encodeTestResponseIntegerUnixSecondsArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15383,13 +6732,7 @@ func encodeTestResponseIntegerUnixSecondsArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15397,13 +6740,7 @@ func encodeTestResponseIntegerUnixSecondsNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15411,13 +6748,7 @@ func encodeTestResponseIntegerUnixSecondsNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15425,13 +6756,7 @@ func encodeTestResponseIntegerUnixSecondsNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15439,13 +6764,7 @@ func encodeTestResponseNullRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15453,13 +6772,7 @@ func encodeTestResponseNullArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15467,13 +6780,7 @@ func encodeTestResponseNullArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15481,13 +6788,7 @@ func encodeTestResponseNullNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15495,13 +6796,7 @@ func encodeTestResponseNullNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15509,13 +6804,7 @@ func encodeTestResponseNullNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15523,13 +6812,7 @@ func encodeTestResponseNumberRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15537,13 +6820,7 @@ func encodeTestResponseNumberArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15551,13 +6828,7 @@ func encodeTestResponseNumberArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15565,13 +6836,7 @@ func encodeTestResponseNumberDecimalRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15579,13 +6844,7 @@ func encodeTestResponseNumberDecimalArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15593,13 +6852,7 @@ func encodeTestResponseNumberDecimalArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15607,13 +6860,7 @@ func encodeTestResponseNumberDecimalNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15621,13 +6868,7 @@ func encodeTestResponseNumberDecimalNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15635,13 +6876,7 @@ func encodeTestResponseNumberDecimalNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15649,13 +6884,7 @@ func encodeTestResponseNumberDoubleRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15663,13 +6892,7 @@ func encodeTestResponseNumberDoubleArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15677,13 +6900,7 @@ func encodeTestResponseNumberDoubleArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15691,13 +6908,7 @@ func encodeTestResponseNumberDoubleNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15705,13 +6916,7 @@ func encodeTestResponseNumberDoubleNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15719,13 +6924,7 @@ func encodeTestResponseNumberDoubleNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15733,13 +6932,7 @@ func encodeTestResponseNumberFloatRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15747,13 +6940,7 @@ func encodeTestResponseNumberFloatArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15761,13 +6948,7 @@ func encodeTestResponseNumberFloatArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15775,13 +6956,7 @@ func encodeTestResponseNumberFloatNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15789,13 +6964,7 @@ func encodeTestResponseNumberFloatNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15803,13 +6972,7 @@ func encodeTestResponseNumberFloatNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15817,13 +6980,7 @@ func encodeTestResponseNumberInt32Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15831,13 +6988,7 @@ func encodeTestResponseNumberInt32ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15845,13 +6996,7 @@ func encodeTestResponseNumberInt32ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15859,13 +7004,7 @@ func encodeTestResponseNumberInt32NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15873,13 +7012,7 @@ func encodeTestResponseNumberInt32NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15887,13 +7020,7 @@ func encodeTestResponseNumberInt32NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15901,13 +7028,7 @@ func encodeTestResponseNumberInt64Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15915,13 +7036,7 @@ func encodeTestResponseNumberInt64ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15929,13 +7044,7 @@ func encodeTestResponseNumberInt64ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15943,13 +7052,7 @@ func encodeTestResponseNumberInt64NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15957,13 +7060,7 @@ func encodeTestResponseNumberInt64NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15971,13 +7068,7 @@ func encodeTestResponseNumberInt64NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15985,13 +7076,7 @@ func encodeTestResponseNumberNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -15999,13 +7084,7 @@ func encodeTestResponseNumberNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16013,13 +7092,7 @@ func encodeTestResponseNumberNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16027,13 +7100,7 @@ func encodeTestResponseStringRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16041,13 +7108,7 @@ func encodeTestResponseStringArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16055,13 +7116,7 @@ func encodeTestResponseStringArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16069,13 +7124,7 @@ func encodeTestResponseStringBase64Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16083,13 +7132,7 @@ func encodeTestResponseStringBase64ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16097,13 +7140,7 @@ func encodeTestResponseStringBase64ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16111,13 +7148,7 @@ func encodeTestResponseStringBase64NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16125,13 +7156,7 @@ func encodeTestResponseStringBase64NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16139,13 +7164,7 @@ func encodeTestResponseStringBase64NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16153,13 +7172,7 @@ func encodeTestResponseStringBinaryRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16167,13 +7180,7 @@ func encodeTestResponseStringBinaryArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16181,13 +7188,7 @@ func encodeTestResponseStringBinaryArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16195,13 +7196,7 @@ func encodeTestResponseStringBinaryNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16209,13 +7204,7 @@ func encodeTestResponseStringBinaryNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16223,13 +7212,7 @@ func encodeTestResponseStringBinaryNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16237,13 +7220,7 @@ func encodeTestResponseStringByteRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16251,13 +7228,7 @@ func encodeTestResponseStringByteArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16265,13 +7236,7 @@ func encodeTestResponseStringByteArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16279,13 +7244,7 @@ func encodeTestResponseStringByteNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16293,13 +7252,7 @@ func encodeTestResponseStringByteNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16307,13 +7260,7 @@ func encodeTestResponseStringByteNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16321,13 +7268,7 @@ func encodeTestResponseStringDateRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16335,13 +7276,7 @@ func encodeTestResponseStringDateArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16349,13 +7284,7 @@ func encodeTestResponseStringDateArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16363,13 +7292,7 @@ func encodeTestResponseStringDateNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16377,13 +7300,7 @@ func encodeTestResponseStringDateNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16391,13 +7308,7 @@ func encodeTestResponseStringDateNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16405,13 +7316,7 @@ func encodeTestResponseStringDateTimeRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16419,13 +7324,7 @@ func encodeTestResponseStringDateTimeArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16433,13 +7332,7 @@ func encodeTestResponseStringDateTimeArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16447,13 +7340,7 @@ func encodeTestResponseStringDateTimeNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16461,13 +7348,7 @@ func encodeTestResponseStringDateTimeNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16475,13 +7356,7 @@ func encodeTestResponseStringDateTimeNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16489,13 +7364,7 @@ func encodeTestResponseStringDecimalRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16503,13 +7372,7 @@ func encodeTestResponseStringDecimalArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16517,13 +7380,7 @@ func encodeTestResponseStringDecimalArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16531,13 +7388,7 @@ func encodeTestResponseStringDecimalNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16545,13 +7396,7 @@ func encodeTestResponseStringDecimalNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16559,13 +7404,7 @@ func encodeTestResponseStringDecimalNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16573,13 +7412,7 @@ func encodeTestResponseStringDurationRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16587,13 +7420,7 @@ func encodeTestResponseStringDurationArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16601,13 +7428,7 @@ func encodeTestResponseStringDurationArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16615,13 +7436,7 @@ func encodeTestResponseStringDurationNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16629,13 +7444,7 @@ func encodeTestResponseStringDurationNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16643,13 +7452,7 @@ func encodeTestResponseStringDurationNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16657,13 +7460,7 @@ func encodeTestResponseStringEmailRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16671,13 +7468,7 @@ func encodeTestResponseStringEmailArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16685,13 +7476,7 @@ func encodeTestResponseStringEmailArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16699,13 +7484,7 @@ func encodeTestResponseStringEmailNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16713,13 +7492,7 @@ func encodeTestResponseStringEmailNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16727,13 +7500,7 @@ func encodeTestResponseStringEmailNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16741,13 +7508,7 @@ func encodeTestResponseStringFloat32Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16755,13 +7516,7 @@ func encodeTestResponseStringFloat32ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16769,13 +7524,7 @@ func encodeTestResponseStringFloat32ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16783,13 +7532,7 @@ func encodeTestResponseStringFloat32NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16797,13 +7540,7 @@ func encodeTestResponseStringFloat32NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16811,13 +7548,7 @@ func encodeTestResponseStringFloat32NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16825,13 +7556,7 @@ func encodeTestResponseStringFloat64Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16839,13 +7564,7 @@ func encodeTestResponseStringFloat64ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16853,13 +7572,7 @@ func encodeTestResponseStringFloat64ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16867,13 +7580,7 @@ func encodeTestResponseStringFloat64NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16881,13 +7588,7 @@ func encodeTestResponseStringFloat64NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16895,13 +7596,7 @@ func encodeTestResponseStringFloat64NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16909,13 +7604,7 @@ func encodeTestResponseStringHTTPDateRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16923,13 +7612,7 @@ func encodeTestResponseStringHTTPDateArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16937,13 +7620,7 @@ func encodeTestResponseStringHTTPDateArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16951,13 +7628,7 @@ func encodeTestResponseStringHTTPDateNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16965,13 +7636,7 @@ func encodeTestResponseStringHTTPDateNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16979,13 +7644,7 @@ func encodeTestResponseStringHTTPDateNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -16993,13 +7652,7 @@ func encodeTestResponseStringHostnameRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17007,13 +7660,7 @@ func encodeTestResponseStringHostnameArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17021,13 +7668,7 @@ func encodeTestResponseStringHostnameArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17035,13 +7676,7 @@ func encodeTestResponseStringHostnameNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17049,13 +7684,7 @@ func encodeTestResponseStringHostnameNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17063,13 +7692,7 @@ func encodeTestResponseStringHostnameNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17077,13 +7700,7 @@ func encodeTestResponseStringIPRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17091,13 +7708,7 @@ func encodeTestResponseStringIPArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17105,13 +7716,7 @@ func encodeTestResponseStringIPArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17119,13 +7724,7 @@ func encodeTestResponseStringIPNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17133,13 +7732,7 @@ func encodeTestResponseStringIPNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17147,13 +7740,7 @@ func encodeTestResponseStringIPNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17161,13 +7748,7 @@ func encodeTestResponseStringIntRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17175,13 +7756,7 @@ func encodeTestResponseStringInt16Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17189,13 +7764,7 @@ func encodeTestResponseStringInt16ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17203,13 +7772,7 @@ func encodeTestResponseStringInt16ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17217,13 +7780,7 @@ func encodeTestResponseStringInt16NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17231,13 +7788,7 @@ func encodeTestResponseStringInt16NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17245,13 +7796,7 @@ func encodeTestResponseStringInt16NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17259,13 +7804,7 @@ func encodeTestResponseStringInt32Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17273,13 +7812,7 @@ func encodeTestResponseStringInt32ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17287,13 +7820,7 @@ func encodeTestResponseStringInt32ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17301,13 +7828,7 @@ func encodeTestResponseStringInt32NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17315,13 +7836,7 @@ func encodeTestResponseStringInt32NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17329,13 +7844,7 @@ func encodeTestResponseStringInt32NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17343,13 +7852,7 @@ func encodeTestResponseStringInt64Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17357,13 +7860,7 @@ func encodeTestResponseStringInt64ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17371,13 +7868,7 @@ func encodeTestResponseStringInt64ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17385,13 +7876,7 @@ func encodeTestResponseStringInt64NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17399,13 +7884,7 @@ func encodeTestResponseStringInt64NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17413,13 +7892,7 @@ func encodeTestResponseStringInt64NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17427,13 +7900,7 @@ func encodeTestResponseStringInt8Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17441,13 +7908,7 @@ func encodeTestResponseStringInt8ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17455,13 +7916,7 @@ func encodeTestResponseStringInt8ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17469,13 +7924,7 @@ func encodeTestResponseStringInt8NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17483,13 +7932,7 @@ func encodeTestResponseStringInt8NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17497,13 +7940,7 @@ func encodeTestResponseStringInt8NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17511,13 +7948,7 @@ func encodeTestResponseStringIntArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17525,13 +7956,7 @@ func encodeTestResponseStringIntArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17539,13 +7964,7 @@ func encodeTestResponseStringIntNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17553,13 +7972,7 @@ func encodeTestResponseStringIntNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17567,13 +7980,7 @@ func encodeTestResponseStringIntNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17581,13 +7988,7 @@ func encodeTestResponseStringIpv4Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17595,13 +7996,7 @@ func encodeTestResponseStringIpv4ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17609,13 +8004,7 @@ func encodeTestResponseStringIpv4ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17623,13 +8012,7 @@ func encodeTestResponseStringIpv4NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17637,13 +8020,7 @@ func encodeTestResponseStringIpv4NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17651,13 +8028,7 @@ func encodeTestResponseStringIpv4NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17665,13 +8036,7 @@ func encodeTestResponseStringIpv6Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17679,13 +8044,7 @@ func encodeTestResponseStringIpv6ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17693,13 +8052,7 @@ func encodeTestResponseStringIpv6ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17707,13 +8060,7 @@ func encodeTestResponseStringIpv6NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17721,13 +8068,7 @@ func encodeTestResponseStringIpv6NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17735,13 +8076,7 @@ func encodeTestResponseStringIpv6NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17749,13 +8084,7 @@ func encodeTestResponseStringMACRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17763,13 +8092,7 @@ func encodeTestResponseStringMACArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17777,13 +8100,7 @@ func encodeTestResponseStringMACArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17791,13 +8108,7 @@ func encodeTestResponseStringMACNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17805,13 +8116,7 @@ func encodeTestResponseStringMACNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17819,13 +8124,7 @@ func encodeTestResponseStringMACNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17833,13 +8132,7 @@ func encodeTestResponseStringNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17847,13 +8140,7 @@ func encodeTestResponseStringNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17861,13 +8148,7 @@ func encodeTestResponseStringNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17875,13 +8156,7 @@ func encodeTestResponseStringPasswordRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17889,13 +8164,7 @@ func encodeTestResponseStringPasswordArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17903,13 +8172,7 @@ func encodeTestResponseStringPasswordArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17917,13 +8180,7 @@ func encodeTestResponseStringPasswordNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17931,13 +8188,7 @@ func encodeTestResponseStringPasswordNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17945,13 +8196,7 @@ func encodeTestResponseStringPasswordNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17959,13 +8204,7 @@ func encodeTestResponseStringTimeRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17973,13 +8212,7 @@ func encodeTestResponseStringTimeArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -17987,13 +8220,7 @@ func encodeTestResponseStringTimeArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18001,13 +8228,7 @@ func encodeTestResponseStringTimeNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18015,13 +8236,7 @@ func encodeTestResponseStringTimeNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18029,13 +8244,7 @@ func encodeTestResponseStringTimeNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18043,13 +8252,7 @@ func encodeTestResponseStringURIRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18057,13 +8260,7 @@ func encodeTestResponseStringURIArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18071,13 +8268,7 @@ func encodeTestResponseStringURIArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18085,13 +8276,7 @@ func encodeTestResponseStringURINullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18099,13 +8284,7 @@ func encodeTestResponseStringURINullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18113,13 +8292,7 @@ func encodeTestResponseStringURINullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18127,13 +8300,7 @@ func encodeTestResponseStringUUIDRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18141,13 +8308,7 @@ func encodeTestResponseStringUUIDArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18155,13 +8316,7 @@ func encodeTestResponseStringUUIDArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18169,13 +8324,7 @@ func encodeTestResponseStringUUIDNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18183,13 +8332,7 @@ func encodeTestResponseStringUUIDNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18197,13 +8340,7 @@ func encodeTestResponseStringUUIDNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18211,13 +8348,7 @@ func encodeTestResponseStringUintRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18225,13 +8356,7 @@ func encodeTestResponseStringUint16Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18239,13 +8364,7 @@ func encodeTestResponseStringUint16ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18253,13 +8372,7 @@ func encodeTestResponseStringUint16ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18267,13 +8380,7 @@ func encodeTestResponseStringUint16NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18281,13 +8388,7 @@ func encodeTestResponseStringUint16NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18295,13 +8396,7 @@ func encodeTestResponseStringUint16NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18309,13 +8404,7 @@ func encodeTestResponseStringUint32Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18323,13 +8412,7 @@ func encodeTestResponseStringUint32ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18337,13 +8420,7 @@ func encodeTestResponseStringUint32ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18351,13 +8428,7 @@ func encodeTestResponseStringUint32NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18365,13 +8436,7 @@ func encodeTestResponseStringUint32NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18379,13 +8444,7 @@ func encodeTestResponseStringUint32NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18393,13 +8452,7 @@ func encodeTestResponseStringUint64Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18407,13 +8460,7 @@ func encodeTestResponseStringUint64ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18421,13 +8468,7 @@ func encodeTestResponseStringUint64ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18435,13 +8476,7 @@ func encodeTestResponseStringUint64NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18449,13 +8484,7 @@ func encodeTestResponseStringUint64NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18463,13 +8492,7 @@ func encodeTestResponseStringUint64NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18477,13 +8500,7 @@ func encodeTestResponseStringUint8Request(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18491,13 +8508,7 @@ func encodeTestResponseStringUint8ArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18505,13 +8516,7 @@ func encodeTestResponseStringUint8ArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18519,13 +8524,7 @@ func encodeTestResponseStringUint8NullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18533,13 +8532,7 @@ func encodeTestResponseStringUint8NullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18547,13 +8540,7 @@ func encodeTestResponseStringUint8NullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18561,13 +8548,7 @@ func encodeTestResponseStringUintArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18575,13 +8556,7 @@ func encodeTestResponseStringUintArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18589,13 +8564,7 @@ func encodeTestResponseStringUintNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18603,13 +8572,7 @@ func encodeTestResponseStringUintNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18617,13 +8580,7 @@ func encodeTestResponseStringUintNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18631,13 +8588,7 @@ func encodeTestResponseStringUnixRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18645,13 +8596,7 @@ func encodeTestResponseStringUnixArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18659,13 +8604,7 @@ func encodeTestResponseStringUnixArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18673,13 +8612,7 @@ func encodeTestResponseStringUnixMicroRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18687,13 +8620,7 @@ func encodeTestResponseStringUnixMicroArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18701,13 +8628,7 @@ func encodeTestResponseStringUnixMicroArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18715,13 +8636,7 @@ func encodeTestResponseStringUnixMicroNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18729,13 +8644,7 @@ func encodeTestResponseStringUnixMicroNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18743,13 +8652,7 @@ func encodeTestResponseStringUnixMicroNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18757,13 +8660,7 @@ func encodeTestResponseStringUnixMilliRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18771,13 +8668,7 @@ func encodeTestResponseStringUnixMilliArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18785,13 +8676,7 @@ func encodeTestResponseStringUnixMilliArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18799,13 +8684,7 @@ func encodeTestResponseStringUnixMilliNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18813,13 +8692,7 @@ func encodeTestResponseStringUnixMilliNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18827,13 +8700,7 @@ func encodeTestResponseStringUnixMilliNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18841,13 +8708,7 @@ func encodeTestResponseStringUnixNanoRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18855,13 +8716,7 @@ func encodeTestResponseStringUnixNanoArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18869,13 +8724,7 @@ func encodeTestResponseStringUnixNanoArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18883,13 +8732,7 @@ func encodeTestResponseStringUnixNanoNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18897,13 +8740,7 @@ func encodeTestResponseStringUnixNanoNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18911,13 +8748,7 @@ func encodeTestResponseStringUnixNanoNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18925,13 +8756,7 @@ func encodeTestResponseStringUnixNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18939,13 +8764,7 @@ func encodeTestResponseStringUnixNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18953,13 +8772,7 @@ func encodeTestResponseStringUnixNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18967,13 +8780,7 @@ func encodeTestResponseStringUnixSecondsRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18981,13 +8788,7 @@ func encodeTestResponseStringUnixSecondsArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -18995,13 +8796,7 @@ func encodeTestResponseStringUnixSecondsArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -19009,13 +8804,7 @@ func encodeTestResponseStringUnixSecondsNullableRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -19023,13 +8812,7 @@ func encodeTestResponseStringUnixSecondsNullableArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -19037,12 +8820,6 @@ func encodeTestResponseStringUnixSecondsNullableArrayArrayRequest(
 	req string,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		e.Str(req)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }

@@ -2,43 +2,17 @@
 
 package api
 
-import (
-	"fmt"
-	"hash/fnv"
-)
-
 // Hash computes a hash value for ParameterValue using FNV-1a.
 // Equal objects must produce equal hashes.
 func (a ParameterValue) Hash() uint64 {
-	h := fnv.New64a()
+	_ = "STUB: not implemented"
 
 	// Hash optional field: StringValue
-	if a.StringValue.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.StringValue.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: NumberValue
-	if a.NumberValue.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.NumberValue.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: BooleanValue
-	if a.BooleanValue.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.BooleanValue.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Metadata
-	if a.Metadata.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Metadata.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	return h.Sum64()
+	return 0
 }
+
+// Hash optional field: NumberValue
+
+// Hash optional field: BooleanValue
+
+// Hash optional field: Metadata

@@ -2,36 +2,15 @@
 
 package api
 
-import (
-	"fmt"
-	"hash/fnv"
-)
-
 // Hash computes a hash value for Metadata using FNV-1a.
 // Equal objects must produce equal hashes.
 func (a Metadata) Hash() uint64 {
-	h := fnv.New64a()
+	_ = "STUB: not implemented"
 
 	// Hash optional field: Version
-	if a.Version.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Version.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Timestamp
-	if a.Timestamp.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Timestamp.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Labels
-	if a.Labels.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Labels.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	return h.Sum64()
+	return 0
 }
+
+// Hash optional field: Timestamp
+
+// Hash optional field: Labels

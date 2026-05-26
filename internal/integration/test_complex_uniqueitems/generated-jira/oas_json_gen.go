@@ -3,44 +3,14 @@
 package api
 
 import (
-	"math/bits"
-	"strconv"
-
-	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/validate"
 )
 
 // Encode implements json.Marshaler.
-func (s *IssueTypesWorkflowMapping) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *IssueTypesWorkflowMapping) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *IssueTypesWorkflowMapping) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("workflowId")
-		e.Str(s.WorkflowId)
-	}
-	{
-		if s.IssueTypes != nil {
-			e.FieldStart("issueTypes")
-			e.ArrStart()
-			for _, elem := range s.IssueTypes {
-				e.Str(elem)
-			}
-			e.ArrEnd()
-		}
-	}
-	{
-		if s.UpdateDraftIfNeeded.Set {
-			e.FieldStart("updateDraftIfNeeded")
-			s.UpdateDraftIfNeeded.Encode(e)
-		}
-	}
-}
+func (s *IssueTypesWorkflowMapping) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfIssueTypesWorkflowMapping = [3]string{
 	0: "workflowId",
@@ -50,335 +20,120 @@ var jsonFieldsNameOfIssueTypesWorkflowMapping = [3]string{
 
 // Decode decodes IssueTypesWorkflowMapping from json.
 func (s *IssueTypesWorkflowMapping) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode IssueTypesWorkflowMapping to nil")
-	}
-	var requiredBitSet [1]uint8
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "workflowId":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.WorkflowId = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"workflowId\"")
-			}
-		case "issueTypes":
-			if err := func() error {
-				s.IssueTypes = make([]string, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem string
-					v, err := d.Str()
-					elem = string(v)
-					if err != nil {
-						return err
-					}
-					s.IssueTypes = append(s.IssueTypes, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"issueTypes\"")
-			}
-		case "updateDraftIfNeeded":
-			if err := func() error {
-				s.UpdateDraftIfNeeded.Reset()
-				if err := s.UpdateDraftIfNeeded.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"updateDraftIfNeeded\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode IssueTypesWorkflowMapping")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfIssueTypesWorkflowMapping) {
-					name = jsonFieldsNameOfIssueTypesWorkflowMapping[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Validate required fields.
+
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s *IssueTypesWorkflowMapping) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *IssueTypesWorkflowMapping) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes bool as json.
-func (o OptBool) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Bool(bool(o.Value))
-}
+func (o OptBool) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes bool from json.
-func (o *OptBool) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptBool to nil")
-	}
-	o.Set = true
-	v, err := d.Bool()
-	if err != nil {
-		return err
-	}
-	o.Value = bool(v)
-	return nil
-}
+func (o *OptBool) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptBool) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptBool) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptBool) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptBool) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes int as json.
-func (o OptInt) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Int(int(o.Value))
-}
+func (o OptInt) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes int from json.
-func (o *OptInt) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptInt to nil")
-	}
-	o.Set = true
-	v, err := d.Int()
-	if err != nil {
-		return err
-	}
-	o.Value = int(v)
-	return nil
-}
+func (o *OptInt) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptInt) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptInt) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptInt) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptInt) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes string as json.
-func (o OptString) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	e.Str(string(o.Value))
-}
+func (o OptString) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // Decode decodes string from json.
-func (o *OptString) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptString to nil")
-	}
-	o.Set = true
-	v, err := d.Str()
-	if err != nil {
-		return err
-	}
-	o.Value = string(v)
-	return nil
-}
+func (o *OptString) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s OptString) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s OptString) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *OptString) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *OptString) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode encodes WorkflowSchemeIssueTypeMappings as json.
 func (o OptWorkflowSchemeIssueTypeMappings) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes WorkflowSchemeIssueTypeMappings from json.
 func (o *OptWorkflowSchemeIssueTypeMappings) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptWorkflowSchemeIssueTypeMappings to nil")
-	}
-	o.Set = true
-	o.Value = make(WorkflowSchemeIssueTypeMappings)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptWorkflowSchemeIssueTypeMappings) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptWorkflowSchemeIssueTypeMappings) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode encodes WorkflowTransitionRuleConfiguration as json.
 func (o OptWorkflowTransitionRuleConfiguration) Encode(e *jx.Encoder) {
-	if !o.Set {
-		return
-	}
-	o.Value.Encode(e)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes WorkflowTransitionRuleConfiguration from json.
 func (o *OptWorkflowTransitionRuleConfiguration) Decode(d *jx.Decoder) error {
-	if o == nil {
-		return errors.New("invalid: unable to decode OptWorkflowTransitionRuleConfiguration to nil")
-	}
-	o.Set = true
-	o.Value = make(WorkflowTransitionRuleConfiguration)
-	if err := o.Value.Decode(d); err != nil {
-		return err
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s OptWorkflowTransitionRuleConfiguration) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *OptWorkflowTransitionRuleConfiguration) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *WorkflowScheme) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *WorkflowScheme) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *WorkflowScheme) encodeFields(e *jx.Encoder) {
-	{
-		if s.ID.Set {
-			e.FieldStart("id")
-			s.ID.Encode(e)
-		}
-	}
-	{
-		if s.Name.Set {
-			e.FieldStart("name")
-			s.Name.Encode(e)
-		}
-	}
-	{
-		if s.Description.Set {
-			e.FieldStart("description")
-			s.Description.Encode(e)
-		}
-	}
-	{
-		if s.DefaultWorkflow.Set {
-			e.FieldStart("defaultWorkflow")
-			s.DefaultWorkflow.Encode(e)
-		}
-	}
-	{
-		if s.IssueTypeMappings.Set {
-			e.FieldStart("issueTypeMappings")
-			s.IssueTypeMappings.Encode(e)
-		}
-	}
-	{
-		if s.Draft.Set {
-			e.FieldStart("draft")
-			s.Draft.Encode(e)
-		}
-	}
-	{
-		if s.Self.Set {
-			e.FieldStart("self")
-			s.Self.Encode(e)
-		}
-	}
-}
+func (s *WorkflowScheme) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfWorkflowScheme = [7]string{
 	0: "id",
@@ -391,131 +146,19 @@ var jsonFieldsNameOfWorkflowScheme = [7]string{
 }
 
 // Decode decodes WorkflowScheme from json.
-func (s *WorkflowScheme) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode WorkflowScheme to nil")
-	}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "id":
-			if err := func() error {
-				s.ID.Reset()
-				if err := s.ID.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"id\"")
-			}
-		case "name":
-			if err := func() error {
-				s.Name.Reset()
-				if err := s.Name.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"name\"")
-			}
-		case "description":
-			if err := func() error {
-				s.Description.Reset()
-				if err := s.Description.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"description\"")
-			}
-		case "defaultWorkflow":
-			if err := func() error {
-				s.DefaultWorkflow.Reset()
-				if err := s.DefaultWorkflow.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"defaultWorkflow\"")
-			}
-		case "issueTypeMappings":
-			if err := func() error {
-				s.IssueTypeMappings.Reset()
-				if err := s.IssueTypeMappings.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"issueTypeMappings\"")
-			}
-		case "draft":
-			if err := func() error {
-				s.Draft.Reset()
-				if err := s.Draft.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"draft\"")
-			}
-		case "self":
-			if err := func() error {
-				s.Self.Reset()
-				if err := s.Self.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"self\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode WorkflowScheme")
-	}
-
-	return nil
-}
+func (s *WorkflowScheme) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
 // MarshalJSON implements stdjson.Marshaler.
-func (s *WorkflowScheme) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
-}
+func (s *WorkflowScheme) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
-func (s *WorkflowScheme) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
-}
+func (s *WorkflowScheme) UnmarshalJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Encode implements json.Marshaler.
-func (s *WorkflowSchemeAssociations) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *WorkflowSchemeAssociations) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *WorkflowSchemeAssociations) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("issueTypeMappings")
-		e.ArrStart()
-		for _, elem := range s.IssueTypeMappings {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	{
-		if s.DefaultWorkflowId.Set {
-			e.FieldStart("defaultWorkflowId")
-			s.DefaultWorkflowId.Encode(e)
-		}
-	}
-}
+func (s *WorkflowSchemeAssociations) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfWorkflowSchemeAssociations = [2]string{
 	0: "issueTypeMappings",
@@ -524,179 +167,63 @@ var jsonFieldsNameOfWorkflowSchemeAssociations = [2]string{
 
 // Decode decodes WorkflowSchemeAssociations from json.
 func (s *WorkflowSchemeAssociations) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode WorkflowSchemeAssociations to nil")
-	}
-	var requiredBitSet [1]uint8
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "issueTypeMappings":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				s.IssueTypeMappings = make([]IssueTypesWorkflowMapping, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem IssueTypesWorkflowMapping
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.IssueTypeMappings = append(s.IssueTypeMappings, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"issueTypeMappings\"")
-			}
-		case "defaultWorkflowId":
-			if err := func() error {
-				s.DefaultWorkflowId.Reset()
-				if err := s.DefaultWorkflowId.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"defaultWorkflowId\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode WorkflowSchemeAssociations")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfWorkflowSchemeAssociations) {
-					name = jsonFieldsNameOfWorkflowSchemeAssociations[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Validate required fields.
+
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s *WorkflowSchemeAssociations) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *WorkflowSchemeAssociations) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s WorkflowSchemeIssueTypeMappings) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s WorkflowSchemeIssueTypeMappings) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields implements json.Marshaler.
 func (s WorkflowSchemeIssueTypeMappings) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		e.Str(elem)
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes WorkflowSchemeIssueTypeMappings from json.
 func (s *WorkflowSchemeIssueTypeMappings) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode WorkflowSchemeIssueTypeMappings to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem string
-		if err := func() error {
-			v, err := d.Str()
-			elem = string(v)
-			if err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode WorkflowSchemeIssueTypeMappings")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s WorkflowSchemeIssueTypeMappings) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *WorkflowSchemeIssueTypeMappings) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *WorkflowTransitionRule) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *WorkflowTransitionRule) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *WorkflowTransitionRule) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("ruleKey")
-		e.Str(s.RuleKey)
-	}
-	{
-		if s.Configuration.Set {
-			e.FieldStart("configuration")
-			s.Configuration.Encode(e)
-		}
-	}
-	{
-		if s.ID.Set {
-			e.FieldStart("id")
-			s.ID.Encode(e)
-		}
-	}
-}
+func (s *WorkflowTransitionRule) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfWorkflowTransitionRule = [3]string{
 	0: "ruleKey",
@@ -705,196 +232,64 @@ var jsonFieldsNameOfWorkflowTransitionRule = [3]string{
 }
 
 // Decode decodes WorkflowTransitionRule from json.
-func (s *WorkflowTransitionRule) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode WorkflowTransitionRule to nil")
-	}
-	var requiredBitSet [1]uint8
+func (s *WorkflowTransitionRule) Decode(d *jx.Decoder) error { _ = "STUB: not implemented"; return nil }
 
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "ruleKey":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.RuleKey = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"ruleKey\"")
-			}
-		case "configuration":
-			if err := func() error {
-				s.Configuration.Reset()
-				if err := s.Configuration.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"configuration\"")
-			}
-		case "id":
-			if err := func() error {
-				s.ID.Reset()
-				if err := s.ID.Decode(d); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"id\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode WorkflowTransitionRule")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00000001,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfWorkflowTransitionRule) {
-					name = jsonFieldsNameOfWorkflowTransitionRule[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
+// Validate required fields.
 
-	return nil
-}
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s *WorkflowTransitionRule) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *WorkflowTransitionRule) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
 func (s WorkflowTransitionRuleConfiguration) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
+	_ = "STUB: not implemented"
+	return
 }
 
 // encodeFields implements json.Marshaler.
 func (s WorkflowTransitionRuleConfiguration) encodeFields(e *jx.Encoder) {
-	for k, elem := range s {
-		e.FieldStart(k)
-
-		e.Str(elem)
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // Decode decodes WorkflowTransitionRuleConfiguration from json.
 func (s *WorkflowTransitionRuleConfiguration) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode WorkflowTransitionRuleConfiguration to nil")
-	}
-	m := s.init()
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		var elem string
-		if err := func() error {
-			v, err := d.Str()
-			elem = string(v)
-			if err != nil {
-				return err
-			}
-			return nil
-		}(); err != nil {
-			return errors.Wrapf(err, "decode field %q", k)
-		}
-		m[string(k)] = elem
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode WorkflowTransitionRuleConfiguration")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s WorkflowTransitionRuleConfiguration) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *WorkflowTransitionRuleConfiguration) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *WorkflowTransitionRules) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *WorkflowTransitionRules) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
-func (s *WorkflowTransitionRules) encodeFields(e *jx.Encoder) {
-	{
-		e.FieldStart("workflowId")
-		e.Str(s.WorkflowId)
-	}
-	{
-		e.FieldStart("postFunctions")
-		e.ArrStart()
-		for _, elem := range s.PostFunctions {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	{
-		e.FieldStart("conditions")
-		e.ArrStart()
-		for _, elem := range s.Conditions {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-	{
-		e.FieldStart("validators")
-		e.ArrStart()
-		for _, elem := range s.Validators {
-			elem.Encode(e)
-		}
-		e.ArrEnd()
-	}
-}
+func (s *WorkflowTransitionRules) encodeFields(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 var jsonFieldsNameOfWorkflowTransitionRules = [4]string{
 	0: "workflowId",
@@ -905,154 +300,38 @@ var jsonFieldsNameOfWorkflowTransitionRules = [4]string{
 
 // Decode decodes WorkflowTransitionRules from json.
 func (s *WorkflowTransitionRules) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode WorkflowTransitionRules to nil")
-	}
-	var requiredBitSet [1]uint8
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "workflowId":
-			requiredBitSet[0] |= 1 << 0
-			if err := func() error {
-				v, err := d.Str()
-				s.WorkflowId = string(v)
-				if err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"workflowId\"")
-			}
-		case "postFunctions":
-			requiredBitSet[0] |= 1 << 1
-			if err := func() error {
-				s.PostFunctions = make([]WorkflowTransitionRule, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem WorkflowTransitionRule
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.PostFunctions = append(s.PostFunctions, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"postFunctions\"")
-			}
-		case "conditions":
-			requiredBitSet[0] |= 1 << 2
-			if err := func() error {
-				s.Conditions = make([]WorkflowTransitionRule, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem WorkflowTransitionRule
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Conditions = append(s.Conditions, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"conditions\"")
-			}
-		case "validators":
-			requiredBitSet[0] |= 1 << 3
-			if err := func() error {
-				s.Validators = make([]WorkflowTransitionRule, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem WorkflowTransitionRule
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Validators = append(s.Validators, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"validators\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode WorkflowTransitionRules")
-	}
-	// Validate required fields.
-	var failures []validate.FieldError
-	for i, mask := range [1]uint8{
-		0b00001111,
-	} {
-		if result := (requiredBitSet[i] & mask) ^ mask; result != 0 {
-			// Mask only required fields and check equality to mask using XOR.
-			//
-			// If XOR result is not zero, result is not equal to expected, so some fields are missed.
-			// Bits of fields which would be set are actually bits of missed fields.
-			missed := bits.OnesCount8(result)
-			for bitN := 0; bitN < missed; bitN++ {
-				bitIdx := bits.TrailingZeros8(result)
-				fieldIdx := i*8 + bitIdx
-				var name string
-				if fieldIdx < len(jsonFieldsNameOfWorkflowTransitionRules) {
-					name = jsonFieldsNameOfWorkflowTransitionRules[fieldIdx]
-				} else {
-					name = strconv.Itoa(fieldIdx)
-				}
-				failures = append(failures, validate.FieldError{
-					Name:  name,
-					Error: validate.ErrFieldRequired,
-				})
-				// Reset bit.
-				result &^= 1 << bitIdx
-			}
-		}
-	}
-	if len(failures) > 0 {
-		return &validate.Error{Fields: failures}
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Validate required fields.
+
+// Mask only required fields and check equality to mask using XOR.
+//
+// If XOR result is not zero, result is not equal to expected, so some fields are missed.
+// Bits of fields which would be set are actually bits of missed fields.
+
+// Reset bit.
+
 // MarshalJSON implements stdjson.Marshaler.
 func (s *WorkflowTransitionRules) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *WorkflowTransitionRules) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Encode implements json.Marshaler.
-func (s *WorkflowTransitionRulesUpdate) Encode(e *jx.Encoder) {
-	e.ObjStart()
-	s.encodeFields(e)
-	e.ObjEnd()
-}
+func (s *WorkflowTransitionRulesUpdate) Encode(e *jx.Encoder) { _ = "STUB: not implemented"; return }
 
 // encodeFields encodes fields.
 func (s *WorkflowTransitionRulesUpdate) encodeFields(e *jx.Encoder) {
-	{
-		if s.Workflows != nil {
-			e.FieldStart("workflows")
-			e.ArrStart()
-			for _, elem := range s.Workflows {
-				elem.Encode(e)
-			}
-			e.ArrEnd()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 var jsonFieldsNameOfWorkflowTransitionRulesUpdate = [1]string{
@@ -1061,49 +340,18 @@ var jsonFieldsNameOfWorkflowTransitionRulesUpdate = [1]string{
 
 // Decode decodes WorkflowTransitionRulesUpdate from json.
 func (s *WorkflowTransitionRulesUpdate) Decode(d *jx.Decoder) error {
-	if s == nil {
-		return errors.New("invalid: unable to decode WorkflowTransitionRulesUpdate to nil")
-	}
-
-	if err := d.ObjBytes(func(d *jx.Decoder, k []byte) error {
-		switch string(k) {
-		case "workflows":
-			if err := func() error {
-				s.Workflows = make([]WorkflowTransitionRules, 0)
-				if err := d.Arr(func(d *jx.Decoder) error {
-					var elem WorkflowTransitionRules
-					if err := elem.Decode(d); err != nil {
-						return err
-					}
-					s.Workflows = append(s.Workflows, elem)
-					return nil
-				}); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return errors.Wrap(err, "decode field \"workflows\"")
-			}
-		default:
-			return d.Skip()
-		}
-		return nil
-	}); err != nil {
-		return errors.Wrap(err, "decode WorkflowTransitionRulesUpdate")
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // MarshalJSON implements stdjson.Marshaler.
 func (s *WorkflowTransitionRulesUpdate) MarshalJSON() ([]byte, error) {
-	e := jx.Encoder{}
-	s.Encode(&e)
-	return e.Bytes(), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalJSON implements stdjson.Unmarshaler.
 func (s *WorkflowTransitionRulesUpdate) UnmarshalJSON(data []byte) error {
-	d := jx.DecodeBytes(data)
-	return s.Decode(d)
+	_ = "STUB: not implemented"
+	return nil
 }

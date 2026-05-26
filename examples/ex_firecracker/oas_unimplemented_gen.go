@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -19,7 +17,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // PUT /snapshot/create
 func (UnimplementedHandler) CreateSnapshot(ctx context.Context, req *SnapshotCreateParams) (r CreateSnapshotRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CreateSnapshotRes), nil
 }
 
 // CreateSyncAction implements createSyncAction operation.
@@ -28,7 +27,8 @@ func (UnimplementedHandler) CreateSnapshot(ctx context.Context, req *SnapshotCre
 //
 // PUT /actions
 func (UnimplementedHandler) CreateSyncAction(ctx context.Context, req *InstanceActionInfo) (r CreateSyncActionRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(CreateSyncActionRes), nil
 }
 
 // DescribeBalloonConfig implements describeBalloonConfig operation.
@@ -37,7 +37,8 @@ func (UnimplementedHandler) CreateSyncAction(ctx context.Context, req *InstanceA
 //
 // GET /balloon
 func (UnimplementedHandler) DescribeBalloonConfig(ctx context.Context) (r DescribeBalloonConfigRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(DescribeBalloonConfigRes), nil
 }
 
 // DescribeBalloonStats implements describeBalloonStats operation.
@@ -46,7 +47,8 @@ func (UnimplementedHandler) DescribeBalloonConfig(ctx context.Context) (r Descri
 //
 // GET /balloon/statistics
 func (UnimplementedHandler) DescribeBalloonStats(ctx context.Context) (r DescribeBalloonStatsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(DescribeBalloonStatsRes), nil
 }
 
 // DescribeInstance implements describeInstance operation.
@@ -55,37 +57,44 @@ func (UnimplementedHandler) DescribeBalloonStats(ctx context.Context) (r Describ
 //
 // GET /
 func (UnimplementedHandler) DescribeInstance(ctx context.Context) (r *InstanceInfo, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetExportVmConfig implements getExportVmConfig operation.
+	//
+	// Gets configuration for all VM resources.
+	//
+	// GET /vm/config
 }
 
-// GetExportVmConfig implements getExportVmConfig operation.
-//
-// Gets configuration for all VM resources.
-//
-// GET /vm/config
 func (UnimplementedHandler) GetExportVmConfig(ctx context.Context) (r *FullVmConfiguration, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// GetMachineConfiguration implements getMachineConfiguration operation.
+	//
+	// Gets the machine configuration of the VM. When called before the PUT operation, it will return the
+	// default values for the vCPU count (=1), memory size (=128 MiB). By default Hyperthreading is
+	// disabled and there is no CPU Template.
+	//
+	// GET /machine-config
 }
 
-// GetMachineConfiguration implements getMachineConfiguration operation.
-//
-// Gets the machine configuration of the VM. When called before the PUT operation, it will return the
-// default values for the vCPU count (=1), memory size (=128 MiB). By default Hyperthreading is
-// disabled and there is no CPU Template.
-//
-// GET /machine-config
 func (UnimplementedHandler) GetMachineConfiguration(ctx context.Context) (r *MachineConfiguration, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// LoadSnapshot implements loadSnapshot operation.
+	//
+	// Loads the microVM state from a snapshot. Only accepted on a fresh Firecracker process (before
+	// configuring any resource other than the Logger and Metrics).
+	//
+	// PUT /snapshot/load
 }
 
-// LoadSnapshot implements loadSnapshot operation.
-//
-// Loads the microVM state from a snapshot. Only accepted on a fresh Firecracker process (before
-// configuring any resource other than the Logger and Metrics).
-//
-// PUT /snapshot/load
 func (UnimplementedHandler) LoadSnapshot(ctx context.Context, req *SnapshotLoadParams) (r LoadSnapshotRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(LoadSnapshotRes), nil
 }
 
 // MmdsConfigPut implements PUT /mmds/config operation.
@@ -94,7 +103,8 @@ func (UnimplementedHandler) LoadSnapshot(ctx context.Context, req *SnapshotLoadP
 //
 // PUT /mmds/config
 func (UnimplementedHandler) MmdsConfigPut(ctx context.Context, req *MmdsConfig) (r MmdsConfigPutRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MmdsConfigPutRes), nil
 }
 
 // MmdsGet implements GET /mmds operation.
@@ -103,7 +113,8 @@ func (UnimplementedHandler) MmdsConfigPut(ctx context.Context, req *MmdsConfig) 
 //
 // GET /mmds
 func (UnimplementedHandler) MmdsGet(ctx context.Context) (r MmdsGetRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MmdsGetRes), nil
 }
 
 // MmdsPatch implements PATCH /mmds operation.
@@ -112,7 +123,8 @@ func (UnimplementedHandler) MmdsGet(ctx context.Context) (r MmdsGetRes, _ error)
 //
 // PATCH /mmds
 func (UnimplementedHandler) MmdsPatch(ctx context.Context, req *MmdsPatchReq) (r MmdsPatchRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MmdsPatchRes), nil
 }
 
 // MmdsPut implements PUT /mmds operation.
@@ -121,7 +133,8 @@ func (UnimplementedHandler) MmdsPatch(ctx context.Context, req *MmdsPatchReq) (r
 //
 // PUT /mmds
 func (UnimplementedHandler) MmdsPut(ctx context.Context, req *MmdsPutReq) (r MmdsPutRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(MmdsPutRes), nil
 }
 
 // PatchBalloon implements patchBalloon operation.
@@ -131,7 +144,8 @@ func (UnimplementedHandler) MmdsPut(ctx context.Context, req *MmdsPutReq) (r Mmd
 //
 // PATCH /balloon
 func (UnimplementedHandler) PatchBalloon(ctx context.Context, req *BalloonUpdate) (r PatchBalloonRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchBalloonRes), nil
 }
 
 // PatchBalloonStatsInterval implements patchBalloonStatsInterval operation.
@@ -141,7 +155,8 @@ func (UnimplementedHandler) PatchBalloon(ctx context.Context, req *BalloonUpdate
 //
 // PATCH /balloon/statistics
 func (UnimplementedHandler) PatchBalloonStatsInterval(ctx context.Context, req *BalloonStatsUpdate) (r PatchBalloonStatsIntervalRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchBalloonStatsIntervalRes), nil
 }
 
 // PatchGuestDriveByID implements patchGuestDriveByID operation.
@@ -151,7 +166,8 @@ func (UnimplementedHandler) PatchBalloonStatsInterval(ctx context.Context, req *
 //
 // PATCH /drives/{drive_id}
 func (UnimplementedHandler) PatchGuestDriveByID(ctx context.Context, req *PartialDrive, params PatchGuestDriveByIDParams) (r PatchGuestDriveByIDRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchGuestDriveByIDRes), nil
 }
 
 // PatchGuestNetworkInterfaceByID implements patchGuestNetworkInterfaceByID operation.
@@ -160,7 +176,8 @@ func (UnimplementedHandler) PatchGuestDriveByID(ctx context.Context, req *Partia
 //
 // PATCH /network-interfaces/{iface_id}
 func (UnimplementedHandler) PatchGuestNetworkInterfaceByID(ctx context.Context, req *PartialNetworkInterface, params PatchGuestNetworkInterfaceByIDParams) (r PatchGuestNetworkInterfaceByIDRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchGuestNetworkInterfaceByIDRes), nil
 }
 
 // PatchMachineConfiguration implements patchMachineConfiguration operation.
@@ -170,7 +187,8 @@ func (UnimplementedHandler) PatchGuestNetworkInterfaceByID(ctx context.Context, 
 //
 // PATCH /machine-config
 func (UnimplementedHandler) PatchMachineConfiguration(ctx context.Context, req OptMachineConfiguration) (r PatchMachineConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchMachineConfigurationRes), nil
 }
 
 // PatchVm implements patchVm operation.
@@ -179,7 +197,8 @@ func (UnimplementedHandler) PatchMachineConfiguration(ctx context.Context, req O
 //
 // PATCH /vm
 func (UnimplementedHandler) PatchVm(ctx context.Context, req *VM) (r PatchVmRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PatchVmRes), nil
 }
 
 // PutBalloon implements putBalloon operation.
@@ -189,7 +208,8 @@ func (UnimplementedHandler) PatchVm(ctx context.Context, req *VM) (r PatchVmRes,
 //
 // PUT /balloon
 func (UnimplementedHandler) PutBalloon(ctx context.Context, req *Balloon) (r PutBalloonRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PutBalloonRes), nil
 }
 
 // PutGuestBootSource implements putGuestBootSource operation.
@@ -199,7 +219,8 @@ func (UnimplementedHandler) PutBalloon(ctx context.Context, req *Balloon) (r Put
 //
 // PUT /boot-source
 func (UnimplementedHandler) PutGuestBootSource(ctx context.Context, req *BootSource) (r PutGuestBootSourceRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PutGuestBootSourceRes), nil
 }
 
 // PutGuestDriveByID implements putGuestDriveByID operation.
@@ -209,7 +230,8 @@ func (UnimplementedHandler) PutGuestBootSource(ctx context.Context, req *BootSou
 //
 // PUT /drives/{drive_id}
 func (UnimplementedHandler) PutGuestDriveByID(ctx context.Context, req *Drive, params PutGuestDriveByIDParams) (r PutGuestDriveByIDRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PutGuestDriveByIDRes), nil
 }
 
 // PutGuestNetworkInterfaceByID implements putGuestNetworkInterfaceByID operation.
@@ -218,7 +240,8 @@ func (UnimplementedHandler) PutGuestDriveByID(ctx context.Context, req *Drive, p
 //
 // PUT /network-interfaces/{iface_id}
 func (UnimplementedHandler) PutGuestNetworkInterfaceByID(ctx context.Context, req *NetworkInterface, params PutGuestNetworkInterfaceByIDParams) (r PutGuestNetworkInterfaceByIDRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PutGuestNetworkInterfaceByIDRes), nil
 }
 
 // PutGuestVsock implements putGuestVsock operation.
@@ -228,7 +251,8 @@ func (UnimplementedHandler) PutGuestNetworkInterfaceByID(ctx context.Context, re
 //
 // PUT /vsock
 func (UnimplementedHandler) PutGuestVsock(ctx context.Context, req *Vsock) (r PutGuestVsockRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PutGuestVsockRes), nil
 }
 
 // PutLogger implements putLogger operation.
@@ -237,7 +261,8 @@ func (UnimplementedHandler) PutGuestVsock(ctx context.Context, req *Vsock) (r Pu
 //
 // PUT /logger
 func (UnimplementedHandler) PutLogger(ctx context.Context, req *Logger) (r PutLoggerRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PutLoggerRes), nil
 }
 
 // PutMachineConfiguration implements putMachineConfiguration operation.
@@ -249,7 +274,8 @@ func (UnimplementedHandler) PutLogger(ctx context.Context, req *Logger) (r PutLo
 //
 // PUT /machine-config
 func (UnimplementedHandler) PutMachineConfiguration(ctx context.Context, req OptMachineConfiguration) (r PutMachineConfigurationRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PutMachineConfigurationRes), nil
 }
 
 // PutMetrics implements putMetrics operation.
@@ -258,13 +284,14 @@ func (UnimplementedHandler) PutMachineConfiguration(ctx context.Context, req Opt
 //
 // PUT /metrics
 func (UnimplementedHandler) PutMetrics(ctx context.Context, req *Metrics) (r PutMetricsRes, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(PutMetricsRes), nil
 }
 
 // NewError creates *ErrorStatusCode from error returned by handler.
 //
 // Used for common default response.
 func (UnimplementedHandler) NewError(ctx context.Context, err error) (r *ErrorStatusCode) {
-	r = new(ErrorStatusCode)
-	return r
+	_ = "STUB: not implemented"
+	return nil
 }

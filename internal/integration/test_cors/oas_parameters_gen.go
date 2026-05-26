@@ -5,10 +5,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/ogen-go/ogen/conv"
 	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
 )
 
 // FooGetParams is parameters of GET /foo operation.
@@ -17,51 +14,13 @@ type FooGetParams struct {
 }
 
 func unpackFooGetParams(packed middleware.Parameters) (params FooGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "Content-Length",
-			In:   "header",
-		}
-		params.ContentLength = packed[key].(int64)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(FooGetParams)
 }
 
 func decodeFooGetParams(args [0]string, argsEscaped bool, r *http.Request) (params FooGetParams, _ error) {
-	h := uri.NewHeaderDecoder(r.Header)
-	// Decode header: Content-Length.
-	if err := func() error {
-		cfg := uri.HeaderParameterDecodingConfig{
-			Name:    "Content-Length",
-			Explode: false,
-		}
-		if err := h.HasParam(cfg); err == nil {
-			if err := h.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt64(val)
-				if err != nil {
-					return err
-				}
-
-				params.ContentLength = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "Content-Length",
-			In:   "header",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(FooGetParams), nil
 }
+
+// Decode header: Content-Length.

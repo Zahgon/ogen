@@ -6,10 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ogen-go/ogen/conv"
 	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
 )
 
 // MarketCandlesGetParams is parameters of GET /market/candles operation.
@@ -25,193 +22,22 @@ type MarketCandlesGetParams struct {
 }
 
 func unpackMarketCandlesGetParams(packed middleware.Parameters) (params MarketCandlesGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "figi",
-			In:   "query",
-		}
-		params.Figi = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "from",
-			In:   "query",
-		}
-		params.From = packed[key].(time.Time)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "to",
-			In:   "query",
-		}
-		params.To = packed[key].(time.Time)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "interval",
-			In:   "query",
-		}
-		params.Interval = packed[key].(CandleResolution)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(MarketCandlesGetParams)
 }
 
 func decodeMarketCandlesGetParams(args [0]string, argsEscaped bool, r *http.Request) (params MarketCandlesGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: figi.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "figi",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Figi = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "figi",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: from.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "from",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToDateTime(val)
-				if err != nil {
-					return err
-				}
-
-				params.From = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "from",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: to.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "to",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToDateTime(val)
-				if err != nil {
-					return err
-				}
-
-				params.To = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "to",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: interval.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "interval",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Interval = CandleResolution(c)
-				return nil
-			}); err != nil {
-				return err
-			}
-			if err := func() error {
-				if err := params.Interval.Validate(); err != nil {
-					return err
-				}
-				return nil
-			}(); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "interval",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(MarketCandlesGetParams), nil
 }
+
+// Decode query: figi.
+
+// Decode query: from.
+
+// Decode query: to.
+
+// Decode query: interval.
 
 // MarketOrderbookGetParams is parameters of GET /market/orderbook operation.
 type MarketOrderbookGetParams struct {
@@ -222,99 +48,18 @@ type MarketOrderbookGetParams struct {
 }
 
 func unpackMarketOrderbookGetParams(packed middleware.Parameters) (params MarketOrderbookGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "figi",
-			In:   "query",
-		}
-		params.Figi = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "depth",
-			In:   "query",
-		}
-		params.Depth = packed[key].(int32)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(MarketOrderbookGetParams)
 }
 
 func decodeMarketOrderbookGetParams(args [0]string, argsEscaped bool, r *http.Request) (params MarketOrderbookGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: figi.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "figi",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Figi = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "figi",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: depth.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "depth",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToInt32(val)
-				if err != nil {
-					return err
-				}
-
-				params.Depth = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "depth",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(MarketOrderbookGetParams), nil
 }
+
+// Decode query: figi.
+
+// Decode query: depth.
 
 // MarketSearchByFigiGetParams is parameters of GET /market/search/by-figi operation.
 type MarketSearchByFigiGetParams struct {
@@ -323,56 +68,16 @@ type MarketSearchByFigiGetParams struct {
 }
 
 func unpackMarketSearchByFigiGetParams(packed middleware.Parameters) (params MarketSearchByFigiGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "figi",
-			In:   "query",
-		}
-		params.Figi = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(MarketSearchByFigiGetParams)
 }
 
 func decodeMarketSearchByFigiGetParams(args [0]string, argsEscaped bool, r *http.Request) (params MarketSearchByFigiGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: figi.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "figi",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Figi = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "figi",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(MarketSearchByFigiGetParams), nil
 }
+
+// Decode query: figi.
 
 // MarketSearchByTickerGetParams is parameters of GET /market/search/by-ticker operation.
 type MarketSearchByTickerGetParams struct {
@@ -381,56 +86,16 @@ type MarketSearchByTickerGetParams struct {
 }
 
 func unpackMarketSearchByTickerGetParams(packed middleware.Parameters) (params MarketSearchByTickerGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "ticker",
-			In:   "query",
-		}
-		params.Ticker = packed[key].(string)
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(MarketSearchByTickerGetParams)
 }
 
 func decodeMarketSearchByTickerGetParams(args [0]string, argsEscaped bool, r *http.Request) (params MarketSearchByTickerGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: ticker.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "ticker",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Ticker = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "ticker",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(MarketSearchByTickerGetParams), nil
 }
+
+// Decode query: ticker.
 
 // OperationsGetParams is parameters of GET /operations operation.
 type OperationsGetParams struct {
@@ -445,199 +110,22 @@ type OperationsGetParams struct {
 }
 
 func unpackOperationsGetParams(packed middleware.Parameters) (params OperationsGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "from",
-			In:   "query",
-		}
-		params.From = packed[key].(time.Time)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "to",
-			In:   "query",
-		}
-		params.To = packed[key].(time.Time)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "figi",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.Figi = v.(OptString)
-		}
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(OperationsGetParams)
 }
 
 func decodeOperationsGetParams(args [0]string, argsEscaped bool, r *http.Request) (params OperationsGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: from.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "from",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToDateTime(val)
-				if err != nil {
-					return err
-				}
-
-				params.From = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "from",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: to.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "to",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToDateTime(val)
-				if err != nil {
-					return err
-				}
-
-				params.To = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "to",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: figi.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "figi",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotFigiVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotFigiVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.Figi.SetTo(paramsDotFigiVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "figi",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(OperationsGetParams), nil
 }
+
+// Decode query: from.
+
+// Decode query: to.
+
+// Decode query: figi.
+
+// Decode query: brokerAccountId.
 
 // OrdersCancelPostParams is parameters of POST /orders/cancel operation.
 type OrdersCancelPostParams struct {
@@ -648,106 +136,18 @@ type OrdersCancelPostParams struct {
 }
 
 func unpackOrdersCancelPostParams(packed middleware.Parameters) (params OrdersCancelPostParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "orderId",
-			In:   "query",
-		}
-		params.OrderId = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(OrdersCancelPostParams)
 }
 
 func decodeOrdersCancelPostParams(args [0]string, argsEscaped bool, r *http.Request) (params OrdersCancelPostParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: orderId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "orderId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.OrderId = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "orderId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(OrdersCancelPostParams), nil
 }
+
+// Decode query: orderId.
+
+// Decode query: brokerAccountId.
 
 // OrdersGetParams is parameters of GET /orders operation.
 type OrdersGetParams struct {
@@ -756,63 +156,16 @@ type OrdersGetParams struct {
 }
 
 func unpackOrdersGetParams(packed middleware.Parameters) (params OrdersGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(OrdersGetParams)
 }
 
 func decodeOrdersGetParams(args [0]string, argsEscaped bool, r *http.Request) (params OrdersGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(OrdersGetParams), nil
 }
+
+// Decode query: brokerAccountId.
 
 // OrdersLimitOrderPostParams is parameters of POST /orders/limit-order operation.
 type OrdersLimitOrderPostParams struct {
@@ -823,106 +176,18 @@ type OrdersLimitOrderPostParams struct {
 }
 
 func unpackOrdersLimitOrderPostParams(packed middleware.Parameters) (params OrdersLimitOrderPostParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "figi",
-			In:   "query",
-		}
-		params.Figi = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(OrdersLimitOrderPostParams)
 }
 
 func decodeOrdersLimitOrderPostParams(args [0]string, argsEscaped bool, r *http.Request) (params OrdersLimitOrderPostParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: figi.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "figi",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Figi = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "figi",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(OrdersLimitOrderPostParams), nil
 }
+
+// Decode query: figi.
+
+// Decode query: brokerAccountId.
 
 // OrdersMarketOrderPostParams is parameters of POST /orders/market-order operation.
 type OrdersMarketOrderPostParams struct {
@@ -934,106 +199,18 @@ type OrdersMarketOrderPostParams struct {
 }
 
 func unpackOrdersMarketOrderPostParams(packed middleware.Parameters) (params OrdersMarketOrderPostParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "figi",
-			In:   "query",
-		}
-		params.Figi = packed[key].(string)
-	}
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(OrdersMarketOrderPostParams)
 }
 
 func decodeOrdersMarketOrderPostParams(args [0]string, argsEscaped bool, r *http.Request) (params OrdersMarketOrderPostParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: figi.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "figi",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				val, err := d.DecodeValue()
-				if err != nil {
-					return err
-				}
-
-				c, err := conv.ToString(val)
-				if err != nil {
-					return err
-				}
-
-				params.Figi = c
-				return nil
-			}); err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "figi",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(OrdersMarketOrderPostParams), nil
 }
+
+// Decode query: figi.
+
+// Decode query: brokerAccountId.
 
 // PortfolioCurrenciesGetParams is parameters of GET /portfolio/currencies operation.
 type PortfolioCurrenciesGetParams struct {
@@ -1042,63 +219,16 @@ type PortfolioCurrenciesGetParams struct {
 }
 
 func unpackPortfolioCurrenciesGetParams(packed middleware.Parameters) (params PortfolioCurrenciesGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(PortfolioCurrenciesGetParams)
 }
 
 func decodePortfolioCurrenciesGetParams(args [0]string, argsEscaped bool, r *http.Request) (params PortfolioCurrenciesGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(PortfolioCurrenciesGetParams), nil
 }
+
+// Decode query: brokerAccountId.
 
 // PortfolioGetParams is parameters of GET /portfolio operation.
 type PortfolioGetParams struct {
@@ -1107,63 +237,16 @@ type PortfolioGetParams struct {
 }
 
 func unpackPortfolioGetParams(packed middleware.Parameters) (params PortfolioGetParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(PortfolioGetParams)
 }
 
 func decodePortfolioGetParams(args [0]string, argsEscaped bool, r *http.Request) (params PortfolioGetParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(PortfolioGetParams), nil
 }
+
+// Decode query: brokerAccountId.
 
 // SandboxClearPostParams is parameters of POST /sandbox/clear operation.
 type SandboxClearPostParams struct {
@@ -1172,63 +255,16 @@ type SandboxClearPostParams struct {
 }
 
 func unpackSandboxClearPostParams(packed middleware.Parameters) (params SandboxClearPostParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(SandboxClearPostParams)
 }
 
 func decodeSandboxClearPostParams(args [0]string, argsEscaped bool, r *http.Request) (params SandboxClearPostParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(SandboxClearPostParams), nil
 }
+
+// Decode query: brokerAccountId.
 
 // SandboxCurrenciesBalancePostParams is parameters of POST /sandbox/currencies/balance operation.
 type SandboxCurrenciesBalancePostParams struct {
@@ -1237,63 +273,16 @@ type SandboxCurrenciesBalancePostParams struct {
 }
 
 func unpackSandboxCurrenciesBalancePostParams(packed middleware.Parameters) (params SandboxCurrenciesBalancePostParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(SandboxCurrenciesBalancePostParams)
 }
 
 func decodeSandboxCurrenciesBalancePostParams(args [0]string, argsEscaped bool, r *http.Request) (params SandboxCurrenciesBalancePostParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(SandboxCurrenciesBalancePostParams), nil
 }
+
+// Decode query: brokerAccountId.
 
 // SandboxPositionsBalancePostParams is parameters of POST /sandbox/positions/balance operation.
 type SandboxPositionsBalancePostParams struct {
@@ -1302,63 +291,16 @@ type SandboxPositionsBalancePostParams struct {
 }
 
 func unpackSandboxPositionsBalancePostParams(packed middleware.Parameters) (params SandboxPositionsBalancePostParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(SandboxPositionsBalancePostParams)
 }
 
 func decodeSandboxPositionsBalancePostParams(args [0]string, argsEscaped bool, r *http.Request) (params SandboxPositionsBalancePostParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(SandboxPositionsBalancePostParams), nil
 }
+
+// Decode query: brokerAccountId.
 
 // SandboxRemovePostParams is parameters of POST /sandbox/remove operation.
 type SandboxRemovePostParams struct {
@@ -1367,60 +309,13 @@ type SandboxRemovePostParams struct {
 }
 
 func unpackSandboxRemovePostParams(packed middleware.Parameters) (params SandboxRemovePostParams) {
-	{
-		key := middleware.ParameterKey{
-			Name: "brokerAccountId",
-			In:   "query",
-		}
-		if v, ok := packed[key]; ok {
-			params.BrokerAccountId = v.(OptString)
-		}
-	}
-	return params
+	_ = "STUB: not implemented"
+	return *new(SandboxRemovePostParams)
 }
 
 func decodeSandboxRemovePostParams(args [0]string, argsEscaped bool, r *http.Request) (params SandboxRemovePostParams, _ error) {
-	q := uri.NewQueryDecoder(r.URL.Query())
-	// Decode query: brokerAccountId.
-	if err := func() error {
-		cfg := uri.QueryParameterDecodingConfig{
-			Name:    "brokerAccountId",
-			Style:   uri.QueryStyleForm,
-			Explode: true,
-		}
-
-		if err := q.HasParam(cfg); err == nil {
-			if err := q.DecodeParam(cfg, func(d uri.Decoder) error {
-				var paramsDotBrokerAccountIdVal string
-				if err := func() error {
-					val, err := d.DecodeValue()
-					if err != nil {
-						return err
-					}
-
-					c, err := conv.ToString(val)
-					if err != nil {
-						return err
-					}
-
-					paramsDotBrokerAccountIdVal = c
-					return nil
-				}(); err != nil {
-					return err
-				}
-				params.BrokerAccountId.SetTo(paramsDotBrokerAccountIdVal)
-				return nil
-			}); err != nil {
-				return err
-			}
-		}
-		return nil
-	}(); err != nil {
-		return params, &ogenerrors.DecodeParamError{
-			Name: "brokerAccountId",
-			In:   "query",
-			Err:  err,
-		}
-	}
-	return params, nil
+	_ = "STUB: not implemented"
+	return *new(SandboxRemovePostParams), nil
 }
+
+// Decode query: brokerAccountId.

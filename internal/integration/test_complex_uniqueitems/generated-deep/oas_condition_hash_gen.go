@@ -2,38 +2,15 @@
 
 package api
 
-import (
-	"encoding/binary"
-	"fmt"
-	"hash/fnv"
-)
-
 // Hash computes a hash value for Condition using FNV-1a.
 // Equal objects must produce equal hashes.
 func (a Condition) Hash() uint64 {
-	h := fnv.New64a()
+	_ = "STUB: not implemented"
 
 	// Hash optional field: Type
-	if a.Type.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Type.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Negated
-	if a.Negated.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Negated.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Configuration
-	if a.Configuration.Set {
-		h.Write([]byte{1})
-		nestedHashConfiguration := a.Configuration.Value.Hash()
-		binary.Write(h, binary.LittleEndian, nestedHashConfiguration)
-	} else {
-		h.Write([]byte{0})
-	}
-	return h.Sum64()
+	return 0
 }
+
+// Hash optional field: Negated
+
+// Hash optional field: Configuration

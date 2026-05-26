@@ -3,8615 +3,1002 @@
 package api
 
 // SetFake set fake values.
-func (s *AddStickerToSet) SetFake() {
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.PNGSticker.SetFake()
-		}
-	}
-	{
-		{
-			s.TgsSticker.SetFake()
-		}
-	}
-	{
-		{
-			s.WebmSticker.SetFake()
-		}
-	}
-	{
-		{
-			s.Emojis = "string"
-		}
-	}
-	{
-		{
-			s.MaskPosition.SetFake()
-		}
-	}
-}
+func (s *AddStickerToSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Animation) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-	{
-		{
-			s.FileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.Width = int(0)
-		}
-	}
-	{
-		{
-			s.Height = int(0)
-		}
-	}
-	{
-		{
-			s.Duration = int(0)
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.FileName.SetFake()
-		}
-	}
-	{
-		{
-			s.MimeType.SetFake()
-		}
-	}
-	{
-		{
-			s.FileSize.SetFake()
-		}
-	}
-}
+func (s *Animation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AnswerCallbackQuery) SetFake() {
-	{
-		{
-			s.CallbackQueryID = "string"
-		}
-	}
-	{
-		{
-			s.Text.SetFake()
-		}
-	}
-	{
-		{
-			s.ShowAlert.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.CacheTime.SetFake()
-		}
-	}
-}
+func (s *AnswerCallbackQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AnswerInlineQuery) SetFake() {
-	{
-		{
-			s.InlineQueryID = "string"
-		}
-	}
-	{
-		{
-			s.Results = nil
-			for i := 0; i < 0; i++ {
-				var elem InlineQueryResult
-				{
-					elem.SetFake()
-				}
-				s.Results = append(s.Results, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CacheTime.SetFake()
-		}
-	}
-	{
-		{
-			s.IsPersonal.SetFake()
-		}
-	}
-	{
-		{
-			s.NextOffset.SetFake()
-		}
-	}
-	{
-		{
-			s.SwitchPmText.SetFake()
-		}
-	}
-	{
-		{
-			s.SwitchPmParameter.SetFake()
-		}
-	}
-}
+func (s *AnswerInlineQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AnswerPreCheckoutQuery) SetFake() {
-	{
-		{
-			s.PreCheckoutQueryID = "string"
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-	{
-		{
-			s.ErrorMessage.SetFake()
-		}
-	}
-}
+func (s *AnswerPreCheckoutQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AnswerShippingQuery) SetFake() {
-	{
-		{
-			s.ShippingQueryID = "string"
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-	{
-		{
-			s.ShippingOptions = nil
-			for i := 0; i < 0; i++ {
-				var elem ShippingOption
-				{
-					elem.SetFake()
-				}
-				s.ShippingOptions = append(s.ShippingOptions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ErrorMessage.SetFake()
-		}
-	}
-}
+func (s *AnswerShippingQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AnswerWebAppQuery) SetFake() {
-	{
-		{
-			s.WebAppQueryID = "string"
-		}
-	}
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-}
+func (s *AnswerWebAppQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ApproveChatJoinRequest) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-}
+func (s *ApproveChatJoinRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Audio) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-	{
-		{
-			s.FileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.Duration = int(0)
-		}
-	}
-	{
-		{
-			s.Performer.SetFake()
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.FileName.SetFake()
-		}
-	}
-	{
-		{
-			s.MimeType.SetFake()
-		}
-	}
-	{
-		{
-			s.FileSize.SetFake()
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-}
+func (s *Audio) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BanChatMember) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.UntilDate.SetFake()
-		}
-	}
-	{
-		{
-			s.RevokeMessages.SetFake()
-		}
-	}
-}
+func (s *BanChatMember) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BanChatSenderChat) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.SenderChatID = int64(0)
-		}
-	}
-}
+func (s *BanChatSenderChat) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BotCommand) SetFake() {
-	{
-		{
-			s.Command = "string"
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-}
+func (s *BotCommand) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BotCommandScope) SetFake() {
-	var variant BotCommandScopeAllChatAdministrators
-
-	{
-		variant.SetFake()
-	}
-	s.SetBotCommandScopeAllChatAdministrators(variant)
-}
+func (s *BotCommandScope) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BotCommandScopeAllChatAdministrators) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *BotCommandScopeAllChatAdministrators) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BotCommandScopeAllGroupChats) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *BotCommandScopeAllGroupChats) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BotCommandScopeAllPrivateChats) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *BotCommandScopeAllPrivateChats) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BotCommandScopeChat) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *BotCommandScopeChat) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BotCommandScopeChatAdministrators) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *BotCommandScopeChatAdministrators) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BotCommandScopeChatMember) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-}
+func (s *BotCommandScopeChatMember) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BotCommandScopeDefault) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *BotCommandScopeDefault) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *CallbackGame) SetFake() {
-}
+	_ = "STUB: not implemented"
 
-// SetFake set fake values.
-func (s *CallbackQuery) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.From.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Message = nil
-		}
-	}
-	{
-		{
-			s.InlineMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.ChatInstance = "string"
-		}
-	}
-	{
-		{
-			s.Data.SetFake()
-		}
-	}
-	{
-		{
-			s.GameShortName.SetFake()
-		}
-	}
+	// SetFake set fake values.
+	return
 }
+
+func (s *CallbackQuery) SetFake() { _ = "STUB: not implemented"; return }
+
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
-func (s *Chat) SetFake() {
-	{
-		{
-			s.ID = int64(0)
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Username.SetFake()
-		}
-	}
-	{
-		{
-			s.FirstName.SetFake()
-		}
-	}
-	{
-		{
-			s.LastName.SetFake()
-		}
-	}
-	{
-		{
-			s.Photo.SetFake()
-		}
-	}
-	{
-		{
-			s.Bio.SetFake()
-		}
-	}
-	{
-		{
-			s.HasPrivateForwards.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.InviteLink.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.PinnedMessage = nil
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.SlowModeDelay.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageAutoDeleteTime.SetFake()
-		}
-	}
-	{
-		{
-			s.HasProtectedContent.SetFake()
-		}
-	}
-	{
-		{
-			s.StickerSetName.SetFake()
-		}
-	}
-	{
-		{
-			s.CanSetStickerSet.SetFake()
-		}
-	}
-	{
-		{
-			s.LinkedChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.AllMembersAreAdministrators.SetFake()
-		}
-	}
-}
+func (s *Chat) SetFake() { _ = "STUB: not implemented"; return }
+
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
-func (s *ChatAdministratorRights) SetFake() {
-	{
-		{
-			s.IsAnonymous = true
-		}
-	}
-	{
-		{
-			s.CanManageChat = true
-		}
-	}
-	{
-		{
-			s.CanDeleteMessages = true
-		}
-	}
-	{
-		{
-			s.CanManageVideoChats = true
-		}
-	}
-	{
-		{
-			s.CanRestrictMembers = true
-		}
-	}
-	{
-		{
-			s.CanPromoteMembers = true
-		}
-	}
-	{
-		{
-			s.CanChangeInfo = true
-		}
-	}
-	{
-		{
-			s.CanInviteUsers = true
-		}
-	}
-	{
-		{
-			s.CanPostMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CanEditMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CanPinMessages.SetFake()
-		}
-	}
-}
+func (s *ChatAdministratorRights) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatInviteLink) SetFake() {
-	{
-		{
-			s.InviteLink = "string"
-		}
-	}
-	{
-		{
-			s.Creator.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatesJoinRequest = true
-		}
-	}
-	{
-		{
-			s.IsPrimary = true
-		}
-	}
-	{
-		{
-			s.IsRevoked = true
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.ExpireDate.SetFake()
-		}
-	}
-	{
-		{
-			s.MemberLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.PendingJoinRequestCount.SetFake()
-		}
-	}
-}
+func (s *ChatInviteLink) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatJoinRequest) SetFake() {
-	{
-		{
-			s.Chat.SetFake()
-		}
-	}
-	{
-		{
-			s.From.SetFake()
-		}
-	}
-	{
-		{
-			s.Date = int(0)
-		}
-	}
-	{
-		{
-			s.Bio.SetFake()
-		}
-	}
-	{
-		{
-			s.InviteLink.SetFake()
-		}
-	}
-}
+func (s *ChatJoinRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatLocation) SetFake() {
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.Address = "string"
-		}
-	}
-}
+func (s *ChatLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatMember) SetFake() {
-	var variant ChatMemberAdministrator
+func (s *ChatMember) SetFake() { _ = "STUB: not implemented"; return }
 
-	{
-		variant.SetFake()
-	}
-	s.SetChatMemberAdministrator(variant)
-}
+// SetFake set fake values.
+func (s *ChatMemberAdministrator) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatMemberAdministrator) SetFake() {
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.CanBeEdited = true
-		}
-	}
-	{
-		{
-			s.IsAnonymous = true
-		}
-	}
-	{
-		{
-			s.CanManageChat = true
-		}
-	}
-	{
-		{
-			s.CanDeleteMessages = true
-		}
-	}
-	{
-		{
-			s.CanManageVideoChats = true
-		}
-	}
-	{
-		{
-			s.CanRestrictMembers = true
-		}
-	}
-	{
-		{
-			s.CanPromoteMembers = true
-		}
-	}
-	{
-		{
-			s.CanChangeInfo = true
-		}
-	}
-	{
-		{
-			s.CanInviteUsers = true
-		}
-	}
-	{
-		{
-			s.CanPostMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CanEditMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CanPinMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CustomTitle.SetFake()
-		}
-	}
-}
+func (s *ChatMemberBanned) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatMemberBanned) SetFake() {
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.UntilDate = int(0)
-		}
-	}
-}
+func (s *ChatMemberLeft) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatMemberLeft) SetFake() {
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *ChatMemberMember) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatMemberMember) SetFake() {
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *ChatMemberOwner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatMemberOwner) SetFake() {
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.IsAnonymous = true
-		}
-	}
-	{
-		{
-			s.CustomTitle.SetFake()
-		}
-	}
-}
+func (s *ChatMemberRestricted) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatMemberRestricted) SetFake() {
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.IsMember = true
-		}
-	}
-	{
-		{
-			s.CanChangeInfo = true
-		}
-	}
-	{
-		{
-			s.CanInviteUsers = true
-		}
-	}
-	{
-		{
-			s.CanPinMessages = true
-		}
-	}
-	{
-		{
-			s.CanSendMessages = true
-		}
-	}
-	{
-		{
-			s.CanSendMediaMessages = true
-		}
-	}
-	{
-		{
-			s.CanSendPolls = true
-		}
-	}
-	{
-		{
-			s.CanSendOtherMessages = true
-		}
-	}
-	{
-		{
-			s.CanAddWebPagePreviews = true
-		}
-	}
-	{
-		{
-			s.UntilDate = int(0)
-		}
-	}
-}
+func (s *ChatMemberUpdated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatMemberUpdated) SetFake() {
-	{
-		{
-			s.Chat.SetFake()
-		}
-	}
-	{
-		{
-			s.From.SetFake()
-		}
-	}
-	{
-		{
-			s.Date = int(0)
-		}
-	}
-	{
-		{
-			s.OldChatMember.SetFake()
-		}
-	}
-	{
-		{
-			s.NewChatMember.SetFake()
-		}
-	}
-	{
-		{
-			s.InviteLink.SetFake()
-		}
-	}
-}
+func (s *ChatPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatPermissions) SetFake() {
-	{
-		{
-			s.CanSendMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CanSendMediaMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CanSendPolls.SetFake()
-		}
-	}
-	{
-		{
-			s.CanSendOtherMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CanAddWebPagePreviews.SetFake()
-		}
-	}
-	{
-		{
-			s.CanChangeInfo.SetFake()
-		}
-	}
-	{
-		{
-			s.CanInviteUsers.SetFake()
-		}
-	}
-	{
-		{
-			s.CanPinMessages.SetFake()
-		}
-	}
-}
+func (s *ChatPhoto) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatPhoto) SetFake() {
-	{
-		{
-			s.SmallFileID = "string"
-		}
-	}
-	{
-		{
-			s.SmallFileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.BigFileID = "string"
-		}
-	}
-	{
-		{
-			s.BigFileUniqueID = "string"
-		}
-	}
-}
+func (s *ChatType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChatType) SetFake() {
-	*s = ChatTypePrivate
-}
+func (s *ChosenInlineResult) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChosenInlineResult) SetFake() {
-	{
-		{
-			s.ResultID = "string"
-		}
-	}
-	{
-		{
-			s.From.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.Query = "string"
-		}
-	}
-}
+func (s *Contact) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Contact) SetFake() {
-	{
-		{
-			s.PhoneNumber = "string"
-		}
-	}
-	{
-		{
-			s.FirstName = "string"
-		}
-	}
-	{
-		{
-			s.LastName.SetFake()
-		}
-	}
-	{
-		{
-			s.UserID.SetFake()
-		}
-	}
-	{
-		{
-			s.Vcard.SetFake()
-		}
-	}
-}
+func (s *CopyMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CopyMessage) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.FromChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID = int(0)
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *CreateChatInviteLink) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CreateChatInviteLink) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.ExpireDate.SetFake()
-		}
-	}
-	{
-		{
-			s.MemberLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatesJoinRequest.SetFake()
-		}
-	}
-}
+func (s *CreateNewStickerSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CreateNewStickerSet) SetFake() {
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.PNGSticker.SetFake()
-		}
-	}
-	{
-		{
-			s.TgsSticker.SetFake()
-		}
-	}
-	{
-		{
-			s.WebmSticker.SetFake()
-		}
-	}
-	{
-		{
-			s.Emojis = "string"
-		}
-	}
-	{
-		{
-			s.ContainsMasks.SetFake()
-		}
-	}
-	{
-		{
-			s.MaskPosition.SetFake()
-		}
-	}
-}
+func (s *DeclineChatJoinRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeclineChatJoinRequest) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-}
+func (s *DeleteChatPhoto) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeleteChatPhoto) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *DeleteChatStickerSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeleteChatStickerSet) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *DeleteMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeleteMessage) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID = int(0)
-		}
-	}
-}
+func (s *DeleteMyCommands) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeleteMyCommands) SetFake() {
-	{
-		{
-			s.Scope.SetFake()
-		}
-	}
-	{
-		{
-			s.LanguageCode.SetFake()
-		}
-	}
-}
+func (s *DeleteStickerFromSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeleteStickerFromSet) SetFake() {
-	{
-		{
-			s.Sticker = "string"
-		}
-	}
-}
+func (s *DeleteWebhook) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeleteWebhook) SetFake() {
-	{
-		{
-			s.DropPendingUpdates.SetFake()
-		}
-	}
-}
+func (s *Dice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Dice) SetFake() {
-	{
-		{
-			s.Emoji = "string"
-		}
-	}
-	{
-		{
-			s.Value = int(0)
-		}
-	}
-}
+func (s *Document) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Document) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-	{
-		{
-			s.FileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.FileName.SetFake()
-		}
-	}
-	{
-		{
-			s.MimeType.SetFake()
-		}
-	}
-	{
-		{
-			s.FileSize.SetFake()
-		}
-	}
-}
+func (s *EditChatInviteLink) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EditChatInviteLink) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.InviteLink = "string"
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.ExpireDate.SetFake()
-		}
-	}
-	{
-		{
-			s.MemberLimit.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatesJoinRequest.SetFake()
-		}
-	}
-}
+func (s *EditMessageCaption) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EditMessageCaption) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *EditMessageLiveLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EditMessageLiveLocation) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.Latitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Longitude = float64(0)
-		}
-	}
-	{
-		{
-			s.HorizontalAccuracy.SetFake()
-		}
-	}
-	{
-		{
-			s.Heading.SetFake()
-		}
-	}
-	{
-		{
-			s.ProximityAlertRadius.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *EditMessageMedia) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EditMessageMedia) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.Media.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *EditMessageReplyMarkup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EditMessageReplyMarkup) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *EditMessageText) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EditMessageText) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.Text = "string"
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.Entities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.Entities = append(s.Entities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisableWebPagePreview.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *EncryptedCredentials) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EncryptedCredentials) SetFake() {
-	{
-		{
-			s.Data = "string"
-		}
-	}
-	{
-		{
-			s.Hash = "string"
-		}
-	}
-	{
-		{
-			s.Secret = "string"
-		}
-	}
-}
+func (s *EncryptedPassportElement) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EncryptedPassportElement) SetFake() {
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Data.SetFake()
-		}
-	}
-	{
-		{
-			s.PhoneNumber.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Files = nil
-			for i := 0; i < 0; i++ {
-				var elem PassportFile
-				{
-					elem.SetFake()
-				}
-				s.Files = append(s.Files, elem)
-			}
-		}
-	}
-	{
-		{
-			s.FrontSide.SetFake()
-		}
-	}
-	{
-		{
-			s.ReverseSide.SetFake()
-		}
-	}
-	{
-		{
-			s.Selfie.SetFake()
-		}
-	}
-	{
-		{
-			s.Translation = nil
-			for i := 0; i < 0; i++ {
-				var elem PassportFile
-				{
-					elem.SetFake()
-				}
-				s.Translation = append(s.Translation, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Hash = "string"
-		}
-	}
-}
+func (s *EncryptedPassportElementType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EncryptedPassportElementType) SetFake() {
-	*s = EncryptedPassportElementTypePersonalDetails
-}
+func (s *Error) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Error) SetFake() {
-	{
-		{
-			s.Ok = true
-		}
-	}
-	{
-		{
-			s.ErrorCode = int(0)
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.Parameters.SetFake()
-		}
-	}
-}
+func (s *ExportChatInviteLink) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ExportChatInviteLink) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *File) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *File) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-	{
-		{
-			s.FileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.FileSize.SetFake()
-		}
-	}
-	{
-		{
-			s.FilePath.SetFake()
-		}
-	}
-}
+func (s *ForceReply) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ForceReply) SetFake() {
-	{
-		{
-			s.ForceReply = true
-		}
-	}
-	{
-		{
-			s.InputFieldPlaceholder.SetFake()
-		}
-	}
-	{
-		{
-			s.Selective.SetFake()
-		}
-	}
-}
+func (s *ForwardMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ForwardMessage) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.FromChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID = int(0)
-		}
-	}
-}
+func (s *Game) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Game) SetFake() {
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.Photo = nil
-			for i := 0; i < 0; i++ {
-				var elem PhotoSize
-				{
-					elem.SetFake()
-				}
-				s.Photo = append(s.Photo, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Text.SetFake()
-		}
-	}
-	{
-		{
-			s.TextEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.TextEntities = append(s.TextEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Animation.SetFake()
-		}
-	}
-}
+func (s *GameHighScore) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GameHighScore) SetFake() {
-	{
-		{
-			s.Position = int(0)
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Score = int(0)
-		}
-	}
-}
+func (s *GetChat) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetChat) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *GetChatAdministrators) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetChatAdministrators) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *GetChatMember) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetChatMember) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-}
+func (s *GetChatMemberCount) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetChatMemberCount) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *GetChatMenuButton) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetChatMenuButton) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *GetFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetFile) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-}
+func (s *GetGameHighScores) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetGameHighScores) SetFake() {
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineMessageID.SetFake()
-		}
-	}
-}
+func (s *GetMyCommands) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetMyCommands) SetFake() {
-	{
-		{
-			s.Scope.SetFake()
-		}
-	}
-	{
-		{
-			s.LanguageCode.SetFake()
-		}
-	}
-}
+func (s *GetMyDefaultAdministratorRights) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetMyDefaultAdministratorRights) SetFake() {
-	{
-		{
-			s.ForChannels.SetFake()
-		}
-	}
-}
+func (s *GetStickerSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetStickerSet) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *GetUpdates) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetUpdates) SetFake() {
-	{
-		{
-			s.Offset.SetFake()
-		}
-	}
-	{
-		{
-			s.Limit.SetFake()
-		}
-	}
-	{
-		{
-			s.Timeout.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedUpdates = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AllowedUpdates = append(s.AllowedUpdates, elem)
-			}
-		}
-	}
-}
+func (s *GetUserProfilePhotos) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GetUserProfilePhotos) SetFake() {
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.Offset.SetFake()
-		}
-	}
-	{
-		{
-			s.Limit.SetFake()
-		}
-	}
-}
+func (s *ID) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ID) SetFake() {
-	var variant string
+func (s *InlineKeyboardButton) SetFake() { _ = "STUB: not implemented"; return }
 
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
-func (s *InlineKeyboardButton) SetFake() {
-	{
-		{
-			s.Text = "string"
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.CallbackData.SetFake()
-		}
-	}
-	{
-		{
-			s.WebApp.SetFake()
-		}
-	}
-	{
-		{
-			s.LoginURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SwitchInlineQuery.SetFake()
-		}
-	}
-	{
-		{
-			s.SwitchInlineQueryCurrentChat.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.CallbackGame = nil
-		}
-	}
-	{
-		{
-			s.Pay.SetFake()
-		}
-	}
-}
+func (s *InlineKeyboardMarkup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineKeyboardMarkup) SetFake() {
-	{
-		{
-			s.InlineKeyboard = nil
-			for i := 0; i < 0; i++ {
-				var elem []InlineKeyboardButton
-				{
-					elem = nil
-					for i := 0; i < 0; i++ {
-						var elemElem InlineKeyboardButton
-						{
-							elemElem.SetFake()
-						}
-						elem = append(elem, elemElem)
-					}
-				}
-				s.InlineKeyboard = append(s.InlineKeyboard, elem)
-			}
-		}
-	}
-}
+func (s *InlineQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQuery) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.From.SetFake()
-		}
-	}
-	{
-		{
-			s.Query = "string"
-		}
-	}
-	{
-		{
-			s.Offset = "string"
-		}
-	}
-	{
-		{
-			s.ChatType.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-}
+func (s *InlineQueryChatType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryChatType) SetFake() {
-	*s = InlineQueryChatTypeSender
-}
+func (s *InlineQueryResult) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResult) SetFake() {
-	var variant InlineQueryResultArticle
+func (s *InlineQueryResultArticle) SetFake() { _ = "STUB: not implemented"; return }
 
-	{
-		variant.SetFake()
-	}
-	s.SetInlineQueryResultArticle(variant)
-}
-
 // SetFake set fake values.
-func (s *InlineQueryResultArticle) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HideURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbWidth.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbHeight.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultAudio) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultAudio) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.AudioURL = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Performer.SetFake()
-		}
-	}
-	{
-		{
-			s.AudioDuration.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultCachedAudio) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultCachedAudio) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.AudioFileID = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultCachedDocument) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultCachedDocument) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.DocumentFileID = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultCachedGif) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultCachedGif) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.GIFFileID = "string"
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultCachedMpeg4Gif) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultCachedMpeg4Gif) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Mpeg4FileID = "string"
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultCachedPhoto) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultCachedPhoto) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.PhotoFileID = "string"
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultCachedSticker) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultCachedSticker) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.StickerFileID = "string"
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultCachedVideo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultCachedVideo) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.VideoFileID = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultCachedVoice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultCachedVoice) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.VoiceFileID = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultContact) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultContact) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.PhoneNumber = "string"
-		}
-	}
-	{
-		{
-			s.FirstName = "string"
-		}
-	}
-	{
-		{
-			s.LastName.SetFake()
-		}
-	}
-	{
-		{
-			s.Vcard.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbWidth.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbHeight.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultDocument) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultDocument) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DocumentURL = "string"
-		}
-	}
-	{
-		{
-			s.MimeType = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbWidth.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbHeight.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultGame) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultGame) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.GameShortName = "string"
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultGif) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultGif) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.GIFURL = "string"
-		}
-	}
-	{
-		{
-			s.GIFWidth.SetFake()
-		}
-	}
-	{
-		{
-			s.GIFHeight.SetFake()
-		}
-	}
-	{
-		{
-			s.GIFDuration.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbURL = "string"
-		}
-	}
-	{
-		{
-			s.ThumbMimeType.SetFake()
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultLocation) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Latitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Longitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.HorizontalAccuracy.SetFake()
-		}
-	}
-	{
-		{
-			s.LivePeriod.SetFake()
-		}
-	}
-	{
-		{
-			s.Heading.SetFake()
-		}
-	}
-	{
-		{
-			s.ProximityAlertRadius.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbWidth.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbHeight.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultMpeg4Gif) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultMpeg4Gif) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Mpeg4URL = "string"
-		}
-	}
-	{
-		{
-			s.Mpeg4Width.SetFake()
-		}
-	}
-	{
-		{
-			s.Mpeg4Height.SetFake()
-		}
-	}
-	{
-		{
-			s.Mpeg4Duration.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbURL = "string"
-		}
-	}
-	{
-		{
-			s.ThumbMimeType.SetFake()
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultPhoto) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultPhoto) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.PhotoURL = "string"
-		}
-	}
-	{
-		{
-			s.ThumbURL = "string"
-		}
-	}
-	{
-		{
-			s.PhotoWidth.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotoHeight.SetFake()
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultVenue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultVenue) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Latitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Longitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Address = "string"
-		}
-	}
-	{
-		{
-			s.FoursquareID.SetFake()
-		}
-	}
-	{
-		{
-			s.FoursquareType.SetFake()
-		}
-	}
-	{
-		{
-			s.GooglePlaceID.SetFake()
-		}
-	}
-	{
-		{
-			s.GooglePlaceType.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbWidth.SetFake()
-		}
-	}
-	{
-		{
-			s.ThumbHeight.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultVideo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultVideo) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.VideoURL = "string"
-		}
-	}
-	{
-		{
-			s.MimeType = "string"
-		}
-	}
-	{
-		{
-			s.ThumbURL = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.VideoWidth.SetFake()
-		}
-	}
-	{
-		{
-			s.VideoHeight.SetFake()
-		}
-	}
-	{
-		{
-			s.VideoDuration.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InlineQueryResultVoice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InlineQueryResultVoice) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.VoiceURL = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.VoiceDuration.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.InputMessageContent.SetFake()
-		}
-	}
-}
+func (s *InputContactMessageContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputContactMessageContent) SetFake() {
-	{
-		{
-			s.PhoneNumber = "string"
-		}
-	}
-	{
-		{
-			s.FirstName = "string"
-		}
-	}
-	{
-		{
-			s.LastName.SetFake()
-		}
-	}
-	{
-		{
-			s.Vcard.SetFake()
-		}
-	}
-}
+func (s *InputInvoiceMessageContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputInvoiceMessageContent) SetFake() {
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.Payload = "string"
-		}
-	}
-	{
-		{
-			s.ProviderToken = "string"
-		}
-	}
-	{
-		{
-			s.Currency = "string"
-		}
-	}
-	{
-		{
-			s.Prices = nil
-			for i := 0; i < 0; i++ {
-				var elem LabeledPrice
-				{
-					elem.SetFake()
-				}
-				s.Prices = append(s.Prices, elem)
-			}
-		}
-	}
-	{
-		{
-			s.MaxTipAmount.SetFake()
-		}
-	}
-	{
-		{
-			s.SuggestedTipAmounts = nil
-			for i := 0; i < 0; i++ {
-				var elem int64
-				{
-					elem = int64(0)
-				}
-				s.SuggestedTipAmounts = append(s.SuggestedTipAmounts, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ProviderData.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotoURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotoSize.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotoWidth.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotoHeight.SetFake()
-		}
-	}
-	{
-		{
-			s.NeedName.SetFake()
-		}
-	}
-	{
-		{
-			s.NeedPhoneNumber.SetFake()
-		}
-	}
-	{
-		{
-			s.NeedEmail.SetFake()
-		}
-	}
-	{
-		{
-			s.NeedShippingAddress.SetFake()
-		}
-	}
-	{
-		{
-			s.SendPhoneNumberToProvider.SetFake()
-		}
-	}
-	{
-		{
-			s.SendEmailToProvider.SetFake()
-		}
-	}
-	{
-		{
-			s.IsFlexible.SetFake()
-		}
-	}
-}
+func (s *InputLocationMessageContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputLocationMessageContent) SetFake() {
-	{
-		{
-			s.Latitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Longitude = float64(0)
-		}
-	}
-	{
-		{
-			s.HorizontalAccuracy.SetFake()
-		}
-	}
-	{
-		{
-			s.LivePeriod.SetFake()
-		}
-	}
-	{
-		{
-			s.Heading.SetFake()
-		}
-	}
-	{
-		{
-			s.ProximityAlertRadius.SetFake()
-		}
-	}
-}
+func (s *InputMedia) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputMedia) SetFake() {
-	var variant InputMediaAnimation
-
-	{
-		variant.SetFake()
-	}
-	s.SetInputMediaAnimation(variant)
-}
+func (s *InputMediaAnimation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputMediaAnimation) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Media = "string"
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Width.SetFake()
-		}
-	}
-	{
-		{
-			s.Height.SetFake()
-		}
-	}
-	{
-		{
-			s.Duration.SetFake()
-		}
-	}
-}
+func (s *InputMediaAudio) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputMediaAudio) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Media = "string"
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Duration.SetFake()
-		}
-	}
-	{
-		{
-			s.Performer.SetFake()
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-}
+func (s *InputMediaDocument) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputMediaDocument) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Media = "string"
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisableContentTypeDetection.SetFake()
-		}
-	}
-}
+func (s *InputMediaPhoto) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputMediaPhoto) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Media = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-}
+func (s *InputMediaVideo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputMediaVideo) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Media = "string"
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Width.SetFake()
-		}
-	}
-	{
-		{
-			s.Height.SetFake()
-		}
-	}
-	{
-		{
-			s.Duration.SetFake()
-		}
-	}
-	{
-		{
-			s.SupportsStreaming.SetFake()
-		}
-	}
-}
+func (s *InputMessageContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputMessageContent) SetFake() {
-	var variant InputTextMessageContent
-
-	{
-		variant.SetFake()
-	}
-	s.SetInputTextMessageContent(variant)
-}
+func (s *InputTextMessageContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputTextMessageContent) SetFake() {
-	{
-		{
-			s.MessageText = "string"
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.Entities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.Entities = append(s.Entities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisableWebPagePreview.SetFake()
-		}
-	}
-}
+func (s *InputVenueMessageContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InputVenueMessageContent) SetFake() {
-	{
-		{
-			s.Latitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Longitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Address = "string"
-		}
-	}
-	{
-		{
-			s.FoursquareID.SetFake()
-		}
-	}
-	{
-		{
-			s.FoursquareType.SetFake()
-		}
-	}
-	{
-		{
-			s.GooglePlaceID.SetFake()
-		}
-	}
-	{
-		{
-			s.GooglePlaceType.SetFake()
-		}
-	}
-}
+func (s *Invoice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Invoice) SetFake() {
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.StartParameter = "string"
-		}
-	}
-	{
-		{
-			s.Currency = "string"
-		}
-	}
-	{
-		{
-			s.TotalAmount = int(0)
-		}
-	}
-}
+func (s *KeyboardButton) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *KeyboardButton) SetFake() {
-	var variant string
-
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+func (s *KeyboardButtonObject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *KeyboardButtonObject) SetFake() {
-	{
-		{
-			s.Text = "string"
-		}
-	}
-	{
-		{
-			s.RequestContact.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestLocation.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestPoll.SetFake()
-		}
-	}
-	{
-		{
-			s.WebApp.SetFake()
-		}
-	}
-}
+func (s *KeyboardButtonPollType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *KeyboardButtonPollType) SetFake() {
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *LabeledPrice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LabeledPrice) SetFake() {
-	{
-		{
-			s.Label = "string"
-		}
-	}
-	{
-		{
-			s.Amount = int(0)
-		}
-	}
-}
+func (s *LeaveChat) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LeaveChat) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *Location) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Location) SetFake() {
-	{
-		{
-			s.Longitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Latitude = float64(0)
-		}
-	}
-	{
-		{
-			s.HorizontalAccuracy.SetFake()
-		}
-	}
-	{
-		{
-			s.LivePeriod.SetFake()
-		}
-	}
-	{
-		{
-			s.Heading.SetFake()
-		}
-	}
-	{
-		{
-			s.ProximityAlertRadius.SetFake()
-		}
-	}
-}
+func (s *LoginUrl) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LoginUrl) SetFake() {
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.ForwardText.SetFake()
-		}
-	}
-	{
-		{
-			s.BotUsername.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestWriteAccess.SetFake()
-		}
-	}
-}
+func (s *MaskPosition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MaskPosition) SetFake() {
-	{
-		{
-			s.Point = "string"
-		}
-	}
-	{
-		{
-			s.XShift = float64(0)
-		}
-	}
-	{
-		{
-			s.YShift = float64(0)
-		}
-	}
-	{
-		{
-			s.Scale = float64(0)
-		}
-	}
-}
+func (s *MenuButton) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MenuButton) SetFake() {
-	var variant MenuButtonCommands
+func (s *MenuButtonCommands) SetFake() { _ = "STUB: not implemented"; return }
 
-	{
-		variant.SetFake()
-	}
-	s.SetMenuButtonCommands(variant)
-}
-
 // SetFake set fake values.
-func (s *MenuButtonCommands) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *MenuButtonDefault) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MenuButtonDefault) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *MenuButtonWebApp) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MenuButtonWebApp) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Text = "string"
-		}
-	}
-	{
-		{
-			s.WebApp.SetFake()
-		}
-	}
-}
+func (s *Message) SetFake() { _ = "STUB: not implemented"; return }
 
-// SetFake set fake values.
-func (s *Message) SetFake() {
-	{
-		{
-			s.MessageID = int(0)
-		}
-	}
-	{
-		{
-			s.From.SetFake()
-		}
-	}
-	{
-		{
-			s.SenderChat.SetFake()
-		}
-	}
-	{
-		{
-			s.Date = int(0)
-		}
-	}
-	{
-		{
-			s.Chat.SetFake()
-		}
-	}
-	{
-		{
-			s.ForwardFrom.SetFake()
-		}
-	}
-	{
-		{
-			s.ForwardFromChat.SetFake()
-		}
-	}
-	{
-		{
-			s.ForwardFromMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.ForwardSignature.SetFake()
-		}
-	}
-	{
-		{
-			s.ForwardSenderName.SetFake()
-		}
-	}
-	{
-		{
-			s.ForwardDate.SetFake()
-		}
-	}
-	{
-		{
-			s.IsAutomaticForward.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.ReplyToMessage = nil
-		}
-	}
-	{
-		{
-			s.ViaBot.SetFake()
-		}
-	}
-	{
-		{
-			s.EditDate.SetFake()
-		}
-	}
-	{
-		{
-			s.HasProtectedContent.SetFake()
-		}
-	}
-	{
-		{
-			s.MediaGroupID.SetFake()
-		}
-	}
-	{
-		{
-			s.AuthorSignature.SetFake()
-		}
-	}
-	{
-		{
-			s.Text.SetFake()
-		}
-	}
-	{
-		{
-			s.Entities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.Entities = append(s.Entities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Animation.SetFake()
-		}
-	}
-	{
-		{
-			s.Audio.SetFake()
-		}
-	}
-	{
-		{
-			s.Document.SetFake()
-		}
-	}
-	{
-		{
-			s.Photo = nil
-			for i := 0; i < 0; i++ {
-				var elem PhotoSize
-				{
-					elem.SetFake()
-				}
-				s.Photo = append(s.Photo, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Sticker.SetFake()
-		}
-	}
-	{
-		{
-			s.Video.SetFake()
-		}
-	}
-	{
-		{
-			s.VideoNote.SetFake()
-		}
-	}
-	{
-		{
-			s.Voice.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Contact.SetFake()
-		}
-	}
-	{
-		{
-			s.Dice.SetFake()
-		}
-	}
-	{
-		{
-			s.Game.SetFake()
-		}
-	}
-	{
-		{
-			s.Poll.SetFake()
-		}
-	}
-	{
-		{
-			s.Venue.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.NewChatMembers = nil
-			for i := 0; i < 0; i++ {
-				var elem User
-				{
-					elem.SetFake()
-				}
-				s.NewChatMembers = append(s.NewChatMembers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.LeftChatMember.SetFake()
-		}
-	}
-	{
-		{
-			s.NewChatTitle.SetFake()
-		}
-	}
-	{
-		{
-			s.NewChatPhoto = nil
-			for i := 0; i < 0; i++ {
-				var elem PhotoSize
-				{
-					elem.SetFake()
-				}
-				s.NewChatPhoto = append(s.NewChatPhoto, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DeleteChatPhoto.SetFake()
-		}
-	}
-	{
-		{
-			s.GroupChatCreated.SetFake()
-		}
-	}
-	{
-		{
-			s.SupergroupChatCreated.SetFake()
-		}
-	}
-	{
-		{
-			s.ChannelChatCreated.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageAutoDeleteTimerChanged.SetFake()
-		}
-	}
-	{
-		{
-			s.MigrateToChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MigrateFromChatID.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.PinnedMessage = nil
-		}
-	}
-	{
-		{
-			s.Invoice.SetFake()
-		}
-	}
-	{
-		{
-			s.SuccessfulPayment.SetFake()
-		}
-	}
-	{
-		{
-			s.ConnectedWebsite.SetFake()
-		}
-	}
-	{
-		{
-			s.PassportData.SetFake()
-		}
-	}
-	{
-		{
-			s.ProximityAlertTriggered.SetFake()
-		}
-	}
-	{
-		{
-			s.VideoChatScheduled.SetFake()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.VideoChatStarted = nil
-		}
-	}
-	{
-		{
-			s.VideoChatEnded.SetFake()
-		}
-	}
-	{
-		{
-			s.VideoChatParticipantsInvited.SetFake()
-		}
-	}
-	{
-		{
-			s.WebAppData.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-	{
-		{
-			s.NewChatMember.SetFake()
-		}
-	}
-	{
-		{
-			s.NewChatParticipant.SetFake()
-		}
-	}
-	{
-		{
-			s.LeftChatParticipant.SetFake()
-		}
-	}
-}
+// Keep pointer nil to prevent infinite recursion.
 
-// SetFake set fake values.
-func (s *MessageAutoDeleteTimerChanged) SetFake() {
-	{
-		{
-			s.MessageAutoDeleteTime = int(0)
-		}
-	}
-}
+// Keep pointer nil to prevent infinite recursion.
 
-// SetFake set fake values.
-func (s *MessageEntity) SetFake() {
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Offset = int(0)
-		}
-	}
-	{
-		{
-			s.Length = int(0)
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-}
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
-func (s *MessageEntityType) SetFake() {
-	*s = MessageEntityTypeMention
-}
+func (s *MessageAutoDeleteTimerChanged) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MessageId) SetFake() {
-	{
-		{
-			s.MessageID = int(0)
-		}
-	}
-}
+func (s *MessageEntity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAnimation) SetFake() {
-	var elem Animation
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *MessageEntityType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAudio) SetFake() {
-	var elem Audio
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *MessageId) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBool) SetFake() {
-	var elem bool
-	{
-		elem = true
-	}
-	s.SetTo(elem)
-}
+func (s *OptAnimation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBotCommandScope) SetFake() {
-	var elem BotCommandScope
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAudio) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCallbackQuery) SetFake() {
-	var elem CallbackQuery
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBool) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChat) SetFake() {
-	var elem Chat
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBotCommandScope) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChatAdministratorRights) SetFake() {
-	var elem ChatAdministratorRights
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCallbackQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChatInviteLink) SetFake() {
-	var elem ChatInviteLink
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChat) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChatJoinRequest) SetFake() {
-	var elem ChatJoinRequest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChatAdministratorRights) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChatLocation) SetFake() {
-	var elem ChatLocation
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChatInviteLink) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChatMember) SetFake() {
-	var elem ChatMember
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChatJoinRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChatMemberUpdated) SetFake() {
-	var elem ChatMemberUpdated
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChatLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChatPermissions) SetFake() {
-	var elem ChatPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChatMember) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChatPhoto) SetFake() {
-	var elem ChatPhoto
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChatMemberUpdated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChosenInlineResult) SetFake() {
-	var elem ChosenInlineResult
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChatPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptContact) SetFake() {
-	var elem Contact
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChatPhoto) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDeleteMyCommands) SetFake() {
-	var elem DeleteMyCommands
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChosenInlineResult) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDeleteWebhook) SetFake() {
-	var elem DeleteWebhook
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptContact) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDice) SetFake() {
-	var elem Dice
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptDeleteMyCommands) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDocument) SetFake() {
-	var elem Document
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptDeleteWebhook) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFile) SetFake() {
-	var elem File
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptDice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFloat64) SetFake() {
-	var elem float64
-	{
-		elem = float64(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptDocument) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGame) SetFake() {
-	var elem Game
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGetChatMenuButton) SetFake() {
-	var elem GetChatMenuButton
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptFloat64) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGetMyCommands) SetFake() {
-	var elem GetMyCommands
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGame) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGetMyDefaultAdministratorRights) SetFake() {
-	var elem GetMyDefaultAdministratorRights
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGetChatMenuButton) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGetUpdates) SetFake() {
-	var elem GetUpdates
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGetMyCommands) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptID) SetFake() {
-	var elem ID
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGetMyDefaultAdministratorRights) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInlineKeyboardMarkup) SetFake() {
-	var elem InlineKeyboardMarkup
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGetUpdates) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInlineQuery) SetFake() {
-	var elem InlineQuery
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptID) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInlineQueryChatType) SetFake() {
-	var elem InlineQueryChatType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInlineKeyboardMarkup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInputMessageContent) SetFake() {
-	var elem InputMessageContent
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInlineQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt) SetFake() {
-	var elem int
-	{
-		elem = int(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInlineQueryChatType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt64) SetFake() {
-	var elem int64
-	{
-		elem = int64(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInputMessageContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInvoice) SetFake() {
-	var elem Invoice
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptKeyboardButtonPollType) SetFake() {
-	var elem KeyboardButtonPollType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt64) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptLocation) SetFake() {
-	var elem Location
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInvoice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptLoginUrl) SetFake() {
-	var elem LoginUrl
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptKeyboardButtonPollType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMaskPosition) SetFake() {
-	var elem MaskPosition
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMenuButton) SetFake() {
-	var elem MenuButton
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptLoginUrl) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMessage) SetFake() {
-	var elem Message
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMaskPosition) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMessageAutoDeleteTimerChanged) SetFake() {
-	var elem MessageAutoDeleteTimerChanged
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMenuButton) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMessageId) SetFake() {
-	var elem MessageId
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOrderInfo) SetFake() {
-	var elem OrderInfo
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMessageAutoDeleteTimerChanged) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPassportData) SetFake() {
-	var elem PassportData
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMessageId) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPassportFile) SetFake() {
-	var elem PassportFile
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOrderInfo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPhotoSize) SetFake() {
-	var elem PhotoSize
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPassportData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPoll) SetFake() {
-	var elem Poll
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPassportFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPollAnswer) SetFake() {
-	var elem PollAnswer
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPhotoSize) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPreCheckoutQuery) SetFake() {
-	var elem PreCheckoutQuery
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPoll) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProximityAlertTriggered) SetFake() {
-	var elem ProximityAlertTriggered
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPollAnswer) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptResponse) SetFake() {
-	var elem Response
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPreCheckoutQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptResultMessageOrBooleanResult) SetFake() {
-	var elem ResultMessageOrBooleanResult
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProximityAlertTriggered) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSendReplyMarkup) SetFake() {
-	var elem SendReplyMarkup
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSetChatMenuButton) SetFake() {
-	var elem SetChatMenuButton
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptResultMessageOrBooleanResult) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSetMyDefaultAdministratorRights) SetFake() {
-	var elem SetMyDefaultAdministratorRights
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptSendReplyMarkup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptShippingAddress) SetFake() {
-	var elem ShippingAddress
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptSetChatMenuButton) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptShippingQuery) SetFake() {
-	var elem ShippingQuery
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptSetMyDefaultAdministratorRights) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSticker) SetFake() {
-	var elem Sticker
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptShippingAddress) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptStickerSet) SetFake() {
-	var elem StickerSet
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptShippingQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptString) SetFake() {
-	var elem string
-	{
-		elem = "string"
-	}
-	s.SetTo(elem)
-}
+func (s *OptSticker) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSuccessfulPayment) SetFake() {
-	var elem SuccessfulPayment
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptStickerSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptUser) SetFake() {
-	var elem User
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptUserProfilePhotos) SetFake() {
-	var elem UserProfilePhotos
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptSuccessfulPayment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptVenue) SetFake() {
-	var elem Venue
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptVideo) SetFake() {
-	var elem Video
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptUserProfilePhotos) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptVideoChatEnded) SetFake() {
-	var elem VideoChatEnded
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptVenue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptVideoChatParticipantsInvited) SetFake() {
-	var elem VideoChatParticipantsInvited
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptVideo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptVideoChatScheduled) SetFake() {
-	var elem VideoChatScheduled
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptVideoChatEnded) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptVideoNote) SetFake() {
-	var elem VideoNote
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptVideoChatParticipantsInvited) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptVoice) SetFake() {
-	var elem Voice
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptVideoChatScheduled) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWebAppData) SetFake() {
-	var elem WebAppData
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptVideoNote) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWebAppInfo) SetFake() {
-	var elem WebAppInfo
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptVoice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWebhookInfo) SetFake() {
-	var elem WebhookInfo
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWebAppData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrderInfo) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.PhoneNumber.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.ShippingAddress.SetFake()
-		}
-	}
-}
+func (s *OptWebAppInfo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportData) SetFake() {
-	{
-		{
-			s.Data = nil
-			for i := 0; i < 0; i++ {
-				var elem EncryptedPassportElement
-				{
-					elem.SetFake()
-				}
-				s.Data = append(s.Data, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Credentials.SetFake()
-		}
-	}
-}
+func (s *OptWebhookInfo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementError) SetFake() {
-	var variant PassportElementErrorDataField
+func (s *OrderInfo) SetFake() { _ = "STUB: not implemented"; return }
 
-	{
-		variant.SetFake()
-	}
-	s.SetPassportElementErrorDataField(variant)
-}
-
 // SetFake set fake values.
-func (s *PassportElementErrorDataField) SetFake() {
-	{
-		{
-			s.Source = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.FieldName = "string"
-		}
-	}
-	{
-		{
-			s.DataHash = "string"
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PassportData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorDataFieldType) SetFake() {
-	*s = PassportElementErrorDataFieldTypePersonalDetails
-}
+func (s *PassportElementError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorFile) SetFake() {
-	{
-		{
-			s.Source = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.FileHash = "string"
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PassportElementErrorDataField) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorFileType) SetFake() {
-	*s = PassportElementErrorFileTypeUtilityBill
-}
+func (s *PassportElementErrorDataFieldType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorFiles) SetFake() {
-	{
-		{
-			s.Source = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.FileHashes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.FileHashes = append(s.FileHashes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PassportElementErrorFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorFilesType) SetFake() {
-	*s = PassportElementErrorFilesTypeUtilityBill
-}
+func (s *PassportElementErrorFileType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorFrontSide) SetFake() {
-	{
-		{
-			s.Source = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.FileHash = "string"
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PassportElementErrorFiles) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorFrontSideType) SetFake() {
-	*s = PassportElementErrorFrontSideTypePassport
-}
+func (s *PassportElementErrorFilesType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorReverseSide) SetFake() {
-	{
-		{
-			s.Source = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.FileHash = "string"
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PassportElementErrorFrontSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorReverseSideType) SetFake() {
-	*s = PassportElementErrorReverseSideTypeDriverLicense
-}
+func (s *PassportElementErrorFrontSideType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorSelfie) SetFake() {
-	{
-		{
-			s.Source = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.FileHash = "string"
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PassportElementErrorReverseSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorSelfieType) SetFake() {
-	*s = PassportElementErrorSelfieTypePassport
-}
+func (s *PassportElementErrorReverseSideType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorTranslationFile) SetFake() {
-	{
-		{
-			s.Source = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.FileHash = "string"
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PassportElementErrorSelfie) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorTranslationFileType) SetFake() {
-	*s = PassportElementErrorTranslationFileTypePassport
-}
+func (s *PassportElementErrorSelfieType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorTranslationFiles) SetFake() {
-	{
-		{
-			s.Source = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.FileHashes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.FileHashes = append(s.FileHashes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PassportElementErrorTranslationFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorTranslationFilesType) SetFake() {
-	*s = PassportElementErrorTranslationFilesTypePassport
-}
+func (s *PassportElementErrorTranslationFileType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportElementErrorUnspecified) SetFake() {
-	{
-		{
-			s.Source = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ElementHash = "string"
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PassportElementErrorTranslationFiles) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PassportFile) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-	{
-		{
-			s.FileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.FileSize = int(0)
-		}
-	}
-	{
-		{
-			s.FileDate = int(0)
-		}
-	}
-}
+func (s *PassportElementErrorTranslationFilesType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PhotoSize) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-	{
-		{
-			s.FileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.Width = int(0)
-		}
-	}
-	{
-		{
-			s.Height = int(0)
-		}
-	}
-	{
-		{
-			s.FileSize.SetFake()
-		}
-	}
-}
+func (s *PassportElementErrorUnspecified) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PinChatMessage) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID = int(0)
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-}
+func (s *PassportFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Poll) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Question = "string"
-		}
-	}
-	{
-		{
-			s.Options = nil
-			for i := 0; i < 0; i++ {
-				var elem PollOption
-				{
-					elem.SetFake()
-				}
-				s.Options = append(s.Options, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TotalVoterCount = int(0)
-		}
-	}
-	{
-		{
-			s.IsClosed = true
-		}
-	}
-	{
-		{
-			s.IsAnonymous = true
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowsMultipleAnswers = true
-		}
-	}
-	{
-		{
-			s.CorrectOptionID.SetFake()
-		}
-	}
-	{
-		{
-			s.Explanation.SetFake()
-		}
-	}
-	{
-		{
-			s.ExplanationEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.ExplanationEntities = append(s.ExplanationEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.OpenPeriod.SetFake()
-		}
-	}
-	{
-		{
-			s.CloseDate.SetFake()
-		}
-	}
-}
+func (s *PhotoSize) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PollAnswer) SetFake() {
-	{
-		{
-			s.PollID = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.OptionIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.OptionIds = append(s.OptionIds, elem)
-			}
-		}
-	}
-}
+func (s *PinChatMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PollOption) SetFake() {
-	{
-		{
-			s.Text = "string"
-		}
-	}
-	{
-		{
-			s.VoterCount = int(0)
-		}
-	}
-}
+func (s *Poll) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PollType) SetFake() {
-	*s = PollTypeRegular
-}
+func (s *PollAnswer) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PreCheckoutQuery) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.From.SetFake()
-		}
-	}
-	{
-		{
-			s.Currency = "string"
-		}
-	}
-	{
-		{
-			s.TotalAmount = int(0)
-		}
-	}
-	{
-		{
-			s.InvoicePayload = "string"
-		}
-	}
-	{
-		{
-			s.ShippingOptionID.SetFake()
-		}
-	}
-	{
-		{
-			s.OrderInfo.SetFake()
-		}
-	}
-}
+func (s *PollOption) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PromoteChatMember) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.IsAnonymous.SetFake()
-		}
-	}
-	{
-		{
-			s.CanManageChat.SetFake()
-		}
-	}
-	{
-		{
-			s.CanPostMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CanEditMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CanDeleteMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.CanManageVideoChats.SetFake()
-		}
-	}
-	{
-		{
-			s.CanRestrictMembers.SetFake()
-		}
-	}
-	{
-		{
-			s.CanPromoteMembers.SetFake()
-		}
-	}
-	{
-		{
-			s.CanChangeInfo.SetFake()
-		}
-	}
-	{
-		{
-			s.CanInviteUsers.SetFake()
-		}
-	}
-	{
-		{
-			s.CanPinMessages.SetFake()
-		}
-	}
-}
+func (s *PollType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProximityAlertTriggered) SetFake() {
-	{
-		{
-			s.Traveler.SetFake()
-		}
-	}
-	{
-		{
-			s.Watcher.SetFake()
-		}
-	}
-	{
-		{
-			s.Distance = int(0)
-		}
-	}
-}
+func (s *PreCheckoutQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReplyKeyboardMarkup) SetFake() {
-	{
-		{
-			s.Keyboard = nil
-			for i := 0; i < 0; i++ {
-				var elem []KeyboardButton
-				{
-					elem = nil
-					for i := 0; i < 0; i++ {
-						var elemElem KeyboardButton
-						{
-							elemElem.SetFake()
-						}
-						elem = append(elem, elemElem)
-					}
-				}
-				s.Keyboard = append(s.Keyboard, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ResizeKeyboard.SetFake()
-		}
-	}
-	{
-		{
-			s.OneTimeKeyboard.SetFake()
-		}
-	}
-	{
-		{
-			s.InputFieldPlaceholder.SetFake()
-		}
-	}
-	{
-		{
-			s.Selective.SetFake()
-		}
-	}
-}
+func (s *PromoteChatMember) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReplyKeyboardRemove) SetFake() {
-	{
-		{
-			s.RemoveKeyboard = true
-		}
-	}
-	{
-		{
-			s.Selective.SetFake()
-		}
-	}
-}
+func (s *ProximityAlertTriggered) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Response) SetFake() {
-	{
-		{
-			s.MigrateToChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.RetryAfter.SetFake()
-		}
-	}
-}
+func (s *ReplyKeyboardMarkup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RestrictChatMember) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.UntilDate.SetFake()
-		}
-	}
-}
+func (s *ReplyKeyboardRemove) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Result) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *Response) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultArrayOfBotCommand) SetFake() {
-	{
-		{
-			s.Result = nil
-			for i := 0; i < 0; i++ {
-				var elem BotCommand
-				{
-					elem.SetFake()
-				}
-				s.Result = append(s.Result, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *RestrictChatMember) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultArrayOfChatMember) SetFake() {
-	{
-		{
-			s.Result = nil
-			for i := 0; i < 0; i++ {
-				var elem ChatMember
-				{
-					elem.SetFake()
-				}
-				s.Result = append(s.Result, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *Result) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultArrayOfGameHighScore) SetFake() {
-	{
-		{
-			s.Result = nil
-			for i := 0; i < 0; i++ {
-				var elem GameHighScore
-				{
-					elem.SetFake()
-				}
-				s.Result = append(s.Result, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultArrayOfBotCommand) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultArrayOfMessage) SetFake() {
-	{
-		{
-			s.Result = nil
-			for i := 0; i < 0; i++ {
-				var elem Message
-				{
-					elem.SetFake()
-				}
-				s.Result = append(s.Result, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultArrayOfChatMember) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultArrayOfUpdate) SetFake() {
-	{
-		{
-			s.Result = nil
-			for i := 0; i < 0; i++ {
-				var elem Update
-				{
-					elem.SetFake()
-				}
-				s.Result = append(s.Result, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultArrayOfGameHighScore) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultChat) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultArrayOfMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultChatInviteLink) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultArrayOfUpdate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultChatMember) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultChat) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultFile) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultChatInviteLink) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultInt) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultChatMember) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultMessage) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultMessageId) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultInt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultMessageOrBoolean) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultMessageOrBooleanResult) SetFake() {
-	var variant Message
-
-	{
-		variant.SetFake()
-	}
-	s.SetMessage(variant)
-}
+func (s *ResultMessageId) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultPoll) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultMessageOrBoolean) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultStickerSet) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultMessageOrBooleanResult) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultString) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultPoll) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultUser) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultStickerSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultUserProfilePhotos) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ResultWebhookInfo) SetFake() {
-	{
-		{
-			s.Result.SetFake()
-		}
-	}
-	{
-		{
-			s.Ok = true
-		}
-	}
-}
+func (s *ResultUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RevokeChatInviteLink) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.InviteLink = "string"
-		}
-	}
-}
+func (s *ResultUserProfilePhotos) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendAnimation) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Animation = "string"
-		}
-	}
-	{
-		{
-			s.Duration.SetFake()
-		}
-	}
-	{
-		{
-			s.Width.SetFake()
-		}
-	}
-	{
-		{
-			s.Height.SetFake()
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *ResultWebhookInfo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendAudio) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Audio = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Duration.SetFake()
-		}
-	}
-	{
-		{
-			s.Performer.SetFake()
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *RevokeChatInviteLink) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendChatAction) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Action = "string"
-		}
-	}
-}
+func (s *SendAnimation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendContact) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.PhoneNumber = "string"
-		}
-	}
-	{
-		{
-			s.FirstName = "string"
-		}
-	}
-	{
-		{
-			s.LastName.SetFake()
-		}
-	}
-	{
-		{
-			s.Vcard.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendAudio) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendDice) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Emoji.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendChatAction) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendDocument) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Document = "string"
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisableContentTypeDetection.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendContact) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendGame) SetFake() {
-	{
-		{
-			s.ChatID = int64(0)
-		}
-	}
-	{
-		{
-			s.GameShortName = "string"
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendDice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendInvoice) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.Payload = "string"
-		}
-	}
-	{
-		{
-			s.ProviderToken = "string"
-		}
-	}
-	{
-		{
-			s.Currency = "string"
-		}
-	}
-	{
-		{
-			s.Prices = nil
-			for i := 0; i < 0; i++ {
-				var elem LabeledPrice
-				{
-					elem.SetFake()
-				}
-				s.Prices = append(s.Prices, elem)
-			}
-		}
-	}
-	{
-		{
-			s.MaxTipAmount.SetFake()
-		}
-	}
-	{
-		{
-			s.SuggestedTipAmounts = nil
-			for i := 0; i < 0; i++ {
-				var elem int64
-				{
-					elem = int64(0)
-				}
-				s.SuggestedTipAmounts = append(s.SuggestedTipAmounts, elem)
-			}
-		}
-	}
-	{
-		{
-			s.StartParameter.SetFake()
-		}
-	}
-	{
-		{
-			s.ProviderData.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotoURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotoSize.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotoWidth.SetFake()
-		}
-	}
-	{
-		{
-			s.PhotoHeight.SetFake()
-		}
-	}
-	{
-		{
-			s.NeedName.SetFake()
-		}
-	}
-	{
-		{
-			s.NeedPhoneNumber.SetFake()
-		}
-	}
-	{
-		{
-			s.NeedEmail.SetFake()
-		}
-	}
-	{
-		{
-			s.NeedShippingAddress.SetFake()
-		}
-	}
-	{
-		{
-			s.SendPhoneNumberToProvider.SetFake()
-		}
-	}
-	{
-		{
-			s.SendEmailToProvider.SetFake()
-		}
-	}
-	{
-		{
-			s.IsFlexible.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendDocument) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendLocation) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Latitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Longitude = float64(0)
-		}
-	}
-	{
-		{
-			s.HorizontalAccuracy.SetFake()
-		}
-	}
-	{
-		{
-			s.LivePeriod.SetFake()
-		}
-	}
-	{
-		{
-			s.Heading.SetFake()
-		}
-	}
-	{
-		{
-			s.ProximityAlertRadius.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendGame) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendMediaGroup) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Media = nil
-			for i := 0; i < 0; i++ {
-				var elem SendMediaGroupMediaItem
-				{
-					elem.SetFake()
-				}
-				s.Media = append(s.Media, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-}
+func (s *SendInvoice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendMediaGroupMediaItem) SetFake() {
-	var variant InputMediaAudio
+func (s *SendLocation) SetFake() { _ = "STUB: not implemented"; return }
 
-	{
-		variant.SetFake()
-	}
-	s.SetInputMediaAudio(variant)
-}
+// SetFake set fake values.
+func (s *SendMediaGroup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendMessage) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Text = "string"
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.Entities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.Entities = append(s.Entities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisableWebPagePreview.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendMediaGroupMediaItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendPhoto) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Photo = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendPoll) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Question = "string"
-		}
-	}
-	{
-		{
-			s.Options = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Options = append(s.Options, elem)
-			}
-		}
-	}
-	{
-		{
-			s.IsAnonymous.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowsMultipleAnswers.SetFake()
-		}
-	}
-	{
-		{
-			s.CorrectOptionID.SetFake()
-		}
-	}
-	{
-		{
-			s.Explanation.SetFake()
-		}
-	}
-	{
-		{
-			s.ExplanationParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.ExplanationEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.ExplanationEntities = append(s.ExplanationEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.OpenPeriod.SetFake()
-		}
-	}
-	{
-		{
-			s.CloseDate.SetFake()
-		}
-	}
-	{
-		{
-			s.IsClosed.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendPhoto) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendReplyMarkup) SetFake() {
-	var variant InlineKeyboardMarkup
+func (s *SendPoll) SetFake() { _ = "STUB: not implemented"; return }
 
-	{
-		variant.SetFake()
-	}
-	s.SetInlineKeyboardMarkup(variant)
-}
+// SetFake set fake values.
+func (s *SendReplyMarkup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendSticker) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Sticker = "string"
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendSticker) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendVenue) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Latitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Longitude = float64(0)
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Address = "string"
-		}
-	}
-	{
-		{
-			s.FoursquareID.SetFake()
-		}
-	}
-	{
-		{
-			s.FoursquareType.SetFake()
-		}
-	}
-	{
-		{
-			s.GooglePlaceID.SetFake()
-		}
-	}
-	{
-		{
-			s.GooglePlaceType.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendVenue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendVideo) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Video = "string"
-		}
-	}
-	{
-		{
-			s.Duration.SetFake()
-		}
-	}
-	{
-		{
-			s.Width.SetFake()
-		}
-	}
-	{
-		{
-			s.Height.SetFake()
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SupportsStreaming.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendVideo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendVideoNote) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.VideoNote = "string"
-		}
-	}
-	{
-		{
-			s.Duration.SetFake()
-		}
-	}
-	{
-		{
-			s.Length.SetFake()
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendVideoNote) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SendVoice) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Voice = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-	{
-		{
-			s.ParseMode.SetFake()
-		}
-	}
-	{
-		{
-			s.CaptionEntities = nil
-			for i := 0; i < 0; i++ {
-				var elem MessageEntity
-				{
-					elem.SetFake()
-				}
-				s.CaptionEntities = append(s.CaptionEntities, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Duration.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableNotification.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectContent.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyToMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSendingWithoutReply.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *SendVoice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetChatAdministratorCustomTitle) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.CustomTitle = "string"
-		}
-	}
-}
+func (s *SetChatAdministratorCustomTitle) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetChatDescription) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-}
+func (s *SetChatDescription) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetChatMenuButton) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MenuButton.SetFake()
-		}
-	}
-}
+func (s *SetChatMenuButton) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetChatPermissions) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-}
+func (s *SetChatPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetChatPhoto) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Photo = "string"
-		}
-	}
-}
+func (s *SetChatPhoto) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetChatStickerSet) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.StickerSetName = "string"
-		}
-	}
-}
+func (s *SetChatStickerSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetChatTitle) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-}
+func (s *SetChatTitle) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetGameScore) SetFake() {
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.Score = int(0)
-		}
-	}
-	{
-		{
-			s.Force.SetFake()
-		}
-	}
-	{
-		{
-			s.DisableEditMessage.SetFake()
-		}
-	}
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineMessageID.SetFake()
-		}
-	}
-}
+func (s *SetGameScore) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetMyCommands) SetFake() {
-	{
-		{
-			s.Commands = nil
-			for i := 0; i < 0; i++ {
-				var elem BotCommand
-				{
-					elem.SetFake()
-				}
-				s.Commands = append(s.Commands, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Scope.SetFake()
-		}
-	}
-	{
-		{
-			s.LanguageCode.SetFake()
-		}
-	}
-}
+func (s *SetMyCommands) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetMyDefaultAdministratorRights) SetFake() {
-	{
-		{
-			s.Rights.SetFake()
-		}
-	}
-	{
-		{
-			s.ForChannels.SetFake()
-		}
-	}
-}
+func (s *SetMyDefaultAdministratorRights) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetPassportDataErrors) SetFake() {
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.Errors = nil
-			for i := 0; i < 0; i++ {
-				var elem PassportElementError
-				{
-					elem.SetFake()
-				}
-				s.Errors = append(s.Errors, elem)
-			}
-		}
-	}
-}
+func (s *SetPassportDataErrors) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetStickerPositionInSet) SetFake() {
-	{
-		{
-			s.Sticker = "string"
-		}
-	}
-	{
-		{
-			s.Position = int(0)
-		}
-	}
-}
+func (s *SetStickerPositionInSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetStickerSetThumb) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-}
+func (s *SetStickerSetThumb) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SetWebhook) SetFake() {
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.Certificate.SetFake()
-		}
-	}
-	{
-		{
-			s.IPAddress.SetFake()
-		}
-	}
-	{
-		{
-			s.MaxConnections.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedUpdates = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AllowedUpdates = append(s.AllowedUpdates, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DropPendingUpdates.SetFake()
-		}
-	}
-}
+func (s *SetWebhook) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ShippingAddress) SetFake() {
-	{
-		{
-			s.CountryCode = "string"
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.City = "string"
-		}
-	}
-	{
-		{
-			s.StreetLine1 = "string"
-		}
-	}
-	{
-		{
-			s.StreetLine2 = "string"
-		}
-	}
-	{
-		{
-			s.PostCode = "string"
-		}
-	}
-}
+func (s *ShippingAddress) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ShippingOption) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Prices = nil
-			for i := 0; i < 0; i++ {
-				var elem LabeledPrice
-				{
-					elem.SetFake()
-				}
-				s.Prices = append(s.Prices, elem)
-			}
-		}
-	}
-}
+func (s *ShippingOption) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ShippingQuery) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.From.SetFake()
-		}
-	}
-	{
-		{
-			s.InvoicePayload = "string"
-		}
-	}
-	{
-		{
-			s.ShippingAddress.SetFake()
-		}
-	}
-}
+func (s *ShippingQuery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Sticker) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-	{
-		{
-			s.FileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.Width = int(0)
-		}
-	}
-	{
-		{
-			s.Height = int(0)
-		}
-	}
-	{
-		{
-			s.IsAnimated = true
-		}
-	}
-	{
-		{
-			s.IsVideo = true
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.Emoji.SetFake()
-		}
-	}
-	{
-		{
-			s.SetName.SetFake()
-		}
-	}
-	{
-		{
-			s.MaskPosition.SetFake()
-		}
-	}
-	{
-		{
-			s.FileSize.SetFake()
-		}
-	}
-}
+func (s *Sticker) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *StickerSet) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.IsAnimated = true
-		}
-	}
-	{
-		{
-			s.IsVideo = true
-		}
-	}
-	{
-		{
-			s.ContainsMasks = true
-		}
-	}
-	{
-		{
-			s.Stickers = nil
-			for i := 0; i < 0; i++ {
-				var elem Sticker
-				{
-					elem.SetFake()
-				}
-				s.Stickers = append(s.Stickers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-}
+func (s *StickerSet) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *StopMessageLiveLocation) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineMessageID.SetFake()
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *StopMessageLiveLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *StopPoll) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID = int(0)
-		}
-	}
-	{
-		{
-			s.ReplyMarkup.SetFake()
-		}
-	}
-}
+func (s *StopPoll) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SuccessfulPayment) SetFake() {
-	{
-		{
-			s.Currency = "string"
-		}
-	}
-	{
-		{
-			s.TotalAmount = int(0)
-		}
-	}
-	{
-		{
-			s.InvoicePayload = "string"
-		}
-	}
-	{
-		{
-			s.ShippingOptionID.SetFake()
-		}
-	}
-	{
-		{
-			s.OrderInfo.SetFake()
-		}
-	}
-	{
-		{
-			s.TelegramPaymentChargeID = "string"
-		}
-	}
-	{
-		{
-			s.ProviderPaymentChargeID = "string"
-		}
-	}
-}
+func (s *SuccessfulPayment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UnbanChatMember) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.OnlyIfBanned.SetFake()
-		}
-	}
-}
+func (s *UnbanChatMember) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UnbanChatSenderChat) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.SenderChatID = int64(0)
-		}
-	}
-}
+func (s *UnbanChatSenderChat) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UnpinAllChatMessages) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-}
+func (s *UnpinAllChatMessages) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UnpinChatMessage) SetFake() {
-	{
-		{
-			s.ChatID.SetFake()
-		}
-	}
-	{
-		{
-			s.MessageID.SetFake()
-		}
-	}
-}
+func (s *UnpinChatMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Update) SetFake() {
-	{
-		{
-			s.UpdateID = int(0)
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.EditedMessage.SetFake()
-		}
-	}
-	{
-		{
-			s.ChannelPost.SetFake()
-		}
-	}
-	{
-		{
-			s.EditedChannelPost.SetFake()
-		}
-	}
-	{
-		{
-			s.InlineQuery.SetFake()
-		}
-	}
-	{
-		{
-			s.ChosenInlineResult.SetFake()
-		}
-	}
-	{
-		{
-			s.CallbackQuery.SetFake()
-		}
-	}
-	{
-		{
-			s.ShippingQuery.SetFake()
-		}
-	}
-	{
-		{
-			s.PreCheckoutQuery.SetFake()
-		}
-	}
-	{
-		{
-			s.Poll.SetFake()
-		}
-	}
-	{
-		{
-			s.PollAnswer.SetFake()
-		}
-	}
-	{
-		{
-			s.MyChatMember.SetFake()
-		}
-	}
-	{
-		{
-			s.ChatMember.SetFake()
-		}
-	}
-	{
-		{
-			s.ChatJoinRequest.SetFake()
-		}
-	}
-}
+func (s *Update) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UploadStickerFile) SetFake() {
-	{
-		{
-			s.UserID = int64(0)
-		}
-	}
-	{
-		{
-			s.PNGSticker = "string"
-		}
-	}
-}
+func (s *UploadStickerFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *User) SetFake() {
-	{
-		{
-			s.ID = int64(0)
-		}
-	}
-	{
-		{
-			s.IsBot = true
-		}
-	}
-	{
-		{
-			s.FirstName = "string"
-		}
-	}
-	{
-		{
-			s.LastName.SetFake()
-		}
-	}
-	{
-		{
-			s.Username.SetFake()
-		}
-	}
-	{
-		{
-			s.LanguageCode.SetFake()
-		}
-	}
-	{
-		{
-			s.CanJoinGroups.SetFake()
-		}
-	}
-	{
-		{
-			s.CanReadAllGroupMessages.SetFake()
-		}
-	}
-	{
-		{
-			s.SupportsInlineQueries.SetFake()
-		}
-	}
-}
+func (s *User) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UserProfilePhotos) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Photos = nil
-			for i := 0; i < 0; i++ {
-				var elem []PhotoSize
-				{
-					elem = nil
-					for i := 0; i < 0; i++ {
-						var elemElem PhotoSize
-						{
-							elemElem.SetFake()
-						}
-						elem = append(elem, elemElem)
-					}
-				}
-				s.Photos = append(s.Photos, elem)
-			}
-		}
-	}
-}
+func (s *UserProfilePhotos) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Venue) SetFake() {
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Address = "string"
-		}
-	}
-	{
-		{
-			s.FoursquareID.SetFake()
-		}
-	}
-	{
-		{
-			s.FoursquareType.SetFake()
-		}
-	}
-	{
-		{
-			s.GooglePlaceID.SetFake()
-		}
-	}
-	{
-		{
-			s.GooglePlaceType.SetFake()
-		}
-	}
-}
+func (s *Venue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Video) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-	{
-		{
-			s.FileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.Width = int(0)
-		}
-	}
-	{
-		{
-			s.Height = int(0)
-		}
-	}
-	{
-		{
-			s.Duration = int(0)
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.FileName.SetFake()
-		}
-	}
-	{
-		{
-			s.MimeType.SetFake()
-		}
-	}
-	{
-		{
-			s.FileSize.SetFake()
-		}
-	}
-}
+func (s *Video) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *VideoChatEnded) SetFake() {
-	{
-		{
-			s.Duration = int(0)
-		}
-	}
-}
+func (s *VideoChatEnded) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *VideoChatParticipantsInvited) SetFake() {
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem User
-				{
-					elem.SetFake()
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-}
+func (s *VideoChatParticipantsInvited) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *VideoChatScheduled) SetFake() {
-	{
-		{
-			s.StartDate = int(0)
-		}
-	}
-}
+func (s *VideoChatScheduled) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *VideoChatStarted) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *VideoNote) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-	{
-		{
-			s.FileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.Length = int(0)
-		}
-	}
-	{
-		{
-			s.Duration = int(0)
-		}
-	}
-	{
-		{
-			s.Thumb.SetFake()
-		}
-	}
-	{
-		{
-			s.FileSize.SetFake()
-		}
-	}
-}
+func (s *VideoNote) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Voice) SetFake() {
-	{
-		{
-			s.FileID = "string"
-		}
-	}
-	{
-		{
-			s.FileUniqueID = "string"
-		}
-	}
-	{
-		{
-			s.Duration = int(0)
-		}
-	}
-	{
-		{
-			s.MimeType.SetFake()
-		}
-	}
-	{
-		{
-			s.FileSize.SetFake()
-		}
-	}
-}
+func (s *Voice) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WebAppData) SetFake() {
-	{
-		{
-			s.Data = "string"
-		}
-	}
-	{
-		{
-			s.ButtonText = "string"
-		}
-	}
-}
+func (s *WebAppData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WebAppInfo) SetFake() {
-	{
-		{
-			s.URL = "string"
-		}
-	}
-}
+func (s *WebAppInfo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WebhookInfo) SetFake() {
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.HasCustomCertificate = true
-		}
-	}
-	{
-		{
-			s.PendingUpdateCount = int(0)
-		}
-	}
-	{
-		{
-			s.IPAddress.SetFake()
-		}
-	}
-	{
-		{
-			s.LastErrorDate.SetFake()
-		}
-	}
-	{
-		{
-			s.LastErrorMessage.SetFake()
-		}
-	}
-	{
-		{
-			s.LastSynchronizationErrorDate.SetFake()
-		}
-	}
-	{
-		{
-			s.MaxConnections.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedUpdates = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AllowedUpdates = append(s.AllowedUpdates, elem)
-			}
-		}
-	}
-}
+func (s *WebhookInfo) SetFake() { _ = "STUB: not implemented"; return }

@@ -26,76 +26,49 @@ const (
 )
 
 // IsUserEvent reports whether Event is UserEvent.
-func (s Event) IsUserEvent() bool { return s.Type == UserEventEvent }
+func (s Event) IsUserEvent() bool { _ = "STUB: not implemented"; return false }
 
 // IsSystemEvent reports whether Event is SystemEvent.
-func (s Event) IsSystemEvent() bool { return s.Type == SystemEventEvent }
+func (s Event) IsSystemEvent() bool { _ = "STUB: not implemented"; return false }
 
 // IsMetricEvent reports whether Event is MetricEvent.
-func (s Event) IsMetricEvent() bool { return s.Type == MetricEventEvent }
+func (s Event) IsMetricEvent() bool { _ = "STUB: not implemented"; return false }
 
 // SetUserEvent sets Event to UserEvent.
-func (s *Event) SetUserEvent(v UserEvent) {
-	s.Type = UserEventEvent
-	s.UserEvent = v
-}
+func (s *Event) SetUserEvent(v UserEvent) { _ = "STUB: not implemented"; return }
 
 // GetUserEvent returns UserEvent and true boolean if Event is UserEvent.
 func (s Event) GetUserEvent() (v UserEvent, ok bool) {
-	if !s.IsUserEvent() {
-		return v, false
-	}
-	return s.UserEvent, true
+	_ = "STUB: not implemented"
+	return *new(UserEvent), false
 }
 
 // NewUserEventEvent returns new Event from UserEvent.
-func NewUserEventEvent(v UserEvent) Event {
-	var s Event
-	s.SetUserEvent(v)
-	return s
-}
+func NewUserEventEvent(v UserEvent) Event { _ = "STUB: not implemented"; return *new(Event) }
 
 // SetSystemEvent sets Event to SystemEvent.
-func (s *Event) SetSystemEvent(v SystemEvent) {
-	s.Type = SystemEventEvent
-	s.SystemEvent = v
-}
+func (s *Event) SetSystemEvent(v SystemEvent) { _ = "STUB: not implemented"; return }
 
 // GetSystemEvent returns SystemEvent and true boolean if Event is SystemEvent.
 func (s Event) GetSystemEvent() (v SystemEvent, ok bool) {
-	if !s.IsSystemEvent() {
-		return v, false
-	}
-	return s.SystemEvent, true
+	_ = "STUB: not implemented"
+	return *new(SystemEvent), false
 }
 
 // NewSystemEventEvent returns new Event from SystemEvent.
-func NewSystemEventEvent(v SystemEvent) Event {
-	var s Event
-	s.SetSystemEvent(v)
-	return s
-}
+func NewSystemEventEvent(v SystemEvent) Event { _ = "STUB: not implemented"; return *new(Event) }
 
 // SetMetricEvent sets Event to MetricEvent.
-func (s *Event) SetMetricEvent(v MetricEvent) {
-	s.Type = MetricEventEvent
-	s.MetricEvent = v
-}
+func (s *Event) SetMetricEvent(v MetricEvent) { _ = "STUB: not implemented"; return }
 
 // GetMetricEvent returns MetricEvent and true boolean if Event is MetricEvent.
 func (s Event) GetMetricEvent() (v MetricEvent, ok bool) {
-	if !s.IsMetricEvent() {
-		return v, false
-	}
-	return s.MetricEvent, true
+	_ = "STUB: not implemented"
+	return *new(MetricEvent), false
 }
 
 // NewMetricEventEvent returns new Event from MetricEvent.
-func NewMetricEventEvent(v MetricEvent) Event {
-	var s Event
-	s.SetMetricEvent(v)
-	return s
-}
+func NewMetricEventEvent(v MetricEvent) Event { _ = "STUB: not implemented"; return *new(Event) }
 
 // LogEventOK is response for LogEvent operation.
 type LogEventOK struct{}
@@ -110,41 +83,48 @@ type MetricEvent struct {
 
 // GetTimestamp returns the value of Timestamp.
 func (s *MetricEvent) GetTimestamp() time.Time {
-	return s.Timestamp
+	_ = "STUB: not implemented"
+
+	// GetSeverity returns the value of Severity.
+	return *new(time.Time)
 }
 
-// GetSeverity returns the value of Severity.
 func (s *MetricEvent) GetSeverity() int {
-	return s.Severity
+	_ = "STUB: not implemented"
+
+	// GetAction returns the value of Action.
+	return 0
 }
 
-// GetAction returns the value of Action.
 func (s *MetricEvent) GetAction() OptString {
-	return s.Action
+	_ = "STUB: not implemented"
+
+	// SetTimestamp sets the value of Timestamp.
+	return *new(OptString)
 }
 
-// SetTimestamp sets the value of Timestamp.
 func (s *MetricEvent) SetTimestamp(val time.Time) {
-	s.Timestamp = val
+	_ = "STUB: not implemented"
+
+	// SetSeverity sets the value of Severity.
+	return
 }
 
-// SetSeverity sets the value of Severity.
 func (s *MetricEvent) SetSeverity(val int) {
-	s.Severity = val
+	_ = "STUB: not implemented"
+
+	// SetAction sets the value of Action.
+	return
 }
 
-// SetAction sets the value of Action.
 func (s *MetricEvent) SetAction(val OptString) {
-	s.Action = val
+	_ = "STUB: not implemented"
+
+	// NewOptString returns new OptString with value set to v.
+	return
 }
 
-// NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -153,36 +133,23 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/SystemEvent
 type SystemEvent struct {
@@ -194,35 +161,47 @@ type SystemEvent struct {
 
 // GetTimestamp returns the value of Timestamp.
 func (s *SystemEvent) GetTimestamp() time.Time {
-	return s.Timestamp
+	_ = "STUB: not implemented"
+
+	// GetSeverity returns the value of Severity.
+	return *new(time.Time)
 }
 
-// GetSeverity returns the value of Severity.
 func (s *SystemEvent) GetSeverity() string {
-	return s.Severity
+	_ = "STUB: not implemented"
+
+	// GetAction returns the value of Action.
+	return ""
 }
 
-// GetAction returns the value of Action.
 func (s *SystemEvent) GetAction() OptString {
-	return s.Action
+	_ = "STUB: not implemented"
+
+	// SetTimestamp sets the value of Timestamp.
+	return *new(OptString)
 }
 
-// SetTimestamp sets the value of Timestamp.
 func (s *SystemEvent) SetTimestamp(val time.Time) {
-	s.Timestamp = val
+	_ = "STUB: not implemented"
+
+	// SetSeverity sets the value of Severity.
+	return
 }
 
-// SetSeverity sets the value of Severity.
 func (s *SystemEvent) SetSeverity(val string) {
-	s.Severity = val
+	_ = "STUB: not implemented"
+
+	// SetAction sets the value of Action.
+	return
 }
 
-// SetAction sets the value of Action.
 func (s *SystemEvent) SetAction(val OptString) {
-	s.Action = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/UserEvent
+	return
 }
 
-// Ref: #/components/schemas/UserEvent
 type UserEvent struct {
 	Timestamp time.Time `json:"timestamp"`
 	// Unique field name - discriminates UserEvent.
@@ -232,30 +211,38 @@ type UserEvent struct {
 
 // GetTimestamp returns the value of Timestamp.
 func (s *UserEvent) GetTimestamp() time.Time {
-	return s.Timestamp
+	_ = "STUB: not implemented"
+
+	// GetUserId returns the value of UserId.
+	return *new(time.Time)
 }
 
-// GetUserId returns the value of UserId.
 func (s *UserEvent) GetUserId() string {
-	return s.UserId
+	_ = "STUB: not implemented"
+
+	// GetAction returns the value of Action.
+	return ""
 }
 
-// GetAction returns the value of Action.
 func (s *UserEvent) GetAction() OptString {
-	return s.Action
+	_ = "STUB: not implemented"
+
+	// SetTimestamp sets the value of Timestamp.
+	return *new(OptString)
 }
 
-// SetTimestamp sets the value of Timestamp.
 func (s *UserEvent) SetTimestamp(val time.Time) {
-	s.Timestamp = val
+	_ = "STUB: not implemented"
+
+	// SetUserId sets the value of UserId.
+	return
 }
 
-// SetUserId sets the value of UserId.
 func (s *UserEvent) SetUserId(val string) {
-	s.UserId = val
+	_ = "STUB: not implemented"
+
+	// SetAction sets the value of Action.
+	return
 }
 
-// SetAction sets the value of Action.
-func (s *UserEvent) SetAction(val OptString) {
-	s.Action = val
-}
+func (s *UserEvent) SetAction(val OptString) { _ = "STUB: not implemented"; return }

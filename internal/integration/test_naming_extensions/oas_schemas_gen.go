@@ -3,12 +3,7 @@
 package api
 
 // NewOptPerson returns new OptPerson with value set to v.
-func NewOptPerson(v Person) OptPerson {
-	return OptPerson{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptPerson(v Person) OptPerson { _ = "STUB: not implemented"; return *new(OptPerson) }
 
 // OptPerson is optional Person.
 type OptPerson struct {
@@ -17,36 +12,23 @@ type OptPerson struct {
 }
 
 // IsSet returns true if OptPerson was set.
-func (o OptPerson) IsSet() bool { return o.Set }
+func (o OptPerson) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPerson) Reset() {
-	var v Person
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPerson) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPerson) SetTo(v Person) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPerson) SetTo(v Person) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptPerson) Get() (v Person, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptPerson) Get() (v Person, ok bool) { _ = "STUB: not implemented"; return *new(Person), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptPerson) Or(d Person) Person {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptPerson) Or(d Person) Person { _ = "STUB: not implemented"; return *new(Person) }
 
 // Ref: #/components/schemas/User
 type Person struct {
@@ -56,20 +38,24 @@ type Person struct {
 
 // GetField returns the value of Field.
 func (s *Person) GetField() string {
-	return s.Field
+	_ = "STUB: not implemented"
+
+	// GetParent returns the value of Parent.
+	return ""
 }
 
-// GetParent returns the value of Parent.
 func (s *Person) GetParent() *Person {
-	return s.Parent
+	_ = "STUB: not implemented"
+
+	// SetField sets the value of Field.
+	return nil
 }
 
-// SetField sets the value of Field.
 func (s *Person) SetField(val string) {
-	s.Field = val
+	_ = "STUB: not implemented"
+
+	// SetParent sets the value of Parent.
+	return
 }
 
-// SetParent sets the value of Parent.
-func (s *Person) SetParent(val *Person) {
-	s.Parent = val
-}
+func (s *Person) SetParent(val *Person) { _ = "STUB: not implemented"; return }

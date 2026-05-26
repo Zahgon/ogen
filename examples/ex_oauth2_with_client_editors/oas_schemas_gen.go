@@ -2,13 +2,7 @@
 
 package api
 
-import (
-	"fmt"
-)
-
-func (s *ErrorStatusCode) Error() string {
-	return fmt.Sprintf("code %d: %+v", s.StatusCode, s.Response)
-}
+func (s *ErrorStatusCode) Error() string { _ = "STUB: not implemented"; return "" }
 
 // Ref: #/components/schemas/Error
 type Error struct {
@@ -18,49 +12,57 @@ type Error struct {
 
 // GetCode returns the value of Code.
 func (s *Error) GetCode() int32 {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return 0
 }
 
-// GetMessage returns the value of Message.
 func (s *Error) GetMessage() string {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return ""
 }
 
-// SetCode sets the value of Code.
 func (s *Error) SetCode(val int32) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *Error) SetMessage(val string) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// ErrorStatusCode wraps Error with StatusCode.
+	return
 }
 
-// ErrorStatusCode wraps Error with StatusCode.
 type ErrorStatusCode struct {
 	StatusCode int
 	Response   Error
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorStatusCode) GetResponse() Error {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(Error)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
-func (s *ErrorStatusCode) SetResponse(val Error) {
-	s.Response = val
-}
+func (s *ErrorStatusCode) SetResponse(val Error) { _ = "STUB: not implemented"; return }
 
 type Oauth2Alt struct {
 	Token  string
@@ -69,23 +71,27 @@ type Oauth2Alt struct {
 
 // GetToken returns the value of Token.
 func (s *Oauth2Alt) GetToken() string {
-	return s.Token
+	_ = "STUB: not implemented"
+
+	// GetScopes returns the value of Scopes.
+	return ""
 }
 
-// GetScopes returns the value of Scopes.
 func (s *Oauth2Alt) GetScopes() []string {
-	return s.Scopes
+	_ = "STUB: not implemented"
+
+	// SetToken sets the value of Token.
+	return nil
 }
 
-// SetToken sets the value of Token.
 func (s *Oauth2Alt) SetToken(val string) {
-	s.Token = val
+	_ = "STUB: not implemented"
+
+	// SetScopes sets the value of Scopes.
+	return
 }
 
-// SetScopes sets the value of Scopes.
-func (s *Oauth2Alt) SetScopes(val []string) {
-	s.Scopes = val
-}
+func (s *Oauth2Alt) SetScopes(val []string) { _ = "STUB: not implemented"; return }
 
 type TesttestReq struct {
 	Name string `json:"name"`
@@ -93,10 +99,10 @@ type TesttestReq struct {
 
 // GetName returns the value of Name.
 func (s *TesttestReq) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return ""
 }
 
-// SetName sets the value of Name.
-func (s *TesttestReq) SetName(val string) {
-	s.Name = val
-}
+func (s *TesttestReq) SetName(val string) { _ = "STUB: not implemented"; return }

@@ -2,9 +2,7 @@ package parser
 
 import (
 	"net/url"
-	"strings"
 
-	"github.com/ogen-go/ogen/jsonpointer"
 	"github.com/ogen-go/ogen/jsonschema"
 	"github.com/ogen-go/ogen/location"
 )
@@ -65,38 +63,8 @@ type Settings struct {
 	DisallowDuplicateMethodPaths bool
 }
 
-func (s *Settings) setDefaults() {
-	if s.External == nil {
-		s.External = jsonschema.NoExternal{}
-	}
-	if s.DepthLimit == 0 {
-		s.DepthLimit = jsonpointer.DefaultDepthLimit
-	}
-	if s.RootURL == nil {
-		s.RootURL = jsonpointer.DummyURL()
-	}
-	if len(s.AuthenticationSchemes) != 0 {
-		// Make sure schemes are lowercased
-		for i, scheme := range s.AuthenticationSchemes {
-			s.AuthenticationSchemes[i] = strings.ToLower(scheme)
-		}
-	} else {
-		// Values from https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml.
-		s.AuthenticationSchemes = []string{
-			"basic",
-			"bearer",
-			"concealed",
-			"digest",
-			"dpop",
-			"gnap",
-			"hoba",
-			"mutual",
-			"negotiate",
-			"oauth",
-			"privatetoken",
-			"scram-sha-1",
-			"scram-sha-256",
-			"vapid",
-		}
-	}
-}
+func (s *Settings) setDefaults() { _ = "STUB: not implemented"; return }
+
+// Make sure schemes are lowercased
+
+// Values from https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml.

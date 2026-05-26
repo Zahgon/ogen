@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -17,61 +15,71 @@ var _ Handler = UnimplementedHandler{}
 //
 // POST /onlyForm
 func (UnimplementedHandler) OnlyForm(ctx context.Context, req *OnlyFormReq) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // OnlyMultipartFile implements onlyMultipartFile operation.
 //
 // POST /onlyMultipartFile
 func (UnimplementedHandler) OnlyMultipartFile(ctx context.Context, req *OnlyMultipartFileReq) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // OnlyMultipartForm implements onlyMultipartForm operation.
 //
 // POST /onlyMultipartForm
 func (UnimplementedHandler) OnlyMultipartForm(ctx context.Context, req *OnlyMultipartFormReq) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TestFormURLEncoded implements testFormURLEncoded operation.
 //
 // POST /testFormURLEncoded
 func (UnimplementedHandler) TestFormURLEncoded(ctx context.Context, req *TestForm) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TestMultipart implements testMultipart operation.
 //
 // POST /testMultipart
 func (UnimplementedHandler) TestMultipart(ctx context.Context, req *TestFormMultipart) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TestMultipartUpload implements testMultipartUpload operation.
 //
 // POST /testMultipartUpload
 func (UnimplementedHandler) TestMultipartUpload(ctx context.Context, req *TestMultipartUploadReq) (r *TestMultipartUploadOK, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil, nil
+
+	// TestReuseFormOptionalSchema implements testReuseFormOptionalSchema operation.
+	//
+	// POST /testReuseFormOptionalSchema
 }
 
-// TestReuseFormOptionalSchema implements testReuseFormOptionalSchema operation.
-//
-// POST /testReuseFormOptionalSchema
 func (UnimplementedHandler) TestReuseFormOptionalSchema(ctx context.Context, req OptSharedRequestMultipart) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TestReuseFormSchema implements testReuseFormSchema operation.
 //
 // POST /testReuseFormSchema
 func (UnimplementedHandler) TestReuseFormSchema(ctx context.Context, req *SharedRequestMultipart) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TestShareFormSchema implements testShareFormSchema operation.
 //
 // POST /testShareFormSchema
 func (UnimplementedHandler) TestShareFormSchema(ctx context.Context, req TestShareFormSchemaReq) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }

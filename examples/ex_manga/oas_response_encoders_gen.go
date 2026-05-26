@@ -3,207 +3,49 @@
 package api
 
 import (
-	"io"
 	"net/http"
 
-	"github.com/go-faster/errors"
-	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/uri"
 	"go.opentelemetry.io/otel/trace"
 )
 
 func encodeGetBookResponse(response GetBookRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *Book:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GetBookForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeGetPageCoverImageResponse(response GetPageCoverImageRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GetPageCoverImageOKHeaders:
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Content-Type" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Content-Type",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					return e.EncodeValue(conv.StringToString(response.ContentType))
-				}); err != nil {
-					return errors.Wrap(err, "encode Content-Type header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		writer := w
-		if closer, ok := response.Response.Data.(io.Closer); ok {
-			defer closer.Close()
-		}
-		if _, err := io.Copy(writer, response.Response); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GetPageCoverImageForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Content-Type" header.
 
 func encodeGetPageImageResponse(response GetPageImageRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GetPageImageOKHeaders:
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Content-Type" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Content-Type",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					return e.EncodeValue(conv.StringToString(response.ContentType))
-				}); err != nil {
-					return errors.Wrap(err, "encode Content-Type header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		writer := w
-		if closer, ok := response.Response.Data.(io.Closer); ok {
-			defer closer.Close()
-		}
-		if _, err := io.Copy(writer, response.Response); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GetPageImageForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
+
+// Encoding response headers.
+
+// Encode "Content-Type" header.
 
 func encodeGetPageThumbnailImageResponse(response GetPageThumbnailImageRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *GetPageThumbnailImageOKHeaders:
-		// Encoding response headers.
-		{
-			h := uri.NewHeaderEncoder(w.Header())
-			// Encode "Content-Type" header.
-			{
-				cfg := uri.HeaderParameterEncodingConfig{
-					Name:    "Content-Type",
-					Explode: false,
-				}
-				if err := h.EncodeParam(cfg, func(e uri.Encoder) error {
-					return e.EncodeValue(conv.StringToString(response.ContentType))
-				}); err != nil {
-					return errors.Wrap(err, "encode Content-Type header")
-				}
-			}
-		}
-		w.WriteHeader(200)
-
-		writer := w
-		if closer, ok := response.Response.Data.(io.Closer); ok {
-			defer closer.Close()
-		}
-		if _, err := io.Copy(writer, response.Response); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *GetPageThumbnailImageForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
+// Encoding response headers.
+
+// Encode "Content-Type" header.
+
 func encodeSearchResponse(response SearchRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SearchOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *SearchForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func encodeSearchByTagIDResponse(response SearchByTagIDRes, w http.ResponseWriter, span trace.Span) error {
-	switch response := response.(type) {
-	case *SearchByTagIDOKApplicationJSON:
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(200)
-
-		e := new(jx.Encoder)
-		response.Encode(e)
-		if _, err := e.WriteTo(w); err != nil {
-			return errors.Wrap(err, "write")
-		}
-
-		return nil
-
-	case *SearchByTagIDForbidden:
-		w.WriteHeader(403)
-
-		return nil
-
-	default:
-		return errors.Errorf("unexpected response type: %T", response)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }

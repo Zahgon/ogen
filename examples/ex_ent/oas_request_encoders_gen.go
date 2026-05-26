@@ -3,24 +3,14 @@
 package api
 
 import (
-	"bytes"
 	"net/http"
-
-	"github.com/go-faster/jx"
-	ht "github.com/ogen-go/ogen/http"
 )
 
 func encodeCreatePetRequest(
 	req *CreatePetReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -28,13 +18,7 @@ func encodeCreatePetCategoriesRequest(
 	req *CreatePetCategoriesReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -42,13 +26,7 @@ func encodeCreatePetFriendsRequest(
 	req *CreatePetFriendsReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -56,13 +34,7 @@ func encodeCreatePetOwnerRequest(
 	req *CreatePetOwnerReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -70,12 +42,6 @@ func encodeUpdatePetRequest(
 	req *UpdatePetReq,
 	r *http.Request,
 ) error {
-	const contentType = "application/json"
-	e := new(jx.Encoder)
-	{
-		req.Encode(e)
-	}
-	encoded := e.Bytes()
-	ht.SetBody(r, bytes.NewReader(encoded), contentType)
+	_ = "STUB: not implemented"
 	return nil
 }

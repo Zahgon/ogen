@@ -5,9 +5,6 @@ package api
 import (
 	"net/http"
 	"net/url"
-	"strings"
-
-	"github.com/ogen-go/ogen/uri"
 )
 
 var (
@@ -1418,15484 +1415,2055 @@ var (
 	}
 )
 
-func (s *Server) cutPrefix(path string) (string, bool) {
-	prefix := s.cfg.Prefix
-	if prefix == "" {
-		return path, true
-	}
-	if !strings.HasPrefix(path, prefix) {
-		// Prefix doesn't match.
-		return "", false
-	}
-	// Cut prefix from the path.
-	return strings.TrimPrefix(path, prefix), true
-}
+func (s *Server) cutPrefix(path string) (string, bool) { _ = "STUB: not implemented"; return "", false }
+
+// Prefix doesn't match.
+
+// Cut prefix from the path.
 
 // ServeHTTP serves http request as defined by OpenAPI v3 specification,
 // calling handler that matches the path or returning not found error.
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	elem := r.URL.Path
-	elemIsEscaped := false
-	if rawPath := r.URL.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-			elemIsEscaped = strings.ContainsRune(elem, '%')
-		}
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok || len(elem) == 0 {
-		s.notFound(w, r)
-		return
-	}
-	args := [3]string{}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case '.': // Prefix: ".well-known/openid-configuration/"
-
-				if l := len(".well-known/openid-configuration/"); len(elem) >= l && elem[0:l] == ".well-known/openid-configuration/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleGetServiceAccountIssuerOpenIDConfigurationRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: rn93AllowedHeaders,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'a': // Prefix: "api"
-
-				if l := len("api"); len(elem) >= l && elem[0:l] == "api" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case '/': // Prefix: "/"
-
-					if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						switch r.Method {
-						case "GET":
-							s.handleGetCoreAPIVersionsRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: rn61AllowedHeaders,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-					switch elem[0] {
-					case 'v': // Prefix: "v1/"
-
-						if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch r.Method {
-							case "GET":
-								s.handleGetCoreV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: rn62AllowedHeaders,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-						switch elem[0] {
-						case 'c': // Prefix: "co"
-
-							if l := len("co"); len(elem) >= l && elem[0:l] == "co" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'm': // Prefix: "mponentstatuses"
-
-								if l := len("mponentstatuses"); len(elem) >= l && elem[0:l] == "mponentstatuses" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleListCoreV1ComponentStatusRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn148AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "name"
-									// Leaf parameter, slashes are prohibited
-									idx := strings.IndexByte(elem, '/')
-									if idx >= 0 {
-										break
-									}
-									args[0] = elem
-									elem = ""
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleReadCoreV1ComponentStatusRequest([1]string{
-												args[0],
-											}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn421AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								}
-
-							case 'n': // Prefix: "nfigmaps"
-
-								if l := len("nfigmaps"); len(elem) >= l && elem[0:l] == "nfigmaps" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch r.Method {
-									case "GET":
-										s.handleListCoreV1ConfigMapForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn150AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-
-							}
-
-						case 'e': // Prefix: "e"
-
-							if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'n': // Prefix: "ndpoints"
-
-								if l := len("ndpoints"); len(elem) >= l && elem[0:l] == "ndpoints" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch r.Method {
-									case "GET":
-										s.handleListCoreV1EndpointsForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn151AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-
-							case 'v': // Prefix: "vents"
-
-								if l := len("vents"); len(elem) >= l && elem[0:l] == "vents" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch r.Method {
-									case "GET":
-										s.handleListCoreV1EventForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn153AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-
-							}
-
-						case 'l': // Prefix: "limitranges"
-
-							if l := len("limitranges"); len(elem) >= l && elem[0:l] == "limitranges" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								// Leaf node.
-								switch r.Method {
-								case "GET":
-									s.handleListCoreV1LimitRangeForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn154AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-
-						case 'n': // Prefix: "n"
-
-							if l := len("n"); len(elem) >= l && elem[0:l] == "n" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'a': // Prefix: "amespaces"
-
-								if l := len("amespaces"); len(elem) >= l && elem[0:l] == "amespaces" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleListCoreV1NamespaceRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn155AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleReadCoreV1NamespaceRequest([1]string{
-												args[0],
-											}, elemIsEscaped, w, r)
-										case "PATCH":
-											s.handlePatchCoreV1NamespaceRequest([1]string{
-												args[0],
-											}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET,PATCH",
-												allowedHeaders: rn2AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "configmaps"
-
-											if l := len("configmaps"); len(elem) >= l && elem[0:l] == "configmaps" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleListCoreV1NamespacedConfigMapRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn156AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadCoreV1NamespacedConfigMapRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchCoreV1NamespacedConfigMapRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn319AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										case 'e': // Prefix: "e"
-
-											if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'n': // Prefix: "ndpoints"
-
-												if l := len("ndpoints"); len(elem) >= l && elem[0:l] == "ndpoints" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListCoreV1NamespacedEndpointsRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn157AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleReadCoreV1NamespacedEndpointsRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchCoreV1NamespacedEndpointsRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn321AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											case 'v': // Prefix: "vents"
-
-												if l := len("vents"); len(elem) >= l && elem[0:l] == "vents" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListCoreV1NamespacedEventRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn159AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleReadCoreV1NamespacedEventRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchCoreV1NamespacedEventRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn323AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											}
-
-										case 'l': // Prefix: "limitranges"
-
-											if l := len("limitranges"); len(elem) >= l && elem[0:l] == "limitranges" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleListCoreV1NamespacedLimitRangeRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn160AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadCoreV1NamespacedLimitRangeRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchCoreV1NamespacedLimitRangeRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn325AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										case 'p': // Prefix: "p"
-
-											if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'e': // Prefix: "ersistentvolumeclaims"
-
-												if l := len("ersistentvolumeclaims"); len(elem) >= l && elem[0:l] == "ersistentvolumeclaims" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListCoreV1NamespacedPersistentVolumeClaimRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn162AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleReadCoreV1NamespacedPersistentVolumeClaimRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchCoreV1NamespacedPersistentVolumeClaimRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn327AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/status"
-
-														if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleReadCoreV1NamespacedPersistentVolumeClaimStatusRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchCoreV1NamespacedPersistentVolumeClaimStatusRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn328AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												}
-
-											case 'o': // Prefix: "od"
-
-												if l := len("od"); len(elem) >= l && elem[0:l] == "od" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 's': // Prefix: "s"
-
-													if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleListCoreV1NamespacedPodRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn163AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Match until "/"
-														idx := strings.IndexByte(elem, '/')
-														if idx < 0 {
-															idx = len(elem)
-														}
-														args[1] = elem[:idx]
-														elem = elem[idx:]
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleReadCoreV1NamespacedPodRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchCoreV1NamespacedPodRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn4AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																break
-															}
-															switch elem[0] {
-															case 'a': // Prefix: "attach"
-
-																if l := len("attach"); len(elem) >= l && elem[0:l] == "attach" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	// Leaf node.
-																	switch r.Method {
-																	case "GET":
-																		s.handleConnectCoreV1GetNamespacedPodAttachRequest([2]string{
-																			args[0],
-																			args[1],
-																		}, elemIsEscaped, w, r)
-																	case "POST":
-																		s.handleConnectCoreV1PostNamespacedPodAttachRequest([2]string{
-																			args[0],
-																			args[1],
-																		}, elemIsEscaped, w, r)
-																	default:
-																		s.notAllowed(w, r, notAllowedParams{
-																			allowedMethods: "GET,POST",
-																			allowedHeaders: rn21AllowedHeaders,
-																			acceptPost:     "",
-																			acceptPatch:    "",
-																		})
-																	}
-
-																	return
-																}
-
-															case 'e': // Prefix: "e"
-
-																if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	break
-																}
-																switch elem[0] {
-																case 'p': // Prefix: "phemeralcontainers"
-
-																	if l := len("phemeralcontainers"); len(elem) >= l && elem[0:l] == "phemeralcontainers" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		// Leaf node.
-																		switch r.Method {
-																		case "GET":
-																			s.handleReadCoreV1NamespacedPodEphemeralcontainersRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "PATCH":
-																			s.handlePatchCoreV1NamespacedPodEphemeralcontainersRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		default:
-																			s.notAllowed(w, r, notAllowedParams{
-																				allowedMethods: "GET,PATCH",
-																				allowedHeaders: rn330AllowedHeaders,
-																				acceptPost:     "",
-																				acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																			})
-																		}
-
-																		return
-																	}
-
-																case 'x': // Prefix: "xec"
-
-																	if l := len("xec"); len(elem) >= l && elem[0:l] == "xec" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		// Leaf node.
-																		switch r.Method {
-																		case "GET":
-																			s.handleConnectCoreV1GetNamespacedPodExecRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "POST":
-																			s.handleConnectCoreV1PostNamespacedPodExecRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		default:
-																			s.notAllowed(w, r, notAllowedParams{
-																				allowedMethods: "GET,POST",
-																				allowedHeaders: rn22AllowedHeaders,
-																				acceptPost:     "",
-																				acceptPatch:    "",
-																			})
-																		}
-
-																		return
-																	}
-
-																}
-
-															case 'l': // Prefix: "log"
-
-																if l := len("log"); len(elem) >= l && elem[0:l] == "log" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	// Leaf node.
-																	switch r.Method {
-																	case "GET":
-																		s.handleReadCoreV1NamespacedPodLogRequest([2]string{
-																			args[0],
-																			args[1],
-																		}, elemIsEscaped, w, r)
-																	default:
-																		s.notAllowed(w, r, notAllowedParams{
-																			allowedMethods: "GET",
-																			allowedHeaders: rn422AllowedHeaders,
-																			acceptPost:     "",
-																			acceptPatch:    "",
-																		})
-																	}
-
-																	return
-																}
-
-															case 'p': // Prefix: "p"
-
-																if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	break
-																}
-																switch elem[0] {
-																case 'o': // Prefix: "ortforward"
-
-																	if l := len("ortforward"); len(elem) >= l && elem[0:l] == "ortforward" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		// Leaf node.
-																		switch r.Method {
-																		case "GET":
-																			s.handleConnectCoreV1GetNamespacedPodPortforwardRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "POST":
-																			s.handleConnectCoreV1PostNamespacedPodPortforwardRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		default:
-																			s.notAllowed(w, r, notAllowedParams{
-																				allowedMethods: "GET,POST",
-																				allowedHeaders: rn24AllowedHeaders,
-																				acceptPost:     "",
-																				acceptPatch:    "",
-																			})
-																		}
-
-																		return
-																	}
-
-																case 'r': // Prefix: "roxy"
-
-																	if l := len("roxy"); len(elem) >= l && elem[0:l] == "roxy" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		switch r.Method {
-																		case "DELETE":
-																			s.handleConnectCoreV1DeleteNamespacedPodProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "GET":
-																			s.handleConnectCoreV1GetNamespacedPodProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "HEAD":
-																			s.handleConnectCoreV1HeadNamespacedPodProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "OPTIONS":
-																			s.handleConnectCoreV1OptionsNamespacedPodProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "PATCH":
-																			s.handleConnectCoreV1PatchNamespacedPodProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "POST":
-																			s.handleConnectCoreV1PostNamespacedPodProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "PUT":
-																			s.handleConnectCoreV1PutNamespacedPodProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		default:
-																			s.notAllowed(w, r, notAllowedParams{
-																				allowedMethods: "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
-																				allowedHeaders: rn5AllowedHeaders,
-																				acceptPost:     "",
-																				acceptPatch:    "",
-																			})
-																		}
-
-																		return
-																	}
-																	switch elem[0] {
-																	case '/': // Prefix: "/"
-
-																		if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																			elem = elem[l:]
-																		} else {
-																			break
-																		}
-
-																		// Param: "path"
-																		// Leaf parameter, slashes are prohibited
-																		idx := strings.IndexByte(elem, '/')
-																		if idx >= 0 {
-																			break
-																		}
-																		args[2] = elem
-																		elem = ""
-
-																		if len(elem) == 0 {
-																			// Leaf node.
-																			switch r.Method {
-																			case "DELETE":
-																				s.handleConnectCoreV1DeleteNamespacedPodProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "GET":
-																				s.handleConnectCoreV1GetNamespacedPodProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "HEAD":
-																				s.handleConnectCoreV1HeadNamespacedPodProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "OPTIONS":
-																				s.handleConnectCoreV1OptionsNamespacedPodProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "PATCH":
-																				s.handleConnectCoreV1PatchNamespacedPodProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "POST":
-																				s.handleConnectCoreV1PostNamespacedPodProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "PUT":
-																				s.handleConnectCoreV1PutNamespacedPodProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			default:
-																				s.notAllowed(w, r, notAllowedParams{
-																					allowedMethods: "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
-																					allowedHeaders: rn7AllowedHeaders,
-																					acceptPost:     "",
-																					acceptPatch:    "",
-																				})
-																			}
-
-																			return
-																		}
-
-																	}
-
-																}
-
-															case 's': // Prefix: "status"
-
-																if l := len("status"); len(elem) >= l && elem[0:l] == "status" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	// Leaf node.
-																	switch r.Method {
-																	case "GET":
-																		s.handleReadCoreV1NamespacedPodStatusRequest([2]string{
-																			args[0],
-																			args[1],
-																		}, elemIsEscaped, w, r)
-																	case "PATCH":
-																		s.handlePatchCoreV1NamespacedPodStatusRequest([2]string{
-																			args[0],
-																			args[1],
-																		}, elemIsEscaped, w, r)
-																	default:
-																		s.notAllowed(w, r, notAllowedParams{
-																			allowedMethods: "GET,PATCH",
-																			allowedHeaders: rn331AllowedHeaders,
-																			acceptPost:     "",
-																			acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																		})
-																	}
-
-																	return
-																}
-
-															}
-
-														}
-
-													}
-
-												case 't': // Prefix: "templates"
-
-													if l := len("templates"); len(elem) >= l && elem[0:l] == "templates" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleListCoreV1NamespacedPodTemplateRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn165AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleReadCoreV1NamespacedPodTemplateRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchCoreV1NamespacedPodTemplateRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn333AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												}
-
-											}
-
-										case 'r': // Prefix: "re"
-
-											if l := len("re"); len(elem) >= l && elem[0:l] == "re" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'p': // Prefix: "plicationcontrollers"
-
-												if l := len("plicationcontrollers"); len(elem) >= l && elem[0:l] == "plicationcontrollers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListCoreV1NamespacedReplicationControllerRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn166AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleReadCoreV1NamespacedReplicationControllerRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchCoreV1NamespacedReplicationControllerRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn335AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/s"
-
-														if l := len("/s"); len(elem) >= l && elem[0:l] == "/s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															break
-														}
-														switch elem[0] {
-														case 'c': // Prefix: "cale"
-
-															if l := len("cale"); len(elem) >= l && elem[0:l] == "cale" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleReadCoreV1NamespacedReplicationControllerScaleRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchCoreV1NamespacedReplicationControllerScaleRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn336AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-
-														case 't': // Prefix: "tatus"
-
-															if l := len("tatus"); len(elem) >= l && elem[0:l] == "tatus" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleReadCoreV1NamespacedReplicationControllerStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchCoreV1NamespacedReplicationControllerStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn338AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												}
-
-											case 's': // Prefix: "sourcequotas"
-
-												if l := len("sourcequotas"); len(elem) >= l && elem[0:l] == "sourcequotas" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListCoreV1NamespacedResourceQuotaRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn168AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleReadCoreV1NamespacedResourceQuotaRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchCoreV1NamespacedResourceQuotaRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn340AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/status"
-
-														if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleReadCoreV1NamespacedResourceQuotaStatusRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchCoreV1NamespacedResourceQuotaStatusRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn341AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												}
-
-											}
-
-										case 's': // Prefix: "s"
-
-											if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'e': // Prefix: "e"
-
-												if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'c': // Prefix: "crets"
-
-													if l := len("crets"); len(elem) >= l && elem[0:l] == "crets" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleListCoreV1NamespacedSecretRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn170AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleReadCoreV1NamespacedSecretRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchCoreV1NamespacedSecretRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn343AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												case 'r': // Prefix: "rvice"
-
-													if l := len("rvice"); len(elem) >= l && elem[0:l] == "rvice" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case 'a': // Prefix: "accounts"
-
-														if l := len("accounts"); len(elem) >= l && elem[0:l] == "accounts" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleListCoreV1NamespacedServiceAccountRequest([1]string{
-																	args[0],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn173AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleReadCoreV1NamespacedServiceAccountRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchCoreV1NamespacedServiceAccountRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn345AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													case 's': // Prefix: "s"
-
-														if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleListCoreV1NamespacedServiceRequest([1]string{
-																	args[0],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn171AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Match until "/"
-															idx := strings.IndexByte(elem, '/')
-															if idx < 0 {
-																idx = len(elem)
-															}
-															args[1] = elem[:idx]
-															elem = elem[idx:]
-
-															if len(elem) == 0 {
-																switch r.Method {
-																case "GET":
-																	s.handleReadCoreV1NamespacedServiceRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchCoreV1NamespacedServiceRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn10AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-															switch elem[0] {
-															case '/': // Prefix: "/"
-
-																if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	break
-																}
-																switch elem[0] {
-																case 'p': // Prefix: "proxy"
-
-																	if l := len("proxy"); len(elem) >= l && elem[0:l] == "proxy" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		switch r.Method {
-																		case "DELETE":
-																			s.handleConnectCoreV1DeleteNamespacedServiceProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "GET":
-																			s.handleConnectCoreV1GetNamespacedServiceProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "HEAD":
-																			s.handleConnectCoreV1HeadNamespacedServiceProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "OPTIONS":
-																			s.handleConnectCoreV1OptionsNamespacedServiceProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "PATCH":
-																			s.handleConnectCoreV1PatchNamespacedServiceProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "POST":
-																			s.handleConnectCoreV1PostNamespacedServiceProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "PUT":
-																			s.handleConnectCoreV1PutNamespacedServiceProxyRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		default:
-																			s.notAllowed(w, r, notAllowedParams{
-																				allowedMethods: "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
-																				allowedHeaders: rn11AllowedHeaders,
-																				acceptPost:     "",
-																				acceptPatch:    "",
-																			})
-																		}
-
-																		return
-																	}
-																	switch elem[0] {
-																	case '/': // Prefix: "/"
-
-																		if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																			elem = elem[l:]
-																		} else {
-																			break
-																		}
-
-																		// Param: "path"
-																		// Leaf parameter, slashes are prohibited
-																		idx := strings.IndexByte(elem, '/')
-																		if idx >= 0 {
-																			break
-																		}
-																		args[2] = elem
-																		elem = ""
-
-																		if len(elem) == 0 {
-																			// Leaf node.
-																			switch r.Method {
-																			case "DELETE":
-																				s.handleConnectCoreV1DeleteNamespacedServiceProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "GET":
-																				s.handleConnectCoreV1GetNamespacedServiceProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "HEAD":
-																				s.handleConnectCoreV1HeadNamespacedServiceProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "OPTIONS":
-																				s.handleConnectCoreV1OptionsNamespacedServiceProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "PATCH":
-																				s.handleConnectCoreV1PatchNamespacedServiceProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "POST":
-																				s.handleConnectCoreV1PostNamespacedServiceProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			case "PUT":
-																				s.handleConnectCoreV1PutNamespacedServiceProxyWithPathRequest([3]string{
-																					args[0],
-																					args[1],
-																					args[2],
-																				}, elemIsEscaped, w, r)
-																			default:
-																				s.notAllowed(w, r, notAllowedParams{
-																					allowedMethods: "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
-																					allowedHeaders: rn13AllowedHeaders,
-																					acceptPost:     "",
-																					acceptPatch:    "",
-																				})
-																			}
-
-																			return
-																		}
-
-																	}
-
-																case 's': // Prefix: "status"
-
-																	if l := len("status"); len(elem) >= l && elem[0:l] == "status" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		// Leaf node.
-																		switch r.Method {
-																		case "GET":
-																			s.handleReadCoreV1NamespacedServiceStatusRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		case "PATCH":
-																			s.handlePatchCoreV1NamespacedServiceStatusRequest([2]string{
-																				args[0],
-																				args[1],
-																			}, elemIsEscaped, w, r)
-																		default:
-																			s.notAllowed(w, r, notAllowedParams{
-																				allowedMethods: "GET,PATCH",
-																				allowedHeaders: rn347AllowedHeaders,
-																				acceptPost:     "",
-																				acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																			})
-																		}
-
-																		return
-																	}
-
-																}
-
-															}
-
-														}
-
-													}
-
-												}
-
-											case 't': // Prefix: "tatus"
-
-												if l := len("tatus"); len(elem) >= l && elem[0:l] == "tatus" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadCoreV1NamespaceStatusRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchCoreV1NamespaceStatusRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn317AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'o': // Prefix: "odes"
-
-								if l := len("odes"); len(elem) >= l && elem[0:l] == "odes" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleListCoreV1NodeRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn174AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "name"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleReadCoreV1NodeRequest([1]string{
-												args[0],
-											}, elemIsEscaped, w, r)
-										case "PATCH":
-											s.handlePatchCoreV1NodeRequest([1]string{
-												args[0],
-											}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET,PATCH",
-												allowedHeaders: rn16AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'p': // Prefix: "proxy"
-
-											if l := len("proxy"); len(elem) >= l && elem[0:l] == "proxy" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "DELETE":
-													s.handleConnectCoreV1DeleteNodeProxyRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "GET":
-													s.handleConnectCoreV1GetNodeProxyRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "HEAD":
-													s.handleConnectCoreV1HeadNodeProxyRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "OPTIONS":
-													s.handleConnectCoreV1OptionsNodeProxyRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handleConnectCoreV1PatchNodeProxyRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "POST":
-													s.handleConnectCoreV1PostNodeProxyRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PUT":
-													s.handleConnectCoreV1PutNodeProxyRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
-														allowedHeaders: rn17AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "path"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "DELETE":
-														s.handleConnectCoreV1DeleteNodeProxyWithPathRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "GET":
-														s.handleConnectCoreV1GetNodeProxyWithPathRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "HEAD":
-														s.handleConnectCoreV1HeadNodeProxyWithPathRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "OPTIONS":
-														s.handleConnectCoreV1OptionsNodeProxyWithPathRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handleConnectCoreV1PatchNodeProxyWithPathRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "POST":
-														s.handleConnectCoreV1PostNodeProxyWithPathRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PUT":
-														s.handleConnectCoreV1PutNodeProxyWithPathRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
-															allowedHeaders: rn19AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										case 's': // Prefix: "status"
-
-											if l := len("status"); len(elem) >= l && elem[0:l] == "status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadCoreV1NodeStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchCoreV1NodeStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn349AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						case 'p': // Prefix: "p"
-
-							if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'e': // Prefix: "ersistentvolume"
-
-								if l := len("ersistentvolume"); len(elem) >= l && elem[0:l] == "ersistentvolume" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "claims"
-
-									if l := len("claims"); len(elem) >= l && elem[0:l] == "claims" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListCoreV1PersistentVolumeClaimForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn177AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 's': // Prefix: "s"
-
-									if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListCoreV1PersistentVolumeRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn175AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleReadCoreV1PersistentVolumeRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchCoreV1PersistentVolumeRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn351AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/status"
-
-											if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadCoreV1PersistentVolumeStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchCoreV1PersistentVolumeStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn352AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'o': // Prefix: "od"
-
-								if l := len("od"); len(elem) >= l && elem[0:l] == "od" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 's': // Prefix: "s"
-
-									if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListCoreV1PodForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn179AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 't': // Prefix: "templates"
-
-									if l := len("templates"); len(elem) >= l && elem[0:l] == "templates" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListCoreV1PodTemplateForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn181AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								}
-
-							}
-
-						case 'r': // Prefix: "re"
-
-							if l := len("re"); len(elem) >= l && elem[0:l] == "re" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'p': // Prefix: "plicationcontrollers"
-
-								if l := len("plicationcontrollers"); len(elem) >= l && elem[0:l] == "plicationcontrollers" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch r.Method {
-									case "GET":
-										s.handleListCoreV1ReplicationControllerForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn182AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-
-							case 's': // Prefix: "sourcequotas"
-
-								if l := len("sourcequotas"); len(elem) >= l && elem[0:l] == "sourcequotas" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch r.Method {
-									case "GET":
-										s.handleListCoreV1ResourceQuotaForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn184AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-
-							}
-
-						case 's': // Prefix: "se"
-
-							if l := len("se"); len(elem) >= l && elem[0:l] == "se" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'c': // Prefix: "crets"
-
-								if l := len("crets"); len(elem) >= l && elem[0:l] == "crets" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch r.Method {
-									case "GET":
-										s.handleListCoreV1SecretForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn185AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-
-							case 'r': // Prefix: "rvice"
-
-								if l := len("rvice"); len(elem) >= l && elem[0:l] == "rvice" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'a': // Prefix: "accounts"
-
-									if l := len("accounts"); len(elem) >= l && elem[0:l] == "accounts" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListCoreV1ServiceAccountForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn187AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 's': // Prefix: "s"
-
-									if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListCoreV1ServiceForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn189AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								}
-
-							}
-
-						case 'w': // Prefix: "watch/"
-
-							if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'c': // Prefix: "configmaps"
-
-								if l := len("configmaps"); len(elem) >= l && elem[0:l] == "configmaps" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch r.Method {
-									case "GET":
-										s.handleWatchCoreV1ConfigMapListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn512AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-
-							case 'e': // Prefix: "e"
-
-								if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'n': // Prefix: "ndpoints"
-
-									if l := len("ndpoints"); len(elem) >= l && elem[0:l] == "ndpoints" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleWatchCoreV1EndpointsListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn514AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'v': // Prefix: "vents"
-
-									if l := len("vents"); len(elem) >= l && elem[0:l] == "vents" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleWatchCoreV1EventListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn516AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								}
-
-							case 'l': // Prefix: "limitranges"
-
-								if l := len("limitranges"); len(elem) >= l && elem[0:l] == "limitranges" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch r.Method {
-									case "GET":
-										s.handleWatchCoreV1LimitRangeListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn517AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-
-							case 'n': // Prefix: "n"
-
-								if l := len("n"); len(elem) >= l && elem[0:l] == "n" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'a': // Prefix: "amespaces"
-
-									if l := len("amespaces"); len(elem) >= l && elem[0:l] == "amespaces" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleWatchCoreV1NamespaceListRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn520AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchCoreV1NamespaceRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn519AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'c': // Prefix: "configmaps"
-
-												if l := len("configmaps"); len(elem) >= l && elem[0:l] == "configmaps" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleWatchCoreV1NamespacedConfigMapListRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn523AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleWatchCoreV1NamespacedConfigMapRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn522AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											case 'e': // Prefix: "e"
-
-												if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'n': // Prefix: "ndpoints"
-
-													if l := len("ndpoints"); len(elem) >= l && elem[0:l] == "ndpoints" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchCoreV1NamespacedEndpointsListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn527AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchCoreV1NamespacedEndpointsRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn526AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												case 'v': // Prefix: "vents"
-
-													if l := len("vents"); len(elem) >= l && elem[0:l] == "vents" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchCoreV1NamespacedEventListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn531AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchCoreV1NamespacedEventRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn530AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												}
-
-											case 'l': // Prefix: "limitranges"
-
-												if l := len("limitranges"); len(elem) >= l && elem[0:l] == "limitranges" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleWatchCoreV1NamespacedLimitRangeListRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn534AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleWatchCoreV1NamespacedLimitRangeRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn533AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											case 'p': // Prefix: "p"
-
-												if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'e': // Prefix: "ersistentvolumeclaims"
-
-													if l := len("ersistentvolumeclaims"); len(elem) >= l && elem[0:l] == "ersistentvolumeclaims" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchCoreV1NamespacedPersistentVolumeClaimListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn537AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchCoreV1NamespacedPersistentVolumeClaimRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn536AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												case 'o': // Prefix: "od"
-
-													if l := len("od"); len(elem) >= l && elem[0:l] == "od" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case 's': // Prefix: "s"
-
-														if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleWatchCoreV1NamespacedPodListRequest([1]string{
-																	args[0],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn541AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleWatchCoreV1NamespacedPodRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET",
-																		allowedHeaders: rn540AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													case 't': // Prefix: "templates"
-
-														if l := len("templates"); len(elem) >= l && elem[0:l] == "templates" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleWatchCoreV1NamespacedPodTemplateListRequest([1]string{
-																	args[0],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn545AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleWatchCoreV1NamespacedPodTemplateRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET",
-																		allowedHeaders: rn544AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												}
-
-											case 'r': // Prefix: "re"
-
-												if l := len("re"); len(elem) >= l && elem[0:l] == "re" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'p': // Prefix: "plicationcontrollers"
-
-													if l := len("plicationcontrollers"); len(elem) >= l && elem[0:l] == "plicationcontrollers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchCoreV1NamespacedReplicationControllerListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn548AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchCoreV1NamespacedReplicationControllerRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn547AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												case 's': // Prefix: "sourcequotas"
-
-													if l := len("sourcequotas"); len(elem) >= l && elem[0:l] == "sourcequotas" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchCoreV1NamespacedResourceQuotaListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn552AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchCoreV1NamespacedResourceQuotaRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn551AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												}
-
-											case 's': // Prefix: "se"
-
-												if l := len("se"); len(elem) >= l && elem[0:l] == "se" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'c': // Prefix: "crets"
-
-													if l := len("crets"); len(elem) >= l && elem[0:l] == "crets" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchCoreV1NamespacedSecretListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn555AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchCoreV1NamespacedSecretRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn554AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												case 'r': // Prefix: "rvice"
-
-													if l := len("rvice"); len(elem) >= l && elem[0:l] == "rvice" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case 'a': // Prefix: "accounts"
-
-														if l := len("accounts"); len(elem) >= l && elem[0:l] == "accounts" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleWatchCoreV1NamespacedServiceAccountListRequest([1]string{
-																	args[0],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn562AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleWatchCoreV1NamespacedServiceAccountRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET",
-																		allowedHeaders: rn561AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													case 's': // Prefix: "s"
-
-														if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleWatchCoreV1NamespacedServiceListRequest([1]string{
-																	args[0],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn563AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleWatchCoreV1NamespacedServiceRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET",
-																		allowedHeaders: rn558AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'o': // Prefix: "odes"
-
-									if l := len("odes"); len(elem) >= l && elem[0:l] == "odes" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleWatchCoreV1NodeListRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn567AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchCoreV1NodeRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn566AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								}
-
-							case 'p': // Prefix: "p"
-
-								if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "ersistentvolume"
-
-									if l := len("ersistentvolume"); len(elem) >= l && elem[0:l] == "ersistentvolume" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "claims"
-
-										if l := len("claims"); len(elem) >= l && elem[0:l] == "claims" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchCoreV1PersistentVolumeClaimListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn571AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchCoreV1PersistentVolumeListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn572AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchCoreV1PersistentVolumeRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn569AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'o': // Prefix: "od"
-
-									if l := len("od"); len(elem) >= l && elem[0:l] == "od" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchCoreV1PodListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn574AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 't': // Prefix: "templates"
-
-										if l := len("templates"); len(elem) >= l && elem[0:l] == "templates" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchCoreV1PodTemplateListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn576AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								}
-
-							case 'r': // Prefix: "re"
-
-								if l := len("re"); len(elem) >= l && elem[0:l] == "re" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'p': // Prefix: "plicationcontrollers"
-
-									if l := len("plicationcontrollers"); len(elem) >= l && elem[0:l] == "plicationcontrollers" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleWatchCoreV1ReplicationControllerListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn577AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 's': // Prefix: "sourcequotas"
-
-									if l := len("sourcequotas"); len(elem) >= l && elem[0:l] == "sourcequotas" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleWatchCoreV1ResourceQuotaListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn579AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								}
-
-							case 's': // Prefix: "se"
-
-								if l := len("se"); len(elem) >= l && elem[0:l] == "se" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "crets"
-
-									if l := len("crets"); len(elem) >= l && elem[0:l] == "crets" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleWatchCoreV1SecretListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn580AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'r': // Prefix: "rvice"
-
-									if l := len("rvice"); len(elem) >= l && elem[0:l] == "rvice" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'a': // Prefix: "accounts"
-
-										if l := len("accounts"); len(elem) >= l && elem[0:l] == "accounts" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchCoreV1ServiceAccountListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn582AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchCoreV1ServiceListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn584AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					}
-
-				case 's': // Prefix: "s/"
-
-					if l := len("s/"); len(elem) >= l && elem[0:l] == "s/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						switch r.Method {
-						case "GET":
-							s.handleGetAPIVersionsRequest([0]string{}, elemIsEscaped, w, r)
-						default:
-							s.notAllowed(w, r, notAllowedParams{
-								allowedMethods: "GET",
-								allowedHeaders: rn26AllowedHeaders,
-								acceptPost:     "",
-								acceptPatch:    "",
-							})
-						}
-
-						return
-					}
-					switch elem[0] {
-					case 'a': // Prefix: "a"
-
-						if l := len("a"); len(elem) >= l && elem[0:l] == "a" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'd': // Prefix: "dmissionregistration.k8s.io/"
-
-							if l := len("dmissionregistration.k8s.io/"); len(elem) >= l && elem[0:l] == "dmissionregistration.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch r.Method {
-								case "GET":
-									s.handleGetAdmissionregistrationAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn27AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1/"
-
-								if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetAdmissionregistrationV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn28AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'm': // Prefix: "mutatingwebhookconfigurations"
-
-									if l := len("mutatingwebhookconfigurations"); len(elem) >= l && elem[0:l] == "mutatingwebhookconfigurations" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListAdmissionregistrationV1MutatingWebhookConfigurationRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn101AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleReadAdmissionregistrationV1MutatingWebhookConfigurationRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchAdmissionregistrationV1MutatingWebhookConfigurationRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn262AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								case 'v': // Prefix: "validatingwebhookconfigurations"
-
-									if l := len("validatingwebhookconfigurations"); len(elem) >= l && elem[0:l] == "validatingwebhookconfigurations" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListAdmissionregistrationV1ValidatingWebhookConfigurationRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn102AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleReadAdmissionregistrationV1ValidatingWebhookConfigurationRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchAdmissionregistrationV1ValidatingWebhookConfigurationRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn264AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'm': // Prefix: "mutatingwebhookconfigurations"
-
-										if l := len("mutatingwebhookconfigurations"); len(elem) >= l && elem[0:l] == "mutatingwebhookconfigurations" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchAdmissionregistrationV1MutatingWebhookConfigurationListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn425AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchAdmissionregistrationV1MutatingWebhookConfigurationRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn424AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 'v': // Prefix: "validatingwebhookconfigurations"
-
-										if l := len("validatingwebhookconfigurations"); len(elem) >= l && elem[0:l] == "validatingwebhookconfigurations" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchAdmissionregistrationV1ValidatingWebhookConfigurationListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn429AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchAdmissionregistrationV1ValidatingWebhookConfigurationRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn428AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						case 'p': // Prefix: "p"
-
-							if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'i': // Prefix: "i"
-
-								if l := len("i"); len(elem) >= l && elem[0:l] == "i" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "extensions.k8s.io/"
-
-									if l := len("extensions.k8s.io/"); len(elem) >= l && elem[0:l] == "extensions.k8s.io/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetApiextensionsAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn30AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'v': // Prefix: "v1/"
-
-										if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleGetApiextensionsV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn31AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "customresourcedefinitions"
-
-											if l := len("customresourcedefinitions"); len(elem) >= l && elem[0:l] == "customresourcedefinitions" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleListApiextensionsV1CustomResourceDefinitionRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn103AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[0] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleReadApiextensionsV1CustomResourceDefinitionRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchApiextensionsV1CustomResourceDefinitionRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn266AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/status"
-
-													if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleReadApiextensionsV1CustomResourceDefinitionStatusRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchApiextensionsV1CustomResourceDefinitionStatusRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn267AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											}
-
-										case 'w': // Prefix: "watch/customresourcedefinitions"
-
-											if l := len("watch/customresourcedefinitions"); len(elem) >= l && elem[0:l] == "watch/customresourcedefinitions" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchApiextensionsV1CustomResourceDefinitionListRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn432AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchApiextensionsV1CustomResourceDefinitionRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn431AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'r': // Prefix: "registration.k8s.io/"
-
-									if l := len("registration.k8s.io/"); len(elem) >= l && elem[0:l] == "registration.k8s.io/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetApiregistrationAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn33AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'v': // Prefix: "v1/"
-
-										if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleGetApiregistrationV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn34AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case 'a': // Prefix: "apiservices"
-
-											if l := len("apiservices"); len(elem) >= l && elem[0:l] == "apiservices" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleListApiregistrationV1APIServiceRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn104AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[0] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleReadApiregistrationV1APIServiceRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchApiregistrationV1APIServiceRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn269AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/status"
-
-													if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleReadApiregistrationV1APIServiceStatusRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchApiregistrationV1APIServiceStatusRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn270AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											}
-
-										case 'w': // Prefix: "watch/apiservices"
-
-											if l := len("watch/apiservices"); len(elem) >= l && elem[0:l] == "watch/apiservices" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchApiregistrationV1APIServiceListRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn435AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchApiregistrationV1APIServiceRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn434AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'p': // Prefix: "ps/"
-
-								if l := len("ps/"); len(elem) >= l && elem[0:l] == "ps/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetAppsAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn36AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'v': // Prefix: "v1/"
-
-									if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetAppsV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn37AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "controllerrevisions"
-
-										if l := len("controllerrevisions"); len(elem) >= l && elem[0:l] == "controllerrevisions" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleListAppsV1ControllerRevisionForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn105AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'd': // Prefix: "d"
-
-										if l := len("d"); len(elem) >= l && elem[0:l] == "d" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'a': // Prefix: "aemonsets"
-
-											if l := len("aemonsets"); len(elem) >= l && elem[0:l] == "aemonsets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleListAppsV1DaemonSetForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn106AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										case 'e': // Prefix: "eployments"
-
-											if l := len("eployments"); len(elem) >= l && elem[0:l] == "eployments" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleListAppsV1DeploymentForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn108AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'c': // Prefix: "controllerrevisions"
-
-												if l := len("controllerrevisions"); len(elem) >= l && elem[0:l] == "controllerrevisions" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListAppsV1NamespacedControllerRevisionRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn111AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleReadAppsV1NamespacedControllerRevisionRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchAppsV1NamespacedControllerRevisionRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn272AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											case 'd': // Prefix: "d"
-
-												if l := len("d"); len(elem) >= l && elem[0:l] == "d" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'a': // Prefix: "aemonsets"
-
-													if l := len("aemonsets"); len(elem) >= l && elem[0:l] == "aemonsets" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleListAppsV1NamespacedDaemonSetRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn113AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Match until "/"
-														idx := strings.IndexByte(elem, '/')
-														if idx < 0 {
-															idx = len(elem)
-														}
-														args[1] = elem[:idx]
-														elem = elem[idx:]
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleReadAppsV1NamespacedDaemonSetRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchAppsV1NamespacedDaemonSetRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn274AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/status"
-
-															if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleReadAppsV1NamespacedDaemonSetStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchAppsV1NamespacedDaemonSetStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn275AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												case 'e': // Prefix: "eployments"
-
-													if l := len("eployments"); len(elem) >= l && elem[0:l] == "eployments" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleListAppsV1NamespacedDeploymentRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn115AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Match until "/"
-														idx := strings.IndexByte(elem, '/')
-														if idx < 0 {
-															idx = len(elem)
-														}
-														args[1] = elem[:idx]
-														elem = elem[idx:]
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleReadAppsV1NamespacedDeploymentRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchAppsV1NamespacedDeploymentRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn277AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/s"
-
-															if l := len("/s"); len(elem) >= l && elem[0:l] == "/s" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																break
-															}
-															switch elem[0] {
-															case 'c': // Prefix: "cale"
-
-																if l := len("cale"); len(elem) >= l && elem[0:l] == "cale" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	// Leaf node.
-																	switch r.Method {
-																	case "GET":
-																		s.handleReadAppsV1NamespacedDeploymentScaleRequest([2]string{
-																			args[0],
-																			args[1],
-																		}, elemIsEscaped, w, r)
-																	case "PATCH":
-																		s.handlePatchAppsV1NamespacedDeploymentScaleRequest([2]string{
-																			args[0],
-																			args[1],
-																		}, elemIsEscaped, w, r)
-																	default:
-																		s.notAllowed(w, r, notAllowedParams{
-																			allowedMethods: "GET,PATCH",
-																			allowedHeaders: rn278AllowedHeaders,
-																			acceptPost:     "",
-																			acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																		})
-																	}
-
-																	return
-																}
-
-															case 't': // Prefix: "tatus"
-
-																if l := len("tatus"); len(elem) >= l && elem[0:l] == "tatus" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	// Leaf node.
-																	switch r.Method {
-																	case "GET":
-																		s.handleReadAppsV1NamespacedDeploymentStatusRequest([2]string{
-																			args[0],
-																			args[1],
-																		}, elemIsEscaped, w, r)
-																	case "PATCH":
-																		s.handlePatchAppsV1NamespacedDeploymentStatusRequest([2]string{
-																			args[0],
-																			args[1],
-																		}, elemIsEscaped, w, r)
-																	default:
-																		s.notAllowed(w, r, notAllowedParams{
-																			allowedMethods: "GET,PATCH",
-																			allowedHeaders: rn280AllowedHeaders,
-																			acceptPost:     "",
-																			acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																		})
-																	}
-
-																	return
-																}
-
-															}
-
-														}
-
-													}
-
-												}
-
-											case 'r': // Prefix: "replicasets"
-
-												if l := len("replicasets"); len(elem) >= l && elem[0:l] == "replicasets" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListAppsV1NamespacedReplicaSetRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn116AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleReadAppsV1NamespacedReplicaSetRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchAppsV1NamespacedReplicaSetRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn282AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/s"
-
-														if l := len("/s"); len(elem) >= l && elem[0:l] == "/s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															break
-														}
-														switch elem[0] {
-														case 'c': // Prefix: "cale"
-
-															if l := len("cale"); len(elem) >= l && elem[0:l] == "cale" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleReadAppsV1NamespacedReplicaSetScaleRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchAppsV1NamespacedReplicaSetScaleRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn283AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-
-														case 't': // Prefix: "tatus"
-
-															if l := len("tatus"); len(elem) >= l && elem[0:l] == "tatus" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleReadAppsV1NamespacedReplicaSetStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchAppsV1NamespacedReplicaSetStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn285AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												}
-
-											case 's': // Prefix: "statefulsets"
-
-												if l := len("statefulsets"); len(elem) >= l && elem[0:l] == "statefulsets" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListAppsV1NamespacedStatefulSetRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn117AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleReadAppsV1NamespacedStatefulSetRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchAppsV1NamespacedStatefulSetRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn287AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/s"
-
-														if l := len("/s"); len(elem) >= l && elem[0:l] == "/s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															break
-														}
-														switch elem[0] {
-														case 'c': // Prefix: "cale"
-
-															if l := len("cale"); len(elem) >= l && elem[0:l] == "cale" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleReadAppsV1NamespacedStatefulSetScaleRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchAppsV1NamespacedStatefulSetScaleRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn288AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-
-														case 't': // Prefix: "tatus"
-
-															if l := len("tatus"); len(elem) >= l && elem[0:l] == "tatus" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleReadAppsV1NamespacedStatefulSetStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchAppsV1NamespacedStatefulSetStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn290AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												}
-
-											}
-
-										}
-
-									case 'r': // Prefix: "replicasets"
-
-										if l := len("replicasets"); len(elem) >= l && elem[0:l] == "replicasets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleListAppsV1ReplicaSetForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn118AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 's': // Prefix: "statefulsets"
-
-										if l := len("statefulsets"); len(elem) >= l && elem[0:l] == "statefulsets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleListAppsV1StatefulSetForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn119AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'w': // Prefix: "watch/"
-
-										if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "controllerrevisions"
-
-											if l := len("controllerrevisions"); len(elem) >= l && elem[0:l] == "controllerrevisions" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchAppsV1ControllerRevisionListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn436AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										case 'd': // Prefix: "d"
-
-											if l := len("d"); len(elem) >= l && elem[0:l] == "d" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'a': // Prefix: "aemonsets"
-
-												if l := len("aemonsets"); len(elem) >= l && elem[0:l] == "aemonsets" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchAppsV1DaemonSetListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn438AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											case 'e': // Prefix: "eployments"
-
-												if l := len("eployments"); len(elem) >= l && elem[0:l] == "eployments" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchAppsV1DeploymentListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn440AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										case 'n': // Prefix: "namespaces/"
-
-											if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "namespace"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'c': // Prefix: "controllerrevisions"
-
-													if l := len("controllerrevisions"); len(elem) >= l && elem[0:l] == "controllerrevisions" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchAppsV1NamespacedControllerRevisionListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn445AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchAppsV1NamespacedControllerRevisionRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn444AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												case 'd': // Prefix: "d"
-
-													if l := len("d"); len(elem) >= l && elem[0:l] == "d" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case 'a': // Prefix: "aemonsets"
-
-														if l := len("aemonsets"); len(elem) >= l && elem[0:l] == "aemonsets" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleWatchAppsV1NamespacedDaemonSetListRequest([1]string{
-																	args[0],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn449AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleWatchAppsV1NamespacedDaemonSetRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET",
-																		allowedHeaders: rn448AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													case 'e': // Prefix: "eployments"
-
-														if l := len("eployments"); len(elem) >= l && elem[0:l] == "eployments" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleWatchAppsV1NamespacedDeploymentListRequest([1]string{
-																	args[0],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn453AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleWatchAppsV1NamespacedDeploymentRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET",
-																		allowedHeaders: rn452AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												case 'r': // Prefix: "replicasets"
-
-													if l := len("replicasets"); len(elem) >= l && elem[0:l] == "replicasets" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchAppsV1NamespacedReplicaSetListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn456AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchAppsV1NamespacedReplicaSetRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn455AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												case 's': // Prefix: "statefulsets"
-
-													if l := len("statefulsets"); len(elem) >= l && elem[0:l] == "statefulsets" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchAppsV1NamespacedStatefulSetListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn459AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchAppsV1NamespacedStatefulSetRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn458AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												}
-
-											}
-
-										case 'r': // Prefix: "replicasets"
-
-											if l := len("replicasets"); len(elem) >= l && elem[0:l] == "replicasets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchAppsV1ReplicaSetListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn460AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										case 's': // Prefix: "statefulsets"
-
-											if l := len("statefulsets"); len(elem) >= l && elem[0:l] == "statefulsets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchAppsV1StatefulSetListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn461AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						case 'u': // Prefix: "ut"
-
-							if l := len("ut"); len(elem) >= l && elem[0:l] == "ut" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'h': // Prefix: "h"
-
-								if l := len("h"); len(elem) >= l && elem[0:l] == "h" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "entication.k8s.io/"
-
-									if l := len("entication.k8s.io/"); len(elem) >= l && elem[0:l] == "entication.k8s.io/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetAuthenticationAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn38AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'v': // Prefix: "v1/"
-
-										if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleGetAuthenticationV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn39AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								case 'o': // Prefix: "orization.k8s.io/"
-
-									if l := len("orization.k8s.io/"); len(elem) >= l && elem[0:l] == "orization.k8s.io/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetAuthorizationAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn41AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'v': // Prefix: "v1/"
-
-										if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleGetAuthorizationV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn42AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								}
-
-							case 'o': // Prefix: "oscaling/"
-
-								if l := len("oscaling/"); len(elem) >= l && elem[0:l] == "oscaling/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetAutoscalingAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn44AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'v': // Prefix: "v"
-
-									if l := len("v"); len(elem) >= l && elem[0:l] == "v" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '1': // Prefix: "1/"
-
-										if l := len("1/"); len(elem) >= l && elem[0:l] == "1/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleGetAutoscalingV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn45AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case 'h': // Prefix: "horizontalpodautoscalers"
-
-											if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleListAutoscalingV1HorizontalPodAutoscalerForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn120AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										case 'n': // Prefix: "namespaces/"
-
-											if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "namespace"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/horizontalpodautoscalers"
-
-												if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListAutoscalingV1NamespacedHorizontalPodAutoscalerRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn123AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleReadAutoscalingV1NamespacedHorizontalPodAutoscalerRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchAutoscalingV1NamespacedHorizontalPodAutoscalerRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn292AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/status"
-
-														if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleReadAutoscalingV1NamespacedHorizontalPodAutoscalerStatusRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn293AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												}
-
-											}
-
-										case 'w': // Prefix: "watch/"
-
-											if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'h': // Prefix: "horizontalpodautoscalers"
-
-												if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchAutoscalingV1HorizontalPodAutoscalerListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn462AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											case 'n': // Prefix: "namespaces/"
-
-												if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "namespace"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[0] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/horizontalpodautoscalers"
-
-													if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchAutoscalingV1NamespacedHorizontalPodAutoscalerListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn468AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchAutoscalingV1NamespacedHorizontalPodAutoscalerRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn467AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												}
-
-											}
-
-										}
-
-									case '2': // Prefix: "2beta"
-
-										if l := len("2beta"); len(elem) >= l && elem[0:l] == "2beta" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '1': // Prefix: "1/"
-
-											if l := len("1/"); len(elem) >= l && elem[0:l] == "1/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleGetAutoscalingV2beta1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn47AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case 'h': // Prefix: "horizontalpodautoscalers"
-
-												if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleListAutoscalingV2beta1HorizontalPodAutoscalerForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn124AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											case 'n': // Prefix: "namespaces/"
-
-												if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "namespace"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[0] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/horizontalpodautoscalers"
-
-													if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleListAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn127AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Match until "/"
-														idx := strings.IndexByte(elem, '/')
-														if idx < 0 {
-															idx = len(elem)
-														}
-														args[1] = elem[:idx]
-														elem = elem[idx:]
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn295AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/status"
-
-															if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn296AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												}
-
-											case 'w': // Prefix: "watch/"
-
-												if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'h': // Prefix: "horizontalpodautoscalers"
-
-													if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleWatchAutoscalingV2beta1HorizontalPodAutoscalerListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn469AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-
-												case 'n': // Prefix: "namespaces/"
-
-													if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "namespace"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[0] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/horizontalpodautoscalers"
-
-														if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleWatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerListRequest([1]string{
-																	args[0],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn475AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleWatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET",
-																		allowedHeaders: rn474AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												}
-
-											}
-
-										case '2': // Prefix: "2/"
-
-											if l := len("2/"); len(elem) >= l && elem[0:l] == "2/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleGetAutoscalingV2beta2APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn49AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case 'h': // Prefix: "horizontalpodautoscalers"
-
-												if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleListAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn128AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											case 'n': // Prefix: "namespaces/"
-
-												if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "namespace"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[0] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/horizontalpodautoscalers"
-
-													if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleListAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn131AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Match until "/"
-														idx := strings.IndexByte(elem, '/')
-														if idx < 0 {
-															idx = len(elem)
-														}
-														args[1] = elem[:idx]
-														elem = elem[idx:]
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn298AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/status"
-
-															if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																case "PATCH":
-																	s.handlePatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET,PATCH",
-																		allowedHeaders: rn299AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												}
-
-											case 'w': // Prefix: "watch/"
-
-												if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'h': // Prefix: "horizontalpodautoscalers"
-
-													if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleWatchAutoscalingV2beta2HorizontalPodAutoscalerListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn476AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-
-												case 'n': // Prefix: "namespaces/"
-
-													if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "namespace"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[0] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/horizontalpodautoscalers"
-
-														if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch r.Method {
-															case "GET":
-																s.handleWatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerListRequest([1]string{
-																	args[0],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn482AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch r.Method {
-																case "GET":
-																	s.handleWatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerRequest([2]string{
-																		args[0],
-																		args[1],
-																	}, elemIsEscaped, w, r)
-																default:
-																	s.notAllowed(w, r, notAllowedParams{
-																		allowedMethods: "GET",
-																		allowedHeaders: rn481AllowedHeaders,
-																		acceptPost:     "",
-																		acceptPatch:    "",
-																	})
-																}
-
-																return
-															}
-
-														}
-
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'b': // Prefix: "batch/"
-
-						if l := len("batch/"); len(elem) >= l && elem[0:l] == "batch/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch r.Method {
-							case "GET":
-								s.handleGetBatchAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: rn50AllowedHeaders,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1"
-
-							if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case '/': // Prefix: "/"
-
-								if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetBatchV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn51AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "cronjobs"
-
-									if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListBatchV1CronJobForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn132AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'j': // Prefix: "jobs"
-
-									if l := len("jobs"); len(elem) >= l && elem[0:l] == "jobs" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListBatchV1JobForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn133AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "cronjobs"
-
-											if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleListBatchV1NamespacedCronJobRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn136AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[1] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleReadBatchV1NamespacedCronJobRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchBatchV1NamespacedCronJobRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn301AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/status"
-
-													if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleReadBatchV1NamespacedCronJobStatusRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchBatchV1NamespacedCronJobStatusRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn302AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											}
-
-										case 'j': // Prefix: "jobs"
-
-											if l := len("jobs"); len(elem) >= l && elem[0:l] == "jobs" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleListBatchV1NamespacedJobRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn138AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[1] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleReadBatchV1NamespacedJobRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchBatchV1NamespacedJobRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn304AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/status"
-
-													if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleReadBatchV1NamespacedJobStatusRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchBatchV1NamespacedJobStatusRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn305AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "cronjobs"
-
-										if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchBatchV1CronJobListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn483AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'j': // Prefix: "jobs"
-
-										if l := len("jobs"); len(elem) >= l && elem[0:l] == "jobs" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchBatchV1JobListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn485AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'c': // Prefix: "cronjobs"
-
-												if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleWatchBatchV1NamespacedCronJobListRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn490AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleWatchBatchV1NamespacedCronJobRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn489AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											case 'j': // Prefix: "jobs"
-
-												if l := len("jobs"); len(elem) >= l && elem[0:l] == "jobs" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleWatchBatchV1NamespacedJobListRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn494AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleWatchBatchV1NamespacedJobRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn493AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'b': // Prefix: "beta1/"
-
-								if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetBatchV1beta1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn53AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "cronjobs"
-
-									if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListBatchV1beta1CronJobForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn139AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/cronjobs"
-
-										if l := len("/cronjobs"); len(elem) >= l && elem[0:l] == "/cronjobs" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListBatchV1beta1NamespacedCronJobRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn142AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[1] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleReadBatchV1beta1NamespacedCronJobRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchBatchV1beta1NamespacedCronJobRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn307AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/status"
-
-												if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadBatchV1beta1NamespacedCronJobStatusRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchBatchV1beta1NamespacedCronJobStatusRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn308AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "cronjobs"
-
-										if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchBatchV1beta1CronJobListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn495AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/cronjobs"
-
-											if l := len("/cronjobs"); len(elem) >= l && elem[0:l] == "/cronjobs" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchBatchV1beta1NamespacedCronJobListRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn501AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchBatchV1beta1NamespacedCronJobRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn500AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'c': // Prefix: "c"
-
-						if l := len("c"); len(elem) >= l && elem[0:l] == "c" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'e': // Prefix: "ertificates.k8s.io/"
-
-							if l := len("ertificates.k8s.io/"); len(elem) >= l && elem[0:l] == "ertificates.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch r.Method {
-								case "GET":
-									s.handleGetCertificatesAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn54AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1/"
-
-								if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetCertificatesV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn55AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "certificatesigningrequests"
-
-									if l := len("certificatesigningrequests"); len(elem) >= l && elem[0:l] == "certificatesigningrequests" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListCertificatesV1CertificateSigningRequestRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn143AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleReadCertificatesV1CertificateSigningRequestRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchCertificatesV1CertificateSigningRequestRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn310AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'a': // Prefix: "approval"
-
-												if l := len("approval"); len(elem) >= l && elem[0:l] == "approval" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadCertificatesV1CertificateSigningRequestApprovalRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchCertificatesV1CertificateSigningRequestApprovalRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn311AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											case 's': // Prefix: "status"
-
-												if l := len("status"); len(elem) >= l && elem[0:l] == "status" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadCertificatesV1CertificateSigningRequestStatusRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchCertificatesV1CertificateSigningRequestStatusRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn313AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/certificatesigningrequests"
-
-									if l := len("watch/certificatesigningrequests"); len(elem) >= l && elem[0:l] == "watch/certificatesigningrequests" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleWatchCertificatesV1CertificateSigningRequestListRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn504AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchCertificatesV1CertificateSigningRequestRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn503AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								}
-
-							}
-
-						case 'o': // Prefix: "oordination.k8s.io/"
-
-							if l := len("oordination.k8s.io/"); len(elem) >= l && elem[0:l] == "oordination.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch r.Method {
-								case "GET":
-									s.handleGetCoordinationAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn59AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1/"
-
-								if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetCoordinationV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn60AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'l': // Prefix: "leases"
-
-									if l := len("leases"); len(elem) >= l && elem[0:l] == "leases" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListCoordinationV1LeaseForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn144AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/leases"
-
-										if l := len("/leases"); len(elem) >= l && elem[0:l] == "/leases" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListCoordinationV1NamespacedLeaseRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn147AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadCoordinationV1NamespacedLeaseRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchCoordinationV1NamespacedLeaseRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn315AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'l': // Prefix: "leases"
-
-										if l := len("leases"); len(elem) >= l && elem[0:l] == "leases" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchCoordinationV1LeaseListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn505AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/leases"
-
-											if l := len("/leases"); len(elem) >= l && elem[0:l] == "/leases" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchCoordinationV1NamespacedLeaseListRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn511AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchCoordinationV1NamespacedLeaseRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn510AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'd': // Prefix: "discovery.k8s.io/"
-
-						if l := len("discovery.k8s.io/"); len(elem) >= l && elem[0:l] == "discovery.k8s.io/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch r.Method {
-							case "GET":
-								s.handleGetDiscoveryAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: rn63AllowedHeaders,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1"
-
-							if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case '/': // Prefix: "/"
-
-								if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetDiscoveryV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn64AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "endpointslices"
-
-									if l := len("endpointslices"); len(elem) >= l && elem[0:l] == "endpointslices" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListDiscoveryV1EndpointSliceForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn190AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/endpointslices"
-
-										if l := len("/endpointslices"); len(elem) >= l && elem[0:l] == "/endpointslices" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListDiscoveryV1NamespacedEndpointSliceRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn193AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadDiscoveryV1NamespacedEndpointSliceRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchDiscoveryV1NamespacedEndpointSliceRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn354AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'e': // Prefix: "endpointslices"
-
-										if l := len("endpointslices"); len(elem) >= l && elem[0:l] == "endpointslices" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchDiscoveryV1EndpointSliceListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn585AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/endpointslices"
-
-											if l := len("/endpointslices"); len(elem) >= l && elem[0:l] == "/endpointslices" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchDiscoveryV1NamespacedEndpointSliceListRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn591AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchDiscoveryV1NamespacedEndpointSliceRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn590AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'b': // Prefix: "beta1/"
-
-								if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetDiscoveryV1beta1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn66AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "endpointslices"
-
-									if l := len("endpointslices"); len(elem) >= l && elem[0:l] == "endpointslices" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListDiscoveryV1beta1EndpointSliceForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn194AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/endpointslices"
-
-										if l := len("/endpointslices"); len(elem) >= l && elem[0:l] == "/endpointslices" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListDiscoveryV1beta1NamespacedEndpointSliceRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn197AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadDiscoveryV1beta1NamespacedEndpointSliceRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchDiscoveryV1beta1NamespacedEndpointSliceRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn356AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'e': // Prefix: "endpointslices"
-
-										if l := len("endpointslices"); len(elem) >= l && elem[0:l] == "endpointslices" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchDiscoveryV1beta1EndpointSliceListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn592AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/endpointslices"
-
-											if l := len("/endpointslices"); len(elem) >= l && elem[0:l] == "/endpointslices" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchDiscoveryV1beta1NamespacedEndpointSliceListRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn598AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchDiscoveryV1beta1NamespacedEndpointSliceRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn597AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'e': // Prefix: "events.k8s.io/"
-
-						if l := len("events.k8s.io/"); len(elem) >= l && elem[0:l] == "events.k8s.io/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch r.Method {
-							case "GET":
-								s.handleGetEventsAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: rn67AllowedHeaders,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1"
-
-							if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case '/': // Prefix: "/"
-
-								if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetEventsV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn68AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "events"
-
-									if l := len("events"); len(elem) >= l && elem[0:l] == "events" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListEventsV1EventForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn198AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/events"
-
-										if l := len("/events"); len(elem) >= l && elem[0:l] == "/events" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListEventsV1NamespacedEventRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn201AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadEventsV1NamespacedEventRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchEventsV1NamespacedEventRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn358AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'e': // Prefix: "events"
-
-										if l := len("events"); len(elem) >= l && elem[0:l] == "events" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchEventsV1EventListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn599AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/events"
-
-											if l := len("/events"); len(elem) >= l && elem[0:l] == "/events" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchEventsV1NamespacedEventListRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn605AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchEventsV1NamespacedEventRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn604AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'b': // Prefix: "beta1/"
-
-								if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetEventsV1beta1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn70AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "events"
-
-									if l := len("events"); len(elem) >= l && elem[0:l] == "events" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListEventsV1beta1EventForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn202AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/events"
-
-										if l := len("/events"); len(elem) >= l && elem[0:l] == "/events" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListEventsV1beta1NamespacedEventRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn205AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadEventsV1beta1NamespacedEventRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchEventsV1beta1NamespacedEventRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn360AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'e': // Prefix: "events"
-
-										if l := len("events"); len(elem) >= l && elem[0:l] == "events" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchEventsV1beta1EventListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn606AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/events"
-
-											if l := len("/events"); len(elem) >= l && elem[0:l] == "/events" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchEventsV1beta1NamespacedEventListRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn612AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchEventsV1beta1NamespacedEventRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn611AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'f': // Prefix: "flowcontrol.apiserver.k8s.io/"
-
-						if l := len("flowcontrol.apiserver.k8s.io/"); len(elem) >= l && elem[0:l] == "flowcontrol.apiserver.k8s.io/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch r.Method {
-							case "GET":
-								s.handleGetFlowcontrolApiserverAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: rn71AllowedHeaders,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1beta"
-
-							if l := len("v1beta"); len(elem) >= l && elem[0:l] == "v1beta" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case '1': // Prefix: "1/"
-
-								if l := len("1/"); len(elem) >= l && elem[0:l] == "1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetFlowcontrolApiserverV1beta1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn72AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'f': // Prefix: "flowschemas"
-
-									if l := len("flowschemas"); len(elem) >= l && elem[0:l] == "flowschemas" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListFlowcontrolApiserverV1beta1FlowSchemaRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn206AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleReadFlowcontrolApiserverV1beta1FlowSchemaRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchFlowcontrolApiserverV1beta1FlowSchemaRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn362AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/status"
-
-											if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadFlowcontrolApiserverV1beta1FlowSchemaStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchFlowcontrolApiserverV1beta1FlowSchemaStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn363AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'p': // Prefix: "prioritylevelconfigurations"
-
-									if l := len("prioritylevelconfigurations"); len(elem) >= l && elem[0:l] == "prioritylevelconfigurations" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListFlowcontrolApiserverV1beta1PriorityLevelConfigurationRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn207AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn365AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/status"
-
-											if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn366AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'f': // Prefix: "flowschemas"
-
-										if l := len("flowschemas"); len(elem) >= l && elem[0:l] == "flowschemas" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchFlowcontrolApiserverV1beta1FlowSchemaListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn615AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchFlowcontrolApiserverV1beta1FlowSchemaRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn614AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 'p': // Prefix: "prioritylevelconfigurations"
-
-										if l := len("prioritylevelconfigurations"); len(elem) >= l && elem[0:l] == "prioritylevelconfigurations" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn619AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn618AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								}
-
-							case '2': // Prefix: "2/"
-
-								if l := len("2/"); len(elem) >= l && elem[0:l] == "2/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetFlowcontrolApiserverV1beta2APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn74AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'f': // Prefix: "flowschemas"
-
-									if l := len("flowschemas"); len(elem) >= l && elem[0:l] == "flowschemas" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListFlowcontrolApiserverV1beta2FlowSchemaRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn208AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleReadFlowcontrolApiserverV1beta2FlowSchemaRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchFlowcontrolApiserverV1beta2FlowSchemaRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn368AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/status"
-
-											if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadFlowcontrolApiserverV1beta2FlowSchemaStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchFlowcontrolApiserverV1beta2FlowSchemaStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn369AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'p': // Prefix: "prioritylevelconfigurations"
-
-									if l := len("prioritylevelconfigurations"); len(elem) >= l && elem[0:l] == "prioritylevelconfigurations" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListFlowcontrolApiserverV1beta2PriorityLevelConfigurationRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn209AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn371AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/status"
-
-											if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn372AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'f': // Prefix: "flowschemas"
-
-										if l := len("flowschemas"); len(elem) >= l && elem[0:l] == "flowschemas" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchFlowcontrolApiserverV1beta2FlowSchemaListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn622AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchFlowcontrolApiserverV1beta2FlowSchemaRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn621AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 'p': // Prefix: "prioritylevelconfigurations"
-
-										if l := len("prioritylevelconfigurations"); len(elem) >= l && elem[0:l] == "prioritylevelconfigurations" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn626AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn625AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'i': // Prefix: "internal.apiserver.k8s.io/"
-
-						if l := len("internal.apiserver.k8s.io/"); len(elem) >= l && elem[0:l] == "internal.apiserver.k8s.io/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch r.Method {
-							case "GET":
-								s.handleGetInternalApiserverAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: rn75AllowedHeaders,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1alpha1/"
-
-							if l := len("v1alpha1/"); len(elem) >= l && elem[0:l] == "v1alpha1/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch r.Method {
-								case "GET":
-									s.handleGetInternalApiserverV1alpha1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn76AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-							switch elem[0] {
-							case 's': // Prefix: "storageversions"
-
-								if l := len("storageversions"); len(elem) >= l && elem[0:l] == "storageversions" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleListInternalApiserverV1alpha1StorageVersionRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn210AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "name"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleReadInternalApiserverV1alpha1StorageVersionRequest([1]string{
-												args[0],
-											}, elemIsEscaped, w, r)
-										case "PATCH":
-											s.handlePatchInternalApiserverV1alpha1StorageVersionRequest([1]string{
-												args[0],
-											}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET,PATCH",
-												allowedHeaders: rn374AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/status"
-
-										if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleReadInternalApiserverV1alpha1StorageVersionStatusRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchInternalApiserverV1alpha1StorageVersionStatusRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn375AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								}
-
-							case 'w': // Prefix: "watch/storageversions"
-
-								if l := len("watch/storageversions"); len(elem) >= l && elem[0:l] == "watch/storageversions" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleWatchInternalApiserverV1alpha1StorageVersionListRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn629AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "name"
-									// Leaf parameter, slashes are prohibited
-									idx := strings.IndexByte(elem, '/')
-									if idx >= 0 {
-										break
-									}
-									args[0] = elem
-									elem = ""
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleWatchInternalApiserverV1alpha1StorageVersionRequest([1]string{
-												args[0],
-											}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn628AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'n': // Prefix: "n"
-
-						if l := len("n"); len(elem) >= l && elem[0:l] == "n" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'e': // Prefix: "etworking.k8s.io/"
-
-							if l := len("etworking.k8s.io/"); len(elem) >= l && elem[0:l] == "etworking.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch r.Method {
-								case "GET":
-									s.handleGetNetworkingAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn77AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1/"
-
-								if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetNetworkingV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn78AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'i': // Prefix: "ingress"
-
-									if l := len("ingress"); len(elem) >= l && elem[0:l] == "ingress" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "classes"
-
-										if l := len("classes"); len(elem) >= l && elem[0:l] == "classes" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListNetworkingV1IngressClassRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn211AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadNetworkingV1IngressClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchNetworkingV1IngressClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn377AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 'e': // Prefix: "es"
-
-										if l := len("es"); len(elem) >= l && elem[0:l] == "es" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleListNetworkingV1IngressForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn213AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								case 'n': // Prefix: "n"
-
-									if l := len("n"); len(elem) >= l && elem[0:l] == "n" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'a': // Prefix: "amespaces/"
-
-										if l := len("amespaces/"); len(elem) >= l && elem[0:l] == "amespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'i': // Prefix: "ingresses"
-
-												if l := len("ingresses"); len(elem) >= l && elem[0:l] == "ingresses" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListNetworkingV1NamespacedIngressRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn216AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleReadNetworkingV1NamespacedIngressRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchNetworkingV1NamespacedIngressRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn379AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/status"
-
-														if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleReadNetworkingV1NamespacedIngressStatusRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															case "PATCH":
-																s.handlePatchNetworkingV1NamespacedIngressStatusRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET,PATCH",
-																	allowedHeaders: rn380AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												}
-
-											case 'n': // Prefix: "networkpolicies"
-
-												if l := len("networkpolicies"); len(elem) >= l && elem[0:l] == "networkpolicies" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleListNetworkingV1NamespacedNetworkPolicyRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn218AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleReadNetworkingV1NamespacedNetworkPolicyRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														case "PATCH":
-															s.handlePatchNetworkingV1NamespacedNetworkPolicyRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET,PATCH",
-																allowedHeaders: rn382AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											}
-
-										}
-
-									case 'e': // Prefix: "etworkpolicies"
-
-										if l := len("etworkpolicies"); len(elem) >= l && elem[0:l] == "etworkpolicies" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleListNetworkingV1NetworkPolicyForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn220AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'i': // Prefix: "ingress"
-
-										if l := len("ingress"); len(elem) >= l && elem[0:l] == "ingress" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "classes"
-
-											if l := len("classes"); len(elem) >= l && elem[0:l] == "classes" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchNetworkingV1IngressClassListRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn632AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchNetworkingV1IngressClassRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn631AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										case 'e': // Prefix: "es"
-
-											if l := len("es"); len(elem) >= l && elem[0:l] == "es" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchNetworkingV1IngressListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn634AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 'n': // Prefix: "n"
-
-										if l := len("n"); len(elem) >= l && elem[0:l] == "n" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'a': // Prefix: "amespaces/"
-
-											if l := len("amespaces/"); len(elem) >= l && elem[0:l] == "amespaces/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "namespace"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'i': // Prefix: "ingresses"
-
-													if l := len("ingresses"); len(elem) >= l && elem[0:l] == "ingresses" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchNetworkingV1NamespacedIngressListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn640AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchNetworkingV1NamespacedIngressRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn639AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												case 'n': // Prefix: "networkpolicies"
-
-													if l := len("networkpolicies"); len(elem) >= l && elem[0:l] == "networkpolicies" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch r.Method {
-														case "GET":
-															s.handleWatchNetworkingV1NamespacedNetworkPolicyListRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn644AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch r.Method {
-															case "GET":
-																s.handleWatchNetworkingV1NamespacedNetworkPolicyRequest([2]string{
-																	args[0],
-																	args[1],
-																}, elemIsEscaped, w, r)
-															default:
-																s.notAllowed(w, r, notAllowedParams{
-																	allowedMethods: "GET",
-																	allowedHeaders: rn643AllowedHeaders,
-																	acceptPost:     "",
-																	acceptPatch:    "",
-																})
-															}
-
-															return
-														}
-
-													}
-
-												}
-
-											}
-
-										case 'e': // Prefix: "etworkpolicies"
-
-											if l := len("etworkpolicies"); len(elem) >= l && elem[0:l] == "etworkpolicies" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchNetworkingV1NetworkPolicyListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn646AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						case 'o': // Prefix: "ode.k8s.io/"
-
-							if l := len("ode.k8s.io/"); len(elem) >= l && elem[0:l] == "ode.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch r.Method {
-								case "GET":
-									s.handleGetNodeAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn80AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1"
-
-								if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetNodeV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn81AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'r': // Prefix: "runtimeclasses"
-
-										if l := len("runtimeclasses"); len(elem) >= l && elem[0:l] == "runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListNodeV1RuntimeClassRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn221AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadNodeV1RuntimeClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchNodeV1RuntimeClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn384AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/runtimeclasses"
-
-										if l := len("watch/runtimeclasses"); len(elem) >= l && elem[0:l] == "watch/runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchNodeV1RuntimeClassListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn649AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchNodeV1RuntimeClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn648AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'a': // Prefix: "alpha1/"
-
-									if l := len("alpha1/"); len(elem) >= l && elem[0:l] == "alpha1/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetNodeV1alpha1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn83AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'r': // Prefix: "runtimeclasses"
-
-										if l := len("runtimeclasses"); len(elem) >= l && elem[0:l] == "runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListNodeV1alpha1RuntimeClassRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn222AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadNodeV1alpha1RuntimeClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchNodeV1alpha1RuntimeClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn386AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/runtimeclasses"
-
-										if l := len("watch/runtimeclasses"); len(elem) >= l && elem[0:l] == "watch/runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchNodeV1alpha1RuntimeClassListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn652AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchNodeV1alpha1RuntimeClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn651AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'b': // Prefix: "beta1/"
-
-									if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetNodeV1beta1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn84AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'r': // Prefix: "runtimeclasses"
-
-										if l := len("runtimeclasses"); len(elem) >= l && elem[0:l] == "runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListNodeV1beta1RuntimeClassRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn223AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadNodeV1beta1RuntimeClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchNodeV1beta1RuntimeClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn388AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/runtimeclasses"
-
-										if l := len("watch/runtimeclasses"); len(elem) >= l && elem[0:l] == "watch/runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchNodeV1beta1RuntimeClassListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn655AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchNodeV1beta1RuntimeClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn654AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'p': // Prefix: "policy/"
-
-						if l := len("policy/"); len(elem) >= l && elem[0:l] == "policy/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch r.Method {
-							case "GET":
-								s.handleGetPolicyAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: rn85AllowedHeaders,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1"
-
-							if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case '/': // Prefix: "/"
-
-								if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetPolicyV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn86AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/poddisruptionbudgets"
-
-										if l := len("/poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "/poddisruptionbudgets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListPolicyV1NamespacedPodDisruptionBudgetRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn226AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[1] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleReadPolicyV1NamespacedPodDisruptionBudgetRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchPolicyV1NamespacedPodDisruptionBudgetRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn390AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/status"
-
-												if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadPolicyV1NamespacedPodDisruptionBudgetStatusRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchPolicyV1NamespacedPodDisruptionBudgetStatusRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn391AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'p': // Prefix: "poddisruptionbudgets"
-
-									if l := len("poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "poddisruptionbudgets" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListPolicyV1PodDisruptionBudgetForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn227AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/poddisruptionbudgets"
-
-											if l := len("/poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "/poddisruptionbudgets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchPolicyV1NamespacedPodDisruptionBudgetListRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn660AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchPolicyV1NamespacedPodDisruptionBudgetRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn659AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									case 'p': // Prefix: "poddisruptionbudgets"
-
-										if l := len("poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "poddisruptionbudgets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchPolicyV1PodDisruptionBudgetListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn662AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								}
-
-							case 'b': // Prefix: "beta1/"
-
-								if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetPolicyV1beta1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn88AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/poddisruptionbudgets"
-
-										if l := len("/poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "/poddisruptionbudgets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListPolicyV1beta1NamespacedPodDisruptionBudgetRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn230AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[1] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleReadPolicyV1beta1NamespacedPodDisruptionBudgetRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchPolicyV1beta1NamespacedPodDisruptionBudgetRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn393AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/status"
-
-												if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadPolicyV1beta1NamespacedPodDisruptionBudgetStatusRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn394AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'p': // Prefix: "pod"
-
-									if l := len("pod"); len(elem) >= l && elem[0:l] == "pod" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'd': // Prefix: "disruptionbudgets"
-
-										if l := len("disruptionbudgets"); len(elem) >= l && elem[0:l] == "disruptionbudgets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleListPolicyV1beta1PodDisruptionBudgetForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn231AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 's': // Prefix: "securitypolicies"
-
-										if l := len("securitypolicies"); len(elem) >= l && elem[0:l] == "securitypolicies" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListPolicyV1beta1PodSecurityPolicyRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn233AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadPolicyV1beta1PodSecurityPolicyRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchPolicyV1beta1PodSecurityPolicyRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn396AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/poddisruptionbudgets"
-
-											if l := len("/poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "/poddisruptionbudgets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchPolicyV1beta1NamespacedPodDisruptionBudgetListRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn667AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchPolicyV1beta1NamespacedPodDisruptionBudgetRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn666AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									case 'p': // Prefix: "pod"
-
-										if l := len("pod"); len(elem) >= l && elem[0:l] == "pod" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'd': // Prefix: "disruptionbudgets"
-
-											if l := len("disruptionbudgets"); len(elem) >= l && elem[0:l] == "disruptionbudgets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchPolicyV1beta1PodDisruptionBudgetListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn669AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										case 's': // Prefix: "securitypolicies"
-
-											if l := len("securitypolicies"); len(elem) >= l && elem[0:l] == "securitypolicies" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchPolicyV1beta1PodSecurityPolicyListRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn673AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchPolicyV1beta1PodSecurityPolicyRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn672AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'r': // Prefix: "rbac.authorization.k8s.io/"
-
-						if l := len("rbac.authorization.k8s.io/"); len(elem) >= l && elem[0:l] == "rbac.authorization.k8s.io/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch r.Method {
-							case "GET":
-								s.handleGetRbacAuthorizationAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-							default:
-								s.notAllowed(w, r, notAllowedParams{
-									allowedMethods: "GET",
-									allowedHeaders: rn89AllowedHeaders,
-									acceptPost:     "",
-									acceptPatch:    "",
-								})
-							}
-
-							return
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1/"
-
-							if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch r.Method {
-								case "GET":
-									s.handleGetRbacAuthorizationV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn90AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-							switch elem[0] {
-							case 'c': // Prefix: "clusterrole"
-
-								if l := len("clusterrole"); len(elem) >= l && elem[0:l] == "clusterrole" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'b': // Prefix: "bindings"
-
-									if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListRbacAuthorizationV1ClusterRoleBindingRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn236AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleReadRbacAuthorizationV1ClusterRoleBindingRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchRbacAuthorizationV1ClusterRoleBindingRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn400AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								case 's': // Prefix: "s"
-
-									if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListRbacAuthorizationV1ClusterRoleRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn234AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleReadRbacAuthorizationV1ClusterRoleRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchRbacAuthorizationV1ClusterRoleRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn398AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								}
-
-							case 'n': // Prefix: "namespaces/"
-
-								if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								// Param: "namespace"
-								// Match until "/"
-								idx := strings.IndexByte(elem, '/')
-								if idx < 0 {
-									idx = len(elem)
-								}
-								args[0] = elem[:idx]
-								elem = elem[idx:]
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/role"
-
-									if l := len("/role"); len(elem) >= l && elem[0:l] == "/role" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'b': // Prefix: "bindings"
-
-										if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListRbacAuthorizationV1NamespacedRoleBindingRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn241AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadRbacAuthorizationV1NamespacedRoleBindingRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchRbacAuthorizationV1NamespacedRoleBindingRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn404AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListRbacAuthorizationV1NamespacedRoleRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn239AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadRbacAuthorizationV1NamespacedRoleRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchRbacAuthorizationV1NamespacedRoleRequest([2]string{
-														args[0],
-														args[1],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn402AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'r': // Prefix: "role"
-
-								if l := len("role"); len(elem) >= l && elem[0:l] == "role" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'b': // Prefix: "bindings"
-
-									if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListRbacAuthorizationV1RoleBindingForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn242AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								case 's': // Prefix: "s"
-
-									if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch r.Method {
-										case "GET":
-											s.handleListRbacAuthorizationV1RoleForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn244AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-
-								}
-
-							case 'w': // Prefix: "watch/"
-
-								if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "clusterrole"
-
-									if l := len("clusterrole"); len(elem) >= l && elem[0:l] == "clusterrole" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'b': // Prefix: "bindings"
-
-										if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchRbacAuthorizationV1ClusterRoleBindingListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn679AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchRbacAuthorizationV1ClusterRoleBindingRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn678AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleWatchRbacAuthorizationV1ClusterRoleListRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn680AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchRbacAuthorizationV1ClusterRoleRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn675AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/role"
-
-										if l := len("/role"); len(elem) >= l && elem[0:l] == "/role" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'b': // Prefix: "bindings"
-
-											if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchRbacAuthorizationV1NamespacedRoleBindingListRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn689AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchRbacAuthorizationV1NamespacedRoleBindingRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn688AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										case 's': // Prefix: "s"
-
-											if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchRbacAuthorizationV1NamespacedRoleListRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn690AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchRbacAuthorizationV1NamespacedRoleRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn685AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'r': // Prefix: "role"
-
-									if l := len("role"); len(elem) >= l && elem[0:l] == "role" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'b': // Prefix: "bindings"
-
-										if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchRbacAuthorizationV1RoleBindingListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn691AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchRbacAuthorizationV1RoleListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn693AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 's': // Prefix: "s"
-
-						if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'c': // Prefix: "cheduling.k8s.io/"
-
-							if l := len("cheduling.k8s.io/"); len(elem) >= l && elem[0:l] == "cheduling.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch r.Method {
-								case "GET":
-									s.handleGetSchedulingAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn91AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1/"
-
-								if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch r.Method {
-									case "GET":
-										s.handleGetSchedulingV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-									default:
-										s.notAllowed(w, r, notAllowedParams{
-											allowedMethods: "GET",
-											allowedHeaders: rn92AllowedHeaders,
-											acceptPost:     "",
-											acceptPatch:    "",
-										})
-									}
-
-									return
-								}
-								switch elem[0] {
-								case 'p': // Prefix: "priorityclasses"
-
-									if l := len("priorityclasses"); len(elem) >= l && elem[0:l] == "priorityclasses" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleListSchedulingV1PriorityClassRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn245AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleReadSchedulingV1PriorityClassRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											case "PATCH":
-												s.handlePatchSchedulingV1PriorityClassRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET,PATCH",
-													allowedHeaders: rn406AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/priorityclasses"
-
-									if l := len("watch/priorityclasses"); len(elem) >= l && elem[0:l] == "watch/priorityclasses" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleWatchSchedulingV1PriorityClassListRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn696AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleWatchSchedulingV1PriorityClassRequest([1]string{
-													args[0],
-												}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn695AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									}
-
-								}
-
-							}
-
-						case 't': // Prefix: "torage.k8s.io/"
-
-							if l := len("torage.k8s.io/"); len(elem) >= l && elem[0:l] == "torage.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch r.Method {
-								case "GET":
-									s.handleGetStorageAPIGroupRequest([0]string{}, elemIsEscaped, w, r)
-								default:
-									s.notAllowed(w, r, notAllowedParams{
-										allowedMethods: "GET",
-										allowedHeaders: rn96AllowedHeaders,
-										acceptPost:     "",
-										acceptPatch:    "",
-									})
-								}
-
-								return
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1"
-
-								if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetStorageV1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn97AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "csi"
-
-										if l := len("csi"); len(elem) >= l && elem[0:l] == "csi" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'd': // Prefix: "drivers"
-
-											if l := len("drivers"); len(elem) >= l && elem[0:l] == "drivers" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleListStorageV1CSIDriverRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn246AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadStorageV1CSIDriverRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchStorageV1CSIDriverRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn408AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										case 'n': // Prefix: "nodes"
-
-											if l := len("nodes"); len(elem) >= l && elem[0:l] == "nodes" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleListStorageV1CSINodeRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn248AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadStorageV1CSINodeRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchStorageV1CSINodeRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn410AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									case 's': // Prefix: "storageclasses"
-
-										if l := len("storageclasses"); len(elem) >= l && elem[0:l] == "storageclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListStorageV1StorageClassRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn249AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleReadStorageV1StorageClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchStorageV1StorageClassRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn412AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-
-										}
-
-									case 'v': // Prefix: "volumeattachments"
-
-										if l := len("volumeattachments"); len(elem) >= l && elem[0:l] == "volumeattachments" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch r.Method {
-											case "GET":
-												s.handleListStorageV1VolumeAttachmentRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn250AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleReadStorageV1VolumeAttachmentRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												case "PATCH":
-													s.handlePatchStorageV1VolumeAttachmentRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET,PATCH",
-														allowedHeaders: rn414AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/status"
-
-												if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadStorageV1VolumeAttachmentStatusRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchStorageV1VolumeAttachmentStatusRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn415AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/"
-
-										if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "csi"
-
-											if l := len("csi"); len(elem) >= l && elem[0:l] == "csi" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'd': // Prefix: "drivers"
-
-												if l := len("drivers"); len(elem) >= l && elem[0:l] == "drivers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleWatchStorageV1CSIDriverListRequest([0]string{}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn699AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[0] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleWatchStorageV1CSIDriverRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn698AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											case 'n': // Prefix: "nodes"
-
-												if l := len("nodes"); len(elem) >= l && elem[0:l] == "nodes" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleWatchStorageV1CSINodeListRequest([0]string{}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn703AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[0] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleWatchStorageV1CSINodeRequest([1]string{
-																args[0],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn702AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											}
-
-										case 's': // Prefix: "storageclasses"
-
-											if l := len("storageclasses"); len(elem) >= l && elem[0:l] == "storageclasses" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchStorageV1StorageClassListRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn707AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchStorageV1StorageClassRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn706AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										case 'v': // Prefix: "volumeattachments"
-
-											if l := len("volumeattachments"); len(elem) >= l && elem[0:l] == "volumeattachments" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleWatchStorageV1VolumeAttachmentListRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn710AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleWatchStorageV1VolumeAttachmentRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn709AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'a': // Prefix: "alpha1/"
-
-									if l := len("alpha1/"); len(elem) >= l && elem[0:l] == "alpha1/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetStorageV1alpha1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn99AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "csistoragecapacities"
-
-										if l := len("csistoragecapacities"); len(elem) >= l && elem[0:l] == "csistoragecapacities" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleListStorageV1alpha1CSIStorageCapacityForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn251AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/csistoragecapacities"
-
-											if l := len("/csistoragecapacities"); len(elem) >= l && elem[0:l] == "/csistoragecapacities" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleListStorageV1alpha1NamespacedCSIStorageCapacityRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn254AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadStorageV1alpha1NamespacedCSIStorageCapacityRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchStorageV1alpha1NamespacedCSIStorageCapacityRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn417AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/"
-
-										if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "csistoragecapacities"
-
-											if l := len("csistoragecapacities"); len(elem) >= l && elem[0:l] == "csistoragecapacities" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchStorageV1alpha1CSIStorageCapacityListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn711AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										case 'n': // Prefix: "namespaces/"
-
-											if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "namespace"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/csistoragecapacities"
-
-												if l := len("/csistoragecapacities"); len(elem) >= l && elem[0:l] == "/csistoragecapacities" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleWatchStorageV1alpha1NamespacedCSIStorageCapacityListRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn717AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleWatchStorageV1alpha1NamespacedCSIStorageCapacityRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn716AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'b': // Prefix: "beta1/"
-
-									if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch r.Method {
-										case "GET":
-											s.handleGetStorageV1beta1APIResourcesRequest([0]string{}, elemIsEscaped, w, r)
-										default:
-											s.notAllowed(w, r, notAllowedParams{
-												allowedMethods: "GET",
-												allowedHeaders: rn100AllowedHeaders,
-												acceptPost:     "",
-												acceptPatch:    "",
-											})
-										}
-
-										return
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "csistoragecapacities"
-
-										if l := len("csistoragecapacities"); len(elem) >= l && elem[0:l] == "csistoragecapacities" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch r.Method {
-											case "GET":
-												s.handleListStorageV1beta1CSIStorageCapacityForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-											default:
-												s.notAllowed(w, r, notAllowedParams{
-													allowedMethods: "GET",
-													allowedHeaders: rn255AllowedHeaders,
-													acceptPost:     "",
-													acceptPatch:    "",
-												})
-											}
-
-											return
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/csistoragecapacities"
-
-											if l := len("/csistoragecapacities"); len(elem) >= l && elem[0:l] == "/csistoragecapacities" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch r.Method {
-												case "GET":
-													s.handleListStorageV1beta1NamespacedCSIStorageCapacityRequest([1]string{
-														args[0],
-													}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn258AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch r.Method {
-													case "GET":
-														s.handleReadStorageV1beta1NamespacedCSIStorageCapacityRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													case "PATCH":
-														s.handlePatchStorageV1beta1NamespacedCSIStorageCapacityRequest([2]string{
-															args[0],
-															args[1],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET,PATCH",
-															allowedHeaders: rn419AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "application/json-patch+json,application/merge-patch+json,application/strategic-merge-patch+json",
-														})
-													}
-
-													return
-												}
-
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/"
-
-										if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "csistoragecapacities"
-
-											if l := len("csistoragecapacities"); len(elem) >= l && elem[0:l] == "csistoragecapacities" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch r.Method {
-												case "GET":
-													s.handleWatchStorageV1beta1CSIStorageCapacityListForAllNamespacesRequest([0]string{}, elemIsEscaped, w, r)
-												default:
-													s.notAllowed(w, r, notAllowedParams{
-														allowedMethods: "GET",
-														allowedHeaders: rn718AllowedHeaders,
-														acceptPost:     "",
-														acceptPatch:    "",
-													})
-												}
-
-												return
-											}
-
-										case 'n': // Prefix: "namespaces/"
-
-											if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "namespace"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/csistoragecapacities"
-
-												if l := len("/csistoragecapacities"); len(elem) >= l && elem[0:l] == "/csistoragecapacities" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch r.Method {
-													case "GET":
-														s.handleWatchStorageV1beta1NamespacedCSIStorageCapacityListRequest([1]string{
-															args[0],
-														}, elemIsEscaped, w, r)
-													default:
-														s.notAllowed(w, r, notAllowedParams{
-															allowedMethods: "GET",
-															allowedHeaders: rn724AllowedHeaders,
-															acceptPost:     "",
-															acceptPatch:    "",
-														})
-													}
-
-													return
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch r.Method {
-														case "GET":
-															s.handleWatchStorageV1beta1NamespacedCSIStorageCapacityRequest([2]string{
-																args[0],
-																args[1],
-															}, elemIsEscaped, w, r)
-														default:
-															s.notAllowed(w, r, notAllowedParams{
-																allowedMethods: "GET",
-																allowedHeaders: rn723AllowedHeaders,
-																acceptPost:     "",
-																acceptPatch:    "",
-															})
-														}
-
-														return
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					}
-
-				}
-
-			case 'l': // Prefix: "logs/"
-
-				if l := len("logs/"); len(elem) >= l && elem[0:l] == "logs/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					switch r.Method {
-					case "GET":
-						s.handleLogFileListHandlerRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: rn259AllowedHeaders,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-				// Param: "logpath"
-				// Leaf parameter, slashes are prohibited
-				idx := strings.IndexByte(elem, '/')
-				if idx >= 0 {
-					break
-				}
-				args[0] = elem
-				elem = ""
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleLogFileHandlerRequest([1]string{
-							args[0],
-						}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: rn260AllowedHeaders,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'o': // Prefix: "openid/v1/jwks/"
-
-				if l := len("openid/v1/jwks/"); len(elem) >= l && elem[0:l] == "openid/v1/jwks/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleGetServiceAccountIssuerOpenIDKeysetRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: rn94AllowedHeaders,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			case 'v': // Prefix: "version/"
-
-				if l := len("version/"); len(elem) >= l && elem[0:l] == "version/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleGetCodeVersionRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, notAllowedParams{
-							allowedMethods: "GET",
-							allowedHeaders: rn57AllowedHeaders,
-							acceptPost:     "",
-							acceptPatch:    "",
-						})
-					}
-
-					return
-				}
-
-			}
-
-		}
-	}
-	s.notFound(w, r)
+	_ = "STUB: not implemented"
+	return
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: ".well-known/openid-configuration/"
+
+// Leaf node.
+
+// Prefix: "api"
+
+// Prefix: "/"
+
+// Prefix: "v1/"
+
+// Prefix: "co"
+
+// Prefix: "mponentstatuses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "nfigmaps"
+
+// Leaf node.
+
+// Prefix: "e"
+
+// Prefix: "ndpoints"
+
+// Leaf node.
+
+// Prefix: "vents"
+
+// Leaf node.
+
+// Prefix: "limitranges"
+
+// Leaf node.
+
+// Prefix: "n"
+
+// Prefix: "amespaces"
+
+// Prefix: "/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "configmaps"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "e"
+
+// Prefix: "ndpoints"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "vents"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "limitranges"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "ersistentvolumeclaims"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "od"
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "attach"
+
+// Leaf node.
+
+// Prefix: "e"
+
+// Prefix: "phemeralcontainers"
+
+// Leaf node.
+
+// Prefix: "xec"
+
+// Leaf node.
+
+// Prefix: "log"
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "ortforward"
+
+// Leaf node.
+
+// Prefix: "roxy"
+
+// Prefix: "/"
+
+// Param: "path"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "status"
+
+// Leaf node.
+
+// Prefix: "templates"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "re"
+
+// Prefix: "plicationcontrollers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/s"
+
+// Prefix: "cale"
+
+// Leaf node.
+
+// Prefix: "tatus"
+
+// Leaf node.
+
+// Prefix: "sourcequotas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "e"
+
+// Prefix: "crets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "rvice"
+
+// Prefix: "accounts"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "proxy"
+
+// Prefix: "/"
+
+// Param: "path"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "status"
+
+// Leaf node.
+
+// Prefix: "tatus"
+
+// Leaf node.
+
+// Prefix: "odes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "proxy"
+
+// Prefix: "/"
+
+// Param: "path"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "status"
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "ersistentvolume"
+
+// Prefix: "claims"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "od"
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "templates"
+
+// Leaf node.
+
+// Prefix: "re"
+
+// Prefix: "plicationcontrollers"
+
+// Leaf node.
+
+// Prefix: "sourcequotas"
+
+// Leaf node.
+
+// Prefix: "se"
+
+// Prefix: "crets"
+
+// Leaf node.
+
+// Prefix: "rvice"
+
+// Prefix: "accounts"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "configmaps"
+
+// Leaf node.
+
+// Prefix: "e"
+
+// Prefix: "ndpoints"
+
+// Leaf node.
+
+// Prefix: "vents"
+
+// Leaf node.
+
+// Prefix: "limitranges"
+
+// Leaf node.
+
+// Prefix: "n"
+
+// Prefix: "amespaces"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "configmaps"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "e"
+
+// Prefix: "ndpoints"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "vents"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "limitranges"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "ersistentvolumeclaims"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "od"
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "templates"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "re"
+
+// Prefix: "plicationcontrollers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "sourcequotas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "se"
+
+// Prefix: "crets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "rvice"
+
+// Prefix: "accounts"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "odes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "ersistentvolume"
+
+// Prefix: "claims"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "od"
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "templates"
+
+// Leaf node.
+
+// Prefix: "re"
+
+// Prefix: "plicationcontrollers"
+
+// Leaf node.
+
+// Prefix: "sourcequotas"
+
+// Leaf node.
+
+// Prefix: "se"
+
+// Prefix: "crets"
+
+// Leaf node.
+
+// Prefix: "rvice"
+
+// Prefix: "accounts"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "s/"
+
+// Prefix: "a"
+
+// Prefix: "dmissionregistration.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "mutatingwebhookconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "validatingwebhookconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "mutatingwebhookconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "validatingwebhookconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "i"
+
+// Prefix: "extensions.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "customresourcedefinitions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/customresourcedefinitions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "registration.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "apiservices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/apiservices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "ps/"
+
+// Prefix: "v1/"
+
+// Prefix: "controllerrevisions"
+
+// Leaf node.
+
+// Prefix: "d"
+
+// Prefix: "aemonsets"
+
+// Leaf node.
+
+// Prefix: "eployments"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "controllerrevisions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "d"
+
+// Prefix: "aemonsets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "eployments"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/s"
+
+// Prefix: "cale"
+
+// Leaf node.
+
+// Prefix: "tatus"
+
+// Leaf node.
+
+// Prefix: "replicasets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/s"
+
+// Prefix: "cale"
+
+// Leaf node.
+
+// Prefix: "tatus"
+
+// Leaf node.
+
+// Prefix: "statefulsets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/s"
+
+// Prefix: "cale"
+
+// Leaf node.
+
+// Prefix: "tatus"
+
+// Leaf node.
+
+// Prefix: "replicasets"
+
+// Leaf node.
+
+// Prefix: "statefulsets"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "controllerrevisions"
+
+// Leaf node.
+
+// Prefix: "d"
+
+// Prefix: "aemonsets"
+
+// Leaf node.
+
+// Prefix: "eployments"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "controllerrevisions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "d"
+
+// Prefix: "aemonsets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "eployments"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "replicasets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "statefulsets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "replicasets"
+
+// Leaf node.
+
+// Prefix: "statefulsets"
+
+// Leaf node.
+
+// Prefix: "ut"
+
+// Prefix: "h"
+
+// Prefix: "entication.k8s.io/"
+
+// Prefix: "v1/"
+
+// Leaf node.
+
+// Prefix: "orization.k8s.io/"
+
+// Prefix: "v1/"
+
+// Leaf node.
+
+// Prefix: "oscaling/"
+
+// Prefix: "v"
+
+// Prefix: "1/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "2beta"
+
+// Prefix: "1/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "2/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "batch/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "cronjobs"
+
+// Leaf node.
+
+// Prefix: "jobs"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "cronjobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "jobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "cronjobs"
+
+// Leaf node.
+
+// Prefix: "jobs"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "cronjobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "jobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "cronjobs"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/cronjobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "cronjobs"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/cronjobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "c"
+
+// Prefix: "ertificates.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "certificatesigningrequests"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "approval"
+
+// Leaf node.
+
+// Prefix: "status"
+
+// Leaf node.
+
+// Prefix: "watch/certificatesigningrequests"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "oordination.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "leases"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/leases"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "leases"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/leases"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "discovery.k8s.io/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "endpointslices"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/endpointslices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "endpointslices"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/endpointslices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "endpointslices"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/endpointslices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "endpointslices"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/endpointslices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "events.k8s.io/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "events"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/events"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "events"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/events"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "events"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/events"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "events"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/events"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "flowcontrol.apiserver.k8s.io/"
+
+// Prefix: "v1beta"
+
+// Prefix: "1/"
+
+// Prefix: "flowschemas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "prioritylevelconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "flowschemas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "prioritylevelconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "2/"
+
+// Prefix: "flowschemas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "prioritylevelconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "flowschemas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "prioritylevelconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "internal.apiserver.k8s.io/"
+
+// Prefix: "v1alpha1/"
+
+// Prefix: "storageversions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/storageversions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "n"
+
+// Prefix: "etworking.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "ingress"
+
+// Prefix: "classes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "es"
+
+// Leaf node.
+
+// Prefix: "n"
+
+// Prefix: "amespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "ingresses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "networkpolicies"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "etworkpolicies"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "ingress"
+
+// Prefix: "classes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "es"
+
+// Leaf node.
+
+// Prefix: "n"
+
+// Prefix: "amespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "ingresses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "networkpolicies"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "etworkpolicies"
+
+// Leaf node.
+
+// Prefix: "ode.k8s.io/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "alpha1/"
+
+// Prefix: "runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "policy/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/poddisruptionbudgets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "poddisruptionbudgets"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/poddisruptionbudgets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "poddisruptionbudgets"
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/poddisruptionbudgets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "pod"
+
+// Prefix: "disruptionbudgets"
+
+// Leaf node.
+
+// Prefix: "securitypolicies"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/poddisruptionbudgets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "pod"
+
+// Prefix: "disruptionbudgets"
+
+// Leaf node.
+
+// Prefix: "securitypolicies"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "rbac.authorization.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "clusterrole"
+
+// Prefix: "bindings"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/role"
+
+// Prefix: "bindings"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "role"
+
+// Prefix: "bindings"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "clusterrole"
+
+// Prefix: "bindings"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/role"
+
+// Prefix: "bindings"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "role"
+
+// Prefix: "bindings"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "cheduling.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "priorityclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/priorityclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "torage.k8s.io/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "csi"
+
+// Prefix: "drivers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "nodes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "storageclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "volumeattachments"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "csi"
+
+// Prefix: "drivers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "nodes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "storageclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "volumeattachments"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "alpha1/"
+
+// Prefix: "csistoragecapacities"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/csistoragecapacities"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "csistoragecapacities"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/csistoragecapacities"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "csistoragecapacities"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/csistoragecapacities"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "csistoragecapacities"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/csistoragecapacities"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "logs/"
+
+// Param: "logpath"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "openid/v1/jwks/"
+
+// Leaf node.
+
+// Prefix: "version/"
+
+// Leaf node.
 
 // Route is route object.
 type Route struct {
@@ -16912,15494 +3480,2077 @@ type Route struct {
 //
 // It is guaranteed to be unique and not empty.
 func (r Route) Name() string {
-	return r.name
+	_ = "STUB: not implemented"
+
+	// Summary returns OpenAPI summary.
+	return ""
 }
 
-// Summary returns OpenAPI summary.
 func (r Route) Summary() string {
-	return r.summary
+	_ = "STUB: not implemented"
+
+	// OperationID returns OpenAPI operationId.
+	return ""
 }
 
-// OperationID returns OpenAPI operationId.
-func (r Route) OperationID() string {
-	return r.operationID
-}
+func (r Route) OperationID() string { _ = "STUB: not implemented"; return "" }
 
 // OperationGroup returns the x-ogen-operation-group value.
-func (r Route) OperationGroup() string {
-	return r.operationGroup
-}
+func (r Route) OperationGroup() string { _ = "STUB: not implemented"; return "" }
 
 // PathPattern returns OpenAPI path.
-func (r Route) PathPattern() string {
-	return r.pathPattern
-}
+func (r Route) PathPattern() string { _ = "STUB: not implemented"; return "" }
 
 // Args returns parsed arguments.
-func (r Route) Args() []string {
-	return r.args[:r.count]
-}
+func (r Route) Args() []string { _ = "STUB: not implemented"; return nil }
 
 // FindRoute finds Route for given method and path.
 //
 // Note: this method does not unescape path or handle reserved characters in path properly. Use FindPath instead.
 func (s *Server) FindRoute(method, path string) (Route, bool) {
-	return s.FindPath(method, &url.URL{Path: path})
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
 
 // FindPath finds Route for given method and URL.
 func (s *Server) FindPath(method string, u *url.URL) (r Route, _ bool) {
-	var (
-		elem = u.Path
-		args = r.args
-	)
-	if rawPath := u.RawPath; rawPath != "" {
-		if normalized, ok := uri.NormalizeEscapedPath(rawPath); ok {
-			elem = normalized
-		}
-		defer func() {
-			for i, arg := range r.args[:r.count] {
-				if unescaped, err := url.PathUnescape(arg); err == nil {
-					r.args[i] = unescaped
-				}
-			}
-		}()
-	}
-
-	elem, ok := s.cutPrefix(elem)
-	if !ok {
-		return r, false
-	}
-
-	// Static code generated router with unwrapped path search.
-	switch {
-	default:
-		if len(elem) == 0 {
-			break
-		}
-		switch elem[0] {
-		case '/': // Prefix: "/"
-
-			if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-				elem = elem[l:]
-			} else {
-				break
-			}
-
-			if len(elem) == 0 {
-				break
-			}
-			switch elem[0] {
-			case '.': // Prefix: ".well-known/openid-configuration/"
-
-				if l := len(".well-known/openid-configuration/"); len(elem) >= l && elem[0:l] == ".well-known/openid-configuration/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = GetServiceAccountIssuerOpenIDConfigurationOperation
-						r.summary = ""
-						r.operationID = "getServiceAccountIssuerOpenIDConfiguration"
-						r.operationGroup = ""
-						r.pathPattern = "/.well-known/openid-configuration/"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'a': // Prefix: "api"
-
-				if l := len("api"); len(elem) >= l && elem[0:l] == "api" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					break
-				}
-				switch elem[0] {
-				case '/': // Prefix: "/"
-
-					if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						switch method {
-						case "GET":
-							r.name = GetCoreAPIVersionsOperation
-							r.summary = ""
-							r.operationID = "getCoreAPIVersions"
-							r.operationGroup = ""
-							r.pathPattern = "/api/"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-					switch elem[0] {
-					case 'v': // Prefix: "v1/"
-
-						if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch method {
-							case "GET":
-								r.name = GetCoreV1APIResourcesOperation
-								r.summary = ""
-								r.operationID = "getCoreV1APIResources"
-								r.operationGroup = ""
-								r.pathPattern = "/api/v1/"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-						switch elem[0] {
-						case 'c': // Prefix: "co"
-
-							if l := len("co"); len(elem) >= l && elem[0:l] == "co" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'm': // Prefix: "mponentstatuses"
-
-								if l := len("mponentstatuses"); len(elem) >= l && elem[0:l] == "mponentstatuses" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = ListCoreV1ComponentStatusOperation
-										r.summary = ""
-										r.operationID = "listCoreV1ComponentStatus"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/componentstatuses"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "name"
-									// Leaf parameter, slashes are prohibited
-									idx := strings.IndexByte(elem, '/')
-									if idx >= 0 {
-										break
-									}
-									args[0] = elem
-									elem = ""
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ReadCoreV1ComponentStatusOperation
-											r.summary = ""
-											r.operationID = "readCoreV1ComponentStatus"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/componentstatuses/{name}"
-											r.args = args
-											r.count = 1
-											return r, true
-										default:
-											return
-										}
-									}
-
-								}
-
-							case 'n': // Prefix: "nfigmaps"
-
-								if l := len("nfigmaps"); len(elem) >= l && elem[0:l] == "nfigmaps" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch method {
-									case "GET":
-										r.name = ListCoreV1ConfigMapForAllNamespacesOperation
-										r.summary = ""
-										r.operationID = "listCoreV1ConfigMapForAllNamespaces"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/configmaps"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-
-							}
-
-						case 'e': // Prefix: "e"
-
-							if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'n': // Prefix: "ndpoints"
-
-								if l := len("ndpoints"); len(elem) >= l && elem[0:l] == "ndpoints" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch method {
-									case "GET":
-										r.name = ListCoreV1EndpointsForAllNamespacesOperation
-										r.summary = ""
-										r.operationID = "listCoreV1EndpointsForAllNamespaces"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/endpoints"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-
-							case 'v': // Prefix: "vents"
-
-								if l := len("vents"); len(elem) >= l && elem[0:l] == "vents" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch method {
-									case "GET":
-										r.name = ListCoreV1EventForAllNamespacesOperation
-										r.summary = ""
-										r.operationID = "listCoreV1EventForAllNamespaces"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/events"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-
-							}
-
-						case 'l': // Prefix: "limitranges"
-
-							if l := len("limitranges"); len(elem) >= l && elem[0:l] == "limitranges" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								// Leaf node.
-								switch method {
-								case "GET":
-									r.name = ListCoreV1LimitRangeForAllNamespacesOperation
-									r.summary = ""
-									r.operationID = "listCoreV1LimitRangeForAllNamespaces"
-									r.operationGroup = ""
-									r.pathPattern = "/api/v1/limitranges"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-
-						case 'n': // Prefix: "n"
-
-							if l := len("n"); len(elem) >= l && elem[0:l] == "n" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'a': // Prefix: "amespaces"
-
-								if l := len("amespaces"); len(elem) >= l && elem[0:l] == "amespaces" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = ListCoreV1NamespaceOperation
-										r.summary = ""
-										r.operationID = "listCoreV1Namespace"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/namespaces"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ReadCoreV1NamespaceOperation
-											r.summary = ""
-											r.operationID = "readCoreV1Namespace"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/namespaces/{name}"
-											r.args = args
-											r.count = 1
-											return r, true
-										case "PATCH":
-											r.name = PatchCoreV1NamespaceOperation
-											r.summary = ""
-											r.operationID = "patchCoreV1Namespace"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/namespaces/{name}"
-											r.args = args
-											r.count = 1
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "configmaps"
-
-											if l := len("configmaps"); len(elem) >= l && elem[0:l] == "configmaps" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ListCoreV1NamespacedConfigMapOperation
-													r.summary = ""
-													r.operationID = "listCoreV1NamespacedConfigMap"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/namespaces/{namespace}/configmaps"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadCoreV1NamespacedConfigMapOperation
-														r.summary = ""
-														r.operationID = "readCoreV1NamespacedConfigMap"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{namespace}/configmaps/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PATCH":
-														r.name = PatchCoreV1NamespacedConfigMapOperation
-														r.summary = ""
-														r.operationID = "patchCoreV1NamespacedConfigMap"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{namespace}/configmaps/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										case 'e': // Prefix: "e"
-
-											if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'n': // Prefix: "ndpoints"
-
-												if l := len("ndpoints"); len(elem) >= l && elem[0:l] == "ndpoints" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListCoreV1NamespacedEndpointsOperation
-														r.summary = ""
-														r.operationID = "listCoreV1NamespacedEndpoints"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{namespace}/endpoints"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = ReadCoreV1NamespacedEndpointsOperation
-															r.summary = ""
-															r.operationID = "readCoreV1NamespacedEndpoints"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/endpoints/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchCoreV1NamespacedEndpointsOperation
-															r.summary = ""
-															r.operationID = "patchCoreV1NamespacedEndpoints"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/endpoints/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											case 'v': // Prefix: "vents"
-
-												if l := len("vents"); len(elem) >= l && elem[0:l] == "vents" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListCoreV1NamespacedEventOperation
-														r.summary = ""
-														r.operationID = "listCoreV1NamespacedEvent"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{namespace}/events"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = ReadCoreV1NamespacedEventOperation
-															r.summary = ""
-															r.operationID = "readCoreV1NamespacedEvent"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/events/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchCoreV1NamespacedEventOperation
-															r.summary = ""
-															r.operationID = "patchCoreV1NamespacedEvent"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/events/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											}
-
-										case 'l': // Prefix: "limitranges"
-
-											if l := len("limitranges"); len(elem) >= l && elem[0:l] == "limitranges" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ListCoreV1NamespacedLimitRangeOperation
-													r.summary = ""
-													r.operationID = "listCoreV1NamespacedLimitRange"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/namespaces/{namespace}/limitranges"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadCoreV1NamespacedLimitRangeOperation
-														r.summary = ""
-														r.operationID = "readCoreV1NamespacedLimitRange"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{namespace}/limitranges/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PATCH":
-														r.name = PatchCoreV1NamespacedLimitRangeOperation
-														r.summary = ""
-														r.operationID = "patchCoreV1NamespacedLimitRange"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{namespace}/limitranges/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										case 'p': // Prefix: "p"
-
-											if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'e': // Prefix: "ersistentvolumeclaims"
-
-												if l := len("ersistentvolumeclaims"); len(elem) >= l && elem[0:l] == "ersistentvolumeclaims" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListCoreV1NamespacedPersistentVolumeClaimOperation
-														r.summary = ""
-														r.operationID = "listCoreV1NamespacedPersistentVolumeClaim"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{namespace}/persistentvolumeclaims"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ReadCoreV1NamespacedPersistentVolumeClaimOperation
-															r.summary = ""
-															r.operationID = "readCoreV1NamespacedPersistentVolumeClaim"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchCoreV1NamespacedPersistentVolumeClaimOperation
-															r.summary = ""
-															r.operationID = "patchCoreV1NamespacedPersistentVolumeClaim"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/status"
-
-														if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = ReadCoreV1NamespacedPersistentVolumeClaimStatusOperation
-																r.summary = ""
-																r.operationID = "readCoreV1NamespacedPersistentVolumeClaimStatus"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchCoreV1NamespacedPersistentVolumeClaimStatusOperation
-																r.summary = ""
-																r.operationID = "patchCoreV1NamespacedPersistentVolumeClaimStatus"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												}
-
-											case 'o': // Prefix: "od"
-
-												if l := len("od"); len(elem) >= l && elem[0:l] == "od" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 's': // Prefix: "s"
-
-													if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ListCoreV1NamespacedPodOperation
-															r.summary = ""
-															r.operationID = "listCoreV1NamespacedPod"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/pods"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Match until "/"
-														idx := strings.IndexByte(elem, '/')
-														if idx < 0 {
-															idx = len(elem)
-														}
-														args[1] = elem[:idx]
-														elem = elem[idx:]
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = ReadCoreV1NamespacedPodOperation
-																r.summary = ""
-																r.operationID = "readCoreV1NamespacedPod"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchCoreV1NamespacedPodOperation
-																r.summary = ""
-																r.operationID = "patchCoreV1NamespacedPod"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																break
-															}
-															switch elem[0] {
-															case 'a': // Prefix: "attach"
-
-																if l := len("attach"); len(elem) >= l && elem[0:l] == "attach" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	// Leaf node.
-																	switch method {
-																	case "GET":
-																		r.name = ConnectCoreV1GetNamespacedPodAttachOperation
-																		r.summary = ""
-																		r.operationID = "connectCoreV1GetNamespacedPodAttach"
-																		r.operationGroup = ""
-																		r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/attach"
-																		r.args = args
-																		r.count = 2
-																		return r, true
-																	case "POST":
-																		r.name = ConnectCoreV1PostNamespacedPodAttachOperation
-																		r.summary = ""
-																		r.operationID = "connectCoreV1PostNamespacedPodAttach"
-																		r.operationGroup = ""
-																		r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/attach"
-																		r.args = args
-																		r.count = 2
-																		return r, true
-																	default:
-																		return
-																	}
-																}
-
-															case 'e': // Prefix: "e"
-
-																if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	break
-																}
-																switch elem[0] {
-																case 'p': // Prefix: "phemeralcontainers"
-
-																	if l := len("phemeralcontainers"); len(elem) >= l && elem[0:l] == "phemeralcontainers" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		// Leaf node.
-																		switch method {
-																		case "GET":
-																			r.name = ReadCoreV1NamespacedPodEphemeralcontainersOperation
-																			r.summary = ""
-																			r.operationID = "readCoreV1NamespacedPodEphemeralcontainers"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "PATCH":
-																			r.name = PatchCoreV1NamespacedPodEphemeralcontainersOperation
-																			r.summary = ""
-																			r.operationID = "patchCoreV1NamespacedPodEphemeralcontainers"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		default:
-																			return
-																		}
-																	}
-
-																case 'x': // Prefix: "xec"
-
-																	if l := len("xec"); len(elem) >= l && elem[0:l] == "xec" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		// Leaf node.
-																		switch method {
-																		case "GET":
-																			r.name = ConnectCoreV1GetNamespacedPodExecOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1GetNamespacedPodExec"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/exec"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "POST":
-																			r.name = ConnectCoreV1PostNamespacedPodExecOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1PostNamespacedPodExec"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/exec"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		default:
-																			return
-																		}
-																	}
-
-																}
-
-															case 'l': // Prefix: "log"
-
-																if l := len("log"); len(elem) >= l && elem[0:l] == "log" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	// Leaf node.
-																	switch method {
-																	case "GET":
-																		r.name = ReadCoreV1NamespacedPodLogOperation
-																		r.summary = ""
-																		r.operationID = "readCoreV1NamespacedPodLog"
-																		r.operationGroup = ""
-																		r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/log"
-																		r.args = args
-																		r.count = 2
-																		return r, true
-																	default:
-																		return
-																	}
-																}
-
-															case 'p': // Prefix: "p"
-
-																if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	break
-																}
-																switch elem[0] {
-																case 'o': // Prefix: "ortforward"
-
-																	if l := len("ortforward"); len(elem) >= l && elem[0:l] == "ortforward" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		// Leaf node.
-																		switch method {
-																		case "GET":
-																			r.name = ConnectCoreV1GetNamespacedPodPortforwardOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1GetNamespacedPodPortforward"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/portforward"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "POST":
-																			r.name = ConnectCoreV1PostNamespacedPodPortforwardOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1PostNamespacedPodPortforward"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/portforward"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		default:
-																			return
-																		}
-																	}
-
-																case 'r': // Prefix: "roxy"
-
-																	if l := len("roxy"); len(elem) >= l && elem[0:l] == "roxy" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		switch method {
-																		case "DELETE":
-																			r.name = ConnectCoreV1DeleteNamespacedPodProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1DeleteNamespacedPodProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "GET":
-																			r.name = ConnectCoreV1GetNamespacedPodProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1GetNamespacedPodProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "HEAD":
-																			r.name = ConnectCoreV1HeadNamespacedPodProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1HeadNamespacedPodProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "OPTIONS":
-																			r.name = ConnectCoreV1OptionsNamespacedPodProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1OptionsNamespacedPodProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "PATCH":
-																			r.name = ConnectCoreV1PatchNamespacedPodProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1PatchNamespacedPodProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "POST":
-																			r.name = ConnectCoreV1PostNamespacedPodProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1PostNamespacedPodProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "PUT":
-																			r.name = ConnectCoreV1PutNamespacedPodProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1PutNamespacedPodProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		default:
-																			return
-																		}
-																	}
-																	switch elem[0] {
-																	case '/': // Prefix: "/"
-
-																		if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																			elem = elem[l:]
-																		} else {
-																			break
-																		}
-
-																		// Param: "path"
-																		// Leaf parameter, slashes are prohibited
-																		idx := strings.IndexByte(elem, '/')
-																		if idx >= 0 {
-																			break
-																		}
-																		args[2] = elem
-																		elem = ""
-
-																		if len(elem) == 0 {
-																			// Leaf node.
-																			switch method {
-																			case "DELETE":
-																				r.name = ConnectCoreV1DeleteNamespacedPodProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1DeleteNamespacedPodProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "GET":
-																				r.name = ConnectCoreV1GetNamespacedPodProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1GetNamespacedPodProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "HEAD":
-																				r.name = ConnectCoreV1HeadNamespacedPodProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1HeadNamespacedPodProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "OPTIONS":
-																				r.name = ConnectCoreV1OptionsNamespacedPodProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1OptionsNamespacedPodProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "PATCH":
-																				r.name = ConnectCoreV1PatchNamespacedPodProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1PatchNamespacedPodProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "POST":
-																				r.name = ConnectCoreV1PostNamespacedPodProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1PostNamespacedPodProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "PUT":
-																				r.name = ConnectCoreV1PutNamespacedPodProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1PutNamespacedPodProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			default:
-																				return
-																			}
-																		}
-
-																	}
-
-																}
-
-															case 's': // Prefix: "status"
-
-																if l := len("status"); len(elem) >= l && elem[0:l] == "status" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	// Leaf node.
-																	switch method {
-																	case "GET":
-																		r.name = ReadCoreV1NamespacedPodStatusOperation
-																		r.summary = ""
-																		r.operationID = "readCoreV1NamespacedPodStatus"
-																		r.operationGroup = ""
-																		r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/status"
-																		r.args = args
-																		r.count = 2
-																		return r, true
-																	case "PATCH":
-																		r.name = PatchCoreV1NamespacedPodStatusOperation
-																		r.summary = ""
-																		r.operationID = "patchCoreV1NamespacedPodStatus"
-																		r.operationGroup = ""
-																		r.pathPattern = "/api/v1/namespaces/{namespace}/pods/{name}/status"
-																		r.args = args
-																		r.count = 2
-																		return r, true
-																	default:
-																		return
-																	}
-																}
-
-															}
-
-														}
-
-													}
-
-												case 't': // Prefix: "templates"
-
-													if l := len("templates"); len(elem) >= l && elem[0:l] == "templates" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ListCoreV1NamespacedPodTemplateOperation
-															r.summary = ""
-															r.operationID = "listCoreV1NamespacedPodTemplate"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/podtemplates"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = ReadCoreV1NamespacedPodTemplateOperation
-																r.summary = ""
-																r.operationID = "readCoreV1NamespacedPodTemplate"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/podtemplates/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchCoreV1NamespacedPodTemplateOperation
-																r.summary = ""
-																r.operationID = "patchCoreV1NamespacedPodTemplate"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/podtemplates/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												}
-
-											}
-
-										case 'r': // Prefix: "re"
-
-											if l := len("re"); len(elem) >= l && elem[0:l] == "re" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'p': // Prefix: "plicationcontrollers"
-
-												if l := len("plicationcontrollers"); len(elem) >= l && elem[0:l] == "plicationcontrollers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListCoreV1NamespacedReplicationControllerOperation
-														r.summary = ""
-														r.operationID = "listCoreV1NamespacedReplicationController"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{namespace}/replicationcontrollers"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ReadCoreV1NamespacedReplicationControllerOperation
-															r.summary = ""
-															r.operationID = "readCoreV1NamespacedReplicationController"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/replicationcontrollers/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchCoreV1NamespacedReplicationControllerOperation
-															r.summary = ""
-															r.operationID = "patchCoreV1NamespacedReplicationController"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/replicationcontrollers/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/s"
-
-														if l := len("/s"); len(elem) >= l && elem[0:l] == "/s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															break
-														}
-														switch elem[0] {
-														case 'c': // Prefix: "cale"
-
-															if l := len("cale"); len(elem) >= l && elem[0:l] == "cale" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = ReadCoreV1NamespacedReplicationControllerScaleOperation
-																	r.summary = ""
-																	r.operationID = "readCoreV1NamespacedReplicationControllerScale"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchCoreV1NamespacedReplicationControllerScaleOperation
-																	r.summary = ""
-																	r.operationID = "patchCoreV1NamespacedReplicationControllerScale"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														case 't': // Prefix: "tatus"
-
-															if l := len("tatus"); len(elem) >= l && elem[0:l] == "tatus" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = ReadCoreV1NamespacedReplicationControllerStatusOperation
-																	r.summary = ""
-																	r.operationID = "readCoreV1NamespacedReplicationControllerStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchCoreV1NamespacedReplicationControllerStatusOperation
-																	r.summary = ""
-																	r.operationID = "patchCoreV1NamespacedReplicationControllerStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												}
-
-											case 's': // Prefix: "sourcequotas"
-
-												if l := len("sourcequotas"); len(elem) >= l && elem[0:l] == "sourcequotas" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListCoreV1NamespacedResourceQuotaOperation
-														r.summary = ""
-														r.operationID = "listCoreV1NamespacedResourceQuota"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{namespace}/resourcequotas"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ReadCoreV1NamespacedResourceQuotaOperation
-															r.summary = ""
-															r.operationID = "readCoreV1NamespacedResourceQuota"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/resourcequotas/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchCoreV1NamespacedResourceQuotaOperation
-															r.summary = ""
-															r.operationID = "patchCoreV1NamespacedResourceQuota"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/resourcequotas/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/status"
-
-														if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = ReadCoreV1NamespacedResourceQuotaStatusOperation
-																r.summary = ""
-																r.operationID = "readCoreV1NamespacedResourceQuotaStatus"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/resourcequotas/{name}/status"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchCoreV1NamespacedResourceQuotaStatusOperation
-																r.summary = ""
-																r.operationID = "patchCoreV1NamespacedResourceQuotaStatus"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/resourcequotas/{name}/status"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												}
-
-											}
-
-										case 's': // Prefix: "s"
-
-											if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'e': // Prefix: "e"
-
-												if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'c': // Prefix: "crets"
-
-													if l := len("crets"); len(elem) >= l && elem[0:l] == "crets" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ListCoreV1NamespacedSecretOperation
-															r.summary = ""
-															r.operationID = "listCoreV1NamespacedSecret"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/namespaces/{namespace}/secrets"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = ReadCoreV1NamespacedSecretOperation
-																r.summary = ""
-																r.operationID = "readCoreV1NamespacedSecret"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/secrets/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchCoreV1NamespacedSecretOperation
-																r.summary = ""
-																r.operationID = "patchCoreV1NamespacedSecret"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/secrets/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												case 'r': // Prefix: "rvice"
-
-													if l := len("rvice"); len(elem) >= l && elem[0:l] == "rvice" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case 'a': // Prefix: "accounts"
-
-														if l := len("accounts"); len(elem) >= l && elem[0:l] == "accounts" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = ListCoreV1NamespacedServiceAccountOperation
-																r.summary = ""
-																r.operationID = "listCoreV1NamespacedServiceAccount"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/serviceaccounts"
-																r.args = args
-																r.count = 1
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = ReadCoreV1NamespacedServiceAccountOperation
-																	r.summary = ""
-																	r.operationID = "readCoreV1NamespacedServiceAccount"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/namespaces/{namespace}/serviceaccounts/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchCoreV1NamespacedServiceAccountOperation
-																	r.summary = ""
-																	r.operationID = "patchCoreV1NamespacedServiceAccount"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/namespaces/{namespace}/serviceaccounts/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													case 's': // Prefix: "s"
-
-														if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = ListCoreV1NamespacedServiceOperation
-																r.summary = ""
-																r.operationID = "listCoreV1NamespacedService"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/namespaces/{namespace}/services"
-																r.args = args
-																r.count = 1
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Match until "/"
-															idx := strings.IndexByte(elem, '/')
-															if idx < 0 {
-																idx = len(elem)
-															}
-															args[1] = elem[:idx]
-															elem = elem[idx:]
-
-															if len(elem) == 0 {
-																switch method {
-																case "GET":
-																	r.name = ReadCoreV1NamespacedServiceOperation
-																	r.summary = ""
-																	r.operationID = "readCoreV1NamespacedService"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchCoreV1NamespacedServiceOperation
-																	r.summary = ""
-																	r.operationID = "patchCoreV1NamespacedService"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-															switch elem[0] {
-															case '/': // Prefix: "/"
-
-																if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	break
-																}
-																switch elem[0] {
-																case 'p': // Prefix: "proxy"
-
-																	if l := len("proxy"); len(elem) >= l && elem[0:l] == "proxy" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		switch method {
-																		case "DELETE":
-																			r.name = ConnectCoreV1DeleteNamespacedServiceProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1DeleteNamespacedServiceProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "GET":
-																			r.name = ConnectCoreV1GetNamespacedServiceProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1GetNamespacedServiceProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "HEAD":
-																			r.name = ConnectCoreV1HeadNamespacedServiceProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1HeadNamespacedServiceProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "OPTIONS":
-																			r.name = ConnectCoreV1OptionsNamespacedServiceProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1OptionsNamespacedServiceProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "PATCH":
-																			r.name = ConnectCoreV1PatchNamespacedServiceProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1PatchNamespacedServiceProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "POST":
-																			r.name = ConnectCoreV1PostNamespacedServiceProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1PostNamespacedServiceProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "PUT":
-																			r.name = ConnectCoreV1PutNamespacedServiceProxyOperation
-																			r.summary = ""
-																			r.operationID = "connectCoreV1PutNamespacedServiceProxy"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		default:
-																			return
-																		}
-																	}
-																	switch elem[0] {
-																	case '/': // Prefix: "/"
-
-																		if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																			elem = elem[l:]
-																		} else {
-																			break
-																		}
-
-																		// Param: "path"
-																		// Leaf parameter, slashes are prohibited
-																		idx := strings.IndexByte(elem, '/')
-																		if idx >= 0 {
-																			break
-																		}
-																		args[2] = elem
-																		elem = ""
-
-																		if len(elem) == 0 {
-																			// Leaf node.
-																			switch method {
-																			case "DELETE":
-																				r.name = ConnectCoreV1DeleteNamespacedServiceProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1DeleteNamespacedServiceProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "GET":
-																				r.name = ConnectCoreV1GetNamespacedServiceProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1GetNamespacedServiceProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "HEAD":
-																				r.name = ConnectCoreV1HeadNamespacedServiceProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1HeadNamespacedServiceProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "OPTIONS":
-																				r.name = ConnectCoreV1OptionsNamespacedServiceProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1OptionsNamespacedServiceProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "PATCH":
-																				r.name = ConnectCoreV1PatchNamespacedServiceProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1PatchNamespacedServiceProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "POST":
-																				r.name = ConnectCoreV1PostNamespacedServiceProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1PostNamespacedServiceProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			case "PUT":
-																				r.name = ConnectCoreV1PutNamespacedServiceProxyWithPathOperation
-																				r.summary = ""
-																				r.operationID = "connectCoreV1PutNamespacedServiceProxyWithPath"
-																				r.operationGroup = ""
-																				r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}"
-																				r.args = args
-																				r.count = 3
-																				return r, true
-																			default:
-																				return
-																			}
-																		}
-
-																	}
-
-																case 's': // Prefix: "status"
-
-																	if l := len("status"); len(elem) >= l && elem[0:l] == "status" {
-																		elem = elem[l:]
-																	} else {
-																		break
-																	}
-
-																	if len(elem) == 0 {
-																		// Leaf node.
-																		switch method {
-																		case "GET":
-																			r.name = ReadCoreV1NamespacedServiceStatusOperation
-																			r.summary = ""
-																			r.operationID = "readCoreV1NamespacedServiceStatus"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/status"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		case "PATCH":
-																			r.name = PatchCoreV1NamespacedServiceStatusOperation
-																			r.summary = ""
-																			r.operationID = "patchCoreV1NamespacedServiceStatus"
-																			r.operationGroup = ""
-																			r.pathPattern = "/api/v1/namespaces/{namespace}/services/{name}/status"
-																			r.args = args
-																			r.count = 2
-																			return r, true
-																		default:
-																			return
-																		}
-																	}
-
-																}
-
-															}
-
-														}
-
-													}
-
-												}
-
-											case 't': // Prefix: "tatus"
-
-												if l := len("tatus"); len(elem) >= l && elem[0:l] == "tatus" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadCoreV1NamespaceStatusOperation
-														r.summary = ""
-														r.operationID = "readCoreV1NamespaceStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{name}/status"
-														r.args = args
-														r.count = 1
-														return r, true
-													case "PATCH":
-														r.name = PatchCoreV1NamespaceStatusOperation
-														r.summary = ""
-														r.operationID = "patchCoreV1NamespaceStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/namespaces/{name}/status"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'o': // Prefix: "odes"
-
-								if l := len("odes"); len(elem) >= l && elem[0:l] == "odes" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = ListCoreV1NodeOperation
-										r.summary = ""
-										r.operationID = "listCoreV1Node"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/nodes"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "name"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ReadCoreV1NodeOperation
-											r.summary = ""
-											r.operationID = "readCoreV1Node"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/nodes/{name}"
-											r.args = args
-											r.count = 1
-											return r, true
-										case "PATCH":
-											r.name = PatchCoreV1NodeOperation
-											r.summary = ""
-											r.operationID = "patchCoreV1Node"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/nodes/{name}"
-											r.args = args
-											r.count = 1
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'p': // Prefix: "proxy"
-
-											if l := len("proxy"); len(elem) >= l && elem[0:l] == "proxy" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "DELETE":
-													r.name = ConnectCoreV1DeleteNodeProxyOperation
-													r.summary = ""
-													r.operationID = "connectCoreV1DeleteNodeProxy"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/nodes/{name}/proxy"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "GET":
-													r.name = ConnectCoreV1GetNodeProxyOperation
-													r.summary = ""
-													r.operationID = "connectCoreV1GetNodeProxy"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/nodes/{name}/proxy"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "HEAD":
-													r.name = ConnectCoreV1HeadNodeProxyOperation
-													r.summary = ""
-													r.operationID = "connectCoreV1HeadNodeProxy"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/nodes/{name}/proxy"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "OPTIONS":
-													r.name = ConnectCoreV1OptionsNodeProxyOperation
-													r.summary = ""
-													r.operationID = "connectCoreV1OptionsNodeProxy"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/nodes/{name}/proxy"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = ConnectCoreV1PatchNodeProxyOperation
-													r.summary = ""
-													r.operationID = "connectCoreV1PatchNodeProxy"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/nodes/{name}/proxy"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "POST":
-													r.name = ConnectCoreV1PostNodeProxyOperation
-													r.summary = ""
-													r.operationID = "connectCoreV1PostNodeProxy"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/nodes/{name}/proxy"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PUT":
-													r.name = ConnectCoreV1PutNodeProxyOperation
-													r.summary = ""
-													r.operationID = "connectCoreV1PutNodeProxy"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/nodes/{name}/proxy"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "path"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "DELETE":
-														r.name = ConnectCoreV1DeleteNodeProxyWithPathOperation
-														r.summary = ""
-														r.operationID = "connectCoreV1DeleteNodeProxyWithPath"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/nodes/{name}/proxy/{path}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "GET":
-														r.name = ConnectCoreV1GetNodeProxyWithPathOperation
-														r.summary = ""
-														r.operationID = "connectCoreV1GetNodeProxyWithPath"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/nodes/{name}/proxy/{path}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "HEAD":
-														r.name = ConnectCoreV1HeadNodeProxyWithPathOperation
-														r.summary = ""
-														r.operationID = "connectCoreV1HeadNodeProxyWithPath"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/nodes/{name}/proxy/{path}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "OPTIONS":
-														r.name = ConnectCoreV1OptionsNodeProxyWithPathOperation
-														r.summary = ""
-														r.operationID = "connectCoreV1OptionsNodeProxyWithPath"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/nodes/{name}/proxy/{path}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PATCH":
-														r.name = ConnectCoreV1PatchNodeProxyWithPathOperation
-														r.summary = ""
-														r.operationID = "connectCoreV1PatchNodeProxyWithPath"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/nodes/{name}/proxy/{path}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "POST":
-														r.name = ConnectCoreV1PostNodeProxyWithPathOperation
-														r.summary = ""
-														r.operationID = "connectCoreV1PostNodeProxyWithPath"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/nodes/{name}/proxy/{path}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PUT":
-														r.name = ConnectCoreV1PutNodeProxyWithPathOperation
-														r.summary = ""
-														r.operationID = "connectCoreV1PutNodeProxyWithPath"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/nodes/{name}/proxy/{path}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										case 's': // Prefix: "status"
-
-											if l := len("status"); len(elem) >= l && elem[0:l] == "status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadCoreV1NodeStatusOperation
-													r.summary = ""
-													r.operationID = "readCoreV1NodeStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/nodes/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchCoreV1NodeStatusOperation
-													r.summary = ""
-													r.operationID = "patchCoreV1NodeStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/nodes/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						case 'p': // Prefix: "p"
-
-							if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'e': // Prefix: "ersistentvolume"
-
-								if l := len("ersistentvolume"); len(elem) >= l && elem[0:l] == "ersistentvolume" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "claims"
-
-									if l := len("claims"); len(elem) >= l && elem[0:l] == "claims" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListCoreV1PersistentVolumeClaimForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listCoreV1PersistentVolumeClaimForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/persistentvolumeclaims"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 's': // Prefix: "s"
-
-									if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListCoreV1PersistentVolumeOperation
-											r.summary = ""
-											r.operationID = "listCoreV1PersistentVolume"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/persistentvolumes"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ReadCoreV1PersistentVolumeOperation
-												r.summary = ""
-												r.operationID = "readCoreV1PersistentVolume"
-												r.operationGroup = ""
-												r.pathPattern = "/api/v1/persistentvolumes/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchCoreV1PersistentVolumeOperation
-												r.summary = ""
-												r.operationID = "patchCoreV1PersistentVolume"
-												r.operationGroup = ""
-												r.pathPattern = "/api/v1/persistentvolumes/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/status"
-
-											if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadCoreV1PersistentVolumeStatusOperation
-													r.summary = ""
-													r.operationID = "readCoreV1PersistentVolumeStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/persistentvolumes/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchCoreV1PersistentVolumeStatusOperation
-													r.summary = ""
-													r.operationID = "patchCoreV1PersistentVolumeStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/persistentvolumes/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'o': // Prefix: "od"
-
-								if l := len("od"); len(elem) >= l && elem[0:l] == "od" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 's': // Prefix: "s"
-
-									if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListCoreV1PodForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listCoreV1PodForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/pods"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 't': // Prefix: "templates"
-
-									if l := len("templates"); len(elem) >= l && elem[0:l] == "templates" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListCoreV1PodTemplateForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listCoreV1PodTemplateForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/podtemplates"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								}
-
-							}
-
-						case 'r': // Prefix: "re"
-
-							if l := len("re"); len(elem) >= l && elem[0:l] == "re" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'p': // Prefix: "plicationcontrollers"
-
-								if l := len("plicationcontrollers"); len(elem) >= l && elem[0:l] == "plicationcontrollers" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch method {
-									case "GET":
-										r.name = ListCoreV1ReplicationControllerForAllNamespacesOperation
-										r.summary = ""
-										r.operationID = "listCoreV1ReplicationControllerForAllNamespaces"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/replicationcontrollers"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-
-							case 's': // Prefix: "sourcequotas"
-
-								if l := len("sourcequotas"); len(elem) >= l && elem[0:l] == "sourcequotas" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch method {
-									case "GET":
-										r.name = ListCoreV1ResourceQuotaForAllNamespacesOperation
-										r.summary = ""
-										r.operationID = "listCoreV1ResourceQuotaForAllNamespaces"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/resourcequotas"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-
-							}
-
-						case 's': // Prefix: "se"
-
-							if l := len("se"); len(elem) >= l && elem[0:l] == "se" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'c': // Prefix: "crets"
-
-								if l := len("crets"); len(elem) >= l && elem[0:l] == "crets" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch method {
-									case "GET":
-										r.name = ListCoreV1SecretForAllNamespacesOperation
-										r.summary = ""
-										r.operationID = "listCoreV1SecretForAllNamespaces"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/secrets"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-
-							case 'r': // Prefix: "rvice"
-
-								if l := len("rvice"); len(elem) >= l && elem[0:l] == "rvice" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'a': // Prefix: "accounts"
-
-									if l := len("accounts"); len(elem) >= l && elem[0:l] == "accounts" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListCoreV1ServiceAccountForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listCoreV1ServiceAccountForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/serviceaccounts"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 's': // Prefix: "s"
-
-									if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListCoreV1ServiceForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listCoreV1ServiceForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/services"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								}
-
-							}
-
-						case 'w': // Prefix: "watch/"
-
-							if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'c': // Prefix: "configmaps"
-
-								if l := len("configmaps"); len(elem) >= l && elem[0:l] == "configmaps" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch method {
-									case "GET":
-										r.name = WatchCoreV1ConfigMapListForAllNamespacesOperation
-										r.summary = ""
-										r.operationID = "watchCoreV1ConfigMapListForAllNamespaces"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/watch/configmaps"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-
-							case 'e': // Prefix: "e"
-
-								if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'n': // Prefix: "ndpoints"
-
-									if l := len("ndpoints"); len(elem) >= l && elem[0:l] == "ndpoints" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = WatchCoreV1EndpointsListForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "watchCoreV1EndpointsListForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/watch/endpoints"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'v': // Prefix: "vents"
-
-									if l := len("vents"); len(elem) >= l && elem[0:l] == "vents" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = WatchCoreV1EventListForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "watchCoreV1EventListForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/watch/events"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								}
-
-							case 'l': // Prefix: "limitranges"
-
-								if l := len("limitranges"); len(elem) >= l && elem[0:l] == "limitranges" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									// Leaf node.
-									switch method {
-									case "GET":
-										r.name = WatchCoreV1LimitRangeListForAllNamespacesOperation
-										r.summary = ""
-										r.operationID = "watchCoreV1LimitRangeListForAllNamespaces"
-										r.operationGroup = ""
-										r.pathPattern = "/api/v1/watch/limitranges"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-
-							case 'n': // Prefix: "n"
-
-								if l := len("n"); len(elem) >= l && elem[0:l] == "n" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'a': // Prefix: "amespaces"
-
-									if l := len("amespaces"); len(elem) >= l && elem[0:l] == "amespaces" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = WatchCoreV1NamespaceListOperation
-											r.summary = ""
-											r.operationID = "watchCoreV1NamespaceList"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/watch/namespaces"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchCoreV1NamespaceOperation
-												r.summary = ""
-												r.operationID = "watchCoreV1Namespace"
-												r.operationGroup = ""
-												r.pathPattern = "/api/v1/watch/namespaces/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'c': // Prefix: "configmaps"
-
-												if l := len("configmaps"); len(elem) >= l && elem[0:l] == "configmaps" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = WatchCoreV1NamespacedConfigMapListOperation
-														r.summary = ""
-														r.operationID = "watchCoreV1NamespacedConfigMapList"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/watch/namespaces/{namespace}/configmaps"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = WatchCoreV1NamespacedConfigMapOperation
-															r.summary = ""
-															r.operationID = "watchCoreV1NamespacedConfigMap"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/watch/namespaces/{namespace}/configmaps/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											case 'e': // Prefix: "e"
-
-												if l := len("e"); len(elem) >= l && elem[0:l] == "e" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'n': // Prefix: "ndpoints"
-
-													if l := len("ndpoints"); len(elem) >= l && elem[0:l] == "ndpoints" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchCoreV1NamespacedEndpointsListOperation
-															r.summary = ""
-															r.operationID = "watchCoreV1NamespacedEndpointsList"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/watch/namespaces/{namespace}/endpoints"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchCoreV1NamespacedEndpointsOperation
-																r.summary = ""
-																r.operationID = "watchCoreV1NamespacedEndpoints"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/watch/namespaces/{namespace}/endpoints/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												case 'v': // Prefix: "vents"
-
-													if l := len("vents"); len(elem) >= l && elem[0:l] == "vents" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchCoreV1NamespacedEventListOperation
-															r.summary = ""
-															r.operationID = "watchCoreV1NamespacedEventList"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/watch/namespaces/{namespace}/events"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchCoreV1NamespacedEventOperation
-																r.summary = ""
-																r.operationID = "watchCoreV1NamespacedEvent"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/watch/namespaces/{namespace}/events/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												}
-
-											case 'l': // Prefix: "limitranges"
-
-												if l := len("limitranges"); len(elem) >= l && elem[0:l] == "limitranges" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = WatchCoreV1NamespacedLimitRangeListOperation
-														r.summary = ""
-														r.operationID = "watchCoreV1NamespacedLimitRangeList"
-														r.operationGroup = ""
-														r.pathPattern = "/api/v1/watch/namespaces/{namespace}/limitranges"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = WatchCoreV1NamespacedLimitRangeOperation
-															r.summary = ""
-															r.operationID = "watchCoreV1NamespacedLimitRange"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/watch/namespaces/{namespace}/limitranges/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											case 'p': // Prefix: "p"
-
-												if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'e': // Prefix: "ersistentvolumeclaims"
-
-													if l := len("ersistentvolumeclaims"); len(elem) >= l && elem[0:l] == "ersistentvolumeclaims" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchCoreV1NamespacedPersistentVolumeClaimListOperation
-															r.summary = ""
-															r.operationID = "watchCoreV1NamespacedPersistentVolumeClaimList"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/watch/namespaces/{namespace}/persistentvolumeclaims"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchCoreV1NamespacedPersistentVolumeClaimOperation
-																r.summary = ""
-																r.operationID = "watchCoreV1NamespacedPersistentVolumeClaim"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/watch/namespaces/{namespace}/persistentvolumeclaims/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												case 'o': // Prefix: "od"
-
-													if l := len("od"); len(elem) >= l && elem[0:l] == "od" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case 's': // Prefix: "s"
-
-														if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = WatchCoreV1NamespacedPodListOperation
-																r.summary = ""
-																r.operationID = "watchCoreV1NamespacedPodList"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/watch/namespaces/{namespace}/pods"
-																r.args = args
-																r.count = 1
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = WatchCoreV1NamespacedPodOperation
-																	r.summary = ""
-																	r.operationID = "watchCoreV1NamespacedPod"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/watch/namespaces/{namespace}/pods/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													case 't': // Prefix: "templates"
-
-														if l := len("templates"); len(elem) >= l && elem[0:l] == "templates" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = WatchCoreV1NamespacedPodTemplateListOperation
-																r.summary = ""
-																r.operationID = "watchCoreV1NamespacedPodTemplateList"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/watch/namespaces/{namespace}/podtemplates"
-																r.args = args
-																r.count = 1
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = WatchCoreV1NamespacedPodTemplateOperation
-																	r.summary = ""
-																	r.operationID = "watchCoreV1NamespacedPodTemplate"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/watch/namespaces/{namespace}/podtemplates/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												}
-
-											case 'r': // Prefix: "re"
-
-												if l := len("re"); len(elem) >= l && elem[0:l] == "re" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'p': // Prefix: "plicationcontrollers"
-
-													if l := len("plicationcontrollers"); len(elem) >= l && elem[0:l] == "plicationcontrollers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchCoreV1NamespacedReplicationControllerListOperation
-															r.summary = ""
-															r.operationID = "watchCoreV1NamespacedReplicationControllerList"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/watch/namespaces/{namespace}/replicationcontrollers"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchCoreV1NamespacedReplicationControllerOperation
-																r.summary = ""
-																r.operationID = "watchCoreV1NamespacedReplicationController"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/watch/namespaces/{namespace}/replicationcontrollers/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												case 's': // Prefix: "sourcequotas"
-
-													if l := len("sourcequotas"); len(elem) >= l && elem[0:l] == "sourcequotas" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchCoreV1NamespacedResourceQuotaListOperation
-															r.summary = ""
-															r.operationID = "watchCoreV1NamespacedResourceQuotaList"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/watch/namespaces/{namespace}/resourcequotas"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchCoreV1NamespacedResourceQuotaOperation
-																r.summary = ""
-																r.operationID = "watchCoreV1NamespacedResourceQuota"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/watch/namespaces/{namespace}/resourcequotas/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												}
-
-											case 's': // Prefix: "se"
-
-												if l := len("se"); len(elem) >= l && elem[0:l] == "se" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'c': // Prefix: "crets"
-
-													if l := len("crets"); len(elem) >= l && elem[0:l] == "crets" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchCoreV1NamespacedSecretListOperation
-															r.summary = ""
-															r.operationID = "watchCoreV1NamespacedSecretList"
-															r.operationGroup = ""
-															r.pathPattern = "/api/v1/watch/namespaces/{namespace}/secrets"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchCoreV1NamespacedSecretOperation
-																r.summary = ""
-																r.operationID = "watchCoreV1NamespacedSecret"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/watch/namespaces/{namespace}/secrets/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												case 'r': // Prefix: "rvice"
-
-													if l := len("rvice"); len(elem) >= l && elem[0:l] == "rvice" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case 'a': // Prefix: "accounts"
-
-														if l := len("accounts"); len(elem) >= l && elem[0:l] == "accounts" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = WatchCoreV1NamespacedServiceAccountListOperation
-																r.summary = ""
-																r.operationID = "watchCoreV1NamespacedServiceAccountList"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/watch/namespaces/{namespace}/serviceaccounts"
-																r.args = args
-																r.count = 1
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = WatchCoreV1NamespacedServiceAccountOperation
-																	r.summary = ""
-																	r.operationID = "watchCoreV1NamespacedServiceAccount"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/watch/namespaces/{namespace}/serviceaccounts/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													case 's': // Prefix: "s"
-
-														if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = WatchCoreV1NamespacedServiceListOperation
-																r.summary = ""
-																r.operationID = "watchCoreV1NamespacedServiceList"
-																r.operationGroup = ""
-																r.pathPattern = "/api/v1/watch/namespaces/{namespace}/services"
-																r.args = args
-																r.count = 1
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = WatchCoreV1NamespacedServiceOperation
-																	r.summary = ""
-																	r.operationID = "watchCoreV1NamespacedService"
-																	r.operationGroup = ""
-																	r.pathPattern = "/api/v1/watch/namespaces/{namespace}/services/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'o': // Prefix: "odes"
-
-									if l := len("odes"); len(elem) >= l && elem[0:l] == "odes" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = WatchCoreV1NodeListOperation
-											r.summary = ""
-											r.operationID = "watchCoreV1NodeList"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/watch/nodes"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchCoreV1NodeOperation
-												r.summary = ""
-												r.operationID = "watchCoreV1Node"
-												r.operationGroup = ""
-												r.pathPattern = "/api/v1/watch/nodes/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								}
-
-							case 'p': // Prefix: "p"
-
-								if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "ersistentvolume"
-
-									if l := len("ersistentvolume"); len(elem) >= l && elem[0:l] == "ersistentvolume" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "claims"
-
-										if l := len("claims"); len(elem) >= l && elem[0:l] == "claims" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchCoreV1PersistentVolumeClaimListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchCoreV1PersistentVolumeClaimListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/api/v1/watch/persistentvolumeclaims"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchCoreV1PersistentVolumeListOperation
-												r.summary = ""
-												r.operationID = "watchCoreV1PersistentVolumeList"
-												r.operationGroup = ""
-												r.pathPattern = "/api/v1/watch/persistentvolumes"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchCoreV1PersistentVolumeOperation
-													r.summary = ""
-													r.operationID = "watchCoreV1PersistentVolume"
-													r.operationGroup = ""
-													r.pathPattern = "/api/v1/watch/persistentvolumes/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'o': // Prefix: "od"
-
-									if l := len("od"); len(elem) >= l && elem[0:l] == "od" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchCoreV1PodListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchCoreV1PodListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/api/v1/watch/pods"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 't': // Prefix: "templates"
-
-										if l := len("templates"); len(elem) >= l && elem[0:l] == "templates" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchCoreV1PodTemplateListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchCoreV1PodTemplateListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/api/v1/watch/podtemplates"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								}
-
-							case 'r': // Prefix: "re"
-
-								if l := len("re"); len(elem) >= l && elem[0:l] == "re" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'p': // Prefix: "plicationcontrollers"
-
-									if l := len("plicationcontrollers"); len(elem) >= l && elem[0:l] == "plicationcontrollers" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = WatchCoreV1ReplicationControllerListForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "watchCoreV1ReplicationControllerListForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/watch/replicationcontrollers"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 's': // Prefix: "sourcequotas"
-
-									if l := len("sourcequotas"); len(elem) >= l && elem[0:l] == "sourcequotas" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = WatchCoreV1ResourceQuotaListForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "watchCoreV1ResourceQuotaListForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/watch/resourcequotas"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								}
-
-							case 's': // Prefix: "se"
-
-								if l := len("se"); len(elem) >= l && elem[0:l] == "se" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "crets"
-
-									if l := len("crets"); len(elem) >= l && elem[0:l] == "crets" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = WatchCoreV1SecretListForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "watchCoreV1SecretListForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/api/v1/watch/secrets"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'r': // Prefix: "rvice"
-
-									if l := len("rvice"); len(elem) >= l && elem[0:l] == "rvice" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'a': // Prefix: "accounts"
-
-										if l := len("accounts"); len(elem) >= l && elem[0:l] == "accounts" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchCoreV1ServiceAccountListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchCoreV1ServiceAccountListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/api/v1/watch/serviceaccounts"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchCoreV1ServiceListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchCoreV1ServiceListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/api/v1/watch/services"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					}
-
-				case 's': // Prefix: "s/"
-
-					if l := len("s/"); len(elem) >= l && elem[0:l] == "s/" {
-						elem = elem[l:]
-					} else {
-						break
-					}
-
-					if len(elem) == 0 {
-						switch method {
-						case "GET":
-							r.name = GetAPIVersionsOperation
-							r.summary = ""
-							r.operationID = "getAPIVersions"
-							r.operationGroup = ""
-							r.pathPattern = "/apis/"
-							r.args = args
-							r.count = 0
-							return r, true
-						default:
-							return
-						}
-					}
-					switch elem[0] {
-					case 'a': // Prefix: "a"
-
-						if l := len("a"); len(elem) >= l && elem[0:l] == "a" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'd': // Prefix: "dmissionregistration.k8s.io/"
-
-							if l := len("dmissionregistration.k8s.io/"); len(elem) >= l && elem[0:l] == "dmissionregistration.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch method {
-								case "GET":
-									r.name = GetAdmissionregistrationAPIGroupOperation
-									r.summary = ""
-									r.operationID = "getAdmissionregistrationAPIGroup"
-									r.operationGroup = ""
-									r.pathPattern = "/apis/admissionregistration.k8s.io/"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1/"
-
-								if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetAdmissionregistrationV1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getAdmissionregistrationV1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/admissionregistration.k8s.io/v1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'm': // Prefix: "mutatingwebhookconfigurations"
-
-									if l := len("mutatingwebhookconfigurations"); len(elem) >= l && elem[0:l] == "mutatingwebhookconfigurations" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListAdmissionregistrationV1MutatingWebhookConfigurationOperation
-											r.summary = ""
-											r.operationID = "listAdmissionregistrationV1MutatingWebhookConfiguration"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ReadAdmissionregistrationV1MutatingWebhookConfigurationOperation
-												r.summary = ""
-												r.operationID = "readAdmissionregistrationV1MutatingWebhookConfiguration"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchAdmissionregistrationV1MutatingWebhookConfigurationOperation
-												r.summary = ""
-												r.operationID = "patchAdmissionregistrationV1MutatingWebhookConfiguration"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								case 'v': // Prefix: "validatingwebhookconfigurations"
-
-									if l := len("validatingwebhookconfigurations"); len(elem) >= l && elem[0:l] == "validatingwebhookconfigurations" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListAdmissionregistrationV1ValidatingWebhookConfigurationOperation
-											r.summary = ""
-											r.operationID = "listAdmissionregistrationV1ValidatingWebhookConfiguration"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ReadAdmissionregistrationV1ValidatingWebhookConfigurationOperation
-												r.summary = ""
-												r.operationID = "readAdmissionregistrationV1ValidatingWebhookConfiguration"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchAdmissionregistrationV1ValidatingWebhookConfigurationOperation
-												r.summary = ""
-												r.operationID = "patchAdmissionregistrationV1ValidatingWebhookConfiguration"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'm': // Prefix: "mutatingwebhookconfigurations"
-
-										if l := len("mutatingwebhookconfigurations"); len(elem) >= l && elem[0:l] == "mutatingwebhookconfigurations" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchAdmissionregistrationV1MutatingWebhookConfigurationListOperation
-												r.summary = ""
-												r.operationID = "watchAdmissionregistrationV1MutatingWebhookConfigurationList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/admissionregistration.k8s.io/v1/watch/mutatingwebhookconfigurations"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchAdmissionregistrationV1MutatingWebhookConfigurationOperation
-													r.summary = ""
-													r.operationID = "watchAdmissionregistrationV1MutatingWebhookConfiguration"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/admissionregistration.k8s.io/v1/watch/mutatingwebhookconfigurations/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 'v': // Prefix: "validatingwebhookconfigurations"
-
-										if l := len("validatingwebhookconfigurations"); len(elem) >= l && elem[0:l] == "validatingwebhookconfigurations" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchAdmissionregistrationV1ValidatingWebhookConfigurationListOperation
-												r.summary = ""
-												r.operationID = "watchAdmissionregistrationV1ValidatingWebhookConfigurationList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/admissionregistration.k8s.io/v1/watch/validatingwebhookconfigurations"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchAdmissionregistrationV1ValidatingWebhookConfigurationOperation
-													r.summary = ""
-													r.operationID = "watchAdmissionregistrationV1ValidatingWebhookConfiguration"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/admissionregistration.k8s.io/v1/watch/validatingwebhookconfigurations/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						case 'p': // Prefix: "p"
-
-							if l := len("p"); len(elem) >= l && elem[0:l] == "p" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'i': // Prefix: "i"
-
-								if l := len("i"); len(elem) >= l && elem[0:l] == "i" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "extensions.k8s.io/"
-
-									if l := len("extensions.k8s.io/"); len(elem) >= l && elem[0:l] == "extensions.k8s.io/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetApiextensionsAPIGroupOperation
-											r.summary = ""
-											r.operationID = "getApiextensionsAPIGroup"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/apiextensions.k8s.io/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'v': // Prefix: "v1/"
-
-										if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = GetApiextensionsV1APIResourcesOperation
-												r.summary = ""
-												r.operationID = "getApiextensionsV1APIResources"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/apiextensions.k8s.io/v1/"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "customresourcedefinitions"
-
-											if l := len("customresourcedefinitions"); len(elem) >= l && elem[0:l] == "customresourcedefinitions" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ListApiextensionsV1CustomResourceDefinitionOperation
-													r.summary = ""
-													r.operationID = "listApiextensionsV1CustomResourceDefinition"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/apiextensions.k8s.io/v1/customresourcedefinitions"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[0] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ReadApiextensionsV1CustomResourceDefinitionOperation
-														r.summary = ""
-														r.operationID = "readApiextensionsV1CustomResourceDefinition"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													case "PATCH":
-														r.name = PatchApiextensionsV1CustomResourceDefinitionOperation
-														r.summary = ""
-														r.operationID = "patchApiextensionsV1CustomResourceDefinition"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/status"
-
-													if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = ReadApiextensionsV1CustomResourceDefinitionStatusOperation
-															r.summary = ""
-															r.operationID = "readApiextensionsV1CustomResourceDefinitionStatus"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status"
-															r.args = args
-															r.count = 1
-															return r, true
-														case "PATCH":
-															r.name = PatchApiextensionsV1CustomResourceDefinitionStatusOperation
-															r.summary = ""
-															r.operationID = "patchApiextensionsV1CustomResourceDefinitionStatus"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											}
-
-										case 'w': // Prefix: "watch/customresourcedefinitions"
-
-											if l := len("watch/customresourcedefinitions"); len(elem) >= l && elem[0:l] == "watch/customresourcedefinitions" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchApiextensionsV1CustomResourceDefinitionListOperation
-													r.summary = ""
-													r.operationID = "watchApiextensionsV1CustomResourceDefinitionList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/apiextensions.k8s.io/v1/watch/customresourcedefinitions"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchApiextensionsV1CustomResourceDefinitionOperation
-														r.summary = ""
-														r.operationID = "watchApiextensionsV1CustomResourceDefinition"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apiextensions.k8s.io/v1/watch/customresourcedefinitions/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'r': // Prefix: "registration.k8s.io/"
-
-									if l := len("registration.k8s.io/"); len(elem) >= l && elem[0:l] == "registration.k8s.io/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetApiregistrationAPIGroupOperation
-											r.summary = ""
-											r.operationID = "getApiregistrationAPIGroup"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/apiregistration.k8s.io/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'v': // Prefix: "v1/"
-
-										if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = GetApiregistrationV1APIResourcesOperation
-												r.summary = ""
-												r.operationID = "getApiregistrationV1APIResources"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/apiregistration.k8s.io/v1/"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case 'a': // Prefix: "apiservices"
-
-											if l := len("apiservices"); len(elem) >= l && elem[0:l] == "apiservices" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ListApiregistrationV1APIServiceOperation
-													r.summary = ""
-													r.operationID = "listApiregistrationV1APIService"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/apiregistration.k8s.io/v1/apiservices"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[0] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ReadApiregistrationV1APIServiceOperation
-														r.summary = ""
-														r.operationID = "readApiregistrationV1APIService"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apiregistration.k8s.io/v1/apiservices/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													case "PATCH":
-														r.name = PatchApiregistrationV1APIServiceOperation
-														r.summary = ""
-														r.operationID = "patchApiregistrationV1APIService"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apiregistration.k8s.io/v1/apiservices/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/status"
-
-													if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = ReadApiregistrationV1APIServiceStatusOperation
-															r.summary = ""
-															r.operationID = "readApiregistrationV1APIServiceStatus"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apiregistration.k8s.io/v1/apiservices/{name}/status"
-															r.args = args
-															r.count = 1
-															return r, true
-														case "PATCH":
-															r.name = PatchApiregistrationV1APIServiceStatusOperation
-															r.summary = ""
-															r.operationID = "patchApiregistrationV1APIServiceStatus"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apiregistration.k8s.io/v1/apiservices/{name}/status"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											}
-
-										case 'w': // Prefix: "watch/apiservices"
-
-											if l := len("watch/apiservices"); len(elem) >= l && elem[0:l] == "watch/apiservices" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchApiregistrationV1APIServiceListOperation
-													r.summary = ""
-													r.operationID = "watchApiregistrationV1APIServiceList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/apiregistration.k8s.io/v1/watch/apiservices"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchApiregistrationV1APIServiceOperation
-														r.summary = ""
-														r.operationID = "watchApiregistrationV1APIService"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apiregistration.k8s.io/v1/watch/apiservices/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'p': // Prefix: "ps/"
-
-								if l := len("ps/"); len(elem) >= l && elem[0:l] == "ps/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetAppsAPIGroupOperation
-										r.summary = ""
-										r.operationID = "getAppsAPIGroup"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/apps/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'v': // Prefix: "v1/"
-
-									if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetAppsV1APIResourcesOperation
-											r.summary = ""
-											r.operationID = "getAppsV1APIResources"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/apps/v1/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "controllerrevisions"
-
-										if l := len("controllerrevisions"); len(elem) >= l && elem[0:l] == "controllerrevisions" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ListAppsV1ControllerRevisionForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "listAppsV1ControllerRevisionForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/apps/v1/controllerrevisions"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'd': // Prefix: "d"
-
-										if l := len("d"); len(elem) >= l && elem[0:l] == "d" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'a': // Prefix: "aemonsets"
-
-											if l := len("aemonsets"); len(elem) >= l && elem[0:l] == "aemonsets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ListAppsV1DaemonSetForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "listAppsV1DaemonSetForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/apps/v1/daemonsets"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										case 'e': // Prefix: "eployments"
-
-											if l := len("eployments"); len(elem) >= l && elem[0:l] == "eployments" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ListAppsV1DeploymentForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "listAppsV1DeploymentForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/apps/v1/deployments"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'c': // Prefix: "controllerrevisions"
-
-												if l := len("controllerrevisions"); len(elem) >= l && elem[0:l] == "controllerrevisions" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListAppsV1NamespacedControllerRevisionOperation
-														r.summary = ""
-														r.operationID = "listAppsV1NamespacedControllerRevision"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/controllerrevisions"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = ReadAppsV1NamespacedControllerRevisionOperation
-															r.summary = ""
-															r.operationID = "readAppsV1NamespacedControllerRevision"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchAppsV1NamespacedControllerRevisionOperation
-															r.summary = ""
-															r.operationID = "patchAppsV1NamespacedControllerRevision"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											case 'd': // Prefix: "d"
-
-												if l := len("d"); len(elem) >= l && elem[0:l] == "d" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'a': // Prefix: "aemonsets"
-
-													if l := len("aemonsets"); len(elem) >= l && elem[0:l] == "aemonsets" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ListAppsV1NamespacedDaemonSetOperation
-															r.summary = ""
-															r.operationID = "listAppsV1NamespacedDaemonSet"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/daemonsets"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Match until "/"
-														idx := strings.IndexByte(elem, '/')
-														if idx < 0 {
-															idx = len(elem)
-														}
-														args[1] = elem[:idx]
-														elem = elem[idx:]
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = ReadAppsV1NamespacedDaemonSetOperation
-																r.summary = ""
-																r.operationID = "readAppsV1NamespacedDaemonSet"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchAppsV1NamespacedDaemonSetOperation
-																r.summary = ""
-																r.operationID = "patchAppsV1NamespacedDaemonSet"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/status"
-
-															if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = ReadAppsV1NamespacedDaemonSetStatusOperation
-																	r.summary = ""
-																	r.operationID = "readAppsV1NamespacedDaemonSetStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchAppsV1NamespacedDaemonSetStatusOperation
-																	r.summary = ""
-																	r.operationID = "patchAppsV1NamespacedDaemonSetStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												case 'e': // Prefix: "eployments"
-
-													if l := len("eployments"); len(elem) >= l && elem[0:l] == "eployments" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ListAppsV1NamespacedDeploymentOperation
-															r.summary = ""
-															r.operationID = "listAppsV1NamespacedDeployment"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/deployments"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Match until "/"
-														idx := strings.IndexByte(elem, '/')
-														if idx < 0 {
-															idx = len(elem)
-														}
-														args[1] = elem[:idx]
-														elem = elem[idx:]
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = ReadAppsV1NamespacedDeploymentOperation
-																r.summary = ""
-																r.operationID = "readAppsV1NamespacedDeployment"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/deployments/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchAppsV1NamespacedDeploymentOperation
-																r.summary = ""
-																r.operationID = "patchAppsV1NamespacedDeployment"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/deployments/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/s"
-
-															if l := len("/s"); len(elem) >= l && elem[0:l] == "/s" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																break
-															}
-															switch elem[0] {
-															case 'c': // Prefix: "cale"
-
-																if l := len("cale"); len(elem) >= l && elem[0:l] == "cale" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	// Leaf node.
-																	switch method {
-																	case "GET":
-																		r.name = ReadAppsV1NamespacedDeploymentScaleOperation
-																		r.summary = ""
-																		r.operationID = "readAppsV1NamespacedDeploymentScale"
-																		r.operationGroup = ""
-																		r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/deployments/{name}/scale"
-																		r.args = args
-																		r.count = 2
-																		return r, true
-																	case "PATCH":
-																		r.name = PatchAppsV1NamespacedDeploymentScaleOperation
-																		r.summary = ""
-																		r.operationID = "patchAppsV1NamespacedDeploymentScale"
-																		r.operationGroup = ""
-																		r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/deployments/{name}/scale"
-																		r.args = args
-																		r.count = 2
-																		return r, true
-																	default:
-																		return
-																	}
-																}
-
-															case 't': // Prefix: "tatus"
-
-																if l := len("tatus"); len(elem) >= l && elem[0:l] == "tatus" {
-																	elem = elem[l:]
-																} else {
-																	break
-																}
-
-																if len(elem) == 0 {
-																	// Leaf node.
-																	switch method {
-																	case "GET":
-																		r.name = ReadAppsV1NamespacedDeploymentStatusOperation
-																		r.summary = ""
-																		r.operationID = "readAppsV1NamespacedDeploymentStatus"
-																		r.operationGroup = ""
-																		r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/deployments/{name}/status"
-																		r.args = args
-																		r.count = 2
-																		return r, true
-																	case "PATCH":
-																		r.name = PatchAppsV1NamespacedDeploymentStatusOperation
-																		r.summary = ""
-																		r.operationID = "patchAppsV1NamespacedDeploymentStatus"
-																		r.operationGroup = ""
-																		r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/deployments/{name}/status"
-																		r.args = args
-																		r.count = 2
-																		return r, true
-																	default:
-																		return
-																	}
-																}
-
-															}
-
-														}
-
-													}
-
-												}
-
-											case 'r': // Prefix: "replicasets"
-
-												if l := len("replicasets"); len(elem) >= l && elem[0:l] == "replicasets" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListAppsV1NamespacedReplicaSetOperation
-														r.summary = ""
-														r.operationID = "listAppsV1NamespacedReplicaSet"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/replicasets"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ReadAppsV1NamespacedReplicaSetOperation
-															r.summary = ""
-															r.operationID = "readAppsV1NamespacedReplicaSet"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/replicasets/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchAppsV1NamespacedReplicaSetOperation
-															r.summary = ""
-															r.operationID = "patchAppsV1NamespacedReplicaSet"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/replicasets/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/s"
-
-														if l := len("/s"); len(elem) >= l && elem[0:l] == "/s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															break
-														}
-														switch elem[0] {
-														case 'c': // Prefix: "cale"
-
-															if l := len("cale"); len(elem) >= l && elem[0:l] == "cale" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = ReadAppsV1NamespacedReplicaSetScaleOperation
-																	r.summary = ""
-																	r.operationID = "readAppsV1NamespacedReplicaSetScale"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/scale"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchAppsV1NamespacedReplicaSetScaleOperation
-																	r.summary = ""
-																	r.operationID = "patchAppsV1NamespacedReplicaSetScale"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/scale"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														case 't': // Prefix: "tatus"
-
-															if l := len("tatus"); len(elem) >= l && elem[0:l] == "tatus" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = ReadAppsV1NamespacedReplicaSetStatusOperation
-																	r.summary = ""
-																	r.operationID = "readAppsV1NamespacedReplicaSetStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchAppsV1NamespacedReplicaSetStatusOperation
-																	r.summary = ""
-																	r.operationID = "patchAppsV1NamespacedReplicaSetStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												}
-
-											case 's': // Prefix: "statefulsets"
-
-												if l := len("statefulsets"); len(elem) >= l && elem[0:l] == "statefulsets" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListAppsV1NamespacedStatefulSetOperation
-														r.summary = ""
-														r.operationID = "listAppsV1NamespacedStatefulSet"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/statefulsets"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ReadAppsV1NamespacedStatefulSetOperation
-															r.summary = ""
-															r.operationID = "readAppsV1NamespacedStatefulSet"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchAppsV1NamespacedStatefulSetOperation
-															r.summary = ""
-															r.operationID = "patchAppsV1NamespacedStatefulSet"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/s"
-
-														if l := len("/s"); len(elem) >= l && elem[0:l] == "/s" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															break
-														}
-														switch elem[0] {
-														case 'c': // Prefix: "cale"
-
-															if l := len("cale"); len(elem) >= l && elem[0:l] == "cale" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = ReadAppsV1NamespacedStatefulSetScaleOperation
-																	r.summary = ""
-																	r.operationID = "readAppsV1NamespacedStatefulSetScale"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/scale"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchAppsV1NamespacedStatefulSetScaleOperation
-																	r.summary = ""
-																	r.operationID = "patchAppsV1NamespacedStatefulSetScale"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/scale"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														case 't': // Prefix: "tatus"
-
-															if l := len("tatus"); len(elem) >= l && elem[0:l] == "tatus" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = ReadAppsV1NamespacedStatefulSetStatusOperation
-																	r.summary = ""
-																	r.operationID = "readAppsV1NamespacedStatefulSetStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchAppsV1NamespacedStatefulSetStatusOperation
-																	r.summary = ""
-																	r.operationID = "patchAppsV1NamespacedStatefulSetStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												}
-
-											}
-
-										}
-
-									case 'r': // Prefix: "replicasets"
-
-										if l := len("replicasets"); len(elem) >= l && elem[0:l] == "replicasets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ListAppsV1ReplicaSetForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "listAppsV1ReplicaSetForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/apps/v1/replicasets"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 's': // Prefix: "statefulsets"
-
-										if l := len("statefulsets"); len(elem) >= l && elem[0:l] == "statefulsets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ListAppsV1StatefulSetForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "listAppsV1StatefulSetForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/apps/v1/statefulsets"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'w': // Prefix: "watch/"
-
-										if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "controllerrevisions"
-
-											if l := len("controllerrevisions"); len(elem) >= l && elem[0:l] == "controllerrevisions" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchAppsV1ControllerRevisionListForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "watchAppsV1ControllerRevisionListForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/apps/v1/watch/controllerrevisions"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										case 'd': // Prefix: "d"
-
-											if l := len("d"); len(elem) >= l && elem[0:l] == "d" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'a': // Prefix: "aemonsets"
-
-												if l := len("aemonsets"); len(elem) >= l && elem[0:l] == "aemonsets" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchAppsV1DaemonSetListForAllNamespacesOperation
-														r.summary = ""
-														r.operationID = "watchAppsV1DaemonSetListForAllNamespaces"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apps/v1/watch/daemonsets"
-														r.args = args
-														r.count = 0
-														return r, true
-													default:
-														return
-													}
-												}
-
-											case 'e': // Prefix: "eployments"
-
-												if l := len("eployments"); len(elem) >= l && elem[0:l] == "eployments" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchAppsV1DeploymentListForAllNamespacesOperation
-														r.summary = ""
-														r.operationID = "watchAppsV1DeploymentListForAllNamespaces"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/apps/v1/watch/deployments"
-														r.args = args
-														r.count = 0
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										case 'n': // Prefix: "namespaces/"
-
-											if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "namespace"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'c': // Prefix: "controllerrevisions"
-
-													if l := len("controllerrevisions"); len(elem) >= l && elem[0:l] == "controllerrevisions" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchAppsV1NamespacedControllerRevisionListOperation
-															r.summary = ""
-															r.operationID = "watchAppsV1NamespacedControllerRevisionList"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/watch/namespaces/{namespace}/controllerrevisions"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchAppsV1NamespacedControllerRevisionOperation
-																r.summary = ""
-																r.operationID = "watchAppsV1NamespacedControllerRevision"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/apps/v1/watch/namespaces/{namespace}/controllerrevisions/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												case 'd': // Prefix: "d"
-
-													if l := len("d"); len(elem) >= l && elem[0:l] == "d" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case 'a': // Prefix: "aemonsets"
-
-														if l := len("aemonsets"); len(elem) >= l && elem[0:l] == "aemonsets" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = WatchAppsV1NamespacedDaemonSetListOperation
-																r.summary = ""
-																r.operationID = "watchAppsV1NamespacedDaemonSetList"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/apps/v1/watch/namespaces/{namespace}/daemonsets"
-																r.args = args
-																r.count = 1
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = WatchAppsV1NamespacedDaemonSetOperation
-																	r.summary = ""
-																	r.operationID = "watchAppsV1NamespacedDaemonSet"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/watch/namespaces/{namespace}/daemonsets/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													case 'e': // Prefix: "eployments"
-
-														if l := len("eployments"); len(elem) >= l && elem[0:l] == "eployments" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = WatchAppsV1NamespacedDeploymentListOperation
-																r.summary = ""
-																r.operationID = "watchAppsV1NamespacedDeploymentList"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/apps/v1/watch/namespaces/{namespace}/deployments"
-																r.args = args
-																r.count = 1
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = WatchAppsV1NamespacedDeploymentOperation
-																	r.summary = ""
-																	r.operationID = "watchAppsV1NamespacedDeployment"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/apps/v1/watch/namespaces/{namespace}/deployments/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												case 'r': // Prefix: "replicasets"
-
-													if l := len("replicasets"); len(elem) >= l && elem[0:l] == "replicasets" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchAppsV1NamespacedReplicaSetListOperation
-															r.summary = ""
-															r.operationID = "watchAppsV1NamespacedReplicaSetList"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/watch/namespaces/{namespace}/replicasets"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchAppsV1NamespacedReplicaSetOperation
-																r.summary = ""
-																r.operationID = "watchAppsV1NamespacedReplicaSet"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/apps/v1/watch/namespaces/{namespace}/replicasets/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												case 's': // Prefix: "statefulsets"
-
-													if l := len("statefulsets"); len(elem) >= l && elem[0:l] == "statefulsets" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchAppsV1NamespacedStatefulSetListOperation
-															r.summary = ""
-															r.operationID = "watchAppsV1NamespacedStatefulSetList"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/apps/v1/watch/namespaces/{namespace}/statefulsets"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchAppsV1NamespacedStatefulSetOperation
-																r.summary = ""
-																r.operationID = "watchAppsV1NamespacedStatefulSet"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/apps/v1/watch/namespaces/{namespace}/statefulsets/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												}
-
-											}
-
-										case 'r': // Prefix: "replicasets"
-
-											if l := len("replicasets"); len(elem) >= l && elem[0:l] == "replicasets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchAppsV1ReplicaSetListForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "watchAppsV1ReplicaSetListForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/apps/v1/watch/replicasets"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										case 's': // Prefix: "statefulsets"
-
-											if l := len("statefulsets"); len(elem) >= l && elem[0:l] == "statefulsets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchAppsV1StatefulSetListForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "watchAppsV1StatefulSetListForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/apps/v1/watch/statefulsets"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						case 'u': // Prefix: "ut"
-
-							if l := len("ut"); len(elem) >= l && elem[0:l] == "ut" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case 'h': // Prefix: "h"
-
-								if l := len("h"); len(elem) >= l && elem[0:l] == "h" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "entication.k8s.io/"
-
-									if l := len("entication.k8s.io/"); len(elem) >= l && elem[0:l] == "entication.k8s.io/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetAuthenticationAPIGroupOperation
-											r.summary = ""
-											r.operationID = "getAuthenticationAPIGroup"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/authentication.k8s.io/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'v': // Prefix: "v1/"
-
-										if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = GetAuthenticationV1APIResourcesOperation
-												r.summary = ""
-												r.operationID = "getAuthenticationV1APIResources"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/authentication.k8s.io/v1/"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								case 'o': // Prefix: "orization.k8s.io/"
-
-									if l := len("orization.k8s.io/"); len(elem) >= l && elem[0:l] == "orization.k8s.io/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetAuthorizationAPIGroupOperation
-											r.summary = ""
-											r.operationID = "getAuthorizationAPIGroup"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/authorization.k8s.io/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'v': // Prefix: "v1/"
-
-										if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = GetAuthorizationV1APIResourcesOperation
-												r.summary = ""
-												r.operationID = "getAuthorizationV1APIResources"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/authorization.k8s.io/v1/"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								}
-
-							case 'o': // Prefix: "oscaling/"
-
-								if l := len("oscaling/"); len(elem) >= l && elem[0:l] == "oscaling/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetAutoscalingAPIGroupOperation
-										r.summary = ""
-										r.operationID = "getAutoscalingAPIGroup"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/autoscaling/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'v': // Prefix: "v"
-
-									if l := len("v"); len(elem) >= l && elem[0:l] == "v" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '1': // Prefix: "1/"
-
-										if l := len("1/"); len(elem) >= l && elem[0:l] == "1/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = GetAutoscalingV1APIResourcesOperation
-												r.summary = ""
-												r.operationID = "getAutoscalingV1APIResources"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/autoscaling/v1/"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case 'h': // Prefix: "horizontalpodautoscalers"
-
-											if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ListAutoscalingV1HorizontalPodAutoscalerForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "listAutoscalingV1HorizontalPodAutoscalerForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/autoscaling/v1/horizontalpodautoscalers"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										case 'n': // Prefix: "namespaces/"
-
-											if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "namespace"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/horizontalpodautoscalers"
-
-												if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListAutoscalingV1NamespacedHorizontalPodAutoscalerOperation
-														r.summary = ""
-														r.operationID = "listAutoscalingV1NamespacedHorizontalPodAutoscaler"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ReadAutoscalingV1NamespacedHorizontalPodAutoscalerOperation
-															r.summary = ""
-															r.operationID = "readAutoscalingV1NamespacedHorizontalPodAutoscaler"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerOperation
-															r.summary = ""
-															r.operationID = "patchAutoscalingV1NamespacedHorizontalPodAutoscaler"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/status"
-
-														if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = ReadAutoscalingV1NamespacedHorizontalPodAutoscalerStatusOperation
-																r.summary = ""
-																r.operationID = "readAutoscalingV1NamespacedHorizontalPodAutoscalerStatus"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatusOperation
-																r.summary = ""
-																r.operationID = "patchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												}
-
-											}
-
-										case 'w': // Prefix: "watch/"
-
-											if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'h': // Prefix: "horizontalpodautoscalers"
-
-												if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchAutoscalingV1HorizontalPodAutoscalerListForAllNamespacesOperation
-														r.summary = ""
-														r.operationID = "watchAutoscalingV1HorizontalPodAutoscalerListForAllNamespaces"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/autoscaling/v1/watch/horizontalpodautoscalers"
-														r.args = args
-														r.count = 0
-														return r, true
-													default:
-														return
-													}
-												}
-
-											case 'n': // Prefix: "namespaces/"
-
-												if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "namespace"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[0] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/horizontalpodautoscalers"
-
-													if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchAutoscalingV1NamespacedHorizontalPodAutoscalerListOperation
-															r.summary = ""
-															r.operationID = "watchAutoscalingV1NamespacedHorizontalPodAutoscalerList"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchAutoscalingV1NamespacedHorizontalPodAutoscalerOperation
-																r.summary = ""
-																r.operationID = "watchAutoscalingV1NamespacedHorizontalPodAutoscaler"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												}
-
-											}
-
-										}
-
-									case '2': // Prefix: "2beta"
-
-										if l := len("2beta"); len(elem) >= l && elem[0:l] == "2beta" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '1': // Prefix: "1/"
-
-											if l := len("1/"); len(elem) >= l && elem[0:l] == "1/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = GetAutoscalingV2beta1APIResourcesOperation
-													r.summary = ""
-													r.operationID = "getAutoscalingV2beta1APIResources"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/autoscaling/v2beta1/"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case 'h': // Prefix: "horizontalpodautoscalers"
-
-												if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ListAutoscalingV2beta1HorizontalPodAutoscalerForAllNamespacesOperation
-														r.summary = ""
-														r.operationID = "listAutoscalingV2beta1HorizontalPodAutoscalerForAllNamespaces"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/autoscaling/v2beta1/horizontalpodautoscalers"
-														r.args = args
-														r.count = 0
-														return r, true
-													default:
-														return
-													}
-												}
-
-											case 'n': // Prefix: "namespaces/"
-
-												if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "namespace"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[0] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/horizontalpodautoscalers"
-
-													if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ListAutoscalingV2beta1NamespacedHorizontalPodAutoscalerOperation
-															r.summary = ""
-															r.operationID = "listAutoscalingV2beta1NamespacedHorizontalPodAutoscaler"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Match until "/"
-														idx := strings.IndexByte(elem, '/')
-														if idx < 0 {
-															idx = len(elem)
-														}
-														args[1] = elem[:idx]
-														elem = elem[idx:]
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerOperation
-																r.summary = ""
-																r.operationID = "readAutoscalingV2beta1NamespacedHorizontalPodAutoscaler"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerOperation
-																r.summary = ""
-																r.operationID = "patchAutoscalingV2beta1NamespacedHorizontalPodAutoscaler"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/status"
-
-															if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = ReadAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusOperation
-																	r.summary = ""
-																	r.operationID = "readAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatusOperation
-																	r.summary = ""
-																	r.operationID = "patchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/autoscaling/v2beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												}
-
-											case 'w': // Prefix: "watch/"
-
-												if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'h': // Prefix: "horizontalpodautoscalers"
-
-													if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = WatchAutoscalingV2beta1HorizontalPodAutoscalerListForAllNamespacesOperation
-															r.summary = ""
-															r.operationID = "watchAutoscalingV2beta1HorizontalPodAutoscalerListForAllNamespaces"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/autoscaling/v2beta1/watch/horizontalpodautoscalers"
-															r.args = args
-															r.count = 0
-															return r, true
-														default:
-															return
-														}
-													}
-
-												case 'n': // Prefix: "namespaces/"
-
-													if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "namespace"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[0] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/horizontalpodautoscalers"
-
-														if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerListOperation
-																r.summary = ""
-																r.operationID = "watchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerList"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/autoscaling/v2beta1/watch/namespaces/{namespace}/horizontalpodautoscalers"
-																r.args = args
-																r.count = 1
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = WatchAutoscalingV2beta1NamespacedHorizontalPodAutoscalerOperation
-																	r.summary = ""
-																	r.operationID = "watchAutoscalingV2beta1NamespacedHorizontalPodAutoscaler"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/autoscaling/v2beta1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												}
-
-											}
-
-										case '2': // Prefix: "2/"
-
-											if l := len("2/"); len(elem) >= l && elem[0:l] == "2/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = GetAutoscalingV2beta2APIResourcesOperation
-													r.summary = ""
-													r.operationID = "getAutoscalingV2beta2APIResources"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/autoscaling/v2beta2/"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case 'h': // Prefix: "horizontalpodautoscalers"
-
-												if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ListAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespacesOperation
-														r.summary = ""
-														r.operationID = "listAutoscalingV2beta2HorizontalPodAutoscalerForAllNamespaces"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/autoscaling/v2beta2/horizontalpodautoscalers"
-														r.args = args
-														r.count = 0
-														return r, true
-													default:
-														return
-													}
-												}
-
-											case 'n': // Prefix: "namespaces/"
-
-												if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "namespace"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[0] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/horizontalpodautoscalers"
-
-													if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ListAutoscalingV2beta2NamespacedHorizontalPodAutoscalerOperation
-															r.summary = ""
-															r.operationID = "listAutoscalingV2beta2NamespacedHorizontalPodAutoscaler"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/autoscaling/v2beta2/namespaces/{namespace}/horizontalpodautoscalers"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Match until "/"
-														idx := strings.IndexByte(elem, '/')
-														if idx < 0 {
-															idx = len(elem)
-														}
-														args[1] = elem[:idx]
-														elem = elem[idx:]
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerOperation
-																r.summary = ""
-																r.operationID = "readAutoscalingV2beta2NamespacedHorizontalPodAutoscaler"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/autoscaling/v2beta2/namespaces/{namespace}/horizontalpodautoscalers/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerOperation
-																r.summary = ""
-																r.operationID = "patchAutoscalingV2beta2NamespacedHorizontalPodAutoscaler"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/autoscaling/v2beta2/namespaces/{namespace}/horizontalpodautoscalers/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/status"
-
-															if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = ReadAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusOperation
-																	r.summary = ""
-																	r.operationID = "readAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/autoscaling/v2beta2/namespaces/{namespace}/horizontalpodautoscalers/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																case "PATCH":
-																	r.name = PatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatusOperation
-																	r.summary = ""
-																	r.operationID = "patchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerStatus"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/autoscaling/v2beta2/namespaces/{namespace}/horizontalpodautoscalers/{name}/status"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												}
-
-											case 'w': // Prefix: "watch/"
-
-												if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'h': // Prefix: "horizontalpodautoscalers"
-
-													if l := len("horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "horizontalpodautoscalers" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = WatchAutoscalingV2beta2HorizontalPodAutoscalerListForAllNamespacesOperation
-															r.summary = ""
-															r.operationID = "watchAutoscalingV2beta2HorizontalPodAutoscalerListForAllNamespaces"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/autoscaling/v2beta2/watch/horizontalpodautoscalers"
-															r.args = args
-															r.count = 0
-															return r, true
-														default:
-															return
-														}
-													}
-
-												case 'n': // Prefix: "namespaces/"
-
-													if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "namespace"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[0] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														break
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/horizontalpodautoscalers"
-
-														if l := len("/horizontalpodautoscalers"); len(elem) >= l && elem[0:l] == "/horizontalpodautoscalers" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															switch method {
-															case "GET":
-																r.name = WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerListOperation
-																r.summary = ""
-																r.operationID = "watchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerList"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/autoscaling/v2beta2/watch/namespaces/{namespace}/horizontalpodautoscalers"
-																r.args = args
-																r.count = 1
-																return r, true
-															default:
-																return
-															}
-														}
-														switch elem[0] {
-														case '/': // Prefix: "/"
-
-															if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-																elem = elem[l:]
-															} else {
-																break
-															}
-
-															// Param: "name"
-															// Leaf parameter, slashes are prohibited
-															idx := strings.IndexByte(elem, '/')
-															if idx >= 0 {
-																break
-															}
-															args[1] = elem
-															elem = ""
-
-															if len(elem) == 0 {
-																// Leaf node.
-																switch method {
-																case "GET":
-																	r.name = WatchAutoscalingV2beta2NamespacedHorizontalPodAutoscalerOperation
-																	r.summary = ""
-																	r.operationID = "watchAutoscalingV2beta2NamespacedHorizontalPodAutoscaler"
-																	r.operationGroup = ""
-																	r.pathPattern = "/apis/autoscaling/v2beta2/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}"
-																	r.args = args
-																	r.count = 2
-																	return r, true
-																default:
-																	return
-																}
-															}
-
-														}
-
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'b': // Prefix: "batch/"
-
-						if l := len("batch/"); len(elem) >= l && elem[0:l] == "batch/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch method {
-							case "GET":
-								r.name = GetBatchAPIGroupOperation
-								r.summary = ""
-								r.operationID = "getBatchAPIGroup"
-								r.operationGroup = ""
-								r.pathPattern = "/apis/batch/"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1"
-
-							if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case '/': // Prefix: "/"
-
-								if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetBatchV1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getBatchV1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/batch/v1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "cronjobs"
-
-									if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListBatchV1CronJobForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listBatchV1CronJobForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/batch/v1/cronjobs"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'j': // Prefix: "jobs"
-
-									if l := len("jobs"); len(elem) >= l && elem[0:l] == "jobs" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListBatchV1JobForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listBatchV1JobForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/batch/v1/jobs"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "cronjobs"
-
-											if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ListBatchV1NamespacedCronJobOperation
-													r.summary = ""
-													r.operationID = "listBatchV1NamespacedCronJob"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/batch/v1/namespaces/{namespace}/cronjobs"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[1] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ReadBatchV1NamespacedCronJobOperation
-														r.summary = ""
-														r.operationID = "readBatchV1NamespacedCronJob"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PATCH":
-														r.name = PatchBatchV1NamespacedCronJobOperation
-														r.summary = ""
-														r.operationID = "patchBatchV1NamespacedCronJob"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/status"
-
-													if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = ReadBatchV1NamespacedCronJobStatusOperation
-															r.summary = ""
-															r.operationID = "readBatchV1NamespacedCronJobStatus"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}/status"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchBatchV1NamespacedCronJobStatusOperation
-															r.summary = ""
-															r.operationID = "patchBatchV1NamespacedCronJobStatus"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}/status"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											}
-
-										case 'j': // Prefix: "jobs"
-
-											if l := len("jobs"); len(elem) >= l && elem[0:l] == "jobs" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ListBatchV1NamespacedJobOperation
-													r.summary = ""
-													r.operationID = "listBatchV1NamespacedJob"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/batch/v1/namespaces/{namespace}/jobs"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Match until "/"
-												idx := strings.IndexByte(elem, '/')
-												if idx < 0 {
-													idx = len(elem)
-												}
-												args[1] = elem[:idx]
-												elem = elem[idx:]
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ReadBatchV1NamespacedJobOperation
-														r.summary = ""
-														r.operationID = "readBatchV1NamespacedJob"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/batch/v1/namespaces/{namespace}/jobs/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PATCH":
-														r.name = PatchBatchV1NamespacedJobOperation
-														r.summary = ""
-														r.operationID = "patchBatchV1NamespacedJob"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/batch/v1/namespaces/{namespace}/jobs/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/status"
-
-													if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = ReadBatchV1NamespacedJobStatusOperation
-															r.summary = ""
-															r.operationID = "readBatchV1NamespacedJobStatus"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/batch/v1/namespaces/{namespace}/jobs/{name}/status"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchBatchV1NamespacedJobStatusOperation
-															r.summary = ""
-															r.operationID = "patchBatchV1NamespacedJobStatus"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/batch/v1/namespaces/{namespace}/jobs/{name}/status"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "cronjobs"
-
-										if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchBatchV1CronJobListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchBatchV1CronJobListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/batch/v1/watch/cronjobs"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'j': // Prefix: "jobs"
-
-										if l := len("jobs"); len(elem) >= l && elem[0:l] == "jobs" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchBatchV1JobListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchBatchV1JobListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/batch/v1/watch/jobs"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'c': // Prefix: "cronjobs"
-
-												if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = WatchBatchV1NamespacedCronJobListOperation
-														r.summary = ""
-														r.operationID = "watchBatchV1NamespacedCronJobList"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/batch/v1/watch/namespaces/{namespace}/cronjobs"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = WatchBatchV1NamespacedCronJobOperation
-															r.summary = ""
-															r.operationID = "watchBatchV1NamespacedCronJob"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/batch/v1/watch/namespaces/{namespace}/cronjobs/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											case 'j': // Prefix: "jobs"
-
-												if l := len("jobs"); len(elem) >= l && elem[0:l] == "jobs" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = WatchBatchV1NamespacedJobListOperation
-														r.summary = ""
-														r.operationID = "watchBatchV1NamespacedJobList"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/batch/v1/watch/namespaces/{namespace}/jobs"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = WatchBatchV1NamespacedJobOperation
-															r.summary = ""
-															r.operationID = "watchBatchV1NamespacedJob"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/batch/v1/watch/namespaces/{namespace}/jobs/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'b': // Prefix: "beta1/"
-
-								if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetBatchV1beta1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getBatchV1beta1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/batch/v1beta1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "cronjobs"
-
-									if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListBatchV1beta1CronJobForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listBatchV1beta1CronJobForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/batch/v1beta1/cronjobs"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/cronjobs"
-
-										if l := len("/cronjobs"); len(elem) >= l && elem[0:l] == "/cronjobs" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListBatchV1beta1NamespacedCronJobOperation
-												r.summary = ""
-												r.operationID = "listBatchV1beta1NamespacedCronJob"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/batch/v1beta1/namespaces/{namespace}/cronjobs"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[1] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ReadBatchV1beta1NamespacedCronJobOperation
-													r.summary = ""
-													r.operationID = "readBatchV1beta1NamespacedCronJob"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/batch/v1beta1/namespaces/{namespace}/cronjobs/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												case "PATCH":
-													r.name = PatchBatchV1beta1NamespacedCronJobOperation
-													r.summary = ""
-													r.operationID = "patchBatchV1beta1NamespacedCronJob"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/batch/v1beta1/namespaces/{namespace}/cronjobs/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/status"
-
-												if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadBatchV1beta1NamespacedCronJobStatusOperation
-														r.summary = ""
-														r.operationID = "readBatchV1beta1NamespacedCronJobStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/batch/v1beta1/namespaces/{namespace}/cronjobs/{name}/status"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PATCH":
-														r.name = PatchBatchV1beta1NamespacedCronJobStatusOperation
-														r.summary = ""
-														r.operationID = "patchBatchV1beta1NamespacedCronJobStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/batch/v1beta1/namespaces/{namespace}/cronjobs/{name}/status"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "cronjobs"
-
-										if l := len("cronjobs"); len(elem) >= l && elem[0:l] == "cronjobs" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchBatchV1beta1CronJobListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchBatchV1beta1CronJobListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/batch/v1beta1/watch/cronjobs"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/cronjobs"
-
-											if l := len("/cronjobs"); len(elem) >= l && elem[0:l] == "/cronjobs" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchBatchV1beta1NamespacedCronJobListOperation
-													r.summary = ""
-													r.operationID = "watchBatchV1beta1NamespacedCronJobList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/batch/v1beta1/watch/namespaces/{namespace}/cronjobs"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchBatchV1beta1NamespacedCronJobOperation
-														r.summary = ""
-														r.operationID = "watchBatchV1beta1NamespacedCronJob"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/batch/v1beta1/watch/namespaces/{namespace}/cronjobs/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'c': // Prefix: "c"
-
-						if l := len("c"); len(elem) >= l && elem[0:l] == "c" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'e': // Prefix: "ertificates.k8s.io/"
-
-							if l := len("ertificates.k8s.io/"); len(elem) >= l && elem[0:l] == "ertificates.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch method {
-								case "GET":
-									r.name = GetCertificatesAPIGroupOperation
-									r.summary = ""
-									r.operationID = "getCertificatesAPIGroup"
-									r.operationGroup = ""
-									r.pathPattern = "/apis/certificates.k8s.io/"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1/"
-
-								if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetCertificatesV1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getCertificatesV1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/certificates.k8s.io/v1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "certificatesigningrequests"
-
-									if l := len("certificatesigningrequests"); len(elem) >= l && elem[0:l] == "certificatesigningrequests" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListCertificatesV1CertificateSigningRequestOperation
-											r.summary = ""
-											r.operationID = "listCertificatesV1CertificateSigningRequest"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/certificates.k8s.io/v1/certificatesigningrequests"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ReadCertificatesV1CertificateSigningRequestOperation
-												r.summary = ""
-												r.operationID = "readCertificatesV1CertificateSigningRequest"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchCertificatesV1CertificateSigningRequestOperation
-												r.summary = ""
-												r.operationID = "patchCertificatesV1CertificateSigningRequest"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'a': // Prefix: "approval"
-
-												if l := len("approval"); len(elem) >= l && elem[0:l] == "approval" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadCertificatesV1CertificateSigningRequestApprovalOperation
-														r.summary = ""
-														r.operationID = "readCertificatesV1CertificateSigningRequestApproval"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/approval"
-														r.args = args
-														r.count = 1
-														return r, true
-													case "PATCH":
-														r.name = PatchCertificatesV1CertificateSigningRequestApprovalOperation
-														r.summary = ""
-														r.operationID = "patchCertificatesV1CertificateSigningRequestApproval"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/approval"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											case 's': // Prefix: "status"
-
-												if l := len("status"); len(elem) >= l && elem[0:l] == "status" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadCertificatesV1CertificateSigningRequestStatusOperation
-														r.summary = ""
-														r.operationID = "readCertificatesV1CertificateSigningRequestStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/status"
-														r.args = args
-														r.count = 1
-														return r, true
-													case "PATCH":
-														r.name = PatchCertificatesV1CertificateSigningRequestStatusOperation
-														r.summary = ""
-														r.operationID = "patchCertificatesV1CertificateSigningRequestStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/status"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/certificatesigningrequests"
-
-									if l := len("watch/certificatesigningrequests"); len(elem) >= l && elem[0:l] == "watch/certificatesigningrequests" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = WatchCertificatesV1CertificateSigningRequestListOperation
-											r.summary = ""
-											r.operationID = "watchCertificatesV1CertificateSigningRequestList"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/certificates.k8s.io/v1/watch/certificatesigningrequests"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchCertificatesV1CertificateSigningRequestOperation
-												r.summary = ""
-												r.operationID = "watchCertificatesV1CertificateSigningRequest"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/certificates.k8s.io/v1/watch/certificatesigningrequests/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								}
-
-							}
-
-						case 'o': // Prefix: "oordination.k8s.io/"
-
-							if l := len("oordination.k8s.io/"); len(elem) >= l && elem[0:l] == "oordination.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch method {
-								case "GET":
-									r.name = GetCoordinationAPIGroupOperation
-									r.summary = ""
-									r.operationID = "getCoordinationAPIGroup"
-									r.operationGroup = ""
-									r.pathPattern = "/apis/coordination.k8s.io/"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1/"
-
-								if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetCoordinationV1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getCoordinationV1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/coordination.k8s.io/v1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'l': // Prefix: "leases"
-
-									if l := len("leases"); len(elem) >= l && elem[0:l] == "leases" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListCoordinationV1LeaseForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listCoordinationV1LeaseForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/coordination.k8s.io/v1/leases"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/leases"
-
-										if l := len("/leases"); len(elem) >= l && elem[0:l] == "/leases" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListCoordinationV1NamespacedLeaseOperation
-												r.summary = ""
-												r.operationID = "listCoordinationV1NamespacedLease"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadCoordinationV1NamespacedLeaseOperation
-													r.summary = ""
-													r.operationID = "readCoordinationV1NamespacedLease"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												case "PATCH":
-													r.name = PatchCoordinationV1NamespacedLeaseOperation
-													r.summary = ""
-													r.operationID = "patchCoordinationV1NamespacedLease"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'l': // Prefix: "leases"
-
-										if l := len("leases"); len(elem) >= l && elem[0:l] == "leases" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchCoordinationV1LeaseListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchCoordinationV1LeaseListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/coordination.k8s.io/v1/watch/leases"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/leases"
-
-											if l := len("/leases"); len(elem) >= l && elem[0:l] == "/leases" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchCoordinationV1NamespacedLeaseListOperation
-													r.summary = ""
-													r.operationID = "watchCoordinationV1NamespacedLeaseList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/coordination.k8s.io/v1/watch/namespaces/{namespace}/leases"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchCoordinationV1NamespacedLeaseOperation
-														r.summary = ""
-														r.operationID = "watchCoordinationV1NamespacedLease"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/coordination.k8s.io/v1/watch/namespaces/{namespace}/leases/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'd': // Prefix: "discovery.k8s.io/"
-
-						if l := len("discovery.k8s.io/"); len(elem) >= l && elem[0:l] == "discovery.k8s.io/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch method {
-							case "GET":
-								r.name = GetDiscoveryAPIGroupOperation
-								r.summary = ""
-								r.operationID = "getDiscoveryAPIGroup"
-								r.operationGroup = ""
-								r.pathPattern = "/apis/discovery.k8s.io/"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1"
-
-							if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case '/': // Prefix: "/"
-
-								if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetDiscoveryV1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getDiscoveryV1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/discovery.k8s.io/v1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "endpointslices"
-
-									if l := len("endpointslices"); len(elem) >= l && elem[0:l] == "endpointslices" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListDiscoveryV1EndpointSliceForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listDiscoveryV1EndpointSliceForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/discovery.k8s.io/v1/endpointslices"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/endpointslices"
-
-										if l := len("/endpointslices"); len(elem) >= l && elem[0:l] == "/endpointslices" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListDiscoveryV1NamespacedEndpointSliceOperation
-												r.summary = ""
-												r.operationID = "listDiscoveryV1NamespacedEndpointSlice"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadDiscoveryV1NamespacedEndpointSliceOperation
-													r.summary = ""
-													r.operationID = "readDiscoveryV1NamespacedEndpointSlice"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												case "PATCH":
-													r.name = PatchDiscoveryV1NamespacedEndpointSliceOperation
-													r.summary = ""
-													r.operationID = "patchDiscoveryV1NamespacedEndpointSlice"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'e': // Prefix: "endpointslices"
-
-										if l := len("endpointslices"); len(elem) >= l && elem[0:l] == "endpointslices" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchDiscoveryV1EndpointSliceListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchDiscoveryV1EndpointSliceListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/discovery.k8s.io/v1/watch/endpointslices"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/endpointslices"
-
-											if l := len("/endpointslices"); len(elem) >= l && elem[0:l] == "/endpointslices" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchDiscoveryV1NamespacedEndpointSliceListOperation
-													r.summary = ""
-													r.operationID = "watchDiscoveryV1NamespacedEndpointSliceList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/discovery.k8s.io/v1/watch/namespaces/{namespace}/endpointslices"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchDiscoveryV1NamespacedEndpointSliceOperation
-														r.summary = ""
-														r.operationID = "watchDiscoveryV1NamespacedEndpointSlice"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/discovery.k8s.io/v1/watch/namespaces/{namespace}/endpointslices/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'b': // Prefix: "beta1/"
-
-								if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetDiscoveryV1beta1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getDiscoveryV1beta1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/discovery.k8s.io/v1beta1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "endpointslices"
-
-									if l := len("endpointslices"); len(elem) >= l && elem[0:l] == "endpointslices" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListDiscoveryV1beta1EndpointSliceForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listDiscoveryV1beta1EndpointSliceForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/discovery.k8s.io/v1beta1/endpointslices"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/endpointslices"
-
-										if l := len("/endpointslices"); len(elem) >= l && elem[0:l] == "/endpointslices" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListDiscoveryV1beta1NamespacedEndpointSliceOperation
-												r.summary = ""
-												r.operationID = "listDiscoveryV1beta1NamespacedEndpointSlice"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/discovery.k8s.io/v1beta1/namespaces/{namespace}/endpointslices"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadDiscoveryV1beta1NamespacedEndpointSliceOperation
-													r.summary = ""
-													r.operationID = "readDiscoveryV1beta1NamespacedEndpointSlice"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/discovery.k8s.io/v1beta1/namespaces/{namespace}/endpointslices/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												case "PATCH":
-													r.name = PatchDiscoveryV1beta1NamespacedEndpointSliceOperation
-													r.summary = ""
-													r.operationID = "patchDiscoveryV1beta1NamespacedEndpointSlice"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/discovery.k8s.io/v1beta1/namespaces/{namespace}/endpointslices/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'e': // Prefix: "endpointslices"
-
-										if l := len("endpointslices"); len(elem) >= l && elem[0:l] == "endpointslices" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchDiscoveryV1beta1EndpointSliceListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchDiscoveryV1beta1EndpointSliceListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/discovery.k8s.io/v1beta1/watch/endpointslices"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/endpointslices"
-
-											if l := len("/endpointslices"); len(elem) >= l && elem[0:l] == "/endpointslices" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchDiscoveryV1beta1NamespacedEndpointSliceListOperation
-													r.summary = ""
-													r.operationID = "watchDiscoveryV1beta1NamespacedEndpointSliceList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/discovery.k8s.io/v1beta1/watch/namespaces/{namespace}/endpointslices"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchDiscoveryV1beta1NamespacedEndpointSliceOperation
-														r.summary = ""
-														r.operationID = "watchDiscoveryV1beta1NamespacedEndpointSlice"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/discovery.k8s.io/v1beta1/watch/namespaces/{namespace}/endpointslices/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'e': // Prefix: "events.k8s.io/"
-
-						if l := len("events.k8s.io/"); len(elem) >= l && elem[0:l] == "events.k8s.io/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch method {
-							case "GET":
-								r.name = GetEventsAPIGroupOperation
-								r.summary = ""
-								r.operationID = "getEventsAPIGroup"
-								r.operationGroup = ""
-								r.pathPattern = "/apis/events.k8s.io/"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1"
-
-							if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case '/': // Prefix: "/"
-
-								if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetEventsV1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getEventsV1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/events.k8s.io/v1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "events"
-
-									if l := len("events"); len(elem) >= l && elem[0:l] == "events" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListEventsV1EventForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listEventsV1EventForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/events.k8s.io/v1/events"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/events"
-
-										if l := len("/events"); len(elem) >= l && elem[0:l] == "/events" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListEventsV1NamespacedEventOperation
-												r.summary = ""
-												r.operationID = "listEventsV1NamespacedEvent"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/events.k8s.io/v1/namespaces/{namespace}/events"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadEventsV1NamespacedEventOperation
-													r.summary = ""
-													r.operationID = "readEventsV1NamespacedEvent"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												case "PATCH":
-													r.name = PatchEventsV1NamespacedEventOperation
-													r.summary = ""
-													r.operationID = "patchEventsV1NamespacedEvent"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'e': // Prefix: "events"
-
-										if l := len("events"); len(elem) >= l && elem[0:l] == "events" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchEventsV1EventListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchEventsV1EventListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/events.k8s.io/v1/watch/events"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/events"
-
-											if l := len("/events"); len(elem) >= l && elem[0:l] == "/events" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchEventsV1NamespacedEventListOperation
-													r.summary = ""
-													r.operationID = "watchEventsV1NamespacedEventList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/events.k8s.io/v1/watch/namespaces/{namespace}/events"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchEventsV1NamespacedEventOperation
-														r.summary = ""
-														r.operationID = "watchEventsV1NamespacedEvent"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/events.k8s.io/v1/watch/namespaces/{namespace}/events/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'b': // Prefix: "beta1/"
-
-								if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetEventsV1beta1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getEventsV1beta1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/events.k8s.io/v1beta1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'e': // Prefix: "events"
-
-									if l := len("events"); len(elem) >= l && elem[0:l] == "events" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListEventsV1beta1EventForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listEventsV1beta1EventForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/events.k8s.io/v1beta1/events"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/events"
-
-										if l := len("/events"); len(elem) >= l && elem[0:l] == "/events" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListEventsV1beta1NamespacedEventOperation
-												r.summary = ""
-												r.operationID = "listEventsV1beta1NamespacedEvent"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/events.k8s.io/v1beta1/namespaces/{namespace}/events"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadEventsV1beta1NamespacedEventOperation
-													r.summary = ""
-													r.operationID = "readEventsV1beta1NamespacedEvent"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/events.k8s.io/v1beta1/namespaces/{namespace}/events/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												case "PATCH":
-													r.name = PatchEventsV1beta1NamespacedEventOperation
-													r.summary = ""
-													r.operationID = "patchEventsV1beta1NamespacedEvent"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/events.k8s.io/v1beta1/namespaces/{namespace}/events/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'e': // Prefix: "events"
-
-										if l := len("events"); len(elem) >= l && elem[0:l] == "events" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchEventsV1beta1EventListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchEventsV1beta1EventListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/events.k8s.io/v1beta1/watch/events"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/events"
-
-											if l := len("/events"); len(elem) >= l && elem[0:l] == "/events" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchEventsV1beta1NamespacedEventListOperation
-													r.summary = ""
-													r.operationID = "watchEventsV1beta1NamespacedEventList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/events.k8s.io/v1beta1/watch/namespaces/{namespace}/events"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchEventsV1beta1NamespacedEventOperation
-														r.summary = ""
-														r.operationID = "watchEventsV1beta1NamespacedEvent"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/events.k8s.io/v1beta1/watch/namespaces/{namespace}/events/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'f': // Prefix: "flowcontrol.apiserver.k8s.io/"
-
-						if l := len("flowcontrol.apiserver.k8s.io/"); len(elem) >= l && elem[0:l] == "flowcontrol.apiserver.k8s.io/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch method {
-							case "GET":
-								r.name = GetFlowcontrolApiserverAPIGroupOperation
-								r.summary = ""
-								r.operationID = "getFlowcontrolApiserverAPIGroup"
-								r.operationGroup = ""
-								r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1beta"
-
-							if l := len("v1beta"); len(elem) >= l && elem[0:l] == "v1beta" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case '1': // Prefix: "1/"
-
-								if l := len("1/"); len(elem) >= l && elem[0:l] == "1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetFlowcontrolApiserverV1beta1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getFlowcontrolApiserverV1beta1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'f': // Prefix: "flowschemas"
-
-									if l := len("flowschemas"); len(elem) >= l && elem[0:l] == "flowschemas" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListFlowcontrolApiserverV1beta1FlowSchemaOperation
-											r.summary = ""
-											r.operationID = "listFlowcontrolApiserverV1beta1FlowSchema"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ReadFlowcontrolApiserverV1beta1FlowSchemaOperation
-												r.summary = ""
-												r.operationID = "readFlowcontrolApiserverV1beta1FlowSchema"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchFlowcontrolApiserverV1beta1FlowSchemaOperation
-												r.summary = ""
-												r.operationID = "patchFlowcontrolApiserverV1beta1FlowSchema"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/status"
-
-											if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadFlowcontrolApiserverV1beta1FlowSchemaStatusOperation
-													r.summary = ""
-													r.operationID = "readFlowcontrolApiserverV1beta1FlowSchemaStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchFlowcontrolApiserverV1beta1FlowSchemaStatusOperation
-													r.summary = ""
-													r.operationID = "patchFlowcontrolApiserverV1beta1FlowSchemaStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/flowschemas/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'p': // Prefix: "prioritylevelconfigurations"
-
-									if l := len("prioritylevelconfigurations"); len(elem) >= l && elem[0:l] == "prioritylevelconfigurations" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListFlowcontrolApiserverV1beta1PriorityLevelConfigurationOperation
-											r.summary = ""
-											r.operationID = "listFlowcontrolApiserverV1beta1PriorityLevelConfiguration"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationOperation
-												r.summary = ""
-												r.operationID = "readFlowcontrolApiserverV1beta1PriorityLevelConfiguration"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationOperation
-												r.summary = ""
-												r.operationID = "patchFlowcontrolApiserverV1beta1PriorityLevelConfiguration"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/status"
-
-											if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusOperation
-													r.summary = ""
-													r.operationID = "readFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatusOperation
-													r.summary = ""
-													r.operationID = "patchFlowcontrolApiserverV1beta1PriorityLevelConfigurationStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'f': // Prefix: "flowschemas"
-
-										if l := len("flowschemas"); len(elem) >= l && elem[0:l] == "flowschemas" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchFlowcontrolApiserverV1beta1FlowSchemaListOperation
-												r.summary = ""
-												r.operationID = "watchFlowcontrolApiserverV1beta1FlowSchemaList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/watch/flowschemas"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchFlowcontrolApiserverV1beta1FlowSchemaOperation
-													r.summary = ""
-													r.operationID = "watchFlowcontrolApiserverV1beta1FlowSchema"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/watch/flowschemas/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 'p': // Prefix: "prioritylevelconfigurations"
-
-										if l := len("prioritylevelconfigurations"); len(elem) >= l && elem[0:l] == "prioritylevelconfigurations" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationListOperation
-												r.summary = ""
-												r.operationID = "watchFlowcontrolApiserverV1beta1PriorityLevelConfigurationList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/watch/prioritylevelconfigurations"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchFlowcontrolApiserverV1beta1PriorityLevelConfigurationOperation
-													r.summary = ""
-													r.operationID = "watchFlowcontrolApiserverV1beta1PriorityLevelConfiguration"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta1/watch/prioritylevelconfigurations/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								}
-
-							case '2': // Prefix: "2/"
-
-								if l := len("2/"); len(elem) >= l && elem[0:l] == "2/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetFlowcontrolApiserverV1beta2APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getFlowcontrolApiserverV1beta2APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'f': // Prefix: "flowschemas"
-
-									if l := len("flowschemas"); len(elem) >= l && elem[0:l] == "flowschemas" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListFlowcontrolApiserverV1beta2FlowSchemaOperation
-											r.summary = ""
-											r.operationID = "listFlowcontrolApiserverV1beta2FlowSchema"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ReadFlowcontrolApiserverV1beta2FlowSchemaOperation
-												r.summary = ""
-												r.operationID = "readFlowcontrolApiserverV1beta2FlowSchema"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchFlowcontrolApiserverV1beta2FlowSchemaOperation
-												r.summary = ""
-												r.operationID = "patchFlowcontrolApiserverV1beta2FlowSchema"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/status"
-
-											if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadFlowcontrolApiserverV1beta2FlowSchemaStatusOperation
-													r.summary = ""
-													r.operationID = "readFlowcontrolApiserverV1beta2FlowSchemaStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchFlowcontrolApiserverV1beta2FlowSchemaStatusOperation
-													r.summary = ""
-													r.operationID = "patchFlowcontrolApiserverV1beta2FlowSchemaStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'p': // Prefix: "prioritylevelconfigurations"
-
-									if l := len("prioritylevelconfigurations"); len(elem) >= l && elem[0:l] == "prioritylevelconfigurations" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListFlowcontrolApiserverV1beta2PriorityLevelConfigurationOperation
-											r.summary = ""
-											r.operationID = "listFlowcontrolApiserverV1beta2PriorityLevelConfiguration"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationOperation
-												r.summary = ""
-												r.operationID = "readFlowcontrolApiserverV1beta2PriorityLevelConfiguration"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationOperation
-												r.summary = ""
-												r.operationID = "patchFlowcontrolApiserverV1beta2PriorityLevelConfiguration"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/status"
-
-											if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusOperation
-													r.summary = ""
-													r.operationID = "readFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatusOperation
-													r.summary = ""
-													r.operationID = "patchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}/status"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'f': // Prefix: "flowschemas"
-
-										if l := len("flowschemas"); len(elem) >= l && elem[0:l] == "flowschemas" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchFlowcontrolApiserverV1beta2FlowSchemaListOperation
-												r.summary = ""
-												r.operationID = "watchFlowcontrolApiserverV1beta2FlowSchemaList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/flowschemas"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchFlowcontrolApiserverV1beta2FlowSchemaOperation
-													r.summary = ""
-													r.operationID = "watchFlowcontrolApiserverV1beta2FlowSchema"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/flowschemas/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 'p': // Prefix: "prioritylevelconfigurations"
-
-										if l := len("prioritylevelconfigurations"); len(elem) >= l && elem[0:l] == "prioritylevelconfigurations" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationListOperation
-												r.summary = ""
-												r.operationID = "watchFlowcontrolApiserverV1beta2PriorityLevelConfigurationList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/prioritylevelconfigurations"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchFlowcontrolApiserverV1beta2PriorityLevelConfigurationOperation
-													r.summary = ""
-													r.operationID = "watchFlowcontrolApiserverV1beta2PriorityLevelConfiguration"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/prioritylevelconfigurations/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'i': // Prefix: "internal.apiserver.k8s.io/"
-
-						if l := len("internal.apiserver.k8s.io/"); len(elem) >= l && elem[0:l] == "internal.apiserver.k8s.io/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch method {
-							case "GET":
-								r.name = GetInternalApiserverAPIGroupOperation
-								r.summary = ""
-								r.operationID = "getInternalApiserverAPIGroup"
-								r.operationGroup = ""
-								r.pathPattern = "/apis/internal.apiserver.k8s.io/"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1alpha1/"
-
-							if l := len("v1alpha1/"); len(elem) >= l && elem[0:l] == "v1alpha1/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch method {
-								case "GET":
-									r.name = GetInternalApiserverV1alpha1APIResourcesOperation
-									r.summary = ""
-									r.operationID = "getInternalApiserverV1alpha1APIResources"
-									r.operationGroup = ""
-									r.pathPattern = "/apis/internal.apiserver.k8s.io/v1alpha1/"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-							switch elem[0] {
-							case 's': // Prefix: "storageversions"
-
-								if l := len("storageversions"); len(elem) >= l && elem[0:l] == "storageversions" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = ListInternalApiserverV1alpha1StorageVersionOperation
-										r.summary = ""
-										r.operationID = "listInternalApiserverV1alpha1StorageVersion"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/internal.apiserver.k8s.io/v1alpha1/storageversions"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "name"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ReadInternalApiserverV1alpha1StorageVersionOperation
-											r.summary = ""
-											r.operationID = "readInternalApiserverV1alpha1StorageVersion"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}"
-											r.args = args
-											r.count = 1
-											return r, true
-										case "PATCH":
-											r.name = PatchInternalApiserverV1alpha1StorageVersionOperation
-											r.summary = ""
-											r.operationID = "patchInternalApiserverV1alpha1StorageVersion"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}"
-											r.args = args
-											r.count = 1
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/status"
-
-										if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ReadInternalApiserverV1alpha1StorageVersionStatusOperation
-												r.summary = ""
-												r.operationID = "readInternalApiserverV1alpha1StorageVersionStatus"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}/status"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchInternalApiserverV1alpha1StorageVersionStatusOperation
-												r.summary = ""
-												r.operationID = "patchInternalApiserverV1alpha1StorageVersionStatus"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}/status"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								}
-
-							case 'w': // Prefix: "watch/storageversions"
-
-								if l := len("watch/storageversions"); len(elem) >= l && elem[0:l] == "watch/storageversions" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = WatchInternalApiserverV1alpha1StorageVersionListOperation
-										r.summary = ""
-										r.operationID = "watchInternalApiserverV1alpha1StorageVersionList"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/internal.apiserver.k8s.io/v1alpha1/watch/storageversions"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "name"
-									// Leaf parameter, slashes are prohibited
-									idx := strings.IndexByte(elem, '/')
-									if idx >= 0 {
-										break
-									}
-									args[0] = elem
-									elem = ""
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = WatchInternalApiserverV1alpha1StorageVersionOperation
-											r.summary = ""
-											r.operationID = "watchInternalApiserverV1alpha1StorageVersion"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/internal.apiserver.k8s.io/v1alpha1/watch/storageversions/{name}"
-											r.args = args
-											r.count = 1
-											return r, true
-										default:
-											return
-										}
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'n': // Prefix: "n"
-
-						if l := len("n"); len(elem) >= l && elem[0:l] == "n" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'e': // Prefix: "etworking.k8s.io/"
-
-							if l := len("etworking.k8s.io/"); len(elem) >= l && elem[0:l] == "etworking.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch method {
-								case "GET":
-									r.name = GetNetworkingAPIGroupOperation
-									r.summary = ""
-									r.operationID = "getNetworkingAPIGroup"
-									r.operationGroup = ""
-									r.pathPattern = "/apis/networking.k8s.io/"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1/"
-
-								if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetNetworkingV1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getNetworkingV1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/networking.k8s.io/v1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'i': // Prefix: "ingress"
-
-									if l := len("ingress"); len(elem) >= l && elem[0:l] == "ingress" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "classes"
-
-										if l := len("classes"); len(elem) >= l && elem[0:l] == "classes" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListNetworkingV1IngressClassOperation
-												r.summary = ""
-												r.operationID = "listNetworkingV1IngressClass"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/networking.k8s.io/v1/ingressclasses"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadNetworkingV1IngressClassOperation
-													r.summary = ""
-													r.operationID = "readNetworkingV1IngressClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/networking.k8s.io/v1/ingressclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchNetworkingV1IngressClassOperation
-													r.summary = ""
-													r.operationID = "patchNetworkingV1IngressClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/networking.k8s.io/v1/ingressclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 'e': // Prefix: "es"
-
-										if l := len("es"); len(elem) >= l && elem[0:l] == "es" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ListNetworkingV1IngressForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "listNetworkingV1IngressForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/networking.k8s.io/v1/ingresses"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								case 'n': // Prefix: "n"
-
-									if l := len("n"); len(elem) >= l && elem[0:l] == "n" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'a': // Prefix: "amespaces/"
-
-										if l := len("amespaces/"); len(elem) >= l && elem[0:l] == "amespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'i': // Prefix: "ingresses"
-
-												if l := len("ingresses"); len(elem) >= l && elem[0:l] == "ingresses" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListNetworkingV1NamespacedIngressOperation
-														r.summary = ""
-														r.operationID = "listNetworkingV1NamespacedIngress"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Match until "/"
-													idx := strings.IndexByte(elem, '/')
-													if idx < 0 {
-														idx = len(elem)
-													}
-													args[1] = elem[:idx]
-													elem = elem[idx:]
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = ReadNetworkingV1NamespacedIngressOperation
-															r.summary = ""
-															r.operationID = "readNetworkingV1NamespacedIngress"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchNetworkingV1NamespacedIngressOperation
-															r.summary = ""
-															r.operationID = "patchNetworkingV1NamespacedIngress"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/status"
-
-														if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = ReadNetworkingV1NamespacedIngressStatusOperation
-																r.summary = ""
-																r.operationID = "readNetworkingV1NamespacedIngressStatus"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}/status"
-																r.args = args
-																r.count = 2
-																return r, true
-															case "PATCH":
-																r.name = PatchNetworkingV1NamespacedIngressStatusOperation
-																r.summary = ""
-																r.operationID = "patchNetworkingV1NamespacedIngressStatus"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}/status"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												}
-
-											case 'n': // Prefix: "networkpolicies"
-
-												if l := len("networkpolicies"); len(elem) >= l && elem[0:l] == "networkpolicies" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = ListNetworkingV1NamespacedNetworkPolicyOperation
-														r.summary = ""
-														r.operationID = "listNetworkingV1NamespacedNetworkPolicy"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = ReadNetworkingV1NamespacedNetworkPolicyOperation
-															r.summary = ""
-															r.operationID = "readNetworkingV1NamespacedNetworkPolicy"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														case "PATCH":
-															r.name = PatchNetworkingV1NamespacedNetworkPolicyOperation
-															r.summary = ""
-															r.operationID = "patchNetworkingV1NamespacedNetworkPolicy"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											}
-
-										}
-
-									case 'e': // Prefix: "etworkpolicies"
-
-										if l := len("etworkpolicies"); len(elem) >= l && elem[0:l] == "etworkpolicies" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ListNetworkingV1NetworkPolicyForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "listNetworkingV1NetworkPolicyForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/networking.k8s.io/v1/networkpolicies"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'i': // Prefix: "ingress"
-
-										if l := len("ingress"); len(elem) >= l && elem[0:l] == "ingress" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "classes"
-
-											if l := len("classes"); len(elem) >= l && elem[0:l] == "classes" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchNetworkingV1IngressClassListOperation
-													r.summary = ""
-													r.operationID = "watchNetworkingV1IngressClassList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/networking.k8s.io/v1/watch/ingressclasses"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchNetworkingV1IngressClassOperation
-														r.summary = ""
-														r.operationID = "watchNetworkingV1IngressClass"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/networking.k8s.io/v1/watch/ingressclasses/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										case 'e': // Prefix: "es"
-
-											if l := len("es"); len(elem) >= l && elem[0:l] == "es" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchNetworkingV1IngressListForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "watchNetworkingV1IngressListForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/networking.k8s.io/v1/watch/ingresses"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 'n': // Prefix: "n"
-
-										if l := len("n"); len(elem) >= l && elem[0:l] == "n" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'a': // Prefix: "amespaces/"
-
-											if l := len("amespaces/"); len(elem) >= l && elem[0:l] == "amespaces/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "namespace"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													break
-												}
-												switch elem[0] {
-												case 'i': // Prefix: "ingresses"
-
-													if l := len("ingresses"); len(elem) >= l && elem[0:l] == "ingresses" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchNetworkingV1NamespacedIngressListOperation
-															r.summary = ""
-															r.operationID = "watchNetworkingV1NamespacedIngressList"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/ingresses"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchNetworkingV1NamespacedIngressOperation
-																r.summary = ""
-																r.operationID = "watchNetworkingV1NamespacedIngress"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/ingresses/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												case 'n': // Prefix: "networkpolicies"
-
-													if l := len("networkpolicies"); len(elem) >= l && elem[0:l] == "networkpolicies" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													if len(elem) == 0 {
-														switch method {
-														case "GET":
-															r.name = WatchNetworkingV1NamespacedNetworkPolicyListOperation
-															r.summary = ""
-															r.operationID = "watchNetworkingV1NamespacedNetworkPolicyList"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/networkpolicies"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-													switch elem[0] {
-													case '/': // Prefix: "/"
-
-														if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-															elem = elem[l:]
-														} else {
-															break
-														}
-
-														// Param: "name"
-														// Leaf parameter, slashes are prohibited
-														idx := strings.IndexByte(elem, '/')
-														if idx >= 0 {
-															break
-														}
-														args[1] = elem
-														elem = ""
-
-														if len(elem) == 0 {
-															// Leaf node.
-															switch method {
-															case "GET":
-																r.name = WatchNetworkingV1NamespacedNetworkPolicyOperation
-																r.summary = ""
-																r.operationID = "watchNetworkingV1NamespacedNetworkPolicy"
-																r.operationGroup = ""
-																r.pathPattern = "/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/networkpolicies/{name}"
-																r.args = args
-																r.count = 2
-																return r, true
-															default:
-																return
-															}
-														}
-
-													}
-
-												}
-
-											}
-
-										case 'e': // Prefix: "etworkpolicies"
-
-											if l := len("etworkpolicies"); len(elem) >= l && elem[0:l] == "etworkpolicies" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchNetworkingV1NetworkPolicyListForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "watchNetworkingV1NetworkPolicyListForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/networking.k8s.io/v1/watch/networkpolicies"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						case 'o': // Prefix: "ode.k8s.io/"
-
-							if l := len("ode.k8s.io/"); len(elem) >= l && elem[0:l] == "ode.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch method {
-								case "GET":
-									r.name = GetNodeAPIGroupOperation
-									r.summary = ""
-									r.operationID = "getNodeAPIGroup"
-									r.operationGroup = ""
-									r.pathPattern = "/apis/node.k8s.io/"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1"
-
-								if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetNodeV1APIResourcesOperation
-											r.summary = ""
-											r.operationID = "getNodeV1APIResources"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/node.k8s.io/v1/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'r': // Prefix: "runtimeclasses"
-
-										if l := len("runtimeclasses"); len(elem) >= l && elem[0:l] == "runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListNodeV1RuntimeClassOperation
-												r.summary = ""
-												r.operationID = "listNodeV1RuntimeClass"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/node.k8s.io/v1/runtimeclasses"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadNodeV1RuntimeClassOperation
-													r.summary = ""
-													r.operationID = "readNodeV1RuntimeClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/node.k8s.io/v1/runtimeclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchNodeV1RuntimeClassOperation
-													r.summary = ""
-													r.operationID = "patchNodeV1RuntimeClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/node.k8s.io/v1/runtimeclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/runtimeclasses"
-
-										if l := len("watch/runtimeclasses"); len(elem) >= l && elem[0:l] == "watch/runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchNodeV1RuntimeClassListOperation
-												r.summary = ""
-												r.operationID = "watchNodeV1RuntimeClassList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/node.k8s.io/v1/watch/runtimeclasses"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchNodeV1RuntimeClassOperation
-													r.summary = ""
-													r.operationID = "watchNodeV1RuntimeClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/node.k8s.io/v1/watch/runtimeclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'a': // Prefix: "alpha1/"
-
-									if l := len("alpha1/"); len(elem) >= l && elem[0:l] == "alpha1/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetNodeV1alpha1APIResourcesOperation
-											r.summary = ""
-											r.operationID = "getNodeV1alpha1APIResources"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/node.k8s.io/v1alpha1/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'r': // Prefix: "runtimeclasses"
-
-										if l := len("runtimeclasses"); len(elem) >= l && elem[0:l] == "runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListNodeV1alpha1RuntimeClassOperation
-												r.summary = ""
-												r.operationID = "listNodeV1alpha1RuntimeClass"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/node.k8s.io/v1alpha1/runtimeclasses"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadNodeV1alpha1RuntimeClassOperation
-													r.summary = ""
-													r.operationID = "readNodeV1alpha1RuntimeClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/node.k8s.io/v1alpha1/runtimeclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchNodeV1alpha1RuntimeClassOperation
-													r.summary = ""
-													r.operationID = "patchNodeV1alpha1RuntimeClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/node.k8s.io/v1alpha1/runtimeclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/runtimeclasses"
-
-										if l := len("watch/runtimeclasses"); len(elem) >= l && elem[0:l] == "watch/runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchNodeV1alpha1RuntimeClassListOperation
-												r.summary = ""
-												r.operationID = "watchNodeV1alpha1RuntimeClassList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/node.k8s.io/v1alpha1/watch/runtimeclasses"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchNodeV1alpha1RuntimeClassOperation
-													r.summary = ""
-													r.operationID = "watchNodeV1alpha1RuntimeClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/node.k8s.io/v1alpha1/watch/runtimeclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'b': // Prefix: "beta1/"
-
-									if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetNodeV1beta1APIResourcesOperation
-											r.summary = ""
-											r.operationID = "getNodeV1beta1APIResources"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/node.k8s.io/v1beta1/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'r': // Prefix: "runtimeclasses"
-
-										if l := len("runtimeclasses"); len(elem) >= l && elem[0:l] == "runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListNodeV1beta1RuntimeClassOperation
-												r.summary = ""
-												r.operationID = "listNodeV1beta1RuntimeClass"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/node.k8s.io/v1beta1/runtimeclasses"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadNodeV1beta1RuntimeClassOperation
-													r.summary = ""
-													r.operationID = "readNodeV1beta1RuntimeClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/node.k8s.io/v1beta1/runtimeclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchNodeV1beta1RuntimeClassOperation
-													r.summary = ""
-													r.operationID = "patchNodeV1beta1RuntimeClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/node.k8s.io/v1beta1/runtimeclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/runtimeclasses"
-
-										if l := len("watch/runtimeclasses"); len(elem) >= l && elem[0:l] == "watch/runtimeclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchNodeV1beta1RuntimeClassListOperation
-												r.summary = ""
-												r.operationID = "watchNodeV1beta1RuntimeClassList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/node.k8s.io/v1beta1/watch/runtimeclasses"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchNodeV1beta1RuntimeClassOperation
-													r.summary = ""
-													r.operationID = "watchNodeV1beta1RuntimeClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/node.k8s.io/v1beta1/watch/runtimeclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'p': // Prefix: "policy/"
-
-						if l := len("policy/"); len(elem) >= l && elem[0:l] == "policy/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch method {
-							case "GET":
-								r.name = GetPolicyAPIGroupOperation
-								r.summary = ""
-								r.operationID = "getPolicyAPIGroup"
-								r.operationGroup = ""
-								r.pathPattern = "/apis/policy/"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1"
-
-							if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								break
-							}
-							switch elem[0] {
-							case '/': // Prefix: "/"
-
-								if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetPolicyV1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getPolicyV1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/policy/v1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/poddisruptionbudgets"
-
-										if l := len("/poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "/poddisruptionbudgets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListPolicyV1NamespacedPodDisruptionBudgetOperation
-												r.summary = ""
-												r.operationID = "listPolicyV1NamespacedPodDisruptionBudget"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[1] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ReadPolicyV1NamespacedPodDisruptionBudgetOperation
-													r.summary = ""
-													r.operationID = "readPolicyV1NamespacedPodDisruptionBudget"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												case "PATCH":
-													r.name = PatchPolicyV1NamespacedPodDisruptionBudgetOperation
-													r.summary = ""
-													r.operationID = "patchPolicyV1NamespacedPodDisruptionBudget"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/status"
-
-												if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadPolicyV1NamespacedPodDisruptionBudgetStatusOperation
-														r.summary = ""
-														r.operationID = "readPolicyV1NamespacedPodDisruptionBudgetStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}/status"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PATCH":
-														r.name = PatchPolicyV1NamespacedPodDisruptionBudgetStatusOperation
-														r.summary = ""
-														r.operationID = "patchPolicyV1NamespacedPodDisruptionBudgetStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}/status"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'p': // Prefix: "poddisruptionbudgets"
-
-									if l := len("poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "poddisruptionbudgets" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListPolicyV1PodDisruptionBudgetForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listPolicyV1PodDisruptionBudgetForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/policy/v1/poddisruptionbudgets"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/poddisruptionbudgets"
-
-											if l := len("/poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "/poddisruptionbudgets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchPolicyV1NamespacedPodDisruptionBudgetListOperation
-													r.summary = ""
-													r.operationID = "watchPolicyV1NamespacedPodDisruptionBudgetList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/policy/v1/watch/namespaces/{namespace}/poddisruptionbudgets"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchPolicyV1NamespacedPodDisruptionBudgetOperation
-														r.summary = ""
-														r.operationID = "watchPolicyV1NamespacedPodDisruptionBudget"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/policy/v1/watch/namespaces/{namespace}/poddisruptionbudgets/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									case 'p': // Prefix: "poddisruptionbudgets"
-
-										if l := len("poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "poddisruptionbudgets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchPolicyV1PodDisruptionBudgetListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchPolicyV1PodDisruptionBudgetListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/policy/v1/watch/poddisruptionbudgets"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								}
-
-							case 'b': // Prefix: "beta1/"
-
-								if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetPolicyV1beta1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getPolicyV1beta1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/policy/v1beta1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/poddisruptionbudgets"
-
-										if l := len("/poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "/poddisruptionbudgets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListPolicyV1beta1NamespacedPodDisruptionBudgetOperation
-												r.summary = ""
-												r.operationID = "listPolicyV1beta1NamespacedPodDisruptionBudget"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/policy/v1beta1/namespaces/{namespace}/poddisruptionbudgets"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[1] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ReadPolicyV1beta1NamespacedPodDisruptionBudgetOperation
-													r.summary = ""
-													r.operationID = "readPolicyV1beta1NamespacedPodDisruptionBudget"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/policy/v1beta1/namespaces/{namespace}/poddisruptionbudgets/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												case "PATCH":
-													r.name = PatchPolicyV1beta1NamespacedPodDisruptionBudgetOperation
-													r.summary = ""
-													r.operationID = "patchPolicyV1beta1NamespacedPodDisruptionBudget"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/policy/v1beta1/namespaces/{namespace}/poddisruptionbudgets/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/status"
-
-												if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadPolicyV1beta1NamespacedPodDisruptionBudgetStatusOperation
-														r.summary = ""
-														r.operationID = "readPolicyV1beta1NamespacedPodDisruptionBudgetStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/policy/v1beta1/namespaces/{namespace}/poddisruptionbudgets/{name}/status"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PATCH":
-														r.name = PatchPolicyV1beta1NamespacedPodDisruptionBudgetStatusOperation
-														r.summary = ""
-														r.operationID = "patchPolicyV1beta1NamespacedPodDisruptionBudgetStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/policy/v1beta1/namespaces/{namespace}/poddisruptionbudgets/{name}/status"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'p': // Prefix: "pod"
-
-									if l := len("pod"); len(elem) >= l && elem[0:l] == "pod" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'd': // Prefix: "disruptionbudgets"
-
-										if l := len("disruptionbudgets"); len(elem) >= l && elem[0:l] == "disruptionbudgets" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ListPolicyV1beta1PodDisruptionBudgetForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "listPolicyV1beta1PodDisruptionBudgetForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/policy/v1beta1/poddisruptionbudgets"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 's': // Prefix: "securitypolicies"
-
-										if l := len("securitypolicies"); len(elem) >= l && elem[0:l] == "securitypolicies" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListPolicyV1beta1PodSecurityPolicyOperation
-												r.summary = ""
-												r.operationID = "listPolicyV1beta1PodSecurityPolicy"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/policy/v1beta1/podsecuritypolicies"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadPolicyV1beta1PodSecurityPolicyOperation
-													r.summary = ""
-													r.operationID = "readPolicyV1beta1PodSecurityPolicy"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/policy/v1beta1/podsecuritypolicies/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchPolicyV1beta1PodSecurityPolicyOperation
-													r.summary = ""
-													r.operationID = "patchPolicyV1beta1PodSecurityPolicy"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/policy/v1beta1/podsecuritypolicies/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/"
-
-									if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/poddisruptionbudgets"
-
-											if l := len("/poddisruptionbudgets"); len(elem) >= l && elem[0:l] == "/poddisruptionbudgets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchPolicyV1beta1NamespacedPodDisruptionBudgetListOperation
-													r.summary = ""
-													r.operationID = "watchPolicyV1beta1NamespacedPodDisruptionBudgetList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/policy/v1beta1/watch/namespaces/{namespace}/poddisruptionbudgets"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchPolicyV1beta1NamespacedPodDisruptionBudgetOperation
-														r.summary = ""
-														r.operationID = "watchPolicyV1beta1NamespacedPodDisruptionBudget"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/policy/v1beta1/watch/namespaces/{namespace}/poddisruptionbudgets/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									case 'p': // Prefix: "pod"
-
-										if l := len("pod"); len(elem) >= l && elem[0:l] == "pod" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'd': // Prefix: "disruptionbudgets"
-
-											if l := len("disruptionbudgets"); len(elem) >= l && elem[0:l] == "disruptionbudgets" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchPolicyV1beta1PodDisruptionBudgetListForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "watchPolicyV1beta1PodDisruptionBudgetListForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/policy/v1beta1/watch/poddisruptionbudgets"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										case 's': // Prefix: "securitypolicies"
-
-											if l := len("securitypolicies"); len(elem) >= l && elem[0:l] == "securitypolicies" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchPolicyV1beta1PodSecurityPolicyListOperation
-													r.summary = ""
-													r.operationID = "watchPolicyV1beta1PodSecurityPolicyList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/policy/v1beta1/watch/podsecuritypolicies"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchPolicyV1beta1PodSecurityPolicyOperation
-														r.summary = ""
-														r.operationID = "watchPolicyV1beta1PodSecurityPolicy"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/policy/v1beta1/watch/podsecuritypolicies/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 'r': // Prefix: "rbac.authorization.k8s.io/"
-
-						if l := len("rbac.authorization.k8s.io/"); len(elem) >= l && elem[0:l] == "rbac.authorization.k8s.io/" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							switch method {
-							case "GET":
-								r.name = GetRbacAuthorizationAPIGroupOperation
-								r.summary = ""
-								r.operationID = "getRbacAuthorizationAPIGroup"
-								r.operationGroup = ""
-								r.pathPattern = "/apis/rbac.authorization.k8s.io/"
-								r.args = args
-								r.count = 0
-								return r, true
-							default:
-								return
-							}
-						}
-						switch elem[0] {
-						case 'v': // Prefix: "v1/"
-
-							if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch method {
-								case "GET":
-									r.name = GetRbacAuthorizationV1APIResourcesOperation
-									r.summary = ""
-									r.operationID = "getRbacAuthorizationV1APIResources"
-									r.operationGroup = ""
-									r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-							switch elem[0] {
-							case 'c': // Prefix: "clusterrole"
-
-								if l := len("clusterrole"); len(elem) >= l && elem[0:l] == "clusterrole" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'b': // Prefix: "bindings"
-
-									if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListRbacAuthorizationV1ClusterRoleBindingOperation
-											r.summary = ""
-											r.operationID = "listRbacAuthorizationV1ClusterRoleBinding"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/clusterrolebindings"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ReadRbacAuthorizationV1ClusterRoleBindingOperation
-												r.summary = ""
-												r.operationID = "readRbacAuthorizationV1ClusterRoleBinding"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchRbacAuthorizationV1ClusterRoleBindingOperation
-												r.summary = ""
-												r.operationID = "patchRbacAuthorizationV1ClusterRoleBinding"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								case 's': // Prefix: "s"
-
-									if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListRbacAuthorizationV1ClusterRoleOperation
-											r.summary = ""
-											r.operationID = "listRbacAuthorizationV1ClusterRole"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/clusterroles"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ReadRbacAuthorizationV1ClusterRoleOperation
-												r.summary = ""
-												r.operationID = "readRbacAuthorizationV1ClusterRole"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/clusterroles/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchRbacAuthorizationV1ClusterRoleOperation
-												r.summary = ""
-												r.operationID = "patchRbacAuthorizationV1ClusterRole"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/clusterroles/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								}
-
-							case 'n': // Prefix: "namespaces/"
-
-								if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								// Param: "namespace"
-								// Match until "/"
-								idx := strings.IndexByte(elem, '/')
-								if idx < 0 {
-									idx = len(elem)
-								}
-								args[0] = elem[:idx]
-								elem = elem[idx:]
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/role"
-
-									if l := len("/role"); len(elem) >= l && elem[0:l] == "/role" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'b': // Prefix: "bindings"
-
-										if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListRbacAuthorizationV1NamespacedRoleBindingOperation
-												r.summary = ""
-												r.operationID = "listRbacAuthorizationV1NamespacedRoleBinding"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadRbacAuthorizationV1NamespacedRoleBindingOperation
-													r.summary = ""
-													r.operationID = "readRbacAuthorizationV1NamespacedRoleBinding"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												case "PATCH":
-													r.name = PatchRbacAuthorizationV1NamespacedRoleBindingOperation
-													r.summary = ""
-													r.operationID = "patchRbacAuthorizationV1NamespacedRoleBinding"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListRbacAuthorizationV1NamespacedRoleOperation
-												r.summary = ""
-												r.operationID = "listRbacAuthorizationV1NamespacedRole"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[1] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadRbacAuthorizationV1NamespacedRoleOperation
-													r.summary = ""
-													r.operationID = "readRbacAuthorizationV1NamespacedRole"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												case "PATCH":
-													r.name = PatchRbacAuthorizationV1NamespacedRoleOperation
-													r.summary = ""
-													r.operationID = "patchRbacAuthorizationV1NamespacedRole"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}"
-													r.args = args
-													r.count = 2
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								}
-
-							case 'r': // Prefix: "role"
-
-								if l := len("role"); len(elem) >= l && elem[0:l] == "role" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'b': // Prefix: "bindings"
-
-									if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListRbacAuthorizationV1RoleBindingForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listRbacAuthorizationV1RoleBindingForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/rolebindings"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								case 's': // Prefix: "s"
-
-									if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										// Leaf node.
-										switch method {
-										case "GET":
-											r.name = ListRbacAuthorizationV1RoleForAllNamespacesOperation
-											r.summary = ""
-											r.operationID = "listRbacAuthorizationV1RoleForAllNamespaces"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/roles"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-
-								}
-
-							case 'w': // Prefix: "watch/"
-
-								if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case 'c': // Prefix: "clusterrole"
-
-									if l := len("clusterrole"); len(elem) >= l && elem[0:l] == "clusterrole" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'b': // Prefix: "bindings"
-
-										if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchRbacAuthorizationV1ClusterRoleBindingListOperation
-												r.summary = ""
-												r.operationID = "watchRbacAuthorizationV1ClusterRoleBindingList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/watch/clusterrolebindings"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchRbacAuthorizationV1ClusterRoleBindingOperation
-													r.summary = ""
-													r.operationID = "watchRbacAuthorizationV1ClusterRoleBinding"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/watch/clusterrolebindings/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = WatchRbacAuthorizationV1ClusterRoleListOperation
-												r.summary = ""
-												r.operationID = "watchRbacAuthorizationV1ClusterRoleList"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/watch/clusterroles"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchRbacAuthorizationV1ClusterRoleOperation
-													r.summary = ""
-													r.operationID = "watchRbacAuthorizationV1ClusterRole"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/watch/clusterroles/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									}
-
-								case 'n': // Prefix: "namespaces/"
-
-									if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									// Param: "namespace"
-									// Match until "/"
-									idx := strings.IndexByte(elem, '/')
-									if idx < 0 {
-										idx = len(elem)
-									}
-									args[0] = elem[:idx]
-									elem = elem[idx:]
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/role"
-
-										if l := len("/role"); len(elem) >= l && elem[0:l] == "/role" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'b': // Prefix: "bindings"
-
-											if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchRbacAuthorizationV1NamespacedRoleBindingListOperation
-													r.summary = ""
-													r.operationID = "watchRbacAuthorizationV1NamespacedRoleBindingList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/rolebindings"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchRbacAuthorizationV1NamespacedRoleBindingOperation
-														r.summary = ""
-														r.operationID = "watchRbacAuthorizationV1NamespacedRoleBinding"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/rolebindings/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										case 's': // Prefix: "s"
-
-											if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchRbacAuthorizationV1NamespacedRoleListOperation
-													r.summary = ""
-													r.operationID = "watchRbacAuthorizationV1NamespacedRoleList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/roles"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchRbacAuthorizationV1NamespacedRoleOperation
-														r.summary = ""
-														r.operationID = "watchRbacAuthorizationV1NamespacedRole"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/roles/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'r': // Prefix: "role"
-
-									if l := len("role"); len(elem) >= l && elem[0:l] == "role" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										break
-									}
-									switch elem[0] {
-									case 'b': // Prefix: "bindings"
-
-										if l := len("bindings"); len(elem) >= l && elem[0:l] == "bindings" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchRbacAuthorizationV1RoleBindingListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchRbacAuthorizationV1RoleBindingListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/watch/rolebindings"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 's': // Prefix: "s"
-
-										if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchRbacAuthorizationV1RoleListForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "watchRbacAuthorizationV1RoleListForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/rbac.authorization.k8s.io/v1/watch/roles"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					case 's': // Prefix: "s"
-
-						if l := len("s"); len(elem) >= l && elem[0:l] == "s" {
-							elem = elem[l:]
-						} else {
-							break
-						}
-
-						if len(elem) == 0 {
-							break
-						}
-						switch elem[0] {
-						case 'c': // Prefix: "cheduling.k8s.io/"
-
-							if l := len("cheduling.k8s.io/"); len(elem) >= l && elem[0:l] == "cheduling.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch method {
-								case "GET":
-									r.name = GetSchedulingAPIGroupOperation
-									r.summary = ""
-									r.operationID = "getSchedulingAPIGroup"
-									r.operationGroup = ""
-									r.pathPattern = "/apis/scheduling.k8s.io/"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1/"
-
-								if l := len("v1/"); len(elem) >= l && elem[0:l] == "v1/" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									switch method {
-									case "GET":
-										r.name = GetSchedulingV1APIResourcesOperation
-										r.summary = ""
-										r.operationID = "getSchedulingV1APIResources"
-										r.operationGroup = ""
-										r.pathPattern = "/apis/scheduling.k8s.io/v1/"
-										r.args = args
-										r.count = 0
-										return r, true
-									default:
-										return
-									}
-								}
-								switch elem[0] {
-								case 'p': // Prefix: "priorityclasses"
-
-									if l := len("priorityclasses"); len(elem) >= l && elem[0:l] == "priorityclasses" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = ListSchedulingV1PriorityClassOperation
-											r.summary = ""
-											r.operationID = "listSchedulingV1PriorityClass"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/scheduling.k8s.io/v1/priorityclasses"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ReadSchedulingV1PriorityClassOperation
-												r.summary = ""
-												r.operationID = "readSchedulingV1PriorityClass"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/scheduling.k8s.io/v1/priorityclasses/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											case "PATCH":
-												r.name = PatchSchedulingV1PriorityClassOperation
-												r.summary = ""
-												r.operationID = "patchSchedulingV1PriorityClass"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/scheduling.k8s.io/v1/priorityclasses/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								case 'w': // Prefix: "watch/priorityclasses"
-
-									if l := len("watch/priorityclasses"); len(elem) >= l && elem[0:l] == "watch/priorityclasses" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = WatchSchedulingV1PriorityClassListOperation
-											r.summary = ""
-											r.operationID = "watchSchedulingV1PriorityClassList"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/scheduling.k8s.io/v1/watch/priorityclasses"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case '/': // Prefix: "/"
-
-										if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "name"
-										// Leaf parameter, slashes are prohibited
-										idx := strings.IndexByte(elem, '/')
-										if idx >= 0 {
-											break
-										}
-										args[0] = elem
-										elem = ""
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = WatchSchedulingV1PriorityClassOperation
-												r.summary = ""
-												r.operationID = "watchSchedulingV1PriorityClass"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/scheduling.k8s.io/v1/watch/priorityclasses/{name}"
-												r.args = args
-												r.count = 1
-												return r, true
-											default:
-												return
-											}
-										}
-
-									}
-
-								}
-
-							}
-
-						case 't': // Prefix: "torage.k8s.io/"
-
-							if l := len("torage.k8s.io/"); len(elem) >= l && elem[0:l] == "torage.k8s.io/" {
-								elem = elem[l:]
-							} else {
-								break
-							}
-
-							if len(elem) == 0 {
-								switch method {
-								case "GET":
-									r.name = GetStorageAPIGroupOperation
-									r.summary = ""
-									r.operationID = "getStorageAPIGroup"
-									r.operationGroup = ""
-									r.pathPattern = "/apis/storage.k8s.io/"
-									r.args = args
-									r.count = 0
-									return r, true
-								default:
-									return
-								}
-							}
-							switch elem[0] {
-							case 'v': // Prefix: "v1"
-
-								if l := len("v1"); len(elem) >= l && elem[0:l] == "v1" {
-									elem = elem[l:]
-								} else {
-									break
-								}
-
-								if len(elem) == 0 {
-									break
-								}
-								switch elem[0] {
-								case '/': // Prefix: "/"
-
-									if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetStorageV1APIResourcesOperation
-											r.summary = ""
-											r.operationID = "getStorageV1APIResources"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/storage.k8s.io/v1/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "csi"
-
-										if l := len("csi"); len(elem) >= l && elem[0:l] == "csi" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'd': // Prefix: "drivers"
-
-											if l := len("drivers"); len(elem) >= l && elem[0:l] == "drivers" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ListStorageV1CSIDriverOperation
-													r.summary = ""
-													r.operationID = "listStorageV1CSIDriver"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1/csidrivers"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadStorageV1CSIDriverOperation
-														r.summary = ""
-														r.operationID = "readStorageV1CSIDriver"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1/csidrivers/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													case "PATCH":
-														r.name = PatchStorageV1CSIDriverOperation
-														r.summary = ""
-														r.operationID = "patchStorageV1CSIDriver"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1/csidrivers/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										case 'n': // Prefix: "nodes"
-
-											if l := len("nodes"); len(elem) >= l && elem[0:l] == "nodes" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ListStorageV1CSINodeOperation
-													r.summary = ""
-													r.operationID = "listStorageV1CSINode"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1/csinodes"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadStorageV1CSINodeOperation
-														r.summary = ""
-														r.operationID = "readStorageV1CSINode"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1/csinodes/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													case "PATCH":
-														r.name = PatchStorageV1CSINodeOperation
-														r.summary = ""
-														r.operationID = "patchStorageV1CSINode"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1/csinodes/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									case 's': // Prefix: "storageclasses"
-
-										if l := len("storageclasses"); len(elem) >= l && elem[0:l] == "storageclasses" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListStorageV1StorageClassOperation
-												r.summary = ""
-												r.operationID = "listStorageV1StorageClass"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/storage.k8s.io/v1/storageclasses"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Leaf parameter, slashes are prohibited
-											idx := strings.IndexByte(elem, '/')
-											if idx >= 0 {
-												break
-											}
-											args[0] = elem
-											elem = ""
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = ReadStorageV1StorageClassOperation
-													r.summary = ""
-													r.operationID = "readStorageV1StorageClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1/storageclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchStorageV1StorageClassOperation
-													r.summary = ""
-													r.operationID = "patchStorageV1StorageClass"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1/storageclasses/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-
-										}
-
-									case 'v': // Prefix: "volumeattachments"
-
-										if l := len("volumeattachments"); len(elem) >= l && elem[0:l] == "volumeattachments" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											switch method {
-											case "GET":
-												r.name = ListStorageV1VolumeAttachmentOperation
-												r.summary = ""
-												r.operationID = "listStorageV1VolumeAttachment"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/storage.k8s.io/v1/volumeattachments"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/"
-
-											if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "name"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ReadStorageV1VolumeAttachmentOperation
-													r.summary = ""
-													r.operationID = "readStorageV1VolumeAttachment"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1/volumeattachments/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												case "PATCH":
-													r.name = PatchStorageV1VolumeAttachmentOperation
-													r.summary = ""
-													r.operationID = "patchStorageV1VolumeAttachment"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1/volumeattachments/{name}"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/status"
-
-												if l := len("/status"); len(elem) >= l && elem[0:l] == "/status" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadStorageV1VolumeAttachmentStatusOperation
-														r.summary = ""
-														r.operationID = "readStorageV1VolumeAttachmentStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1/volumeattachments/{name}/status"
-														r.args = args
-														r.count = 1
-														return r, true
-													case "PATCH":
-														r.name = PatchStorageV1VolumeAttachmentStatusOperation
-														r.summary = ""
-														r.operationID = "patchStorageV1VolumeAttachmentStatus"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1/volumeattachments/{name}/status"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/"
-
-										if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "csi"
-
-											if l := len("csi"); len(elem) >= l && elem[0:l] == "csi" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case 'd': // Prefix: "drivers"
-
-												if l := len("drivers"); len(elem) >= l && elem[0:l] == "drivers" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = WatchStorageV1CSIDriverListOperation
-														r.summary = ""
-														r.operationID = "watchStorageV1CSIDriverList"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1/watch/csidrivers"
-														r.args = args
-														r.count = 0
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[0] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = WatchStorageV1CSIDriverOperation
-															r.summary = ""
-															r.operationID = "watchStorageV1CSIDriver"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/storage.k8s.io/v1/watch/csidrivers/{name}"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											case 'n': // Prefix: "nodes"
-
-												if l := len("nodes"); len(elem) >= l && elem[0:l] == "nodes" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = WatchStorageV1CSINodeListOperation
-														r.summary = ""
-														r.operationID = "watchStorageV1CSINodeList"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1/watch/csinodes"
-														r.args = args
-														r.count = 0
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[0] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = WatchStorageV1CSINodeOperation
-															r.summary = ""
-															r.operationID = "watchStorageV1CSINode"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/storage.k8s.io/v1/watch/csinodes/{name}"
-															r.args = args
-															r.count = 1
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											}
-
-										case 's': // Prefix: "storageclasses"
-
-											if l := len("storageclasses"); len(elem) >= l && elem[0:l] == "storageclasses" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchStorageV1StorageClassListOperation
-													r.summary = ""
-													r.operationID = "watchStorageV1StorageClassList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1/watch/storageclasses"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchStorageV1StorageClassOperation
-														r.summary = ""
-														r.operationID = "watchStorageV1StorageClass"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1/watch/storageclasses/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										case 'v': // Prefix: "volumeattachments"
-
-											if l := len("volumeattachments"); len(elem) >= l && elem[0:l] == "volumeattachments" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = WatchStorageV1VolumeAttachmentListOperation
-													r.summary = ""
-													r.operationID = "watchStorageV1VolumeAttachmentList"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1/watch/volumeattachments"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[0] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = WatchStorageV1VolumeAttachmentOperation
-														r.summary = ""
-														r.operationID = "watchStorageV1VolumeAttachment"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1/watch/volumeattachments/{name}"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'a': // Prefix: "alpha1/"
-
-									if l := len("alpha1/"); len(elem) >= l && elem[0:l] == "alpha1/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetStorageV1alpha1APIResourcesOperation
-											r.summary = ""
-											r.operationID = "getStorageV1alpha1APIResources"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/storage.k8s.io/v1alpha1/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "csistoragecapacities"
-
-										if l := len("csistoragecapacities"); len(elem) >= l && elem[0:l] == "csistoragecapacities" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ListStorageV1alpha1CSIStorageCapacityForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "listStorageV1alpha1CSIStorageCapacityForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/storage.k8s.io/v1alpha1/csistoragecapacities"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/csistoragecapacities"
-
-											if l := len("/csistoragecapacities"); len(elem) >= l && elem[0:l] == "/csistoragecapacities" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ListStorageV1alpha1NamespacedCSIStorageCapacityOperation
-													r.summary = ""
-													r.operationID = "listStorageV1alpha1NamespacedCSIStorageCapacity"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1alpha1/namespaces/{namespace}/csistoragecapacities"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadStorageV1alpha1NamespacedCSIStorageCapacityOperation
-														r.summary = ""
-														r.operationID = "readStorageV1alpha1NamespacedCSIStorageCapacity"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1alpha1/namespaces/{namespace}/csistoragecapacities/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PATCH":
-														r.name = PatchStorageV1alpha1NamespacedCSIStorageCapacityOperation
-														r.summary = ""
-														r.operationID = "patchStorageV1alpha1NamespacedCSIStorageCapacity"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1alpha1/namespaces/{namespace}/csistoragecapacities/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/"
-
-										if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "csistoragecapacities"
-
-											if l := len("csistoragecapacities"); len(elem) >= l && elem[0:l] == "csistoragecapacities" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchStorageV1alpha1CSIStorageCapacityListForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "watchStorageV1alpha1CSIStorageCapacityListForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1alpha1/watch/csistoragecapacities"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										case 'n': // Prefix: "namespaces/"
-
-											if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "namespace"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/csistoragecapacities"
-
-												if l := len("/csistoragecapacities"); len(elem) >= l && elem[0:l] == "/csistoragecapacities" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = WatchStorageV1alpha1NamespacedCSIStorageCapacityListOperation
-														r.summary = ""
-														r.operationID = "watchStorageV1alpha1NamespacedCSIStorageCapacityList"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1alpha1/watch/namespaces/{namespace}/csistoragecapacities"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = WatchStorageV1alpha1NamespacedCSIStorageCapacityOperation
-															r.summary = ""
-															r.operationID = "watchStorageV1alpha1NamespacedCSIStorageCapacity"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/storage.k8s.io/v1alpha1/watch/namespaces/{namespace}/csistoragecapacities/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								case 'b': // Prefix: "beta1/"
-
-									if l := len("beta1/"); len(elem) >= l && elem[0:l] == "beta1/" {
-										elem = elem[l:]
-									} else {
-										break
-									}
-
-									if len(elem) == 0 {
-										switch method {
-										case "GET":
-											r.name = GetStorageV1beta1APIResourcesOperation
-											r.summary = ""
-											r.operationID = "getStorageV1beta1APIResources"
-											r.operationGroup = ""
-											r.pathPattern = "/apis/storage.k8s.io/v1beta1/"
-											r.args = args
-											r.count = 0
-											return r, true
-										default:
-											return
-										}
-									}
-									switch elem[0] {
-									case 'c': // Prefix: "csistoragecapacities"
-
-										if l := len("csistoragecapacities"); len(elem) >= l && elem[0:l] == "csistoragecapacities" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											// Leaf node.
-											switch method {
-											case "GET":
-												r.name = ListStorageV1beta1CSIStorageCapacityForAllNamespacesOperation
-												r.summary = ""
-												r.operationID = "listStorageV1beta1CSIStorageCapacityForAllNamespaces"
-												r.operationGroup = ""
-												r.pathPattern = "/apis/storage.k8s.io/v1beta1/csistoragecapacities"
-												r.args = args
-												r.count = 0
-												return r, true
-											default:
-												return
-											}
-										}
-
-									case 'n': // Prefix: "namespaces/"
-
-										if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										// Param: "namespace"
-										// Match until "/"
-										idx := strings.IndexByte(elem, '/')
-										if idx < 0 {
-											idx = len(elem)
-										}
-										args[0] = elem[:idx]
-										elem = elem[idx:]
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case '/': // Prefix: "/csistoragecapacities"
-
-											if l := len("/csistoragecapacities"); len(elem) >= l && elem[0:l] == "/csistoragecapacities" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												switch method {
-												case "GET":
-													r.name = ListStorageV1beta1NamespacedCSIStorageCapacityOperation
-													r.summary = ""
-													r.operationID = "listStorageV1beta1NamespacedCSIStorageCapacity"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities"
-													r.args = args
-													r.count = 1
-													return r, true
-												default:
-													return
-												}
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/"
-
-												if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												// Param: "name"
-												// Leaf parameter, slashes are prohibited
-												idx := strings.IndexByte(elem, '/')
-												if idx >= 0 {
-													break
-												}
-												args[1] = elem
-												elem = ""
-
-												if len(elem) == 0 {
-													// Leaf node.
-													switch method {
-													case "GET":
-														r.name = ReadStorageV1beta1NamespacedCSIStorageCapacityOperation
-														r.summary = ""
-														r.operationID = "readStorageV1beta1NamespacedCSIStorageCapacity"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													case "PATCH":
-														r.name = PatchStorageV1beta1NamespacedCSIStorageCapacityOperation
-														r.summary = ""
-														r.operationID = "patchStorageV1beta1NamespacedCSIStorageCapacity"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}"
-														r.args = args
-														r.count = 2
-														return r, true
-													default:
-														return
-													}
-												}
-
-											}
-
-										}
-
-									case 'w': // Prefix: "watch/"
-
-										if l := len("watch/"); len(elem) >= l && elem[0:l] == "watch/" {
-											elem = elem[l:]
-										} else {
-											break
-										}
-
-										if len(elem) == 0 {
-											break
-										}
-										switch elem[0] {
-										case 'c': // Prefix: "csistoragecapacities"
-
-											if l := len("csistoragecapacities"); len(elem) >= l && elem[0:l] == "csistoragecapacities" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											if len(elem) == 0 {
-												// Leaf node.
-												switch method {
-												case "GET":
-													r.name = WatchStorageV1beta1CSIStorageCapacityListForAllNamespacesOperation
-													r.summary = ""
-													r.operationID = "watchStorageV1beta1CSIStorageCapacityListForAllNamespaces"
-													r.operationGroup = ""
-													r.pathPattern = "/apis/storage.k8s.io/v1beta1/watch/csistoragecapacities"
-													r.args = args
-													r.count = 0
-													return r, true
-												default:
-													return
-												}
-											}
-
-										case 'n': // Prefix: "namespaces/"
-
-											if l := len("namespaces/"); len(elem) >= l && elem[0:l] == "namespaces/" {
-												elem = elem[l:]
-											} else {
-												break
-											}
-
-											// Param: "namespace"
-											// Match until "/"
-											idx := strings.IndexByte(elem, '/')
-											if idx < 0 {
-												idx = len(elem)
-											}
-											args[0] = elem[:idx]
-											elem = elem[idx:]
-
-											if len(elem) == 0 {
-												break
-											}
-											switch elem[0] {
-											case '/': // Prefix: "/csistoragecapacities"
-
-												if l := len("/csistoragecapacities"); len(elem) >= l && elem[0:l] == "/csistoragecapacities" {
-													elem = elem[l:]
-												} else {
-													break
-												}
-
-												if len(elem) == 0 {
-													switch method {
-													case "GET":
-														r.name = WatchStorageV1beta1NamespacedCSIStorageCapacityListOperation
-														r.summary = ""
-														r.operationID = "watchStorageV1beta1NamespacedCSIStorageCapacityList"
-														r.operationGroup = ""
-														r.pathPattern = "/apis/storage.k8s.io/v1beta1/watch/namespaces/{namespace}/csistoragecapacities"
-														r.args = args
-														r.count = 1
-														return r, true
-													default:
-														return
-													}
-												}
-												switch elem[0] {
-												case '/': // Prefix: "/"
-
-													if l := len("/"); len(elem) >= l && elem[0:l] == "/" {
-														elem = elem[l:]
-													} else {
-														break
-													}
-
-													// Param: "name"
-													// Leaf parameter, slashes are prohibited
-													idx := strings.IndexByte(elem, '/')
-													if idx >= 0 {
-														break
-													}
-													args[1] = elem
-													elem = ""
-
-													if len(elem) == 0 {
-														// Leaf node.
-														switch method {
-														case "GET":
-															r.name = WatchStorageV1beta1NamespacedCSIStorageCapacityOperation
-															r.summary = ""
-															r.operationID = "watchStorageV1beta1NamespacedCSIStorageCapacity"
-															r.operationGroup = ""
-															r.pathPattern = "/apis/storage.k8s.io/v1beta1/watch/namespaces/{namespace}/csistoragecapacities/{name}"
-															r.args = args
-															r.count = 2
-															return r, true
-														default:
-															return
-														}
-													}
-
-												}
-
-											}
-
-										}
-
-									}
-
-								}
-
-							}
-
-						}
-
-					}
-
-				}
-
-			case 'l': // Prefix: "logs/"
-
-				if l := len("logs/"); len(elem) >= l && elem[0:l] == "logs/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					switch method {
-					case "GET":
-						r.name = LogFileListHandlerOperation
-						r.summary = ""
-						r.operationID = "logFileListHandler"
-						r.operationGroup = ""
-						r.pathPattern = "/logs/"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-				// Param: "logpath"
-				// Leaf parameter, slashes are prohibited
-				idx := strings.IndexByte(elem, '/')
-				if idx >= 0 {
-					break
-				}
-				args[0] = elem
-				elem = ""
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = LogFileHandlerOperation
-						r.summary = ""
-						r.operationID = "logFileHandler"
-						r.operationGroup = ""
-						r.pathPattern = "/logs/{logpath}"
-						r.args = args
-						r.count = 1
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'o': // Prefix: "openid/v1/jwks/"
-
-				if l := len("openid/v1/jwks/"); len(elem) >= l && elem[0:l] == "openid/v1/jwks/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = GetServiceAccountIssuerOpenIDKeysetOperation
-						r.summary = ""
-						r.operationID = "getServiceAccountIssuerOpenIDKeyset"
-						r.operationGroup = ""
-						r.pathPattern = "/openid/v1/jwks/"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'v': // Prefix: "version/"
-
-				if l := len("version/"); len(elem) >= l && elem[0:l] == "version/" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = GetCodeVersionOperation
-						r.summary = ""
-						r.operationID = "getCodeVersion"
-						r.operationGroup = ""
-						r.pathPattern = "/version/"
-						r.args = args
-						r.count = 0
-						return r, true
-					default:
-						return
-					}
-				}
-
-			}
-
-		}
-	}
-	return r, false
+	_ = "STUB: not implemented"
+	return *new(Route), false
 }
+
+// Static code generated router with unwrapped path search.
+
+// Prefix: "/"
+
+// Prefix: ".well-known/openid-configuration/"
+
+// Leaf node.
+
+// Prefix: "api"
+
+// Prefix: "/"
+
+// Prefix: "v1/"
+
+// Prefix: "co"
+
+// Prefix: "mponentstatuses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "nfigmaps"
+
+// Leaf node.
+
+// Prefix: "e"
+
+// Prefix: "ndpoints"
+
+// Leaf node.
+
+// Prefix: "vents"
+
+// Leaf node.
+
+// Prefix: "limitranges"
+
+// Leaf node.
+
+// Prefix: "n"
+
+// Prefix: "amespaces"
+
+// Prefix: "/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "configmaps"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "e"
+
+// Prefix: "ndpoints"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "vents"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "limitranges"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "ersistentvolumeclaims"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "od"
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "attach"
+
+// Leaf node.
+
+// Prefix: "e"
+
+// Prefix: "phemeralcontainers"
+
+// Leaf node.
+
+// Prefix: "xec"
+
+// Leaf node.
+
+// Prefix: "log"
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "ortforward"
+
+// Leaf node.
+
+// Prefix: "roxy"
+
+// Prefix: "/"
+
+// Param: "path"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "status"
+
+// Leaf node.
+
+// Prefix: "templates"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "re"
+
+// Prefix: "plicationcontrollers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/s"
+
+// Prefix: "cale"
+
+// Leaf node.
+
+// Prefix: "tatus"
+
+// Leaf node.
+
+// Prefix: "sourcequotas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "e"
+
+// Prefix: "crets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "rvice"
+
+// Prefix: "accounts"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "proxy"
+
+// Prefix: "/"
+
+// Param: "path"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "status"
+
+// Leaf node.
+
+// Prefix: "tatus"
+
+// Leaf node.
+
+// Prefix: "odes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "proxy"
+
+// Prefix: "/"
+
+// Param: "path"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "status"
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "ersistentvolume"
+
+// Prefix: "claims"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "od"
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "templates"
+
+// Leaf node.
+
+// Prefix: "re"
+
+// Prefix: "plicationcontrollers"
+
+// Leaf node.
+
+// Prefix: "sourcequotas"
+
+// Leaf node.
+
+// Prefix: "se"
+
+// Prefix: "crets"
+
+// Leaf node.
+
+// Prefix: "rvice"
+
+// Prefix: "accounts"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "configmaps"
+
+// Leaf node.
+
+// Prefix: "e"
+
+// Prefix: "ndpoints"
+
+// Leaf node.
+
+// Prefix: "vents"
+
+// Leaf node.
+
+// Prefix: "limitranges"
+
+// Leaf node.
+
+// Prefix: "n"
+
+// Prefix: "amespaces"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "configmaps"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "e"
+
+// Prefix: "ndpoints"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "vents"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "limitranges"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "ersistentvolumeclaims"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "od"
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "templates"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "re"
+
+// Prefix: "plicationcontrollers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "sourcequotas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "se"
+
+// Prefix: "crets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "rvice"
+
+// Prefix: "accounts"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "odes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "ersistentvolume"
+
+// Prefix: "claims"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "od"
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "templates"
+
+// Leaf node.
+
+// Prefix: "re"
+
+// Prefix: "plicationcontrollers"
+
+// Leaf node.
+
+// Prefix: "sourcequotas"
+
+// Leaf node.
+
+// Prefix: "se"
+
+// Prefix: "crets"
+
+// Leaf node.
+
+// Prefix: "rvice"
+
+// Prefix: "accounts"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "s/"
+
+// Prefix: "a"
+
+// Prefix: "dmissionregistration.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "mutatingwebhookconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "validatingwebhookconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "mutatingwebhookconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "validatingwebhookconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "p"
+
+// Prefix: "i"
+
+// Prefix: "extensions.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "customresourcedefinitions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/customresourcedefinitions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "registration.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "apiservices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/apiservices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "ps/"
+
+// Prefix: "v1/"
+
+// Prefix: "controllerrevisions"
+
+// Leaf node.
+
+// Prefix: "d"
+
+// Prefix: "aemonsets"
+
+// Leaf node.
+
+// Prefix: "eployments"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "controllerrevisions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "d"
+
+// Prefix: "aemonsets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "eployments"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/s"
+
+// Prefix: "cale"
+
+// Leaf node.
+
+// Prefix: "tatus"
+
+// Leaf node.
+
+// Prefix: "replicasets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/s"
+
+// Prefix: "cale"
+
+// Leaf node.
+
+// Prefix: "tatus"
+
+// Leaf node.
+
+// Prefix: "statefulsets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/s"
+
+// Prefix: "cale"
+
+// Leaf node.
+
+// Prefix: "tatus"
+
+// Leaf node.
+
+// Prefix: "replicasets"
+
+// Leaf node.
+
+// Prefix: "statefulsets"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "controllerrevisions"
+
+// Leaf node.
+
+// Prefix: "d"
+
+// Prefix: "aemonsets"
+
+// Leaf node.
+
+// Prefix: "eployments"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "controllerrevisions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "d"
+
+// Prefix: "aemonsets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "eployments"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "replicasets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "statefulsets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "replicasets"
+
+// Leaf node.
+
+// Prefix: "statefulsets"
+
+// Leaf node.
+
+// Prefix: "ut"
+
+// Prefix: "h"
+
+// Prefix: "entication.k8s.io/"
+
+// Prefix: "v1/"
+
+// Leaf node.
+
+// Prefix: "orization.k8s.io/"
+
+// Prefix: "v1/"
+
+// Leaf node.
+
+// Prefix: "oscaling/"
+
+// Prefix: "v"
+
+// Prefix: "1/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "2beta"
+
+// Prefix: "1/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "2/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "horizontalpodautoscalers"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/horizontalpodautoscalers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "batch/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "cronjobs"
+
+// Leaf node.
+
+// Prefix: "jobs"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "cronjobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "jobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "cronjobs"
+
+// Leaf node.
+
+// Prefix: "jobs"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "cronjobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "jobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "cronjobs"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/cronjobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "cronjobs"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/cronjobs"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "c"
+
+// Prefix: "ertificates.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "certificatesigningrequests"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "approval"
+
+// Leaf node.
+
+// Prefix: "status"
+
+// Leaf node.
+
+// Prefix: "watch/certificatesigningrequests"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "oordination.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "leases"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/leases"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "leases"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/leases"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "discovery.k8s.io/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "endpointslices"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/endpointslices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "endpointslices"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/endpointslices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "endpointslices"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/endpointslices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "endpointslices"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/endpointslices"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "events.k8s.io/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "events"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/events"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "events"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/events"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "events"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/events"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "events"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/events"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "flowcontrol.apiserver.k8s.io/"
+
+// Prefix: "v1beta"
+
+// Prefix: "1/"
+
+// Prefix: "flowschemas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "prioritylevelconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "flowschemas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "prioritylevelconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "2/"
+
+// Prefix: "flowschemas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "prioritylevelconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "flowschemas"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "prioritylevelconfigurations"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "internal.apiserver.k8s.io/"
+
+// Prefix: "v1alpha1/"
+
+// Prefix: "storageversions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/storageversions"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "n"
+
+// Prefix: "etworking.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "ingress"
+
+// Prefix: "classes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "es"
+
+// Leaf node.
+
+// Prefix: "n"
+
+// Prefix: "amespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "ingresses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "networkpolicies"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "etworkpolicies"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "ingress"
+
+// Prefix: "classes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "es"
+
+// Leaf node.
+
+// Prefix: "n"
+
+// Prefix: "amespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/"
+
+// Prefix: "ingresses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "networkpolicies"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "etworkpolicies"
+
+// Leaf node.
+
+// Prefix: "ode.k8s.io/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "alpha1/"
+
+// Prefix: "runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/runtimeclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "policy/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/poddisruptionbudgets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "poddisruptionbudgets"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/poddisruptionbudgets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "poddisruptionbudgets"
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/poddisruptionbudgets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "pod"
+
+// Prefix: "disruptionbudgets"
+
+// Leaf node.
+
+// Prefix: "securitypolicies"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/poddisruptionbudgets"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "pod"
+
+// Prefix: "disruptionbudgets"
+
+// Leaf node.
+
+// Prefix: "securitypolicies"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "rbac.authorization.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "clusterrole"
+
+// Prefix: "bindings"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/role"
+
+// Prefix: "bindings"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "role"
+
+// Prefix: "bindings"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "clusterrole"
+
+// Prefix: "bindings"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/role"
+
+// Prefix: "bindings"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "role"
+
+// Prefix: "bindings"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Leaf node.
+
+// Prefix: "s"
+
+// Prefix: "cheduling.k8s.io/"
+
+// Prefix: "v1/"
+
+// Prefix: "priorityclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/priorityclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "torage.k8s.io/"
+
+// Prefix: "v1"
+
+// Prefix: "/"
+
+// Prefix: "csi"
+
+// Prefix: "drivers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "nodes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "storageclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "volumeattachments"
+
+// Prefix: "/"
+
+// Param: "name"
+// Match until "/"
+
+// Prefix: "/status"
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "csi"
+
+// Prefix: "drivers"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "nodes"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "storageclasses"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "volumeattachments"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "alpha1/"
+
+// Prefix: "csistoragecapacities"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/csistoragecapacities"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "csistoragecapacities"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/csistoragecapacities"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "beta1/"
+
+// Prefix: "csistoragecapacities"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/csistoragecapacities"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "watch/"
+
+// Prefix: "csistoragecapacities"
+
+// Leaf node.
+
+// Prefix: "namespaces/"
+
+// Param: "namespace"
+// Match until "/"
+
+// Prefix: "/csistoragecapacities"
+
+// Prefix: "/"
+
+// Param: "name"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "logs/"
+
+// Param: "logpath"
+// Leaf parameter, slashes are prohibited
+
+// Leaf node.
+
+// Prefix: "openid/v1/jwks/"
+
+// Leaf node.
+
+// Prefix: "version/"
+
+// Leaf node.

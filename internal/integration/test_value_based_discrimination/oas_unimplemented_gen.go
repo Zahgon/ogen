@@ -4,8 +4,6 @@ package api
 
 import (
 	"context"
-
-	ht "github.com/ogen-go/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -17,7 +15,8 @@ var _ Handler = UnimplementedHandler{}
 //
 // GET /resource
 func (UnimplementedHandler) GetResource(ctx context.Context) (r Resource, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(Resource), nil
 }
 
 // GetShippingOption implements getShippingOption operation.
@@ -26,19 +25,22 @@ func (UnimplementedHandler) GetResource(ctx context.Context) (r Resource, _ erro
 //
 // GET /shipping-option
 func (UnimplementedHandler) GetShippingOption(ctx context.Context) (r ShippingOption, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(ShippingOption), nil
 }
 
 // GetStatus implements getStatus operation.
 //
 // GET /status
 func (UnimplementedHandler) GetStatus(ctx context.Context) (r StatusResponse, _ error) {
-	return r, ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return *new(StatusResponse), nil
 }
 
 // LogEvent implements logEvent operation.
 //
 // POST /event
 func (UnimplementedHandler) LogEvent(ctx context.Context, req Event) error {
-	return ht.ErrNotImplemented
+	_ = "STUB: not implemented"
+	return nil
 }

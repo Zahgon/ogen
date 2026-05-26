@@ -2,15 +2,7 @@
 
 package api
 
-import (
-	"fmt"
-
-	"github.com/go-faster/errors"
-)
-
-func (s *ErrorStatusCode) Error() string {
-	return fmt.Sprintf("code %d: %+v", s.StatusCode, s.Response)
-}
+func (s *ErrorStatusCode) Error() string { _ = "STUB: not implemented"; return "" }
 
 // Balloon device descriptor.
 // Ref: #/components/schemas/Balloon
@@ -26,38 +18,38 @@ type Balloon struct {
 
 // GetAmountMib returns the value of AmountMib.
 func (s *Balloon) GetAmountMib() int {
-	return s.AmountMib
+	_ = "STUB: not implemented"
+
+	// GetDeflateOnOom returns the value of DeflateOnOom.
+	return 0
 }
 
-// GetDeflateOnOom returns the value of DeflateOnOom.
-func (s *Balloon) GetDeflateOnOom() bool {
-	return s.DeflateOnOom
-}
+func (s *Balloon) GetDeflateOnOom() bool { _ = "STUB: not implemented"; return false }
 
 // GetStatsPollingIntervalS returns the value of StatsPollingIntervalS.
-func (s *Balloon) GetStatsPollingIntervalS() OptInt {
-	return s.StatsPollingIntervalS
-}
+func (s *Balloon) GetStatsPollingIntervalS() OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // SetAmountMib sets the value of AmountMib.
 func (s *Balloon) SetAmountMib(val int) {
-	s.AmountMib = val
+	_ = "STUB: not implemented"
+
+	// SetDeflateOnOom sets the value of DeflateOnOom.
+	return
 }
 
-// SetDeflateOnOom sets the value of DeflateOnOom.
-func (s *Balloon) SetDeflateOnOom(val bool) {
-	s.DeflateOnOom = val
-}
+func (s *Balloon) SetDeflateOnOom(val bool) { _ = "STUB: not implemented"; return }
 
 // SetStatsPollingIntervalS sets the value of StatsPollingIntervalS.
-func (s *Balloon) SetStatsPollingIntervalS(val OptInt) {
-	s.StatsPollingIntervalS = val
+func (s *Balloon) SetStatsPollingIntervalS(val OptInt) { _ = "STUB: not implemented"; return }
+
+func (*Balloon) describeBalloonConfigRes() {
+	_ = "STUB: not implemented"
+
+	// Describes the balloon device statistics.
+	// Ref: #/components/schemas/BalloonStats
+	return
 }
 
-func (*Balloon) describeBalloonConfigRes() {}
-
-// Describes the balloon device statistics.
-// Ref: #/components/schemas/BalloonStats
 type BalloonStats struct {
 	// Target number of pages the device aims to hold.
 	TargetPages int `json:"target_pages"`
@@ -92,164 +84,186 @@ type BalloonStats struct {
 }
 
 // GetTargetPages returns the value of TargetPages.
-func (s *BalloonStats) GetTargetPages() int {
-	return s.TargetPages
-}
+func (s *BalloonStats) GetTargetPages() int { _ = "STUB: not implemented"; return 0 }
 
 // GetActualPages returns the value of ActualPages.
-func (s *BalloonStats) GetActualPages() int {
-	return s.ActualPages
-}
+func (s *BalloonStats) GetActualPages() int { _ = "STUB: not implemented"; return 0 }
 
 // GetTargetMib returns the value of TargetMib.
 func (s *BalloonStats) GetTargetMib() int {
-	return s.TargetMib
+	_ = "STUB: not implemented"
+
+	// GetActualMib returns the value of ActualMib.
+	return 0
 }
 
-// GetActualMib returns the value of ActualMib.
 func (s *BalloonStats) GetActualMib() int {
-	return s.ActualMib
+	_ = "STUB: not implemented"
+
+	// GetSwapIn returns the value of SwapIn.
+	return 0
 }
 
-// GetSwapIn returns the value of SwapIn.
 func (s *BalloonStats) GetSwapIn() OptInt64 {
-	return s.SwapIn
+	_ = "STUB: not implemented"
+
+	// GetSwapOut returns the value of SwapOut.
+	return *new(OptInt64)
 }
 
-// GetSwapOut returns the value of SwapOut.
 func (s *BalloonStats) GetSwapOut() OptInt64 {
-	return s.SwapOut
+	_ = "STUB: not implemented"
+
+	// GetMajorFaults returns the value of MajorFaults.
+	return *new(OptInt64)
 }
 
-// GetMajorFaults returns the value of MajorFaults.
 func (s *BalloonStats) GetMajorFaults() OptInt64 {
-	return s.MajorFaults
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMinorFaults returns the value of MinorFaults.
+	new(OptInt64)
 }
 
-// GetMinorFaults returns the value of MinorFaults.
 func (s *BalloonStats) GetMinorFaults() OptInt64 {
-	return s.MinorFaults
+	_ = "STUB: not implemented"
+	return *
+
+	// GetFreeMemory returns the value of FreeMemory.
+	new(OptInt64)
 }
 
-// GetFreeMemory returns the value of FreeMemory.
 func (s *BalloonStats) GetFreeMemory() OptInt64 {
-	return s.FreeMemory
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTotalMemory returns the value of TotalMemory.
+	new(OptInt64)
 }
 
-// GetTotalMemory returns the value of TotalMemory.
 func (s *BalloonStats) GetTotalMemory() OptInt64 {
-	return s.TotalMemory
+	_ = "STUB: not implemented"
+	return *
+
+	// GetAvailableMemory returns the value of AvailableMemory.
+	new(OptInt64)
 }
 
-// GetAvailableMemory returns the value of AvailableMemory.
 func (s *BalloonStats) GetAvailableMemory() OptInt64 {
-	return s.AvailableMemory
+	_ = "STUB: not implemented"
+	return *
+
+	// GetDiskCaches returns the value of DiskCaches.
+	new(OptInt64)
 }
 
-// GetDiskCaches returns the value of DiskCaches.
 func (s *BalloonStats) GetDiskCaches() OptInt64 {
-	return s.DiskCaches
+	_ = "STUB: not implemented"
+	return *
+
+	// GetHugetlbAllocations returns the value of HugetlbAllocations.
+	new(OptInt64)
 }
 
-// GetHugetlbAllocations returns the value of HugetlbAllocations.
 func (s *BalloonStats) GetHugetlbAllocations() OptInt64 {
-	return s.HugetlbAllocations
+	_ = "STUB: not implemented"
+	return *new(OptInt64)
 }
 
 // GetHugetlbFailures returns the value of HugetlbFailures.
 func (s *BalloonStats) GetHugetlbFailures() OptInt64 {
-	return s.HugetlbFailures
+	_ = "STUB: not implemented"
+	return *
+
+	// SetTargetPages sets the value of TargetPages.
+	new(OptInt64)
 }
 
-// SetTargetPages sets the value of TargetPages.
-func (s *BalloonStats) SetTargetPages(val int) {
-	s.TargetPages = val
-}
+func (s *BalloonStats) SetTargetPages(val int) { _ = "STUB: not implemented"; return }
 
 // SetActualPages sets the value of ActualPages.
-func (s *BalloonStats) SetActualPages(val int) {
-	s.ActualPages = val
-}
+func (s *BalloonStats) SetActualPages(val int) { _ = "STUB: not implemented"; return }
 
 // SetTargetMib sets the value of TargetMib.
 func (s *BalloonStats) SetTargetMib(val int) {
-	s.TargetMib = val
+	_ = "STUB: not implemented"
+
+	// SetActualMib sets the value of ActualMib.
+	return
 }
 
-// SetActualMib sets the value of ActualMib.
 func (s *BalloonStats) SetActualMib(val int) {
-	s.ActualMib = val
+	_ = "STUB: not implemented"
+
+	// SetSwapIn sets the value of SwapIn.
+	return
 }
 
-// SetSwapIn sets the value of SwapIn.
 func (s *BalloonStats) SetSwapIn(val OptInt64) {
-	s.SwapIn = val
+	_ = "STUB: not implemented"
+
+	// SetSwapOut sets the value of SwapOut.
+	return
 }
 
-// SetSwapOut sets the value of SwapOut.
 func (s *BalloonStats) SetSwapOut(val OptInt64) {
-	s.SwapOut = val
+	_ = "STUB: not implemented"
+
+	// SetMajorFaults sets the value of MajorFaults.
+	return
 }
 
-// SetMajorFaults sets the value of MajorFaults.
-func (s *BalloonStats) SetMajorFaults(val OptInt64) {
-	s.MajorFaults = val
-}
+func (s *BalloonStats) SetMajorFaults(val OptInt64) { _ = "STUB: not implemented"; return }
 
 // SetMinorFaults sets the value of MinorFaults.
-func (s *BalloonStats) SetMinorFaults(val OptInt64) {
-	s.MinorFaults = val
-}
+func (s *BalloonStats) SetMinorFaults(val OptInt64) { _ = "STUB: not implemented"; return }
 
 // SetFreeMemory sets the value of FreeMemory.
 func (s *BalloonStats) SetFreeMemory(val OptInt64) {
-	s.FreeMemory = val
+	_ = "STUB: not implemented"
+
+	// SetTotalMemory sets the value of TotalMemory.
+	return
 }
 
-// SetTotalMemory sets the value of TotalMemory.
-func (s *BalloonStats) SetTotalMemory(val OptInt64) {
-	s.TotalMemory = val
-}
+func (s *BalloonStats) SetTotalMemory(val OptInt64) { _ = "STUB: not implemented"; return }
 
 // SetAvailableMemory sets the value of AvailableMemory.
-func (s *BalloonStats) SetAvailableMemory(val OptInt64) {
-	s.AvailableMemory = val
-}
+func (s *BalloonStats) SetAvailableMemory(val OptInt64) { _ = "STUB: not implemented"; return }
 
 // SetDiskCaches sets the value of DiskCaches.
 func (s *BalloonStats) SetDiskCaches(val OptInt64) {
-	s.DiskCaches = val
+	_ = "STUB: not implemented"
+
+	// SetHugetlbAllocations sets the value of HugetlbAllocations.
+	return
 }
 
-// SetHugetlbAllocations sets the value of HugetlbAllocations.
-func (s *BalloonStats) SetHugetlbAllocations(val OptInt64) {
-	s.HugetlbAllocations = val
-}
+func (s *BalloonStats) SetHugetlbAllocations(val OptInt64) { _ = "STUB: not implemented"; return }
 
 // SetHugetlbFailures sets the value of HugetlbFailures.
-func (s *BalloonStats) SetHugetlbFailures(val OptInt64) {
-	s.HugetlbFailures = val
+func (s *BalloonStats) SetHugetlbFailures(val OptInt64) { _ = "STUB: not implemented"; return }
+
+func (*BalloonStats) describeBalloonStatsRes() {
+	_ = "STUB: not implemented"
+
+	// Update the statistics polling interval, with the first statistics update scheduled immediately.
+	// Statistics cannot be turned on/off after boot.
+	// Ref: #/components/schemas/BalloonStatsUpdate
+	return
 }
 
-func (*BalloonStats) describeBalloonStatsRes() {}
-
-// Update the statistics polling interval, with the first statistics update scheduled immediately.
-// Statistics cannot be turned on/off after boot.
-// Ref: #/components/schemas/BalloonStatsUpdate
 type BalloonStatsUpdate struct {
 	// Interval in seconds between refreshing statistics.
 	StatsPollingIntervalS int `json:"stats_polling_interval_s"`
 }
 
 // GetStatsPollingIntervalS returns the value of StatsPollingIntervalS.
-func (s *BalloonStatsUpdate) GetStatsPollingIntervalS() int {
-	return s.StatsPollingIntervalS
-}
+func (s *BalloonStatsUpdate) GetStatsPollingIntervalS() int { _ = "STUB: not implemented"; return 0 }
 
 // SetStatsPollingIntervalS sets the value of StatsPollingIntervalS.
-func (s *BalloonStatsUpdate) SetStatsPollingIntervalS(val int) {
-	s.StatsPollingIntervalS = val
-}
+func (s *BalloonStatsUpdate) SetStatsPollingIntervalS(val int) { _ = "STUB: not implemented"; return }
 
 // Balloon device descriptor.
 // Ref: #/components/schemas/BalloonUpdate
@@ -260,16 +274,20 @@ type BalloonUpdate struct {
 
 // GetAmountMib returns the value of AmountMib.
 func (s *BalloonUpdate) GetAmountMib() int {
-	return s.AmountMib
+	_ = "STUB: not implemented"
+
+	// SetAmountMib sets the value of AmountMib.
+	return 0
 }
 
-// SetAmountMib sets the value of AmountMib.
 func (s *BalloonUpdate) SetAmountMib(val int) {
-	s.AmountMib = val
+	_ = "STUB: not implemented"
+
+	// Boot source descriptor.
+	// Ref: #/components/schemas/BootSource
+	return
 }
 
-// Boot source descriptor.
-// Ref: #/components/schemas/BootSource
 type BootSource struct {
 	// Kernel boot arguments.
 	BootArgs OptString `json:"boot_args"`
@@ -281,33 +299,38 @@ type BootSource struct {
 
 // GetBootArgs returns the value of BootArgs.
 func (s *BootSource) GetBootArgs() OptString {
-	return s.BootArgs
+	_ = "STUB: not implemented"
+
+	// GetInitrdPath returns the value of InitrdPath.
+	return *new(OptString)
 }
 
-// GetInitrdPath returns the value of InitrdPath.
 func (s *BootSource) GetInitrdPath() OptString {
-	return s.InitrdPath
+	_ = "STUB: not implemented"
+	return *
+
+	// GetKernelImagePath returns the value of KernelImagePath.
+	new(OptString)
 }
 
-// GetKernelImagePath returns the value of KernelImagePath.
-func (s *BootSource) GetKernelImagePath() string {
-	return s.KernelImagePath
-}
+func (s *BootSource) GetKernelImagePath() string { _ = "STUB: not implemented"; return "" }
 
 // SetBootArgs sets the value of BootArgs.
 func (s *BootSource) SetBootArgs(val OptString) {
-	s.BootArgs = val
+	_ = "STUB: not implemented"
+
+	// SetInitrdPath sets the value of InitrdPath.
+	return
 }
 
-// SetInitrdPath sets the value of InitrdPath.
 func (s *BootSource) SetInitrdPath(val OptString) {
-	s.InitrdPath = val
+	_ = "STUB: not implemented"
+
+	// SetKernelImagePath sets the value of KernelImagePath.
+	return
 }
 
-// SetKernelImagePath sets the value of KernelImagePath.
-func (s *BootSource) SetKernelImagePath(val string) {
-	s.KernelImagePath = val
-}
+func (s *BootSource) SetKernelImagePath(val string) { _ = "STUB: not implemented"; return }
 
 // The CPU Template defines a set of flags to be disabled from the microvm so that the features
 // exposed to the guest are the same as in the selected instance type.
@@ -320,50 +343,33 @@ const (
 )
 
 // AllValues returns all CpuTemplate values.
-func (CpuTemplate) AllValues() []CpuTemplate {
-	return []CpuTemplate{
-		CpuTemplateC3,
-		CpuTemplateT2,
-	}
-}
+func (CpuTemplate) AllValues() []CpuTemplate { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s CpuTemplate) MarshalText() ([]byte, error) {
-	switch s {
-	case CpuTemplateC3:
-		return []byte(s), nil
-	case CpuTemplateT2:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s CpuTemplate) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *CpuTemplate) UnmarshalText(data []byte) error {
-	switch CpuTemplate(data) {
-	case CpuTemplateC3:
-		*s = CpuTemplateC3
-		return nil
-	case CpuTemplateT2:
-		*s = CpuTemplateT2
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *CpuTemplate) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // CreateSnapshotNoContent is response for CreateSnapshot operation.
 type CreateSnapshotNoContent struct{}
 
-func (*CreateSnapshotNoContent) createSnapshotRes() {}
+func (*CreateSnapshotNoContent) createSnapshotRes() {
+	_ = "STUB: not implemented"
 
-// CreateSyncActionNoContent is response for CreateSyncAction operation.
+	// CreateSyncActionNoContent is response for CreateSyncAction operation.
+	return
+}
+
 type CreateSyncActionNoContent struct{}
 
-func (*CreateSyncActionNoContent) createSyncActionRes() {}
+func (*CreateSyncActionNoContent) createSyncActionRes() {
+	_ = "STUB: not implemented"
 
-// Ref: #/components/schemas/Drive
+	// Ref: #/components/schemas/Drive
+	return
+}
+
 type Drive struct {
 	DriveID string `json:"drive_id"`
 	// Represents the caching strategy for the block device.
@@ -380,73 +386,82 @@ type Drive struct {
 
 // GetDriveID returns the value of DriveID.
 func (s *Drive) GetDriveID() string {
-	return s.DriveID
+	_ = "STUB: not implemented"
+
+	// GetCacheType returns the value of CacheType.
+	return ""
 }
 
-// GetCacheType returns the value of CacheType.
 func (s *Drive) GetCacheType() OptString {
-	return s.CacheType
+	_ = "STUB: not implemented"
+
+	// GetIsReadOnly returns the value of IsReadOnly.
+	return *new(OptString)
 }
 
-// GetIsReadOnly returns the value of IsReadOnly.
-func (s *Drive) GetIsReadOnly() bool {
-	return s.IsReadOnly
-}
+func (s *Drive) GetIsReadOnly() bool { _ = "STUB: not implemented"; return false }
 
 // GetIsRootDevice returns the value of IsRootDevice.
-func (s *Drive) GetIsRootDevice() bool {
-	return s.IsRootDevice
-}
+func (s *Drive) GetIsRootDevice() bool { _ = "STUB: not implemented"; return false }
 
 // GetPartuuid returns the value of Partuuid.
 func (s *Drive) GetPartuuid() OptString {
-	return s.Partuuid
+	_ = "STUB: not implemented"
+
+	// GetPathOnHost returns the value of PathOnHost.
+	return *new(OptString)
 }
 
-// GetPathOnHost returns the value of PathOnHost.
-func (s *Drive) GetPathOnHost() string {
-	return s.PathOnHost
-}
+func (s *Drive) GetPathOnHost() string { _ = "STUB: not implemented"; return "" }
 
 // GetRateLimiter returns the value of RateLimiter.
 func (s *Drive) GetRateLimiter() OptRateLimiter {
-	return s.RateLimiter
+	_ = "STUB: not implemented"
+	return *
+
+	// SetDriveID sets the value of DriveID.
+	new(OptRateLimiter)
 }
 
-// SetDriveID sets the value of DriveID.
 func (s *Drive) SetDriveID(val string) {
-	s.DriveID = val
+	_ = "STUB: not implemented"
+
+	// SetCacheType sets the value of CacheType.
+	return
 }
 
-// SetCacheType sets the value of CacheType.
 func (s *Drive) SetCacheType(val OptString) {
-	s.CacheType = val
+	_ = "STUB: not implemented"
+
+	// SetIsReadOnly sets the value of IsReadOnly.
+	return
 }
 
-// SetIsReadOnly sets the value of IsReadOnly.
 func (s *Drive) SetIsReadOnly(val bool) {
-	s.IsReadOnly = val
+	_ = "STUB: not implemented"
+
+	// SetIsRootDevice sets the value of IsRootDevice.
+	return
 }
 
-// SetIsRootDevice sets the value of IsRootDevice.
-func (s *Drive) SetIsRootDevice(val bool) {
-	s.IsRootDevice = val
-}
+func (s *Drive) SetIsRootDevice(val bool) { _ = "STUB: not implemented"; return }
 
 // SetPartuuid sets the value of Partuuid.
 func (s *Drive) SetPartuuid(val OptString) {
-	s.Partuuid = val
+	_ = "STUB: not implemented"
+
+	// SetPathOnHost sets the value of PathOnHost.
+	return
 }
 
-// SetPathOnHost sets the value of PathOnHost.
 func (s *Drive) SetPathOnHost(val string) {
-	s.PathOnHost = val
+	_ = "STUB: not implemented"
+
+	// SetRateLimiter sets the value of RateLimiter.
+	return
 }
 
-// SetRateLimiter sets the value of RateLimiter.
-func (s *Drive) SetRateLimiter(val OptRateLimiter) {
-	s.RateLimiter = val
-}
+func (s *Drive) SetRateLimiter(val OptRateLimiter) { _ = "STUB: not implemented"; return }
 
 // Ref: #/components/schemas/Error
 type Error struct {
@@ -456,65 +471,74 @@ type Error struct {
 
 // GetFaultMessage returns the value of FaultMessage.
 func (s *Error) GetFaultMessage() OptString {
-	return s.FaultMessage
+	_ = "STUB: not implemented"
+	return *
+
+	// SetFaultMessage sets the value of FaultMessage.
+	new(OptString)
 }
 
-// SetFaultMessage sets the value of FaultMessage.
-func (s *Error) SetFaultMessage(val OptString) {
-	s.FaultMessage = val
+func (s *Error) SetFaultMessage(val OptString) { _ = "STUB: not implemented"; return }
+
+func (*Error) createSnapshotRes()                 { _ = "STUB: not implemented"; return }
+func (*Error) createSyncActionRes()               { _ = "STUB: not implemented"; return }
+func (*Error) describeBalloonConfigRes()          { _ = "STUB: not implemented"; return }
+func (*Error) describeBalloonStatsRes()           { _ = "STUB: not implemented"; return }
+func (*Error) loadSnapshotRes()                   { _ = "STUB: not implemented"; return }
+func (*Error) mmdsConfigPutRes()                  { _ = "STUB: not implemented"; return }
+func (*Error) mmdsGetRes()                        { _ = "STUB: not implemented"; return }
+func (*Error) mmdsPatchRes()                      { _ = "STUB: not implemented"; return }
+func (*Error) mmdsPutRes()                        { _ = "STUB: not implemented"; return }
+func (*Error) patchBalloonRes()                   { _ = "STUB: not implemented"; return }
+func (*Error) patchBalloonStatsIntervalRes()      { _ = "STUB: not implemented"; return }
+func (*Error) patchGuestDriveByIDRes()            { _ = "STUB: not implemented"; return }
+func (*Error) patchGuestNetworkInterfaceByIDRes() { _ = "STUB: not implemented"; return }
+func (*Error) patchMachineConfigurationRes()      { _ = "STUB: not implemented"; return }
+func (*Error) patchVmRes()                        { _ = "STUB: not implemented"; return }
+func (*Error) putBalloonRes()                     { _ = "STUB: not implemented"; return }
+func (*Error) putGuestBootSourceRes()             { _ = "STUB: not implemented"; return }
+func (*Error) putGuestDriveByIDRes()              { _ = "STUB: not implemented"; return }
+func (*Error) putGuestNetworkInterfaceByIDRes()   { _ = "STUB: not implemented"; return }
+func (*Error) putGuestVsockRes()                  { _ = "STUB: not implemented"; return }
+func (*Error) putLoggerRes()                      { _ = "STUB: not implemented"; return }
+func (*Error) putMachineConfigurationRes()        { _ = "STUB: not implemented"; return }
+func (*Error) putMetricsRes() {
+	_ = "STUB: not implemented"
+
+	// ErrorStatusCode wraps Error with StatusCode.
+	return
 }
 
-func (*Error) createSnapshotRes()                 {}
-func (*Error) createSyncActionRes()               {}
-func (*Error) describeBalloonConfigRes()          {}
-func (*Error) describeBalloonStatsRes()           {}
-func (*Error) loadSnapshotRes()                   {}
-func (*Error) mmdsConfigPutRes()                  {}
-func (*Error) mmdsGetRes()                        {}
-func (*Error) mmdsPatchRes()                      {}
-func (*Error) mmdsPutRes()                        {}
-func (*Error) patchBalloonRes()                   {}
-func (*Error) patchBalloonStatsIntervalRes()      {}
-func (*Error) patchGuestDriveByIDRes()            {}
-func (*Error) patchGuestNetworkInterfaceByIDRes() {}
-func (*Error) patchMachineConfigurationRes()      {}
-func (*Error) patchVmRes()                        {}
-func (*Error) putBalloonRes()                     {}
-func (*Error) putGuestBootSourceRes()             {}
-func (*Error) putGuestDriveByIDRes()              {}
-func (*Error) putGuestNetworkInterfaceByIDRes()   {}
-func (*Error) putGuestVsockRes()                  {}
-func (*Error) putLoggerRes()                      {}
-func (*Error) putMachineConfigurationRes()        {}
-func (*Error) putMetricsRes()                     {}
-
-// ErrorStatusCode wraps Error with StatusCode.
 type ErrorStatusCode struct {
 	StatusCode int
 	Response   Error
 }
 
 // GetStatusCode returns the value of StatusCode.
-func (s *ErrorStatusCode) GetStatusCode() int {
-	return s.StatusCode
-}
+func (s *ErrorStatusCode) GetStatusCode() int { _ = "STUB: not implemented"; return 0 }
 
 // GetResponse returns the value of Response.
 func (s *ErrorStatusCode) GetResponse() Error {
-	return s.Response
+	_ = "STUB: not implemented"
+
+	// SetStatusCode sets the value of StatusCode.
+	return *new(Error)
 }
 
-// SetStatusCode sets the value of StatusCode.
 func (s *ErrorStatusCode) SetStatusCode(val int) {
-	s.StatusCode = val
+	_ = "STUB: not implemented"
+
+	// SetResponse sets the value of Response.
+	return
 }
 
-// SetResponse sets the value of Response.
 func (s *ErrorStatusCode) SetResponse(val Error) {
-	s.Response = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/FullVmConfiguration
+	return
 }
 
-// Ref: #/components/schemas/FullVmConfiguration
 type FullVmConfiguration struct {
 	BalloonDevice OptBalloon `json:"balloon_device"`
 	// Configurations for all block devices.
@@ -531,93 +555,118 @@ type FullVmConfiguration struct {
 
 // GetBalloonDevice returns the value of BalloonDevice.
 func (s *FullVmConfiguration) GetBalloonDevice() OptBalloon {
-	return s.BalloonDevice
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBlockDevices returns the value of BlockDevices.
+	new(OptBalloon)
 }
 
-// GetBlockDevices returns the value of BlockDevices.
-func (s *FullVmConfiguration) GetBlockDevices() []Drive {
-	return s.BlockDevices
-}
+func (s *FullVmConfiguration) GetBlockDevices() []Drive { _ = "STUB: not implemented"; return nil }
 
 // GetBootSource returns the value of BootSource.
 func (s *FullVmConfiguration) GetBootSource() OptBootSource {
-	return s.BootSource
+	_ = "STUB: not implemented"
+	return *
+
+	// GetLogger returns the value of Logger.
+	new(OptBootSource)
 }
 
-// GetLogger returns the value of Logger.
 func (s *FullVmConfiguration) GetLogger() OptLogger {
-	return s.Logger
+	_ = "STUB: not implemented"
+
+	// GetMachineConfig returns the value of MachineConfig.
+	return *new(OptLogger)
 }
 
-// GetMachineConfig returns the value of MachineConfig.
 func (s *FullVmConfiguration) GetMachineConfig() OptMachineConfiguration {
-	return s.MachineConfig
+	_ = "STUB: not implemented"
+	return *
+
+	// GetMetrics returns the value of Metrics.
+	new(OptMachineConfiguration)
 }
 
-// GetMetrics returns the value of Metrics.
 func (s *FullVmConfiguration) GetMetrics() OptMetrics {
-	return s.Metrics
+	_ = "STUB: not implemented"
+
+	// GetMmdsConfig returns the value of MmdsConfig.
+	return *new(OptMetrics)
 }
 
-// GetMmdsConfig returns the value of MmdsConfig.
 func (s *FullVmConfiguration) GetMmdsConfig() OptMmdsConfig {
-	return s.MmdsConfig
+	_ = "STUB: not implemented"
+	return *
+
+	// GetNetDevices returns the value of NetDevices.
+	new(OptMmdsConfig)
 }
 
-// GetNetDevices returns the value of NetDevices.
 func (s *FullVmConfiguration) GetNetDevices() []NetworkInterface {
-	return s.NetDevices
+	_ = "STUB: not implemented"
+	return nil
+
+	// GetVsockDevice returns the value of VsockDevice.
 }
 
-// GetVsockDevice returns the value of VsockDevice.
 func (s *FullVmConfiguration) GetVsockDevice() OptVsock {
-	return s.VsockDevice
+	_ = "STUB: not implemented"
+	return *
+
+	// SetBalloonDevice sets the value of BalloonDevice.
+	new(OptVsock)
 }
 
-// SetBalloonDevice sets the value of BalloonDevice.
-func (s *FullVmConfiguration) SetBalloonDevice(val OptBalloon) {
-	s.BalloonDevice = val
-}
+func (s *FullVmConfiguration) SetBalloonDevice(val OptBalloon) { _ = "STUB: not implemented"; return }
 
 // SetBlockDevices sets the value of BlockDevices.
-func (s *FullVmConfiguration) SetBlockDevices(val []Drive) {
-	s.BlockDevices = val
-}
+func (s *FullVmConfiguration) SetBlockDevices(val []Drive) { _ = "STUB: not implemented"; return }
 
 // SetBootSource sets the value of BootSource.
 func (s *FullVmConfiguration) SetBootSource(val OptBootSource) {
-	s.BootSource = val
+	_ = "STUB: not implemented"
+
+	// SetLogger sets the value of Logger.
+	return
 }
 
-// SetLogger sets the value of Logger.
 func (s *FullVmConfiguration) SetLogger(val OptLogger) {
-	s.Logger = val
+	_ = "STUB: not implemented"
+
+	// SetMachineConfig sets the value of MachineConfig.
+	return
 }
 
-// SetMachineConfig sets the value of MachineConfig.
 func (s *FullVmConfiguration) SetMachineConfig(val OptMachineConfiguration) {
-	s.MachineConfig = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetMetrics sets the value of Metrics.
 }
 
-// SetMetrics sets the value of Metrics.
 func (s *FullVmConfiguration) SetMetrics(val OptMetrics) {
-	s.Metrics = val
+	_ = "STUB: not implemented"
+
+	// SetMmdsConfig sets the value of MmdsConfig.
+	return
 }
 
-// SetMmdsConfig sets the value of MmdsConfig.
 func (s *FullVmConfiguration) SetMmdsConfig(val OptMmdsConfig) {
-	s.MmdsConfig = val
+	_ = "STUB: not implemented"
+
+	// SetNetDevices sets the value of NetDevices.
+	return
 }
 
-// SetNetDevices sets the value of NetDevices.
 func (s *FullVmConfiguration) SetNetDevices(val []NetworkInterface) {
-	s.NetDevices = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetVsockDevice sets the value of VsockDevice.
 }
 
-// SetVsockDevice sets the value of VsockDevice.
-func (s *FullVmConfiguration) SetVsockDevice(val OptVsock) {
-	s.VsockDevice = val
-}
+func (s *FullVmConfiguration) SetVsockDevice(val OptVsock) { _ = "STUB: not implemented"; return }
 
 // Variant wrapper containing the real action.
 // Ref: #/components/schemas/InstanceActionInfo
@@ -628,15 +677,20 @@ type InstanceActionInfo struct {
 
 // GetActionType returns the value of ActionType.
 func (s *InstanceActionInfo) GetActionType() InstanceActionInfoActionType {
-	return s.ActionType
+	_ = "STUB: not implemented"
+	return *
+
+	// SetActionType sets the value of ActionType.
+	new(InstanceActionInfoActionType)
 }
 
-// SetActionType sets the value of ActionType.
 func (s *InstanceActionInfo) SetActionType(val InstanceActionInfoActionType) {
-	s.ActionType = val
+	_ = "STUB: not implemented"
+	return
+
+	// Enumeration indicating what type of action is contained in the payload.
 }
 
-// Enumeration indicating what type of action is contained in the payload.
 type InstanceActionInfoActionType string
 
 const (
@@ -647,42 +701,20 @@ const (
 
 // AllValues returns all InstanceActionInfoActionType values.
 func (InstanceActionInfoActionType) AllValues() []InstanceActionInfoActionType {
-	return []InstanceActionInfoActionType{
-		InstanceActionInfoActionTypeFlushMetrics,
-		InstanceActionInfoActionTypeInstanceStart,
-		InstanceActionInfoActionTypeSendCtrlAltDel,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s InstanceActionInfoActionType) MarshalText() ([]byte, error) {
-	switch s {
-	case InstanceActionInfoActionTypeFlushMetrics:
-		return []byte(s), nil
-	case InstanceActionInfoActionTypeInstanceStart:
-		return []byte(s), nil
-	case InstanceActionInfoActionTypeSendCtrlAltDel:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *InstanceActionInfoActionType) UnmarshalText(data []byte) error {
-	switch InstanceActionInfoActionType(data) {
-	case InstanceActionInfoActionTypeFlushMetrics:
-		*s = InstanceActionInfoActionTypeFlushMetrics
-		return nil
-	case InstanceActionInfoActionTypeInstanceStart:
-		*s = InstanceActionInfoActionTypeInstanceStart
-		return nil
-	case InstanceActionInfoActionTypeSendCtrlAltDel:
-		*s = InstanceActionInfoActionTypeSendCtrlAltDel
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Describes MicroVM instance information.
@@ -701,46 +733,58 @@ type InstanceInfo struct {
 
 // GetAppName returns the value of AppName.
 func (s *InstanceInfo) GetAppName() string {
-	return s.AppName
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return ""
 }
 
-// GetID returns the value of ID.
 func (s *InstanceInfo) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetState returns the value of State.
+	return ""
 }
 
-// GetState returns the value of State.
 func (s *InstanceInfo) GetState() InstanceInfoState {
-	return s.State
+	_ = "STUB: not implemented"
+
+	// GetVmmVersion returns the value of VmmVersion.
+	return *new(InstanceInfoState)
 }
 
-// GetVmmVersion returns the value of VmmVersion.
-func (s *InstanceInfo) GetVmmVersion() string {
-	return s.VmmVersion
-}
+func (s *InstanceInfo) GetVmmVersion() string { _ = "STUB: not implemented"; return "" }
 
 // SetAppName sets the value of AppName.
 func (s *InstanceInfo) SetAppName(val string) {
-	s.AppName = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *InstanceInfo) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetState sets the value of State.
+	return
 }
 
-// SetState sets the value of State.
 func (s *InstanceInfo) SetState(val InstanceInfoState) {
-	s.State = val
+	_ = "STUB: not implemented"
+
+	// SetVmmVersion sets the value of VmmVersion.
+	return
 }
 
-// SetVmmVersion sets the value of VmmVersion.
 func (s *InstanceInfo) SetVmmVersion(val string) {
-	s.VmmVersion = val
+	_ = "STUB: not implemented"
+
+	// The current detailed state (Not started, Running, Paused) of the Firecracker instance. This value
+	// is read-only for the control-plane.
+	return
 }
 
-// The current detailed state (Not started, Running, Paused) of the Firecracker instance. This value
-// is read-only for the control-plane.
 type InstanceInfoState string
 
 const (
@@ -750,52 +794,28 @@ const (
 )
 
 // AllValues returns all InstanceInfoState values.
-func (InstanceInfoState) AllValues() []InstanceInfoState {
-	return []InstanceInfoState{
-		InstanceInfoStateNotStarted,
-		InstanceInfoStateRunning,
-		InstanceInfoStatePaused,
-	}
-}
+func (InstanceInfoState) AllValues() []InstanceInfoState { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s InstanceInfoState) MarshalText() ([]byte, error) {
-	switch s {
-	case InstanceInfoStateNotStarted:
-		return []byte(s), nil
-	case InstanceInfoStateRunning:
-		return []byte(s), nil
-	case InstanceInfoStatePaused:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *InstanceInfoState) UnmarshalText(data []byte) error {
-	switch InstanceInfoState(data) {
-	case InstanceInfoStateNotStarted:
-		*s = InstanceInfoStateNotStarted
-		return nil
-	case InstanceInfoStateRunning:
-		*s = InstanceInfoStateRunning
-		return nil
-	case InstanceInfoStatePaused:
-		*s = InstanceInfoStatePaused
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *InstanceInfoState) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // LoadSnapshotNoContent is response for LoadSnapshot operation.
 type LoadSnapshotNoContent struct{}
 
-func (*LoadSnapshotNoContent) loadSnapshotRes() {}
+func (*LoadSnapshotNoContent) loadSnapshotRes() {
+	_ = "STUB: not implemented"
 
-// Describes the configuration option for the logging capability.
-// Ref: #/components/schemas/Logger
+	// Describes the configuration option for the logging capability.
+	// Ref: #/components/schemas/Logger
+	return
+}
+
 type Logger struct {
 	// Set the level. The possible values are case-insensitive.
 	Level OptLoggerLevel `json:"level"`
@@ -809,43 +829,56 @@ type Logger struct {
 
 // GetLevel returns the value of Level.
 func (s *Logger) GetLevel() OptLoggerLevel {
-	return s.Level
+	_ = "STUB: not implemented"
+
+	// GetLogPath returns the value of LogPath.
+	return *new(OptLoggerLevel)
 }
 
-// GetLogPath returns the value of LogPath.
 func (s *Logger) GetLogPath() string {
-	return s.LogPath
+	_ = "STUB: not implemented"
+
+	// GetShowLevel returns the value of ShowLevel.
+	return ""
 }
 
-// GetShowLevel returns the value of ShowLevel.
 func (s *Logger) GetShowLevel() OptBool {
-	return s.ShowLevel
+	_ = "STUB: not implemented"
+
+	// GetShowLogOrigin returns the value of ShowLogOrigin.
+	return *new(OptBool)
 }
 
-// GetShowLogOrigin returns the value of ShowLogOrigin.
 func (s *Logger) GetShowLogOrigin() OptBool {
-	return s.ShowLogOrigin
+	_ = "STUB: not implemented"
+	return *
+
+	// SetLevel sets the value of Level.
+	new(OptBool)
 }
 
-// SetLevel sets the value of Level.
 func (s *Logger) SetLevel(val OptLoggerLevel) {
-	s.Level = val
+	_ = "STUB: not implemented"
+
+	// SetLogPath sets the value of LogPath.
+	return
 }
 
-// SetLogPath sets the value of LogPath.
 func (s *Logger) SetLogPath(val string) {
-	s.LogPath = val
+	_ = "STUB: not implemented"
+
+	// SetShowLevel sets the value of ShowLevel.
+	return
 }
 
-// SetShowLevel sets the value of ShowLevel.
 func (s *Logger) SetShowLevel(val OptBool) {
-	s.ShowLevel = val
+	_ = "STUB: not implemented"
+
+	// SetShowLogOrigin sets the value of ShowLogOrigin.
+	return
 }
 
-// SetShowLogOrigin sets the value of ShowLogOrigin.
-func (s *Logger) SetShowLogOrigin(val OptBool) {
-	s.ShowLogOrigin = val
-}
+func (s *Logger) SetShowLogOrigin(val OptBool) { _ = "STUB: not implemented"; return }
 
 // Set the level. The possible values are case-insensitive.
 type LoggerLevel string
@@ -858,50 +891,13 @@ const (
 )
 
 // AllValues returns all LoggerLevel values.
-func (LoggerLevel) AllValues() []LoggerLevel {
-	return []LoggerLevel{
-		LoggerLevelError,
-		LoggerLevelWarning,
-		LoggerLevelInfo,
-		LoggerLevelDebug,
-	}
-}
+func (LoggerLevel) AllValues() []LoggerLevel { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s LoggerLevel) MarshalText() ([]byte, error) {
-	switch s {
-	case LoggerLevelError:
-		return []byte(s), nil
-	case LoggerLevelWarning:
-		return []byte(s), nil
-	case LoggerLevelInfo:
-		return []byte(s), nil
-	case LoggerLevelDebug:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s LoggerLevel) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *LoggerLevel) UnmarshalText(data []byte) error {
-	switch LoggerLevel(data) {
-	case LoggerLevelError:
-		*s = LoggerLevelError
-		return nil
-	case LoggerLevelWarning:
-		*s = LoggerLevelWarning
-		return nil
-	case LoggerLevelInfo:
-		*s = LoggerLevelInfo
-		return nil
-	case LoggerLevelDebug:
-		*s = LoggerLevelDebug
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *LoggerLevel) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Describes the number of vCPUs, memory size, Hyperthreading capabilities and the CPU template.
 // Ref: #/components/schemas/MachineConfiguration
@@ -921,70 +917,80 @@ type MachineConfiguration struct {
 
 // GetCPUTemplate returns the value of CPUTemplate.
 func (s *MachineConfiguration) GetCPUTemplate() OptCpuTemplate {
-	return s.CPUTemplate
+	_ = "STUB: not implemented"
+	return *
+
+	// GetHtEnabled returns the value of HtEnabled.
+	new(OptCpuTemplate)
 }
 
-// GetHtEnabled returns the value of HtEnabled.
 func (s *MachineConfiguration) GetHtEnabled() bool {
-	return s.HtEnabled
+	_ = "STUB: not implemented"
+
+	// GetMemSizeMib returns the value of MemSizeMib.
+	return false
 }
 
-// GetMemSizeMib returns the value of MemSizeMib.
-func (s *MachineConfiguration) GetMemSizeMib() int {
-	return s.MemSizeMib
-}
+func (s *MachineConfiguration) GetMemSizeMib() int { _ = "STUB: not implemented"; return 0 }
 
 // GetTrackDirtyPages returns the value of TrackDirtyPages.
 func (s *MachineConfiguration) GetTrackDirtyPages() OptBool {
-	return s.TrackDirtyPages
+	_ = "STUB: not implemented"
+	return *
+
+	// GetVcpuCount returns the value of VcpuCount.
+	new(OptBool)
 }
 
-// GetVcpuCount returns the value of VcpuCount.
 func (s *MachineConfiguration) GetVcpuCount() int {
-	return s.VcpuCount
+	_ = "STUB: not implemented"
+
+	// SetCPUTemplate sets the value of CPUTemplate.
+	return 0
 }
 
-// SetCPUTemplate sets the value of CPUTemplate.
 func (s *MachineConfiguration) SetCPUTemplate(val OptCpuTemplate) {
-	s.CPUTemplate = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetHtEnabled sets the value of HtEnabled.
 }
 
-// SetHtEnabled sets the value of HtEnabled.
 func (s *MachineConfiguration) SetHtEnabled(val bool) {
-	s.HtEnabled = val
+	_ = "STUB: not implemented"
+
+	// SetMemSizeMib sets the value of MemSizeMib.
+	return
 }
 
-// SetMemSizeMib sets the value of MemSizeMib.
 func (s *MachineConfiguration) SetMemSizeMib(val int) {
-	s.MemSizeMib = val
+	_ = "STUB: not implemented"
+
+	// SetTrackDirtyPages sets the value of TrackDirtyPages.
+	return
 }
 
-// SetTrackDirtyPages sets the value of TrackDirtyPages.
-func (s *MachineConfiguration) SetTrackDirtyPages(val OptBool) {
-	s.TrackDirtyPages = val
-}
+func (s *MachineConfiguration) SetTrackDirtyPages(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetVcpuCount sets the value of VcpuCount.
 func (s *MachineConfiguration) SetVcpuCount(val int) {
-	s.VcpuCount = val
+	_ = "STUB: not implemented"
+
+	// Describes the configuration option for the metrics capability.
+	// Ref: #/components/schemas/Metrics
+	return
 }
 
-// Describes the configuration option for the metrics capability.
-// Ref: #/components/schemas/Metrics
 type Metrics struct {
 	// Path to the named pipe or file where the JSON-formatted metrics are flushed.
 	MetricsPath string `json:"metrics_path"`
 }
 
 // GetMetricsPath returns the value of MetricsPath.
-func (s *Metrics) GetMetricsPath() string {
-	return s.MetricsPath
-}
+func (s *Metrics) GetMetricsPath() string { _ = "STUB: not implemented"; return "" }
 
 // SetMetricsPath sets the value of MetricsPath.
-func (s *Metrics) SetMetricsPath(val string) {
-	s.MetricsPath = val
-}
+func (s *Metrics) SetMetricsPath(val string) { _ = "STUB: not implemented"; return }
 
 // Defines the MMDS configuration.
 // Ref: #/components/schemas/MmdsConfig
@@ -995,34 +1001,39 @@ type MmdsConfig struct {
 
 // GetIpv4Address returns the value of Ipv4Address.
 func (s *MmdsConfig) GetIpv4Address() OptString {
-	return s.Ipv4Address
+	_ = "STUB: not implemented"
+	return *
+
+	// SetIpv4Address sets the value of Ipv4Address.
+	new(OptString)
 }
 
-// SetIpv4Address sets the value of Ipv4Address.
-func (s *MmdsConfig) SetIpv4Address(val OptString) {
-	s.Ipv4Address = val
-}
+func (s *MmdsConfig) SetIpv4Address(val OptString) { _ = "STUB: not implemented"; return }
 
 // MmdsConfigPutNoContent is response for MmdsConfigPut operation.
 type MmdsConfigPutNoContent struct{}
 
-func (*MmdsConfigPutNoContent) mmdsConfigPutRes() {}
+func (*MmdsConfigPutNoContent) mmdsConfigPutRes() { _ = "STUB: not implemented"; return }
 
 type MmdsGetOK struct{}
 
-func (*MmdsGetOK) mmdsGetRes() {}
+func (*MmdsGetOK) mmdsGetRes() {
+	_ = "STUB: not implemented"
 
-// MmdsPatchNoContent is response for MmdsPatch operation.
+	// MmdsPatchNoContent is response for MmdsPatch operation.
+	return
+}
+
 type MmdsPatchNoContent struct{}
 
-func (*MmdsPatchNoContent) mmdsPatchRes() {}
+func (*MmdsPatchNoContent) mmdsPatchRes() { _ = "STUB: not implemented"; return }
 
 type MmdsPatchReq struct{}
 
 // MmdsPutNoContent is response for MmdsPut operation.
 type MmdsPutNoContent struct{}
 
-func (*MmdsPutNoContent) mmdsPutRes() {}
+func (*MmdsPutNoContent) mmdsPutRes() { _ = "STUB: not implemented"; return }
 
 type MmdsPutReq struct{}
 
@@ -1044,71 +1055,71 @@ type NetworkInterface struct {
 
 // GetAllowMmdsRequests returns the value of AllowMmdsRequests.
 func (s *NetworkInterface) GetAllowMmdsRequests() OptBool {
-	return s.AllowMmdsRequests
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetGuestMAC returns the value of GuestMAC.
 func (s *NetworkInterface) GetGuestMAC() OptString {
-	return s.GuestMAC
+	_ = "STUB: not implemented"
+
+	// GetHostDevName returns the value of HostDevName.
+	return *new(OptString)
 }
 
-// GetHostDevName returns the value of HostDevName.
-func (s *NetworkInterface) GetHostDevName() string {
-	return s.HostDevName
-}
+func (s *NetworkInterface) GetHostDevName() string { _ = "STUB: not implemented"; return "" }
 
 // GetIfaceID returns the value of IfaceID.
 func (s *NetworkInterface) GetIfaceID() string {
-	return s.IfaceID
+	_ = "STUB: not implemented"
+
+	// GetRxRateLimiter returns the value of RxRateLimiter.
+	return ""
 }
 
-// GetRxRateLimiter returns the value of RxRateLimiter.
 func (s *NetworkInterface) GetRxRateLimiter() OptRateLimiter {
-	return s.RxRateLimiter
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTxRateLimiter returns the value of TxRateLimiter.
+	new(OptRateLimiter)
 }
 
-// GetTxRateLimiter returns the value of TxRateLimiter.
 func (s *NetworkInterface) GetTxRateLimiter() OptRateLimiter {
-	return s.TxRateLimiter
+	_ = "STUB: not implemented"
+	return *
+
+	// SetAllowMmdsRequests sets the value of AllowMmdsRequests.
+	new(OptRateLimiter)
 }
 
-// SetAllowMmdsRequests sets the value of AllowMmdsRequests.
-func (s *NetworkInterface) SetAllowMmdsRequests(val OptBool) {
-	s.AllowMmdsRequests = val
-}
+func (s *NetworkInterface) SetAllowMmdsRequests(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetGuestMAC sets the value of GuestMAC.
 func (s *NetworkInterface) SetGuestMAC(val OptString) {
-	s.GuestMAC = val
+	_ = "STUB: not implemented"
+
+	// SetHostDevName sets the value of HostDevName.
+	return
 }
 
-// SetHostDevName sets the value of HostDevName.
-func (s *NetworkInterface) SetHostDevName(val string) {
-	s.HostDevName = val
-}
+func (s *NetworkInterface) SetHostDevName(val string) { _ = "STUB: not implemented"; return }
 
 // SetIfaceID sets the value of IfaceID.
 func (s *NetworkInterface) SetIfaceID(val string) {
-	s.IfaceID = val
+	_ = "STUB: not implemented"
+
+	// SetRxRateLimiter sets the value of RxRateLimiter.
+	return
 }
 
-// SetRxRateLimiter sets the value of RxRateLimiter.
-func (s *NetworkInterface) SetRxRateLimiter(val OptRateLimiter) {
-	s.RxRateLimiter = val
-}
+func (s *NetworkInterface) SetRxRateLimiter(val OptRateLimiter) { _ = "STUB: not implemented"; return }
 
 // SetTxRateLimiter sets the value of TxRateLimiter.
-func (s *NetworkInterface) SetTxRateLimiter(val OptRateLimiter) {
-	s.TxRateLimiter = val
-}
+func (s *NetworkInterface) SetTxRateLimiter(val OptRateLimiter) { _ = "STUB: not implemented"; return }
 
 // NewOptBalloon returns new OptBalloon with value set to v.
-func NewOptBalloon(v Balloon) OptBalloon {
-	return OptBalloon{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBalloon(v Balloon) OptBalloon { _ = "STUB: not implemented"; return *new(OptBalloon) }
 
 // OptBalloon is optional Balloon.
 type OptBalloon struct {
@@ -1117,44 +1128,29 @@ type OptBalloon struct {
 }
 
 // IsSet returns true if OptBalloon was set.
-func (o OptBalloon) IsSet() bool { return o.Set }
+func (o OptBalloon) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBalloon) Reset() {
-	var v Balloon
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBalloon) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBalloon) SetTo(v Balloon) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBalloon) SetTo(v Balloon) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptBalloon) Get() (v Balloon, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Balloon), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBalloon) Or(d Balloon) Balloon {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBalloon) Or(d Balloon) Balloon { _ = "STUB: not implemented"; return *new(Balloon) }
 
 // NewOptBool returns new OptBool with value set to v.
-func NewOptBool(v bool) OptBool {
-	return OptBool{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptBool(v bool) OptBool { _ = "STUB: not implemented"; return *new(OptBool) }
 
 // OptBool is optional bool.
 type OptBool struct {
@@ -1163,43 +1159,28 @@ type OptBool struct {
 }
 
 // IsSet returns true if OptBool was set.
-func (o OptBool) IsSet() bool { return o.Set }
+func (o OptBool) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBool) Reset() {
-	var v bool
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBool) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBool) SetTo(v bool) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBool) SetTo(v bool) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptBool) Get() (v bool, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptBool) Get() (v bool, ok bool) { _ = "STUB: not implemented"; return false, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptBool) Or(d bool) bool {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptBool) Or(d bool) bool { _ = "STUB: not implemented"; return false }
 
 // NewOptBootSource returns new OptBootSource with value set to v.
 func NewOptBootSource(v BootSource) OptBootSource {
-	return OptBootSource{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptBootSource)
 }
 
 // OptBootSource is optional BootSource.
@@ -1209,43 +1190,34 @@ type OptBootSource struct {
 }
 
 // IsSet returns true if OptBootSource was set.
-func (o OptBootSource) IsSet() bool { return o.Set }
+func (o OptBootSource) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptBootSource) Reset() {
-	var v BootSource
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptBootSource) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptBootSource) SetTo(v BootSource) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptBootSource) SetTo(v BootSource) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptBootSource) Get() (v BootSource, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(BootSource), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptBootSource) Or(d BootSource) BootSource {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(BootSource)
 }
 
 // NewOptCpuTemplate returns new OptCpuTemplate with value set to v.
 func NewOptCpuTemplate(v CpuTemplate) OptCpuTemplate {
-	return OptCpuTemplate{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptCpuTemplate)
 }
 
 // OptCpuTemplate is optional CpuTemplate.
@@ -1255,44 +1227,32 @@ type OptCpuTemplate struct {
 }
 
 // IsSet returns true if OptCpuTemplate was set.
-func (o OptCpuTemplate) IsSet() bool { return o.Set }
+func (o OptCpuTemplate) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptCpuTemplate) Reset() {
-	var v CpuTemplate
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptCpuTemplate) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptCpuTemplate) SetTo(v CpuTemplate) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptCpuTemplate) SetTo(v CpuTemplate) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptCpuTemplate) Get() (v CpuTemplate, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(CpuTemplate), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptCpuTemplate) Or(d CpuTemplate) CpuTemplate {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(CpuTemplate)
 }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -1301,44 +1261,26 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptInt64 returns new OptInt64 with value set to v.
-func NewOptInt64(v int64) OptInt64 {
-	return OptInt64{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt64(v int64) OptInt64 { _ = "STUB: not implemented"; return *new(OptInt64) }
 
 // OptInt64 is optional int64.
 type OptInt64 struct {
@@ -1347,44 +1289,26 @@ type OptInt64 struct {
 }
 
 // IsSet returns true if OptInt64 was set.
-func (o OptInt64) IsSet() bool { return o.Set }
+func (o OptInt64) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt64) Reset() {
-	var v int64
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt64) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt64) SetTo(v int64) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt64) SetTo(v int64) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt64) Get() (v int64, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt64) Get() (v int64, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt64) Or(d int64) int64 {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt64) Or(d int64) int64 { _ = "STUB: not implemented"; return 0 }
 
 // NewOptLogger returns new OptLogger with value set to v.
-func NewOptLogger(v Logger) OptLogger {
-	return OptLogger{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptLogger(v Logger) OptLogger { _ = "STUB: not implemented"; return *new(OptLogger) }
 
 // OptLogger is optional Logger.
 type OptLogger struct {
@@ -1393,43 +1317,28 @@ type OptLogger struct {
 }
 
 // IsSet returns true if OptLogger was set.
-func (o OptLogger) IsSet() bool { return o.Set }
+func (o OptLogger) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLogger) Reset() {
-	var v Logger
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLogger) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLogger) SetTo(v Logger) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLogger) SetTo(v Logger) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptLogger) Get() (v Logger, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptLogger) Get() (v Logger, ok bool) { _ = "STUB: not implemented"; return *new(Logger), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptLogger) Or(d Logger) Logger {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptLogger) Or(d Logger) Logger { _ = "STUB: not implemented"; return *new(Logger) }
 
 // NewOptLoggerLevel returns new OptLoggerLevel with value set to v.
 func NewOptLoggerLevel(v LoggerLevel) OptLoggerLevel {
-	return OptLoggerLevel{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptLoggerLevel)
 }
 
 // OptLoggerLevel is optional LoggerLevel.
@@ -1439,43 +1348,34 @@ type OptLoggerLevel struct {
 }
 
 // IsSet returns true if OptLoggerLevel was set.
-func (o OptLoggerLevel) IsSet() bool { return o.Set }
+func (o OptLoggerLevel) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptLoggerLevel) Reset() {
-	var v LoggerLevel
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptLoggerLevel) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptLoggerLevel) SetTo(v LoggerLevel) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptLoggerLevel) SetTo(v LoggerLevel) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptLoggerLevel) Get() (v LoggerLevel, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(LoggerLevel), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptLoggerLevel) Or(d LoggerLevel) LoggerLevel {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(LoggerLevel)
 }
 
 // NewOptMachineConfiguration returns new OptMachineConfiguration with value set to v.
 func NewOptMachineConfiguration(v MachineConfiguration) OptMachineConfiguration {
-	return OptMachineConfiguration{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMachineConfiguration)
 }
 
 // OptMachineConfiguration is optional MachineConfiguration.
@@ -1485,44 +1385,32 @@ type OptMachineConfiguration struct {
 }
 
 // IsSet returns true if OptMachineConfiguration was set.
-func (o OptMachineConfiguration) IsSet() bool { return o.Set }
+func (o OptMachineConfiguration) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMachineConfiguration) Reset() {
-	var v MachineConfiguration
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMachineConfiguration) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMachineConfiguration) SetTo(v MachineConfiguration) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMachineConfiguration) SetTo(v MachineConfiguration) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMachineConfiguration) Get() (v MachineConfiguration, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MachineConfiguration), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMachineConfiguration) Or(d MachineConfiguration) MachineConfiguration {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MachineConfiguration)
 }
 
 // NewOptMetrics returns new OptMetrics with value set to v.
-func NewOptMetrics(v Metrics) OptMetrics {
-	return OptMetrics{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptMetrics(v Metrics) OptMetrics { _ = "STUB: not implemented"; return *new(OptMetrics) }
 
 // OptMetrics is optional Metrics.
 type OptMetrics struct {
@@ -1531,43 +1419,31 @@ type OptMetrics struct {
 }
 
 // IsSet returns true if OptMetrics was set.
-func (o OptMetrics) IsSet() bool { return o.Set }
+func (o OptMetrics) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMetrics) Reset() {
-	var v Metrics
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMetrics) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMetrics) SetTo(v Metrics) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMetrics) SetTo(v Metrics) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMetrics) Get() (v Metrics, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(Metrics), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptMetrics) Or(d Metrics) Metrics {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptMetrics) Or(d Metrics) Metrics { _ = "STUB: not implemented"; return *new(Metrics) }
 
 // NewOptMmdsConfig returns new OptMmdsConfig with value set to v.
 func NewOptMmdsConfig(v MmdsConfig) OptMmdsConfig {
-	return OptMmdsConfig{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMmdsConfig)
 }
 
 // OptMmdsConfig is optional MmdsConfig.
@@ -1577,43 +1453,34 @@ type OptMmdsConfig struct {
 }
 
 // IsSet returns true if OptMmdsConfig was set.
-func (o OptMmdsConfig) IsSet() bool { return o.Set }
+func (o OptMmdsConfig) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMmdsConfig) Reset() {
-	var v MmdsConfig
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMmdsConfig) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptMmdsConfig) SetTo(v MmdsConfig) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptMmdsConfig) SetTo(v MmdsConfig) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMmdsConfig) Get() (v MmdsConfig, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MmdsConfig), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMmdsConfig) Or(d MmdsConfig) MmdsConfig {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MmdsConfig)
 }
 
 // NewOptRateLimiter returns new OptRateLimiter with value set to v.
 func NewOptRateLimiter(v RateLimiter) OptRateLimiter {
-	return OptRateLimiter{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptRateLimiter)
 }
 
 // OptRateLimiter is optional RateLimiter.
@@ -1623,43 +1490,34 @@ type OptRateLimiter struct {
 }
 
 // IsSet returns true if OptRateLimiter was set.
-func (o OptRateLimiter) IsSet() bool { return o.Set }
+func (o OptRateLimiter) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptRateLimiter) Reset() {
-	var v RateLimiter
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptRateLimiter) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptRateLimiter) SetTo(v RateLimiter) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptRateLimiter) SetTo(v RateLimiter) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptRateLimiter) Get() (v RateLimiter, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(RateLimiter), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptRateLimiter) Or(d RateLimiter) RateLimiter {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(RateLimiter)
 }
 
 // NewOptSnapshotCreateParamsSnapshotType returns new OptSnapshotCreateParamsSnapshotType with value set to v.
 func NewOptSnapshotCreateParamsSnapshotType(v SnapshotCreateParamsSnapshotType) OptSnapshotCreateParamsSnapshotType {
-	return OptSnapshotCreateParamsSnapshotType{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptSnapshotCreateParamsSnapshotType)
 }
 
 // OptSnapshotCreateParamsSnapshotType is optional SnapshotCreateParamsSnapshotType.
@@ -1669,44 +1527,35 @@ type OptSnapshotCreateParamsSnapshotType struct {
 }
 
 // IsSet returns true if OptSnapshotCreateParamsSnapshotType was set.
-func (o OptSnapshotCreateParamsSnapshotType) IsSet() bool { return o.Set }
+func (o OptSnapshotCreateParamsSnapshotType) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptSnapshotCreateParamsSnapshotType) Reset() {
-	var v SnapshotCreateParamsSnapshotType
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptSnapshotCreateParamsSnapshotType) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptSnapshotCreateParamsSnapshotType) SetTo(v SnapshotCreateParamsSnapshotType) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptSnapshotCreateParamsSnapshotType) Get() (v SnapshotCreateParamsSnapshotType, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(SnapshotCreateParamsSnapshotType), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptSnapshotCreateParamsSnapshotType) Or(d SnapshotCreateParamsSnapshotType) SnapshotCreateParamsSnapshotType {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(SnapshotCreateParamsSnapshotType)
 }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -1715,43 +1564,28 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptTokenBucket returns new OptTokenBucket with value set to v.
 func NewOptTokenBucket(v TokenBucket) OptTokenBucket {
-	return OptTokenBucket{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptTokenBucket)
 }
 
 // OptTokenBucket is optional TokenBucket.
@@ -1761,44 +1595,32 @@ type OptTokenBucket struct {
 }
 
 // IsSet returns true if OptTokenBucket was set.
-func (o OptTokenBucket) IsSet() bool { return o.Set }
+func (o OptTokenBucket) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptTokenBucket) Reset() {
-	var v TokenBucket
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptTokenBucket) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptTokenBucket) SetTo(v TokenBucket) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptTokenBucket) SetTo(v TokenBucket) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptTokenBucket) Get() (v TokenBucket, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(TokenBucket), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptTokenBucket) Or(d TokenBucket) TokenBucket {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(TokenBucket)
 }
 
 // NewOptVsock returns new OptVsock with value set to v.
-func NewOptVsock(v Vsock) OptVsock {
-	return OptVsock{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptVsock(v Vsock) OptVsock { _ = "STUB: not implemented"; return *new(OptVsock) }
 
 // OptVsock is optional Vsock.
 type OptVsock struct {
@@ -1807,36 +1629,23 @@ type OptVsock struct {
 }
 
 // IsSet returns true if OptVsock was set.
-func (o OptVsock) IsSet() bool { return o.Set }
+func (o OptVsock) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptVsock) Reset() {
-	var v Vsock
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptVsock) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptVsock) SetTo(v Vsock) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptVsock) SetTo(v Vsock) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptVsock) Get() (v Vsock, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptVsock) Get() (v Vsock, ok bool) { _ = "STUB: not implemented"; return *new(Vsock), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptVsock) Or(d Vsock) Vsock {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptVsock) Or(d Vsock) Vsock { _ = "STUB: not implemented"; return *new(Vsock) }
 
 // Ref: #/components/schemas/PartialDrive
 type PartialDrive struct {
@@ -1848,33 +1657,43 @@ type PartialDrive struct {
 
 // GetDriveID returns the value of DriveID.
 func (s *PartialDrive) GetDriveID() string {
-	return s.DriveID
+	_ = "STUB: not implemented"
+
+	// GetPathOnHost returns the value of PathOnHost.
+	return ""
 }
 
-// GetPathOnHost returns the value of PathOnHost.
 func (s *PartialDrive) GetPathOnHost() OptString {
-	return s.PathOnHost
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRateLimiter returns the value of RateLimiter.
+	new(OptString)
 }
 
-// GetRateLimiter returns the value of RateLimiter.
 func (s *PartialDrive) GetRateLimiter() OptRateLimiter {
-	return s.RateLimiter
+	_ = "STUB: not implemented"
+	return *
+
+	// SetDriveID sets the value of DriveID.
+	new(OptRateLimiter)
 }
 
-// SetDriveID sets the value of DriveID.
 func (s *PartialDrive) SetDriveID(val string) {
-	s.DriveID = val
+	_ = "STUB: not implemented"
+
+	// SetPathOnHost sets the value of PathOnHost.
+	return
 }
 
-// SetPathOnHost sets the value of PathOnHost.
 func (s *PartialDrive) SetPathOnHost(val OptString) {
-	s.PathOnHost = val
+	_ = "STUB: not implemented"
+
+	// SetRateLimiter sets the value of RateLimiter.
+	return
 }
 
-// SetRateLimiter sets the value of RateLimiter.
-func (s *PartialDrive) SetRateLimiter(val OptRateLimiter) {
-	s.RateLimiter = val
-}
+func (s *PartialDrive) SetRateLimiter(val OptRateLimiter) { _ = "STUB: not implemented"; return }
 
 // Defines a partial network interface structure, used to update the rate limiters for that interface,
 //
@@ -1889,107 +1708,177 @@ type PartialNetworkInterface struct {
 
 // GetIfaceID returns the value of IfaceID.
 func (s *PartialNetworkInterface) GetIfaceID() string {
-	return s.IfaceID
+	_ = "STUB: not implemented"
+
+	// GetRxRateLimiter returns the value of RxRateLimiter.
+	return ""
 }
 
-// GetRxRateLimiter returns the value of RxRateLimiter.
 func (s *PartialNetworkInterface) GetRxRateLimiter() OptRateLimiter {
-	return s.RxRateLimiter
+	_ = "STUB: not implemented"
+	return *
+
+	// GetTxRateLimiter returns the value of TxRateLimiter.
+	new(OptRateLimiter)
 }
 
-// GetTxRateLimiter returns the value of TxRateLimiter.
 func (s *PartialNetworkInterface) GetTxRateLimiter() OptRateLimiter {
-	return s.TxRateLimiter
+	_ = "STUB: not implemented"
+	return *
+
+	// SetIfaceID sets the value of IfaceID.
+	new(OptRateLimiter)
 }
 
-// SetIfaceID sets the value of IfaceID.
 func (s *PartialNetworkInterface) SetIfaceID(val string) {
-	s.IfaceID = val
+	_ = "STUB: not implemented"
+
+	// SetRxRateLimiter sets the value of RxRateLimiter.
+	return
 }
 
-// SetRxRateLimiter sets the value of RxRateLimiter.
 func (s *PartialNetworkInterface) SetRxRateLimiter(val OptRateLimiter) {
-	s.RxRateLimiter = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetTxRateLimiter sets the value of TxRateLimiter.
 }
 
-// SetTxRateLimiter sets the value of TxRateLimiter.
 func (s *PartialNetworkInterface) SetTxRateLimiter(val OptRateLimiter) {
-	s.TxRateLimiter = val
+	_ = "STUB: not implemented"
+	return
+
+	// PatchBalloonNoContent is response for PatchBalloon operation.
 }
 
-// PatchBalloonNoContent is response for PatchBalloon operation.
 type PatchBalloonNoContent struct{}
 
-func (*PatchBalloonNoContent) patchBalloonRes() {}
+func (*PatchBalloonNoContent) patchBalloonRes() {
+	_ = "STUB: not implemented"
 
-// PatchBalloonStatsIntervalNoContent is response for PatchBalloonStatsInterval operation.
+	// PatchBalloonStatsIntervalNoContent is response for PatchBalloonStatsInterval operation.
+	return
+}
+
 type PatchBalloonStatsIntervalNoContent struct{}
 
-func (*PatchBalloonStatsIntervalNoContent) patchBalloonStatsIntervalRes() {}
+func (*PatchBalloonStatsIntervalNoContent) patchBalloonStatsIntervalRes() {
+	_ = "STUB: not implemented"
 
-// PatchGuestDriveByIDNoContent is response for PatchGuestDriveByID operation.
+	// PatchGuestDriveByIDNoContent is response for PatchGuestDriveByID operation.
+	return
+}
+
 type PatchGuestDriveByIDNoContent struct{}
 
-func (*PatchGuestDriveByIDNoContent) patchGuestDriveByIDRes() {}
+func (*PatchGuestDriveByIDNoContent) patchGuestDriveByIDRes() {
+	_ = "STUB: not implemented"
 
-// PatchGuestNetworkInterfaceByIDNoContent is response for PatchGuestNetworkInterfaceByID operation.
+	// PatchGuestNetworkInterfaceByIDNoContent is response for PatchGuestNetworkInterfaceByID operation.
+	return
+}
+
 type PatchGuestNetworkInterfaceByIDNoContent struct{}
 
-func (*PatchGuestNetworkInterfaceByIDNoContent) patchGuestNetworkInterfaceByIDRes() {}
+func (*PatchGuestNetworkInterfaceByIDNoContent) patchGuestNetworkInterfaceByIDRes() {
+	_ = "STUB: not implemented"
 
-// PatchMachineConfigurationNoContent is response for PatchMachineConfiguration operation.
+	// PatchMachineConfigurationNoContent is response for PatchMachineConfiguration operation.
+	return
+}
+
 type PatchMachineConfigurationNoContent struct{}
 
-func (*PatchMachineConfigurationNoContent) patchMachineConfigurationRes() {}
+func (*PatchMachineConfigurationNoContent) patchMachineConfigurationRes() {
+	_ = "STUB: not implemented"
 
-// PatchVmNoContent is response for PatchVm operation.
+	// PatchVmNoContent is response for PatchVm operation.
+	return
+}
+
 type PatchVmNoContent struct{}
 
-func (*PatchVmNoContent) patchVmRes() {}
+func (*PatchVmNoContent) patchVmRes() {
+	_ = "STUB: not implemented"
 
-// PutBalloonNoContent is response for PutBalloon operation.
+	// PutBalloonNoContent is response for PutBalloon operation.
+	return
+}
+
 type PutBalloonNoContent struct{}
 
-func (*PutBalloonNoContent) putBalloonRes() {}
+func (*PutBalloonNoContent) putBalloonRes() {
+	_ = "STUB: not implemented"
 
-// PutGuestBootSourceNoContent is response for PutGuestBootSource operation.
+	// PutGuestBootSourceNoContent is response for PutGuestBootSource operation.
+	return
+}
+
 type PutGuestBootSourceNoContent struct{}
 
-func (*PutGuestBootSourceNoContent) putGuestBootSourceRes() {}
+func (*PutGuestBootSourceNoContent) putGuestBootSourceRes() {
+	_ = "STUB: not implemented"
 
-// PutGuestDriveByIDNoContent is response for PutGuestDriveByID operation.
+	// PutGuestDriveByIDNoContent is response for PutGuestDriveByID operation.
+	return
+}
+
 type PutGuestDriveByIDNoContent struct{}
 
-func (*PutGuestDriveByIDNoContent) putGuestDriveByIDRes() {}
+func (*PutGuestDriveByIDNoContent) putGuestDriveByIDRes() {
+	_ = "STUB: not implemented"
 
-// PutGuestNetworkInterfaceByIDNoContent is response for PutGuestNetworkInterfaceByID operation.
+	// PutGuestNetworkInterfaceByIDNoContent is response for PutGuestNetworkInterfaceByID operation.
+	return
+}
+
 type PutGuestNetworkInterfaceByIDNoContent struct{}
 
-func (*PutGuestNetworkInterfaceByIDNoContent) putGuestNetworkInterfaceByIDRes() {}
+func (*PutGuestNetworkInterfaceByIDNoContent) putGuestNetworkInterfaceByIDRes() {
+	_ = "STUB: not implemented"
 
-// PutGuestVsockNoContent is response for PutGuestVsock operation.
+	// PutGuestVsockNoContent is response for PutGuestVsock operation.
+	return
+}
+
 type PutGuestVsockNoContent struct{}
 
-func (*PutGuestVsockNoContent) putGuestVsockRes() {}
+func (*PutGuestVsockNoContent) putGuestVsockRes() {
+	_ = "STUB: not implemented"
 
-// PutLoggerNoContent is response for PutLogger operation.
+	// PutLoggerNoContent is response for PutLogger operation.
+	return
+}
+
 type PutLoggerNoContent struct{}
 
-func (*PutLoggerNoContent) putLoggerRes() {}
+func (*PutLoggerNoContent) putLoggerRes() {
+	_ = "STUB: not implemented"
 
-// PutMachineConfigurationNoContent is response for PutMachineConfiguration operation.
+	// PutMachineConfigurationNoContent is response for PutMachineConfiguration operation.
+	return
+}
+
 type PutMachineConfigurationNoContent struct{}
 
-func (*PutMachineConfigurationNoContent) putMachineConfigurationRes() {}
+func (*PutMachineConfigurationNoContent) putMachineConfigurationRes() {
+	_ = "STUB: not implemented"
 
-// PutMetricsNoContent is response for PutMetrics operation.
+	// PutMetricsNoContent is response for PutMetrics operation.
+	return
+}
+
 type PutMetricsNoContent struct{}
 
-func (*PutMetricsNoContent) putMetricsRes() {}
+func (*PutMetricsNoContent) putMetricsRes() {
+	_ = "STUB: not implemented"
 
-// Defines an IO rate limiter with independent bytes/s and ops/s limits. Limits are defined by
-// configuring each of the _bandwidth_ and _ops_ token buckets.
-// Ref: #/components/schemas/RateLimiter
+	// Defines an IO rate limiter with independent bytes/s and ops/s limits. Limits are defined by
+	// configuring each of the _bandwidth_ and _ops_ token buckets.
+	// Ref: #/components/schemas/RateLimiter
+	return
+}
+
 type RateLimiter struct {
 	Bandwidth OptTokenBucket `json:"bandwidth"`
 	Ops       OptTokenBucket `json:"ops"`
@@ -1997,25 +1886,34 @@ type RateLimiter struct {
 
 // GetBandwidth returns the value of Bandwidth.
 func (s *RateLimiter) GetBandwidth() OptTokenBucket {
-	return s.Bandwidth
+	_ = "STUB: not implemented"
+	return *
+
+	// GetOps returns the value of Ops.
+	new(OptTokenBucket)
 }
 
-// GetOps returns the value of Ops.
 func (s *RateLimiter) GetOps() OptTokenBucket {
-	return s.Ops
+	_ = "STUB: not implemented"
+
+	// SetBandwidth sets the value of Bandwidth.
+	return *new(OptTokenBucket)
 }
 
-// SetBandwidth sets the value of Bandwidth.
 func (s *RateLimiter) SetBandwidth(val OptTokenBucket) {
-	s.Bandwidth = val
+	_ = "STUB: not implemented"
+
+	// SetOps sets the value of Ops.
+	return
 }
 
-// SetOps sets the value of Ops.
 func (s *RateLimiter) SetOps(val OptTokenBucket) {
-	s.Ops = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/SnapshotCreateParams
+	return
 }
 
-// Ref: #/components/schemas/SnapshotCreateParams
 type SnapshotCreateParams struct {
 	// Path to the file that will contain the guest memory.
 	MemFilePath string `json:"mem_file_path"`
@@ -2029,46 +1927,47 @@ type SnapshotCreateParams struct {
 }
 
 // GetMemFilePath returns the value of MemFilePath.
-func (s *SnapshotCreateParams) GetMemFilePath() string {
-	return s.MemFilePath
-}
+func (s *SnapshotCreateParams) GetMemFilePath() string { _ = "STUB: not implemented"; return "" }
 
 // GetSnapshotPath returns the value of SnapshotPath.
-func (s *SnapshotCreateParams) GetSnapshotPath() string {
-	return s.SnapshotPath
-}
+func (s *SnapshotCreateParams) GetSnapshotPath() string { _ = "STUB: not implemented"; return "" }
 
 // GetSnapshotType returns the value of SnapshotType.
 func (s *SnapshotCreateParams) GetSnapshotType() OptSnapshotCreateParamsSnapshotType {
-	return s.SnapshotType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetVersion returns the value of Version.
+	new(OptSnapshotCreateParamsSnapshotType)
 }
 
-// GetVersion returns the value of Version.
 func (s *SnapshotCreateParams) GetVersion() OptString {
-	return s.Version
+	_ = "STUB: not implemented"
+
+	// SetMemFilePath sets the value of MemFilePath.
+	return *new(OptString)
 }
 
-// SetMemFilePath sets the value of MemFilePath.
-func (s *SnapshotCreateParams) SetMemFilePath(val string) {
-	s.MemFilePath = val
-}
+func (s *SnapshotCreateParams) SetMemFilePath(val string) { _ = "STUB: not implemented"; return }
 
 // SetSnapshotPath sets the value of SnapshotPath.
-func (s *SnapshotCreateParams) SetSnapshotPath(val string) {
-	s.SnapshotPath = val
-}
+func (s *SnapshotCreateParams) SetSnapshotPath(val string) { _ = "STUB: not implemented"; return }
 
 // SetSnapshotType sets the value of SnapshotType.
 func (s *SnapshotCreateParams) SetSnapshotType(val OptSnapshotCreateParamsSnapshotType) {
-	s.SnapshotType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetVersion sets the value of Version.
 }
 
-// SetVersion sets the value of Version.
 func (s *SnapshotCreateParams) SetVersion(val OptString) {
-	s.Version = val
+	_ = "STUB: not implemented"
+
+	// Type of snapshot to create. It is optional and by default, a full snapshot is created.
+	return
 }
 
-// Type of snapshot to create. It is optional and by default, a full snapshot is created.
 type SnapshotCreateParamsSnapshotType string
 
 const (
@@ -2078,36 +1977,20 @@ const (
 
 // AllValues returns all SnapshotCreateParamsSnapshotType values.
 func (SnapshotCreateParamsSnapshotType) AllValues() []SnapshotCreateParamsSnapshotType {
-	return []SnapshotCreateParamsSnapshotType{
-		SnapshotCreateParamsSnapshotTypeFull,
-		SnapshotCreateParamsSnapshotTypeDiff,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MarshalText implements encoding.TextMarshaler.
 func (s SnapshotCreateParamsSnapshotType) MarshalText() ([]byte, error) {
-	switch s {
-	case SnapshotCreateParamsSnapshotTypeFull:
-		return []byte(s), nil
-	case SnapshotCreateParamsSnapshotTypeDiff:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
 func (s *SnapshotCreateParamsSnapshotType) UnmarshalText(data []byte) error {
-	switch SnapshotCreateParamsSnapshotType(data) {
-	case SnapshotCreateParamsSnapshotTypeFull:
-		*s = SnapshotCreateParamsSnapshotTypeFull
-		return nil
-	case SnapshotCreateParamsSnapshotTypeDiff:
-		*s = SnapshotCreateParamsSnapshotTypeDiff
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Ref: #/components/schemas/SnapshotLoadParams
@@ -2124,51 +2007,46 @@ type SnapshotLoadParams struct {
 
 // GetEnableDiffSnapshots returns the value of EnableDiffSnapshots.
 func (s *SnapshotLoadParams) GetEnableDiffSnapshots() OptBool {
-	return s.EnableDiffSnapshots
+	_ = "STUB: not implemented"
+	return *new(OptBool)
 }
 
 // GetMemFilePath returns the value of MemFilePath.
-func (s *SnapshotLoadParams) GetMemFilePath() string {
-	return s.MemFilePath
-}
+func (s *SnapshotLoadParams) GetMemFilePath() string { _ = "STUB: not implemented"; return "" }
 
 // GetSnapshotPath returns the value of SnapshotPath.
-func (s *SnapshotLoadParams) GetSnapshotPath() string {
-	return s.SnapshotPath
-}
+func (s *SnapshotLoadParams) GetSnapshotPath() string { _ = "STUB: not implemented"; return "" }
 
 // GetResumeVM returns the value of ResumeVM.
 func (s *SnapshotLoadParams) GetResumeVM() OptBool {
-	return s.ResumeVM
+	_ = "STUB: not implemented"
+
+	// SetEnableDiffSnapshots sets the value of EnableDiffSnapshots.
+	return *new(OptBool)
 }
 
-// SetEnableDiffSnapshots sets the value of EnableDiffSnapshots.
-func (s *SnapshotLoadParams) SetEnableDiffSnapshots(val OptBool) {
-	s.EnableDiffSnapshots = val
-}
+func (s *SnapshotLoadParams) SetEnableDiffSnapshots(val OptBool) { _ = "STUB: not implemented"; return }
 
 // SetMemFilePath sets the value of MemFilePath.
-func (s *SnapshotLoadParams) SetMemFilePath(val string) {
-	s.MemFilePath = val
-}
+func (s *SnapshotLoadParams) SetMemFilePath(val string) { _ = "STUB: not implemented"; return }
 
 // SetSnapshotPath sets the value of SnapshotPath.
-func (s *SnapshotLoadParams) SetSnapshotPath(val string) {
-	s.SnapshotPath = val
-}
+func (s *SnapshotLoadParams) SetSnapshotPath(val string) { _ = "STUB: not implemented"; return }
 
 // SetResumeVM sets the value of ResumeVM.
 func (s *SnapshotLoadParams) SetResumeVM(val OptBool) {
-	s.ResumeVM = val
+	_ = "STUB: not implemented"
+
+	// Defines a token bucket with a maximum capacity (size), an initial burst size (one_time_burst) and
+	// an interval for refilling purposes (refill_time). The refill-rate is derived from size and
+	// refill_time, and it is the constant rate at which the tokens replenish. The refill process only
+	// starts happening after the initial burst budget is consumed. Consumption from the token bucket is
+	// unbounded in speed which allows for bursts bound in size by the amount of tokens available. Once
+	// the token bucket is empty, consumption speed is bound by the refill_rate.
+	// Ref: #/components/schemas/TokenBucket
+	return
 }
 
-// Defines a token bucket with a maximum capacity (size), an initial burst size (one_time_burst) and
-// an interval for refilling purposes (refill_time). The refill-rate is derived from size and
-// refill_time, and it is the constant rate at which the tokens replenish. The refill process only
-// starts happening after the initial burst budget is consumed. Consumption from the token bucket is
-// unbounded in speed which allows for bursts bound in size by the amount of tokens available. Once
-// the token bucket is empty, consumption speed is bound by the refill_rate.
-// Ref: #/components/schemas/TokenBucket
 type TokenBucket struct {
 	// The initial size of a token bucket.
 	OneTimeBurst OptInt64 `json:"one_time_burst"`
@@ -2180,49 +2058,54 @@ type TokenBucket struct {
 
 // GetOneTimeBurst returns the value of OneTimeBurst.
 func (s *TokenBucket) GetOneTimeBurst() OptInt64 {
-	return s.OneTimeBurst
+	_ = "STUB: not implemented"
+	return *
+
+	// GetRefillTime returns the value of RefillTime.
+	new(OptInt64)
 }
 
-// GetRefillTime returns the value of RefillTime.
-func (s *TokenBucket) GetRefillTime() int64 {
-	return s.RefillTime
-}
+func (s *TokenBucket) GetRefillTime() int64 { _ = "STUB: not implemented"; return 0 }
 
 // GetSize returns the value of Size.
 func (s *TokenBucket) GetSize() int64 {
-	return s.Size
+	_ = "STUB: not implemented"
+
+	// SetOneTimeBurst sets the value of OneTimeBurst.
+	return 0
 }
 
-// SetOneTimeBurst sets the value of OneTimeBurst.
-func (s *TokenBucket) SetOneTimeBurst(val OptInt64) {
-	s.OneTimeBurst = val
-}
+func (s *TokenBucket) SetOneTimeBurst(val OptInt64) { _ = "STUB: not implemented"; return }
 
 // SetRefillTime sets the value of RefillTime.
 func (s *TokenBucket) SetRefillTime(val int64) {
-	s.RefillTime = val
+	_ = "STUB: not implemented"
+
+	// SetSize sets the value of Size.
+	return
 }
 
-// SetSize sets the value of Size.
 func (s *TokenBucket) SetSize(val int64) {
-	s.Size = val
+	_ = "STUB: not implemented"
+
+	// Defines the microVM running state. It is especially useful in the snapshotting context.
+	// Ref: #/components/schemas/Vm
+	return
 }
 
-// Defines the microVM running state. It is especially useful in the snapshotting context.
-// Ref: #/components/schemas/Vm
 type VM struct {
 	State VMState `json:"state"`
 }
 
 // GetState returns the value of State.
 func (s *VM) GetState() VMState {
-	return s.State
+	_ = "STUB: not implemented"
+
+	// SetState sets the value of State.
+	return *new(VMState)
 }
 
-// SetState sets the value of State.
-func (s *VM) SetState(val VMState) {
-	s.State = val
-}
+func (s *VM) SetState(val VMState) { _ = "STUB: not implemented"; return }
 
 type VMState string
 
@@ -2232,38 +2115,13 @@ const (
 )
 
 // AllValues returns all VMState values.
-func (VMState) AllValues() []VMState {
-	return []VMState{
-		VMStatePaused,
-		VMStateResumed,
-	}
-}
+func (VMState) AllValues() []VMState { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s VMState) MarshalText() ([]byte, error) {
-	switch s {
-	case VMStatePaused:
-		return []byte(s), nil
-	case VMStateResumed:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s VMState) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *VMState) UnmarshalText(data []byte) error {
-	switch VMState(data) {
-	case VMStatePaused:
-		*s = VMStatePaused
-		return nil
-	case VMStateResumed:
-		*s = VMStateResumed
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *VMState) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Defines a vsock device, backed by a set of Unix Domain Sockets, on the host side. For
 // host-initiated connections, Firecracker will be listening on the Unix socket identified by the
@@ -2283,30 +2141,38 @@ type Vsock struct {
 
 // GetGuestCid returns the value of GuestCid.
 func (s *Vsock) GetGuestCid() int {
-	return s.GuestCid
+	_ = "STUB: not implemented"
+
+	// GetUdsPath returns the value of UdsPath.
+	return 0
 }
 
-// GetUdsPath returns the value of UdsPath.
 func (s *Vsock) GetUdsPath() string {
-	return s.UdsPath
+	_ = "STUB: not implemented"
+
+	// GetVsockID returns the value of VsockID.
+	return ""
 }
 
-// GetVsockID returns the value of VsockID.
 func (s *Vsock) GetVsockID() string {
-	return s.VsockID
+	_ = "STUB: not implemented"
+
+	// SetGuestCid sets the value of GuestCid.
+	return ""
 }
 
-// SetGuestCid sets the value of GuestCid.
 func (s *Vsock) SetGuestCid(val int) {
-	s.GuestCid = val
+	_ = "STUB: not implemented"
+
+	// SetUdsPath sets the value of UdsPath.
+	return
 }
 
-// SetUdsPath sets the value of UdsPath.
 func (s *Vsock) SetUdsPath(val string) {
-	s.UdsPath = val
+	_ = "STUB: not implemented"
+
+	// SetVsockID sets the value of VsockID.
+	return
 }
 
-// SetVsockID sets the value of VsockID.
-func (s *Vsock) SetVsockID(val string) {
-	s.VsockID = val
-}
+func (s *Vsock) SetVsockID(val string) { _ = "STUB: not implemented"; return }

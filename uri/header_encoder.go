@@ -6,11 +6,7 @@ type HeaderEncoder struct {
 	header http.Header
 }
 
-func NewHeaderEncoder(header http.Header) *HeaderEncoder {
-	return &HeaderEncoder{
-		header: header,
-	}
-}
+func NewHeaderEncoder(header http.Header) *HeaderEncoder { _ = "STUB: not implemented"; return nil }
 
 type HeaderParameterEncodingConfig struct {
 	Name    string
@@ -18,21 +14,10 @@ type HeaderParameterEncodingConfig struct {
 }
 
 func (e *HeaderEncoder) EncodeParam(cfg HeaderParameterEncodingConfig, f func(Encoder) error) error {
-	p := &headerParamEncoder{
-		receiver:  newReceiver(),
-		paramName: cfg.Name,
-		explode:   cfg.Explode,
-		header:    e.header,
-	}
-
-	if err := f(p); err != nil {
-		return err
-	}
-
-	// FIXME(tdakkota): probable we should return the error during encoding
-	return p.serialize()
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (e *HeaderEncoder) Header() http.Header {
-	return e.header
-}
+// FIXME(tdakkota): probable we should return the error during encoding
+
+func (e *HeaderEncoder) Header() http.Header { _ = "STUB: not implemented"; return *new(http.Header) }

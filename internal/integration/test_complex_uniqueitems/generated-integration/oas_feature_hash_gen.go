@@ -2,36 +2,15 @@
 
 package api
 
-import (
-	"fmt"
-	"hash/fnv"
-)
-
 // Hash computes a hash value for Feature using FNV-1a.
 // Equal objects must produce equal hashes.
 func (a Feature) Hash() uint64 {
-	h := fnv.New64a()
+	_ = "STUB: not implemented"
 
 	// Hash optional field: Name
-	if a.Name.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Name.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Enabled
-	if a.Enabled.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Enabled.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	// Hash optional field: Parameters
-	if a.Parameters.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.Parameters.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	return h.Sum64()
+	return 0
 }
+
+// Hash optional field: Enabled
+
+// Hash optional field: Parameters

@@ -8,11 +8,14 @@ import (
 
 type AllRequestBodiesApplicationJSON SimpleObject
 
-func (*AllRequestBodiesApplicationJSON) allRequestBodiesReq() {}
+func (*AllRequestBodiesApplicationJSON) allRequestBodiesReq() { _ = "STUB: not implemented"; return }
 
 type AllRequestBodiesApplicationXWwwFormUrlencoded SimpleObject
 
-func (*AllRequestBodiesApplicationXWwwFormUrlencoded) allRequestBodiesReq() {}
+func (*AllRequestBodiesApplicationXWwwFormUrlencoded) allRequestBodiesReq() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type AllRequestBodiesOK struct {
 	Data io.Reader
@@ -22,19 +25,23 @@ type AllRequestBodiesOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s AllRequestBodiesOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 type AllRequestBodiesOptionalApplicationJSON SimpleObject
 
-func (*AllRequestBodiesOptionalApplicationJSON) allRequestBodiesOptionalReq() {}
+func (*AllRequestBodiesOptionalApplicationJSON) allRequestBodiesOptionalReq() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type AllRequestBodiesOptionalApplicationXWwwFormUrlencoded SimpleObject
 
-func (*AllRequestBodiesOptionalApplicationXWwwFormUrlencoded) allRequestBodiesOptionalReq() {}
+func (*AllRequestBodiesOptionalApplicationXWwwFormUrlencoded) allRequestBodiesOptionalReq() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type AllRequestBodiesOptionalOK struct {
 	Data io.Reader
@@ -44,10 +51,8 @@ type AllRequestBodiesOptionalOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s AllRequestBodiesOptionalOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 type AllRequestBodiesOptionalReqApplicationOctetStream struct {
@@ -58,17 +63,21 @@ type AllRequestBodiesOptionalReqApplicationOctetStream struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s AllRequestBodiesOptionalReqApplicationOctetStream) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
-func (*AllRequestBodiesOptionalReqApplicationOctetStream) allRequestBodiesOptionalReq() {}
+func (*AllRequestBodiesOptionalReqApplicationOctetStream) allRequestBodiesOptionalReq() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type AllRequestBodiesOptionalReqEmptyBody struct{}
 
-func (*AllRequestBodiesOptionalReqEmptyBody) allRequestBodiesOptionalReq() {}
+func (*AllRequestBodiesOptionalReqEmptyBody) allRequestBodiesOptionalReq() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type AllRequestBodiesOptionalReqTextPlain struct {
 	Data io.Reader
@@ -78,13 +87,14 @@ type AllRequestBodiesOptionalReqTextPlain struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s AllRequestBodiesOptionalReqTextPlain) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
-func (*AllRequestBodiesOptionalReqTextPlain) allRequestBodiesOptionalReq() {}
+func (*AllRequestBodiesOptionalReqTextPlain) allRequestBodiesOptionalReq() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type AllRequestBodiesReqApplicationOctetStream struct {
 	Data io.Reader
@@ -94,13 +104,14 @@ type AllRequestBodiesReqApplicationOctetStream struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s AllRequestBodiesReqApplicationOctetStream) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
-func (*AllRequestBodiesReqApplicationOctetStream) allRequestBodiesReq() {}
+func (*AllRequestBodiesReqApplicationOctetStream) allRequestBodiesReq() {
+	_ = "STUB: not implemented"
+	return
+}
 
 type AllRequestBodiesReqTextPlain struct {
 	Data io.Reader
@@ -110,13 +121,11 @@ type AllRequestBodiesReqTextPlain struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s AllRequestBodiesReqTextPlain) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
-func (*AllRequestBodiesReqTextPlain) allRequestBodiesReq() {}
+func (*AllRequestBodiesReqTextPlain) allRequestBodiesReq() { _ = "STUB: not implemented"; return }
 
 type Base64RequestOK struct {
 	Data io.Reader
@@ -126,10 +135,8 @@ type Base64RequestOK struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s Base64RequestOK) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 type Base64RequestReq struct {
@@ -140,10 +147,8 @@ type Base64RequestReq struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s Base64RequestReq) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 type MaskContentTypeOptionalReq struct {
@@ -154,10 +159,8 @@ type MaskContentTypeOptionalReq struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s MaskContentTypeOptionalReq) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // MaskContentTypeOptionalReqWithContentType wraps MaskContentTypeOptionalReq with Content-Type.
@@ -168,22 +171,29 @@ type MaskContentTypeOptionalReqWithContentType struct {
 
 // GetContentType returns the value of ContentType.
 func (s *MaskContentTypeOptionalReqWithContentType) GetContentType() string {
-	return s.ContentType
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetContent returns the value of Content.
 }
 
-// GetContent returns the value of Content.
 func (s *MaskContentTypeOptionalReqWithContentType) GetContent() MaskContentTypeOptionalReq {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// SetContentType sets the value of ContentType.
+	return *new(MaskContentTypeOptionalReq)
 }
 
-// SetContentType sets the value of ContentType.
 func (s *MaskContentTypeOptionalReqWithContentType) SetContentType(val string) {
-	s.ContentType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetContent sets the value of Content.
 }
 
-// SetContent sets the value of Content.
 func (s *MaskContentTypeOptionalReqWithContentType) SetContent(val MaskContentTypeOptionalReq) {
-	s.Content = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type MaskContentTypeReq struct {
@@ -194,10 +204,8 @@ type MaskContentTypeReq struct {
 //
 // Kept to satisfy the io.Reader interface.
 func (s MaskContentTypeReq) Read(p []byte) (n int, err error) {
-	if s.Data == nil {
-		return 0, io.EOF
-	}
-	return s.Data.Read(p)
+	_ = "STUB: not implemented"
+	return 0, nil
 }
 
 // MaskContentTypeReqWithContentType wraps MaskContentTypeReq with Content-Type.
@@ -208,57 +216,60 @@ type MaskContentTypeReqWithContentType struct {
 
 // GetContentType returns the value of ContentType.
 func (s *MaskContentTypeReqWithContentType) GetContentType() string {
-	return s.ContentType
+	_ = "STUB: not implemented"
+	return ""
+
+	// GetContent returns the value of Content.
 }
 
-// GetContent returns the value of Content.
 func (s *MaskContentTypeReqWithContentType) GetContent() MaskContentTypeReq {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// SetContentType sets the value of ContentType.
+	return *new(MaskContentTypeReq)
 }
 
-// SetContentType sets the value of ContentType.
 func (s *MaskContentTypeReqWithContentType) SetContentType(val string) {
-	s.ContentType = val
+	_ = "STUB: not implemented"
+	return
+
+	// SetContent sets the value of Content.
 }
 
-// SetContent sets the value of Content.
 func (s *MaskContentTypeReqWithContentType) SetContent(val MaskContentTypeReq) {
-	s.Content = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/MaskResponse
+	return
 }
 
-// Ref: #/components/schemas/MaskResponse
 type MaskResponse struct {
 	ContentType string `json:"contentType"`
 	Content     string `json:"content"`
 }
 
 // GetContentType returns the value of ContentType.
-func (s *MaskResponse) GetContentType() string {
-	return s.ContentType
-}
+func (s *MaskResponse) GetContentType() string { _ = "STUB: not implemented"; return "" }
 
 // GetContent returns the value of Content.
 func (s *MaskResponse) GetContent() string {
-	return s.Content
+	_ = "STUB: not implemented"
+
+	// SetContentType sets the value of ContentType.
+	return ""
 }
 
-// SetContentType sets the value of ContentType.
-func (s *MaskResponse) SetContentType(val string) {
-	s.ContentType = val
-}
+func (s *MaskResponse) SetContentType(val string) { _ = "STUB: not implemented"; return }
 
 // SetContent sets the value of Content.
 func (s *MaskResponse) SetContent(val string) {
-	s.Content = val
+	_ = "STUB: not implemented"
+
+	// NewOptInt returns new OptInt with value set to v.
+	return
 }
 
-// NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -267,36 +278,23 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // Ref: #/components/schemas/SimpleObject
 type SimpleObject struct {
@@ -306,25 +304,33 @@ type SimpleObject struct {
 
 // GetName returns the value of Name.
 func (s *SimpleObject) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetAge returns the value of Age.
+	return ""
 }
 
-// GetAge returns the value of Age.
 func (s *SimpleObject) GetAge() OptInt {
-	return s.Age
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return *new(OptInt)
 }
 
-// SetName sets the value of Name.
 func (s *SimpleObject) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetAge sets the value of Age.
+	return
 }
 
-// SetAge sets the value of Age.
 func (s *SimpleObject) SetAge(val OptInt) {
-	s.Age = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/SimpleObject
+	return
 }
 
-// Ref: #/components/schemas/SimpleObject
 type SimpleObjectMultipart struct {
 	Name string `json:"name"`
 	Age  OptInt `json:"age"`
@@ -332,23 +338,27 @@ type SimpleObjectMultipart struct {
 
 // GetName returns the value of Name.
 func (s *SimpleObjectMultipart) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetAge returns the value of Age.
+	return ""
 }
 
-// GetAge returns the value of Age.
 func (s *SimpleObjectMultipart) GetAge() OptInt {
-	return s.Age
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return *new(OptInt)
 }
 
-// SetName sets the value of Name.
 func (s *SimpleObjectMultipart) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetAge sets the value of Age.
+	return
 }
 
-// SetAge sets the value of Age.
-func (s *SimpleObjectMultipart) SetAge(val OptInt) {
-	s.Age = val
-}
+func (s *SimpleObjectMultipart) SetAge(val OptInt) { _ = "STUB: not implemented"; return }
 
-func (*SimpleObjectMultipart) allRequestBodiesOptionalReq() {}
-func (*SimpleObjectMultipart) allRequestBodiesReq()         {}
+func (*SimpleObjectMultipart) allRequestBodiesOptionalReq() { _ = "STUB: not implemented"; return }
+func (*SimpleObjectMultipart) allRequestBodiesReq()         { _ = "STUB: not implemented"; return }

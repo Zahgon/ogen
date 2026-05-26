@@ -3,21 +3,28 @@
 package api
 
 import (
-	"github.com/go-faster/errors"
 	ht "github.com/ogen-go/ogen/http"
 )
 
 // APICaptcha2chcaptchaShowGetNotFound is response for APICaptcha2chcaptchaShowGet operation.
 type APICaptcha2chcaptchaShowGetNotFound struct{}
 
-func (*APICaptcha2chcaptchaShowGetNotFound) aPICaptcha2chcaptchaShowGetRes() {}
+func (*APICaptcha2chcaptchaShowGetNotFound) aPICaptcha2chcaptchaShowGetRes() {
+	_ = "STUB: not implemented"
 
-// APICaptcha2chcaptchaShowGetOK is response for APICaptcha2chcaptchaShowGet operation.
+	// APICaptcha2chcaptchaShowGetOK is response for APICaptcha2chcaptchaShowGet operation.
+	return
+}
+
 type APICaptcha2chcaptchaShowGetOK struct{}
 
-func (*APICaptcha2chcaptchaShowGetOK) aPICaptcha2chcaptchaShowGetRes() {}
+func (*APICaptcha2chcaptchaShowGetOK) aPICaptcha2chcaptchaShowGetRes() {
+	_ = "STUB: not implemented"
 
-// APICaptchaInvisibleRecaptchaMobileGetOK is response for APICaptchaInvisibleRecaptchaMobileGet operation.
+	// APICaptchaInvisibleRecaptchaMobileGetOK is response for APICaptchaInvisibleRecaptchaMobileGet operation.
+	return
+}
+
 type APICaptchaInvisibleRecaptchaMobileGetOK struct{}
 
 // APICaptchaRecaptchaMobileGetOK is response for APICaptchaRecaptchaMobileGet operation.
@@ -62,263 +69,243 @@ type Board struct {
 
 // GetID returns the value of ID.
 func (s *Board) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return ""
 }
 
-// GetName returns the value of Name.
 func (s *Board) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetCategory returns the value of Category.
+	return ""
 }
 
-// GetCategory returns the value of Category.
 func (s *Board) GetCategory() string {
-	return s.Category
+	_ = "STUB: not implemented"
+
+	// GetInfo returns the value of Info.
+	return ""
 }
 
-// GetInfo returns the value of Info.
 func (s *Board) GetInfo() string {
-	return s.Info
+	_ = "STUB: not implemented"
+
+	// GetInfoOuter returns the value of InfoOuter.
+	return ""
 }
 
-// GetInfoOuter returns the value of InfoOuter.
 func (s *Board) GetInfoOuter() string {
-	return s.InfoOuter
+	_ = "STUB: not implemented"
+
+	// GetThreadsPerPage returns the value of ThreadsPerPage.
+	return ""
 }
 
-// GetThreadsPerPage returns the value of ThreadsPerPage.
-func (s *Board) GetThreadsPerPage() int {
-	return s.ThreadsPerPage
-}
+func (s *Board) GetThreadsPerPage() int { _ = "STUB: not implemented"; return 0 }
 
 // GetBumpLimit returns the value of BumpLimit.
 func (s *Board) GetBumpLimit() int {
-	return s.BumpLimit
+	_ = "STUB: not implemented"
+
+	// GetMaxPages returns the value of MaxPages.
+	return 0
 }
 
-// GetMaxPages returns the value of MaxPages.
 func (s *Board) GetMaxPages() int {
-	return s.MaxPages
+	_ = "STUB: not implemented"
+
+	// GetDefaultName returns the value of DefaultName.
+	return 0
 }
 
-// GetDefaultName returns the value of DefaultName.
-func (s *Board) GetDefaultName() string {
-	return s.DefaultName
-}
+func (s *Board) GetDefaultName() string { _ = "STUB: not implemented"; return "" }
 
 // GetEnableNames returns the value of EnableNames.
-func (s *Board) GetEnableNames() bool {
-	return s.EnableNames
-}
+func (s *Board) GetEnableNames() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnableTrips returns the value of EnableTrips.
-func (s *Board) GetEnableTrips() bool {
-	return s.EnableTrips
-}
+func (s *Board) GetEnableTrips() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnableSubject returns the value of EnableSubject.
-func (s *Board) GetEnableSubject() bool {
-	return s.EnableSubject
-}
+func (s *Board) GetEnableSubject() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnableSage returns the value of EnableSage.
-func (s *Board) GetEnableSage() bool {
-	return s.EnableSage
-}
+func (s *Board) GetEnableSage() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnableIcons returns the value of EnableIcons.
-func (s *Board) GetEnableIcons() bool {
-	return s.EnableIcons
-}
+func (s *Board) GetEnableIcons() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnableFlags returns the value of EnableFlags.
-func (s *Board) GetEnableFlags() bool {
-	return s.EnableFlags
-}
+func (s *Board) GetEnableFlags() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnableDices returns the value of EnableDices.
-func (s *Board) GetEnableDices() bool {
-	return s.EnableDices
-}
+func (s *Board) GetEnableDices() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnableShield returns the value of EnableShield.
-func (s *Board) GetEnableShield() bool {
-	return s.EnableShield
-}
+func (s *Board) GetEnableShield() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnableThreadTags returns the value of EnableThreadTags.
-func (s *Board) GetEnableThreadTags() bool {
-	return s.EnableThreadTags
-}
+func (s *Board) GetEnableThreadTags() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnablePosting returns the value of EnablePosting.
-func (s *Board) GetEnablePosting() bool {
-	return s.EnablePosting
-}
+func (s *Board) GetEnablePosting() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnableLikes returns the value of EnableLikes.
-func (s *Board) GetEnableLikes() bool {
-	return s.EnableLikes
-}
+func (s *Board) GetEnableLikes() bool { _ = "STUB: not implemented"; return false }
 
 // GetEnableOekaki returns the value of EnableOekaki.
-func (s *Board) GetEnableOekaki() bool {
-	return s.EnableOekaki
-}
+func (s *Board) GetEnableOekaki() bool { _ = "STUB: not implemented"; return false }
 
 // GetFileTypes returns the value of FileTypes.
 func (s *Board) GetFileTypes() []string {
-	return s.FileTypes
+	_ = "STUB: not implemented"
+
+	// GetMaxComment returns the value of MaxComment.
+	return nil
 }
 
-// GetMaxComment returns the value of MaxComment.
-func (s *Board) GetMaxComment() int {
-	return s.MaxComment
-}
+func (s *Board) GetMaxComment() int { _ = "STUB: not implemented"; return 0 }
 
 // GetMaxFilesSize returns the value of MaxFilesSize.
-func (s *Board) GetMaxFilesSize() int {
-	return s.MaxFilesSize
-}
+func (s *Board) GetMaxFilesSize() int { _ = "STUB: not implemented"; return 0 }
 
 // GetTags returns the value of Tags.
 func (s *Board) GetTags() []string {
-	return s.Tags
+	_ = "STUB: not implemented"
+
+	// GetIcons returns the value of Icons.
+	return nil
 }
 
-// GetIcons returns the value of Icons.
 func (s *Board) GetIcons() []BoardIconsItem {
-	return s.Icons
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return nil
 }
 
-// SetID sets the value of ID.
 func (s *Board) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Board) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetCategory sets the value of Category.
+	return
 }
 
-// SetCategory sets the value of Category.
 func (s *Board) SetCategory(val string) {
-	s.Category = val
+	_ = "STUB: not implemented"
+
+	// SetInfo sets the value of Info.
+	return
 }
 
-// SetInfo sets the value of Info.
 func (s *Board) SetInfo(val string) {
-	s.Info = val
+	_ = "STUB: not implemented"
+
+	// SetInfoOuter sets the value of InfoOuter.
+	return
 }
 
-// SetInfoOuter sets the value of InfoOuter.
 func (s *Board) SetInfoOuter(val string) {
-	s.InfoOuter = val
+	_ = "STUB: not implemented"
+
+	// SetThreadsPerPage sets the value of ThreadsPerPage.
+	return
 }
 
-// SetThreadsPerPage sets the value of ThreadsPerPage.
-func (s *Board) SetThreadsPerPage(val int) {
-	s.ThreadsPerPage = val
-}
+func (s *Board) SetThreadsPerPage(val int) { _ = "STUB: not implemented"; return }
 
 // SetBumpLimit sets the value of BumpLimit.
 func (s *Board) SetBumpLimit(val int) {
-	s.BumpLimit = val
+	_ = "STUB: not implemented"
+
+	// SetMaxPages sets the value of MaxPages.
+	return
 }
 
-// SetMaxPages sets the value of MaxPages.
 func (s *Board) SetMaxPages(val int) {
-	s.MaxPages = val
+	_ = "STUB: not implemented"
+
+	// SetDefaultName sets the value of DefaultName.
+	return
 }
 
-// SetDefaultName sets the value of DefaultName.
-func (s *Board) SetDefaultName(val string) {
-	s.DefaultName = val
-}
+func (s *Board) SetDefaultName(val string) { _ = "STUB: not implemented"; return }
 
 // SetEnableNames sets the value of EnableNames.
-func (s *Board) SetEnableNames(val bool) {
-	s.EnableNames = val
-}
+func (s *Board) SetEnableNames(val bool) { _ = "STUB: not implemented"; return }
 
 // SetEnableTrips sets the value of EnableTrips.
-func (s *Board) SetEnableTrips(val bool) {
-	s.EnableTrips = val
-}
+func (s *Board) SetEnableTrips(val bool) { _ = "STUB: not implemented"; return }
 
 // SetEnableSubject sets the value of EnableSubject.
-func (s *Board) SetEnableSubject(val bool) {
-	s.EnableSubject = val
-}
+func (s *Board) SetEnableSubject(val bool) { _ = "STUB: not implemented"; return }
 
 // SetEnableSage sets the value of EnableSage.
 func (s *Board) SetEnableSage(val bool) {
-	s.EnableSage = val
+	_ = "STUB: not implemented"
+
+	// SetEnableIcons sets the value of EnableIcons.
+	return
 }
 
-// SetEnableIcons sets the value of EnableIcons.
-func (s *Board) SetEnableIcons(val bool) {
-	s.EnableIcons = val
-}
+func (s *Board) SetEnableIcons(val bool) { _ = "STUB: not implemented"; return }
 
 // SetEnableFlags sets the value of EnableFlags.
-func (s *Board) SetEnableFlags(val bool) {
-	s.EnableFlags = val
-}
+func (s *Board) SetEnableFlags(val bool) { _ = "STUB: not implemented"; return }
 
 // SetEnableDices sets the value of EnableDices.
-func (s *Board) SetEnableDices(val bool) {
-	s.EnableDices = val
-}
+func (s *Board) SetEnableDices(val bool) { _ = "STUB: not implemented"; return }
 
 // SetEnableShield sets the value of EnableShield.
-func (s *Board) SetEnableShield(val bool) {
-	s.EnableShield = val
-}
+func (s *Board) SetEnableShield(val bool) { _ = "STUB: not implemented"; return }
 
 // SetEnableThreadTags sets the value of EnableThreadTags.
-func (s *Board) SetEnableThreadTags(val bool) {
-	s.EnableThreadTags = val
-}
+func (s *Board) SetEnableThreadTags(val bool) { _ = "STUB: not implemented"; return }
 
 // SetEnablePosting sets the value of EnablePosting.
-func (s *Board) SetEnablePosting(val bool) {
-	s.EnablePosting = val
-}
+func (s *Board) SetEnablePosting(val bool) { _ = "STUB: not implemented"; return }
 
 // SetEnableLikes sets the value of EnableLikes.
-func (s *Board) SetEnableLikes(val bool) {
-	s.EnableLikes = val
-}
+func (s *Board) SetEnableLikes(val bool) { _ = "STUB: not implemented"; return }
 
 // SetEnableOekaki sets the value of EnableOekaki.
-func (s *Board) SetEnableOekaki(val bool) {
-	s.EnableOekaki = val
-}
+func (s *Board) SetEnableOekaki(val bool) { _ = "STUB: not implemented"; return }
 
 // SetFileTypes sets the value of FileTypes.
 func (s *Board) SetFileTypes(val []string) {
-	s.FileTypes = val
+	_ = "STUB: not implemented"
+
+	// SetMaxComment sets the value of MaxComment.
+	return
 }
 
-// SetMaxComment sets the value of MaxComment.
 func (s *Board) SetMaxComment(val int) {
-	s.MaxComment = val
+	_ = "STUB: not implemented"
+
+	// SetMaxFilesSize sets the value of MaxFilesSize.
+	return
 }
 
-// SetMaxFilesSize sets the value of MaxFilesSize.
-func (s *Board) SetMaxFilesSize(val int) {
-	s.MaxFilesSize = val
-}
+func (s *Board) SetMaxFilesSize(val int) { _ = "STUB: not implemented"; return }
 
 // SetTags sets the value of Tags.
 func (s *Board) SetTags(val []string) {
-	s.Tags = val
+	_ = "STUB: not implemented"
+
+	// SetIcons sets the value of Icons.
+	return
 }
 
-// SetIcons sets the value of Icons.
-func (s *Board) SetIcons(val []BoardIconsItem) {
-	s.Icons = val
-}
+func (s *Board) SetIcons(val []BoardIconsItem) { _ = "STUB: not implemented"; return }
 
 type BoardIconsItem struct {
 	Num  OptInt    `json:"num"`
@@ -328,33 +315,41 @@ type BoardIconsItem struct {
 
 // GetNum returns the value of Num.
 func (s *BoardIconsItem) GetNum() OptInt {
-	return s.Num
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(OptInt)
 }
 
-// GetName returns the value of Name.
 func (s *BoardIconsItem) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetURL returns the value of URL.
+	return *new(OptString)
 }
 
-// GetURL returns the value of URL.
 func (s *BoardIconsItem) GetURL() OptString {
-	return s.URL
+	_ = "STUB: not implemented"
+
+	// SetNum sets the value of Num.
+	return *new(OptString)
 }
 
-// SetNum sets the value of Num.
 func (s *BoardIconsItem) SetNum(val OptInt) {
-	s.Num = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *BoardIconsItem) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetURL sets the value of URL.
+	return
 }
 
-// SetURL sets the value of URL.
-func (s *BoardIconsItem) SetURL(val OptString) {
-	s.URL = val
-}
+func (s *BoardIconsItem) SetURL(val OptString) { _ = "STUB: not implemented"; return }
 
 type Boards []Board
 
@@ -380,81 +375,105 @@ type Captcha struct {
 
 // GetResult returns the value of Result.
 func (s *Captcha) GetResult() int {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetError returns the value of Error.
+	return 0
 }
 
-// GetError returns the value of Error.
 func (s *Captcha) GetError() OptError {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return *new(OptError)
 }
 
-// GetType returns the value of Type.
 func (s *Captcha) GetType() CaptchaType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetID returns the value of ID.
+	return *new(CaptchaType)
 }
 
-// GetID returns the value of ID.
 func (s *Captcha) GetID() string {
-	return s.ID
+	_ = "STUB: not implemented"
+
+	// GetExpires returns the value of Expires.
+	return ""
 }
 
-// GetExpires returns the value of Expires.
 func (s *Captcha) GetExpires() OptInt {
-	return s.Expires
+	_ = "STUB: not implemented"
+
+	// GetInput returns the value of Input.
+	return *new(OptInt)
 }
 
-// GetInput returns the value of Input.
 func (s *Captcha) GetInput() OptString {
-	return s.Input
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return *new(OptString)
 }
 
-// SetResult sets the value of Result.
 func (s *Captcha) SetResult(val int) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return
 }
 
-// SetError sets the value of Error.
 func (s *Captcha) SetError(val OptError) {
-	s.Error = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *Captcha) SetType(val CaptchaType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetID sets the value of ID.
+	return
 }
 
-// SetID sets the value of ID.
 func (s *Captcha) SetID(val string) {
-	s.ID = val
+	_ = "STUB: not implemented"
+
+	// SetExpires sets the value of Expires.
+	return
 }
 
-// SetExpires sets the value of Expires.
 func (s *Captcha) SetExpires(val OptInt) {
-	s.Expires = val
+	_ = "STUB: not implemented"
+
+	// SetInput sets the value of Input.
+	return
 }
 
-// SetInput sets the value of Input.
 func (s *Captcha) SetInput(val OptString) {
-	s.Input = val
+	_ = "STUB: not implemented"
+
+	// Каждый тип капчи так же требует дополнительные
+	// параметры для её валидации:
+	// * recaptcha: g-recaptcha-response
+	// * invisible_recaptcha: g-recaptcha-response
+	// * recaptcha3: g-recaptcha-response
+	// * 2chcaptcha: Два.ч капча
+	// 2chcaptcha_id - идентификатор Два.ч капчи.
+	// 2chcaptcha_value - строка, которую пользователь увидел на
+	// картинке.
+	// * appid: app_response_id и app_response
+	// app_response_id - результат запроса к этому методу с
+	// публичным ключём приложения: /api/captcha/app/id/{public_key}
+	// app_response - sha256(app_response_id + '|' + private_key)
+	// * passcode: cookie passcode_auth
+	// * nocaptcha: капча не требуется, никакие дополнительные
+	// параметры тоже.
+	// Ref: #/components/schemas/CaptchaType
+	return
 }
 
-// Каждый тип капчи так же требует дополнительные
-// параметры для её валидации:
-// * recaptcha: g-recaptcha-response
-// * invisible_recaptcha: g-recaptcha-response
-// * recaptcha3: g-recaptcha-response
-// * 2chcaptcha: Два.ч капча
-// 2chcaptcha_id - идентификатор Два.ч капчи.
-// 2chcaptcha_value - строка, которую пользователь увидел на
-// картинке.
-// * appid: app_response_id и app_response
-// app_response_id - результат запроса к этому методу с
-// публичным ключём приложения: /api/captcha/app/id/{public_key}
-// app_response - sha256(app_response_id + '|' + private_key)
-// * passcode: cookie passcode_auth
-// * nocaptcha: капча не требуется, никакие дополнительные
-// параметры тоже.
-// Ref: #/components/schemas/CaptchaType
 type CaptchaType string
 
 const (
@@ -468,68 +487,13 @@ const (
 )
 
 // AllValues returns all CaptchaType values.
-func (CaptchaType) AllValues() []CaptchaType {
-	return []CaptchaType{
-		CaptchaTypeRecaptcha,
-		CaptchaTypeInvisibleRecaptcha,
-		CaptchaTypeRecaptcha3,
-		CaptchaType2chcaptcha,
-		CaptchaTypeAppid,
-		CaptchaTypePasscode,
-		CaptchaTypeNocaptcha,
-	}
-}
+func (CaptchaType) AllValues() []CaptchaType { _ = "STUB: not implemented"; return nil }
 
 // MarshalText implements encoding.TextMarshaler.
-func (s CaptchaType) MarshalText() ([]byte, error) {
-	switch s {
-	case CaptchaTypeRecaptcha:
-		return []byte(s), nil
-	case CaptchaTypeInvisibleRecaptcha:
-		return []byte(s), nil
-	case CaptchaTypeRecaptcha3:
-		return []byte(s), nil
-	case CaptchaType2chcaptcha:
-		return []byte(s), nil
-	case CaptchaTypeAppid:
-		return []byte(s), nil
-	case CaptchaTypePasscode:
-		return []byte(s), nil
-	case CaptchaTypeNocaptcha:
-		return []byte(s), nil
-	default:
-		return nil, errors.Errorf("invalid value: %q", s)
-	}
-}
+func (s CaptchaType) MarshalText() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
-func (s *CaptchaType) UnmarshalText(data []byte) error {
-	switch CaptchaType(data) {
-	case CaptchaTypeRecaptcha:
-		*s = CaptchaTypeRecaptcha
-		return nil
-	case CaptchaTypeInvisibleRecaptcha:
-		*s = CaptchaTypeInvisibleRecaptcha
-		return nil
-	case CaptchaTypeRecaptcha3:
-		*s = CaptchaTypeRecaptcha3
-		return nil
-	case CaptchaType2chcaptcha:
-		*s = CaptchaType2chcaptcha
-		return nil
-	case CaptchaTypeAppid:
-		*s = CaptchaTypeAppid
-		return nil
-	case CaptchaTypePasscode:
-		*s = CaptchaTypePasscode
-		return nil
-	case CaptchaTypeNocaptcha:
-		*s = CaptchaTypeNocaptcha
-		return nil
-	default:
-		return errors.Errorf("invalid value: %q", data)
-	}
-}
+func (s *CaptchaType) UnmarshalText(data []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Ошибка запроса.
 // Ref: #/components/schemas/Error
@@ -541,75 +505,83 @@ type Error struct {
 
 // GetCode returns the value of Code.
 func (s *Error) GetCode() OptErrorCode {
-	return s.Code
+	_ = "STUB: not implemented"
+
+	// GetMessage returns the value of Message.
+	return *new(OptErrorCode)
 }
 
-// GetMessage returns the value of Message.
 func (s *Error) GetMessage() OptString {
-	return s.Message
+	_ = "STUB: not implemented"
+
+	// SetCode sets the value of Code.
+	return *new(OptString)
 }
 
-// SetCode sets the value of Code.
 func (s *Error) SetCode(val OptErrorCode) {
-	s.Code = val
+	_ = "STUB: not implemented"
+
+	// SetMessage sets the value of Message.
+	return
 }
 
-// SetMessage sets the value of Message.
 func (s *Error) SetMessage(val OptString) {
-	s.Message = val
+	_ = "STUB: not implemented"
+
+	// * 0 NoError, ошибки нет.
+	// * 403 ErrorForbidden, ошибка доступа.
+	// * 666 ErrorInternal, внутренняя ошибка.
+	// * 667 ErrorNotFound, используется для совместимости, если
+	// запрос не существует.
+	// * -2 ErrorNoBoard, доска не существует.
+	// * -3 ErrorNoParent, тред не существует.
+	// * -31 ErrorNoPost, пост не существует.
+	// * -4 ErrorNoAccess, контент существует, но у вас нет доступа.
+	// * -41 ErrorBoardClosed, доска закрыта.
+	// * -42 ErrorBoardOnlyVIP, доступ к доске возможен только с
+	// пасскодом.
+	// * -5 ErrorCaptchaNotValid, капча не валидна.
+	// * -6 ErrorBanned, вы были забанены. Сообщение содержит
+	// причину и номер бана.
+	// * -7 ErrorThreadClosed, тред закрыт.
+	// * -8 ErrorPostingToFast, вы постите слишком быстро ИЛИ
+	// установлен лимит на создание тредов на доске.
+	// * -9 ErrorFieldTooBig, поле слишком большое. Например,
+	// комментарий превысил лимит.
+	// * -10 ErrorFileSimilar, похожий файл уже был загружен.
+	// * -11 ErrorFileNotSupported, файл не поддерживается.
+	// * -12 ErrorFileTooBig, слишком большой файл.
+	// * -13 ErrorFilesTooMuch, вы загрузили больше файлов, чем
+	// разрешено на доске.
+	// * -14 ErrorTripBanned, трипкод был забанен.
+	// * -15 ErrorWordBanned, в комментарии недопустимое выражение.
+	// * -16 ErrorSpamList, в комментарии выражение из спамлиста.
+	// * -19 ErrorEmptyOp, при создании треда необходимо загрузить
+	// файл.
+	// * -20 ErrorEmptyPost, пост не может быть пустым, необходим
+	// комментарий/файл/etc.
+	// * -21 ErrorPasscodeNotExist, пасскод не существует.
+	// * -22 ErrorLimitReached, достигнут лимит запросов, попробуйте
+	// позже.
+	// * -23 ErrorFieldTooSmall, слишком короткое сообщение.
+	// (используется в поиске).
+	// * -50 ErrorReportTooManyPostsm, слишком много постов для жалобы.
+	// * -51 ErrorReportEmpty, вы ничего не написали в жалобе.
+	// * -52 ErrorReportExist, вы уже отправляли жалобу.
+	// * -300 ErrorAppNotExist, приложение не существует или было
+	// отключено.
+	// * -301 ErrorAppIDWrong, некорректный идентификатор приложения.
+	// * -302 ErrorAppIDExpired, идентификатор приложения истёк.
+	// * -303 ErrorAppIDSignature, неверная подпись поста с помощью
+	// идентификатора.
+	// * -304 ErrorAppIDUsed, указанный идентификатор уже был
+	// использован.
+	// * -24 ErrorWrongStickerID, некорректный идентификатор стикера.
+	// * -25 ErrorStickerNotFound, стикер не найден.
+	// Ref: #/components/schemas/ErrorCode
+	return
 }
 
-// * 0 NoError, ошибки нет.
-// * 403 ErrorForbidden, ошибка доступа.
-// * 666 ErrorInternal, внутренняя ошибка.
-// * 667 ErrorNotFound, используется для совместимости, если
-// запрос не существует.
-// * -2 ErrorNoBoard, доска не существует.
-// * -3 ErrorNoParent, тред не существует.
-// * -31 ErrorNoPost, пост не существует.
-// * -4 ErrorNoAccess, контент существует, но у вас нет доступа.
-// * -41 ErrorBoardClosed, доска закрыта.
-// * -42 ErrorBoardOnlyVIP, доступ к доске возможен только с
-// пасскодом.
-// * -5 ErrorCaptchaNotValid, капча не валидна.
-// * -6 ErrorBanned, вы были забанены. Сообщение содержит
-// причину и номер бана.
-// * -7 ErrorThreadClosed, тред закрыт.
-// * -8 ErrorPostingToFast, вы постите слишком быстро ИЛИ
-// установлен лимит на создание тредов на доске.
-// * -9 ErrorFieldTooBig, поле слишком большое. Например,
-// комментарий превысил лимит.
-// * -10 ErrorFileSimilar, похожий файл уже был загружен.
-// * -11 ErrorFileNotSupported, файл не поддерживается.
-// * -12 ErrorFileTooBig, слишком большой файл.
-// * -13 ErrorFilesTooMuch, вы загрузили больше файлов, чем
-// разрешено на доске.
-// * -14 ErrorTripBanned, трипкод был забанен.
-// * -15 ErrorWordBanned, в комментарии недопустимое выражение.
-// * -16 ErrorSpamList, в комментарии выражение из спамлиста.
-// * -19 ErrorEmptyOp, при создании треда необходимо загрузить
-// файл.
-// * -20 ErrorEmptyPost, пост не может быть пустым, необходим
-// комментарий/файл/etc.
-// * -21 ErrorPasscodeNotExist, пасскод не существует.
-// * -22 ErrorLimitReached, достигнут лимит запросов, попробуйте
-// позже.
-// * -23 ErrorFieldTooSmall, слишком короткое сообщение.
-// (используется в поиске).
-// * -50 ErrorReportTooManyPostsm, слишком много постов для жалобы.
-// * -51 ErrorReportEmpty, вы ничего не написали в жалобе.
-// * -52 ErrorReportExist, вы уже отправляли жалобу.
-// * -300 ErrorAppNotExist, приложение не существует или было
-// отключено.
-// * -301 ErrorAppIDWrong, некорректный идентификатор приложения.
-// * -302 ErrorAppIDExpired, идентификатор приложения истёк.
-// * -303 ErrorAppIDSignature, неверная подпись поста с помощью
-// идентификатора.
-// * -304 ErrorAppIDUsed, указанный идентификатор уже был
-// использован.
-// * -24 ErrorWrongStickerID, некорректный идентификатор стикера.
-// * -25 ErrorStickerNotFound, стикер не найден.
-// Ref: #/components/schemas/ErrorCode
 type ErrorCode int
 
 const (
@@ -650,44 +622,7 @@ const (
 )
 
 // AllValues returns all ErrorCode values.
-func (ErrorCode) AllValues() []ErrorCode {
-	return []ErrorCode{
-		ErrorCode0,
-		ErrorCode403,
-		ErrorCode666,
-		ErrorCode667,
-		ErrorCodeMinus2,
-		ErrorCodeMinus3,
-		ErrorCodeMinus31,
-		ErrorCodeMinus4,
-		ErrorCodeMinus41,
-		ErrorCodeMinus42,
-		ErrorCodeMinus5,
-		ErrorCodeMinus6,
-		ErrorCodeMinus7,
-		ErrorCodeMinus8,
-		ErrorCodeMinus9,
-		ErrorCodeMinus10,
-		ErrorCodeMinus11,
-		ErrorCodeMinus12,
-		ErrorCodeMinus13,
-		ErrorCodeMinus14,
-		ErrorCodeMinus15,
-		ErrorCodeMinus16,
-		ErrorCodeMinus19,
-		ErrorCodeMinus20,
-		ErrorCodeMinus21,
-		ErrorCodeMinus22,
-		ErrorCodeMinus23,
-		ErrorCodeMinus300,
-		ErrorCodeMinus301,
-		ErrorCodeMinus302,
-		ErrorCodeMinus303,
-		ErrorCodeMinus304,
-		ErrorCodeMinus24,
-		ErrorCodeMinus25,
-	}
-}
+func (ErrorCode) AllValues() []ErrorCode { _ = "STUB: not implemented"; return nil }
 
 // Модель файла.
 // Ref: #/components/schemas/File
@@ -724,196 +659,257 @@ type File struct {
 
 // GetName returns the value of Name.
 func (s *File) GetName() string {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetFullname returns the value of Fullname.
+	return ""
 }
 
-// GetFullname returns the value of Fullname.
 func (s *File) GetFullname() string {
-	return s.Fullname
+	_ = "STUB: not implemented"
+
+	// GetDisplayname returns the value of Displayname.
+	return ""
 }
 
-// GetDisplayname returns the value of Displayname.
-func (s *File) GetDisplayname() string {
-	return s.Displayname
-}
+func (s *File) GetDisplayname() string { _ = "STUB: not implemented"; return "" }
 
 // GetPath returns the value of Path.
 func (s *File) GetPath() string {
-	return s.Path
+	_ = "STUB: not implemented"
+
+	// GetThumbnail returns the value of Thumbnail.
+	return ""
 }
 
-// GetThumbnail returns the value of Thumbnail.
 func (s *File) GetThumbnail() string {
-	return s.Thumbnail
+	_ = "STUB: not implemented"
+
+	// GetMD5 returns the value of MD5.
+	return ""
 }
 
-// GetMD5 returns the value of MD5.
 func (s *File) GetMD5() OptString {
-	return s.MD5
+	_ = "STUB: not implemented"
+
+	// GetType returns the value of Type.
+	return *new(OptString)
 }
 
-// GetType returns the value of Type.
 func (s *File) GetType() FileType {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetSize returns the value of Size.
+	return *new(FileType)
 }
 
-// GetSize returns the value of Size.
 func (s *File) GetSize() int {
-	return s.Size
+	_ = "STUB: not implemented"
+
+	// GetWidth returns the value of Width.
+	return 0
 }
 
-// GetWidth returns the value of Width.
 func (s *File) GetWidth() int {
-	return s.Width
+	_ = "STUB: not implemented"
+
+	// GetHeight returns the value of Height.
+	return 0
 }
 
-// GetHeight returns the value of Height.
 func (s *File) GetHeight() int {
-	return s.Height
+	_ = "STUB: not implemented"
+
+	// GetTnWidth returns the value of TnWidth.
+	return 0
 }
 
-// GetTnWidth returns the value of TnWidth.
 func (s *File) GetTnWidth() int {
-	return s.TnWidth
+	_ = "STUB: not implemented"
+
+	// GetTnHeight returns the value of TnHeight.
+	return 0
 }
 
-// GetTnHeight returns the value of TnHeight.
 func (s *File) GetTnHeight() int {
-	return s.TnHeight
+	_ = "STUB: not implemented"
+
+	// GetNsfw returns the value of Nsfw.
+	return 0
 }
 
-// GetNsfw returns the value of Nsfw.
 func (s *File) GetNsfw() OptInt {
-	return s.Nsfw
+	_ = "STUB: not implemented"
+
+	// GetDuration returns the value of Duration.
+	return *new(OptInt)
 }
 
-// GetDuration returns the value of Duration.
 func (s *File) GetDuration() OptString {
-	return s.Duration
+	_ = "STUB: not implemented"
+
+	// GetDurationSecs returns the value of DurationSecs.
+	return *new(OptString)
 }
 
-// GetDurationSecs returns the value of DurationSecs.
 func (s *File) GetDurationSecs() OptInt {
-	return s.DurationSecs
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPack returns the value of Pack.
+	new(OptInt)
 }
 
-// GetPack returns the value of Pack.
 func (s *File) GetPack() OptString {
-	return s.Pack
+	_ = "STUB: not implemented"
+
+	// GetSticker returns the value of Sticker.
+	return *new(OptString)
 }
 
-// GetSticker returns the value of Sticker.
 func (s *File) GetSticker() OptString {
-	return s.Sticker
+	_ = "STUB: not implemented"
+
+	// GetInstall returns the value of Install.
+	return *new(OptString)
 }
 
-// GetInstall returns the value of Install.
 func (s *File) GetInstall() OptString {
-	return s.Install
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return *new(OptString)
 }
 
-// SetName sets the value of Name.
 func (s *File) SetName(val string) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetFullname sets the value of Fullname.
+	return
 }
 
-// SetFullname sets the value of Fullname.
 func (s *File) SetFullname(val string) {
-	s.Fullname = val
+	_ = "STUB: not implemented"
+
+	// SetDisplayname sets the value of Displayname.
+	return
 }
 
-// SetDisplayname sets the value of Displayname.
-func (s *File) SetDisplayname(val string) {
-	s.Displayname = val
-}
+func (s *File) SetDisplayname(val string) { _ = "STUB: not implemented"; return }
 
 // SetPath sets the value of Path.
 func (s *File) SetPath(val string) {
-	s.Path = val
+	_ = "STUB: not implemented"
+
+	// SetThumbnail sets the value of Thumbnail.
+	return
 }
 
-// SetThumbnail sets the value of Thumbnail.
 func (s *File) SetThumbnail(val string) {
-	s.Thumbnail = val
+	_ = "STUB: not implemented"
+
+	// SetMD5 sets the value of MD5.
+	return
 }
 
-// SetMD5 sets the value of MD5.
 func (s *File) SetMD5(val OptString) {
-	s.MD5 = val
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return
 }
 
-// SetType sets the value of Type.
 func (s *File) SetType(val FileType) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetSize sets the value of Size.
+	return
 }
 
-// SetSize sets the value of Size.
 func (s *File) SetSize(val int) {
-	s.Size = val
+	_ = "STUB: not implemented"
+
+	// SetWidth sets the value of Width.
+	return
 }
 
-// SetWidth sets the value of Width.
 func (s *File) SetWidth(val int) {
-	s.Width = val
+	_ = "STUB: not implemented"
+
+	// SetHeight sets the value of Height.
+	return
 }
 
-// SetHeight sets the value of Height.
 func (s *File) SetHeight(val int) {
-	s.Height = val
+	_ = "STUB: not implemented"
+
+	// SetTnWidth sets the value of TnWidth.
+	return
 }
 
-// SetTnWidth sets the value of TnWidth.
 func (s *File) SetTnWidth(val int) {
-	s.TnWidth = val
+	_ = "STUB: not implemented"
+
+	// SetTnHeight sets the value of TnHeight.
+	return
 }
 
-// SetTnHeight sets the value of TnHeight.
 func (s *File) SetTnHeight(val int) {
-	s.TnHeight = val
+	_ = "STUB: not implemented"
+
+	// SetNsfw sets the value of Nsfw.
+	return
 }
 
-// SetNsfw sets the value of Nsfw.
 func (s *File) SetNsfw(val OptInt) {
-	s.Nsfw = val
+	_ = "STUB: not implemented"
+
+	// SetDuration sets the value of Duration.
+	return
 }
 
-// SetDuration sets the value of Duration.
 func (s *File) SetDuration(val OptString) {
-	s.Duration = val
+	_ = "STUB: not implemented"
+
+	// SetDurationSecs sets the value of DurationSecs.
+	return
 }
 
-// SetDurationSecs sets the value of DurationSecs.
-func (s *File) SetDurationSecs(val OptInt) {
-	s.DurationSecs = val
-}
+func (s *File) SetDurationSecs(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetPack sets the value of Pack.
 func (s *File) SetPack(val OptString) {
-	s.Pack = val
+	_ = "STUB: not implemented"
+
+	// SetSticker sets the value of Sticker.
+	return
 }
 
-// SetSticker sets the value of Sticker.
 func (s *File) SetSticker(val OptString) {
-	s.Sticker = val
+	_ = "STUB: not implemented"
+
+	// SetInstall sets the value of Install.
+	return
 }
 
-// SetInstall sets the value of Install.
 func (s *File) SetInstall(val OptString) {
-	s.Install = val
+	_ = "STUB: not implemented"
+
+	// * 0 FileTypeNone
+	// * 1 FileTypeJpg
+	// * 2 FileTypePng
+	// * 3 FileTypeAPng
+	// * 4 FileTypeGif
+	// * 5 FileTypeBmp
+	// * 6 FileTypeWebm
+	// * 7 FileTypeMp3, не используется в данный момент.
+	// * 8 FileTypeOgg, не используется в данный момент.
+	// * 10 FileTypeMp4
+	// * 100 FileTypeSticker.
+	// Ref: #/components/schemas/FileType
+	return
 }
 
-// * 0 FileTypeNone
-// * 1 FileTypeJpg
-// * 2 FileTypePng
-// * 3 FileTypeAPng
-// * 4 FileTypeGif
-// * 5 FileTypeBmp
-// * 6 FileTypeWebm
-// * 7 FileTypeMp3, не используется в данный момент.
-// * 8 FileTypeOgg, не используется в данный момент.
-// * 10 FileTypeMp4
-// * 100 FileTypeSticker.
-// Ref: #/components/schemas/FileType
 type FileType int
 
 const (
@@ -931,21 +927,7 @@ const (
 )
 
 // AllValues returns all FileType values.
-func (FileType) AllValues() []FileType {
-	return []FileType{
-		FileType0,
-		FileType1,
-		FileType2,
-		FileType3,
-		FileType4,
-		FileType5,
-		FileType6,
-		FileType7,
-		FileType8,
-		FileType10,
-		FileType100,
-	}
-}
+func (FileType) AllValues() []FileType { _ = "STUB: not implemented"; return nil }
 
 // Ref: #/components/schemas/Like
 type Like struct {
@@ -955,25 +937,33 @@ type Like struct {
 
 // GetResult returns the value of Result.
 func (s *Like) GetResult() OptInt {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetError returns the value of Error.
+	return *new(OptInt)
 }
 
-// GetError returns the value of Error.
 func (s *Like) GetError() OptError {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return *new(OptError)
 }
 
-// SetResult sets the value of Result.
 func (s *Like) SetResult(val OptInt) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return
 }
 
-// SetError sets the value of Error.
 func (s *Like) SetError(val OptError) {
-	s.Error = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/MobilePost
+	return
 }
 
-// Ref: #/components/schemas/MobilePost
 type MobilePost struct {
 	Result OptInt   `json:"result"`
 	Error  OptError `json:"error"`
@@ -982,35 +972,47 @@ type MobilePost struct {
 
 // GetResult returns the value of Result.
 func (s *MobilePost) GetResult() OptInt {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetError returns the value of Error.
+	return *new(OptInt)
 }
 
-// GetError returns the value of Error.
 func (s *MobilePost) GetError() OptError {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// GetPost returns the value of Post.
+	return *new(OptError)
 }
 
-// GetPost returns the value of Post.
 func (s *MobilePost) GetPost() OptPost {
-	return s.Post
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return *new(OptPost)
 }
 
-// SetResult sets the value of Result.
 func (s *MobilePost) SetResult(val OptInt) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return
 }
 
-// SetError sets the value of Error.
 func (s *MobilePost) SetError(val OptError) {
-	s.Error = val
+	_ = "STUB: not implemented"
+
+	// SetPost sets the value of Post.
+	return
 }
 
-// SetPost sets the value of Post.
 func (s *MobilePost) SetPost(val OptPost) {
-	s.Post = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/MobileThreadLastInfo
+	return
 }
 
-// Ref: #/components/schemas/MobileThreadLastInfo
 type MobileThreadLastInfo struct {
 	Result OptInt                        `json:"result"`
 	Error  OptError                      `json:"error"`
@@ -1019,32 +1021,43 @@ type MobileThreadLastInfo struct {
 
 // GetResult returns the value of Result.
 func (s *MobileThreadLastInfo) GetResult() OptInt {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetError returns the value of Error.
+	return *new(OptInt)
 }
 
-// GetError returns the value of Error.
 func (s *MobileThreadLastInfo) GetError() OptError {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// GetThread returns the value of Thread.
+	return *new(OptError)
 }
 
-// GetThread returns the value of Thread.
 func (s *MobileThreadLastInfo) GetThread() OptMobileThreadLastInfoThread {
-	return s.Thread
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return *new(OptMobileThreadLastInfoThread)
 }
 
-// SetResult sets the value of Result.
 func (s *MobileThreadLastInfo) SetResult(val OptInt) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return
 }
 
-// SetError sets the value of Error.
 func (s *MobileThreadLastInfo) SetError(val OptError) {
-	s.Error = val
+	_ = "STUB: not implemented"
+
+	// SetThread sets the value of Thread.
+	return
 }
 
-// SetThread sets the value of Thread.
 func (s *MobileThreadLastInfo) SetThread(val OptMobileThreadLastInfoThread) {
-	s.Thread = val
+	_ = "STUB: not implemented"
+	return
 }
 
 type MobileThreadLastInfoThread struct {
@@ -1055,35 +1068,48 @@ type MobileThreadLastInfoThread struct {
 
 // GetNum returns the value of Num.
 func (s *MobileThreadLastInfoThread) GetNum() OptInt {
-	return s.Num
+	_ = "STUB: not implemented"
+
+	// GetTimestamp returns the value of Timestamp.
+	return *new(OptInt)
 }
 
-// GetTimestamp returns the value of Timestamp.
 func (s *MobileThreadLastInfoThread) GetTimestamp() OptInt {
-	return s.Timestamp
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPosts returns the value of Posts.
+	new(OptInt)
 }
 
-// GetPosts returns the value of Posts.
 func (s *MobileThreadLastInfoThread) GetPosts() OptInt {
-	return s.Posts
+	_ = "STUB: not implemented"
+
+	// SetNum sets the value of Num.
+	return *new(OptInt)
 }
 
-// SetNum sets the value of Num.
 func (s *MobileThreadLastInfoThread) SetNum(val OptInt) {
-	s.Num = val
+	_ = "STUB: not implemented"
+
+	// SetTimestamp sets the value of Timestamp.
+	return
 }
 
-// SetTimestamp sets the value of Timestamp.
 func (s *MobileThreadLastInfoThread) SetTimestamp(val OptInt) {
-	s.Timestamp = val
+	_ = "STUB: not implemented"
+
+	// SetPosts sets the value of Posts.
+	return
 }
 
-// SetPosts sets the value of Posts.
 func (s *MobileThreadLastInfoThread) SetPosts(val OptInt) {
-	s.Posts = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/MobileThreadPostsAfter
+	return
 }
 
-// Ref: #/components/schemas/MobileThreadPostsAfter
 type MobileThreadPostsAfter struct {
 	Result        OptInt   `json:"result"`
 	Error         OptError `json:"error"`
@@ -1093,51 +1119,59 @@ type MobileThreadPostsAfter struct {
 
 // GetResult returns the value of Result.
 func (s *MobileThreadPostsAfter) GetResult() OptInt {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetError returns the value of Error.
+	return *new(OptInt)
 }
 
-// GetError returns the value of Error.
 func (s *MobileThreadPostsAfter) GetError() OptError {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// GetUniquePosters returns the value of UniquePosters.
+	return *new(OptError)
 }
 
-// GetUniquePosters returns the value of UniquePosters.
 func (s *MobileThreadPostsAfter) GetUniquePosters() OptInt {
-	return s.UniquePosters
+	_ = "STUB: not implemented"
+	return *
+
+	// GetPosts returns the value of Posts.
+	new(OptInt)
 }
 
-// GetPosts returns the value of Posts.
 func (s *MobileThreadPostsAfter) GetPosts() []Post {
-	return s.Posts
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return nil
 }
 
-// SetResult sets the value of Result.
 func (s *MobileThreadPostsAfter) SetResult(val OptInt) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return
 }
 
-// SetError sets the value of Error.
 func (s *MobileThreadPostsAfter) SetError(val OptError) {
-	s.Error = val
+	_ = "STUB: not implemented"
+
+	// SetUniquePosters sets the value of UniquePosters.
+	return
 }
 
-// SetUniquePosters sets the value of UniquePosters.
-func (s *MobileThreadPostsAfter) SetUniquePosters(val OptInt) {
-	s.UniquePosters = val
-}
+func (s *MobileThreadPostsAfter) SetUniquePosters(val OptInt) { _ = "STUB: not implemented"; return }
 
 // SetPosts sets the value of Posts.
 func (s *MobileThreadPostsAfter) SetPosts(val []Post) {
-	s.Posts = val
+	_ = "STUB: not implemented"
+
+	// NewOptError returns new OptError with value set to v.
+	return
 }
 
-// NewOptError returns new OptError with value set to v.
-func NewOptError(v Error) OptError {
-	return OptError{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptError(v Error) OptError { _ = "STUB: not implemented"; return *new(OptError) }
 
 // OptError is optional Error.
 type OptError struct {
@@ -1146,43 +1180,28 @@ type OptError struct {
 }
 
 // IsSet returns true if OptError was set.
-func (o OptError) IsSet() bool { return o.Set }
+func (o OptError) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptError) Reset() {
-	var v Error
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptError) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptError) SetTo(v Error) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptError) SetTo(v Error) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptError) Get() (v Error, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptError) Get() (v Error, ok bool) { _ = "STUB: not implemented"; return *new(Error), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptError) Or(d Error) Error {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptError) Or(d Error) Error { _ = "STUB: not implemented"; return *new(Error) }
 
 // NewOptErrorCode returns new OptErrorCode with value set to v.
 func NewOptErrorCode(v ErrorCode) OptErrorCode {
-	return OptErrorCode{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptErrorCode)
 }
 
 // OptErrorCode is optional ErrorCode.
@@ -1192,44 +1211,29 @@ type OptErrorCode struct {
 }
 
 // IsSet returns true if OptErrorCode was set.
-func (o OptErrorCode) IsSet() bool { return o.Set }
+func (o OptErrorCode) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptErrorCode) Reset() {
-	var v ErrorCode
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptErrorCode) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptErrorCode) SetTo(v ErrorCode) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptErrorCode) SetTo(v ErrorCode) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptErrorCode) Get() (v ErrorCode, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(ErrorCode), false
 }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptErrorCode) Or(d ErrorCode) ErrorCode {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptErrorCode) Or(d ErrorCode) ErrorCode { _ = "STUB: not implemented"; return *new(ErrorCode) }
 
 // NewOptInt returns new OptInt with value set to v.
-func NewOptInt(v int) OptInt {
-	return OptInt{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptInt(v int) OptInt { _ = "STUB: not implemented"; return *new(OptInt) }
 
 // OptInt is optional int.
 type OptInt struct {
@@ -1238,43 +1242,28 @@ type OptInt struct {
 }
 
 // IsSet returns true if OptInt was set.
-func (o OptInt) IsSet() bool { return o.Set }
+func (o OptInt) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptInt) Reset() {
-	var v int
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptInt) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptInt) SetTo(v int) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptInt) SetTo(v int) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptInt) Get() (v int, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptInt) Get() (v int, ok bool) { _ = "STUB: not implemented"; return 0, false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptInt) Or(d int) int {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptInt) Or(d int) int { _ = "STUB: not implemented"; return 0 }
 
 // NewOptMobileThreadLastInfoThread returns new OptMobileThreadLastInfoThread with value set to v.
 func NewOptMobileThreadLastInfoThread(v MobileThreadLastInfoThread) OptMobileThreadLastInfoThread {
-	return OptMobileThreadLastInfoThread{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptMobileThreadLastInfoThread)
 }
 
 // OptMobileThreadLastInfoThread is optional MobileThreadLastInfoThread.
@@ -1284,43 +1273,37 @@ type OptMobileThreadLastInfoThread struct {
 }
 
 // IsSet returns true if OptMobileThreadLastInfoThread was set.
-func (o OptMobileThreadLastInfoThread) IsSet() bool { return o.Set }
+func (o OptMobileThreadLastInfoThread) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptMobileThreadLastInfoThread) Reset() {
-	var v MobileThreadLastInfoThread
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptMobileThreadLastInfoThread) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
 func (o *OptMobileThreadLastInfoThread) SetTo(v MobileThreadLastInfoThread) {
-	o.Set = true
-	o.Value = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptMobileThreadLastInfoThread) Get() (v MobileThreadLastInfoThread, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(MobileThreadLastInfoThread), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptMobileThreadLastInfoThread) Or(d MobileThreadLastInfoThread) MobileThreadLastInfoThread {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(MobileThreadLastInfoThread)
 }
 
 // NewOptPasscodePasscode returns new OptPasscodePasscode with value set to v.
 func NewOptPasscodePasscode(v PasscodePasscode) OptPasscodePasscode {
-	return OptPasscodePasscode{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptPasscodePasscode)
 }
 
 // OptPasscodePasscode is optional PasscodePasscode.
@@ -1330,44 +1313,32 @@ type OptPasscodePasscode struct {
 }
 
 // IsSet returns true if OptPasscodePasscode was set.
-func (o OptPasscodePasscode) IsSet() bool { return o.Set }
+func (o OptPasscodePasscode) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPasscodePasscode) Reset() {
-	var v PasscodePasscode
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPasscodePasscode) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPasscodePasscode) SetTo(v PasscodePasscode) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPasscodePasscode) SetTo(v PasscodePasscode) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptPasscodePasscode) Get() (v PasscodePasscode, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(PasscodePasscode), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptPasscodePasscode) Or(d PasscodePasscode) PasscodePasscode {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(PasscodePasscode)
 }
 
 // NewOptPost returns new OptPost with value set to v.
-func NewOptPost(v Post) OptPost {
-	return OptPost{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptPost(v Post) OptPost { _ = "STUB: not implemented"; return *new(OptPost) }
 
 // OptPost is optional Post.
 type OptPost struct {
@@ -1376,44 +1347,26 @@ type OptPost struct {
 }
 
 // IsSet returns true if OptPost was set.
-func (o OptPost) IsSet() bool { return o.Set }
+func (o OptPost) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptPost) Reset() {
-	var v Post
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptPost) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptPost) SetTo(v Post) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptPost) SetTo(v Post) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptPost) Get() (v Post, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptPost) Get() (v Post, ok bool) { _ = "STUB: not implemented"; return *new(Post), false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptPost) Or(d Post) Post {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptPost) Or(d Post) Post { _ = "STUB: not implemented"; return *new(Post) }
 
 // NewOptString returns new OptString with value set to v.
-func NewOptString(v string) OptString {
-	return OptString{
-		Value: v,
-		Set:   true,
-	}
-}
+func NewOptString(v string) OptString { _ = "STUB: not implemented"; return *new(OptString) }
 
 // OptString is optional string.
 type OptString struct {
@@ -1422,43 +1375,28 @@ type OptString struct {
 }
 
 // IsSet returns true if OptString was set.
-func (o OptString) IsSet() bool { return o.Set }
+func (o OptString) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptString) Reset() {
-	var v string
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptString) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptString) SetTo(v string) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptString) SetTo(v string) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
-func (o OptString) Get() (v string, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
-}
+func (o OptString) Get() (v string, ok bool) { _ = "STUB: not implemented"; return "", false }
 
 // Or returns value if set, or given parameter if does not.
-func (o OptString) Or(d string) string {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
-}
+func (o OptString) Or(d string) string { _ = "STUB: not implemented"; return "" }
 
 // NewOptUserPassloginPostReq returns new OptUserPassloginPostReq with value set to v.
 func NewOptUserPassloginPostReq(v UserPassloginPostReq) OptUserPassloginPostReq {
-	return OptUserPassloginPostReq{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptUserPassloginPostReq)
 }
 
 // OptUserPassloginPostReq is optional UserPassloginPostReq.
@@ -1468,43 +1406,34 @@ type OptUserPassloginPostReq struct {
 }
 
 // IsSet returns true if OptUserPassloginPostReq was set.
-func (o OptUserPassloginPostReq) IsSet() bool { return o.Set }
+func (o OptUserPassloginPostReq) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUserPassloginPostReq) Reset() {
-	var v UserPassloginPostReq
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUserPassloginPostReq) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUserPassloginPostReq) SetTo(v UserPassloginPostReq) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUserPassloginPostReq) SetTo(v UserPassloginPostReq) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUserPassloginPostReq) Get() (v UserPassloginPostReq, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(UserPassloginPostReq), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptUserPassloginPostReq) Or(d UserPassloginPostReq) UserPassloginPostReq {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(UserPassloginPostReq)
 }
 
 // NewOptUserPostingPostReq returns new OptUserPostingPostReq with value set to v.
 func NewOptUserPostingPostReq(v UserPostingPostReq) OptUserPostingPostReq {
-	return OptUserPostingPostReq{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptUserPostingPostReq)
 }
 
 // OptUserPostingPostReq is optional UserPostingPostReq.
@@ -1514,43 +1443,34 @@ type OptUserPostingPostReq struct {
 }
 
 // IsSet returns true if OptUserPostingPostReq was set.
-func (o OptUserPostingPostReq) IsSet() bool { return o.Set }
+func (o OptUserPostingPostReq) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUserPostingPostReq) Reset() {
-	var v UserPostingPostReq
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUserPostingPostReq) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUserPostingPostReq) SetTo(v UserPostingPostReq) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUserPostingPostReq) SetTo(v UserPostingPostReq) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUserPostingPostReq) Get() (v UserPostingPostReq, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(UserPostingPostReq), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptUserPostingPostReq) Or(d UserPostingPostReq) UserPostingPostReq {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(UserPostingPostReq)
 }
 
 // NewOptUserReportPostReq returns new OptUserReportPostReq with value set to v.
 func NewOptUserReportPostReq(v UserReportPostReq) OptUserReportPostReq {
-	return OptUserReportPostReq{
-		Value: v,
-		Set:   true,
-	}
+	_ = "STUB: not implemented"
+	return *new(OptUserReportPostReq)
 }
 
 // OptUserReportPostReq is optional UserReportPostReq.
@@ -1560,35 +1480,28 @@ type OptUserReportPostReq struct {
 }
 
 // IsSet returns true if OptUserReportPostReq was set.
-func (o OptUserReportPostReq) IsSet() bool { return o.Set }
+func (o OptUserReportPostReq) IsSet() bool {
+	_ = "STUB: not implemented"
 
-// Reset unsets value.
-func (o *OptUserReportPostReq) Reset() {
-	var v UserReportPostReq
-	o.Value = v
-	o.Set = false
+	// Reset unsets value.
+	return false
 }
+
+func (o *OptUserReportPostReq) Reset() { _ = "STUB: not implemented"; return }
 
 // SetTo sets value to v.
-func (o *OptUserReportPostReq) SetTo(v UserReportPostReq) {
-	o.Set = true
-	o.Value = v
-}
+func (o *OptUserReportPostReq) SetTo(v UserReportPostReq) { _ = "STUB: not implemented"; return }
 
 // Get returns value and boolean that denotes whether value was set.
 func (o OptUserReportPostReq) Get() (v UserReportPostReq, ok bool) {
-	if !o.Set {
-		return v, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return *new(UserReportPostReq), false
 }
 
 // Or returns value if set, or given parameter if does not.
 func (o OptUserReportPostReq) Or(d UserReportPostReq) UserReportPostReq {
-	if v, ok := o.Get(); ok {
-		return v
-	}
-	return d
+	_ = "STUB: not implemented"
+	return *new(UserReportPostReq)
 }
 
 // Ref: #/components/schemas/Passcode
@@ -1600,33 +1513,41 @@ type Passcode struct {
 
 // GetResult returns the value of Result.
 func (s *Passcode) GetResult() OptInt {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetError returns the value of Error.
+	return *new(OptInt)
 }
 
-// GetError returns the value of Error.
 func (s *Passcode) GetError() OptError {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// GetPasscode returns the value of Passcode.
+	return *new(OptError)
 }
 
-// GetPasscode returns the value of Passcode.
 func (s *Passcode) GetPasscode() OptPasscodePasscode {
-	return s.Passcode
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return *new(OptPasscodePasscode)
 }
 
-// SetResult sets the value of Result.
 func (s *Passcode) SetResult(val OptInt) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return
 }
 
-// SetError sets the value of Error.
 func (s *Passcode) SetError(val OptError) {
-	s.Error = val
+	_ = "STUB: not implemented"
+
+	// SetPasscode sets the value of Passcode.
+	return
 }
 
-// SetPasscode sets the value of Passcode.
-func (s *Passcode) SetPasscode(val OptPasscodePasscode) {
-	s.Passcode = val
-}
+func (s *Passcode) SetPasscode(val OptPasscodePasscode) { _ = "STUB: not implemented"; return }
 
 type PasscodePasscode struct {
 	Type    OptString `json:"type"`
@@ -1635,26 +1556,34 @@ type PasscodePasscode struct {
 
 // GetType returns the value of Type.
 func (s *PasscodePasscode) GetType() OptString {
-	return s.Type
+	_ = "STUB: not implemented"
+
+	// GetExpires returns the value of Expires.
+	return *new(OptString)
 }
 
-// GetExpires returns the value of Expires.
 func (s *PasscodePasscode) GetExpires() OptInt {
-	return s.Expires
+	_ = "STUB: not implemented"
+
+	// SetType sets the value of Type.
+	return *new(OptInt)
 }
 
-// SetType sets the value of Type.
 func (s *PasscodePasscode) SetType(val OptString) {
-	s.Type = val
+	_ = "STUB: not implemented"
+
+	// SetExpires sets the value of Expires.
+	return
 }
 
-// SetExpires sets the value of Expires.
 func (s *PasscodePasscode) SetExpires(val OptInt) {
-	s.Expires = val
+	_ = "STUB: not implemented"
+
+	// Модель поста.
+	// Ref: #/components/schemas/Post
+	return
 }
 
-// Модель поста.
-// Ref: #/components/schemas/Post
 type Post struct {
 	Num       int       `json:"num"`
 	Parent    int       `json:"parent"`
@@ -1683,235 +1612,327 @@ type Post struct {
 
 // GetNum returns the value of Num.
 func (s *Post) GetNum() int {
-	return s.Num
+	_ = "STUB: not implemented"
+
+	// GetParent returns the value of Parent.
+	return 0
 }
 
-// GetParent returns the value of Parent.
 func (s *Post) GetParent() int {
-	return s.Parent
+	_ = "STUB: not implemented"
+
+	// GetBoard returns the value of Board.
+	return 0
 }
 
-// GetBoard returns the value of Board.
 func (s *Post) GetBoard() string {
-	return s.Board
+	_ = "STUB: not implemented"
+
+	// GetTimestamp returns the value of Timestamp.
+	return ""
 }
 
-// GetTimestamp returns the value of Timestamp.
 func (s *Post) GetTimestamp() int {
-	return s.Timestamp
+	_ = "STUB: not implemented"
+
+	// GetLasthit returns the value of Lasthit.
+	return 0
 }
 
-// GetLasthit returns the value of Lasthit.
 func (s *Post) GetLasthit() int {
-	return s.Lasthit
+	_ = "STUB: not implemented"
+
+	// GetDate returns the value of Date.
+	return 0
 }
 
-// GetDate returns the value of Date.
 func (s *Post) GetDate() string {
-	return s.Date
+	_ = "STUB: not implemented"
+
+	// GetEmail returns the value of Email.
+	return ""
 }
 
-// GetEmail returns the value of Email.
 func (s *Post) GetEmail() OptString {
-	return s.Email
+	_ = "STUB: not implemented"
+
+	// GetSubject returns the value of Subject.
+	return *new(OptString)
 }
 
-// GetSubject returns the value of Subject.
 func (s *Post) GetSubject() OptString {
-	return s.Subject
+	_ = "STUB: not implemented"
+
+	// GetComment returns the value of Comment.
+	return *new(OptString)
 }
 
-// GetComment returns the value of Comment.
 func (s *Post) GetComment() string {
-	return s.Comment
+	_ = "STUB: not implemented"
+
+	// GetFiles returns the value of Files.
+	return ""
 }
 
-// GetFiles returns the value of Files.
 func (s *Post) GetFiles() []File {
-	return s.Files
+	_ = "STUB: not implemented"
+
+	// GetViews returns the value of Views.
+	return nil
 }
 
-// GetViews returns the value of Views.
 func (s *Post) GetViews() int {
-	return s.Views
+	_ = "STUB: not implemented"
+
+	// GetSticky returns the value of Sticky.
+	return 0
 }
 
-// GetSticky returns the value of Sticky.
 func (s *Post) GetSticky() int {
-	return s.Sticky
+	_ = "STUB: not implemented"
+
+	// GetEndless returns the value of Endless.
+	return 0
 }
 
-// GetEndless returns the value of Endless.
 func (s *Post) GetEndless() int {
-	return s.Endless
+	_ = "STUB: not implemented"
+
+	// GetClosed returns the value of Closed.
+	return 0
 }
 
-// GetClosed returns the value of Closed.
 func (s *Post) GetClosed() int {
-	return s.Closed
+	_ = "STUB: not implemented"
+
+	// GetBanned returns the value of Banned.
+	return 0
 }
 
-// GetBanned returns the value of Banned.
 func (s *Post) GetBanned() int {
-	return s.Banned
+	_ = "STUB: not implemented"
+
+	// GetOp returns the value of Op.
+	return 0
 }
 
-// GetOp returns the value of Op.
 func (s *Post) GetOp() int {
-	return s.Op
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return 0
 }
 
-// GetName returns the value of Name.
 func (s *Post) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetIcon returns the value of Icon.
+	return *new(OptString)
 }
 
-// GetIcon returns the value of Icon.
 func (s *Post) GetIcon() OptString {
-	return s.Icon
+	_ = "STUB: not implemented"
+
+	// GetTrip returns the value of Trip.
+	return *new(OptString)
 }
 
-// GetTrip returns the value of Trip.
 func (s *Post) GetTrip() OptString {
-	return s.Trip
+	_ = "STUB: not implemented"
+
+	// GetTripStyle returns the value of TripStyle.
+	return *new(OptString)
 }
 
-// GetTripStyle returns the value of TripStyle.
 func (s *Post) GetTripStyle() OptString {
-	return s.TripStyle
+	_ = "STUB: not implemented"
+
+	// GetTags returns the value of Tags.
+	return *new(OptString)
 }
 
-// GetTags returns the value of Tags.
 func (s *Post) GetTags() OptString {
-	return s.Tags
+	_ = "STUB: not implemented"
+
+	// GetLikes returns the value of Likes.
+	return *new(OptString)
 }
 
-// GetLikes returns the value of Likes.
 func (s *Post) GetLikes() OptInt {
-	return s.Likes
+	_ = "STUB: not implemented"
+
+	// GetDislikes returns the value of Dislikes.
+	return *new(OptInt)
 }
 
-// GetDislikes returns the value of Dislikes.
 func (s *Post) GetDislikes() OptInt {
-	return s.Dislikes
+	_ = "STUB: not implemented"
+
+	// SetNum sets the value of Num.
+	return *new(OptInt)
 }
 
-// SetNum sets the value of Num.
 func (s *Post) SetNum(val int) {
-	s.Num = val
+	_ = "STUB: not implemented"
+
+	// SetParent sets the value of Parent.
+	return
 }
 
-// SetParent sets the value of Parent.
 func (s *Post) SetParent(val int) {
-	s.Parent = val
+	_ = "STUB: not implemented"
+
+	// SetBoard sets the value of Board.
+	return
 }
 
-// SetBoard sets the value of Board.
 func (s *Post) SetBoard(val string) {
-	s.Board = val
+	_ = "STUB: not implemented"
+
+	// SetTimestamp sets the value of Timestamp.
+	return
 }
 
-// SetTimestamp sets the value of Timestamp.
 func (s *Post) SetTimestamp(val int) {
-	s.Timestamp = val
+	_ = "STUB: not implemented"
+
+	// SetLasthit sets the value of Lasthit.
+	return
 }
 
-// SetLasthit sets the value of Lasthit.
 func (s *Post) SetLasthit(val int) {
-	s.Lasthit = val
+	_ = "STUB: not implemented"
+
+	// SetDate sets the value of Date.
+	return
 }
 
-// SetDate sets the value of Date.
 func (s *Post) SetDate(val string) {
-	s.Date = val
+	_ = "STUB: not implemented"
+
+	// SetEmail sets the value of Email.
+	return
 }
 
-// SetEmail sets the value of Email.
 func (s *Post) SetEmail(val OptString) {
-	s.Email = val
+	_ = "STUB: not implemented"
+
+	// SetSubject sets the value of Subject.
+	return
 }
 
-// SetSubject sets the value of Subject.
 func (s *Post) SetSubject(val OptString) {
-	s.Subject = val
+	_ = "STUB: not implemented"
+
+	// SetComment sets the value of Comment.
+	return
 }
 
-// SetComment sets the value of Comment.
 func (s *Post) SetComment(val string) {
-	s.Comment = val
+	_ = "STUB: not implemented"
+
+	// SetFiles sets the value of Files.
+	return
 }
 
-// SetFiles sets the value of Files.
 func (s *Post) SetFiles(val []File) {
-	s.Files = val
+	_ = "STUB: not implemented"
+
+	// SetViews sets the value of Views.
+	return
 }
 
-// SetViews sets the value of Views.
 func (s *Post) SetViews(val int) {
-	s.Views = val
+	_ = "STUB: not implemented"
+
+	// SetSticky sets the value of Sticky.
+	return
 }
 
-// SetSticky sets the value of Sticky.
 func (s *Post) SetSticky(val int) {
-	s.Sticky = val
+	_ = "STUB: not implemented"
+
+	// SetEndless sets the value of Endless.
+	return
 }
 
-// SetEndless sets the value of Endless.
 func (s *Post) SetEndless(val int) {
-	s.Endless = val
+	_ = "STUB: not implemented"
+
+	// SetClosed sets the value of Closed.
+	return
 }
 
-// SetClosed sets the value of Closed.
 func (s *Post) SetClosed(val int) {
-	s.Closed = val
+	_ = "STUB: not implemented"
+
+	// SetBanned sets the value of Banned.
+	return
 }
 
-// SetBanned sets the value of Banned.
 func (s *Post) SetBanned(val int) {
-	s.Banned = val
+	_ = "STUB: not implemented"
+
+	// SetOp sets the value of Op.
+	return
 }
 
-// SetOp sets the value of Op.
 func (s *Post) SetOp(val int) {
-	s.Op = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *Post) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetIcon sets the value of Icon.
+	return
 }
 
-// SetIcon sets the value of Icon.
 func (s *Post) SetIcon(val OptString) {
-	s.Icon = val
+	_ = "STUB: not implemented"
+
+	// SetTrip sets the value of Trip.
+	return
 }
 
-// SetTrip sets the value of Trip.
 func (s *Post) SetTrip(val OptString) {
-	s.Trip = val
+	_ = "STUB: not implemented"
+
+	// SetTripStyle sets the value of TripStyle.
+	return
 }
 
-// SetTripStyle sets the value of TripStyle.
 func (s *Post) SetTripStyle(val OptString) {
-	s.TripStyle = val
+	_ = "STUB: not implemented"
+
+	// SetTags sets the value of Tags.
+	return
 }
 
-// SetTags sets the value of Tags.
 func (s *Post) SetTags(val OptString) {
-	s.Tags = val
+	_ = "STUB: not implemented"
+
+	// SetLikes sets the value of Likes.
+	return
 }
 
-// SetLikes sets the value of Likes.
 func (s *Post) SetLikes(val OptInt) {
-	s.Likes = val
+	_ = "STUB: not implemented"
+
+	// SetDislikes sets the value of Dislikes.
+	return
 }
 
-// SetDislikes sets the value of Dislikes.
 func (s *Post) SetDislikes(val OptInt) {
-	s.Dislikes = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PostingNewPost
+	return
 }
 
-// Ref: #/components/schemas/PostingNewPost
 type PostingNewPost struct {
 	Result OptInt   `json:"result"`
 	Error  OptError `json:"error"`
@@ -1921,35 +1942,47 @@ type PostingNewPost struct {
 
 // GetResult returns the value of Result.
 func (s *PostingNewPost) GetResult() OptInt {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetError returns the value of Error.
+	return *new(OptInt)
 }
 
-// GetError returns the value of Error.
 func (s *PostingNewPost) GetError() OptError {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// GetNum returns the value of Num.
+	return *new(OptError)
 }
 
-// GetNum returns the value of Num.
 func (s *PostingNewPost) GetNum() OptInt {
-	return s.Num
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return *new(OptInt)
 }
 
-// SetResult sets the value of Result.
 func (s *PostingNewPost) SetResult(val OptInt) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return
 }
 
-// SetError sets the value of Error.
 func (s *PostingNewPost) SetError(val OptError) {
-	s.Error = val
+	_ = "STUB: not implemented"
+
+	// SetNum sets the value of Num.
+	return
 }
 
-// SetNum sets the value of Num.
 func (s *PostingNewPost) SetNum(val OptInt) {
-	s.Num = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/PostingNewThread
+	return
 }
 
-// Ref: #/components/schemas/PostingNewThread
 type PostingNewThread struct {
 	Result OptInt   `json:"result"`
 	Error  OptError `json:"error"`
@@ -1959,35 +1992,47 @@ type PostingNewThread struct {
 
 // GetResult returns the value of Result.
 func (s *PostingNewThread) GetResult() OptInt {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetError returns the value of Error.
+	return *new(OptInt)
 }
 
-// GetError returns the value of Error.
 func (s *PostingNewThread) GetError() OptError {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// GetThread returns the value of Thread.
+	return *new(OptError)
 }
 
-// GetThread returns the value of Thread.
 func (s *PostingNewThread) GetThread() OptInt {
-	return s.Thread
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return *new(OptInt)
 }
 
-// SetResult sets the value of Result.
 func (s *PostingNewThread) SetResult(val OptInt) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return
 }
 
-// SetError sets the value of Error.
 func (s *PostingNewThread) SetError(val OptError) {
-	s.Error = val
+	_ = "STUB: not implemented"
+
+	// SetThread sets the value of Thread.
+	return
 }
 
-// SetThread sets the value of Thread.
 func (s *PostingNewThread) SetThread(val OptInt) {
-	s.Thread = val
+	_ = "STUB: not implemented"
+
+	// Ref: #/components/schemas/Report
+	return
 }
 
-// Ref: #/components/schemas/Report
 type Report struct {
 	Result OptInt   `json:"result"`
 	Error  OptError `json:"error"`
@@ -1995,23 +2040,27 @@ type Report struct {
 
 // GetResult returns the value of Result.
 func (s *Report) GetResult() OptInt {
-	return s.Result
+	_ = "STUB: not implemented"
+
+	// GetError returns the value of Error.
+	return *new(OptInt)
 }
 
-// GetError returns the value of Error.
 func (s *Report) GetError() OptError {
-	return s.Error
+	_ = "STUB: not implemented"
+
+	// SetResult sets the value of Result.
+	return *new(OptError)
 }
 
-// SetResult sets the value of Result.
 func (s *Report) SetResult(val OptInt) {
-	s.Result = val
+	_ = "STUB: not implemented"
+
+	// SetError sets the value of Error.
+	return
 }
 
-// SetError sets the value of Error.
-func (s *Report) SetError(val OptError) {
-	s.Error = val
-}
+func (s *Report) SetError(val OptError) { _ = "STUB: not implemented"; return }
 
 type UserPassloginPostReq struct {
 	Passcode string `json:"passcode"`
@@ -2019,15 +2068,19 @@ type UserPassloginPostReq struct {
 
 // GetPasscode returns the value of Passcode.
 func (s *UserPassloginPostReq) GetPasscode() string {
-	return s.Passcode
+	_ = "STUB: not implemented"
+
+	// SetPasscode sets the value of Passcode.
+	return ""
 }
 
-// SetPasscode sets the value of Passcode.
 func (s *UserPassloginPostReq) SetPasscode(val string) {
-	s.Passcode = val
+	_ = "STUB: not implemented"
+
+	// UserPostingPostOK represents sum type.
+	return
 }
 
-// UserPostingPostOK represents sum type.
 type UserPostingPostOK struct {
 	Type             UserPostingPostOKType // switch on this field
 	PostingNewThread PostingNewThread
@@ -2044,53 +2097,42 @@ const (
 )
 
 // IsPostingNewThread reports whether UserPostingPostOK is PostingNewThread.
-func (s UserPostingPostOK) IsPostingNewThread() bool {
-	return s.Type == PostingNewThreadUserPostingPostOK
-}
+func (s UserPostingPostOK) IsPostingNewThread() bool { _ = "STUB: not implemented"; return false }
 
 // IsPostingNewPost reports whether UserPostingPostOK is PostingNewPost.
-func (s UserPostingPostOK) IsPostingNewPost() bool { return s.Type == PostingNewPostUserPostingPostOK }
+func (s UserPostingPostOK) IsPostingNewPost() bool { _ = "STUB: not implemented"; return false }
 
 // SetPostingNewThread sets UserPostingPostOK to PostingNewThread.
 func (s *UserPostingPostOK) SetPostingNewThread(v PostingNewThread) {
-	s.Type = PostingNewThreadUserPostingPostOK
-	s.PostingNewThread = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPostingNewThread returns PostingNewThread and true boolean if UserPostingPostOK is PostingNewThread.
 func (s UserPostingPostOK) GetPostingNewThread() (v PostingNewThread, ok bool) {
-	if !s.IsPostingNewThread() {
-		return v, false
-	}
-	return s.PostingNewThread, true
+	_ = "STUB: not implemented"
+	return *new(PostingNewThread), false
 }
 
 // NewPostingNewThreadUserPostingPostOK returns new UserPostingPostOK from PostingNewThread.
 func NewPostingNewThreadUserPostingPostOK(v PostingNewThread) UserPostingPostOK {
-	var s UserPostingPostOK
-	s.SetPostingNewThread(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(UserPostingPostOK)
 }
 
 // SetPostingNewPost sets UserPostingPostOK to PostingNewPost.
-func (s *UserPostingPostOK) SetPostingNewPost(v PostingNewPost) {
-	s.Type = PostingNewPostUserPostingPostOK
-	s.PostingNewPost = v
-}
+func (s *UserPostingPostOK) SetPostingNewPost(v PostingNewPost) { _ = "STUB: not implemented"; return }
 
 // GetPostingNewPost returns PostingNewPost and true boolean if UserPostingPostOK is PostingNewPost.
 func (s UserPostingPostOK) GetPostingNewPost() (v PostingNewPost, ok bool) {
-	if !s.IsPostingNewPost() {
-		return v, false
-	}
-	return s.PostingNewPost, true
+	_ = "STUB: not implemented"
+	return *new(PostingNewPost), false
 }
 
 // NewPostingNewPostUserPostingPostOK returns new UserPostingPostOK from PostingNewPost.
 func NewPostingNewPostUserPostingPostOK(v PostingNewPost) UserPostingPostOK {
-	var s UserPostingPostOK
-	s.SetPostingNewPost(v)
-	return s
+	_ = "STUB: not implemented"
+	return *new(UserPostingPostOK)
 }
 
 type UserPostingPostReq struct {
@@ -2120,113 +2162,150 @@ type UserPostingPostReq struct {
 
 // GetCaptchaType returns the value of CaptchaType.
 func (s *UserPostingPostReq) GetCaptchaType() CaptchaType {
-	return s.CaptchaType
+	_ = "STUB: not implemented"
+	return *
+
+	// GetBoard returns the value of Board.
+	new(CaptchaType)
 }
 
-// GetBoard returns the value of Board.
 func (s *UserPostingPostReq) GetBoard() string {
-	return s.Board
+	_ = "STUB: not implemented"
+
+	// GetThread returns the value of Thread.
+	return ""
 }
 
-// GetThread returns the value of Thread.
 func (s *UserPostingPostReq) GetThread() OptInt {
-	return s.Thread
+	_ = "STUB: not implemented"
+
+	// GetName returns the value of Name.
+	return *new(OptInt)
 }
 
-// GetName returns the value of Name.
 func (s *UserPostingPostReq) GetName() OptString {
-	return s.Name
+	_ = "STUB: not implemented"
+
+	// GetEmail returns the value of Email.
+	return *new(OptString)
 }
 
-// GetEmail returns the value of Email.
 func (s *UserPostingPostReq) GetEmail() OptString {
-	return s.Email
+	_ = "STUB: not implemented"
+
+	// GetTags returns the value of Tags.
+	return *new(OptString)
 }
 
-// GetTags returns the value of Tags.
 func (s *UserPostingPostReq) GetTags() OptString {
-	return s.Tags
+	_ = "STUB: not implemented"
+
+	// GetSubject returns the value of Subject.
+	return *new(OptString)
 }
 
-// GetSubject returns the value of Subject.
 func (s *UserPostingPostReq) GetSubject() OptString {
-	return s.Subject
+	_ = "STUB: not implemented"
+
+	// GetComment returns the value of Comment.
+	return *new(OptString)
 }
 
-// GetComment returns the value of Comment.
 func (s *UserPostingPostReq) GetComment() OptString {
-	return s.Comment
+	_ = "STUB: not implemented"
+
+	// GetIcon returns the value of Icon.
+	return *new(OptString)
 }
 
-// GetIcon returns the value of Icon.
 func (s *UserPostingPostReq) GetIcon() OptInt {
-	return s.Icon
+	_ = "STUB: not implemented"
+
+	// GetOpMark returns the value of OpMark.
+	return *new(OptInt)
 }
 
-// GetOpMark returns the value of OpMark.
 func (s *UserPostingPostReq) GetOpMark() OptInt {
-	return s.OpMark
+	_ = "STUB: not implemented"
+
+	// GetFile returns the value of File.
+	return *new(OptInt)
 }
 
-// GetFile returns the value of File.
 func (s *UserPostingPostReq) GetFile() []ht.MultipartFile {
-	return s.File
+	_ = "STUB: not implemented"
+
+	// SetCaptchaType sets the value of CaptchaType.
+	return nil
 }
 
-// SetCaptchaType sets the value of CaptchaType.
-func (s *UserPostingPostReq) SetCaptchaType(val CaptchaType) {
-	s.CaptchaType = val
-}
+func (s *UserPostingPostReq) SetCaptchaType(val CaptchaType) { _ = "STUB: not implemented"; return }
 
 // SetBoard sets the value of Board.
 func (s *UserPostingPostReq) SetBoard(val string) {
-	s.Board = val
+	_ = "STUB: not implemented"
+
+	// SetThread sets the value of Thread.
+	return
 }
 
-// SetThread sets the value of Thread.
 func (s *UserPostingPostReq) SetThread(val OptInt) {
-	s.Thread = val
+	_ = "STUB: not implemented"
+
+	// SetName sets the value of Name.
+	return
 }
 
-// SetName sets the value of Name.
 func (s *UserPostingPostReq) SetName(val OptString) {
-	s.Name = val
+	_ = "STUB: not implemented"
+
+	// SetEmail sets the value of Email.
+	return
 }
 
-// SetEmail sets the value of Email.
 func (s *UserPostingPostReq) SetEmail(val OptString) {
-	s.Email = val
+	_ = "STUB: not implemented"
+
+	// SetTags sets the value of Tags.
+	return
 }
 
-// SetTags sets the value of Tags.
 func (s *UserPostingPostReq) SetTags(val OptString) {
-	s.Tags = val
+	_ = "STUB: not implemented"
+
+	// SetSubject sets the value of Subject.
+	return
 }
 
-// SetSubject sets the value of Subject.
 func (s *UserPostingPostReq) SetSubject(val OptString) {
-	s.Subject = val
+	_ = "STUB: not implemented"
+
+	// SetComment sets the value of Comment.
+	return
 }
 
-// SetComment sets the value of Comment.
 func (s *UserPostingPostReq) SetComment(val OptString) {
-	s.Comment = val
+	_ = "STUB: not implemented"
+
+	// SetIcon sets the value of Icon.
+	return
 }
 
-// SetIcon sets the value of Icon.
 func (s *UserPostingPostReq) SetIcon(val OptInt) {
-	s.Icon = val
+	_ = "STUB: not implemented"
+
+	// SetOpMark sets the value of OpMark.
+	return
 }
 
-// SetOpMark sets the value of OpMark.
 func (s *UserPostingPostReq) SetOpMark(val OptInt) {
-	s.OpMark = val
+	_ = "STUB: not implemented"
+
+	// SetFile sets the value of File.
+	return
 }
 
-// SetFile sets the value of File.
-func (s *UserPostingPostReq) SetFile(val []ht.MultipartFile) {
-	s.File = val
-}
+func (s *UserPostingPostReq) SetFile(val []ht.MultipartFile) { _ = "STUB: not implemented"; return }
 
 type UserReportPostReq struct {
 	Board   string `json:"board"`
@@ -2237,40 +2316,52 @@ type UserReportPostReq struct {
 
 // GetBoard returns the value of Board.
 func (s *UserReportPostReq) GetBoard() string {
-	return s.Board
+	_ = "STUB: not implemented"
+
+	// GetThread returns the value of Thread.
+	return ""
 }
 
-// GetThread returns the value of Thread.
 func (s *UserReportPostReq) GetThread() int {
-	return s.Thread
+	_ = "STUB: not implemented"
+
+	// GetPost returns the value of Post.
+	return 0
 }
 
-// GetPost returns the value of Post.
 func (s *UserReportPostReq) GetPost() []int {
-	return s.Post
+	_ = "STUB: not implemented"
+
+	// GetComment returns the value of Comment.
+	return nil
 }
 
-// GetComment returns the value of Comment.
 func (s *UserReportPostReq) GetComment() string {
-	return s.Comment
+	_ = "STUB: not implemented"
+
+	// SetBoard sets the value of Board.
+	return ""
 }
 
-// SetBoard sets the value of Board.
 func (s *UserReportPostReq) SetBoard(val string) {
-	s.Board = val
+	_ = "STUB: not implemented"
+
+	// SetThread sets the value of Thread.
+	return
 }
 
-// SetThread sets the value of Thread.
 func (s *UserReportPostReq) SetThread(val int) {
-	s.Thread = val
+	_ = "STUB: not implemented"
+
+	// SetPost sets the value of Post.
+	return
 }
 
-// SetPost sets the value of Post.
 func (s *UserReportPostReq) SetPost(val []int) {
-	s.Post = val
+	_ = "STUB: not implemented"
+
+	// SetComment sets the value of Comment.
+	return
 }
 
-// SetComment sets the value of Comment.
-func (s *UserReportPostReq) SetComment(val string) {
-	s.Comment = val
-}
+func (s *UserReportPostReq) SetComment(val string) { _ = "STUB: not implemented"; return }

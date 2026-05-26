@@ -2,38609 +2,6751 @@
 
 package api
 
-import (
-	"fmt"
-	"net/url"
-	"time"
-
-	"github.com/go-faster/jx"
-)
+// SetFake set fake values.
+func (s *APIOverview) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *APIOverview) SetFake() {
-	{
-		{
-			s.VerifiablePasswordAuthentication = true
-		}
-	}
-	{
-		{
-			s.SSHKeyFingerprints.SetFake()
-		}
-	}
-	{
-		{
-			s.Hooks = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Hooks = append(s.Hooks, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Web = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Web = append(s.Web, elem)
-			}
-		}
-	}
-	{
-		{
-			s.API = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.API = append(s.API, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Git = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Git = append(s.Git, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Packages = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Packages = append(s.Packages, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Pages = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Pages = append(s.Pages, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Importer = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Importer = append(s.Importer, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Actions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Actions = append(s.Actions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Dependabot = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Dependabot = append(s.Dependabot, elem)
-			}
-		}
-	}
-}
-
-// SetFake set fake values.
-func (s *APIOverviewSSHKeyFingerprints) SetFake() {
-	{
-		{
-			s.SHA256RSA.SetFake()
-		}
-	}
-	{
-		{
-			s.SHA256DSA.SetFake()
-		}
-	}
-	{
-		{
-			s.SHA256ECDSA.SetFake()
-		}
-	}
-	{
-		{
-			s.SHA256ED25519.SetFake()
-		}
-	}
-}
+func (s *APIOverviewSSHKeyFingerprints) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *Accepted) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *ActionsApproveWorkflowRunForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActionsApproveWorkflowRunForbidden(unwrapped)
-}
+func (s *ActionsApproveWorkflowRunForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsApproveWorkflowRunNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActionsApproveWorkflowRunNotFound(unwrapped)
-}
+func (s *ActionsApproveWorkflowRunNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsBillingUsage) SetFake() {
-	{
-		{
-			s.TotalMinutesUsed = int(0)
-		}
-	}
-	{
-		{
-			s.TotalPaidMinutesUsed = int(0)
-		}
-	}
-	{
-		{
-			s.IncludedMinutes = int(0)
-		}
-	}
-	{
-		{
-			s.MinutesUsedBreakdown.SetFake()
-		}
-	}
-}
+func (s *ActionsBillingUsage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsBillingUsageMinutesUsedBreakdown) SetFake() {
-	{
-		{
-			s.UBUNTU.SetFake()
-		}
-	}
-	{
-		{
-			s.MACOS.SetFake()
-		}
-	}
-	{
-		{
-			s.WINDOWS.SetFake()
-		}
-	}
-}
+func (s *ActionsBillingUsageMinutesUsedBreakdown) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsCancelWorkflowRunAccepted) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *ActionsCreateOrUpdateEnvironmentSecretReq) SetFake() {
-	{
-		{
-			s.EncryptedValue = "string"
-		}
-	}
-	{
-		{
-			s.KeyID = "string"
-		}
-	}
-}
+func (s *ActionsCreateOrUpdateEnvironmentSecretReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsCreateOrUpdateOrgSecretReq) SetFake() {
-	{
-		{
-			s.EncryptedValue.SetFake()
-		}
-	}
-	{
-		{
-			s.KeyID.SetFake()
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.SelectedRepositoryIds = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.SelectedRepositoryIds = append(s.SelectedRepositoryIds, elem)
-			}
-		}
-	}
-}
+func (s *ActionsCreateOrUpdateOrgSecretReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsCreateOrUpdateOrgSecretReqVisibility) SetFake() {
-	*s = ActionsCreateOrUpdateOrgSecretReqVisibilityAll
-}
+func (s *ActionsCreateOrUpdateOrgSecretReqVisibility) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsCreateOrUpdateRepoSecretCreated) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *ActionsCreateOrUpdateRepoSecretReq) SetFake() {
-	{
-		{
-			s.EncryptedValue.SetFake()
-		}
-	}
-	{
-		{
-			s.KeyID.SetFake()
-		}
-	}
-}
+func (s *ActionsCreateOrUpdateRepoSecretReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsCreateSelfHostedRunnerGroupForOrgReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.SelectedRepositoryIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.SelectedRepositoryIds = append(s.SelectedRepositoryIds, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Runners = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Runners = append(s.Runners, elem)
-			}
-		}
-	}
-}
+func (s *ActionsCreateSelfHostedRunnerGroupForOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsCreateSelfHostedRunnerGroupForOrgReqVisibility) SetFake() {
-	*s = ActionsCreateSelfHostedRunnerGroupForOrgReqVisibilitySelected
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActionsCreateWorkflowDispatchReq) SetFake() {
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.Inputs.SetFake()
-		}
-	}
-}
+func (s *ActionsCreateWorkflowDispatchReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsCreateWorkflowDispatchReqInputs) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *ActionsCreateWorkflowDispatchReqInputs) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsEnabled) SetFake() {
-	var unwrapped bool
-	{
-		unwrapped = true
-	}
-	*s = ActionsEnabled(unwrapped)
-}
+func (s *ActionsEnabled) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsEnterprisePermissions) SetFake() {
-	{
-		{
-			s.EnabledOrganizations.SetFake()
-		}
-	}
-	{
-		{
-			s.SelectedOrganizationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedActions.SetFake()
-		}
-	}
-	{
-		{
-			s.SelectedActionsURL.SetFake()
-		}
-	}
-}
+func (s *ActionsEnterprisePermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListArtifactsForRepoOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Artifacts = nil
-			for i := 0; i < 0; i++ {
-				var elem Artifact
-				{
-					elem.SetFake()
-				}
-				s.Artifacts = append(s.Artifacts, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListArtifactsForRepoOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListEnvironmentSecretsOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Secrets = nil
-			for i := 0; i < 0; i++ {
-				var elem ActionsSecret
-				{
-					elem.SetFake()
-				}
-				s.Secrets = append(s.Secrets, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListEnvironmentSecretsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListJobsForWorkflowRunOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Jobs = nil
-			for i := 0; i < 0; i++ {
-				var elem Job
-				{
-					elem.SetFake()
-				}
-				s.Jobs = append(s.Jobs, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListJobsForWorkflowRunOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListOrgSecretsOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Secrets = nil
-			for i := 0; i < 0; i++ {
-				var elem OrganizationActionsSecret
-				{
-					elem.SetFake()
-				}
-				s.Secrets = append(s.Secrets, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListOrgSecretsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsListRepoAccessToSelfHostedRunnerGroupInOrgOK) SetFake() {
-	{
-		{
-			s.TotalCount = float64(0)
-		}
-	}
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem MinimalRepository
-				{
-					elem.SetFake()
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActionsListRepoSecretsOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Secrets = nil
-			for i := 0; i < 0; i++ {
-				var elem ActionsSecret
-				{
-					elem.SetFake()
-				}
-				s.Secrets = append(s.Secrets, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListRepoSecretsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListRepoWorkflowsOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Workflows = nil
-			for i := 0; i < 0; i++ {
-				var elem Workflow
-				{
-					elem.SetFake()
-				}
-				s.Workflows = append(s.Workflows, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListRepoWorkflowsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListSelectedReposForOrgSecretOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem MinimalRepository
-				{
-					elem.SetFake()
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListSelectedReposForOrgSecretOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationOK) SetFake() {
-	{
-		{
-			s.TotalCount = float64(0)
-		}
-	}
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem Repository
-				{
-					elem.SetFake()
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActionsListSelfHostedRunnerGroupsForOrgOK) SetFake() {
-	{
-		{
-			s.TotalCount = float64(0)
-		}
-	}
-	{
-		{
-			s.RunnerGroups = nil
-			for i := 0; i < 0; i++ {
-				var elem RunnerGroupsOrg
-				{
-					elem.SetFake()
-				}
-				s.RunnerGroups = append(s.RunnerGroups, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListSelfHostedRunnerGroupsForOrgOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListSelfHostedRunnersForOrgOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Runners = nil
-			for i := 0; i < 0; i++ {
-				var elem Runner
-				{
-					elem.SetFake()
-				}
-				s.Runners = append(s.Runners, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListSelfHostedRunnersForOrgOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListSelfHostedRunnersForRepoOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Runners = nil
-			for i := 0; i < 0; i++ {
-				var elem Runner
-				{
-					elem.SetFake()
-				}
-				s.Runners = append(s.Runners, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListSelfHostedRunnersForRepoOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListSelfHostedRunnersInGroupForOrgOK) SetFake() {
-	{
-		{
-			s.TotalCount = float64(0)
-		}
-	}
-	{
-		{
-			s.Runners = nil
-			for i := 0; i < 0; i++ {
-				var elem Runner
-				{
-					elem.SetFake()
-				}
-				s.Runners = append(s.Runners, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListSelfHostedRunnersInGroupForOrgOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListWorkflowRunArtifactsOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Artifacts = nil
-			for i := 0; i < 0; i++ {
-				var elem Artifact
-				{
-					elem.SetFake()
-				}
-				s.Artifacts = append(s.Artifacts, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListWorkflowRunArtifactsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListWorkflowRunsForRepoOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.WorkflowRuns = nil
-			for i := 0; i < 0; i++ {
-				var elem WorkflowRun
-				{
-					elem.SetFake()
-				}
-				s.WorkflowRuns = append(s.WorkflowRuns, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListWorkflowRunsForRepoOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsListWorkflowRunsOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.WorkflowRuns = nil
-			for i := 0; i < 0; i++ {
-				var elem WorkflowRun
-				{
-					elem.SetFake()
-				}
-				s.WorkflowRuns = append(s.WorkflowRuns, elem)
-			}
-		}
-	}
-}
+func (s *ActionsListWorkflowRunsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsOrganizationPermissions) SetFake() {
-	{
-		{
-			s.EnabledRepositories.SetFake()
-		}
-	}
-	{
-		{
-			s.SelectedRepositoriesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedActions.SetFake()
-		}
-	}
-	{
-		{
-			s.SelectedActionsURL.SetFake()
-		}
-	}
-}
+func (s *ActionsOrganizationPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsPublicKey) SetFake() {
-	{
-		{
-			s.KeyID = "string"
-		}
-	}
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-}
+func (s *ActionsPublicKey) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsReRunWorkflowCreated) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *ActionsRepositoryPermissions) SetFake() {
-	{
-		{
-			s.Enabled.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedActions.SetFake()
-		}
-	}
-	{
-		{
-			s.SelectedActionsURL.SetFake()
-		}
-	}
-}
+func (s *ActionsRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsRetryWorkflowCreated) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *ActionsReviewPendingDeploymentsForRunReq) SetFake() {
-	{
-		{
-			s.EnvironmentIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.EnvironmentIds = append(s.EnvironmentIds, elem)
-			}
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Comment = "string"
-		}
-	}
-}
+func (s *ActionsReviewPendingDeploymentsForRunReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsReviewPendingDeploymentsForRunReqState) SetFake() {
-	*s = ActionsReviewPendingDeploymentsForRunReqStateApproved
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActionsSecret) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-}
+func (s *ActionsSecret) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsSetGithubActionsPermissionsOrganizationReq) SetFake() {
-	{
-		{
-			s.EnabledRepositories.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedActions.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActionsSetGithubActionsPermissionsRepositoryReq) SetFake() {
-	{
-		{
-			s.Enabled.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedActions.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgReq) SetFake() {
-	{
-		{
-			s.SelectedRepositoryIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.SelectedRepositoryIds = append(s.SelectedRepositoryIds, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActionsSetSelectedReposForOrgSecretReq) SetFake() {
-	{
-		{
-			s.SelectedRepositoryIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.SelectedRepositoryIds = append(s.SelectedRepositoryIds, elem)
-			}
-		}
-	}
-}
+func (s *ActionsSetSelectedReposForOrgSecretReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationReq) SetFake() {
-	{
-		{
-			s.SelectedRepositoryIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.SelectedRepositoryIds = append(s.SelectedRepositoryIds, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActionsSetSelfHostedRunnersInGroupForOrgReq) SetFake() {
-	{
-		{
-			s.Runners = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Runners = append(s.Runners, elem)
-			}
-		}
-	}
-}
+func (s *ActionsSetSelfHostedRunnersInGroupForOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActionsUpdateSelfHostedRunnerGroupForOrgReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-}
+func (s *ActionsUpdateSelfHostedRunnerGroupForOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActionsUpdateSelfHostedRunnerGroupForOrgReqVisibility) SetFake() {
-	*s = ActionsUpdateSelfHostedRunnerGroupForOrgReqVisibilitySelected
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityCheckRepoIsStarredByAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityCheckRepoIsStarredByAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityCheckRepoIsStarredByAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityCheckRepoIsStarredByAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityCheckRepoIsStarredByAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityCheckRepoIsStarredByAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActivityDeleteThreadSubscriptionForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityDeleteThreadSubscriptionForbidden(unwrapped)
-}
+func (s *ActivityDeleteThreadSubscriptionForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivityDeleteThreadSubscriptionUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityDeleteThreadSubscriptionUnauthorized(unwrapped)
-}
+func (s *ActivityDeleteThreadSubscriptionUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivityGetThreadForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityGetThreadForbidden(unwrapped)
-}
+func (s *ActivityGetThreadForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActivityGetThreadSubscriptionForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityGetThreadSubscriptionForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityGetThreadSubscriptionForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityGetThreadSubscriptionForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActivityGetThreadUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityGetThreadUnauthorized(unwrapped)
-}
+func (s *ActivityGetThreadUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActivityListNotificationsForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityListNotificationsForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityListNotificationsForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityListNotificationsForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityListPublicEventsForRepoNetworkForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityListPublicEventsForRepoNetworkForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityListPublicEventsForRepoNetworkMovedPermanently) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityListPublicEventsForRepoNetworkMovedPermanently(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityListPublicEventsForRepoNetworkNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityListPublicEventsForRepoNetworkNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityListPublicEventsForRepoNetworkOKApplicationJSON) SetFake() {
-	var unwrapped []Event
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Event
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ActivityListPublicEventsForRepoNetworkOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActivityListPublicEventsOKApplicationJSON) SetFake() {
-	var unwrapped []Event
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Event
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ActivityListPublicEventsOKApplicationJSON(unwrapped)
-}
+func (s *ActivityListPublicEventsOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActivityListReposStarredByAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityListReposStarredByAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityListReposStarredByAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityListReposStarredByAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityListWatchedReposForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityListWatchedReposForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityListWatchedReposForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityListWatchedReposForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActivityMarkNotificationsAsReadAccepted) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-}
+func (s *ActivityMarkNotificationsAsReadAccepted) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivityMarkNotificationsAsReadForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityMarkNotificationsAsReadForbidden(unwrapped)
-}
+func (s *ActivityMarkNotificationsAsReadForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivityMarkNotificationsAsReadReq) SetFake() {
-	{
-		{
-			s.LastReadAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Read.SetFake()
-		}
-	}
-}
+func (s *ActivityMarkNotificationsAsReadReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivityMarkNotificationsAsReadUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityMarkNotificationsAsReadUnauthorized(unwrapped)
-}
+func (s *ActivityMarkNotificationsAsReadUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivityMarkRepoNotificationsAsReadAccepted) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-}
+func (s *ActivityMarkRepoNotificationsAsReadAccepted) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivityMarkRepoNotificationsAsReadReq) SetFake() {
-	{
-		{
-			s.LastReadAt.SetFake()
-		}
-	}
-}
+func (s *ActivityMarkRepoNotificationsAsReadReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivitySetRepoSubscriptionReq) SetFake() {
-	{
-		{
-			s.Subscribed.SetFake()
-		}
-	}
-	{
-		{
-			s.Ignored.SetFake()
-		}
-	}
-}
+func (s *ActivitySetRepoSubscriptionReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivitySetThreadSubscriptionForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivitySetThreadSubscriptionForbidden(unwrapped)
-}
+func (s *ActivitySetThreadSubscriptionForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivitySetThreadSubscriptionReq) SetFake() {
-	{
-		{
-			s.Ignored.SetFake()
-		}
-	}
-}
+func (s *ActivitySetThreadSubscriptionReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ActivitySetThreadSubscriptionUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivitySetThreadSubscriptionUnauthorized(unwrapped)
-}
+func (s *ActivitySetThreadSubscriptionUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActivityStarRepoForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityStarRepoForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ActivityStarRepoForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityStarRepoForAuthenticatedUserNotFound(unwrapped)
-}
+func (s *ActivityStarRepoForAuthenticatedUserNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ActivityStarRepoForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityStarRepoForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityUnstarRepoForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityUnstarRepoForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityUnstarRepoForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityUnstarRepoForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ActivityUnstarRepoForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ActivityUnstarRepoForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *Actor) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.DisplayLogin.SetFake()
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *Actor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AlertCreatedAt) SetFake() {
-	var unwrapped time.Time
-	{
-		unwrapped = time.Now()
-	}
-	*s = AlertCreatedAt(unwrapped)
-}
+func (s *AlertCreatedAt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AlertHTMLURL) SetFake() {
-	var unwrapped url.URL
-	{
-		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-	}
-	*s = AlertHTMLURL(unwrapped)
-}
+func (s *AlertHTMLURL) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AlertInstancesURL) SetFake() {
-	var unwrapped url.URL
-	{
-		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-	}
-	*s = AlertInstancesURL(unwrapped)
-}
+func (s *AlertInstancesURL) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AlertNumber) SetFake() {
-	var unwrapped int
-	{
-		unwrapped = int(0)
-	}
-	*s = AlertNumber(unwrapped)
-}
+func (s *AlertNumber) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AlertURL) SetFake() {
-	var unwrapped url.URL
-	{
-		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-	}
-	*s = AlertURL(unwrapped)
-}
+func (s *AlertURL) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AllowedActions) SetFake() {
-	*s = AllowedActionsAll
-}
+func (s *AllowedActions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissions) SetFake() {
-	{
-		{
-			s.Actions.SetFake()
-		}
-	}
-	{
-		{
-			s.Administration.SetFake()
-		}
-	}
-	{
-		{
-			s.Checks.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentReferences.SetFake()
-		}
-	}
-	{
-		{
-			s.Contents.SetFake()
-		}
-	}
-	{
-		{
-			s.Deployments.SetFake()
-		}
-	}
-	{
-		{
-			s.Environments.SetFake()
-		}
-	}
-	{
-		{
-			s.Issues.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Packages.SetFake()
-		}
-	}
-	{
-		{
-			s.Pages.SetFake()
-		}
-	}
-	{
-		{
-			s.PullRequests.SetFake()
-		}
-	}
-	{
-		{
-			s.RepositoryHooks.SetFake()
-		}
-	}
-	{
-		{
-			s.RepositoryProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretScanningAlerts.SetFake()
-		}
-	}
-	{
-		{
-			s.Secrets.SetFake()
-		}
-	}
-	{
-		{
-			s.SecurityEvents.SetFake()
-		}
-	}
-	{
-		{
-			s.SingleFile.SetFake()
-		}
-	}
-	{
-		{
-			s.Statuses.SetFake()
-		}
-	}
-	{
-		{
-			s.VulnerabilityAlerts.SetFake()
-		}
-	}
-	{
-		{
-			s.Workflows.SetFake()
-		}
-	}
-	{
-		{
-			s.Members.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationAdministration.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationHooks.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationPlan.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationPackages.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationSecrets.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationSelfHostedRunners.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationUserBlocking.SetFake()
-		}
-	}
-	{
-		{
-			s.TeamDiscussions.SetFake()
-		}
-	}
-}
+func (s *AppPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsActions) SetFake() {
-	*s = AppPermissionsActionsRead
-}
+func (s *AppPermissionsActions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsAdministration) SetFake() {
-	*s = AppPermissionsAdministrationRead
-}
+func (s *AppPermissionsAdministration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsChecks) SetFake() {
-	*s = AppPermissionsChecksRead
-}
+func (s *AppPermissionsChecks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsContentReferences) SetFake() {
-	*s = AppPermissionsContentReferencesRead
-}
+func (s *AppPermissionsContentReferences) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsContents) SetFake() {
-	*s = AppPermissionsContentsRead
-}
+func (s *AppPermissionsContents) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsDeployments) SetFake() {
-	*s = AppPermissionsDeploymentsRead
-}
+func (s *AppPermissionsDeployments) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsEnvironments) SetFake() {
-	*s = AppPermissionsEnvironmentsRead
-}
+func (s *AppPermissionsEnvironments) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsIssues) SetFake() {
-	*s = AppPermissionsIssuesRead
-}
+func (s *AppPermissionsIssues) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsMembers) SetFake() {
-	*s = AppPermissionsMembersRead
-}
+func (s *AppPermissionsMembers) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsMetadata) SetFake() {
-	*s = AppPermissionsMetadataRead
-}
+func (s *AppPermissionsMetadata) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsOrganizationAdministration) SetFake() {
-	*s = AppPermissionsOrganizationAdministrationRead
-}
+func (s *AppPermissionsOrganizationAdministration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsOrganizationHooks) SetFake() {
-	*s = AppPermissionsOrganizationHooksRead
-}
+func (s *AppPermissionsOrganizationHooks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsOrganizationPackages) SetFake() {
-	*s = AppPermissionsOrganizationPackagesRead
-}
+func (s *AppPermissionsOrganizationPackages) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsOrganizationPlan) SetFake() {
-	*s = AppPermissionsOrganizationPlanRead
-}
+func (s *AppPermissionsOrganizationPlan) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsOrganizationProjects) SetFake() {
-	*s = AppPermissionsOrganizationProjectsRead
-}
+func (s *AppPermissionsOrganizationProjects) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsOrganizationSecrets) SetFake() {
-	*s = AppPermissionsOrganizationSecretsRead
-}
+func (s *AppPermissionsOrganizationSecrets) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsOrganizationSelfHostedRunners) SetFake() {
-	*s = AppPermissionsOrganizationSelfHostedRunnersRead
-}
+func (s *AppPermissionsOrganizationSelfHostedRunners) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsOrganizationUserBlocking) SetFake() {
-	*s = AppPermissionsOrganizationUserBlockingRead
-}
+func (s *AppPermissionsOrganizationUserBlocking) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsPackages) SetFake() {
-	*s = AppPermissionsPackagesRead
-}
+func (s *AppPermissionsPackages) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsPages) SetFake() {
-	*s = AppPermissionsPagesRead
-}
+func (s *AppPermissionsPages) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsPullRequests) SetFake() {
-	*s = AppPermissionsPullRequestsRead
-}
+func (s *AppPermissionsPullRequests) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsRepositoryHooks) SetFake() {
-	*s = AppPermissionsRepositoryHooksRead
-}
+func (s *AppPermissionsRepositoryHooks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsRepositoryProjects) SetFake() {
-	*s = AppPermissionsRepositoryProjectsRead
-}
+func (s *AppPermissionsRepositoryProjects) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsSecretScanningAlerts) SetFake() {
-	*s = AppPermissionsSecretScanningAlertsRead
-}
+func (s *AppPermissionsSecretScanningAlerts) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsSecrets) SetFake() {
-	*s = AppPermissionsSecretsRead
-}
+func (s *AppPermissionsSecrets) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsSecurityEvents) SetFake() {
-	*s = AppPermissionsSecurityEventsRead
-}
+func (s *AppPermissionsSecurityEvents) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsSingleFile) SetFake() {
-	*s = AppPermissionsSingleFileRead
-}
+func (s *AppPermissionsSingleFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsStatuses) SetFake() {
-	*s = AppPermissionsStatusesRead
-}
+func (s *AppPermissionsStatuses) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsTeamDiscussions) SetFake() {
-	*s = AppPermissionsTeamDiscussionsRead
-}
+func (s *AppPermissionsTeamDiscussions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsVulnerabilityAlerts) SetFake() {
-	*s = AppPermissionsVulnerabilityAlertsRead
-}
+func (s *AppPermissionsVulnerabilityAlerts) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppPermissionsWorkflows) SetFake() {
-	*s = AppPermissionsWorkflowsWrite
-}
+func (s *AppPermissionsWorkflows) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ApplicationGrant) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.App.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Scopes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Scopes = append(s.Scopes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *ApplicationGrant) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ApplicationGrantApp) SetFake() {
-	{
-		{
-			s.ClientID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *ApplicationGrantApp) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsAddRepoToInstallationForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsAddRepoToInstallationForbidden(unwrapped)
-}
+func (s *AppsAddRepoToInstallationForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsAddRepoToInstallationNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsAddRepoToInstallationNotFound(unwrapped)
-}
+func (s *AppsAddRepoToInstallationNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsCheckTokenReq) SetFake() {
-	{
-		{
-			s.AccessToken = "string"
-		}
-	}
-}
+func (s *AppsCheckTokenReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsCreateContentAttachmentForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsCreateContentAttachmentForbidden(unwrapped)
-}
+func (s *AppsCreateContentAttachmentForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsCreateContentAttachmentGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsCreateContentAttachmentGone(unwrapped)
-}
+func (s *AppsCreateContentAttachmentGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsCreateContentAttachmentNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsCreateContentAttachmentNotFound(unwrapped)
-}
+func (s *AppsCreateContentAttachmentNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsCreateContentAttachmentReq) SetFake() {
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *AppsCreateContentAttachmentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsCreateFromManifestCreated) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Slug.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.ExternalURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-	{
-		{
-			s.InstallationsCount.SetFake()
-		}
-	}
-	{
-		{
-			s.ClientID = "string"
-		}
-	}
-	{
-		{
-			s.ClientSecret = "string"
-		}
-	}
-	{
-		{
-			s.WebhookSecret.SetFake()
-		}
-	}
-	{
-		{
-			s.Pem = "string"
-		}
-	}
-	{
-		{
-			s.AdditionalProps.SetFake()
-		}
-	}
-}
+func (s *AppsCreateFromManifestCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsCreateFromManifestCreatedAdditional) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *AppsCreateFromManifestCreatedAdditional) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsCreateFromManifestCreatedPermissions) SetFake() {
-	{
-		{
-			s.Issues.SetFake()
-		}
-	}
-	{
-		{
-			s.Checks.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Contents.SetFake()
-		}
-	}
-	{
-		{
-			s.Deployments.SetFake()
-		}
-	}
-	{
-		{
-			s.AdditionalProps.SetFake()
-		}
-	}
-}
+func (s *AppsCreateFromManifestCreatedPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *AppsCreateFromManifestCreatedPermissionsAdditional) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *AppsCreateFromManifestReq) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *AppsCreateInstallationAccessTokenForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsCreateInstallationAccessTokenForbidden(unwrapped)
-}
+func (s *AppsCreateInstallationAccessTokenForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsCreateInstallationAccessTokenNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsCreateInstallationAccessTokenNotFound(unwrapped)
-}
+func (s *AppsCreateInstallationAccessTokenNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsCreateInstallationAccessTokenReq) SetFake() {
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RepositoryIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.RepositoryIds = append(s.RepositoryIds, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-}
+func (s *AppsCreateInstallationAccessTokenReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *AppsCreateInstallationAccessTokenUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsCreateInstallationAccessTokenUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *AppsDeleteAuthorizationReq) SetFake() {
-	{
-		{
-			s.AccessToken = "string"
-		}
-	}
-}
+func (s *AppsDeleteAuthorizationReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsDeleteTokenReq) SetFake() {
-	{
-		{
-			s.AccessToken = "string"
-		}
-	}
-}
+func (s *AppsDeleteTokenReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsGetBySlugForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsGetBySlugForbidden(unwrapped)
-}
+func (s *AppsGetBySlugForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsGetBySlugNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsGetBySlugNotFound(unwrapped)
-}
+func (s *AppsGetBySlugNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsGetSubscriptionPlanForAccountNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsGetSubscriptionPlanForAccountNotFound(unwrapped)
-}
+func (s *AppsGetSubscriptionPlanForAccountNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *AppsGetSubscriptionPlanForAccountUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsGetSubscriptionPlanForAccountUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *AppsListAccountsForPlanNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsListAccountsForPlanNotFound(unwrapped)
-}
+func (s *AppsListAccountsForPlanNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsListAccountsForPlanUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsListAccountsForPlanUnauthorized(unwrapped)
-}
+func (s *AppsListAccountsForPlanUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *AppsListInstallationReposForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsListInstallationReposForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *AppsListInstallationReposForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsListInstallationReposForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *AppsListInstallationReposForAuthenticatedUserOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.RepositorySelection.SetFake()
-		}
-	}
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem Repository
-				{
-					elem.SetFake()
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *AppsListPlansNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsListPlansNotFound(unwrapped)
-}
+func (s *AppsListPlansNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsListPlansUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsListPlansUnauthorized(unwrapped)
-}
+func (s *AppsListPlansUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *AppsListReposAccessibleToInstallationForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsListReposAccessibleToInstallationForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *AppsListReposAccessibleToInstallationOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem Repository
-				{
-					elem.SetFake()
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RepositorySelection.SetFake()
-		}
-	}
-}
+func (s *AppsListReposAccessibleToInstallationOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *AppsListReposAccessibleToInstallationUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsListReposAccessibleToInstallationUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *AppsListSubscriptionsForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsListSubscriptionsForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *AppsListSubscriptionsForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsListSubscriptionsForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *AppsListWebhookDeliveriesOKApplicationJSON) SetFake() {
-	var unwrapped []HookDeliveryItem
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem HookDeliveryItem
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = AppsListWebhookDeliveriesOKApplicationJSON(unwrapped)
-}
+func (s *AppsListWebhookDeliveriesOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsRemoveRepoFromInstallationForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsRemoveRepoFromInstallationForbidden(unwrapped)
-}
+func (s *AppsRemoveRepoFromInstallationForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsRemoveRepoFromInstallationNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsRemoveRepoFromInstallationNotFound(unwrapped)
-}
+func (s *AppsRemoveRepoFromInstallationNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsResetTokenReq) SetFake() {
-	{
-		{
-			s.AccessToken = "string"
-		}
-	}
-}
+func (s *AppsResetTokenReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsScopeTokenForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsScopeTokenForbidden(unwrapped)
-}
+func (s *AppsScopeTokenForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsScopeTokenNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsScopeTokenNotFound(unwrapped)
-}
+func (s *AppsScopeTokenNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsScopeTokenReq) SetFake() {
-	{
-		{
-			s.AccessToken = "string"
-		}
-	}
-	{
-		{
-			s.Target.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetID.SetFake()
-		}
-	}
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RepositoryIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.RepositoryIds = append(s.RepositoryIds, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-}
+func (s *AppsScopeTokenReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsScopeTokenUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = AppsScopeTokenUnauthorized(unwrapped)
-}
+func (s *AppsScopeTokenUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AppsUpdateWebhookConfigForAppReq) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.InsecureSsl.SetFake()
-		}
-	}
-}
+func (s *AppsUpdateWebhookConfigForAppReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Artifact) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.SizeInBytes = int(0)
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.ArchiveDownloadURL = "string"
-		}
-	}
-	{
-		{
-			s.Expired = true
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.ExpiresAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-}
+func (s *Artifact) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AuditLogEvent) SetFake() {
-	{
-		{
-			s.Timestamp.SetFake()
-		}
-	}
-	{
-		{
-			s.Action.SetFake()
-		}
-	}
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-	{
-		{
-			s.ActiveWas.SetFake()
-		}
-	}
-	{
-		{
-			s.Actor.SetFake()
-		}
-	}
-	{
-		{
-			s.ActorID.SetFake()
-		}
-	}
-	{
-		{
-			s.ActorLocation.SetFake()
-		}
-	}
-	{
-		{
-			s.Data.SetFake()
-		}
-	}
-	{
-		{
-			s.OrgID.SetFake()
-		}
-	}
-	{
-		{
-			s.BlockedUser.SetFake()
-		}
-	}
-	{
-		{
-			s.Business.SetFake()
-		}
-	}
-	{
-		{
-			s.Config = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.Config = append(s.Config, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ConfigWas = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.ConfigWas = append(s.ConfigWas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.DeployKeyFingerprint.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentID.SetFake()
-		}
-	}
-	{
-		{
-			s.Emoji.SetFake()
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-	{
-		{
-			s.EventsWere = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.EventsWere = append(s.EventsWere, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Explanation.SetFake()
-		}
-	}
-	{
-		{
-			s.Fingerprint.SetFake()
-		}
-	}
-	{
-		{
-			s.HookID.SetFake()
-		}
-	}
-	{
-		{
-			s.LimitedAvailability.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.OldUser.SetFake()
-		}
-	}
-	{
-		{
-			s.OpensshPublicKey.SetFake()
-		}
-	}
-	{
-		{
-			s.Org.SetFake()
-		}
-	}
-	{
-		{
-			s.PreviousVisibility.SetFake()
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-	{
-		{
-			s.Repo.SetFake()
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.RepositoryPublic.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetLogin.SetFake()
-		}
-	}
-	{
-		{
-			s.Team.SetFake()
-		}
-	}
-	{
-		{
-			s.TransportProtocol.SetFake()
-		}
-	}
-	{
-		{
-			s.TransportProtocolName.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-}
+func (s *AuditLogEvent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AuditLogEventActorLocation) SetFake() {
-	{
-		{
-			s.CountryName.SetFake()
-		}
-	}
-}
+func (s *AuditLogEventActorLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AuditLogEventData) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *AuditLogEventData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AuthenticationToken) SetFake() {
-	{
-		{
-			s.Token = "string"
-		}
-	}
-	{
-		{
-			s.ExpiresAt = time.Now()
-		}
-	}
-	{
-		{ // Keep pointer nil to prevent infinite recursion.
-			s.Permissions = nil
-		}
-	}
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem Repository
-				{
-					elem.SetFake()
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SingleFile.SetFake()
-		}
-	}
-	{
-		{
-			s.RepositorySelection.SetFake()
-		}
-	}
-}
+func (s *AuthenticationToken) SetFake() { _ = "STUB: not implemented"; return }
+
+// Keep pointer nil to prevent infinite recursion.
 
 // SetFake set fake values.
 func (s *AuthenticationTokenPermissions) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *AuthenticationTokenRepositorySelection) SetFake() {
-	*s = AuthenticationTokenRepositorySelectionAll
-}
+func (s *AuthenticationTokenRepositorySelection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AuthorAssociation) SetFake() {
-	*s = AuthorAssociationCOLLABORATOR
-}
+func (s *AuthorAssociation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Authorization) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Scopes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Scopes = append(s.Scopes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Token = "string"
-		}
-	}
-	{
-		{
-			s.TokenLastEight.SetFake()
-		}
-	}
-	{
-		{
-			s.HashedToken.SetFake()
-		}
-	}
-	{
-		{
-			s.App.SetFake()
-		}
-	}
-	{
-		{
-			s.Note.SetFake()
-		}
-	}
-	{
-		{
-			s.NoteURL.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Fingerprint.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Installation.SetFake()
-		}
-	}
-	{
-		{
-			s.ExpiresAt.SetFake()
-		}
-	}
-}
+func (s *Authorization) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AuthorizationApp) SetFake() {
-	{
-		{
-			s.ClientID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *AuthorizationApp) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AutoMerge) SetFake() {
-	{
-		{
-			s.EnabledBy.SetFake()
-		}
-	}
-	{
-		{
-			s.MergeMethod.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitTitle = "string"
-		}
-	}
-	{
-		{
-			s.CommitMessage = "string"
-		}
-	}
-}
+func (s *AutoMerge) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *AutoMergeMergeMethod) SetFake() {
-	*s = AutoMergeMergeMethodMerge
-}
+func (s *AutoMergeMergeMethod) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Autolink) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.KeyPrefix = "string"
-		}
-	}
-	{
-		{
-			s.URLTemplate = "string"
-		}
-	}
-}
+func (s *Autolink) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BaseGist) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.GitPullURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitPushURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Files.SetFake()
-		}
-	}
-	{
-		{
-			s.Public = true
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Comments = int(0)
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Truncated.SetFake()
-		}
-	}
-	{
-		{
-			s.Forks = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.Forks = append(s.Forks, elem)
-			}
-		}
-	}
-	{
-		{
-			s.History = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.History = append(s.History, elem)
-			}
-		}
-	}
-}
+func (s *BaseGist) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BaseGistFiles) SetFake() {
-	var (
-		elem BaseGistFilesItem
-		m    map[string]BaseGistFilesItem = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *BaseGistFiles) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BaseGistFilesItem) SetFake() {
-	{
-		{
-			s.Filename.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.RawURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Size.SetFake()
-		}
-	}
-}
+func (s *BaseGistFilesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BasicError) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-}
+func (s *BasicError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Blob) SetFake() {
-	{
-		{
-			s.Content = "string"
-		}
-	}
-	{
-		{
-			s.Encoding = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Size.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.HighlightedContent.SetFake()
-		}
-	}
-}
+func (s *Blob) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchProtection) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.Enabled.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredStatusChecks.SetFake()
-		}
-	}
-	{
-		{
-			s.EnforceAdmins.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredPullRequestReviews.SetFake()
-		}
-	}
-	{
-		{
-			s.Restrictions.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredLinearHistory.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForcePushes.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowDeletions.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredConversationResolution.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectionURL.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredSignatures.SetFake()
-		}
-	}
-}
+func (s *BranchProtection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchProtectionAllowDeletions) SetFake() {
-	{
-		{
-			s.Enabled.SetFake()
-		}
-	}
-}
+func (s *BranchProtectionAllowDeletions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchProtectionAllowForcePushes) SetFake() {
-	{
-		{
-			s.Enabled.SetFake()
-		}
-	}
-}
+func (s *BranchProtectionAllowForcePushes) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *BranchProtectionRequiredConversationResolution) SetFake() {
-	{
-		{
-			s.Enabled.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *BranchProtectionRequiredLinearHistory) SetFake() {
-	{
-		{
-			s.Enabled.SetFake()
-		}
-	}
-}
+func (s *BranchProtectionRequiredLinearHistory) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchProtectionRequiredSignatures) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Enabled = true
-		}
-	}
-}
+func (s *BranchProtectionRequiredSignatures) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchProtectionRequiredStatusChecks) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.EnforcementLevel.SetFake()
-		}
-	}
-	{
-		{
-			s.Contexts = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Contexts = append(s.Contexts, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ContextsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Strict.SetFake()
-		}
-	}
-}
+func (s *BranchProtectionRequiredStatusChecks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchRestrictionPolicy) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.UsersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.AppsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem BranchRestrictionPolicyUsersItem
-				{
-					elem.SetFake()
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Teams = nil
-			for i := 0; i < 0; i++ {
-				var elem BranchRestrictionPolicyTeamsItem
-				{
-					elem.SetFake()
-				}
-				s.Teams = append(s.Teams, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Apps = nil
-			for i := 0; i < 0; i++ {
-				var elem BranchRestrictionPolicyAppsItem
-				{
-					elem.SetFake()
-				}
-				s.Apps = append(s.Apps, elem)
-			}
-		}
-	}
-}
+func (s *BranchRestrictionPolicy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchRestrictionPolicyAppsItem) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Slug.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.ExternalURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-}
+func (s *BranchRestrictionPolicyAppsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchRestrictionPolicyAppsItemOwner) SetFake() {
-	{
-		{
-			s.Login.SetFake()
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReposURL.SetFake()
-		}
-	}
-	{
-		{
-			s.EventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HooksURL.SetFake()
-		}
-	}
-	{
-		{
-			s.IssuesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PublicMembersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.AvatarURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.FollowersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.FollowingURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GistsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StarredURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.SiteAdmin.SetFake()
-		}
-	}
-}
+func (s *BranchRestrictionPolicyAppsItemOwner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchRestrictionPolicyAppsItemPermissions) SetFake() {
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Contents.SetFake()
-		}
-	}
-	{
-		{
-			s.Issues.SetFake()
-		}
-	}
-	{
-		{
-			s.SingleFile.SetFake()
-		}
-	}
-}
+func (s *BranchRestrictionPolicyAppsItemPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchRestrictionPolicyTeamsItem) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Slug.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Privacy.SetFake()
-		}
-	}
-	{
-		{
-			s.Permission.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.RepositoriesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Parent.SetFake()
-		}
-	}
-}
+func (s *BranchRestrictionPolicyTeamsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchRestrictionPolicyUsersItem) SetFake() {
-	{
-		{
-			s.Login.SetFake()
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.AvatarURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.FollowersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.FollowingURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GistsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StarredURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReposURL.SetFake()
-		}
-	}
-	{
-		{
-			s.EventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.SiteAdmin.SetFake()
-		}
-	}
-}
+func (s *BranchRestrictionPolicyUsersItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchShort) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Commit.SetFake()
-		}
-	}
-	{
-		{
-			s.Protected = true
-		}
-	}
-}
+func (s *BranchShort) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchShortCommit) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-}
+func (s *BranchShortCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchWithProtection) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Commit.SetFake()
-		}
-	}
-	{
-		{
-			s.Links.SetFake()
-		}
-	}
-	{
-		{
-			s.Protected = true
-		}
-	}
-	{
-		{
-			s.Protection.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Pattern.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredApprovingReviewCount.SetFake()
-		}
-	}
-}
+func (s *BranchWithProtection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *BranchWithProtectionLinks) SetFake() {
-	{
-		{
-			s.HTML = "string"
-		}
-	}
-	{
-		{
-			s.Self = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *BranchWithProtectionLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CheckAnnotation) SetFake() {
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.StartLine = int(0)
-		}
-	}
-	{
-		{
-			s.EndLine = int(0)
-		}
-	}
-	{
-		{
-			s.StartColumn.SetFake()
-		}
-	}
-	{
-		{
-			s.EndColumn.SetFake()
-		}
-	}
-	{
-		{
-			s.AnnotationLevel.SetFake()
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.RawDetails.SetFake()
-		}
-	}
-	{
-		{
-			s.BlobHref = "string"
-		}
-	}
-}
+func (s *CheckAnnotation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CheckRun) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.HeadSha = "string"
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.ExternalID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.DetailsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Conclusion.SetFake()
-		}
-	}
-	{
-		{
-			s.StartedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CompletedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Output.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.CheckSuite.SetFake()
-		}
-	}
-	{
-		{
-			s.App.SetFake()
-		}
-	}
-	{
-		{
-			s.PullRequests = nil
-			for i := 0; i < 0; i++ {
-				var elem PullRequestMinimal
-				{
-					elem.SetFake()
-				}
-				s.PullRequests = append(s.PullRequests, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Deployment.SetFake()
-		}
-	}
-}
+func (s *CheckRun) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CheckRunCheckSuite) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-}
+func (s *CheckRunCheckSuite) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CheckRunConclusion) SetFake() {
-	*s = CheckRunConclusionSuccess
-}
+func (s *CheckRunConclusion) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CheckRunOutput) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Summary.SetFake()
-		}
-	}
-	{
-		{
-			s.Text.SetFake()
-		}
-	}
-	{
-		{
-			s.AnnotationsCount = int(0)
-		}
-	}
-	{
-		{
-			s.AnnotationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *CheckRunOutput) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CheckRunStatus) SetFake() {
-	*s = CheckRunStatusQueued
-}
+func (s *CheckRunStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CheckSuite) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.HeadBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.HeadSha = "string"
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Conclusion.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.Before.SetFake()
-		}
-	}
-	{
-		{
-			s.After.SetFake()
-		}
-	}
-	{
-		{
-			s.PullRequests = nil
-			for i := 0; i < 0; i++ {
-				var elem PullRequestMinimal
-				{
-					elem.SetFake()
-				}
-				s.PullRequests = append(s.PullRequests, elem)
-			}
-		}
-	}
-	{
-		{
-			s.App.SetFake()
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.HeadCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.LatestCheckRunsCount = int(0)
-		}
-	}
-	{
-		{
-			s.CheckRunsURL = "string"
-		}
-	}
-}
+func (s *CheckSuite) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CheckSuiteConclusion) SetFake() {
-	*s = CheckSuiteConclusionSuccess
-}
+func (s *CheckSuiteConclusion) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CheckSuitePreference) SetFake() {
-	{
-		{
-			s.Preferences.SetFake()
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-}
+func (s *CheckSuitePreference) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CheckSuitePreferencePreferences) SetFake() {
-	{
-		{
-			s.AutoTriggerChecks = nil
-			for i := 0; i < 0; i++ {
-				var elem CheckSuitePreferencePreferencesAutoTriggerChecksItem
-				{
-					elem.SetFake()
-				}
-				s.AutoTriggerChecks = append(s.AutoTriggerChecks, elem)
-			}
-		}
-	}
-}
+func (s *CheckSuitePreferencePreferences) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *CheckSuitePreferencePreferencesAutoTriggerChecksItem) SetFake() {
-	{
-		{
-			s.AppID = int(0)
-		}
-	}
-	{
-		{
-			s.Setting = true
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *CheckSuiteStatus) SetFake() {
-	*s = CheckSuiteStatusQueued
-}
+func (s *CheckSuiteStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.HeadSha = "string"
-		}
-	}
-	{
-		{
-			s.DetailsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ExternalID.SetFake()
-		}
-	}
-	{
-		{
-			s.StartedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Conclusion.SetFake()
-		}
-	}
-	{
-		{
-			s.CompletedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Output.SetFake()
-		}
-	}
-	{
-		{
-			s.Actions = nil
-			for i := 0; i < 0; i++ {
-				var elem ChecksCreateReqActionsItem
-				{
-					elem.SetFake()
-				}
-				s.Actions = append(s.Actions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.OneOf.SetFake()
-		}
-	}
-}
+func (s *ChecksCreateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqActionsItem) SetFake() {
-	{
-		{
-			s.Label = "string"
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.Identifier = "string"
-		}
-	}
-}
+func (s *ChecksCreateReqActionsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqConclusion) SetFake() {
-	*s = ChecksCreateReqConclusionActionRequired
-}
+func (s *ChecksCreateReqConclusion) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqOutput) SetFake() {
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Summary = "string"
-		}
-	}
-	{
-		{
-			s.Text.SetFake()
-		}
-	}
-	{
-		{
-			s.Annotations = nil
-			for i := 0; i < 0; i++ {
-				var elem ChecksCreateReqOutputAnnotationsItem
-				{
-					elem.SetFake()
-				}
-				s.Annotations = append(s.Annotations, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Images = nil
-			for i := 0; i < 0; i++ {
-				var elem ChecksCreateReqOutputImagesItem
-				{
-					elem.SetFake()
-				}
-				s.Images = append(s.Images, elem)
-			}
-		}
-	}
-}
+func (s *ChecksCreateReqOutput) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqOutputAnnotationsItem) SetFake() {
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.StartLine = int(0)
-		}
-	}
-	{
-		{
-			s.EndLine = int(0)
-		}
-	}
-	{
-		{
-			s.StartColumn.SetFake()
-		}
-	}
-	{
-		{
-			s.EndColumn.SetFake()
-		}
-	}
-	{
-		{
-			s.AnnotationLevel.SetFake()
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.RawDetails.SetFake()
-		}
-	}
-}
+func (s *ChecksCreateReqOutputAnnotationsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ChecksCreateReqOutputAnnotationsItemAnnotationLevel) SetFake() {
-	*s = ChecksCreateReqOutputAnnotationsItemAnnotationLevelNotice
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqOutputImagesItem) SetFake() {
-	{
-		{
-			s.Alt = "string"
-		}
-	}
-	{
-		{
-			s.ImageURL = "string"
-		}
-	}
-	{
-		{
-			s.Caption.SetFake()
-		}
-	}
-}
+func (s *ChecksCreateReqOutputImagesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqStatus) SetFake() {
-	*s = ChecksCreateReqStatusQueued
-}
+func (s *ChecksCreateReqStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqSum) SetFake() {
-	var variant ChecksCreateReqSum0
-
-	{
-		variant.SetFake()
-	}
-	s.SetChecksCreateReqSum0(variant)
-}
+func (s *ChecksCreateReqSum) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqSum0) SetFake() {
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.AdditionalProps.SetFake()
-		}
-	}
-}
+func (s *ChecksCreateReqSum0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqSum0Additional) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *ChecksCreateReqSum0Additional) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqSum0Status) SetFake() {
-	*s = ChecksCreateReqSum0StatusCompleted
-}
+func (s *ChecksCreateReqSum0Status) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqSum1) SetFake() {
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.AdditionalProps.SetFake()
-		}
-	}
-}
+func (s *ChecksCreateReqSum1) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqSum1Additional) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *ChecksCreateReqSum1Additional) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateReqSum1Status) SetFake() {
-	*s = ChecksCreateReqSum1StatusQueued
-}
+func (s *ChecksCreateReqSum1Status) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateSuiteCreated) SetFake() {
-	var unwrapped CheckSuite
-	{
-		unwrapped.SetFake()
-	}
-	*s = ChecksCreateSuiteCreated(unwrapped)
-}
+func (s *ChecksCreateSuiteCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateSuiteOK) SetFake() {
-	var unwrapped CheckSuite
-	{
-		unwrapped.SetFake()
-	}
-	*s = ChecksCreateSuiteOK(unwrapped)
-}
+func (s *ChecksCreateSuiteOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksCreateSuiteReq) SetFake() {
-	{
-		{
-			s.HeadSha = "string"
-		}
-	}
-}
+func (s *ChecksCreateSuiteReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksListForRefOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.CheckRuns = nil
-			for i := 0; i < 0; i++ {
-				var elem CheckRun
-				{
-					elem.SetFake()
-				}
-				s.CheckRuns = append(s.CheckRuns, elem)
-			}
-		}
-	}
-}
+func (s *ChecksListForRefOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksListForSuiteOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.CheckRuns = nil
-			for i := 0; i < 0; i++ {
-				var elem CheckRun
-				{
-					elem.SetFake()
-				}
-				s.CheckRuns = append(s.CheckRuns, elem)
-			}
-		}
-	}
-}
+func (s *ChecksListForSuiteOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ChecksListSuitesForRefOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.CheckSuites = nil
-			for i := 0; i < 0; i++ {
-				var elem CheckSuite
-				{
-					elem.SetFake()
-				}
-				s.CheckSuites = append(s.CheckSuites, elem)
-			}
-		}
-	}
-}
+func (s *ChecksListSuitesForRefOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ChecksRerequestSuiteCreated) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *ChecksSetSuitesPreferencesReq) SetFake() {
-	{
-		{
-			s.AutoTriggerChecks = nil
-			for i := 0; i < 0; i++ {
-				var elem ChecksSetSuitesPreferencesReqAutoTriggerChecksItem
-				{
-					elem.SetFake()
-				}
-				s.AutoTriggerChecks = append(s.AutoTriggerChecks, elem)
-			}
-		}
-	}
-}
+func (s *ChecksSetSuitesPreferencesReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ChecksSetSuitesPreferencesReqAutoTriggerChecksItem) SetFake() {
-	{
-		{
-			s.AppID = int(0)
-		}
-	}
-	{
-		{
-			s.Setting = true
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *CloneTraffic) SetFake() {
-	{
-		{
-			s.Count = int(0)
-		}
-	}
-	{
-		{
-			s.Uniques = int(0)
-		}
-	}
-	{
-		{
-			s.Clones = nil
-			for i := 0; i < 0; i++ {
-				var elem Traffic
-				{
-					elem.SetFake()
-				}
-				s.Clones = append(s.Clones, elem)
-			}
-		}
-	}
-}
+func (s *CloneTraffic) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeFrequencyStat) SetFake() {
-	var unwrapped []int
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem int
-			{
-				elem = int(0)
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = CodeFrequencyStat(unwrapped)
-}
+func (s *CodeFrequencyStat) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeOfConduct) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-}
+func (s *CodeOfConduct) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeOfConductSimple) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-}
+func (s *CodeOfConductSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlert) SetFake() {
-	{
-		{
-			s.Number.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Instances = []byte("null")
-		}
-	}
-	{
-		{
-			s.InstancesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissedBy.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissedReason.SetFake()
-		}
-	}
-	{
-		{
-			s.Rule.SetFake()
-		}
-	}
-	{
-		{
-			s.Tool.SetFake()
-		}
-	}
-	{
-		{
-			s.MostRecentInstance.SetFake()
-		}
-	}
-}
+func (s *CodeScanningAlert) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertClassification) SetFake() {
-	*s = CodeScanningAlertClassificationSource
-}
+func (s *CodeScanningAlertClassification) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertDismissedAt) SetFake() {
-	var unwrapped time.Time
-	{
-		unwrapped = time.Now()
-	}
-	*s = CodeScanningAlertDismissedAt(unwrapped)
-}
+func (s *CodeScanningAlertDismissedAt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertDismissedReason) SetFake() {
-	*s = CodeScanningAlertDismissedReasonFalsePositive
-}
+func (s *CodeScanningAlertDismissedReason) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertEnvironment) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningAlertEnvironment(unwrapped)
-}
+func (s *CodeScanningAlertEnvironment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertInstance) SetFake() {
-	{
-		{
-			s.Ref.SetFake()
-		}
-	}
-	{
-		{
-			s.AnalysisKey.SetFake()
-		}
-	}
-	{
-		{
-			s.Environment.SetFake()
-		}
-	}
-	{
-		{
-			s.Category.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitSha.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Classifications = nil
-			for i := 0; i < 0; i++ {
-				var elem NilCodeScanningAlertClassification
-				{
-					elem.SetFake()
-				}
-				s.Classifications = append(s.Classifications, elem)
-			}
-		}
-	}
-}
+func (s *CodeScanningAlertInstance) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertInstanceMessage) SetFake() {
-	{
-		{
-			s.Text.SetFake()
-		}
-	}
-}
+func (s *CodeScanningAlertInstanceMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertItems) SetFake() {
-	{
-		{
-			s.Number.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.InstancesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissedBy.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissedReason.SetFake()
-		}
-	}
-	{
-		{
-			s.Rule.SetFake()
-		}
-	}
-	{
-		{
-			s.Tool.SetFake()
-		}
-	}
-	{
-		{
-			s.MostRecentInstance.SetFake()
-		}
-	}
-}
+func (s *CodeScanningAlertItems) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertLocation) SetFake() {
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.StartLine.SetFake()
-		}
-	}
-	{
-		{
-			s.EndLine.SetFake()
-		}
-	}
-	{
-		{
-			s.StartColumn.SetFake()
-		}
-	}
-	{
-		{
-			s.EndColumn.SetFake()
-		}
-	}
-}
+func (s *CodeScanningAlertLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertRule) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Severity.SetFake()
-		}
-	}
-	{
-		{
-			s.SecuritySeverityLevel.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.FullDescription.SetFake()
-		}
-	}
-	{
-		{
-			s.Tags.SetFake()
-		}
-	}
-	{
-		{
-			s.Help.SetFake()
-		}
-	}
-}
+func (s *CodeScanningAlertRule) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertRuleSecuritySeverityLevel) SetFake() {
-	*s = CodeScanningAlertRuleSecuritySeverityLevelLow
-}
+func (s *CodeScanningAlertRuleSecuritySeverityLevel) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertRuleSeverity) SetFake() {
-	*s = CodeScanningAlertRuleSeverityNone
-}
+func (s *CodeScanningAlertRuleSeverity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertRuleSummary) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Severity.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-}
+func (s *CodeScanningAlertRuleSummary) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertRuleSummarySeverity) SetFake() {
-	*s = CodeScanningAlertRuleSummarySeverityNone
-}
+func (s *CodeScanningAlertRuleSummarySeverity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertSetState) SetFake() {
-	*s = CodeScanningAlertSetStateOpen
-}
+func (s *CodeScanningAlertSetState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAlertState) SetFake() {
-	*s = CodeScanningAlertStateOpen
-}
+func (s *CodeScanningAlertState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysis) SetFake() {
-	{
-		{
-			s.Ref.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitSha.SetFake()
-		}
-	}
-	{
-		{
-			s.AnalysisKey.SetFake()
-		}
-	}
-	{
-		{
-			s.Environment.SetFake()
-		}
-	}
-	{
-		{
-			s.Category.SetFake()
-		}
-	}
-	{
-		{
-			s.Error = "string"
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.ResultsCount = int(0)
-		}
-	}
-	{
-		{
-			s.RulesCount = int(0)
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.SarifID.SetFake()
-		}
-	}
-	{
-		{
-			s.Tool.SetFake()
-		}
-	}
-	{
-		{
-			s.Deletable = true
-		}
-	}
-	{
-		{
-			s.Warning = "string"
-		}
-	}
-	{
-		{
-			s.ToolName.SetFake()
-		}
-	}
-}
+func (s *CodeScanningAnalysis) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisAnalysisKey) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningAnalysisAnalysisKey(unwrapped)
-}
+func (s *CodeScanningAnalysisAnalysisKey) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisCategory) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningAnalysisCategory(unwrapped)
-}
+func (s *CodeScanningAnalysisCategory) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisCommitSha) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningAnalysisCommitSha(unwrapped)
-}
+func (s *CodeScanningAnalysisCommitSha) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisCreatedAt) SetFake() {
-	var unwrapped time.Time
-	{
-		unwrapped = time.Now()
-	}
-	*s = CodeScanningAnalysisCreatedAt(unwrapped)
-}
+func (s *CodeScanningAnalysisCreatedAt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisDeletion) SetFake() {
-	{
-		{
-			s.NextAnalysisURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ConfirmDeleteURL.SetFake()
-		}
-	}
-}
+func (s *CodeScanningAnalysisDeletion) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisEnvironment) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningAnalysisEnvironment(unwrapped)
-}
+func (s *CodeScanningAnalysisEnvironment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisSarifFile) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningAnalysisSarifFile(unwrapped)
-}
+func (s *CodeScanningAnalysisSarifFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisSarifID) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningAnalysisSarifID(unwrapped)
-}
+func (s *CodeScanningAnalysisSarifID) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisTool) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Version.SetFake()
-		}
-	}
-	{
-		{
-			s.GUID.SetFake()
-		}
-	}
-}
+func (s *CodeScanningAnalysisTool) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisToolGUID) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningAnalysisToolGUID(unwrapped)
-}
+func (s *CodeScanningAnalysisToolGUID) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisToolName) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningAnalysisToolName(unwrapped)
-}
+func (s *CodeScanningAnalysisToolName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisToolVersion) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningAnalysisToolVersion(unwrapped)
-}
+func (s *CodeScanningAnalysisToolVersion) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningAnalysisURL) SetFake() {
-	var unwrapped url.URL
-	{
-		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-	}
-	*s = CodeScanningAnalysisURL(unwrapped)
-}
+func (s *CodeScanningAnalysisURL) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *CodeScanningDeleteAnalysisApplicationJSONBadRequest) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningDeleteAnalysisApplicationJSONBadRequest(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *CodeScanningDeleteAnalysisForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningDeleteAnalysisForbidden(unwrapped)
-}
+func (s *CodeScanningDeleteAnalysisForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningDeleteAnalysisNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningDeleteAnalysisNotFound(unwrapped)
-}
+func (s *CodeScanningDeleteAnalysisNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningGetAlertForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningGetAlertForbidden(unwrapped)
-}
+func (s *CodeScanningGetAlertForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningGetAlertNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningGetAlertNotFound(unwrapped)
-}
+func (s *CodeScanningGetAlertNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningGetAnalysisForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningGetAnalysisForbidden(unwrapped)
-}
+func (s *CodeScanningGetAnalysisForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningGetAnalysisNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningGetAnalysisNotFound(unwrapped)
-}
+func (s *CodeScanningGetAnalysisNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningListAlertInstancesForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningListAlertInstancesForbidden(unwrapped)
-}
+func (s *CodeScanningListAlertInstancesForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningListAlertInstancesNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningListAlertInstancesNotFound(unwrapped)
-}
+func (s *CodeScanningListAlertInstancesNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *CodeScanningListAlertInstancesOKApplicationJSON) SetFake() {
-	var unwrapped []CodeScanningAlertInstance
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem CodeScanningAlertInstance
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = CodeScanningListAlertInstancesOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *CodeScanningListAlertsForRepoForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningListAlertsForRepoForbidden(unwrapped)
-}
+func (s *CodeScanningListAlertsForRepoForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningListAlertsForRepoNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningListAlertsForRepoNotFound(unwrapped)
-}
+func (s *CodeScanningListAlertsForRepoNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *CodeScanningListAlertsForRepoOKApplicationJSON) SetFake() {
-	var unwrapped []CodeScanningAlertItems
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem CodeScanningAlertItems
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = CodeScanningListAlertsForRepoOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *CodeScanningListRecentAnalysesForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningListRecentAnalysesForbidden(unwrapped)
-}
+func (s *CodeScanningListRecentAnalysesForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningListRecentAnalysesNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningListRecentAnalysesNotFound(unwrapped)
-}
+func (s *CodeScanningListRecentAnalysesNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *CodeScanningListRecentAnalysesOKApplicationJSON) SetFake() {
-	var unwrapped []CodeScanningAnalysis
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem CodeScanningAnalysis
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = CodeScanningListRecentAnalysesOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *CodeScanningRef) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = CodeScanningRef(unwrapped)
-}
+func (s *CodeScanningRef) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningSarifsReceipt) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-}
+func (s *CodeScanningSarifsReceipt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningSarifsStatus) SetFake() {
-	{
-		{
-			s.ProcessingStatus.SetFake()
-		}
-	}
-	{
-		{
-			s.AnalysesURL.SetFake()
-		}
-	}
-}
+func (s *CodeScanningSarifsStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningSarifsStatusProcessingStatus) SetFake() {
-	*s = CodeScanningSarifsStatusProcessingStatusPending
-}
+func (s *CodeScanningSarifsStatusProcessingStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningUpdateAlertForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningUpdateAlertForbidden(unwrapped)
-}
+func (s *CodeScanningUpdateAlertForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningUpdateAlertNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningUpdateAlertNotFound(unwrapped)
-}
+func (s *CodeScanningUpdateAlertNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningUpdateAlertReq) SetFake() {
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissedReason.SetFake()
-		}
-	}
-}
+func (s *CodeScanningUpdateAlertReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningUploadSarifForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningUploadSarifForbidden(unwrapped)
-}
+func (s *CodeScanningUploadSarifForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningUploadSarifNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = CodeScanningUploadSarifNotFound(unwrapped)
-}
+func (s *CodeScanningUploadSarifNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeScanningUploadSarifReq) SetFake() {
-	{
-		{
-			s.CommitSha.SetFake()
-		}
-	}
-	{
-		{
-			s.Ref.SetFake()
-		}
-	}
-	{
-		{
-			s.Sarif.SetFake()
-		}
-	}
-	{
-		{
-			s.CheckoutURI.SetFake()
-		}
-	}
-	{
-		{
-			s.StartedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.ToolName.SetFake()
-		}
-	}
-}
+func (s *CodeScanningUploadSarifReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CodeSearchResultItem) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.Score = float64(0)
-		}
-	}
-	{
-		{
-			s.FileSize.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.LastModifiedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.LineNumbers = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.LineNumbers = append(s.LineNumbers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TextMatches.SetFake()
-		}
-	}
-}
+func (s *CodeSearchResultItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *CodesOfConductGetAllCodesOfConductOKApplicationJSON) SetFake() {
-	var unwrapped []CodeOfConduct
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem CodeOfConduct
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = CodesOfConductGetAllCodesOfConductOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *Collaborator) SetFake() {
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.SiteAdmin = true
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-}
+func (s *Collaborator) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CollaboratorPermissions) SetFake() {
-	{
-		{
-			s.Pull = true
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Push = true
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-	{
-		{
-			s.Admin = true
-		}
-	}
-}
+func (s *CollaboratorPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CombinedBillingUsage) SetFake() {
-	{
-		{
-			s.DaysLeftInBillingCycle = int(0)
-		}
-	}
-	{
-		{
-			s.EstimatedPaidStorageForMonth = int(0)
-		}
-	}
-	{
-		{
-			s.EstimatedStorageForMonth = int(0)
-		}
-	}
-}
+func (s *CombinedBillingUsage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CombinedCommitStatus) SetFake() {
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.Statuses = nil
-			for i := 0; i < 0; i++ {
-				var elem SimpleCommitStatus
-				{
-					elem.SetFake()
-				}
-				s.Statuses = append(s.Statuses, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *CombinedCommitStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Commit) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Commit.SetFake()
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-	{
-		{
-			s.Parents = nil
-			for i := 0; i < 0; i++ {
-				var elem CommitParentsItem
-				{
-					elem.SetFake()
-				}
-				s.Parents = append(s.Parents, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Stats.SetFake()
-		}
-	}
-	{
-		{
-			s.Files = nil
-			for i := 0; i < 0; i++ {
-				var elem CommitFilesItem
-				{
-					elem.SetFake()
-				}
-				s.Files = append(s.Files, elem)
-			}
-		}
-	}
-}
+func (s *Commit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitActivity) SetFake() {
-	{
-		{
-			s.Days = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Days = append(s.Days, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Total = int(0)
-		}
-	}
-	{
-		{
-			s.Week = int(0)
-		}
-	}
-}
+func (s *CommitActivity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitComment) SetFake() {
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Position.SetFake()
-		}
-	}
-	{
-		{
-			s.Line.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitID = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-	{
-		{
-			s.Reactions.SetFake()
-		}
-	}
-}
+func (s *CommitComment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitCommit) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.CommentCount = int(0)
-		}
-	}
-	{
-		{
-			s.Tree.SetFake()
-		}
-	}
-	{
-		{
-			s.Verification.SetFake()
-		}
-	}
-}
+func (s *CommitCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitCommitTree) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *CommitCommitTree) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitComparison) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.PermalinkURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DiffURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.PatchURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.BaseCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.MergeBaseCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.AheadBy = int(0)
-		}
-	}
-	{
-		{
-			s.BehindBy = int(0)
-		}
-	}
-	{
-		{
-			s.TotalCommits = int(0)
-		}
-	}
-	{
-		{
-			s.Commits = nil
-			for i := 0; i < 0; i++ {
-				var elem Commit
-				{
-					elem.SetFake()
-				}
-				s.Commits = append(s.Commits, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Files = nil
-			for i := 0; i < 0; i++ {
-				var elem DiffEntry
-				{
-					elem.SetFake()
-				}
-				s.Files = append(s.Files, elem)
-			}
-		}
-	}
-}
+func (s *CommitComparison) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitComparisonStatus) SetFake() {
-	*s = CommitComparisonStatusDiverged
-}
+func (s *CommitComparisonStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitFilesItem) SetFake() {
-	{
-		{
-			s.Filename.SetFake()
-		}
-	}
-	{
-		{
-			s.Additions.SetFake()
-		}
-	}
-	{
-		{
-			s.Deletions.SetFake()
-		}
-	}
-	{
-		{
-			s.Changes.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.RawURL.SetFake()
-		}
-	}
-	{
-		{
-			s.BlobURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Patch.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PreviousFilename.SetFake()
-		}
-	}
-}
+func (s *CommitFilesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitParentsItem) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-}
+func (s *CommitParentsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitSearchResultItem) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Commit.SetFake()
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-	{
-		{
-			s.Parents = nil
-			for i := 0; i < 0; i++ {
-				var elem CommitSearchResultItemParentsItem
-				{
-					elem.SetFake()
-				}
-				s.Parents = append(s.Parents, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.Score = float64(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.TextMatches.SetFake()
-		}
-	}
-}
+func (s *CommitSearchResultItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitSearchResultItemCommit) SetFake() {
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-	{
-		{
-			s.CommentCount = int(0)
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Tree.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Verification.SetFake()
-		}
-	}
-}
+func (s *CommitSearchResultItemCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitSearchResultItemCommitAuthor) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Date = time.Now()
-		}
-	}
-}
+func (s *CommitSearchResultItemCommitAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitSearchResultItemCommitTree) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *CommitSearchResultItemCommitTree) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitSearchResultItemParentsItem) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-}
+func (s *CommitSearchResultItemParentsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommitStats) SetFake() {
-	{
-		{
-			s.Additions.SetFake()
-		}
-	}
-	{
-		{
-			s.Deletions.SetFake()
-		}
-	}
-	{
-		{
-			s.Total.SetFake()
-		}
-	}
-}
+func (s *CommitStats) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommunityProfile) SetFake() {
-	{
-		{
-			s.HealthPercentage = int(0)
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Documentation.SetFake()
-		}
-	}
-	{
-		{
-			s.Files.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentReportsEnabled.SetFake()
-		}
-	}
-}
+func (s *CommunityProfile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CommunityProfileFiles) SetFake() {
-	{
-		{
-			s.CodeOfConduct.SetFake()
-		}
-	}
-	{
-		{
-			s.CodeOfConductFile.SetFake()
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.Contributing.SetFake()
-		}
-	}
-	{
-		{
-			s.Readme.SetFake()
-		}
-	}
-	{
-		{
-			s.IssueTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.PullRequestTemplate.SetFake()
-		}
-	}
-}
+func (s *CommunityProfileFiles) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ContentFile) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Encoding = "string"
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.Content = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.DownloadURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Links.SetFake()
-		}
-	}
-	{
-		{
-			s.Target.SetFake()
-		}
-	}
-	{
-		{
-			s.SubmoduleGitURL.SetFake()
-		}
-	}
-}
+func (s *ContentFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ContentFileLinks) SetFake() {
-	{
-		{
-			s.Git.SetFake()
-		}
-	}
-	{
-		{
-			s.HTML.SetFake()
-		}
-	}
-	{
-		{
-			s.Self = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *ContentFileLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ContentReferenceAttachment) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-}
+func (s *ContentReferenceAttachment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ContentTraffic) SetFake() {
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Count = int(0)
-		}
-	}
-	{
-		{
-			s.Uniques = int(0)
-		}
-	}
-}
+func (s *ContentTraffic) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Contributor) SetFake() {
-	{
-		{
-			s.Login.SetFake()
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.AvatarURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.FollowersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.FollowingURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GistsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StarredURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReposURL.SetFake()
-		}
-	}
-	{
-		{
-			s.EventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.SiteAdmin.SetFake()
-		}
-	}
-	{
-		{
-			s.Contributions = int(0)
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-}
+func (s *Contributor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ContributorActivity) SetFake() {
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Total = int(0)
-		}
-	}
-	{
-		{
-			s.Weeks = nil
-			for i := 0; i < 0; i++ {
-				var elem ContributorActivityWeeksItem
-				{
-					elem.SetFake()
-				}
-				s.Weeks = append(s.Weeks, elem)
-			}
-		}
-	}
-}
+func (s *ContributorActivity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ContributorActivityWeeksItem) SetFake() {
-	{
-		{
-			s.W.SetFake()
-		}
-	}
-	{
-		{
-			s.A.SetFake()
-		}
-	}
-	{
-		{
-			s.D.SetFake()
-		}
-	}
-	{
-		{
-			s.C.SetFake()
-		}
-	}
-}
+func (s *ContributorActivityWeeksItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *CredentialAuthorization) SetFake() {
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.CredentialID = int(0)
-		}
-	}
-	{
-		{
-			s.CredentialType = "string"
-		}
-	}
-	{
-		{
-			s.TokenLastEight.SetFake()
-		}
-	}
-	{
-		{
-			s.CredentialAuthorizedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Scopes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Scopes = append(s.Scopes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Fingerprint.SetFake()
-		}
-	}
-	{
-		{
-			s.CredentialAccessedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.AuthorizedCredentialID.SetFake()
-		}
-	}
-	{
-		{
-			s.AuthorizedCredentialTitle.SetFake()
-		}
-	}
-	{
-		{
-			s.AuthorizedCredentialNote.SetFake()
-		}
-	}
-}
+func (s *CredentialAuthorization) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeployKey) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Verified = true
-		}
-	}
-	{
-		{
-			s.CreatedAt = "string"
-		}
-	}
-	{
-		{
-			s.ReadOnly = true
-		}
-	}
-}
+func (s *DeployKey) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Deployment) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.Task = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-	{
-		{
-			s.OriginalEnvironment.SetFake()
-		}
-	}
-	{
-		{
-			s.Environment = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Creator.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TransientEnvironment.SetFake()
-		}
-	}
-	{
-		{
-			s.ProductionEnvironment.SetFake()
-		}
-	}
-	{
-		{
-			s.PerformedViaGithubApp.SetFake()
-		}
-	}
-}
+func (s *Deployment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeploymentPayload) SetFake() {
-	var variant DeploymentPayload0
-
-	{
-		variant.SetFake()
-	}
-	s.SetDeploymentPayload0(variant)
-}
+func (s *DeploymentPayload) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeploymentPayload0) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *DeploymentPayload0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeploymentSimple) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Task = "string"
-		}
-	}
-	{
-		{
-			s.OriginalEnvironment.SetFake()
-		}
-	}
-	{
-		{
-			s.Environment = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TransientEnvironment.SetFake()
-		}
-	}
-	{
-		{
-			s.ProductionEnvironment.SetFake()
-		}
-	}
-	{
-		{
-			s.PerformedViaGithubApp.SetFake()
-		}
-	}
-}
+func (s *DeploymentSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeploymentStatus) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Creator.SetFake()
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.Environment.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.DeploymentURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EnvironmentURL.SetFake()
-		}
-	}
-	{
-		{
-			s.LogURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PerformedViaGithubApp.SetFake()
-		}
-	}
-}
+func (s *DeploymentStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DeploymentStatusState) SetFake() {
-	*s = DeploymentStatusStateError
-}
+func (s *DeploymentStatusState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DiffEntry) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Filename = "string"
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Additions = int(0)
-		}
-	}
-	{
-		{
-			s.Deletions = int(0)
-		}
-	}
-	{
-		{
-			s.Changes = int(0)
-		}
-	}
-	{
-		{
-			s.BlobURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RawURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ContentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Patch.SetFake()
-		}
-	}
-	{
-		{
-			s.PreviousFilename.SetFake()
-		}
-	}
-}
+func (s *DiffEntry) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *DiffEntryStatus) SetFake() {
-	*s = DiffEntryStatusAdded
-}
+func (s *DiffEntryStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Email) SetFake() {
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Primary = true
-		}
-	}
-	{
-		{
-			s.Verified = true
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-}
+func (s *Email) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EmojisGetOK) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *EmojisGetOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *EmptyObject) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *EnabledOrganizations) SetFake() {
-	*s = EnabledOrganizationsAll
-}
+func (s *EnabledOrganizations) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EnabledRepositories) SetFake() {
-	*s = EnabledRepositoriesAll
-}
+func (s *EnabledRepositories) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.SelectedOrganizationIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.SelectedOrganizationIds = append(s.SelectedOrganizationIds, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Runners = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Runners = append(s.Runners, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseReqVisibility) SetFake() {
-	*s = EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseReqVisibilitySelected
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseOK) SetFake() {
-	{
-		{
-			s.TotalCount = float64(0)
-		}
-	}
-	{
-		{
-			s.Organizations = nil
-			for i := 0; i < 0; i++ {
-				var elem OrganizationSimple
-				{
-					elem.SetFake()
-				}
-				s.Organizations = append(s.Organizations, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseOK) SetFake() {
-	{
-		{
-			s.TotalCount = float64(0)
-		}
-	}
-	{
-		{
-			s.Organizations = nil
-			for i := 0; i < 0; i++ {
-				var elem OrganizationSimple
-				{
-					elem.SetFake()
-				}
-				s.Organizations = append(s.Organizations, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseOK) SetFake() {
-	{
-		{
-			s.TotalCount = float64(0)
-		}
-	}
-	{
-		{
-			s.RunnerGroups = nil
-			for i := 0; i < 0; i++ {
-				var elem RunnerGroupsEnterprise
-				{
-					elem.SetFake()
-				}
-				s.RunnerGroups = append(s.RunnerGroups, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminListSelfHostedRunnersForEnterpriseOK) SetFake() {
-	{
-		{
-			s.TotalCount.SetFake()
-		}
-	}
-	{
-		{
-			s.Runners = nil
-			for i := 0; i < 0; i++ {
-				var elem Runner
-				{
-					elem.SetFake()
-				}
-				s.Runners = append(s.Runners, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseOK) SetFake() {
-	{
-		{
-			s.TotalCount = float64(0)
-		}
-	}
-	{
-		{
-			s.Runners = nil
-			for i := 0; i < 0; i++ {
-				var elem Runner
-				{
-					elem.SetFake()
-				}
-				s.Runners = append(s.Runners, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminProvisionAndInviteEnterpriseGroupReq) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisplayName = "string"
-		}
-	}
-	{
-		{
-			s.Members = nil
-			for i := 0; i < 0; i++ {
-				var elem EnterpriseAdminProvisionAndInviteEnterpriseGroupReqMembersItem
-				{
-					elem.SetFake()
-				}
-				s.Members = append(s.Members, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminProvisionAndInviteEnterpriseGroupReqMembersItem) SetFake() {
-	{
-		{
-			s.Value = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminProvisionAndInviteEnterpriseUserReq) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.UserName = "string"
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 0; i++ {
-				var elem EnterpriseAdminProvisionAndInviteEnterpriseUserReqEmailsItem
-				{
-					elem.SetFake()
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem EnterpriseAdminProvisionAndInviteEnterpriseUserReqGroupsItem
-				{
-					elem.SetFake()
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminProvisionAndInviteEnterpriseUserReqEmailsItem) SetFake() {
-	{
-		{
-			s.Value = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Primary = true
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminProvisionAndInviteEnterpriseUserReqGroupsItem) SetFake() {
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminProvisionAndInviteEnterpriseUserReqName) SetFake() {
-	{
-		{
-			s.GivenName = "string"
-		}
-	}
-	{
-		{
-			s.FamilyName = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminSetGithubActionsPermissionsEnterpriseReq) SetFake() {
-	{
-		{
-			s.EnabledOrganizations.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowedActions.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminSetInformationForProvisionedEnterpriseGroupReq) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisplayName = "string"
-		}
-	}
-	{
-		{
-			s.Members = nil
-			for i := 0; i < 0; i++ {
-				var elem EnterpriseAdminSetInformationForProvisionedEnterpriseGroupReqMembersItem
-				{
-					elem.SetFake()
-				}
-				s.Members = append(s.Members, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminSetInformationForProvisionedEnterpriseGroupReqMembersItem) SetFake() {
-	{
-		{
-			s.Value = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminSetInformationForProvisionedEnterpriseUserReq) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.UserName = "string"
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 0; i++ {
-				var elem EnterpriseAdminSetInformationForProvisionedEnterpriseUserReqEmailsItem
-				{
-					elem.SetFake()
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem EnterpriseAdminSetInformationForProvisionedEnterpriseUserReqGroupsItem
-				{
-					elem.SetFake()
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminSetInformationForProvisionedEnterpriseUserReqEmailsItem) SetFake() {
-	{
-		{
-			s.Value = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Primary = true
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminSetInformationForProvisionedEnterpriseUserReqGroupsItem) SetFake() {
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminSetInformationForProvisionedEnterpriseUserReqName) SetFake() {
-	{
-		{
-			s.GivenName = "string"
-		}
-	}
-	{
-		{
-			s.FamilyName = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseReq) SetFake() {
-	{
-		{
-			s.SelectedOrganizationIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.SelectedOrganizationIds = append(s.SelectedOrganizationIds, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseReq) SetFake() {
-	{
-		{
-			s.SelectedOrganizationIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.SelectedOrganizationIds = append(s.SelectedOrganizationIds, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseReq) SetFake() {
-	{
-		{
-			s.Runners = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Runners = append(s.Runners, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminUpdateAttributeForEnterpriseGroupReq) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Operations = nil
-			for i := 0; i < 1; i++ {
-				var elem EnterpriseAdminUpdateAttributeForEnterpriseGroupReqOperationsItem
-				{
-					elem.SetFake()
-				}
-				s.Operations = append(s.Operations, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminUpdateAttributeForEnterpriseGroupReqOperationsItem) SetFake() {
-	{
-		{
-			s.Op.SetFake()
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminUpdateAttributeForEnterpriseGroupReqOperationsItemOp) SetFake() {
-	*s = EnterpriseAdminUpdateAttributeForEnterpriseGroupReqOperationsItemOp_add
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminUpdateAttributeForEnterpriseGroupReqOperationsItemValue) SetFake() {
-	var variant string
-
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminUpdateAttributeForEnterpriseGroupReqOperationsItemValue1) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *EnterpriseAdminUpdateAttributeForEnterpriseUserReq) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Operations = nil
-			for i := 0; i < 0; i++ {
-				var elem EnterpriseAdminUpdateAttributeForEnterpriseUserReqOperationsItem
-				{
-					elem.SetFake()
-				}
-				s.Operations = append(s.Operations, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminUpdateAttributeForEnterpriseUserReqOperationsItem) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseReq) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseReqVisibility) SetFake() {
-	*s = EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseReqVisibilitySelected
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *EnvironmentApprovals) SetFake() {
-	{
-		{
-			s.Environments = nil
-			for i := 0; i < 0; i++ {
-				var elem EnvironmentApprovalsEnvironmentsItem
-				{
-					elem.SetFake()
-				}
-				s.Environments = append(s.Environments, elem)
-			}
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Comment = "string"
-		}
-	}
-}
+func (s *EnvironmentApprovals) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EnvironmentApprovalsEnvironmentsItem) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-}
+func (s *EnvironmentApprovalsEnvironmentsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EnvironmentApprovalsState) SetFake() {
-	*s = EnvironmentApprovalsStateApproved
-}
+func (s *EnvironmentApprovalsState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Event) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Actor.SetFake()
-		}
-	}
-	{
-		{
-			s.Repo.SetFake()
-		}
-	}
-	{
-		{
-			s.Org.SetFake()
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-	{
-		{
-			s.Public = true
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-}
+func (s *Event) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EventPayload) SetFake() {
-	{
-		{
-			s.Action.SetFake()
-		}
-	}
-	{
-		{
-			s.Issue.SetFake()
-		}
-	}
-	{
-		{
-			s.Comment.SetFake()
-		}
-	}
-	{
-		{
-			s.Pages = nil
-			for i := 0; i < 0; i++ {
-				var elem EventPayloadPagesItem
-				{
-					elem.SetFake()
-				}
-				s.Pages = append(s.Pages, elem)
-			}
-		}
-	}
-}
+func (s *EventPayload) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EventPayloadPagesItem) SetFake() {
-	{
-		{
-			s.PageName.SetFake()
-		}
-	}
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Summary.SetFake()
-		}
-	}
-	{
-		{
-			s.Action.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-}
+func (s *EventPayloadPagesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *EventRepo) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *EventRepo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Feed) SetFake() {
-	{
-		{
-			s.TimelineURL = "string"
-		}
-	}
-	{
-		{
-			s.UserURL = "string"
-		}
-	}
-	{
-		{
-			s.CurrentUserPublicURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentUserURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentUserActorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentUserOrganizationURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentUserOrganizationUrls = nil
-			for i := 0; i < 0; i++ {
-				var elem url.URL
-				{
-					elem = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-				}
-				s.CurrentUserOrganizationUrls = append(s.CurrentUserOrganizationUrls, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SecurityAdvisoriesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Links.SetFake()
-		}
-	}
-}
+func (s *Feed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FeedLinks) SetFake() {
-	{
-		{
-			s.Timeline.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.SecurityAdvisories.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentUser.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentUserPublic.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentUserActor.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentUserOrganization.SetFake()
-		}
-	}
-	{
-		{
-			s.CurrentUserOrganizations = nil
-			for i := 0; i < 0; i++ {
-				var elem LinkWithType
-				{
-					elem.SetFake()
-				}
-				s.CurrentUserOrganizations = append(s.CurrentUserOrganizations, elem)
-			}
-		}
-	}
-}
+func (s *FeedLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FileCommit) SetFake() {
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
-	{
-		{
-			s.Commit.SetFake()
-		}
-	}
-}
+func (s *FileCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FileCommitCommit) SetFake() {
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Tree.SetFake()
-		}
-	}
-	{
-		{
-			s.Parents = nil
-			for i := 0; i < 0; i++ {
-				var elem FileCommitCommitParentsItem
-				{
-					elem.SetFake()
-				}
-				s.Parents = append(s.Parents, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Verification.SetFake()
-		}
-	}
-}
+func (s *FileCommitCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FileCommitCommitAuthor) SetFake() {
-	{
-		{
-			s.Date.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-}
+func (s *FileCommitCommitAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FileCommitCommitCommitter) SetFake() {
-	{
-		{
-			s.Date.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-}
+func (s *FileCommitCommitCommitter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FileCommitCommitParentsItem) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-}
+func (s *FileCommitCommitParentsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FileCommitCommitTree) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-}
+func (s *FileCommitCommitTree) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FileCommitCommitVerification) SetFake() {
-	{
-		{
-			s.Verified.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.Signature.SetFake()
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *FileCommitCommitVerification) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FileCommitContent) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-	{
-		{
-			s.Size.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitURL.SetFake()
-		}
-	}
-	{
-		{
-			s.DownloadURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Links.SetFake()
-		}
-	}
-}
+func (s *FileCommitContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FileCommitContentLinks) SetFake() {
-	{
-		{
-			s.Self.SetFake()
-		}
-	}
-	{
-		{
-			s.Git.SetFake()
-		}
-	}
-	{
-		{
-			s.HTML.SetFake()
-		}
-	}
-}
+func (s *FileCommitContentLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ForbiddenGist) SetFake() {
-	{
-		{
-			s.Block.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-}
+func (s *ForbiddenGist) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ForbiddenGistBlock) SetFake() {
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-}
+func (s *ForbiddenGistBlock) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FullRepository) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.FullName = "string"
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private = true
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Fork = true
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ArchiveURL = "string"
-		}
-	}
-	{
-		{
-			s.AssigneesURL = "string"
-		}
-	}
-	{
-		{
-			s.BlobsURL = "string"
-		}
-	}
-	{
-		{
-			s.BranchesURL = "string"
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.CompareURL = "string"
-		}
-	}
-	{
-		{
-			s.ContentsURL = "string"
-		}
-	}
-	{
-		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitCommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitRefsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitTagsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueEventsURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.KeysURL = "string"
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MilestonesURL = "string"
-		}
-	}
-	{
-		{
-			s.NotificationsURL = "string"
-		}
-	}
-	{
-		{
-			s.PullsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReleasesURL = "string"
-		}
-	}
-	{
-		{
-			s.SSHURL = "string"
-		}
-	}
-	{
-		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StatusesURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TreesURL = "string"
-		}
-	}
-	{
-		{
-			s.CloneURL = "string"
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksCount = int(0)
-		}
-	}
-	{
-		{
-			s.StargazersCount = int(0)
-		}
-	}
-	{
-		{
-			s.WatchersCount = int(0)
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-	{
-		{
-			s.DefaultBranch = "string"
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount = int(0)
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HasIssues = true
-		}
-	}
-	{
-		{
-			s.HasProjects = true
-		}
-	}
-	{
-		{
-			s.HasWiki = true
-		}
-	}
-	{
-		{
-			s.HasPages = true
-		}
-	}
-	{
-		{
-			s.HasDownloads = true
-		}
-	}
-	{
-		{
-			s.Archived = true
-		}
-	}
-	{
-		{
-			s.Disabled = true
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.PushedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.TemplateRepository.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowAutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForking.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscribersCount = int(0)
-		}
-	}
-	{
-		{
-			s.NetworkCount = int(0)
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.Organization.SetFake()
-		}
-	}
-	{
-		{
-			s.Parent.SetFake()
-		}
-	}
-	{
-		{
-			s.Source.SetFake()
-		}
-	}
-	{
-		{
-			s.Forks = int(0)
-		}
-	}
-	{
-		{
-			s.MasterBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssues = int(0)
-		}
-	}
-	{
-		{
-			s.Watchers = int(0)
-		}
-	}
-	{
-		{
-			s.AnonymousAccessEnabled.SetFake()
-		}
-	}
-	{
-		{
-			s.CodeOfConduct.SetFake()
-		}
-	}
-	{
-		{
-			s.SecurityAndAnalysis.SetFake()
-		}
-	}
-}
+func (s *FullRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FullRepositoryPermissions) SetFake() {
-	{
-		{
-			s.Admin = true
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-	{
-		{
-			s.Push = true
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Pull = true
-		}
-	}
-}
+func (s *FullRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *FullRepositorySecurityAndAnalysis) SetFake() {
-	{
-		{
-			s.AdvancedSecurity.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretScanning.SetFake()
-		}
-	}
-}
+func (s *FullRepositorySecurityAndAnalysis) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *FullRepositorySecurityAndAnalysisAdvancedSecurity) SetFake() {
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *FullRepositorySecurityAndAnalysisAdvancedSecurityStatus) SetFake() {
-	*s = FullRepositorySecurityAndAnalysisAdvancedSecurityStatusEnabled
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *FullRepositorySecurityAndAnalysisSecretScanning) SetFake() {
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *FullRepositorySecurityAndAnalysisSecretScanningStatus) SetFake() {
-	*s = FullRepositorySecurityAndAnalysisSecretScanningStatusEnabled
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *GistComment) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-}
+func (s *GistComment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistCommit) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Version = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.ChangeStatus.SetFake()
-		}
-	}
-	{
-		{
-			s.CommittedAt = time.Now()
-		}
-	}
-}
+func (s *GistCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistCommitChangeStatus) SetFake() {
-	{
-		{
-			s.Total.SetFake()
-		}
-	}
-	{
-		{
-			s.Additions.SetFake()
-		}
-	}
-	{
-		{
-			s.Deletions.SetFake()
-		}
-	}
-}
+func (s *GistCommitChangeStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistHistory) SetFake() {
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Version.SetFake()
-		}
-	}
-	{
-		{
-			s.CommittedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.ChangeStatus.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-}
+func (s *GistHistory) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistHistoryChangeStatus) SetFake() {
-	{
-		{
-			s.Total.SetFake()
-		}
-	}
-	{
-		{
-			s.Additions.SetFake()
-		}
-	}
-	{
-		{
-			s.Deletions.SetFake()
-		}
-	}
-}
+func (s *GistHistoryChangeStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistSimple) SetFake() {
-	{
-		{
-			s.Forks.SetFake()
-		}
-	}
-	{
-		{
-			s.History.SetFake()
-		}
-	}
-	{
-		{
-			s.ForkOf.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.GitPullURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitPushURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Files.SetFake()
-		}
-	}
-	{
-		{
-			s.Public.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Comments.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.CommentsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Truncated.SetFake()
-		}
-	}
-}
+func (s *GistSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistSimpleFiles) SetFake() {
-	var (
-		elem NilGistSimpleFilesItem
-		m    map[string]NilGistSimpleFilesItem = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *GistSimpleFiles) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistSimpleFilesItem) SetFake() {
-	{
-		{
-			s.Filename.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.RawURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Size.SetFake()
-		}
-	}
-	{
-		{
-			s.Truncated.SetFake()
-		}
-	}
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
-}
+func (s *GistSimpleFilesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistSimpleForkOf) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.GitPullURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitPushURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Files.SetFake()
-		}
-	}
-	{
-		{
-			s.Public = true
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Comments = int(0)
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Truncated.SetFake()
-		}
-	}
-	{
-		{
-			s.Forks = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.Forks = append(s.Forks, elem)
-			}
-		}
-	}
-	{
-		{
-			s.History = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.History = append(s.History, elem)
-			}
-		}
-	}
-}
+func (s *GistSimpleForkOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistSimpleForkOfFiles) SetFake() {
-	var (
-		elem GistSimpleForkOfFilesItem
-		m    map[string]GistSimpleForkOfFilesItem = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *GistSimpleForkOfFiles) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistSimpleForkOfFilesItem) SetFake() {
-	{
-		{
-			s.Filename.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.RawURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Size.SetFake()
-		}
-	}
-}
+func (s *GistSimpleForkOfFilesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistSimpleForksItem) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-}
+func (s *GistSimpleForksItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *GistsCheckIsStarredNotFound) SetFake() {
-}
+	_ = "STUB: not implemented"
 
-// SetFake set fake values.
-func (s *GistsCreateCommentForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsCreateCommentForbidden(unwrapped)
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *GistsCreateCommentNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsCreateCommentNotFound(unwrapped)
-}
+func (s *GistsCreateCommentForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsCreateCommentReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *GistsCreateCommentNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsCreateForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsCreateForbidden(unwrapped)
-}
+func (s *GistsCreateCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsCreateNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsCreateNotFound(unwrapped)
-}
+func (s *GistsCreateForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsCreateReq) SetFake() {
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Files.SetFake()
-		}
-	}
-	{
-		{
-			s.Public.SetFake()
-		}
-	}
-}
+func (s *GistsCreateNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsCreateReqFiles) SetFake() {
-	var (
-		elem GistsCreateReqFilesItem
-		m    map[string]GistsCreateReqFilesItem = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *GistsCreateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsCreateReqFilesItem) SetFake() {
-	{
-		{
-			s.Content = "string"
-		}
-	}
-}
+func (s *GistsCreateReqFiles) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsCreateReqPublic) SetFake() {
-	var variant bool
-
-	{
-		variant = true
-	}
-	s.SetBool(variant)
-}
+func (s *GistsCreateReqFilesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsCreateReqPublic1) SetFake() {
-	*s = GistsCreateReqPublic1True
-}
+func (s *GistsCreateReqPublic) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsDeleteCommentForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsDeleteCommentForbidden(unwrapped)
-}
+func (s *GistsCreateReqPublic1) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsDeleteCommentNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsDeleteCommentNotFound(unwrapped)
-}
+func (s *GistsDeleteCommentForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsDeleteForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsDeleteForbidden(unwrapped)
-}
+func (s *GistsDeleteCommentNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsDeleteNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsDeleteNotFound(unwrapped)
-}
+func (s *GistsDeleteForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsForkForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsForkForbidden(unwrapped)
-}
+func (s *GistsDeleteNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsForkNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsForkNotFound(unwrapped)
-}
+func (s *GistsForkForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsGetRevisionForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsGetRevisionForbidden(unwrapped)
-}
+func (s *GistsForkNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsGetRevisionNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsGetRevisionNotFound(unwrapped)
-}
+func (s *GistsGetRevisionForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsListCommentsForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsListCommentsForbidden(unwrapped)
-}
+func (s *GistsGetRevisionNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsListCommentsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsListCommentsNotFound(unwrapped)
-}
+func (s *GistsListCommentsForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsListCommitsForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsListCommitsForbidden(unwrapped)
-}
+func (s *GistsListCommentsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsListCommitsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsListCommitsNotFound(unwrapped)
-}
+func (s *GistsListCommitsForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsListForksForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsListForksForbidden(unwrapped)
-}
+func (s *GistsListCommitsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsListForksNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsListForksNotFound(unwrapped)
-}
+func (s *GistsListForksForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsListStarredForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsListStarredForbidden(unwrapped)
-}
+func (s *GistsListForksNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsListStarredUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsListStarredUnauthorized(unwrapped)
-}
+func (s *GistsListStarredForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsStarForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsStarForbidden(unwrapped)
-}
+func (s *GistsListStarredUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsStarNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsStarNotFound(unwrapped)
-}
+func (s *GistsStarForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsUnstarForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsUnstarForbidden(unwrapped)
-}
+func (s *GistsStarNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsUnstarNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GistsUnstarNotFound(unwrapped)
-}
+func (s *GistsUnstarForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GistsUpdateCommentReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *GistsUnstarNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCommit) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Tree.SetFake()
-		}
-	}
-	{
-		{
-			s.Parents = nil
-			for i := 0; i < 0; i++ {
-				var elem GitCommitParentsItem
-				{
-					elem.SetFake()
-				}
-				s.Parents = append(s.Parents, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Verification.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *GistsUpdateCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCommitAuthor) SetFake() {
-	{
-		{
-			s.Date = time.Now()
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *GitCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCommitCommitter) SetFake() {
-	{
-		{
-			s.Date = time.Now()
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *GitCommitAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCommitParentsItem) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *GitCommitCommitter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCommitTree) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *GitCommitParentsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCommitVerification) SetFake() {
-	{
-		{
-			s.Verified = true
-		}
-	}
-	{
-		{
-			s.Reason = "string"
-		}
-	}
-	{
-		{
-			s.Signature.SetFake()
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *GitCommitTree) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateBlobConflict) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GitCreateBlobConflict(unwrapped)
-}
+func (s *GitCommitVerification) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateBlobForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GitCreateBlobForbidden(unwrapped)
-}
+func (s *GitCreateBlobConflict) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateBlobNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GitCreateBlobNotFound(unwrapped)
-}
+func (s *GitCreateBlobForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateBlobReq) SetFake() {
-	{
-		{
-			s.Content = "string"
-		}
-	}
-	{
-		{
-			s.Encoding.SetFake()
-		}
-	}
-}
+func (s *GitCreateBlobNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateCommitReq) SetFake() {
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Tree = "string"
-		}
-	}
-	{
-		{
-			s.Parents = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Parents = append(s.Parents, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-	{
-		{
-			s.Signature.SetFake()
-		}
-	}
-}
+func (s *GitCreateBlobReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateCommitReqAuthor) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Date.SetFake()
-		}
-	}
-}
+func (s *GitCreateCommitReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateCommitReqCommitter) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Date.SetFake()
-		}
-	}
-}
+func (s *GitCreateCommitReqAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateRefReq) SetFake() {
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Key.SetFake()
-		}
-	}
-}
+func (s *GitCreateCommitReqCommitter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateTagReq) SetFake() {
-	{
-		{
-			s.Tag = "string"
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Object = "string"
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Tagger.SetFake()
-		}
-	}
-}
+func (s *GitCreateRefReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateTagReqTagger) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Date.SetFake()
-		}
-	}
-}
+func (s *GitCreateTagReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateTagReqType) SetFake() {
-	*s = GitCreateTagReqTypeCommit
-}
+func (s *GitCreateTagReqTagger) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateTreeForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GitCreateTreeForbidden(unwrapped)
-}
+func (s *GitCreateTagReqType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateTreeNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GitCreateTreeNotFound(unwrapped)
-}
+func (s *GitCreateTreeForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateTreeReq) SetFake() {
-	{
-		{
-			s.Tree = nil
-			for i := 0; i < 0; i++ {
-				var elem GitCreateTreeReqTreeItem
-				{
-					elem.SetFake()
-				}
-				s.Tree = append(s.Tree, elem)
-			}
-		}
-	}
-	{
-		{
-			s.BaseTree.SetFake()
-		}
-	}
-}
+func (s *GitCreateTreeNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateTreeReqTreeItem) SetFake() {
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Mode.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
-}
+func (s *GitCreateTreeReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateTreeReqTreeItemMode) SetFake() {
-	*s = GitCreateTreeReqTreeItemMode100644
-}
+func (s *GitCreateTreeReqTreeItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitCreateTreeReqTreeItemType) SetFake() {
-	*s = GitCreateTreeReqTreeItemTypeBlob
-}
+func (s *GitCreateTreeReqTreeItemMode) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitGetBlobForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GitGetBlobForbidden(unwrapped)
-}
+func (s *GitCreateTreeReqTreeItemType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitGetBlobNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = GitGetBlobNotFound(unwrapped)
-}
+func (s *GitGetBlobForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitRef) SetFake() {
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Object.SetFake()
-		}
-	}
-}
+func (s *GitGetBlobNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitRefObject) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *GitRef) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitTag) SetFake() {
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Tag = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Tagger.SetFake()
-		}
-	}
-	{
-		{
-			s.Object.SetFake()
-		}
-	}
-	{
-		{
-			s.Verification.SetFake()
-		}
-	}
-}
+func (s *GitRefObject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitTagObject) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *GitTag) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitTagTagger) SetFake() {
-	{
-		{
-			s.Date = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *GitTagObject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitTree) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Truncated = true
-		}
-	}
-	{
-		{
-			s.Tree = nil
-			for i := 0; i < 0; i++ {
-				var elem GitTreeTreeItem
-				{
-					elem.SetFake()
-				}
-				s.Tree = append(s.Tree, elem)
-			}
-		}
-	}
-}
+func (s *GitTagTagger) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitTreeTreeItem) SetFake() {
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Mode.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-	{
-		{
-			s.Size.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-}
+func (s *GitTree) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitUpdateRefReq) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Force.SetFake()
-		}
-	}
-}
+func (s *GitTreeTreeItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitignoreGetAllTemplatesOKApplicationJSON) SetFake() {
-	var unwrapped []string
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem string
-			{
-				elem = "string"
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = GitignoreGetAllTemplatesOKApplicationJSON(unwrapped)
-}
+func (s *GitUpdateRefReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GitignoreTemplate) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Source = "string"
-		}
-	}
-}
+func (s *GitignoreGetAllTemplatesOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GpgKey) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.PrimaryKeyID.SetFake()
-		}
-	}
-	{
-		{
-			s.KeyID = "string"
-		}
-	}
-	{
-		{
-			s.PublicKey = "string"
-		}
-	}
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 0; i++ {
-				var elem GpgKeyEmailsItem
-				{
-					elem.SetFake()
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Subkeys = nil
-			for i := 0; i < 0; i++ {
-				var elem GpgKeySubkeysItem
-				{
-					elem.SetFake()
-				}
-				s.Subkeys = append(s.Subkeys, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CanSign = true
-		}
-	}
-	{
-		{
-			s.CanEncryptComms = true
-		}
-	}
-	{
-		{
-			s.CanEncryptStorage = true
-		}
-	}
-	{
-		{
-			s.CanCertify = true
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.ExpiresAt.SetFake()
-		}
-	}
-	{
-		{
-			s.RawKey.SetFake()
-		}
-	}
-}
+func (s *GitignoreTemplate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GpgKeyEmailsItem) SetFake() {
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Verified.SetFake()
-		}
-	}
-}
+func (s *GpgKey) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GpgKeySubkeysItem) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.PrimaryKeyID.SetFake()
-		}
-	}
-	{
-		{
-			s.KeyID.SetFake()
-		}
-	}
-	{
-		{
-			s.PublicKey.SetFake()
-		}
-	}
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Subkeys = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.Subkeys = append(s.Subkeys, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CanSign.SetFake()
-		}
-	}
-	{
-		{
-			s.CanEncryptComms.SetFake()
-		}
-	}
-	{
-		{
-			s.CanEncryptStorage.SetFake()
-		}
-	}
-	{
-		{
-			s.CanCertify.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.ExpiresAt.SetFake()
-		}
-	}
-	{
-		{
-			s.RawKey.SetFake()
-		}
-	}
-}
+func (s *GpgKeyEmailsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GroupMapping) SetFake() {
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem GroupMappingGroupsItem
-				{
-					elem.SetFake()
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
-}
+func (s *GpgKeySubkeysItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *GroupMappingGroupsItem) SetFake() {
-	{
-		{
-			s.GroupID = "string"
-		}
-	}
-	{
-		{
-			s.GroupName = "string"
-		}
-	}
-	{
-		{
-			s.GroupDescription = "string"
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.SyncedAt.SetFake()
-		}
-	}
-}
+func (s *GroupMapping) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Hook) SetFake() {
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Active = true
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Config.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.PingURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DeliveriesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.LastResponse.SetFake()
-		}
-	}
-}
+func (s *GroupMappingGroupsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *HookConfig) SetFake() {
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Password.SetFake()
-		}
-	}
-	{
-		{
-			s.Room.SetFake()
-		}
-	}
-	{
-		{
-			s.Subdomain.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.InsecureSsl.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Digest.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.Token.SetFake()
-		}
-	}
-}
+func (s *Hook) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *HookDelivery) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.GUID = "string"
-		}
-	}
-	{
-		{
-			s.DeliveredAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Redelivery = true
-		}
-	}
-	{
-		{
-			s.Duration = float64(0)
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.StatusCode = int(0)
-		}
-	}
-	{
-		{
-			s.Event = "string"
-		}
-	}
-	{
-		{
-			s.Action.SetFake()
-		}
-	}
-	{
-		{
-			s.InstallationID.SetFake()
-		}
-	}
-	{
-		{
-			s.RepositoryID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.Request.SetFake()
-		}
-	}
-	{
-		{
-			s.Response.SetFake()
-		}
-	}
-}
+func (s *HookConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *HookDeliveryItem) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.GUID = "string"
-		}
-	}
-	{
-		{
-			s.DeliveredAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Redelivery = true
-		}
-	}
-	{
-		{
-			s.Duration = float64(0)
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.StatusCode = int(0)
-		}
-	}
-	{
-		{
-			s.Event = "string"
-		}
-	}
-	{
-		{
-			s.Action.SetFake()
-		}
-	}
-	{
-		{
-			s.InstallationID.SetFake()
-		}
-	}
-	{
-		{
-			s.RepositoryID.SetFake()
-		}
-	}
-}
+func (s *HookDelivery) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *HookDeliveryRequest) SetFake() {
-	{
-		{
-			s.Headers.SetFake()
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *HookDeliveryItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *HookDeliveryRequestHeaders) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *HookDeliveryRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *HookDeliveryRequestPayload) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *HookDeliveryRequestHeaders) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *HookDeliveryResponse) SetFake() {
-	{
-		{
-			s.Headers.SetFake()
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-}
+func (s *HookDeliveryRequestPayload) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *HookDeliveryResponseHeaders) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *HookDeliveryResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *HookResponse) SetFake() {
-	{
-		{
-			s.Code.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-}
+func (s *HookDeliveryResponseHeaders) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Hovercard) SetFake() {
-	{
-		{
-			s.Contexts = nil
-			for i := 0; i < 0; i++ {
-				var elem HovercardContextsItem
-				{
-					elem.SetFake()
-				}
-				s.Contexts = append(s.Contexts, elem)
-			}
-		}
-	}
-}
+func (s *HookResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *HovercardContextsItem) SetFake() {
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Octicon = "string"
-		}
-	}
-}
+func (s *Hovercard) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Import) SetFake() {
-	{
-		{
-			s.Vcs.SetFake()
-		}
-	}
-	{
-		{
-			s.UseLfs.SetFake()
-		}
-	}
-	{
-		{
-			s.VcsURL = "string"
-		}
-	}
-	{
-		{
-			s.SvcRoot.SetFake()
-		}
-	}
-	{
-		{
-			s.TfvcProject.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.StatusText.SetFake()
-		}
-	}
-	{
-		{
-			s.FailedStep.SetFake()
-		}
-	}
-	{
-		{
-			s.ErrorMessage.SetFake()
-		}
-	}
-	{
-		{
-			s.ImportPercent.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitCount.SetFake()
-		}
-	}
-	{
-		{
-			s.PushPercent.SetFake()
-		}
-	}
-	{
-		{
-			s.HasLargeFiles.SetFake()
-		}
-	}
-	{
-		{
-			s.LargeFilesSize.SetFake()
-		}
-	}
-	{
-		{
-			s.LargeFilesCount.SetFake()
-		}
-	}
-	{
-		{
-			s.ProjectChoices = nil
-			for i := 0; i < 0; i++ {
-				var elem ImportProjectChoicesItem
-				{
-					elem.SetFake()
-				}
-				s.ProjectChoices = append(s.ProjectChoices, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.AuthorsCount.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.AuthorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SvnRoot.SetFake()
-		}
-	}
-}
+func (s *HovercardContextsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ImportProjectChoicesItem) SetFake() {
-	{
-		{
-			s.Vcs.SetFake()
-		}
-	}
-	{
-		{
-			s.TfvcProject.SetFake()
-		}
-	}
-	{
-		{
-			s.HumanName.SetFake()
-		}
-	}
-}
+func (s *Import) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ImportStatus) SetFake() {
-	*s = ImportStatusAuth
-}
+func (s *ImportProjectChoicesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InstallationToken) SetFake() {
-	{
-		{
-			s.Token = "string"
-		}
-	}
-	{
-		{
-			s.ExpiresAt = "string"
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.RepositorySelection.SetFake()
-		}
-	}
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem Repository
-				{
-					elem.SetFake()
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SingleFile.SetFake()
-		}
-	}
-	{
-		{
-			s.HasMultipleSingleFiles.SetFake()
-		}
-	}
-	{
-		{
-			s.SingleFilePaths = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.SingleFilePaths = append(s.SingleFilePaths, elem)
-			}
-		}
-	}
-}
+func (s *ImportStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InstallationTokenRepositorySelection) SetFake() {
-	*s = InstallationTokenRepositorySelectionAll
-}
+func (s *InstallationToken) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Integration) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Slug.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.ExternalURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-	{
-		{
-			s.InstallationsCount.SetFake()
-		}
-	}
-	{
-		{
-			s.ClientID.SetFake()
-		}
-	}
-	{
-		{
-			s.ClientSecret.SetFake()
-		}
-	}
-	{
-		{
-			s.WebhookSecret.SetFake()
-		}
-	}
-	{
-		{
-			s.Pem.SetFake()
-		}
-	}
-}
+func (s *InstallationTokenRepositorySelection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IntegrationPermissions) SetFake() {
-	{
-		{
-			s.Issues.SetFake()
-		}
-	}
-	{
-		{
-			s.Checks.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Contents.SetFake()
-		}
-	}
-	{
-		{
-			s.Deployments.SetFake()
-		}
-	}
-	{
-		{
-			s.AdditionalProps.SetFake()
-		}
-	}
-}
+func (s *Integration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IntegrationPermissionsAdditional) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *IntegrationPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InteractionExpiry) SetFake() {
-	*s = InteractionExpiryOneDay
-}
+func (s *IntegrationPermissionsAdditional) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InteractionGroup) SetFake() {
-	*s = InteractionGroupExistingUsers
-}
+func (s *InteractionExpiry) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InteractionLimit) SetFake() {
-	{
-		{
-			s.Limit.SetFake()
-		}
-	}
-	{
-		{
-			s.Expiry.SetFake()
-		}
-	}
-}
+func (s *InteractionGroup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *InteractionLimitResponse) SetFake() {
-	{
-		{
-			s.Limit.SetFake()
-		}
-	}
-	{
-		{
-			s.Origin = "string"
-		}
-	}
-	{
-		{
-			s.ExpiresAt = time.Now()
-		}
-	}
-}
+func (s *InteractionLimit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Issue) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Labels = nil
-			for i := 0; i < 0; i++ {
-				var elem IssueLabelsItem
-				{
-					elem.SetFake()
-				}
-				s.Labels = append(s.Labels, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Assignee.SetFake()
-		}
-	}
-	{
-		{
-			s.Assignees.SetFake()
-		}
-	}
-	{
-		{
-			s.Milestone.SetFake()
-		}
-	}
-	{
-		{
-			s.Locked = true
-		}
-	}
-	{
-		{
-			s.ActiveLockReason.SetFake()
-		}
-	}
-	{
-		{
-			s.Comments = int(0)
-		}
-	}
-	{
-		{
-			s.PullRequest.SetFake()
-		}
-	}
-	{
-		{
-			s.ClosedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.ClosedBy.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyHTML.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyText.SetFake()
-		}
-	}
-	{
-		{
-			s.TimelineURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.PerformedViaGithubApp.SetFake()
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-	{
-		{
-			s.Reactions.SetFake()
-		}
-	}
-}
+func (s *InteractionLimitResponse) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueComment) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyText.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyHTML.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.IssueURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-	{
-		{
-			s.PerformedViaGithubApp.SetFake()
-		}
-	}
-	{
-		{
-			s.Reactions.SetFake()
-		}
-	}
-}
+func (s *Issue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueEvent) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Actor.SetFake()
-		}
-	}
-	{
-		{
-			s.Event = "string"
-		}
-	}
-	{
-		{
-			s.CommitID.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Issue.SetFake()
-		}
-	}
-	{
-		{
-			s.Label.SetFake()
-		}
-	}
-	{
-		{
-			s.Assignee.SetFake()
-		}
-	}
-	{
-		{
-			s.Assigner.SetFake()
-		}
-	}
-	{
-		{
-			s.ReviewRequester.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestedReviewer.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestedTeam.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissedReview.SetFake()
-		}
-	}
-	{
-		{
-			s.Milestone.SetFake()
-		}
-	}
-	{
-		{
-			s.ProjectCard.SetFake()
-		}
-	}
-	{
-		{
-			s.Rename.SetFake()
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-	{
-		{
-			s.LockReason.SetFake()
-		}
-	}
-	{
-		{
-			s.PerformedViaGithubApp.SetFake()
-		}
-	}
-}
+func (s *IssueComment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueEventDismissedReview) SetFake() {
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.ReviewID = int(0)
-		}
-	}
-	{
-		{
-			s.DismissalMessage.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissalCommitID.SetFake()
-		}
-	}
-}
+func (s *IssueEvent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueEventLabel) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Color.SetFake()
-		}
-	}
-}
+func (s *IssueEventDismissedReview) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueEventMilestone) SetFake() {
-	{
-		{
-			s.Title = "string"
-		}
-	}
-}
+func (s *IssueEventLabel) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueEventProjectCard) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.ProjectURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ProjectID = int(0)
-		}
-	}
-	{
-		{
-			s.ColumnName = "string"
-		}
-	}
-	{
-		{
-			s.PreviousColumnName.SetFake()
-		}
-	}
-}
+func (s *IssueEventMilestone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueEventRename) SetFake() {
-	{
-		{
-			s.From = "string"
-		}
-	}
-	{
-		{
-			s.To = "string"
-		}
-	}
-}
+func (s *IssueEventProjectCard) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueLabelsItem) SetFake() {
-	var variant string
+func (s *IssueEventRename) SetFake() { _ = "STUB: not implemented"; return }
 
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
-
 // SetFake set fake values.
-func (s *IssueLabelsItem1) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Color.SetFake()
-		}
-	}
-	{
-		{
-			s.Default.SetFake()
-		}
-	}
-}
+func (s *IssueLabelsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuePullRequest) SetFake() {
-	{
-		{
-			s.MergedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.DiffURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PatchURL.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-}
+func (s *IssueLabelsItem1) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueSearchResultItem) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Locked = true
-		}
-	}
-	{
-		{
-			s.ActiveLockReason.SetFake()
-		}
-	}
-	{
-		{
-			s.Assignees.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Labels = nil
-			for i := 0; i < 0; i++ {
-				var elem IssueSearchResultItemLabelsItem
-				{
-					elem.SetFake()
-				}
-				s.Labels = append(s.Labels, elem)
-			}
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.Assignee.SetFake()
-		}
-	}
-	{
-		{
-			s.Milestone.SetFake()
-		}
-	}
-	{
-		{
-			s.Comments = int(0)
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.ClosedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.TextMatches.SetFake()
-		}
-	}
-	{
-		{
-			s.PullRequest.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Score = float64(0)
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-	{
-		{
-			s.Draft.SetFake()
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyHTML.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyText.SetFake()
-		}
-	}
-	{
-		{
-			s.TimelineURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PerformedViaGithubApp.SetFake()
-		}
-	}
-}
+func (s *IssuePullRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueSearchResultItemLabelsItem) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Color.SetFake()
-		}
-	}
-	{
-		{
-			s.Default.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-}
+func (s *IssueSearchResultItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueSearchResultItemPullRequest) SetFake() {
-	{
-		{
-			s.MergedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.DiffURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PatchURL.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-}
+func (s *IssueSearchResultItemLabelsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueSimple) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Labels = nil
-			for i := 0; i < 0; i++ {
-				var elem Label
-				{
-					elem.SetFake()
-				}
-				s.Labels = append(s.Labels, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Assignee.SetFake()
-		}
-	}
-	{
-		{
-			s.Assignees.SetFake()
-		}
-	}
-	{
-		{
-			s.Milestone.SetFake()
-		}
-	}
-	{
-		{
-			s.Locked = true
-		}
-	}
-	{
-		{
-			s.ActiveLockReason.SetFake()
-		}
-	}
-	{
-		{
-			s.Comments = int(0)
-		}
-	}
-	{
-		{
-			s.PullRequest.SetFake()
-		}
-	}
-	{
-		{
-			s.ClosedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyHTML.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyText.SetFake()
-		}
-	}
-	{
-		{
-			s.TimelineURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.PerformedViaGithubApp.SetFake()
-		}
-	}
-}
+func (s *IssueSearchResultItemPullRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssueSimplePullRequest) SetFake() {
-	{
-		{
-			s.MergedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.DiffURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PatchURL.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-}
+func (s *IssueSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesAddAssigneesReq) SetFake() {
-	{
-		{
-			s.Assignees = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Assignees = append(s.Assignees, elem)
-			}
-		}
-	}
-}
+func (s *IssueSimplePullRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateCommentForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesCreateCommentForbidden(unwrapped)
-}
+func (s *IssuesAddAssigneesReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateCommentGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesCreateCommentGone(unwrapped)
-}
+func (s *IssuesCreateCommentForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateCommentNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesCreateCommentNotFound(unwrapped)
-}
+func (s *IssuesCreateCommentGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateCommentReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *IssuesCreateCommentNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesCreateForbidden(unwrapped)
-}
+func (s *IssuesCreateCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesCreateGone(unwrapped)
-}
+func (s *IssuesCreateForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateLabelReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Color.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-}
+func (s *IssuesCreateGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateMilestoneReq) SetFake() {
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.DueOn.SetFake()
-		}
-	}
-}
+func (s *IssuesCreateLabelReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateMilestoneReqState) SetFake() {
-	*s = IssuesCreateMilestoneReqStateOpen
-}
+func (s *IssuesCreateMilestoneReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesCreateNotFound(unwrapped)
-}
+func (s *IssuesCreateMilestoneReqState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateReq) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Assignee.SetFake()
-		}
-	}
-	{
-		{
-			s.Milestone.SetFake()
-		}
-	}
-	{
-		{
-			s.Labels = nil
-			for i := 0; i < 0; i++ {
-				var elem IssuesCreateReqLabelsItem
-				{
-					elem.SetFake()
-				}
-				s.Labels = append(s.Labels, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Assignees = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Assignees = append(s.Assignees, elem)
-			}
-		}
-	}
-}
+func (s *IssuesCreateNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateReqLabelsItem) SetFake() {
-	var variant string
-
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+func (s *IssuesCreateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateReqLabelsItem1) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Color.SetFake()
-		}
-	}
-}
+func (s *IssuesCreateReqLabelsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateReqMilestone) SetFake() {
-	var variant string
-
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+func (s *IssuesCreateReqLabelsItem1) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesCreateReqTitle) SetFake() {
-	var variant string
-
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+func (s *IssuesCreateReqMilestone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesGetEventForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesGetEventForbidden(unwrapped)
-}
+func (s *IssuesCreateReqTitle) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesGetEventGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesGetEventGone(unwrapped)
-}
+func (s *IssuesGetEventForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesGetEventNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesGetEventNotFound(unwrapped)
-}
+func (s *IssuesGetEventGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesGetGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesGetGone(unwrapped)
-}
+func (s *IssuesGetEventNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesGetMovedPermanently) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesGetMovedPermanently(unwrapped)
-}
+func (s *IssuesGetGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesGetNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesGetNotFound(unwrapped)
-}
+func (s *IssuesGetMovedPermanently) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesListCommentsGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesListCommentsGone(unwrapped)
-}
+func (s *IssuesGetNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesListCommentsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesListCommentsNotFound(unwrapped)
-}
+func (s *IssuesListCommentsGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesListForRepoMovedPermanently) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesListForRepoMovedPermanently(unwrapped)
-}
+func (s *IssuesListCommentsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesListForRepoNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesListForRepoNotFound(unwrapped)
-}
+func (s *IssuesListForRepoMovedPermanently) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesLockForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesLockForbidden(unwrapped)
-}
+func (s *IssuesListForRepoNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesLockGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesLockGone(unwrapped)
-}
+func (s *IssuesLockForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesLockNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesLockNotFound(unwrapped)
-}
+func (s *IssuesLockGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesLockReq) SetFake() {
-	{
-		{
-			s.LockReason.SetFake()
-		}
-	}
-}
+func (s *IssuesLockNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesLockReqLockReason) SetFake() {
-	*s = IssuesLockReqLockReasonOffTopic
-}
+func (s *IssuesLockReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesRemoveAssigneesReq) SetFake() {
-	{
-		{
-			s.Assignees = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Assignees = append(s.Assignees, elem)
-			}
-		}
-	}
-}
+func (s *IssuesLockReqLockReason) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesRemoveLabelGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesRemoveLabelGone(unwrapped)
-}
+func (s *IssuesRemoveAssigneesReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesRemoveLabelNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesRemoveLabelNotFound(unwrapped)
-}
+func (s *IssuesRemoveLabelGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesRemoveLabelOKApplicationJSON) SetFake() {
-	var unwrapped []Label
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Label
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = IssuesRemoveLabelOKApplicationJSON(unwrapped)
-}
+func (s *IssuesRemoveLabelNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUnlockForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesUnlockForbidden(unwrapped)
-}
+func (s *IssuesRemoveLabelOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUnlockNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesUnlockNotFound(unwrapped)
-}
+func (s *IssuesUnlockForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateCommentReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *IssuesUnlockNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesUpdateForbidden(unwrapped)
-}
+func (s *IssuesUpdateCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesUpdateGone(unwrapped)
-}
+func (s *IssuesUpdateForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateLabelReq) SetFake() {
-	{
-		{
-			s.NewName.SetFake()
-		}
-	}
-	{
-		{
-			s.Color.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-}
+func (s *IssuesUpdateGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateMilestoneReq) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.DueOn.SetFake()
-		}
-	}
-}
+func (s *IssuesUpdateLabelReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateMilestoneReqState) SetFake() {
-	*s = IssuesUpdateMilestoneReqStateOpen
-}
+func (s *IssuesUpdateMilestoneReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateMovedPermanently) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesUpdateMovedPermanently(unwrapped)
-}
+func (s *IssuesUpdateMilestoneReqState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = IssuesUpdateNotFound(unwrapped)
-}
+func (s *IssuesUpdateMovedPermanently) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateReq) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Assignee.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Milestone.SetFake()
-		}
-	}
-	{
-		{
-			s.Labels = nil
-			for i := 0; i < 0; i++ {
-				var elem IssuesUpdateReqLabelsItem
-				{
-					elem.SetFake()
-				}
-				s.Labels = append(s.Labels, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Assignees = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Assignees = append(s.Assignees, elem)
-			}
-		}
-	}
-}
+func (s *IssuesUpdateNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateReqLabelsItem) SetFake() {
-	var variant string
-
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+func (s *IssuesUpdateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateReqLabelsItem1) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Color.SetFake()
-		}
-	}
-}
+func (s *IssuesUpdateReqLabelsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateReqMilestone) SetFake() {
-	var variant string
-
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+func (s *IssuesUpdateReqLabelsItem1) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateReqState) SetFake() {
-	*s = IssuesUpdateReqStateOpen
-}
+func (s *IssuesUpdateReqMilestone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *IssuesUpdateReqTitle) SetFake() {
-	var variant string
+func (s *IssuesUpdateReqState) SetFake() { _ = "STUB: not implemented"; return }
 
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+// SetFake set fake values.
+func (s *IssuesUpdateReqTitle) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Job) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.RunID = int(0)
-		}
-	}
-	{
-		{
-			s.RunURL = "string"
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.HeadSha = "string"
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Conclusion.SetFake()
-		}
-	}
-	{
-		{
-			s.StartedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.CompletedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Steps = nil
-			for i := 0; i < 0; i++ {
-				var elem JobStepsItem
-				{
-					elem.SetFake()
-				}
-				s.Steps = append(s.Steps, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CheckRunURL = "string"
-		}
-	}
-}
+func (s *Job) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *JobStatus) SetFake() {
-	*s = JobStatusQueued
-}
+func (s *JobStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *JobStepsItem) SetFake() {
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Conclusion.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.StartedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CompletedAt.SetFake()
-		}
-	}
-}
+func (s *JobStepsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *JobStepsItemStatus) SetFake() {
-	*s = JobStepsItemStatusQueued
-}
+func (s *JobStepsItemStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Key) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Verified = true
-		}
-	}
-	{
-		{
-			s.ReadOnly = true
-		}
-	}
-}
+func (s *Key) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *KeySimple) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Key = "string"
-		}
-	}
-}
+func (s *KeySimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Label) SetFake() {
-	{
-		{
-			s.ID = int64(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Color = "string"
-		}
-	}
-	{
-		{
-			s.Default = true
-		}
-	}
-}
+func (s *Label) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LabelSearchResultItem) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Color = "string"
-		}
-	}
-	{
-		{
-			s.Default = true
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Score = float64(0)
-		}
-	}
-	{
-		{
-			s.TextMatches.SetFake()
-		}
-	}
-}
+func (s *LabelSearchResultItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Language) SetFake() {
-	var (
-		elem int
-		m    map[string]int = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *Language) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *License) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.SpdxID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.Implementation = "string"
-		}
-	}
-	{
-		{
-			s.Permissions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Permissions = append(s.Permissions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Conditions = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Conditions = append(s.Conditions, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Limitations = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Limitations = append(s.Limitations, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.Featured = true
-		}
-	}
-}
+func (s *License) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LicenseContent) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitURL.SetFake()
-		}
-	}
-	{
-		{
-			s.DownloadURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Content = "string"
-		}
-	}
-	{
-		{
-			s.Encoding = "string"
-		}
-	}
-	{
-		{
-			s.Links.SetFake()
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-}
+func (s *LicenseContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LicenseContentLinks) SetFake() {
-	{
-		{
-			s.Git.SetFake()
-		}
-	}
-	{
-		{
-			s.HTML.SetFake()
-		}
-	}
-	{
-		{
-			s.Self = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *LicenseContentLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LicenseSimple) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.SpdxID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-}
+func (s *LicenseSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LicensesGetAllCommonlyUsedOKApplicationJSON) SetFake() {
-	var unwrapped []LicenseSimple
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem LicenseSimple
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = LicensesGetAllCommonlyUsedOKApplicationJSON(unwrapped)
-}
+func (s *LicensesGetAllCommonlyUsedOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LicensesGetForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = LicensesGetForbidden(unwrapped)
-}
+func (s *LicensesGetForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LicensesGetNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = LicensesGetNotFound(unwrapped)
-}
+func (s *LicensesGetNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Link) SetFake() {
-	{
-		{
-			s.Href = "string"
-		}
-	}
-}
+func (s *Link) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *LinkWithType) SetFake() {
-	{
-		{
-			s.Href = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *LinkWithType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarkdownRenderReq) SetFake() {
-	{
-		{
-			s.Text = "string"
-		}
-	}
-	{
-		{
-			s.Mode.SetFake()
-		}
-	}
-	{
-		{
-			s.Context.SetFake()
-		}
-	}
-}
+func (s *MarkdownRenderReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarkdownRenderReqMode) SetFake() {
-	*s = MarkdownRenderReqModeMarkdown
-}
+func (s *MarkdownRenderReqMode) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarketplaceAccount) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationBillingEmail.SetFake()
-		}
-	}
-}
+func (s *MarketplaceAccount) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarketplaceListingPlan) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.AccountsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.MonthlyPriceInCents = int(0)
-		}
-	}
-	{
-		{
-			s.YearlyPriceInCents = int(0)
-		}
-	}
-	{
-		{
-			s.PriceModel = "string"
-		}
-	}
-	{
-		{
-			s.HasFreeTrial = true
-		}
-	}
-	{
-		{
-			s.UnitName.SetFake()
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.Bullets = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Bullets = append(s.Bullets, elem)
-			}
-		}
-	}
-}
+func (s *MarketplaceListingPlan) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarketplacePurchase) SetFake() {
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.OrganizationBillingEmail.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.MarketplacePendingChange.SetFake()
-		}
-	}
-	{
-		{
-			s.MarketplacePurchase.SetFake()
-		}
-	}
-}
+func (s *MarketplacePurchase) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarketplacePurchaseMarketplacePendingChange) SetFake() {
-	{
-		{
-			s.IsInstalled.SetFake()
-		}
-	}
-	{
-		{
-			s.EffectiveDate.SetFake()
-		}
-	}
-	{
-		{
-			s.UnitCount.SetFake()
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Plan.SetFake()
-		}
-	}
-}
+func (s *MarketplacePurchaseMarketplacePendingChange) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MarketplacePurchaseMarketplacePurchase) SetFake() {
-	{
-		{
-			s.BillingCycle.SetFake()
-		}
-	}
-	{
-		{
-			s.NextBillingDate.SetFake()
-		}
-	}
-	{
-		{
-			s.IsInstalled.SetFake()
-		}
-	}
-	{
-		{
-			s.UnitCount.SetFake()
-		}
-	}
-	{
-		{
-			s.OnFreeTrial.SetFake()
-		}
-	}
-	{
-		{
-			s.FreeTrialEndsOn.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Plan.SetFake()
-		}
-	}
-}
+func (s *MarketplacePurchaseMarketplacePurchase) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MergedUpstream) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.MergeType.SetFake()
-		}
-	}
-	{
-		{
-			s.BaseBranch.SetFake()
-		}
-	}
-}
+func (s *MergedUpstream) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MergedUpstreamMergeType) SetFake() {
-	*s = MergedUpstreamMergeTypeMerge
-}
+func (s *MergedUpstreamMergeType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MetaRootOK) SetFake() {
-	{
-		{
-			s.CurrentUserURL = "string"
-		}
-	}
-	{
-		{
-			s.CurrentUserAuthorizationsHTMLURL = "string"
-		}
-	}
-	{
-		{
-			s.AuthorizationsURL = "string"
-		}
-	}
-	{
-		{
-			s.CodeSearchURL = "string"
-		}
-	}
-	{
-		{
-			s.CommitSearchURL = "string"
-		}
-	}
-	{
-		{
-			s.EmailsURL = "string"
-		}
-	}
-	{
-		{
-			s.EmojisURL = "string"
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.FeedsURL = "string"
-		}
-	}
-	{
-		{
-			s.FollowersURL = "string"
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.HubURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueSearchURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.KeysURL = "string"
-		}
-	}
-	{
-		{
-			s.LabelSearchURL = "string"
-		}
-	}
-	{
-		{
-			s.NotificationsURL = "string"
-		}
-	}
-	{
-		{
-			s.OrganizationURL = "string"
-		}
-	}
-	{
-		{
-			s.OrganizationRepositoriesURL = "string"
-		}
-	}
-	{
-		{
-			s.OrganizationTeamsURL = "string"
-		}
-	}
-	{
-		{
-			s.PublicGistsURL = "string"
-		}
-	}
-	{
-		{
-			s.RateLimitURL = "string"
-		}
-	}
-	{
-		{
-			s.RepositoryURL = "string"
-		}
-	}
-	{
-		{
-			s.RepositorySearchURL = "string"
-		}
-	}
-	{
-		{
-			s.CurrentUserRepositoriesURL = "string"
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.StarredGistsURL = "string"
-		}
-	}
-	{
-		{
-			s.TopicSearchURL.SetFake()
-		}
-	}
-	{
-		{
-			s.UserURL = "string"
-		}
-	}
-	{
-		{
-			s.UserOrganizationsURL = "string"
-		}
-	}
-	{
-		{
-			s.UserRepositoriesURL = "string"
-		}
-	}
-	{
-		{
-			s.UserSearchURL = "string"
-		}
-	}
-}
+func (s *MetaRootOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Migration) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.GUID = "string"
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.LockRepositories = true
-		}
-	}
-	{
-		{
-			s.ExcludeMetadata = true
-		}
-	}
-	{
-		{
-			s.ExcludeGitData = true
-		}
-	}
-	{
-		{
-			s.ExcludeAttachments = true
-		}
-	}
-	{
-		{
-			s.ExcludeReleases = true
-		}
-	}
-	{
-		{
-			s.ExcludeOwnerProjects = true
-		}
-	}
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem Repository
-				{
-					elem.SetFake()
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.ArchiveURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Exclude = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.Exclude = append(s.Exclude, elem)
-			}
-		}
-	}
-}
+func (s *Migration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *MigrationsDeleteArchiveForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsDeleteArchiveForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *MigrationsDeleteArchiveForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsDeleteArchiveForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *MigrationsDeleteArchiveForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsDeleteArchiveForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *MigrationsGetArchiveForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsGetArchiveForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *MigrationsGetArchiveForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsGetArchiveForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *MigrationsGetCommitAuthorsOKApplicationJSON) SetFake() {
-	var unwrapped []PorterAuthor
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem PorterAuthor
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = MigrationsGetCommitAuthorsOKApplicationJSON(unwrapped)
-}
+func (s *MigrationsGetCommitAuthorsOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *MigrationsGetStatusForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsGetStatusForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *MigrationsGetStatusForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsGetStatusForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *MigrationsGetStatusForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsGetStatusForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *MigrationsListForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsListForAuthenticatedUserForbidden(unwrapped)
-}
+func (s *MigrationsListForAuthenticatedUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *MigrationsListForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsListForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *MigrationsMapCommitAuthorReq) SetFake() {
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-}
+func (s *MigrationsMapCommitAuthorReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MigrationsSetLfsPreferenceReq) SetFake() {
-	{
-		{
-			s.UseLfs.SetFake()
-		}
-	}
-}
+func (s *MigrationsSetLfsPreferenceReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MigrationsSetLfsPreferenceReqUseLfs) SetFake() {
-	*s = MigrationsSetLfsPreferenceReqUseLfsOptIn
-}
+func (s *MigrationsSetLfsPreferenceReqUseLfs) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MigrationsStartForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsStartForAuthenticatedUserForbidden(unwrapped)
-}
+func (s *MigrationsStartForAuthenticatedUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MigrationsStartForAuthenticatedUserReq) SetFake() {
-	{
-		{
-			s.LockRepositories.SetFake()
-		}
-	}
-	{
-		{
-			s.ExcludeAttachments.SetFake()
-		}
-	}
-	{
-		{
-			s.ExcludeReleases.SetFake()
-		}
-	}
-	{
-		{
-			s.ExcludeOwnerProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.Exclude = nil
-			for i := 0; i < 0; i++ {
-				var elem MigrationsStartForAuthenticatedUserReqExcludeItem
-				{
-					elem.SetFake()
-				}
-				s.Exclude = append(s.Exclude, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
-}
+func (s *MigrationsStartForAuthenticatedUserReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *MigrationsStartForAuthenticatedUserReqExcludeItem) SetFake() {
-	*s = MigrationsStartForAuthenticatedUserReqExcludeItemRepositories
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *MigrationsStartForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsStartForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *MigrationsStartForOrgReq) SetFake() {
-	{
-		{
-			s.Repositories = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Repositories = append(s.Repositories, elem)
-			}
-		}
-	}
-	{
-		{
-			s.LockRepositories.SetFake()
-		}
-	}
-	{
-		{
-			s.ExcludeAttachments.SetFake()
-		}
-	}
-	{
-		{
-			s.ExcludeReleases.SetFake()
-		}
-	}
-	{
-		{
-			s.ExcludeOwnerProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.Exclude = nil
-			for i := 0; i < 0; i++ {
-				var elem MigrationsStartForOrgReqExcludeItem
-				{
-					elem.SetFake()
-				}
-				s.Exclude = append(s.Exclude, elem)
-			}
-		}
-	}
-}
+func (s *MigrationsStartForOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MigrationsStartForOrgReqExcludeItem) SetFake() {
-	*s = MigrationsStartForOrgReqExcludeItemRepositories
-}
+func (s *MigrationsStartForOrgReqExcludeItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MigrationsStartImportReq) SetFake() {
-	{
-		{
-			s.VcsURL = "string"
-		}
-	}
-	{
-		{
-			s.Vcs.SetFake()
-		}
-	}
-	{
-		{
-			s.VcsUsername.SetFake()
-		}
-	}
-	{
-		{
-			s.VcsPassword.SetFake()
-		}
-	}
-	{
-		{
-			s.TfvcProject.SetFake()
-		}
-	}
-}
+func (s *MigrationsStartImportReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MigrationsStartImportReqVcs) SetFake() {
-	*s = MigrationsStartImportReqVcsSubversion
-}
+func (s *MigrationsStartImportReqVcs) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *MigrationsUnlockRepoForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsUnlockRepoForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *MigrationsUnlockRepoForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsUnlockRepoForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *MigrationsUnlockRepoForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = MigrationsUnlockRepoForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *MigrationsUpdateImportReq) SetFake() {
-	{
-		{
-			s.VcsUsername.SetFake()
-		}
-	}
-	{
-		{
-			s.VcsPassword.SetFake()
-		}
-	}
-	{
-		{
-			s.Vcs.SetFake()
-		}
-	}
-	{
-		{
-			s.TfvcProject.SetFake()
-		}
-	}
-}
+func (s *MigrationsUpdateImportReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Milestone) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.LabelsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Creator.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssues = int(0)
-		}
-	}
-	{
-		{
-			s.ClosedIssues = int(0)
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.ClosedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.DueOn.SetFake()
-		}
-	}
-}
+func (s *Milestone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MilestoneState) SetFake() {
-	*s = MilestoneStateOpen
-}
+func (s *MilestoneState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MinimalRepository) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.FullName = "string"
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private = true
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Fork = true
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ArchiveURL = "string"
-		}
-	}
-	{
-		{
-			s.AssigneesURL = "string"
-		}
-	}
-	{
-		{
-			s.BlobsURL = "string"
-		}
-	}
-	{
-		{
-			s.BranchesURL = "string"
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.CompareURL = "string"
-		}
-	}
-	{
-		{
-			s.ContentsURL = "string"
-		}
-	}
-	{
-		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitCommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitRefsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitTagsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitURL.SetFake()
-		}
-	}
-	{
-		{
-			s.IssueCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueEventsURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.KeysURL = "string"
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MilestonesURL = "string"
-		}
-	}
-	{
-		{
-			s.NotificationsURL = "string"
-		}
-	}
-	{
-		{
-			s.PullsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReleasesURL = "string"
-		}
-	}
-	{
-		{
-			s.SSHURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StatusesURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TreesURL = "string"
-		}
-	}
-	{
-		{
-			s.CloneURL.SetFake()
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SvnURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksCount.SetFake()
-		}
-	}
-	{
-		{
-			s.StargazersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.WatchersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.Size.SetFake()
-		}
-	}
-	{
-		{
-			s.DefaultBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount.SetFake()
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HasIssues.SetFake()
-		}
-	}
-	{
-		{
-			s.HasProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.HasWiki.SetFake()
-		}
-	}
-	{
-		{
-			s.HasPages.SetFake()
-		}
-	}
-	{
-		{
-			s.HasDownloads.SetFake()
-		}
-	}
-	{
-		{
-			s.Archived.SetFake()
-		}
-	}
-	{
-		{
-			s.Disabled.SetFake()
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.PushedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.TemplateRepository.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscribersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.NetworkCount.SetFake()
-		}
-	}
-	{
-		{
-			s.CodeOfConduct.SetFake()
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.Forks.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssues.SetFake()
-		}
-	}
-	{
-		{
-			s.Watchers.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForking.SetFake()
-		}
-	}
-}
+func (s *MinimalRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MinimalRepositoryLicense) SetFake() {
-	{
-		{
-			s.Key.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.SpdxID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-}
+func (s *MinimalRepositoryLicense) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *MinimalRepositoryPermissions) SetFake() {
-	{
-		{
-			s.Admin.SetFake()
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-	{
-		{
-			s.Push.SetFake()
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Pull.SetFake()
-		}
-	}
-}
+func (s *MinimalRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *NilAutoMerge) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilBool) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilCheckRunCheckSuite) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilCheckRunConclusion) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilCheckSuiteConclusion) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilCheckSuiteStatus) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilCodeScanningAlertClassification) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilCodeScanningAlertDismissedAt) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilCodeScanningAlertDismissedReason) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilDateTime) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilFileCommitContent) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilGistSimpleFilesItem) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilHookDeliveryRequestHeaders) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilHookDeliveryRequestPayload) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilHookDeliveryResponseHeaders) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilInt) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableCodeOfConductSimple) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableCommunityHealthFile) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableGitUser) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableIntegration) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableLicenseSimple) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableMilestone) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableSimpleCommit) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableSimpleCommitAuthor) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableSimpleCommitCommitter) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableSimpleUser) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilNullableTeamSimple) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilPageStatus) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilPullRequestHeadRepo) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilPullRequestHeadRepoLicense) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilReposCreatePagesSiteReq) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilReposUpdateBranchProtectionReqRequiredPullRequestReviews) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilReposUpdateBranchProtectionReqRequiredStatusChecks) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilReposUpdateBranchProtectionReqRestrictions) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilSimpleCommitAuthor) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilSimpleCommitCommitter) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilString) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
 func (s *NilURI) SetFake() {
-	s.Null = true
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *NullableCodeOfConductSimple) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-}
+func (s *NullableCodeOfConductSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableCommunityHealthFile) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *NullableCommunityHealthFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableGitUser) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Date.SetFake()
-		}
-	}
-}
+func (s *NullableGitUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableIntegration) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Slug.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.ExternalURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-	{
-		{
-			s.InstallationsCount.SetFake()
-		}
-	}
-	{
-		{
-			s.ClientID.SetFake()
-		}
-	}
-	{
-		{
-			s.ClientSecret.SetFake()
-		}
-	}
-	{
-		{
-			s.WebhookSecret.SetFake()
-		}
-	}
-	{
-		{
-			s.Pem.SetFake()
-		}
-	}
-}
+func (s *NullableIntegration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableIntegrationPermissions) SetFake() {
-	{
-		{
-			s.Issues.SetFake()
-		}
-	}
-	{
-		{
-			s.Checks.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-	{
-		{
-			s.Contents.SetFake()
-		}
-	}
-	{
-		{
-			s.Deployments.SetFake()
-		}
-	}
-	{
-		{
-			s.AdditionalProps.SetFake()
-		}
-	}
-}
+func (s *NullableIntegrationPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableIntegrationPermissionsAdditional) SetFake() {
-	var (
-		elem string
-		m    map[string]string = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *NullableIntegrationPermissionsAdditional) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableLicenseSimple) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.SpdxID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-}
+func (s *NullableLicenseSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableMilestone) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.LabelsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Creator.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssues = int(0)
-		}
-	}
-	{
-		{
-			s.ClosedIssues = int(0)
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.ClosedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.DueOn.SetFake()
-		}
-	}
-}
+func (s *NullableMilestone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableMilestoneState) SetFake() {
-	*s = NullableMilestoneStateOpen
-}
+func (s *NullableMilestoneState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableMinimalRepository) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.FullName = "string"
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private = true
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Fork = true
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ArchiveURL = "string"
-		}
-	}
-	{
-		{
-			s.AssigneesURL = "string"
-		}
-	}
-	{
-		{
-			s.BlobsURL = "string"
-		}
-	}
-	{
-		{
-			s.BranchesURL = "string"
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.CompareURL = "string"
-		}
-	}
-	{
-		{
-			s.ContentsURL = "string"
-		}
-	}
-	{
-		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitCommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitRefsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitTagsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitURL.SetFake()
-		}
-	}
-	{
-		{
-			s.IssueCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueEventsURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.KeysURL = "string"
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MilestonesURL = "string"
-		}
-	}
-	{
-		{
-			s.NotificationsURL = "string"
-		}
-	}
-	{
-		{
-			s.PullsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReleasesURL = "string"
-		}
-	}
-	{
-		{
-			s.SSHURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StatusesURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TreesURL = "string"
-		}
-	}
-	{
-		{
-			s.CloneURL.SetFake()
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SvnURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksCount.SetFake()
-		}
-	}
-	{
-		{
-			s.StargazersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.WatchersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.Size.SetFake()
-		}
-	}
-	{
-		{
-			s.DefaultBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount.SetFake()
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HasIssues.SetFake()
-		}
-	}
-	{
-		{
-			s.HasProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.HasWiki.SetFake()
-		}
-	}
-	{
-		{
-			s.HasPages.SetFake()
-		}
-	}
-	{
-		{
-			s.HasDownloads.SetFake()
-		}
-	}
-	{
-		{
-			s.Archived.SetFake()
-		}
-	}
-	{
-		{
-			s.Disabled.SetFake()
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.PushedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.TemplateRepository.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscribersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.NetworkCount.SetFake()
-		}
-	}
-	{
-		{
-			s.CodeOfConduct.SetFake()
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.Forks.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssues.SetFake()
-		}
-	}
-	{
-		{
-			s.Watchers.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForking.SetFake()
-		}
-	}
-}
+func (s *NullableMinimalRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableMinimalRepositoryLicense) SetFake() {
-	{
-		{
-			s.Key.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.SpdxID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-}
+func (s *NullableMinimalRepositoryLicense) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableMinimalRepositoryPermissions) SetFake() {
-	{
-		{
-			s.Admin.SetFake()
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-	{
-		{
-			s.Push.SetFake()
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Pull.SetFake()
-		}
-	}
-}
+func (s *NullableMinimalRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableRepository) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.FullName = "string"
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.Organization.SetFake()
-		}
-	}
-	{
-		{
-			s.Forks = int(0)
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private = true
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Fork = true
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ArchiveURL = "string"
-		}
-	}
-	{
-		{
-			s.AssigneesURL = "string"
-		}
-	}
-	{
-		{
-			s.BlobsURL = "string"
-		}
-	}
-	{
-		{
-			s.BranchesURL = "string"
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.CompareURL = "string"
-		}
-	}
-	{
-		{
-			s.ContentsURL = "string"
-		}
-	}
-	{
-		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitCommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitRefsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitTagsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueEventsURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.KeysURL = "string"
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MilestonesURL = "string"
-		}
-	}
-	{
-		{
-			s.NotificationsURL = "string"
-		}
-	}
-	{
-		{
-			s.PullsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReleasesURL = "string"
-		}
-	}
-	{
-		{
-			s.SSHURL = "string"
-		}
-	}
-	{
-		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StatusesURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TreesURL = "string"
-		}
-	}
-	{
-		{
-			s.CloneURL = "string"
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksCount = int(0)
-		}
-	}
-	{
-		{
-			s.StargazersCount = int(0)
-		}
-	}
-	{
-		{
-			s.WatchersCount = int(0)
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-	{
-		{
-			s.DefaultBranch = "string"
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount = int(0)
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HasIssues = true
-		}
-	}
-	{
-		{
-			s.HasProjects = true
-		}
-	}
-	{
-		{
-			s.HasWiki = true
-		}
-	}
-	{
-		{
-			s.HasPages = true
-		}
-	}
-	{
-		{
-			s.HasDownloads = true
-		}
-	}
-	{
-		{
-			s.Archived = true
-		}
-	}
-	{
-		{
-			s.Disabled = true
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.PushedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.TemplateRepository.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowAutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForking.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscribersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.NetworkCount.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssues = int(0)
-		}
-	}
-	{
-		{
-			s.Watchers = int(0)
-		}
-	}
-	{
-		{
-			s.MasterBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.StarredAt.SetFake()
-		}
-	}
-}
+func (s *NullableRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableRepositoryPermissions) SetFake() {
-	{
-		{
-			s.Admin = true
-		}
-	}
-	{
-		{
-			s.Pull = true
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Push = true
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-}
+func (s *NullableRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableRepositoryTemplateRepository) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.FullName.SetFake()
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Fork.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ArchiveURL.SetFake()
-		}
-	}
-	{
-		{
-			s.AssigneesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.BlobsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.BranchesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CommentsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CompareURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContributorsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.DeploymentsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.DownloadsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.EventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitCommitsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitRefsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitTagsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitURL.SetFake()
-		}
-	}
-	{
-		{
-			s.IssueCommentURL.SetFake()
-		}
-	}
-	{
-		{
-			s.IssueEventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.IssuesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.KeysURL.SetFake()
-		}
-	}
-	{
-		{
-			s.LabelsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.LanguagesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.MergesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.MilestonesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.NotificationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PullsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReleasesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SSHURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StargazersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StatusesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscribersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscriptionURL.SetFake()
-		}
-	}
-	{
-		{
-			s.TagsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.TeamsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.TreesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CloneURL.SetFake()
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HooksURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SvnURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksCount.SetFake()
-		}
-	}
-	{
-		{
-			s.StargazersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.WatchersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.Size.SetFake()
-		}
-	}
-	{
-		{
-			s.DefaultBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount.SetFake()
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HasIssues.SetFake()
-		}
-	}
-	{
-		{
-			s.HasProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.HasWiki.SetFake()
-		}
-	}
-	{
-		{
-			s.HasPages.SetFake()
-		}
-	}
-	{
-		{
-			s.HasDownloads.SetFake()
-		}
-	}
-	{
-		{
-			s.Archived.SetFake()
-		}
-	}
-	{
-		{
-			s.Disabled.SetFake()
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.PushedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowAutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscribersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.NetworkCount.SetFake()
-		}
-	}
-}
+func (s *NullableRepositoryTemplateRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableRepositoryTemplateRepositoryOwner) SetFake() {
-	{
-		{
-			s.Login.SetFake()
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.AvatarURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.FollowersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.FollowingURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GistsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StarredURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReposURL.SetFake()
-		}
-	}
-	{
-		{
-			s.EventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.SiteAdmin.SetFake()
-		}
-	}
-}
+func (s *NullableRepositoryTemplateRepositoryOwner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *NullableRepositoryTemplateRepositoryPermissions) SetFake() {
-	{
-		{
-			s.Admin.SetFake()
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-	{
-		{
-			s.Push.SetFake()
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Pull.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *NullableScopedInstallation) SetFake() {
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.RepositorySelection.SetFake()
-		}
-	}
-	{
-		{
-			s.SingleFileName.SetFake()
-		}
-	}
-	{
-		{
-			s.HasMultipleSingleFiles.SetFake()
-		}
-	}
-	{
-		{
-			s.SingleFilePaths = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.SingleFilePaths = append(s.SingleFilePaths, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Account.SetFake()
-		}
-	}
-}
+func (s *NullableScopedInstallation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *NullableScopedInstallationRepositorySelection) SetFake() {
-	*s = NullableScopedInstallationRepositorySelectionAll
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *NullableSimpleCommit) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.TreeID = "string"
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Timestamp = time.Now()
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-}
+func (s *NullableSimpleCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableSimpleCommitAuthor) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-}
+func (s *NullableSimpleCommitAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableSimpleCommitCommitter) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-}
+func (s *NullableSimpleCommitCommitter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableSimpleUser) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.SiteAdmin = true
-		}
-	}
-	{
-		{
-			s.StarredAt.SetFake()
-		}
-	}
-}
+func (s *NullableSimpleUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *NullableTeamSimple) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MembersURL = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Permission = "string"
-		}
-	}
-	{
-		{
-			s.Privacy.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Slug = "string"
-		}
-	}
-	{
-		{
-			s.LdapDn.SetFake()
-		}
-	}
-}
+func (s *NullableTeamSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsCreateAuthorizationForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsCreateAuthorizationForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsCreateAuthorizationGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsCreateAuthorizationGone(unwrapped)
-}
+func (s *OAuthAuthorizationsCreateAuthorizationGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsCreateAuthorizationReq) SetFake() {
-	{
-		{
-			s.Scopes.SetFake()
-		}
-	}
-	{
-		{
-			s.Note.SetFake()
-		}
-	}
-	{
-		{
-			s.NoteURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ClientID.SetFake()
-		}
-	}
-	{
-		{
-			s.ClientSecret.SetFake()
-		}
-	}
-	{
-		{
-			s.Fingerprint.SetFake()
-		}
-	}
-}
+func (s *OAuthAuthorizationsCreateAuthorizationReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsCreateAuthorizationUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsCreateAuthorizationUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsDeleteAuthorizationForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsDeleteAuthorizationForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsDeleteAuthorizationUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsDeleteAuthorizationUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsDeleteGrantForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsDeleteGrantForbidden(unwrapped)
-}
+func (s *OAuthAuthorizationsDeleteGrantForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsDeleteGrantUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsDeleteGrantUnauthorized(unwrapped)
-}
+func (s *OAuthAuthorizationsDeleteGrantUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsGetAuthorizationForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsGetAuthorizationForbidden(unwrapped)
-}
+func (s *OAuthAuthorizationsGetAuthorizationForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsGetAuthorizationUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsGetAuthorizationUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsGetGrantForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsGetGrantForbidden(unwrapped)
-}
+func (s *OAuthAuthorizationsGetGrantForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsGetGrantUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsGetGrantUnauthorized(unwrapped)
-}
+func (s *OAuthAuthorizationsGetGrantUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintReq) SetFake() {
-	{
-		{
-			s.ClientSecret = "string"
-		}
-	}
-	{
-		{
-			s.Scopes.SetFake()
-		}
-	}
-	{
-		{
-			s.Note.SetFake()
-		}
-	}
-	{
-		{
-			s.NoteURL.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsGetOrCreateAuthorizationForAppForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsGetOrCreateAuthorizationForAppForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsGetOrCreateAuthorizationForAppReq) SetFake() {
-	{
-		{
-			s.ClientSecret = "string"
-		}
-	}
-	{
-		{
-			s.Scopes.SetFake()
-		}
-	}
-	{
-		{
-			s.Note.SetFake()
-		}
-	}
-	{
-		{
-			s.NoteURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Fingerprint.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsGetOrCreateAuthorizationForAppUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsGetOrCreateAuthorizationForAppUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsListAuthorizationsForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsListAuthorizationsForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsListAuthorizationsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsListAuthorizationsNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OAuthAuthorizationsListAuthorizationsUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsListAuthorizationsUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsListGrantsForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsListGrantsForbidden(unwrapped)
-}
+func (s *OAuthAuthorizationsListGrantsForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsListGrantsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsListGrantsNotFound(unwrapped)
-}
+func (s *OAuthAuthorizationsListGrantsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsListGrantsUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OAuthAuthorizationsListGrantsUnauthorized(unwrapped)
-}
+func (s *OAuthAuthorizationsListGrantsUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OAuthAuthorizationsUpdateAuthorizationReq) SetFake() {
-	{
-		{
-			s.Scopes.SetFake()
-		}
-	}
-	{
-		{
-			s.AddScopes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AddScopes = append(s.AddScopes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RemoveScopes = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.RemoveScopes = append(s.RemoveScopes, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Note.SetFake()
-		}
-	}
-	{
-		{
-			s.NoteURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Fingerprint.SetFake()
-		}
-	}
-}
+func (s *OAuthAuthorizationsUpdateAuthorizationReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAPIOverviewSSHKeyFingerprints) SetFake() {
-	var elem APIOverviewSSHKeyFingerprints
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAPIOverviewSSHKeyFingerprints) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptActionsCreateSelfHostedRunnerGroupForOrgReqVisibility) SetFake() {
-	var elem ActionsCreateSelfHostedRunnerGroupForOrgReqVisibility
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptActionsCreateWorkflowDispatchReqInputs) SetFake() {
-	var elem ActionsCreateWorkflowDispatchReqInputs
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptActionsCreateWorkflowDispatchReqInputs) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptActionsUpdateSelfHostedRunnerGroupForOrgReqVisibility) SetFake() {
-	var elem ActionsUpdateSelfHostedRunnerGroupForOrgReqVisibility
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptActivityMarkNotificationsAsReadReq) SetFake() {
-	var elem ActivityMarkNotificationsAsReadReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptActivityMarkNotificationsAsReadReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptActivityMarkRepoNotificationsAsReadReq) SetFake() {
-	var elem ActivityMarkRepoNotificationsAsReadReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptActivityMarkRepoNotificationsAsReadReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptActivitySetRepoSubscriptionReq) SetFake() {
-	var elem ActivitySetRepoSubscriptionReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptActivitySetRepoSubscriptionReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptActivitySetThreadSubscriptionReq) SetFake() {
-	var elem ActivitySetThreadSubscriptionReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptActivitySetThreadSubscriptionReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptActor) SetFake() {
-	var elem Actor
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptActor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAlertCreatedAt) SetFake() {
-	var elem AlertCreatedAt
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAlertCreatedAt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAlertHTMLURL) SetFake() {
-	var elem AlertHTMLURL
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAlertHTMLURL) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAlertNumber) SetFake() {
-	var elem AlertNumber
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAlertNumber) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAlertURL) SetFake() {
-	var elem AlertURL
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAlertURL) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAllowedActions) SetFake() {
-	var elem AllowedActions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAllowedActions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissions) SetFake() {
-	var elem AppPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsActions) SetFake() {
-	var elem AppPermissionsActions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsActions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsAdministration) SetFake() {
-	var elem AppPermissionsAdministration
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsAdministration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsChecks) SetFake() {
-	var elem AppPermissionsChecks
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsChecks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsContentReferences) SetFake() {
-	var elem AppPermissionsContentReferences
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsContentReferences) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsContents) SetFake() {
-	var elem AppPermissionsContents
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsContents) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsDeployments) SetFake() {
-	var elem AppPermissionsDeployments
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsDeployments) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsEnvironments) SetFake() {
-	var elem AppPermissionsEnvironments
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsEnvironments) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsIssues) SetFake() {
-	var elem AppPermissionsIssues
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsIssues) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsMembers) SetFake() {
-	var elem AppPermissionsMembers
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsMembers) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsMetadata) SetFake() {
-	var elem AppPermissionsMetadata
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsMetadata) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsOrganizationAdministration) SetFake() {
-	var elem AppPermissionsOrganizationAdministration
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsOrganizationAdministration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsOrganizationHooks) SetFake() {
-	var elem AppPermissionsOrganizationHooks
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsOrganizationHooks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsOrganizationPackages) SetFake() {
-	var elem AppPermissionsOrganizationPackages
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsOrganizationPackages) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsOrganizationPlan) SetFake() {
-	var elem AppPermissionsOrganizationPlan
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsOrganizationPlan) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsOrganizationProjects) SetFake() {
-	var elem AppPermissionsOrganizationProjects
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsOrganizationProjects) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsOrganizationSecrets) SetFake() {
-	var elem AppPermissionsOrganizationSecrets
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsOrganizationSecrets) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptAppPermissionsOrganizationSelfHostedRunners) SetFake() {
-	var elem AppPermissionsOrganizationSelfHostedRunners
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsOrganizationUserBlocking) SetFake() {
-	var elem AppPermissionsOrganizationUserBlocking
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsOrganizationUserBlocking) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsPackages) SetFake() {
-	var elem AppPermissionsPackages
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsPackages) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsPages) SetFake() {
-	var elem AppPermissionsPages
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsPages) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsPullRequests) SetFake() {
-	var elem AppPermissionsPullRequests
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsPullRequests) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsRepositoryHooks) SetFake() {
-	var elem AppPermissionsRepositoryHooks
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsRepositoryHooks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsRepositoryProjects) SetFake() {
-	var elem AppPermissionsRepositoryProjects
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsRepositoryProjects) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsSecretScanningAlerts) SetFake() {
-	var elem AppPermissionsSecretScanningAlerts
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsSecretScanningAlerts) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsSecrets) SetFake() {
-	var elem AppPermissionsSecrets
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsSecrets) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsSecurityEvents) SetFake() {
-	var elem AppPermissionsSecurityEvents
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsSecurityEvents) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsSingleFile) SetFake() {
-	var elem AppPermissionsSingleFile
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsSingleFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsStatuses) SetFake() {
-	var elem AppPermissionsStatuses
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsStatuses) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsTeamDiscussions) SetFake() {
-	var elem AppPermissionsTeamDiscussions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsTeamDiscussions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsVulnerabilityAlerts) SetFake() {
-	var elem AppPermissionsVulnerabilityAlerts
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsVulnerabilityAlerts) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppPermissionsWorkflows) SetFake() {
-	var elem AppPermissionsWorkflows
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppPermissionsWorkflows) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppsCreateInstallationAccessTokenReq) SetFake() {
-	var elem AppsCreateInstallationAccessTokenReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppsCreateInstallationAccessTokenReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAppsUpdateWebhookConfigForAppReq) SetFake() {
-	var elem AppsUpdateWebhookConfigForAppReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAppsUpdateWebhookConfigForAppReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAuditLogEventActorLocation) SetFake() {
-	var elem AuditLogEventActorLocation
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAuditLogEventActorLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAuditLogEventData) SetFake() {
-	var elem AuditLogEventData
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAuditLogEventData) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAuthenticationTokenRepositorySelection) SetFake() {
-	var elem AuthenticationTokenRepositorySelection
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAuthenticationTokenRepositorySelection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptAuthorAssociation) SetFake() {
-	var elem AuthorAssociation
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptAuthorAssociation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBool) SetFake() {
-	var elem bool
-	{
-		elem = true
-	}
-	s.SetTo(elem)
-}
+func (s *OptBool) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBranchProtection) SetFake() {
-	var elem BranchProtection
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBranchProtection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBranchProtectionAllowDeletions) SetFake() {
-	var elem BranchProtectionAllowDeletions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBranchProtectionAllowDeletions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBranchProtectionAllowForcePushes) SetFake() {
-	var elem BranchProtectionAllowForcePushes
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBranchProtectionAllowForcePushes) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptBranchProtectionRequiredConversationResolution) SetFake() {
-	var elem BranchProtectionRequiredConversationResolution
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptBranchProtectionRequiredLinearHistory) SetFake() {
-	var elem BranchProtectionRequiredLinearHistory
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBranchProtectionRequiredLinearHistory) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBranchProtectionRequiredSignatures) SetFake() {
-	var elem BranchProtectionRequiredSignatures
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBranchProtectionRequiredSignatures) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBranchProtectionRequiredStatusChecks) SetFake() {
-	var elem BranchProtectionRequiredStatusChecks
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBranchProtectionRequiredStatusChecks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBranchRestrictionPolicy) SetFake() {
-	var elem BranchRestrictionPolicy
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBranchRestrictionPolicy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptBranchRestrictionPolicyAppsItemOwner) SetFake() {
-	var elem BranchRestrictionPolicyAppsItemOwner
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptBranchRestrictionPolicyAppsItemOwner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptBranchRestrictionPolicyAppsItemPermissions) SetFake() {
-	var elem BranchRestrictionPolicyAppsItemPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptChecksCreateReqConclusion) SetFake() {
-	var elem ChecksCreateReqConclusion
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChecksCreateReqConclusion) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChecksCreateReqOutput) SetFake() {
-	var elem ChecksCreateReqOutput
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChecksCreateReqOutput) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChecksCreateReqStatus) SetFake() {
-	var elem ChecksCreateReqStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChecksCreateReqStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptChecksCreateReqSum1Status) SetFake() {
-	var elem ChecksCreateReqSum1Status
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptChecksCreateReqSum1Status) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeOfConduct) SetFake() {
-	var elem CodeOfConduct
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeOfConduct) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeOfConductSimple) SetFake() {
-	var elem CodeOfConductSimple
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeOfConductSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeScanningAlertEnvironment) SetFake() {
-	var elem CodeScanningAlertEnvironment
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeScanningAlertEnvironment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeScanningAlertInstanceMessage) SetFake() {
-	var elem CodeScanningAlertInstanceMessage
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeScanningAlertInstanceMessage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeScanningAlertLocation) SetFake() {
-	var elem CodeScanningAlertLocation
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeScanningAlertLocation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeScanningAlertState) SetFake() {
-	var elem CodeScanningAlertState
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeScanningAlertState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeScanningAnalysisAnalysisKey) SetFake() {
-	var elem CodeScanningAnalysisAnalysisKey
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeScanningAnalysisAnalysisKey) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeScanningAnalysisCategory) SetFake() {
-	var elem CodeScanningAnalysisCategory
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeScanningAnalysisCategory) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeScanningAnalysisSarifID) SetFake() {
-	var elem CodeScanningAnalysisSarifID
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeScanningAnalysisSarifID) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeScanningAnalysisToolName) SetFake() {
-	var elem CodeScanningAnalysisToolName
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeScanningAnalysisToolName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeScanningRef) SetFake() {
-	var elem CodeScanningRef
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeScanningRef) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCodeScanningSarifsStatusProcessingStatus) SetFake() {
-	var elem CodeScanningSarifsStatusProcessingStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCodeScanningSarifsStatusProcessingStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCollaboratorPermissions) SetFake() {
-	var elem CollaboratorPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCollaboratorPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptCommitStats) SetFake() {
-	var elem CommitStats
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptCommitStats) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDate) SetFake() {
-	var elem time.Time
-	{
-		elem = time.Now()
-	}
-	s.SetTo(elem)
-}
+func (s *OptDate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDateTime) SetFake() {
-	var elem time.Time
-	{
-		elem = time.Now()
-	}
-	s.SetTo(elem)
-}
+func (s *OptDateTime) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptDeploymentSimple) SetFake() {
-	var elem DeploymentSimple
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptDeploymentSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptEnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseReqVisibility) SetFake() {
-	var elem EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseReqVisibility
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptEnterpriseAdminUpdateAttributeForEnterpriseGroupReqOperationsItemValue) SetFake() {
-	var elem EnterpriseAdminUpdateAttributeForEnterpriseGroupReqOperationsItemValue
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptEnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseReq) SetFake() {
-	var elem EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptEnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseReqVisibility) SetFake() {
-	var elem EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseReqVisibility
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptFileCommitCommitAuthor) SetFake() {
-	var elem FileCommitCommitAuthor
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptFileCommitCommitAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFileCommitCommitCommitter) SetFake() {
-	var elem FileCommitCommitCommitter
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptFileCommitCommitCommitter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFileCommitCommitTree) SetFake() {
-	var elem FileCommitCommitTree
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptFileCommitCommitTree) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFileCommitCommitVerification) SetFake() {
-	var elem FileCommitCommitVerification
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptFileCommitCommitVerification) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFileCommitContentLinks) SetFake() {
-	var elem FileCommitContentLinks
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptFileCommitContentLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFloat64) SetFake() {
-	var elem float64
-	{
-		elem = float64(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptFloat64) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptForbiddenGistBlock) SetFake() {
-	var elem ForbiddenGistBlock
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptForbiddenGistBlock) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptFullRepositoryPermissions) SetFake() {
-	var elem FullRepositoryPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptFullRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptFullRepositorySecurityAndAnalysisAdvancedSecurity) SetFake() {
-	var elem FullRepositorySecurityAndAnalysisAdvancedSecurity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptFullRepositorySecurityAndAnalysisAdvancedSecurityStatus) SetFake() {
-	var elem FullRepositorySecurityAndAnalysisAdvancedSecurityStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptFullRepositorySecurityAndAnalysisSecretScanning) SetFake() {
-	var elem FullRepositorySecurityAndAnalysisSecretScanning
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptFullRepositorySecurityAndAnalysisSecretScanningStatus) SetFake() {
-	var elem FullRepositorySecurityAndAnalysisSecretScanningStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptGistHistoryChangeStatus) SetFake() {
-	var elem GistHistoryChangeStatus
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGistHistoryChangeStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGistSimpleFiles) SetFake() {
-	var elem GistSimpleFiles
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGistSimpleFiles) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGistsCreateReqPublic) SetFake() {
-	var elem GistsCreateReqPublic
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGistsCreateReqPublic) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGitCreateCommitReqAuthor) SetFake() {
-	var elem GitCreateCommitReqAuthor
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGitCreateCommitReqAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGitCreateCommitReqCommitter) SetFake() {
-	var elem GitCreateCommitReqCommitter
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGitCreateCommitReqCommitter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGitCreateTagReqTagger) SetFake() {
-	var elem GitCreateTagReqTagger
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGitCreateTagReqTagger) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGitCreateTreeReqTreeItemMode) SetFake() {
-	var elem GitCreateTreeReqTreeItemMode
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGitCreateTreeReqTreeItemMode) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptGitCreateTreeReqTreeItemType) SetFake() {
-	var elem GitCreateTreeReqTreeItemType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptGitCreateTreeReqTreeItemType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInstallationTokenRepositorySelection) SetFake() {
-	var elem InstallationTokenRepositorySelection
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInstallationTokenRepositorySelection) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt) SetFake() {
-	var elem int
-	{
-		elem = int(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInt64) SetFake() {
-	var elem int64
-	{
-		elem = int64(0)
-	}
-	s.SetTo(elem)
-}
+func (s *OptInt64) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptInteractionExpiry) SetFake() {
-	var elem InteractionExpiry
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptInteractionExpiry) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssueComment) SetFake() {
-	var elem IssueComment
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssueComment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssueEventDismissedReview) SetFake() {
-	var elem IssueEventDismissedReview
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssueEventDismissedReview) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssueEventLabel) SetFake() {
-	var elem IssueEventLabel
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssueEventLabel) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssueEventMilestone) SetFake() {
-	var elem IssueEventMilestone
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssueEventMilestone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssueEventProjectCard) SetFake() {
-	var elem IssueEventProjectCard
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssueEventProjectCard) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssueEventRename) SetFake() {
-	var elem IssueEventRename
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssueEventRename) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssuePullRequest) SetFake() {
-	var elem IssuePullRequest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssuePullRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssueSearchResultItemPullRequest) SetFake() {
-	var elem IssueSearchResultItemPullRequest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssueSearchResultItemPullRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssueSimple) SetFake() {
-	var elem IssueSimple
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssueSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssueSimplePullRequest) SetFake() {
-	var elem IssueSimplePullRequest
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssueSimplePullRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssuesAddAssigneesReq) SetFake() {
-	var elem IssuesAddAssigneesReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssuesAddAssigneesReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssuesCreateMilestoneReqState) SetFake() {
-	var elem IssuesCreateMilestoneReqState
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssuesCreateMilestoneReqState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssuesLockReqLockReason) SetFake() {
-	var elem IssuesLockReqLockReason
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssuesLockReqLockReason) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssuesRemoveAssigneesReq) SetFake() {
-	var elem IssuesRemoveAssigneesReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssuesRemoveAssigneesReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssuesUpdateLabelReq) SetFake() {
-	var elem IssuesUpdateLabelReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssuesUpdateLabelReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssuesUpdateMilestoneReq) SetFake() {
-	var elem IssuesUpdateMilestoneReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssuesUpdateMilestoneReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssuesUpdateMilestoneReqState) SetFake() {
-	var elem IssuesUpdateMilestoneReqState
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssuesUpdateMilestoneReqState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssuesUpdateReq) SetFake() {
-	var elem IssuesUpdateReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssuesUpdateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptIssuesUpdateReqState) SetFake() {
-	var elem IssuesUpdateReqState
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptIssuesUpdateReqState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptLinkWithType) SetFake() {
-	var elem LinkWithType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptLinkWithType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMarkdownRenderReqMode) SetFake() {
-	var elem MarkdownRenderReqMode
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMarkdownRenderReqMode) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMarketplaceListingPlan) SetFake() {
-	var elem MarketplaceListingPlan
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMarketplaceListingPlan) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMergedUpstreamMergeType) SetFake() {
-	var elem MergedUpstreamMergeType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMergedUpstreamMergeType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMigrationsMapCommitAuthorReq) SetFake() {
-	var elem MigrationsMapCommitAuthorReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMigrationsMapCommitAuthorReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMigrationsStartImportReqVcs) SetFake() {
-	var elem MigrationsStartImportReqVcs
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMigrationsStartImportReqVcs) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMinimalRepository) SetFake() {
-	var elem MinimalRepository
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMinimalRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptMinimalRepositoryPermissions) SetFake() {
-	var elem MinimalRepositoryPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptMinimalRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilBool) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilBool) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilCodeScanningAlertDismissedReason) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilCodeScanningAlertDismissedReason) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptNilCodeScanningAlertRuleSecuritySeverityLevel) SetFake() {
-	s.Null = true
-	s.Set = true
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptNilCodeScanningAlertRuleSeverity) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilCodeScanningAlertRuleSeverity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilCodeScanningAlertRuleSummarySeverity) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilCodeScanningAlertRuleSummarySeverity) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilCodeScanningAnalysisToolGUID) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilCodeScanningAnalysisToolGUID) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilCodeScanningAnalysisToolVersion) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilCodeScanningAnalysisToolVersion) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilDateTime) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilDateTime) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilFullRepositorySecurityAndAnalysis) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilFullRepositorySecurityAndAnalysis) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilGistHistoryArray) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilGistHistoryArray) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilGistSimpleForkOf) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilGistSimpleForkOf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilGistSimpleForksItemArray) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilGistSimpleForksItemArray) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilInt) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilInt) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilIssuesCreateReqMilestone) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilIssuesCreateReqMilestone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilIssuesLockReq) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilIssuesLockReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilIssuesUpdateReqMilestone) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilIssuesUpdateReqMilestone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilIssuesUpdateReqTitle) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilIssuesUpdateReqTitle) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptNilMarketplacePurchaseMarketplacePendingChange) SetFake() {
-	s.Null = true
-	s.Set = true
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptNilMigrationsUpdateImportReq) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilMigrationsUpdateImportReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilMinimalRepositoryLicense) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilMinimalRepositoryLicense) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilNullableIntegration) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilNullableIntegration) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilNullableMinimalRepository) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilNullableMinimalRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilNullableMinimalRepositoryLicense) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilNullableMinimalRepositoryLicense) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilNullableRepository) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilNullableRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilNullableRepositoryTemplateRepository) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilNullableRepositoryTemplateRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilNullableScopedInstallation) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilNullableScopedInstallation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilNullableSimpleUser) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilNullableSimpleUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilNullableTeamSimple) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilNullableTeamSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilPageProtectedDomainState) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilPageProtectedDomainState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilPagesHealthCheckAltDomain) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilPagesHealthCheckAltDomain) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilProjectsAddCollaboratorReq) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilProjectsAddCollaboratorReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilPullRequestReviewCommentStartSide) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilPullRequestReviewCommentStartSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilPullsMergeReq) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilPullsMergeReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilPullsUpdateBranchReq) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilPullsUpdateBranchReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilReposCreateForkReq) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilReposCreateForkReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilReposCreateWebhookReq) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilReposCreateWebhookReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilReposUpdateReqSecurityAndAnalysis) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilReposUpdateReqSecurityAndAnalysis) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilRepositoryTemplateRepository) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilRepositoryTemplateRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilReviewCommentStartSide) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilReviewCommentStartSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilSecretScanningAlertResolution) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilSecretScanningAlertResolution) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilSimpleUserArray) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilSimpleUserArray) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilString) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilStringArray) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilStringArray) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilTeamArray) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilTeamArray) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilTeamSimpleArray) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilTeamSimpleArray) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptNilTeamsAddOrUpdateProjectPermissionsInOrgReq) SetFake() {
-	s.Null = true
-	s.Set = true
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptNilTopicSearchResultItemAliasesItemArray) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilTopicSearchResultItemAliasesItemArray) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilTopicSearchResultItemRelatedItemArray) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilTopicSearchResultItemRelatedItemArray) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNilURI) SetFake() {
-	s.Null = true
-	s.Set = true
-}
+func (s *OptNilURI) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNullableMinimalRepositoryPermissions) SetFake() {
-	var elem NullableMinimalRepositoryPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptNullableMinimalRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNullableRepositoryPermissions) SetFake() {
-	var elem NullableRepositoryPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptNullableRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptNullableRepositoryTemplateRepositoryOwner) SetFake() {
-	var elem NullableRepositoryTemplateRepositoryOwner
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptNullableRepositoryTemplateRepositoryOwner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptNullableRepositoryTemplateRepositoryPermissions) SetFake() {
-	var elem NullableRepositoryTemplateRepositoryPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptOAuthAuthorizationsCreateAuthorizationReq) SetFake() {
-	var elem OAuthAuthorizationsCreateAuthorizationReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOAuthAuthorizationsCreateAuthorizationReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOAuthAuthorizationsUpdateAuthorizationReq) SetFake() {
-	var elem OAuthAuthorizationsUpdateAuthorizationReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOAuthAuthorizationsUpdateAuthorizationReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOrgMembershipPermissions) SetFake() {
-	var elem OrgMembershipPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOrgMembershipPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOrganizationFullPlan) SetFake() {
-	var elem OrganizationFullPlan
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOrganizationFullPlan) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOrgsCreateInvitationReq) SetFake() {
-	var elem OrgsCreateInvitationReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOrgsCreateInvitationReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOrgsCreateInvitationReqRole) SetFake() {
-	var elem OrgsCreateInvitationReqRole
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOrgsCreateInvitationReqRole) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOrgsSetMembershipForUserReq) SetFake() {
-	var elem OrgsSetMembershipForUserReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOrgsSetMembershipForUserReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOrgsSetMembershipForUserReqRole) SetFake() {
-	var elem OrgsSetMembershipForUserReqRole
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOrgsSetMembershipForUserReqRole) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOrgsUpdateWebhookConfigForOrgReq) SetFake() {
-	var elem OrgsUpdateWebhookConfigForOrgReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOrgsUpdateWebhookConfigForOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOrgsUpdateWebhookReq) SetFake() {
-	var elem OrgsUpdateWebhookReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOrgsUpdateWebhookReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptOrgsUpdateWebhookReqConfig) SetFake() {
-	var elem OrgsUpdateWebhookReqConfig
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptOrgsUpdateWebhookReqConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPackageVersionMetadata) SetFake() {
-	var elem PackageVersionMetadata
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPackageVersionMetadata) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPackageVersionMetadataContainer) SetFake() {
-	var elem PackageVersionMetadataContainer
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPackageVersionMetadataContainer) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPackageVersionMetadataDocker) SetFake() {
-	var elem PackageVersionMetadataDocker
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPackageVersionMetadataDocker) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPagesHTTPSCertificate) SetFake() {
-	var elem PagesHTTPSCertificate
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPagesHTTPSCertificate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPagesHealthCheckDomain) SetFake() {
-	var elem PagesHealthCheckDomain
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPagesHealthCheckDomain) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPagesSourceHash) SetFake() {
-	var elem PagesSourceHash
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPagesSourceHash) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPrivateUserPlan) SetFake() {
-	var elem PrivateUserPlan
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPrivateUserPlan) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProjectOrganizationPermission) SetFake() {
-	var elem ProjectOrganizationPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProjectOrganizationPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProjectsAddCollaboratorReqPermission) SetFake() {
-	var elem ProjectsAddCollaboratorReqPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProjectsAddCollaboratorReqPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProjectsUpdateCardReq) SetFake() {
-	var elem ProjectsUpdateCardReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProjectsUpdateCardReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProjectsUpdateReq) SetFake() {
-	var elem ProjectsUpdateReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProjectsUpdateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProjectsUpdateReqOrganizationPermission) SetFake() {
-	var elem ProjectsUpdateReqOrganizationPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProjectsUpdateReqOrganizationPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProtectedBranchAdminEnforced) SetFake() {
-	var elem ProtectedBranchAdminEnforced
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProtectedBranchAdminEnforced) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProtectedBranchAllowDeletions) SetFake() {
-	var elem ProtectedBranchAllowDeletions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProtectedBranchAllowDeletions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProtectedBranchAllowForcePushes) SetFake() {
-	var elem ProtectedBranchAllowForcePushes
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProtectedBranchAllowForcePushes) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProtectedBranchEnforceAdmins) SetFake() {
-	var elem ProtectedBranchEnforceAdmins
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProtectedBranchEnforceAdmins) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProtectedBranchPullRequestReview) SetFake() {
-	var elem ProtectedBranchPullRequestReview
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProtectedBranchPullRequestReview) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptProtectedBranchPullRequestReviewDismissalRestrictions) SetFake() {
-	var elem ProtectedBranchPullRequestReviewDismissalRestrictions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptProtectedBranchRequiredConversationResolution) SetFake() {
-	var elem ProtectedBranchRequiredConversationResolution
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptProtectedBranchRequiredLinearHistory) SetFake() {
-	var elem ProtectedBranchRequiredLinearHistory
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProtectedBranchRequiredLinearHistory) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptProtectedBranchRequiredPullRequestReviews) SetFake() {
-	var elem ProtectedBranchRequiredPullRequestReviews
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProtectedBranchRequiredPullRequestReviews) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptProtectedBranchRequiredPullRequestReviewsDismissalRestrictions) SetFake() {
-	var elem ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptProtectedBranchRequiredSignatures) SetFake() {
-	var elem ProtectedBranchRequiredSignatures
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptProtectedBranchRequiredSignatures) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPublicUser) SetFake() {
-	var elem PublicUser
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPublicUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPublicUserPlan) SetFake() {
-	var elem PublicUserPlan
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPublicUserPlan) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPullRequestBaseRepoPermissions) SetFake() {
-	var elem PullRequestBaseRepoPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPullRequestBaseRepoPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPullRequestHeadRepoPermissions) SetFake() {
-	var elem PullRequestHeadRepoPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPullRequestHeadRepoPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPullRequestReviewCommentSide) SetFake() {
-	var elem PullRequestReviewCommentSide
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPullRequestReviewCommentSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPullsCreateReviewCommentReqSide) SetFake() {
-	var elem PullsCreateReviewCommentReqSide
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPullsCreateReviewCommentReqSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPullsCreateReviewCommentReqStartSide) SetFake() {
-	var elem PullsCreateReviewCommentReqStartSide
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPullsCreateReviewCommentReqStartSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPullsCreateReviewReq) SetFake() {
-	var elem PullsCreateReviewReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPullsCreateReviewReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPullsCreateReviewReqEvent) SetFake() {
-	var elem PullsCreateReviewReqEvent
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPullsCreateReviewReqEvent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPullsMergeReqMergeMethod) SetFake() {
-	var elem PullsMergeReqMergeMethod
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPullsMergeReqMergeMethod) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPullsUpdateReq) SetFake() {
-	var elem PullsUpdateReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPullsUpdateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptPullsUpdateReqState) SetFake() {
-	var elem PullsUpdateReqState
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptPullsUpdateReqState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptRateLimit) SetFake() {
-	var elem RateLimit
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptRateLimit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReactionRollup) SetFake() {
-	var elem ReactionRollup
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReactionRollup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptRepoSearchResultItemPermissions) SetFake() {
-	var elem RepoSearchResultItemPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptRepoSearchResultItemPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposAddAppAccessRestrictionsReq) SetFake() {
-	var elem ReposAddAppAccessRestrictionsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposAddAppAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposAddCollaboratorReq) SetFake() {
-	var elem ReposAddCollaboratorReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposAddCollaboratorReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposAddCollaboratorReqPermission) SetFake() {
-	var elem ReposAddCollaboratorReqPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposAddCollaboratorReqPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposAddStatusCheckContextsReq) SetFake() {
-	var elem ReposAddStatusCheckContextsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposAddStatusCheckContextsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposAddTeamAccessRestrictionsReq) SetFake() {
-	var elem ReposAddTeamAccessRestrictionsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposAddTeamAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposAddUserAccessRestrictionsReq) SetFake() {
-	var elem ReposAddUserAccessRestrictionsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposAddUserAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposCreateDeploymentReqPayload) SetFake() {
-	var elem ReposCreateDeploymentReqPayload
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposCreateDeploymentReqPayload) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposCreateDeploymentStatusReqEnvironment) SetFake() {
-	var elem ReposCreateDeploymentStatusReqEnvironment
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposCreateDeploymentStatusReqEnvironment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposCreateDispatchEventReqClientPayload) SetFake() {
-	var elem ReposCreateDispatchEventReqClientPayload
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposCreateDispatchEventReqClientPayload) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposCreateInOrgReqVisibility) SetFake() {
-	var elem ReposCreateInOrgReqVisibility
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposCreateInOrgReqVisibility) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposCreateOrUpdateFileContentsReqAuthor) SetFake() {
-	var elem ReposCreateOrUpdateFileContentsReqAuthor
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposCreateOrUpdateFileContentsReqAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptReposCreateOrUpdateFileContentsReqCommitter) SetFake() {
-	var elem ReposCreateOrUpdateFileContentsReqCommitter
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptReposCreatePagesSiteReqSourcePath) SetFake() {
-	var elem ReposCreatePagesSiteReqSourcePath
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposCreatePagesSiteReqSourcePath) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposCreateWebhookReqConfig) SetFake() {
-	var elem ReposCreateWebhookReqConfig
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposCreateWebhookReqConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposDeleteFileReqAuthor) SetFake() {
-	var elem ReposDeleteFileReqAuthor
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposDeleteFileReqAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposDeleteFileReqCommitter) SetFake() {
-	var elem ReposDeleteFileReqCommitter
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposDeleteFileReqCommitter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposRemoveAppAccessRestrictionsReq) SetFake() {
-	var elem ReposRemoveAppAccessRestrictionsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposRemoveAppAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposRemoveStatusCheckContextsReq) SetFake() {
-	var elem ReposRemoveStatusCheckContextsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposRemoveStatusCheckContextsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposRemoveTeamAccessRestrictionsReq) SetFake() {
-	var elem ReposRemoveTeamAccessRestrictionsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposRemoveTeamAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposRemoveUserAccessRestrictionsReq) SetFake() {
-	var elem ReposRemoveUserAccessRestrictionsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposRemoveUserAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposRenameBranchReq) SetFake() {
-	var elem ReposRenameBranchReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposRenameBranchReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposSetAppAccessRestrictionsReq) SetFake() {
-	var elem ReposSetAppAccessRestrictionsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposSetAppAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposSetStatusCheckContextsReq) SetFake() {
-	var elem ReposSetStatusCheckContextsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposSetStatusCheckContextsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposSetTeamAccessRestrictionsReq) SetFake() {
-	var elem ReposSetTeamAccessRestrictionsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposSetTeamAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposSetUserAccessRestrictionsReq) SetFake() {
-	var elem ReposSetUserAccessRestrictionsReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposSetUserAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptReposUpdateBranchProtectionReqRequiredPullRequestReviewsDismissalRestrictions) SetFake() {
-	var elem ReposUpdateBranchProtectionReqRequiredPullRequestReviewsDismissalRestrictions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptReposUpdateInvitationReq) SetFake() {
-	var elem ReposUpdateInvitationReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdateInvitationReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposUpdateInvitationReqPermissions) SetFake() {
-	var elem ReposUpdateInvitationReqPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdateInvitationReqPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposUpdatePullRequestReviewProtectionReq) SetFake() {
-	var elem ReposUpdatePullRequestReviewProtectionReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdatePullRequestReviewProtectionReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptReposUpdatePullRequestReviewProtectionReqDismissalRestrictions) SetFake() {
-	var elem ReposUpdatePullRequestReviewProtectionReqDismissalRestrictions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptReposUpdateReleaseAssetReq) SetFake() {
-	var elem ReposUpdateReleaseAssetReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdateReleaseAssetReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposUpdateReleaseReq) SetFake() {
-	var elem ReposUpdateReleaseReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdateReleaseReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposUpdateReq) SetFake() {
-	var elem ReposUpdateReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptReposUpdateReqSecurityAndAnalysisAdvancedSecurity) SetFake() {
-	var elem ReposUpdateReqSecurityAndAnalysisAdvancedSecurity
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptReposUpdateReqSecurityAndAnalysisSecretScanning) SetFake() {
-	var elem ReposUpdateReqSecurityAndAnalysisSecretScanning
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptReposUpdateReqVisibility) SetFake() {
-	var elem ReposUpdateReqVisibility
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdateReqVisibility) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposUpdateStatusCheckProtectionReq) SetFake() {
-	var elem ReposUpdateStatusCheckProtectionReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdateStatusCheckProtectionReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposUpdateWebhookConfigForRepoReq) SetFake() {
-	var elem ReposUpdateWebhookConfigForRepoReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdateWebhookConfigForRepoReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposUpdateWebhookReq) SetFake() {
-	var elem ReposUpdateWebhookReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdateWebhookReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReposUpdateWebhookReqConfig) SetFake() {
-	var elem ReposUpdateWebhookReqConfig
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReposUpdateWebhookReqConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptRepository) SetFake() {
-	var elem Repository
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptRepositoryPermissions) SetFake() {
-	var elem RepositoryPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptRepositoryTemplateRepositoryOwner) SetFake() {
-	var elem RepositoryTemplateRepositoryOwner
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptRepositoryTemplateRepositoryOwner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptRepositoryTemplateRepositoryPermissions) SetFake() {
-	var elem RepositoryTemplateRepositoryPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptRepositoryTemplateRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptReviewCommentSide) SetFake() {
-	var elem ReviewCommentSide
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptReviewCommentSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptRunnerLabelsItemType) SetFake() {
-	var elem RunnerLabelsItemType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptRunnerLabelsItemType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptScimEnterpriseGroupMeta) SetFake() {
-	var elem ScimEnterpriseGroupMeta
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptScimEnterpriseGroupMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptScimEnterpriseUserMeta) SetFake() {
-	var elem ScimEnterpriseUserMeta
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptScimEnterpriseUserMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptScimEnterpriseUserName) SetFake() {
-	var elem ScimEnterpriseUserName
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptScimEnterpriseUserName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptScimGroupListEnterpriseResourcesItemMeta) SetFake() {
-	var elem ScimGroupListEnterpriseResourcesItemMeta
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptScimGroupListEnterpriseResourcesItemMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptScimUpdateAttributeForUserReqOperationsItemValue) SetFake() {
-	var elem ScimUpdateAttributeForUserReqOperationsItemValue
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptScimUserListEnterpriseResourcesItemMeta) SetFake() {
-	var elem ScimUserListEnterpriseResourcesItemMeta
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptScimUserListEnterpriseResourcesItemMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptScimUserListEnterpriseResourcesItemName) SetFake() {
-	var elem ScimUserListEnterpriseResourcesItemName
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptScimUserListEnterpriseResourcesItemName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptScimUserOperationsItemValue) SetFake() {
-	var elem ScimUserOperationsItemValue
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptScimUserOperationsItemValue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSecretScanningAlertState) SetFake() {
-	var elem SecretScanningAlertState
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptSecretScanningAlertState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSelectedActions) SetFake() {
-	var elem SelectedActions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptSelectedActions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSelectedActionsURL) SetFake() {
-	var elem SelectedActionsURL
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptSelectedActionsURL) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptSimpleUser) SetFake() {
-	var elem SimpleUser
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptSimpleUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptStatusCheckPolicy) SetFake() {
-	var elem StatusCheckPolicy
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptStatusCheckPolicy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptString) SetFake() {
-	var elem string
-	{
-		elem = "string"
-	}
-	s.SetTo(elem)
-}
+func (s *OptString) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeam) SetFake() {
-	var elem Team
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeam) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamFullPrivacy) SetFake() {
-	var elem TeamFullPrivacy
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamFullPrivacy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamPermissions) SetFake() {
-	var elem TeamPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamRepositoryPermissions) SetFake() {
-	var elem TeamRepositoryPermissions
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamsAddOrUpdateMembershipForUserInOrgReq) SetFake() {
-	var elem TeamsAddOrUpdateMembershipForUserInOrgReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsAddOrUpdateMembershipForUserInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptTeamsAddOrUpdateMembershipForUserInOrgReqRole) SetFake() {
-	var elem TeamsAddOrUpdateMembershipForUserInOrgReqRole
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptTeamsAddOrUpdateMembershipForUserLegacyReq) SetFake() {
-	var elem TeamsAddOrUpdateMembershipForUserLegacyReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptTeamsAddOrUpdateMembershipForUserLegacyReqRole) SetFake() {
-	var elem TeamsAddOrUpdateMembershipForUserLegacyReqRole
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptTeamsAddOrUpdateProjectPermissionsInOrgReqPermission) SetFake() {
-	var elem TeamsAddOrUpdateProjectPermissionsInOrgReqPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptTeamsAddOrUpdateProjectPermissionsLegacyReq) SetFake() {
-	var elem TeamsAddOrUpdateProjectPermissionsLegacyReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptTeamsAddOrUpdateProjectPermissionsLegacyReqPermission) SetFake() {
-	var elem TeamsAddOrUpdateProjectPermissionsLegacyReqPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptTeamsAddOrUpdateRepoPermissionsInOrgReq) SetFake() {
-	var elem TeamsAddOrUpdateRepoPermissionsInOrgReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsAddOrUpdateRepoPermissionsInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptTeamsAddOrUpdateRepoPermissionsInOrgReqPermission) SetFake() {
-	var elem TeamsAddOrUpdateRepoPermissionsInOrgReqPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptTeamsAddOrUpdateRepoPermissionsLegacyReq) SetFake() {
-	var elem TeamsAddOrUpdateRepoPermissionsLegacyReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsAddOrUpdateRepoPermissionsLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptTeamsAddOrUpdateRepoPermissionsLegacyReqPermission) SetFake() {
-	var elem TeamsAddOrUpdateRepoPermissionsLegacyReqPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptTeamsCreateReqPermission) SetFake() {
-	var elem TeamsCreateReqPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsCreateReqPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamsCreateReqPrivacy) SetFake() {
-	var elem TeamsCreateReqPrivacy
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsCreateReqPrivacy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamsUpdateDiscussionInOrgReq) SetFake() {
-	var elem TeamsUpdateDiscussionInOrgReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsUpdateDiscussionInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamsUpdateDiscussionLegacyReq) SetFake() {
-	var elem TeamsUpdateDiscussionLegacyReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsUpdateDiscussionLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamsUpdateInOrgReq) SetFake() {
-	var elem TeamsUpdateInOrgReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsUpdateInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamsUpdateInOrgReqPermission) SetFake() {
-	var elem TeamsUpdateInOrgReqPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsUpdateInOrgReqPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamsUpdateInOrgReqPrivacy) SetFake() {
-	var elem TeamsUpdateInOrgReqPrivacy
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsUpdateInOrgReqPrivacy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamsUpdateLegacyReqPermission) SetFake() {
-	var elem TeamsUpdateLegacyReqPermission
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsUpdateLegacyReqPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptTeamsUpdateLegacyReqPrivacy) SetFake() {
-	var elem TeamsUpdateLegacyReqPrivacy
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptTeamsUpdateLegacyReqPrivacy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OptTopicSearchResultItemAliasesItemTopicRelation) SetFake() {
-	var elem TopicSearchResultItemAliasesItemTopicRelation
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OptTopicSearchResultItemRelatedItemTopicRelation) SetFake() {
-	var elem TopicSearchResultItemRelatedItemTopicRelation
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OptURI) SetFake() {
-	var elem url.URL
-	{
-		elem = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-	}
-	s.SetTo(elem)
-}
+func (s *OptURI) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptUsersAddEmailForAuthenticatedReq) SetFake() {
-	var elem UsersAddEmailForAuthenticatedReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptUsersAddEmailForAuthenticatedReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptUsersDeleteEmailForAuthenticatedReq) SetFake() {
-	var elem UsersDeleteEmailForAuthenticatedReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptUsersDeleteEmailForAuthenticatedReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptUsersUpdateAuthenticatedReq) SetFake() {
-	var elem UsersUpdateAuthenticatedReq
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptUsersUpdateAuthenticatedReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptValidationErrorErrorsItemValue) SetFake() {
-	var elem ValidationErrorErrorsItemValue
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptValidationErrorErrorsItemValue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptVerification) SetFake() {
-	var elem Verification
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptVerification) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWebhookConfigContentType) SetFake() {
-	var elem WebhookConfigContentType
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWebhookConfigContentType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWebhookConfigInsecureSsl) SetFake() {
-	var elem WebhookConfigInsecureSsl
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWebhookConfigInsecureSsl) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWebhookConfigSecret) SetFake() {
-	var elem WebhookConfigSecret
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWebhookConfigSecret) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWebhookConfigURL) SetFake() {
-	var elem WebhookConfigURL
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWebhookConfigURL) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWorkflowRunUsageBillableMACOS) SetFake() {
-	var elem WorkflowRunUsageBillableMACOS
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWorkflowRunUsageBillableMACOS) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWorkflowRunUsageBillableUBUNTU) SetFake() {
-	var elem WorkflowRunUsageBillableUBUNTU
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWorkflowRunUsageBillableUBUNTU) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWorkflowRunUsageBillableWINDOWS) SetFake() {
-	var elem WorkflowRunUsageBillableWINDOWS
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWorkflowRunUsageBillableWINDOWS) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWorkflowUsageBillableMACOS) SetFake() {
-	var elem WorkflowUsageBillableMACOS
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWorkflowUsageBillableMACOS) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWorkflowUsageBillableUBUNTU) SetFake() {
-	var elem WorkflowUsageBillableUBUNTU
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWorkflowUsageBillableUBUNTU) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OptWorkflowUsageBillableWINDOWS) SetFake() {
-	var elem WorkflowUsageBillableWINDOWS
-	{
-		elem.SetFake()
-	}
-	s.SetTo(elem)
-}
+func (s *OptWorkflowUsageBillableWINDOWS) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgHook) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.PingURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DeliveriesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Active = true
-		}
-	}
-	{
-		{
-			s.Config.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *OrgHook) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgHookConfig) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.InsecureSsl.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-}
+func (s *OrgHookConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgMembership) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Role.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Organization.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-}
+func (s *OrgMembership) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgMembershipPermissions) SetFake() {
-	{
-		{
-			s.CanCreateRepository = true
-		}
-	}
-}
+func (s *OrgMembershipPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgMembershipRole) SetFake() {
-	*s = OrgMembershipRoleAdmin
-}
+func (s *OrgMembershipRole) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgMembershipState) SetFake() {
-	*s = OrgMembershipStateActive
-}
+func (s *OrgMembershipState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrganizationActionsSecret) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.SelectedRepositoriesURL.SetFake()
-		}
-	}
-}
+func (s *OrganizationActionsSecret) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrganizationActionsSecretVisibility) SetFake() {
-	*s = OrganizationActionsSecretVisibilityAll
-}
+func (s *OrganizationActionsSecretVisibility) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrganizationFull) SetFake() {
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HooksURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.MembersURL = "string"
-		}
-	}
-	{
-		{
-			s.PublicMembersURL = "string"
-		}
-	}
-	{
-		{
-			s.AvatarURL = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Company.SetFake()
-		}
-	}
-	{
-		{
-			s.Blog.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.TwitterUsername.SetFake()
-		}
-	}
-	{
-		{
-			s.IsVerified.SetFake()
-		}
-	}
-	{
-		{
-			s.HasOrganizationProjects = true
-		}
-	}
-	{
-		{
-			s.HasRepositoryProjects = true
-		}
-	}
-	{
-		{
-			s.PublicRepos = int(0)
-		}
-	}
-	{
-		{
-			s.PublicGists = int(0)
-		}
-	}
-	{
-		{
-			s.Followers = int(0)
-		}
-	}
-	{
-		{
-			s.Following = int(0)
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.TotalPrivateRepos.SetFake()
-		}
-	}
-	{
-		{
-			s.OwnedPrivateRepos.SetFake()
-		}
-	}
-	{
-		{
-			s.PrivateGists.SetFake()
-		}
-	}
-	{
-		{
-			s.DiskUsage.SetFake()
-		}
-	}
-	{
-		{
-			s.Collaborators.SetFake()
-		}
-	}
-	{
-		{
-			s.BillingEmail.SetFake()
-		}
-	}
-	{
-		{
-			s.Plan.SetFake()
-		}
-	}
-	{
-		{
-			s.DefaultRepositoryPermission.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersCanCreateRepositories.SetFake()
-		}
-	}
-	{
-		{
-			s.TwoFactorRequirementEnabled.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersAllowedRepositoryCreationType.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersCanCreatePublicRepositories.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersCanCreatePrivateRepositories.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersCanCreateInternalRepositories.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersCanCreatePages.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersCanCreatePublicPages.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersCanCreatePrivatePages.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-}
+func (s *OrganizationFull) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrganizationFullPlan) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Space = int(0)
-		}
-	}
-	{
-		{
-			s.PrivateRepos = int(0)
-		}
-	}
-	{
-		{
-			s.FilledSeats.SetFake()
-		}
-	}
-	{
-		{
-			s.Seats.SetFake()
-		}
-	}
-}
+func (s *OrganizationFullPlan) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrganizationInvitation) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Login.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Role = "string"
-		}
-	}
-	{
-		{
-			s.CreatedAt = "string"
-		}
-	}
-	{
-		{
-			s.FailedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.FailedReason.SetFake()
-		}
-	}
-	{
-		{
-			s.Inviter.SetFake()
-		}
-	}
-	{
-		{
-			s.TeamCount = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.InvitationTeamsURL = "string"
-		}
-	}
-}
+func (s *OrganizationInvitation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrganizationSecretScanningAlert) SetFake() {
-	{
-		{
-			s.Number.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.LocationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Resolution.SetFake()
-		}
-	}
-	{
-		{
-			s.ResolvedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.ResolvedBy.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-}
+func (s *OrganizationSecretScanningAlert) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrganizationSimple) SetFake() {
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HooksURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.MembersURL = "string"
-		}
-	}
-	{
-		{
-			s.PublicMembersURL = "string"
-		}
-	}
-	{
-		{
-			s.AvatarURL = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-}
+func (s *OrganizationSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OrgsConvertMemberToOutsideCollaboratorAccepted) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *OrgsCreateInvitationReq) SetFake() {
-	{
-		{
-			s.InviteeID.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Role.SetFake()
-		}
-	}
-	{
-		{
-			s.TeamIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.TeamIds = append(s.TeamIds, elem)
-			}
-		}
-	}
-}
+func (s *OrgsCreateInvitationReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsCreateInvitationReqRole) SetFake() {
-	*s = OrgsCreateInvitationReqRoleAdmin
-}
+func (s *OrgsCreateInvitationReqRole) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsCreateWebhookReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Config.SetFake()
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-}
+func (s *OrgsCreateWebhookReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsCreateWebhookReqConfig) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.InsecureSsl.SetFake()
-		}
-	}
-	{
-		{
-			s.Username.SetFake()
-		}
-	}
-	{
-		{
-			s.Password.SetFake()
-		}
-	}
-}
+func (s *OrgsCreateWebhookReqConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OrgsGetMembershipForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsGetMembershipForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OrgsGetMembershipForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsGetMembershipForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OrgsGetMembershipForUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsGetMembershipForUserForbidden(unwrapped)
-}
+func (s *OrgsGetMembershipForUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsGetMembershipForUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsGetMembershipForUserNotFound(unwrapped)
-}
+func (s *OrgsGetMembershipForUserNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsListBlockedUsersOKApplicationJSON) SetFake() {
-	var unwrapped []SimpleUser
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem SimpleUser
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = OrgsListBlockedUsersOKApplicationJSON(unwrapped)
-}
+func (s *OrgsListBlockedUsersOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsListForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsListForAuthenticatedUserForbidden(unwrapped)
-}
+func (s *OrgsListForAuthenticatedUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsListForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsListForAuthenticatedUserUnauthorized(unwrapped)
-}
+func (s *OrgsListForAuthenticatedUserUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OrgsListMembershipsForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsListMembershipsForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OrgsListMembershipsForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsListMembershipsForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OrgsListWebhookDeliveriesOKApplicationJSON) SetFake() {
-	var unwrapped []HookDeliveryItem
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem HookDeliveryItem
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = OrgsListWebhookDeliveriesOKApplicationJSON(unwrapped)
-}
+func (s *OrgsListWebhookDeliveriesOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsRemoveMembershipForUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsRemoveMembershipForUserForbidden(unwrapped)
-}
+func (s *OrgsRemoveMembershipForUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsRemoveMembershipForUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsRemoveMembershipForUserNotFound(unwrapped)
-}
+func (s *OrgsRemoveMembershipForUserNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OrgsRemoveOutsideCollaboratorUnprocessableEntity) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OrgsSetMembershipForUserReq) SetFake() {
-	{
-		{
-			s.Role.SetFake()
-		}
-	}
-}
+func (s *OrgsSetMembershipForUserReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsSetMembershipForUserReqRole) SetFake() {
-	*s = OrgsSetMembershipForUserReqRoleAdmin
-}
+func (s *OrgsSetMembershipForUserReqRole) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OrgsUpdateMembershipForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsUpdateMembershipForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *OrgsUpdateMembershipForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = OrgsUpdateMembershipForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OrgsUpdateMembershipForAuthenticatedUserReq) SetFake() {
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-}
+func (s *OrgsUpdateMembershipForAuthenticatedUserReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *OrgsUpdateMembershipForAuthenticatedUserReqState) SetFake() {
-	*s = OrgsUpdateMembershipForAuthenticatedUserReqStateActive
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *OrgsUpdateWebhookConfigForOrgReq) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.InsecureSsl.SetFake()
-		}
-	}
-}
+func (s *OrgsUpdateWebhookConfigForOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsUpdateWebhookReq) SetFake() {
-	{
-		{
-			s.Config.SetFake()
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-}
+func (s *OrgsUpdateWebhookReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *OrgsUpdateWebhookReqConfig) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.InsecureSsl.SetFake()
-		}
-	}
-}
+func (s *OrgsUpdateWebhookReqConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Package) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.PackageType.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = "string"
-		}
-	}
-	{
-		{
-			s.VersionCount = int(0)
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-}
+func (s *Package) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagePackageType) SetFake() {
-	*s = PackagePackageTypeNpm
-}
+func (s *PackagePackageType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackageVersion) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.PackageHTMLURL = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.DeletedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Metadata.SetFake()
-		}
-	}
-}
+func (s *PackageVersion) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackageVersionMetadata) SetFake() {
-	{
-		{
-			s.PackageType.SetFake()
-		}
-	}
-	{
-		{
-			s.Container.SetFake()
-		}
-	}
-	{
-		{
-			s.Docker.SetFake()
-		}
-	}
-}
+func (s *PackageVersionMetadata) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackageVersionMetadataContainer) SetFake() {
-	{
-		{
-			s.Tags = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.Tags = append(s.Tags, elem)
-			}
-		}
-	}
-}
+func (s *PackageVersionMetadataContainer) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackageVersionMetadataDocker) SetFake() {
-	{
-		{
-			s.Tag = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.Tag = append(s.Tag, elem)
-			}
-		}
-	}
-}
+func (s *PackageVersionMetadataDocker) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackageVersionMetadataPackageType) SetFake() {
-	*s = PackageVersionMetadataPackageTypeNpm
-}
+func (s *PackageVersionMetadataPackageType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackageVisibility) SetFake() {
-	*s = PackageVisibilityPrivate
-}
+func (s *PackageVisibility) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesBillingUsage) SetFake() {
-	{
-		{
-			s.TotalGigabytesBandwidthUsed = int(0)
-		}
-	}
-	{
-		{
-			s.TotalPaidGigabytesBandwidthUsed = int(0)
-		}
-	}
-	{
-		{
-			s.IncludedGigabytesBandwidth = int(0)
-		}
-	}
-}
+func (s *PackagesBillingUsage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PackagesDeletePackageForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesDeletePackageForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesDeletePackageForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PackagesDeletePackageForOrgForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageForOrgForbidden(unwrapped)
-}
+func (s *PackagesDeletePackageForOrgForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesDeletePackageForOrgNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageForOrgNotFound(unwrapped)
-}
+func (s *PackagesDeletePackageForOrgNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesDeletePackageForOrgUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageForOrgUnauthorized(unwrapped)
-}
+func (s *PackagesDeletePackageForOrgUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesDeletePackageForUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageForUserForbidden(unwrapped)
-}
+func (s *PackagesDeletePackageForUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesDeletePackageForUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageForUserNotFound(unwrapped)
-}
+func (s *PackagesDeletePackageForUserNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesDeletePackageForUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageForUserUnauthorized(unwrapped)
-}
+func (s *PackagesDeletePackageForUserUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PackagesDeletePackageVersionForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageVersionForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesDeletePackageVersionForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageVersionForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesDeletePackageVersionForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageVersionForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PackagesDeletePackageVersionForOrgForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageVersionForOrgForbidden(unwrapped)
-}
+func (s *PackagesDeletePackageVersionForOrgForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesDeletePackageVersionForOrgNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageVersionForOrgNotFound(unwrapped)
-}
+func (s *PackagesDeletePackageVersionForOrgNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PackagesDeletePackageVersionForOrgUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageVersionForOrgUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PackagesDeletePackageVersionForUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageVersionForUserForbidden(unwrapped)
-}
+func (s *PackagesDeletePackageVersionForUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesDeletePackageVersionForUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageVersionForUserNotFound(unwrapped)
-}
+func (s *PackagesDeletePackageVersionForUserNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PackagesDeletePackageVersionForUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesDeletePackageVersionForUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserOKApplicationJSON) SetFake() {
-	var unwrapped []PackageVersion
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem PackageVersion
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByOrgForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByOrgForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByOrgNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByOrgNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByOrgOKApplicationJSON) SetFake() {
-	var unwrapped []PackageVersion
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem PackageVersion
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByOrgOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByOrgUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByOrgUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByUserOKApplicationJSON) SetFake() {
-	var unwrapped []PackageVersion
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem PackageVersion
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByUserOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesGetAllPackageVersionsForPackageOwnedByUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesGetAllPackageVersionsForPackageOwnedByUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PackagesListPackagesForOrganizationForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesListPackagesForOrganizationForbidden(unwrapped)
-}
+func (s *PackagesListPackagesForOrganizationForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PackagesListPackagesForOrganizationOKApplicationJSON) SetFake() {
-	var unwrapped []Package
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Package
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = PackagesListPackagesForOrganizationOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesListPackagesForOrganizationUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesListPackagesForOrganizationUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PackagesListPackagesForUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesListPackagesForUserForbidden(unwrapped)
-}
+func (s *PackagesListPackagesForUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesListPackagesForUserOKApplicationJSON) SetFake() {
-	var unwrapped []Package
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Package
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = PackagesListPackagesForUserOKApplicationJSON(unwrapped)
-}
+func (s *PackagesListPackagesForUserOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesListPackagesForUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesListPackagesForUserUnauthorized(unwrapped)
-}
+func (s *PackagesListPackagesForUserUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PackagesRestorePackageForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesRestorePackageForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesRestorePackageForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PackagesRestorePackageForOrgForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageForOrgForbidden(unwrapped)
-}
+func (s *PackagesRestorePackageForOrgForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesRestorePackageForOrgNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageForOrgNotFound(unwrapped)
-}
+func (s *PackagesRestorePackageForOrgNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesRestorePackageForOrgUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageForOrgUnauthorized(unwrapped)
-}
+func (s *PackagesRestorePackageForOrgUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesRestorePackageForUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageForUserForbidden(unwrapped)
-}
+func (s *PackagesRestorePackageForUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesRestorePackageForUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageForUserNotFound(unwrapped)
-}
+func (s *PackagesRestorePackageForUserNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesRestorePackageForUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageForUserUnauthorized(unwrapped)
-}
+func (s *PackagesRestorePackageForUserUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PackagesRestorePackageVersionForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageVersionForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesRestorePackageVersionForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageVersionForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesRestorePackageVersionForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageVersionForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PackagesRestorePackageVersionForOrgForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageVersionForOrgForbidden(unwrapped)
-}
+func (s *PackagesRestorePackageVersionForOrgForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PackagesRestorePackageVersionForOrgNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageVersionForOrgNotFound(unwrapped)
-}
+func (s *PackagesRestorePackageVersionForOrgNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PackagesRestorePackageVersionForOrgUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageVersionForOrgUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *PackagesRestorePackageVersionForUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageVersionForUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *PackagesRestorePackageVersionForUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageVersionForUserNotFound(unwrapped)
-}
+func (s *PackagesRestorePackageVersionForUserNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *PackagesRestorePackageVersionForUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PackagesRestorePackageVersionForUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *Page) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Cname.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectedDomainState.SetFake()
-		}
-	}
-	{
-		{
-			s.PendingDomainUnverifiedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Custom404 = true
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Source.SetFake()
-		}
-	}
-	{
-		{
-			s.Public = true
-		}
-	}
-	{
-		{
-			s.HTTPSCertificate.SetFake()
-		}
-	}
-	{
-		{
-			s.HTTPSEnforced.SetFake()
-		}
-	}
-}
+func (s *Page) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PageBuild) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Error.SetFake()
-		}
-	}
-	{
-		{
-			s.Pusher.SetFake()
-		}
-	}
-	{
-		{
-			s.Commit = "string"
-		}
-	}
-	{
-		{
-			s.Duration = int(0)
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-}
+func (s *PageBuild) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PageBuildError) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-}
+func (s *PageBuildError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PageBuildStatus) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-}
+func (s *PageBuildStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PageProtectedDomainState) SetFake() {
-	*s = PageProtectedDomainStatePending
-}
+func (s *PageProtectedDomainState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PageStatus) SetFake() {
-	*s = PageStatusBuilt
-}
+func (s *PageStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PagesHTTPSCertificate) SetFake() {
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.Domains = nil
-			for i := 0; i < 0; i++ {
-				var elem jx.Raw
-				{
-					elem = []byte("null")
-				}
-				s.Domains = append(s.Domains, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ExpiresAt.SetFake()
-		}
-	}
-}
+func (s *PagesHTTPSCertificate) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PagesHTTPSCertificateState) SetFake() {
-	*s = PagesHTTPSCertificateStateNew
-}
+func (s *PagesHTTPSCertificateState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PagesHealthCheck) SetFake() {
-	{
-		{
-			s.Domain.SetFake()
-		}
-	}
-	{
-		{
-			s.AltDomain.SetFake()
-		}
-	}
-}
+func (s *PagesHealthCheck) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PagesHealthCheckAltDomain) SetFake() {
-	{
-		{
-			s.Host.SetFake()
-		}
-	}
-	{
-		{
-			s.URI.SetFake()
-		}
-	}
-	{
-		{
-			s.Nameservers.SetFake()
-		}
-	}
-	{
-		{
-			s.DNSResolves.SetFake()
-		}
-	}
-	{
-		{
-			s.IsProxied.SetFake()
-		}
-	}
-	{
-		{
-			s.IsCloudflareIP.SetFake()
-		}
-	}
-	{
-		{
-			s.IsFastlyIP.SetFake()
-		}
-	}
-	{
-		{
-			s.IsOldIPAddress.SetFake()
-		}
-	}
-	{
-		{
-			s.IsARecord.SetFake()
-		}
-	}
-	{
-		{
-			s.HasCnameRecord.SetFake()
-		}
-	}
-	{
-		{
-			s.HasMxRecordsPresent.SetFake()
-		}
-	}
-	{
-		{
-			s.IsValidDomain.SetFake()
-		}
-	}
-	{
-		{
-			s.IsApexDomain.SetFake()
-		}
-	}
-	{
-		{
-			s.ShouldBeARecord.SetFake()
-		}
-	}
-	{
-		{
-			s.IsCnameToGithubUserDomain.SetFake()
-		}
-	}
-	{
-		{
-			s.IsCnameToPagesDotGithubDotCom.SetFake()
-		}
-	}
-	{
-		{
-			s.IsCnameToFastly.SetFake()
-		}
-	}
-	{
-		{
-			s.IsPointedToGithubPagesIP.SetFake()
-		}
-	}
-	{
-		{
-			s.IsNonGithubPagesIPPresent.SetFake()
-		}
-	}
-	{
-		{
-			s.IsPagesDomain.SetFake()
-		}
-	}
-	{
-		{
-			s.IsServedByPages.SetFake()
-		}
-	}
-	{
-		{
-			s.IsValid.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.RespondsToHTTPS.SetFake()
-		}
-	}
-	{
-		{
-			s.EnforcesHTTPS.SetFake()
-		}
-	}
-	{
-		{
-			s.HTTPSError.SetFake()
-		}
-	}
-	{
-		{
-			s.IsHTTPSEligible.SetFake()
-		}
-	}
-	{
-		{
-			s.CaaError.SetFake()
-		}
-	}
-}
+func (s *PagesHealthCheckAltDomain) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PagesHealthCheckDomain) SetFake() {
-	{
-		{
-			s.Host.SetFake()
-		}
-	}
-	{
-		{
-			s.URI.SetFake()
-		}
-	}
-	{
-		{
-			s.Nameservers.SetFake()
-		}
-	}
-	{
-		{
-			s.DNSResolves.SetFake()
-		}
-	}
-	{
-		{
-			s.IsProxied.SetFake()
-		}
-	}
-	{
-		{
-			s.IsCloudflareIP.SetFake()
-		}
-	}
-	{
-		{
-			s.IsFastlyIP.SetFake()
-		}
-	}
-	{
-		{
-			s.IsOldIPAddress.SetFake()
-		}
-	}
-	{
-		{
-			s.IsARecord.SetFake()
-		}
-	}
-	{
-		{
-			s.HasCnameRecord.SetFake()
-		}
-	}
-	{
-		{
-			s.HasMxRecordsPresent.SetFake()
-		}
-	}
-	{
-		{
-			s.IsValidDomain.SetFake()
-		}
-	}
-	{
-		{
-			s.IsApexDomain.SetFake()
-		}
-	}
-	{
-		{
-			s.ShouldBeARecord.SetFake()
-		}
-	}
-	{
-		{
-			s.IsCnameToGithubUserDomain.SetFake()
-		}
-	}
-	{
-		{
-			s.IsCnameToPagesDotGithubDotCom.SetFake()
-		}
-	}
-	{
-		{
-			s.IsCnameToFastly.SetFake()
-		}
-	}
-	{
-		{
-			s.IsPointedToGithubPagesIP.SetFake()
-		}
-	}
-	{
-		{
-			s.IsNonGithubPagesIPPresent.SetFake()
-		}
-	}
-	{
-		{
-			s.IsPagesDomain.SetFake()
-		}
-	}
-	{
-		{
-			s.IsServedByPages.SetFake()
-		}
-	}
-	{
-		{
-			s.IsValid.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.RespondsToHTTPS.SetFake()
-		}
-	}
-	{
-		{
-			s.EnforcesHTTPS.SetFake()
-		}
-	}
-	{
-		{
-			s.HTTPSError.SetFake()
-		}
-	}
-	{
-		{
-			s.IsHTTPSEligible.SetFake()
-		}
-	}
-	{
-		{
-			s.CaaError.SetFake()
-		}
-	}
-}
+func (s *PagesHealthCheckDomain) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PagesSourceHash) SetFake() {
-	{
-		{
-			s.Branch = "string"
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-}
+func (s *PagesSourceHash) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ParticipationStats) SetFake() {
-	{
-		{
-			s.All = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.All = append(s.All, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Owner = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Owner = append(s.Owner, elem)
-			}
-		}
-	}
-}
+func (s *ParticipationStats) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PorterAuthor) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.RemoteID = "string"
-		}
-	}
-	{
-		{
-			s.RemoteName = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ImportURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *PorterAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PorterLargeFile) SetFake() {
-	{
-		{
-			s.RefName = "string"
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.Oid = "string"
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-}
+func (s *PorterLargeFile) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PreviewHeaderMissing) SetFake() {
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.DocumentationURL = "string"
-		}
-	}
-}
+func (s *PreviewHeaderMissing) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PrivateUser) SetFake() {
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.SiteAdmin = true
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Company.SetFake()
-		}
-	}
-	{
-		{
-			s.Blog.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Hireable.SetFake()
-		}
-	}
-	{
-		{
-			s.Bio.SetFake()
-		}
-	}
-	{
-		{
-			s.TwitterUsername.SetFake()
-		}
-	}
-	{
-		{
-			s.PublicRepos = int(0)
-		}
-	}
-	{
-		{
-			s.PublicGists = int(0)
-		}
-	}
-	{
-		{
-			s.Followers = int(0)
-		}
-	}
-	{
-		{
-			s.Following = int(0)
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.PrivateGists = int(0)
-		}
-	}
-	{
-		{
-			s.TotalPrivateRepos = int(0)
-		}
-	}
-	{
-		{
-			s.OwnedPrivateRepos = int(0)
-		}
-	}
-	{
-		{
-			s.DiskUsage = int(0)
-		}
-	}
-	{
-		{
-			s.Collaborators = int(0)
-		}
-	}
-	{
-		{
-			s.TwoFactorAuthentication = true
-		}
-	}
-	{
-		{
-			s.Plan.SetFake()
-		}
-	}
-	{
-		{
-			s.SuspendedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.BusinessPlus.SetFake()
-		}
-	}
-	{
-		{
-			s.LdapDn.SetFake()
-		}
-	}
-}
+func (s *PrivateUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PrivateUserPlan) SetFake() {
-	{
-		{
-			s.Collaborators = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Space = int(0)
-		}
-	}
-	{
-		{
-			s.PrivateRepos = int(0)
-		}
-	}
-}
+func (s *PrivateUserPlan) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Project) SetFake() {
-	{
-		{
-			s.OwnerURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ColumnsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.Creator.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.OrganizationPermission.SetFake()
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-}
+func (s *Project) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectCard) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Note.SetFake()
-		}
-	}
-	{
-		{
-			s.Creator.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Archived.SetFake()
-		}
-	}
-	{
-		{
-			s.ColumnName.SetFake()
-		}
-	}
-	{
-		{
-			s.ProjectID.SetFake()
-		}
-	}
-	{
-		{
-			s.ColumnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ContentURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ProjectURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *ProjectCard) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectColumn) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ProjectURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CardsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-}
+func (s *ProjectColumn) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectOrganizationPermission) SetFake() {
-	*s = ProjectOrganizationPermissionRead
-}
+func (s *ProjectOrganizationPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsAddCollaboratorForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsAddCollaboratorForbidden(unwrapped)
-}
+func (s *ProjectsAddCollaboratorForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsAddCollaboratorNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsAddCollaboratorNotFound(unwrapped)
-}
+func (s *ProjectsAddCollaboratorNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsAddCollaboratorReq) SetFake() {
-	{
-		{
-			s.Permission.SetFake()
-		}
-	}
-}
+func (s *ProjectsAddCollaboratorReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsAddCollaboratorReqPermission) SetFake() {
-	*s = ProjectsAddCollaboratorReqPermissionRead
-}
+func (s *ProjectsAddCollaboratorReqPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsAddCollaboratorUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsAddCollaboratorUnauthorized(unwrapped)
-}
+func (s *ProjectsAddCollaboratorUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateColumnForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateColumnForbidden(unwrapped)
-}
+func (s *ProjectsCreateColumnForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateColumnReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *ProjectsCreateColumnReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateColumnUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateColumnUnauthorized(unwrapped)
-}
+func (s *ProjectsCreateColumnUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateForAuthenticatedUserForbidden(unwrapped)
-}
+func (s *ProjectsCreateForAuthenticatedUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForAuthenticatedUserReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-}
+func (s *ProjectsCreateForAuthenticatedUserReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ProjectsCreateForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForOrgForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateForOrgForbidden(unwrapped)
-}
+func (s *ProjectsCreateForOrgForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForOrgGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateForOrgGone(unwrapped)
-}
+func (s *ProjectsCreateForOrgGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForOrgNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateForOrgNotFound(unwrapped)
-}
+func (s *ProjectsCreateForOrgNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForOrgReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-}
+func (s *ProjectsCreateForOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForOrgUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateForOrgUnauthorized(unwrapped)
-}
+func (s *ProjectsCreateForOrgUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForRepoForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateForRepoForbidden(unwrapped)
-}
+func (s *ProjectsCreateForRepoForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForRepoGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateForRepoGone(unwrapped)
-}
+func (s *ProjectsCreateForRepoGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForRepoNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateForRepoNotFound(unwrapped)
-}
+func (s *ProjectsCreateForRepoNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForRepoReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-}
+func (s *ProjectsCreateForRepoReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsCreateForRepoUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsCreateForRepoUnauthorized(unwrapped)
-}
+func (s *ProjectsCreateForRepoUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsDeleteCardForbidden) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Errors = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Errors = append(s.Errors, elem)
-			}
-		}
-	}
-}
+func (s *ProjectsDeleteCardForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsDeleteCardNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsDeleteCardNotFound(unwrapped)
-}
+func (s *ProjectsDeleteCardNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsDeleteCardUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsDeleteCardUnauthorized(unwrapped)
-}
+func (s *ProjectsDeleteCardUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsDeleteColumnForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsDeleteColumnForbidden(unwrapped)
-}
+func (s *ProjectsDeleteColumnForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsDeleteColumnUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsDeleteColumnUnauthorized(unwrapped)
-}
+func (s *ProjectsDeleteColumnUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsDeleteForbidden) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Errors = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Errors = append(s.Errors, elem)
-			}
-		}
-	}
-}
+func (s *ProjectsDeleteForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsDeleteGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsDeleteGone(unwrapped)
-}
+func (s *ProjectsDeleteGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsDeleteNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsDeleteNotFound(unwrapped)
-}
+func (s *ProjectsDeleteNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsDeleteUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsDeleteUnauthorized(unwrapped)
-}
+func (s *ProjectsDeleteUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetCardForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetCardForbidden(unwrapped)
-}
+func (s *ProjectsGetCardForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetCardNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetCardNotFound(unwrapped)
-}
+func (s *ProjectsGetCardNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetCardUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetCardUnauthorized(unwrapped)
-}
+func (s *ProjectsGetCardUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetColumnForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetColumnForbidden(unwrapped)
-}
+func (s *ProjectsGetColumnForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetColumnNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetColumnNotFound(unwrapped)
-}
+func (s *ProjectsGetColumnNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetColumnUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetColumnUnauthorized(unwrapped)
-}
+func (s *ProjectsGetColumnUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetForbidden(unwrapped)
-}
+func (s *ProjectsGetForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetPermissionForUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetPermissionForUserForbidden(unwrapped)
-}
+func (s *ProjectsGetPermissionForUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetPermissionForUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetPermissionForUserNotFound(unwrapped)
-}
+func (s *ProjectsGetPermissionForUserNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetPermissionForUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetPermissionForUserUnauthorized(unwrapped)
-}
+func (s *ProjectsGetPermissionForUserUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsGetUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsGetUnauthorized(unwrapped)
-}
+func (s *ProjectsGetUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListCardsForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListCardsForbidden(unwrapped)
-}
+func (s *ProjectsListCardsForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListCardsUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListCardsUnauthorized(unwrapped)
-}
+func (s *ProjectsListCardsUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListCollaboratorsForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListCollaboratorsForbidden(unwrapped)
-}
+func (s *ProjectsListCollaboratorsForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListCollaboratorsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListCollaboratorsNotFound(unwrapped)
-}
+func (s *ProjectsListCollaboratorsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListCollaboratorsUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListCollaboratorsUnauthorized(unwrapped)
-}
+func (s *ProjectsListCollaboratorsUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListColumnsForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListColumnsForbidden(unwrapped)
-}
+func (s *ProjectsListColumnsForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListColumnsUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListColumnsUnauthorized(unwrapped)
-}
+func (s *ProjectsListColumnsUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListForRepoForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListForRepoForbidden(unwrapped)
-}
+func (s *ProjectsListForRepoForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListForRepoGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListForRepoGone(unwrapped)
-}
+func (s *ProjectsListForRepoGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListForRepoNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListForRepoNotFound(unwrapped)
-}
+func (s *ProjectsListForRepoNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsListForRepoUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsListForRepoUnauthorized(unwrapped)
-}
+func (s *ProjectsListForRepoUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ProjectsMoveCardCreated) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *ProjectsMoveCardForbidden) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Errors = nil
-			for i := 0; i < 0; i++ {
-				var elem ProjectsMoveCardForbiddenErrorsItem
-				{
-					elem.SetFake()
-				}
-				s.Errors = append(s.Errors, elem)
-			}
-		}
-	}
-}
+func (s *ProjectsMoveCardForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsMoveCardForbiddenErrorsItem) SetFake() {
-	{
-		{
-			s.Code.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Resource.SetFake()
-		}
-	}
-	{
-		{
-			s.Field.SetFake()
-		}
-	}
-}
+func (s *ProjectsMoveCardForbiddenErrorsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsMoveCardReq) SetFake() {
-	{
-		{
-			s.Position = "string"
-		}
-	}
-	{
-		{
-			s.ColumnID.SetFake()
-		}
-	}
-}
+func (s *ProjectsMoveCardReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsMoveCardServiceUnavailable) SetFake() {
-	{
-		{
-			s.Code.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Errors = nil
-			for i := 0; i < 0; i++ {
-				var elem ProjectsMoveCardServiceUnavailableErrorsItem
-				{
-					elem.SetFake()
-				}
-				s.Errors = append(s.Errors, elem)
-			}
-		}
-	}
-}
+func (s *ProjectsMoveCardServiceUnavailable) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsMoveCardServiceUnavailableErrorsItem) SetFake() {
-	{
-		{
-			s.Code.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-}
+func (s *ProjectsMoveCardServiceUnavailableErrorsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ProjectsMoveColumnCreated) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *ProjectsMoveColumnForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsMoveColumnForbidden(unwrapped)
-}
+func (s *ProjectsMoveColumnForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsMoveColumnReq) SetFake() {
-	{
-		{
-			s.Position = "string"
-		}
-	}
-}
+func (s *ProjectsMoveColumnReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsMoveColumnUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsMoveColumnUnauthorized(unwrapped)
-}
+func (s *ProjectsMoveColumnUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsRemoveCollaboratorForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsRemoveCollaboratorForbidden(unwrapped)
-}
+func (s *ProjectsRemoveCollaboratorForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsRemoveCollaboratorNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsRemoveCollaboratorNotFound(unwrapped)
-}
+func (s *ProjectsRemoveCollaboratorNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsRemoveCollaboratorUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsRemoveCollaboratorUnauthorized(unwrapped)
-}
+func (s *ProjectsRemoveCollaboratorUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateCardForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsUpdateCardForbidden(unwrapped)
-}
+func (s *ProjectsUpdateCardForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateCardNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsUpdateCardNotFound(unwrapped)
-}
+func (s *ProjectsUpdateCardNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateCardReq) SetFake() {
-	{
-		{
-			s.Note.SetFake()
-		}
-	}
-	{
-		{
-			s.Archived.SetFake()
-		}
-	}
-}
+func (s *ProjectsUpdateCardReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateCardUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsUpdateCardUnauthorized(unwrapped)
-}
+func (s *ProjectsUpdateCardUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateColumnForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsUpdateColumnForbidden(unwrapped)
-}
+func (s *ProjectsUpdateColumnForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateColumnReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *ProjectsUpdateColumnReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateColumnUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsUpdateColumnUnauthorized(unwrapped)
-}
+func (s *ProjectsUpdateColumnUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateForbidden) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Errors = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Errors = append(s.Errors, elem)
-			}
-		}
-	}
-}
+func (s *ProjectsUpdateForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsUpdateGone(unwrapped)
-}
+func (s *ProjectsUpdateGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateReq) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationPermission.SetFake()
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-}
+func (s *ProjectsUpdateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateReqOrganizationPermission) SetFake() {
-	*s = ProjectsUpdateReqOrganizationPermissionRead
-}
+func (s *ProjectsUpdateReqOrganizationPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProjectsUpdateUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ProjectsUpdateUnauthorized(unwrapped)
-}
+func (s *ProjectsUpdateUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProtectedBranch) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RequiredStatusChecks.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredPullRequestReviews.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredSignatures.SetFake()
-		}
-	}
-	{
-		{
-			s.EnforceAdmins.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredLinearHistory.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForcePushes.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowDeletions.SetFake()
-		}
-	}
-	{
-		{
-			s.Restrictions.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredConversationResolution.SetFake()
-		}
-	}
-}
+func (s *ProtectedBranch) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProtectedBranchAdminEnforced) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Enabled = true
-		}
-	}
-}
+func (s *ProtectedBranchAdminEnforced) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProtectedBranchAllowDeletions) SetFake() {
-	{
-		{
-			s.Enabled = true
-		}
-	}
-}
+func (s *ProtectedBranchAllowDeletions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProtectedBranchAllowForcePushes) SetFake() {
-	{
-		{
-			s.Enabled = true
-		}
-	}
-}
+func (s *ProtectedBranchAllowForcePushes) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProtectedBranchEnforceAdmins) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Enabled = true
-		}
-	}
-}
+func (s *ProtectedBranchEnforceAdmins) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProtectedBranchPullRequestReview) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissalRestrictions.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissStaleReviews = true
-		}
-	}
-	{
-		{
-			s.RequireCodeOwnerReviews = true
-		}
-	}
-	{
-		{
-			s.RequiredApprovingReviewCount.SetFake()
-		}
-	}
-}
+func (s *ProtectedBranchPullRequestReview) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ProtectedBranchPullRequestReviewDismissalRestrictions) SetFake() {
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem SimpleUser
-				{
-					elem.SetFake()
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Teams = nil
-			for i := 0; i < 0; i++ {
-				var elem Team
-				{
-					elem.SetFake()
-				}
-				s.Teams = append(s.Teams, elem)
-			}
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.UsersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.TeamsURL.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ProtectedBranchRequiredConversationResolution) SetFake() {
-	{
-		{
-			s.Enabled.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ProtectedBranchRequiredLinearHistory) SetFake() {
-	{
-		{
-			s.Enabled = true
-		}
-	}
-}
+func (s *ProtectedBranchRequiredLinearHistory) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ProtectedBranchRequiredPullRequestReviews) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DismissStaleReviews.SetFake()
-		}
-	}
-	{
-		{
-			s.RequireCodeOwnerReviews.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredApprovingReviewCount.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissalRestrictions.SetFake()
-		}
-	}
-}
+func (s *ProtectedBranchRequiredPullRequestReviews) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.UsersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem SimpleUser
-				{
-					elem.SetFake()
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Teams = nil
-			for i := 0; i < 0; i++ {
-				var elem Team
-				{
-					elem.SetFake()
-				}
-				s.Teams = append(s.Teams, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ProtectedBranchRequiredSignatures) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Enabled = true
-		}
-	}
-}
+func (s *ProtectedBranchRequiredSignatures) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PublicUser) SetFake() {
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.SiteAdmin = true
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Company.SetFake()
-		}
-	}
-	{
-		{
-			s.Blog.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Hireable.SetFake()
-		}
-	}
-	{
-		{
-			s.Bio.SetFake()
-		}
-	}
-	{
-		{
-			s.TwitterUsername.SetFake()
-		}
-	}
-	{
-		{
-			s.PublicRepos = int(0)
-		}
-	}
-	{
-		{
-			s.PublicGists = int(0)
-		}
-	}
-	{
-		{
-			s.Followers = int(0)
-		}
-	}
-	{
-		{
-			s.Following = int(0)
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Plan.SetFake()
-		}
-	}
-	{
-		{
-			s.SuspendedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.PrivateGists.SetFake()
-		}
-	}
-	{
-		{
-			s.TotalPrivateRepos.SetFake()
-		}
-	}
-	{
-		{
-			s.OwnedPrivateRepos.SetFake()
-		}
-	}
-	{
-		{
-			s.DiskUsage.SetFake()
-		}
-	}
-	{
-		{
-			s.Collaborators.SetFake()
-		}
-	}
-}
+func (s *PublicUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PublicUserPlan) SetFake() {
-	{
-		{
-			s.Collaborators = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Space = int(0)
-		}
-	}
-	{
-		{
-			s.PrivateRepos = int(0)
-		}
-	}
-}
+func (s *PublicUserPlan) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequest) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DiffURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.PatchURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.IssueURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReviewCommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReviewCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Locked = true
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Labels = nil
-			for i := 0; i < 0; i++ {
-				var elem PullRequestLabelsItem
-				{
-					elem.SetFake()
-				}
-				s.Labels = append(s.Labels, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Milestone.SetFake()
-		}
-	}
-	{
-		{
-			s.ActiveLockReason.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.ClosedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.MergedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.MergeCommitSha.SetFake()
-		}
-	}
-	{
-		{
-			s.Assignee.SetFake()
-		}
-	}
-	{
-		{
-			s.Assignees.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestedReviewers.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestedTeams.SetFake()
-		}
-	}
-	{
-		{
-			s.Head.SetFake()
-		}
-	}
-	{
-		{
-			s.Base.SetFake()
-		}
-	}
-	{
-		{
-			s.Links.SetFake()
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-	{
-		{
-			s.AutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.Draft.SetFake()
-		}
-	}
-	{
-		{
-			s.Merged = true
-		}
-	}
-	{
-		{
-			s.Mergeable.SetFake()
-		}
-	}
-	{
-		{
-			s.Rebaseable.SetFake()
-		}
-	}
-	{
-		{
-			s.MergeableState = "string"
-		}
-	}
-	{
-		{
-			s.MergedBy.SetFake()
-		}
-	}
-	{
-		{
-			s.Comments = int(0)
-		}
-	}
-	{
-		{
-			s.ReviewComments = int(0)
-		}
-	}
-	{
-		{
-			s.MaintainerCanModify = true
-		}
-	}
-	{
-		{
-			s.Commits = int(0)
-		}
-	}
-	{
-		{
-			s.Additions = int(0)
-		}
-	}
-	{
-		{
-			s.Deletions = int(0)
-		}
-	}
-	{
-		{
-			s.ChangedFiles = int(0)
-		}
-	}
-}
+func (s *PullRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestBase) SetFake() {
-	{
-		{
-			s.Label = "string"
-		}
-	}
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.Repo.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *PullRequestBase) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestBaseRepo) SetFake() {
-	{
-		{
-			s.ArchiveURL = "string"
-		}
-	}
-	{
-		{
-			s.AssigneesURL = "string"
-		}
-	}
-	{
-		{
-			s.BlobsURL = "string"
-		}
-	}
-	{
-		{
-			s.BranchesURL = "string"
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.CompareURL = "string"
-		}
-	}
-	{
-		{
-			s.ContentsURL = "string"
-		}
-	}
-	{
-		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Fork = true
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FullName = "string"
-		}
-	}
-	{
-		{
-			s.GitCommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitRefsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitTagsURL = "string"
-		}
-	}
-	{
-		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.IssueCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueEventsURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.KeysURL = "string"
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MilestonesURL = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.NotificationsURL = "string"
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private = true
-		}
-	}
-	{
-		{
-			s.PullsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReleasesURL = "string"
-		}
-	}
-	{
-		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StatusesURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TreesURL = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CloneURL = "string"
-		}
-	}
-	{
-		{
-			s.DefaultBranch = "string"
-		}
-	}
-	{
-		{
-			s.Forks = int(0)
-		}
-	}
-	{
-		{
-			s.ForksCount = int(0)
-		}
-	}
-	{
-		{
-			s.GitURL = "string"
-		}
-	}
-	{
-		{
-			s.HasDownloads = true
-		}
-	}
-	{
-		{
-			s.HasIssues = true
-		}
-	}
-	{
-		{
-			s.HasProjects = true
-		}
-	}
-	{
-		{
-			s.HasWiki = true
-		}
-	}
-	{
-		{
-			s.HasPages = true
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.MasterBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.Archived = true
-		}
-	}
-	{
-		{
-			s.Disabled = true
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssues = int(0)
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount = int(0)
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.PushedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-	{
-		{
-			s.SSHURL = "string"
-		}
-	}
-	{
-		{
-			s.StargazersCount = int(0)
-		}
-	}
-	{
-		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Watchers = int(0)
-		}
-	}
-	{
-		{
-			s.WatchersCount = int(0)
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.AllowForking.SetFake()
-		}
-	}
-}
+func (s *PullRequestBaseRepo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestBaseRepoOwner) SetFake() {
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SiteAdmin = true
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *PullRequestBaseRepoOwner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestBaseRepoPermissions) SetFake() {
-	{
-		{
-			s.Admin = true
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-	{
-		{
-			s.Push = true
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Pull = true
-		}
-	}
-}
+func (s *PullRequestBaseRepoPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestBaseUser) SetFake() {
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SiteAdmin = true
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *PullRequestBaseUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestHead) SetFake() {
-	{
-		{
-			s.Label = "string"
-		}
-	}
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.Repo.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *PullRequestHead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestHeadRepo) SetFake() {
-	{
-		{
-			s.ArchiveURL = "string"
-		}
-	}
-	{
-		{
-			s.AssigneesURL = "string"
-		}
-	}
-	{
-		{
-			s.BlobsURL = "string"
-		}
-	}
-	{
-		{
-			s.BranchesURL = "string"
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.CompareURL = "string"
-		}
-	}
-	{
-		{
-			s.ContentsURL = "string"
-		}
-	}
-	{
-		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Fork = true
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FullName = "string"
-		}
-	}
-	{
-		{
-			s.GitCommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitRefsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitTagsURL = "string"
-		}
-	}
-	{
-		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.IssueCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueEventsURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.KeysURL = "string"
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MilestonesURL = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.NotificationsURL = "string"
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private = true
-		}
-	}
-	{
-		{
-			s.PullsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReleasesURL = "string"
-		}
-	}
-	{
-		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StatusesURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TreesURL = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CloneURL = "string"
-		}
-	}
-	{
-		{
-			s.DefaultBranch = "string"
-		}
-	}
-	{
-		{
-			s.Forks = int(0)
-		}
-	}
-	{
-		{
-			s.ForksCount = int(0)
-		}
-	}
-	{
-		{
-			s.GitURL = "string"
-		}
-	}
-	{
-		{
-			s.HasDownloads = true
-		}
-	}
-	{
-		{
-			s.HasIssues = true
-		}
-	}
-	{
-		{
-			s.HasProjects = true
-		}
-	}
-	{
-		{
-			s.HasWiki = true
-		}
-	}
-	{
-		{
-			s.HasPages = true
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.MasterBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.Archived = true
-		}
-	}
-	{
-		{
-			s.Disabled = true
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssues = int(0)
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount = int(0)
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.PushedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-	{
-		{
-			s.SSHURL = "string"
-		}
-	}
-	{
-		{
-			s.StargazersCount = int(0)
-		}
-	}
-	{
-		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Watchers = int(0)
-		}
-	}
-	{
-		{
-			s.WatchersCount = int(0)
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.AllowForking.SetFake()
-		}
-	}
-}
+func (s *PullRequestHeadRepo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestHeadRepoLicense) SetFake() {
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.SpdxID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-}
+func (s *PullRequestHeadRepoLicense) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestHeadRepoOwner) SetFake() {
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SiteAdmin = true
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *PullRequestHeadRepoOwner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestHeadRepoPermissions) SetFake() {
-	{
-		{
-			s.Admin = true
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-	{
-		{
-			s.Push = true
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Pull = true
-		}
-	}
-}
+func (s *PullRequestHeadRepoPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestHeadUser) SetFake() {
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SiteAdmin = true
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *PullRequestHeadUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestLabelsItem) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Color.SetFake()
-		}
-	}
-	{
-		{
-			s.Default.SetFake()
-		}
-	}
-}
+func (s *PullRequestLabelsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestLinks) SetFake() {
-	{
-		{
-			s.Comments.SetFake()
-		}
-	}
-	{
-		{
-			s.Commits.SetFake()
-		}
-	}
-	{
-		{
-			s.Statuses.SetFake()
-		}
-	}
-	{
-		{
-			s.HTML.SetFake()
-		}
-	}
-	{
-		{
-			s.Issue.SetFake()
-		}
-	}
-	{
-		{
-			s.ReviewComments.SetFake()
-		}
-	}
-	{
-		{
-			s.ReviewComment.SetFake()
-		}
-	}
-	{
-		{
-			s.Self.SetFake()
-		}
-	}
-}
+func (s *PullRequestLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestMergeResult) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Merged = true
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-}
+func (s *PullRequestMergeResult) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestMinimal) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.Head.SetFake()
-		}
-	}
-	{
-		{
-			s.Base.SetFake()
-		}
-	}
-}
+func (s *PullRequestMinimal) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestMinimalBase) SetFake() {
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Repo.SetFake()
-		}
-	}
-}
+func (s *PullRequestMinimalBase) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestMinimalBaseRepo) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *PullRequestMinimalBaseRepo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestMinimalHead) SetFake() {
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Repo.SetFake()
-		}
-	}
-}
+func (s *PullRequestMinimalHead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestMinimalHeadRepo) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-}
+func (s *PullRequestMinimalHeadRepo) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReview) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.PullRequestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Links.SetFake()
-		}
-	}
-	{
-		{
-			s.SubmittedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitID = "string"
-		}
-	}
-	{
-		{
-			s.BodyHTML.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyText.SetFake()
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-}
+func (s *PullRequestReview) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewComment) SetFake() {
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.PullRequestReviewID.SetFake()
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.DiffHunk = "string"
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.Position = int(0)
-		}
-	}
-	{
-		{
-			s.OriginalPosition = int(0)
-		}
-	}
-	{
-		{
-			s.CommitID = "string"
-		}
-	}
-	{
-		{
-			s.OriginalCommitID = "string"
-		}
-	}
-	{
-		{
-			s.InReplyToID.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.PullRequestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-	{
-		{
-			s.Links.SetFake()
-		}
-	}
-	{
-		{
-			s.StartLine.SetFake()
-		}
-	}
-	{
-		{
-			s.OriginalStartLine.SetFake()
-		}
-	}
-	{
-		{
-			s.StartSide.SetFake()
-		}
-	}
-	{
-		{
-			s.Line.SetFake()
-		}
-	}
-	{
-		{
-			s.OriginalLine.SetFake()
-		}
-	}
-	{
-		{
-			s.Side.SetFake()
-		}
-	}
-	{
-		{
-			s.Reactions.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyHTML.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyText.SetFake()
-		}
-	}
-}
+func (s *PullRequestReviewComment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewCommentLinks) SetFake() {
-	{
-		{
-			s.Self.SetFake()
-		}
-	}
-	{
-		{
-			s.HTML.SetFake()
-		}
-	}
-	{
-		{
-			s.PullRequest.SetFake()
-		}
-	}
-}
+func (s *PullRequestReviewCommentLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewCommentLinksHTML) SetFake() {
-	{
-		{
-			s.Href = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *PullRequestReviewCommentLinksHTML) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewCommentLinksPullRequest) SetFake() {
-	{
-		{
-			s.Href = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *PullRequestReviewCommentLinksPullRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewCommentLinksSelf) SetFake() {
-	{
-		{
-			s.Href = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *PullRequestReviewCommentLinksSelf) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewCommentSide) SetFake() {
-	*s = PullRequestReviewCommentSideLEFT
-}
+func (s *PullRequestReviewCommentSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewCommentStartSide) SetFake() {
-	*s = PullRequestReviewCommentStartSideLEFT
-}
+func (s *PullRequestReviewCommentStartSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewLinks) SetFake() {
-	{
-		{
-			s.HTML.SetFake()
-		}
-	}
-	{
-		{
-			s.PullRequest.SetFake()
-		}
-	}
-}
+func (s *PullRequestReviewLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewLinksHTML) SetFake() {
-	{
-		{
-			s.Href = "string"
-		}
-	}
-}
+func (s *PullRequestReviewLinksHTML) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewLinksPullRequest) SetFake() {
-	{
-		{
-			s.Href = "string"
-		}
-	}
-}
+func (s *PullRequestReviewLinksPullRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestReviewRequest) SetFake() {
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem SimpleUser
-				{
-					elem.SetFake()
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Teams = nil
-			for i := 0; i < 0; i++ {
-				var elem Team
-				{
-					elem.SetFake()
-				}
-				s.Teams = append(s.Teams, elem)
-			}
-		}
-	}
-}
+func (s *PullRequestReviewRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestSimple) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DiffURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.PatchURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.IssueURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CommitsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReviewCommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReviewCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StatusesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.Locked = true
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Labels = nil
-			for i := 0; i < 0; i++ {
-				var elem PullRequestSimpleLabelsItem
-				{
-					elem.SetFake()
-				}
-				s.Labels = append(s.Labels, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Milestone.SetFake()
-		}
-	}
-	{
-		{
-			s.ActiveLockReason.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.ClosedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.MergedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.MergeCommitSha.SetFake()
-		}
-	}
-	{
-		{
-			s.Assignee.SetFake()
-		}
-	}
-	{
-		{
-			s.Assignees.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestedReviewers.SetFake()
-		}
-	}
-	{
-		{
-			s.RequestedTeams.SetFake()
-		}
-	}
-	{
-		{
-			s.Head.SetFake()
-		}
-	}
-	{
-		{
-			s.Base.SetFake()
-		}
-	}
-	{
-		{
-			s.Links.SetFake()
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-	{
-		{
-			s.AutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.Draft.SetFake()
-		}
-	}
-}
+func (s *PullRequestSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestSimpleBase) SetFake() {
-	{
-		{
-			s.Label = "string"
-		}
-	}
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.Repo.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *PullRequestSimpleBase) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestSimpleHead) SetFake() {
-	{
-		{
-			s.Label = "string"
-		}
-	}
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.Repo.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *PullRequestSimpleHead) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestSimpleLabelsItem) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Color.SetFake()
-		}
-	}
-	{
-		{
-			s.Default.SetFake()
-		}
-	}
-}
+func (s *PullRequestSimpleLabelsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestSimpleLinks) SetFake() {
-	{
-		{
-			s.Comments.SetFake()
-		}
-	}
-	{
-		{
-			s.Commits.SetFake()
-		}
-	}
-	{
-		{
-			s.Statuses.SetFake()
-		}
-	}
-	{
-		{
-			s.HTML.SetFake()
-		}
-	}
-	{
-		{
-			s.Issue.SetFake()
-		}
-	}
-	{
-		{
-			s.ReviewComments.SetFake()
-		}
-	}
-	{
-		{
-			s.ReviewComment.SetFake()
-		}
-	}
-	{
-		{
-			s.Self.SetFake()
-		}
-	}
-}
+func (s *PullRequestSimpleLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullRequestState) SetFake() {
-	*s = PullRequestStateOpen
-}
+func (s *PullRequestState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsCreateReplyForReviewCommentReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *PullsCreateReplyForReviewCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsCreateReq) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Head = "string"
-		}
-	}
-	{
-		{
-			s.Base = "string"
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.MaintainerCanModify.SetFake()
-		}
-	}
-	{
-		{
-			s.Draft.SetFake()
-		}
-	}
-	{
-		{
-			s.Issue.SetFake()
-		}
-	}
-}
+func (s *PullsCreateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsCreateReviewCommentReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.CommitID.SetFake()
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Position.SetFake()
-		}
-	}
-	{
-		{
-			s.Side.SetFake()
-		}
-	}
-	{
-		{
-			s.Line.SetFake()
-		}
-	}
-	{
-		{
-			s.StartLine.SetFake()
-		}
-	}
-	{
-		{
-			s.StartSide.SetFake()
-		}
-	}
-	{
-		{
-			s.InReplyTo.SetFake()
-		}
-	}
-}
+func (s *PullsCreateReviewCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsCreateReviewCommentReqSide) SetFake() {
-	*s = PullsCreateReviewCommentReqSideLEFT
-}
+func (s *PullsCreateReviewCommentReqSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsCreateReviewCommentReqStartSide) SetFake() {
-	*s = PullsCreateReviewCommentReqStartSideLEFT
-}
+func (s *PullsCreateReviewCommentReqStartSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsCreateReviewReq) SetFake() {
-	{
-		{
-			s.CommitID.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Event.SetFake()
-		}
-	}
-	{
-		{
-			s.Comments = nil
-			for i := 0; i < 0; i++ {
-				var elem PullsCreateReviewReqCommentsItem
-				{
-					elem.SetFake()
-				}
-				s.Comments = append(s.Comments, elem)
-			}
-		}
-	}
-}
+func (s *PullsCreateReviewReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsCreateReviewReqCommentsItem) SetFake() {
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.Position.SetFake()
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.Line.SetFake()
-		}
-	}
-	{
-		{
-			s.Side.SetFake()
-		}
-	}
-	{
-		{
-			s.StartLine.SetFake()
-		}
-	}
-	{
-		{
-			s.StartSide.SetFake()
-		}
-	}
-}
+func (s *PullsCreateReviewReqCommentsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsCreateReviewReqEvent) SetFake() {
-	*s = PullsCreateReviewReqEventAPPROVE
-}
+func (s *PullsCreateReviewReqEvent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsDismissReviewReq) SetFake() {
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Event.SetFake()
-		}
-	}
-}
+func (s *PullsDismissReviewReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsGetInternalServerError) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PullsGetInternalServerError(unwrapped)
-}
+func (s *PullsGetInternalServerError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsGetNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PullsGetNotFound(unwrapped)
-}
+func (s *PullsGetNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsMergeConflict) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-}
+func (s *PullsMergeConflict) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsMergeForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PullsMergeForbidden(unwrapped)
-}
+func (s *PullsMergeForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsMergeMethodNotAllowed) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-}
+func (s *PullsMergeMethodNotAllowed) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsMergeNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PullsMergeNotFound(unwrapped)
-}
+func (s *PullsMergeNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsMergeReq) SetFake() {
-	{
-		{
-			s.CommitTitle.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitMessage.SetFake()
-		}
-	}
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-	{
-		{
-			s.MergeMethod.SetFake()
-		}
-	}
-}
+func (s *PullsMergeReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsMergeReqMergeMethod) SetFake() {
-	*s = PullsMergeReqMergeMethodMerge
-}
+func (s *PullsMergeReqMergeMethod) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsRemoveRequestedReviewersReq) SetFake() {
-	{
-		{
-			s.Reviewers = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Reviewers = append(s.Reviewers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TeamReviewers = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.TeamReviewers = append(s.TeamReviewers, elem)
-			}
-		}
-	}
-}
+func (s *PullsRemoveRequestedReviewersReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsSubmitReviewForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PullsSubmitReviewForbidden(unwrapped)
-}
+func (s *PullsSubmitReviewForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsSubmitReviewNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = PullsSubmitReviewNotFound(unwrapped)
-}
+func (s *PullsSubmitReviewNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsSubmitReviewReq) SetFake() {
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Event.SetFake()
-		}
-	}
-}
+func (s *PullsSubmitReviewReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsSubmitReviewReqEvent) SetFake() {
-	*s = PullsSubmitReviewReqEventAPPROVE
-}
+func (s *PullsSubmitReviewReqEvent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsUpdateBranchAccepted) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-}
+func (s *PullsUpdateBranchAccepted) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsUpdateBranchReq) SetFake() {
-	{
-		{
-			s.ExpectedHeadSha.SetFake()
-		}
-	}
-}
+func (s *PullsUpdateBranchReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsUpdateReq) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Base.SetFake()
-		}
-	}
-	{
-		{
-			s.MaintainerCanModify.SetFake()
-		}
-	}
-}
+func (s *PullsUpdateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsUpdateReqState) SetFake() {
-	*s = PullsUpdateReqStateOpen
-}
+func (s *PullsUpdateReqState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsUpdateReviewCommentReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *PullsUpdateReviewCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *PullsUpdateReviewReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *PullsUpdateReviewReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RateLimit) SetFake() {
-	{
-		{
-			s.Limit = int(0)
-		}
-	}
-	{
-		{
-			s.Remaining = int(0)
-		}
-	}
-	{
-		{
-			s.Reset = int(0)
-		}
-	}
-	{
-		{
-			s.Used = int(0)
-		}
-	}
-}
+func (s *RateLimit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RateLimitOverview) SetFake() {
-	{
-		{
-			s.Resources.SetFake()
-		}
-	}
-	{
-		{
-			s.Rate.SetFake()
-		}
-	}
-}
+func (s *RateLimitOverview) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RateLimitOverviewResources) SetFake() {
-	{
-		{
-			s.Core.SetFake()
-		}
-	}
-	{
-		{
-			s.Graphql.SetFake()
-		}
-	}
-	{
-		{
-			s.Search.SetFake()
-		}
-	}
-	{
-		{
-			s.SourceImport.SetFake()
-		}
-	}
-	{
-		{
-			s.IntegrationManifest.SetFake()
-		}
-	}
-	{
-		{
-			s.CodeScanningUpload.SetFake()
-		}
-	}
-	{
-		{
-			s.ActionsRunnerRegistration.SetFake()
-		}
-	}
-}
+func (s *RateLimitOverviewResources) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Reaction) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-}
+func (s *Reaction) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionContent) SetFake() {
-	*s = ReactionContentPlus1
-}
+func (s *ReactionContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionRollup) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.Plus1 = int(0)
-		}
-	}
-	{
-		{
-			s.Minus1 = int(0)
-		}
-	}
-	{
-		{
-			s.Laugh = int(0)
-		}
-	}
-	{
-		{
-			s.Confused = int(0)
-		}
-	}
-	{
-		{
-			s.Heart = int(0)
-		}
-	}
-	{
-		{
-			s.Hooray = int(0)
-		}
-	}
-	{
-		{
-			s.Eyes = int(0)
-		}
-	}
-	{
-		{
-			s.Rocket = int(0)
-		}
-	}
-}
+func (s *ReactionRollup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForCommitCommentCreated) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForCommitCommentCreated(unwrapped)
-}
+func (s *ReactionsCreateForCommitCommentCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForCommitCommentOK) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForCommitCommentOK(unwrapped)
-}
+func (s *ReactionsCreateForCommitCommentOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForCommitCommentReq) SetFake() {
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
-}
+func (s *ReactionsCreateForCommitCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForCommitCommentReqContent) SetFake() {
-	*s = ReactionsCreateForCommitCommentReqContentPlus1
-}
+func (s *ReactionsCreateForCommitCommentReqContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForIssueCommentCreated) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForIssueCommentCreated(unwrapped)
-}
+func (s *ReactionsCreateForIssueCommentCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForIssueCommentOK) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForIssueCommentOK(unwrapped)
-}
+func (s *ReactionsCreateForIssueCommentOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForIssueCommentReq) SetFake() {
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
-}
+func (s *ReactionsCreateForIssueCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForIssueCommentReqContent) SetFake() {
-	*s = ReactionsCreateForIssueCommentReqContentPlus1
-}
+func (s *ReactionsCreateForIssueCommentReqContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForIssueCreated) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForIssueCreated(unwrapped)
-}
+func (s *ReactionsCreateForIssueCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForIssueOK) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForIssueOK(unwrapped)
-}
+func (s *ReactionsCreateForIssueOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForIssueReq) SetFake() {
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
-}
+func (s *ReactionsCreateForIssueReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForIssueReqContent) SetFake() {
-	*s = ReactionsCreateForIssueReqContentPlus1
-}
+func (s *ReactionsCreateForIssueReqContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForPullRequestReviewCommentCreated) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForPullRequestReviewCommentCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForPullRequestReviewCommentOK) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForPullRequestReviewCommentOK(unwrapped)
-}
+func (s *ReactionsCreateForPullRequestReviewCommentOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForPullRequestReviewCommentReq) SetFake() {
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForPullRequestReviewCommentReqContent) SetFake() {
-	*s = ReactionsCreateForPullRequestReviewCommentReqContentPlus1
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForReleaseCreated) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForReleaseCreated(unwrapped)
-}
+func (s *ReactionsCreateForReleaseCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForReleaseOK) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForReleaseOK(unwrapped)
-}
+func (s *ReactionsCreateForReleaseOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForReleaseReq) SetFake() {
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
-}
+func (s *ReactionsCreateForReleaseReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForReleaseReqContent) SetFake() {
-	*s = ReactionsCreateForReleaseReqContentPlus1
-}
+func (s *ReactionsCreateForReleaseReqContent) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForTeamDiscussionCommentInOrgCreated) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForTeamDiscussionCommentInOrgCreated(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForTeamDiscussionCommentInOrgOK) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForTeamDiscussionCommentInOrgOK(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForTeamDiscussionCommentInOrgReq) SetFake() {
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForTeamDiscussionCommentInOrgReqContent) SetFake() {
-	*s = ReactionsCreateForTeamDiscussionCommentInOrgReqContentPlus1
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForTeamDiscussionCommentLegacyReq) SetFake() {
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForTeamDiscussionCommentLegacyReqContent) SetFake() {
-	*s = ReactionsCreateForTeamDiscussionCommentLegacyReqContentPlus1
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForTeamDiscussionInOrgCreated) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForTeamDiscussionInOrgCreated(unwrapped)
-}
+func (s *ReactionsCreateForTeamDiscussionInOrgCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForTeamDiscussionInOrgOK) SetFake() {
-	var unwrapped Reaction
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsCreateForTeamDiscussionInOrgOK(unwrapped)
-}
+func (s *ReactionsCreateForTeamDiscussionInOrgOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForTeamDiscussionInOrgReq) SetFake() {
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
-}
+func (s *ReactionsCreateForTeamDiscussionInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForTeamDiscussionInOrgReqContent) SetFake() {
-	*s = ReactionsCreateForTeamDiscussionInOrgReqContentPlus1
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReactionsCreateForTeamDiscussionLegacyReq) SetFake() {
-	{
-		{
-			s.Content.SetFake()
-		}
-	}
-}
+func (s *ReactionsCreateForTeamDiscussionLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReactionsCreateForTeamDiscussionLegacyReqContent) SetFake() {
-	*s = ReactionsCreateForTeamDiscussionLegacyReqContentPlus1
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReactionsDeleteLegacyForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsDeleteLegacyForbidden(unwrapped)
-}
+func (s *ReactionsDeleteLegacyForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsDeleteLegacyGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsDeleteLegacyGone(unwrapped)
-}
+func (s *ReactionsDeleteLegacyGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsDeleteLegacyUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsDeleteLegacyUnauthorized(unwrapped)
-}
+func (s *ReactionsDeleteLegacyUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsListForIssueGone) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsListForIssueGone(unwrapped)
-}
+func (s *ReactionsListForIssueGone) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReactionsListForIssueNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReactionsListForIssueNotFound(unwrapped)
-}
+func (s *ReactionsListForIssueNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReferrerTraffic) SetFake() {
-	{
-		{
-			s.Referrer = "string"
-		}
-	}
-	{
-		{
-			s.Count = int(0)
-		}
-	}
-	{
-		{
-			s.Uniques = int(0)
-		}
-	}
-}
+func (s *ReferrerTraffic) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Release) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.AssetsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.UploadURL = "string"
-		}
-	}
-	{
-		{
-			s.TarballURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ZipballURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.TagName = "string"
-		}
-	}
-	{
-		{
-			s.TargetCommitish = "string"
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Draft = true
-		}
-	}
-	{
-		{
-			s.Prerelease = true
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.PublishedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Assets = nil
-			for i := 0; i < 0; i++ {
-				var elem ReleaseAsset
-				{
-					elem.SetFake()
-				}
-				s.Assets = append(s.Assets, elem)
-			}
-		}
-	}
-	{
-		{
-			s.BodyHTML.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyText.SetFake()
-		}
-	}
-	{
-		{
-			s.MentionsCount.SetFake()
-		}
-	}
-	{
-		{
-			s.DiscussionURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Reactions.SetFake()
-		}
-	}
-}
+func (s *Release) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReleaseAsset) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.BrowserDownloadURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Label.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType = "string"
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-	{
-		{
-			s.DownloadCount = int(0)
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Uploader.SetFake()
-		}
-	}
-}
+func (s *ReleaseAsset) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReleaseAssetState) SetFake() {
-	*s = ReleaseAssetStateUploaded
-}
+func (s *ReleaseAssetState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RepoSearchResultItem) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.FullName = "string"
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private = true
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Fork = true
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.PushedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-	{
-		{
-			s.StargazersCount = int(0)
-		}
-	}
-	{
-		{
-			s.WatchersCount = int(0)
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksCount = int(0)
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount = int(0)
-		}
-	}
-	{
-		{
-			s.MasterBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.DefaultBranch = "string"
-		}
-	}
-	{
-		{
-			s.Score = float64(0)
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.KeysURL = "string"
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL = "string"
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.IssueEventsURL = "string"
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.AssigneesURL = "string"
-		}
-	}
-	{
-		{
-			s.BranchesURL = "string"
-		}
-	}
-	{
-		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.BlobsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitTagsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitRefsURL = "string"
-		}
-	}
-	{
-		{
-			s.TreesURL = "string"
-		}
-	}
-	{
-		{
-			s.StatusesURL = "string"
-		}
-	}
-	{
-		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitCommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.ContentsURL = "string"
-		}
-	}
-	{
-		{
-			s.CompareURL = "string"
-		}
-	}
-	{
-		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ArchiveURL = "string"
-		}
-	}
-	{
-		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.PullsURL = "string"
-		}
-	}
-	{
-		{
-			s.MilestonesURL = "string"
-		}
-	}
-	{
-		{
-			s.NotificationsURL = "string"
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReleasesURL = "string"
-		}
-	}
-	{
-		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitURL = "string"
-		}
-	}
-	{
-		{
-			s.SSHURL = "string"
-		}
-	}
-	{
-		{
-			s.CloneURL = "string"
-		}
-	}
-	{
-		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Forks = int(0)
-		}
-	}
-	{
-		{
-			s.OpenIssues = int(0)
-		}
-	}
-	{
-		{
-			s.Watchers = int(0)
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HasIssues = true
-		}
-	}
-	{
-		{
-			s.HasProjects = true
-		}
-	}
-	{
-		{
-			s.HasPages = true
-		}
-	}
-	{
-		{
-			s.HasWiki = true
-		}
-	}
-	{
-		{
-			s.HasDownloads = true
-		}
-	}
-	{
-		{
-			s.Archived = true
-		}
-	}
-	{
-		{
-			s.Disabled = true
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.TextMatches.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowAutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForking.SetFake()
-		}
-	}
-}
+func (s *RepoSearchResultItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RepoSearchResultItemPermissions) SetFake() {
-	{
-		{
-			s.Admin = true
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-	{
-		{
-			s.Push = true
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Pull = true
-		}
-	}
-}
+func (s *RepoSearchResultItemPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAcceptInvitationConflict) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposAcceptInvitationConflict(unwrapped)
-}
+func (s *ReposAcceptInvitationConflict) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAcceptInvitationForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposAcceptInvitationForbidden(unwrapped)
-}
+func (s *ReposAcceptInvitationForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAcceptInvitationNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposAcceptInvitationNotFound(unwrapped)
-}
+func (s *ReposAcceptInvitationNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposAddAppAccessRestrictionsOKApplicationJSON) SetFake() {
-	var unwrapped []Integration
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Integration
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposAddAppAccessRestrictionsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposAddAppAccessRestrictionsReq) SetFake() {
-	var variant ReposAddAppAccessRestrictionsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposAddAppAccessRestrictionsReq0(variant)
-}
+func (s *ReposAddAppAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAddAppAccessRestrictionsReq0) SetFake() {
-	{
-		{
-			s.Apps = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Apps = append(s.Apps, elem)
-			}
-		}
-	}
-}
+func (s *ReposAddAppAccessRestrictionsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAddCollaboratorReq) SetFake() {
-	{
-		{
-			s.Permission.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-}
+func (s *ReposAddCollaboratorReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAddCollaboratorReqPermission) SetFake() {
-	*s = ReposAddCollaboratorReqPermissionPull
-}
+func (s *ReposAddCollaboratorReqPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAddStatusCheckContextsForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposAddStatusCheckContextsForbidden(unwrapped)
-}
+func (s *ReposAddStatusCheckContextsForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAddStatusCheckContextsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposAddStatusCheckContextsNotFound(unwrapped)
-}
+func (s *ReposAddStatusCheckContextsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAddStatusCheckContextsOKApplicationJSON) SetFake() {
-	var unwrapped []string
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem string
-			{
-				elem = "string"
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposAddStatusCheckContextsOKApplicationJSON(unwrapped)
-}
+func (s *ReposAddStatusCheckContextsOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAddStatusCheckContextsReq) SetFake() {
-	var variant ReposAddStatusCheckContextsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposAddStatusCheckContextsReq0(variant)
-}
+func (s *ReposAddStatusCheckContextsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAddStatusCheckContextsReq0) SetFake() {
-	{
-		{
-			s.Contexts = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Contexts = append(s.Contexts, elem)
-			}
-		}
-	}
-}
+func (s *ReposAddStatusCheckContextsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposAddTeamAccessRestrictionsOKApplicationJSON) SetFake() {
-	var unwrapped []Team
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Team
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposAddTeamAccessRestrictionsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposAddTeamAccessRestrictionsReq) SetFake() {
-	var variant ReposAddTeamAccessRestrictionsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposAddTeamAccessRestrictionsReq0(variant)
-}
+func (s *ReposAddTeamAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAddTeamAccessRestrictionsReq0) SetFake() {
-	{
-		{
-			s.Teams = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Teams = append(s.Teams, elem)
-			}
-		}
-	}
-}
+func (s *ReposAddTeamAccessRestrictionsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposAddUserAccessRestrictionsOKApplicationJSON) SetFake() {
-	var unwrapped []SimpleUser
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem SimpleUser
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposAddUserAccessRestrictionsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposAddUserAccessRestrictionsReq) SetFake() {
-	var variant ReposAddUserAccessRestrictionsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposAddUserAccessRestrictionsReq0(variant)
-}
+func (s *ReposAddUserAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposAddUserAccessRestrictionsReq0) SetFake() {
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-}
+func (s *ReposAddUserAccessRestrictionsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCompareCommitsInternalServerError) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCompareCommitsInternalServerError(unwrapped)
-}
+func (s *ReposCompareCommitsInternalServerError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCompareCommitsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCompareCommitsNotFound(unwrapped)
-}
+func (s *ReposCompareCommitsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateAutolinkReq) SetFake() {
-	{
-		{
-			s.KeyPrefix = "string"
-		}
-	}
-	{
-		{
-			s.URLTemplate = "string"
-		}
-	}
-}
+func (s *ReposCreateAutolinkReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateCommitCommentReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Position.SetFake()
-		}
-	}
-	{
-		{
-			s.Line.SetFake()
-		}
-	}
-}
+func (s *ReposCreateCommitCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateCommitStatusReq) SetFake() {
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Context.SetFake()
-		}
-	}
-}
+func (s *ReposCreateCommitStatusReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateCommitStatusReqState) SetFake() {
-	*s = ReposCreateCommitStatusReqStateError
-}
+func (s *ReposCreateCommitStatusReqState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateDeployKeyReq) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Key = "string"
-		}
-	}
-	{
-		{
-			s.ReadOnly.SetFake()
-		}
-	}
-}
+func (s *ReposCreateDeployKeyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateDeploymentAccepted) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-}
+func (s *ReposCreateDeploymentAccepted) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateDeploymentReq) SetFake() {
-	{
-		{
-			s.Ref = "string"
-		}
-	}
-	{
-		{
-			s.Task.SetFake()
-		}
-	}
-	{
-		{
-			s.AutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredContexts = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.RequiredContexts = append(s.RequiredContexts, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-	{
-		{
-			s.Environment.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.TransientEnvironment.SetFake()
-		}
-	}
-	{
-		{
-			s.ProductionEnvironment.SetFake()
-		}
-	}
-}
+func (s *ReposCreateDeploymentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateDeploymentReqPayload) SetFake() {
-	var variant ReposCreateDeploymentReqPayload0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposCreateDeploymentReqPayload0(variant)
-}
+func (s *ReposCreateDeploymentReqPayload) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateDeploymentReqPayload0) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *ReposCreateDeploymentReqPayload0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateDeploymentStatusReq) SetFake() {
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetURL.SetFake()
-		}
-	}
-	{
-		{
-			s.LogURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Environment.SetFake()
-		}
-	}
-	{
-		{
-			s.EnvironmentURL.SetFake()
-		}
-	}
-	{
-		{
-			s.AutoInactive.SetFake()
-		}
-	}
-}
+func (s *ReposCreateDeploymentStatusReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateDeploymentStatusReqEnvironment) SetFake() {
-	*s = ReposCreateDeploymentStatusReqEnvironmentProduction
-}
+func (s *ReposCreateDeploymentStatusReqEnvironment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateDeploymentStatusReqState) SetFake() {
-	*s = ReposCreateDeploymentStatusReqStateError
-}
+func (s *ReposCreateDeploymentStatusReqState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateDispatchEventReq) SetFake() {
-	{
-		{
-			s.EventType = "string"
-		}
-	}
-	{
-		{
-			s.ClientPayload.SetFake()
-		}
-	}
-}
+func (s *ReposCreateDispatchEventReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateDispatchEventReqClientPayload) SetFake() {
-	var (
-		elem jx.Raw
-		m    map[string]jx.Raw = s.init()
-	)
-	for i := 0; i < 0; i++ {
-		m[fmt.Sprintf("fake%d", i)] = elem
-	}
-}
+func (s *ReposCreateDispatchEventReqClientPayload) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposCreateForAuthenticatedUserApplicationJSONBadRequest) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateForAuthenticatedUserApplicationJSONBadRequest(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposCreateForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateForAuthenticatedUserForbidden(unwrapped)
-}
+func (s *ReposCreateForAuthenticatedUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateForAuthenticatedUserNotFound(unwrapped)
-}
+func (s *ReposCreateForAuthenticatedUserNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateForAuthenticatedUserReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-	{
-		{
-			s.HasIssues.SetFake()
-		}
-	}
-	{
-		{
-			s.HasProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.HasWiki.SetFake()
-		}
-	}
-	{
-		{
-			s.TeamID.SetFake()
-		}
-	}
-	{
-		{
-			s.AutoInit.SetFake()
-		}
-	}
-	{
-		{
-			s.GitignoreTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.LicenseTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowAutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.HasDownloads.SetFake()
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-}
+func (s *ReposCreateForAuthenticatedUserReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateForAuthenticatedUserUnauthorized(unwrapped)
-}
+func (s *ReposCreateForAuthenticatedUserUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateForkApplicationJSONBadRequest) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateForkApplicationJSONBadRequest(unwrapped)
-}
+func (s *ReposCreateForkApplicationJSONBadRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateForkForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateForkForbidden(unwrapped)
-}
+func (s *ReposCreateForkForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateForkNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateForkNotFound(unwrapped)
-}
+func (s *ReposCreateForkNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateForkReq) SetFake() {
-	{
-		{
-			s.Organization.SetFake()
-		}
-	}
-}
+func (s *ReposCreateForkReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateInOrgReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.HasIssues.SetFake()
-		}
-	}
-	{
-		{
-			s.HasProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.HasWiki.SetFake()
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.TeamID.SetFake()
-		}
-	}
-	{
-		{
-			s.AutoInit.SetFake()
-		}
-	}
-	{
-		{
-			s.GitignoreTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.LicenseTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowAutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-}
+func (s *ReposCreateInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateInOrgReqVisibility) SetFake() {
-	*s = ReposCreateInOrgReqVisibilityPublic
-}
+func (s *ReposCreateInOrgReqVisibility) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateOrUpdateFileContentsConflict) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateOrUpdateFileContentsConflict(unwrapped)
-}
+func (s *ReposCreateOrUpdateFileContentsConflict) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateOrUpdateFileContentsCreated) SetFake() {
-	var unwrapped FileCommit
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateOrUpdateFileContentsCreated(unwrapped)
-}
+func (s *ReposCreateOrUpdateFileContentsCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateOrUpdateFileContentsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateOrUpdateFileContentsNotFound(unwrapped)
-}
+func (s *ReposCreateOrUpdateFileContentsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateOrUpdateFileContentsOK) SetFake() {
-	var unwrapped FileCommit
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateOrUpdateFileContentsOK(unwrapped)
-}
+func (s *ReposCreateOrUpdateFileContentsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateOrUpdateFileContentsReq) SetFake() {
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Content = "string"
-		}
-	}
-	{
-		{
-			s.Sha.SetFake()
-		}
-	}
-	{
-		{
-			s.Branch.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-}
+func (s *ReposCreateOrUpdateFileContentsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateOrUpdateFileContentsReqAuthor) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Date.SetFake()
-		}
-	}
-}
+func (s *ReposCreateOrUpdateFileContentsReqAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateOrUpdateFileContentsReqCommitter) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-	{
-		{
-			s.Date.SetFake()
-		}
-	}
-}
+func (s *ReposCreateOrUpdateFileContentsReqCommitter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreatePagesSiteReq) SetFake() {
-	{
-		{
-			s.Source.SetFake()
-		}
-	}
-}
+func (s *ReposCreatePagesSiteReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreatePagesSiteReqSource) SetFake() {
-	{
-		{
-			s.Branch = "string"
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-}
+func (s *ReposCreatePagesSiteReqSource) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreatePagesSiteReqSourcePath) SetFake() {
-	*s = ReposCreatePagesSiteReqSourcePathSlash
-}
+func (s *ReposCreatePagesSiteReqSourcePath) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateReleaseReq) SetFake() {
-	{
-		{
-			s.TagName = "string"
-		}
-	}
-	{
-		{
-			s.TargetCommitish.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Draft.SetFake()
-		}
-	}
-	{
-		{
-			s.Prerelease.SetFake()
-		}
-	}
-	{
-		{
-			s.DiscussionCategoryName.SetFake()
-		}
-	}
-}
+func (s *ReposCreateReleaseReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateUsingTemplateReq) SetFake() {
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.IncludeAllBranches.SetFake()
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-}
+func (s *ReposCreateUsingTemplateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateWebhookForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateWebhookForbidden(unwrapped)
-}
+func (s *ReposCreateWebhookForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateWebhookNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposCreateWebhookNotFound(unwrapped)
-}
+func (s *ReposCreateWebhookNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateWebhookReq) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Config.SetFake()
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-}
+func (s *ReposCreateWebhookReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposCreateWebhookReqConfig) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.InsecureSsl.SetFake()
-		}
-	}
-	{
-		{
-			s.Token.SetFake()
-		}
-	}
-	{
-		{
-			s.Digest.SetFake()
-		}
-	}
-}
+func (s *ReposCreateWebhookReqConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeclineInvitationConflict) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposDeclineInvitationConflict(unwrapped)
-}
+func (s *ReposDeclineInvitationConflict) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeclineInvitationForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposDeclineInvitationForbidden(unwrapped)
-}
+func (s *ReposDeclineInvitationForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeclineInvitationNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposDeclineInvitationNotFound(unwrapped)
-}
+func (s *ReposDeclineInvitationNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeleteFileConflict) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposDeleteFileConflict(unwrapped)
-}
+func (s *ReposDeleteFileConflict) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeleteFileNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposDeleteFileNotFound(unwrapped)
-}
+func (s *ReposDeleteFileNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeleteFileReq) SetFake() {
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.Branch.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-}
+func (s *ReposDeleteFileReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeleteFileReqAuthor) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-}
+func (s *ReposDeleteFileReqAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeleteFileReqCommitter) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-}
+func (s *ReposDeleteFileReqCommitter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeleteForbidden) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-}
+func (s *ReposDeleteForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeleteNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposDeleteNotFound(unwrapped)
-}
+func (s *ReposDeleteNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposDeleteTemporaryRedirect) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposDeleteTemporaryRedirect(unwrapped)
-}
+func (s *ReposDeleteTemporaryRedirect) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposGetAllStatusCheckContextsOKApplicationJSON) SetFake() {
-	var unwrapped []string
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem string
-			{
-				elem = "string"
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposGetAllStatusCheckContextsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReposGetAppsWithAccessToProtectedBranchOKApplicationJSON) SetFake() {
-	var unwrapped []Integration
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Integration
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposGetAppsWithAccessToProtectedBranchOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposGetBranchMovedPermanently) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposGetBranchMovedPermanently(unwrapped)
-}
+func (s *ReposGetBranchMovedPermanently) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetBranchNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposGetBranchNotFound(unwrapped)
-}
+func (s *ReposGetBranchNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetCodeFrequencyStatsOKApplicationJSON) SetFake() {
-	var unwrapped []CodeFrequencyStat
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem CodeFrequencyStat
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposGetCodeFrequencyStatsOKApplicationJSON(unwrapped)
-}
+func (s *ReposGetCodeFrequencyStatsOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetCommitActivityStatsOKApplicationJSON) SetFake() {
-	var unwrapped []CommitActivity
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem CommitActivity
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposGetCommitActivityStatsOKApplicationJSON(unwrapped)
-}
+func (s *ReposGetCommitActivityStatsOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetCommitInternalServerError) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposGetCommitInternalServerError(unwrapped)
-}
+func (s *ReposGetCommitInternalServerError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetCommitNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposGetCommitNotFound(unwrapped)
-}
+func (s *ReposGetCommitNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetContributorsStatsOKApplicationJSON) SetFake() {
-	var unwrapped []ContributorActivity
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem ContributorActivity
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposGetContributorsStatsOKApplicationJSON(unwrapped)
-}
+func (s *ReposGetContributorsStatsOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposGetForbidden(unwrapped)
-}
+func (s *ReposGetForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetMovedPermanently) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposGetMovedPermanently(unwrapped)
-}
+func (s *ReposGetMovedPermanently) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposGetNotFound(unwrapped)
-}
+func (s *ReposGetNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetPunchCardStatsOKApplicationJSON) SetFake() {
-	var unwrapped []CodeFrequencyStat
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem CodeFrequencyStat
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposGetPunchCardStatsOKApplicationJSON(unwrapped)
-}
+func (s *ReposGetPunchCardStatsOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposGetTeamsWithAccessToProtectedBranchOKApplicationJSON) SetFake() {
-	var unwrapped []Team
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Team
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposGetTeamsWithAccessToProtectedBranchOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposGetTopPathsOKApplicationJSON) SetFake() {
-	var unwrapped []ContentTraffic
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem ContentTraffic
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposGetTopPathsOKApplicationJSON(unwrapped)
-}
+func (s *ReposGetTopPathsOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposGetTopReferrersOKApplicationJSON) SetFake() {
-	var unwrapped []ReferrerTraffic
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem ReferrerTraffic
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposGetTopReferrersOKApplicationJSON(unwrapped)
-}
+func (s *ReposGetTopReferrersOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposGetUsersWithAccessToProtectedBranchOKApplicationJSON) SetFake() {
-	var unwrapped []SimpleUser
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem SimpleUser
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposGetUsersWithAccessToProtectedBranchOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReposListBranchesForHeadCommitOKApplicationJSON) SetFake() {
-	var unwrapped []BranchShort
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem BranchShort
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposListBranchesForHeadCommitOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposListCommitsApplicationJSONBadRequest) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListCommitsApplicationJSONBadRequest(unwrapped)
-}
+func (s *ReposListCommitsApplicationJSONBadRequest) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposListCommitsConflict) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListCommitsConflict(unwrapped)
-}
+func (s *ReposListCommitsConflict) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposListCommitsInternalServerError) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListCommitsInternalServerError(unwrapped)
-}
+func (s *ReposListCommitsInternalServerError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposListCommitsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListCommitsNotFound(unwrapped)
-}
+func (s *ReposListCommitsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposListContributorsForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListContributorsForbidden(unwrapped)
-}
+func (s *ReposListContributorsForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposListContributorsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListContributorsNotFound(unwrapped)
-}
+func (s *ReposListContributorsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposListForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListForAuthenticatedUserForbidden(unwrapped)
-}
+func (s *ReposListForAuthenticatedUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposListForAuthenticatedUserOKApplicationJSON) SetFake() {
-	var unwrapped []Repository
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Repository
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposListForAuthenticatedUserOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposListForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListForAuthenticatedUserUnauthorized(unwrapped)
-}
+func (s *ReposListForAuthenticatedUserUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposListInvitationsForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListInvitationsForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReposListInvitationsForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListInvitationsForAuthenticatedUserNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReposListInvitationsForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposListInvitationsForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposListWebhookDeliveriesOKApplicationJSON) SetFake() {
-	var unwrapped []HookDeliveryItem
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem HookDeliveryItem
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposListWebhookDeliveriesOKApplicationJSON(unwrapped)
-}
+func (s *ReposListWebhookDeliveriesOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposMergeReq) SetFake() {
-	{
-		{
-			s.Base = "string"
-		}
-	}
-	{
-		{
-			s.Head = "string"
-		}
-	}
-	{
-		{
-			s.CommitMessage.SetFake()
-		}
-	}
-}
+func (s *ReposMergeReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposMergeUpstreamReq) SetFake() {
-	{
-		{
-			s.Branch = "string"
-		}
-	}
-}
+func (s *ReposMergeUpstreamReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposRemoveAppAccessRestrictionsOKApplicationJSON) SetFake() {
-	var unwrapped []Integration
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Integration
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposRemoveAppAccessRestrictionsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposRemoveAppAccessRestrictionsReq) SetFake() {
-	var variant ReposRemoveAppAccessRestrictionsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposRemoveAppAccessRestrictionsReq0(variant)
-}
+func (s *ReposRemoveAppAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposRemoveAppAccessRestrictionsReq0) SetFake() {
-	{
-		{
-			s.Apps = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Apps = append(s.Apps, elem)
-			}
-		}
-	}
-}
+func (s *ReposRemoveAppAccessRestrictionsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposRemoveStatusCheckContextsOKApplicationJSON) SetFake() {
-	var unwrapped []string
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem string
-			{
-				elem = "string"
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposRemoveStatusCheckContextsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposRemoveStatusCheckContextsReq) SetFake() {
-	var variant ReposRemoveStatusCheckContextsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposRemoveStatusCheckContextsReq0(variant)
-}
+func (s *ReposRemoveStatusCheckContextsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposRemoveStatusCheckContextsReq0) SetFake() {
-	{
-		{
-			s.Contexts = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Contexts = append(s.Contexts, elem)
-			}
-		}
-	}
-}
+func (s *ReposRemoveStatusCheckContextsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposRemoveTeamAccessRestrictionsOKApplicationJSON) SetFake() {
-	var unwrapped []Team
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Team
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposRemoveTeamAccessRestrictionsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposRemoveTeamAccessRestrictionsReq) SetFake() {
-	var variant ReposRemoveTeamAccessRestrictionsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposRemoveTeamAccessRestrictionsReq0(variant)
-}
+func (s *ReposRemoveTeamAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposRemoveTeamAccessRestrictionsReq0) SetFake() {
-	{
-		{
-			s.Teams = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Teams = append(s.Teams, elem)
-			}
-		}
-	}
-}
+func (s *ReposRemoveTeamAccessRestrictionsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposRemoveUserAccessRestrictionsOKApplicationJSON) SetFake() {
-	var unwrapped []SimpleUser
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem SimpleUser
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposRemoveUserAccessRestrictionsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposRemoveUserAccessRestrictionsReq) SetFake() {
-	var variant ReposRemoveUserAccessRestrictionsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposRemoveUserAccessRestrictionsReq0(variant)
-}
+func (s *ReposRemoveUserAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposRemoveUserAccessRestrictionsReq0) SetFake() {
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-}
+func (s *ReposRemoveUserAccessRestrictionsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposRenameBranchForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposRenameBranchForbidden(unwrapped)
-}
+func (s *ReposRenameBranchForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposRenameBranchNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposRenameBranchNotFound(unwrapped)
-}
+func (s *ReposRenameBranchNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposRenameBranchReq) SetFake() {
-	{
-		{
-			s.NewName = "string"
-		}
-	}
-}
+func (s *ReposRenameBranchReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposReplaceAllTopicsReq) SetFake() {
-	{
-		{
-			s.Names = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Names = append(s.Names, elem)
-			}
-		}
-	}
-}
+func (s *ReposReplaceAllTopicsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposSetAppAccessRestrictionsOKApplicationJSON) SetFake() {
-	var unwrapped []Integration
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Integration
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposSetAppAccessRestrictionsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposSetAppAccessRestrictionsReq) SetFake() {
-	var variant ReposSetAppAccessRestrictionsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposSetAppAccessRestrictionsReq0(variant)
-}
+func (s *ReposSetAppAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposSetAppAccessRestrictionsReq0) SetFake() {
-	{
-		{
-			s.Apps = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Apps = append(s.Apps, elem)
-			}
-		}
-	}
-}
+func (s *ReposSetAppAccessRestrictionsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposSetStatusCheckContextsOKApplicationJSON) SetFake() {
-	var unwrapped []string
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem string
-			{
-				elem = "string"
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposSetStatusCheckContextsOKApplicationJSON(unwrapped)
-}
+func (s *ReposSetStatusCheckContextsOKApplicationJSON) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposSetStatusCheckContextsReq) SetFake() {
-	var variant ReposSetStatusCheckContextsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposSetStatusCheckContextsReq0(variant)
-}
+func (s *ReposSetStatusCheckContextsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposSetStatusCheckContextsReq0) SetFake() {
-	{
-		{
-			s.Contexts = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Contexts = append(s.Contexts, elem)
-			}
-		}
-	}
-}
+func (s *ReposSetStatusCheckContextsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposSetTeamAccessRestrictionsOKApplicationJSON) SetFake() {
-	var unwrapped []Team
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Team
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposSetTeamAccessRestrictionsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposSetTeamAccessRestrictionsReq) SetFake() {
-	var variant ReposSetTeamAccessRestrictionsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposSetTeamAccessRestrictionsReq0(variant)
-}
+func (s *ReposSetTeamAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposSetTeamAccessRestrictionsReq0) SetFake() {
-	{
-		{
-			s.Teams = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Teams = append(s.Teams, elem)
-			}
-		}
-	}
-}
+func (s *ReposSetTeamAccessRestrictionsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposSetUserAccessRestrictionsOKApplicationJSON) SetFake() {
-	var unwrapped []SimpleUser
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem SimpleUser
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = ReposSetUserAccessRestrictionsOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposSetUserAccessRestrictionsReq) SetFake() {
-	var variant ReposSetUserAccessRestrictionsReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetReposSetUserAccessRestrictionsReq0(variant)
-}
+func (s *ReposSetUserAccessRestrictionsReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposSetUserAccessRestrictionsReq0) SetFake() {
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-}
+func (s *ReposSetUserAccessRestrictionsReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposTransferReq) SetFake() {
-	{
-		{
-			s.NewOwner = "string"
-		}
-	}
-	{
-		{
-			s.TeamIds = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.TeamIds = append(s.TeamIds, elem)
-			}
-		}
-	}
-}
+func (s *ReposTransferReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateBranchProtectionForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposUpdateBranchProtectionForbidden(unwrapped)
-}
+func (s *ReposUpdateBranchProtectionForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateBranchProtectionNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposUpdateBranchProtectionNotFound(unwrapped)
-}
+func (s *ReposUpdateBranchProtectionNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateBranchProtectionReq) SetFake() {
-	{
-		{
-			s.RequiredStatusChecks.SetFake()
-		}
-	}
-	{
-		{
-			s.EnforceAdmins.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredPullRequestReviews.SetFake()
-		}
-	}
-	{
-		{
-			s.Restrictions.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredLinearHistory.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForcePushes.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowDeletions.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredConversationResolution.SetFake()
-		}
-	}
-}
+func (s *ReposUpdateBranchProtectionReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposUpdateBranchProtectionReqRequiredPullRequestReviews) SetFake() {
-	{
-		{
-			s.DismissalRestrictions.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissStaleReviews.SetFake()
-		}
-	}
-	{
-		{
-			s.RequireCodeOwnerReviews.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredApprovingReviewCount.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReposUpdateBranchProtectionReqRequiredPullRequestReviewsDismissalRestrictions) SetFake() {
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Teams = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Teams = append(s.Teams, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReposUpdateBranchProtectionReqRequiredStatusChecks) SetFake() {
-	{
-		{
-			s.Strict = true
-		}
-	}
-	{
-		{
-			s.Contexts = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Contexts = append(s.Contexts, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposUpdateBranchProtectionReqRestrictions) SetFake() {
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Teams = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Teams = append(s.Teams, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Apps = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Apps = append(s.Apps, elem)
-			}
-		}
-	}
-}
+func (s *ReposUpdateBranchProtectionReqRestrictions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateCommitCommentReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *ReposUpdateCommitCommentReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposUpdateForbidden(unwrapped)
-}
+func (s *ReposUpdateForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateInvitationReq) SetFake() {
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-}
+func (s *ReposUpdateInvitationReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateInvitationReqPermissions) SetFake() {
-	*s = ReposUpdateInvitationReqPermissionsRead
-}
+func (s *ReposUpdateInvitationReqPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposUpdateNotFound(unwrapped)
-}
+func (s *ReposUpdateNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdatePullRequestReviewProtectionReq) SetFake() {
-	{
-		{
-			s.DismissalRestrictions.SetFake()
-		}
-	}
-	{
-		{
-			s.DismissStaleReviews.SetFake()
-		}
-	}
-	{
-		{
-			s.RequireCodeOwnerReviews.SetFake()
-		}
-	}
-	{
-		{
-			s.RequiredApprovingReviewCount.SetFake()
-		}
-	}
-}
+func (s *ReposUpdatePullRequestReviewProtectionReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposUpdatePullRequestReviewProtectionReqDismissalRestrictions) SetFake() {
-	{
-		{
-			s.Users = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Users = append(s.Users, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Teams = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Teams = append(s.Teams, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposUpdateReleaseAssetReq) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Label.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-}
+func (s *ReposUpdateReleaseAssetReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateReleaseReq) SetFake() {
-	{
-		{
-			s.TagName.SetFake()
-		}
-	}
-	{
-		{
-			s.TargetCommitish.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Draft.SetFake()
-		}
-	}
-	{
-		{
-			s.Prerelease.SetFake()
-		}
-	}
-	{
-		{
-			s.DiscussionCategoryName.SetFake()
-		}
-	}
-}
+func (s *ReposUpdateReleaseReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateReq) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.SecurityAndAnalysis.SetFake()
-		}
-	}
-	{
-		{
-			s.HasIssues.SetFake()
-		}
-	}
-	{
-		{
-			s.HasProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.HasWiki.SetFake()
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.DefaultBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowAutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.Archived.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForking.SetFake()
-		}
-	}
-}
+func (s *ReposUpdateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateReqSecurityAndAnalysis) SetFake() {
-	{
-		{
-			s.AdvancedSecurity.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretScanning.SetFake()
-		}
-	}
-}
+func (s *ReposUpdateReqSecurityAndAnalysis) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ReposUpdateReqSecurityAndAnalysisAdvancedSecurity) SetFake() {
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ReposUpdateReqSecurityAndAnalysisSecretScanning) SetFake() {
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ReposUpdateReqVisibility) SetFake() {
-	*s = ReposUpdateReqVisibilityPublic
-}
+func (s *ReposUpdateReqVisibility) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateStatusCheckProtectionReq) SetFake() {
-	{
-		{
-			s.Strict.SetFake()
-		}
-	}
-	{
-		{
-			s.Contexts = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Contexts = append(s.Contexts, elem)
-			}
-		}
-	}
-}
+func (s *ReposUpdateStatusCheckProtectionReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateTemporaryRedirect) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ReposUpdateTemporaryRedirect(unwrapped)
-}
+func (s *ReposUpdateTemporaryRedirect) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateWebhookConfigForRepoReq) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.InsecureSsl.SetFake()
-		}
-	}
-}
+func (s *ReposUpdateWebhookConfigForRepoReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateWebhookReq) SetFake() {
-	{
-		{
-			s.Config.SetFake()
-		}
-	}
-	{
-		{
-			s.Events = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Events = append(s.Events, elem)
-			}
-		}
-	}
-	{
-		{
-			s.AddEvents = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.AddEvents = append(s.AddEvents, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RemoveEvents = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.RemoveEvents = append(s.RemoveEvents, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-}
+func (s *ReposUpdateWebhookReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReposUpdateWebhookReqConfig) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.InsecureSsl.SetFake()
-		}
-	}
-	{
-		{
-			s.Address.SetFake()
-		}
-	}
-	{
-		{
-			s.Room.SetFake()
-		}
-	}
-}
+func (s *ReposUpdateWebhookReqConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Repository) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.FullName = "string"
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.Organization.SetFake()
-		}
-	}
-	{
-		{
-			s.Forks = int(0)
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private = true
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Fork = true
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ArchiveURL = "string"
-		}
-	}
-	{
-		{
-			s.AssigneesURL = "string"
-		}
-	}
-	{
-		{
-			s.BlobsURL = "string"
-		}
-	}
-	{
-		{
-			s.BranchesURL = "string"
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.CompareURL = "string"
-		}
-	}
-	{
-		{
-			s.ContentsURL = "string"
-		}
-	}
-	{
-		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitCommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitRefsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitTagsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueEventsURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.KeysURL = "string"
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MilestonesURL = "string"
-		}
-	}
-	{
-		{
-			s.NotificationsURL = "string"
-		}
-	}
-	{
-		{
-			s.PullsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReleasesURL = "string"
-		}
-	}
-	{
-		{
-			s.SSHURL = "string"
-		}
-	}
-	{
-		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StatusesURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TreesURL = "string"
-		}
-	}
-	{
-		{
-			s.CloneURL = "string"
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksCount = int(0)
-		}
-	}
-	{
-		{
-			s.StargazersCount = int(0)
-		}
-	}
-	{
-		{
-			s.WatchersCount = int(0)
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-	{
-		{
-			s.DefaultBranch = "string"
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount = int(0)
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HasIssues = true
-		}
-	}
-	{
-		{
-			s.HasProjects = true
-		}
-	}
-	{
-		{
-			s.HasWiki = true
-		}
-	}
-	{
-		{
-			s.HasPages = true
-		}
-	}
-	{
-		{
-			s.HasDownloads = true
-		}
-	}
-	{
-		{
-			s.Archived = true
-		}
-	}
-	{
-		{
-			s.Disabled = true
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.PushedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.TemplateRepository.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowAutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForking.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscribersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.NetworkCount.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssues = int(0)
-		}
-	}
-	{
-		{
-			s.Watchers = int(0)
-		}
-	}
-	{
-		{
-			s.MasterBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.StarredAt.SetFake()
-		}
-	}
-}
+func (s *Repository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RepositoryCollaboratorPermission) SetFake() {
-	{
-		{
-			s.Permission = "string"
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-}
+func (s *RepositoryCollaboratorPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RepositoryInvitation) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.Invitee.SetFake()
-		}
-	}
-	{
-		{
-			s.Inviter.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Expired.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = "string"
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-}
+func (s *RepositoryInvitation) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RepositoryInvitationPermissions) SetFake() {
-	*s = RepositoryInvitationPermissionsRead
-}
+func (s *RepositoryInvitationPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RepositoryPermissions) SetFake() {
-	{
-		{
-			s.Admin = true
-		}
-	}
-	{
-		{
-			s.Pull = true
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Push = true
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-}
+func (s *RepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RepositorySubscription) SetFake() {
-	{
-		{
-			s.Subscribed = true
-		}
-	}
-	{
-		{
-			s.Ignored = true
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RepositoryURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *RepositorySubscription) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RepositoryTemplateRepository) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.FullName.SetFake()
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Fork.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ArchiveURL.SetFake()
-		}
-	}
-	{
-		{
-			s.AssigneesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.BlobsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.BranchesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CommentsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CommitsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CompareURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContributorsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.DeploymentsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.DownloadsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.EventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitCommitsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitRefsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitTagsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GitURL.SetFake()
-		}
-	}
-	{
-		{
-			s.IssueCommentURL.SetFake()
-		}
-	}
-	{
-		{
-			s.IssueEventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.IssuesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.KeysURL.SetFake()
-		}
-	}
-	{
-		{
-			s.LabelsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.LanguagesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.MergesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.MilestonesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.NotificationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.PullsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReleasesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SSHURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StargazersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StatusesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscribersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscriptionURL.SetFake()
-		}
-	}
-	{
-		{
-			s.TagsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.TeamsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.TreesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.CloneURL.SetFake()
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HooksURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SvnURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksCount.SetFake()
-		}
-	}
-	{
-		{
-			s.StargazersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.WatchersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.Size.SetFake()
-		}
-	}
-	{
-		{
-			s.DefaultBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount.SetFake()
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HasIssues.SetFake()
-		}
-	}
-	{
-		{
-			s.HasProjects.SetFake()
-		}
-	}
-	{
-		{
-			s.HasWiki.SetFake()
-		}
-	}
-	{
-		{
-			s.HasPages.SetFake()
-		}
-	}
-	{
-		{
-			s.HasDownloads.SetFake()
-		}
-	}
-	{
-		{
-			s.Archived.SetFake()
-		}
-	}
-	{
-		{
-			s.Disabled.SetFake()
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.PushedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowAutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscribersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.NetworkCount.SetFake()
-		}
-	}
-}
+func (s *RepositoryTemplateRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RepositoryTemplateRepositoryOwner) SetFake() {
-	{
-		{
-			s.Login.SetFake()
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.AvatarURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.FollowersURL.SetFake()
-		}
-	}
-	{
-		{
-			s.FollowingURL.SetFake()
-		}
-	}
-	{
-		{
-			s.GistsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.StarredURL.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReposURL.SetFake()
-		}
-	}
-	{
-		{
-			s.EventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.SiteAdmin.SetFake()
-		}
-	}
-}
+func (s *RepositoryTemplateRepositoryOwner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RepositoryTemplateRepositoryPermissions) SetFake() {
-	{
-		{
-			s.Admin.SetFake()
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-	{
-		{
-			s.Push.SetFake()
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Pull.SetFake()
-		}
-	}
-}
+func (s *RepositoryTemplateRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReviewComment) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.PullRequestReviewID.SetFake()
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.DiffHunk = "string"
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.Position.SetFake()
-		}
-	}
-	{
-		{
-			s.OriginalPosition = int(0)
-		}
-	}
-	{
-		{
-			s.CommitID = "string"
-		}
-	}
-	{
-		{
-			s.OriginalCommitID = "string"
-		}
-	}
-	{
-		{
-			s.InReplyToID.SetFake()
-		}
-	}
-	{
-		{
-			s.User.SetFake()
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.PullRequestURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.AuthorAssociation.SetFake()
-		}
-	}
-	{
-		{
-			s.Links.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyText.SetFake()
-		}
-	}
-	{
-		{
-			s.BodyHTML.SetFake()
-		}
-	}
-	{
-		{
-			s.Reactions.SetFake()
-		}
-	}
-	{
-		{
-			s.Side.SetFake()
-		}
-	}
-	{
-		{
-			s.StartSide.SetFake()
-		}
-	}
-	{
-		{
-			s.Line.SetFake()
-		}
-	}
-	{
-		{
-			s.OriginalLine.SetFake()
-		}
-	}
-	{
-		{
-			s.StartLine.SetFake()
-		}
-	}
-	{
-		{
-			s.OriginalStartLine.SetFake()
-		}
-	}
-}
+func (s *ReviewComment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReviewCommentLinks) SetFake() {
-	{
-		{
-			s.Self.SetFake()
-		}
-	}
-	{
-		{
-			s.HTML.SetFake()
-		}
-	}
-	{
-		{
-			s.PullRequest.SetFake()
-		}
-	}
-}
+func (s *ReviewCommentLinks) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReviewCommentSide) SetFake() {
-	*s = ReviewCommentSideLEFT
-}
+func (s *ReviewCommentSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ReviewCommentStartSide) SetFake() {
-	*s = ReviewCommentStartSideLEFT
-}
+func (s *ReviewCommentStartSide) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Runner) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Os = "string"
-		}
-	}
-	{
-		{
-			s.Status = "string"
-		}
-	}
-	{
-		{
-			s.Busy = true
-		}
-	}
-	{
-		{
-			s.Labels = nil
-			for i := 0; i < 0; i++ {
-				var elem RunnerLabelsItem
-				{
-					elem.SetFake()
-				}
-				s.Labels = append(s.Labels, elem)
-			}
-		}
-	}
-}
+func (s *Runner) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RunnerApplication) SetFake() {
-	{
-		{
-			s.Os = "string"
-		}
-	}
-	{
-		{
-			s.Architecture = "string"
-		}
-	}
-	{
-		{
-			s.DownloadURL = "string"
-		}
-	}
-	{
-		{
-			s.Filename = "string"
-		}
-	}
-	{
-		{
-			s.TempDownloadToken.SetFake()
-		}
-	}
-	{
-		{
-			s.SHA256Checksum.SetFake()
-		}
-	}
-}
+func (s *RunnerApplication) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RunnerGroupsEnterprise) SetFake() {
-	{
-		{
-			s.ID = float64(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Visibility = "string"
-		}
-	}
-	{
-		{
-			s.Default = true
-		}
-	}
-	{
-		{
-			s.SelectedOrganizationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.RunnersURL = "string"
-		}
-	}
-	{
-		{
-			s.AllowsPublicRepositories = true
-		}
-	}
-}
+func (s *RunnerGroupsEnterprise) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RunnerGroupsOrg) SetFake() {
-	{
-		{
-			s.ID = float64(0)
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Visibility = "string"
-		}
-	}
-	{
-		{
-			s.Default = true
-		}
-	}
-	{
-		{
-			s.SelectedRepositoriesURL.SetFake()
-		}
-	}
-	{
-		{
-			s.RunnersURL = "string"
-		}
-	}
-	{
-		{
-			s.Inherited = true
-		}
-	}
-	{
-		{
-			s.InheritedAllowsPublicRepositories.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowsPublicRepositories = true
-		}
-	}
-}
+func (s *RunnerGroupsOrg) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RunnerLabelsItem) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *RunnerLabelsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *RunnerLabelsItemType) SetFake() {
-	*s = RunnerLabelsItemTypeReadOnly
-}
+func (s *RunnerLabelsItemType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimDeleteUserFromOrgApplicationJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimDeleteUserFromOrgApplicationJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ScimDeleteUserFromOrgApplicationJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimDeleteUserFromOrgApplicationJSONNotFound(unwrapped)
-}
+func (s *ScimDeleteUserFromOrgApplicationJSONNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimDeleteUserFromOrgApplicationScimJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimDeleteUserFromOrgApplicationScimJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimDeleteUserFromOrgApplicationScimJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimDeleteUserFromOrgApplicationScimJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ScimEnterpriseGroup) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.ExternalId.SetFake()
-		}
-	}
-	{
-		{
-			s.DisplayName.SetFake()
-		}
-	}
-	{
-		{
-			s.Members = nil
-			for i := 0; i < 0; i++ {
-				var elem ScimEnterpriseGroupMembersItem
-				{
-					elem.SetFake()
-				}
-				s.Members = append(s.Members, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Meta.SetFake()
-		}
-	}
-}
+func (s *ScimEnterpriseGroup) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimEnterpriseGroupMembersItem) SetFake() {
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-	{
-		{
-			s.Ref.SetFake()
-		}
-	}
-	{
-		{
-			s.Display.SetFake()
-		}
-	}
-}
+func (s *ScimEnterpriseGroupMembersItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimEnterpriseGroupMeta) SetFake() {
-	{
-		{
-			s.ResourceType.SetFake()
-		}
-	}
-	{
-		{
-			s.Created.SetFake()
-		}
-	}
-	{
-		{
-			s.LastModified.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-}
+func (s *ScimEnterpriseGroupMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimEnterpriseUser) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.ExternalId.SetFake()
-		}
-	}
-	{
-		{
-			s.UserName.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 0; i++ {
-				var elem ScimEnterpriseUserEmailsItem
-				{
-					elem.SetFake()
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem ScimEnterpriseUserGroupsItem
-				{
-					elem.SetFake()
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-	{
-		{
-			s.Meta.SetFake()
-		}
-	}
-}
+func (s *ScimEnterpriseUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimEnterpriseUserEmailsItem) SetFake() {
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Primary.SetFake()
-		}
-	}
-}
+func (s *ScimEnterpriseUserEmailsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimEnterpriseUserGroupsItem) SetFake() {
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-}
+func (s *ScimEnterpriseUserGroupsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimEnterpriseUserMeta) SetFake() {
-	{
-		{
-			s.ResourceType.SetFake()
-		}
-	}
-	{
-		{
-			s.Created.SetFake()
-		}
-	}
-	{
-		{
-			s.LastModified.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-}
+func (s *ScimEnterpriseUserMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimEnterpriseUserName) SetFake() {
-	{
-		{
-			s.GivenName.SetFake()
-		}
-	}
-	{
-		{
-			s.FamilyName.SetFake()
-		}
-	}
-}
+func (s *ScimEnterpriseUserName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimError) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-	{
-		{
-			s.Detail.SetFake()
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.ScimType.SetFake()
-		}
-	}
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-}
+func (s *ScimError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimGetProvisioningInformationForUserApplicationJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimGetProvisioningInformationForUserApplicationJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimGetProvisioningInformationForUserApplicationJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimGetProvisioningInformationForUserApplicationJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimGetProvisioningInformationForUserApplicationScimJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimGetProvisioningInformationForUserApplicationScimJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimGetProvisioningInformationForUserApplicationScimJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimGetProvisioningInformationForUserApplicationScimJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ScimGroupListEnterprise) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TotalResults = float64(0)
-		}
-	}
-	{
-		{
-			s.ItemsPerPage = float64(0)
-		}
-	}
-	{
-		{
-			s.StartIndex = float64(0)
-		}
-	}
-	{
-		{
-			s.Resources = nil
-			for i := 0; i < 0; i++ {
-				var elem ScimGroupListEnterpriseResourcesItem
-				{
-					elem.SetFake()
-				}
-				s.Resources = append(s.Resources, elem)
-			}
-		}
-	}
-}
+func (s *ScimGroupListEnterprise) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimGroupListEnterpriseResourcesItem) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.ExternalId.SetFake()
-		}
-	}
-	{
-		{
-			s.DisplayName.SetFake()
-		}
-	}
-	{
-		{
-			s.Members = nil
-			for i := 0; i < 0; i++ {
-				var elem ScimGroupListEnterpriseResourcesItemMembersItem
-				{
-					elem.SetFake()
-				}
-				s.Members = append(s.Members, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Meta.SetFake()
-		}
-	}
-}
+func (s *ScimGroupListEnterpriseResourcesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimGroupListEnterpriseResourcesItemMembersItem) SetFake() {
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-	{
-		{
-			s.Ref.SetFake()
-		}
-	}
-	{
-		{
-			s.Display.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ScimGroupListEnterpriseResourcesItemMeta) SetFake() {
-	{
-		{
-			s.ResourceType.SetFake()
-		}
-	}
-	{
-		{
-			s.Created.SetFake()
-		}
-	}
-	{
-		{
-			s.LastModified.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-}
+func (s *ScimGroupListEnterpriseResourcesItemMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimListProvisionedIdentitiesApplicationJSONBadRequest) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimListProvisionedIdentitiesApplicationJSONBadRequest(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimListProvisionedIdentitiesApplicationJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimListProvisionedIdentitiesApplicationJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimListProvisionedIdentitiesApplicationJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimListProvisionedIdentitiesApplicationJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimListProvisionedIdentitiesApplicationScimJSONBadRequest) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimListProvisionedIdentitiesApplicationScimJSONBadRequest(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimListProvisionedIdentitiesApplicationScimJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimListProvisionedIdentitiesApplicationScimJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimListProvisionedIdentitiesApplicationScimJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimListProvisionedIdentitiesApplicationScimJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimProvisionAndInviteUserApplicationJSONBadRequest) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimProvisionAndInviteUserApplicationJSONBadRequest(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimProvisionAndInviteUserApplicationJSONConflict) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimProvisionAndInviteUserApplicationJSONConflict(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimProvisionAndInviteUserApplicationJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimProvisionAndInviteUserApplicationJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimProvisionAndInviteUserApplicationJSONInternalServerError) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimProvisionAndInviteUserApplicationJSONInternalServerError(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimProvisionAndInviteUserApplicationJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimProvisionAndInviteUserApplicationJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimProvisionAndInviteUserApplicationScimJSONBadRequest) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimProvisionAndInviteUserApplicationScimJSONBadRequest(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimProvisionAndInviteUserApplicationScimJSONConflict) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimProvisionAndInviteUserApplicationScimJSONConflict(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimProvisionAndInviteUserApplicationScimJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimProvisionAndInviteUserApplicationScimJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimProvisionAndInviteUserApplicationScimJSONInternalServerError) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimProvisionAndInviteUserApplicationScimJSONInternalServerError(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimProvisionAndInviteUserApplicationScimJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimProvisionAndInviteUserApplicationScimJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ScimProvisionAndInviteUserReq) SetFake() {
-	{
-		{
-			s.UserName = "string"
-		}
-	}
-	{
-		{
-			s.DisplayName.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 1; i++ {
-				var elem ScimProvisionAndInviteUserReqEmailsItem
-				{
-					elem.SetFake()
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ExternalId.SetFake()
-		}
-	}
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-}
+func (s *ScimProvisionAndInviteUserReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimProvisionAndInviteUserReqEmailsItem) SetFake() {
-	{
-		{
-			s.Value = "string"
-		}
-	}
-	{
-		{
-			s.Primary.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-}
+func (s *ScimProvisionAndInviteUserReqEmailsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimProvisionAndInviteUserReqName) SetFake() {
-	{
-		{
-			s.GivenName = "string"
-		}
-	}
-	{
-		{
-			s.FamilyName = "string"
-		}
-	}
-	{
-		{
-			s.Formatted.SetFake()
-		}
-	}
-}
+func (s *ScimProvisionAndInviteUserReqName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimSetInformationForProvisionedUserApplicationJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimSetInformationForProvisionedUserApplicationJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimSetInformationForProvisionedUserApplicationJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimSetInformationForProvisionedUserApplicationJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimSetInformationForProvisionedUserApplicationScimJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimSetInformationForProvisionedUserApplicationScimJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimSetInformationForProvisionedUserApplicationScimJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimSetInformationForProvisionedUserApplicationScimJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ScimSetInformationForProvisionedUserReq) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.DisplayName.SetFake()
-		}
-	}
-	{
-		{
-			s.ExternalId.SetFake()
-		}
-	}
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-	{
-		{
-			s.UserName = "string"
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 1; i++ {
-				var elem ScimSetInformationForProvisionedUserReqEmailsItem
-				{
-					elem.SetFake()
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-}
+func (s *ScimSetInformationForProvisionedUserReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimSetInformationForProvisionedUserReqEmailsItem) SetFake() {
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
-	{
-		{
-			s.Value = "string"
-		}
-	}
-	{
-		{
-			s.Primary.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ScimSetInformationForProvisionedUserReqName) SetFake() {
-	{
-		{
-			s.GivenName = "string"
-		}
-	}
-	{
-		{
-			s.FamilyName = "string"
-		}
-	}
-	{
-		{
-			s.Formatted.SetFake()
-		}
-	}
-}
+func (s *ScimSetInformationForProvisionedUserReqName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimUpdateAttributeForUserApplicationJSONBadRequest) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimUpdateAttributeForUserApplicationJSONBadRequest(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimUpdateAttributeForUserApplicationJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimUpdateAttributeForUserApplicationJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimUpdateAttributeForUserApplicationJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimUpdateAttributeForUserApplicationJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimUpdateAttributeForUserApplicationScimJSONBadRequest) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimUpdateAttributeForUserApplicationScimJSONBadRequest(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimUpdateAttributeForUserApplicationScimJSONForbidden) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimUpdateAttributeForUserApplicationScimJSONForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimUpdateAttributeForUserApplicationScimJSONNotFound) SetFake() {
-	var unwrapped ScimError
-	{
-		unwrapped.SetFake()
-	}
-	*s = ScimUpdateAttributeForUserApplicationScimJSONNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ScimUpdateAttributeForUserReq) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Operations = nil
-			for i := 0; i < 1; i++ {
-				var elem ScimUpdateAttributeForUserReqOperationsItem
-				{
-					elem.SetFake()
-				}
-				s.Operations = append(s.Operations, elem)
-			}
-		}
-	}
-}
+func (s *ScimUpdateAttributeForUserReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUpdateAttributeForUserReqOperationsItem) SetFake() {
-	{
-		{
-			s.Op.SetFake()
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-}
+func (s *ScimUpdateAttributeForUserReqOperationsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimUpdateAttributeForUserReqOperationsItemOp) SetFake() {
-	*s = ScimUpdateAttributeForUserReqOperationsItemOpAdd
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimUpdateAttributeForUserReqOperationsItemValue) SetFake() {
-	var variant ScimUpdateAttributeForUserReqOperationsItemValue0
-
-	{
-		variant.SetFake()
-	}
-	s.SetScimUpdateAttributeForUserReqOperationsItemValue0(variant)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimUpdateAttributeForUserReqOperationsItemValue0) SetFake() {
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-	{
-		{
-			s.UserName.SetFake()
-		}
-	}
-	{
-		{
-			s.ExternalId.SetFake()
-		}
-	}
-	{
-		{
-			s.GivenName.SetFake()
-		}
-	}
-	{
-		{
-			s.FamilyName.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimUpdateAttributeForUserReqOperationsItemValue1Item) SetFake() {
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-	{
-		{
-			s.Primary.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ScimUser) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 1; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.ExternalId.SetFake()
-		}
-	}
-	{
-		{
-			s.UserName.SetFake()
-		}
-	}
-	{
-		{
-			s.DisplayName.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 1; i++ {
-				var elem ScimUserEmailsItem
-				{
-					elem.SetFake()
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Active = true
-		}
-	}
-	{
-		{
-			s.Meta.SetFake()
-		}
-	}
-	{
-		{
-			s.OrganizationID.SetFake()
-		}
-	}
-	{
-		{
-			s.Operations = nil
-			for i := 0; i < 1; i++ {
-				var elem ScimUserOperationsItem
-				{
-					elem.SetFake()
-				}
-				s.Operations = append(s.Operations, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem ScimUserGroupsItem
-				{
-					elem.SetFake()
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
-}
+func (s *ScimUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserEmailsItem) SetFake() {
-	{
-		{
-			s.Value = "string"
-		}
-	}
-	{
-		{
-			s.Primary.SetFake()
-		}
-	}
-}
+func (s *ScimUserEmailsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserGroupsItem) SetFake() {
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-	{
-		{
-			s.Display.SetFake()
-		}
-	}
-}
+func (s *ScimUserGroupsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserList) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 1; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TotalResults = int(0)
-		}
-	}
-	{
-		{
-			s.ItemsPerPage = int(0)
-		}
-	}
-	{
-		{
-			s.StartIndex = int(0)
-		}
-	}
-	{
-		{
-			s.Resources = nil
-			for i := 0; i < 0; i++ {
-				var elem ScimUser
-				{
-					elem.SetFake()
-				}
-				s.Resources = append(s.Resources, elem)
-			}
-		}
-	}
-}
+func (s *ScimUserList) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserListEnterprise) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.TotalResults = float64(0)
-		}
-	}
-	{
-		{
-			s.ItemsPerPage = float64(0)
-		}
-	}
-	{
-		{
-			s.StartIndex = float64(0)
-		}
-	}
-	{
-		{
-			s.Resources = nil
-			for i := 0; i < 0; i++ {
-				var elem ScimUserListEnterpriseResourcesItem
-				{
-					elem.SetFake()
-				}
-				s.Resources = append(s.Resources, elem)
-			}
-		}
-	}
-}
+func (s *ScimUserListEnterprise) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserListEnterpriseResourcesItem) SetFake() {
-	{
-		{
-			s.Schemas = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Schemas = append(s.Schemas, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.ExternalId.SetFake()
-		}
-	}
-	{
-		{
-			s.UserName.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 0; i++ {
-				var elem ScimUserListEnterpriseResourcesItemEmailsItem
-				{
-					elem.SetFake()
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem ScimUserListEnterpriseResourcesItemGroupsItem
-				{
-					elem.SetFake()
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Active.SetFake()
-		}
-	}
-	{
-		{
-			s.Meta.SetFake()
-		}
-	}
-}
+func (s *ScimUserListEnterpriseResourcesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimUserListEnterpriseResourcesItemEmailsItem) SetFake() {
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-	{
-		{
-			s.Primary.SetFake()
-		}
-	}
-	{
-		{
-			s.Type.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *ScimUserListEnterpriseResourcesItemGroupsItem) SetFake() {
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *ScimUserListEnterpriseResourcesItemMeta) SetFake() {
-	{
-		{
-			s.ResourceType.SetFake()
-		}
-	}
-	{
-		{
-			s.Created.SetFake()
-		}
-	}
-	{
-		{
-			s.LastModified.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-}
+func (s *ScimUserListEnterpriseResourcesItemMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserListEnterpriseResourcesItemName) SetFake() {
-	{
-		{
-			s.GivenName.SetFake()
-		}
-	}
-	{
-		{
-			s.FamilyName.SetFake()
-		}
-	}
-}
+func (s *ScimUserListEnterpriseResourcesItemName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserMeta) SetFake() {
-	{
-		{
-			s.ResourceType.SetFake()
-		}
-	}
-	{
-		{
-			s.Created.SetFake()
-		}
-	}
-	{
-		{
-			s.LastModified.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-}
+func (s *ScimUserMeta) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserName) SetFake() {
-	{
-		{
-			s.GivenName.SetFake()
-		}
-	}
-	{
-		{
-			s.FamilyName.SetFake()
-		}
-	}
-	{
-		{
-			s.Formatted.SetFake()
-		}
-	}
-}
+func (s *ScimUserName) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserOperationsItem) SetFake() {
-	{
-		{
-			s.Op.SetFake()
-		}
-	}
-	{
-		{
-			s.Path.SetFake()
-		}
-	}
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-}
+func (s *ScimUserOperationsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserOperationsItemOp) SetFake() {
-	*s = ScimUserOperationsItemOpAdd
-}
+func (s *ScimUserOperationsItemOp) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ScimUserOperationsItemValue) SetFake() {
-	var variant string
-
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+func (s *ScimUserOperationsItemValue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *ScimUserOperationsItemValue1) SetFake() {
+	_ = "STUB: not implemented"
+
+	// SetFake set fake values.
+	return
 }
 
-// SetFake set fake values.
-func (s *SearchCodeOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.IncompleteResults = true
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem CodeSearchResultItem
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-}
+func (s *SearchCodeOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchCommitsOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.IncompleteResults = true
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem CommitSearchResultItem
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-}
+func (s *SearchCommitsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchIssuesAndPullRequestsOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.IncompleteResults = true
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem IssueSearchResultItem
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-}
+func (s *SearchIssuesAndPullRequestsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchLabelsForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = SearchLabelsForbidden(unwrapped)
-}
+func (s *SearchLabelsForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchLabelsNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = SearchLabelsNotFound(unwrapped)
-}
+func (s *SearchLabelsNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchLabelsOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.IncompleteResults = true
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem LabelSearchResultItem
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-}
+func (s *SearchLabelsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchReposOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.IncompleteResults = true
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem RepoSearchResultItem
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-}
+func (s *SearchReposOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchResultTextMatches) SetFake() {
-	var unwrapped []SearchResultTextMatchesItem
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem SearchResultTextMatchesItem
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = SearchResultTextMatches(unwrapped)
-}
+func (s *SearchResultTextMatches) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchResultTextMatchesItem) SetFake() {
-	{
-		{
-			s.ObjectURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ObjectType.SetFake()
-		}
-	}
-	{
-		{
-			s.Property.SetFake()
-		}
-	}
-	{
-		{
-			s.Fragment.SetFake()
-		}
-	}
-	{
-		{
-			s.Matches = nil
-			for i := 0; i < 0; i++ {
-				var elem SearchResultTextMatchesItemMatchesItem
-				{
-					elem.SetFake()
-				}
-				s.Matches = append(s.Matches, elem)
-			}
-		}
-	}
-}
+func (s *SearchResultTextMatchesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchResultTextMatchesItemMatchesItem) SetFake() {
-	{
-		{
-			s.Text.SetFake()
-		}
-	}
-	{
-		{
-			s.Indices = nil
-			for i := 0; i < 0; i++ {
-				var elem int
-				{
-					elem = int(0)
-				}
-				s.Indices = append(s.Indices, elem)
-			}
-		}
-	}
-}
+func (s *SearchResultTextMatchesItemMatchesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchTopicsOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.IncompleteResults = true
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem TopicSearchResultItem
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-}
+func (s *SearchTopicsOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SearchUsersOK) SetFake() {
-	{
-		{
-			s.TotalCount = int(0)
-		}
-	}
-	{
-		{
-			s.IncompleteResults = true
-		}
-	}
-	{
-		{
-			s.Items = nil
-			for i := 0; i < 0; i++ {
-				var elem UserSearchResultItem
-				{
-					elem.SetFake()
-				}
-				s.Items = append(s.Items, elem)
-			}
-		}
-	}
-}
+func (s *SearchUsersOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SecretScanningAlert) SetFake() {
-	{
-		{
-			s.Number.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL.SetFake()
-		}
-	}
-	{
-		{
-			s.LocationsURL.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Resolution.SetFake()
-		}
-	}
-	{
-		{
-			s.ResolvedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.ResolvedBy.SetFake()
-		}
-	}
-	{
-		{
-			s.SecretType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-}
+func (s *SecretScanningAlert) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SecretScanningAlertResolution) SetFake() {
-	*s = SecretScanningAlertResolutionFalsePositive
-}
+func (s *SecretScanningAlertResolution) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SecretScanningAlertState) SetFake() {
-	*s = SecretScanningAlertStateOpen
-}
+func (s *SecretScanningAlertState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *SecretScanningListAlertsForRepoOKApplicationJSON) SetFake() {
-	var unwrapped []SecretScanningAlert
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem SecretScanningAlert
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = SecretScanningListAlertsForRepoOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *SecretScanningUpdateAlertReq) SetFake() {
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.Resolution.SetFake()
-		}
-	}
-}
+func (s *SecretScanningUpdateAlertReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SelectedActions) SetFake() {
-	{
-		{
-			s.GithubOwnedAllowed.SetFake()
-		}
-	}
-	{
-		{
-			s.VerifiedAllowed.SetFake()
-		}
-	}
-	{
-		{
-			s.PatternsAllowed = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.PatternsAllowed = append(s.PatternsAllowed, elem)
-			}
-		}
-	}
-}
+func (s *SelectedActions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SelectedActionsURL) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = SelectedActionsURL(unwrapped)
-}
+func (s *SelectedActionsURL) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ServiceUnavailable) SetFake() {
-	{
-		{
-			s.Code.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
-}
+func (s *ServiceUnavailable) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ShortBlob) SetFake() {
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-}
+func (s *ShortBlob) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ShortBranch) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Commit.SetFake()
-		}
-	}
-	{
-		{
-			s.Protected = true
-		}
-	}
-	{
-		{
-			s.Protection.SetFake()
-		}
-	}
-	{
-		{
-			s.ProtectionURL.SetFake()
-		}
-	}
-}
+func (s *ShortBranch) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ShortBranchCommit) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *ShortBranchCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SimpleCommit) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.TreeID = "string"
-		}
-	}
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.Timestamp = time.Now()
-		}
-	}
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Committer.SetFake()
-		}
-	}
-}
+func (s *SimpleCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SimpleCommitAuthor) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-}
+func (s *SimpleCommitAuthor) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SimpleCommitCommitter) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Email = "string"
-		}
-	}
-}
+func (s *SimpleCommitCommitter) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SimpleCommitStatus) SetFake() {
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.Context = "string"
-		}
-	}
-	{
-		{
-			s.TargetURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Required.SetFake()
-		}
-	}
-	{
-		{
-			s.AvatarURL.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-}
+func (s *SimpleCommitStatus) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *SimpleUser) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.SiteAdmin = true
-		}
-	}
-	{
-		{
-			s.StarredAt.SetFake()
-		}
-	}
-}
+func (s *SimpleUser) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *StarredRepository) SetFake() {
-	{
-		{
-			s.StarredAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Repo.SetFake()
-		}
-	}
-}
+func (s *StarredRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Status) SetFake() {
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.AvatarURL.SetFake()
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.Description = "string"
-		}
-	}
-	{
-		{
-			s.TargetURL = "string"
-		}
-	}
-	{
-		{
-			s.Context = "string"
-		}
-	}
-	{
-		{
-			s.CreatedAt = "string"
-		}
-	}
-	{
-		{
-			s.UpdatedAt = "string"
-		}
-	}
-	{
-		{
-			s.Creator.SetFake()
-		}
-	}
-}
+func (s *Status) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *StatusCheckPolicy) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Strict = true
-		}
-	}
-	{
-		{
-			s.Contexts = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Contexts = append(s.Contexts, elem)
-			}
-		}
-	}
-	{
-		{
-			s.ContextsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *StatusCheckPolicy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Tag) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Commit.SetFake()
-		}
-	}
-	{
-		{
-			s.ZipballURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TarballURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-}
+func (s *Tag) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TagCommit) SetFake() {
-	{
-		{
-			s.Sha = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-}
+func (s *TagCommit) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Team) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Slug = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Privacy.SetFake()
-		}
-	}
-	{
-		{
-			s.Permission = "string"
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MembersURL = "string"
-		}
-	}
-	{
-		{
-			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Parent.SetFake()
-		}
-	}
-}
+func (s *Team) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamDiscussion) SetFake() {
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.BodyHTML = "string"
-		}
-	}
-	{
-		{
-			s.BodyVersion = "string"
-		}
-	}
-	{
-		{
-			s.CommentsCount = int(0)
-		}
-	}
-	{
-		{
-			s.CommentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.LastEditedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.Pinned = true
-		}
-	}
-	{
-		{
-			s.Private = true
-		}
-	}
-	{
-		{
-			s.TeamURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Reactions.SetFake()
-		}
-	}
-}
+func (s *TeamDiscussion) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamDiscussionComment) SetFake() {
-	{
-		{
-			s.Author.SetFake()
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.BodyHTML = "string"
-		}
-	}
-	{
-		{
-			s.BodyVersion = "string"
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.LastEditedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.DiscussionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Reactions.SetFake()
-		}
-	}
-}
+func (s *TeamDiscussionComment) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamFull) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Slug = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Privacy.SetFake()
-		}
-	}
-	{
-		{
-			s.Permission = "string"
-		}
-	}
-	{
-		{
-			s.MembersURL = "string"
-		}
-	}
-	{
-		{
-			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Parent.SetFake()
-		}
-	}
-	{
-		{
-			s.MembersCount = int(0)
-		}
-	}
-	{
-		{
-			s.ReposCount = int(0)
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Organization.SetFake()
-		}
-	}
-	{
-		{
-			s.LdapDn.SetFake()
-		}
-	}
-}
+func (s *TeamFull) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamFullPrivacy) SetFake() {
-	*s = TeamFullPrivacyClosed
-}
+func (s *TeamFullPrivacy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamMembership) SetFake() {
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Role.SetFake()
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-}
+func (s *TeamMembership) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamMembershipRole) SetFake() {
-	*s = TeamMembershipRoleMember
-}
+func (s *TeamMembershipRole) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamMembershipState) SetFake() {
-	*s = TeamMembershipStateActive
-}
+func (s *TeamMembershipState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamPermissions) SetFake() {
-	{
-		{
-			s.Pull = true
-		}
-	}
-	{
-		{
-			s.Triage = true
-		}
-	}
-	{
-		{
-			s.Push = true
-		}
-	}
-	{
-		{
-			s.Maintain = true
-		}
-	}
-	{
-		{
-			s.Admin = true
-		}
-	}
-}
+func (s *TeamPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamProject) SetFake() {
-	{
-		{
-			s.OwnerURL = "string"
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = "string"
-		}
-	}
-	{
-		{
-			s.ColumnsURL = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-	{
-		{
-			s.Number = int(0)
-		}
-	}
-	{
-		{
-			s.State = "string"
-		}
-	}
-	{
-		{
-			s.Creator.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = "string"
-		}
-	}
-	{
-		{
-			s.UpdatedAt = "string"
-		}
-	}
-	{
-		{
-			s.OrganizationPermission.SetFake()
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-}
+func (s *TeamProject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamProjectPermissions) SetFake() {
-	{
-		{
-			s.Read = true
-		}
-	}
-	{
-		{
-			s.Write = true
-		}
-	}
-	{
-		{
-			s.Admin = true
-		}
-	}
-}
+func (s *TeamProjectPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamRepository) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.FullName = "string"
-		}
-	}
-	{
-		{
-			s.License.SetFake()
-		}
-	}
-	{
-		{
-			s.Forks = int(0)
-		}
-	}
-	{
-		{
-			s.Permissions.SetFake()
-		}
-	}
-	{
-		{
-			s.Owner.SetFake()
-		}
-	}
-	{
-		{
-			s.Private = true
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Fork = true
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ArchiveURL = "string"
-		}
-	}
-	{
-		{
-			s.AssigneesURL = "string"
-		}
-	}
-	{
-		{
-			s.BlobsURL = "string"
-		}
-	}
-	{
-		{
-			s.BranchesURL = "string"
-		}
-	}
-	{
-		{
-			s.CollaboratorsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommentsURL = "string"
-		}
-	}
-	{
-		{
-			s.CommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.CompareURL = "string"
-		}
-	}
-	{
-		{
-			s.ContentsURL = "string"
-		}
-	}
-	{
-		{
-			s.ContributorsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DeploymentsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.DownloadsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.EventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ForksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GitCommitsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitRefsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitTagsURL = "string"
-		}
-	}
-	{
-		{
-			s.GitURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.IssueEventsURL = "string"
-		}
-	}
-	{
-		{
-			s.IssuesURL = "string"
-		}
-	}
-	{
-		{
-			s.KeysURL = "string"
-		}
-	}
-	{
-		{
-			s.LabelsURL = "string"
-		}
-	}
-	{
-		{
-			s.LanguagesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MergesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MilestonesURL = "string"
-		}
-	}
-	{
-		{
-			s.NotificationsURL = "string"
-		}
-	}
-	{
-		{
-			s.PullsURL = "string"
-		}
-	}
-	{
-		{
-			s.ReleasesURL = "string"
-		}
-	}
-	{
-		{
-			s.SSHURL = "string"
-		}
-	}
-	{
-		{
-			s.StargazersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.StatusesURL = "string"
-		}
-	}
-	{
-		{
-			s.SubscribersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscriptionURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TagsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TeamsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.TreesURL = "string"
-		}
-	}
-	{
-		{
-			s.CloneURL = "string"
-		}
-	}
-	{
-		{
-			s.MirrorURL.SetFake()
-		}
-	}
-	{
-		{
-			s.HooksURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SvnURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Homepage.SetFake()
-		}
-	}
-	{
-		{
-			s.Language.SetFake()
-		}
-	}
-	{
-		{
-			s.ForksCount = int(0)
-		}
-	}
-	{
-		{
-			s.StargazersCount = int(0)
-		}
-	}
-	{
-		{
-			s.WatchersCount = int(0)
-		}
-	}
-	{
-		{
-			s.Size = int(0)
-		}
-	}
-	{
-		{
-			s.DefaultBranch = "string"
-		}
-	}
-	{
-		{
-			s.OpenIssuesCount = int(0)
-		}
-	}
-	{
-		{
-			s.IsTemplate.SetFake()
-		}
-	}
-	{
-		{
-			s.Topics = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Topics = append(s.Topics, elem)
-			}
-		}
-	}
-	{
-		{
-			s.HasIssues = true
-		}
-	}
-	{
-		{
-			s.HasProjects = true
-		}
-	}
-	{
-		{
-			s.HasWiki = true
-		}
-	}
-	{
-		{
-			s.HasPages = true
-		}
-	}
-	{
-		{
-			s.HasDownloads = true
-		}
-	}
-	{
-		{
-			s.Archived = true
-		}
-	}
-	{
-		{
-			s.Disabled = true
-		}
-	}
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
-	{
-		{
-			s.PushedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowRebaseMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.TemplateRepository.SetFake()
-		}
-	}
-	{
-		{
-			s.TempCloneToken.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowSquashMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowAutoMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.DeleteBranchOnMerge.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowMergeCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.AllowForking.SetFake()
-		}
-	}
-	{
-		{
-			s.SubscribersCount.SetFake()
-		}
-	}
-	{
-		{
-			s.NetworkCount.SetFake()
-		}
-	}
-	{
-		{
-			s.OpenIssues = int(0)
-		}
-	}
-	{
-		{
-			s.Watchers = int(0)
-		}
-	}
-	{
-		{
-			s.MasterBranch.SetFake()
-		}
-	}
-}
+func (s *TeamRepository) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamRepositoryPermissions) SetFake() {
-	{
-		{
-			s.Admin = true
-		}
-	}
-	{
-		{
-			s.Pull = true
-		}
-	}
-	{
-		{
-			s.Triage.SetFake()
-		}
-	}
-	{
-		{
-			s.Push = true
-		}
-	}
-	{
-		{
-			s.Maintain.SetFake()
-		}
-	}
-}
+func (s *TeamRepositoryPermissions) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamSimple) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.MembersURL = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Permission = "string"
-		}
-	}
-	{
-		{
-			s.Privacy.SetFake()
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.RepositoriesURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Slug = "string"
-		}
-	}
-	{
-		{
-			s.LdapDn.SetFake()
-		}
-	}
-}
+func (s *TeamSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsAddOrUpdateMembershipForUserInOrgReq) SetFake() {
-	{
-		{
-			s.Role.SetFake()
-		}
-	}
-}
+func (s *TeamsAddOrUpdateMembershipForUserInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *TeamsAddOrUpdateMembershipForUserInOrgReqRole) SetFake() {
-	*s = TeamsAddOrUpdateMembershipForUserInOrgReqRoleMember
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *TeamsAddOrUpdateMembershipForUserLegacyReq) SetFake() {
-	{
-		{
-			s.Role.SetFake()
-		}
-	}
-}
+func (s *TeamsAddOrUpdateMembershipForUserLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *TeamsAddOrUpdateMembershipForUserLegacyReqRole) SetFake() {
-	*s = TeamsAddOrUpdateMembershipForUserLegacyReqRoleMember
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *TeamsAddOrUpdateProjectPermissionsInOrgForbidden) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *TeamsAddOrUpdateProjectPermissionsInOrgReq) SetFake() {
-	{
-		{
-			s.Permission.SetFake()
-		}
-	}
-}
+func (s *TeamsAddOrUpdateProjectPermissionsInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *TeamsAddOrUpdateProjectPermissionsInOrgReqPermission) SetFake() {
-	*s = TeamsAddOrUpdateProjectPermissionsInOrgReqPermissionRead
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *TeamsAddOrUpdateProjectPermissionsLegacyForbidden) SetFake() {
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.DocumentationURL.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *TeamsAddOrUpdateProjectPermissionsLegacyReq) SetFake() {
-	{
-		{
-			s.Permission.SetFake()
-		}
-	}
-}
+func (s *TeamsAddOrUpdateProjectPermissionsLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *TeamsAddOrUpdateProjectPermissionsLegacyReqPermission) SetFake() {
-	*s = TeamsAddOrUpdateProjectPermissionsLegacyReqPermissionRead
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *TeamsAddOrUpdateRepoPermissionsInOrgReq) SetFake() {
-	{
-		{
-			s.Permission.SetFake()
-		}
-	}
-}
+func (s *TeamsAddOrUpdateRepoPermissionsInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *TeamsAddOrUpdateRepoPermissionsInOrgReqPermission) SetFake() {
-	*s = TeamsAddOrUpdateRepoPermissionsInOrgReqPermissionPull
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *TeamsAddOrUpdateRepoPermissionsLegacyReq) SetFake() {
-	{
-		{
-			s.Permission.SetFake()
-		}
-	}
-}
+func (s *TeamsAddOrUpdateRepoPermissionsLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *TeamsAddOrUpdateRepoPermissionsLegacyReqPermission) SetFake() {
-	*s = TeamsAddOrUpdateRepoPermissionsLegacyReqPermissionPull
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *TeamsCreateDiscussionCommentInOrgReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *TeamsCreateDiscussionCommentInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsCreateDiscussionCommentLegacyReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *TeamsCreateDiscussionCommentLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsCreateDiscussionInOrgReq) SetFake() {
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-}
+func (s *TeamsCreateDiscussionInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsCreateDiscussionLegacyReq) SetFake() {
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.Body = "string"
-		}
-	}
-	{
-		{
-			s.Private.SetFake()
-		}
-	}
-}
+func (s *TeamsCreateDiscussionLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *TeamsCreateOrUpdateIdpGroupConnectionsInOrgReq) SetFake() {
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem TeamsCreateOrUpdateIdpGroupConnectionsInOrgReqGroupsItem
-				{
-					elem.SetFake()
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *TeamsCreateOrUpdateIdpGroupConnectionsInOrgReqGroupsItem) SetFake() {
-	{
-		{
-			s.GroupID = "string"
-		}
-	}
-	{
-		{
-			s.GroupName = "string"
-		}
-	}
-	{
-		{
-			s.GroupDescription = "string"
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *TeamsCreateOrUpdateIdpGroupConnectionsLegacyReq) SetFake() {
-	{
-		{
-			s.Groups = nil
-			for i := 0; i < 0; i++ {
-				var elem TeamsCreateOrUpdateIdpGroupConnectionsLegacyReqGroupsItem
-				{
-					elem.SetFake()
-				}
-				s.Groups = append(s.Groups, elem)
-			}
-		}
-	}
-	{
-		{
-			s.SyncedAt.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *TeamsCreateOrUpdateIdpGroupConnectionsLegacyReqGroupsItem) SetFake() {
-	{
-		{
-			s.GroupID = "string"
-		}
-	}
-	{
-		{
-			s.GroupName = "string"
-		}
-	}
-	{
-		{
-			s.GroupDescription = "string"
-		}
-	}
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *TeamsCreateReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Maintainers = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Maintainers = append(s.Maintainers, elem)
-			}
-		}
-	}
-	{
-		{
-			s.RepoNames = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.RepoNames = append(s.RepoNames, elem)
-			}
-		}
-	}
-	{
-		{
-			s.Privacy.SetFake()
-		}
-	}
-	{
-		{
-			s.Permission.SetFake()
-		}
-	}
-	{
-		{
-			s.ParentTeamID.SetFake()
-		}
-	}
-}
+func (s *TeamsCreateReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsCreateReqPermission) SetFake() {
-	*s = TeamsCreateReqPermissionPull
-}
+func (s *TeamsCreateReqPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsCreateReqPrivacy) SetFake() {
-	*s = TeamsCreateReqPrivacySecret
-}
+func (s *TeamsCreateReqPrivacy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsListChildLegacyForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = TeamsListChildLegacyForbidden(unwrapped)
-}
+func (s *TeamsListChildLegacyForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsListChildLegacyNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = TeamsListChildLegacyNotFound(unwrapped)
-}
+func (s *TeamsListChildLegacyNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsListForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = TeamsListForAuthenticatedUserForbidden(unwrapped)
-}
+func (s *TeamsListForAuthenticatedUserForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsListForAuthenticatedUserNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = TeamsListForAuthenticatedUserNotFound(unwrapped)
-}
+func (s *TeamsListForAuthenticatedUserNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsListIdpGroupsForLegacyForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = TeamsListIdpGroupsForLegacyForbidden(unwrapped)
-}
+func (s *TeamsListIdpGroupsForLegacyForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsListIdpGroupsForLegacyNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = TeamsListIdpGroupsForLegacyNotFound(unwrapped)
-}
+func (s *TeamsListIdpGroupsForLegacyNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateDiscussionCommentInOrgReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *TeamsUpdateDiscussionCommentInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateDiscussionCommentLegacyReq) SetFake() {
-	{
-		{
-			s.Body = "string"
-		}
-	}
-}
+func (s *TeamsUpdateDiscussionCommentLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateDiscussionInOrgReq) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-}
+func (s *TeamsUpdateDiscussionInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateDiscussionLegacyReq) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Body.SetFake()
-		}
-	}
-}
+func (s *TeamsUpdateDiscussionLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateInOrgReq) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Privacy.SetFake()
-		}
-	}
-	{
-		{
-			s.Permission.SetFake()
-		}
-	}
-	{
-		{
-			s.ParentTeamID.SetFake()
-		}
-	}
-}
+func (s *TeamsUpdateInOrgReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateInOrgReqPermission) SetFake() {
-	*s = TeamsUpdateInOrgReqPermissionPull
-}
+func (s *TeamsUpdateInOrgReqPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateInOrgReqPrivacy) SetFake() {
-	*s = TeamsUpdateInOrgReqPrivacySecret
-}
+func (s *TeamsUpdateInOrgReqPrivacy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateLegacyCreated) SetFake() {
-	var unwrapped TeamFull
-	{
-		unwrapped.SetFake()
-	}
-	*s = TeamsUpdateLegacyCreated(unwrapped)
-}
+func (s *TeamsUpdateLegacyCreated) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateLegacyForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = TeamsUpdateLegacyForbidden(unwrapped)
-}
+func (s *TeamsUpdateLegacyForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateLegacyNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = TeamsUpdateLegacyNotFound(unwrapped)
-}
+func (s *TeamsUpdateLegacyNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateLegacyOK) SetFake() {
-	var unwrapped TeamFull
-	{
-		unwrapped.SetFake()
-	}
-	*s = TeamsUpdateLegacyOK(unwrapped)
-}
+func (s *TeamsUpdateLegacyOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateLegacyReq) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.Privacy.SetFake()
-		}
-	}
-	{
-		{
-			s.Permission.SetFake()
-		}
-	}
-	{
-		{
-			s.ParentTeamID.SetFake()
-		}
-	}
-}
+func (s *TeamsUpdateLegacyReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateLegacyReqPermission) SetFake() {
-	*s = TeamsUpdateLegacyReqPermissionPull
-}
+func (s *TeamsUpdateLegacyReqPermission) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TeamsUpdateLegacyReqPrivacy) SetFake() {
-	*s = TeamsUpdateLegacyReqPrivacySecret
-}
+func (s *TeamsUpdateLegacyReqPrivacy) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Thread) SetFake() {
-	{
-		{
-			s.ID = "string"
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.Subject.SetFake()
-		}
-	}
-	{
-		{
-			s.Reason = "string"
-		}
-	}
-	{
-		{
-			s.Unread = true
-		}
-	}
-	{
-		{
-			s.UpdatedAt = "string"
-		}
-	}
-	{
-		{
-			s.LastReadAt.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.SubscriptionURL = "string"
-		}
-	}
-}
+func (s *Thread) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ThreadSubject) SetFake() {
-	{
-		{
-			s.Title = "string"
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.LatestCommentURL = "string"
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-}
+func (s *ThreadSubject) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ThreadSubscription) SetFake() {
-	{
-		{
-			s.Subscribed = true
-		}
-	}
-	{
-		{
-			s.Ignored = true
-		}
-	}
-	{
-		{
-			s.Reason.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ThreadURL.SetFake()
-		}
-	}
-	{
-		{
-			s.RepositoryURL.SetFake()
-		}
-	}
-}
+func (s *ThreadSubscription) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Topic) SetFake() {
-	{
-		{
-			s.Names = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Names = append(s.Names, elem)
-			}
-		}
-	}
-}
+func (s *Topic) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TopicSearchResultItem) SetFake() {
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.DisplayName.SetFake()
-		}
-	}
-	{
-		{
-			s.ShortDescription.SetFake()
-		}
-	}
-	{
-		{
-			s.Description.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedBy.SetFake()
-		}
-	}
-	{
-		{
-			s.Released.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.Featured = true
-		}
-	}
-	{
-		{
-			s.Curated = true
-		}
-	}
-	{
-		{
-			s.Score = float64(0)
-		}
-	}
-	{
-		{
-			s.RepositoryCount.SetFake()
-		}
-	}
-	{
-		{
-			s.LogoURL.SetFake()
-		}
-	}
-	{
-		{
-			s.TextMatches.SetFake()
-		}
-	}
-	{
-		{
-			s.Related.SetFake()
-		}
-	}
-	{
-		{
-			s.Aliases.SetFake()
-		}
-	}
-}
+func (s *TopicSearchResultItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *TopicSearchResultItemAliasesItem) SetFake() {
-	{
-		{
-			s.TopicRelation.SetFake()
-		}
-	}
-}
+func (s *TopicSearchResultItemAliasesItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *TopicSearchResultItemAliasesItemTopicRelation) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.TopicID.SetFake()
-		}
-	}
-	{
-		{
-			s.RelationType.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *TopicSearchResultItemRelatedItem) SetFake() {
-	{
-		{
-			s.TopicRelation.SetFake()
-		}
-	}
-}
+func (s *TopicSearchResultItemRelatedItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *TopicSearchResultItemRelatedItemTopicRelation) SetFake() {
-	{
-		{
-			s.ID.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.TopicID.SetFake()
-		}
-	}
-	{
-		{
-			s.RelationType.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *Traffic) SetFake() {
-	{
-		{
-			s.Timestamp = time.Now()
-		}
-	}
-	{
-		{
-			s.Uniques = int(0)
-		}
-	}
-	{
-		{
-			s.Count = int(0)
-		}
-	}
-}
+func (s *Traffic) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UserMarketplacePurchase) SetFake() {
-	{
-		{
-			s.BillingCycle = "string"
-		}
-	}
-	{
-		{
-			s.NextBillingDate.SetFake()
-		}
-	}
-	{
-		{
-			s.UnitCount.SetFake()
-		}
-	}
-	{
-		{
-			s.OnFreeTrial = true
-		}
-	}
-	{
-		{
-			s.FreeTrialEndsOn.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Account.SetFake()
-		}
-	}
-	{
-		{
-			s.Plan.SetFake()
-		}
-	}
-}
+func (s *UserMarketplacePurchase) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UserSearchResultItem) SetFake() {
-	{
-		{
-			s.Login = "string"
-		}
-	}
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.AvatarURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.GravatarID.SetFake()
-		}
-	}
-	{
-		{
-			s.URL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.HTMLURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.FollowersURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.SubscriptionsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.OrganizationsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReposURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.ReceivedEventsURL = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-		}
-	}
-	{
-		{
-			s.Type = "string"
-		}
-	}
-	{
-		{
-			s.Score = float64(0)
-		}
-	}
-	{
-		{
-			s.FollowingURL = "string"
-		}
-	}
-	{
-		{
-			s.GistsURL = "string"
-		}
-	}
-	{
-		{
-			s.StarredURL = "string"
-		}
-	}
-	{
-		{
-			s.EventsURL = "string"
-		}
-	}
-	{
-		{
-			s.PublicRepos.SetFake()
-		}
-	}
-	{
-		{
-			s.PublicGists.SetFake()
-		}
-	}
-	{
-		{
-			s.Followers.SetFake()
-		}
-	}
-	{
-		{
-			s.Following.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.UpdatedAt.SetFake()
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Bio.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.SiteAdmin = true
-		}
-	}
-	{
-		{
-			s.Hireable.SetFake()
-		}
-	}
-	{
-		{
-			s.TextMatches.SetFake()
-		}
-	}
-	{
-		{
-			s.Blog.SetFake()
-		}
-	}
-	{
-		{
-			s.Company.SetFake()
-		}
-	}
-	{
-		{
-			s.SuspendedAt.SetFake()
-		}
-	}
-}
+func (s *UserSearchResultItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *UsersAddEmailForAuthenticatedCreatedApplicationJSON) SetFake() {
-	var unwrapped []Email
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Email
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = UsersAddEmailForAuthenticatedCreatedApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *UsersAddEmailForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersAddEmailForAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersAddEmailForAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersAddEmailForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersAddEmailForAuthenticatedNotFound(unwrapped)
-}
+func (s *UsersAddEmailForAuthenticatedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersAddEmailForAuthenticatedReq) SetFake() {
-	var variant UsersAddEmailForAuthenticatedReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetUsersAddEmailForAuthenticatedReq0(variant)
-}
+func (s *UsersAddEmailForAuthenticatedReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersAddEmailForAuthenticatedReq0) SetFake() {
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-}
+func (s *UsersAddEmailForAuthenticatedReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersAddEmailForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersAddEmailForAuthenticatedUnauthorized(unwrapped)
-}
+func (s *UsersAddEmailForAuthenticatedUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersBlockForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersBlockForbidden(unwrapped)
-}
+func (s *UsersBlockForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersBlockNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersBlockNotFound(unwrapped)
-}
+func (s *UsersBlockNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersBlockUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersBlockUnauthorized(unwrapped)
-}
+func (s *UsersBlockUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersCheckBlockedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCheckBlockedForbidden(unwrapped)
-}
+func (s *UsersCheckBlockedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersCheckBlockedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCheckBlockedNotFound(unwrapped)
-}
+func (s *UsersCheckBlockedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersCheckBlockedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCheckBlockedUnauthorized(unwrapped)
-}
+func (s *UsersCheckBlockedUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *UsersCheckPersonIsFollowedByAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCheckPersonIsFollowedByAuthenticatedForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersCheckPersonIsFollowedByAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCheckPersonIsFollowedByAuthenticatedNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersCheckPersonIsFollowedByAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCheckPersonIsFollowedByAuthenticatedUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *UsersCreateGpgKeyForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCreateGpgKeyForAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersCreateGpgKeyForAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersCreateGpgKeyForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCreateGpgKeyForAuthenticatedNotFound(unwrapped)
-}
+func (s *UsersCreateGpgKeyForAuthenticatedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersCreateGpgKeyForAuthenticatedReq) SetFake() {
-	{
-		{
-			s.ArmoredPublicKey = "string"
-		}
-	}
-}
+func (s *UsersCreateGpgKeyForAuthenticatedReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *UsersCreateGpgKeyForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCreateGpgKeyForAuthenticatedUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersCreatePublicSSHKeyForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCreatePublicSSHKeyForAuthenticatedForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersCreatePublicSSHKeyForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCreatePublicSSHKeyForAuthenticatedNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *UsersCreatePublicSSHKeyForAuthenticatedReq) SetFake() {
-	{
-		{
-			s.Title.SetFake()
-		}
-	}
-	{
-		{
-			s.Key = "string"
-		}
-	}
-}
+func (s *UsersCreatePublicSSHKeyForAuthenticatedReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *UsersCreatePublicSSHKeyForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersCreatePublicSSHKeyForAuthenticatedUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *UsersDeleteEmailForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersDeleteEmailForAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersDeleteEmailForAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersDeleteEmailForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersDeleteEmailForAuthenticatedNotFound(unwrapped)
-}
+func (s *UsersDeleteEmailForAuthenticatedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersDeleteEmailForAuthenticatedReq) SetFake() {
-	var variant UsersDeleteEmailForAuthenticatedReq0
-
-	{
-		variant.SetFake()
-	}
-	s.SetUsersDeleteEmailForAuthenticatedReq0(variant)
-}
+func (s *UsersDeleteEmailForAuthenticatedReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersDeleteEmailForAuthenticatedReq0) SetFake() {
-	{
-		{
-			s.Emails = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Emails = append(s.Emails, elem)
-			}
-		}
-	}
-}
+func (s *UsersDeleteEmailForAuthenticatedReq0) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersDeleteEmailForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersDeleteEmailForAuthenticatedUnauthorized(unwrapped)
-}
+func (s *UsersDeleteEmailForAuthenticatedUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersDeleteGpgKeyForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersDeleteGpgKeyForAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersDeleteGpgKeyForAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersDeleteGpgKeyForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersDeleteGpgKeyForAuthenticatedNotFound(unwrapped)
-}
+func (s *UsersDeleteGpgKeyForAuthenticatedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *UsersDeleteGpgKeyForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersDeleteGpgKeyForAuthenticatedUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersDeletePublicSSHKeyForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersDeletePublicSSHKeyForAuthenticatedForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersDeletePublicSSHKeyForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersDeletePublicSSHKeyForAuthenticatedNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersDeletePublicSSHKeyForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersDeletePublicSSHKeyForAuthenticatedUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *UsersFollowForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersFollowForbidden(unwrapped)
-}
+func (s *UsersFollowForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersFollowNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersFollowNotFound(unwrapped)
-}
+func (s *UsersFollowNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersFollowUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersFollowUnauthorized(unwrapped)
-}
+func (s *UsersFollowUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersGetAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersGetAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersGetAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersGetAuthenticatedOK) SetFake() {
-	var variant PrivateUser
-
-	{
-		variant.SetFake()
-	}
-	s.SetPrivateUser(variant)
-}
+func (s *UsersGetAuthenticatedOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersGetAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersGetAuthenticatedUnauthorized(unwrapped)
-}
+func (s *UsersGetAuthenticatedUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersGetByUsernameOK) SetFake() {
-	var variant PrivateUser
-
-	{
-		variant.SetFake()
-	}
-	s.SetPrivateUser(variant)
-}
+func (s *UsersGetByUsernameOK) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersGetGpgKeyForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersGetGpgKeyForAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersGetGpgKeyForAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersGetGpgKeyForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersGetGpgKeyForAuthenticatedNotFound(unwrapped)
-}
+func (s *UsersGetGpgKeyForAuthenticatedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersGetGpgKeyForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersGetGpgKeyForAuthenticatedUnauthorized(unwrapped)
-}
+func (s *UsersGetGpgKeyForAuthenticatedUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *UsersGetPublicSSHKeyForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersGetPublicSSHKeyForAuthenticatedForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *UsersGetPublicSSHKeyForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersGetPublicSSHKeyForAuthenticatedNotFound(unwrapped)
-}
+func (s *UsersGetPublicSSHKeyForAuthenticatedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *UsersGetPublicSSHKeyForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersGetPublicSSHKeyForAuthenticatedUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *UsersListBlockedByAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListBlockedByAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersListBlockedByAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersListBlockedByAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListBlockedByAuthenticatedNotFound(unwrapped)
-}
+func (s *UsersListBlockedByAuthenticatedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *UsersListBlockedByAuthenticatedOKApplicationJSON) SetFake() {
-	var unwrapped []SimpleUser
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem SimpleUser
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = UsersListBlockedByAuthenticatedOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *UsersListBlockedByAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListBlockedByAuthenticatedUnauthorized(unwrapped)
-}
+func (s *UsersListBlockedByAuthenticatedUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersListEmailsForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListEmailsForAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersListEmailsForAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersListEmailsForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListEmailsForAuthenticatedNotFound(unwrapped)
-}
+func (s *UsersListEmailsForAuthenticatedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersListEmailsForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListEmailsForAuthenticatedUnauthorized(unwrapped)
-}
+func (s *UsersListEmailsForAuthenticatedUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersListFollowedByAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListFollowedByAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersListFollowedByAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersListFollowedByAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListFollowedByAuthenticatedUnauthorized(unwrapped)
-}
+func (s *UsersListFollowedByAuthenticatedUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *UsersListFollowersForAuthenticatedUserForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListFollowersForAuthenticatedUserForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersListFollowersForAuthenticatedUserUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListFollowersForAuthenticatedUserUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *UsersListGpgKeysForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListGpgKeysForAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersListGpgKeysForAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersListGpgKeysForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListGpgKeysForAuthenticatedNotFound(unwrapped)
-}
+func (s *UsersListGpgKeysForAuthenticatedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersListGpgKeysForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListGpgKeysForAuthenticatedUnauthorized(unwrapped)
-}
+func (s *UsersListGpgKeysForAuthenticatedUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
 func (s *UsersListPublicEmailsForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListPublicEmailsForAuthenticatedForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersListPublicEmailsForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListPublicEmailsForAuthenticatedNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersListPublicEmailsForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListPublicEmailsForAuthenticatedUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersListPublicSSHKeysForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListPublicSSHKeysForAuthenticatedForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersListPublicSSHKeysForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListPublicSSHKeysForAuthenticatedNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersListPublicSSHKeysForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersListPublicSSHKeysForAuthenticatedUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersSetPrimaryEmailVisibilityForAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersSetPrimaryEmailVisibilityForAuthenticatedForbidden(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersSetPrimaryEmailVisibilityForAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersSetPrimaryEmailVisibilityForAuthenticatedNotFound(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersSetPrimaryEmailVisibilityForAuthenticatedOKApplicationJSON) SetFake() {
-	var unwrapped []Email
-	{
-		unwrapped = nil
-		for i := 0; i < 0; i++ {
-			var elem Email
-			{
-				elem.SetFake()
-			}
-			unwrapped = append(unwrapped, elem)
-		}
-	}
-	*s = UsersSetPrimaryEmailVisibilityForAuthenticatedOKApplicationJSON(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersSetPrimaryEmailVisibilityForAuthenticatedReq) SetFake() {
-	{
-		{
-			s.Visibility.SetFake()
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersSetPrimaryEmailVisibilityForAuthenticatedReqVisibility) SetFake() {
-	*s = UsersSetPrimaryEmailVisibilityForAuthenticatedReqVisibilityPublic
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
 func (s *UsersSetPrimaryEmailVisibilityForAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersSetPrimaryEmailVisibilityForAuthenticatedUnauthorized(unwrapped)
+	_ = "STUB: not implemented"
+	return
 }
 
 // SetFake set fake values.
-func (s *UsersUnblockForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersUnblockForbidden(unwrapped)
-}
+func (s *UsersUnblockForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersUnblockNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersUnblockNotFound(unwrapped)
-}
+func (s *UsersUnblockNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersUnblockUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersUnblockUnauthorized(unwrapped)
-}
+func (s *UsersUnblockUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersUnfollowForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersUnfollowForbidden(unwrapped)
-}
+func (s *UsersUnfollowForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersUnfollowNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersUnfollowNotFound(unwrapped)
-}
+func (s *UsersUnfollowNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersUnfollowUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersUnfollowUnauthorized(unwrapped)
-}
+func (s *UsersUnfollowUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersUpdateAuthenticatedForbidden) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersUpdateAuthenticatedForbidden(unwrapped)
-}
+func (s *UsersUpdateAuthenticatedForbidden) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersUpdateAuthenticatedNotFound) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersUpdateAuthenticatedNotFound(unwrapped)
-}
+func (s *UsersUpdateAuthenticatedNotFound) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersUpdateAuthenticatedReq) SetFake() {
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.Email.SetFake()
-		}
-	}
-	{
-		{
-			s.Blog.SetFake()
-		}
-	}
-	{
-		{
-			s.TwitterUsername.SetFake()
-		}
-	}
-	{
-		{
-			s.Company.SetFake()
-		}
-	}
-	{
-		{
-			s.Location.SetFake()
-		}
-	}
-	{
-		{
-			s.Hireable.SetFake()
-		}
-	}
-	{
-		{
-			s.Bio.SetFake()
-		}
-	}
-}
+func (s *UsersUpdateAuthenticatedReq) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *UsersUpdateAuthenticatedUnauthorized) SetFake() {
-	var unwrapped BasicError
-	{
-		unwrapped.SetFake()
-	}
-	*s = UsersUpdateAuthenticatedUnauthorized(unwrapped)
-}
+func (s *UsersUpdateAuthenticatedUnauthorized) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ValidationError) SetFake() {
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.DocumentationURL = "string"
-		}
-	}
-	{
-		{
-			s.Errors = nil
-			for i := 0; i < 0; i++ {
-				var elem ValidationErrorErrorsItem
-				{
-					elem.SetFake()
-				}
-				s.Errors = append(s.Errors, elem)
-			}
-		}
-	}
-}
+func (s *ValidationError) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ValidationErrorErrorsItem) SetFake() {
-	{
-		{
-			s.Resource.SetFake()
-		}
-	}
-	{
-		{
-			s.Field.SetFake()
-		}
-	}
-	{
-		{
-			s.Message.SetFake()
-		}
-	}
-	{
-		{
-			s.Code = "string"
-		}
-	}
-	{
-		{
-			s.Index.SetFake()
-		}
-	}
-	{
-		{
-			s.Value.SetFake()
-		}
-	}
-}
+func (s *ValidationErrorErrorsItem) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ValidationErrorErrorsItemValue) SetFake() {
-	var variant struct{}
-
-	{
-		variant = struct{}{}
-	}
-	s.SetNull(variant)
-}
+func (s *ValidationErrorErrorsItemValue) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ValidationErrorSimple) SetFake() {
-	{
-		{
-			s.Message = "string"
-		}
-	}
-	{
-		{
-			s.DocumentationURL = "string"
-		}
-	}
-	{
-		{
-			s.Errors = nil
-			for i := 0; i < 0; i++ {
-				var elem string
-				{
-					elem = "string"
-				}
-				s.Errors = append(s.Errors, elem)
-			}
-		}
-	}
-}
+func (s *ValidationErrorSimple) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Verification) SetFake() {
-	{
-		{
-			s.Verified = true
-		}
-	}
-	{
-		{
-			s.Reason = "string"
-		}
-	}
-	{
-		{
-			s.Payload.SetFake()
-		}
-	}
-	{
-		{
-			s.Signature.SetFake()
-		}
-	}
-}
+func (s *Verification) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *ViewTraffic) SetFake() {
-	{
-		{
-			s.Count = int(0)
-		}
-	}
-	{
-		{
-			s.Uniques = int(0)
-		}
-	}
-	{
-		{
-			s.Views = nil
-			for i := 0; i < 0; i++ {
-				var elem Traffic
-				{
-					elem.SetFake()
-				}
-				s.Views = append(s.Views, elem)
-			}
-		}
-	}
-}
+func (s *ViewTraffic) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WebhookConfig) SetFake() {
-	{
-		{
-			s.URL.SetFake()
-		}
-	}
-	{
-		{
-			s.ContentType.SetFake()
-		}
-	}
-	{
-		{
-			s.Secret.SetFake()
-		}
-	}
-	{
-		{
-			s.InsecureSsl.SetFake()
-		}
-	}
-}
+func (s *WebhookConfig) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WebhookConfigContentType) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = WebhookConfigContentType(unwrapped)
-}
+func (s *WebhookConfigContentType) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WebhookConfigInsecureSsl) SetFake() {
-	var variant string
-
-	{
-		variant = "string"
-	}
-	s.SetString(variant)
-}
+func (s *WebhookConfigInsecureSsl) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WebhookConfigSecret) SetFake() {
-	var unwrapped string
-	{
-		unwrapped = "string"
-	}
-	*s = WebhookConfigSecret(unwrapped)
-}
+func (s *WebhookConfigSecret) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WebhookConfigURL) SetFake() {
-	var unwrapped url.URL
-	{
-		unwrapped = url.URL{Scheme: "https", Host: "github.com", Path: "/ogen-go/ogen"}
-	}
-	*s = WebhookConfigURL(unwrapped)
-}
+func (s *WebhookConfigURL) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *Workflow) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.Name = "string"
-		}
-	}
-	{
-		{
-			s.Path = "string"
-		}
-	}
-	{
-		{
-			s.State.SetFake()
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = "string"
-		}
-	}
-	{
-		{
-			s.BadgeURL = "string"
-		}
-	}
-	{
-		{
-			s.DeletedAt.SetFake()
-		}
-	}
-}
+func (s *Workflow) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowRun) SetFake() {
-	{
-		{
-			s.ID = int(0)
-		}
-	}
-	{
-		{
-			s.Name.SetFake()
-		}
-	}
-	{
-		{
-			s.NodeID = "string"
-		}
-	}
-	{
-		{
-			s.CheckSuiteID.SetFake()
-		}
-	}
-	{
-		{
-			s.CheckSuiteNodeID.SetFake()
-		}
-	}
-	{
-		{
-			s.HeadBranch.SetFake()
-		}
-	}
-	{
-		{
-			s.HeadSha = "string"
-		}
-	}
-	{
-		{
-			s.RunNumber = int(0)
-		}
-	}
-	{
-		{
-			s.RunAttempt.SetFake()
-		}
-	}
-	{
-		{
-			s.Event = "string"
-		}
-	}
-	{
-		{
-			s.Status.SetFake()
-		}
-	}
-	{
-		{
-			s.Conclusion.SetFake()
-		}
-	}
-	{
-		{
-			s.WorkflowID = int(0)
-		}
-	}
-	{
-		{
-			s.URL = "string"
-		}
-	}
-	{
-		{
-			s.HTMLURL = "string"
-		}
-	}
-	{
-		{
-			s.PullRequests = nil
-			for i := 0; i < 0; i++ {
-				var elem PullRequestMinimal
-				{
-					elem.SetFake()
-				}
-				s.PullRequests = append(s.PullRequests, elem)
-			}
-		}
-	}
-	{
-		{
-			s.CreatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.UpdatedAt = time.Now()
-		}
-	}
-	{
-		{
-			s.JobsURL = "string"
-		}
-	}
-	{
-		{
-			s.LogsURL = "string"
-		}
-	}
-	{
-		{
-			s.CheckSuiteURL = "string"
-		}
-	}
-	{
-		{
-			s.ArtifactsURL = "string"
-		}
-	}
-	{
-		{
-			s.CancelURL = "string"
-		}
-	}
-	{
-		{
-			s.RerunURL = "string"
-		}
-	}
-	{
-		{
-			s.PreviousAttemptURL.SetFake()
-		}
-	}
-	{
-		{
-			s.WorkflowURL = "string"
-		}
-	}
-	{
-		{
-			s.HeadCommit.SetFake()
-		}
-	}
-	{
-		{
-			s.Repository.SetFake()
-		}
-	}
-	{
-		{
-			s.HeadRepository.SetFake()
-		}
-	}
-	{
-		{
-			s.HeadRepositoryID.SetFake()
-		}
-	}
-}
+func (s *WorkflowRun) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowRunUsage) SetFake() {
-	{
-		{
-			s.Billable.SetFake()
-		}
-	}
-	{
-		{
-			s.RunDurationMs.SetFake()
-		}
-	}
-}
+func (s *WorkflowRunUsage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowRunUsageBillable) SetFake() {
-	{
-		{
-			s.UBUNTU.SetFake()
-		}
-	}
-	{
-		{
-			s.MACOS.SetFake()
-		}
-	}
-	{
-		{
-			s.WINDOWS.SetFake()
-		}
-	}
-}
+func (s *WorkflowRunUsageBillable) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowRunUsageBillableMACOS) SetFake() {
-	{
-		{
-			s.TotalMs = int(0)
-		}
-	}
-	{
-		{
-			s.Jobs = int(0)
-		}
-	}
-}
+func (s *WorkflowRunUsageBillableMACOS) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowRunUsageBillableUBUNTU) SetFake() {
-	{
-		{
-			s.TotalMs = int(0)
-		}
-	}
-	{
-		{
-			s.Jobs = int(0)
-		}
-	}
-}
+func (s *WorkflowRunUsageBillableUBUNTU) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowRunUsageBillableWINDOWS) SetFake() {
-	{
-		{
-			s.TotalMs = int(0)
-		}
-	}
-	{
-		{
-			s.Jobs = int(0)
-		}
-	}
-}
+func (s *WorkflowRunUsageBillableWINDOWS) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowState) SetFake() {
-	*s = WorkflowStateActive
-}
+func (s *WorkflowState) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowUsage) SetFake() {
-	{
-		{
-			s.Billable.SetFake()
-		}
-	}
-}
+func (s *WorkflowUsage) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowUsageBillable) SetFake() {
-	{
-		{
-			s.UBUNTU.SetFake()
-		}
-	}
-	{
-		{
-			s.MACOS.SetFake()
-		}
-	}
-	{
-		{
-			s.WINDOWS.SetFake()
-		}
-	}
-}
+func (s *WorkflowUsageBillable) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowUsageBillableMACOS) SetFake() {
-	{
-		{
-			s.TotalMs.SetFake()
-		}
-	}
-}
+func (s *WorkflowUsageBillableMACOS) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowUsageBillableUBUNTU) SetFake() {
-	{
-		{
-			s.TotalMs.SetFake()
-		}
-	}
-}
+func (s *WorkflowUsageBillableUBUNTU) SetFake() { _ = "STUB: not implemented"; return }
 
 // SetFake set fake values.
-func (s *WorkflowUsageBillableWINDOWS) SetFake() {
-	{
-		{
-			s.TotalMs.SetFake()
-		}
-	}
-}
+func (s *WorkflowUsageBillableWINDOWS) SetFake() { _ = "STUB: not implemented"; return }

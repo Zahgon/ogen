@@ -27,14 +27,8 @@ type Server struct {
 
 // NewServer creates new Server.
 func NewServer(h Handler, opts ...ServerOption) (*Server, error) {
-	s, err := newServerConfig(opts...).baseServer()
-	if err != nil {
-		return nil, err
-	}
-	return &Server{
-		h:          h,
-		baseServer: s,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // WebhookHandler handles webhooks described by OpenAPI v3 specification.
@@ -59,12 +53,6 @@ type WebhookServer struct {
 
 // NewWebhookServer creates new WebhookServer.
 func NewWebhookServer(h WebhookHandler, opts ...ServerOption) (*WebhookServer, error) {
-	s, err := newServerConfig(opts...).baseServer()
-	if err != nil {
-		return nil, err
-	}
-	return &WebhookServer{
-		h:          h,
-		baseServer: s,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }

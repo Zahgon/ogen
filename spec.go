@@ -1,9 +1,6 @@
 package ogen
 
 import (
-	"encoding/json"
-
-	"github.com/go-faster/jx"
 	"github.com/go-faster/yaml"
 
 	"github.com/ogen-go/ogen/jsonschema"
@@ -91,45 +88,13 @@ type Spec struct {
 }
 
 // UnmarshalYAML implements yaml.Unmarshaler.
-func (s *Spec) UnmarshalYAML(n *yaml.Node) error {
-	type Alias Spec
-	var a Alias
-
-	if err := n.Decode(&a); err != nil {
-		return err
-	}
-	*s = Spec(a)
-	s.Raw = n
-
-	return nil
-}
+func (s *Spec) UnmarshalYAML(n *yaml.Node) error { _ = "STUB: not implemented"; return nil }
 
 // UnmarshalJSON implements json.Unmarshaler.
-func (s *Spec) UnmarshalJSON(bytes []byte) error {
-	type Alias Spec
-	var a Alias
-
-	if err := json.Unmarshal(bytes, &a); err != nil {
-		return err
-	}
-	*s = Spec(a)
-
-	var n yaml.Node
-	if err := yaml.Unmarshal(bytes, &n); err != nil {
-		return err
-	}
-	s.Raw = &n
-
-	return nil
-}
+func (s *Spec) UnmarshalJSON(bytes []byte) error { _ = "STUB: not implemented"; return nil }
 
 // Init components of schema.
-func (s *Spec) Init() {
-	if s.Components == nil {
-		s.Components = &Components{}
-	}
-	s.Components.Init()
-}
+func (s *Spec) Init() { _ = "STUB: not implemented"; return }
 
 // Info provides metadata about the API.
 //
@@ -253,29 +218,10 @@ type Components struct {
 	Common OpenAPICommon `json:"-" yaml:",inline"`
 }
 
-func initMapIfNil[K comparable, V any](m map[K]V) map[K]V {
-	if m == nil {
-		m = make(map[K]V)
-	}
-	return m
-}
+func initMapIfNil[K comparable, V any](m map[K]V) map[K]V { _ = "STUB: not implemented"; return nil }
 
 // Init initializes all fields.
-func (c *Components) Init() {
-	if c == nil {
-		return
-	}
-	c.Schemas = initMapIfNil(c.Schemas)
-	c.Responses = initMapIfNil(c.Responses)
-	c.Parameters = initMapIfNil(c.Parameters)
-	c.Examples = initMapIfNil(c.Examples)
-	c.RequestBodies = initMapIfNil(c.RequestBodies)
-	c.Headers = initMapIfNil(c.Headers)
-	c.SecuritySchemes = initMapIfNil(c.SecuritySchemes)
-	c.Links = initMapIfNil(c.Links)
-	c.Callbacks = initMapIfNil(c.Callbacks)
-	c.PathItems = initMapIfNil(c.PathItems)
-}
+func (c *Components) Init() { _ = "STUB: not implemented"; return }
 
 // Paths holds the relative paths to the individual endpoints and their operations.
 // The path is appended to the URL from the Server Object in order to construct the full URL.
@@ -340,39 +286,7 @@ type PathItem struct {
 }
 
 // MarshalJSON implements [json.Marshaler].
-func (p *PathItem) MarshalJSON() ([]byte, error) {
-	type Alias PathItem
-	originalJSON, err := json.Marshal(Alias(*p))
-	if err != nil {
-		return nil, err
-	}
-
-	d := jx.DecodeBytes(originalJSON)
-	e := jx.Encoder{}
-
-	e.ObjStart()
-	if err := d.Obj(func(d *jx.Decoder, key string) error {
-		e.FieldStart(key)
-		raw, err := d.Raw()
-		if err != nil {
-			return err
-		}
-
-		e.Raw(raw)
-		return nil
-	}); err != nil {
-		return nil, err
-	}
-
-	for extK, extV := range p.Common.Extensions {
-		e.FieldStart(extK)
-		e.Str(extV.Value)
-	}
-
-	e.ObjEnd()
-
-	return e.Bytes(), nil
-}
+func (p *PathItem) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // Operation describes a single API operation on a path.
 //
@@ -429,38 +343,7 @@ type Operation struct {
 }
 
 // MarshalJSON implements [json.Marshaler].
-func (o *Operation) MarshalJSON() ([]byte, error) {
-	type Alias Operation
-	originalJSON, err := json.Marshal(Alias(*o))
-	if err != nil {
-		return nil, err
-	}
-
-	d := jx.DecodeBytes(originalJSON)
-	e := jx.Encoder{}
-
-	e.ObjStart()
-	if err := d.Obj(func(d *jx.Decoder, key string) error {
-		e.FieldStart(key)
-		raw, err := d.Raw()
-		if err != nil {
-			return err
-		}
-		e.Raw(raw)
-		return nil
-	}); err != nil {
-		return nil, err
-	}
-
-	for extK, extV := range o.Common.Extensions {
-		e.FieldStart(extK)
-		e.Str(extV.Value)
-	}
-
-	e.ObjEnd()
-
-	return e.Bytes(), nil
-}
+func (o *Operation) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 // ExternalDocumentation describes a reference to external resource for extended documentation.
 //

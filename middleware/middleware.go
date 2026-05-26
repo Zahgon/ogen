@@ -20,28 +20,32 @@ type ParameterKey struct {
 type Parameters map[ParameterKey]any
 
 func (p Parameters) find(name string, in openapi.ParameterLocation) (v any, ok bool) {
-	v, ok = p[ParameterKey{Name: name, In: in}]
-	return v, ok
+	_ = "STUB: not implemented"
+	return *new(any), false
 }
 
 // Query returns a parameter from the query.
 func (p Parameters) Query(name string) (any, bool) {
-	return p.find(name, openapi.LocationQuery)
+	_ = "STUB: not implemented"
+	return *new(any), false
 }
 
 // Header returns a parameter from the header.
 func (p Parameters) Header(name string) (any, bool) {
-	return p.find(name, openapi.LocationHeader)
+	_ = "STUB: not implemented"
+	return *new(any), false
 }
 
 // Path returns a parameter from the path.
 func (p Parameters) Path(name string) (any, bool) {
-	return p.find(name, openapi.LocationPath)
+	_ = "STUB: not implemented"
+	return *new(any), false
 }
 
 // Cookie returns a parameter from the cookie.
 func (p Parameters) Cookie(name string) (any, bool) {
-	return p.find(name, openapi.LocationCookie)
+	_ = "STUB: not implemented"
+	return *new(any), false
 }
 
 // Request is request context type for middleware.
@@ -66,10 +70,12 @@ type Request struct {
 
 // SetContext sets Context in Request.
 func (r *Request) SetContext(ctx context.Context) {
-	r.Context = ctx
+	_ = "STUB: not implemented"
+
+	// Response is response type for middleware.
+	return
 }
 
-// Response is response type for middleware.
 type Response struct {
 	// Type is the operation response type.
 	Type any
@@ -84,15 +90,6 @@ type (
 
 // ChainMiddlewares chains middlewares into a single middleware, which will be executed in the order they are passed.
 func ChainMiddlewares(m ...Middleware) Middleware {
-	if len(m) == 0 {
-		return func(req Request, next Next) (Response, error) {
-			return next(req)
-		}
-	}
-	tail := ChainMiddlewares(m[1:]...)
-	return func(req Request, next Next) (Response, error) {
-		return m[0](req, func(req Request) (Response, error) {
-			return tail(req, next)
-		})
-	}
+	_ = "STUB: not implemented"
+	return *new(Middleware)
 }

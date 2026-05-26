@@ -5,10 +5,6 @@ package api
 import (
 	"context"
 	"net/http"
-	"strings"
-
-	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/ogenerrors"
 )
 
 // SecurityHandler is handler for security parameters.
@@ -28,17 +24,7 @@ type SecurityHandler interface {
 }
 
 func findAuthorization(h http.Header, prefix string) (string, bool) {
-	v, ok := h["Authorization"]
-	if !ok {
-		return "", false
-	}
-	for _, vv := range v {
-		scheme, value, ok := strings.Cut(vv, " ")
-		if !ok || !strings.EqualFold(scheme, prefix) {
-			continue
-		}
-		return value, true
-	}
+	_ = "STUB: not implemented"
 	return "", false
 }
 
@@ -58,16 +44,9 @@ var operationRolesBasicAuth = map[string][]string{
 //	requiredRoles := GetRolesForBasicAuth(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForBasicAuth(operation string) []string {
-	roles, ok := operationRolesBasicAuth[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForBasicAuth(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 // operationRolesBearerToken is a private map storing roles per operation.
 var operationRolesBearerToken = map[string][]string{
@@ -84,16 +63,9 @@ var operationRolesBearerToken = map[string][]string{
 //	requiredRoles := GetRolesForBearerToken(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForBearerToken(operation string) []string {
-	roles, ok := operationRolesBearerToken[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForBearerToken(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 // operationRolesCookieKey is a private map storing roles per operation.
 var operationRolesCookieKey = map[string][]string{
@@ -110,16 +82,9 @@ var operationRolesCookieKey = map[string][]string{
 //	requiredRoles := GetRolesForCookieKey(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForCookieKey(operation string) []string {
-	roles, ok := operationRolesCookieKey[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForCookieKey(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 // operationRolesCustom is a private map storing roles per operation.
 var operationRolesCustom = map[string][]string{
@@ -136,16 +101,9 @@ var operationRolesCustom = map[string][]string{
 //	requiredRoles := GetRolesForCustom(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForCustom(operation string) []string {
-	roles, ok := operationRolesCustom[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForCustom(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 // operationRolesHeaderKey is a private map storing roles per operation.
 var operationRolesHeaderKey = map[string][]string{
@@ -163,16 +121,9 @@ var operationRolesHeaderKey = map[string][]string{
 //	requiredRoles := GetRolesForHeaderKey(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForHeaderKey(operation string) []string {
-	roles, ok := operationRolesHeaderKey[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForHeaderKey(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 // operationRolesQueryKey is a private map storing roles per operation.
 var operationRolesQueryKey = map[string][]string{
@@ -192,126 +143,40 @@ var operationRolesQueryKey = map[string][]string{
 //	requiredRoles := GetRolesForQueryKey(AddPetOperation)
 //
 // Returns nil if the operation has no role requirements or if the operation is unknown.
-func GetRolesForQueryKey(operation string) []string {
-	roles, ok := operationRolesQueryKey[operation]
-	if !ok {
-		return nil
-	}
-	// Return a copy to prevent external modification
-	result := make([]string, len(roles))
-	copy(result, roles)
-	return result
-}
+func GetRolesForQueryKey(operation string) []string { _ = "STUB: not implemented"; return nil }
+
+// Return a copy to prevent external modification
 
 func (s *Server) securityBasicAuth(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t BasicAuth
-	if _, ok := findAuthorization(req.Header, "Basic"); !ok {
-		return ctx, false, nil
-	}
-	username, password, ok := req.BasicAuth()
-	if !ok {
-		return nil, false, errors.New("invalid basic auth")
-	}
-	t.Username = username
-	t.Password = password
-	t.Roles = operationRolesBasicAuth[operationName]
-	rctx, err := s.sec.HandleBasicAuth(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
 func (s *Server) securityBearerToken(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t BearerToken
-	token, ok := findAuthorization(req.Header, "Bearer")
-	if !ok {
-		return ctx, false, nil
-	}
-	t.Token = token
-	t.Roles = operationRolesBearerToken[operationName]
-	rctx, err := s.sec.HandleBearerToken(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
 func (s *Server) securityCookieKey(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t CookieKey
-	const parameterName = "api_key"
-	var value string
-	switch cookie, err := req.Cookie(parameterName); {
-	case err == nil: // if NO error
-		value = cookie.Value
-	case errors.Is(err, http.ErrNoCookie):
-		return ctx, false, nil
-	default:
-		return nil, false, errors.Wrap(err, "get cookie value")
-	}
-	t.APIKey = value
-	t.Roles = operationRolesCookieKey[operationName]
-	rctx, err := s.sec.HandleCookieKey(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
+// if NO error
+
 func (s *Server) securityCustom(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t Custom
-	t.Request = req
-	t.Roles = operationRolesCustom[operationName]
-	rctx, err := s.sec.HandleCustom(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
 func (s *Server) securityHeaderKey(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t HeaderKey
-	const parameterName = "X-Api-Key"
-	value := req.Header.Get(parameterName)
-	if value == "" {
-		return ctx, false, nil
-	}
-	t.APIKey = value
-	t.Roles = operationRolesHeaderKey[operationName]
-	rctx, err := s.sec.HandleHeaderKey(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
 func (s *Server) securityQueryKey(ctx context.Context, operationName OperationName, req *http.Request) (context.Context, bool, error) {
-	var t QueryKey
-	const parameterName = "api_key"
-	q := req.URL.Query()
-	if !q.Has(parameterName) {
-		return ctx, false, nil
-	}
-	value := q.Get(parameterName)
-	t.APIKey = value
-	t.Roles = operationRolesQueryKey[operationName]
-	rctx, err := s.sec.HandleQueryKey(ctx, operationName, t)
-	if errors.Is(err, ogenerrors.ErrSkipServerSecurity) {
-		return nil, false, nil
-	} else if err != nil {
-		return nil, false, err
-	}
-	return rctx, true, err
+	_ = "STUB: not implemented"
+	return *new(context.Context), false, nil
 }
 
 // SecuritySource is provider of security values (tokens, passwords, etc.).
@@ -331,53 +196,31 @@ type SecuritySource interface {
 }
 
 func (s *Client) securityBasicAuth(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.BasicAuth(ctx, operationName, s)
-	if err != nil {
-		return errors.Wrap(err, "security source \"BasicAuth\"")
-	}
-	req.SetBasicAuth(t.Username, t.Password)
+	_ = "STUB: not implemented"
 	return nil
 }
+
 func (s *Client) securityBearerToken(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.BearerToken(ctx, operationName, s)
-	if err != nil {
-		return errors.Wrap(err, "security source \"BearerToken\"")
-	}
-	req.Header.Set("Authorization", "Bearer "+t.Token)
+	_ = "STUB: not implemented"
 	return nil
 }
+
 func (s *Client) securityCookieKey(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.CookieKey(ctx, operationName, s)
-	if err != nil {
-		return errors.Wrap(err, "security source \"CookieKey\"")
-	}
-	req.AddCookie(&http.Cookie{
-		Name:  "api_key",
-		Value: t.APIKey,
-	})
+	_ = "STUB: not implemented"
 	return nil
 }
+
 func (s *Client) securityCustom(ctx context.Context, operationName OperationName, req *http.Request) error {
-	if err := s.sec.Custom(ctx, operationName, req, s); err != nil {
-		return errors.Wrap(err, "security source \"Custom\"")
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
+
 func (s *Client) securityHeaderKey(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.HeaderKey(ctx, operationName, s)
-	if err != nil {
-		return errors.Wrap(err, "security source \"HeaderKey\"")
-	}
-	req.Header.Set("X-Api-Key", t.APIKey)
+	_ = "STUB: not implemented"
 	return nil
 }
+
 func (s *Client) securityQueryKey(ctx context.Context, operationName OperationName, req *http.Request) error {
-	t, err := s.sec.QueryKey(ctx, operationName, s)
-	if err != nil {
-		return errors.Wrap(err, "security source \"QueryKey\"")
-	}
-	q := req.URL.Query()
-	q.Set("api_key", t.APIKey)
-	req.URL.RawQuery = q.Encode()
+	_ = "STUB: not implemented"
 	return nil
 }

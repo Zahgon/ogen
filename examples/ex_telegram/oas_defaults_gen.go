@@ -3,513 +3,193 @@
 package api
 
 // setDefaults set default value of fields.
-func (s *BotCommandScopeAllChatAdministrators) setDefaults() {
-	{
-		val := string("all_chat_administrators")
-		s.Type = val
-	}
-}
+func (s *BotCommandScopeAllChatAdministrators) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *BotCommandScopeAllGroupChats) setDefaults() {
-	{
-		val := string("all_group_chats")
-		s.Type = val
-	}
-}
+func (s *BotCommandScopeAllGroupChats) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *BotCommandScopeAllPrivateChats) setDefaults() {
-	{
-		val := string("all_private_chats")
-		s.Type = val
-	}
-}
+func (s *BotCommandScopeAllPrivateChats) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *BotCommandScopeChat) setDefaults() {
-	{
-		val := string("chat")
-		s.Type = val
-	}
-}
+func (s *BotCommandScopeChat) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *BotCommandScopeChatAdministrators) setDefaults() {
-	{
-		val := string("chat_administrators")
-		s.Type = val
-	}
-}
+func (s *BotCommandScopeChatAdministrators) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *BotCommandScopeChatMember) setDefaults() {
-	{
-		val := string("chat_member")
-		s.Type = val
-	}
-}
+func (s *BotCommandScopeChatMember) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *BotCommandScopeDefault) setDefaults() {
-	{
-		val := string("default")
-		s.Type = val
-	}
-}
+func (s *BotCommandScopeDefault) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *Error) setDefaults() {
-	{
-		val := bool(false)
-		s.Ok = val
-	}
-}
+func (s *Error) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *GetUpdates) setDefaults() {
-	{
-		val := int(0)
-		s.Offset.SetTo(val)
-	}
-}
+func (s *GetUpdates) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *GetUserProfilePhotos) setDefaults() {
-	{
-		val := int(0)
-		s.Offset.SetTo(val)
-	}
-}
+func (s *GetUserProfilePhotos) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultArticle) setDefaults() {
-	{
-		val := string("article")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultArticle) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultAudio) setDefaults() {
-	{
-		val := string("audio")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultAudio) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultCachedAudio) setDefaults() {
-	{
-		val := string("audio")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultCachedAudio) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultCachedDocument) setDefaults() {
-	{
-		val := string("document")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultCachedDocument) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultCachedGif) setDefaults() {
-	{
-		val := string("gif")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultCachedGif) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultCachedMpeg4Gif) setDefaults() {
-	{
-		val := string("mpeg4_gif")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultCachedMpeg4Gif) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultCachedPhoto) setDefaults() {
-	{
-		val := string("photo")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultCachedPhoto) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultCachedSticker) setDefaults() {
-	{
-		val := string("sticker")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultCachedSticker) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultCachedVideo) setDefaults() {
-	{
-		val := string("video")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultCachedVideo) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultCachedVoice) setDefaults() {
-	{
-		val := string("voice")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultCachedVoice) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultContact) setDefaults() {
-	{
-		val := string("contact")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultContact) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultDocument) setDefaults() {
-	{
-		val := string("document")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultDocument) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultGame) setDefaults() {
-	{
-		val := string("game")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultGame) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultGif) setDefaults() {
-	{
-		val := string("gif")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultGif) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultLocation) setDefaults() {
-	{
-		val := string("location")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultLocation) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultMpeg4Gif) setDefaults() {
-	{
-		val := string("mpeg4_gif")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultMpeg4Gif) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultPhoto) setDefaults() {
-	{
-		val := string("photo")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultPhoto) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultVenue) setDefaults() {
-	{
-		val := string("venue")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultVenue) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultVideo) setDefaults() {
-	{
-		val := string("video")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultVideo) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InlineQueryResultVoice) setDefaults() {
-	{
-		val := string("voice")
-		s.Type = val
-	}
-}
+func (s *InlineQueryResultVoice) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InputMediaAnimation) setDefaults() {
-	{
-		val := string("animation")
-		s.Type = val
-	}
-}
+func (s *InputMediaAnimation) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InputMediaAudio) setDefaults() {
-	{
-		val := string("audio")
-		s.Type = val
-	}
-}
+func (s *InputMediaAudio) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InputMediaDocument) setDefaults() {
-	{
-		val := string("document")
-		s.Type = val
-	}
-}
+func (s *InputMediaDocument) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InputMediaPhoto) setDefaults() {
-	{
-		val := string("photo")
-		s.Type = val
-	}
-}
+func (s *InputMediaPhoto) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *InputMediaVideo) setDefaults() {
-	{
-		val := string("video")
-		s.Type = val
-	}
-}
+func (s *InputMediaVideo) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *MessageEntity) setDefaults() {
-	{
-		val := int(0)
-		s.Offset = val
-	}
-}
+func (s *MessageEntity) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PassportElementErrorDataField) setDefaults() {
-	{
-		val := string("data")
-		s.Source = val
-	}
-}
+func (s *PassportElementErrorDataField) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PassportElementErrorFile) setDefaults() {
-	{
-		val := string("file")
-		s.Source = val
-	}
-}
+func (s *PassportElementErrorFile) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PassportElementErrorFiles) setDefaults() {
-	{
-		val := string("files")
-		s.Source = val
-	}
-}
+func (s *PassportElementErrorFiles) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PassportElementErrorFrontSide) setDefaults() {
-	{
-		val := string("front_side")
-		s.Source = val
-	}
-}
+func (s *PassportElementErrorFrontSide) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PassportElementErrorReverseSide) setDefaults() {
-	{
-		val := string("reverse_side")
-		s.Source = val
-	}
-}
+func (s *PassportElementErrorReverseSide) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PassportElementErrorSelfie) setDefaults() {
-	{
-		val := string("selfie")
-		s.Source = val
-	}
-}
+func (s *PassportElementErrorSelfie) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PassportElementErrorTranslationFile) setDefaults() {
-	{
-		val := string("translation_file")
-		s.Source = val
-	}
-}
+func (s *PassportElementErrorTranslationFile) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PassportElementErrorTranslationFiles) setDefaults() {
-	{
-		val := string("translation_files")
-		s.Source = val
-	}
-}
+func (s *PassportElementErrorTranslationFiles) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *PassportElementErrorUnspecified) setDefaults() {
-	{
-		val := string("unspecified")
-		s.Source = val
-	}
-}
+func (s *PassportElementErrorUnspecified) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *Result) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *Result) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultArrayOfBotCommand) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultArrayOfBotCommand) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultArrayOfChatMember) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultArrayOfChatMember) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultArrayOfGameHighScore) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultArrayOfGameHighScore) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultArrayOfMessage) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultArrayOfMessage) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultArrayOfUpdate) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultArrayOfUpdate) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultChat) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultChat) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultChatInviteLink) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultChatInviteLink) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultChatMember) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultChatMember) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultFile) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultFile) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultInt) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultInt) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultMessage) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultMessage) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultMessageId) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultMessageId) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultPoll) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultPoll) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultString) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultString) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultUser) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultUser) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultUserProfilePhotos) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultUserProfilePhotos) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *ResultWebhookInfo) setDefaults() {
-	{
-		val := bool(true)
-		s.Ok = val
-	}
-}
+func (s *ResultWebhookInfo) setDefaults() { _ = "STUB: not implemented"; return }
 
 // setDefaults set default value of fields.
-func (s *UploadStickerFile) setDefaults() {
-	{
-		val := string("up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. More info on Sending Files »")
-		s.PNGSticker = val
-	}
-}
+func (s *UploadStickerFile) setDefaults() { _ = "STUB: not implemented"; return }

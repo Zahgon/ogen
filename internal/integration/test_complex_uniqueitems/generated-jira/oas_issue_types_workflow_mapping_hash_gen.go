@@ -2,28 +2,15 @@
 
 package api
 
-import (
-	"fmt"
-	"hash/fnv"
-)
-
 // Hash computes a hash value for IssueTypesWorkflowMapping using FNV-1a.
 // Equal objects must produce equal hashes.
 func (a IssueTypesWorkflowMapping) Hash() uint64 {
-	h := fnv.New64a()
+	_ = "STUB: not implemented"
 
 	// Hash primitive field: WorkflowId
-	h.Write([]byte(fmt.Sprintf("%v", a.WorkflowId)))
-	// Hash array field: IssueTypes
-	for _, item := range a.IssueTypes {
-		h.Write([]byte(fmt.Sprintf("%v", item)))
-	}
-	// Hash optional field: UpdateDraftIfNeeded
-	if a.UpdateDraftIfNeeded.Set {
-		h.Write([]byte{1})
-		h.Write([]byte(fmt.Sprintf("%v", a.UpdateDraftIfNeeded.Value)))
-	} else {
-		h.Write([]byte{0})
-	}
-	return h.Sum64()
+	return 0
 }
+
+// Hash array field: IssueTypes
+
+// Hash optional field: UpdateDraftIfNeeded

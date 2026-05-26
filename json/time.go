@@ -14,95 +14,68 @@ const (
 
 // DecodeTimeFormat decodes date, time & date-time from json using a custom layout.
 func DecodeTimeFormat(d *jx.Decoder, layout string) (v time.Time, err error) {
-	s, err := d.Str()
-	if err != nil {
-		return v, err
-	}
-	return time.Parse(layout, s)
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // EncodeTimeFormat encodes date, time & date-time to json using a custom layout.
-func EncodeTimeFormat(e *jx.Encoder, v time.Time, layout string) {
-	const stackThreshold = 64
+func EncodeTimeFormat(e *jx.Encoder, v time.Time, layout string) { _ = "STUB: not implemented"; return }
 
-	var buf []byte
-	if len(layout) > stackThreshold {
-		buf = make([]byte, len(layout))
-	} else {
-		// Allocate buf on stack, if we can.
-		buf = make([]byte, stackThreshold)
-	}
-
-	buf = v.AppendFormat(buf[:0], layout)
-	e.ByteStr(buf)
-}
+// Allocate buf on stack, if we can.
 
 // NewTimeDecoder returns a new time decoder using a custom layout.
 func NewTimeDecoder(layout string) func(i *jx.Decoder) (time.Time, error) {
-	return func(d *jx.Decoder) (time.Time, error) {
-		return DecodeTimeFormat(d, layout)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewTimeEncoder returns a new time encoder using a custom layout.
 func NewTimeEncoder(layout string) func(e *jx.Encoder, v time.Time) {
-	return func(e *jx.Encoder, v time.Time) {
-		EncodeTimeFormat(e, v, layout)
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // DecodeDate decodes date from json.
 func DecodeDate(d *jx.Decoder) (v time.Time, err error) {
-	return DecodeTimeFormat(d, dateLayout)
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // EncodeDate encodes date to json.
-func EncodeDate(e *jx.Encoder, v time.Time) {
-	EncodeTimeFormat(e, v, dateLayout)
-}
+func EncodeDate(e *jx.Encoder, v time.Time) { _ = "STUB: not implemented"; return }
 
 // DecodeTime decodes time from json.
 func DecodeTime(d *jx.Decoder) (v time.Time, err error) {
-	return DecodeTimeFormat(d, timeLayout)
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // EncodeTime encodes time to json.
-func EncodeTime(e *jx.Encoder, v time.Time) {
-	EncodeTimeFormat(e, v, timeLayout)
-}
+func EncodeTime(e *jx.Encoder, v time.Time) { _ = "STUB: not implemented"; return }
 
 // DecodeDateTime decodes date-time from json.
 func DecodeDateTime(d *jx.Decoder) (v time.Time, err error) {
-	return DecodeTimeFormat(d, time.RFC3339)
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // EncodeDateTime encodes date-time to json.
-func EncodeDateTime(e *jx.Encoder, v time.Time) {
-	EncodeTimeFormat(e, v, time.RFC3339)
-}
+func EncodeDateTime(e *jx.Encoder, v time.Time) { _ = "STUB: not implemented"; return }
 
 // DecodeHTTPDate decodes http-date from json.
 func DecodeHTTPDate(d *jx.Decoder) (v time.Time, err error) {
-	return DecodeTimeFormat(d, httpDateLayout)
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
 
 // EncodeHTTPDate encodes http-date to json.
-func EncodeHTTPDate(e *jx.Encoder, v time.Time) {
-	EncodeTimeFormat(e, v.UTC(), httpDateLayout)
-}
+func EncodeHTTPDate(e *jx.Encoder, v time.Time) { _ = "STUB: not implemented"; return }
 
 // DecodeDuration decodes duration from json.
 func DecodeDuration(d *jx.Decoder) (v time.Duration, err error) {
-	s, err := d.Str()
-	if err != nil {
-		return v, err
-	}
-	return time.ParseDuration(s)
+	_ = "STUB: not implemented"
+	return *new(time.Duration), nil
 }
 
 // EncodeDuration encodes duration to json.
-func EncodeDuration(e *jx.Encoder, v time.Duration) {
-	var buf [32]byte
-	w := formatDuration(&buf, v)
-	e.ByteStr(buf[w:])
-}
+func EncodeDuration(e *jx.Encoder, v time.Duration) { _ = "STUB: not implemented"; return }
